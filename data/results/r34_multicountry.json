@@ -1,0 +1,364 @@
+{
+  "2012-01-06": {
+    "overall": {
+      "ssw_mean": 2.357,
+      "ctrl_mean": 2.414,
+      "diff": -0.057,
+      "p": 0.0
+    },
+    "AT": {
+      "ssw_mean": 2.404,
+      "ctrl_mean": 2.123,
+      "diff": 0.28,
+      "p": 0.0,
+      "direction": "INCREASE",
+      "n_ssw": 1425,
+      "n_ctrl": 2899
+    },
+    "CH": {
+      "ssw_mean": 2.624,
+      "ctrl_mean": 2.493,
+      "diff": 0.13,
+      "p": 0.0,
+      "direction": "INCREASE",
+      "n_ssw": 3627,
+      "n_ctrl": 7370
+    },
+    "DE": {
+      "ssw_mean": 2.849,
+      "ctrl_mean": 2.156,
+      "diff": 0.693,
+      "p": 0.0,
+      "direction": "INCREASE",
+      "n_ssw": 186,
+      "n_ctrl": 378
+    },
+    "FR": {
+      "ssw_mean": 2.585,
+      "ctrl_mean": 2.674,
+      "diff": -0.089,
+      "p": 0.0091,
+      "direction": "DECREASE",
+      "n_ssw": 713,
+      "n_ctrl": 1449
+    },
+    "IT": {
+      "ssw_mean": 1.908,
+      "ctrl_mean": 2.411,
+      "diff": -0.503,
+      "p": 0.0,
+      "direction": "DECREASE",
+      "n_ssw": 2870,
+      "n_ctrl": 5906
+    }
+  },
+  "2013-01-06": {
+    "overall": {
+      "ssw_mean": 2.32,
+      "ctrl_mean": 2.454,
+      "diff": -0.134,
+      "p": 0.0
+    },
+    "AT": {
+      "ssw_mean": 2.209,
+      "ctrl_mean": 2.241,
+      "diff": -0.032,
+      "p": 0.2167,
+      "direction": "DECREASE",
+      "n_ssw": 1426,
+      "n_ctrl": 2898
+    },
+    "CH": {
+      "ssw_mean": 2.333,
+      "ctrl_mean": 2.616,
+      "diff": -0.283,
+      "p": 0.0,
+      "direction": "DECREASE",
+      "n_ssw": 3626,
+      "n_ctrl": 7371
+    },
+    "DE": {
+      "ssw_mean": 2.624,
+      "ctrl_mean": 2.27,
+      "diff": 0.354,
+      "p": 0.0,
+      "direction": "INCREASE",
+      "n_ssw": 186,
+      "n_ctrl": 378
+    },
+    "FR": {
+      "ssw_mean": 2.593,
+      "ctrl_mean": 2.669,
+      "diff": -0.075,
+      "p": 0.0016,
+      "direction": "DECREASE",
+      "n_ssw": 713,
+      "n_ctrl": 1449
+    },
+    "IT": {
+      "ssw_mean": 2.271,
+      "ctrl_mean": 2.314,
+      "diff": -0.043,
+      "p": 0.0033,
+      "direction": "DECREASE",
+      "n_ssw": 2883,
+      "n_ctrl": 5906
+    }
+  },
+  "gradient": {
+    "BAY": {
+      "country": "DE",
+      "ssw_mean": 2.737,
+      "ctrl_mean": 2.365,
+      "diff": 0.371,
+      "p": 0.0,
+      "direction": "INCREASE"
+    },
+    "BOL": {
+      "country": "IT",
+      "ssw_mean": 2.406,
+      "ctrl_mean": 2.535,
+      "diff": -0.128,
+      "p": 0.0005,
+      "direction": "DECREASE"
+    },
+    "BOR": {
+      "country": "IT",
+      "ssw_mean": 2.07,
+      "ctrl_mean": 2.386,
+      "diff": -0.316,
+      "p": 0.0,
+      "direction": "DECREASE"
+    },
+    "BRI": {
+      "country": "FR",
+      "ssw_mean": 2.541,
+      "ctrl_mean": 2.663,
+      "diff": -0.121,
+      "p": 0.0097,
+      "direction": "DECREASE"
+    },
+    "BSM": {
+      "country": "FR",
+      "ssw_mean": 2.669,
+      "ctrl_mean": 2.665,
+      "diff": 0.005,
+      "p": 0.9549,
+      "direction": "INCREASE"
+    },
+    "CHX": {
+      "country": "FR",
+      "ssw_mean": 2.64,
+      "ctrl_mean": 2.722,
+      "diff": -0.082,
+      "p": 0.0827,
+      "direction": "DECREASE"
+    },
+    "FRI": {
+      "country": "IT",
+      "ssw_mean": 1.74,
+      "ctrl_mean": 2.019,
+      "diff": -0.279,
+      "p": 0.0,
+      "direction": "DECREASE"
+    },
+    "GRE": {
+      "country": "FR",
+      "ssw_mean": 2.548,
+      "ctrl_mean": 2.464,
+      "diff": 0.084,
+      "p": 0.3018,
+      "direction": "INCREASE"
+    },
+    "KAE": {
+      "country": "AT",
+      "ssw_mean": 1.78,
+      "ctrl_mean": 1.957,
+      "diff": -0.177,
+      "p": 0.0001,
+      "direction": "DECREASE"
+    },
+    "LIG": {
+      "country": "IT",
+      "ssw_mean": 1.532,
+      "ctrl_mean": 1.595,
+      "diff": -0.063,
+      "p": 0.5316,
+      "direction": "DECREASE"
+    },
+    "LOM": {
+      "country": "IT",
+      "ssw_mean": 2.301,
+      "ctrl_mean": 2.526,
+      "diff": -0.225,
+      "p": 0.0001,
+      "direction": "DECREASE"
+    },
+    "NIE": {
+      "country": "AT",
+      "ssw_mean": 1.786,
+      "ctrl_mean": 1.585,
+      "diff": 0.202,
+      "p": 0.0046,
+      "direction": "INCREASE"
+    },
+    "OBE": {
+      "country": "AT",
+      "ssw_mean": 2.758,
+      "ctrl_mean": 2.321,
+      "diff": 0.437,
+      "p": 0.0001,
+      "direction": "INCREASE"
+    },
+    "PIE": {
+      "country": "IT",
+      "ssw_mean": 1.99,
+      "ctrl_mean": 2.12,
+      "diff": -0.13,
+      "p": 0.0009,
+      "direction": "DECREASE"
+    },
+    "SAL": {
+      "country": "AT",
+      "ssw_mean": 2.363,
+      "ctrl_mean": 2.302,
+      "diff": 0.061,
+      "p": 0.045,
+      "direction": "INCREASE"
+    },
+    "STE": {
+      "country": "AT",
+      "ssw_mean": 2.099,
+      "ctrl_mean": 1.883,
+      "diff": 0.216,
+      "p": 0.0004,
+      "direction": "INCREASE"
+    },
+    "SWI": {
+      "country": "CH",
+      "ssw_mean": 2.479,
+      "ctrl_mean": 2.51,
+      "diff": -0.032,
+      "p": 0.0,
+      "direction": "DECREASE"
+    },
+    "TIR": {
+      "country": "AT",
+      "ssw_mean": 2.774,
+      "ctrl_mean": 2.658,
+      "diff": 0.116,
+      "p": 0.0002,
+      "direction": "INCREASE"
+    },
+    "TRE": {
+      "country": "IT",
+      "ssw_mean": 2.028,
+      "ctrl_mean": 2.293,
+      "diff": -0.265,
+      "p": 0.0,
+      "direction": "DECREASE"
+    },
+    "VDA": {
+      "country": "IT",
+      "ssw_mean": 2.162,
+      "ctrl_mean": 2.332,
+      "diff": -0.171,
+      "p": 0.0,
+      "direction": "DECREASE"
+    },
+    "VEN": {
+      "country": "IT",
+      "ssw_mean": 1.897,
+      "ctrl_mean": 2.145,
+      "diff": -0.248,
+      "p": 0.0003,
+      "direction": "DECREASE"
+    },
+    "VOR": {
+      "country": "AT",
+      "ssw_mean": 2.538,
+      "ctrl_mean": 2.558,
+      "diff": -0.02,
+      "p": 0.7448,
+      "direction": "DECREASE"
+    }
+  },
+  "concordance": {
+    "n_decrease": "6",
+    "n_total": 10,
+    "pct_decrease": 60.0,
+    "binom_p": 0.377,
+    "pairs": [
+      {
+        "ssw": "2012-01-06",
+        "country": "AT",
+        "ssw_mean": 2.4035087719298245,
+        "ctrl_mean": 2.1231459123835807,
+        "decrease": "False"
+      },
+      {
+        "ssw": "2012-01-06",
+        "country": "CH",
+        "ssw_mean": 2.6236559139784945,
+        "ctrl_mean": 2.493215739484396,
+        "decrease": "False"
+      },
+      {
+        "ssw": "2012-01-06",
+        "country": "DE",
+        "ssw_mean": 2.849462365591398,
+        "ctrl_mean": 2.1560846560846563,
+        "decrease": "False"
+      },
+      {
+        "ssw": "2012-01-06",
+        "country": "FR",
+        "ssw_mean": 2.584852734922861,
+        "ctrl_mean": 2.674258109040718,
+        "decrease": "True"
+      },
+      {
+        "ssw": "2012-01-06",
+        "country": "IT",
+        "ssw_mean": 1.90801393728223,
+        "ctrl_mean": 2.4109380291229257,
+        "decrease": "True"
+      },
+      {
+        "ssw": "2013-01-06",
+        "country": "AT",
+        "ssw_mean": 2.208976157082749,
+        "ctrl_mean": 2.24120082815735,
+        "decrease": "True"
+      },
+      {
+        "ssw": "2013-01-06",
+        "country": "CH",
+        "ssw_mean": 2.3334252619966906,
+        "ctrl_mean": 2.6161986161986164,
+        "decrease": "True"
+      },
+      {
+        "ssw": "2013-01-06",
+        "country": "DE",
+        "ssw_mean": 2.6236559139784945,
+        "ctrl_mean": 2.2698412698412698,
+        "decrease": "False"
+      },
+      {
+        "ssw": "2013-01-06",
+        "country": "FR",
+        "ssw_mean": 2.5932678821879382,
+        "ctrl_mean": 2.668737060041408,
+        "decrease": "True"
+      },
+      {
+        "ssw": "2013-01-06",
+        "country": "IT",
+        "ssw_mean": 2.270898369753729,
+        "ctrl_mean": 2.3142566881137827,
+        "decrease": "True"
+      }
+    ]
+  }
+}

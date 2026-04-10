@@ -1,0 +1,16 @@
+{
+  "part": 4,
+  "description": "Event-level permutation inference with seasonally-matched pseudo-SSW dates",
+  "n_permutations": 399,
+  "n_events_real": 15,
+  "real_post_anomaly": -0.5506388192703983,
+  "real_concordance": 0.8,
+  "null_anomaly_median": -0.11079307853404848,
+  "null_anomaly_5th": -0.6674843139962536,
+  "null_anomaly_95th": 0.8873442233371075,
+  "p_anomaly": 0.08270676691729323,
+  "null_concordance_median": 0.7333333333333333,
+  "null_concordance_5th": 0.5382051282051282,
+  "null_concordance_95th": 0.9230769230769231,
+  "p_concordance": 0.296
+}

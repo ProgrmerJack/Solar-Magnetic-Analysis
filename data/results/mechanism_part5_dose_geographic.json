@@ -1,0 +1,116 @@
+{
+  "part": 5,
+  "description": "Dose-response and geographic comparison (exploratory)",
+  "dose_response": {
+    "n_events": 15,
+    "spearman_r": 0.04642857142857142,
+    "spearman_p": 0.8694915255450946,
+    "pearson_r": -0.17824131934936754,
+    "pearson_p": 0.5250641228858837,
+    "loo_r_range": [
+      -0.1164835164835165,
+      0.18681318681318684
+    ],
+    "events": [
+      {
+        "date": "1998-12-15",
+        "ssw_intensity_K": 12.586422729492199,
+        "aval_reduction": -0.696969696969697
+      },
+      {
+        "date": "1999-02-26",
+        "ssw_intensity_K": 5.072747802734369,
+        "aval_reduction": -0.17857142857142855
+      },
+      {
+        "date": "2001-02-11",
+        "ssw_intensity_K": -3.7272186279296875,
+        "aval_reduction": -0.4047619047619047
+      },
+      {
+        "date": "2001-12-30",
+        "ssw_intensity_K": -3.9105712890624886,
+        "aval_reduction": -0.6433656957928803
+      },
+      {
+        "date": "2002-02-17",
+        "ssw_intensity_K": 5.849862670898432,
+        "aval_reduction": -0.4714285714285714
+      },
+      {
+        "date": "2003-01-18",
+        "ssw_intensity_K": -1.7308441162109602,
+        "aval_reduction": -1.2380952380952381
+      },
+      {
+        "date": "2004-01-05",
+        "ssw_intensity_K": 3.473703002929682,
+        "aval_reduction": -1.4166666666666667
+      },
+      {
+        "date": "2006-01-21",
+        "ssw_intensity_K": 5.218536376953125,
+        "aval_reduction": -1.7071428571428573
+      },
+      {
+        "date": "2007-02-24",
+        "ssw_intensity_K": 8.729556274414051,
+        "aval_reduction": 0.06190476190476191
+      },
+      {
+        "date": "2008-02-22",
+        "ssw_intensity_K": 8.200585937499994,
+        "aval_reduction": -0.6071428571428571
+      },
+      {
+        "date": "2009-01-24",
+        "ssw_intensity_K": 5.3414154052734375,
+        "aval_reduction": -1.1142857142857143
+      },
+      {
+        "date": "2010-02-09",
+        "ssw_intensity_K": -4.444601440429693,
+        "aval_reduction": -1.2785714285714285
+      },
+      {
+        "date": "2012-01-11",
+        "ssw_intensity_K": 4.756060791015614,
+        "aval_reduction": 0.6880952380952382
+      },
+      {
+        "date": "2013-01-07",
+        "ssw_intensity_K": 10.460006713867188,
+        "aval_reduction": -0.9642857142857143
+      },
+      {
+        "date": "2019-01-01",
+        "ssw_intensity_K": -2.261749267578125,
+        "aval_reduction": 3.8041666666666663
+      }
+    ]
+  },
+  "snotel": {
+    "snotel_swe_mean": {
+      "post_ssw_anomaly": 14.681131374464693,
+      "p_value": 0.4451301972783045,
+      "n_events": 15
+    },
+    "snotel_prec_mean": {
+      "post_ssw_anomaly": 6.792522574751483,
+      "p_value": 0.741538955053473,
+      "n_events": 15
+    },
+    "snotel_temp_mean": {
+      "post_ssw_anomaly": -0.4145925223304581,
+      "p_value": 0.34368947096810487,
+      "n_events": 15
+    }
+  },
+  "caic_us": {
+    "post_mean_rate": 0.15111111111111114,
+    "ctrl_mean_rate": 0.21210338910338913,
+    "mean_diff": -0.06099227799227798,
+    "p_value": 0.14396821433654056,
+    "concordance": "10/15"
+  }
+}

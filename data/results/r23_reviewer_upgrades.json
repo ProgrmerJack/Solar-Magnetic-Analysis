@@ -1,0 +1,319 @@
+{
+  "confounder_stratification": {
+    "qbo_u50": {
+      "high_n": 8,
+      "high_n_decrease": 7,
+      "high_geo_rr": 0.361,
+      "high_sign_p": 0.0703,
+      "low_n": 8,
+      "low_n_decrease": 7,
+      "low_geo_rr": 0.289,
+      "low_sign_p": 0.0703,
+      "correlation_r": -0.088,
+      "correlation_p": 0.7463
+    },
+    "mei": {
+      "high_n": 8,
+      "high_n_decrease": 7,
+      "high_geo_rr": 0.338,
+      "high_sign_p": 0.0703,
+      "low_n": 8,
+      "low_n_decrease": 7,
+      "low_geo_rr": 0.309,
+      "low_sign_p": 0.0703,
+      "correlation_r": 0.078,
+      "correlation_p": 0.7731
+    },
+    "pdo": {
+      "high_n": 8,
+      "high_n_decrease": 6,
+      "high_geo_rr": 0.399,
+      "high_sign_p": 0.2891,
+      "low_n": 8,
+      "low_n_decrease": 8,
+      "low_geo_rr": 0.262,
+      "low_sign_p": 0.0078,
+      "correlation_r": 0.154,
+      "correlation_p": 0.57
+    },
+    "f107": {
+      "high_n": 8,
+      "high_n_decrease": 8,
+      "high_geo_rr": 0.273,
+      "high_sign_p": 0.0078,
+      "low_n": 7,
+      "low_n_decrease": 6,
+      "low_geo_rr": 0.279,
+      "low_sign_p": 0.125,
+      "correlation_r": -0.101,
+      "correlation_p": 0.7213
+    },
+    "nao": {
+      "high_n": 8,
+      "high_n_decrease": 6,
+      "high_geo_rr": 0.447,
+      "high_sign_p": 0.2891,
+      "low_n": 8,
+      "low_n_decrease": 8,
+      "low_geo_rr": 0.234,
+      "low_sign_p": 0.0078,
+      "correlation_r": 0.194,
+      "correlation_p": 0.4704
+    }
+  },
+  "multivariate_confounder": {
+    "n_events": 16,
+    "confounders": [
+      "QBO",
+      "MEI/ENSO",
+      "PDO",
+      "NAO"
+    ],
+    "r2_confounders": 0.1257,
+    "residual_mean": 0.0,
+    "residual_geo_rr": 1.0,
+    "residual_t_stat": 0.0,
+    "residual_t_p": 1.0,
+    "residual_sign_n_neg": 9,
+    "residual_sign_p": 0.8036
+  },
+  "phase_wave_timing": {
+    "wave_variability": {
+      "-20": 18.9,
+      "-15": 19.2,
+      "-10": 21.9,
+      "-5": 21.2,
+      "0": 24.0,
+      "5": 21.8,
+      "10": 19.8,
+      "15": 20.2,
+      "20": 19.6
+    },
+    "phase_rrs": {
+      "pre": {
+        "geo_rr": 0.344,
+        "n_decrease": 10,
+        "n_total": 13
+      },
+      "onset": {
+        "geo_rr": 0.353,
+        "n_decrease": 13,
+        "n_total": 16
+      },
+      "post": {
+        "geo_rr": 0.327,
+        "n_decrease": 13,
+        "n_total": 15
+      },
+      "late": {
+        "geo_rr": 0.33,
+        "n_decrease": 11,
+        "n_total": 14
+      }
+    }
+  },
+  "slp_direction": {
+    "r": 0.514,
+    "p": 0.0416,
+    "interpretation": "Negative SLP anomaly (stronger reorganisation) \u2192 stronger avalanche suppression",
+    "strong_reorg_rr": 0.187,
+    "weak_reorg_rr": 0.559
+  },
+  "temporal_trend": {
+    "r": 0.481,
+    "p": 0.0595,
+    "detrended_t_p": 1.0,
+    "detrended_sign_p": 1.0
+  },
+  "propagation_cascade": {
+    "10 hPa": {
+      "peak_lag": 3,
+      "r_with_logRR": -0.046,
+      "p_with_logRR": 0.8648
+    },
+    "20 hPa": {
+      "peak_lag": 8,
+      "r_with_logRR": -0.01,
+      "p_with_logRR": 0.9695
+    },
+    "30 hPa": {
+      "peak_lag": 8,
+      "r_with_logRR": 0.01,
+      "p_with_logRR": 0.9714
+    },
+    "50 hPa": {
+      "peak_lag": 20,
+      "r_with_logRR": 0.048,
+      "p_with_logRR": 0.8601
+    },
+    "70 hPa": {
+      "peak_lag": 21,
+      "r_with_logRR": 0.077,
+      "p_with_logRR": 0.7758
+    },
+    "100 hPa": {
+      "peak_lag": 22,
+      "r_with_logRR": 0.113,
+      "p_with_logRR": 0.6759
+    },
+    "500 hPa": {
+      "peak_lag": 30,
+      "r_with_logRR": 0.56,
+      "p_with_logRR": 0.024
+    }
+  },
+  "ssw_event_table": [
+    {
+      "onset_date": "1998-12-15",
+      "type": "D",
+      "observed": 17.0,
+      "expected": 19.5,
+      "rr": 0.871,
+      "direction": "Decrease"
+    },
+    {
+      "onset_date": "1999-02-26",
+      "type": "S",
+      "observed": 17.0,
+      "expected": 35.9,
+      "rr": 0.474,
+      "direction": "Decrease"
+    },
+    {
+      "onset_date": "2001-02-11",
+      "type": "D",
+      "observed": 9.0,
+      "expected": 48.6,
+      "rr": 0.185,
+      "direction": "Decrease"
+    },
+    {
+      "onset_date": "2001-12-30",
+      "type": "D",
+      "observed": 4.0,
+      "expected": 35.7,
+      "rr": 0.112,
+      "direction": "Decrease"
+    },
+    {
+      "onset_date": "2002-02-17",
+      "type": "D",
+      "observed": 11.0,
+      "expected": 39.3,
+      "rr": 0.28,
+      "direction": "Decrease"
+    },
+    {
+      "onset_date": "2003-01-18",
+      "type": "S",
+      "observed": 11.0,
+      "expected": 59.1,
+      "rr": 0.186,
+      "direction": "Decrease"
+    },
+    {
+      "onset_date": "2004-01-05",
+      "type": "D",
+      "observed": 5.0,
+      "expected": 43.5,
+      "rr": 0.115,
+      "direction": "Decrease"
+    },
+    {
+      "onset_date": "2006-01-21",
+      "type": "D",
+      "observed": 13.0,
+      "expected": 64.0,
+      "rr": 0.203,
+      "direction": "Decrease"
+    },
+    {
+      "onset_date": "2007-02-24",
+      "type": "D",
+      "observed": 12.0,
+      "expected": 35.5,
+      "rr": 0.338,
+      "direction": "Decrease"
+    },
+    {
+      "onset_date": "2008-02-22",
+      "type": "D",
+      "observed": 2.0,
+      "expected": 35.5,
+      "rr": 0.056,
+      "direction": "Decrease"
+    },
+    {
+      "onset_date": "2009-01-24",
+      "type": "S",
+      "observed": 7.0,
+      "expected": 67.0,
+      "rr": 0.105,
+      "direction": "Decrease"
+    },
+    {
+      "onset_date": "2010-02-09",
+      "type": "D",
+      "observed": 33.0,
+      "expected": 50.2,
+      "rr": 0.657,
+      "direction": "Decrease"
+    },
+    {
+      "onset_date": "2012-01-11",
+      "type": "D",
+      "observed": 43.0,
+      "expected": 50.2,
+      "rr": 0.857,
+      "direction": "Decrease"
+    },
+    {
+      "onset_date": "2013-01-07",
+      "type": "S",
+      "observed": 16.0,
+      "expected": 47.6,
+      "rr": 0.336,
+      "direction": "Decrease"
+    },
+    {
+      "onset_date": "2018-02-12",
+      "type": "S",
+      "observed": 51.0,
+      "expected": 48.6,
+      "rr": 1.049,
+      "direction": "Increase"
+    },
+    {
+      "onset_date": "2019-01-01",
+      "type": "D",
+      "observed": 132.0,
+      "expected": 38.5,
+      "rr": 3.427,
+      "direction": "Increase"
+    }
+  ],
+  "blocking_proxy": {
+    "z500_ssw_mean": 5408.9,
+    "z500_ctrl_mean": 5441.6,
+    "z500_diff": -32.7,
+    "z500_mw_p": 0.0,
+    "z500_d": -0.843,
+    "slp_ssw_mean": 101605.13,
+    "slp_ctrl_mean": 101602.49,
+    "slp_diff": 2.64,
+    "slp_mw_p": 0.558187,
+    "slp_d": 0.016
+  },
+  "volcanic_check": {
+    "volcanic_years": [
+      2008,
+      2009,
+      2010,
+      2011
+    ],
+    "n_volcanic_events": 3,
+    "geo_rr_all": 0.323,
+    "geo_rr_no_volcanic": 0.382,
+    "non_volcanic_sign_p": 0.0225
+  }
+}

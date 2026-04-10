@@ -1,0 +1,86 @@
+{
+  "part": 4,
+  "description": "Meteorological chain, NAO, and U850 tests",
+  "met_chain": [
+    {
+      "variable": "ncep_t_10hpa",
+      "label": "T 10hPa (K)",
+      "mean_pre": 222.19,
+      "mean_post": 227.14,
+      "mean_change": 4.95,
+      "ttest_p": 0.036709,
+      "wilcoxon_p": 0.047913,
+      "bonferroni_p": 0.146835
+    },
+    {
+      "variable": "ncep_u_10hpa",
+      "label": "U 10hPa (m/s)",
+      "mean_pre": 18.2,
+      "mean_post": -2.68,
+      "mean_change": -20.88,
+      "ttest_p": 1.7e-05,
+      "wilcoxon_p": 6.1e-05,
+      "bonferroni_p": 6.9e-05
+    },
+    {
+      "variable": "ncep_u850_nh",
+      "label": "U 850hPa (m/s)",
+      "mean_pre": 4.41,
+      "mean_post": 3.88,
+      "mean_change": -0.53,
+      "ttest_p": 0.014171,
+      "wilcoxon_p": 0.010254,
+      "bonferroni_p": 0.056686
+    },
+    {
+      "variable": "ncep_z500_nh",
+      "label": "Z500 (m)",
+      "mean_pre": 5408.16,
+      "mean_post": 5406.96,
+      "mean_change": -1.2,
+      "ttest_p": 0.811382,
+      "wilcoxon_p": 0.890381,
+      "bonferroni_p": 1.0
+    },
+    {
+      "variable": "ncep_slp_nh",
+      "label": "SLP (hPa)",
+      "mean_pre": 101576.15,
+      "mean_post": 101600.31,
+      "mean_change": 24.16,
+      "ttest_p": 0.627873,
+      "wilcoxon_p": 0.454285,
+      "bonferroni_p": 1.0
+    }
+  ],
+  "event_corr_t10_aval": {
+    "pearson_r": -0.0685,
+    "pearson_p": 0.8084,
+    "spearman_rho": 0.0464,
+    "spearman_p": 0.8695,
+    "n": 15
+  },
+  "event_corr_u850_aval": {
+    "pearson_r": 0.0745,
+    "pearson_p": 0.7918,
+    "n": 15
+  },
+  "daily_u850_aval": {
+    "pearson_r": -0.0009,
+    "pearson_p": 0.9643,
+    "n": 2702
+  },
+  "nao_avalanche": {
+    "pearson_r": 0.0474,
+    "pearson_p": 0.0138,
+    "n": 2702,
+    "nao_negative_rate": 0.6934,
+    "nao_middle_rate": 1.1457,
+    "nao_positive_rate": 1.308
+  },
+  "ssw_nao": {
+    "post_ssw_nao_mean": 0.3286,
+    "climatology_mean": 0.3495,
+    "ttest_p": 0.9154
+  }
+}

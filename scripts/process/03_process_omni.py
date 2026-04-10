@@ -25,7 +25,9 @@ SOL_OUT = PROCESSED_ROOT / "solar"
 # Use pd.Series.replace for exact equality; no tolerance needed for text-parsed floats.
 _FILL_INTS  = [99.0, 999.0, 9999.0, 99999.0, 9999999.0]
 _FILL_FLOATS = [99.9, 999.9, 9999.9, 99999.9, 9999999.0]
-FILL_ALL = list(dict.fromkeys(_FILL_INTS + _FILL_FLOATS))  # unique, ordered
+# HRO 1-min specific fills: IMF components use 9999.99; density/pressure use 999.99
+_FILL_HRO   = [999.99, 9999.99, 99999.9, 9999999.0]
+FILL_ALL = list(dict.fromkeys(_FILL_INTS + _FILL_FLOATS + _FILL_HRO))  # unique, ordered
 
 # OMNIweb hourly column names (55 total per omni2 format documentation)
 OMNI_HOURLY_COLS = [
@@ -49,18 +51,43 @@ OMNI_HOURLY_COLS = [
     "col50", "col51", "col52", "col53", "col54",
 ]
 
-# OMNI 1-min column names (26 total)
+# OMNI 1-min column names — HRO format (hroformat.txt), 46 cols total
+# Ref: https://spdf.gsfc.nasa.gov/pub/data/omni/high_res_omni/hroformat.txt
 OMNI_1MIN_COLS = [
-    "year", "doy", "hour", "minute",
-    "Bx", "By", "Bz",
-    "Vx", "Vy", "Vz",
-    "proton_density", "T",
-    "flow_speed", "phi_v", "theta_v",
-    "B_magnitude", "RMS_B", "RMS_Bsc",
-    "sigma_Bx", "sigma_By", "sigma_Bz",
-    "sigma_Vx", "sigma_Vy", "sigma_Vz",
-    "sigma_n", "sigma_T",
+    "year", "doy", "hour", "minute",        # 0-3  time
+    "id_imf", "id_plasma",                  # 4-5  spacecraft IDs (50=IMP8, 51=Wind, 60=Geotail, 71=ACE)
+    "n_imf_pts", "n_plasma_pts",            # 6-7  # points in averages
+    "pct_interp",                           # 8    % interpolated phase fronts
+    "timeshift", "rms_timeshift",           # 9-10 seconds
+    "rms_phase_front",                      # 11   F6.2
+    "dbot1",                                # 12   I7 time between obs (sec)
+    "B_magnitude",                          # 13   |B| nT
+    "Bx", "By", "Bz",                      # 14-16 GSE nT
+    "By_GSM", "Bz_GSM",                    # 17-18 GSM nT
+    "rms_B_scalar", "rms_B_vector",         # 19-20 RMS nT
+    "flow_speed",                           # 21   km/s (scalar)
+    "Vx", "Vy", "Vz",                      # 22-24 GSE km/s
+    "proton_density",                       # 25   n/cc
+    "T",                                    # 26   K
+    "flow_pressure",                        # 27   nPa
+    "E_field",                              # 28   mV/m
+    "plasma_beta",                          # 29
+    "alfven_mach",                          # 30
+    "x_sc", "y_sc", "z_sc",               # 31-33 spacecraft GSE Re
+    "bsn_x", "bsn_y", "bsn_z",            # 34-36 bow shock nose GSE Re
+    "AE_index", "AL_index", "AU_index",    # 37-39 nT
+    "symd", "symh", "asyd", "asyh",        # 40-43 nT
+    "pcn_index",                            # 44   F7.2
+    "mach_ms",                              # 45   magnetosonic Mach
 ]
+
+# Metadata-only columns to drop after parsing
+_1MIN_DROP_COLS = {
+    "id_imf", "id_plasma", "n_imf_pts", "n_plasma_pts",
+    "pct_interp", "timeshift", "rms_timeshift", "rms_phase_front", "dbot1",
+    "rms_B_scalar", "rms_B_vector", "x_sc", "y_sc", "z_sc",
+    "bsn_x", "bsn_y", "bsn_z", "symd", "asyd", "asyh",
+}
 
 
 def _fill_to_nan(df: pd.DataFrame) -> pd.DataFrame:
@@ -231,8 +258,10 @@ def process_omni_1min() -> None:
             df = _fill_to_nan(df)
             df["time"] = _build_1min_datetime(df)
             df = df.dropna(subset=["time"]).set_index("time").sort_index()
-            drop_cols = [c for c in ("year", "doy", "hour", "minute") if c in df.columns]
-            df = df.drop(columns=drop_cols, errors="ignore")
+            drop_cols = (
+                {"year", "doy", "hour", "minute"} | _1MIN_DROP_COLS
+            )
+            df = df.drop(columns=[c for c in drop_cols if c in df.columns])
             frames.append(df)
             success_files.append(fp)
         except Exception as exc:

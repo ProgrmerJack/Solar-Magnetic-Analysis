@@ -1,0 +1,163 @@
+{
+  "overview": {
+    "n_regions": 10,
+    "n_ssw_events": 4,
+    "n_region_days_ssw": 899,
+    "n_region_days_ctrl": 552,
+    "ssw_mean_danger": 2.014460511679644,
+    "ctrl_mean_danger": 2.4909420289855073,
+    "mann_whitney_p": 8.171901437447114e-29,
+    "cohens_d": -0.6717237925608113,
+    "permutation_p": 0.0,
+    "bootstrap_ci": [
+      -0.550253401525044,
+      -0.403542180522642
+    ]
+  },
+  "per_event": [
+    {
+      "ssw_date": "2018-02-12",
+      "n_region_days": 279,
+      "n_regions": 9,
+      "ssw_mean": 1.7526881720430108,
+      "ctrl_mean": 2.5080645161290325,
+      "decrease": "True",
+      "p_value": 6.772362217479097e-31
+    },
+    {
+      "ssw_date": "2019-01-02",
+      "n_region_days": 310,
+      "n_regions": 10,
+      "ssw_mean": 2.358064516129032,
+      "ctrl_mean": 2.463709677419355,
+      "decrease": "True",
+      "p_value": 0.08517359400961627
+    },
+    {
+      "ssw_date": "2021-01-05",
+      "n_region_days": 279,
+      "n_regions": 9,
+      "ssw_mean": 1.874551971326165,
+      "ctrl_mean": 2.525,
+      "decrease": "True",
+      "p_value": 2.0469367467321678e-19
+    },
+    {
+      "ssw_date": "2023-02-16",
+      "n_region_days": 31,
+      "n_regions": 1,
+      "ssw_mean": 2.193548387096774,
+      "ctrl_mean": 2.524193548387097,
+      "decrease": "True",
+      "p_value": 0.006637833197992805
+    }
+  ],
+  "per_region": [
+    {
+      "region_id": "3009",
+      "name": "Nord-Troms",
+      "lat": 69.5,
+      "ssw_mean": 1.6774193548387097,
+      "ctrl_mean": 2.347826086956522,
+      "ratio": 0.7144563918757467,
+      "decrease": "True",
+      "p_value": 1.2641135629957827e-07
+    },
+    {
+      "region_id": "3010",
+      "name": "Lyngen",
+      "lat": 69.6,
+      "ssw_mean": 1.6559139784946237,
+      "ctrl_mean": 2.3043478260869565,
+      "ratio": 0.7186041793467235,
+      "decrease": "True",
+      "p_value": 1.2767188206535388e-08
+    },
+    {
+      "region_id": "3011",
+      "name": "Troms\u00f8",
+      "lat": 69.3,
+      "ssw_mean": 1.6129032258064515,
+      "ctrl_mean": NaN,
+      "ratio": NaN,
+      "decrease": null,
+      "p_value": NaN
+    },
+    {
+      "region_id": "3013",
+      "name": "Indre Troms",
+      "lat": 68.8,
+      "ssw_mean": 1.6344086021505377,
+      "ctrl_mean": 2.3333333333333335,
+      "ratio": 0.7004608294930875,
+      "decrease": "True",
+      "p_value": 2.782271834475146e-09
+    },
+    {
+      "region_id": "3022",
+      "name": "Trollheimen",
+      "lat": 62.8,
+      "ssw_mean": 2.161290322580645,
+      "ctrl_mean": NaN,
+      "ratio": NaN,
+      "decrease": null,
+      "p_value": NaN
+    },
+    {
+      "region_id": "3023",
+      "name": "Romsdal",
+      "lat": 62.5,
+      "ssw_mean": 2.182795698924731,
+      "ctrl_mean": 2.347826086956522,
+      "ratio": 0.9297092791716446,
+      "decrease": "True",
+      "p_value": 0.06635550335441052
+    },
+    {
+      "region_id": "3024",
+      "name": "Sunnm\u00f8re",
+      "lat": 62.2,
+      "ssw_mean": 2.2096774193548385,
+      "ctrl_mean": 2.5652173913043477,
+      "ratio": 0.8613996719518863,
+      "decrease": "True",
+      "p_value": 0.0075246195280796015
+    },
+    {
+      "region_id": "3027",
+      "name": "Indre Fjordane",
+      "lat": 61.5,
+      "ssw_mean": 2.2661290322580645,
+      "ctrl_mean": 2.8260869565217392,
+      "ratio": 0.8018610421836228,
+      "decrease": "True",
+      "p_value": 1.6251871357351245e-07
+    },
+    {
+      "region_id": "3028",
+      "name": "Jotunheimen",
+      "lat": 61.5,
+      "ssw_mean": 2.3978494623655915,
+      "ctrl_mean": 2.6231884057971016,
+      "ratio": 0.9140973088576011,
+      "decrease": "True",
+      "p_value": 0.007200149482774627
+    },
+    {
+      "region_id": "3029",
+      "name": "Indre Sogn",
+      "lat": 61.2,
+      "ssw_mean": 2.21505376344086,
+      "ctrl_mean": 2.579710144927536,
+      "ratio": 0.8586444363899963,
+      "decrease": "True",
+      "p_value": 0.0007471392849729497
+    }
+  ],
+  "concordance": {
+    "n_pairs": 23,
+    "n_decrease": 20,
+    "pct_decrease": 86.95652173913044,
+    "binomial_p": 0.000244140625
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "warm_dry_perm_rr": 1.89028314028314,
+  "warm_dry_perm_p_unstratified": 0.1069,
+  "warm_dry_perm_p_doy_stratified": 0.0573,
+  "blinder_oaxaca": {
+    "total_gap": 0.05068882391666352,
+    "composition_effect": -0.04605617910859867,
+    "rate_effect": 0.10823268750867997,
+    "composition_pct": -90.86061886998742,
+    "rate_pct": 213.5237694341127
+  }
+}

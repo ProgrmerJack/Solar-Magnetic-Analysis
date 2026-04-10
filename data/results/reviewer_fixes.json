@@ -1,0 +1,20 @@
+{
+  "zip_comparison": {
+    "n_obs": 3806,
+    "n_zeros": 3326,
+    "pct_zeros": 87.4,
+    "poisson_null_aic": 20672.3,
+    "poisson_ssw_aic": 20673.8,
+    "poisson_irr": 0.962,
+    "zip_null_aic": 10964.0,
+    "zip_ssw_aic": 10652.7,
+    "zip_count_irr": 0.433,
+    "zip_zero_infl_base": 0.89,
+    "zip_zero_infl_ssw": 0.756,
+    "vuong_z": 6.543,
+    "vuong_p": 0.0,
+    "overdispersion": 45.02,
+    "lrt_zip_ssw_chi2": 315.3,
+    "lrt_zip_ssw_p": 0.0
+  }
+}

@@ -2,5 +2,12 @@
 
 #Ignore vscode AI rules
 .github\instructions\codacy.instructions.md
-data/
+data/solar
+data/processed
+data/cryosphere
+C:\Users\Jack0\Solar-Magnetic-Analysis\data\cryosphere\
+data/raw
+data/atmospheric
 logs/
+paper/
+nature_geoscience_paper.md

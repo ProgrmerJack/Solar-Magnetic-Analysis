@@ -1,0 +1,103 @@
+{
+  "ssw_type_stratification": {
+    "displacement": {
+      "n": 11,
+      "n_decrease": 10,
+      "geo_rr": 0.32515571803168597
+    },
+    "split": {
+      "n": 5,
+      "n_decrease": 4,
+      "geo_rr": 0.31793577929615074
+    },
+    "difference_mw_p": 1.0
+  },
+  "outlier_analysis": {
+    "grubbs_G": 2.290700726426528,
+    "grubbs_critical": 2.585676340671961,
+    "is_outlier": false,
+    "outlier_event": "2019-01-01",
+    "outlier_rr": 3.405663283433686,
+    "without_outlier_geo_rr": 0.27595189316151886,
+    "without_outlier_t_p": 6.265879089994338e-05,
+    "without_outlier_sign_p": 0.00048828125,
+    "median_rr": 0.3066064655520155
+  },
+  "doy_sensitivity": {
+    "pm1": {
+      "geo_rr": 0.3251874042013501,
+      "n_decrease": 14
+    },
+    "pm2": {
+      "geo_rr": 0.32339906313286615,
+      "n_decrease": 14
+    },
+    "pm3": {
+      "geo_rr": 0.3228820474218975,
+      "n_decrease": 14
+    },
+    "pm5": {
+      "geo_rr": 0.32451517229340326,
+      "n_decrease": 14
+    },
+    "pm7": {
+      "geo_rr": 0.32501929077347713,
+      "n_decrease": 14
+    },
+    "pm10": {
+      "geo_rr": 0.3212793847195631,
+      "n_decrease": 14
+    }
+  },
+  "window_sensitivity": {
+    "pm5d": {
+      "geo_rr": 0.3778973912148351,
+      "n_decrease": 12
+    },
+    "pm7d": {
+      "geo_rr": 0.3906474288218759,
+      "n_decrease": 14
+    },
+    "pm10d": {
+      "geo_rr": 0.34026658263027143,
+      "n_decrease": 12
+    },
+    "pm12d": {
+      "geo_rr": 0.3038268655214614,
+      "n_decrease": 13
+    },
+    "pm15d": {
+      "geo_rr": 0.3228820474218975,
+      "n_decrease": 14
+    },
+    "pm20d": {
+      "geo_rr": 0.35199482948355937,
+      "n_decrease": 13
+    },
+    "pm25d": {
+      "geo_rr": 0.30818307415437735,
+      "n_decrease": 13
+    },
+    "pm30d": {
+      "geo_rr": 0.3147773982861061,
+      "n_decrease": 13
+    }
+  },
+  "era5_multivar_r2": 0.21252977506128512,
+  "era5_multivar_adj_r2": -0.07382303400733847,
+  "power_analysis": {
+    "n_events": 16,
+    "min_detectable_d": 0.7500000000000002,
+    "primary_effect_d": 1.06,
+    "era5_temp_d_est": 0.19
+  },
+  "hindcast": {
+    "direction_accuracy": 0.875,
+    "direction_p": 0.0020904541015625,
+    "correct": 14,
+    "total": 16,
+    "loo_mse": 0.7169494606907244,
+    "null_mse": 0.8028585515001228,
+    "forecast_skill": 0.10700401789191782
+  }
+}

@@ -257,6 +257,7 @@ def process_polar_strat() -> None:
 
             try:
                 ds = xr.open_dataset(str(fp), engine="netcdf4", use_cftime=False)
+                mean_df = _compute_polar_means(ds, year)
                 ds.close()
                 if not mean_df.empty:
                     all_means.append(mean_df)
@@ -322,8 +323,6 @@ def process_polar_strat() -> None:
                 save_netcdf4(ds_all, out_grid, meta_nc)
                 ds_all.close()
                 register_output(MANIFEST, "era5_polar_strat_gridded", out_grid, False, meta_nc)
-            except Exception as exc:
-                LOG.warning("Could not build gridded NC: %s", exc)
             except Exception as exc:
                 LOG.warning("Could not build gridded NC: %s", exc)
 

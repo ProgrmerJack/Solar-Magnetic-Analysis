@@ -1,0 +1,41 @@
+{
+  "n_events": 4,
+  "n_decrease": 4,
+  "concordance": 1.0,
+  "mean_difference": -0.97575,
+  "sign_test_p": 0.0625,
+  "events": [
+    {
+      "ssw_date": "2013-01-07",
+      "post_mean": 0.267,
+      "control_mean": 1.738,
+      "difference": -1.472,
+      "direction": "decrease",
+      "n_control_winters": 13
+    },
+    {
+      "ssw_date": "2018-02-12",
+      "post_mean": 1.533,
+      "control_mean": 2.082,
+      "difference": -0.549,
+      "direction": "decrease",
+      "n_control_winters": 13
+    },
+    {
+      "ssw_date": "2019-01-01",
+      "post_mean": 1.267,
+      "control_mean": 1.692,
+      "difference": -0.426,
+      "direction": "decrease",
+      "n_control_winters": 13
+    },
+    {
+      "ssw_date": "2021-01-05",
+      "post_mean": 0.333,
+      "control_mean": 1.79,
+      "difference": -1.456,
+      "direction": "decrease",
+      "n_control_winters": 13
+    }
+  ]
+}

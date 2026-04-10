@@ -1,0 +1,155 @@
+{
+  "n_events": 16,
+  "n_era5_years": "1998-2019",
+  "mean_enhancement_pct": 5.44,
+  "median_enhancement_pct": 11.08,
+  "positive_fraction": "10/16",
+  "t_test_p": 0.17076,
+  "sign_test_p": 0.454498,
+  "per_event": [
+    {
+      "ssw_date": "1998-12-15",
+      "delta_T_K": 2.032,
+      "sintering_enhancement_pct": 15.84,
+      "ssw_mean_T": 274.07,
+      "ctrl_mean_T": 272.04,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 30
+    },
+    {
+      "ssw_date": "1999-02-26",
+      "delta_T_K": 3.024,
+      "sintering_enhancement_pct": 22.51,
+      "ssw_mean_T": 276.0,
+      "ctrl_mean_T": 272.98,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 30
+    },
+    {
+      "ssw_date": "2001-02-11",
+      "delta_T_K": 2.703,
+      "sintering_enhancement_pct": 22.91,
+      "ssw_mean_T": 276.02,
+      "ctrl_mean_T": 273.32,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 30
+    },
+    {
+      "ssw_date": "2001-12-30",
+      "delta_T_K": -0.906,
+      "sintering_enhancement_pct": -8.99,
+      "ssw_mean_T": 270.34,
+      "ctrl_mean_T": 271.25,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 30
+    },
+    {
+      "ssw_date": "2002-02-17",
+      "delta_T_K": -2.915,
+      "sintering_enhancement_pct": -19.99,
+      "ssw_mean_T": 275.54,
+      "ctrl_mean_T": 278.45,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 30
+    },
+    {
+      "ssw_date": "2003-01-18",
+      "delta_T_K": 0.076,
+      "sintering_enhancement_pct": -2.65,
+      "ssw_mean_T": 271.8,
+      "ctrl_mean_T": 271.73,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 30
+    },
+    {
+      "ssw_date": "2004-01-05",
+      "delta_T_K": 1.552,
+      "sintering_enhancement_pct": 12.96,
+      "ssw_mean_T": 273.23,
+      "ctrl_mean_T": 271.68,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 30
+    },
+    {
+      "ssw_date": "2006-01-21",
+      "delta_T_K": 1.588,
+      "sintering_enhancement_pct": 13.25,
+      "ssw_mean_T": 271.35,
+      "ctrl_mean_T": 269.76,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 30
+    },
+    {
+      "ssw_date": "2007-02-24",
+      "delta_T_K": 1.942,
+      "sintering_enhancement_pct": 14.68,
+      "ssw_mean_T": 278.26,
+      "ctrl_mean_T": 276.31,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 30
+    },
+    {
+      "ssw_date": "2008-02-22",
+      "delta_T_K": 1.179,
+      "sintering_enhancement_pct": 10.56,
+      "ssw_mean_T": 276.92,
+      "ctrl_mean_T": 275.74,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 30
+    },
+    {
+      "ssw_date": "2009-01-24",
+      "delta_T_K": 3.043,
+      "sintering_enhancement_pct": 26.3,
+      "ssw_mean_T": 272.97,
+      "ctrl_mean_T": 269.93,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 30
+    },
+    {
+      "ssw_date": "2010-02-09",
+      "delta_T_K": 0.023,
+      "sintering_enhancement_pct": -0.06,
+      "ssw_mean_T": 272.06,
+      "ctrl_mean_T": 272.04,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 30
+    },
+    {
+      "ssw_date": "2012-01-11",
+      "delta_T_K": 1.76,
+      "sintering_enhancement_pct": 11.59,
+      "ssw_mean_T": 273.23,
+      "ctrl_mean_T": 271.47,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 30
+    },
+    {
+      "ssw_date": "2013-01-07",
+      "delta_T_K": -1.258,
+      "sintering_enhancement_pct": -9.32,
+      "ssw_mean_T": 272.81,
+      "ctrl_mean_T": 274.07,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 30
+    },
+    {
+      "ssw_date": "2018-02-12",
+      "delta_T_K": -3.463,
+      "sintering_enhancement_pct": -23.48,
+      "ssw_mean_T": 271.09,
+      "ctrl_mean_T": 274.55,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 30
+    },
+    {
+      "ssw_date": "2019-01-01",
+      "delta_T_K": 0.324,
+      "sintering_enhancement_pct": 0.94,
+      "ssw_mean_T": 273.02,
+      "ctrl_mean_T": 272.7,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 30
+    }
+  ]
+}

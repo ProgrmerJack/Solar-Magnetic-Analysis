@@ -1,0 +1,35 @@
+{
+  "precipitation_loading": {
+    "ssw_precip_mean": 0.32174436565590675,
+    "ctl_precip_mean": 0.4023706614408302,
+    "precip_reduction_pct": 20.037816747426994,
+    "ssw_snow_mean": 0.1693351084366564,
+    "ctl_snow_mean": 0.17957064559473282,
+    "snow_reduction_pct": 5.7000057688586185,
+    "cum_31d_precip_deficit_mm": 2.499415169332627,
+    "heavy_precip_days_ssw": 0.0,
+    "heavy_precip_days_ctl": 0.0009638554216867469,
+    "d_precip": -0.13379678484799631,
+    "d_snow": -0.03426882555049115
+  },
+  "event_level_loading": {
+    "r_precip_logRR": -0.08373521782410863,
+    "p_precip_logRR": 0.7578442617463769,
+    "r_snow_logRR": 0.06887756821879355,
+    "p_snow_logRR": 0.7999114265617064
+  },
+  "sintering": {
+    "T_ssw_K": 273.1668236640192,
+    "T_ctl_K": 275.1446977362575,
+    "delta_T_K": -1.9778740722383077,
+    "sintering_rate_ratio": 0.8325737914497258,
+    "sintering_slower_pct": 16.742620855027425,
+    "explanation": "SSW colder -> slower sintering -> weaker bonds. Consistent with Rutschblock d=0.10. Loading reduction dominates."
+  },
+  "loading_vs_stability": {
+    "precip_predicted_rr": 0.79962183252573,
+    "regime_predicted_rr": 0.9357993596012916,
+    "observed_rr": 0.32,
+    "regime_explains_pct": 9.441270646868889
+  }
+}

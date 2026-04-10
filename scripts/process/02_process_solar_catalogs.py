@@ -409,13 +409,13 @@ def process_ncep() -> None:
     ATM_OUT.mkdir(parents=True, exist_ok=True)
     _process_ncep_domain(
         DATA_ROOT / "atmospheric" / "ncep_stratosphere",
-        "ncep_strat.parquet",
+        "ncep_stratosphere.parquet",
         "NCEP/NCAR Reanalysis I — Stratospheric Polar Cap Means (≥60°N)",
         "ncep_stratosphere",
     )
     _process_ncep_domain(
         DATA_ROOT / "atmospheric" / "ncep_troposphere",
-        "ncep_trop.parquet",
+        "ncep_troposphere.parquet",
         "NCEP/NCAR Reanalysis I — Tropospheric Polar Cap Means (≥60°N)",
         "ncep_troposphere",
     )

@@ -1,0 +1,54 @@
+{
+  "wave_forcing": {
+    "r_wave_post": -0.08928571428571427,
+    "p_wave_post": 0.751672517350277,
+    "r_wave_pre": 0.22142857142857136,
+    "p_wave_pre": 0.42771371901637,
+    "r_pre_post_aval": 0.39999999999999997,
+    "p_pre_post_aval": 0.13959512937214466
+  },
+  "conditional_independence": {
+    "resid_after_wave_mean": -2.9605947323337506e-16,
+    "resid_after_wave_t": -8.090773318505835e-16,
+    "resid_after_wave_p": 0.9999999999999993,
+    "resid_after_pre_mean": 1.1842378929335003e-16,
+    "resid_after_pre_t": 4.614622125280333e-16,
+    "resid_after_pre_p": 0.9999999999999996
+  },
+  "daily_level": {
+    "r_wave_daily": -0.007495653848995086,
+    "p_wave_daily": 0.6656948708868351,
+    "r_ssw_binary": NaN,
+    "p_ssw_binary": NaN,
+    "r_ssw_lifecycle": NaN,
+    "p_ssw_lifecycle": NaN,
+    "partial_r_ssw_given_wave": -0.010317014023796816,
+    "partial_p_ssw_given_wave": 0.5520438963226427
+  },
+  "fdr": {
+    "n_tests": 25,
+    "n_significant_fdr": 9,
+    "tests_significant": [
+      "Matched SSW paired t",
+      "Matched SSW sign test",
+      "Matched SSW Wilcoxon",
+      "Matched SSW permutation",
+      "Pre-SSW matched",
+      "Post-SSW matched",
+      "MH dry slab parametric",
+      "NAO-adjusted SSW IRR",
+      "Snowfall\u2192avalanche"
+    ]
+  },
+  "permutation_2000": {
+    "post_anomaly": -0.5506388192703983,
+    "post_p": 0.4917210235825389,
+    "pre_anomaly": -0.5148532633326235,
+    "pre_p": 0.6169438669438669,
+    "concordance": 0.9333333333333333,
+    "concordance_p": 0.19719016557952834,
+    "null_median": -0.5461904591100742,
+    "null_90_lo": -0.8825609203795479,
+    "null_90_hi": 0.12806133437712283
+  }
+}

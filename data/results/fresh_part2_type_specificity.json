@@ -1,0 +1,170 @@
+{
+  "part": 2,
+  "description": "Type specificity and geomagnetic storm case-crossover",
+  "mh_dry_natural_geomag": {
+    "rate_ratio": 0.6371,
+    "ci_lo": 0.5679,
+    "ci_hi": 0.7149,
+    "z_stat": -7.674,
+    "p_value": 0.0,
+    "n_strata": 124,
+    "rate_exposed": 0.6475,
+    "rate_unexposed": 1.1285,
+    "total_exposed_events": 259.0,
+    "total_exposed_days": 400,
+    "total_unexposed_events": 1633.0,
+    "total_unexposed_days": 1447
+  },
+  "mh_wet_natural_geomag": {
+    "rate_ratio": 0.8979,
+    "ci_lo": 0.7689,
+    "ci_hi": 1.0485,
+    "z_stat": -1.362,
+    "p_value": 0.173279,
+    "n_strata": 124,
+    "rate_exposed": 0.4775,
+    "rate_unexposed": 0.5342,
+    "total_exposed_events": 191.0,
+    "total_exposed_days": 400,
+    "total_unexposed_events": 773.0,
+    "total_unexposed_days": 1447
+  },
+  "mh_all_natural_geomag": {
+    "rate_ratio": 0.8578,
+    "ci_lo": 0.7894,
+    "ci_hi": 0.9322,
+    "z_stat": -3.616,
+    "p_value": 0.0003,
+    "n_strata": 124,
+    "rate_exposed": 1.5825,
+    "rate_unexposed": 1.9267,
+    "total_exposed_events": 633.0,
+    "total_exposed_days": 400,
+    "total_unexposed_events": 2788.0,
+    "total_unexposed_days": 1447
+  },
+  "isolated_sensitivity": [
+    {
+      "stratum_width": 7,
+      "direction": "post",
+      "rr": 0.6017,
+      "ci_lo": 0.498,
+      "ci_hi": 0.7269,
+      "p": 0.0
+    },
+    {
+      "stratum_width": 7,
+      "direction": "pre",
+      "rr": 0.7386,
+      "ci_lo": 0.5744,
+      "ci_hi": 0.9498,
+      "p": 0.018189
+    },
+    {
+      "stratum_width": 10,
+      "direction": "post",
+      "rr": 0.5015,
+      "ci_lo": 0.4292,
+      "ci_hi": 0.586,
+      "p": 0.0
+    },
+    {
+      "stratum_width": 10,
+      "direction": "pre",
+      "rr": 1.0366,
+      "ci_lo": 0.8361,
+      "ci_hi": 1.2853,
+      "p": 0.743015
+    },
+    {
+      "stratum_width": 15,
+      "direction": "post",
+      "rr": 0.6431,
+      "ci_lo": 0.5514,
+      "ci_hi": 0.7501,
+      "p": 0.0
+    },
+    {
+      "stratum_width": 15,
+      "direction": "pre",
+      "rr": 0.4718,
+      "ci_lo": 0.3997,
+      "ci_hi": 0.5569,
+      "p": 0.0
+    },
+    {
+      "stratum_width": 21,
+      "direction": "post",
+      "rr": 1.1205,
+      "ci_lo": 0.9305,
+      "ci_hi": 1.3491,
+      "p": 0.230014
+    },
+    {
+      "stratum_width": 21,
+      "direction": "pre",
+      "rr": 0.4771,
+      "ci_lo": 0.4085,
+      "ci_hi": 0.5571,
+      "p": 0.0
+    }
+  ],
+  "n_isolated_events": 59,
+  "summer_falsification": {
+    "rr": 0.0,
+    "p": NaN
+  },
+  "placebo_tests": [
+    {
+      "trial": 1,
+      "rr": 1.1881,
+      "p": 0.000912
+    },
+    {
+      "trial": 2,
+      "rr": 0.5721,
+      "p": 0.0
+    },
+    {
+      "trial": 3,
+      "rr": 1.0656,
+      "p": 0.287854
+    },
+    {
+      "trial": 4,
+      "rr": 0.6576,
+      "p": 0.0
+    },
+    {
+      "trial": 5,
+      "rr": 1.0268,
+      "p": 0.683662
+    },
+    {
+      "trial": 6,
+      "rr": 0.9478,
+      "p": 0.395824
+    },
+    {
+      "trial": 7,
+      "rr": 0.6662,
+      "p": 0.0
+    },
+    {
+      "trial": 8,
+      "rr": 0.711,
+      "p": 1e-06
+    },
+    {
+      "trial": 9,
+      "rr": 1.2151,
+      "p": 0.003544
+    },
+    {
+      "trial": 10,
+      "rr": 0.8842,
+      "p": 0.077752
+    }
+  ],
+  "placebo_n_significant": 6
+}
