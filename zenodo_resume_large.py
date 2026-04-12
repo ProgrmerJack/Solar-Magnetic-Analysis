@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Resume large-file uploads to Zenodo using curl.exe (avoids Windows TCP abort).
 Run AFTER zenodo_upload.py to fill in any files that failed.
 Usage: python zenodo_resume_large.py
 """
+import io
 import requests
 import subprocess
 import os
@@ -11,6 +13,9 @@ import sys
 import json
 import time
 from pathlib import Path
+
+# Force UTF-8 output on Windows
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 TOKEN = "v0vwEqX8u9dw6MUFZqAQJSGjwcqA3JImFA5zQbPJx4MIJrhlfQgVp77jJz7p"
 DEPOSITS_JSON = Path(r"C:\Users\Jack0\Solar-Magnetic-Analysis\ZENODO_DEPOSITS.json")
@@ -142,10 +147,10 @@ def main():
     atm_dir = Path(r"C:\Users\Jack0\Solar-Magnetic-Analysis\data\processed\atmospheric")
     sol_dir = Path(r"C:\Users\Jack0\Solar-Magnetic-Analysis\data\processed\solar")
 
-    # Large individual files (uploaded directly, not via zip)
-    large_atm = [f for f in sorted(atm_dir.iterdir())
-                 if f.is_file() and (f.name.startswith("poes_") or
-                                     f.name == "era5_polar_strat_gridded.nc")]
+    # POES parquets + ERA5 gridded are in atmospheric dir — upload them all individually
+    large_poes_era5 = [f for f in sorted(atm_dir.iterdir())
+                       if f.is_file() and (f.name.startswith("poes_") or
+                                           f.name == "era5_polar_strat_gridded.nc")]
     large_sol_names = {
         "goes_r_particle.parquet", "goes_r_particle_goes16.parquet",
         "omni_1min.parquet", "goes_r_particle_goes17.parquet",
@@ -165,9 +170,9 @@ def main():
         "figures.zip",
     ]
 
-    # Upload large atmospheric files
-    print("  -- Large atmospheric files --")
-    for fp in large_atm:
+    # Upload POES + ERA5 large files
+    print("  -- Large atmospheric/POES + ERA5 files --")
+    for fp in large_poes_era5:
         zenodo_name = f"processed_atmospheric_{fp.name}"
         if zenodo_name in uploaded_proc:
             print(f"  ✓ already uploaded: {zenodo_name}")
