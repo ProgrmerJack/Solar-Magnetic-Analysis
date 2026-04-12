@@ -35,12 +35,27 @@ scripts/download_extra/   data/processed/               data/results/
 | `data/results/ssw_event_catalog.csv` | 16 SSW events with dates and types | `scripts/analysis/02_define_events.py` |
 | `data/cryosphere/slf_avalanche_*.parquet` | Swiss SLF avalanche records | `scripts/download/45_download_slf_envidat.py` |
 | `data/cryosphere/norway_nve_*.parquet` | Norwegian NVE danger levels | `scripts/download_extra/download_norway_targeted.py` |
+| `data/processed/cryosphere/french_bra_north_ssw_panel.parquet` | Reconstructed French BRA north-Alps matched-control panel (6,839 massif-days) | `scripts/review_rounds/r39_french_bra_replication.py` |
+| `data/processed/cryosphere/french_bra_all_ssw_panel.parquet` | Reconstructed French BRA all-available-Alps matched-control panel (10,623 massif-days) | `scripts/review_rounds/r39_french_bra_replication.py` |
+| `data/processed/cryosphere/avcan_flexible_ssw_panel.parquet` | Avalanche Canada flexible-forecast area-weighted matched-control panel (4,661 region-days; 189 forecast dates) | `scripts/review_rounds/r41_avcan_flexible_validation.py` |
 | `data/cryosphere/eaws_*.parquet` | Pan-European EAWS danger levels | `scripts/download_extra/download_eaws_comprehensive.py` |
 | `data/cryosphere/albina_*.parquet` | Austrian ALBINA bulletins | `scripts/download_extra/download_albina.py` |
 | `data/cryosphere/utah_*.parquet` | Utah avalanche center data | `scripts/download/32_download_uac_avalanche.py` |
 | `data/atmospheric/era5_*.nc` | ERA5 reanalysis fields | `scripts/download/38_download_era5.py` |
 | `data/processed/envidat_*.parquet` | EnviDat Swiss danger levels + Rutschblock | `scripts/download_extra/download_envidat.py` |
 | `data/processed/snowpack_*.parquet` | SNOWPACK process-model output | `scripts/download_extra/download_envidat2.py` |
+
+### Verification and Figure Scripts
+
+| Script | Description | Output |
+|--------|-------------|--------|
+| `scripts/verification/reproducibility_check.py` | Re-derives 3 primary statistics (sign test P, geometric mean RR, BF) from archived data | Console PASS/FAIL |
+| `scripts/figures/eaws_geographic_map.py` | Generates Extended Data geographic map of EAWS centre-level SSW anomalies | `data/figures/extended_eaws_map.pdf` |
+| `scripts/figures/forest_plot_cross_regional.py` | Forest plot of cross-regional SSW–avalanche effect sizes (Fig. 4) | `data/figures/forest_plot_cross_regional.pdf` |
+| `scripts/figures/dose_response_mediation.py` | Two-panel dose-response scatter: stratospheric T50 vs Z500 event-level correlations with log(RR) (Extended Data Fig. 3) | `data/figures/extended_dose_response.pdf`, `data/results/event_level_dose_response.csv` |
+| `scripts/analysis/size_threshold_sensitivity.py` | Size-threshold sensitivity: computes event-level RR for size≥1, ≥2, ≥3 from raw SLF data; confirms all natural dry slabs are size≥2 | `data/results/size_threshold_sensitivity.json` |
+| `scripts/review_rounds/r14_fdr_17tests.py` | Verifies BH-FDR for 17 primary hypothesis tests | Console output |
+| `scripts/review_rounds/r43_threshold_loo_cv.py` | Dual-target threshold model with LOO cross-validation | Console output |
 
 ---
 
@@ -54,7 +69,9 @@ scripts/download_extra/   data/processed/               data/results/
 |-------|-------|--------|-------------|
 | Primary Swiss RR | RR = 0.32; CI [0.20, 0.54]; d = −1.06 | `scripts/review_rounds/r21_paper_analysis.py` | `data/results/r21_paper_analysis.json` → `swiss_core` |
 | Norwegian danger decrease | d = −0.67; P < 10⁻⁶ | `scripts/review_rounds/r38_norway_analysis.py` | `data/results/r38_norway_expanded.json` |
+| French BRA archive support | Δ = −0.15; sign P = 0.011; Wilcoxon P = 0.019 | `scripts/review_rounds/r39_french_bra_replication.py` | `data/results/r39_french_bra_north_replication.json` |
 | Utah replication | RR = 0.34 | `scripts/review_rounds/r20_definitive_analysis.py` | `data/results/r20_definitive_analysis.json` → `utah` |
+| Canadian counterexample / structured external response | Avalanche Canada Δ = +0.37; 18/61 daily pairs decrease | `scripts/review_rounds/r41_avcan_flexible_validation.py` | `data/results/r41_avcan_flexible_validation.json` |
 | Specification curve | 100% RR < 1; P < 0.001 | `scripts/review_rounds/r37_spec_curve.py` | `data/results/r37_spec_curve.json` |
 | EAWS geographic gradient | r = 0.69; P = 0.0004 | `scripts/review_rounds/r37_eaws_gradient.py` | `data/results/r37_eaws_gradient.json` |
 | Differential trigger response | RR = 1.81× human-to-natural | `scripts/review_rounds/r31b_trigger_suppression.py` | `data/results/r31b_trigger_suppression.json` |
@@ -94,7 +111,7 @@ scripts/download_extra/   data/processed/               data/results/
 
 ---
 
-### RESULTS — Cross-Context Consistency: Norway (Lines 93–101)
+### RESULTS — Cross-Context Consistency: Norway and France (Lines 93–101)
 
 | Claim | Value | Script | Output File |
 |-------|-------|--------|-------------|
@@ -106,6 +123,15 @@ scripts/download_extra/   data/processed/               data/results/
 | Event concordance | 4/4 events decrease (P = 0.063); 20/23 pairs (P = 0.0002) | `scripts/review_rounds/r38_norway_analysis.py` | `data/results/r38_norway_expanded.json` |
 | 8/10 regions decrease | Regional breakdown | `scripts/review_rounds/r38_norway_analysis.py` | `data/results/r38_norway_expanded.json` |
 | Latitudinal gradient | North ~69°N ratio ≈0.71; South ~61°N ratio ≈0.86 | `scripts/review_rounds/r38_norway_analysis.py` | `data/results/r38_norway_expanded.json` |
+| French BRA sample | 14 massifs; 6,839 massif-days; 4 SSW events | `scripts/review_rounds/r39_french_bra_replication.py` | `data/processed/cryosphere/french_bra_north_ssw_panel.parquet` |
+| French danger means | SSW 2.33 vs control 2.48; Δ = −0.15 | `scripts/review_rounds/r39_french_bra_replication.py` | `data/results/r39_french_bra_north_replication.json` → `overall` |
+| French bootstrap CI | [−0.30, −0.01] | `scripts/review_rounds/r39_french_bra_replication.py` | `data/results/r39_french_bra_north_replication.json` → `overall.bootstrap_mean_diff_ci` |
+| French event-massif concordance | 37/56 pairs decrease; sign P = 0.011; Wilcoxon P = 0.019 | `scripts/review_rounds/r39_french_bra_replication.py` | `data/results/r39_french_bra_north_replication.json` → `overall` |
+| French positive exception | 2021-01-05 diff = +0.62; 0/14 negative pairs | `scripts/review_rounds/r39_french_bra_replication.py` | `data/results/r39_french_bra_north_replication.json` → `by_event[2021-01-05]` |
+| French all-Alps sensitivity | 22 massifs; 10,623 massif-days; Δ = −0.08; 51/88 pairs decrease; sign P = 0.083; Wilcoxon P = 0.117 | `scripts/review_rounds/r40_french_bra_gradient.py` | `data/results/r40_french_bra_gradient.json` → `group_summaries.all` |
+| French internal split | North Δ = −0.15 vs South Δ = +0.05; latitude r = −0.81; P = 4.8×10⁻⁶ | `scripts/review_rounds/r40_french_bra_gradient.py` | `data/results/r40_french_bra_gradient.json` → `group_summaries` + `latitude_gradient_mean_diff` |
+| Avalanche Canada flexible stress test | 2 SSW events; Δ = +0.37; 18/61 daily pairs decrease; CI [0.23, 0.51] | `scripts/review_rounds/r41_avcan_flexible_validation.py` | `data/results/r41_avcan_flexible_validation.json` |
+| Avalanche Canada owner split | Avalanche Canada 97.0% area share and Δ = +0.37; Avalanche Québec Δ = −0.94 with 53/61 daily pairs decreasing | `scripts/review_rounds/r42_avcan_owner_heterogeneity.py` | `data/results/r42_avcan_owner_heterogeneity.json` |
 
 ---
 
@@ -273,7 +299,11 @@ scripts/download_extra/   data/processed/               data/results/
 
 | Claim | Value | Script | Output File |
 |-------|-------|--------|-------------|
-| k-trigger model | k = 7; θ = 1.25σ; best fit | [inline] threshold amplification | `data/results/threshold_amplification_model.json` |
+| k-trigger model | k = 7; θ = 1.23σ; best fit (dual-target: RR + d_hazard) | `scripts/review_rounds/r43_threshold_loo_cv.py` | `scripts/review_rounds/r43_threshold_loo_cv.json` → `best_k`, `best_theta` |
+| Acceptable k range | k = 6–8 (loss < 10× best) | `scripts/review_rounds/r43_threshold_loo_cv.py` | `scripts/review_rounds/r43_threshold_loo_cv.json` → `acceptable_k_range` |
+| LOO k stability | Median = 7; range 6–15; mean 8.2 ± 2.9 | `scripts/review_rounds/r43_threshold_loo_cv.py` | `scripts/review_rounds/r43_threshold_loo_cv.json` → `loo_k_median`, `loo_k_range` |
+| Model comparison: k=1 cannot amplify | k=1 d_hazard = 0.69 (amp 1.00×) vs observed 1.06 (amp 1.54×) | `scripts/review_rounds/r43_threshold_loo_cv.py` | `scripts/review_rounds/r43_threshold_loo_cv.json` → `model_comparison` |
+| Model comparison: k=7 matches both | RR = 0.320, d_hazard = 1.07, amp = 1.55× | `scripts/review_rounds/r43_threshold_loo_cv.py` | `scripts/review_rounds/r43_threshold_loo_cv.json` → `model_comparison.best_threshold` |
 | Overdispersion | Variance/mean = 45; NB α = 7.30; LR P < 10⁻¹⁰ | [inline] overdispersion test | `data/results/overdispersion_test.json` |
 | Cross-hazard landslides | k = 3; RR ≈ 0.37; amp = 1.31× | [inline] cross-hazard predictions | `data/results/threshold_amplification_model.json` |
 | Cross-hazard debris flows | k = 4; RR ≈ 0.34; amp = 1.38× | [inline] cross-hazard predictions | `data/results/threshold_amplification_model.json` |
@@ -313,6 +343,10 @@ scripts/download_extra/   data/processed/               data/results/
 | Log-normality test | Shapiro–Wilk W = 0.97; P = 0.85 | [inline] log-normality test | `data/results/r20_supplementary.json` |
 | Sintering model | Arrhenius Eₐ = 0.6 eV; 17% slower sintering; 2.0 K cooler | `scripts/process_extra/snowpack_sintering_model.py` | `data/results/snowpack_sintering_model.csv` |
 | SNOWPACK sample | 292,837 station-days; 130 stations; 1997–2020 | `scripts/review_rounds/r31_snowpack_stability.py` | `data/results/r31_snowpack_stability.json` |
+| French BRA sample | 14 northern-Alpine massifs; 6,839 massif-days; 2016/17–2022/23; 4 SSW events | `scripts/review_rounds/r39_french_bra_replication.py` | `data/processed/cryosphere/french_bra_north_ssw_panel.parquet` |
+| French BRA all-Alps sensitivity | 22 available massifs; 10,623 massif-days; 2016/17–2022/23; 4 SSW events | `scripts/review_rounds/r40_french_bra_gradient.py` | `data/processed/cryosphere/french_bra_all_ssw_panel.parquet` |
+| Avalanche Canada flexible sample | 189 forecast dates; 4,661 region-days; 293 flexible regions; 2 SSW events | `scripts/review_rounds/r41_avcan_flexible_validation.py` | `data/processed/cryosphere/avcan_flexible_ssw_panel.parquet` |
+| Avalanche Canada owner heterogeneity | 4 owners; Avalanche Canada mean daily area share 97.0%; Avalanche Québec 3 active regions and Δ = −0.94 | `scripts/review_rounds/r42_avcan_owner_heterogeneity.py` | `data/results/r42_avcan_owner_heterogeneity.json` |
 | ALBINA sample | 47,004 region-days; ~70 regions; 2018–2024 | `scripts/review_rounds/r31c_albina_gradient.py` | `data/results/r31c_albina_gradient.json` |
 | LAWIS sample | 3,060 incidents; Tirol; 1992–2024; 18 SSW events | `scripts/review_rounds/r29_grand_analysis.py` | `data/results/r29_grand_multicountry.json` |
 
@@ -348,12 +382,23 @@ scripts/download_extra/   data/processed/               data/results/
 | ED Table 30 | SSW type stratification | `scripts/review_rounds/r22_reviewer_upgrades.py` | `data/results/r22_reviewer_upgrades.json` |
 | ED Table 31 | Specification curve | `scripts/review_rounds/r37_spec_curve.py` | `data/results/r37_spec_curve.json` |
 | ED Table 32 | Bayesian evidence | `scripts/review_rounds/r34_wave_flux_bayesian.py` | `data/results/r34_multicountry.json` |
-| ED Table 33 | FDR correction | `scripts/review_rounds/r21_paper_analysis.py` | `data/results/r21_paper_analysis.json` |
+| ED Table 33 | FDR correction (17 primary tests, Norway MW excluded) | `scripts/review_rounds/r14_fdr_17tests.py` | Terminal output; also `data/results/r21_paper_analysis.json` |
 | ED Table 34 | Threshold amplification model | [inline] k-trigger model | `data/results/threshold_amplification_model.json` |
 | ED Table 35 | Trigger differential | `scripts/review_rounds/r31b_trigger_suppression.py` | `data/results/r31b_trigger_suppression.json` |
 | ED Table 36 | Cross-hazard predictions | [inline] cross-hazard calculation | `data/results/threshold_amplification_model.json` |
 | ED Table 37 | Warm-dry regime exclusion | [inline] warm-dry analysis | `data/results/warm_dry_exclusion.json` |
 | ED Table 38 | SSW catalog sensitivity | [inline] catalog sensitivity | `data/results/ssw_catalog_sensitivity.json` |
+
+---
+
+### SUPPLEMENTARY TABLES
+
+| Table | Content | Script | Output File |
+|-------|---------|--------|-------------|
+| Supplementary Table 26b | French BRA north-Alps replication: 14 massifs, 4 events, 6,839 massif-days; Δ = −0.15; 37/56 pairs decrease; sign P = 0.011; Wilcoxon P = 0.019 | `scripts/review_rounds/r39_french_bra_replication.py` | `data/results/r39_french_bra_north_replication.json` + `data/processed/cryosphere/french_bra_north_ssw_panel.parquet` |
+| Supplementary Table 26c | French BRA all-Alps sensitivity: all 22 available massifs Δ = −0.08; north Δ = −0.15; south Δ = +0.05; latitude r = −0.81 | `scripts/review_rounds/r40_french_bra_gradient.py` | `data/results/r40_french_bra_gradient.json` + `data/processed/cryosphere/french_bra_all_ssw_panel.parquet` |
+| Supplementary Table 26d | Avalanche Canada flexible stress test: 2 events; Δ = +0.37; 18/61 daily pairs decrease; CI [0.23, 0.51] | `scripts/review_rounds/r41_avcan_flexible_validation.py` | `data/results/r41_avcan_flexible_validation.json` + `data/processed/cryosphere/avcan_flexible_ssw_panel.parquet` |
+| Supplementary Table 26e | Avalanche Canada owner split: Avalanche Canada 97.0% area share and Δ = +0.37; Parks Canada Δ = +0.49; Avalanche Québec Δ = −0.94; 53/61 days decrease | `scripts/review_rounds/r42_avcan_owner_heterogeneity.py` | `data/results/r42_avcan_owner_heterogeneity.json` + `data/processed/cryosphere/avcan_flexible_ssw_panel.parquet` |
 
 ---
 
@@ -379,6 +424,10 @@ Some results were produced in interactive Copilot CLI sessions rather than stand
 | Swiss primary analysis (RR, CI, P-values) | `review_rounds/r21_paper_analysis.py` |
 | Phase-resolved temporal structure | `analysis/24_fresh_analysis.py` |
 | Norwegian danger level analysis | `review_rounds/r38_norway_analysis.py` |
+| French BRA north-Alps bulletin replication | `review_rounds/r39_french_bra_replication.py` |
+| French BRA internal gradient / all-Alps sensitivity | `review_rounds/r40_french_bra_gradient.py` |
+| Avalanche Canada flexible validation | `review_rounds/r41_avcan_flexible_validation.py` |
+| Avalanche Canada owner heterogeneity | `review_rounds/r42_avcan_owner_heterogeneity.py` |
 | Utah replication | `review_rounds/r20_definitive_analysis.py` |
 | EAWS European gradient | `review_rounds/r37_eaws_gradient.py` |
 | ALBINA Austrian/Italian gradient | `review_rounds/r31c_albina_gradient.py` |
