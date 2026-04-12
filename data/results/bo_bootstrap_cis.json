@@ -1,0 +1,30 @@
+{
+  "point_estimate": {
+    "gap": -0.2332,
+    "composition_pct": 61.2,
+    "within_pct": 28.4,
+    "interaction_pct": 8.1
+  },
+  "bootstrap": {
+    "n_resamples": 10000,
+    "composition_pct_CI95": [
+      -1482.9,
+      1490.7
+    ],
+    "within_pct_CI95": [
+      -2195.2,
+      2566.2
+    ],
+    "interaction_pct_CI95": [
+      -1248.5,
+      947.2
+    ],
+    "gap_CI95": [
+      -0.5533,
+      0.1754
+    ],
+    "composition_pct_median": 43.1,
+    "within_pct_median": 76.9,
+    "interaction_pct_median": -16.9
+  }
+}
