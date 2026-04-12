@@ -447,3 +447,5 @@ Some results were produced in interactive Copilot CLI sessions rather than stand
 | Bayesian analysis | `review_rounds/r34_wave_flux_bayesian.py` |
 | Sintering model | `process_extra/snowpack_sintering_model.py` |
 | Figures (main paper) | `analysis/24_fresh_analysis.py`, `25_revision_analysis.py`, `26_mechanism_analysis.py` |
+| Window sensitivity event-flip analysis | `analysis/window_sensitivity_events.py` → `data/results/window_sensitivity_events.json` |
+| B-O bootstrap confidence intervals | `analysis/bo_bootstrap_ci.py` → `data/results/bo_bootstrap_cis.json` |

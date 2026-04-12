@@ -1,0 +1,461 @@
+{
+  "window_results": {
+    "pm5d": [
+      {
+        "onset": "1998-12-15",
+        "window": "\u00b15d",
+        "RR": 0.9642,
+        "direction": "decrease"
+      },
+      {
+        "onset": "1999-02-26",
+        "window": "\u00b15d",
+        "RR": 0.4827,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2001-02-11",
+        "window": "\u00b15d",
+        "RR": 0.1173,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2001-12-30",
+        "window": "\u00b15d",
+        "RR": 0.1251,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2002-02-17",
+        "window": "\u00b15d",
+        "RR": 0.3,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2003-01-18",
+        "window": "\u00b15d",
+        "RR": 0.0349,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2004-01-05",
+        "window": "\u00b15d",
+        "RR": 0.2545,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2006-01-21",
+        "window": "\u00b15d",
+        "RR": 0.4384,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2007-02-24",
+        "window": "\u00b15d",
+        "RR": 0.1605,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2008-02-22",
+        "window": "\u00b15d",
+        "RR": 0.1182,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2009-01-24",
+        "window": "\u00b15d",
+        "RR": 0.2069,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2010-02-09",
+        "window": "\u00b15d",
+        "RR": 0.5423,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2012-01-11",
+        "window": "\u00b15d",
+        "RR": 1.196,
+        "direction": "increase"
+      },
+      {
+        "onset": "2013-01-07",
+        "window": "\u00b15d",
+        "RR": 0.4497,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2018-02-12",
+        "window": "\u00b15d",
+        "RR": 3.6095,
+        "direction": "increase"
+      },
+      {
+        "onset": "2019-01-01",
+        "window": "\u00b15d",
+        "RR": 1.8487,
+        "direction": "increase"
+      }
+    ],
+    "pm7d": [
+      {
+        "onset": "1998-12-15",
+        "window": "\u00b17d",
+        "RR": 0.9339,
+        "direction": "decrease"
+      },
+      {
+        "onset": "1999-02-26",
+        "window": "\u00b17d",
+        "RR": 0.6653,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2001-02-11",
+        "window": "\u00b17d",
+        "RR": 0.2325,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2001-12-30",
+        "window": "\u00b17d",
+        "RR": 0.2035,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2002-02-17",
+        "window": "\u00b17d",
+        "RR": 0.4094,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2003-01-18",
+        "window": "\u00b17d",
+        "RR": 0.0334,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2004-01-05",
+        "window": "\u00b17d",
+        "RR": 0.2052,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2006-01-21",
+        "window": "\u00b17d",
+        "RR": 0.3461,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2007-02-24",
+        "window": "\u00b17d",
+        "RR": 0.3531,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2008-02-22",
+        "window": "\u00b17d",
+        "RR": 0.0908,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2009-01-24",
+        "window": "\u00b17d",
+        "RR": 0.1439,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2010-02-09",
+        "window": "\u00b17d",
+        "RR": 0.9834,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2012-01-11",
+        "window": "\u00b17d",
+        "RR": 0.5778,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2013-01-07",
+        "window": "\u00b17d",
+        "RR": 0.2821,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2018-02-12",
+        "window": "\u00b17d",
+        "RR": 2.0154,
+        "direction": "increase"
+      },
+      {
+        "onset": "2019-01-01",
+        "window": "\u00b17d",
+        "RR": 1.9162,
+        "direction": "increase"
+      }
+    ],
+    "pm10d": [
+      {
+        "onset": "1998-12-15",
+        "window": "\u00b110d",
+        "RR": 1.3654,
+        "direction": "increase"
+      },
+      {
+        "onset": "1999-02-26",
+        "window": "\u00b110d",
+        "RR": 0.4128,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2001-02-11",
+        "window": "\u00b110d",
+        "RR": 0.1266,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2001-12-30",
+        "window": "\u00b110d",
+        "RR": 0.1789,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2002-02-17",
+        "window": "\u00b110d",
+        "RR": 0.5204,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2003-01-18",
+        "window": "\u00b110d",
+        "RR": 0.0301,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2004-01-05",
+        "window": "\u00b110d",
+        "RR": 0.164,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2006-01-21",
+        "window": "\u00b110d",
+        "RR": 0.3096,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2007-02-24",
+        "window": "\u00b110d",
+        "RR": 0.3312,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2008-02-22",
+        "window": "\u00b110d",
+        "RR": 0.0632,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2009-01-24",
+        "window": "\u00b110d",
+        "RR": 0.0789,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2010-02-09",
+        "window": "\u00b110d",
+        "RR": 0.5496,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2012-01-11",
+        "window": "\u00b110d",
+        "RR": 1.1158,
+        "direction": "increase"
+      },
+      {
+        "onset": "2013-01-07",
+        "window": "\u00b110d",
+        "RR": 0.2696,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2018-02-12",
+        "window": "\u00b110d",
+        "RR": 1.7643,
+        "direction": "increase"
+      },
+      {
+        "onset": "2019-01-01",
+        "window": "\u00b110d",
+        "RR": 3.686,
+        "direction": "increase"
+      }
+    ],
+    "pm15d": [
+      {
+        "onset": "1998-12-15",
+        "window": "\u00b115d",
+        "RR": 0.9427,
+        "direction": "decrease"
+      },
+      {
+        "onset": "1999-02-26",
+        "window": "\u00b115d",
+        "RR": 0.4436,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2001-02-11",
+        "window": "\u00b115d",
+        "RR": 0.1803,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2001-12-30",
+        "window": "\u00b115d",
+        "RR": 0.1139,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2002-02-17",
+        "window": "\u00b115d",
+        "RR": 0.3183,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2003-01-18",
+        "window": "\u00b115d",
+        "RR": 0.1742,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2004-01-05",
+        "window": "\u00b115d",
+        "RR": 0.1208,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2006-01-21",
+        "window": "\u00b115d",
+        "RR": 0.2229,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2007-02-24",
+        "window": "\u00b115d",
+        "RR": 0.2956,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2008-02-22",
+        "window": "\u00b115d",
+        "RR": 0.0488,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2009-01-24",
+        "window": "\u00b115d",
+        "RR": 0.1064,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2010-02-09",
+        "window": "\u00b115d",
+        "RR": 0.6612,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2012-01-11",
+        "window": "\u00b115d",
+        "RR": 0.8627,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2013-01-07",
+        "window": "\u00b115d",
+        "RR": 0.3226,
+        "direction": "decrease"
+      },
+      {
+        "onset": "2018-02-12",
+        "window": "\u00b115d",
+        "RR": 1.0347,
+        "direction": "increase"
+      },
+      {
+        "onset": "2019-01-01",
+        "window": "\u00b115d",
+        "RR": 3.284,
+        "direction": "increase"
+      }
+    ]
+  },
+  "flipping_events": [
+    {
+      "onset": "1998-12-15",
+      "rr_by_window": {
+        "\u00b15d": 0.9642,
+        "\u00b17d": 0.9339,
+        "\u00b110d": 1.3654,
+        "\u00b115d": 0.9427
+      },
+      "signs": {
+        "\u00b15d": "decrease",
+        "\u00b17d": "decrease",
+        "\u00b110d": "increase",
+        "\u00b115d": "decrease"
+      },
+      "flip_type": "decrease\u2192increase"
+    },
+    {
+      "onset": "2012-01-11",
+      "rr_by_window": {
+        "\u00b15d": 1.196,
+        "\u00b17d": 0.5778,
+        "\u00b110d": 1.1158,
+        "\u00b115d": 0.8627
+      },
+      "signs": {
+        "\u00b15d": "increase",
+        "\u00b17d": "decrease",
+        "\u00b110d": "increase",
+        "\u00b115d": "decrease"
+      },
+      "flip_type": "decrease\u2192increase"
+    }
+  ],
+  "summary": {
+    "\u00b15d": {
+      "n_decrease": 13,
+      "n_increase": 3,
+      "n_total": 16,
+      "P_sign": 0.0213
+    },
+    "\u00b17d": {
+      "n_decrease": 14,
+      "n_increase": 2,
+      "n_total": 16,
+      "P_sign": 0.0042
+    },
+    "\u00b110d": {
+      "n_decrease": 12,
+      "n_increase": 4,
+      "n_total": 16,
+      "P_sign": 0.0768
+    },
+    "\u00b115d": {
+      "n_decrease": 14,
+      "n_increase": 2,
+      "n_total": 16,
+      "P_sign": 0.0042
+    }
+  },
+  "n_flipping": 2,
+  "flipping_onsets": [
+    "1998-12-15",
+    "2012-01-11"
+  ]
+}
