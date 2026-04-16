@@ -483,7 +483,8 @@ SSW + vortex + int. & 4 & $-3{,}278$ & 6,564 & 98 & 92 \\
 
 \begin{table}[!ht]
 \centering
-\caption{\textbf{Supplementary Table 7: Benjamini--Hochberg FDR correction.}}
+\caption{\textbf{Supplementary Table 7: Benjamini--Hochberg FDR correction.}
+All hypothesis tests reported in the main text and Extended Data are included in a single correction family. Phase-level tests (pre/onset/post/late) share the same 16 SSW events over non-overlapping windows; their inclusion in the FDR family addresses the multiplicity concern but does not account for within-event dependence, which would require a more conservative correction.}
 \label{stab:fdr}
 \small
 \begin{tabular}{lccl}
@@ -491,27 +492,37 @@ SSW + vortex + int. & 4 & $-3{,}278$ & 6,564 & 98 & 92 \\
 Test & Raw $P$ & FDR $P$ & Status \\
 \midrule
 Snowfall $\to$ avalanche (daily) & $<10^{-12}$ & $<10^{-11}$ & Significant \\
-Vuong test (ZIP vs Poisson) & $<10^{-4}$ & $<10^{-3}$ & Significant \\
 ZIP SSW LRT & $<10^{-6}$ & $<10^{-5}$ & Significant \\
+Vuong test (ZIP vs Poisson) & $<10^{-4}$ & $<10^{-3}$ & Significant \\
 Combined sign test (18/20) & 0.0002 & 0.001 & Significant \\
-Swiss sign test (14/16) & 0.002 & 0.007 & Significant \\
-NAO-adjusted SSW IRR & 0.001 & 0.004 & Significant \\
-Rutschblock (MWU, 1-sided) & 0.003 & 0.009 & Significant \\
 ERA5 T2m deseasonalised & 0.0003 & 0.002 & Significant \\
+NAO-adjusted SSW IRR & 0.001 & 0.004 & Significant \\
 ERA5 T2m post-SSW & 0.001 & 0.004 & Significant \\
-Window 10d sign & 0.004 & 0.012 & Significant \\
-Window 15d sign & 0.004 & 0.012 & Significant \\
-Size distribution $\chi^2$ & 0.006 & 0.016 & Significant \\
-ERA5 T2m late post-SSW & 0.006 & 0.016 & Significant \\
-Utah pre-SSW matched & 0.008 & 0.022 & Significant \\
-Pre-SSW matched (Swiss, Wilcoxon) & 0.009 & 0.023 & Significant \\
-RE meta-analysis pooled & 0.012 & 0.028 & Significant \\
-Rutschblock $\chi^2$ dist. & 0.020 & 0.040 & Significant \\
-Trigger type $\chi^2$ & 0.024 & 0.044 & Significant \\
-ERA5 u10 zonal wind & 0.039 & 0.068 & Marginal \\
-Utah paired $t$ & 0.041 & 0.072 & Not sig. \\
-Human/natural trigger differential (Wilcoxon) & 0.058 & 0.097 & Not sig. \\
-Event-level temperature permutation & 0.083 & 0.128 & Not sig. \\
+Swiss sign test (14/16) & 0.002 & 0.006 & Significant \\
+Swiss onset-phase sign (14/16)$^\dag$ & 0.002 & 0.006 & Significant \\
+Rutschblock (MWU, 1-sided) & 0.003 & 0.009 & Significant \\
+Window 10d sign & 0.004 & 0.010 & Significant \\
+Window 15d sign & 0.004 & 0.010 & Significant \\
+Size distribution $\chi^2$ & 0.006 & 0.012 & Significant \\
+ERA5 T2m late post-SSW & 0.006 & 0.012 & Significant \\
+Utah pre-SSW matched & 0.008 & 0.015 & Significant \\
+Pre-SSW matched (Swiss, Wilcoxon) & 0.009 & 0.016 & Significant \\
+French BRA sign test (37/56) & 0.011 & 0.018 & Significant \\
+Pre-onset phase sign (13/16)$^\dag$ & 0.011 & 0.018 & Significant \\
+RE meta-analysis pooled & 0.012 & 0.018 & Significant \\
+Rutschblock $\chi^2$ dist. & 0.020 & 0.029 & Significant \\
+Trigger type $\chi^2$ & 0.024 & 0.032 & Significant \\
+Z500 event-level correlation & 0.024 & 0.032 & Significant \\
+Post-onset phase sign (13/16)$^\dag$ & 0.038 & 0.044 & Significant \\
+Late-phase sign (13/16)$^\dag$ & 0.038 & 0.044 & Significant \\
+Wet avalanche increase (sign) & 0.038 & 0.044 & Significant \\
+ERA5 u10 zonal wind & 0.039 & 0.044 & Significant \\
+Utah paired $t$ & 0.041 & 0.044 & Significant \\
+Human/natural trigger differential (Wilcoxon) & 0.058 & 0.060 & Marginal \\
+Event-level temperature permutation & 0.083 & 0.083 & Marginal \\
+\bottomrule
+\multicolumn{4}{l}{\footnotesize $^\dag$Phase-level tests share the same 16 SSW events over non-overlapping windows.} \\
+\multicolumn{4}{l}{\footnotesize BH-FDR applied across all 29 tests as a single family ($m = 29$).} \\
 \bottomrule
 \end{tabular}
 \end{table}
