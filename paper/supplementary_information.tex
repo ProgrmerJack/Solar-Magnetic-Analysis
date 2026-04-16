@@ -53,10 +53,10 @@ Process-Model Validation, and Count--Rating Dissociation}
 \begin{abstract}
 Stratospheric sudden warming (SSW) events produce persistent surface weather anomalies, yet their consequences for threshold-governed geophysical hazards remain poorly constrained.
 Here we quantify a strong Swiss-centered association between SSW episodes and reduced natural dry slab avalanche activity and interpret the pattern with a threshold-amplification framework, in which modest circulation-driven weather shifts produce larger hazard responses by weakening several release triggers at once. This represents the first direct demonstration that stratospheric variability can measurably modulate a threshold-governed natural-hazard system.
-In Switzerland (21~winters, 16~SSW events), 14 of 16 events show reduced counts (geometric mean rate ratio $\mathrm{RR} = 0.32$; 95\% CI $[0.20, 0.54]$; $d = -1.06$).
+In Switzerland (21~winters, 16~SSW events), 14 of 16 events show reduced counts (geometric mean rate ratio $\mathrm{RR} = 0.32$; 95\% CI $[0.26, 0.53]$ winter-blocked bootstrap; $d = -1.06$).
 Norwegian avalanche danger levels decrease concordantly ($d = -0.67$; $P < 10^{-6}$), a reconstructed French north-Alps BRA archive also shows lower matched-window danger ($\Delta = -0.15$; sign test $P = 0.011$), and all four Utah SSW events show decreased counts ($\mathrm{RR} = 0.34$), whereas a recent Avalanche Canada flexible-forecast panel shows higher area-weighted danger during the 2023 and 2024 SSW windows.
 A specification curve of 180 analytical variants confirms robustness: 100\% show $\mathrm{RR} < 1$ (permutation $P < 0.001$).
-Five-country EAWS data reveal a reproducible geographic gradient in hazard response ($r = 0.69$, $P = 0.0004$), confirmed out-of-sample by independent ALBINA bulletin data---showing that the Alpine response has coherent spatial structure rather than random sign changes.
+Five-country EAWS data reveal a reproducible geographic gradient in hazard response ($r = 0.69$, $P = 0.0004$; based on two SSW events within the EAWS period). Independent ALBINA bulletin data reproduce the same north--south divergence in gradient direction, though Italian regions show absolute danger increases rather than the decreases seen in EAWS Italian centres---indicating that the absolute sign is event-dependent while the gradient direction is robust.
 A count--rating dissociation---danger \emph{ratings} increase while occurrence \emph{counts} decrease---and a differential trigger response---human-triggered avalanches increase ($\mathrm{RR} = 1.81\times$ relative to natural) while natural triggers are suppressed---indicate a ``loaded gun'' mechanism: SSW-associated cold regimes suppress surface-energy triggers ($-57\%$ warming, $-29\%$ rain) while leaving loading and weak-layer problems operationally relevant.
 Hemispheric verification via Aura/MLS stratospheric chemistry, SNOTEL surface observations, and Northern Hemisphere snow cover ($d = +1.13$) is consistent with the broader circulation chain examined here.
 The temporal profile---suppression emerging before SSW onset---supports a strong precursor planetary-wave component and argues against a purely post-onset annular-mode pathway.
@@ -615,11 +615,10 @@ Warm-wet & 18.3 & 28.3 & $-9.9$ & 1.09 & 0.98 & 0.66 & 0.82 & 0.22 \\
 \midrule
 \multicolumn{9}{l}{Chi-square: $\chi^2 = 83.5$, $P = 5.4 \times 10^{-18}$ (regime distribution SSW vs.\ control)} \\
 \multicolumn{9}{l}{SSW $\times$ regime interaction LRT: $\chi^2 = 12.9$, $P = 0.005$} \\
-\multicolumn{9}{l}{Net DOY- and regime-adjusted SSW IRR: 0.89, $P = 0.06$} \\
-\multicolumn{9}{l}{Blinder--Oaxaca: composition (regime shift) $= -91\%$ of gap; within-regime $= +214\%$} \\
-\multicolumn{9}{l}{\footnotesize Note: The B-O decomposition is a linear approximation applied to count data; components} \\
-\multicolumn{9}{l}{\footnotesize can exceed $\pm 100\%$ and should be interpreted as directional (regime shift dominates).} \\
-\multicolumn{9}{l}{\footnotesize The regime-adjusted IRR $= 0.89$ ($P = 0.06$) provides the cleanest mechanistic estimate.} \\
+\multicolumn{9}{l}{Net DOY- and regime-adjusted SSW IRR: 0.89, $P = 0.06$ (primary mechanistic estimate)} \\
+\multicolumn{9}{l}{\footnotesize Blinder--Oaxaca decomposition (linear approximation): composition $= -91\%$,} \\
+\multicolumn{9}{l}{\footnotesize within-regime $= +214\%$. Components exceed $\pm 100\%$ because B-O is a linear} \\
+\multicolumn{9}{l}{\footnotesize approximation ill-suited to count data; the IRR above is the preferred estimate.} \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -875,7 +874,7 @@ Beta-binomial & Beta(1,1) & 3,855 & Decisive \\
 \begin{table}[!ht]
 \centering
 \caption{\textbf{Supplementary Table 24: Retrospective forecasting skill.}
-Forecast verification metrics for predicting ``decreased avalanche activity'' during SSW events, using Z500 as the sole predictor. The ROC AUC of 0.85 indicates good-to-excellent discriminative ability at the event level.}
+Forecast verification metrics for predicting ``decreased avalanche activity'' during SSW events, using Z500 as the sole predictor. The in-sample ROC AUC of 0.85 indicates good discriminative ability, but the LOO Brier skill score is negative ($-0.95$), demonstrating that this does not translate into calibrated forecast skill. LOO direction accuracy matches the base rate (87.5\%), confirming no directional skill beyond climatology.}
 \label{tab:forecast_skill}
 \small
 \begin{tabular}{lcc}
@@ -884,13 +883,16 @@ Metric & Value & Interpretation \\
 \midrule
 Base rate (decrease) & 14/16 (87.5\%) & High prevalence \\
 LOO direction accuracy & 14/16 (87.5\%) & $P = 0.002$ vs.\ chance \\
-Z500 AUC-ROC & 0.854 & Good--excellent \\
+Z500 AUC-ROC & 0.854 & In-sample$^{\ddagger}$ \\
 Z500 vs.\ $\log(\mathrm{RR})$ & $r = 0.51$, $R^2 = 0.26$ & $P = 0.045$ \\
 Brier (climatology) & 0.109 & Reference$^{\dagger}$ \\
 Brier (LOO) & 0.213 & No skill (BSS $= -0.95$) \\
 \bottomrule
 \multicolumn{3}{l}{\footnotesize $^{\dagger}$Climatological Brier score: $\mathrm{BS}_{\mathrm{clim}} = \frac{1}{N}\sum(p - o_i)^2$ where $p = 14/16 = 0.875$} \\
 \multicolumn{3}{l}{\footnotesize is the observed suppression rate. $\mathrm{BS}_{\mathrm{clim}} = 0.109$. BSS $= 1 - 0.213/0.109 = -0.95$.} \\
+\multicolumn{3}{l}{\footnotesize $^{\ddagger}$In-sample ROC AUC computed from all 16 events; LOO-validated AUC was not computed} \\
+\multicolumn{3}{l}{\footnotesize separately. The negative Brier skill score indicates this discriminative ability does} \\
+\multicolumn{3}{l}{\footnotesize not translate into calibrated probabilistic forecasts.} \\
 \end{tabular}
 \end{table}
 
@@ -1161,7 +1163,7 @@ MODIS & Alpine snow frac. & 0.292 & 0.234 & $+0.35$ & $< 10^{-6}$ \\
 % --- Supplementary Table 32: Differential trigger response ---
 \begin{table}[htbp]
 \centering
-\caption{\textbf{Supplementary Table 32: Differential trigger response during SSW windows.} DOY-matched event-level rate ratios for natural-trigger and human-trigger avalanches, with the human/natural differential. The 1.81-fold increase in relative human-triggered activity confirms the ``loaded gun'' mechanism.}
+\caption{\textbf{Supplementary Table 32: Differential trigger response during SSW windows.} DOY-matched event-level rate ratios for natural-trigger and human-trigger avalanches, with the human/natural differential. Both trigger types decrease, but natural dry slabs decrease far more strongly, shifting the human-to-natural ratio 1.81-fold ($P = 0.058$, marginally significant). This differential response is consistent with the ``loaded gun'' mechanism but does not survive formal significance correction.}
 \label{tab:trigger_differential}
 \small
 \begin{tabular}{lcccc}
