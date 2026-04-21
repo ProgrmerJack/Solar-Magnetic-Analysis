@@ -159,6 +159,7 @@ scripts/download_extra/   data/processed/               data/results/
 
 | Claim | Value | Script | Output File |
 |-------|-------|--------|-------------|
+| **Pre-event snowpack comparison** | PWL $P = 0.93$; HS $P = 0.32$; SWE $P = 0.32$ (event-level) | `scripts/review_rounds/r52_pre_event_snowpack.py` | `data/results/r52_pre_event_snowpack.json` |
 | SNOWPACK sample | 292,837 station-days; 130 stations; 11 SSW events | `scripts/review_rounds/r31_snowpack_stability.py` | `data/results/r31_snowpack_stability.json` |
 | sn38 decrease | −9.3%; 10/11 events | `scripts/review_rounds/r31_snowpack_stability.py` | `data/results/r31_snowpack_stability.json` |
 | CCL decrease | −20.3% | `scripts/review_rounds/r31_snowpack_stability.py` | `data/results/r31_snowpack_stability.json` |
@@ -171,6 +172,7 @@ scripts/download_extra/   data/processed/               data/results/
 | Air temperature warming events | +10% (paradoxical increase) | `scripts/review_rounds/r31_snowpack_stability.py` | `data/results/r31_snowpack_stability.json` |
 | Trigger suppression mediation | 42% reduction in trigger-day frequency; RR_trigger = 0.92; 41% explained | `scripts/review_rounds/r31b_trigger_suppression.py` + `r32_mediation_analysis.py` | `data/results/r31b_trigger_suppression.json` + `r32_mediation.json` |
 | Blinder–Oaxaca decomposition | 91% of daily-level gap from regime shift | `scripts/review_rounds/r37_mediation.py` | `data/results/r37_mediation.json` |
+| Regime occupancy decomposition | 6% occupancy-shift, 95% within-regime rate change | `scripts/analysis/67_regime_occupancy_decomposition.py` | `data/results/r67_regime_occupancy_decomposition.json` |
 
 ---
 
@@ -237,6 +239,7 @@ scripts/download_extra/   data/processed/               data/results/
 | Z500 correlation | r = 0.56; P = 0.024; R² = 0.31 | `scripts/review_rounds/r22_reviewer_upgrades.py` | `data/results/r22_reviewer_upgrades.json` → `ncep_mechanism` |
 | SLP correlation | r = 0.52; P = 0.037; R² = 0.27 | `scripts/review_rounds/r22_reviewer_upgrades.py` | `data/results/r22_reviewer_upgrades.json` → `ncep_mechanism` |
 | Bivariate Z500+SLP | R² = 0.41; adj R² = 0.32 | `scripts/review_rounds/r22_reviewer_upgrades.py` | `data/results/r22_reviewer_upgrades.json` → `era5_multi` |
+| Z500 + stratospheric deceleration | R² = 0.33 (vs 0.31 for Z500 alone) | `scripts/analysis/31_stratospheric_downward_propagation.py` | `data/results/downward_propagation.json` → `multi_predictor` |
 | Surface variables ΔR² | 0.001 | `scripts/review_rounds/r22_reviewer_upgrades.py` | `data/results/r22_reviewer_upgrades.json` → `era5_multi` |
 | Stratospheric R² | <0.03 | `scripts/review_rounds/r22_reviewer_upgrades.py` | `data/results/r22_reviewer_upgrades.json` |
 | Propagation lags | +3d, +20d, +30d at various levels | `scripts/analysis/26_mechanism_analysis.py` (Part 2) | `data/results/mechanism_part2_propagation.json` |
@@ -288,7 +291,9 @@ scripts/download_extra/   data/processed/               data/results/
 
 | Claim | Value | Script | Output File |
 |-------|-------|--------|-------------|
-| k-trigger model | k = 7; θ = 1.25σ; best fit | [inline] threshold amplification | `data/results/threshold_amplification_model.json` |
+| Threshold solution family | Independent-channel range k = 6–8 reproduces RR and $d_{\mathrm{hazard}}$ | `scripts/review_rounds/r43_threshold_loo_cv.py` | `scripts/review_rounds/r43_threshold_loo_cv.json` |
+| Representative nominal fit | k = 7; θ = 1.25σ; RR = 0.313; $d_{\mathrm{hazard}} = 1.06$ | `scripts/review_rounds/r43_threshold_loo_cv.py` | `scripts/review_rounds/r43_threshold_loo_cv.json` |
+| Correlated effective-channel fit | $\rho = 0.3$–0.8 gives $k_{\mathrm{eff}} \approx 2.5$–1.2 and RR = 0.332–0.315 | `scripts/review_rounds/r45_correlated_channels.py` | `data/results/r45_correlated_channels.json` |
 | Overdispersion | Variance/mean = 45; NB α = 7.30; LR P < 10⁻¹⁰ | [inline] overdispersion test | `data/results/overdispersion_test.json` |
 | Cross-hazard landslides | k = 3; RR ≈ 0.37; amp = 1.31× | [inline] cross-hazard predictions | `data/results/threshold_amplification_model.json` |
 | Cross-hazard debris flows | k = 4; RR ≈ 0.34; amp = 1.38× | [inline] cross-hazard predictions | `data/results/threshold_amplification_model.json` |
@@ -374,6 +379,23 @@ scripts/download_extra/   data/processed/               data/results/
 | ED Table 37 | Warm-dry regime exclusion | [inline] warm-dry analysis | `data/results/warm_dry_exclusion.json` |
 | ED Table 38 | SSW catalog sensitivity | [inline] catalog sensitivity | `data/results/ssw_catalog_sensitivity.json` |
 
+## Scripts 38–41: Round 44+ Analysis Scripts
+
+| Claim | Key Result | Script | Output |
+|---|---|---|---|
+| COVID-adjusted 2021 prospective test | Season RR = 1.81 (pandemic-free); 30-day RR = 2.52 | `scripts/analysis/38_covid_adjusted_2021.py` | `data/results/38_covid_adjusted_2021.json` |
+| Stratified BH-FDR correction | 3/12 event-level survive; 7/7 daily survive; 3/7 external survive | `scripts/analysis/39_bh_fdr_stratified.py` | `data/results/39_bh_fdr_stratified.json` |
+| EP-flux window sensitivity | 0/9 windows significant after correction; 10-day pre-onset ρ = 0.24, P = 0.37 | `scripts/analysis/40_ep_flux_window_sensitivity.py` | `data/results/40_ep_flux_window_sensitivity.json` |
+| Accident secular trend | R² = 0.73; decade decomposition shows recreation confound | `scripts/analysis/41_accident_secular_trend.py` | `data/results/41_accident_secular_trend.json` |
+
+### SI Table Cross-Reference (New Tables)
+
+| SI Table Label | Description | Source Script |
+|---|---|---|
+| `tab:covid_adjusted` | COVID-adjusted 2021 prospective test | `scripts/analysis/38_covid_adjusted_2021.py` |
+| `tab:fdr_stratified` | BH-FDR stratified by inferential unit | `scripts/analysis/39_bh_fdr_stratified.py` |
+| `tab:secular_trend` | Accident secular trend and decade decomposition | `scripts/analysis/41_accident_secular_trend.py` |
+
 ### EXTENDED DATA FIGURES
 
 | Figure | Description | Script | Output |
@@ -446,3 +468,177 @@ Some results were produced in interactive Copilot CLI sessions rather than stand
 | Correlated-channel sensitivity (Suppl. Table 37b) | `review_rounds/r45_correlated_channels.py` |
 | Multi-country comparison figure (ED Fig 5) | `review_rounds/r45_multi_country_figure.py` |
 | Study area map (Main Fig 5) | `review_rounds/r46_study_area_map.py` |
+| Z500 influence diagnostics (Suppl. Table 39) | `analysis/29_z500_influence_diagnostics.py` |
+| Temporal heterogeneity tests (Suppl. Table 40) | `analysis/30_temporal_heterogeneity_test.py` |
+| Downward propagation composite (Suppl. Table 41) | `analysis/31_stratospheric_downward_propagation.py` |
+| Stratospheric predictor correlations (Suppl. Table 42) | `analysis/31_stratospheric_downward_propagation.py` |
+| Mediation analysis: Z500 vs stratosphere (Suppl. Table 43) | `analysis/31_stratospheric_downward_propagation.py` |
+| Extended accident SSW analysis, n=29 (Suppl. Table 44) | `analysis/32_extended_accident_ssw_response.py` |
+| EP-flux proxy dose-response (Suppl. Table 46, Main text) | `analysis/33_ep_flux_wave_driving.py` |
+| MERRA2 cross-reanalysis validation | `analysis/34_merra2_cross_validation.py` |
+| Prospective 2021 out-of-sample test (Suppl. Table 45) | `analysis/35_prospective_2021_test.py` |
+| Extended dose-response (Z500 → accident RR) | `analysis/36_dose_response_extended.py` |
+| Z500 blocking lead-time analysis (Suppl. Table 47) | `analysis/37_z500_blocking_timeseries.py` |
+
+| COVID-adjusted 2021 prospective test (Suppl. Table covid_adjusted) | `analysis/38_covid_adjusted_2021.py` |
+| BH-FDR stratified by inferential unit (Suppl. Table fdr_stratified) | `analysis/39_bh_fdr_stratified.py` |
+| EP-flux window sensitivity (0/9 windows significant) | `analysis/40_ep_flux_window_sensitivity.py` |
+| Accident secular trend (R²=0.73; Suppl. Table secular_trend) | `analysis/41_accident_secular_trend.py` |
+| Non-SSW blocking equivalence test | `analysis/42_non_ssw_blocking_test.py` |
+| CMH decade-stratified accident detrending (OR=1.77, P<10⁻¹²; Suppl. Table cmh_detrending) | `analysis/43_accident_detrending.py` |
+| Z500/activity composite figure (ED Fig 6) | `analysis/44_z500_composite_figure.py` |
+| Loaded-gun divergence figure (ED Fig 5) | `analysis/45_loaded_gun_divergence.py` |
+
+| Formal causal mediation (Suppl. Table mediation) | `analysis/46_formal_mediation.py` |
+| Direct EP-flux v'T' at 100hPa (Suppl. Table direct_vt; Main Fig 6) | `analysis/47_direct_ep_flux.py` |
+| Climate change SSW projections & PAF (Suppl. Table climate_paf) | `analysis/48_climate_ssw_projections.py` |
+| Mixed-effects accident model (event-level IRR, NB regression) | `analysis/49_mixed_effects_accident.py` |
+| Count-rating dissociation figure (Main Fig 7) | `analysis/50_count_rating_dissociation_fig.py` |
+| Cross-hazard regime redistribution (Suppl. Table 49; multi-hazard simultaneity) | `analysis/51_cross_hazard_regime.py` |
+| Geographic effect map (Main Fig geographic_map) | `analysis/52_geographic_effect_map.py` |
+| SNOWPACK-trigger joint probability model | `analysis/53_snowpack_trigger_joint.py` |
+| Multi-hazard regime figure (Main Fig multi_hazard) | `analysis/54_multi_hazard_figure.py` |
+| Formal power analysis (Suppl. Table 48; BF sensitivity, MDE, spec-curve null) | `analysis/55_power_analysis.py` |
+| Blocking-without-SSW comparison (Suppl. Table 50; Main text blocking paragraph) | `analysis/56_blocking_without_ssw.py` |
+| GEE/design-effect cluster-robust accident model (Suppl. Table 51; Main text CMH correction) | `analysis/57_gee_accident_model.py` |
+| Precipitation phase analysis (Suppl. Table 52; Main text mechanistic paragraph) | `analysis/58_precipitation_phase.py` |
+| Cold-wave mortality risk estimation (Suppl. Table 53; Main text multi-hazard paragraph; Abstract) | `analysis/59_cold_wave_mortality_risk.py` |
+| Monte Carlo spec-curve, placebo falsification, leave-two-out (Suppl. Tables 55; ED Table 14) | `analysis/60_monte_carlo_specurve_placebo.py` |
+| Incremental SSW value, power simulation, Granger causality (ED Table 13; Suppl. Tables 56--58) | `analysis/61_incremental_value_power.py` |
+| Cross-country meta-analysis, compound-event typology (ED Table 12; Suppl. Tables) | `analysis/62_cross_country_meta_typology.py` |
+| Poisson overdispersion correction: ZIP, quasi-Poisson, robust SE, GEE (ED Table 13 updated) | `analysis/63_dispersion_correction.py` |
+| Z500 composite maps, strat-trop coupling figures (ED Figs 7--8) | `figures/r55_z500_composite_maps.py` |
+| ZIP+DOY sensitivity analysis (Suppl. Tables; resolves ZIP/DOY discrepancy) | `r56_zip_doy_resolution.py` |
+| Pre-onset vs post-onset decomposition (Suppl. Table 59; 52% pre-onset deficit) | `r57_pre_post_decomposition.py` |
+| v'T' composite eddy heat flux (Suppl. Table 60; pre-onset P<10^-5) | via `r56_mechanism_composites` agent |
+| Wind-transport paradox trigger budget (Suppl. Table 61; net Δ=+2.9%) | `r57_wind_transport_resolution.py` |
+| NB/ZINB model comparison, Vuong test (Suppl. Table 62; ZINB best AIC) | `r57_nb_models.py` |
+| GEE power simulation (Suppl. Table 63b; 26% power, P=0.18 is median under H1) | `r60_gee_power_simulation.py` |
+| EP-flux proxy diagnostics: du/dt, dT/dt, downward propagation (Suppl. Table 64) | `r57_epflux_diagnostics.py` |
+| Swiss GEE mixed-effects NB2 (confirms IRR=0.70, P=0.179 under all specs) | `r60_mixed_effects_swiss.py` |
+| Multi-predictor LOO BSS (SSW adds +0.078 to Z500-only BSS) | `r60_multi_predictor_loo.py` |
+| Blocking differentiation (only 6 SSW-blocking days; underpowered) | `r60_blocking_differentiation.py` |
+### R61 Falsification & Influence Analyses
+
+| Claim | Script | Output File |
+|-------|--------|-------------|
+| Lead-lag falsification (Suppl. Table 65; 14/16 at lag 0 vs 7/13 at lag ±60d) | `scripts/review_rounds/r61_falsification.py` | `data/results/r61_falsification.json` |
+| Influence/fragility analysis (Suppl. Table 66; fragility index = 3) | `scripts/review_rounds/r61_falsification.py` | `data/results/r61_falsification.json` |
+| Randomization inference (P_sign = 0.085; baseline 11/16 suppressed) | `scripts/review_rounds/r61_falsification.py` | `data/results/r61_falsification.json` |
+| Comprehensive stats: event-level t-test, Wilcoxon, Bayesian, GLMM, spec-curve N_eff | `scripts/review_rounds/r61_comprehensive_stats_v2.py` | `data/results/r61_comprehensive_stats.json` |
+
+### R68 Mechanistic & Stratification Analyses
+
+| Claim | Script | Output File |
+|-------|--------|-------------|
+| Split vs displacement stratification (gmRR=0.24 split, 0.71 displacement; P=0.016 split) | `scripts/analysis/68_comprehensive_stratification.py` | `data/results/r68_comprehensive_analysis.json` |
+| Combinatorial coherence (8/8 channels, P=0.004; k_eff=5, P=0.031) | `scripts/analysis/68_comprehensive_stratification.py` | `data/results/r68_comprehensive_analysis.json` |
+| Power analysis for v'T' dose-response (min |ρ|=0.65 at 80% power, n=16) | `scripts/analysis/68_comprehensive_stratification.py` | `data/results/r68_comprehensive_analysis.json` |
+| Bootstrap CI on gmRR [0.25, 0.89] | `scripts/analysis/68_comprehensive_stratification.py` | `data/results/r68_comprehensive_analysis.json` |
+| Season consistency (early gmRR=0.53, late gmRR=0.43) | `scripts/analysis/68_comprehensive_stratification.py` | `data/results/r68_comprehensive_analysis.json` |
+| SNOWPACK 4-step mechanistic chain (PWL +25%, sk38 -33%, CCL -39%, SSI -24%) | `scripts/analysis/68_mechanistic_deep_dive.py` | `data/results/r68_mechanistic_analysis.json` |
+| Elevation stratification (PWL +65% at 1500-2000m, +25% at 2000-2500m) | `scripts/analysis/68_mechanistic_deep_dive.py` | `data/results/r68_mechanistic_analysis.json` |
+| Temporal structure (PWL peaks day +4; danger increases through +30d) | `scripts/analysis/68_mechanistic_deep_dive.py` | `data/results/r68_mechanistic_analysis.json` |
+| Wind transport +45%, air temp -3.0°C, rainfall -59% (station-day level) | `scripts/analysis/68_mechanistic_deep_dive.py` | `data/results/r68_mechanistic_analysis.json` |
+| Height-time composite: du/dt at 10,30,50,100 hPa with propagation timing | `scripts/r77_height_time_composite.py` | `data/results/r77_height_time_composite.json` |
+| Observer-effort indicators (6 metrics showing asymmetric pattern) | `scripts/r77_observer_effort_table.py` | `data/results/r77_observer_effort_summary.json` |
+
+### Sign-Randomisation Inference (Supplementary Table 63)
+- **Claim:** Sign-randomisation P = 0.0005 for observed gmRR; Bonferroni-corrected P_adj = 0.01 survives α = 0.05 two-sided
+- → script: `scripts/r78_sign_randomisation.py`
+- → output: `data/results/r78_sign_randomisation.json`
+- → table: Supplementary Table 63 (`tab:randomisation`)
+- **Method:** For each of 100,000 iterations, randomly flip the sign of each event-level log(RR), preserving magnitudes. Compute geometric mean RR under the null of no directional SSW effect. Tests whether the observed magnitude+direction pattern is unlikely under the null.
+
+### EP-Flux Height–Time Composite Figure (Fig. 6)
+- **Claim:** Downward propagation of EP-flux convergence from 10 hPa to 100 hPa in ~6.6 days; all 16 events show positive v'T' anomalies at 100 hPa
+- → script: `scripts/r79_epflux_height_time_figure.py`
+- → data: `data/results/r77_height_time_composite.json`, `data/results/47_direct_ep_flux.json`, `data/results/downward_propagation.json`
+- → figure: `data/figures/fig_epflux_height_time.pdf`
+- **Method:** 3-panel composite: (a) height-time du/dt at 4 pressure levels with significance stippling, (b) ranked v'T' at 100 hPa per event, (c) v'T' vs log(RR) scatter with correlation.
+### R81 Structural Ceiling Breakers
+Script: `scripts/r81_structural_ceiling_breakers.py`
+Output: `data/results/r81_ceiling_breakers.json`
+Computes: Extended SSW catalog (n=40) representativeness test, QAIC overdispersion correction, PWL depth accessibility analysis, SSW-specificity (non-SSW blocking comparison), formal mediation analysis, cross-reanalysis validation, power landscape, global scope evidence
+
+
+### R82 PWL Depth Validation (Extended Data Table 4b)
+- **Claim:** Persistent weak layers deepen during SSW: mean Pen_depth 20.5 vs 18.0 cm, 15/16 events deeper (sign test P=0.0005); CCL lower in 14/16 events (P=0.004)
+- Script: `scripts/analysis/r82_pwl_depth_validation.py`
+- Output: `data/results/r82_pwl_depth_validation.json`
+- Method: SNOWPACK Pen_depth and min_ccl_pen across 130 Swiss stations tagged by SSW window (+-15d). Event-level sign tests cluster at SSW event (n=16) to avoid station-day pseudo-replication.
+
+### R82 Hierarchical Event-Level Synthesis (now superseded by R83)
+- **Claim (CORRECTED):** gmRR=0.32 (DOY-matched); sign-randomisation P=0.0006; LOO gmRR range [0.27, 0.36], all folds P≤0.004
+- Script: `scripts/analysis/r83_fix_all_consensus.py` (supersedes r82_hierarchical_synthesis.py which used wrong data source)
+- Output: `data/results/r83_consensus_fixes.json`
+- Method: DOY-matched RRs from r20_definitive_analysis.json (correct source). Sign-randomisation 100K permutations. LOO leave-one-event-out. Bootstrap CI.
+
+### R82 Problem-Type Regime Shift
+- **Claim:** Persistent-slab conditions +29% during SSW (47% vs 36%); sk38 lower in 14/16 events (P=0.004); sn38 lower in 13/16 (P=0.021)
+- Script: `scripts/analysis/r82_problem_type_proxy.py`
+- Output: `data/results/r82_problem_type_proxy.json`
+- Method: SNOWPACK stability indices classified by SSW status. Event-level sign tests (n=16) for proper clustering.
+
+### R82 Bulletin External Validation
+- **Claim:** Swiss Avalanche Bulletin confirms loaded-gun: 13/16 events elevated danger (sign test P=0.021); OR=1.49 at station-day level
+- Script: `scripts/analysis/r82_bulletin_validation.py`
+- Output: `data/results/r82_bulletin_validation.json`
+- Method: SLF bulletin danger levels (human-expert assessment independent of SNOWPACK). Event-level sign test (13/16 elevated) provides proper inference.
+
+### R83 Consensus Fixes (Tables 70-72, threshold sensitivity)
+- **Claims:** (1) gmRR=0.32, LOO all P≤0.004; (2) Event-level SNOWPACK: Pen_depth 15/16 P=0.0005, sk38 14/16 P=0.004, CCL 14/16 P=0.004; (3) Rutschblock reconciliation: deeper PWL = harder surface trigger + easier propagation; (4) Threshold sensitivity: robust 10-30cm; (5) Bulletin 13/16 events elevated P=0.021
+- Script: `scripts/analysis/r83_fix_all_consensus.py`
+- Output: `data/results/r83_consensus_fixes.json`
+- Method: Corrects Table 70 using DOY-matched RRs from r20_definitive_analysis.json. Aggregates SNOWPACK to event level (n=16) with sign tests. Demonstrates Rutschblock-SNOWPACK reconciliation through depth-dependent loaded-gun physics. Threshold sensitivity across 10-50cm confirms robustness.
+
+### R84 N=16 Structural Ceiling Resolution (SI Tables 74-75)
+- **Claims:** (1) ERA5 atmospheric validation at n=25 (1979-2014): 10hPa +5.37K, 21/25 positive, P<10⁻⁴; (2) Pre-study replication (1979-1997, n=10): P=0.010, two-sample vs study P=0.955; (3) Power analysis: sign test at n=16 has 87% power at observed effect; (4) Fisher combined P=1.2×10⁻¹⁵ across 7 independent streams; combined BF>10¹²
+- Script: `scripts/analysis/r84_n16_resolution.py`
+- Output: `data/results/r84_n16_resolution.json`
+- Method: ERA5 polar-stratospheric monthly means (1979-2014) for 25 Butler-catalog SSW events. Compute anomalies relative to monthly climatology. Split into pre-study (1979-1997) and study-period (1998-2014) subsamples. Power analysis via exact binomial computation. Fisher combined test sums -2ln(P) across 7 independent measurement systems.
+
+### R86 Directional Forecast Skill Verification (SI Table 76)
+- **Claims:** (1) Directional LOO accuracy = 87.5% = SSW-conditional base rate; (2) SSW identification shifts suppression probability from unconditional 50% to conditional 87.5%; (3) No further within-sample discrimination needed; (4) Continuous BSS = -0.95 is expected at SNR=0.95; (5) Conditional climatological skill fills S2S prediction gap at weeks 2-4
+- Script: `scripts/analysis/r86_directional_skill.py`
+- Output: `data/results/r86_directional_skill.json`
+- Method: Leave-one-out categorical verification following WMO (2019) Guidelines on Verification of Forecasts. For each held-out event, posterior P(suppression) computed from Beta(1,1) prior + remaining 15 observations. Brier Score computed against climatological base rate (0.5). SNR analysis demonstrates why continuous BSS is mathematically expected to be negative for binary predictors with CV>1.5.
+
+### R86 Brown's Method for Dependent P-Value Combination (Discussion §"Convergent evidence")
+- **Claims:** (1) Brown's P = 3.4×10⁻⁷ under conservative dependence (ρ=0.5 European, 0.2 cross-Atlantic); (2) Ultra-conservative P = 3.7×10⁻⁶ (ρ=0.7/0.4); (3) Two-stream same-direction (Swiss+French, ρ=0.5): P = 7.1×10⁻⁴; (4) All scenarios reject H0 at conventional α
+- Script: `scripts/analysis/r86_browns_method.py`
+- Output: `data/results/r86_browns_method.json`
+- Method: Brown's method (Brown 1975; Poole et al. 2016) adjusts Fisher's combined chi-squared for inter-system dependence using Kost-McDermott covariance approximation. Three systems: Swiss sign-randomisation (P=0.0006), US SNOTEL (P=2.5×10⁻⁷), French S2M/Crocus (P=0.011). Sensitivity analysis across 4 dependence scenarios from ρ=0.2 (weak) to ρ=0.7 (extreme).
+
+### R87 Joint Compound-Event Cross-Tabulation (Results §"Loaded-gun")
+- **Claims:** (1) 13/16 events (81%) show ALL THREE loaded-gun indicators simultaneously; (2) Permutation P = 0.004; (3) OR = 6.5× vs unconditional base rates; (4) Wilson CI [0.57, 0.93]
+- Script: `scripts/analysis/r87_joint_compound_test.py`
+- Output: `data/results/r87_joint_compound_test.json`
+- Method: Cross-tabulates three binary indicators per SSW event: (a) natural-trigger suppression (RR<1), (b) bulletin danger elevation (≥1 level increase), (c) SNOWPACK PWL deepening (penetration depth increase ≥1cm). Permutation null generated by independently shuffling each indicator 10,000× and counting joint occurrences. Odds ratio computed from 2×2 table of observed vs expected triple-positives.
+
+### R88 Formal Joint Copula Test (historical; superseded for typology by R89)
+- **Claims:** Historical joint-incidence analysis before the irreducibility upgrade: (1) permutation P = 0.004 against independent shuffling; (2) against DJF null, P < 10⁻⁶ (6.5× enrichment)
+- Script: `scripts/analysis/r88_formal_joint_copula_test.py`
+- Output: `data/results/r88_formal_joint_copula_test.json`
+- Method: Three complementary tests of joint compound-event significance. (1) Binomial test against product of marginals (P(S)×P(B)×P(P)). (2) Permutation test with 100K independent shuffles (approach A) and 100K random DJF draws (approach B). (3) Gaussian copula model estimating dependence via tetrachoric correlations and Kendall's tau, with Monte Carlo trivariate exceedance probability.
+
+### R88 Pre-Onset Stratification (Results §"SSW counting" and Discussion §"Mediation")
+- **Claims:** (1) Events stratified by Z500 nadir lag show equivalent suppression: Group A (tropo leads, n=7) gmRR=0.20, 7/7 suppress; Group B (top-down, n=9) gmRR=0.48, 7/9 suppress; Mann-Whitney P=0.14; (2) Strong wave forcing (above-median) produces gmRR=0.21, 8/8 direction; weak wave forcing: gmRR=0.50, 6/8
+- Script: `scripts/analysis/r88_pre_onset_stratification.py`
+- Output: `data/results/r88_pre_onset_stratification.json`
+- Method: Stratification of 16 SSW events by Z500 nadir timing relative to formal onset date. Events with Z500 nadir before onset (tropospheric leads) vs after onset (classic top-down propagation). Also stratified by wave-forcing intensity (above/below median du/dt proxy). Tests whether both sub-groups show suppression, defending "drive" framing.
+
+### R89 Compound Irreducibility Test (Discussion §"Compound-event extension")
+- **Claim:** The loaded-gun compound is irreducible: suppression strength and structural-instability metrics are not monotone reflections of one cold-dry severity axis (suppression vs composite instability Spearman $\rho=-0.33$, $P=0.213$; partial $\rho=-0.31$, $P=0.240$ after controlling for $\overline{v'T'}$).
+- Script: `scripts/analysis/r89_compound_irreducibility.py`
+- Output: `data/results/r89_compound_irreducibility.json`
+- Method: Event-level Spearman correlations across 16 SSW events between suppression strength ($-\log \mathrm{RR}$) and structural-instability diagnostics (critical crack length, triggerable fraction, Pen_depth, composite instability index). Partial correlations controlling for pre-onset $\overline{v'T'}$ or 10 hPa deceleration test whether both arms collapse onto one cold-dry severity axis.
+
+### R92 NASA Aura MLS Satellite Independent Validation (Extended Data Table 15)
+- **Claim:** All 7/7 SSW events with valid MLS coverage show positive polar-cap (60–90°N) warming at 10 hPa within D+0 to D+14 of SSW onset: mean +20.8 ± 13.4 K; sign test P = 0.008; one-sample t(6) = 4.12, P = 0.006. Individual events range from +7.6 K (2010) to +46.7 K (2009 major split-vortex).
+- **Significance:** MLS L3DZ daily zonal-mean temperature is physically independent of ERA5 and NCEP reanalysis (derived from direct microwave limb emission), establishing that the SSW catalogue is not a reanalysis artefact.
+- Script: `scripts/analysis/r92_mls_satellite_validation.py`
+- Output: `data/results/r92_mls_satellite_validation.json`
+- Data: `data/atmospheric/aura_mls/Temperature/` — HDF5 files (h5py-readable), group `Temperature PressureZM`, variable `value` shape (n_days, 55_lev, 45_lat); 2004–2025 coverage
+- Coverage notes: Events 1998–2003 predate MLS launch. Events at DOY 1 or 6 (2013, 2019) have year-boundary issues in pre-onset reference window and are excluded. 2004 has ~59% NaN at polar cap 10 hPa (early-mission). Valid for 7/10 MLS-era events.
+- Method: For each SSW event year, extract daily polar-cap mean temperature at 10 hPa. Compute anomaly as peak temperature in D+0 to D+14 minus mean of D-30 to D-7 reference period. Sign test (binomtest) and one-sample t-test against 0.
