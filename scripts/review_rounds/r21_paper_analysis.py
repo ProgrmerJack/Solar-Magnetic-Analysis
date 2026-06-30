@@ -11,7 +11,7 @@ from pathlib import Path
 warnings.filterwarnings('ignore')
 np.random.seed(42)
 
-ROOT = Path(r'C:\Users\Jack0\Solar-Magnetic-Analysis')
+ROOT = Path(__file__).resolve().parents[2]  # repo root (scripts/review_rounds/.. → root)
 OUT = {}
 
 # ============================================================

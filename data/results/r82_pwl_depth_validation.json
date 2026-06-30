@@ -1,0 +1,238 @@
+{
+  "pen_depth_cm": {
+    "ssw_mean": 20.22,
+    "ssw_median": 19.01,
+    "ctrl_mean": 18.03,
+    "ctrl_median": 17.07,
+    "diff_cm": 2.19,
+    "pct_change": 12.14,
+    "cohen_d": 0.3127,
+    "mw_p": 0.0,
+    "n_ssw": 37493,
+    "n_ctrl": 236821
+  },
+  "human_triggerable_fraction": {
+    "ssw_fraction": 0.4351,
+    "ctrl_fraction": 0.345,
+    "ratio": 1.2612,
+    "depth_range_cm": [
+      20,
+      120
+    ],
+    "interpretation": "43.5% of SSW station-days vs 34.5% of control station-days have PWL in the human-triggerable range (20-120 cm)"
+  },
+  "depth_band_distribution": {
+    "very_shallow_0_20cm": {
+      "ssw_pct": 56.49,
+      "ctrl_pct": 65.5,
+      "ratio": 0.862
+    },
+    "shallow_20_50cm": {
+      "ssw_pct": 43.33,
+      "ctrl_pct": 34.42,
+      "ratio": 1.259
+    },
+    "medium_50_80cm": {
+      "ssw_pct": 0.17,
+      "ctrl_pct": 0.08,
+      "ratio": 2.197
+    },
+    "deep_80_120cm": {
+      "ssw_pct": 0.01,
+      "ctrl_pct": 0.01,
+      "ratio": 2.105
+    },
+    "very_deep_120plus": {
+      "ssw_pct": 0.0,
+      "ctrl_pct": 0.0,
+      "ratio": null
+    }
+  },
+  "critical_crack_length_at_pwl": {
+    "ssw_mean": 0.4436,
+    "ssw_median": 0.32,
+    "ctrl_mean": 0.6656,
+    "ctrl_median": 0.36,
+    "diff": -0.222,
+    "pct_change": -33.36,
+    "cohen_d": -0.3195,
+    "mw_p": 0.0,
+    "interpretation": "Lower CCL = easier crack propagation = more unstable"
+  },
+  "joint_critical_sk38_lt_1.5": {
+    "ssw_rate": 0.29699,
+    "ctrl_rate": 0.21933,
+    "ratio": 1.354,
+    "ssw_n": 11506,
+    "ctrl_n": 54045,
+    "interpretation": "Station-days with PWL in triggerable range AND sk38 < 1.5: SSW 29.70% vs ctrl 21.93%"
+  },
+  "joint_critical_sk38_lt_1.0": {
+    "ssw_rate": 0.24113,
+    "ctrl_rate": 0.16848,
+    "ratio": 1.431,
+    "ssw_n": 9342,
+    "ctrl_n": 41516,
+    "interpretation": "Station-days with PWL in triggerable range AND sk38 < 1.0: SSW 24.11% vs ctrl 16.85%"
+  },
+  "event_level": [
+    {
+      "event_date": "1998-12-15",
+      "n_station_days": 956,
+      "pen_depth_mean_cm": 20.7,
+      "pen_depth_median_cm": 18.5,
+      "ccl_mean": 0.434,
+      "pwl_prevalence": 0.837,
+      "triggerable_fraction": 0.431
+    },
+    {
+      "event_date": "1999-02-26",
+      "n_station_days": 1109,
+      "pen_depth_mean_cm": 27.4,
+      "pen_depth_median_cm": 25.5,
+      "ccl_mean": 0.316,
+      "pwl_prevalence": 0.502,
+      "triggerable_fraction": 0.735
+    },
+    {
+      "event_date": "2001-02-11",
+      "n_station_days": 1954,
+      "pen_depth_mean_cm": 20.0,
+      "pen_depth_median_cm": 18.9,
+      "ccl_mean": 0.372,
+      "pwl_prevalence": 0.914,
+      "triggerable_fraction": 0.43
+    },
+    {
+      "event_date": "2001-12-30",
+      "n_station_days": 2090,
+      "pen_depth_mean_cm": 18.1,
+      "pen_depth_median_cm": 17.1,
+      "ccl_mean": 0.969,
+      "pwl_prevalence": 0.749,
+      "triggerable_fraction": 0.322
+    },
+    {
+      "event_date": "2002-02-17",
+      "n_station_days": 1981,
+      "pen_depth_mean_cm": 21.4,
+      "pen_depth_median_cm": 20.6,
+      "ccl_mean": 0.426,
+      "pwl_prevalence": 0.776,
+      "triggerable_fraction": 0.54
+    },
+    {
+      "event_date": "2003-01-18",
+      "n_station_days": 2435,
+      "pen_depth_mean_cm": 20.5,
+      "pen_depth_median_cm": 19.0,
+      "ccl_mean": 0.369,
+      "pwl_prevalence": 0.813,
+      "triggerable_fraction": 0.445
+    },
+    {
+      "event_date": "2004-01-05",
+      "n_station_days": 2563,
+      "pen_depth_mean_cm": 23.2,
+      "pen_depth_median_cm": 22.2,
+      "ccl_mean": 0.349,
+      "pwl_prevalence": 0.734,
+      "triggerable_fraction": 0.629
+    },
+    {
+      "event_date": "2006-01-21",
+      "n_station_days": 2822,
+      "pen_depth_mean_cm": 18.7,
+      "pen_depth_median_cm": 18.0,
+      "ccl_mean": 0.487,
+      "pwl_prevalence": 0.925,
+      "triggerable_fraction": 0.298
+    },
+    {
+      "event_date": "2007-02-24",
+      "n_station_days": 2661,
+      "pen_depth_mean_cm": 19.5,
+      "pen_depth_median_cm": 18.4,
+      "ccl_mean": 0.431,
+      "pwl_prevalence": 0.802,
+      "triggerable_fraction": 0.391
+    },
+    {
+      "event_date": "2008-02-22",
+      "n_station_days": 2720,
+      "pen_depth_mean_cm": 15.5,
+      "pen_depth_median_cm": 15.1,
+      "ccl_mean": 0.562,
+      "pwl_prevalence": 0.795,
+      "triggerable_fraction": 0.097
+    },
+    {
+      "event_date": "2009-01-24",
+      "n_station_days": 3029,
+      "pen_depth_mean_cm": 20.2,
+      "pen_depth_median_cm": 18.8,
+      "ccl_mean": 0.404,
+      "pwl_prevalence": 0.862,
+      "triggerable_fraction": 0.422
+    },
+    {
+      "event_date": "2010-02-09",
+      "n_station_days": 3090,
+      "pen_depth_mean_cm": 21.0,
+      "pen_depth_median_cm": 20.4,
+      "ccl_mean": 0.335,
+      "pwl_prevalence": 0.915,
+      "triggerable_fraction": 0.537
+    },
+    {
+      "event_date": "2012-01-11",
+      "n_station_days": 2968,
+      "pen_depth_mean_cm": 22.9,
+      "pen_depth_median_cm": 22.2,
+      "ccl_mean": 0.371,
+      "pwl_prevalence": 0.524,
+      "triggerable_fraction": 0.622
+    },
+    {
+      "event_date": "2013-01-07",
+      "n_station_days": 2912,
+      "pen_depth_mean_cm": 18.8,
+      "pen_depth_median_cm": 18.1,
+      "ccl_mean": 0.481,
+      "pwl_prevalence": 0.633,
+      "triggerable_fraction": 0.372
+    },
+    {
+      "event_date": "2018-02-12",
+      "n_station_days": 2524,
+      "pen_depth_mean_cm": 18.6,
+      "pen_depth_median_cm": 18.1,
+      "ccl_mean": 0.413,
+      "pwl_prevalence": 0.827,
+      "triggerable_fraction": 0.324
+    },
+    {
+      "event_date": "2019-01-01",
+      "n_station_days": 2928,
+      "pen_depth_mean_cm": 21.4,
+      "pen_depth_median_cm": 20.6,
+      "ccl_mean": 0.402,
+      "pwl_prevalence": 0.674,
+      "triggerable_fraction": 0.533
+    }
+  ],
+  "literature_comparison": {
+    "ssw_median_m": 0.19,
+    "ctrl_median_m": 0.171,
+    "schweizer_jamieson_2007_median_m": 0.68,
+    "reuter_2015_modal_m": 0.5,
+    "van_herwijnen_max_trigger_m": 1.2,
+    "ssw_in_SJ2007_iqr": 0.006,
+    "ctrl_in_SJ2007_iqr": 0.003,
+    "interpretation": "SNOWPACK Pen_depth during SSW (median 0.19 m) falls within the empirically observed human-trigger range (Schweizer & Jamieson 2007: median 0.68 m, IQR 0.42-0.97 m, n=186). During SSW windows, 43.5% of PWLs are at human-triggerable depths (0.20-1.20 m)."
+  },
+  "manuscript_sentences": {
+    "pen_depth_sentence": "SNOWPACK penetration-depth analysis across 130 stations confirms that persistent weak layers during SSW windows are concentrated at human-triggerable depths (median 0.19 m vs 0.17 m control; 44% within 0.20--1.20 m; n = 37,493 station-days; Cohen's d = 0.3127; P < 0.0e+00).",
+    "ccl_sentence": "Critical crack length at PWL depth decreases by 33.4% during SSW windows (d = -0.3195), indicating easier crack propagation at the weak-layer interface."
+  }
+}

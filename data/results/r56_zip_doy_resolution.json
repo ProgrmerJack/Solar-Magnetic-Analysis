@@ -1,0 +1,90 @@
+{
+  "zip_ssw_only": {
+    "ssw_coef": -0.8719965836205873,
+    "ssw_pval": 2.608976289950656e-44,
+    "ssw_rr": 0.41811591193407294,
+    "aic": 10626.721218212151,
+    "bic": 10651.400828801588,
+    "converged": true,
+    "method": "bfgs",
+    "const_coef": 1.9724338522611682,
+    "const_pval": 0.0
+  },
+  "zip_ssw_doy_linear": {
+    "ssw_coef": -0.8967795847503124,
+    "ssw_pval": 1.3740936503927526e-46,
+    "ssw_rr": 0.4078810934199836,
+    "aic": 10582.529222935678,
+    "bic": 10613.378736172474,
+    "converged": true,
+    "method": "bfgs",
+    "const_coef": 2.0800057446225546,
+    "const_pval": 0.0,
+    "doy_coef": -0.0010862721092530273,
+    "doy_pval": 6.06831564214328e-11
+  },
+  "zip_ssw_doy_cyclical": {
+    "ssw_coef": -0.9141456693628428,
+    "ssw_pval": 1.3203227028862044e-47,
+    "ssw_rr": 0.4008589459215175,
+    "aic": 10419.095155341609,
+    "bic": 10468.454376520482,
+    "converged": true,
+    "method": "bfgs",
+    "const_coef": 1.483726615076269,
+    "const_pval": 7.372059740682585e-62,
+    "doy_sin_coef": 0.3425160047919191,
+    "doy_sin_pval": 3.3322997126550753e-07,
+    "doy_cos_coef": 0.48293980531957403,
+    "doy_cos_pval": 3.7170502021024995e-08
+  },
+  "zip_ssw_z500_doy": {
+    "ssw_coef": -0.8773630832534368,
+    "ssw_pval": 7.022951082970611e-43,
+    "ssw_rr": 0.4158781030171674,
+    "aic": 10407.034139759984,
+    "bic": 10462.563263586217,
+    "converged": true,
+    "method": "bfgs",
+    "const_coef": 1.0054310889300337,
+    "const_pval": 1.1036098658377352e-10,
+    "z500_coef": 0.2883950889454021,
+    "z500_pval": 0.00017983366165965847,
+    "doy_sin_coef": 0.6693303934916384,
+    "doy_sin_pval": 1.0686899545174446e-09,
+    "doy_cos_coef": 1.130418866088235,
+    "doy_cos_pval": 5.024494865969422e-09
+  },
+  "poisson_ssw_doy_cyclical": {
+    "ssw_coef": -0.7600004755289732,
+    "ssw_pval": 5.19838119792665e-38,
+    "ssw_rr": 0.46766620462102626,
+    "aic": 18706.89355976852,
+    "bic": -11524.742060292978
+  },
+  "zip_ssw_z500_no_doy": {
+    "ssw_coef": -0.9136697791456031,
+    "ssw_pval": 8.405898921877289e-47,
+    "ssw_rr": 0.4010497561711391,
+    "aic": 10617.39826711509,
+    "bic": 10648.247780351885,
+    "converged": true,
+    "method": "bfgs",
+    "const_coef": 1.9276610444955273,
+    "const_pval": 0.0,
+    "z500_coef": -0.11162211385348408,
+    "z500_pval": 0.001028058087861932
+  },
+  "_metadata": {
+    "n_rows": 3533,
+    "n_ssw_days": 465,
+    "y_mean": 0.8615907161052929,
+    "y_zeros_pct": 86.35720350976507,
+    "doy_range": [
+      1,
+      366
+    ],
+    "description": "ZIP/DOY discrepancy resolution: SSW effect on dry natural avalanche counts",
+    "conclusion": "Original ZIP without DOY suffered omitted-variable bias; Z500 absorbed seasonal variance"
+  }
+}

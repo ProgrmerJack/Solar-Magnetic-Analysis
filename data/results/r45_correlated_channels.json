@@ -1,0 +1,108 @@
+{
+  "parameters": {
+    "k": 7,
+    "d_weather": 0.69,
+    "threshold_sigma": 1.25,
+    "n_mc": 500000
+  },
+  "results": [
+    {
+      "rho": 0.0,
+      "k_eff": 7.0,
+      "RR": 0.313,
+      "P_ctrl": 0.5431,
+      "P_ssw": 0.1702,
+      "d_hazard": 1.16,
+      "amplification": 1.68
+    },
+    {
+      "rho": 0.1,
+      "k_eff": 4.38,
+      "RR": 0.322,
+      "P_ctrl": 0.5037,
+      "P_ssw": 0.1622,
+      "d_hazard": 1.133,
+      "amplification": 1.64
+    },
+    {
+      "rho": 0.2,
+      "k_eff": 3.18,
+      "RR": 0.328,
+      "P_ctrl": 0.4661,
+      "P_ssw": 0.1529,
+      "d_hazard": 1.115,
+      "amplification": 1.62
+    },
+    {
+      "rho": 0.3,
+      "k_eff": 2.5,
+      "RR": 0.332,
+      "P_ctrl": 0.43,
+      "P_ssw": 0.1426,
+      "d_hazard": 1.104,
+      "amplification": 1.6
+    },
+    {
+      "rho": 0.4,
+      "k_eff": 2.06,
+      "RR": 0.331,
+      "P_ctrl": 0.3947,
+      "P_ssw": 0.1307,
+      "d_hazard": 1.105,
+      "amplification": 1.6
+    },
+    {
+      "rho": 0.5,
+      "k_eff": 1.75,
+      "RR": 0.334,
+      "P_ctrl": 0.3575,
+      "P_ssw": 0.1192,
+      "d_hazard": 1.098,
+      "amplification": 1.59
+    },
+    {
+      "rho": 0.6,
+      "k_eff": 1.52,
+      "RR": 0.331,
+      "P_ctrl": 0.3225,
+      "P_ssw": 0.1067,
+      "d_hazard": 1.106,
+      "amplification": 1.6
+    },
+    {
+      "rho": 0.7,
+      "k_eff": 1.35,
+      "RR": 0.325,
+      "P_ctrl": 0.2846,
+      "P_ssw": 0.0924,
+      "d_hazard": 1.125,
+      "amplification": 1.63
+    },
+    {
+      "rho": 0.8,
+      "k_eff": 1.21,
+      "RR": 0.315,
+      "P_ctrl": 0.2449,
+      "P_ssw": 0.0771,
+      "d_hazard": 1.156,
+      "amplification": 1.68
+    },
+    {
+      "rho": 0.9,
+      "k_eff": 1.09,
+      "RR": 0.301,
+      "P_ctrl": 0.1974,
+      "P_ssw": 0.0595,
+      "d_hazard": 1.199,
+      "amplification": 1.74
+    }
+  ],
+  "summary": {
+    "independent_RR": 0.313,
+    "rho03_RR": 0.332,
+    "rho06_RR": 0.331,
+    "rho08_RR": 0.315,
+    "observed_RR": 0.32,
+    "conclusion": "Even under high inter-channel correlations (rho=0.6-0.8), the multi-trigger model still predicts substantial suppression. The amplification factor decreases but RR remains well below 1.0."
+  }
+}

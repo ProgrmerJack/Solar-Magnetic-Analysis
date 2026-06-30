@@ -1,0 +1,120 @@
+{
+  "description": "M3 frozen-pipeline OOS test on post-2019 SSW events",
+  "design": "matched-control DOY design; reference = post-2019 NON-SSW winters (controls secular trend, out-of-sample w.r.t. pre-2019 training)",
+  "hard_limitation": "only ~2 major mid-winter SSWs exist post-study (2021-01-05, 2023-02-16); n_OOS~2 -> underpowered by construction",
+  "ssw_verification": [
+    {
+      "onset": "2021-01-05",
+      "u10_min_ms": -21.218250274658203,
+      "reversal_confirmed": true,
+      "n_reversal_days_pm20": 22
+    },
+    {
+      "onset": "2023-02-16",
+      "u10_min_ms": -25.04903221130371,
+      "reversal_confirmed": true,
+      "n_reversal_days_pm20": 20
+    },
+    {
+      "onset": "2024-01-16",
+      "u10_min_ms": -9.420101165771484,
+      "reversal_confirmed": true,
+      "n_reversal_days_pm20": 5
+    }
+  ],
+  "post2019_reversal_scan": [
+    "2021-01-04",
+    "2022-03-19",
+    "2023-02-15",
+    "2024-01-15",
+    "2024-02-16"
+  ],
+  "accident_channel": {
+    "channel": "fatal_accidents",
+    "predicted_direction": "increase",
+    "per_event": [
+      {
+        "onset": "2021-01-05",
+        "host_winter": "2020-21",
+        "observed_mean": 2.225806451612903,
+        "expected_doy_matched": 0.7831541218637993,
+        "rate_ratio": 2.8421052631578942,
+        "n_obs_days": 31,
+        "n_control_winters": 3,
+        "direction": "INCREASE"
+      },
+      {
+        "onset": "2023-02-16",
+        "host_winter": "2022-23",
+        "observed_mean": 1.0,
+        "expected_doy_matched": 1.2688172043010753,
+        "rate_ratio": 0.788135593220339,
+        "n_obs_days": 31,
+        "n_control_winters": 3,
+        "direction": "DECREASE"
+      },
+      {
+        "onset": "2024-01-16",
+        "host_winter": "2023-24",
+        "observed_mean": 1.2903225806451613,
+        "expected_doy_matched": 0.8709677419354839,
+        "rate_ratio": 1.4814814814814814,
+        "n_obs_days": 31,
+        "n_control_winters": 3,
+        "direction": "INCREASE"
+      }
+    ],
+    "n_events": 3,
+    "gm_rate_ratio": 1.4915773359204723,
+    "hits_in_predicted_direction": "2/3",
+    "sign_test_p": 1.0,
+    "note": "UNDERPOWERED: only ~2 post-study major SSWs exist; this is supportive context, not a powered confirmation."
+  },
+  "danger_channel": {
+    "channel": "bulletin_danger_level",
+    "predicted_direction": "increase",
+    "per_event": [
+      {
+        "onset": "2021-01-05",
+        "host_winter": "2020-21",
+        "observed_mean": 2.718582905294359,
+        "expected_doy_matched": 2.1228045721786812,
+        "rate_ratio": 1.2806562322900112,
+        "n_obs_days": 31,
+        "n_control_winters": 1,
+        "direction": "INCREASE"
+      },
+      {
+        "onset": "2023-02-16",
+        "host_winter": "2022-23",
+        "observed_mean": 1.7195133698990037,
+        "expected_doy_matched": 2.6509542611494497,
+        "rate_ratio": 0.648639395669326,
+        "n_obs_days": 31,
+        "n_control_winters": 1,
+        "direction": "DECREASE"
+      },
+      {
+        "onset": "2024-01-16",
+        "host_winter": "2023-24",
+        "observed_mean": 2.2275215408027997,
+        "expected_doy_matched": 1.7618967947298045,
+        "rate_ratio": 1.2642746995543521,
+        "n_obs_days": 31,
+        "n_control_winters": 1,
+        "direction": "INCREASE"
+      }
+    ],
+    "n_events": 3,
+    "gm_rate_ratio": 1.016465038447967,
+    "hits_in_predicted_direction": "2/3",
+    "sign_test_p": 1.0,
+    "note": "UNDERPOWERED: only ~2 post-study major SSWs exist; this is supportive context, not a powered confirmation."
+  },
+  "count_channel_primary": {
+    "status": "DATA_UNAVAILABLE",
+    "needed_file": "C:\\Users\\Jack0\\Solar-Magnetic-Analysis\\data\\processed\\cryosphere\\slf_activity_post2019.parquet",
+    "request": "Daily SLF natural-trigger dry-slab activity index (aai_dry_natural / dry_natural_size_1234) for winters 2019/20-2024/25 from WSL/SLF.",
+    "note": "Function is implemented; will execute on file arrival."
+  }
+}
