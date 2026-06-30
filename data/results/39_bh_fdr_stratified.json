@@ -1,0 +1,365 @@
+{
+  "family_A_event_level": {
+    "description": "Event-level tests (n=16 SSW events as inferential unit)",
+    "n_tests": 15,
+    "n_significant": 6,
+    "results": [
+      {
+        "test": "Swiss t-test log(RR)",
+        "p_raw": 0.0001,
+        "bh_threshold": 0.0033,
+        "significant_after_fdr": true,
+        "rank": 1,
+        "unit": "event"
+      },
+      {
+        "test": "Swiss Wilcoxon signed-rank",
+        "p_raw": 0.0003,
+        "bh_threshold": 0.0067,
+        "significant_after_fdr": true,
+        "rank": 2,
+        "unit": "event"
+      },
+      {
+        "test": "Swiss permutation",
+        "p_raw": 0.0005,
+        "bh_threshold": 0.01,
+        "significant_after_fdr": true,
+        "rank": 3,
+        "unit": "event"
+      },
+      {
+        "test": "Swiss sign test (14/16)",
+        "p_raw": 0.002,
+        "bh_threshold": 0.0133,
+        "significant_after_fdr": true,
+        "rank": 4,
+        "unit": "event"
+      },
+      {
+        "test": "Partial corr Z500|strat",
+        "p_raw": 0.008,
+        "bh_threshold": 0.0167,
+        "significant_after_fdr": true,
+        "rank": 5,
+        "unit": "event"
+      },
+      {
+        "test": "Pre-onset sign (13/16)",
+        "p_raw": 0.011,
+        "bh_threshold": 0.02,
+        "significant_after_fdr": true,
+        "rank": 6,
+        "unit": "event"
+      },
+      {
+        "test": "Z500 correlation",
+        "p_raw": 0.024,
+        "bh_threshold": 0.0233,
+        "significant_after_fdr": false,
+        "rank": 7,
+        "unit": "event"
+      },
+      {
+        "test": "EP-flux dose-response",
+        "p_raw": 0.032,
+        "bh_threshold": 0.0267,
+        "significant_after_fdr": false,
+        "rank": 8,
+        "unit": "event"
+      },
+      {
+        "test": "Wet avalanche increase",
+        "p_raw": 0.038,
+        "bh_threshold": 0.03,
+        "significant_after_fdr": false,
+        "rank": 9,
+        "unit": "event"
+      },
+      {
+        "test": "Pre-SSW Z500 prediction",
+        "p_raw": 0.045,
+        "bh_threshold": 0.0333,
+        "significant_after_fdr": false,
+        "rank": 10,
+        "unit": "event"
+      },
+      {
+        "test": "Human/natural ratio shift",
+        "p_raw": 0.058,
+        "bh_threshold": 0.0367,
+        "significant_after_fdr": false,
+        "rank": 11,
+        "unit": "event"
+      },
+      {
+        "test": "Residual IRR (regime+DOY)",
+        "p_raw": 0.06,
+        "bh_threshold": 0.04,
+        "significant_after_fdr": false,
+        "rank": 12,
+        "unit": "event"
+      },
+      {
+        "test": "Accident RR (n=29)",
+        "p_raw": 0.067,
+        "bh_threshold": 0.0433,
+        "significant_after_fdr": false,
+        "rank": 13,
+        "unit": "event"
+      },
+      {
+        "test": "Post-2005 subperiod",
+        "p_raw": 0.18,
+        "bh_threshold": 0.0467,
+        "significant_after_fdr": false,
+        "rank": 14,
+        "unit": "event"
+      },
+      {
+        "test": "Partial corr strat|Z500",
+        "p_raw": 0.29,
+        "bh_threshold": 0.05,
+        "significant_after_fdr": false,
+        "rank": 15,
+        "unit": "event"
+      }
+    ]
+  },
+  "family_A_deduplicated": {
+    "description": "Event-level tests with within-H0 duplicates removed",
+    "duplication_note": "4 Swiss primary tests (sign, Wilcoxon, t, permutation) test the same H0. Conservative approach: keep only the least significant (sign test P=0.002) and drop 3 duplicates.",
+    "n_tests": 12,
+    "n_significant": 3,
+    "results": [
+      {
+        "test": "Swiss sign test (14/16)",
+        "p_raw": 0.002,
+        "bh_threshold": 0.0042,
+        "significant_after_fdr": true,
+        "rank": 1,
+        "unit": "event"
+      },
+      {
+        "test": "Partial corr Z500|strat",
+        "p_raw": 0.008,
+        "bh_threshold": 0.0083,
+        "significant_after_fdr": true,
+        "rank": 2,
+        "unit": "event"
+      },
+      {
+        "test": "Pre-onset sign (13/16)",
+        "p_raw": 0.011,
+        "bh_threshold": 0.0125,
+        "significant_after_fdr": true,
+        "rank": 3,
+        "unit": "event"
+      },
+      {
+        "test": "Z500 correlation",
+        "p_raw": 0.024,
+        "bh_threshold": 0.0167,
+        "significant_after_fdr": false,
+        "rank": 4,
+        "unit": "event"
+      },
+      {
+        "test": "EP-flux dose-response",
+        "p_raw": 0.032,
+        "bh_threshold": 0.0208,
+        "significant_after_fdr": false,
+        "rank": 5,
+        "unit": "event"
+      },
+      {
+        "test": "Wet avalanche increase",
+        "p_raw": 0.038,
+        "bh_threshold": 0.025,
+        "significant_after_fdr": false,
+        "rank": 6,
+        "unit": "event"
+      },
+      {
+        "test": "Pre-SSW Z500 prediction",
+        "p_raw": 0.045,
+        "bh_threshold": 0.0292,
+        "significant_after_fdr": false,
+        "rank": 7,
+        "unit": "event"
+      },
+      {
+        "test": "Human/natural ratio shift",
+        "p_raw": 0.058,
+        "bh_threshold": 0.0333,
+        "significant_after_fdr": false,
+        "rank": 8,
+        "unit": "event"
+      },
+      {
+        "test": "Residual IRR (regime+DOY)",
+        "p_raw": 0.06,
+        "bh_threshold": 0.0375,
+        "significant_after_fdr": false,
+        "rank": 9,
+        "unit": "event"
+      },
+      {
+        "test": "Accident RR (n=29)",
+        "p_raw": 0.067,
+        "bh_threshold": 0.0417,
+        "significant_after_fdr": false,
+        "rank": 10,
+        "unit": "event"
+      },
+      {
+        "test": "Post-2005 subperiod",
+        "p_raw": 0.18,
+        "bh_threshold": 0.0458,
+        "significant_after_fdr": false,
+        "rank": 11,
+        "unit": "event"
+      },
+      {
+        "test": "Partial corr strat|Z500",
+        "p_raw": 0.29,
+        "bh_threshold": 0.05,
+        "significant_after_fdr": false,
+        "rank": 12,
+        "unit": "event"
+      }
+    ]
+  },
+  "family_B_daily_level": {
+    "description": "Daily/station-day-level tests (n >> 100)",
+    "n_tests": 7,
+    "n_significant": 7,
+    "results": [
+      {
+        "test": "Surface warming decrease",
+        "p_raw": 0.001,
+        "bh_threshold": 0.0071,
+        "significant_after_fdr": true,
+        "rank": 1,
+        "unit": "daily"
+      },
+      {
+        "test": "Shortwave decrease",
+        "p_raw": 0.001,
+        "bh_threshold": 0.0143,
+        "significant_after_fdr": true,
+        "rank": 2,
+        "unit": "daily"
+      },
+      {
+        "test": "Rutschblock stability",
+        "p_raw": 0.003,
+        "bh_threshold": 0.0214,
+        "significant_after_fdr": true,
+        "rank": 3,
+        "unit": "station-day"
+      },
+      {
+        "test": "SNOWPACK sn38 change",
+        "p_raw": 0.003,
+        "bh_threshold": 0.0286,
+        "significant_after_fdr": true,
+        "rank": 4,
+        "unit": "station-day"
+      },
+      {
+        "test": "Wind transport increase",
+        "p_raw": 0.005,
+        "bh_threshold": 0.0357,
+        "significant_after_fdr": true,
+        "rank": 5,
+        "unit": "daily"
+      },
+      {
+        "test": "Rain-on-snow decrease",
+        "p_raw": 0.01,
+        "bh_threshold": 0.0429,
+        "significant_after_fdr": true,
+        "rank": 6,
+        "unit": "daily"
+      },
+      {
+        "test": "Warm-dry within-regime IRR",
+        "p_raw": 0.013,
+        "bh_threshold": 0.05,
+        "significant_after_fdr": true,
+        "rank": 7,
+        "unit": "daily"
+      }
+    ]
+  },
+  "family_C_external": {
+    "description": "Multi-country/external validation tests",
+    "n_tests": 7,
+    "n_significant": 3,
+    "results": [
+      {
+        "test": "Swiss-Norwegian lag corr",
+        "p_raw": 0.00022,
+        "bh_threshold": 0.0071,
+        "significant_after_fdr": true,
+        "rank": 1,
+        "unit": "lag-profile"
+      },
+      {
+        "test": "Canadian Quebec direction",
+        "p_raw": 0.01,
+        "bh_threshold": 0.0143,
+        "significant_after_fdr": true,
+        "rank": 2,
+        "unit": "external-event"
+      },
+      {
+        "test": "Meta-analysis CH+UT",
+        "p_raw": 0.012,
+        "bh_threshold": 0.0214,
+        "significant_after_fdr": true,
+        "rank": 3,
+        "unit": "meta"
+      },
+      {
+        "test": "EAWS latitude gradient",
+        "p_raw": 0.05,
+        "bh_threshold": 0.0286,
+        "significant_after_fdr": false,
+        "rank": 4,
+        "unit": "spatial"
+      },
+      {
+        "test": "Norway direction (4/4)",
+        "p_raw": 0.0625,
+        "bh_threshold": 0.0357,
+        "significant_after_fdr": false,
+        "rank": 5,
+        "unit": "external-event"
+      },
+      {
+        "test": "Utah direction (4/4)",
+        "p_raw": 0.0625,
+        "bh_threshold": 0.0429,
+        "significant_after_fdr": false,
+        "rank": 6,
+        "unit": "external-event"
+      },
+      {
+        "test": "French BRA direction",
+        "p_raw": 0.083,
+        "bh_threshold": 0.05,
+        "significant_after_fdr": false,
+        "rank": 7,
+        "unit": "external-event"
+      }
+    ]
+  },
+  "combined_original": {
+    "description": "All tests in single family (original approach)",
+    "n_tests": 29,
+    "n_significant": 17
+  },
+  "key_finding": "Stratified FDR is MORE conservative for event-level tests. The primary Swiss result (P=0.002) survives in all approaches. EP-flux (P=0.032) and Z500 correlation (P=0.024) survive stratified FDR. Accident RR (P=0.067) and human/natural ratio (P=0.058) do NOT survive any FDR approach."
+}

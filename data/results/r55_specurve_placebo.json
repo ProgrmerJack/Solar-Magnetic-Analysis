@@ -1,0 +1,96 @@
+{
+  "monte_carlo_spec_curve": {
+    "n_iterations": 10000,
+    "n_specs_per_iteration": 30,
+    "actual_gmrr": 0.447474,
+    "actual_n_decrease": 12,
+    "actual_sign_p": 0.076813,
+    "p_gte_actual_decrease": 0.3776,
+    "p_14_of_16_sign": 0.0767,
+    "p_16_of_16_sign": 0.0022,
+    "p_100pct_spec_consistency": 0.5297,
+    "p_90pct_spec_consistency": 0.6974,
+    "null_distribution_summary": {
+      "gmrr_mean": 0.659709,
+      "gmrr_median": 0.586683,
+      "gmrr_sd": 0.333699,
+      "gmrr_5th": 0.282143,
+      "gmrr_95th": 1.284374,
+      "n_decrease_mean": 10.8797,
+      "n_decrease_sd": 1.8629,
+      "spec_frac_lt1_mean": 0.874253,
+      "spec_frac_lt1_sd": 0.218295
+    }
+  },
+  "placebo_falsification": {
+    "actual_ssw": {
+      "mean_RR": 0.447474,
+      "n_decrease": 12,
+      "sign_P": 0.076813
+    },
+    "shifted_plus60": {
+      "mean_RR": 0.90076,
+      "n_tested": 9,
+      "n_decrease": 4,
+      "sign_P": 1.0
+    },
+    "shifted_minus60": {
+      "mean_RR": 0.678164,
+      "n_tested": 13,
+      "n_decrease": 9,
+      "sign_P": 0.266846
+    },
+    "random_dates": {
+      "n_iterations": 1000,
+      "mean_fraction_decrease": 0.703704,
+      "sd_fraction_decrease": 0.118249,
+      "p_gte_14_of_16": 0.073
+    },
+    "non_ssw_winters": {
+      "mean_RR": 0.683866,
+      "n_tested": 112,
+      "n_decrease": 69,
+      "sign_P": 0.017766
+    },
+    "weak_vortex_non_ssw": {
+      "mean_RR": 1.058106,
+      "n_tested": 16,
+      "n_decrease": 7,
+      "sign_P": 0.803619,
+      "u10_threshold": 7.427
+    }
+  },
+  "leave_two_out": {
+    "n_combinations": 120,
+    "n_events_total": 16,
+    "min_sign_p": 0.012939,
+    "max_sign_p": 0.179565,
+    "median_sign_p": 0.179565,
+    "min_n_decrease": 10,
+    "max_n_decrease": 12,
+    "min_gmrr": 0.346492,
+    "max_gmrr": 0.550322,
+    "all_gmrr_lt1": true,
+    "all_remain_significant_p010": false,
+    "all_remain_significant_p005": false,
+    "worst_case": {
+      "dropped_events": [
+        "1998-12-15",
+        "2001-02-11"
+      ],
+      "sign_p": 0.179565,
+      "gmrr": 0.441188,
+      "n_decrease": 10,
+      "n_tested": 14
+    },
+    "min_decrease_case": {
+      "dropped_events": [
+        "1998-12-15",
+        "2001-02-11"
+      ],
+      "n_decrease": 10,
+      "gmrr": 0.441188,
+      "sign_p": 0.179565
+    }
+  }
+}

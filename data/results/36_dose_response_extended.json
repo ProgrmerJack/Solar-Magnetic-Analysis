@@ -1,0 +1,599 @@
+{
+  "description": "Extended dose-response: SSW intensity \u2192 avalanche hazard",
+  "n_events_extended": 25,
+  "n_events_primary": 16,
+  "dose_response_accidents": {
+    "u10_decel": {
+      "metric": "u10_decel",
+      "n": 25,
+      "pearson_r": 0.3247943310527954,
+      "pearson_p": 0.11316528415349761,
+      "spearman_rho": 0.27120600617090146,
+      "spearman_p": 0.18974139527522957,
+      "kendall_tau": 0.22370648870354956,
+      "kendall_p": 0.11753372173914162,
+      "bootstrap_r_ci95": [
+        -0.1327906753923172,
+        0.6972907975469225
+      ],
+      "slope": 0.022628539288637544,
+      "intercept": -0.2683997655819109,
+      "slope_stderr": 0.01373967412709088,
+      "tercile_high_minus_low": 0.4606515955366306
+    },
+    "reversal_days": {
+      "metric": "reversal_days",
+      "n": 25,
+      "pearson_r": 0.27261390214261993,
+      "pearson_p": 0.1873624131129947,
+      "spearman_rho": 0.24595548010332802,
+      "spearman_p": 0.23596575780720846,
+      "kendall_tau": 0.18919890678581183,
+      "kendall_p": 0.18994806181818813,
+      "bootstrap_r_ci95": [
+        -0.1471056319165214,
+        0.6245959453242526
+      ],
+      "slope": 0.02749921426142086,
+      "intercept": -0.16569546730350912,
+      "slope_stderr": 0.02023667688285634,
+      "tercile_high_minus_low": 0.4612728697479259
+    },
+    "t10_warming": {
+      "metric": "t10_warming",
+      "n": 25,
+      "pearson_r": 0.04770755005901818,
+      "pearson_p": 0.8208482544695422,
+      "spearman_rho": 0.055779958716001006,
+      "spearman_p": 0.7911426215191156,
+      "kendall_tau": 0.03672793098117978,
+      "kendall_p": 0.7971982689966907,
+      "bootstrap_r_ci95": [
+        -0.33982463144347264,
+        0.4529156642557888
+      ],
+      "slope": 0.00706816269017534,
+      "intercept": 0.2110564865862592,
+      "slope_stderr": 0.03085749817035425,
+      "tercile_high_minus_low": 0.04301069873018279
+    },
+    "cumulative_t10": {
+      "metric": "cumulative_t10",
+      "n": 25,
+      "pearson_r": 0.15951876285808841,
+      "pearson_p": 0.4462647086233685,
+      "spearman_rho": 0.2931333002868467,
+      "spearman_p": 0.15499943604182748,
+      "kendall_tau": 0.23706209996943312,
+      "kendall_p": 0.09718529713201818,
+      "bootstrap_r_ci95": [
+        -0.22461309651905717,
+        0.5834563846391636
+      ],
+      "slope": 0.0013616990728327687,
+      "intercept": 0.12163330681839223,
+      "slope_stderr": 0.0017571480406781486,
+      "tercile_high_minus_low": 0.863561992811962
+    },
+    "ep_flux_proxy": {
+      "metric": "ep_flux_proxy",
+      "n": 25,
+      "pearson_r": -0.08968168291345821,
+      "pearson_p": 0.6698802130491311,
+      "spearman_rho": -0.004231583075006973,
+      "spearman_p": 0.9839837615836519,
+      "kendall_tau": 0.0033389028164708887,
+      "kendall_p": 0.9813620424203704,
+      "bootstrap_r_ci95": [
+        -0.42778569879650946,
+        0.30552182371753966
+      ],
+      "slope": -0.12479330579244267,
+      "intercept": 0.3306848085151993,
+      "slope_stderr": 0.28898153133196175,
+      "tercile_high_minus_low": 0.22454004339079875
+    },
+    "propagation_depth_hPa": {
+      "metric": "propagation_depth_hPa",
+      "n": 25,
+      "pearson_r": 0.10556273971477018,
+      "pearson_p": 0.615527818679654,
+      "spearman_rho": 0.08690646164717036,
+      "spearman_p": 0.6795561029796848,
+      "kendall_tau": 0.0879343020190182,
+      "kendall_p": 0.5929344017275117,
+      "bootstrap_r_ci95": [
+        -0.24388697019502806,
+        0.40304404046665704
+      ],
+      "slope": 0.0033282480007898246,
+      "intercept": -0.03607999115991192,
+      "slope_stderr": 0.006537440462894184,
+      "tercile_high_minus_low": 0.017436948709748407
+    },
+    "z500_anomaly": {
+      "metric": "z500_anomaly",
+      "n": 25,
+      "pearson_r": 0.3496945721133714,
+      "pearson_p": 0.08661346934702932,
+      "spearman_rho": 0.39546067282792435,
+      "spearman_p": 0.05038541883813877,
+      "kendall_tau": 0.27712893376708375,
+      "kendall_p": 0.052502402540527786,
+      "bootstrap_r_ci95": [
+        -0.02529908381932889,
+        0.6636166977138171
+      ],
+      "slope": 0.0317631979043675,
+      "intercept": 0.2376367008337012,
+      "slope_stderr": 0.01774384974966358,
+      "tercile_high_minus_low": 0.7876515103347133
+    }
+  },
+  "dose_response_activity": {
+    "u10_decel": {
+      "metric": "u10_decel",
+      "n": 16,
+      "pearson_r": -0.041231439340591924,
+      "pearson_p": 0.8794940477728175,
+      "spearman_rho": 0.03529411764705882,
+      "spearman_p": 0.8967532476935333,
+      "kendall_tau": 0.016666666666666666,
+      "kendall_p": 0.9646949319332571,
+      "bootstrap_r_ci95": [
+        -0.4504029630470205,
+        0.4381933839928597
+      ],
+      "slope": -0.0039535195174199705,
+      "intercept": -1.0539649094759846,
+      "slope_stderr": 0.02560483032233849,
+      "tercile_high_minus_low": 0.7742938512803733
+    },
+    "reversal_days": {
+      "metric": "reversal_days",
+      "n": 16,
+      "pearson_r": -0.0774381159195725,
+      "pearson_p": 0.7756029306024796,
+      "spearman_rho": -0.11782045178250487,
+      "spearman_p": 0.6638734355469889,
+      "kendall_tau": -0.10084389681792215,
+      "kendall_p": 0.5882534862507045,
+      "bootstrap_r_ci95": [
+        -0.5754555530476249,
+        0.4156302515408485
+      ],
+      "slope": -0.00880012561264693,
+      "intercept": -1.0116564003362023,
+      "slope_stderr": 0.03028056657563606,
+      "tercile_high_minus_low": -0.10688966831259927
+    },
+    "t10_warming": {
+      "metric": "t10_warming",
+      "n": 16,
+      "pearson_r": 0.16505371966098803,
+      "pearson_p": 0.5412835413672604,
+      "spearman_rho": 0.2529411764705882,
+      "spearman_p": 0.34456303133749866,
+      "kendall_tau": 0.19999999999999998,
+      "kendall_p": 0.3057265481534429,
+      "bootstrap_r_ci95": [
+        -0.27933214468387596,
+        0.6888811053324351
+      ],
+      "slope": 0.02785653429214648,
+      "intercept": -1.2893433309681448,
+      "slope_stderr": 0.04448770398156373,
+      "tercile_high_minus_low": 0.9081933163880772
+    },
+    "cumulative_t10": {
+      "metric": "cumulative_t10",
+      "n": 16,
+      "pearson_r": 0.06372508137198685,
+      "pearson_p": 0.8146273283594647,
+      "spearman_rho": 0.09999999999999999,
+      "spearman_p": 0.7125163701282782,
+      "kendall_tau": 0.08333333333333334,
+      "kendall_p": 0.6900950405141305,
+      "bootstrap_r_ci95": [
+        -0.4084887541187561,
+        0.5841211648883157
+      ],
+      "slope": 0.0007842840350683808,
+      "intercept": -1.1966764934925898,
+      "slope_stderr": 0.0032825802524847577,
+      "tercile_high_minus_low": 0.17846244569925696
+    },
+    "ep_flux_proxy": {
+      "metric": "ep_flux_proxy",
+      "n": 16,
+      "pearson_r": -0.16698170690237293,
+      "pearson_p": 0.5365024088222693,
+      "spearman_rho": -0.34411764705882353,
+      "spearman_p": 0.19185563142554293,
+      "kendall_tau": -0.21666666666666667,
+      "kendall_p": 0.26504598877832025,
+      "bootstrap_r_ci95": [
+        -0.5798196924802989,
+        0.19945139106549156
+      ],
+      "slope": -0.25090081119734253,
+      "intercept": -0.9633389974618413,
+      "slope_stderr": 0.39593914865539137,
+      "tercile_high_minus_low": -1.2313506712085096
+    },
+    "propagation_depth_hPa": {
+      "metric": "propagation_depth_hPa",
+      "n": 16,
+      "pearson_r": 0.062051719452695525,
+      "pearson_p": 0.8194193476494389,
+      "spearman_rho": 0.035955873264830976,
+      "spearman_p": 0.8948273033428429,
+      "kendall_tau": 0.03506434366591383,
+      "kendall_p": 0.8675648209337318,
+      "bootstrap_r_ci95": [
+        -0.39611068062723365,
+        0.46868189697747986
+      ],
+      "slope": 0.002183529577866543,
+      "intercept": -1.3175053253382347,
+      "slope_stderr": 0.009386496446142034,
+      "tercile_high_minus_low": 0.21267627323961524
+    },
+    "z500_anomaly": {
+      "metric": "z500_anomaly",
+      "n": 16,
+      "pearson_r": 0.2654933083867911,
+      "pearson_p": 0.3203130295539607,
+      "spearman_rho": 0.29705882352941176,
+      "spearman_p": 0.2638630146135225,
+      "kendall_tau": 0.18333333333333335,
+      "kendall_p": 0.350195287197447,
+      "bootstrap_r_ci95": [
+        -0.1883772260363488,
+        0.6877551753156428
+      ],
+      "slope": 0.037141571100973735,
+      "intercept": -1.282789609321765,
+      "slope_stderr": 0.036047112193305766,
+      "tercile_high_minus_low": 0.43060803105542145
+    }
+  },
+  "best_predictor_accidents": {
+    "metric": "z500_anomaly",
+    "n": 25,
+    "pearson_r": 0.3496945721133714,
+    "pearson_p": 0.08661346934702932,
+    "spearman_rho": 0.39546067282792435,
+    "spearman_p": 0.05038541883813877,
+    "kendall_tau": 0.27712893376708375,
+    "kendall_p": 0.052502402540527786,
+    "bootstrap_r_ci95": [
+      -0.02529908381932889,
+      0.6636166977138171
+    ],
+    "slope": 0.0317631979043675,
+    "intercept": 0.2376367008337012,
+    "slope_stderr": 0.01774384974966358,
+    "tercile_high_minus_low": 0.7876515103347133
+  },
+  "best_predictor_activity": {
+    "metric": "z500_anomaly",
+    "n": 16,
+    "pearson_r": 0.2654933083867911,
+    "pearson_p": 0.3203130295539607,
+    "spearman_rho": 0.29705882352941176,
+    "spearman_p": 0.2638630146135225,
+    "kendall_tau": 0.18333333333333335,
+    "kendall_p": 0.350195287197447,
+    "bootstrap_r_ci95": [
+      -0.1883772260363488,
+      0.6877551753156428
+    ],
+    "slope": 0.037141571100973735,
+    "intercept": -1.282789609321765,
+    "slope_stderr": 0.036047112193305766,
+    "tercile_high_minus_low": 0.43060803105542145
+  },
+  "per_event_data": [
+    {
+      "onset": "1979-02-22",
+      "accident_log_rr": -0.8754687373539001,
+      "u10_decel": 20.052841383282853,
+      "reversal_days": 7,
+      "t10_warming": -1.8039201469831596,
+      "cumulative_t10": 108.96593309485388,
+      "ep_flux_proxy": -0.4721186005896801,
+      "propagation_depth_hPa": 100,
+      "z500_anomaly": -3.940153702445059,
+      "activity_log_rr": NaN
+    },
+    {
+      "onset": "1980-02-29",
+      "accident_log_rr": -0.5108256237659905,
+      "u10_decel": 27.572632597979677,
+      "reversal_days": 15,
+      "t10_warming": 11.131562394993296,
+      "cumulative_t10": 306.16095070216977,
+      "ep_flux_proxy": 1.056638166238787,
+      "propagation_depth_hPa": 100,
+      "z500_anomaly": -12.305042240094735,
+      "activity_log_rr": NaN
+    },
+    {
+      "onset": "1981-03-04",
+      "accident_log_rr": -0.2231435513142097,
+      "u10_decel": 6.372330849978232,
+      "reversal_days": 6,
+      "t10_warming": -8.056837857154107,
+      "cumulative_t10": -89.74223593006971,
+      "ep_flux_proxy": 0.19797908861989832,
+      "propagation_depth_hPa": 100,
+      "z500_anomaly": -15.200693181321185,
+      "activity_log_rr": NaN
+    },
+    {
+      "onset": "1984-02-24",
+      "accident_log_rr": -1.2527629684953678,
+      "u10_decel": 39.46867734142529,
+      "reversal_days": 24,
+      "t10_warming": 11.843624533376385,
+      "cumulative_t10": 295.72323674740994,
+      "ep_flux_proxy": 1.7263263908721447,
+      "propagation_depth_hPa": 100,
+      "z500_anomaly": -8.818189195630111,
+      "activity_log_rr": NaN
+    },
+    {
+      "onset": "1985-01-01",
+      "accident_log_rr": 0.6190392084062235,
+      "u10_decel": 26.12642599350663,
+      "reversal_days": 11,
+      "t10_warming": 4.517137145996088,
+      "cumulative_t10": 183.78129146410072,
+      "ep_flux_proxy": 0.7907162346484531,
+      "propagation_depth_hPa": 100,
+      "z500_anomaly": -15.80712890625091,
+      "activity_log_rr": NaN
+    },
+    {
+      "onset": "1987-01-23",
+      "accident_log_rr": 1.6094379124341003,
+      "u10_decel": 35.12330168812505,
+      "reversal_days": 30,
+      "t10_warming": 3.0865928403792964,
+      "cumulative_t10": 140.01153000541353,
+      "ep_flux_proxy": 0.9496747551028004,
+      "propagation_depth_hPa": 100,
+      "z500_anomaly": -13.475938280701484,
+      "activity_log_rr": NaN
+    },
+    {
+      "onset": "1988-12-14",
+      "accident_log_rr": -0.6931471805599453,
+      "u10_decel": -14.95116205728182,
+      "reversal_days": 0,
+      "t10_warming": 0.31969719343288716,
+      "cumulative_t10": -100.71063470149392,
+      "ep_flux_proxy": 0.0028463017821179345,
+      "propagation_depth_hPa": 10,
+      "z500_anomaly": -10.842257991468614,
+      "activity_log_rr": NaN
+    },
+    {
+      "onset": "1989-02-21",
+      "accident_log_rr": 2.0149030205422647,
+      "u10_decel": 39.4186238565387,
+      "reversal_days": 22,
+      "t10_warming": -0.563157998361902,
+      "cumulative_t10": 152.30078091828716,
+      "ep_flux_proxy": 0.9875211514673454,
+      "propagation_depth_hPa": 100,
+      "z500_anomaly": 2.9572243710554176,
+      "activity_log_rr": NaN
+    },
+    {
+      "onset": "1998-12-15",
+      "accident_log_rr": 0.0,
+      "u10_decel": 14.728391131534373,
+      "reversal_days": 6,
+      "t10_warming": 7.253039074969536,
+      "cumulative_t10": 115.78090435525638,
+      "ep_flux_proxy": -0.024966491979274377,
+      "propagation_depth_hPa": 30,
+      "z500_anomaly": 4.049490352165776,
+      "activity_log_rr": -0.12545013316004
+    },
+    {
+      "onset": "1999-02-26",
+      "accident_log_rr": -1.4213856809311607,
+      "u10_decel": 35.8630342572607,
+      "reversal_days": 22,
+      "t10_warming": 9.411169236706144,
+      "cumulative_t10": 68.58159969163972,
+      "ep_flux_proxy": 0.8011628458046408,
+      "propagation_depth_hPa": 100,
+      "z500_anomaly": 1.002993376359882,
+      "activity_log_rr": -0.8166157052348729
+    },
+    {
+      "onset": "2001-02-11",
+      "accident_log_rr": -0.6225296133459921,
+      "u10_decel": 21.869582827757764,
+      "reversal_days": 14,
+      "t10_warming": 0.22751351633380068,
+      "cumulative_t10": -45.0044124437415,
+      "ep_flux_proxy": 1.8905102744648798,
+      "propagation_depth_hPa": 100,
+      "z500_anomaly": -9.745303460289506,
+      "activity_log_rr": -1.6956561576251707
+    },
+    {
+      "onset": "2001-12-30",
+      "accident_log_rr": 1.421385680931161,
+      "u10_decel": 14.516063933923679,
+      "reversal_days": 5,
+      "t10_warming": 6.9318554457797745,
+      "cumulative_t10": 161.37507231339166,
+      "ep_flux_proxy": 0.4173281485432379,
+      "propagation_depth_hPa": 50,
+      "z500_anomaly": -3.2145985821362046,
+      "activity_log_rr": -2.1952649184052744
+    },
+    {
+      "onset": "2002-02-17",
+      "accident_log_rr": 0.24116205681688824,
+      "u10_decel": 5.795186934163494,
+      "reversal_days": 9,
+      "t10_warming": 5.1844443044354875,
+      "cumulative_t10": 128.98904883343238,
+      "ep_flux_proxy": -0.20347299353034143,
+      "propagation_depth_hPa": 30,
+      "z500_anomaly": 2.9525555668169545,
+      "activity_log_rr": -1.3025862981977498
+    },
+    {
+      "onset": "2003-01-18",
+      "accident_log_rr": -0.37037378829689416,
+      "u10_decel": 6.509546535758563,
+      "reversal_days": 3,
+      "t10_warming": 1.6312109342185295,
+      "cumulative_t10": 95.6613776165506,
+      "ep_flux_proxy": 0.5983269664416456,
+      "propagation_depth_hPa": 30,
+      "z500_anomaly": -0.930089835531362,
+      "activity_log_rr": -1.6636870127029988
+    },
+    {
+      "onset": "2004-01-05",
+      "accident_log_rr": -0.05129329438755058,
+      "u10_decel": 24.079155811234827,
+      "reversal_days": 23,
+      "t10_warming": -3.5044710220829245,
+      "cumulative_t10": -57.59457264775813,
+      "ep_flux_proxy": 1.5629307757495372,
+      "propagation_depth_hPa": 100,
+      "z500_anomaly": -2.5893746438896414,
+      "activity_log_rr": -2.168183380680924
+    },
+    {
+      "onset": "2006-01-21",
+      "accident_log_rr": 0.4353180712578454,
+      "u10_decel": 22.939348144669047,
+      "reversal_days": 25,
+      "t10_warming": -1.8787566810525789,
+      "cumulative_t10": -41.87979656717053,
+      "ep_flux_proxy": 1.412599577177088,
+      "propagation_depth_hPa": 100,
+      "z500_anomaly": 9.582813664205787,
+      "activity_log_rr": -1.568103144122456
+    },
+    {
+      "onset": "2007-02-24",
+      "accident_log_rr": 0.5306282510621704,
+      "u10_decel": 14.095608000857858,
+      "reversal_days": 5,
+      "t10_warming": 6.0346714306903095,
+      "cumulative_t10": 94.48175115170682,
+      "ep_flux_proxy": 0.23463206524578425,
+      "propagation_depth_hPa": 50,
+      "z500_anomaly": 10.508880486829185,
+      "activity_log_rr": -1.1513775924088376
+    },
+    {
+      "onset": "2008-02-22",
+      "accident_log_rr": 0.7672551527136672,
+      "u10_decel": 24.848770923319684,
+      "reversal_days": 15,
+      "t10_warming": 0.664593095676878,
+      "cumulative_t10": 98.8292906387992,
+      "ep_flux_proxy": 0.8247714566707081,
+      "propagation_depth_hPa": 100,
+      "z500_anomaly": -0.7640731832916572,
+      "activity_log_rr": -2.9347416376116926
+    },
+    {
+      "onset": "2009-01-24",
+      "accident_log_rr": 1.491654876777717,
+      "u10_decel": 48.95831467823315,
+      "reversal_days": 31,
+      "t10_warming": 14.444190683672502,
+      "cumulative_t10": 107.8861047495966,
+      "ep_flux_proxy": 0.3512427139070063,
+      "propagation_depth_hPa": 100,
+      "z500_anomaly": 14.298200823984189,
+      "activity_log_rr": -2.227207500225078
+    },
+    {
+      "onset": "2010-02-09",
+      "accident_log_rr": -0.12783337150988502,
+      "u10_decel": 14.300982689472937,
+      "reversal_days": 18,
+      "t10_warming": -2.9593254335464962,
+      "cumulative_t10": -78.47471884022588,
+      "ep_flux_proxy": 2.2016726551384758,
+      "propagation_depth_hPa": 100,
+      "z500_anomaly": -3.746748101661069,
+      "activity_log_rr": -0.4290018772383802
+    },
+    {
+      "onset": "2012-01-11",
+      "accident_log_rr": -0.12783337150988502,
+      "u10_decel": 18.26494887669881,
+      "reversal_days": 0,
+      "t10_warming": 10.696683444771708,
+      "cumulative_t10": 151.7190293021824,
+      "ep_flux_proxy": 0.20062535787716057,
+      "propagation_depth_hPa": 100,
+      "z500_anomaly": 8.740647325341342,
+      "activity_log_rr": -0.1588314552590158
+    },
+    {
+      "onset": "2013-01-07",
+      "accident_log_rr": -0.2657031657330056,
+      "u10_decel": 28.849158427984484,
+      "reversal_days": 23,
+      "t10_warming": 16.323277512417064,
+      "cumulative_t10": 100.66857047702959,
+      "ep_flux_proxy": 0.1802505552039396,
+      "propagation_depth_hPa": 100,
+      "z500_anomaly": 9.123932355584657,
+      "activity_log_rr": -1.0910051459985524
+    },
+    {
+      "onset": "2018-02-12",
+      "accident_log_rr": 1.6422277352570913,
+      "u10_decel": 31.834977938795603,
+      "reversal_days": 13,
+      "t10_warming": 13.224990811911965,
+      "cumulative_t10": 210.60767464015794,
+      "ep_flux_proxy": 0.1797378282260577,
+      "propagation_depth_hPa": 100,
+      "z500_anomaly": 19.307718884227143,
+      "activity_log_rr": 0.0389401913792818
+    },
+    {
+      "onset": "2019-01-01",
+      "accident_log_rr": 1.2110902720948,
+      "u10_decel": 26.63484781221036,
+      "reversal_days": 24,
+      "t10_warming": 1.255890893423441,
+      "cumulative_t10": 14.867824056874156,
+      "ep_flux_proxy": 0.7313524357402681,
+      "propagation_depth_hPa": 100,
+      "z500_anomaly": 2.306262600805894,
+      "activity_log_rr": 1.2254397175278475
+    },
+    {
+      "onset": "2021-01-05",
+      "accident_log_rr": 0.6455191315706907,
+      "u10_decel": 32.26713019340269,
+      "reversal_days": 21,
+      "t10_warming": 9.311290273358765,
+      "cumulative_t10": 114.28430308466375,
+      "ep_flux_proxy": 0.8689889420921995,
+      "propagation_depth_hPa": 100,
+      "z500_anomaly": 21.15808944381206,
+      "activity_log_rr": NaN
+    }
+  ]
+}

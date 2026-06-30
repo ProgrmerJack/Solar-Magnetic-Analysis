@@ -1,0 +1,63 @@
+{
+  "swiss_event_permutation": {
+    "observed_gmrr": 0.4707,
+    "permutation_p": 0.01965,
+    "n_permutations": 100000,
+    "n_events": 16,
+    "interpretation": "Event-level sign-randomisation: gmRR = 0.471, P = 0.01965 (100,000 permutations). This test is fully event-clustered."
+  },
+  "loo_event_stability": {
+    "all_folds_significant": false,
+    "gmrr_range": [
+      0.3976,
+      0.5534
+    ],
+    "worst_p": 0.05923,
+    "n_folds": 16
+  },
+  "wild_cluster_bootstrap": {
+    "gmrr_ci_95": [
+      0.4823,
+      2.0534
+    ],
+    "p_exceeds_1": 0.5031,
+    "n_bootstrap": 10000,
+    "interpretation": "Wild cluster bootstrap (Rademacher weights, event-level): 95% CI [0.482, 2.053], P(gmRR >= 1) = 0.5031"
+  },
+  "cross_country_concordance": {
+    "events_with_multi_country": 3,
+    "concordance_details": [
+      {
+        "event": "2013-01-07",
+        "n_countries": 2,
+        "n_suppressed": 2,
+        "fraction_suppressed": 1.0
+      },
+      {
+        "event": "2018-02-12",
+        "n_countries": 4,
+        "n_suppressed": 3,
+        "fraction_suppressed": 0.75
+      },
+      {
+        "event": "2019-01-01",
+        "n_countries": 4,
+        "n_suppressed": 3,
+        "fraction_suppressed": 0.75
+      }
+    ],
+    "mean_concordance": 0.833,
+    "interpretation": "3 events have multi-country data. Concordance is computed per event, not pooled across countries, preserving the 16-event degrees of freedom."
+  },
+  "bayesian_suppression_rate": {
+    "k_suppressed": 12,
+    "n_events": 16,
+    "posterior_mean": 0.7222,
+    "posterior_95_hdi": [
+      0.501,
+      0.8969
+    ],
+    "p_above_chance": 0.975479,
+    "interpretation": "Beta-binomial posterior: suppression rate = 0.72 (95% HDI [0.50, 0.90]); P(rate > 0.5) = 0.97548"
+  }
+}

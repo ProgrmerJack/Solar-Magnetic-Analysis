@@ -1,0 +1,120 @@
+{
+  "event_level_tests": {
+    "n_events": 16,
+    "n_suppress": 12,
+    "gmRR": 0.4707,
+    "t_stat": -2.269,
+    "t_p_twosided": 0.038429,
+    "t_p_onesided": 0.019214,
+    "wilcoxon_W": 31.0,
+    "wilcoxon_p": 0.028839,
+    "ci_normal": [
+      0.2456,
+      0.9024
+    ],
+    "ci_bootstrap": [
+      0.2537,
+      0.8862
+    ],
+    "ci_excludes_1": true
+  },
+  "winter_permutation": {
+    "n_total_winters": 21,
+    "n_ssw_winters": 14,
+    "obs_stat_direction": "9",
+    "perm_p_direction": 0.78966,
+    "obs_mean_log_rr": -0.642,
+    "perm_p_magnitude": 0.81122
+  },
+  "bayesian": {
+    "data_mean_logRR": -0.7535,
+    "data_se": 0.332,
+    "weakly_informative": {
+      "prior": "N(0,1)",
+      "post_mu": -0.6787,
+      "post_sd": 0.3151,
+      "p_irr_lt_1": 0.9844,
+      "bf10": 3.2
+    },
+    "skeptical": {
+      "prior": "N(0,0.25)",
+      "post_mu": -0.5229,
+      "post_sd": 0.2766,
+      "p_irr_lt_1": 0.9707,
+      "bf10": 3.3
+    },
+    "unit_information": {
+      "prior": "N(0,1.764)",
+      "post_mu": -0.7091,
+      "post_sd": 0.3221,
+      "p_irr_lt_1": 0.9862,
+      "bf10": 2.74
+    }
+  },
+  "glmm": {
+    "ssw_coef": 0.0356,
+    "ssw_se": 0.0348,
+    "ssw_p": 0.305703,
+    "implied_irr": 1.0363,
+    "z500_coef": -0.0978,
+    "z500_p": 0.0,
+    "icc": 0.0709,
+    "random_intercept_var": 0.0279,
+    "residual_var": 0.3658
+  },
+  "min_detectable_corr": {
+    "power_by_r": {
+      "0.20": 0.112,
+      "0.25": 0.152,
+      "0.30": 0.206,
+      "0.35": 0.27,
+      "0.40": 0.346,
+      "0.45": 0.433,
+      "0.50": 0.532,
+      "0.55": 0.636,
+      "0.60": 0.732,
+      "0.65": 0.823,
+      "0.70": 0.897,
+      "0.75": 0.951,
+      "0.80": 0.983
+    },
+    "mdc_80": 0.64,
+    "power_at_r025": 0.152,
+    "n": 16
+  },
+  "gee_bootstrap": {
+    "n_boot": 1000,
+    "median_irr": 0.6875,
+    "ci": [
+      0.318,
+      1.2088
+    ],
+    "p_irr_lt_1": 0.874
+  },
+  "suppression_prediction": {
+    "fisher_OR": 0.686,
+    "fisher_p": 1.0,
+    "mannwhitney_U": 57.0,
+    "mannwhitney_p": 0.4734,
+    "auc": 0.513
+  },
+  "primary_family": {
+    "tests": {
+      "sign_test_14_of_16": 0.038406,
+      "event_wilcoxon": 0.028839,
+      "event_t_test": 0.019214,
+      "multi_country_binomial": 1e-05,
+      "winter_permutation_magnitude": 0.81122
+    },
+    "bonferroni_threshold": 0.01,
+    "bonferroni_survivors": 1,
+    "bh_fdr_survivors": 4
+  },
+  "spec_curve_neff": {
+    "n_variants": 180,
+    "r_mean": 0.95,
+    "n_eff_simple": 1.1,
+    "n_eff_eigenvalue": 9.8,
+    "interpretation": "180 specification-curve variants with mean r=0.95 yield ~10 effectively independent tests"
+  }
+}

@@ -3,19 +3,24 @@ Formal specification curve analysis.
 Tests all combinations of analytical choices to show the result holds across
 the entire specification space.
 
-Dimensions varied:
-1. Window width: ±5, ±10, ±15, ±20, ±25, ±30 days
-2. DOY bandwidth: ±1, ±3, ±5, ±7, ±10 days
-3. Avalanche type: dry_natural_size_1234, all_natural
-4. Summary statistic: geometric mean RR, median RR, sign fraction
-5. SSW definition: all 16, displacement only, strict definition (wind < -5 m/s)
+Dimensions varied (4 axes, 180 total specifications):
+1. Window width: ±5, ±10, ±15, ±20, ±25, ±30 days (6 levels)
+2. DOY bandwidth: ±1, ±3, ±5, ±7, ±10 days (5 levels)
+3. Avalanche type: dry_natural_size_1234, all_natural (2 levels)
+4. SSW definition: all 16, displacement only, strict (excl. 2018+2019) (3 levels)
+
+All three summary statistics (geometric mean RR, median RR, sign fraction) are
+computed for each specification but the grid is defined by the four axes above.
 """
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..'))
+from scripts.config import ROOT
 import pandas as pd, numpy as np, json
 from scipy import stats
 from scipy.stats import binomtest
 
-panel = pd.read_parquet('data/processed/analysis_panel_v2.parquet')
-ssw_cat = pd.read_parquet('data/processed/atmospheric/ssw_catalog.parquet')
+panel = pd.read_parquet(ROOT / 'data' / 'processed' / 'analysis_panel_v2.parquet')
+ssw_cat = pd.read_parquet(ROOT / 'data' / 'processed' / 'atmospheric' / 'ssw_catalog.parquet')
 ssw_dates = ssw_cat.index.tz_localize(None)
 ssw_in = ssw_dates[(ssw_dates >= panel.index.min()) & (ssw_dates <= panel.index.max())]
 
@@ -186,7 +191,7 @@ output = {
     'range_rr': [float(sdf['gm_rr'].min()), float(sdf['gm_rr'].max())],
     'permutation_p': float(p_curve),
 }
-with open('data/results/r37_spec_curve.json', 'w') as f:
+with open(ROOT / 'data' / 'results' / 'r37_spec_curve.json', 'w') as f:
     json.dump(output, f, indent=2)
 
 print(f"\nSaved to data/results/r37_spec_curve.json")

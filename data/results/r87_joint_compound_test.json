@@ -1,0 +1,18 @@
+{
+  "joint_all_three": 13,
+  "joint_proportion": 0.8125,
+  "wilson_ci": [
+    0.57,
+    0.934
+  ],
+  "wilson_ci_directional_87.5": [
+    0.64,
+    0.965
+  ],
+  "permutation_p": 0.0042,
+  "binomial_p": 0.1656,
+  "odds_ratio_vs_null": 6.5,
+  "individual_suppression": 14,
+  "individual_bulletin": 13,
+  "individual_pwl": 15
+}

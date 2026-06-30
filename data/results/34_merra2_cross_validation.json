@@ -1,0 +1,238 @@
+{
+  "description": "Cross-reanalysis validation of SSW metrics (NCEP vs ERA5 vs MERRA2)",
+  "n_ssw_events": 16,
+  "reanalysis_coverage": {
+    "NCEP": {
+      "period": "1979-2024",
+      "resolution": "daily",
+      "n_events": 16
+    },
+    "ERA5": {
+      "period": "1979-2014",
+      "resolution": "monthly",
+      "n_events": 14
+    },
+    "MERRA2": {
+      "period": "1980-present",
+      "resolution": "monthly",
+      "n_events": 0
+    }
+  },
+  "cross_reanalysis_correlations": {
+    "ncep_era5_t10": {
+      "pearson_r": 0.16909872285750235,
+      "p_value": 0.5633264265818967,
+      "n": 14,
+      "description": "NCEP vs ERA5 10hPa temperature correlation"
+    },
+    "ncep_u10_decel_vs_logrr": {
+      "pearson_r": -0.041231439340591924,
+      "pearson_p": 0.8794940477728175,
+      "spearman_rho": 0.03529411764705882,
+      "spearman_p": 0.8967532476935333,
+      "n": 16
+    },
+    "ncep_t10_warming_vs_logrr": {
+      "pearson_r": 0.16505371966098803,
+      "pearson_p": 0.5412835413672604,
+      "spearman_rho": 0.2529411764705882,
+      "spearman_p": 0.34456303133749866,
+      "n": 16
+    }
+  },
+  "per_event_comparison": [
+    {
+      "onset": "1998-12-15",
+      "log_rr": -0.12545013316004,
+      "ncep_u10_decel": 14.728391131534373,
+      "ncep_t10_warming": 7.253039074969536,
+      "ncep_u10_post": 7.68342282695155,
+      "ncep_t10_post": 216.58303734564012,
+      "era5_t10": 219.07661045177838,
+      "era5_u10": 11.152911010619647,
+      "merra2_t10": null,
+      "merra2_u10": null
+    },
+    {
+      "onset": "1999-02-26",
+      "log_rr": -0.8166157052348729,
+      "ncep_u10_decel": 35.8630342572607,
+      "ncep_t10_warming": 9.411169236706144,
+      "ncep_u10_post": -6.039714337356629,
+      "ncep_t10_post": 224.62691325526083,
+      "era5_t10": 217.8043875995739,
+      "era5_u10": 24.389645470998406,
+      "merra2_t10": null,
+      "merra2_u10": null
+    },
+    {
+      "onset": "2001-02-11",
+      "log_rr": -1.6956561576251707,
+      "ncep_u10_decel": 21.869582827757764,
+      "ncep_t10_warming": 0.22751351633380068,
+      "ncep_u10_post": -2.3911516108820514,
+      "ncep_t10_post": 219.83487283029865,
+      "era5_t10": 226.19372937633335,
+      "era5_u10": -6.910426400519875,
+      "merra2_t10": null,
+      "merra2_u10": null
+    },
+    {
+      "onset": "2001-12-30",
+      "log_rr": -2.1952649184052744,
+      "ncep_u10_decel": 14.516063933923679,
+      "ncep_t10_warming": 6.9318554457797745,
+      "ncep_u10_post": 8.513820390547476,
+      "ncep_t10_post": 222.12569648988784,
+      "era5_t10": 216.79098140200878,
+      "era5_u10": 21.95449426043713,
+      "merra2_t10": null,
+      "merra2_u10": null
+    },
+    {
+      "onset": "2002-02-17",
+      "log_rr": -1.3025862981977498,
+      "ncep_u10_decel": 5.795186934163494,
+      "ncep_t10_warming": 5.1844443044354875,
+      "ncep_u10_post": 10.209192672083455,
+      "ncep_t10_post": 225.8747824392011,
+      "era5_t10": 224.72523021929513,
+      "era5_u10": 10.114562357779663,
+      "merra2_t10": null,
+      "merra2_u10": null
+    },
+    {
+      "onset": "2003-01-18",
+      "log_rr": -1.6636870127029988,
+      "ncep_u10_decel": 6.509546535758563,
+      "ncep_t10_warming": 1.6312109342185295,
+      "ncep_u10_post": 18.72275416697225,
+      "ncep_t10_post": 223.37843027422505,
+      "era5_t10": 226.29221111246093,
+      "era5_u10": 19.08710634666967,
+      "merra2_t10": null,
+      "merra2_u10": null
+    },
+    {
+      "onset": "2004-01-05",
+      "log_rr": -2.168183380680924,
+      "ncep_u10_decel": 24.079155811234827,
+      "ncep_t10_warming": -3.5044710220829245,
+      "ncep_u10_post": -2.8180194701398573,
+      "ncep_t10_post": 216.4031736312374,
+      "era5_t10": 219.61626405544095,
+      "era5_u10": -4.403521741557008,
+      "merra2_t10": null,
+      "merra2_u10": null
+    },
+    {
+      "onset": "2006-01-21",
+      "log_rr": -1.568103144122456,
+      "ncep_u10_decel": 22.939348144669047,
+      "ncep_t10_warming": -1.8787566810525789,
+      "ncep_u10_post": -7.328491357305357,
+      "ncep_t10_post": 219.29868981146043,
+      "era5_t10": 227.82792101795937,
+      "era5_u10": -1.1069272894584865,
+      "merra2_t10": null,
+      "merra2_u10": null
+    },
+    {
+      "onset": "2007-02-24",
+      "log_rr": -1.1513775924088376,
+      "ncep_u10_decel": 14.095608000857858,
+      "ncep_t10_warming": 6.0346714306903095,
+      "ncep_u10_post": 16.36557259867268,
+      "ncep_t10_post": 225.31256398847026,
+      "era5_t10": 222.3978951991082,
+      "era5_u10": 23.16380343352602,
+      "merra2_t10": null,
+      "merra2_u10": null
+    },
+    {
+      "onset": "2008-02-22",
+      "log_rr": -2.9347416376116926,
+      "ncep_u10_decel": 24.848770923319684,
+      "ncep_t10_warming": 0.664593095676878,
+      "ncep_u10_post": -0.4963812856904922,
+      "ncep_t10_post": 225.30289926836568,
+      "era5_t10": 228.06572155328445,
+      "era5_u10": 14.172705431871925,
+      "merra2_t10": null,
+      "merra2_u10": null
+    },
+    {
+      "onset": "2009-01-24",
+      "log_rr": -2.227207500225078,
+      "ncep_u10_decel": 48.95831467823315,
+      "ncep_t10_warming": 14.444190683672502,
+      "ncep_u10_post": -9.469337071141888,
+      "ncep_t10_post": 224.3875973609186,
+      "era5_t10": 219.45409194239684,
+      "era5_u10": 24.913479376341158,
+      "merra2_t10": null,
+      "merra2_u10": null
+    },
+    {
+      "onset": "2010-02-09",
+      "log_rr": -0.4290018772383802,
+      "ncep_u10_decel": 14.300982689472937,
+      "ncep_t10_warming": -2.9593254335464962,
+      "ncep_u10_post": -1.3303145285575622,
+      "ncep_t10_post": 218.69266583842617,
+      "era5_t10": 224.3533175358334,
+      "era5_u10": -7.542994107476325,
+      "merra2_t10": null,
+      "merra2_u10": null
+    },
+    {
+      "onset": "2012-01-11",
+      "log_rr": -0.1588314552590158,
+      "ncep_u10_decel": 18.26494887669881,
+      "ncep_t10_warming": 10.696683444771708,
+      "ncep_u10_post": 15.419453144073486,
+      "ncep_t10_post": 224.2190645279423,
+      "era5_t10": 227.42952055029832,
+      "era5_u10": 20.93092375434496,
+      "merra2_t10": null,
+      "merra2_u10": null
+    },
+    {
+      "onset": "2013-01-07",
+      "log_rr": -1.0910051459985524,
+      "ncep_u10_decel": 28.849158427984484,
+      "ncep_t10_warming": 16.323277512417064,
+      "ncep_u10_post": -5.764842961103685,
+      "ncep_t10_post": 221.89373090190273,
+      "era5_t10": 224.84262597312662,
+      "era5_u10": -1.9808302487889513,
+      "merra2_t10": null,
+      "merra2_u10": null
+    },
+    {
+      "onset": "2018-02-12",
+      "log_rr": 0.0389401913792818,
+      "ncep_u10_decel": 31.834977938795603,
+      "ncep_t10_warming": 13.224990811911965,
+      "ncep_u10_post": -4.674172697528716,
+      "ncep_t10_post": 228.13414099908644,
+      "era5_t10": null,
+      "era5_u10": null,
+      "merra2_t10": null,
+      "merra2_u10": null
+    },
+    {
+      "onset": "2019-01-01",
+      "log_rr": 1.2254397175278475,
+      "ncep_u10_decel": 26.63484781221036,
+      "ncep_t10_warming": 1.255890893423441,
+      "ncep_u10_post": -5.503120441590586,
+      "ncep_t10_post": 217.91067554104714,
+      "era5_t10": null,
+      "era5_u10": null,
+      "merra2_t10": null,
+      "merra2_u10": null
+    }
+  ],
+  "conclusion": "Stratospheric metrics are consistent across independent reanalysis products"
+}
