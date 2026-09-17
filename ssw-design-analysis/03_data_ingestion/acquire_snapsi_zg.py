@@ -86,8 +86,12 @@ NH_INITS = ["s20180125", "s20180208", "s20181213", "s20190108"]
 SH_INITS = ["s20190829", "s20191001"]
 ALL_INITS = NH_INITS + SH_INITS
 EXPERIMENTS = ["nudged", "control"]
+# NRL is omitted: its submission is corrupt (nudged-minus-control effect
+# identically zero, ratio 0.004 in the duplicate guard) so every downstream
+# analysis excludes it, and its zg names the vertical dimension `snap34` rather
+# than `plev`, which the gate cannot read. Nothing is lost by not fetching it.
 ALL_CENTRES = ["CCCma", "CNR-ISAC", "ECCC", "ECMWF", "KMA", "Meteo-France",
-               "NCAR", "NRL", "SNU", "UKMO"]
+               "NCAR", "SNU", "UKMO"]
 
 TARGET_PA = 10000.0      # 100 hPa, the Loeffel level
 CAP_LAT = 60.0
@@ -205,11 +209,27 @@ def verify_centre(row, tok, sess) -> dict:
     path = zg_path(row)
     dap = f"{DAP_ROOT}/{path.lstrip('/')}"
 
-    req = urllib.request.Request(f"{FILE_ROOT}{path}?download=1",
-                                 headers={"Authorization": f"Bearer {tok}"})
+    # The gate downloads a WHOLE file, 0.2-2.2 GB depending on centre. On
+    # 2026-09-17 Meteo-France (1.6 GB) and UKMO (2.2 GB) both died with
+    # IncompleteRead partway through, which refused two good centres for a
+    # transport reason rather than a data one. Retry before concluding anything
+    # about the subsetting.
     t0 = time.time()
-    with urllib.request.urlopen(req, timeout=1800) as r:
-        blob = r.read()
+    blob, last = None, None
+    for attempt in range(4):
+        try:
+            req = urllib.request.Request(f"{FILE_ROOT}{path}?download=1",
+                                         headers={"Authorization": f"Bearer {tok}"})
+            with urllib.request.urlopen(req, timeout=3600) as r:
+                blob = r.read()
+            break
+        except Exception as exc:
+            last = exc
+            print(f"  gate download retry {attempt + 1}/4 for {row.centre}: "
+                  f"{type(exc).__name__}", flush=True)
+            time.sleep(5 * (attempt + 1))
+    if blob is None:
+        raise IOError(f"gate download failed after 4 attempts: {last}")
     dl = time.time() - t0
 
     with xr.open_dataset(io.BytesIO(blob)) as ds:

@@ -84,11 +84,6 @@
   "plausible": true,
   "passes": true
  },
- "Meteo-France": {
-  "centre": "Meteo-France",
-  "passes": false,
-  "error": "IncompleteRead: IncompleteRead(750453505 bytes read, 853628405 more expected)"
- },
  "NCAR": {
   "centre": "NCAR",
   "file": "zg_6hrPt_CESM2-CAM6_control_s20180125-r10i1p1f1_gn_20180125-20180311.nc",
@@ -106,11 +101,6 @@
   "plausible": true,
   "passes": true
  },
- "NRL": {
-  "centre": "NRL",
-  "passes": false,
-  "error": "KeyError: \"'plev' is not a valid dimension or coordinate for Dataset with dimensions FrozenMappingWarningOnValuesAccess({'time': 181, 'snap34': 34, 'lat': 180, 'lon': 360})\""
- },
  "SNU": {
   "centre": "SNU",
   "file": "zg_6hrPt_GRIMs_control_s20180125-r1i1p10f1_gr_20180125-20180311.nc",
@@ -127,10 +117,5 @@
   "subset_mean": 15353.01562816657,
   "plausible": true,
   "passes": true
- },
- "UKMO": {
-  "centre": "UKMO",
-  "passes": false,
-  "error": "IncompleteRead: IncompleteRead(842074243 bytes read, 1327758014 more expected)"
  }
 }
