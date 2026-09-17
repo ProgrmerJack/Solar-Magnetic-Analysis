@@ -51,9 +51,9 @@ intervals — see §5.)*
 | H | the response distribution is one shifted population | CMIP6 n=1888 | established, power-bounded |
 | I | forced between-event variance σ_f ≈ 0.24 σ | CMIP6 n=1888 | established, 91% placebo correction |
 | J | **out-of-sample predictable share R² = 0.115; 73% of diagnostic skill is window overlap** | CMIP6 n=1888 | **established, no correction** |
-| K | causal stratosphere→surface effect S = +0.97 σ | SNAPSI, 3 models | established, 2 NH events |
-| **L** | **the DW/NDW contrast is identical with and without an SSW, in a designed experiment** | **SNAPSI, 22 ensembles** | **established — the decisive test** |
-| **M** | **an SSW shifts the surface distribution without inflating its variance** | **SNAPSI, 451 vs 450 members** | **established causally; σ_f² ≤ +0.13** |
+| K | causal stratosphere→surface effect S = +0.97 σ | SNAPSI, 3 models | established, 2 NH events — **not yet re-run on all 9 centres** |
+| **L** | **the DW/NDW contrast is identical with and without an SSW, in a designed experiment** | **SNAPSI, 9 centres, 61 ensembles** | **established — the decisive test, replicated at 3x scale 2026-09-17** |
+| **M** | **an SSW shifts the surface distribution without inflating its variance** | **SNAPSI, 9 centres, 1788 vs 1805 members** | **established causally; ratio 0.952 [0.869, 1.047] after an estimator fix** |
 
 **J is the headline.** It needs no correction of any kind, it answers the field's
 own question in the field's own terms, and it independently confirms I.
@@ -380,10 +380,26 @@ stratosphere is nudged to the same observed evolution**, so members differ only
 in tropospheric noise: the causal driver is identical *by construction*, not by
 assumption. Apply Karpechko conditions 1–2 (the surface conditions) and split.
 
-| arm | what is true of it | DW−NDW contrast | DW rate |
+| arm | what is true of it | DW−NDW contrast | DW rate (unconditional) |
 |---|---|---|---|
-| **nudged** | stratospheric forcing **identical** across members | **−1.518 σ** (sd 0.304, n=10) | **0.78** |
-| **control** | **no SSW forcing at all** | **−1.558 σ** (sd 0.103, n=12) | **0.44** |
+| **nudged** | stratospheric forcing **identical** across members | **−1.624 σ** (sd 0.300, n=25) | **0.842** |
+| **control** | **no SSW forcing at all** | **−1.590 σ** (sd 0.089, n=36) | **0.450** |
+
+> **Re-run 2026-09-17 on the COMPLETE archive: 9 usable centres, 4 NH
+> initialisations, 36 ensembles per arm, against the 3 centres and 9-12
+> ensembles the original rested on. The result holds and tightens.** The
+> contrast is the same with the SSW held identical and with no SSW at all
+> (−1.624 vs −1.590), while the rate separates as before.
+>
+> **One correction the larger sample exposed.** The contrast needs ≥3 members in
+> BOTH groups, which is asymmetric by construction: only an arm with a strong
+> forced shift can push nearly every member into one class. **11 of 36 nudged
+> ensembles are dropped that way, with a mean DW rate of 0.993; 0 of 36 control
+> ensembles are.** Taking the rate over surviving ensembles understated it at
+> 0.776. The unconditional rate is **0.842 against 0.450**, so the rate
+> separation is *larger* than previously reported. The contrast remains
+> necessarily conditioned on the ensembles where both groups exist, which are
+> the weaker-responding ones — stated rather than hidden.
 
 **The contrast is the same whether or not an SSW happened** (−1.52 vs −1.56).
 It cannot be reporting a physical difference between groups: in the nudged arm
@@ -418,12 +434,34 @@ SNAPSI measures the same quantity **causally, with no correction at all**:
 
 Pooled over 9 case-ensembles, **451 nudged against 450 control members**:
 
-| quantity | value | reading |
+| quantity | 3 centres (original) | **9 centres, 36 ensembles (2026-09-17)** |
 |---|---|---|
-| causal shift | **−0.889 σ** | consistent with K (+0.97 σ) |
-| **variance ratio** nudged/control | **0.939 [0.781, 1.130]** | **consistent with 1** |
-| implied forced variance σ_f² | **−0.061 [−0.219, +0.130]** | bounded near zero |
-| pure translation (KS, 451 vs 450) | **p = 0.805** | not rejected |
+| causal shift | −0.889 σ | **−1.559 σ** (sd across cases 1.071) |
+| **variance ratio** nudged/control | 0.939 [0.781, 1.130] | **0.952 [0.869, 1.047]** |
+| pure translation (KS) | p = 0.805 (451 v 450) | **p = 0.322** (1788 v 1805) |
+| excluding the short-lead init | — | **0.995 [0.890, 1.105]**, KS p = 0.650 |
+
+> **The conclusion survives a fourfold expansion — but only after an estimator
+> defect was fixed, and the naive scale-up would have overturned it.**
+>
+> Each ensemble is standardised by its OWN control mean and sd, so the control
+> arm lands at ~0 in every case while the nudged arm lands on that case's causal
+> shift. Concatenating without re-centring therefore adds the between-ensemble
+> spread of those shifts to the nudged variance and to nothing else. At 3
+> centres that spread was 0.295 σ, contributing 0.087 to a ratio of 0.941 — the
+> published 0.939, reproduced. At 9 centres the spread is **1.071 σ**,
+> contributing 1.15, and the uncorrected ratio reads **2.085 [1.922, 2.264]**
+> with KS p = 0.000: a flat contradiction of the result, produced entirely by
+> the pooling.
+>
+> Re-centring each ensemble before pooling — which is what the within-ensemble
+> quantity requires — gives **0.952 [0.869, 1.047]** across all 9 centres and
+> **0.995** excluding the short-lead initialisation. The arithmetic closes:
+> 0.952 within + 1.147 between ≈ 2.085 pooled.
+>
+> **`shift_sd_across_cases` = 1.071 σ is NOT σ_f.** It mixes between-model with
+> between-event variation, since the 36 ensembles span 9 centres and only 2
+> events. It must never be quoted as an event-to-event forced spread.
 
 **Why this matters.** If coupling strength genuinely varied between events — if
 some SSWs were "downward-propagating" and others not — the forced ensemble would

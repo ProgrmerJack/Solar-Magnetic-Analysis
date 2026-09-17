@@ -65,6 +65,24 @@ def check_layout() -> None:
         rec("PASS", "run logs", f"{len(list((SSW / 'run_logs').rglob('*.log')))} "
                                 f"logs, all under run_logs/")
 
+    # The SNAPSI reduced cache is read BY FILENAME by snapsi_selection_test.py
+    # and snapsi_distribution_test.py: the centre is p.name.split("_")[0] and
+    # members load via {centre}_{exp}_{init}_*.parquet. On 2026-09-17 a
+    # variable prefix was added to those keys and both scripts silently parsed
+    # "psl" as a centre, analysing 2,026 of 6,161 members without any error.
+    red = SSW / "03_data_ingestion" / "_snapsi_reduced"
+    if red.is_dir():
+        names = [p.name for p in red.glob("*.parquet")]
+        known = {"CCCma", "CNR-ISAC", "ECCC", "ECMWF", "KMA", "Meteo-France",
+                 "NCAR", "NRL", "SNU", "UKMO"}
+        bad = sorted({n.split("_")[0] for n in names} - known)
+        rec("PASS" if not bad else "FAIL", "snapsi cache naming",
+            f"{len(names)} members, all parse to a known centre" if not bad
+            else f"filenames parse to non-centres {bad} -- the analysis scripts "
+                 f"read this directory by filename")
+    else:
+        rec("SKIP", "snapsi cache naming", "cache absent")
+
     for required in ("FAILURES.md", "CLAUDE.md", "CATALOG.md"):
         rec("PASS" if (ROOT / required).exists() else "FAIL",
             f"root file {required}",
