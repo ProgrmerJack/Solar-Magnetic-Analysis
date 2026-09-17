@@ -63,6 +63,11 @@ Tried: re-running `predictability_ceiling.py` to clear an impossible R² = 1.285
 Failed: the correction worked, but the cross-validated R² also moved — ridge P1 0.0998 → 0.1026, P3 0.4245 → 0.4226, gradient boosting up to 0.0081 — on identical data (n=1888), features (38), groups (20) and seed (20260803). The original run's package versions were never recorded, so a library difference can be suspected and not shown.
 Rule: record package versions alongside every result, as the global protocol requires. The environment is now pinned in `environment/requirements.lock.txt`; a result produced before that pin cannot be re-run for comparison, only superseded.
 
+## 2026-09-17 — A passing environment check while every download failed
+Tried: starting the SNAPSI expansion after `check_environment.py` reported ENVIRONMENT OK, 0 failures.
+Failed: every file downloaded and none was reduced. The process had read 5 GB with zero cache files written, because each reduce raised `ImportError: No module named 'h5py'` and the retry loop silently re-downloaded it four times. `netCDF4` cannot read a file-like object; only `h5netcdf` can, and it needs `h5py`. The check opened its probe **from disk**, where netCDF4 works, so it never exercised the path the ingestion actually uses.
+Rule: a capability check must exercise the same code path as the caller. `check_environment.py` now opens a NetCDF from `BytesIO` as well as from disk. Also: a retry loop that swallows the exception class hides a missing dependency as a network problem — print the first failure immediately, do not wait for a progress line.
+
 ## Standing traps that are not failures of a single run
 - **Post-hoc catalogue substitution.** Swapping `primary` (43) for `union` (47) to raise n is the practice that produced four incompatible catalogues in the superseded project. `load_catalogue(which)` is the only permitted event source; inline date lists are forbidden.
 - **Guards that compare the wrong thing.** The first SNAPSI corruption guard compared members by *label* and passed NRL, whose members differ while the ensemble mean is identically zero. Test the effect, not the labels.

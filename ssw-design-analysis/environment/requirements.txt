@@ -13,6 +13,10 @@ scipy
 xarray
 netCDF4          # NetCDF4/HDF5 backend -- without it xarray cannot open any .nc in this repo
 h5netcdf         # second NetCDF backend, used as a fallback
+h5py             # REQUIRED BY h5netcdf. netCDF4 cannot read a file-like object,
+                 # so without h5py every streamed SNAPSI download fails to reduce
+                 # while an on-disk open still succeeds -- see FAILURES.md 2026-09-17
+lxml             # pandas.read_html, parsing the frozen NOAA SSW compendium
 cftime           # non-standard model calendars (CMIP6, SNAPSI)
 pyarrow          # parquet
 scikit-learn     # ridge / gradient boosting in the predictability arm

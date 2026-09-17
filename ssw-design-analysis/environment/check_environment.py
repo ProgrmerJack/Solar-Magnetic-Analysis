@@ -34,9 +34,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 
 REQUIRED = [
-    "numpy", "pandas", "scipy", "xarray", "netCDF4", "h5netcdf",
+    "numpy", "pandas", "scipy", "xarray", "netCDF4", "h5netcdf", "h5py",
     "cftime", "pyarrow", "sklearn", "statsmodels", "matplotlib",
-    "requests", "zarr", "gcsfs", "dask",
+    "requests", "zarr", "gcsfs", "dask", "lxml",
 ]
 
 # Real files, committed or re-acquirable, that the analyses actually read.
@@ -87,14 +87,31 @@ def check_netcdf() -> bool:
     if not NETCDF_PROBE.exists():
         record("SKIP", "netcdf open", f"probe absent: {NETCDF_PROBE.relative_to(ROOT)}")
         return True
+    ok = True
     try:
         with xr.open_dataset(NETCDF_PROBE) as ds:
-            record("PASS", "netcdf open",
+            record("PASS", "netcdf open (disk)",
                    f"{NETCDF_PROBE.name}: vars={list(ds.data_vars)} dims={dict(ds.sizes)}")
-        return True
     except Exception as exc:  # noqa: BLE001
-        record("FAIL", "netcdf open", f"{type(exc).__name__}: {str(exc)[:200]}")
-        return False
+        record("FAIL", "netcdf open (disk)", f"{type(exc).__name__}: {str(exc)[:200]}")
+        ok = False
+
+    # The in-memory path is a SEPARATE capability and this is not pedantry:
+    # netCDF4 cannot read a file-like object, only h5netcdf can, and h5netcdf
+    # needs h5py. On 2026-09-17 the disk check above passed while every SNAPSI
+    # download failed with "No module named 'h5py', backend not available" --
+    # the ingestion streams each file into BytesIO and never touches disk.
+    try:
+        import io
+        with xr.open_dataset(io.BytesIO(NETCDF_PROBE.read_bytes())) as ds:
+            record("PASS", "netcdf open (in-memory)",
+                   f"BytesIO round-trip OK ({len(ds.data_vars)} vars)")
+    except Exception as exc:  # noqa: BLE001
+        record("FAIL", "netcdf open (in-memory)",
+               f"{type(exc).__name__}: {str(exc)[:160]} "
+               f"-- streamed downloads cannot be reduced")
+        ok = False
+    return ok
 
 
 def check_parquet() -> bool:
