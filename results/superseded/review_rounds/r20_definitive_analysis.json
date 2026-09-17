@@ -1,0 +1,434 @@
+{
+  "analysis_date": "2025-R20-definitive",
+  "primary_variable": "dry_natural_size_1234",
+  "rationale": "Natural-trigger dry slabs isolate weather-driven signal from human activity noise",
+  "swiss": {
+    "n_ssw": 16,
+    "n_decrease": 14,
+    "sign_p": 0.004180908203125,
+    "t_p_logrr": 0.0006390041351846987,
+    "wilcoxon_p_logrr": 0.001007080078125,
+    "permutation_p": 0.0005,
+    "geometric_mean_rr": 0.31935298461171735,
+    "median_rr": 0.29401436425973987,
+    "ci_95_rr": [
+      0.19723710142907838,
+      0.5447683450244032
+    ],
+    "cohen_d": -1.073591849379181,
+    "pct_reduction": 68.06470153882826,
+    "events": [
+      {
+        "onset": "1998-12-15",
+        "observed": 17.0,
+        "expected": 19.272196804812708,
+        "rr": 0.8820997508573963,
+        "pct": -11.790024914260366
+      },
+      {
+        "onset": "1999-02-26",
+        "observed": 17.0,
+        "expected": 38.4680893397585,
+        "rr": 0.44192473012767325,
+        "pct": -55.80752698723268
+      },
+      {
+        "onset": "2001-02-11",
+        "observed": 9.0,
+        "expected": 49.05198896632336,
+        "rr": 0.18347879850863846,
+        "pct": -81.65212014913615
+      },
+      {
+        "onset": "2001-12-30",
+        "observed": 4.0,
+        "expected": 35.92952135809071,
+        "rr": 0.11132906447971004,
+        "pct": -88.86709355202899
+      },
+      {
+        "onset": "2002-02-17",
+        "observed": 11.0,
+        "expected": 40.466787299551214,
+        "rr": 0.2718278552377691,
+        "pct": -72.81721447622309
+      },
+      {
+        "onset": "2003-01-18",
+        "observed": 11.0,
+        "expected": 58.06611560216072,
+        "rr": 0.1894392260602787,
+        "pct": -81.05607739397213
+      },
+      {
+        "onset": "2004-01-05",
+        "observed": 5.0,
+        "expected": 43.71194007817585,
+        "rr": 0.11438522268876279,
+        "pct": -88.56147773112372
+      },
+      {
+        "onset": "2006-01-21",
+        "observed": 13.0,
+        "expected": 62.36801111764847,
+        "rr": 0.20844018860048832,
+        "pct": -79.15598113995117
+      },
+      {
+        "onset": "2007-02-24",
+        "observed": 12.0,
+        "expected": 37.95055932470156,
+        "rr": 0.31620087328171065,
+        "pct": -68.37991267182893
+      },
+      {
+        "onset": "2008-02-22",
+        "observed": 2.0,
+        "expected": 37.633281989614495,
+        "rr": 0.05314444805935161,
+        "pct": -94.68555519406485
+      },
+      {
+        "onset": "2009-01-24",
+        "observed": 7.0,
+        "expected": 64.91752702578164,
+        "rr": 0.10782912289958287,
+        "pct": -89.21708771004171
+      },
+      {
+        "onset": "2010-02-09",
+        "observed": 33.0,
+        "expected": 50.67888927137924,
+        "rr": 0.6511587067997692,
+        "pct": -34.884129320023085
+      },
+      {
+        "onset": "2012-01-11",
+        "observed": 43.0,
+        "expected": 50.40203599323546,
+        "rr": 0.8531401391358695,
+        "pct": -14.685986086413049
+      },
+      {
+        "onset": "2013-01-07",
+        "observed": 16.0,
+        "expected": 47.636242483700144,
+        "rr": 0.33587871682941356,
+        "pct": -66.41212831705865
+      },
+      {
+        "onset": "2018-02-12",
+        "observed": 51.0,
+        "expected": 49.05221982434568,
+        "rr": 1.0397082982712966,
+        "pct": 3.9708298271296627
+      },
+      {
+        "onset": "2019-01-01",
+        "observed": 132.0,
+        "expected": 38.758969696767515,
+        "rr": 3.405663283433686,
+        "pct": 240.56632834336858
+      }
+    ],
+    "phases": {
+      "Pre (-15:-5d)": {
+        "decrease": 13,
+        "total": 16,
+        "med_rr": 0.13713174147831722,
+        "p": 0.021270751953125
+      },
+      "Onset (-5:+5d)": {
+        "decrease": 13,
+        "total": 16,
+        "med_rr": 0.34818705957642426,
+        "p": 0.021270751953125
+      },
+      "Post (+5:+15d)": {
+        "decrease": 14,
+        "total": 16,
+        "med_rr": 0.25847812916571855,
+        "p": 0.004180908203125
+      },
+      "Late (+15:+30d)": {
+        "decrease": 13,
+        "total": 16,
+        "med_rr": 0.37744903047366796,
+        "p": 0.021270751953125
+      }
+    },
+    "loocv": [
+      {
+        "excluded": "1998-12-15",
+        "rr_excluded": 0.8820997508573963,
+        "remaining_p": 0.00152587890625,
+        "remaining_dec": 13,
+        "remaining_n": 15,
+        "remaining_geom_rr": 0.2984382820625109
+      },
+      {
+        "excluded": "1999-02-26",
+        "rr_excluded": 0.44192473012767325,
+        "remaining_p": 0.00152587890625,
+        "remaining_dec": 13,
+        "remaining_n": 15,
+        "remaining_geom_rr": 0.3125113710892979
+      },
+      {
+        "excluded": "2001-02-11",
+        "rr_excluded": 0.18347879850863846,
+        "remaining_p": 0.00201416015625,
+        "remaining_dec": 13,
+        "remaining_n": 15,
+        "remaining_geom_rr": 0.3313726433412988
+      },
+      {
+        "excluded": "2001-12-30",
+        "rr_excluded": 0.11132906447971004,
+        "remaining_p": 0.00201416015625,
+        "remaining_dec": 13,
+        "remaining_n": 15,
+        "remaining_geom_rr": 0.3425956207965485
+      },
+      {
+        "excluded": "2002-02-17",
+        "rr_excluded": 0.2718278552377691,
+        "remaining_p": 0.00201416015625,
+        "remaining_dec": 13,
+        "remaining_n": 15,
+        "remaining_geom_rr": 0.32280192361459537
+      },
+      {
+        "excluded": "2003-01-18",
+        "rr_excluded": 0.1894392260602787,
+        "remaining_p": 0.00201416015625,
+        "remaining_dec": 13,
+        "remaining_n": 15,
+        "remaining_geom_rr": 0.33066714873977227
+      },
+      {
+        "excluded": "2004-01-05",
+        "rr_excluded": 0.11438522268876279,
+        "remaining_p": 0.00201416015625,
+        "remaining_dec": 13,
+        "remaining_n": 15,
+        "remaining_geom_rr": 0.3419776444075212
+      },
+      {
+        "excluded": "2006-01-21",
+        "rr_excluded": 0.20844018860048832,
+        "remaining_p": 0.00201416015625,
+        "remaining_dec": 13,
+        "remaining_n": 15,
+        "remaining_geom_rr": 0.3285667516305424
+      },
+      {
+        "excluded": "2007-02-24",
+        "rr_excluded": 0.31620087328171065,
+        "remaining_p": 0.00152587890625,
+        "remaining_dec": 13,
+        "remaining_n": 15,
+        "remaining_geom_rr": 0.3195642391612966
+      },
+      {
+        "excluded": "2008-02-22",
+        "rr_excluded": 0.05314444805935161,
+        "remaining_p": 0.00201416015625,
+        "remaining_dec": 13,
+        "remaining_n": 15,
+        "remaining_geom_rr": 0.3599082908983766
+      },
+      {
+        "excluded": "2009-01-24",
+        "rr_excluded": 0.10782912289958287,
+        "remaining_p": 0.00201416015625,
+        "remaining_dec": 13,
+        "remaining_n": 15,
+        "remaining_geom_rr": 0.34332595739166294
+      },
+      {
+        "excluded": "2010-02-09",
+        "rr_excluded": 0.6511587067997692,
+        "remaining_p": 0.00152587890625,
+        "remaining_dec": 13,
+        "remaining_n": 15,
+        "remaining_geom_rr": 0.3045392364342659
+      },
+      {
+        "excluded": "2012-01-11",
+        "rr_excluded": 0.8531401391358695,
+        "remaining_p": 0.00152587890625,
+        "remaining_dec": 13,
+        "remaining_n": 15,
+        "remaining_geom_rr": 0.2991031725802689
+      },
+      {
+        "excluded": "2013-01-07",
+        "rr_excluded": 0.33587871682941356,
+        "remaining_p": 0.00152587890625,
+        "remaining_dec": 13,
+        "remaining_n": 15,
+        "remaining_geom_rr": 0.31828063238323895
+      },
+      {
+        "excluded": "2018-02-12",
+        "rr_excluded": 1.0397082982712966,
+        "remaining_p": 0.00115966796875,
+        "remaining_dec": 14,
+        "remaining_n": 15,
+        "remaining_geom_rr": 0.2951854480317674
+      },
+      {
+        "excluded": "2019-01-01",
+        "rr_excluded": 3.405663283433686,
+        "remaining_p": 0.0001220703125,
+        "remaining_dec": 14,
+        "remaining_n": 15,
+        "remaining_geom_rr": 0.27273587276217615
+      }
+    ]
+  },
+  "us": {
+    "n_centers": 20,
+    "n_decrease": 11,
+    "sign_p": 0.8238029479980469,
+    "mean_danger_diff": -0.04100349780582526,
+    "n_pairs": 26,
+    "n_pairs_decrease": 15,
+    "pair_sign_p": 0.557197093963623,
+    "center_results": {
+      "Bridger-Teton Avalanche Center": {
+        "n_events": 5,
+        "n_decrease": 4,
+        "mean_diff": -0.3821489621489621
+      },
+      "Sierra Avalanche Center": {
+        "n_events": 3,
+        "n_decrease": 2,
+        "mean_diff": -0.1934552102752777
+      },
+      "Utah Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 0,
+        "mean_diff": 0.04544635814239495
+      },
+      "Colorado Avalanche Information Center": {
+        "n_events": 1,
+        "n_decrease": 1,
+        "mean_diff": -0.06927883017613823
+      },
+      "Chugach National Forest Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 0,
+        "mean_diff": 0.42361111111111116
+      },
+      "Eastern Sierra Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 1,
+        "mean_diff": -0.6949820788530467
+      },
+      "Payette Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 1,
+        "mean_diff": -0.06676342525399104
+      },
+      "Flathead Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 0,
+        "mean_diff": 0.061537557305748614
+      },
+      "Gallatin NF Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 0,
+        "mean_diff": 0.33583114401719616
+      },
+      "Mount Shasta Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 1,
+        "mean_diff": -0.7108695652173911
+      },
+      "Sawtooth Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 0,
+        "mean_diff": 0.2772300469483566
+      },
+      "Northwest Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 1,
+        "mean_diff": -0.14679944882876095
+      },
+      "Hatcher Pass Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 0,
+        "mean_diff": 0.0
+      },
+      "West Central Montana Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 0,
+        "mean_diff": 0.29289617486338804
+      },
+      "Idaho Panhandle Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 1,
+        "mean_diff": -0.03204327923429018
+      },
+      "Mount Washington Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 0,
+        "mean_diff": 0.6025641025641026
+      },
+      "Crested Butte Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 1,
+        "mean_diff": -0.3095238095238093
+      },
+      "Taos Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 1,
+        "mean_diff": -0.43333333333333357
+      },
+      "Wallowa Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 0,
+        "mean_diff": 0.18131868131868112
+      },
+      "Central Oregon Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 1,
+        "mean_diff": -0.0013071895424836555
+      }
+    }
+  },
+  "meta": {
+    "countries": {
+      "Switzerland": {
+        "n_events": 16,
+        "n_decrease": 14,
+        "sign_p": 0.004180908203125,
+        "t_p": 0.0006390041351846987,
+        "wilcoxon_p": 0.001007080078125,
+        "perm_p": 0.0005,
+        "geom_rr": 0.31935298461171735,
+        "median_rr": 0.29401436425973987,
+        "ci": [
+          0.19723710142907838,
+          0.5447683450244032
+        ],
+        "cohen_d": -1.073591849379181,
+        "measure": "natural dry slab count",
+        "pct_reduction": 68.06470153882826
+      },
+      "United States": {
+        "n_centers": 20,
+        "n_decrease": 11,
+        "sign_p": 0.8238029479980469,
+        "mean_diff": -0.04100349780582526,
+        "measure": "danger rating (1-5)",
+        "n_pairs": 26,
+        "n_pairs_decrease": 15,
+        "pair_p": 0.557197093963623
+      }
+    },
+    "fisher_p": 0.02297672970651843
+  }
+}

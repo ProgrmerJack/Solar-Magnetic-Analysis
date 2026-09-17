@@ -1,0 +1,248 @@
+{
+  "part": 6,
+  "description": "Robustness: specification curve and LOOCV",
+  "spec_curve": {
+    "n_specs": 16,
+    "n_decrease": 11,
+    "pct_decrease": 68.8,
+    "median_rr": 0.9347,
+    "specs": [
+      {
+        "outcome": "dry",
+        "exposure": "geomag_1_3d",
+        "geography": "swiss",
+        "rr": 0.6371,
+        "p": 0.0,
+        "decrease": true
+      },
+      {
+        "outcome": "dry",
+        "exposure": "geomag_5_21d",
+        "geography": "swiss",
+        "rr": 0.6746,
+        "p": 0.0,
+        "decrease": true
+      },
+      {
+        "outcome": "dry",
+        "exposure": "ssw_0_15d",
+        "geography": "swiss",
+        "rr": 0.5698,
+        "p": 3e-05,
+        "decrease": true
+      },
+      {
+        "outcome": "dry",
+        "exposure": "geomag_15_30d",
+        "geography": "swiss",
+        "rr": 2.1026,
+        "p": 0.0,
+        "decrease": false
+      },
+      {
+        "outcome": "wet",
+        "exposure": "geomag_1_3d",
+        "geography": "swiss",
+        "rr": 0.8979,
+        "p": 0.173279,
+        "decrease": true
+      },
+      {
+        "outcome": "wet",
+        "exposure": "geomag_5_21d",
+        "geography": "swiss",
+        "rr": 1.0479,
+        "p": 0.640135,
+        "decrease": false
+      },
+      {
+        "outcome": "wet",
+        "exposure": "ssw_0_15d",
+        "geography": "swiss",
+        "rr": 0.8235,
+        "p": 0.515346,
+        "decrease": true
+      },
+      {
+        "outcome": "wet",
+        "exposure": "geomag_15_30d",
+        "geography": "swiss",
+        "rr": 1.0043,
+        "p": 0.962868,
+        "decrease": false
+      },
+      {
+        "outcome": "all_nat",
+        "exposure": "geomag_1_3d",
+        "geography": "swiss",
+        "rr": 0.8578,
+        "p": 0.0003,
+        "decrease": true
+      },
+      {
+        "outcome": "all_nat",
+        "exposure": "geomag_5_21d",
+        "geography": "swiss",
+        "rr": 0.8143,
+        "p": 2.9e-05,
+        "decrease": true
+      },
+      {
+        "outcome": "all_nat",
+        "exposure": "ssw_0_15d",
+        "geography": "swiss",
+        "rr": 0.6945,
+        "p": 0.000804,
+        "decrease": true
+      },
+      {
+        "outcome": "all_nat",
+        "exposure": "geomag_15_30d",
+        "geography": "swiss",
+        "rr": 1.4234,
+        "p": 0.0,
+        "decrease": false
+      },
+      {
+        "outcome": "norway",
+        "exposure": "geomag_1_3d",
+        "geography": "norway",
+        "rr": 1.0036,
+        "p": 0.869465,
+        "decrease": false
+      },
+      {
+        "outcome": "norway",
+        "exposure": "geomag_5_21d",
+        "geography": "norway",
+        "rr": 0.9715,
+        "p": 0.208728,
+        "decrease": true
+      },
+      {
+        "outcome": "norway",
+        "exposure": "ssw_0_15d",
+        "geography": "norway",
+        "rr": 0.995,
+        "p": 0.94159,
+        "decrease": true
+      },
+      {
+        "outcome": "norway",
+        "exposure": "geomag_15_30d",
+        "geography": "norway",
+        "rr": 0.9958,
+        "p": 0.853646,
+        "decrease": true
+      }
+    ]
+  },
+  "loocv": {
+    "folds": [
+      {
+        "winter": "1998/1999",
+        "mean_rr": 0.3655
+      },
+      {
+        "winter": "1999/2000",
+        "mean_rr": 0.3143
+      },
+      {
+        "winter": "2000/2001",
+        "mean_rr": 0.3559
+      },
+      {
+        "winter": "2001/2002",
+        "mean_rr": 0.3778
+      },
+      {
+        "winter": "2002/2003",
+        "mean_rr": 0.3689
+      },
+      {
+        "winter": "2003/2004",
+        "mean_rr": 0.3761
+      },
+      {
+        "winter": "2004/2005",
+        "mean_rr": 0.3158
+      },
+      {
+        "winter": "2005/2006",
+        "mean_rr": 0.3748
+      },
+      {
+        "winter": "2006/2007",
+        "mean_rr": 0.3634
+      },
+      {
+        "winter": "2007/2008",
+        "mean_rr": 0.3793
+      },
+      {
+        "winter": "2008/2009",
+        "mean_rr": 0.3696
+      },
+      {
+        "winter": "2009/2010",
+        "mean_rr": 0.3494
+      },
+      {
+        "winter": "2010/2011",
+        "mean_rr": 0.312
+      },
+      {
+        "winter": "2011/2012",
+        "mean_rr": 0.3324
+      },
+      {
+        "winter": "2012/2013",
+        "mean_rr": 0.3695
+      },
+      {
+        "winter": "2013/2014",
+        "mean_rr": 0.3216
+      },
+      {
+        "winter": "2014/2015",
+        "mean_rr": 0.4212
+      },
+      {
+        "winter": "2015/2016",
+        "mean_rr": 0.4352
+      },
+      {
+        "winter": "2016/2017",
+        "mean_rr": 0.4189
+      },
+      {
+        "winter": "2017/2018",
+        "mean_rr": 0.3928
+      },
+      {
+        "winter": "2018/2019",
+        "mean_rr": 0.2216
+      }
+    ],
+    "n_below_1": 21,
+    "n_folds": 21,
+    "mean_rr": 0.3589,
+    "sd_rr": 0.0454
+  },
+  "wfe_dry_slab_geomag": {
+    "rr": 0.6371,
+    "p": 0.0
+  },
+  "wfe_dry_slab_ssw": {
+    "rr": 0.5698,
+    "p": 3e-05
+  },
+  "wfe_all_natural_geomag": {
+    "rr": 0.8578,
+    "p": 0.0003
+  },
+  "wfe_all_natural_ssw": {
+    "rr": 0.6945,
+    "p": 0.000804
+  }
+}

@@ -1,0 +1,26 @@
+REAL events: 43  ->  dSSW 30, nSSW 13  (70% classified downward)
+
+outcome   ALL events    dSSW only   difference
+----------------------------------------------
+ao           -0.620       -1.162       -0.542
+nao          -0.206       -0.372       -0.166
+pna          +0.069       +0.136       +0.067
+  300/1500 null draws
+  600/1500 null draws
+  900/1500 null draws
+  1200/1500 null draws
+  1500/1500 null draws
+
+=== SELECTION BIAS UNDER A TRUE NULL (1500 draws) ===
+  pseudo-events classified 'downward-propagating': 38%   (real events: 70%)
+
+outcome   null ALL   null dSSW      BIAS   real dSSW  bias share
+------------------------------------------------------------------
+ao         +0.279      -0.774    -1.052      -1.162         91%
+nao        +0.092      -0.196    -0.288      -0.372         78%
+pna        -0.029      +0.060    +0.089      +0.136         65%
+
+  BIAS is what the selection manufactures when the true effect is ZERO.
+  bias share is how much of the published-style dSSW number it explains.
+
+Saved -> selection_on_outcome.json

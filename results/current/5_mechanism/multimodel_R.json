@@ -1,0 +1,176 @@
+{
+  "window": [
+    15,
+    29
+  ],
+  "models": {
+    "BCC-ESM1": {
+      "between": -0.3789,
+      "within": -0.2715,
+      "R": 0.7167,
+      "R_CI95": [
+        0.15,
+        0.987
+      ],
+      "n_events": 64,
+      "n_members": 1,
+      "ssw_per_winter": 0.392,
+      "n_winters": 166,
+      "rate_plausible": true
+    },
+    "CESM2-FV2": {
+      "between": -0.7563,
+      "within": -0.6294,
+      "R": 0.8322,
+      "R_CI95": [
+        0.686,
+        0.986
+      ],
+      "n_events": 93,
+      "n_members": 1,
+      "ssw_per_winter": 0.566,
+      "n_winters": 166,
+      "rate_plausible": true
+    },
+    "CanESM5": {
+      "between": -0.7155,
+      "within": -0.5904,
+      "R": 0.8252,
+      "R_CI95": [
+        0.759,
+        0.886
+      ],
+      "n_events": 846,
+      "n_members": 10,
+      "ssw_per_winter": 0.516,
+      "n_winters": 1660,
+      "rate_plausible": true
+    },
+    "GFDL-CM4": {
+      "between": -0.2439,
+      "within": -0.0894,
+      "R": 0.3664,
+      "R_CI95": [
+        -0.779,
+        0.967
+      ],
+      "n_events": 70,
+      "n_members": 1,
+      "ssw_per_winter": 0.422,
+      "n_winters": 166,
+      "rate_plausible": true
+    },
+    "INM-CM5-0": {
+      "between": -0.4365,
+      "within": -0.3494,
+      "R": 0.8006,
+      "R_CI95": [
+        0.494,
+        1.042
+      ],
+      "n_events": 123,
+      "n_members": 1,
+      "ssw_per_winter": 0.741,
+      "n_winters": 166,
+      "rate_plausible": true
+    },
+    "IPSL-CM5A2-INCA": {
+      "between": -0.8186,
+      "within": -0.7278,
+      "R": 0.8891,
+      "R_CI95": [
+        0.708,
+        1.033
+      ],
+      "n_events": 100,
+      "n_members": 1,
+      "ssw_per_winter": 0.614,
+      "n_winters": 166,
+      "rate_plausible": true
+    },
+    "MIROC6": {
+      "between": -0.1379,
+      "within": -0.0438,
+      "R": 0.318,
+      "R_CI95": [
+        -4.395,
+        1.028
+      ],
+      "n_events": 189,
+      "n_members": 2,
+      "ssw_per_winter": 0.578,
+      "n_winters": 332,
+      "rate_plausible": true
+    },
+    "MPI-ESM-1-2-HAM": {
+      "between": -0.5461,
+      "within": -0.5484,
+      "R": 1.0043,
+      "R_CI95": [
+        0.808,
+        1.205
+      ],
+      "n_events": 137,
+      "n_members": 1,
+      "ssw_per_winter": 0.831,
+      "n_winters": 166,
+      "rate_plausible": true
+    },
+    "MPI-ESM1-2-LR": {
+      "between": -0.4442,
+      "within": -0.393,
+      "R": 0.8847,
+      "R_CI95": [
+        0.66,
+        1.122
+      ],
+      "n_events": 187,
+      "n_members": 1,
+      "ssw_per_winter": 1.133,
+      "n_winters": 166,
+      "rate_plausible": true
+    },
+    "NorESM2-LM": {
+      "between": 0.0719,
+      "within": -0.0539,
+      "R": -0.7491,
+      "R_CI95": [
+        -9.926,
+        13.826
+      ],
+      "n_events": 59,
+      "n_members": 1,
+      "ssw_per_winter": 0.909,
+      "n_winters": 66,
+      "rate_plausible": true
+    }
+  },
+  "skipped": {
+    "MIROC-ES2L": "only 7 usable events"
+  },
+  "observations": {
+    "between": -0.9909,
+    "within": -0.8165,
+    "R": 0.8239,
+    "R_CI95": [
+      0.503,
+      1.091
+    ],
+    "n_events": 43
+  },
+  "headline": {
+    "n_models": 8,
+    "corr_composite_R": -0.6342,
+    "p": 0.0912394327608062,
+    "R_range": [
+      0.366,
+      1.004
+    ],
+    "composite_range": [
+      -0.819,
+      -0.244
+    ],
+    "n_near_observed_composite": 2,
+    "R_range_among_near": null
+  }
+}

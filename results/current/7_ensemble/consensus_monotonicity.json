@@ -1,0 +1,604 @@
+{
+  "n_events": 45,
+  "pre_window": [
+    -30,
+    -16
+  ],
+  "post_window": [
+    15,
+    29
+  ],
+  "n_perm": 10000,
+  "indices": {
+    "ao": {
+      "n_usable": 45,
+      "by_count": {
+        "1": {
+          "n": 3,
+          "pre_mean": -1.074,
+          "post_mean": -1.744
+        },
+        "3": {
+          "n": 5,
+          "pre_mean": -1.708,
+          "post_mean": -0.496
+        },
+        "4": {
+          "n": 12,
+          "pre_mean": -0.516,
+          "post_mean": -0.656
+        },
+        "5": {
+          "n": 12,
+          "pre_mean": -0.897,
+          "post_mean": -0.723
+        },
+        "6": {
+          "n": 13,
+          "pre_mean": -0.262,
+          "post_mean": -1.218
+        }
+      },
+      "monotonicity": {
+        "pre": {
+          "spearman_rho": 0.2212,
+          "p_asymptotic": 0.1442075307856202,
+          "p_permutation": 0.1468
+        },
+        "post": {
+          "spearman_rho": -0.0547,
+          "p_asymptotic": 0.7210685329388251,
+          "p_permutation": 0.7219
+        }
+      },
+      "u10_vs_count": {
+        "spearman_rho": -0.0171,
+        "p_permutation": 0.9253,
+        "by_count": {
+          "1": 14.79,
+          "3": 1.39,
+          "4": -1.66,
+          "5": -1.03,
+          "6": 0.01
+        }
+      },
+      "per_event": [
+        {
+          "event_name": "FEB 1979",
+          "primary_central_date": "1979-02-22",
+          "n_detect": 5.0,
+          "pre": -3.923,
+          "post": -3.781,
+          "u10": 0.214
+        },
+        {
+          "event_name": "FEB 1980",
+          "primary_central_date": "1980-02-29",
+          "n_detect": 6.0,
+          "pre": -3.28,
+          "post": -4.18,
+          "u10": 2.606
+        },
+        {
+          "event_name": "FEB 1981",
+          "primary_central_date": "1981-02-06",
+          "n_detect": 1.0,
+          "pre": 0.171,
+          "post": -2.765,
+          "u10": 14.793
+        },
+        {
+          "event_name": "MAR 1981",
+          "primary_central_date": "1981-03-04",
+          "n_detect": 4.0,
+          "pre": 2.083,
+          "post": 0.401,
+          "u10": -1.395
+        },
+        {
+          "event_name": "DEC 1981",
+          "primary_central_date": "1981-12-04",
+          "n_detect": 6.0,
+          "pre": -0.845,
+          "post": -3.033,
+          "u10": 6.01
+        },
+        {
+          "event_name": "FEB 1984",
+          "primary_central_date": "1984-02-24",
+          "n_detect": 6.0,
+          "pre": 0.885,
+          "post": -2.486,
+          "u10": -3.986
+        },
+        {
+          "event_name": "JAN 1985",
+          "primary_central_date": "1985-01-01",
+          "n_detect": 6.0,
+          "pre": 0.943,
+          "post": -3.235,
+          "u10": 1.166
+        },
+        {
+          "event_name": "JAN 1987",
+          "primary_central_date": "1987-01-23",
+          "n_detect": 6.0,
+          "pre": -2.858,
+          "post": -2.965,
+          "u10": -5.032
+        },
+        {
+          "event_name": "DEC 1987",
+          "primary_central_date": "1987-12-08",
+          "n_detect": 6.0,
+          "pre": 0.334,
+          "post": 1.169,
+          "u10": -7.613
+        },
+        {
+          "event_name": "MAR 1988",
+          "primary_central_date": "1988-03-14",
+          "n_detect": 6.0,
+          "pre": -0.747,
+          "post": -0.35,
+          "u10": 6.729
+        },
+        {
+          "event_name": "FEB 1989",
+          "primary_central_date": "1989-02-21",
+          "n_detect": 6.0,
+          "pre": 2.714,
+          "post": 1.114,
+          "u10": 3.005
+        },
+        {
+          "event_name": "DEC 1998",
+          "primary_central_date": "1998-12-15",
+          "n_detect": 6.0,
+          "pre": -0.371,
+          "post": 0.085,
+          "u10": 1.705
+        },
+        {
+          "event_name": "FEB 1999",
+          "primary_central_date": "1999-02-26",
+          "n_detect": 6.0,
+          "pre": 0.753,
+          "post": -0.756,
+          "u10": -3.179
+        },
+        {
+          "event_name": "MAR 2000",
+          "primary_central_date": "2000-03-20",
+          "n_detect": 6.0,
+          "pre": -1.326,
+          "post": -1.207,
+          "u10": 8.079
+        },
+        {
+          "event_name": "FEB 2001",
+          "primary_central_date": "2001-02-11",
+          "n_detect": 6.0,
+          "pre": 1.431,
+          "post": -1.066,
+          "u10": -10.644
+        },
+        {
+          "event_name": "DEC 2001",
+          "primary_central_date": "2001-12-30",
+          "n_detect": 6.0,
+          "pre": -1.038,
+          "post": 1.071,
+          "u10": 1.248
+        },
+        {
+          "event_name": "FEB 2002",
+          "primary_central_date": "2002-02-17",
+          "n_detect": 3.0,
+          "pre": 0.907,
+          "post": 0.405,
+          "u10": 1.387
+        },
+        {
+          "event_name": "JAN 2003",
+          "primary_central_date": "2003-01-18",
+          "n_detect": 5.0,
+          "pre": -1.281,
+          "post": 1.314,
+          "u10": 13.07
+        },
+        {
+          "event_name": "JAN 2004",
+          "primary_central_date": "2004-01-05",
+          "n_detect": 5.0,
+          "pre": 0.932,
+          "post": -0.974,
+          "u10": -5.79
+        },
+        {
+          "event_name": "JAN 2006",
+          "primary_central_date": "2006-01-21",
+          "n_detect": 5.0,
+          "pre": -2.768,
+          "post": -0.155,
+          "u10": -8.382
+        },
+        {
+          "event_name": "FEB 2007",
+          "primary_central_date": "2007-02-24",
+          "n_detect": 5.0,
+          "pre": -1.193,
+          "post": 0.524,
+          "u10": 1.828
+        },
+        {
+          "event_name": "FEB 2008",
+          "primary_central_date": "2008-02-22",
+          "n_detect": 5.0,
+          "pre": 2.92,
+          "post": 0.411,
+          "u10": -2.455
+        },
+        {
+          "event_name": "JAN 2009",
+          "primary_central_date": "2009-01-24",
+          "n_detect": 5.0,
+          "pre": -1.359,
+          "post": -1.407,
+          "u10": 2.888
+        },
+        {
+          "event_name": "FEB 2010",
+          "primary_central_date": "2010-02-09",
+          "n_detect": 5.0,
+          "pre": -2.054,
+          "post": -2.275,
+          "u10": -10.232
+        },
+        {
+          "event_name": "MAR 2010",
+          "primary_central_date": "2010-03-24",
+          "n_detect": 5.0,
+          "pre": -0.647,
+          "post": 1.274,
+          "u10": -3.698
+        },
+        {
+          "event_name": "JAN 2013",
+          "primary_central_date": "2013-01-06",
+          "n_detect": 5.0,
+          "pre": -1.468,
+          "post": 0.697,
+          "u10": 8.132
+        },
+        {
+          "event_name": "FEB 2018",
+          "primary_central_date": "2018-02-12",
+          "n_detect": 5.0,
+          "pre": -0.188,
+          "post": -3.016,
+          "u10": -1.059
+        },
+        {
+          "event_name": "JAN 2019",
+          "primary_central_date": "2019-01-02",
+          "n_detect": 5.0,
+          "pre": 0.267,
+          "post": -1.284,
+          "u10": -6.908
+        },
+        {
+          "event_name": "JAN 2021",
+          "primary_central_date": "2021-01-05",
+          "n_detect": 4.0,
+          "pre": -2.24,
+          "post": -3.089,
+          "u10": -1.737
+        },
+        {
+          "event_name": "FEB 2023",
+          "primary_central_date": "2023-02-16",
+          "n_detect": 4.0,
+          "pre": -0.414,
+          "post": -1.026,
+          "u10": -1.844
+        }
+      ]
+    },
+    "nao": {
+      "n_usable": 45,
+      "by_count": {
+        "1": {
+          "n": 3,
+          "pre_mean": -0.293,
+          "post_mean": -0.341
+        },
+        "3": {
+          "n": 5,
+          "pre_mean": -0.946,
+          "post_mean": 0.032
+        },
+        "4": {
+          "n": 12,
+          "pre_mean": -0.249,
+          "post_mean": -0.17
+        },
+        "5": {
+          "n": 12,
+          "pre_mean": -0.61,
+          "post_mean": -0.468
+        },
+        "6": {
+          "n": 13,
+          "pre_mean": -0.023,
+          "post_mean": -0.35
+        }
+      },
+      "monotonicity": {
+        "pre": {
+          "spearman_rho": 0.2397,
+          "p_asymptotic": 0.11272558805417114,
+          "p_permutation": 0.1154
+        },
+        "post": {
+          "spearman_rho": -0.1344,
+          "p_asymptotic": 0.3786518441541986,
+          "p_permutation": 0.3874
+        }
+      },
+      "u10_vs_count": {
+        "spearman_rho": -0.0171,
+        "p_permutation": 0.9253,
+        "by_count": {
+          "1": 14.79,
+          "3": 1.39,
+          "4": -1.66,
+          "5": -1.03,
+          "6": 0.01
+        }
+      },
+      "per_event": [
+        {
+          "event_name": "FEB 1979",
+          "primary_central_date": "1979-02-22",
+          "n_detect": 5.0,
+          "pre": -2.644,
+          "post": -1.13,
+          "u10": 0.214
+        },
+        {
+          "event_name": "FEB 1980",
+          "primary_central_date": "1980-02-29",
+          "n_detect": 6.0,
+          "pre": -1.229,
+          "post": -1.5,
+          "u10": 2.606
+        },
+        {
+          "event_name": "FEB 1981",
+          "primary_central_date": "1981-02-06",
+          "n_detect": 1.0,
+          "pre": 0.083,
+          "post": -0.886,
+          "u10": 14.793
+        },
+        {
+          "event_name": "MAR 1981",
+          "primary_central_date": "1981-03-04",
+          "n_detect": 4.0,
+          "pre": 0.976,
+          "post": -0.28,
+          "u10": -1.395
+        },
+        {
+          "event_name": "DEC 1981",
+          "primary_central_date": "1981-12-04",
+          "n_detect": 6.0,
+          "pre": -0.244,
+          "post": -1.041,
+          "u10": 6.01
+        },
+        {
+          "event_name": "FEB 1984",
+          "primary_central_date": "1984-02-24",
+          "n_detect": 6.0,
+          "pre": 0.83,
+          "post": 0.402,
+          "u10": -3.986
+        },
+        {
+          "event_name": "JAN 1985",
+          "primary_central_date": "1985-01-01",
+          "n_detect": 6.0,
+          "pre": -0.227,
+          "post": -1.045,
+          "u10": 1.166
+        },
+        {
+          "event_name": "JAN 1987",
+          "primary_central_date": "1987-01-23",
+          "n_detect": 6.0,
+          "pre": -0.917,
+          "post": -1.507,
+          "u10": -5.032
+        },
+        {
+          "event_name": "DEC 1987",
+          "primary_central_date": "1987-12-08",
+          "n_detect": 6.0,
+          "pre": 0.636,
+          "post": 0.72,
+          "u10": -7.613
+        },
+        {
+          "event_name": "MAR 1988",
+          "primary_central_date": "1988-03-14",
+          "n_detect": 6.0,
+          "pre": 0.131,
+          "post": -0.063,
+          "u10": 6.729
+        },
+        {
+          "event_name": "FEB 1989",
+          "primary_central_date": "1989-02-21",
+          "n_detect": 6.0,
+          "pre": 0.653,
+          "post": 1.273,
+          "u10": 3.005
+        },
+        {
+          "event_name": "DEC 1998",
+          "primary_central_date": "1998-12-15",
+          "n_detect": 6.0,
+          "pre": 0.507,
+          "post": 0.251,
+          "u10": 1.705
+        },
+        {
+          "event_name": "FEB 1999",
+          "primary_central_date": "1999-02-26",
+          "n_detect": 6.0,
+          "pre": -0.418,
+          "post": 0.109,
+          "u10": -3.179
+        },
+        {
+          "event_name": "MAR 2000",
+          "primary_central_date": "2000-03-20",
+          "n_detect": 6.0,
+          "pre": -0.156,
+          "post": -0.855,
+          "u10": 8.079
+        },
+        {
+          "event_name": "FEB 2001",
+          "primary_central_date": "2001-02-11",
+          "n_detect": 6.0,
+          "pre": 0.35,
+          "post": -0.783,
+          "u10": -10.644
+        },
+        {
+          "event_name": "DEC 2001",
+          "primary_central_date": "2001-12-30",
+          "n_detect": 6.0,
+          "pre": -0.217,
+          "post": -0.518,
+          "u10": 1.248
+        },
+        {
+          "event_name": "FEB 2002",
+          "primary_central_date": "2002-02-17",
+          "n_detect": 3.0,
+          "pre": -0.863,
+          "post": -0.332,
+          "u10": 1.387
+        },
+        {
+          "event_name": "JAN 2003",
+          "primary_central_date": "2003-01-18",
+          "n_detect": 5.0,
+          "pre": -0.111,
+          "post": 0.573,
+          "u10": 13.07
+        },
+        {
+          "event_name": "JAN 2004",
+          "primary_central_date": "2004-01-05",
+          "n_detect": 5.0,
+          "pre": -0.624,
+          "post": -1.68,
+          "u10": -5.79
+        },
+        {
+          "event_name": "JAN 2006",
+          "primary_central_date": "2006-01-21",
+          "n_detect": 5.0,
+          "pre": -0.36,
+          "post": -0.658,
+          "u10": -8.382
+        },
+        {
+          "event_name": "FEB 2007",
+          "primary_central_date": "2007-02-24",
+          "n_detect": 5.0,
+          "pre": -1.025,
+          "post": 0.647,
+          "u10": 1.828
+        },
+        {
+          "event_name": "FEB 2008",
+          "primary_central_date": "2008-02-22",
+          "n_detect": 5.0,
+          "pre": -0.524,
+          "post": -0.575,
+          "u10": -2.455
+        },
+        {
+          "event_name": "JAN 2009",
+          "primary_central_date": "2009-01-24",
+          "n_detect": 5.0,
+          "pre": -1.167,
+          "post": -0.395,
+          "u10": 2.888
+        },
+        {
+          "event_name": "FEB 2010",
+          "primary_central_date": "2010-02-09",
+          "n_detect": 5.0,
+          "pre": -0.493,
+          "post": -0.99,
+          "u10": -10.232
+        },
+        {
+          "event_name": "MAR 2010",
+          "primary_central_date": "2010-03-24",
+          "n_detect": 5.0,
+          "pre": -0.13,
+          "post": 0.219,
+          "u10": -3.698
+        },
+        {
+          "event_name": "JAN 2013",
+          "primary_central_date": "2013-01-06",
+          "n_detect": 5.0,
+          "pre": -0.646,
+          "post": 0.055,
+          "u10": 8.132
+        },
+        {
+          "event_name": "FEB 2018",
+          "primary_central_date": "2018-02-12",
+          "n_detect": 5.0,
+          "pre": 0.47,
+          "post": -1.332,
+          "u10": -1.059
+        },
+        {
+          "event_name": "JAN 2019",
+          "primary_central_date": "2019-01-02",
+          "n_detect": 5.0,
+          "pre": -0.071,
+          "post": -0.348,
+          "u10": -6.908
+        },
+        {
+          "event_name": "JAN 2021",
+          "primary_central_date": "2021-01-05",
+          "n_detect": 4.0,
+          "pre": -0.039,
+          "post": -0.495,
+          "u10": -1.737
+        },
+        {
+          "event_name": "FEB 2023",
+          "primary_central_date": "2023-02-16",
+          "n_detect": 4.0,
+          "pre": -0.248,
+          "post": -1.196,
+          "u10": -1.844
+        }
+      ]
+    }
+  }
+}

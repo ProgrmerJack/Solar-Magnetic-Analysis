@@ -1,0 +1,21 @@
+primary events: 14 pre-1980, 29 from 1980
+4000/4000 bootstrap fits converged
+
+bin                  pre-1980              1980+             difference
+------------------------------------------------------------------------
+-60..-46               -0.287             -0.178     -0.109 (p=0.897)
+-45..-31               -0.210             -0.397     +0.187 (p=0.777)
+-30..-16               -1.735             -0.468     -1.268 (p=0.115)
+-15..-1                -1.343             -0.325     -1.017 (p=0.131)
++0..+14                -1.212             -0.680     -0.532 (p=0.496)
++15..+29               -1.210             -1.031     -0.179 (p=0.803)
++30..+44               -1.685             -0.556     -1.130 (p=0.122)
++45..+60               -1.246             -0.570     -0.676 (p=0.309)
+
+=== which explanation ===
+  pre-onset  era difference -1.268 (p=0.115)
+  post-onset era difference -0.179 (p=0.803)
+  DATING predicts post-onset ALSO attenuated pre-1980 (response smeared, not lost);
+  REAL   predicts post-onset comparable across eras.
+
+Saved -> era_split.json

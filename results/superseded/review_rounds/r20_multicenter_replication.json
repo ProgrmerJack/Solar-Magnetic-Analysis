@@ -1,0 +1,46 @@
+{
+  "us_data": {
+    "total_records": 69871,
+    "n_centers": 25,
+    "n_major_centers": 17,
+    "date_range": [
+      "2011-11-12 00:00:00",
+      "2025-12-31 00:00:00"
+    ]
+  },
+  "center_results": {
+    "Bridger-Teton Avalanche Center": {
+      "n_events": 5,
+      "n_decrease": 4,
+      "sign_p": 0.375,
+      "mean_diff": -0.3821489621489621
+    },
+    "Sierra Avalanche Center": {
+      "n_events": 3,
+      "n_decrease": 2,
+      "sign_p": 1.0,
+      "mean_diff": -0.1934552102752777
+    }
+  },
+  "us_pooled": {
+    "n_pairs": 23,
+    "n_decrease": 14,
+    "sign_p": 0.4048728942871094,
+    "mean_diff": -0.11283213333882448,
+    "wilcoxon_p": 0.31455397605895996,
+    "cohen_d": -0.26987763111073204
+  },
+  "swiss": {
+    "n_events": 16,
+    "n_decrease": 12,
+    "sign_p": 0.076812744140625
+  },
+  "global_summary": {
+    "n_sources": 18,
+    "n_decrease": 14,
+    "source_sign_p": 0.0308837890625,
+    "n_pairs_total": 39,
+    "n_pairs_decrease": "26",
+    "global_sign_p": 0.05325191409792752
+  }
+}

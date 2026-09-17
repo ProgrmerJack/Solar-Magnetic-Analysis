@@ -1,0 +1,23 @@
+{
+  "P1 pre-onset": {
+    "pooled_cv_r2": 0.0998,
+    "within_model_cv_r2": 0.0664,
+    "retained_fraction": 0.665,
+    "pseudo_within_cv_r2": 0.0646,
+    "event_specific": 0.0017
+  },
+  "P2 at-onset": {
+    "pooled_cv_r2": 0.1121,
+    "within_model_cv_r2": 0.0746,
+    "retained_fraction": 0.666,
+    "pseudo_within_cv_r2": 0.0767,
+    "event_specific": -0.0021
+  },
+  "P3 + post-onset stratosphere": {
+    "pooled_cv_r2": 0.4245,
+    "within_model_cv_r2": 0.4013,
+    "retained_fraction": 0.945,
+    "pseudo_within_cv_r2": 0.3894,
+    "event_specific": 0.0119
+  }
+}

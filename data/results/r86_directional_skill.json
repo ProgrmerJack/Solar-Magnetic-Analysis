@@ -1,9 +1,0 @@
-{
-  "HSS": 0.75,
-  "BSS_directional_insample": 0.5625,
-  "BSS_directional_loo": 0.5017301038062283,
-  "hit_rate": 0.875,
-  "false_alarm_ratio": 0.125,
-  "n_events": 16,
-  "n_below": 14
-}

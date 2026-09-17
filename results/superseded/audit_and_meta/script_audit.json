@@ -1,0 +1,6481 @@
+[
+ {
+  "path": "scripts/analysis/02_define_events.py",
+  "builds_exposure": false,
+  "role": "process",
+  "validity": "NO_INFERENCE",
+  "reason": "process: no statistical claim, but propagates exposure=PANEL_FLAG downstream",
+  "exposure": "PANEL_FLAG",
+  "controls": [
+   "winter_fe"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 56,
+  "doc": "02_define_events.py \u2014 Build the geomagnetic disturbance event catalog",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/analysis/03_chemistry_response.py",
+  "builds_exposure": false,
+  "role": "process",
+  "validity": "NO_INFERENCE",
+  "reason": "process: produces no statistical claim",
+  "exposure": "PANEL_FLAG_TRANSITIVE",
+  "controls": [],
+  "inference": [
+   "permutation"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 160,
+  "doc": "03_chemistry_response.py \u2014 Superposed Epoch Analysis of MLS Chemistry",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/analysis/12_rebuild_enhanced_panel.py",
+  "builds_exposure": false,
+  "role": "process",
+  "validity": "NO_INFERENCE",
+  "reason": "process: produces no statistical claim",
+  "exposure": "PANEL_FLAG_TRANSITIVE",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "bootstrap_unclustered"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 205,
+  "doc": "12_rebuild_enhanced_panel.py \u2014 Build comprehensive panel with ALL datasets",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/analysis_extra/condpois.py",
+  "builds_exposure": false,
+  "role": "utility",
+  "validity": "CURRENT",
+  "reason": "infrastructure with executable self-check",
+  "exposure": "NONE",
+  "controls": [
+   "winter_fe",
+   "unit_fe"
+  ],
+  "inference": [
+   "bootstrap_unclustered"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 106,
+  "doc": "condpois.py -- conditional Poisson regression with stratum fixed effects.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/analysis_extra/r113_event_study.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "CURRENT",
+  "reason": "simultaneous lag bins + explicit baseline",
+  "exposure": "CANONICAL",
+  "controls": [
+   "winter_fe",
+   "seasonal"
+  ],
+  "inference": [
+   "winter_block_bootstrap",
+   "permutation"
+  ],
+  "multi_bin": true,
+  "placebo": true,
+  "outputs": [
+   "r113_event_study.json"
+  ],
+  "nloc": 226,
+  "doc": "r113_event_study.py",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/analysis_extra/r114_avalanche_event_study.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "CURRENT",
+  "reason": "simultaneous lag bins + explicit baseline",
+  "exposure": "CANONICAL",
+  "controls": [
+   "winter_fe",
+   "seasonal",
+   "unit_fe"
+  ],
+  "inference": [
+   "winter_block_bootstrap"
+  ],
+  "multi_bin": true,
+  "placebo": true,
+  "outputs": [
+   "r114_avalanche_event_study.json"
+  ],
+  "nloc": 197,
+  "doc": "r114_avalanche_event_study.py",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/05_download_ssw_catalog.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 78,
+  "doc": "Script 05 \u2014 Stratospheric Sudden Warming (SSW) Catalog",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/06_download_caic_avalanche.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 126,
+  "doc": "Script 06 \u2014 CAIC Colorado Avalanche Information Center",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/07_download_snotel.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 119,
+  "doc": "Script 07 \u2014 NRCS SNOTEL Snowpack Telemetry Network",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/10_setup_era5.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 142,
+  "doc": "Script 10 \u2014 ERA5 Reanalysis Setup",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/11_setup_nasa_earthdata.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 239,
+  "doc": "Script 11 \u2014 NASA Earthdata Setup",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/14_download_norway_data.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [
+   "unit_fe"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 129,
+  "doc": "Script 14 \u2014 Norway NGI Avalanche Registry Contact + Public NVE Data",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/16_download_norway_fixed.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 145,
+  "doc": "Norway Avalanche Data \u2014 Fixed API versions",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/17_download_snotel_fixed.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 99,
+  "doc": "SNOTEL Bulk Download \u2014 Fixed version",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/18_download_varsom_fixed.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 77,
+  "doc": "Varsom (NVE) Avalanche Warnings \u2014 Correct API v6.3.0",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/24_derive_storm_catalog.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 185,
+  "doc": "Derive geomagnetic storm catalog from Kyoto Dst CSV.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/27_download_ncep_stratosphere.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 84,
+  "doc": "NCEP/NCAR Reanalysis \u2014 Stratospheric Polar Cap Data",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/28_download_snotel_state_reports.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 58,
+  "doc": "SNOTEL State-Level SWE Reports \u2014 Corrected per-station approach",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/29_download_ncep_troposphere.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 88,
+  "doc": "NCEP/NCAR Reanalysis \u2014 Tropospheric Variables for Atmospheric Bridge Analysis",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/30_download_senorge_swe.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 99,
+  "doc": "seNorge Norwegian Snow Water Equivalent (SWE) \u2014 Area-Averaged Time Series",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/32_download_uac_avalanche.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 60,
+  "doc": "Utah Avalanche Center (UAC) Avalanche Incident Database",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/36_download_volcanic_aerosol.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [
+   "winter_fe"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 119,
+  "doc": "Download volcanic eruption catalog and stratospheric aerosol forcing data.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/37_download_climate_indices.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 55,
+  "doc": "Download remaining climate teleconnection indices from NOAA PSL/ESRL.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/38_download_era5.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 117,
+  "doc": "ERA5 Download \u2014 year-by-year, small domains only to stay within CDS cost limits.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/39_download_nasa_earthdata.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 140,
+  "doc": "Aura/MLS + MERRA-2 + MODIS Snow download using NASA Earthdata credentials.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/40_download_ims_snow.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 139,
+  "doc": "IMS (Interactive Multi-sensor Snow and Ice Mapping System) Daily Snow Cover",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/45_download_slf_envidat.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 44,
+  "doc": "Download public SLF/WSL avalanche datasets from EnviDat (Swiss Environmental Data)",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/47_download_era5_polar_strat.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 59,
+  "doc": "ERA5 Polar Stratosphere Monthly Means (1979-2025)",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/50_redownload_mls.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 67,
+  "doc": "Re-download Aura/MLS L3 Daily Zonal files for all 4 EPP-relevant products.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/51_redownload_era5_alps.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 52,
+  "doc": "Re-download ERA5 Swiss Alps surface data for the analysis period (2004-2025).",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/download_all.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 103,
+  "doc": "download_all.py \u2014 Master Download Orchestrator",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download/utils.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 63,
+  "doc": "Shared download utilities for the Solar-Magnetic-Analysis project.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/download_albina.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 100,
+  "doc": "Download ALBINA avalanche bulletins for SSW event analysis.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/download_albina_caaml_problems.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [],
+  "nloc": 147,
+  "doc": "download_albina_caaml_problems.py",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/download_albina_obs.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 100,
+  "doc": "Try to find ALBINA static JSON bulletins and avalanche.org observation data.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/download_austrian.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 82,
+  "doc": "Download Austrian ALBINA avalanche bulletin data",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/download_eaws_comprehensive.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "HARDCODED",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 114,
+  "doc": "Comprehensive EAWS multi-country avalanche danger download using pyAvaCore.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/download_eaws_focused.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "HARDCODED",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 105,
+  "doc": "Focused EAWS download: test which regions have data for recent dates,",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/download_eaws_pyavacore.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "HARDCODED",
+  "controls": [
+   "matched"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 102,
+  "doc": "Download Austrian + French + Italian avalanche danger data using pyAvaCore.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/download_eaws_recent.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "HARDCODED",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 87,
+  "doc": "Download EAWS bulletins for RECENT SSW events only (2018+).",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/download_envidat.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 60,
+  "doc": "Download expanded avalanche datasets from EnviDat:",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/download_envidat2.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 67,
+  "doc": "Download Swiss re-analyzed danger levels from EnviDat.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/download_era5_extended.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 51,
+  "doc": "Download ERA5 daily data for Swiss Alps region for missing years.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/download_era5_radiation.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 69,
+  "doc": "Download ERA5 radiation and additional surface variables for Swiss Alps.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/download_french.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 40,
+  "doc": "Download French avalanche data from data.gouv.fr",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/download_french_bra.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "HARDCODED",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 207,
+  "doc": "Download French M\u00e9t\u00e9o-France BRA (Bulletin d'estimation du Risque d'Avalanche) data.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/download_international.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 98,
+  "doc": "Download additional international avalanche data sources",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/download_lawis_full.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [
+   "unit_fe"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 134,
+  "doc": "download_lawis_full.py",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/download_norway_avalanche.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [
+   "unit_fe"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 61,
+  "doc": "Download Norwegian avalanche danger ratings from NVE API.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/download_norway_targeted.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "HARDCODED",
+  "controls": [
+   "unit_fe"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 99,
+  "doc": "Targeted download of Norwegian avalanche danger ratings from NVE API.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/download_ssw_compendium_canonical.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "CANONICAL",
+  "controls": [
+   "matched"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "ssw_event_catalog.csv"
+  ],
+  "nloc": 135,
+  "doc": "download_ssw_compendium_canonical.py",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/download_us_danger.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 47,
+  "doc": "Download US avalanche danger ratings from avalanche.org API",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/r34_download_albina_extended.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 112,
+  "doc": "Download ALBINA data for ALL SSW events within coverage (2018+).",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/r36_download_extra.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 116,
+  "doc": "Try to download additional avalanche databases for multi-country replication:",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/r36_download_indices.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 97,
+  "doc": "Download NOAA CPC blocking index + NAO/AO indices for mechanism analysis.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/r38_albina_download.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "HARDCODED",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 120,
+  "doc": "Download ALBINA (Austria/South Tyrol/Trentino) danger ratings for SSW analysis.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/r38_download_extra.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 62,
+  "doc": "Try alternative data sources to expand multi-country evidence:",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/download_extra/r39_albina_extended.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 71,
+  "doc": "Download ALBINA CAAMLv6 data (2022-2024) and merge with existing records.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/process/00_run_pipeline.py",
+  "builds_exposure": false,
+  "role": "process",
+  "validity": "NO_INFERENCE",
+  "reason": "process: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 51,
+  "doc": "Master pipeline runner \u2014 processes all domains in order (largest \u2192 smallest).",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/process/01_process_geomagnetic.py",
+  "builds_exposure": false,
+  "role": "process",
+  "validity": "NO_INFERENCE",
+  "reason": "process: produces no statistical claim",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 316,
+  "doc": "01_process_geomagnetic.py",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/process/02_process_solar_catalogs.py",
+  "builds_exposure": false,
+  "role": "process",
+  "validity": "NO_INFERENCE",
+  "reason": "process: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 338,
+  "doc": "02_process_solar_catalogs.py",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/process/03_process_omni.py",
+  "builds_exposure": false,
+  "role": "process",
+  "validity": "NO_INFERENCE",
+  "reason": "process: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 245,
+  "doc": "03_process_omni.py",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/process/04_process_goes_xrs.py",
+  "builds_exposure": false,
+  "role": "process",
+  "validity": "NO_INFERENCE",
+  "reason": "process: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [
+   "bootstrap_unclustered"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 203,
+  "doc": "04_process_goes_xrs.py",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/process/05_process_goes_particle.py",
+  "builds_exposure": false,
+  "role": "process",
+  "validity": "NO_INFERENCE",
+  "reason": "process: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 225,
+  "doc": "05_process_goes_particle.py",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/process/06_process_poes.py",
+  "builds_exposure": false,
+  "role": "process",
+  "validity": "NO_INFERENCE",
+  "reason": "process: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 221,
+  "doc": "06_process_poes.py",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/process/07_process_mls.py",
+  "builds_exposure": false,
+  "role": "process",
+  "validity": "NO_INFERENCE",
+  "reason": "process: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 240,
+  "doc": "07_process_mls.py",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/process/08_process_era5.py",
+  "builds_exposure": false,
+  "role": "process",
+  "validity": "NO_INFERENCE",
+  "reason": "process: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 274,
+  "doc": "08_process_era5.py",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/process/09_process_modis.py",
+  "builds_exposure": false,
+  "role": "process",
+  "validity": "NO_INFERENCE",
+  "reason": "process: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 230,
+  "doc": "09_process_modis.py",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/process/10_process_cryosphere.py",
+  "builds_exposure": false,
+  "role": "process",
+  "validity": "NO_INFERENCE",
+  "reason": "process: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 427,
+  "doc": "10_process_cryosphere.py",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/process/11_process_psp_ace.py",
+  "builds_exposure": false,
+  "role": "process",
+  "validity": "NO_INFERENCE",
+  "reason": "process: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [
+   "bootstrap_unclustered"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 393,
+  "doc": "11_process_psp_ace.py",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/process_extra/fix_nc_units.py",
+  "builds_exposure": false,
+  "role": "process",
+  "validity": "NO_INFERENCE",
+  "reason": "process: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 81,
+  "doc": "Add missing CF units attributes to MLS gridded NC data variables",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/process_extra/fix_ncep_redownload.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 153,
+  "doc": "fix_ncep_redownload.py",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/process_extra/fix_qc_fails.py",
+  "builds_exposure": false,
+  "role": "process",
+  "validity": "NO_INFERENCE",
+  "reason": "process: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 163,
+  "doc": "Fix remaining QC failures:",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/process_extra/fix_qc_issues.py",
+  "builds_exposure": false,
+  "role": "process",
+  "validity": "NO_INFERENCE",
+  "reason": "process: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 330,
+  "doc": "Fix all QC failures and real warnings identified by qc_check.py.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/process_extra/fix_warnings.py",
+  "builds_exposure": false,
+  "role": "process",
+  "validity": "NO_INFERENCE",
+  "reason": "process: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 222,
+  "doc": "fix_warnings.py \u2014 Resolve all 14 QC warnings:",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/review_rounds/r34_check_data.py",
+  "builds_exposure": false,
+  "role": "utility",
+  "validity": "NO_INFERENCE",
+  "reason": "utility: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 28,
+  "doc": "",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/review_rounds/r38_albina_check.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 45,
+  "doc": "Download ALBINA (Euregio: Austria/South Tyrol/Trentino) avalanche bulletin data",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/review_rounds/r38_norway_expanded.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [
+   "unit_fe"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 70,
+  "doc": "Download Norwegian NVE/Varsom avalanche danger data for ALL available regions",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/review_rounds/r38_norway_simple.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [
+   "unit_fe",
+   "matched"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 107,
+  "doc": "Download Norwegian Varsom Simple API data for SSW analysis.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/review_rounds/r38_norway_targeted.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [
+   "unit_fe"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 63,
+  "doc": "Targeted Norwegian Varsom download - only key mountain regions and SSW-relevant winters.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/review_rounds/r43_threshold_loo_cv.py",
+  "builds_exposure": false,
+  "role": "process",
+  "validity": "NO_INFERENCE",
+  "reason": "process: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 259,
+  "doc": "r43_threshold_loo_cv.py -- Leave-one-out cross-validation and model comparison",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/review_rounds/r60_multi_predictor_loo.py",
+  "builds_exposure": false,
+  "role": "process",
+  "validity": "NO_INFERENCE",
+  "reason": "process: produces no statistical claim",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 319,
+  "doc": "Multi-predictor leave-one-out Brier Skill Score analysis for SSW-avalanche prediction.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/utilities/audit_data_usage.py",
+  "builds_exposure": false,
+  "role": "utility",
+  "validity": "NO_INFERENCE",
+  "reason": "utility: produces no statistical claim",
+  "exposure": "PANEL_FLAG_TRANSITIVE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 69,
+  "doc": "Audit: trace which processed data files are used by analysis scripts.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/utilities/audit_results.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "results_audit.json",
+   "script_audit.json"
+  ],
+  "nloc": 168,
+  "doc": "audit_results.py",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/utilities/audit_scripts.py",
+  "builds_exposure": false,
+  "role": "utility",
+  "validity": "NO_INFERENCE",
+  "reason": "utility: produces no statistical claim",
+  "exposure": "CANONICAL",
+  "controls": [
+   "winter_fe",
+   "seasonal",
+   "unit_fe",
+   "matched"
+  ],
+  "inference": [
+   "winter_block_bootstrap",
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": true,
+  "placebo": true,
+  "outputs": [
+   "script_audit.json",
+   "ssw_event_catalog.csv"
+  ],
+  "nloc": 292,
+  "doc": "audit_scripts.py",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/utilities/catalog_results.py",
+  "builds_exposure": false,
+  "role": "utility",
+  "validity": "NO_INFERENCE",
+  "reason": "utility: produces no statistical claim",
+  "exposure": "CANONICAL",
+  "controls": [
+   "winter_fe",
+   "matched"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "results_catalog.json",
+   "ssw_event_catalog.csv"
+  ],
+  "nloc": 152,
+  "doc": "catalog_results.py",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/utilities/check_eaws.py",
+  "builds_exposure": false,
+  "role": "utility",
+  "validity": "NO_INFERENCE",
+  "reason": "utility: produces no statistical claim",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 15,
+  "doc": "",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/utilities/check_era5_gap.py",
+  "builds_exposure": false,
+  "role": "utility",
+  "validity": "NO_INFERENCE",
+  "reason": "utility: produces no statistical claim",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 21,
+  "doc": "",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/utilities/check_nc_status.py",
+  "builds_exposure": false,
+  "role": "utility",
+  "validity": "NO_INFERENCE",
+  "reason": "utility: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 13,
+  "doc": "Check all processed NC files for corruption.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/utilities/find_french_data.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 73,
+  "doc": "Search for French EPA avalanche data on data.gouv.fr",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/utilities/find_more_data.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "HARDCODED",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 134,
+  "doc": "Search for additional avalanche data sources - ALBINA, Japanese, Scottish, Icelandic",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/utilities/inspect_european_alps.py",
+  "builds_exposure": false,
+  "role": "utility",
+  "validity": "NO_INFERENCE",
+  "reason": "utility: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 24,
+  "doc": "",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/utilities/inspect_qc_fails.py",
+  "builds_exposure": false,
+  "role": "utility",
+  "validity": "NO_INFERENCE",
+  "reason": "utility: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 26,
+  "doc": "Inspect files that are failing QC checks.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/utilities/inventory_datasets.py",
+  "builds_exposure": false,
+  "role": "utility",
+  "validity": "NO_INFERENCE",
+  "reason": "utility: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "data_inventory.json"
+  ],
+  "nloc": 234,
+  "doc": "inventory_datasets.py",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/utilities/norway_robust_download.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [
+   "unit_fe"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 112,
+  "doc": "Robust NVE download with retries. Downloads SSW windows + controls",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/utilities/qc_check.py",
+  "builds_exposure": false,
+  "role": "utility",
+  "validity": "NO_INFERENCE",
+  "reason": "utility: produces no statistical claim",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 224,
+  "doc": "Quality Control check for all processed datasets.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/utilities/save_butler_ssw.py",
+  "builds_exposure": false,
+  "role": "utility",
+  "validity": "NO_INFERENCE",
+  "reason": "utility: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 42,
+  "doc": "Save Butler SSW Compendium data as structured CSV.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/utilities/search_french_data.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 28,
+  "doc": "",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/utilities/search_more_data.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 32,
+  "doc": "",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/utilities/test_nc_write.py",
+  "builds_exposure": false,
+  "role": "utility",
+  "validity": "NO_INFERENCE",
+  "reason": "utility: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 23,
+  "doc": "Test: write same-shape MLS array to verify path works correctly.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/utilities/test_nve.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 20,
+  "doc": "Quick test of NVE API for key regions.",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/utilities/test_nve2.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 14,
+  "doc": "Quick check which seasons have data for Jotunheimen (3028).",
+  "quarantined": false
+ },
+ {
+  "path": "scripts/utilities/test_pyavacore.py",
+  "builds_exposure": false,
+  "role": "utility",
+  "validity": "NO_INFERENCE",
+  "reason": "utility: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 47,
+  "doc": "Use pyAvaCore as a Python library to download EAWS bulletins.",
+  "quarantined": false
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/00_preregistration.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "permutation"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 276,
+  "doc": "00_preregistration.py \u2014 Analysis Pre-Registration Protocol Lock",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/01_build_daily_panel.py",
+  "builds_exposure": true,
+  "role": "unknown",
+  "validity": "EXPOSURE_SOURCE",
+  "reason": "BUILDS the ssw_within_15d flag from the 16-event catalogue; every downstream PANEL_FLAG script inherits this error",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "bootstrap_unclustered"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 295,
+  "doc": "01_build_daily_panel.py \u2014 Construct the unified daily analysis panel",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/04_stratospheric_propagation.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "loads analysis_panel.parquet, which carries ssw_within_15d built from the 16-event list",
+  "exposure": "PANEL_FLAG_TRANSITIVE",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 118,
+  "doc": "04_stratospheric_propagation.py \u2014 Distributed-Lag Model for Vortex Response",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/05_enhanced_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 400,
+  "doc": "05_enhanced_analysis.py \u2014 Deep mechanism analysis for Nature Geoscience",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/06_primary_endpoint.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "loads analysis_panel.parquet, which carries ssw_within_15d built from the 16-event list",
+  "exposure": "PANEL_FLAG_TRANSITIVE",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 168,
+  "doc": "06_primary_endpoint.py \u2014 Primary Endpoint Test: Avalanche Activity",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/07_falsification.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "loads analysis_panel.parquet, which carries ssw_within_15d built from the 16-event list",
+  "exposure": "PANEL_FLAG_TRANSITIVE",
+  "controls": [
+   "seasonal",
+   "unit_fe"
+  ],
+  "inference": [
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 232,
+  "doc": "07_falsification.py \u2014 Falsification Suite",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/08_figures.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "loads analysis_panel.parquet, which carries ssw_within_15d built from the 16-event list",
+  "exposure": "PANEL_FLAG_TRANSITIVE",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 265,
+  "doc": "08_figures.py \u2014 Generate publication-quality figures",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/09_synthesis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "loads analysis_panel.parquet, which carries ssw_within_15d built from the 16-event list",
+  "exposure": "PANEL_FLAG_TRANSITIVE",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 320,
+  "doc": "09_synthesis.py \u2014 Nature Geoscience Results Synthesis",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/10_publication_figures.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 439,
+  "doc": "10_publication_figures.py \u2014 Nature Geoscience publication figures",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/11_full_data_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "loads analysis_panel.parquet, which carries ssw_within_15d built from the 16-event list",
+  "exposure": "PANEL_FLAG_TRANSITIVE",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 602,
+  "doc": "11_full_data_analysis.py \u2014 Comprehensive analysis of ALL processed datasets",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/13_nature_tier_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": true,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 939,
+  "doc": "13_nature_tier_analysis.py \u2014 Definitive Nature Geoscience Analysis",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/14_final_synthesis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [
+   "winter_fe"
+  ],
+  "inference": [
+   "permutation"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 374,
+  "doc": "14_final_synthesis.py \u2014 Nature Geoscience Final Synthesis",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/15_nature_figures.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 396,
+  "doc": "15_nature_figures.py \u2014 Publication-Quality Figures for Nature Geoscience",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/16_robustness_resolution.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "winter_fe",
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "winter_block_bootstrap",
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [],
+  "nloc": 928,
+  "doc": "16_robustness_resolution.py \u2014 Address all robustness limitations",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/17_honest_synthesis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [
+   "winter_fe",
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "winter_block_bootstrap"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [],
+  "nloc": 236,
+  "doc": "17_honest_synthesis.py \u2014 Final honest synthesis of all robustness tests",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/18_updated_figures.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [
+   "winter_fe",
+   "matched"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [],
+  "nloc": 285,
+  "doc": "18_updated_figures.py \u2014 Publication figures based on robustness-validated findings",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/19_tier2_upgrade.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "winter_fe",
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [],
+  "nloc": 677,
+  "doc": "19_tier2_upgrade.py \u2014 Upgrade Tier 2 findings with rigorous methodology",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/20_final_synthesis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [
+   "winter_fe",
+   "matched"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "permutation"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [
+   "final_synthesis.json"
+  ],
+  "nloc": 299,
+  "doc": "20_final_synthesis.py \u2014 Final Evidence Synthesis After Tier 2 Upgrade",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/21_final_figures.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [
+   "winter_fe",
+   "matched"
+  ],
+  "inference": [
+   "bootstrap_unclustered"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [],
+  "nloc": 308,
+  "doc": "21_final_figures.py \u2014 Updated Publication Figures After Tier 2 Upgrade",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/22_meteorological_mediation.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [],
+  "inference": [
+   "bootstrap_unclustered",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 213,
+  "doc": "22_meteorological_mediation.py \u2014 Address Opus 4.5 Critic's Key Demands",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/23_resolve_limitations.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 648,
+  "doc": "23_resolve_limitations.py \u2014 Resolve all paper limitations with new analyses.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/24_fresh_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "winter_fe",
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [],
+  "nloc": 978,
+  "doc": "24_fresh_analysis.py \u2014 Comprehensive fresh statistical analysis for Nature Geoscience paper.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/25_revision_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=PANEL_FLAG (16-event list is wrong)",
+  "exposure": "PANEL_FLAG",
+  "controls": [
+   "winter_fe",
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [],
+  "nloc": 603,
+  "doc": "Revision analysis addressing Opus 4.5 review and critic feedback.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/26_mechanism_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": true,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 815,
+  "doc": "26_mechanism_analysis.py \u2014 Addresses three fatal weaknesses for Nature Geoscience",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/27_planetary_wave_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [
+   "planetary_wave_analysis.json"
+  ],
+  "nloc": 318,
+  "doc": "27_planetary_wave_analysis.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/28_mechanism_upgrade.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 412,
+  "doc": "28_mechanism_upgrade.py \u2014 Mechanism upgrade for 9+ reviewer scores.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/29_z500_influence_diagnostics.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [
+   "bootstrap_unclustered"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "event_level_dose_response.csv",
+   "z500_influence_diagnostics.json"
+  ],
+  "nloc": 152,
+  "doc": "29_z500_influence_diagnostics.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/30_temporal_heterogeneity_test.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "event_level_dose_response.csv",
+   "temporal_heterogeneity.json"
+  ],
+  "nloc": 139,
+  "doc": "30_temporal_heterogeneity_test.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/31_stratospheric_downward_propagation.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=CATALOG_OLD (16-event list is wrong)",
+  "exposure": "CATALOG_OLD",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "downward_propagation.json"
+  ],
+  "nloc": 420,
+  "doc": "Script 31: Stratospheric Downward Propagation & Avalanche Response",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/32_extended_accident_ssw_response.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "matched"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 221,
+  "doc": "32_extended_accident_ssw_response.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/33_ep_flux_wave_driving.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [
+   "downward_propagation.json"
+  ],
+  "nloc": 236,
+  "doc": "33_ep_flux_wave_driving.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/34_merra2_cross_validation.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "matched"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "downward_propagation.json"
+  ],
+  "nloc": 158,
+  "doc": "34_merra2_cross_validation.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/35_prospective_2021_test.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "downward_propagation.json"
+  ],
+  "nloc": 218,
+  "doc": "35_prospective_2021_test.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/36_dose_response_extended.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "bootstrap_unclustered"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "downward_propagation.json"
+  ],
+  "nloc": 205,
+  "doc": "36_dose_response_extended.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/37_z500_blocking_timeseries.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "downward_propagation.json"
+  ],
+  "nloc": 251,
+  "doc": "37_z500_blocking_timeseries.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/38_covid_adjusted_2021.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "38_covid_adjusted_2021.json"
+  ],
+  "nloc": 112,
+  "doc": "Script 38: COVID-adjusted 2021 prospective test",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/39_bh_fdr_stratified.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "permutation"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [
+   "39_bh_fdr_stratified.json"
+  ],
+  "nloc": 137,
+  "doc": "Script 39: BH-FDR stratified by inferential unit",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/40_ep_flux_window_sensitivity.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [
+   "33_ep_flux_wave_driving.json",
+   "40_ep_flux_window_sensitivity.json"
+  ],
+  "nloc": 162,
+  "doc": "Script 40: EP-flux window sensitivity analysis",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/41_accident_secular_trend.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "winter_fe",
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "41_accident_secular_trend.json"
+  ],
+  "nloc": 157,
+  "doc": "Script 41: Accident secular trend analysis",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/42_non_ssw_blocking_test.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": true,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 110,
+  "doc": "Script 42: Non-SSW Blocking Equivalence Test",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/43_accident_detrending.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 142,
+  "doc": "Script 43: Formal accident detrending (Cochran-Mantel-Haenszel stratified by decade)",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/44_z500_composite_figure.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [
+   "z500_influence_diagnostics.json"
+  ],
+  "nloc": 172,
+  "doc": "Script 44: Z500 composite time-series and blocking lead-time visualization",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/45_loaded_gun_divergence.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 154,
+  "doc": "Script 45: Loaded-gun divergence figure",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/46_formal_mediation.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "bootstrap_unclustered"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "46_formal_mediation.json"
+  ],
+  "nloc": 260,
+  "doc": "Script 46: Formal causal mediation analysis with bootstrap CIs and E-value sensitivity.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/47_direct_ep_flux.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "matched"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [
+   "46_formal_mediation.json",
+   "47_direct_ep_flux.json"
+  ],
+  "nloc": 151,
+  "doc": "Script 47: Download NCEP 100hPa eddy heat flux (v'T') for direct EP-flux computation.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/48_climate_ssw_projections.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "48_climate_ssw_projections.json"
+  ],
+  "nloc": 107,
+  "doc": "Script 48: SSW frequency trends and climate change context.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/49_mixed_effects_accident.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "49_mixed_effects_accident.json"
+  ],
+  "nloc": 127,
+  "doc": "Script 49: Mixed-effects accident model addressing pseudo-replication concern.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/50_count_rating_dissociation_fig.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "32_extended_accident_ssw.json"
+  ],
+  "nloc": 123,
+  "doc": "Script 50: Count-Rating Dissociation Figure (main text)",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/51_cross_hazard_regime.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "51_cross_hazard_regime.json"
+  ],
+  "nloc": 244,
+  "doc": "Script 51: Cross-Hazard Regime-Redistribution Analysis",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/52_geographic_effect_map.py",
+  "builds_exposure": false,
+  "role": "figure",
+  "validity": "NO_INFERENCE",
+  "reason": "figure: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 150,
+  "doc": "Script 52: Geographic Effect Map",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/53_snowpack_trigger_joint.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "53_snowpack_trigger_joint.json"
+  ],
+  "nloc": 163,
+  "doc": "Script 53: SNOWPACK\u2013Trigger Joint Probability Model",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/54_multi_hazard_figure.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": true,
+  "placebo": false,
+  "outputs": [
+   "51_cross_hazard_regime.json"
+  ],
+  "nloc": 128,
+  "doc": "Script 54: Multi-Hazard Regime Shift Figure",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/55_power_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "55_power_analysis.json"
+  ],
+  "nloc": 94,
+  "doc": "Script 55: Formal Power Analysis for n=16 Events",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/56_blocking_without_ssw.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "56_blocking_without_ssw.json"
+  ],
+  "nloc": 203,
+  "doc": "Script 56: Blocking-without-SSW comparison",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/57_gee_accident_model.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "57_gee_accident_model.json"
+  ],
+  "nloc": 217,
+  "doc": "Script 57: GEE/Cluster-robust accident model",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/58_precipitation_phase.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "58_precipitation_phase.json"
+  ],
+  "nloc": 165,
+  "doc": "Script 58: Precipitation phase analysis",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/59_cold_wave_mortality_risk.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "59_cold_wave_mortality_risk.json"
+  ],
+  "nloc": 240,
+  "doc": "Script 59: Cold-wave mortality risk during SSW windows",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/60_monte_carlo_specurve_placebo.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [
+   "r55_specurve_placebo.json"
+  ],
+  "nloc": 340,
+  "doc": "60_monte_carlo_specurve_placebo.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/61_incremental_value_power.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r55_incremental_power.json"
+  ],
+  "nloc": 434,
+  "doc": "61_incremental_value_power.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/62_cross_country_meta_typology.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r55_meta_typology.json"
+  ],
+  "nloc": 546,
+  "doc": "62_cross_country_meta_typology.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/63_dispersion_correction.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=PANEL_FLAG (16-event list is wrong)",
+  "exposure": "PANEL_FLAG",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r55_dispersion_correction.json"
+  ],
+  "nloc": 125,
+  "doc": "63_dispersion_correction.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/67_regime_occupancy_decomposition.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=CATALOG_OLD (16-event list is wrong)",
+  "exposure": "CATALOG_OLD",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r67_regime_occupancy_decomposition.json"
+  ],
+  "nloc": 201,
+  "doc": "67_regime_occupancy_decomposition.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/68_comprehensive_stratification.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=CATALOG_OLD (16-event list is wrong)",
+  "exposure": "CATALOG_OLD",
+  "controls": [],
+  "inference": [
+   "bootstrap_unclustered",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 218,
+  "doc": "R68 Comprehensive SSW Analysis:",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/68_mechanistic_deep_dive.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=CATALOG_OLD (16-event list is wrong)",
+  "exposure": "CATALOG_OLD",
+  "controls": [
+   "unit_fe"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": true,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 206,
+  "doc": "R68 Mechanistic Analysis: Wind, PWL, stability, temporal structure around SSW events.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/_analysis_utils.py",
+  "builds_exposure": false,
+  "role": "library",
+  "validity": "SUPERSEDED",
+  "reason": "loads analysis_panel.parquet, which carries ssw_within_15d built from the 16-event list",
+  "exposure": "PANEL_FLAG_TRANSITIVE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 30,
+  "doc": "Shared utilities for analysis scripts.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/bo_bootstrap_ci.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [],
+  "inference": [
+   "bootstrap_unclustered"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "bo_bootstrap_cis.json"
+  ],
+  "nloc": 148,
+  "doc": "Bootstrap confidence intervals for Blinder-Oaxaca decomposition components.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/r82_bulletin_validation.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=CATALOG_OLD (16-event list is wrong)",
+  "exposure": "CATALOG_OLD",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r82_bulletin_validation.json",
+   "ssw_event_catalog.csv"
+  ],
+  "nloc": 165,
+  "doc": "R82: External Bulletin Validation \u2014 Danger Level as Independent Evidence",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/r82_hierarchical_synthesis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=CATALOG_OLD (16-event list is wrong)",
+  "exposure": "CATALOG_OLD",
+  "controls": [],
+  "inference": [
+   "bootstrap_unclustered",
+   "permutation"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r39_french_bra_all_replication.json",
+   "r82_hierarchical_synthesis.json",
+   "ssw_event_catalog.csv"
+  ],
+  "nloc": 165,
+  "doc": "R82: Hierarchical Multi-Country Synthesis with Event-Level Clustering",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/r82_problem_type_proxy.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=CATALOG_OLD (16-event list is wrong)",
+  "exposure": "CATALOG_OLD",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r82_problem_type_proxy.json",
+   "ssw_event_catalog.csv"
+  ],
+  "nloc": 167,
+  "doc": "R82: Avalanche Problem-Type Regime Shift During SSW Windows",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/r82_pwl_depth_validation.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=CATALOG_OLD (16-event list is wrong)",
+  "exposure": "CATALOG_OLD",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r82_pwl_depth_validation.json",
+   "ssw_event_catalog.csv"
+  ],
+  "nloc": 210,
+  "doc": "R82: Persistent Weak Layer (PWL) Depth Validation During SSW Windows",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/r83_fix_all_consensus.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=CATALOG_OLD (16-event list is wrong)",
+  "exposure": "CATALOG_OLD",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [
+   "r20_definitive_analysis.json",
+   "r83_consensus_fixes.json",
+   "ssw_event_catalog.csv"
+  ],
+  "nloc": 393,
+  "doc": "R83: Fix All 5 Consensus Reviewer Issues",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/r84_n16_resolution.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r84_n16_resolution.json"
+  ],
+  "nloc": 150,
+  "doc": "R84: n=16 structural ceiling resolution analysis.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/r86_browns_method.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [
+   "permutation"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r86_browns_method.json"
+  ],
+  "nloc": 106,
+  "doc": "Brown's method for combining dependent p-values from multi-system evidence.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/r86_directional_skill.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r86_directional_skill.json"
+  ],
+  "nloc": 96,
+  "doc": "Directional forecast skill analysis for SSW-avalanche prediction.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/r87_joint_compound_test.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "single-window specification (control group contains the post-onset response)",
+  "exposure": "HARDCODED",
+  "controls": [],
+  "inference": [
+   "permutation"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r87_joint_compound_test.json"
+  ],
+  "nloc": 104,
+  "doc": "Joint Compound-Event Test: Cross-tabulates all three loaded-gun indicators",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/r88_formal_joint_copula_test.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "single-window specification (control group contains the post-onset response)",
+  "exposure": "HARDCODED",
+  "controls": [],
+  "inference": [
+   "permutation"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r88_formal_joint_copula_test.json"
+  ],
+  "nloc": 234,
+  "doc": "Formal Joint Compound-Event Test: Copula-Based Trivariate Analysis",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/r88_pre_onset_stratification.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [
+   "r57_pre_post_decomposition.json",
+   "r88_pre_onset_stratification.json"
+  ],
+  "nloc": 146,
+  "doc": "Pre-onset Stratification Analysis: Defending the \"Drive\" Title",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/r89_compound_irreducibility.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 130,
+  "doc": "R89: Formal irreducibility test for the opposing-direction compound event.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/r92_mls_satellite_validation.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [
+   "r57_epflux_diagnostics.json",
+   "r92_mls_satellite_validation.json"
+  ],
+  "nloc": 238,
+  "doc": "R92: Aura MLS Satellite Independent Validation of SSW Stratospheric Signal",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/size_threshold_sensitivity.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=CATALOG_OLD (16-event list is wrong)",
+  "exposure": "CATALOG_OLD",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 93,
+  "doc": "Size-threshold sensitivity analysis: compute event-level RR for size>=1 vs size>=2.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis/window_sensitivity_events.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "window_sensitivity_events.json"
+  ],
+  "nloc": 109,
+  "doc": "Window-sensitivity event-flip analysis.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/analyze_us_danger.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 50,
+  "doc": "",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/era5_mechanism.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 69,
+  "doc": "",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/era5_rutschblock_link.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 48,
+  "doc": "Test if ERA5 temperature anomaly predicts Rutschblock stability at event level.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/era5_wind_mechanism.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "matched"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 93,
+  "doc": "ERA5 wind mechanism analysis for SSW-avalanche pathway.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/lagged_temp_aval.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 78,
+  "doc": "Lagged temperature-avalanche analysis within SSW windows.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/mechanism_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "mechanism_analysis.json"
+  ],
+  "nloc": 167,
+  "doc": "Event-level dose-response and phase decomposition analysis.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/mediation_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 96,
+  "doc": "",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/norway_phase_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "norway_phase_analysis.json"
+  ],
+  "nloc": 92,
+  "doc": "Norwegian NVE phase decomposition analysis.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/norway_ssw_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "single-window specification (control group contains the post-onset response)",
+  "exposure": "HARDCODED",
+  "controls": [
+   "unit_fe"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 192,
+  "doc": "Download Norwegian avalanche danger data and analyze SSW response.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/planetary_wave_timing.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "planetary_wave_timing.json"
+  ],
+  "nloc": 147,
+  "doc": "Planetary wave timing analysis.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/pre_ssw_temperature.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 61,
+  "doc": "Test if ERA5 temperature anomaly exists BEFORE SSW onset - confirming common-cause.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/predictive_model.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 83,
+  "doc": "",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/propagation_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 56,
+  "doc": "",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/r100_oos_post2019.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "single-window specification (control group contains the post-onset response)",
+  "exposure": "HARDCODED",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r100_oos_post2019.json"
+  ],
+  "nloc": 224,
+  "doc": "r100_oos_post2019.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/r101_irreducibility_power.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r101_irreducibility_power.json"
+  ],
+  "nloc": 100,
+  "doc": "r101_irreducibility_power.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/r102_snotel_extended_dissociation.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=local detector (over-detects 40 vs 31)",
+  "exposure": "DETECTOR",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r102_snotel_extended_dissociation.json"
+  ],
+  "nloc": 182,
+  "doc": "r102_snotel_extended_dissociation.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/r103_monitoring_blindspot.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=CATALOG_OLD (16-event list is wrong)",
+  "exposure": "CATALOG_OLD",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r103_monitoring_blindspot.json",
+   "ssw_event_catalog.csv"
+  ],
+  "nloc": 152,
+  "doc": "r103_monitoring_blindspot.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/r104_accident_case_crossover.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=local detector (over-detects 40 vs 31)",
+  "exposure": "DETECTOR",
+  "controls": [
+   "winter_fe",
+   "seasonal"
+  ],
+  "inference": [
+   "winter_block_bootstrap",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r104_accident_case_crossover.json"
+  ],
+  "nloc": 230,
+  "doc": "r104_accident_case_crossover.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/r105_multiregion_meta.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=local detector (over-detects 40 vs 31)",
+  "exposure": "DETECTOR",
+  "controls": [
+   "winter_fe",
+   "seasonal",
+   "unit_fe"
+  ],
+  "inference": [
+   "winter_block_bootstrap"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [
+   "r105_multiregion_meta.json"
+  ],
+  "nloc": 234,
+  "doc": "r105_multiregion_meta.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/r106_canonical_catalog_headline.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "single-window specification (control group contains the post-onset response)",
+  "exposure": "CANONICAL",
+  "controls": [
+   "winter_fe",
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "winter_block_bootstrap",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r106_canonical_catalog_headline.json",
+   "ssw_event_catalog.csv"
+  ],
+  "nloc": 169,
+  "doc": "r106_canonical_catalog_headline.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/r107_pooled_within_winter.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "single-window specification (control group contains the post-onset response)",
+  "exposure": "CANONICAL",
+  "controls": [
+   "winter_fe",
+   "seasonal",
+   "unit_fe"
+  ],
+  "inference": [
+   "winter_block_bootstrap"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [
+   "r107_pooled_within_winter.json"
+  ],
+  "nloc": 226,
+  "doc": "r107_pooled_within_winter.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/r108_pwl_seasonal_control.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "single-window specification (control group contains the post-onset response)",
+  "exposure": "CANONICAL",
+  "controls": [
+   "winter_fe",
+   "seasonal",
+   "unit_fe",
+   "matched"
+  ],
+  "inference": [
+   "winter_block_bootstrap",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r108_pwl_seasonal_control.json"
+  ],
+  "nloc": 248,
+  "doc": "r108_pwl_seasonal_control.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/r109_norway_problem_mechanism.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "single-window specification (control group contains the post-onset response)",
+  "exposure": "CANONICAL",
+  "controls": [
+   "winter_fe",
+   "seasonal",
+   "unit_fe"
+  ],
+  "inference": [
+   "winter_block_bootstrap"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [
+   "r109_norway_problem_mechanism.json"
+  ],
+  "nloc": 194,
+  "doc": "r109_norway_problem_mechanism.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/r110_albina_alpine_problems.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "single-window specification (control group contains the post-onset response)",
+  "exposure": "CANONICAL",
+  "controls": [
+   "winter_fe",
+   "seasonal",
+   "unit_fe"
+  ],
+  "inference": [
+   "winter_block_bootstrap"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [
+   "r110_albina_alpine_problems.json"
+  ],
+  "nloc": 172,
+  "doc": "r110_albina_alpine_problems.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/r111_kinetic_growth_instrumental.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "single-window specification (control group contains the post-onset response)",
+  "exposure": "CANONICAL",
+  "controls": [
+   "winter_fe",
+   "seasonal",
+   "unit_fe"
+  ],
+  "inference": [
+   "winter_block_bootstrap"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [
+   "r111_kinetic_growth_instrumental.json"
+  ],
+  "nloc": 199,
+  "doc": "r111_kinetic_growth_instrumental.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/r112_design_positive_control.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "single-window specification (control group contains the post-onset response)",
+  "exposure": "CANONICAL",
+  "controls": [
+   "winter_fe",
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "winter_block_bootstrap",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [
+   "r112_design_positive_control.json"
+  ],
+  "nloc": 207,
+  "doc": "r112_design_positive_control.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/r98_continuous_vortex_framework.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "loads analysis_panel.parquet, which carries ssw_within_15d built from the 16-event list",
+  "exposure": "PANEL_FLAG_TRANSITIVE",
+  "controls": [
+   "winter_fe",
+   "seasonal"
+  ],
+  "inference": [
+   "winter_block_bootstrap"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r98_continuous_vortex_framework.json"
+  ],
+  "nloc": 271,
+  "doc": "R98: Continuous daily-resolution vortex-strength framework.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/r98_continuous_vortex_framework_v2.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "loads analysis_panel.parquet, which carries ssw_within_15d built from the 16-event list",
+  "exposure": "PANEL_FLAG_TRANSITIVE",
+  "controls": [
+   "winter_fe",
+   "seasonal"
+  ],
+  "inference": [
+   "winter_block_bootstrap",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 323,
+  "doc": "R98v2: Continuous daily-resolution vortex-strength framework (revised).",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/r98b_blocking_modifier.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=PANEL_FLAG (16-event list is wrong)",
+  "exposure": "PANEL_FLAG",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "bootstrap_unclustered"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 147,
+  "doc": "R98b: Blocking-as-modifier secondary analysis.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/r99_blocking_ssw_interaction.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=PANEL_FLAG (16-event list is wrong)",
+  "exposure": "PANEL_FLAG",
+  "controls": [
+   "winter_fe",
+   "seasonal"
+  ],
+  "inference": [
+   "winter_block_bootstrap"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r99_blocking_ssw_interaction.json"
+  ],
+  "nloc": 253,
+  "doc": "r99_blocking_ssw_interaction.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/sintering_dose_response.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "loads analysis_panel.parquet, which carries ssw_within_15d built from the 16-event list",
+  "exposure": "PANEL_FLAG_TRANSITIVE",
+  "controls": [
+   "winter_fe"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 83,
+  "doc": "Per-event dose-response: does sintering enhancement predict avalanche reduction?",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/sintering_timescale.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 57,
+  "doc": "Sintering timescale calculation for the temperature anomaly.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/ssw_subtype.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 58,
+  "doc": "",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/swiss_daily_lag.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "swiss_daily_lag.json"
+  ],
+  "nloc": 103,
+  "doc": "Swiss daily lag analysis - compute avalanche rate by day relative to SSW onset.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/threshold_vs_continuous.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [
+   "threshold_vs_continuous.json"
+  ],
+  "nloc": 225,
+  "doc": "Threshold vs Continuous model comparison for SSW-avalanche association.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/timing_autocorrelation_correction.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [],
+  "inference": [
+   "winter_block_bootstrap"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 132,
+  "doc": "Correct the cross-country temporal correlation for autocorrelation.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/analysis_extra/window_phase_avalanche.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 55,
+  "doc": "Test whether the window-width dependence of the SSW-avalanche association",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/config.py",
+  "builds_exposure": false,
+  "role": "library",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 6,
+  "doc": "Project-level configuration: derive ROOT from this file's location.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/01_download_solar_indices.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 64,
+  "doc": "Script 01 \u2014 Solar Indices",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/02_download_omni.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 51,
+  "doc": "Script 02 \u2014 OMNIWeb Combined Solar Wind & Geomagnetic Indices",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/03_download_goes_xrs.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 75,
+  "doc": "Script 03 \u2014 NOAA GOES X-ray Sensor (XRS) Data",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/04_download_flare_catalog.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 102,
+  "doc": "Script 04 \u2014 NOAA SWPC Solar Flare / Geophysical Event Catalog",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/08_download_dscovr_ace.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 102,
+  "doc": "Script 08 \u2014 NOAA DSCOVR / ACE Solar Wind Data",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/09_download_poes_meped.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 101,
+  "doc": "Script 09 \u2014 NOAA POES / MEPED Energetic Particle Precipitation",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/12_setup_geomagnetic.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 144,
+  "doc": "Script 12 \u2014 SuperMAG & INTERMAGNET Geomagnetic Network Data",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/13_setup_psp_sdo.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 160,
+  "doc": "Script 13 \u2014 Parker Solar Probe & SDO/HMI+AIA Setup",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/15_download_kyoto_dst.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 88,
+  "doc": "Kyoto Dst Historical Download \u2014 HTML scraper",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/19_download_donki_catalog.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 107,
+  "doc": "DONKI Flare Catalog \u2014 NASA CCMC (complete, 1995\u2013present)",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/20_download_goes_xrs_fixed.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 134,
+  "doc": "GOES X-Ray Sensor (XRS) Historical Data \u2014 NOAA NCEI",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/21_download_poes_fixed.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 139,
+  "doc": "NOAA POES / MEPED Energetic Particle Precipitation \u2014 CDAWeb archive",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/22_download_goes_xrs_v2.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 84,
+  "doc": "GOES XRS Science-Quality Data \u2014 NCEI (correct paths)",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/23_download_psp_mag.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 58,
+  "doc": "Download Parker Solar Probe (PSP) FIELDS L2 magnetometer data (RTN, 4 sa/cycle)",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/25_download_kyoto_ae.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 158,
+  "doc": "Download Kyoto AE/AL/AU index (1957\u2013present) from WDC Kyoto.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/26_download_goes_r_xrs.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 81,
+  "doc": "Download GOES-R era (16/17/18) XRS 1-min averaged data from NCEI data.ngdc.noaa.gov.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/31_download_gsfc_flare_catalog.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 88,
+  "doc": "GSFC GOES X-ray Solar Flare Event Catalog 1975\u20132026",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/33_download_tsi.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 162,
+  "doc": "Download Total Solar Irradiance (TSI) composites from LASP LISIRD.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/34_download_solar_spectral_proxies.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 105,
+  "doc": "Download solar spectral irradiance proxies and activity indices from LASP LISIRD.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/35_download_bremen_mgii.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 74,
+  "doc": "Download and parse the Bremen Mg II composite (V8) from IUP Bremen.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/41_download_dscovr_ace_cdaweb.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 74,
+  "doc": "DSCOVR/ACE Historical Solar Wind Data via CDAWeb HAPI.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/42_download_hmi_sharp.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 150,
+  "doc": "SDO/HMI SHARP Active Region Flux Summary via JSOC/drms.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/43_download_goes_particle.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 121,
+  "doc": "GOES Energetic Particle Data via CDAWeb HAPI (open access, no auth needed).",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/44_download_poes_hapi_historical.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 92,
+  "doc": "NOAA POES MEPED Historical \u2014 CDAWeb HAPI (1978-2004)",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/46_download_supermag.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 164,
+  "doc": "SuperMAG geomagnetic indices and station data download.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/48_download_goes_r_particle.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 79,
+  "doc": "GOES-R Series (GOES-16/17/18) SEISS MPSH Energetic Particle Data",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/52_download_omni_dst.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 59,
+  "doc": "Download Dst from OMNI hourly low-resolution data (OMNI2 format).",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download/53_update_dst_processed.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 33,
+  "doc": "Update data/processed/geomagnetic/dst_index.parquet with correct OMNI2 data.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download_extra/download_swpc_data.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 102,
+  "doc": "Download NOAA SWPC Solar Event Reports and additional solar datasets.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/download_extra/supermag-api.py",
+  "builds_exposure": false,
+  "role": "download",
+  "validity": "NO_INFERENCE",
+  "reason": "download: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 276,
+  "doc": ";supermag-api.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/figures/dose_response_mediation.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=PANEL_FLAG (16-event list is wrong)",
+  "exposure": "PANEL_FLAG",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "event_level_dose_response.csv"
+  ],
+  "nloc": 123,
+  "doc": "Dose-response mediation figure: stratospheric vs tropospheric predictors",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/figures/eaws_geographic_map.py",
+  "builds_exposure": false,
+  "role": "figure",
+  "validity": "NO_INFERENCE",
+  "reason": "figure: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 88,
+  "doc": "Generate Extended Data geographic figure showing EAWS centre-level",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/figures/forest_plot_cross_regional.py",
+  "builds_exposure": false,
+  "role": "figure",
+  "validity": "NO_INFERENCE",
+  "reason": "figure: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 42,
+  "doc": "forest_plot_cross_regional.py \u2014 Forest plot of cross-regional SSW-avalanche effect sizes",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/figures/ng_fig_design_artifact.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [
+   "unit_fe"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [
+   "r106_canonical_catalog_headline.json",
+   "r107_pooled_within_winter.json",
+   "r108_pwl_seasonal_control.json",
+   "r111_kinetic_growth_instrumental.json",
+   "r112_design_positive_control.json"
+  ],
+  "nloc": 183,
+  "doc": "ng_fig_design_artifact.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/figures/r55_z500_composite_maps.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 537,
+  "doc": "r55_z500_composite_maps.py",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/process/_utils.py",
+  "builds_exposure": false,
+  "role": "library",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 141,
+  "doc": "Shared utilities for the Solar-Magnetic-Avalanche processing pipeline.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/process_extra/process_extended_era5.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 201,
+  "doc": "Process extended ERA5 netCDF files (1998-2003, 2018-2019) and merge with existing",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/process_extra/snowpack_sintering_model.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 192,
+  "doc": "Process-based 1D snowpack sintering model.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/r56_zip_doy_resolution.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=PANEL_FLAG (16-event list is wrong)",
+  "exposure": "PANEL_FLAG",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r56_zip_doy_resolution.json"
+  ],
+  "nloc": 154,
+  "doc": "R56: ZIP/DOY Discrepancy Resolution",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/r57_epflux_diagnostics.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r57_epflux_diagnostics.json"
+  ],
+  "nloc": 459,
+  "doc": "R57 \u2013 EP-flux diagnostics for SSW-avalanche manuscript.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/r57_nb_models.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=PANEL_FLAG (16-event list is wrong)",
+  "exposure": "PANEL_FLAG",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 309,
+  "doc": "R57 \u2014 Negative Binomial & Zero-Inflated Model Comparisons for SSW\u2013Avalanche Panel",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/r57_pre_post_decomposition.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [
+   "r57_pre_post_decomposition.json"
+  ],
+  "nloc": 220,
+  "doc": "R57 \u2013 Pre-onset vs post-onset SSW suppression decomposition.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/r57_wind_transport_resolution.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [],
+  "inference": [
+   "bootstrap_unclustered",
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 508,
+  "doc": "R57 \u2013 Wind-Transport Paradox Resolution",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/r77_height_time_composite.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r57_epflux_diagnostics.json",
+   "r77_height_time_composite.json"
+  ],
+  "nloc": 98,
+  "doc": "R77: Height-time composite of stratospheric deceleration propagation.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/r77_observer_effort_table.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r31b_trigger_suppression.json",
+   "r77_observer_effort_summary.json"
+  ],
+  "nloc": 98,
+  "doc": "R77: Observer-effort and trigger-budget analysis table.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/r78_sign_randomisation.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [
+   "permutation"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r78_sign_randomisation.json"
+  ],
+  "nloc": 64,
+  "doc": "Sign-randomisation inference test for SSW-avalanche event-level rate ratios.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/r79_epflux_height_time_figure.py",
+  "builds_exposure": false,
+  "role": "figure",
+  "validity": "NO_INFERENCE",
+  "reason": "figure: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [],
+  "nloc": 110,
+  "doc": "R79: EP-flux proxy height-time composite figure for SSW-avalanche manuscript.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/r81_structural_ceiling_breakers.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [
+   "bootstrap_unclustered",
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "34_merra2_cross_validation.json",
+   "56_blocking_without_ssw.json",
+   "r81_ceiling_breakers.json"
+  ],
+  "nloc": 489,
+  "doc": "R81 Structural Ceiling Breakers",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/_avcan_flexible_utils.py",
+  "builds_exposure": false,
+  "role": "library",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 141,
+  "doc": "",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r11_mechanism_upgrade.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=CATALOG_OLD (16-event list is wrong)",
+  "exposure": "CATALOG_OLD",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r11_mechanism_upgrade.json",
+   "sintering_extended.json",
+   "ssw_event_catalog.csv"
+  ],
+  "nloc": 650,
+  "doc": "R11 Mechanism Upgrade: Comprehensive Chain Analysis",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r11_mechanism_upgrade_p2.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=CATALOG_OLD (16-event list is wrong)",
+  "exposure": "CATALOG_OLD",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r11_mechanism_upgrade_p2.json",
+   "sintering_extended.json",
+   "ssw_event_catalog.csv"
+  ],
+  "nloc": 300,
+  "doc": "R11 Mechanism Upgrade Part 2: Daily Chain + Phase-Resolved Analysis",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r14_fdr_17tests.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [
+   "permutation"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 62,
+  "doc": "Recompute BH-FDR correction for 17 primary tests (Norway MW excluded).",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r14_mechanism_breakthrough.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r14_mechanism_breakthrough.json"
+  ],
+  "nloc": 480,
+  "doc": "R14 Mechanism Breakthrough Analysis",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r14_mediation_doy.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 233,
+  "doc": "DOY-matched mediation analysis \u2014 fixes seasonal confounding.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r15_analysis_v2.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "unit_fe",
+   "matched"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r15_comprehensive_v2.json"
+  ],
+  "nloc": 555,
+  "doc": "R15 Comprehensive Analysis v2 \u2014 Fixed column names and parsers",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r15_comprehensive_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r15_comprehensive_analysis.json"
+  ],
+  "nloc": 557,
+  "doc": "R15 Comprehensive Analysis: Multi-Country Replication + SNOWPACK Validation + Mechanism",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r16_snowpack_mechanism.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "unit_fe",
+   "matched"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r16_snowpack_mechanism.json"
+  ],
+  "nloc": 425,
+  "doc": "R16: SNOWPACK Stability Index Analysis \u2014 Mechanism Validation",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r17_bridging_mechanism.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 376,
+  "doc": "R17: Direct slab bridging quantification + planetary wave independence test.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r20_comprehensive_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r20_comprehensive_multicountry.json",
+   "r20_wai_reanalysis.json"
+  ],
+  "nloc": 505,
+  "doc": "R20 COMPREHENSIVE MULTI-COUNTRY SSW AVALANCHE ANALYSIS",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r20_definitive_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r20_definitive_analysis.json"
+  ],
+  "nloc": 338,
+  "doc": "R20 DEFINITIVE MULTI-COUNTRY ANALYSIS",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r20_multicenter_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r20_multicenter_replication.json"
+  ],
+  "nloc": 242,
+  "doc": "R20: Multi-Center US + International SSW Avalanche Analysis",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r20_wai_reanalysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r20_wai_reanalysis.json"
+  ],
+  "nloc": 233,
+  "doc": "R20 WAI-Centric Reanalysis",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r21_paper_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r21_paper_analysis.json"
+  ],
+  "nloc": 715,
+  "doc": "R21 Paper Analysis \u2014 Fresh comprehensive analysis for Nature Geoscience paper.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r22_reviewer_upgrades.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r22_reviewer_upgrades.json"
+  ],
+  "nloc": 506,
+  "doc": "R22: Comprehensive upgrades to address reviewer feedback.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r23_reviewer_upgrades.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "winter_fe",
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r23_reviewer_upgrades.json"
+  ],
+  "nloc": 458,
+  "doc": "R23 Reviewer Upgrades: Address all remaining blockers for 9+ scores.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r25_mechanism_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r25_mechanism_deep_dive.json"
+  ],
+  "nloc": 178,
+  "doc": "",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r25_mechanism_v2.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r25_mechanism_deep_dive.json"
+  ],
+  "nloc": 207,
+  "doc": "",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r25_mechanism_v3.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r25_mechanism_deep_dive.json"
+  ],
+  "nloc": 215,
+  "doc": "",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r28_mechanism.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r28_mechanism_strengthening.json"
+  ],
+  "nloc": 195,
+  "doc": "R28 Mechanism Strengthening: Precipitation Loading Budget + Wave Activity Analysis",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r28_mediation.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r28_mediation_analysis.json"
+  ],
+  "nloc": 132,
+  "doc": "R28 Formal Causal Mediation + Effective Sample Size Analysis",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r29_grand_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r29_grand_multicountry.json"
+  ],
+  "nloc": 218,
+  "doc": "R29: Analyze ALBINA + EAWS multi-country data for SSW events.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r29_multicountry_eaws.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r29_eaws_multicountry.json"
+  ],
+  "nloc": 237,
+  "doc": "R29: Multi-Country EAWS Avalanche Danger Analysis During SSW Events",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r30_envidat_swiss_danger.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "unit_fe",
+   "matched"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 424,
+  "doc": "R30: EnviDat Swiss Regional Danger Level Analysis",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r31_snowpack_stability.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "unit_fe"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r31_snowpack_stability.json"
+  ],
+  "nloc": 389,
+  "doc": "R31: SNOWPACK stability analysis around SSW events.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r31b_trigger_suppression.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "unit_fe"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r31b_trigger_suppression.json"
+  ],
+  "nloc": 299,
+  "doc": "R31b: Test the TRIGGERING SUPPRESSION hypothesis.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r31c_albina_gradient.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r31c_albina_gradient.json"
+  ],
+  "nloc": 137,
+  "doc": "R31c: ALBINA out-of-sample geographic gradient test.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r32_mediation_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "unit_fe"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r32_mediation.json"
+  ],
+  "nloc": 214,
+  "doc": "R32: Mediation analysis \u2014 Do SNOWPACK trigger proxies predict avalanche counts?",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r34_multicountry_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r34_multicountry.json"
+  ],
+  "nloc": 219,
+  "doc": "R34 Multi-Country Replication Analysis",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r34_wave_flux_bayesian.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r34_wave_bayesian.json"
+  ],
+  "nloc": 399,
+  "doc": "R34 Analysis: Wave activity proxy + Bayesian meta-analysis + moisture flux gradient",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r35_moisture_flux_roc_bayes.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r15_comprehensive_analysis.json",
+   "r35_upgrade.json"
+  ],
+  "nloc": 344,
+  "doc": "R35 Upgrade Analysis:",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r35_precip_wind.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": true,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 47,
+  "doc": "",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r36_moisture_mediation.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r36_moisture_mediation.json"
+  ],
+  "nloc": 176,
+  "doc": "R36 Upgrade: ERA5 Moisture Flux Proxy + Mediation Analysis + Blocking Index",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r36_power_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 70,
+  "doc": "Formal power analysis for multi-country replication.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r36_teleconnection.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r36_teleconnection.json"
+  ],
+  "nloc": 152,
+  "doc": "R36 Upgrade Part 2: NAO/AO-mediated mechanism analysis",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r37_eaws_gradient.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r37_eaws_gradient.json"
+  ],
+  "nloc": 169,
+  "doc": "EAWS multi-country spatial gradient analysis for SSW events.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r37_mediation.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r37_mediation.json"
+  ],
+  "nloc": 208,
+  "doc": "Comprehensive causal mediation analysis: quantify how much of the SSW\u2192avalanche",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r37_spec_curve.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r37_spec_curve.json"
+  ],
+  "nloc": 155,
+  "doc": "Formal specification curve analysis.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r37_split_sample.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r37_split_sample.json"
+  ],
+  "nloc": 103,
+  "doc": "Split-sample validation: divide 16 Swiss SSW events chronologically into",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r38_norway_analysis.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r38_norway_expanded.json"
+  ],
+  "nloc": 243,
+  "doc": "Comprehensive Norwegian Varsom SSW analysis with 10 regions \u00d7 4 SSW events.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r39_french_bra_replication.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "loads analysis_panel.parquet, which carries ssw_within_15d built from the 16-event list",
+  "exposure": "PANEL_FLAG_TRANSITIVE",
+  "controls": [
+   "matched"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 476,
+  "doc": "Build a French Alpine BRA danger panel for SSW-window month-days and test whether",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r40_french_bra_gradient.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "loads analysis_panel.parquet, which carries ssw_within_15d built from the 16-event list",
+  "exposure": "PANEL_FLAG_TRANSITIVE",
+  "controls": [
+   "matched"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 394,
+  "doc": "Quantify internal spatial structure in the French BRA SSW replication.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r41_avcan_flexible_validation.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "loads analysis_panel.parquet, which carries ssw_within_15d built from the 16-event list",
+  "exposure": "PANEL_FLAG_TRANSITIVE",
+  "controls": [
+   "matched"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 389,
+  "doc": "Build a post-2022 Avalanche Canada flexible-forecast panel and test whether",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r42_avcan_owner_heterogeneity.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [
+   "matched"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 223,
+  "doc": "Quantify owner-level heterogeneity inside the Avalanche Canada flexible panel.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r44_era5_composites.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "single-window specification (control group contains the post-onset response)",
+  "exposure": "HARDCODED",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 282,
+  "doc": "ERA5 spatial composite maps for SSW events.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r44_winter_blocked_bootstrap.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [
+   "winter_block_bootstrap",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r44_winter_blocked_bootstrap.json"
+  ],
+  "nloc": 134,
+  "doc": "Winter-blocked bootstrap for dependence-aware confidence intervals.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r45_correlated_channels.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r45_correlated_channels.json"
+  ],
+  "nloc": 104,
+  "doc": "Correlated-channel sensitivity analysis for threshold amplification model.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r45_multi_country_figure.py",
+  "builds_exposure": false,
+  "role": "figure",
+  "validity": "NO_INFERENCE",
+  "reason": "figure: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 81,
+  "doc": "Multi-country comparison figure for manuscript.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r46_study_area_map.py",
+  "builds_exposure": false,
+  "role": "figure",
+  "validity": "NO_INFERENCE",
+  "reason": "figure: produces no statistical claim",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 201,
+  "doc": "Generate a publication-quality study-area map for the SSW-avalanche paper.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r52_pre_event_snowpack.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [
+   "r52_pre_event_snowpack.json"
+  ],
+  "nloc": 158,
+  "doc": "R52 Pre-Event Snowpack Comparison: SSW vs Non-SSW Years",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r60_blocking_differentiation.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=PANEL_FLAG (16-event list is wrong)",
+  "exposure": "PANEL_FLAG",
+  "controls": [
+   "matched"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r60_blocking_differentiation.json"
+  ],
+  "nloc": 308,
+  "doc": "R60: SSW Blocking Differentiation Analysis",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r60_gee_power_simulation.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r60_gee_power_simulation.json"
+  ],
+  "nloc": 60,
+  "doc": "GEE Power Simulation for SSW-Avalanche Manuscript (R60)",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r60_mixed_effects_nb.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=PANEL_FLAG (16-event list is wrong)",
+  "exposure": "PANEL_FLAG",
+  "controls": [
+   "winter_fe"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 332,
+  "doc": "Mixed-Effects Negative Binomial Model for SSW Effects on Avalanche Activity",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r60_mixed_effects_swiss.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=PANEL_FLAG (16-event list is wrong)",
+  "exposure": "PANEL_FLAG",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r60_mixed_effects_swiss.json"
+  ],
+  "nloc": 100,
+  "doc": "R60 Mixed-Effects NB2 Analysis - Swiss Natural Dry Slab Counts",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r61_comprehensive_stats.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=PANEL_FLAG (16-event list is wrong)",
+  "exposure": "PANEL_FLAG",
+  "controls": [
+   "winter_fe",
+   "seasonal"
+  ],
+  "inference": [
+   "winter_block_bootstrap",
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r61_comprehensive_stats.json"
+  ],
+  "nloc": 402,
+  "doc": "R61 Comprehensive Statistical Analyses",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r61_comprehensive_stats_v2.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=CATALOG_OLD (16-event list is wrong)",
+  "exposure": "CATALOG_OLD",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "winter_block_bootstrap",
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r61_comprehensive_stats.json",
+   "ssw_event_catalog.csv"
+  ],
+  "nloc": 416,
+  "doc": "R61 Comprehensive Statistical Analyses \u2014 Corrected",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/review_rounds/r61_falsification.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=CATALOG_OLD (16-event list is wrong)",
+  "exposure": "CATALOG_OLD",
+  "controls": [
+   "seasonal",
+   "matched"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "permutation",
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": true,
+  "outputs": [
+   "r61_falsification.json",
+   "ssw_event_catalog.csv"
+  ],
+  "nloc": 303,
+  "doc": "R61 Falsification & Influence Analyses",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/utilities/_inspect_qc.py",
+  "builds_exposure": false,
+  "role": "library",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 30,
+  "doc": "Inspect failing parquet files to understand their structure.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/utilities/condense_paper.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [
+   "matched"
+  ],
+  "inference": [
+   "bootstrap_unclustered",
+   "permutation"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 43,
+  "doc": "Condense main.tex Results and Discussion for Nature Geoscience format.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/utilities/reviewer_fixes.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "reviewer_fixes.json"
+  ],
+  "nloc": 205,
+  "doc": "Reviewer-requested analyses:",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/utilities/save_results.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "comprehensive_upgrade_v2.json"
+  ],
+  "nloc": 90,
+  "doc": "",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/utilities/verify_nh_circulation.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [
+   "seasonal"
+  ],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 66,
+  "doc": "Re-run Phase 7 NH circulation analysis to verify paper numbers.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/utilities/verify_propagation.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r14_mechanism_breakthrough.json"
+  ],
+  "nloc": 37,
+  "doc": "Extract peak propagation values from R14 results.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/utilities/verify_r14_results.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "SUPERSEDED",
+  "reason": "exposure=ssw_catalog.parquet (contains spurious 2012-01-11, omits MAR 2000, ends 2021)",
+  "exposure": "CATALOG_PARQUET",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [
+   "r14_mechanism_breakthrough.json",
+   "sintering_extended.json"
+  ],
+  "nloc": 91,
+  "doc": "Verify key R14 results referenced in the paper.",
+  "quarantined": true
+ },
+ {
+  "path": "archive/superseded_scripts/verification/reproducibility_check.py",
+  "builds_exposure": false,
+  "role": "analysis",
+  "validity": "LIMITED",
+  "reason": "no SSW exposure; descriptive only",
+  "exposure": "NONE",
+  "controls": [],
+  "inference": [
+   "model_p"
+  ],
+  "multi_bin": false,
+  "placebo": false,
+  "outputs": [],
+  "nloc": 107,
+  "doc": "Compact reproducibility script: re-derives the three primary",
+  "quarantined": true
+ }
+]

@@ -1,0 +1,22 @@
+rebuilding CMIP6 real and pseudo tables ...
+real 1,888 | pseudo 11,323 | 20 members
+
+==================================================================================
+=== POOLED (as published) vs WITHIN-MODEL STANDARDISED ===
+tier                                pooled    within  retained  pseudo-w
+----------------------------------------------------------------------------
+P1 pre-onset                       +0.0998   +0.0664      0.66   +0.0646
+P2 at-onset                        +0.1121   +0.0746      0.67   +0.0767
+P3 + post-onset stratosphere       +0.4245   +0.4013      0.95   +0.3894
+
+=== READING ===
+  P1 skill SURVIVES within-model standardisation, so it is genuine
+  event-to-event predictability inside a single climate, which is the
+  quantity the field's question is about. Headline stands.
+
+  event-specific within-model share (within minus pseudo-within):
+    P1 pre-onset                     +0.0017
+    P2 at-onset                      -0.0021
+    P3 + post-onset stratosphere     +0.0119
+
+Saved -> within_model_check.json

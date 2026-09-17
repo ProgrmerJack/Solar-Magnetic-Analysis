@@ -1,0 +1,176 @@
+{
+  "outcome_window": [
+    8,
+    52
+  ],
+  "placebo_window": [
+    -52,
+    -8
+  ],
+  "results": {
+    "observations": {
+      "n_events": 43,
+      "n_pseudo": 17200,
+      "mean_shift": -0.9044,
+      "var_event": 1.1167,
+      "var_pseudo": 1.1788,
+      "sigma_f2": -0.06202,
+      "sigma_f2_CI95": [
+        -0.43318,
+        0.31361
+      ],
+      "sigma_f": 0.0,
+      "sigma_f_upper95": 0.56,
+      "placebo_sigma_f2": 0.28323,
+      "placebo_CI95": [
+        -0.44124,
+        1.12623
+      ],
+      "placebo_clean": true,
+      "corrected_sigma_f2": -0.34525,
+      "corrected_CI95": [
+        -1.16651,
+        0.40568
+      ],
+      "corrected_sigma_f": 0.0,
+      "corrected_sigma_f_upper95": 0.6369,
+      "pre_onset_variance_ratio": 1.237,
+      "noise_equality_ok": true,
+      "ceiling_point": 0.0,
+      "ceiling_upper95": 0.8936,
+      "reported_vs_ceiling": {
+        "Karpechko-criterion AO, observations (this project)": {
+          "reported": 1.782,
+          "split_fraction": 0.7,
+          "ceiling_upper95_at_q": 0.9272,
+          "over_upper_bound_ratio": 1.92,
+          "matched_system": true
+        },
+        "ERA5 1000 hPa NAM, Karpechko criterion (this project)": {
+          "reported": 0.684,
+          "split_fraction": 0.54,
+          "ceiling_upper95_at_q": 0.8949,
+          "over_upper_bound_ratio": 0.76,
+          "matched_system": true
+        },
+        "ERA5 850 hPa NAM, ACP 26,3723 criterion (this project)": {
+          "reported": 0.639,
+          "split_fraction": 0.59,
+          "ceiling_upper95_at_q": 0.9,
+          "over_upper_bound_ratio": 0.71,
+          "matched_system": true
+        },
+        "ACP 26, 3723 (2026) published NAO contrast": {
+          "reported": 0.85,
+          "split_fraction": 0.59,
+          "ceiling_upper95_at_q": 0.9,
+          "over_upper_bound_ratio": 0.94,
+          "matched_system": true
+        },
+        "CMIP6 ensemble DW-NDW (this project)": {
+          "reported": 1.143,
+          "split_fraction": 0.5,
+          "ceiling_upper95_at_q": 0.8936,
+          "over_upper_bound_ratio": 1.28,
+          "matched_system": false
+        }
+      }
+    },
+    "cmip6": {
+      "n_events": 1888,
+      "n_pseudo": 37747,
+      "mean_shift": -0.5087,
+      "var_event": 0.5189,
+      "var_pseudo": 0.448,
+      "sigma_f2": 0.07085,
+      "sigma_f2_CI95": [
+        0.03535,
+        0.10742
+      ],
+      "sigma_f": 0.2662,
+      "sigma_f_upper95": 0.3277,
+      "placebo_sigma_f2": 0.06425,
+      "placebo_CI95": [
+        0.0222,
+        0.10752
+      ],
+      "placebo_clean": false,
+      "placebo_share_of_raw_pct": 90.7,
+      "corrected_sigma_f2": 0.00661,
+      "corrected_CI95": [
+        -0.04602,
+        0.057
+      ],
+      "corrected_sigma_f": 0.0813,
+      "corrected_sigma_f_upper95": 0.2388,
+      "corrected_ceiling_upper95": 0.381,
+      "pre_onset_variance_ratio": 1.1312,
+      "ceiling_point": 0.4248,
+      "ceiling_upper95": 0.523,
+      "reported_vs_ceiling": {
+        "Karpechko-criterion AO, observations (this project)": {
+          "reported": 1.782,
+          "split_fraction": 0.7,
+          "ceiling_upper95_at_q": 0.5426,
+          "over_upper_bound_ratio": 3.28,
+          "matched_system": false
+        },
+        "ERA5 1000 hPa NAM, Karpechko criterion (this project)": {
+          "reported": 0.684,
+          "split_fraction": 0.54,
+          "ceiling_upper95_at_q": 0.5237,
+          "over_upper_bound_ratio": 1.31,
+          "matched_system": false
+        },
+        "ERA5 850 hPa NAM, ACP 26,3723 criterion (this project)": {
+          "reported": 0.639,
+          "split_fraction": 0.59,
+          "ceiling_upper95_at_q": 0.5267,
+          "over_upper_bound_ratio": 1.21,
+          "matched_system": false
+        },
+        "ACP 26, 3723 (2026) published NAO contrast": {
+          "reported": 0.85,
+          "split_fraction": 0.59,
+          "ceiling_upper95_at_q": 0.5267,
+          "over_upper_bound_ratio": 1.61,
+          "matched_system": false
+        },
+        "CMIP6 ensemble DW-NDW (this project)": {
+          "reported": 1.143,
+          "split_fraction": 0.5,
+          "ceiling_upper95_at_q": 0.523,
+          "over_upper_bound_ratio": 2.19,
+          "matched_system": true
+        }
+      }
+    }
+  },
+  "validation_known_truth": {
+    "s_f=0.0": {
+      "recovered_mean": 0.1967,
+      "bias": 0.1967,
+      "sd": 0.2534
+    },
+    "s_f=0.2": {
+      "recovered_mean": 0.237,
+      "bias": 0.037,
+      "sd": 0.2579
+    },
+    "s_f=0.4": {
+      "recovered_mean": 0.3493,
+      "bias": -0.0507,
+      "sd": 0.2936
+    },
+    "s_f=0.6": {
+      "recovered_mean": 0.5291,
+      "bias": -0.0709,
+      "sd": 0.302
+    },
+    "s_f=0.8": {
+      "recovered_mean": 0.7542,
+      "bias": -0.0458,
+      "sd": 0.2983
+    }
+  }
+}

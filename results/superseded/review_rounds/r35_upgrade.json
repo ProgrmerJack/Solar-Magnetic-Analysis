@@ -1,0 +1,146 @@
+{
+  "moisture_analysis": {
+    "v_south_ssw": 0.03248539811442371,
+    "v_south_ctrl": -0.010877130015711414,
+    "v_south_d": 0.04243651755163995,
+    "n_suppressed": 7,
+    "n_events": 16,
+    "event_details": [
+      {
+        "date": "1998-12-15",
+        "ssw_v_south": -0.18192495272735193,
+        "ctrl_v_south": 0.09416224290379858,
+        "delta_v_south": -0.27608719563115053,
+        "suppressed": "True"
+      },
+      {
+        "date": "1999-02-26",
+        "ssw_v_south": -0.34796990141753226,
+        "ctrl_v_south": 0.24163094059371487,
+        "delta_v_south": -0.5896008420112471,
+        "suppressed": "True"
+      },
+      {
+        "date": "2001-02-11",
+        "ssw_v_south": 0.2551119029521942,
+        "ctrl_v_south": 0.2141432653152151,
+        "delta_v_south": 0.04096863763697911,
+        "suppressed": "False"
+      },
+      {
+        "date": "2001-12-30",
+        "ssw_v_south": -0.03792430220111724,
+        "ctrl_v_south": 0.00232506943408583,
+        "delta_v_south": -0.04024937163520307,
+        "suppressed": "True"
+      },
+      {
+        "date": "2002-02-17",
+        "ssw_v_south": -0.4099081274602682,
+        "ctrl_v_south": 0.22303355987147463,
+        "delta_v_south": -0.6329416873317428,
+        "suppressed": "True"
+      },
+      {
+        "date": "2003-01-18",
+        "ssw_v_south": 0.19578068390969308,
+        "ctrl_v_south": -0.20390072307852378,
+        "delta_v_south": 0.39968140698821686,
+        "suppressed": "False"
+      },
+      {
+        "date": "2004-01-05",
+        "ssw_v_south": -0.013207604748106772,
+        "ctrl_v_south": -0.2938326497266932,
+        "delta_v_south": 0.2806250449785864,
+        "suppressed": "False"
+      },
+      {
+        "date": "2006-01-21",
+        "ssw_v_south": 0.35065372420414803,
+        "ctrl_v_south": 0.06494501924349202,
+        "delta_v_south": 0.28570870496065603,
+        "suppressed": "False"
+      },
+      {
+        "date": "2007-02-24",
+        "ssw_v_south": -0.3649815439937576,
+        "ctrl_v_south": 0.4272587786652838,
+        "delta_v_south": -0.7922403226590413,
+        "suppressed": "True"
+      },
+      {
+        "date": "2008-02-22",
+        "ssw_v_south": 0.15921917611793165,
+        "ctrl_v_south": 0.45342516678218275,
+        "delta_v_south": -0.2942059906642511,
+        "suppressed": "True"
+      },
+      {
+        "date": "2009-01-24",
+        "ssw_v_south": -0.011616312448055513,
+        "ctrl_v_south": 0.2135702082987434,
+        "delta_v_south": -0.2251865207467989,
+        "suppressed": "True"
+      },
+      {
+        "date": "2010-02-09",
+        "ssw_v_south": 0.18689789695124473,
+        "ctrl_v_south": 0.11973312253368099,
+        "delta_v_south": 0.06716477441756374,
+        "suppressed": "False"
+      },
+      {
+        "date": "2012-01-11",
+        "ssw_v_south": 0.06416993828550462,
+        "ctrl_v_south": -0.31011025414762783,
+        "delta_v_south": 0.37428019243313243,
+        "suppressed": "False"
+      },
+      {
+        "date": "2013-01-07",
+        "ssw_v_south": 0.008450504671782256,
+        "ctrl_v_south": -0.4161741361989603,
+        "delta_v_south": 0.4246246408707426,
+        "suppressed": "False"
+      },
+      {
+        "date": "2018-02-12",
+        "ssw_v_south": 0.32527094851097754,
+        "ctrl_v_south": 0.27064442511683307,
+        "delta_v_south": 0.05462652339414448,
+        "suppressed": "False"
+      },
+      {
+        "date": "2019-01-01",
+        "ssw_v_south": 0.3409690200801819,
+        "ctrl_v_south": -0.20935866594314576,
+        "delta_v_south": 0.5503276860233276,
+        "suppressed": "False"
+      }
+    ]
+  },
+  "forecasting": {
+    "n_events": 16,
+    "n_decrease": 11,
+    "loo_accuracy": 0.6875,
+    "loo_p": 0.1050567626953125,
+    "brier_clim": 0.21484375,
+    "brier_loo": 0.24444444444444444,
+    "bss": -0.13777777777777778
+  },
+  "bayesian": {
+    "mean_log_rr": -0.831844941909308,
+    "se_log_rr": 0.41100076434423166,
+    "t_stat": -2.0239498659729995,
+    "bf_bic": 1.7251110565924377,
+    "bf_savage_dickey": 1.593414415065322,
+    "posterior_rr": 0.4352455423771035,
+    "ci95": [
+      0.19448379413765765,
+      0.9740589595092554
+    ],
+    "p_decrease_given_data": 0.97851234481081,
+    "bf_sign": 3855.0588235294117
+  }
+}

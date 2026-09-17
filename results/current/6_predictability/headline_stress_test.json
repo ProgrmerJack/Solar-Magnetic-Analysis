@@ -1,0 +1,144 @@
+{
+  "attack1_pseudo_event_skill": {
+    "P1 pre-onset": {
+      "real_cv_r2": 0.0998,
+      "pseudo_cv_r2": 0.0603,
+      "retained_fraction": 0.604
+    },
+    "P2 at-onset": {
+      "real_cv_r2": 0.1121,
+      "pseudo_cv_r2": 0.0733,
+      "retained_fraction": 0.654
+    },
+    "P3 + post-onset stratosphere": {
+      "real_cv_r2": 0.4245,
+      "pseudo_cv_r2": 0.3857,
+      "retained_fraction": 0.909
+    }
+  },
+  "attack2": {
+    "slope": 0.02998,
+    "r": 0.0851,
+    "intercept": -0.01761,
+    "extrapolated_to_observed": 0.0131,
+    "per_member": [
+      {
+        "member": "BCC-ESM1_r1i1p1f1_zm",
+        "coupling": -0.3675,
+        "cv_r2": -0.0427
+      },
+      {
+        "member": "CanESM5_r10i1p1f1_zm",
+        "coupling": -0.6359,
+        "cv_r2": -0.1839
+      },
+      {
+        "member": "CanESM5_r10i1p2f1_zm",
+        "coupling": -0.8319,
+        "cv_r2": -0.0178
+      },
+      {
+        "member": "CanESM5_r11i1p1f1_zm",
+        "coupling": -0.7222,
+        "cv_r2": 0.1729
+      },
+      {
+        "member": "CanESM5_r12i1p1f1_zm",
+        "coupling": -0.6003,
+        "cv_r2": -0.0927
+      },
+      {
+        "member": "CanESM5_r13i1p1f1_zm",
+        "coupling": -0.7606,
+        "cv_r2": 0.1512
+      },
+      {
+        "member": "CanESM5_r14i1p1f1_zm",
+        "coupling": -0.4378,
+        "cv_r2": -0.0536
+      },
+      {
+        "member": "CanESM5_r15i1p1f1_zm",
+        "coupling": -0.5646,
+        "cv_r2": -0.0359
+      },
+      {
+        "member": "CanESM5_r16i1p1f1_zm",
+        "coupling": -0.6683,
+        "cv_r2": -0.0562
+      },
+      {
+        "member": "CanESM5_r17i1p1f1_zm",
+        "coupling": -0.7523,
+        "cv_r2": 0.0231
+      },
+      {
+        "member": "CanESM5_r18i1p1f1_zm",
+        "coupling": -0.5578,
+        "cv_r2": 0.049
+      },
+      {
+        "member": "CESM2-FV2_r1i1p1f1_zm",
+        "coupling": -0.6546,
+        "cv_r2": -0.0298
+      },
+      {
+        "member": "GFDL-CM4_r1i1p1f1_zm",
+        "coupling": -0.2727,
+        "cv_r2": -0.0391
+      },
+      {
+        "member": "INM-CM5-0_r1i1p1f1_zm",
+        "coupling": -0.4169,
+        "cv_r2": 0.0561
+      },
+      {
+        "member": "IPSL-CM5A2-INCA_r1i1p1f1_zm",
+        "coupling": -0.7088,
+        "cv_r2": 0.0111
+      },
+      {
+        "member": "MIROC6_r10i1p1f1_zm",
+        "coupling": -0.1363,
+        "cv_r2": 0.1014
+      },
+      {
+        "member": "MIROC6_r1i1p1f1_zm",
+        "coupling": -0.1442,
+        "cv_r2": -0.0135
+      },
+      {
+        "member": "MPI-ESM-1-2-HAM_r1i1p1f1_zm",
+        "coupling": -0.5137,
+        "cv_r2": 0.0069
+      },
+      {
+        "member": "MPI-ESM1-2-LR_r1i1p1f1_zm",
+        "coupling": -0.3894,
+        "cv_r2": -0.0266
+      },
+      {
+        "member": "NorESM2-LM_r1i1p1f1_zm",
+        "coupling": -0.0148,
+        "cv_r2": -0.0277
+      }
+    ]
+  },
+  "attack3_in_vs_out": {
+    "P1 pre-onset": {
+      "in_sample_r2": 0.1152,
+      "out_of_sample_r2": 0.0998,
+      "optimism": 0.0154
+    },
+    "P2 at-onset": {
+      "in_sample_r2": 0.1275,
+      "out_of_sample_r2": 0.1121,
+      "optimism": 0.0154
+    },
+    "P3 + post-onset stratosphere": {
+      "in_sample_r2": 0.4567,
+      "out_of_sample_r2": 0.4245,
+      "optimism": 0.0323
+    }
+  }
+}

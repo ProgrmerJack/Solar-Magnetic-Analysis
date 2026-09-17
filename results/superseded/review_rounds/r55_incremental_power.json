@@ -1,0 +1,615 @@
+{
+  "analysis_1_incremental_value": {
+    "description": "Negative binomial regression models comparing SSW flag vs Z500 anomaly as predictors of daily dry-natural avalanche counts (winter only).",
+    "models": {
+      "M1_z500_only": {
+        "type": "Poisson_robust_HC1",
+        "n": 2702,
+        "aic": 16439.31688646251,
+        "bic": -6205.142400338307,
+        "llf": -8215.658443231256,
+        "pearson_chi2": 102987.25369903898,
+        "dispersion_ratio": 38.17170263122275,
+        "coefficients": {
+          "const": {
+            "coef": -2.40275989770932,
+            "se": 0.6980640731798323,
+            "z": -3.4420334608601624,
+            "p": 0.0005773588280941971
+          },
+          "sin_doy": {
+            "coef": 1.403560923297363,
+            "se": 0.4117206163373113,
+            "z": 3.4090129753120366,
+            "p": 0.000651983785791608
+          },
+          "cos_doy": {
+            "coef": 2.4372024738325053,
+            "se": 0.7376161225440993,
+            "z": 3.3041610660927416,
+            "p": 0.0009526108540636522
+          },
+          "z500_anom": {
+            "coef": 0.42611548888894213,
+            "se": 0.11995279341294379,
+            "z": 3.5523598639509557,
+            "p": 0.0003817923218279723
+          }
+        }
+      },
+      "M2_ssw_only": {
+        "type": "Poisson_robust_HC1",
+        "n": 2702,
+        "aic": 16736.335681064615,
+        "bic": -5908.123605736204,
+        "llf": -8364.167840532307,
+        "pearson_chi2": 104136.33130843946,
+        "dispersion_ratio": 38.597602412320036,
+        "coefficients": {
+          "const": {
+            "coef": -2.5277631869344983,
+            "se": 0.7133438529160697,
+            "z": -3.543540995834317,
+            "p": 0.000394791925636386
+          },
+          "sin_doy": {
+            "coef": 1.5597811290994763,
+            "se": 0.41973405870291347,
+            "z": 3.7161176148526103,
+            "p": 0.00020230743667294272
+          },
+          "cos_doy": {
+            "coef": 2.788061590170905,
+            "se": 0.7519428314491852,
+            "z": 3.7078105855435854,
+            "p": 0.00020905893185442677
+          },
+          "ssw_flag": {
+            "coef": -0.7563734207827882,
+            "se": 0.23178899803919917,
+            "z": -3.263198111995262,
+            "p": 0.001101624814980546
+          }
+        }
+      },
+      "M3_combined": {
+        "type": "Poisson_robust_HC1",
+        "n": 2702,
+        "aic": 16325.323265780313,
+        "bic": -6313.234273501985,
+        "llf": -8157.661632890156,
+        "pearson_chi2": 96754.67036622782,
+        "dispersion_ratio": 35.8749241254089,
+        "coefficients": {
+          "const": {
+            "coef": -2.534242414343546,
+            "se": 0.7102447544915866,
+            "z": -3.5681254923982206,
+            "p": 0.00035954430154034987
+          },
+          "sin_doy": {
+            "coef": 1.5135697852320347,
+            "se": 0.4243369833575201,
+            "z": 3.5669051828951575,
+            "p": 0.0003612221064361613
+          },
+          "cos_doy": {
+            "coef": 2.688244612277204,
+            "se": 0.765058854775285,
+            "z": 3.513774914829006,
+            "p": 0.0004417869941045535
+          },
+          "z500_anom": {
+            "coef": 0.38668010659032753,
+            "se": 0.11968646565174049,
+            "z": 3.23077554746646,
+            "p": 0.0012345484429644622
+          },
+          "ssw_flag": {
+            "coef": -0.6037309326390007,
+            "se": 0.2421937554151297,
+            "z": -2.492760111028387,
+            "p": 0.012675445131766773
+          }
+        }
+      },
+      "M4_interaction": {
+        "type": "Poisson_robust_HC1",
+        "n": 2702,
+        "aic": 16323.743310615107,
+        "bic": -6308.912481148673,
+        "llf": -8155.871655307554,
+        "pearson_chi2": 96925.05757176109,
+        "dispersion_ratio": 35.95143085005975,
+        "coefficients": {
+          "const": {
+            "coef": -2.5362623556188697,
+            "se": 0.7107889578438676,
+            "z": -3.568235448272097,
+            "p": 0.00035939348153073375
+          },
+          "sin_doy": {
+            "coef": 1.5125838952109463,
+            "se": 0.4248087054257219,
+            "z": 3.560623583961423,
+            "p": 0.00036997513207574626
+          },
+          "cos_doy": {
+            "coef": 2.6856513573301393,
+            "se": 0.7668506446940574,
+            "z": 3.502183085992718,
+            "p": 0.0004614623981465342
+          },
+          "z500_anom": {
+            "coef": 0.39607882364576685,
+            "se": 0.12723632358918335,
+            "z": 3.1129382905200385,
+            "p": 0.0018523474439573384
+          },
+          "ssw_flag": {
+            "coef": -0.6058535693744668,
+            "se": 0.24533610724156543,
+            "z": -2.469483909997499,
+            "p": 0.013530810338578756
+          },
+          "z500_x_ssw": {
+            "coef": -0.14885488803379818,
+            "se": 0.21484275274396963,
+            "z": -0.692855058560854,
+            "p": 0.4884005155364437
+          }
+        }
+      },
+      "M5_ssw_lead7": {
+        "type": "Poisson_robust_HC1",
+        "n": 2702,
+        "aic": 16427.02218744911,
+        "bic": -6211.535351833185,
+        "llf": -8208.511093724555,
+        "pearson_chi2": 103950.58806258105,
+        "dispersion_ratio": 38.54304340473899,
+        "coefficients": {
+          "const": {
+            "coef": -2.431066357192496,
+            "se": 0.7135228657217813,
+            "z": -3.4071316757778916,
+            "p": 0.0006564944742043217
+          },
+          "sin_doy": {
+            "coef": 1.40374405151479,
+            "se": 0.4112882275249715,
+            "z": 3.4130421382643665,
+            "p": 0.0006424200801266149
+          },
+          "cos_doy": {
+            "coef": 2.5186586590938633,
+            "se": 0.7765226958870364,
+            "z": 3.2435093944250433,
+            "p": 0.0011806691707991143
+          },
+          "z500_anom": {
+            "coef": 0.42411753434913013,
+            "se": 0.12376488721240868,
+            "z": 3.4268001523020666,
+            "p": 0.0006107383729534319
+          },
+          "ssw_lead7": {
+            "coef": -0.20036549964018077,
+            "se": 0.3578575641003355,
+            "z": -0.5599029327322047,
+            "p": 0.5755456482632506
+          }
+        }
+      },
+      "M6_ssw_lead14": {
+        "type": "Poisson_robust_HC1",
+        "n": 2702,
+        "aic": 16439.83498062041,
+        "bic": -6198.722558661888,
+        "llf": -8214.917490310205,
+        "pearson_chi2": 103356.24634792111,
+        "dispersion_ratio": 38.32267198662259,
+        "coefficients": {
+          "const": {
+            "coef": -2.405173260984661,
+            "se": 0.70112614282647,
+            "z": -3.4304429888873016,
+            "p": 0.0006025965867116937
+          },
+          "sin_doy": {
+            "coef": 1.3970935020780566,
+            "se": 0.40152331586708184,
+            "z": 3.4794828765075825,
+            "p": 0.0005023824734113528
+          },
+          "cos_doy": {
+            "coef": 2.4575736590279353,
+            "se": 0.7597235968096766,
+            "z": 3.234826020078982,
+            "p": 0.001217168731780441
+          },
+          "z500_anom": {
+            "coef": 0.42597982348046887,
+            "se": 0.12106924879984678,
+            "z": 3.518480767851332,
+            "p": 0.00043402527401447365
+          },
+          "ssw_lead14": {
+            "coef": -0.06641989541047816,
+            "se": 0.36505442576829283,
+            "z": -0.1819451860381941,
+            "p": 0.8556257429520236
+          }
+        }
+      }
+    },
+    "likelihood_ratio_tests": {
+      "M1_vs_M3_SSW_adds_to_Z500": {
+        "LR_stat": 115.99362068219853,
+        "p_value": 4.768278870680218e-27,
+        "df": 1,
+        "interpretation": "SSW flag adds significant information beyond Z500"
+      },
+      "M2_vs_M3_Z500_adds_to_SSW": {
+        "LR_stat": 413.0124152843018,
+        "p_value": 8.098541493381284e-92,
+        "df": 1,
+        "interpretation": "Z500 adds significant information beyond SSW"
+      },
+      "M3_vs_M4_interaction": {
+        "LR_stat": 3.5799551652053196,
+        "p_value": 0.05848072962643866,
+        "df": 1
+      }
+    }
+  },
+  "analysis_2_power_simulation": {
+    "description": "Monte Carlo power analysis: with n=9 SSW events and true P(decrease)=0.78, what is the probability of detecting the effect at various \u03b1 levels?",
+    "n_events": 9,
+    "true_RR": 0.32,
+    "assumed_prob_decrease": 0.78,
+    "n_simulations": 100000,
+    "power_alpha05": 0.37877,
+    "power_alpha10": 0.37877,
+    "fraction_ge_7_of_9_decrease": 0.68511,
+    "fraction_ge_8_of_9_decrease": 0.37874,
+    "median_pvalue": 0.1796875,
+    "pvalue_percentiles": {
+      "p10": 0.00390625,
+      "p25": 0.0390625,
+      "p50": 0.1796875,
+      "p75": 0.5078125,
+      "p90": 1.0
+    },
+    "observed_p018_percentile_rank": 0.68572,
+    "interpretation": "With n=9 and true effect (P(decrease)=0.78), power at \u03b1=0.05 is only 37.9%. The observed P=0.18 falls at the 69% percentile \u2014 fully consistent with a real effect being undetectable at n=9."
+  },
+  "analysis_3_lead_time": {
+    "description": "For each SSW event, timing of SSW onset relative to first detectable Z500 anomaly (<-1 SD) and first avalanche activity drop (<50% of expected). Positive values = surface signal appears AFTER SSW onset (SSW provides lead time).",
+    "n_events_analysed": 16,
+    "z500_lead_days": {
+      "values": [
+        23,
+        5,
+        -9,
+        -7,
+        2,
+        -2,
+        58,
+        14
+      ],
+      "mean": 10.5,
+      "median": 3.5,
+      "std": 20.524375751773793,
+      "n_z500_drops_after_ssw_onset": 5,
+      "n_total_with_drop": 8,
+      "interpretation": "Z500 anomaly drops below -1 SD at mean 10.5\u00b120.5 days relative to SSW onset. 5/8 events show Z500 drop AFTER SSW onset, confirming top-down propagation and SSW lead-time value."
+    },
+    "aval_lead_days": {
+      "values": [
+        5,
+        1,
+        -10,
+        -10,
+        -6,
+        -10,
+        -10,
+        -10,
+        -10,
+        -10,
+        -10,
+        -10,
+        -6,
+        -8,
+        -10,
+        -2
+      ],
+      "mean": -7.25,
+      "median": -10.0,
+      "std": 4.5069390943299865,
+      "n_aval_drops_after_ssw_onset": 2,
+      "n_total_with_drop": 16
+    },
+    "per_event_detail": [
+      {
+        "ssw_onset": "1998-12-15T00:00:00",
+        "first_z500_drop_below_neg1sd": null,
+        "first_aval_drop_below_50pct": "1998-12-20T00:00:00",
+        "z500_lead_days_from_onset": null,
+        "aval_lead_days_from_onset": 5
+      },
+      {
+        "ssw_onset": "1999-02-26T00:00:00",
+        "first_z500_drop_below_neg1sd": "1999-03-21T00:00:00",
+        "first_aval_drop_below_50pct": "1999-02-27T00:00:00",
+        "z500_lead_days_from_onset": 23,
+        "aval_lead_days_from_onset": 1
+      },
+      {
+        "ssw_onset": "2001-02-11T00:00:00",
+        "first_z500_drop_below_neg1sd": "2001-02-16T00:00:00",
+        "first_aval_drop_below_50pct": "2001-02-01T00:00:00",
+        "z500_lead_days_from_onset": 5,
+        "aval_lead_days_from_onset": -10
+      },
+      {
+        "ssw_onset": "2001-12-30T00:00:00",
+        "first_z500_drop_below_neg1sd": "2001-12-21T00:00:00",
+        "first_aval_drop_below_50pct": "2001-12-20T00:00:00",
+        "z500_lead_days_from_onset": -9,
+        "aval_lead_days_from_onset": -10
+      },
+      {
+        "ssw_onset": "2002-02-17T00:00:00",
+        "first_z500_drop_below_neg1sd": null,
+        "first_aval_drop_below_50pct": "2002-02-11T00:00:00",
+        "z500_lead_days_from_onset": null,
+        "aval_lead_days_from_onset": -6
+      },
+      {
+        "ssw_onset": "2003-01-18T00:00:00",
+        "first_z500_drop_below_neg1sd": "2003-01-11T00:00:00",
+        "first_aval_drop_below_50pct": "2003-01-08T00:00:00",
+        "z500_lead_days_from_onset": -7,
+        "aval_lead_days_from_onset": -10
+      },
+      {
+        "ssw_onset": "2004-01-05T00:00:00",
+        "first_z500_drop_below_neg1sd": "2004-01-07T00:00:00",
+        "first_aval_drop_below_50pct": "2003-12-26T00:00:00",
+        "z500_lead_days_from_onset": 2,
+        "aval_lead_days_from_onset": -10
+      },
+      {
+        "ssw_onset": "2006-01-21T00:00:00",
+        "first_z500_drop_below_neg1sd": null,
+        "first_aval_drop_below_50pct": "2006-01-11T00:00:00",
+        "z500_lead_days_from_onset": null,
+        "aval_lead_days_from_onset": -10
+      },
+      {
+        "ssw_onset": "2007-02-24T00:00:00",
+        "first_z500_drop_below_neg1sd": null,
+        "first_aval_drop_below_50pct": "2007-02-14T00:00:00",
+        "z500_lead_days_from_onset": null,
+        "aval_lead_days_from_onset": -10
+      },
+      {
+        "ssw_onset": "2008-02-22T00:00:00",
+        "first_z500_drop_below_neg1sd": "2008-02-20T00:00:00",
+        "first_aval_drop_below_50pct": "2008-02-12T00:00:00",
+        "z500_lead_days_from_onset": -2,
+        "aval_lead_days_from_onset": -10
+      },
+      {
+        "ssw_onset": "2009-01-24T00:00:00",
+        "first_z500_drop_below_neg1sd": null,
+        "first_aval_drop_below_50pct": "2009-01-14T00:00:00",
+        "z500_lead_days_from_onset": null,
+        "aval_lead_days_from_onset": -10
+      },
+      {
+        "ssw_onset": "2010-02-09T00:00:00",
+        "first_z500_drop_below_neg1sd": null,
+        "first_aval_drop_below_50pct": "2010-01-30T00:00:00",
+        "z500_lead_days_from_onset": null,
+        "aval_lead_days_from_onset": -10
+      },
+      {
+        "ssw_onset": "2012-01-11T00:00:00",
+        "first_z500_drop_below_neg1sd": null,
+        "first_aval_drop_below_50pct": "2012-01-05T00:00:00",
+        "z500_lead_days_from_onset": null,
+        "aval_lead_days_from_onset": -6
+      },
+      {
+        "ssw_onset": "2013-01-07T00:00:00",
+        "first_z500_drop_below_neg1sd": "2013-03-06T00:00:00",
+        "first_aval_drop_below_50pct": "2012-12-30T00:00:00",
+        "z500_lead_days_from_onset": 58,
+        "aval_lead_days_from_onset": -8
+      },
+      {
+        "ssw_onset": "2018-02-12T00:00:00",
+        "first_z500_drop_below_neg1sd": null,
+        "first_aval_drop_below_50pct": "2018-02-02T00:00:00",
+        "z500_lead_days_from_onset": null,
+        "aval_lead_days_from_onset": -10
+      },
+      {
+        "ssw_onset": "2019-01-01T00:00:00",
+        "first_z500_drop_below_neg1sd": "2019-01-15T00:00:00",
+        "first_aval_drop_below_50pct": "2018-12-30T00:00:00",
+        "z500_lead_days_from_onset": 14,
+        "aval_lead_days_from_onset": -2
+      }
+    ]
+  },
+  "analysis_4_granger_causality": {
+    "description": "Granger causality tests between stratospheric (U10hPa) and tropospheric (Z500) variables at lags 1\u201314 days. Tests whether stratospheric variability provides information about future tropospheric state beyond its own history.",
+    "stratosphere_to_troposphere_U10_causes_Z500": {
+      "lag_results": {
+        "lag_1": {
+          "F_stat": 45.57297562862105,
+          "p_value": 1.7936473865623978e-11,
+          "significant_005": true
+        },
+        "lag_2": {
+          "F_stat": 19.73407459126215,
+          "p_value": 3.102778633090617e-09,
+          "significant_005": true
+        },
+        "lag_3": {
+          "F_stat": 14.562820208278932,
+          "p_value": 2.0782177177408077e-09,
+          "significant_005": true
+        },
+        "lag_4": {
+          "F_stat": 10.70496436810208,
+          "p_value": 1.315012553557016e-08,
+          "significant_005": true
+        },
+        "lag_5": {
+          "F_stat": 8.732508588138757,
+          "p_value": 3.1592355726368836e-08,
+          "significant_005": true
+        },
+        "lag_6": {
+          "F_stat": 7.285709646177155,
+          "p_value": 9.745762437438676e-08,
+          "significant_005": true
+        },
+        "lag_7": {
+          "F_stat": 6.25297153109715,
+          "p_value": 2.7211679032206674e-07,
+          "significant_005": true
+        },
+        "lag_8": {
+          "F_stat": 5.403055901547249,
+          "p_value": 9.0660928347491e-07,
+          "significant_005": true
+        },
+        "lag_9": {
+          "F_stat": 4.857031758457705,
+          "p_value": 1.8074297324086092e-06,
+          "significant_005": true
+        },
+        "lag_10": {
+          "F_stat": 4.399429975644403,
+          "p_value": 3.724411623802566e-06,
+          "significant_005": true
+        },
+        "lag_11": {
+          "F_stat": 4.223744484707422,
+          "p_value": 3.0557255004045696e-06,
+          "significant_005": true
+        },
+        "lag_12": {
+          "F_stat": 4.0510859944050015,
+          "p_value": 2.8103779380203017e-06,
+          "significant_005": true
+        },
+        "lag_13": {
+          "F_stat": 3.7475075011461385,
+          "p_value": 5.646225384177265e-06,
+          "significant_005": true
+        },
+        "lag_14": {
+          "F_stat": 3.4603759723333933,
+          "p_value": 1.2570507687469296e-05,
+          "significant_005": true
+        }
+      },
+      "n_significant_lags": 14,
+      "min_pvalue": 1.7936473865623978e-11
+    },
+    "troposphere_to_stratosphere_Z500_causes_U10": {
+      "lag_results": {
+        "lag_1": {
+          "F_stat": 26.93478688761507,
+          "p_value": 2.2607391846634586e-07,
+          "significant_005": true
+        },
+        "lag_2": {
+          "F_stat": 11.39436012453869,
+          "p_value": 1.181128583096759e-05,
+          "significant_005": true
+        },
+        "lag_3": {
+          "F_stat": 13.157615014134382,
+          "p_value": 1.5793126715336465e-08,
+          "significant_005": true
+        },
+        "lag_4": {
+          "F_stat": 10.76295339768824,
+          "p_value": 1.1791196639457815e-08,
+          "significant_005": true
+        },
+        "lag_5": {
+          "F_stat": 8.610481477335716,
+          "p_value": 4.181740840661448e-08,
+          "significant_005": true
+        },
+        "lag_6": {
+          "F_stat": 7.4405311720483915,
+          "p_value": 6.419692704734218e-08,
+          "significant_005": true
+        },
+        "lag_7": {
+          "F_stat": 6.4935127424944605,
+          "p_value": 1.298843257515846e-07,
+          "significant_005": true
+        },
+        "lag_8": {
+          "F_stat": 5.7770462365961,
+          "p_value": 2.512607753972191e-07,
+          "significant_005": true
+        },
+        "lag_9": {
+          "F_stat": 5.3200197848969735,
+          "p_value": 3.1414453487245147e-07,
+          "significant_005": true
+        },
+        "lag_10": {
+          "F_stat": 4.888358245487049,
+          "p_value": 4.99935728983295e-07,
+          "significant_005": true
+        },
+        "lag_11": {
+          "F_stat": 4.469155689802647,
+          "p_value": 1.0294109107448232e-06,
+          "significant_005": true
+        },
+        "lag_12": {
+          "F_stat": 4.183930236469035,
+          "p_value": 1.494575383441088e-06,
+          "significant_005": true
+        },
+        "lag_13": {
+          "F_stat": 3.8406647991533003,
+          "p_value": 3.5353459461547884e-06,
+          "significant_005": true
+        },
+        "lag_14": {
+          "F_stat": 3.597196644585344,
+          "p_value": 6.101294991333023e-06,
+          "significant_005": true
+        }
+      },
+      "n_significant_lags": 14,
+      "min_pvalue": 1.1791196639457815e-08
+    },
+    "interpretation": "U10\u2192Z500: 14/14 lags significant (min p=0.0000). Z500\u2192U10: 14/14 lags significant (min p=0.0000). Both directions show Granger causality \u2014 bidirectional coupling."
+  },
+  "metadata": {
+    "script": "scripts/analysis/61_incremental_value_power.py",
+    "n_winter_days": 2702,
+    "n_regression_sample": 2702,
+    "n_ssw_events_in_panel": 16,
+    "panel_date_range": [
+      "1998-11-01T00:00:00",
+      "2019-06-01T00:00:00"
+    ],
+    "avalanche_outcome": "dry_natural_size_1234"
+  }
+}

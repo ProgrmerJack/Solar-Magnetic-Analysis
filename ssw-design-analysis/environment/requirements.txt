@@ -1,0 +1,24 @@
+# Direct dependencies of ssw-design-analysis. Pinned versions live in
+# requirements.lock.txt, which is what a reproduction should install.
+#
+# Recreate with:
+#   python3 -m venv .venv && .venv/bin/pip install -r ssw-design-analysis/environment/requirements.lock.txt
+#
+# Verify with:
+#   .venv/bin/python ssw-design-analysis/environment/check_environment.py
+
+numpy
+pandas
+scipy
+xarray
+netCDF4          # NetCDF4/HDF5 backend -- without it xarray cannot open any .nc in this repo
+h5netcdf         # second NetCDF backend, used as a fallback
+cftime           # non-standard model calendars (CMIP6, SNAPSI)
+pyarrow          # parquet
+scikit-learn     # ridge / gradient boosting in the predictability arm
+statsmodels
+matplotlib
+requests         # CEDA, THREDDS, CPC downloads
+zarr             # ERA5 via WeatherBench2 public GCS
+gcsfs            # anonymous GCS access for the above
+dask             # chunked reads of the CMIP6 / SNAPSI ensembles

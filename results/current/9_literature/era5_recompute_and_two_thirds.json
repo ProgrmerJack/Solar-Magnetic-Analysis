@@ -1,0 +1,78 @@
+{
+  "published": {
+    "ACP_2026_NAO_DW": -0.762,
+    "ACP_2026_NAO_NDW": 0.088,
+    "ACP_2026_contrast": -0.85,
+    "Baldwin_2021_fraction": "about two thirds"
+  },
+  "n_events": 39,
+  "selection_window": [
+    8,
+    52
+  ],
+  "outcome_window": [
+    1,
+    60
+  ],
+  "variants": {
+    "Karpechko_1000hPa": {
+      "selection_field": "nam_1000",
+      "n_DW": 21,
+      "n_NDW": 18,
+      "rate_DW": 0.538,
+      "rate_DW_null": 0.113,
+      "DW_composite": -0.9317,
+      "NDW_composite": -0.2481,
+      "contrast": -0.6836,
+      "dS": -0.6671,
+      "beta": 0.9858,
+      "selection_term": -0.6576,
+      "residual": -0.026,
+      "p_residual": 0.5888235294117647,
+      "pct_from_selection": 96.2,
+      "null_contrast": -0.6636,
+      "pct_reproduced_under_null": 97.1,
+      "cond_pass_rates": {
+        "c1_mean_negative": 0.718,
+        "c2_frac_negative": 0.744,
+        "c3_stratospheric": 0.641
+      }
+    },
+    "ACP2026_850hPa": {
+      "selection_field": "nam_850",
+      "n_DW": 23,
+      "n_NDW": 16,
+      "rate_DW": 0.59,
+      "rate_DW_null": 0.131,
+      "DW_composite": -0.8784,
+      "NDW_composite": -0.2393,
+      "contrast": -0.6392,
+      "dS": -0.6827,
+      "beta": 0.9559,
+      "selection_term": -0.6525,
+      "residual": 0.0134,
+      "p_residual": 0.90574456218628,
+      "pct_from_selection": 102.1,
+      "null_contrast": -0.5934,
+      "pct_reproduced_under_null": 92.8,
+      "cond_pass_rates": {
+        "c1_mean_negative": 0.744,
+        "c2_frac_negative": 0.718,
+        "c3_stratospheric": 0.641
+      }
+    }
+  },
+  "two_thirds_test": {
+    "measured_shift_sigma": -0.639,
+    "observed_pass_rate_c1c2": 0.6923,
+    "null_pass_rate_c1c2": 0.3094,
+    "shifted_pseudo_pass_rate_c1c2": 0.7437,
+    "shifted_pseudo_CI95": [
+      0.6154,
+      0.8718
+    ],
+    "shift_model_reproduces_observed_rate": true,
+    "full_criterion_rate_observed": 0.5385
+  },
+  "verdict": "In ERA5 the published criterion gives a DW-minus-NDW contrast of -0.684 of which 96% is the selection term. A pure surface shift of -0.639 sigma applied to event-free dates gives a 74% pass rate against 69% observed -- so 'about two thirds propagate downward' is what ONE shifted population produces, with no classes in it."
+}

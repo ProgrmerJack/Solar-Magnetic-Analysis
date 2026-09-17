@@ -1,0 +1,24 @@
+continuous sample: 6,958 winter days, 47 winters, 1979-01-01..2024-12-31
+  (the event study uses 43 events in 36 winters)
+
+  corr(X wave driving, M vortex) = -0.437   (negative expected: waves decelerate the vortex)
+  corr(M vortex, Y surface)      = +0.185   (positive expected: weak vortex -> negative AO)
+  corr(X wave driving, Y surface)= -0.149
+
+=== MEDIATION: does the stratosphere carry the signal? ===
+  total   X -> Y            -0.1518  CI [-0.2243, -0.0756]  p=0.0000
+  direct  X -> Y | M        -0.1303  CI [-0.2177, -0.0443]  p=0.0030
+  indirect (via vortex)     -0.0215  CI [-0.0873, 0.0408]  p=0.5020
+  M coefficient (vortex->Y) +0.0409  CI [-0.0776, 0.1641]  p=0.5020
+
+  MEDIATED SHARE = 14.2%   CI [-34.8%, 59.7%]
+
+=== PRECISION vs THE EVENT STUDY ===
+  continuous vortex->surface coefficient SE: 0.0608 (6,958 days, 47 winters)
+
+=== SENSITIVITY ===
+  an unmeasured confounder of the vortex->surface path would need
+  r(U,M) x r(U,Y) >= 0.041 to explain the mediated path away.
+  (for equal correlations that is r >= 0.202 on both)
+
+Saved -> continuous_mediation.json

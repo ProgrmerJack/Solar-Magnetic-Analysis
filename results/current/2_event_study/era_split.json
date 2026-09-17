@@ -1,0 +1,89 @@
+{
+  "split_year": 1980,
+  "n_boot": 4000,
+  "n_events_early": 14,
+  "n_events_late": 29,
+  "bins": {
+    "-60..-46": {
+      "effect_pre1980": -0.287,
+      "effect_1980on": -0.1779,
+      "difference": -0.109,
+      "difference_CI95": [
+        -1.5305,
+        1.3997
+      ],
+      "difference_p": 0.8975
+    },
+    "-45..-31": {
+      "effect_pre1980": -0.21,
+      "effect_1980on": -0.3973,
+      "difference": 0.1874,
+      "difference_CI95": [
+        -1.1722,
+        1.65
+      ],
+      "difference_p": 0.777
+    },
+    "-30..-16": {
+      "effect_pre1980": -1.7354,
+      "effect_1980on": -0.4678,
+      "difference": -1.2676,
+      "difference_CI95": [
+        -2.6339,
+        0.3046
+      ],
+      "difference_p": 0.115
+    },
+    "-15..-1": {
+      "effect_pre1980": -1.3427,
+      "effect_1980on": -0.3253,
+      "difference": -1.0174,
+      "difference_CI95": [
+        -2.0836,
+        0.3738
+      ],
+      "difference_p": 0.131
+    },
+    "+0..+14": {
+      "effect_pre1980": -1.2122,
+      "effect_1980on": -0.68,
+      "difference": -0.5322,
+      "difference_CI95": [
+        -2.0609,
+        1.1799
+      ],
+      "difference_p": 0.496
+    },
+    "+15..+29": {
+      "effect_pre1980": -1.2101,
+      "effect_1980on": -1.0308,
+      "difference": -0.1792,
+      "difference_CI95": [
+        -1.5473,
+        1.3337
+      ],
+      "difference_p": 0.8035
+    },
+    "+30..+44": {
+      "effect_pre1980": -1.6851,
+      "effect_1980on": -0.5555,
+      "difference": -1.1296,
+      "difference_CI95": [
+        -2.372,
+        0.3388
+      ],
+      "difference_p": 0.1225
+    },
+    "+45..+60": {
+      "effect_pre1980": -1.2456,
+      "effect_1980on": -0.5699,
+      "difference": -0.6757,
+      "difference_CI95": [
+        -1.8759,
+        0.67
+      ],
+      "difference_p": 0.3095
+    }
+  },
+  "interpretation_note": "dating-error explanation requires the post-onset effect to be attenuated pre-1980 as well; a real change does not"
+}

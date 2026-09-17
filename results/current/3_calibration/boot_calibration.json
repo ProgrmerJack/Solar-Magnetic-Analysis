@@ -1,0 +1,106 @@
+{
+  "n_draw": 200,
+  "n_boot": 1000,
+  "series": {
+    "AO": {
+      "-60..-46": {
+        "null_SD": 0.3227,
+        "mean_bootstrap_SE": 0.3233,
+        "SE_ratio": 1.002,
+        "coverage_of_zero": 0.925
+      },
+      "-45..-31": {
+        "null_SD": 0.3781,
+        "mean_bootstrap_SE": 0.3505,
+        "SE_ratio": 0.927,
+        "coverage_of_zero": 0.92
+      },
+      "-30..-16": {
+        "null_SD": 0.3837,
+        "mean_bootstrap_SE": 0.3637,
+        "SE_ratio": 0.948,
+        "coverage_of_zero": 0.94
+      },
+      "-15..-1": {
+        "null_SD": 0.3775,
+        "mean_bootstrap_SE": 0.3778,
+        "SE_ratio": 1.001,
+        "coverage_of_zero": 0.92
+      },
+      "+0..+14": {
+        "null_SD": 0.4006,
+        "mean_bootstrap_SE": 0.3823,
+        "SE_ratio": 0.954,
+        "coverage_of_zero": 0.925
+      },
+      "+15..+29": {
+        "null_SD": 0.3571,
+        "mean_bootstrap_SE": 0.3559,
+        "SE_ratio": 0.997,
+        "coverage_of_zero": 0.95
+      },
+      "+30..+44": {
+        "null_SD": 0.3469,
+        "mean_bootstrap_SE": 0.3341,
+        "SE_ratio": 0.963,
+        "coverage_of_zero": 0.92
+      },
+      "+45..+60": {
+        "null_SD": 0.346,
+        "mean_bootstrap_SE": 0.3312,
+        "SE_ratio": 0.957,
+        "coverage_of_zero": 0.915
+      }
+    },
+    "AAO": {
+      "-60..-46": {
+        "null_SD": 0.4062,
+        "mean_bootstrap_SE": 0.3829,
+        "SE_ratio": 0.943,
+        "coverage_of_zero": 0.89
+      },
+      "-45..-31": {
+        "null_SD": 0.4225,
+        "mean_bootstrap_SE": 0.4032,
+        "SE_ratio": 0.954,
+        "coverage_of_zero": 0.91
+      },
+      "-30..-16": {
+        "null_SD": 0.393,
+        "mean_bootstrap_SE": 0.399,
+        "SE_ratio": 1.015,
+        "coverage_of_zero": 0.94
+      },
+      "-15..-1": {
+        "null_SD": 0.391,
+        "mean_bootstrap_SE": 0.3844,
+        "SE_ratio": 0.983,
+        "coverage_of_zero": 0.94
+      },
+      "+0..+14": {
+        "null_SD": 0.3815,
+        "mean_bootstrap_SE": 0.3735,
+        "SE_ratio": 0.979,
+        "coverage_of_zero": 0.945
+      },
+      "+15..+29": {
+        "null_SD": 0.3561,
+        "mean_bootstrap_SE": 0.3701,
+        "SE_ratio": 1.039,
+        "coverage_of_zero": 0.96
+      },
+      "+30..+44": {
+        "null_SD": 0.3549,
+        "mean_bootstrap_SE": 0.3672,
+        "SE_ratio": 1.034,
+        "coverage_of_zero": 0.94
+      },
+      "+45..+60": {
+        "null_SD": 0.352,
+        "mean_bootstrap_SE": 0.372,
+        "SE_ratio": 1.057,
+        "coverage_of_zero": 0.945
+      }
+    }
+  }
+}

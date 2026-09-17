@@ -1,0 +1,403 @@
+{
+  "catalog": "ssw_canonical (NOAA CSL / Butler et al. 2017)",
+  "n_ssw": 45,
+  "design": "Poisson, region x winter FE, region-specific DOY harmonics, winter-block bootstrap across regions",
+  "domains": {
+    "ALPINE (primary, mechanism domain)": {
+      "placebo_pre": {
+        "window": "placebo_pre",
+        "lag_days": [
+          -45,
+          -16
+        ],
+        "IRR": 0.969,
+        "CI95": [
+          0.572,
+          1.4536
+        ],
+        "p_one_sided_suppression": 0.413,
+        "n_region_winters": 30,
+        "n_days": 5142,
+        "n_events_observed": 3696.0,
+        "regions": [
+          "AT-Austria-LAWIS",
+          "CH-Davos-natural"
+        ],
+        "n_boot": 2000
+      },
+      "onset": {
+        "window": "onset",
+        "lag_days": [
+          -15,
+          15
+        ],
+        "IRR": 1.0147,
+        "CI95": [
+          0.6357,
+          1.4976
+        ],
+        "p_one_sided_suppression": 0.5215,
+        "n_region_winters": 30,
+        "n_days": 5142,
+        "n_events_observed": 3696.0,
+        "regions": [
+          "AT-Austria-LAWIS",
+          "CH-Davos-natural"
+        ],
+        "n_boot": 2000
+      },
+      "early_post": {
+        "window": "early_post",
+        "lag_days": [
+          0,
+          14
+        ],
+        "IRR": 1.022,
+        "CI95": [
+          0.6342,
+          1.3406
+        ],
+        "p_one_sided_suppression": 0.539,
+        "n_region_winters": 30,
+        "n_days": 5142,
+        "n_events_observed": 3696.0,
+        "regions": [
+          "AT-Austria-LAWIS",
+          "CH-Davos-natural"
+        ],
+        "n_boot": 2000
+      },
+      "mid_post": {
+        "window": "mid_post",
+        "lag_days": [
+          15,
+          29
+        ],
+        "IRR": 1.1055,
+        "CI95": [
+          0.6079,
+          2.0646
+        ],
+        "p_one_sided_suppression": 0.594,
+        "n_region_winters": 30,
+        "n_days": 5142,
+        "n_events_observed": 3696.0,
+        "regions": [
+          "AT-Austria-LAWIS",
+          "CH-Davos-natural"
+        ],
+        "n_boot": 2000
+      },
+      "late_post": {
+        "window": "late_post",
+        "lag_days": [
+          30,
+          44
+        ],
+        "IRR": 0.9989,
+        "CI95": [
+          0.6228,
+          1.5128
+        ],
+        "p_one_sided_suppression": 0.519,
+        "n_region_winters": 30,
+        "n_days": 5142,
+        "n_events_observed": 3696.0,
+        "regions": [
+          "AT-Austria-LAWIS",
+          "CH-Davos-natural"
+        ],
+        "n_boot": 2000
+      },
+      "post_15_44": {
+        "window": "post_15_44",
+        "lag_days": [
+          15,
+          44
+        ],
+        "IRR": 1.073,
+        "CI95": [
+          0.7302,
+          1.786
+        ],
+        "p_one_sided_suppression": 0.649,
+        "n_region_winters": 30,
+        "n_days": 5142,
+        "n_events_observed": 3696.0,
+        "regions": [
+          "AT-Austria-LAWIS",
+          "CH-Davos-natural"
+        ],
+        "n_boot": 2000
+      }
+    },
+    "US (secondary, out-of-domain)": {
+      "placebo_pre": {
+        "window": "placebo_pre",
+        "lag_days": [
+          -45,
+          -16
+        ],
+        "IRR": 0.8867,
+        "CI95": [
+          0.5482,
+          1.3546
+        ],
+        "p_one_sided_suppression": 0.2825,
+        "n_region_winters": 49,
+        "n_days": 8759,
+        "n_events_observed": 440.0,
+        "regions": [
+          "US-continental",
+          "US-maritime"
+        ],
+        "n_boot": 2000
+      },
+      "onset": {
+        "window": "onset",
+        "lag_days": [
+          -15,
+          15
+        ],
+        "IRR": 0.8067,
+        "CI95": [
+          0.5508,
+          1.1598
+        ],
+        "p_one_sided_suppression": 0.1375,
+        "n_region_winters": 49,
+        "n_days": 8759,
+        "n_events_observed": 440.0,
+        "regions": [
+          "US-continental",
+          "US-maritime"
+        ],
+        "n_boot": 2000
+      },
+      "early_post": {
+        "window": "early_post",
+        "lag_days": [
+          0,
+          14
+        ],
+        "IRR": 0.7895,
+        "CI95": [
+          0.4564,
+          1.1907
+        ],
+        "p_one_sided_suppression": 0.1325,
+        "n_region_winters": 49,
+        "n_days": 8759,
+        "n_events_observed": 440.0,
+        "regions": [
+          "US-continental",
+          "US-maritime"
+        ],
+        "n_boot": 2000
+      },
+      "mid_post": {
+        "window": "mid_post",
+        "lag_days": [
+          15,
+          29
+        ],
+        "IRR": 1.1642,
+        "CI95": [
+          0.8796,
+          1.4838
+        ],
+        "p_one_sided_suppression": 0.871,
+        "n_region_winters": 49,
+        "n_days": 8759,
+        "n_events_observed": 440.0,
+        "regions": [
+          "US-continental",
+          "US-maritime"
+        ],
+        "n_boot": 2000
+      },
+      "late_post": {
+        "window": "late_post",
+        "lag_days": [
+          30,
+          44
+        ],
+        "IRR": 1.1416,
+        "CI95": [
+          0.7438,
+          1.6353
+        ],
+        "p_one_sided_suppression": 0.71,
+        "n_region_winters": 49,
+        "n_days": 8759,
+        "n_events_observed": 440.0,
+        "regions": [
+          "US-continental",
+          "US-maritime"
+        ],
+        "n_boot": 2000
+      },
+      "post_15_44": {
+        "window": "post_15_44",
+        "lag_days": [
+          15,
+          44
+        ],
+        "IRR": 1.2118,
+        "CI95": [
+          0.915,
+          1.5729
+        ],
+        "p_one_sided_suppression": 0.9135,
+        "n_region_winters": 49,
+        "n_days": 8759,
+        "n_events_observed": 440.0,
+        "regions": [
+          "US-continental",
+          "US-maritime"
+        ],
+        "n_boot": 2000
+      }
+    },
+    "ALL regions": {
+      "placebo_pre": {
+        "window": "placebo_pre",
+        "lag_days": [
+          -45,
+          -16
+        ],
+        "IRR": 0.96,
+        "CI95": [
+          0.618,
+          1.4026
+        ],
+        "p_one_sided_suppression": 0.3955,
+        "n_region_winters": 79,
+        "n_days": 13901,
+        "n_events_observed": 4136.0,
+        "regions": [
+          "AT-Austria-LAWIS",
+          "CH-Davos-natural",
+          "US-continental",
+          "US-maritime"
+        ],
+        "n_boot": 2000
+      },
+      "onset": {
+        "window": "onset",
+        "lag_days": [
+          -15,
+          15
+        ],
+        "IRR": 0.9914,
+        "CI95": [
+          0.6377,
+          1.3788
+        ],
+        "p_one_sided_suppression": 0.48,
+        "n_region_winters": 79,
+        "n_days": 13901,
+        "n_events_observed": 4136.0,
+        "regions": [
+          "AT-Austria-LAWIS",
+          "CH-Davos-natural",
+          "US-continental",
+          "US-maritime"
+        ],
+        "n_boot": 2000
+      },
+      "early_post": {
+        "window": "early_post",
+        "lag_days": [
+          0,
+          14
+        ],
+        "IRR": 0.9963,
+        "CI95": [
+          0.6218,
+          1.2913
+        ],
+        "p_one_sided_suppression": 0.464,
+        "n_region_winters": 79,
+        "n_days": 13901,
+        "n_events_observed": 4136.0,
+        "regions": [
+          "AT-Austria-LAWIS",
+          "CH-Davos-natural",
+          "US-continental",
+          "US-maritime"
+        ],
+        "n_boot": 2000
+      },
+      "mid_post": {
+        "window": "mid_post",
+        "lag_days": [
+          15,
+          29
+        ],
+        "IRR": 1.112,
+        "CI95": [
+          0.6809,
+          1.8835
+        ],
+        "p_one_sided_suppression": 0.6315,
+        "n_region_winters": 79,
+        "n_days": 13901,
+        "n_events_observed": 4136.0,
+        "regions": [
+          "AT-Austria-LAWIS",
+          "CH-Davos-natural",
+          "US-continental",
+          "US-maritime"
+        ],
+        "n_boot": 2000
+      },
+      "late_post": {
+        "window": "late_post",
+        "lag_days": [
+          30,
+          44
+        ],
+        "IRR": 1.0149,
+        "CI95": [
+          0.6789,
+          1.4937
+        ],
+        "p_one_sided_suppression": 0.539,
+        "n_region_winters": 79,
+        "n_days": 13901,
+        "n_events_observed": 4136.0,
+        "regions": [
+          "AT-Austria-LAWIS",
+          "CH-Davos-natural",
+          "US-continental",
+          "US-maritime"
+        ],
+        "n_boot": 2000
+      },
+      "post_15_44": {
+        "window": "post_15_44",
+        "lag_days": [
+          15,
+          44
+        ],
+        "IRR": 1.088,
+        "CI95": [
+          0.7786,
+          1.6862
+        ],
+        "p_one_sided_suppression": 0.6965,
+        "n_region_winters": 79,
+        "n_days": 13901,
+        "n_events_observed": 4136.0,
+        "regions": [
+          "AT-Austria-LAWIS",
+          "CH-Davos-natural",
+          "US-continental",
+          "US-maritime"
+        ],
+        "n_boot": 2000
+      }
+    }
+  }
+}

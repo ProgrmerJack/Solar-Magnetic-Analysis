@@ -1,0 +1,54 @@
+{
+  "window": [
+    8,
+    52
+  ],
+  "n_draw": 1500,
+  "n_real": 43,
+  "n_real_dSSW": 30,
+  "rate_real": 0.698,
+  "rate_null": 0.384,
+  "rate_p_value": 0.0,
+  "null_centres_on_zero": 0.0034,
+  "outcomes": {
+    "ao": {
+      "real_all_events": -0.8946,
+      "real_dSSW_only": -1.4334,
+      "null_all_events": 0.0034,
+      "null_same_criterion": -1.0514,
+      "null_rate_matched": -0.5292,
+      "null_rate_matched_CI95": [
+        -0.8619,
+        -0.177
+      ],
+      "pct_of_real_reproduced_by_selection": 36.9,
+      "p_real_vs_matched_null": 0.0
+    },
+    "nao": {
+      "real_all_events": -0.3004,
+      "real_dSSW_only": -0.4644,
+      "null_all_events": -0.0023,
+      "null_same_criterion": -0.2922,
+      "null_rate_matched": -0.1397,
+      "null_rate_matched_CI95": [
+        -0.2941,
+        0.0128
+      ],
+      "pct_of_real_reproduced_by_selection": 30.1,
+      "p_real_vs_matched_null": 0.0
+    },
+    "pna": {
+      "real_all_events": 0.1192,
+      "real_dSSW_only": 0.1862,
+      "null_all_events": 0.0217,
+      "null_same_criterion": 0.1099,
+      "null_rate_matched": 0.0822,
+      "null_rate_matched_CI95": [
+        -0.0808,
+        0.2338
+      ],
+      "pct_of_real_reproduced_by_selection": 44.2,
+      "p_real_vs_matched_null": 0.896
+    }
+  }
+}

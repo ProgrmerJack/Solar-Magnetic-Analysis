@@ -1,0 +1,2617 @@
+{
+  "phase1_stability": {
+    "ssi_pwl": {
+      "n_events": 15,
+      "n_decrease": 13,
+      "mean_pct_change": -16.8,
+      "wilcoxon_p": 0.012451,
+      "ttest_p": 0.014255,
+      "sign_p": 0.007385,
+      "cohens_d": -0.722,
+      "events": [
+        {
+          "date": "2001-12-30",
+          "pre_mean": 4.4883,
+          "post_mean": 3.0594,
+          "pct_change": -31.8,
+          "direction": "decrease"
+        },
+        {
+          "date": "2002-02-17",
+          "pre_mean": 2.7726,
+          "post_mean": 1.5461,
+          "pct_change": -44.2,
+          "direction": "decrease"
+        },
+        {
+          "date": "2003-01-18",
+          "pre_mean": 2.6389,
+          "post_mean": 2.1167,
+          "pct_change": -19.8,
+          "direction": "decrease"
+        },
+        {
+          "date": "2004-01-05",
+          "pre_mean": 2.6273,
+          "post_mean": 2.6152,
+          "pct_change": -0.5,
+          "direction": "decrease"
+        },
+        {
+          "date": "2006-01-21",
+          "pre_mean": 2.8323,
+          "post_mean": 2.0959,
+          "pct_change": -26.0,
+          "direction": "decrease"
+        },
+        {
+          "date": "2007-02-24",
+          "pre_mean": 2.9969,
+          "post_mean": 1.744,
+          "pct_change": -41.8,
+          "direction": "decrease"
+        },
+        {
+          "date": "2008-02-22",
+          "pre_mean": 2.4079,
+          "post_mean": 2.1632,
+          "pct_change": -10.2,
+          "direction": "decrease"
+        },
+        {
+          "date": "2009-01-24",
+          "pre_mean": 3.4771,
+          "post_mean": 2.1869,
+          "pct_change": -37.1,
+          "direction": "decrease"
+        },
+        {
+          "date": "2010-02-09",
+          "pre_mean": 2.7789,
+          "post_mean": 2.2242,
+          "pct_change": -20.0,
+          "direction": "decrease"
+        },
+        {
+          "date": "2010-03-24",
+          "pre_mean": 2.2183,
+          "post_mean": 4.0941,
+          "pct_change": 84.6,
+          "direction": "increase"
+        },
+        {
+          "date": "2012-01-11",
+          "pre_mean": 4.0984,
+          "post_mean": 3.3731,
+          "pct_change": -17.7,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-06",
+          "pre_mean": 3.7899,
+          "post_mean": 3.0035,
+          "pct_change": -20.7,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-07",
+          "pre_mean": 3.812,
+          "post_mean": 2.953,
+          "pct_change": -22.5,
+          "direction": "decrease"
+        },
+        {
+          "date": "2018-02-12",
+          "pre_mean": 3.603,
+          "post_mean": 1.8679,
+          "pct_change": -48.2,
+          "direction": "decrease"
+        },
+        {
+          "date": "2019-01-01",
+          "pre_mean": 3.3585,
+          "post_mean": 3.4693,
+          "pct_change": 3.3,
+          "direction": "increase"
+        }
+      ]
+    },
+    "sk38_pwl": {
+      "n_events": 15,
+      "n_decrease": 13,
+      "mean_pct_change": -20.3,
+      "wilcoxon_p": 0.010254,
+      "ttest_p": 0.020196,
+      "sign_p": 0.007385,
+      "cohens_d": -0.676,
+      "events": [
+        {
+          "date": "2001-12-30",
+          "pre_mean": 4.2414,
+          "post_mean": 2.5084,
+          "pct_change": -40.9,
+          "direction": "decrease"
+        },
+        {
+          "date": "2002-02-17",
+          "pre_mean": 2.1809,
+          "post_mean": 0.8131,
+          "pct_change": -62.7,
+          "direction": "decrease"
+        },
+        {
+          "date": "2003-01-18",
+          "pre_mean": 1.8779,
+          "post_mean": 1.3604,
+          "pct_change": -27.6,
+          "direction": "decrease"
+        },
+        {
+          "date": "2004-01-05",
+          "pre_mean": 2.071,
+          "post_mean": 1.9881,
+          "pct_change": -4.0,
+          "direction": "decrease"
+        },
+        {
+          "date": "2006-01-21",
+          "pre_mean": 2.0245,
+          "post_mean": 1.1829,
+          "pct_change": -41.6,
+          "direction": "decrease"
+        },
+        {
+          "date": "2007-02-24",
+          "pre_mean": 2.3692,
+          "post_mean": 1.1848,
+          "pct_change": -50.0,
+          "direction": "decrease"
+        },
+        {
+          "date": "2008-02-22",
+          "pre_mean": 1.7008,
+          "post_mean": 1.5098,
+          "pct_change": -11.2,
+          "direction": "decrease"
+        },
+        {
+          "date": "2009-01-24",
+          "pre_mean": 2.773,
+          "post_mean": 1.4204,
+          "pct_change": -48.8,
+          "direction": "decrease"
+        },
+        {
+          "date": "2010-02-09",
+          "pre_mean": 1.9842,
+          "post_mean": 1.3459,
+          "pct_change": -32.2,
+          "direction": "decrease"
+        },
+        {
+          "date": "2010-03-24",
+          "pre_mean": 1.4248,
+          "post_mean": 3.7737,
+          "pct_change": 164.9,
+          "direction": "increase"
+        },
+        {
+          "date": "2012-01-11",
+          "pre_mean": 3.6306,
+          "post_mean": 2.7735,
+          "pct_change": -23.6,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-06",
+          "pre_mean": 3.2329,
+          "post_mean": 2.2969,
+          "pct_change": -29.0,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-07",
+          "pre_mean": 3.2638,
+          "post_mean": 2.2394,
+          "pct_change": -31.4,
+          "direction": "decrease"
+        },
+        {
+          "date": "2018-02-12",
+          "pre_mean": 3.1283,
+          "post_mean": 1.0013,
+          "pct_change": -68.0,
+          "direction": "decrease"
+        },
+        {
+          "date": "2019-01-01",
+          "pre_mean": 2.7332,
+          "post_mean": 2.7637,
+          "pct_change": 1.1,
+          "direction": "increase"
+        }
+      ]
+    },
+    "sn38_pwl": {
+      "n_events": 15,
+      "n_decrease": 14,
+      "mean_pct_change": -18.0,
+      "wilcoxon_p": 0.004272,
+      "ttest_p": 0.002667,
+      "sign_p": 0.000977,
+      "cohens_d": -0.94,
+      "events": [
+        {
+          "date": "2001-12-30",
+          "pre_mean": 4.9825,
+          "post_mean": 3.8755,
+          "pct_change": -22.2,
+          "direction": "decrease"
+        },
+        {
+          "date": "2002-02-17",
+          "pre_mean": 3.4973,
+          "post_mean": 1.9125,
+          "pct_change": -45.3,
+          "direction": "decrease"
+        },
+        {
+          "date": "2003-01-18",
+          "pre_mean": 3.3393,
+          "post_mean": 2.5616,
+          "pct_change": -23.3,
+          "direction": "decrease"
+        },
+        {
+          "date": "2004-01-05",
+          "pre_mean": 3.4962,
+          "post_mean": 2.7463,
+          "pct_change": -21.4,
+          "direction": "decrease"
+        },
+        {
+          "date": "2006-01-21",
+          "pre_mean": 3.2199,
+          "post_mean": 2.4435,
+          "pct_change": -24.1,
+          "direction": "decrease"
+        },
+        {
+          "date": "2007-02-24",
+          "pre_mean": 3.7446,
+          "post_mean": 1.9387,
+          "pct_change": -48.2,
+          "direction": "decrease"
+        },
+        {
+          "date": "2008-02-22",
+          "pre_mean": 3.2893,
+          "post_mean": 2.9295,
+          "pct_change": -10.9,
+          "direction": "decrease"
+        },
+        {
+          "date": "2009-01-24",
+          "pre_mean": 3.4635,
+          "post_mean": 2.1524,
+          "pct_change": -37.9,
+          "direction": "decrease"
+        },
+        {
+          "date": "2010-02-09",
+          "pre_mean": 3.099,
+          "post_mean": 2.7319,
+          "pct_change": -11.8,
+          "direction": "decrease"
+        },
+        {
+          "date": "2010-03-24",
+          "pre_mean": 2.8326,
+          "post_mean": 4.0876,
+          "pct_change": 44.3,
+          "direction": "increase"
+        },
+        {
+          "date": "2012-01-11",
+          "pre_mean": 3.9534,
+          "post_mean": 3.2259,
+          "pct_change": -18.4,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-06",
+          "pre_mean": 3.8783,
+          "post_mean": 3.593,
+          "pct_change": -7.4,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-07",
+          "pre_mean": 3.9031,
+          "post_mean": 3.5367,
+          "pct_change": -9.4,
+          "direction": "decrease"
+        },
+        {
+          "date": "2018-02-12",
+          "pre_mean": 3.1715,
+          "post_mean": 2.2833,
+          "pct_change": -28.0,
+          "direction": "decrease"
+        },
+        {
+          "date": "2019-01-01",
+          "pre_mean": 3.4123,
+          "post_mean": 3.1893,
+          "pct_change": -6.5,
+          "direction": "decrease"
+        }
+      ]
+    },
+    "ccl_pwl": {
+      "n_events": 15,
+      "n_decrease": 14,
+      "mean_pct_change": -17.1,
+      "wilcoxon_p": 0.008362,
+      "ttest_p": 0.045048,
+      "sign_p": 0.000977,
+      "cohens_d": -0.568,
+      "events": [
+        {
+          "date": "2001-12-30",
+          "pre_mean": 2.5864,
+          "post_mean": 1.5235,
+          "pct_change": -41.1,
+          "direction": "decrease"
+        },
+        {
+          "date": "2002-02-17",
+          "pre_mean": 1.2313,
+          "post_mean": 0.4864,
+          "pct_change": -60.5,
+          "direction": "decrease"
+        },
+        {
+          "date": "2003-01-18",
+          "pre_mean": 0.862,
+          "post_mean": 0.6841,
+          "pct_change": -20.6,
+          "direction": "decrease"
+        },
+        {
+          "date": "2004-01-05",
+          "pre_mean": 1.2502,
+          "post_mean": 1.1896,
+          "pct_change": -4.8,
+          "direction": "decrease"
+        },
+        {
+          "date": "2006-01-21",
+          "pre_mean": 1.0307,
+          "post_mean": 0.5956,
+          "pct_change": -42.2,
+          "direction": "decrease"
+        },
+        {
+          "date": "2007-02-24",
+          "pre_mean": 1.4282,
+          "post_mean": 0.7295,
+          "pct_change": -48.9,
+          "direction": "decrease"
+        },
+        {
+          "date": "2008-02-22",
+          "pre_mean": 1.246,
+          "post_mean": 1.1102,
+          "pct_change": -10.9,
+          "direction": "decrease"
+        },
+        {
+          "date": "2009-01-24",
+          "pre_mean": 1.3021,
+          "post_mean": 0.6686,
+          "pct_change": -48.6,
+          "direction": "decrease"
+        },
+        {
+          "date": "2010-02-09",
+          "pre_mean": 0.8761,
+          "post_mean": 0.7356,
+          "pct_change": -16.0,
+          "direction": "decrease"
+        },
+        {
+          "date": "2010-03-24",
+          "pre_mean": 0.7989,
+          "post_mean": 2.4277,
+          "pct_change": 203.9,
+          "direction": "increase"
+        },
+        {
+          "date": "2012-01-11",
+          "pre_mean": 2.2654,
+          "post_mean": 1.641,
+          "pct_change": -27.6,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-06",
+          "pre_mean": 1.904,
+          "post_mean": 1.2291,
+          "pct_change": -35.5,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-07",
+          "pre_mean": 1.8874,
+          "post_mean": 1.2292,
+          "pct_change": -34.9,
+          "direction": "decrease"
+        },
+        {
+          "date": "2018-02-12",
+          "pre_mean": 1.5831,
+          "post_mean": 0.5446,
+          "pct_change": -65.6,
+          "direction": "decrease"
+        },
+        {
+          "date": "2019-01-01",
+          "pre_mean": 1.5788,
+          "post_mean": 1.5351,
+          "pct_change": -2.8,
+          "direction": "decrease"
+        }
+      ]
+    },
+    "ssi_pwl_100": {
+      "n_events": 15,
+      "n_decrease": 12,
+      "mean_pct_change": -11.3,
+      "wilcoxon_p": 0.04126,
+      "ttest_p": 0.064672,
+      "sign_p": 0.035156,
+      "cohens_d": -0.518,
+      "events": [
+        {
+          "date": "2001-12-30",
+          "pre_mean": 4.4883,
+          "post_mean": 3.0594,
+          "pct_change": -31.8,
+          "direction": "decrease"
+        },
+        {
+          "date": "2002-02-17",
+          "pre_mean": 2.7726,
+          "post_mean": 1.7471,
+          "pct_change": -37.0,
+          "direction": "decrease"
+        },
+        {
+          "date": "2003-01-18",
+          "pre_mean": 2.6389,
+          "post_mean": 2.3713,
+          "pct_change": -10.1,
+          "direction": "decrease"
+        },
+        {
+          "date": "2004-01-05",
+          "pre_mean": 2.6334,
+          "post_mean": 3.5119,
+          "pct_change": 33.4,
+          "direction": "increase"
+        },
+        {
+          "date": "2006-01-21",
+          "pre_mean": 2.8476,
+          "post_mean": 2.2769,
+          "pct_change": -20.0,
+          "direction": "decrease"
+        },
+        {
+          "date": "2007-02-24",
+          "pre_mean": 3.069,
+          "post_mean": 2.3672,
+          "pct_change": -22.9,
+          "direction": "decrease"
+        },
+        {
+          "date": "2008-02-22",
+          "pre_mean": 2.4543,
+          "post_mean": 2.2249,
+          "pct_change": -9.3,
+          "direction": "decrease"
+        },
+        {
+          "date": "2009-01-24",
+          "pre_mean": 3.4908,
+          "post_mean": 2.6385,
+          "pct_change": -24.4,
+          "direction": "decrease"
+        },
+        {
+          "date": "2010-02-09",
+          "pre_mean": 2.8372,
+          "post_mean": 2.2268,
+          "pct_change": -21.5,
+          "direction": "decrease"
+        },
+        {
+          "date": "2010-03-24",
+          "pre_mean": 2.2223,
+          "post_mean": 4.2727,
+          "pct_change": 92.3,
+          "direction": "increase"
+        },
+        {
+          "date": "2012-01-11",
+          "pre_mean": 4.5611,
+          "post_mean": 3.4643,
+          "pct_change": -24.0,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-06",
+          "pre_mean": 4.0102,
+          "post_mean": 3.0334,
+          "pct_change": -24.4,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-07",
+          "pre_mean": 4.0245,
+          "post_mean": 3.0202,
+          "pct_change": -25.0,
+          "direction": "decrease"
+        },
+        {
+          "date": "2018-02-12",
+          "pre_mean": 4.2038,
+          "post_mean": 2.0537,
+          "pct_change": -51.1,
+          "direction": "decrease"
+        },
+        {
+          "date": "2019-01-01",
+          "pre_mean": 3.43,
+          "post_mean": 3.6641,
+          "pct_change": 6.8,
+          "direction": "increase"
+        }
+      ]
+    },
+    "sk38_pwl_100": {
+      "n_events": 15,
+      "n_decrease": 12,
+      "mean_pct_change": -13.3,
+      "wilcoxon_p": 0.025574,
+      "ttest_p": 0.062921,
+      "sign_p": 0.035156,
+      "cohens_d": -0.522,
+      "events": [
+        {
+          "date": "2001-12-30",
+          "pre_mean": 4.2414,
+          "post_mean": 2.5084,
+          "pct_change": -40.9,
+          "direction": "decrease"
+        },
+        {
+          "date": "2002-02-17",
+          "pre_mean": 2.1809,
+          "post_mean": 0.9896,
+          "pct_change": -54.6,
+          "direction": "decrease"
+        },
+        {
+          "date": "2003-01-18",
+          "pre_mean": 1.8779,
+          "post_mean": 1.593,
+          "pct_change": -15.2,
+          "direction": "decrease"
+        },
+        {
+          "date": "2004-01-05",
+          "pre_mean": 2.071,
+          "post_mean": 2.8303,
+          "pct_change": 36.7,
+          "direction": "increase"
+        },
+        {
+          "date": "2006-01-21",
+          "pre_mean": 2.0279,
+          "post_mean": 1.3883,
+          "pct_change": -31.5,
+          "direction": "decrease"
+        },
+        {
+          "date": "2007-02-24",
+          "pre_mean": 2.4324,
+          "post_mean": 1.6251,
+          "pct_change": -33.2,
+          "direction": "decrease"
+        },
+        {
+          "date": "2008-02-22",
+          "pre_mean": 1.7312,
+          "post_mean": 1.5565,
+          "pct_change": -10.1,
+          "direction": "decrease"
+        },
+        {
+          "date": "2009-01-24",
+          "pre_mean": 2.7902,
+          "post_mean": 1.8827,
+          "pct_change": -32.5,
+          "direction": "decrease"
+        },
+        {
+          "date": "2010-02-09",
+          "pre_mean": 2.0418,
+          "post_mean": 1.346,
+          "pct_change": -34.1,
+          "direction": "decrease"
+        },
+        {
+          "date": "2010-03-24",
+          "pre_mean": 1.4248,
+          "post_mean": 3.9382,
+          "pct_change": 176.4,
+          "direction": "increase"
+        },
+        {
+          "date": "2012-01-11",
+          "pre_mean": 4.1166,
+          "post_mean": 2.8616,
+          "pct_change": -30.5,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-06",
+          "pre_mean": 3.4525,
+          "post_mean": 2.3096,
+          "pct_change": -33.1,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-07",
+          "pre_mean": 3.4748,
+          "post_mean": 2.2895,
+          "pct_change": -34.1,
+          "direction": "decrease"
+        },
+        {
+          "date": "2018-02-12",
+          "pre_mean": 3.7502,
+          "post_mean": 1.1589,
+          "pct_change": -69.1,
+          "direction": "decrease"
+        },
+        {
+          "date": "2019-01-01",
+          "pre_mean": 2.8,
+          "post_mean": 2.9679,
+          "pct_change": 6.0,
+          "direction": "increase"
+        }
+      ]
+    },
+    "sn38_pwl_100": {
+      "n_events": 15,
+      "n_decrease": 13,
+      "mean_pct_change": -13.7,
+      "wilcoxon_p": 0.012451,
+      "ttest_p": 0.009159,
+      "sign_p": 0.007385,
+      "cohens_d": -0.78,
+      "events": [
+        {
+          "date": "2001-12-30",
+          "pre_mean": 4.9825,
+          "post_mean": 3.8759,
+          "pct_change": -22.2,
+          "direction": "decrease"
+        },
+        {
+          "date": "2002-02-17",
+          "pre_mean": 3.4997,
+          "post_mean": 2.0992,
+          "pct_change": -40.0,
+          "direction": "decrease"
+        },
+        {
+          "date": "2003-01-18",
+          "pre_mean": 3.3393,
+          "post_mean": 2.794,
+          "pct_change": -16.3,
+          "direction": "decrease"
+        },
+        {
+          "date": "2004-01-05",
+          "pre_mean": 3.4994,
+          "post_mean": 3.6151,
+          "pct_change": 3.3,
+          "direction": "increase"
+        },
+        {
+          "date": "2006-01-21",
+          "pre_mean": 3.224,
+          "post_mean": 2.6449,
+          "pct_change": -18.0,
+          "direction": "decrease"
+        },
+        {
+          "date": "2007-02-24",
+          "pre_mean": 3.8108,
+          "post_mean": 2.5986,
+          "pct_change": -31.8,
+          "direction": "decrease"
+        },
+        {
+          "date": "2008-02-22",
+          "pre_mean": 3.3628,
+          "post_mean": 3.0123,
+          "pct_change": -10.4,
+          "direction": "decrease"
+        },
+        {
+          "date": "2009-01-24",
+          "pre_mean": 3.4804,
+          "post_mean": 2.6193,
+          "pct_change": -24.7,
+          "direction": "decrease"
+        },
+        {
+          "date": "2010-02-09",
+          "pre_mean": 3.1591,
+          "post_mean": 2.7424,
+          "pct_change": -13.2,
+          "direction": "decrease"
+        },
+        {
+          "date": "2010-03-24",
+          "pre_mean": 2.8423,
+          "post_mean": 4.2844,
+          "pct_change": 50.7,
+          "direction": "increase"
+        },
+        {
+          "date": "2012-01-11",
+          "pre_mean": 4.4375,
+          "post_mean": 3.306,
+          "pct_change": -25.5,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-06",
+          "pre_mean": 4.0956,
+          "post_mean": 3.647,
+          "pct_change": -11.0,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-07",
+          "pre_mean": 4.1122,
+          "post_mean": 3.627,
+          "pct_change": -11.8,
+          "direction": "decrease"
+        },
+        {
+          "date": "2018-02-12",
+          "pre_mean": 3.7832,
+          "post_mean": 2.5994,
+          "pct_change": -31.3,
+          "direction": "decrease"
+        },
+        {
+          "date": "2019-01-01",
+          "pre_mean": 3.4945,
+          "post_mean": 3.3894,
+          "pct_change": -3.0,
+          "direction": "decrease"
+        }
+      ]
+    },
+    "ccl_pwl_100": {
+      "n_events": 15,
+      "n_decrease": 12,
+      "mean_pct_change": -9.0,
+      "wilcoxon_p": 0.047913,
+      "ttest_p": 0.123204,
+      "sign_p": 0.035156,
+      "cohens_d": -0.424,
+      "events": [
+        {
+          "date": "2001-12-30",
+          "pre_mean": 2.5864,
+          "post_mean": 1.5235,
+          "pct_change": -41.1,
+          "direction": "decrease"
+        },
+        {
+          "date": "2002-02-17",
+          "pre_mean": 1.2313,
+          "post_mean": 0.5963,
+          "pct_change": -51.6,
+          "direction": "decrease"
+        },
+        {
+          "date": "2003-01-18",
+          "pre_mean": 0.862,
+          "post_mean": 0.8459,
+          "pct_change": -1.9,
+          "direction": "decrease"
+        },
+        {
+          "date": "2004-01-05",
+          "pre_mean": 1.2502,
+          "post_mean": 1.7523,
+          "pct_change": 40.2,
+          "direction": "increase"
+        },
+        {
+          "date": "2006-01-21",
+          "pre_mean": 1.0341,
+          "post_mean": 0.7337,
+          "pct_change": -29.0,
+          "direction": "decrease"
+        },
+        {
+          "date": "2007-02-24",
+          "pre_mean": 1.4723,
+          "post_mean": 1.0141,
+          "pct_change": -31.1,
+          "direction": "decrease"
+        },
+        {
+          "date": "2008-02-22",
+          "pre_mean": 1.2616,
+          "post_mean": 1.1407,
+          "pct_change": -9.6,
+          "direction": "decrease"
+        },
+        {
+          "date": "2009-01-24",
+          "pre_mean": 1.3124,
+          "post_mean": 0.9834,
+          "pct_change": -25.1,
+          "direction": "decrease"
+        },
+        {
+          "date": "2010-02-09",
+          "pre_mean": 0.9093,
+          "post_mean": 0.7358,
+          "pct_change": -19.1,
+          "direction": "decrease"
+        },
+        {
+          "date": "2010-03-24",
+          "pre_mean": 0.7991,
+          "post_mean": 2.5097,
+          "pct_change": 214.1,
+          "direction": "increase"
+        },
+        {
+          "date": "2012-01-11",
+          "pre_mean": 2.5824,
+          "post_mean": 1.6886,
+          "pct_change": -34.6,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-06",
+          "pre_mean": 2.0458,
+          "post_mean": 1.2367,
+          "pct_change": -39.5,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-07",
+          "pre_mean": 2.0232,
+          "post_mean": 1.2628,
+          "pct_change": -37.6,
+          "direction": "decrease"
+        },
+        {
+          "date": "2018-02-12",
+          "pre_mean": 1.9444,
+          "post_mean": 0.5511,
+          "pct_change": -71.7,
+          "direction": "decrease"
+        },
+        {
+          "date": "2019-01-01",
+          "pre_mean": 1.6228,
+          "post_mean": 1.6616,
+          "pct_change": 2.4,
+          "direction": "increase"
+        }
+      ]
+    },
+    "dangerLevel": {
+      "n_events": 15,
+      "n_decrease": 6,
+      "mean_pct_change": 19.7,
+      "wilcoxon_p": 0.106995,
+      "ttest_p": 0.084861,
+      "sign_p": 0.607239,
+      "cohens_d": 0.479,
+      "events": [
+        {
+          "date": "2001-12-30",
+          "pre_mean": 1.4341,
+          "post_mean": 1.4336,
+          "pct_change": -0.0,
+          "direction": "decrease"
+        },
+        {
+          "date": "2002-02-17",
+          "pre_mean": 1.6403,
+          "post_mean": 2.764,
+          "pct_change": 68.5,
+          "direction": "increase"
+        },
+        {
+          "date": "2003-01-18",
+          "pre_mean": 2.734,
+          "post_mean": 3.1193,
+          "pct_change": 14.1,
+          "direction": "increase"
+        },
+        {
+          "date": "2004-01-05",
+          "pre_mean": 1.7722,
+          "post_mean": 2.9453,
+          "pct_change": 66.2,
+          "direction": "increase"
+        },
+        {
+          "date": "2006-01-21",
+          "pre_mean": 2.0888,
+          "post_mean": 2.7619,
+          "pct_change": 32.2,
+          "direction": "increase"
+        },
+        {
+          "date": "2007-02-24",
+          "pre_mean": 2.0361,
+          "post_mean": 2.9273,
+          "pct_change": 43.8,
+          "direction": "increase"
+        },
+        {
+          "date": "2008-02-22",
+          "pre_mean": 1.3391,
+          "post_mean": 1.6933,
+          "pct_change": 26.5,
+          "direction": "increase"
+        },
+        {
+          "date": "2009-01-24",
+          "pre_mean": 1.6831,
+          "post_mean": 3.1019,
+          "pct_change": 84.3,
+          "direction": "increase"
+        },
+        {
+          "date": "2010-02-09",
+          "pre_mean": 2.1393,
+          "post_mean": 2.6515,
+          "pct_change": 23.9,
+          "direction": "increase"
+        },
+        {
+          "date": "2010-03-24",
+          "pre_mean": 2.4789,
+          "post_mean": 1.7441,
+          "pct_change": -29.6,
+          "direction": "decrease"
+        },
+        {
+          "date": "2012-01-11",
+          "pre_mean": 2.9259,
+          "post_mean": 2.2049,
+          "pct_change": -24.6,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-06",
+          "pre_mean": 2.6916,
+          "post_mean": 2.3804,
+          "pct_change": -11.6,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-07",
+          "pre_mean": 2.6458,
+          "post_mean": 2.4293,
+          "pct_change": -8.2,
+          "direction": "decrease"
+        },
+        {
+          "date": "2018-02-12",
+          "pre_mean": 2.4921,
+          "post_mean": 2.3708,
+          "pct_change": -4.9,
+          "direction": "decrease"
+        },
+        {
+          "date": "2019-01-01",
+          "pre_mean": 2.4062,
+          "post_mean": 2.7818,
+          "pct_change": 15.6,
+          "direction": "increase"
+        }
+      ]
+    },
+    "ISWR": {
+      "n_events": 15,
+      "n_decrease": 0,
+      "mean_pct_change": 45.2,
+      "wilcoxon_p": 6.1e-05,
+      "ttest_p": 1.4e-05,
+      "sign_p": 6.1e-05,
+      "cohens_d": 1.684,
+      "events": [
+        {
+          "date": "2001-12-30",
+          "pre_mean": 65.5507,
+          "post_mean": 76.0198,
+          "pct_change": 16.0,
+          "direction": "increase"
+        },
+        {
+          "date": "2002-02-17",
+          "pre_mean": 90.4724,
+          "post_mean": 153.7426,
+          "pct_change": 69.9,
+          "direction": "increase"
+        },
+        {
+          "date": "2003-01-18",
+          "pre_mean": 59.9498,
+          "post_mean": 94.8366,
+          "pct_change": 58.2,
+          "direction": "increase"
+        },
+        {
+          "date": "2004-01-05",
+          "pre_mean": 58.9865,
+          "post_mean": 69.4162,
+          "pct_change": 17.7,
+          "direction": "increase"
+        },
+        {
+          "date": "2006-01-21",
+          "pre_mean": 62.0791,
+          "post_mean": 83.929,
+          "pct_change": 35.2,
+          "direction": "increase"
+        },
+        {
+          "date": "2007-02-24",
+          "pre_mean": 95.0082,
+          "post_mean": 157.1439,
+          "pct_change": 65.4,
+          "direction": "increase"
+        },
+        {
+          "date": "2008-02-22",
+          "pre_mean": 134.5479,
+          "post_mean": 158.9314,
+          "pct_change": 18.1,
+          "direction": "increase"
+        },
+        {
+          "date": "2009-01-24",
+          "pre_mean": 74.3508,
+          "post_mean": 115.4499,
+          "pct_change": 55.3,
+          "direction": "increase"
+        },
+        {
+          "date": "2010-02-09",
+          "pre_mean": 84.7572,
+          "post_mean": 134.6739,
+          "pct_change": 58.9,
+          "direction": "increase"
+        },
+        {
+          "date": "2010-03-24",
+          "pre_mean": 171.5703,
+          "post_mean": 241.4276,
+          "pct_change": 40.7,
+          "direction": "increase"
+        },
+        {
+          "date": "2012-01-11",
+          "pre_mean": 50.6922,
+          "post_mean": 94.0241,
+          "pct_change": 85.5,
+          "direction": "increase"
+        },
+        {
+          "date": "2013-01-06",
+          "pre_mean": 60.4965,
+          "post_mean": 79.4298,
+          "pct_change": 31.3,
+          "direction": "increase"
+        },
+        {
+          "date": "2013-01-07",
+          "pre_mean": 61.5987,
+          "post_mean": 79.6324,
+          "pct_change": 29.3,
+          "direction": "increase"
+        },
+        {
+          "date": "2018-02-12",
+          "pre_mean": 83.5627,
+          "post_mean": 148.4022,
+          "pct_change": 77.6,
+          "direction": "increase"
+        },
+        {
+          "date": "2019-01-01",
+          "pre_mean": 62.5953,
+          "post_mean": 74.2942,
+          "pct_change": 18.7,
+          "direction": "increase"
+        }
+      ]
+    },
+    "TA": {
+      "n_events": 15,
+      "n_decrease": 11,
+      "mean_pct_change": -35.1,
+      "wilcoxon_p": 0.083252,
+      "ttest_p": 0.080213,
+      "sign_p": 0.118469,
+      "cohens_d": -0.487,
+      "events": [
+        {
+          "date": "2001-12-30",
+          "pre_mean": -8.6137,
+          "post_mean": -4.6528,
+          "pct_change": 46.0,
+          "direction": "increase"
+        },
+        {
+          "date": "2002-02-17",
+          "pre_mean": -2.4435,
+          "post_mean": -5.2932,
+          "pct_change": -116.6,
+          "direction": "decrease"
+        },
+        {
+          "date": "2003-01-18",
+          "pre_mean": -5.2191,
+          "post_mean": -11.2026,
+          "pct_change": -114.6,
+          "direction": "decrease"
+        },
+        {
+          "date": "2004-01-05",
+          "pre_mean": -6.0751,
+          "post_mean": -8.8297,
+          "pct_change": -45.3,
+          "direction": "decrease"
+        },
+        {
+          "date": "2006-01-21",
+          "pre_mean": -8.2858,
+          "post_mean": -7.2053,
+          "pct_change": 13.0,
+          "direction": "increase"
+        },
+        {
+          "date": "2007-02-24",
+          "pre_mean": -3.3129,
+          "post_mean": -5.3121,
+          "pct_change": -60.3,
+          "direction": "decrease"
+        },
+        {
+          "date": "2008-02-22",
+          "pre_mean": -2.89,
+          "post_mean": -2.1451,
+          "pct_change": 25.8,
+          "direction": "increase"
+        },
+        {
+          "date": "2009-01-24",
+          "pre_mean": -6.2068,
+          "post_mean": -9.955,
+          "pct_change": -60.4,
+          "direction": "decrease"
+        },
+        {
+          "date": "2010-02-09",
+          "pre_mean": -8.3364,
+          "post_mean": -9.5453,
+          "pct_change": -14.5,
+          "direction": "decrease"
+        },
+        {
+          "date": "2010-03-24",
+          "pre_mean": -8.0455,
+          "post_mean": -3.0264,
+          "pct_change": 62.4,
+          "direction": "increase"
+        },
+        {
+          "date": "2012-01-11",
+          "pre_mean": -5.9384,
+          "post_mean": -9.5236,
+          "pct_change": -60.4,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-06",
+          "pre_mean": -5.8438,
+          "post_mean": -7.6311,
+          "pct_change": -30.6,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-07",
+          "pre_mean": -5.4067,
+          "post_mean": -7.9883,
+          "pct_change": -47.7,
+          "direction": "decrease"
+        },
+        {
+          "date": "2018-02-12",
+          "pre_mean": -6.7603,
+          "post_mean": -8.5078,
+          "pct_change": -25.9,
+          "direction": "decrease"
+        },
+        {
+          "date": "2019-01-01",
+          "pre_mean": -4.8503,
+          "post_mean": -9.5852,
+          "pct_change": -97.6,
+          "direction": "decrease"
+        }
+      ]
+    },
+    "HS_mod": {
+      "n_events": 15,
+      "n_decrease": 0,
+      "mean_pct_change": 37.6,
+      "wilcoxon_p": 6.1e-05,
+      "ttest_p": 1e-05,
+      "sign_p": 6.1e-05,
+      "cohens_d": 1.736,
+      "events": [
+        {
+          "date": "2001-12-30",
+          "pre_mean": 37.996,
+          "post_mean": 68.9012,
+          "pct_change": 81.3,
+          "direction": "increase"
+        },
+        {
+          "date": "2002-02-17",
+          "pre_mean": 69.2484,
+          "post_mean": 115.7911,
+          "pct_change": 67.2,
+          "direction": "increase"
+        },
+        {
+          "date": "2003-01-18",
+          "pre_mean": 149.69,
+          "post_mean": 190.6301,
+          "pct_change": 27.3,
+          "direction": "increase"
+        },
+        {
+          "date": "2004-01-05",
+          "pre_mean": 78.1905,
+          "post_mean": 145.9365,
+          "pct_change": 86.6,
+          "direction": "increase"
+        },
+        {
+          "date": "2006-01-21",
+          "pre_mean": 74.7799,
+          "post_mean": 101.7513,
+          "pct_change": 36.1,
+          "direction": "increase"
+        },
+        {
+          "date": "2007-02-24",
+          "pre_mean": 85.7112,
+          "post_mean": 156.1237,
+          "pct_change": 82.2,
+          "direction": "increase"
+        },
+        {
+          "date": "2008-02-22",
+          "pre_mean": 126.5294,
+          "post_mean": 138.6503,
+          "pct_change": 9.6,
+          "direction": "increase"
+        },
+        {
+          "date": "2009-01-24",
+          "pre_mean": 116.9361,
+          "post_mean": 173.1883,
+          "pct_change": 48.1,
+          "direction": "increase"
+        },
+        {
+          "date": "2010-02-09",
+          "pre_mean": 130.5698,
+          "post_mean": 145.1829,
+          "pct_change": 11.2,
+          "direction": "increase"
+        },
+        {
+          "date": "2010-03-24",
+          "pre_mean": 152.8284,
+          "post_mean": 166.0116,
+          "pct_change": 8.6,
+          "direction": "increase"
+        },
+        {
+          "date": "2012-01-11",
+          "pre_mean": 148.7966,
+          "post_mean": 209.4211,
+          "pct_change": 40.7,
+          "direction": "increase"
+        },
+        {
+          "date": "2013-01-06",
+          "pre_mean": 132.03,
+          "post_mean": 145.5471,
+          "pct_change": 10.2,
+          "direction": "increase"
+        },
+        {
+          "date": "2013-01-07",
+          "pre_mean": 132.9624,
+          "post_mean": 149.0771,
+          "pct_change": 12.1,
+          "direction": "increase"
+        },
+        {
+          "date": "2018-02-12",
+          "pre_mean": 230.6691,
+          "post_mean": 258.584,
+          "pct_change": 12.1,
+          "direction": "increase"
+        },
+        {
+          "date": "2019-01-01",
+          "pre_mean": 134.6203,
+          "post_mean": 175.5249,
+          "pct_change": 30.4,
+          "direction": "increase"
+        }
+      ]
+    },
+    "HS_meas": {
+      "n_events": 15,
+      "n_decrease": 0,
+      "mean_pct_change": 37.6,
+      "wilcoxon_p": 6.1e-05,
+      "ttest_p": 9e-06,
+      "sign_p": 6.1e-05,
+      "cohens_d": 1.742,
+      "events": [
+        {
+          "date": "2001-12-30",
+          "pre_mean": 37.666,
+          "post_mean": 68.8878,
+          "pct_change": 82.9,
+          "direction": "increase"
+        },
+        {
+          "date": "2002-02-17",
+          "pre_mean": 69.5322,
+          "post_mean": 115.7505,
+          "pct_change": 66.5,
+          "direction": "increase"
+        },
+        {
+          "date": "2003-01-18",
+          "pre_mean": 148.981,
+          "post_mean": 189.3566,
+          "pct_change": 27.1,
+          "direction": "increase"
+        },
+        {
+          "date": "2004-01-05",
+          "pre_mean": 77.93,
+          "post_mean": 145.0019,
+          "pct_change": 86.1,
+          "direction": "increase"
+        },
+        {
+          "date": "2006-01-21",
+          "pre_mean": 74.4376,
+          "post_mean": 100.9169,
+          "pct_change": 35.6,
+          "direction": "increase"
+        },
+        {
+          "date": "2007-02-24",
+          "pre_mean": 85.4305,
+          "post_mean": 155.7197,
+          "pct_change": 82.3,
+          "direction": "increase"
+        },
+        {
+          "date": "2008-02-22",
+          "pre_mean": 126.1684,
+          "post_mean": 138.6017,
+          "pct_change": 9.9,
+          "direction": "increase"
+        },
+        {
+          "date": "2009-01-24",
+          "pre_mean": 116.4861,
+          "post_mean": 172.2879,
+          "pct_change": 47.9,
+          "direction": "increase"
+        },
+        {
+          "date": "2010-02-09",
+          "pre_mean": 129.952,
+          "post_mean": 144.6302,
+          "pct_change": 11.3,
+          "direction": "increase"
+        },
+        {
+          "date": "2010-03-24",
+          "pre_mean": 152.3774,
+          "post_mean": 165.7228,
+          "pct_change": 8.8,
+          "direction": "increase"
+        },
+        {
+          "date": "2012-01-11",
+          "pre_mean": 148.163,
+          "post_mean": 208.6344,
+          "pct_change": 40.8,
+          "direction": "increase"
+        },
+        {
+          "date": "2013-01-06",
+          "pre_mean": 131.4889,
+          "post_mean": 144.8895,
+          "pct_change": 10.2,
+          "direction": "increase"
+        },
+        {
+          "date": "2013-01-07",
+          "pre_mean": 132.3812,
+          "post_mean": 148.4344,
+          "pct_change": 12.1,
+          "direction": "increase"
+        },
+        {
+          "date": "2018-02-12",
+          "pre_mean": 230.3749,
+          "post_mean": 258.0538,
+          "pct_change": 12.0,
+          "direction": "increase"
+        },
+        {
+          "date": "2019-01-01",
+          "pre_mean": 134.27,
+          "post_mean": 174.813,
+          "pct_change": 30.2,
+          "direction": "increase"
+        }
+      ]
+    },
+    "HN24": {
+      "n_events": 15,
+      "n_decrease": 6,
+      "mean_pct_change": 90.2,
+      "wilcoxon_p": 0.25238,
+      "ttest_p": 0.237314,
+      "sign_p": 0.607239,
+      "cohens_d": 0.319,
+      "events": [
+        {
+          "date": "2001-12-30",
+          "pre_mean": 2.7833,
+          "post_mean": 0.9942,
+          "pct_change": -64.3,
+          "direction": "decrease"
+        },
+        {
+          "date": "2002-02-17",
+          "pre_mean": 3.3576,
+          "post_mean": 8.6896,
+          "pct_change": 158.8,
+          "direction": "increase"
+        },
+        {
+          "date": "2003-01-18",
+          "pre_mean": 4.7681,
+          "post_mean": 9.5778,
+          "pct_change": 100.9,
+          "direction": "increase"
+        },
+        {
+          "date": "2004-01-05",
+          "pre_mean": 3.1192,
+          "post_mean": 8.2673,
+          "pct_change": 165.0,
+          "direction": "increase"
+        },
+        {
+          "date": "2006-01-21",
+          "pre_mean": 4.0339,
+          "post_mean": 9.4439,
+          "pct_change": 134.1,
+          "direction": "increase"
+        },
+        {
+          "date": "2007-02-24",
+          "pre_mean": 4.2664,
+          "post_mean": 12.44,
+          "pct_change": 191.6,
+          "direction": "increase"
+        },
+        {
+          "date": "2008-02-22",
+          "pre_mean": 0.809,
+          "post_mean": 4.818,
+          "pct_change": 495.6,
+          "direction": "increase"
+        },
+        {
+          "date": "2009-01-24",
+          "pre_mean": 3.9224,
+          "post_mean": 13.4722,
+          "pct_change": 243.5,
+          "direction": "increase"
+        },
+        {
+          "date": "2010-02-09",
+          "pre_mean": 3.9289,
+          "post_mean": 3.1864,
+          "pct_change": -18.9,
+          "direction": "decrease"
+        },
+        {
+          "date": "2010-03-24",
+          "pre_mean": 3.1966,
+          "post_mean": 4.4287,
+          "pct_change": 38.5,
+          "direction": "increase"
+        },
+        {
+          "date": "2012-01-11",
+          "pre_mean": 14.8844,
+          "post_mean": 6.3102,
+          "pct_change": -57.6,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-06",
+          "pre_mean": 7.6885,
+          "post_mean": 5.7932,
+          "pct_change": -24.7,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-07",
+          "pre_mean": 7.3154,
+          "post_mean": 6.4058,
+          "pct_change": -12.4,
+          "direction": "decrease"
+        },
+        {
+          "date": "2018-02-12",
+          "pre_mean": 12.2908,
+          "post_mean": 3.9704,
+          "pct_change": -67.7,
+          "direction": "decrease"
+        },
+        {
+          "date": "2019-01-01",
+          "pre_mean": 6.2067,
+          "post_mean": 10.6083,
+          "pct_change": 70.9,
+          "direction": "increase"
+        }
+      ]
+    },
+    "HN24_7d": {
+      "n_events": 15,
+      "n_decrease": 6,
+      "mean_pct_change": 78.3,
+      "wilcoxon_p": 0.561401,
+      "ttest_p": 0.573572,
+      "sign_p": 0.607239,
+      "cohens_d": 0.149,
+      "events": [
+        {
+          "date": "2001-12-30",
+          "pre_mean": 12.8265,
+          "post_mean": 10.3527,
+          "pct_change": -19.3,
+          "direction": "decrease"
+        },
+        {
+          "date": "2002-02-17",
+          "pre_mean": 14.6614,
+          "post_mean": 42.1589,
+          "pct_change": 187.6,
+          "direction": "increase"
+        },
+        {
+          "date": "2003-01-18",
+          "pre_mean": 25.5769,
+          "post_mean": 54.3541,
+          "pct_change": 112.5,
+          "direction": "increase"
+        },
+        {
+          "date": "2004-01-05",
+          "pre_mean": 14.7631,
+          "post_mean": 63.9751,
+          "pct_change": 333.3,
+          "direction": "increase"
+        },
+        {
+          "date": "2006-01-21",
+          "pre_mean": 24.852,
+          "post_mean": 37.3171,
+          "pct_change": 50.2,
+          "direction": "increase"
+        },
+        {
+          "date": "2007-02-24",
+          "pre_mean": 24.5272,
+          "post_mean": 62.0877,
+          "pct_change": 153.1,
+          "direction": "increase"
+        },
+        {
+          "date": "2008-02-22",
+          "pre_mean": 7.2214,
+          "post_mean": 23.7733,
+          "pct_change": 229.2,
+          "direction": "increase"
+        },
+        {
+          "date": "2009-01-24",
+          "pre_mean": 16.3494,
+          "post_mean": 64.1814,
+          "pct_change": 292.6,
+          "direction": "increase"
+        },
+        {
+          "date": "2010-02-09",
+          "pre_mean": 21.9262,
+          "post_mean": 21.0396,
+          "pct_change": -4.0,
+          "direction": "decrease"
+        },
+        {
+          "date": "2010-03-24",
+          "pre_mean": 20.3087,
+          "post_mean": 31.3676,
+          "pct_change": 54.5,
+          "direction": "increase"
+        },
+        {
+          "date": "2012-01-11",
+          "pre_mean": 95.2987,
+          "post_mean": 43.955,
+          "pct_change": -53.9,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-06",
+          "pre_mean": 61.4978,
+          "post_mean": 30.1037,
+          "pct_change": -51.0,
+          "direction": "decrease"
+        },
+        {
+          "date": "2013-01-07",
+          "pre_mean": 58.6056,
+          "post_mean": 33.1328,
+          "pct_change": -43.5,
+          "direction": "decrease"
+        },
+        {
+          "date": "2018-02-12",
+          "pre_mean": 70.3199,
+          "post_mean": 21.4205,
+          "pct_change": -69.5,
+          "direction": "decrease"
+        },
+        {
+          "date": "2019-01-01",
+          "pre_mean": 53.8112,
+          "post_mean": 55.3576,
+          "pct_change": 2.9,
+          "direction": "increase"
+        }
+      ]
+    },
+    "SWE": {
+      "n_events": 15,
+      "n_decrease": 0,
+      "mean_pct_change": 43.6,
+      "wilcoxon_p": 6.1e-05,
+      "ttest_p": 1e-06,
+      "sign_p": 6.1e-05,
+      "cohens_d": 2.066,
+      "events": [
+        {
+          "date": "2001-12-30",
+          "pre_mean": 100.4083,
+          "post_mean": 206.9482,
+          "pct_change": 106.1,
+          "direction": "increase"
+        },
+        {
+          "date": "2002-02-17",
+          "pre_mean": 198.0316,
+          "post_mean": 326.2319,
+          "pct_change": 64.7,
+          "direction": "increase"
+        },
+        {
+          "date": "2003-01-18",
+          "pre_mean": 515.1133,
+          "post_mean": 633.9968,
+          "pct_change": 23.1,
+          "direction": "increase"
+        },
+        {
+          "date": "2004-01-05",
+          "pre_mean": 240.1462,
+          "post_mean": 430.3251,
+          "pct_change": 79.2,
+          "direction": "increase"
+        },
+        {
+          "date": "2006-01-21",
+          "pre_mean": 183.6567,
+          "post_mean": 265.2198,
+          "pct_change": 44.4,
+          "direction": "increase"
+        },
+        {
+          "date": "2007-02-24",
+          "pre_mean": 275.0261,
+          "post_mean": 482.8733,
+          "pct_change": 75.6,
+          "direction": "increase"
+        },
+        {
+          "date": "2008-02-22",
+          "pre_mean": 441.1733,
+          "post_mean": 472.8221,
+          "pct_change": 7.2,
+          "direction": "increase"
+        },
+        {
+          "date": "2009-01-24",
+          "pre_mean": 372.2373,
+          "post_mean": 517.4624,
+          "pct_change": 39.0,
+          "direction": "increase"
+        },
+        {
+          "date": "2010-02-09",
+          "pre_mean": 427.5276,
+          "post_mean": 475.6629,
+          "pct_change": 11.3,
+          "direction": "increase"
+        },
+        {
+          "date": "2010-03-24",
+          "pre_mean": 508.6672,
+          "post_mean": 636.3122,
+          "pct_change": 25.1,
+          "direction": "increase"
+        },
+        {
+          "date": "2012-01-11",
+          "pre_mean": 406.7329,
+          "post_mean": 691.6687,
+          "pct_change": 70.1,
+          "direction": "increase"
+        },
+        {
+          "date": "2013-01-06",
+          "pre_mean": 382.2885,
+          "post_mean": 478.9522,
+          "pct_change": 25.3,
+          "direction": "increase"
+        },
+        {
+          "date": "2013-01-07",
+          "pre_mean": 389.2171,
+          "post_mean": 489.2628,
+          "pct_change": 25.7,
+          "direction": "increase"
+        },
+        {
+          "date": "2018-02-12",
+          "pre_mean": 752.0616,
+          "post_mean": 925.6193,
+          "pct_change": 23.1,
+          "direction": "increase"
+        },
+        {
+          "date": "2019-01-01",
+          "pre_mean": 409.6197,
+          "post_mean": 550.5575,
+          "pct_change": 34.4,
+          "direction": "increase"
+        }
+      ]
+    },
+    "pwl_100": {
+      "n_events": 15,
+      "n_decrease": 4,
+      "mean_pct_change": 13.6,
+      "wilcoxon_p": 0.094604,
+      "ttest_p": 0.268978,
+      "sign_p": 0.118469,
+      "cohens_d": 0.297,
+      "events": [
+        {
+          "date": "2001-12-30",
+          "pre_mean": 0.5122,
+          "post_mean": 0.7727,
+          "pct_change": 50.9,
+          "direction": "increase"
+        },
+        {
+          "date": "2002-02-17",
+          "pre_mean": 0.8519,
+          "post_mean": 0.9326,
+          "pct_change": 9.5,
+          "direction": "increase"
+        },
+        {
+          "date": "2003-01-18",
+          "pre_mean": 0.883,
+          "post_mean": 0.8532,
+          "pct_change": -3.4,
+          "direction": "decrease"
+        },
+        {
+          "date": "2004-01-05",
+          "pre_mean": 0.8312,
+          "post_mean": 0.6328,
+          "pct_change": -23.9,
+          "direction": "decrease"
+        },
+        {
+          "date": "2006-01-21",
+          "pre_mean": 0.8274,
+          "post_mean": 0.8968,
+          "pct_change": 8.4,
+          "direction": "increase"
+        },
+        {
+          "date": "2007-02-24",
+          "pre_mean": 0.7952,
+          "post_mean": 0.8273,
+          "pct_change": 4.0,
+          "direction": "increase"
+        },
+        {
+          "date": "2008-02-22",
+          "pre_mean": 0.8314,
+          "post_mean": 0.8468,
+          "pct_change": 1.9,
+          "direction": "increase"
+        },
+        {
+          "date": "2009-01-24",
+          "pre_mean": 0.8014,
+          "post_mean": 0.8301,
+          "pct_change": 3.6,
+          "direction": "increase"
+        },
+        {
+          "date": "2010-02-09",
+          "pre_mean": 0.9173,
+          "post_mean": 0.9152,
+          "pct_change": -0.2,
+          "direction": "decrease"
+        },
+        {
+          "date": "2010-03-24",
+          "pre_mean": 0.9038,
+          "post_mean": 0.4677,
+          "pct_change": -48.3,
+          "direction": "decrease"
+        },
+        {
+          "date": "2012-01-11",
+          "pre_mean": 0.4091,
+          "post_mean": 0.6563,
+          "pct_change": 60.4,
+          "direction": "increase"
+        },
+        {
+          "date": "2013-01-06",
+          "pre_mean": 0.5584,
+          "post_mean": 0.7923,
+          "pct_change": 41.9,
+          "direction": "increase"
+        },
+        {
+          "date": "2013-01-07",
+          "pre_mean": 0.5655,
+          "post_mean": 0.7845,
+          "pct_change": 38.7,
+          "direction": "increase"
+        },
+        {
+          "date": "2018-02-12",
+          "pre_mean": 0.5994,
+          "post_mean": 0.949,
+          "pct_change": 58.3,
+          "direction": "increase"
+        },
+        {
+          "date": "2019-01-01",
+          "pre_mean": 0.6656,
+          "post_mean": 0.6759,
+          "pct_change": 1.6,
+          "direction": "increase"
+        }
+      ]
+    },
+    "pwl_100_15": {
+      "n_events": 15,
+      "n_decrease": 3,
+      "mean_pct_change": 27.5,
+      "wilcoxon_p": 0.021545,
+      "ttest_p": 0.030866,
+      "sign_p": 0.035156,
+      "cohens_d": 0.62,
+      "events": [
+        {
+          "date": "2001-12-30",
+          "pre_mean": 0.3252,
+          "post_mean": 0.6636,
+          "pct_change": 104.1,
+          "direction": "increase"
+        },
+        {
+          "date": "2002-02-17",
+          "pre_mean": 0.7185,
+          "post_mean": 0.9326,
+          "pct_change": 29.8,
+          "direction": "increase"
+        },
+        {
+          "date": "2003-01-18",
+          "pre_mean": 0.8085,
+          "post_mean": 0.844,
+          "pct_change": 4.4,
+          "direction": "increase"
+        },
+        {
+          "date": "2004-01-05",
+          "pre_mean": 0.6883,
+          "post_mean": 0.6172,
+          "pct_change": -10.3,
+          "direction": "decrease"
+        },
+        {
+          "date": "2006-01-21",
+          "pre_mean": 0.7202,
+          "post_mean": 0.8571,
+          "pct_change": 19.0,
+          "direction": "increase"
+        },
+        {
+          "date": "2007-02-24",
+          "pre_mean": 0.6145,
+          "post_mean": 0.8182,
+          "pct_change": 33.2,
+          "direction": "increase"
+        },
+        {
+          "date": "2008-02-22",
+          "pre_mean": 0.7006,
+          "post_mean": 0.7703,
+          "pct_change": 9.9,
+          "direction": "increase"
+        },
+        {
+          "date": "2009-01-24",
+          "pre_mean": 0.6277,
+          "post_mean": 0.7718,
+          "pct_change": 23.0,
+          "direction": "increase"
+        },
+        {
+          "date": "2010-02-09",
+          "pre_mean": 0.7441,
+          "post_mean": 0.8481,
+          "pct_change": 14.0,
+          "direction": "increase"
+        },
+        {
+          "date": "2010-03-24",
+          "pre_mean": 0.8154,
+          "post_mean": 0.4229,
+          "pct_change": -48.1,
+          "direction": "decrease"
+        },
+        {
+          "date": "2012-01-11",
+          "pre_mean": 0.3717,
+          "post_mean": 0.6225,
+          "pct_change": 67.5,
+          "direction": "increase"
+        },
+        {
+          "date": "2013-01-06",
+          "pre_mean": 0.4913,
+          "post_mean": 0.686,
+          "pct_change": 39.6,
+          "direction": "increase"
+        },
+        {
+          "date": "2013-01-07",
+          "pre_mean": 0.4891,
+          "post_mean": 0.6877,
+          "pct_change": 40.6,
+          "direction": "increase"
+        },
+        {
+          "date": "2018-02-12",
+          "pre_mean": 0.461,
+          "post_mean": 0.8938,
+          "pct_change": 93.9,
+          "direction": "increase"
+        },
+        {
+          "date": "2019-01-01",
+          "pre_mean": 0.6424,
+          "post_mean": 0.5907,
+          "pct_change": -8.0,
+          "direction": "decrease"
+        }
+      ]
+    }
+  },
+  "phase2_calendar_matched": {
+    "ssi_pwl": {
+      "n_events": 15,
+      "n_decrease": 11,
+      "mean_pct_change": -9.3,
+      "wilcoxon_p": 0.094604,
+      "n_control_years": 7
+    },
+    "sk38_pwl": {
+      "n_events": 15,
+      "n_decrease": 11,
+      "mean_pct_change": -15.5,
+      "wilcoxon_p": 0.063721,
+      "n_control_years": 7
+    },
+    "sn38_pwl": {
+      "n_events": 15,
+      "n_decrease": 10,
+      "mean_pct_change": -8.1,
+      "wilcoxon_p": 0.047913,
+      "n_control_years": 7
+    },
+    "ccl_pwl": {
+      "n_events": 15,
+      "n_decrease": 11,
+      "mean_pct_change": -16.2,
+      "wilcoxon_p": 0.047913,
+      "n_control_years": 7
+    },
+    "ssi_pwl_100": {
+      "n_events": 15,
+      "n_decrease": 10,
+      "mean_pct_change": -7.6,
+      "wilcoxon_p": 0.207764,
+      "n_control_years": 7
+    },
+    "sk38_pwl_100": {
+      "n_events": 15,
+      "n_decrease": 10,
+      "mean_pct_change": -12.2,
+      "wilcoxon_p": 0.072998,
+      "n_control_years": 7
+    },
+    "sn38_pwl_100": {
+      "n_events": 15,
+      "n_decrease": 10,
+      "mean_pct_change": -6.1,
+      "wilcoxon_p": 0.072998,
+      "n_control_years": 7
+    },
+    "ccl_pwl_100": {
+      "n_events": 15,
+      "n_decrease": 11,
+      "mean_pct_change": -12.0,
+      "wilcoxon_p": 0.106995,
+      "n_control_years": 7
+    },
+    "dangerLevel": {
+      "n_events": 15,
+      "n_decrease": 5,
+      "mean_pct_change": 8.4,
+      "wilcoxon_p": 0.135376,
+      "n_control_years": 7
+    },
+    "ISWR": {
+      "n_events": 15,
+      "n_decrease": 11,
+      "mean_pct_change": -3.4,
+      "wilcoxon_p": 0.063721,
+      "n_control_years": 7
+    },
+    "TA": {
+      "n_events": 15,
+      "n_decrease": 11,
+      "mean_pct_change": -39.3,
+      "wilcoxon_p": 0.04126,
+      "n_control_years": 7
+    },
+    "HS_mod": {
+      "n_events": 15,
+      "n_decrease": 6,
+      "mean_pct_change": 19.5,
+      "wilcoxon_p": 0.135376,
+      "n_control_years": 7
+    },
+    "HS_meas": {
+      "n_events": 15,
+      "n_decrease": 6,
+      "mean_pct_change": 19.5,
+      "wilcoxon_p": 0.135376,
+      "n_control_years": 7
+    },
+    "HN24": {
+      "n_events": 15,
+      "n_decrease": 7,
+      "mean_pct_change": 34.1,
+      "wilcoxon_p": 0.207764,
+      "n_control_years": 7
+    }
+  },
+  "phase3_phase_resolved": {
+    "ssi_pwl": {
+      "early": {
+        "n": 15,
+        "mean_pct": -13.0,
+        "n_decrease": 11,
+        "wilcoxon_p": 0.0353
+      },
+      "mid": {
+        "n": 15,
+        "mean_pct": -5.0,
+        "n_decrease": 10,
+        "wilcoxon_p": 0.2293
+      },
+      "late": {
+        "n": 15,
+        "mean_pct": -14.2,
+        "n_decrease": 11,
+        "wilcoxon_p": 0.0353
+      }
+    },
+    "sk38_pwl": {
+      "early": {
+        "n": 15,
+        "mean_pct": -22.5,
+        "n_decrease": 11,
+        "wilcoxon_p": 0.0151
+      },
+      "mid": {
+        "n": 15,
+        "mean_pct": -7.5,
+        "n_decrease": 9,
+        "wilcoxon_p": 0.3028
+      },
+      "late": {
+        "n": 15,
+        "mean_pct": -18.2,
+        "n_decrease": 10,
+        "wilcoxon_p": 0.0353
+      }
+    },
+    "sn38_pwl": {
+      "early": {
+        "n": 15,
+        "mean_pct": -11.4,
+        "n_decrease": 10,
+        "wilcoxon_p": 0.0413
+      },
+      "mid": {
+        "n": 15,
+        "mean_pct": -4.1,
+        "n_decrease": 9,
+        "wilcoxon_p": 0.2769
+      },
+      "late": {
+        "n": 15,
+        "mean_pct": -14.4,
+        "n_decrease": 11,
+        "wilcoxon_p": 0.0067
+      }
+    },
+    "ccl_pwl": {
+      "early": {
+        "n": 15,
+        "mean_pct": -20.4,
+        "n_decrease": 10,
+        "wilcoxon_p": 0.073
+      },
+      "mid": {
+        "n": 15,
+        "mean_pct": -10.3,
+        "n_decrease": 9,
+        "wilcoxon_p": 0.1688
+      },
+      "late": {
+        "n": 15,
+        "mean_pct": -18.0,
+        "n_decrease": 11,
+        "wilcoxon_p": 0.0946
+      }
+    },
+    "ssi_pwl_100": {
+      "early": {
+        "n": 15,
+        "mean_pct": -11.7,
+        "n_decrease": 10,
+        "wilcoxon_p": 0.0637
+      },
+      "mid": {
+        "n": 15,
+        "mean_pct": -3.5,
+        "n_decrease": 9,
+        "wilcoxon_p": 0.3303
+      },
+      "late": {
+        "n": 15,
+        "mean_pct": -13.8,
+        "n_decrease": 10,
+        "wilcoxon_p": 0.0256
+      }
+    },
+    "sk38_pwl_100": {
+      "early": {
+        "n": 15,
+        "mean_pct": -19.1,
+        "n_decrease": 11,
+        "wilcoxon_p": 0.0256
+      },
+      "mid": {
+        "n": 15,
+        "mean_pct": -4.7,
+        "n_decrease": 10,
+        "wilcoxon_p": 0.3591
+      },
+      "late": {
+        "n": 15,
+        "mean_pct": -17.1,
+        "n_decrease": 11,
+        "wilcoxon_p": 0.0479
+      }
+    },
+    "sn38_pwl_100": {
+      "early": {
+        "n": 15,
+        "mean_pct": -9.6,
+        "n_decrease": 10,
+        "wilcoxon_p": 0.0353
+      },
+      "mid": {
+        "n": 15,
+        "mean_pct": -2.5,
+        "n_decrease": 9,
+        "wilcoxon_p": 0.3303
+      },
+      "late": {
+        "n": 15,
+        "mean_pct": -13.5,
+        "n_decrease": 11,
+        "wilcoxon_p": 0.0067
+      }
+    },
+    "ccl_pwl_100": {
+      "early": {
+        "n": 15,
+        "mean_pct": -16.4,
+        "n_decrease": 9,
+        "wilcoxon_p": 0.1205
+      },
+      "mid": {
+        "n": 15,
+        "mean_pct": -6.6,
+        "n_decrease": 10,
+        "wilcoxon_p": 0.1354
+      },
+      "late": {
+        "n": 15,
+        "mean_pct": -15.6,
+        "n_decrease": 11,
+        "wilcoxon_p": 0.1514
+      }
+    },
+    "dangerLevel": {
+      "early": {
+        "n": 15,
+        "mean_pct": 10.4,
+        "n_decrease": 5,
+        "wilcoxon_p": 0.1876
+      },
+      "mid": {
+        "n": 15,
+        "mean_pct": 7.5,
+        "n_decrease": 6,
+        "wilcoxon_p": 0.3591
+      },
+      "late": {
+        "n": 15,
+        "mean_pct": 6.6,
+        "n_decrease": 4,
+        "wilcoxon_p": 0.4543
+      }
+    },
+    "ISWR": {
+      "early": {
+        "n": 15,
+        "mean_pct": -3.1,
+        "n_decrease": 9,
+        "wilcoxon_p": 0.2769
+      },
+      "mid": {
+        "n": 15,
+        "mean_pct": -3.7,
+        "n_decrease": 8,
+        "wilcoxon_p": 0.2078
+      },
+      "late": {
+        "n": 15,
+        "mean_pct": 2.5,
+        "n_decrease": 7,
+        "wilcoxon_p": 0.8469
+      }
+    },
+    "TA": {
+      "early": {
+        "n": 15,
+        "mean_pct": -17.1,
+        "n_decrease": 10,
+        "wilcoxon_p": 0.2769
+      },
+      "mid": {
+        "n": 15,
+        "mean_pct": -1144.5,
+        "n_decrease": 13,
+        "wilcoxon_p": 0.0103
+      },
+      "late": {
+        "n": 15,
+        "mean_pct": -14.9,
+        "n_decrease": 9,
+        "wilcoxon_p": 0.3303
+      }
+    },
+    "HS_mod": {
+      "early": {
+        "n": 15,
+        "mean_pct": 22.8,
+        "n_decrease": 6,
+        "wilcoxon_p": 0.107
+      },
+      "mid": {
+        "n": 15,
+        "mean_pct": 17.4,
+        "n_decrease": 5,
+        "wilcoxon_p": 0.107
+      },
+      "late": {
+        "n": 15,
+        "mean_pct": 14.4,
+        "n_decrease": 5,
+        "wilcoxon_p": 0.0637
+      }
+    },
+    "HS_meas": {
+      "early": {
+        "n": 15,
+        "mean_pct": 23.0,
+        "n_decrease": 6,
+        "wilcoxon_p": 0.107
+      },
+      "mid": {
+        "n": 15,
+        "mean_pct": 17.3,
+        "n_decrease": 5,
+        "wilcoxon_p": 0.107
+      },
+      "late": {
+        "n": 15,
+        "mean_pct": 14.2,
+        "n_decrease": 5,
+        "wilcoxon_p": 0.073
+      }
+    },
+    "HN24": {
+      "early": {
+        "n": 15,
+        "mean_pct": 37.9,
+        "n_decrease": 7,
+        "wilcoxon_p": 0.4543
+      },
+      "mid": {
+        "n": 15,
+        "mean_pct": 54.0,
+        "n_decrease": 8,
+        "wilcoxon_p": 0.5995
+      },
+      "late": {
+        "n": 15,
+        "mean_pct": 13.4,
+        "n_decrease": 8,
+        "wilcoxon_p": 0.7197
+      }
+    }
+  },
+  "phase4_european_alps": {
+    "AT": {
+      "n_events": 3,
+      "n_decrease": 0,
+      "mean_pct_change": 10.5,
+      "mw_p": 0.1,
+      "events": [
+        {
+          "date": "2012-01-11",
+          "ssw_danger": 2.49,
+          "ctrl_danger": 2.02,
+          "pct_change": 23.5
+        },
+        {
+          "date": "2013-01-06",
+          "ssw_danger": 2.29,
+          "ctrl_danger": 2.21,
+          "pct_change": 3.5
+        },
+        {
+          "date": "2013-01-07",
+          "ssw_danger": 2.29,
+          "ctrl_danger": 2.19,
+          "pct_change": 4.6
+        }
+      ]
+    },
+    "CH": {
+      "n_events": 3,
+      "n_decrease": 3,
+      "mean_pct_change": -9.9,
+      "mw_p": 0.1,
+      "events": [
+        {
+          "date": "2012-01-11",
+          "ssw_danger": 2.31,
+          "ctrl_danger": 2.44,
+          "pct_change": -5.3
+        },
+        {
+          "date": "2013-01-06",
+          "ssw_danger": 2.21,
+          "ctrl_danger": 2.55,
+          "pct_change": -13.3
+        },
+        {
+          "date": "2013-01-07",
+          "ssw_danger": 2.24,
+          "ctrl_danger": 2.52,
+          "pct_change": -11.1
+        }
+      ]
+    },
+    "DE": {
+      "n_events": 3,
+      "n_decrease": 0,
+      "mean_pct_change": 27.7,
+      "mw_p": 0.1,
+      "events": [
+        {
+          "date": "2012-01-11",
+          "ssw_danger": 2.86,
+          "ctrl_danger": 2.19,
+          "pct_change": 30.5
+        },
+        {
+          "date": "2013-01-06",
+          "ssw_danger": 2.78,
+          "ctrl_danger": 2.18,
+          "pct_change": 27.6
+        },
+        {
+          "date": "2013-01-07",
+          "ssw_danger": 2.71,
+          "ctrl_danger": 2.17,
+          "pct_change": 25.1
+        }
+      ]
+    },
+    "FR": {
+      "n_events": 3,
+      "n_decrease": 1,
+      "mean_pct_change": -7.4,
+      "mw_p": 0.7,
+      "events": [
+        {
+          "date": "2012-01-11",
+          "ssw_danger": 2.12,
+          "ctrl_danger": 2.85,
+          "pct_change": -25.7
+        },
+        {
+          "date": "2013-01-06",
+          "ssw_danger": 2.53,
+          "ctrl_danger": 2.53,
+          "pct_change": 0.1
+        },
+        {
+          "date": "2013-01-07",
+          "ssw_danger": 2.62,
+          "ctrl_danger": 2.53,
+          "pct_change": 3.5
+        }
+      ]
+    },
+    "IT": {
+      "n_events": 3,
+      "n_decrease": 3,
+      "mean_pct_change": -13.5,
+      "mw_p": 0.1,
+      "events": [
+        {
+          "date": "2012-01-11",
+          "ssw_danger": 1.7,
+          "ctrl_danger": 2.63,
+          "pct_change": -35.2
+        },
+        {
+          "date": "2013-01-06",
+          "ssw_danger": 2.23,
+          "ctrl_danger": 2.29,
+          "pct_change": -2.7
+        },
+        {
+          "date": "2013-01-07",
+          "ssw_danger": 2.24,
+          "ctrl_danger": 2.3,
+          "pct_change": -2.6
+        }
+      ]
+    }
+  },
+  "phase5_enso_qbo": {
+    "error": "'onset_date'"
+  },
+  "phase6_danger": {
+    "n_events": 4,
+    "mean_danger_ssw": 2.17,
+    "mean_danger_ctrl": 2.27,
+    "pct_change": -3.2,
+    "n_decrease": 2,
+    "wilcoxon_p": 0.625
+  }
+}

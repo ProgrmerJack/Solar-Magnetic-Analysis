@@ -1,0 +1,41 @@
+{
+  "n_mean_draws": 1500,
+  "n_cover_draws": 60,
+  "n_boot": 1000,
+  "n_rows": 81836,
+  "n_units": 10,
+  "n_winters": 47,
+  "n_events": 29,
+  "specs": {
+    "shared_harm3": {
+      "null_mean_degC": 0.1573,
+      "null_sd": 0.5984,
+      "n_draws": 1500,
+      "null_mean_in_sd_units": 0.0262
+    },
+    "unit_harm2": {
+      "null_mean_degC": 0.1855,
+      "null_sd": 0.5954,
+      "n_draws": 1500,
+      "null_mean_in_sd_units": 0.031
+    },
+    "unit_harm3": {
+      "null_mean_degC": 0.1571,
+      "null_sd": 0.5982,
+      "n_draws": 1500,
+      "null_mean_in_sd_units": 0.0262,
+      "mean_CI95": [
+        0.1269,
+        0.1874
+      ],
+      "coverage": 0.983,
+      "coverage_CI95": [
+        0.911,
+        1.0
+      ],
+      "fpr": 0.017,
+      "n_cover": 60
+    }
+  },
+  "coverage_spec": "unit_harm3"
+}

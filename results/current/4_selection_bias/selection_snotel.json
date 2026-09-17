@@ -1,0 +1,33 @@
+{
+  "n_draw": 800,
+  "n_events": 29,
+  "rate_real": 0.621,
+  "variables": {
+    "tavg_c": {
+      "description": "mean daily air temperature",
+      "real_all_events": -0.1513,
+      "real_dSSW_only": -0.1311,
+      "null_all_events": 0.0086,
+      "null_rate_matched": 0.0202,
+      "null_matched_CI95": [
+        -0.1146,
+        0.1654
+      ],
+      "pct_reproduced_by_selection": -15.4,
+      "p_real_vs_matched_null": 0.015
+    },
+    "snwd_mm": {
+      "description": "snow depth",
+      "real_all_events": 0.2452,
+      "real_dSSW_only": 0.0504,
+      "null_all_events": -0.0258,
+      "null_rate_matched": -0.075,
+      "null_matched_CI95": [
+        -0.5418,
+        0.3503
+      ],
+      "pct_reproduced_by_selection": -148.9,
+      "p_real_vs_matched_null": 0.27375
+    }
+  }
+}
