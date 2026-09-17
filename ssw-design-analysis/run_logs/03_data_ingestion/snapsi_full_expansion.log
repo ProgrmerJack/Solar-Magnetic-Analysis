@@ -1,0 +1,11 @@
+centres    ['CCCma', 'CNR-ISAC', 'ECCC', 'ECMWF', 'KMA', 'Meteo-France', 'NCAR', 'NRL', 'SNU', 'UKMO']
+inits      ['s20180125', 's20180208', 's20181213', 's20190108', 's20190829', 's20191001']
+matched    6,171 files, 149.0 GB total
+cached     2,226 files (no transfer)
+to fetch   3,945 files, 132.9 GB
+CEDA token valid, 71.5 h remaining (user mikhail001)
+  100/6171  0.0 min  (25573 files/min)
+  200/6171  0.0 min  (34813 files/min)
+  300/6171  0.0 min  (37113 files/min)
+  400/6171  1.1 min  (351 files/min)
+  500/6171  5.8 min  (86 files/min)
