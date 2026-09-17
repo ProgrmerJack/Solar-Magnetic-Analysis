@@ -321,3 +321,794 @@ information, go to https://www.opendap.org/faq-page.
 Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
 information, go to https://www.opendap.org/faq-page.
   warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+  200/385  3.4 min  (59 members/min)
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+  300/385  4.8 min  (62 members/min)
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(
+
+84,880 rows from 385 members -> snapsi_polarcap_zg100.parquet (0 failed this run)
+experiment  control  nudged
+centre                     
+CCCma             4       4

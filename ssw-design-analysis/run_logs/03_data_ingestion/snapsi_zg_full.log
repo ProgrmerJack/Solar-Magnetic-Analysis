@@ -6,3 +6,7 @@ to fetch   6,071
 CEDA token valid, 70.7 h remaining (user mikhail001)
 
 gating CNR-ISAC -- full file vs OPeNDAP subset ...
+/home/xola/Solar-Magnetic-Analysis/.venv/lib/python3.14/site-packages/pydap/handlers/dap.py:164: UserWarning: PyDAP was unable to determine the DAP protocol defaulting to DAP2. DAP2 is consider legacy and may result in slower responses. 
+Consider replacing `http` in your `url` with either `dap2` or `dap4` to specify the DAP protocol (e.g. `dap2://<data_url>` or `dap4://<data_url>`).  For more 
+information, go to https://www.opendap.org/faq-page.
+  warnings.warn(

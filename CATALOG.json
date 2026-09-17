@@ -1,10 +1,10 @@
 {
- "generated": "2026-09-17T12:15:06+00:00",
+ "generated": "2026-09-17T13:54:46+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 110,
-  "results": 53
+  "scripts": 112,
+  "results": 54
  },
  "scripts": [
   {
@@ -115,13 +115,29 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "Downloads the SNAPSI surface field and reduces it to a polar-cap index on the fly, so the CAUSAL stratosphere-to-surface effect can be measured by experimental design rather than inferred from composites.",
-   "loc": 191,
-   "modified": "2026-08-03 12:10",
-   "sha256_16": "50522dd93c9a20e0",
+   "loc": 366,
+   "modified": "2026-09-17 13:08",
+   "sha256_16": "a16f6337d6959432",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_manifest.csv",
     "snapsi_polarcap_psl.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_snapsi_zg.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "SNAPSI geopotential height at 100 hPa, reduced to a polar-cap mean, fetched by OPeNDAP subsetting rather than by downloading whole files.",
+   "loc": 413,
+   "modified": "2026-09-17 13:34",
+   "sha256_16": "3462b08c4cd2675a",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_manifest.csv",
+    "snapsi_polarcap_zg100.parquet",
+    "snapsi_zg_opendap_gate.json"
    ],
    "filename_prefixes": []
   },
@@ -858,6 +874,22 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/07_physical_decomposition/snapsi_loeffel_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "IS DOWNWARD COUPLING A PROPERTY OF THE EVENT, OR OF WHAT FOLLOWS IT? THE PAPER, IN ITS PUBLISHED FORM Loeffel, Rupp, Kiefer, Pinto, Birner, Garny (2026), \"Quantifying the tropospheric response to individual sudden stratospheric warmings revealed by",
+   "loc": 411,
+   "modified": "2026-09-17 13:54",
+   "sha256_16": "5a0829c47578e896",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_loeffel_test.json",
+    "snapsi_polarcap_psl.parquet",
+    "snapsi_polarcap_zg100.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py",
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
@@ -936,9 +968,9 @@
    "tree": "ssw-design-analysis",
    "stage": "environment",
    "title": "Verifies that this environment can actually do the project's work -- not that packages import, but that the four things every analysis here depends on really function.",
-   "loc": 165,
-   "modified": "2026-09-17 11:35",
-   "sha256_16": "06e09f7cc9cfd3b7",
+   "loc": 182,
+   "modified": "2026-09-17 12:38",
+   "sha256_16": "8298bfa378aa34ef",
    "flags": [],
    "filenames_mentioned": [],
    "filename_prefixes": []
@@ -3539,6 +3571,51 @@
     "pooled_all",
     "pooled_excluding_short_lead_init",
     "interpretation"
+   ]
+  },
+  {
+   "path": "results/current/8_experiment/snapsi_loeffel_test.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 8360,
+   "modified": "2026-09-17 13:54",
+   "sha256_16": "fb1bd5b72cb338b0",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_loeffel_test.py"
+   ],
+   "state": "unverified",
+   "detail": "no provenance baseline recorded",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_loeffel_test.py": "5a0829c47578e896"
+   },
+   "verdicts": [
+    {
+     "key": "power_within_ensemble.note",
+     "text": "Power to detect a WITHIN-ensemble correlation at n members. The 0.85 row is included only for scale: it is Loeffel's BETWEEN-EVENT value on ensemble means and is not the same estimand as anything measured here."
+    }
+   ],
+   "counts": {
+    "n_events": [
+     18
+    ],
+    "n_perm": [
+     5000
+    ]
+   },
+   "top_level_keys": [
+    "paper",
+    "windows",
+    "seed",
+    "n_perm",
+    "excluded_centres",
+    "design_gate",
+    "primary",
+    "fidelity",
+    "max_available",
+    "power_within_ensemble",
+    "between_ensemble_descriptive"
    ]
   },
   {

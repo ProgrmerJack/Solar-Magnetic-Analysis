@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T12:15:06+00:00",
+ "generated": "2026-09-17T13:54:46+00:00",
  "generator": "tools/catalog_repo.py",
  "note": "Every ssw-design-analysis result in one file. The per-script JSONs remain on disk as write-side provenance; this is the read path. Regenerate with tools/catalog_repo.py.",
  "results": {
@@ -8904,6 +8904,446 @@
     "pure_translation": "KS p = 0.805 (D over 451 vs 450 members): the forced distribution is a pure translation of the unforced one.",
     "POWER LIMITATION -- STATED, NOT BURIED": "The Gaussian-mixture BIC test has essentially NO power here: at a proper 5% critical value, power is 0.04 at separation 0.25 sigma and 0.00 at 1.0-1.5 sigma, because the within-component spread stays at ~1 sigma while the separation grows. Its p = 0.415 is therefore NOT evidence for one population and must never be quoted as such. The VARIANCE BOUND and the KS test carry this result; the mixture test does not. A first version of the power code compared the statistic against a SINGLE null draw, which is a coin flip under the null and produced power DECREASING with separation -- impossible, and the giveaway that it was wrong.",
     "guard_that_mattered": "Including the s20190108 initialisation flips every conclusion: variance ratio 1.644 [1.41, 1.93] and KS p = 0.010. That initialisation starts 6 days AFTER onset, so the +8..+25 window sits at lead 2-19 days before the ensemble has diverged; its control spread is ~138 Pa against 205-466 Pa elsewhere. Standardising by forecast spread growth rather than climatological spread inflates both statistics."
+   }
+  },
+  "snapsi_loeffel_test.json": {
+   "paper": {
+    "citation": "Loeffel et al. 2026, WCD 7, 895-913",
+    "reported_r": 0.85,
+    "n_events": 18,
+    "computed": "across events, on ensemble means"
+   },
+   "windows": {
+    "predictor_days": [
+     8,
+     14
+    ],
+    "response_primary_days": [
+     15,
+     25
+    ],
+    "response_fidelity_days": [
+     15,
+     49
+    ],
+    "response_max_available_days": [
+     15,
+     25
+    ]
+   },
+   "seed": 3397693885,
+   "n_perm": 5000,
+   "excluded_centres": [
+    "NRL"
+   ],
+   "design_gate": {
+    "threshold_ratio": 0.5,
+    "per_ensemble": [
+     {
+      "centre": "CCCma",
+      "init": "s20180125",
+      "sd_nudged_m": 37.01,
+      "sd_control_m": 38.41,
+      "ratio": 0.964
+     },
+     {
+      "centre": "CCCma",
+      "init": "s20180208",
+      "sd_nudged_m": 33.26,
+      "sd_control_m": 26.22,
+      "ratio": 1.268
+     },
+     {
+      "centre": "CCCma",
+      "init": "s20181213",
+      "sd_nudged_m": 29.46,
+      "sd_control_m": 32.83,
+      "ratio": 0.897
+     },
+     {
+      "centre": "CCCma",
+      "init": "s20190108",
+      "sd_nudged_m": 4.98,
+      "sd_control_m": 5.24,
+      "ratio": 0.951
+     }
+    ],
+    "median_ratio": 0.958,
+    "passes": true
+   },
+   "primary": {
+    "nudged": {
+     "per_ensemble": [
+      {
+       "centre": "CCCma",
+       "init": "s20180125",
+       "event": "Feb-2018",
+       "arm": "nudged",
+       "n_members": 50,
+       "r": 0.3714,
+       "perm_p": 0.0086
+      },
+      {
+       "centre": "CCCma",
+       "init": "s20180208",
+       "event": "Feb-2018",
+       "arm": "nudged",
+       "n_members": 50,
+       "r": 0.0868,
+       "perm_p": 0.55129
+      },
+      {
+       "centre": "CCCma",
+       "init": "s20181213",
+       "event": "Jan-2019",
+       "arm": "nudged",
+       "n_members": 50,
+       "r": 0.2504,
+       "perm_p": 0.07538
+      },
+      {
+       "centre": "CCCma",
+       "init": "s20190108",
+       "event": "Jan-2019",
+       "arm": "nudged",
+       "n_members": 38,
+       "r": -0.2182,
+       "perm_p": 0.17896
+      }
+     ],
+     "pooled": {
+      "r": 0.1504762118979343,
+      "CI95": [
+       0.0038870664551971944,
+       0.2907343259652459
+      ],
+      "n_ensembles": 4,
+      "n_members_total": 188
+     },
+     "pooled_excl_short_lead": {
+      "r": 0.23955460357269606,
+      "CI95": [
+       0.07907433859422244,
+       0.38793195151531873
+      ],
+      "n_ensembles": 3,
+      "n_members_total": 150
+     }
+    },
+    "control": {
+     "per_ensemble": [
+      {
+       "centre": "CCCma",
+       "init": "s20180125",
+       "event": "Feb-2018",
+       "arm": "control",
+       "n_members": 50,
+       "r": 0.0943,
+       "perm_p": 0.5043
+      },
+      {
+       "centre": "CCCma",
+       "init": "s20180208",
+       "event": "Feb-2018",
+       "arm": "control",
+       "n_members": 50,
+       "r": -0.3102,
+       "perm_p": 0.02999
+      },
+      {
+       "centre": "CCCma",
+       "init": "s20181213",
+       "event": "Jan-2019",
+       "arm": "control",
+       "n_members": 50,
+       "r": 0.1411,
+       "perm_p": 0.33153
+      },
+      {
+       "centre": "CCCma",
+       "init": "s20190108",
+       "event": "Jan-2019",
+       "arm": "control",
+       "n_members": 47,
+       "r": 0.086,
+       "perm_p": 0.56569
+      }
+     ],
+     "pooled": {
+      "r": -0.0008982122688548418,
+      "CI95": [
+       -0.14399253853069427,
+       0.14223290704468125
+      ],
+      "n_ensembles": 4,
+      "n_members_total": 197
+     },
+     "pooled_excl_short_lead": {
+      "r": -0.028038623057089786,
+      "CI95": [
+       -0.19074265461880088,
+       0.13616477810614777
+      ],
+      "n_ensembles": 3,
+      "n_members_total": 150
+     }
+    }
+   },
+   "fidelity": {
+    "nudged": {
+     "per_ensemble": [
+      {
+       "centre": "CCCma",
+       "init": "s20190108",
+       "event": "Jan-2019",
+       "arm": "nudged",
+       "n_members": 38,
+       "r": 0.1899,
+       "perm_p": 0.24975
+      }
+     ],
+     "pooled": {
+      "r": 0.18994209016451025,
+      "CI95": [
+       -0.13813458913887702,
+       0.48045645939426695
+      ],
+      "n_ensembles": 1,
+      "n_members_total": 38
+     },
+     "pooled_excl_short_lead": null
+    },
+    "control": {
+     "per_ensemble": [
+      {
+       "centre": "CCCma",
+       "init": "s20190108",
+       "event": "Jan-2019",
+       "arm": "control",
+       "n_members": 47,
+       "r": 0.0949,
+       "perm_p": 0.5049
+      }
+     ],
+     "pooled": {
+      "r": 0.09488665739348626,
+      "CI95": [
+       -0.19767143992025518,
+       0.371923979241191
+      ],
+      "n_ensembles": 1,
+      "n_members_total": 47
+     },
+     "pooled_excl_short_lead": null
+    }
+   },
+   "max_available": {
+    "nudged": {
+     "per_ensemble": [
+      {
+       "centre": "CCCma",
+       "init": "s20180125",
+       "event": "Feb-2018",
+       "arm": "nudged",
+       "n_members": 50,
+       "r": 0.3714,
+       "perm_p": 0.008
+      },
+      {
+       "centre": "CCCma",
+       "init": "s20180208",
+       "event": "Feb-2018",
+       "arm": "nudged",
+       "n_members": 50,
+       "r": 0.0868,
+       "perm_p": 0.54889
+      },
+      {
+       "centre": "CCCma",
+       "init": "s20181213",
+       "event": "Jan-2019",
+       "arm": "nudged",
+       "n_members": 50,
+       "r": 0.2504,
+       "perm_p": 0.08638
+      },
+      {
+       "centre": "CCCma",
+       "init": "s20190108",
+       "event": "Jan-2019",
+       "arm": "nudged",
+       "n_members": 38,
+       "r": -0.2182,
+       "perm_p": 0.19296
+      }
+     ],
+     "pooled": {
+      "r": 0.1504762118979343,
+      "CI95": [
+       0.0038870664551971944,
+       0.2907343259652459
+      ],
+      "n_ensembles": 4,
+      "n_members_total": 188
+     },
+     "pooled_excl_short_lead": {
+      "r": 0.23955460357269606,
+      "CI95": [
+       0.07907433859422244,
+       0.38793195151531873
+      ],
+      "n_ensembles": 3,
+      "n_members_total": 150
+     }
+    },
+    "control": {
+     "per_ensemble": [
+      {
+       "centre": "CCCma",
+       "init": "s20180125",
+       "event": "Feb-2018",
+       "arm": "control",
+       "n_members": 50,
+       "r": 0.0943,
+       "perm_p": 0.5041
+      },
+      {
+       "centre": "CCCma",
+       "init": "s20180208",
+       "event": "Feb-2018",
+       "arm": "control",
+       "n_members": 50,
+       "r": -0.3102,
+       "perm_p": 0.02599
+      },
+      {
+       "centre": "CCCma",
+       "init": "s20181213",
+       "event": "Jan-2019",
+       "arm": "control",
+       "n_members": 50,
+       "r": 0.1411,
+       "perm_p": 0.33453
+      },
+      {
+       "centre": "CCCma",
+       "init": "s20190108",
+       "event": "Jan-2019",
+       "arm": "control",
+       "n_members": 47,
+       "r": 0.086,
+       "perm_p": 0.55889
+      }
+     ],
+     "pooled": {
+      "r": -0.0008982122688548418,
+      "CI95": [
+       -0.14399253853069427,
+       0.14223290704468125
+      ],
+      "n_ensembles": 4,
+      "n_members_total": 197
+     },
+     "pooled_excl_short_lead": {
+      "r": -0.028038623057089786,
+      "CI95": [
+       -0.19074265461880088,
+       0.13616477810614777
+      ],
+      "n_ensembles": 3,
+      "n_members_total": 150
+     }
+    }
+   },
+   "power_within_ensemble": {
+    "n_members_median": 50,
+    "detection_prob_by_true_r": {
+     "0.1": 0.1057,
+     "0.2": 0.2847,
+     "0.3": 0.5644,
+     "0.4": 0.8275,
+     "0.5": 0.9645,
+     "0.85": 1.0
+    },
+    "note": "Power to detect a WITHIN-ensemble correlation at n members. The 0.85 row is included only for scale: it is Loeffel's BETWEEN-EVENT value on ensemble means and is not the same estimand as anything measured here."
+   },
+   "between_ensemble_descriptive": {
+    "points": [
+     {
+      "centre": "CCCma",
+      "arm": "control",
+      "init": "s20180125",
+      "event": "Feb-2018",
+      "zg100_week2_m": 15462.36,
+      "psl_resp_Pa": 101659.9
+     },
+     {
+      "centre": "CCCma",
+      "arm": "control",
+      "init": "s20180208",
+      "event": "Feb-2018",
+      "zg100_week2_m": 15401.55,
+      "psl_resp_Pa": 102041.8
+     },
+     {
+      "centre": "CCCma",
+      "arm": "control",
+      "init": "s20181213",
+      "event": "Jan-2019",
+      "zg100_week2_m": 15365.66,
+      "psl_resp_Pa": 101543.4
+     },
+     {
+      "centre": "CCCma",
+      "arm": "control",
+      "init": "s20190108",
+      "event": "Jan-2019",
+      "zg100_week2_m": 15386.72,
+      "psl_resp_Pa": 101434.9
+     },
+     {
+      "centre": "CCCma",
+      "arm": "nudged",
+      "init": "s20180125",
+      "event": "Feb-2018",
+      "zg100_week2_m": 15672.41,
+      "psl_resp_Pa": 101988.4
+     },
+     {
+      "centre": "CCCma",
+      "arm": "nudged",
+      "init": "s20180208",
+      "event": "Feb-2018",
+      "zg100_week2_m": 15603.52,
+      "psl_resp_Pa": 102182.6
+     },
+     {
+      "centre": "CCCma",
+      "arm": "nudged",
+      "init": "s20181213",
+      "event": "Jan-2019",
+      "zg100_week2_m": 15549.26,
+      "psl_resp_Pa": 101793.2
+     },
+     {
+      "centre": "CCCma",
+      "arm": "nudged",
+      "init": "s20190108",
+      "event": "Jan-2019",
+      "zg100_week2_m": 15519.14,
+      "psl_resp_Pa": 101518.2
+     }
+    ],
+    "nudged": {
+     "n_ensembles": 4,
+     "n_distinct_events": 2,
+     "r": 0.7341
+    },
+    "control": {
+     "n_ensembles": 4,
+     "n_distinct_events": 2,
+     "r": 0.225
+    }
    }
   },
   "snapsi_selection_test.json": {
