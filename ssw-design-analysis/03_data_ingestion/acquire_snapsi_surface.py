@@ -133,12 +133,51 @@ def lead_days(tv):
     return np.array([(x - t0).total_seconds() / 86400.0 for x in tv], dtype=float)
 
 
+def cache_ok(df):
+    """Is a cached member usable? Cheap structural + physical plausibility test."""
+    if df is None or len(df) == 0:
+        return False
+    need = {"centre", "experiment", "init", "member", "lead_days", "psl_cap"}
+    if not need <= set(df.columns):
+        return False
+    # Entries written before 2026-09-17 have no `hemisphere` column and hold a
+    # NORTHERN cap regardless of the event. That is correct for the four NH
+    # initialisations and wrong for the two SH ones, so reject those and refetch.
+    if "hemisphere" not in df.columns:
+        if str(df["init"].iloc[0]) in SH_INITS:
+            return False
+    v = df["psl_cap"]
+    if v.isna().all():
+        return False
+    # polar-cap sea-level pressure in Pa; anything outside this is not psl
+    return 90000.0 < float(v.mean()) < 110000.0
+
+
 def fetch_reduce(row, tok):
     """Download one file, reduce to a polar-cap mean, discard the raw bytes."""
-    key = f"{row.centre}_{row.experiment}_{row.start_date}_{row.member}"
+    # The variable is part of the key. Without it a future zg or ta run would
+    # collide with the psl entry for the same member and silently serve the
+    # wrong field from cache.
+    key = f"{row.variable}_{row.centre}_{row.experiment}_{row.start_date}_{row.member}"
     cf = CACHE / f"{key}.parquet"
+    legacy = CACHE / f"{row.centre}_{row.experiment}_{row.start_date}_{row.member}.parquet"
+    if not cf.exists() and row.variable == "psl" and legacy.exists():
+        cf = legacy          # 2,466 psl members were cached before the key changed
+
     if cf.exists():
-        return pd.read_parquet(cf)
+        # A cached file is NOT trusted on existence alone. A process killed
+        # mid-write leaves a truncated parquet that exists() happily accepts and
+        # that would then be believed forever. Validate, and re-fetch if bad.
+        try:
+            cached = pd.read_parquet(cf)
+        except Exception:
+            cached = None
+        if cache_ok(cached):
+            return cached
+        print(f"  cache REJECTED, refetching: {cf.name}", flush=True)
+        cf.unlink(missing_ok=True)
+        cf = CACHE / f"{key}.parquet"
+
     url = row.download_url
     if not url.endswith("?download=1"):
         url = url.rstrip("/") + "?download=1"
@@ -154,17 +193,37 @@ def fetch_reduce(row, tok):
             with xr.open_dataset(io.BytesIO(blob)) as ds:
                 v = ds["psl"]
                 lat = ds["lat"]
-                v = v.sel(lat=lat[lat >= CAP_LAT])
-                w = np.cos(np.deg2rad(v.lat))
-                cap = v.weighted(w).mean(dim=["lat", "lon"]).values
+                # BOTH caps, always. The original code took lat >= 60 for every
+                # initialisation, which is the wrong hemisphere for the two SH
+                # cases (s20190829, s20191001 -- the Sep 2019 Antarctic warming)
+                # and silently gave them a NORTHERN cap. Computing both costs
+                # nothing here and means the raw file never has to be fetched
+                # again to answer a question about the other hemisphere.
+                north = v.sel(lat=lat[lat >= CAP_LAT])
+                south = v.sel(lat=lat[lat <= -CAP_LAT])
+                cap_n = north.weighted(np.cos(np.deg2rad(north.lat))).mean(
+                    dim=["lat", "lon"]).values
+                cap_s = south.weighted(np.cos(np.deg2rad(south.lat))).mean(
+                    dim=["lat", "lon"]).values
                 lead = lead_days(ds.time.values)
-            if not np.isfinite(cap).any():
+            if not (np.isfinite(cap_n).any() and np.isfinite(cap_s).any()):
                 raise ValueError("all-NaN polar cap")
+            hemi = "S" if str(row.start_date) in SH_INITS else "N"
             out = pd.DataFrame({
                 "centre": row.centre, "model": row.model,
                 "experiment": row.experiment, "init": str(row.start_date),
-                "member": row.member, "lead_days": lead, "psl_cap": cap})
-            out.to_parquet(cf)          # so a mid-run failure costs nothing
+                "member": row.member, "lead_days": lead,
+                "psl_cap_N": cap_n, "psl_cap_S": cap_s,
+                # the cap of the hemisphere the event is IN -- what an analysis
+                # of that event should use
+                "hemisphere": hemi,
+                "psl_cap": cap_s if hemi == "S" else cap_n})
+            # Atomic: write beside the target, then rename. A kill during
+            # to_parquet() would otherwise leave a truncated file that the next
+            # run treats as a completed download.
+            tmp = cf.with_suffix(".parquet.tmp")
+            out.to_parquet(tmp)
+            tmp.replace(cf)
             return out
         except (ImportError, ModuleNotFoundError) as exc:
             # Not transient. Retrying a missing backend just re-downloads the
@@ -258,10 +317,43 @@ def main():
     # `--centres KMA,SNU --inits sh` overwrote the file with SH data alone and
     # silently dropped every NH member the downstream analyses read. The cache is
     # the source of truth; this file is a materialised view of it.
-    cached_files = sorted(CACHE.glob("*.parquet"))
+    # psl members only. The cache is now keyed by variable, so once zg or ta
+    # members land beside these a bare *.parquet glob would concatenate
+    # different fields into one column. Legacy entries have no variable prefix
+    # and are psl by construction -- they predate the key change.
+    cached_files = sorted(
+        f for f in CACHE.glob("*.parquet")
+        if f.name.startswith("psl_") or not f.name.split("_")[0] in {"zg", "ta", "ua", "va"}
+    )
+    stray = list(CACHE.glob("*.parquet.tmp"))
+    for s in stray:
+        s.unlink(missing_ok=True)
+    if stray:
+        print(f"removed {len(stray)} interrupted partial write(s)")
     if not cached_files:
         sys.exit("nothing downloaded and cache is empty")
-    out = pd.concat([pd.read_parquet(f) for f in cached_files], ignore_index=True)
+
+    # Validate on the way in. A cached file that fetch_reduce() would reject
+    # must not reach the output either -- otherwise an interrupted run leaves
+    # wrong-hemisphere SH members concatenated into the parquet the analyses
+    # read, which is exactly how the NH-cap-for-SH-events bug propagated.
+    frames, dropped = [], 0
+    for f in cached_files:
+        try:
+            df = pd.read_parquet(f)
+        except Exception:
+            dropped += 1
+            continue
+        if cache_ok(df):
+            frames.append(df)
+        else:
+            dropped += 1
+    if dropped:
+        print(f"excluded {dropped} cached member(s) that failed validation "
+              f"(re-run to refetch them)")
+    if not frames:
+        sys.exit("every cached member failed validation")
+    out = pd.concat(frames, ignore_index=True)
     out.to_parquet(OUT)
     print(f"\n{len(out):,} rows from {len(cached_files):,} cached members "
           f"-> {OUT.name}  ({len(failed)} files failed this run)")

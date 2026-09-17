@@ -1,11 +1,51 @@
 centres    ['CCCma', 'CNR-ISAC', 'ECCC', 'ECMWF', 'KMA', 'Meteo-France', 'NCAR', 'NRL', 'SNU', 'UKMO']
 inits      ['s20180125', 's20180208', 's20181213', 's20190108', 's20190829', 's20191001']
 matched    6,171 files, 149.0 GB total
-cached     2,226 files (no transfer)
-to fetch   3,945 files, 132.9 GB
-CEDA token valid, 71.5 h remaining (user mikhail001)
-  100/6171  0.0 min  (25573 files/min)
-  200/6171  0.0 min  (34813 files/min)
-  300/6171  0.0 min  (37113 files/min)
-  400/6171  1.1 min  (351 files/min)
-  500/6171  5.8 min  (86 files/min)
+cached     2,297 files (no transfer)
+to fetch   3,874 files, 126.2 GB
+CEDA token valid, 71.2 h remaining (user mikhail001)
+  100/6171  0.0 min  (19429 files/min)
+  200/6171  0.0 min  (23161 files/min)
+  300/6171  0.0 min  (24325 files/min)
+  400/6171  0.0 min  (27038 files/min)
+  500/6171  0.0 min  (27814 files/min)
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i11p1f1.parquet  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i10p1f1.parquet
+
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i12p1f1.parquet  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i13p1f1.parquet
+
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i14p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i18p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i1p1f1.parquet  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i16p1f1.parquet
+
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i19p1f1.parquet  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i17p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i20p1f1.parquet  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i15p1f1.parquet
+
+
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i21p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i22p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i23p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i24p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i25p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i26p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i27p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i28p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i29p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i2p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i30p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i31p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i32p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i33p1f1.parquet
+  600/6171  0.8 min  (798 files/min)
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i34p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i35p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i36p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i37p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i38p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i39p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i3p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i40p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i41p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i42p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i43p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i44p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i45p1f1.parquet
