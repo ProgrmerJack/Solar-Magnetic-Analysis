@@ -72,3 +72,18 @@ Rule: a capability check must exercise the same code path as the caller. `check_
 - **Post-hoc catalogue substitution.** Swapping `primary` (43) for `union` (47) to raise n is the practice that produced four incompatible catalogues in the superseded project. `load_catalogue(which)` is the only permitted event source; inline date lists are forbidden.
 - **Guards that compare the wrong thing.** The first SNAPSI corruption guard compared members by *label* and passed NRL, whose members differ while the ensemble mean is identically zero. Test the effect, not the labels.
 - **Automated verdicts printed by scripts.** `within_model_check.py` prints "Headline stands" from the wrong criterion (`within > 0.3×pooled` instead of `within − pseudo_within`). Read the table, not the verdict line.
+
+## 2026-09-17 — A cache filename was treated as an internal detail
+Tried: prefixing the SNAPSI reduced-cache keys with the variable (`psl_CCCma_…`) so a later zg run could not collide with psl for the same member.
+Failed: `snapsi_selection_test.py` and `snapsi_distribution_test.py` read that directory BY FILENAME — centre from `name.split("_")[0]`, members via `{centre}_{exp}_{init}_*`. Both silently parsed "psl" as a centre and analysed 2,026 of 6,161 members, with no error and a plausible-looking answer that I nearly reported.
+Rule: a path or filename that another script parses is a public contract. Grep for consumers before changing one. Separate variables by DIRECTORY, never by prefix. `smoke_test.py` now fails if a cache filename does not parse to a known centre.
+
+## 2026-09-17 — Pooling ensembles whose means differ, and calling it a variance
+Tried: scaling result M from 3 centres to 9 by concatenating members across ensembles, each standardised by its own control mean and sd.
+Failed: that puts every control ensemble at ~0 but every nudged ensemble at its own causal shift, so pooling adds the between-ensemble spread of shifts to the nudged variance and to nothing else. The ratio went 0.941 → 2.085 and KS p → 0.000, flatly contradicting the result. It was invisible at 3 centres because the shift spread was 0.295 σ; at 9 it is 1.071 σ, larger than the quantity being estimated.
+Rule: before pooling groups to measure a WITHIN-group quantity, re-centre each group on its own mean. Check the arithmetic closes: 0.952 within + 1.147 between ≈ 2.085 pooled.
+
+## 2026-09-17 — Computing a different quantity and reporting it under the same name
+Tried: extending the polar-cap reduction and the L window to the Southern Hemisphere case.
+Failed: twice in one day. The reduction took `lat >= 60` for every initialisation, giving the two SH cases an ARCTIC cap; and `s20191001`, which initialises 13 days after the central date, was averaged over the nominal +8..+25 window when its data only cover +13..+25 — moving the SH rate from 0.791 to 0.891.
+Rule: when a window or region is nominal, assert the data actually span it and DROP what does not, rather than averaging over whatever is present. Compute both hemispheres at reduction time so the question can never be asked of the wrong one.
