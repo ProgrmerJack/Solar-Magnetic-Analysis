@@ -60,7 +60,30 @@ ONSET = {"s20180125": "2018-02-12", "s20180208": "2018-02-12",
          "s20181213": "2019-01-02", "s20190108": "2019-01-02"}
 INIT_DATE = {"s20180125": "2018-01-25", "s20180208": "2018-02-08",
              "s20181213": "2018-12-13", "s20190108": "2019-01-08"}
+
+# ---- Southern Hemisphere, reported SEPARATELY and never pooled with NH ----
+# Central date 18 September 2019, from the SNAPSI protocol (Hitchcock et al.,
+# GMD 15, 5073, 2022): the 10 hPa 60S zonal-mean wind "did not reverse. However,
+# they did decelerate dramatically, reaching their minimum value on 18 September
+# 2019, which can be considered the 'central' date for the event."
+#
+# TWO CAVEATS THAT MUST TRAVEL WITH ANY SH NUMBER:
+#  1. This is an AUSTRAL MINOR WARMING. The wind never reversed, so it is not an
+#     SSW under the WMO definition. It tests generality to a different hemisphere
+#     AND to a weaker, different class of event -- not to the same event mirrored.
+#  2. s20191001 initialises 13 days AFTER the central date, so its post-onset
+#     coverage starts at +13 and it cannot span the +8..+25 window at all. Only
+#     s20190829 (onset at lead +20) covers it, giving 9 ensembles per arm.
+SH_ONSET = {"s20190829": "2019-09-18", "s20191001": "2019-09-18"}
+SH_INIT_DATE = {"s20190829": "2019-08-29", "s20191001": "2019-10-01"}
+ONSET_ALL = {**ONSET, **SH_ONSET}
+INIT_DATE_ALL = {**INIT_DATE, **SH_INIT_DATE}
+HEMI = {**{k: "NH" for k in ONSET}, **{k: "SH" for k in SH_ONSET}}
 WINDOW = (8, 25)          # post-onset days, as in snapsi_causal_effect.py
+# An initialisation is admitted only if its forecasts actually SPAN the window;
+# see spans_window(). Averaging a partially-covering ensemble over the nominal
+# window computes a different quantity and reports it under the same name.
+REQUIRE_FULL_WINDOW = True
 PUBLISHED_CONTRAST = -0.850   # ACP 26, 3723 (2026), same criterion
 
 
@@ -73,7 +96,7 @@ def load(centre, exp, init):
 
 
 def post_onset_offset(init):
-    return (pd.Timestamp(ONSET[init]) - pd.Timestamp(INIT_DATE[init])).days
+    return (pd.Timestamp(ONSET_ALL[init]) - pd.Timestamp(INIT_DATE_ALL[init])).days
 
 
 def member_series(df, init):
@@ -85,6 +108,23 @@ def member_series(df, init):
     lo, hi = WINDOW[0] + off, WINDOW[1] + off
     w = df[(df["lead_days"] >= lo) & (df["lead_days"] <= hi)]
     return w.groupby("member")["psl_cap"]
+
+
+def spans_window(df, init):
+    """Does this ensemble's data actually cover the analysis window?
+
+    s20191001 initialises 13 days AFTER the SH central date, so its forecasts
+    cover post-onset +13..+25. Averaging it over the nominal +8..+25 computes a
+    different, shorter-window quantity and reports it under the same name --
+    the defect the Loeffel script guards against with win_mean(). Same rule
+    here, applied identically to every initialisation.
+    """
+    if not REQUIRE_FULL_WINDOW:
+        return True
+    off = post_onset_offset(init)
+    lo, hi = WINDOW[0] + off, WINDOW[1] + off
+    lead = df["lead_days"]
+    return bool(lead.min() <= lo + 1.0 and lead.max() >= hi - 1.0)
 
 
 def window_means(df, init):
@@ -107,6 +147,9 @@ def corruption_guard(centre):
     S = []
     for init in ONSET:
         n, c = load(centre, "nudged", init), load(centre, "control", init)
+        if n is not None and c is not None and not (
+                spans_window(n, init) and spans_window(c, init)):
+            continue
         if n is None or c is None:
             continue
         S.append(abs(float(window_means(n, init).mean()
@@ -142,9 +185,9 @@ def main():
     out["all_ensembles"] = []
 
     for c in usable:
-        for init in sorted(ONSET):
+        for init in sorted(ONSET_ALL):
             con = load(c, "control", init)
-            if con is None:
+            if con is None or not spans_window(con, init):
                 continue
             cm = window_means(con, init)
             sd, base = float(cm.std(ddof=1)), float(cm.mean())
@@ -159,7 +202,7 @@ def main():
             #   control -- no SSW forcing at all (the pure null)
             for arm in ("nudged", "control"):
                 d = load(c, arm, init)
-                if d is None:
+                if d is None or not spans_window(d, init):
                     continue
                 w = d[(d["lead_days"] >= lo) & (d["lead_days"] <= hi)].copy()
                 # NAM proxy: high polar-cap pressure -> negative annular mode
@@ -182,6 +225,7 @@ def main():
                 # 0.993, so the kept-only mean of 0.776 is not the rate.
                 out["all_ensembles"].append({
                     "centre": c, "init": init, "arm": arm,
+                    "hemisphere": HEMI[init],
                     "n_members": int(len(mean_nam)),
                     "n_DW": n_dw, "n_NDW": n_nd,
                     "DW_rate": round(n_dw / len(mean_nam), 3),
@@ -192,6 +236,7 @@ def main():
                 ndm = float(mean_nam[~dw].mean())
                 out["per_case"].append({
                     "centre": c, "init": init, "arm": arm,
+                    "hemisphere": HEMI[init],
                     "n_members": int(len(mean_nam)),
                     "n_DW": n_dw, "n_NDW": n_nd,
                     "DW_rate": round(n_dw / len(mean_nam), 3),
@@ -208,7 +253,8 @@ def main():
 
     out["summary"] = {}
     for arm in ("nudged", "control"):
-        rows = [r for r in out["per_case"] if r["arm"] == arm]
+        rows = [r for r in out["per_case"]
+                if r["arm"] == arm and r["hemisphere"] == "NH"]
         if not rows:
             continue
         con = np.array([r["contrast_sigma"] for r in rows])
@@ -224,7 +270,11 @@ def main():
         }
     # Unconditional DW rate: every ensemble, nothing dropped.
     for arm in ("nudged", "control"):
-        alls = [r for r in out["all_ensembles"] if r["arm"] == arm]
+        # NH ONLY. The SH case is an austral MINOR warming in the other
+        # hemisphere and is summarised in its own block; pooling it here would
+        # silently mix two different event classes into one rate.
+        alls = [r for r in out["all_ensembles"]
+                if r["arm"] == arm and r["hemisphere"] == "NH"]
         if not alls or arm not in out["summary"]:
             continue
         rates = np.array([r["DW_rate"] for r in alls])
@@ -238,6 +288,49 @@ def main():
             out["summary"][arm]["dropped_DW_rate_mean"] = round(float(dr.mean()), 3)
             out["summary"][arm]["dropped_DW_rate_range"] = [
                 round(float(dr.min()), 3), round(float(dr.max()), 3)]
+    # ---- Southern Hemisphere, its own block. NEVER pooled with NH. ----
+    out["southern_hemisphere"] = {
+        "event": "Austral MINOR warming, central date 2019-09-18 "
+                 "(SNAPSI protocol, Hitchcock et al. GMD 15, 5073, 2022)",
+        "caveat": ("The 10 hPa 60S wind never reversed, so this is NOT an SSW "
+                   "under the WMO definition. It tests generality to a "
+                   "different hemisphere AND a weaker class of event. "
+                   "s20191001 initialises 13 days after the central date and "
+                   "cannot span the +8..+25 window, so only s20190829 "
+                   "contributes."),
+    }
+    for arm in ("nudged", "control"):
+        rows = [r for r in out["per_case"]
+                if r["arm"] == arm and r["hemisphere"] == "SH"]
+        alls = [r for r in out["all_ensembles"]
+                if r["arm"] == arm and r["hemisphere"] == "SH"]
+        if not alls:
+            continue
+        rates = np.array([r["DW_rate"] for r in alls])
+        blk = {"n_ensembles_all": len(alls),
+               "n_cases_with_contrast": len(rows),
+               "mean_DW_rate_UNCONDITIONAL": round(float(rates.mean()), 3),
+               "inits_present": sorted({r["init"] for r in alls})}
+        if rows:
+            con = np.array([r["contrast_sigma"] for r in rows])
+            blk["mean_contrast_sigma"] = round(float(con.mean()), 4)
+            blk["sd_across_cases"] = (round(float(con.std(ddof=1)), 4)
+                                      if len(con) > 1 else None)
+        out["southern_hemisphere"][arm] = blk
+
+    print("\n=== SOUTHERN HEMISPHERE (austral MINOR warming, reported separately) ===")
+    for arm in ("nudged", "control"):
+        b = out["southern_hemisphere"].get(arm)
+        if not b:
+            print(f"  {arm:<8} no usable ensembles")
+            continue
+        print(f"  {arm:<8} contrast "
+              f"{b.get('mean_contrast_sigma', float('nan')):+.3f} sigma "
+              f"(n={b['n_cases_with_contrast']} of {b['n_ensembles_all']}), "
+              f"DW rate unconditional {b['mean_DW_rate_UNCONDITIONAL']:.3f}, "
+              f"inits {b['inits_present']}")
+    print("  The wind never reversed: this is a MINOR warming, not an SSW.")
+
     out["filter_caveat"] = (
         "The DW-NDW contrast requires >=3 members in BOTH groups, which is "
         "asymmetric by construction: only an arm with a strong forced shift "

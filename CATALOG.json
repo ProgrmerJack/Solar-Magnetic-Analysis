@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T17:14:45+00:00",
+ "generated": "2026-09-17T17:18:38+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -894,9 +894,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "THE DECISIVE TEST: does the published \"downward-propagating SSW\" classification manufacture its own contrast even when the causal forcing is held EXACTLY fixed by experimental design? WHY THIS IS THE CLEAN EXPERIMENT",
-   "loc": 288,
-   "modified": "2026-09-17 16:33",
-   "sha256_16": "c73891f3c225ffd6",
+   "loc": 381,
+   "modified": "2026-09-17 17:18",
+   "sha256_16": "5c1ed25e0d67e989",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_selection_test.json"
@@ -3622,9 +3622,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 35376,
-   "modified": "2026-09-17 16:34",
-   "sha256_16": "349c09892dfa0649",
+   "bytes": 48415,
+   "modified": "2026-09-17 17:18",
+   "sha256_16": "ec40cf9d37e299c3",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py"
    ],
@@ -3632,7 +3632,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "c73891f3c225ffd6"
+    "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "5c1ed25e0d67e989"
    },
    "verdicts": [],
    "counts": {
@@ -3648,6 +3648,7 @@
     "per_case",
     "all_ensembles",
     "summary",
+    "southern_hemisphere",
     "filter_caveat",
     "units_caveat"
    ]
