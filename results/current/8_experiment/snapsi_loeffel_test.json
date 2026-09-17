@@ -1,0 +1,147 @@
+{
+ "paper": {
+  "citation": "Loeffel et al. 2026, WCD 7, 895-913",
+  "reported_r": 0.85,
+  "n_events": 18,
+  "computed": "across events, on ensemble means"
+ },
+ "windows": {
+  "predictor_days": [
+   8,
+   14
+  ],
+  "response_primary_days": [
+   15,
+   25
+  ],
+  "response_fidelity_days": [
+   15,
+   49
+  ],
+  "response_max_available_days": [
+   15,
+   25
+  ]
+ },
+ "seed": 3397693885,
+ "n_perm": 5000,
+ "excluded_centres": [
+  "NRL"
+ ],
+ "design_gate": {
+  "threshold_ratio": 0.5,
+  "per_ensemble": [
+   {
+    "centre": "CCCma",
+    "init": "s20180125",
+    "sd_nudged_m": 37.01,
+    "sd_control_m": 38.41,
+    "ratio": 0.964
+   }
+  ],
+  "median_ratio": 0.964,
+  "passes": true
+ },
+ "primary": {
+  "nudged": {
+   "per_ensemble": [
+    {
+     "centre": "CCCma",
+     "init": "s20180125",
+     "event": "Feb-2018",
+     "arm": "nudged",
+     "n_members": 50,
+     "r": 0.3714,
+     "perm_p": 0.0086
+    }
+   ],
+   "pooled": {
+    "r": 0.37136933034045316,
+    "CI95": [
+     0.10374059758461919,
+     0.5888513823676556
+    ],
+    "n_ensembles": 1,
+    "n_members_total": 50
+   }
+  },
+  "control": {
+   "per_ensemble": [
+    {
+     "centre": "CCCma",
+     "init": "s20180125",
+     "event": "Feb-2018",
+     "arm": "control",
+     "n_members": 50,
+     "r": 0.0943,
+     "perm_p": 0.5145
+    }
+   ],
+   "pooled": {
+    "r": 0.09425417842478298,
+    "CI95": [
+     -0.18905850505189423,
+     0.3630809895765594
+    ],
+    "n_ensembles": 1,
+    "n_members_total": 50
+   }
+  }
+ },
+ "fidelity": {
+  "nudged": {
+   "per_ensemble": [],
+   "pooled": null
+  },
+  "control": {
+   "per_ensemble": [],
+   "pooled": null
+  }
+ },
+ "max_available": {
+  "nudged": {
+   "per_ensemble": [
+    {
+     "centre": "CCCma",
+     "init": "s20180125",
+     "event": "Feb-2018",
+     "arm": "nudged",
+     "n_members": 50,
+     "r": 0.3714,
+     "perm_p": 0.007
+    }
+   ],
+   "pooled": {
+    "r": 0.37136933034045316,
+    "CI95": [
+     0.10374059758461919,
+     0.5888513823676556
+    ],
+    "n_ensembles": 1,
+    "n_members_total": 50
+   }
+  },
+  "control": {
+   "per_ensemble": [
+    {
+     "centre": "CCCma",
+     "init": "s20180125",
+     "event": "Feb-2018",
+     "arm": "control",
+     "n_members": 50,
+     "r": 0.0943,
+     "perm_p": 0.5177
+    }
+   ],
+   "pooled": {
+    "r": 0.09425417842478298,
+    "CI95": [
+     -0.18905850505189423,
+     0.3630809895765594
+    ],
+    "n_ensembles": 1,
+    "n_members_total": 50
+   }
+  }
+ }
+}
