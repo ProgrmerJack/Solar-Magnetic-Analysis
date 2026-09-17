@@ -1,0 +1,19 @@
+{
+ "CCCma": {
+  "centre": "CCCma",
+  "file": "zg_6hrPt_CanESM5_control_s20180125-r10i1p2f1_gn_201801250000-201803311800.nc",
+  "full_MB": 204.68,
+  "full_seconds": 154.3,
+  "subset_MB": 1.352,
+  "subset_seconds": 8.7,
+  "saving_x": 151.4,
+  "all_zero": false,
+  "any_nan": false,
+  "max_abs_diff": 0.0,
+  "correlation": 1.0,
+  "truth_mean": 15450.964516622369,
+  "subset_mean": 15450.964516622369,
+  "plausible": true,
+  "passes": true
+ }
+}
