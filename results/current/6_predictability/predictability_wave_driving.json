@@ -1,0 +1,77 @@
+{
+  "cmip6": {
+    "P1 pre-onset": {
+      "n_features": 44,
+      "ridge": {
+        "cv_r2": 0.1148,
+        "null_mean": -0.0004,
+        "null_p95": 0.0105,
+        "p_value": 0.0,
+        "significant": true
+      },
+      "gb": {
+        "cv_r2": 0.0507,
+        "null_mean": -0.0373,
+        "null_p95": -0.0128,
+        "p_value": 0.0,
+        "significant": true
+      }
+    },
+    "P2 at-onset": {
+      "n_features": 58,
+      "ridge": {
+        "cv_r2": 0.1133,
+        "null_mean": 0.0021,
+        "null_p95": 0.0136,
+        "p_value": 0.0,
+        "significant": true
+      },
+      "gb": {
+        "cv_r2": 0.0568,
+        "null_mean": -0.0333,
+        "null_p95": -0.0197,
+        "p_value": 0.0,
+        "significant": true
+      }
+    },
+    "P3 + post-onset stratosphere": {
+      "n_features": 86,
+      "ridge": {
+        "cv_r2": 0.422,
+        "null_mean": 0.0032,
+        "null_p95": 0.0135,
+        "p_value": 0.0,
+        "significant": true
+      },
+      "gb": {
+        "cv_r2": 0.3724,
+        "null_mean": -0.0311,
+        "null_p95": -0.0117,
+        "p_value": 0.0,
+        "significant": true
+      }
+    }
+  },
+  "cmip6_previous_without_wave": {
+    "P1 pre-onset": 0.0998,
+    "P2 at-onset": 0.1121,
+    "P3 + post-onset stratosphere": 0.4245
+  },
+  "observations": {
+    "vortex only (u10, z100)": {
+      "n_features": 6,
+      "cv_r2": -0.0298,
+      "null_p95": -0.0197,
+      "p_value": 0.395,
+      "significant": false
+    },
+    "vortex + WAVE (v'T', du/dt)": {
+      "n_features": 12,
+      "cv_r2": -0.0811,
+      "null_p95": -0.0581,
+      "p_value": 0.185,
+      "significant": false
+    }
+  },
+  "observations_wave_gain": -0.0513
+}

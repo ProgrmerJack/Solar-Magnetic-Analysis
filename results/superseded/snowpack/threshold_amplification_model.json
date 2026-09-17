@@ -1,0 +1,653 @@
+{
+  "multi_trigger": {
+    "n_trig_1": [
+      {
+        "weather_d": 0.1,
+        "n_triggers": 1,
+        "p_control": 0.3085,
+        "p_ssw": 0.2743,
+        "RR": 0.8889,
+        "d_hazard": 0.1,
+        "amplification": 1.0
+      },
+      {
+        "weather_d": 0.2,
+        "n_triggers": 1,
+        "p_control": 0.3085,
+        "p_ssw": 0.242,
+        "RR": 0.7842,
+        "d_hazard": 0.2,
+        "amplification": 1.0
+      },
+      {
+        "weather_d": 0.3,
+        "n_triggers": 1,
+        "p_control": 0.3085,
+        "p_ssw": 0.2119,
+        "RR": 0.6866,
+        "d_hazard": 0.3,
+        "amplification": 1.0
+      },
+      {
+        "weather_d": 0.4,
+        "n_triggers": 1,
+        "p_control": 0.3085,
+        "p_ssw": 0.1841,
+        "RR": 0.5966,
+        "d_hazard": 0.4,
+        "amplification": 1.0
+      },
+      {
+        "weather_d": 0.5,
+        "n_triggers": 1,
+        "p_control": 0.3085,
+        "p_ssw": 0.1587,
+        "RR": 0.5142,
+        "d_hazard": 0.5,
+        "amplification": 1.0
+      },
+      {
+        "weather_d": 0.6,
+        "n_triggers": 1,
+        "p_control": 0.3085,
+        "p_ssw": 0.1357,
+        "RR": 0.4397,
+        "d_hazard": 0.6,
+        "amplification": 1.0
+      },
+      {
+        "weather_d": 0.7,
+        "n_triggers": 1,
+        "p_control": 0.3085,
+        "p_ssw": 0.1151,
+        "RR": 0.373,
+        "d_hazard": 0.7,
+        "amplification": 1.0
+      },
+      {
+        "weather_d": 0.8,
+        "n_triggers": 1,
+        "p_control": 0.3085,
+        "p_ssw": 0.0968,
+        "RR": 0.3137,
+        "d_hazard": 0.8,
+        "amplification": 1.0
+      },
+      {
+        "weather_d": 0.9,
+        "n_triggers": 1,
+        "p_control": 0.3085,
+        "p_ssw": 0.0808,
+        "RR": 0.2617,
+        "d_hazard": 0.9,
+        "amplification": 1.0
+      },
+      {
+        "weather_d": 1.0,
+        "n_triggers": 1,
+        "p_control": 0.3085,
+        "p_ssw": 0.0668,
+        "RR": 0.2165,
+        "d_hazard": 1.0,
+        "amplification": 1.0
+      },
+      {
+        "weather_d": 1.1,
+        "n_triggers": 1,
+        "p_control": 0.3085,
+        "p_ssw": 0.0548,
+        "RR": 0.1776,
+        "d_hazard": 1.1,
+        "amplification": 1.0
+      },
+      {
+        "weather_d": 1.2,
+        "n_triggers": 1,
+        "p_control": 0.3085,
+        "p_ssw": 0.0446,
+        "RR": 0.1444,
+        "d_hazard": 1.2,
+        "amplification": 1.0
+      },
+      {
+        "weather_d": 1.3,
+        "n_triggers": 1,
+        "p_control": 0.3085,
+        "p_ssw": 0.0359,
+        "RR": 0.1165,
+        "d_hazard": 1.3,
+        "amplification": 1.0
+      },
+      {
+        "weather_d": 1.4,
+        "n_triggers": 1,
+        "p_control": 0.3085,
+        "p_ssw": 0.0287,
+        "RR": 0.0931,
+        "d_hazard": 1.4,
+        "amplification": 1.0
+      }
+    ],
+    "n_trig_2": [
+      {
+        "weather_d": 0.1,
+        "n_triggers": 2,
+        "p_control": 0.5219,
+        "p_ssw": 0.4733,
+        "RR": 0.9069,
+        "d_hazard": 0.1219,
+        "amplification": 1.2187
+      },
+      {
+        "weather_d": 0.2,
+        "n_triggers": 2,
+        "p_control": 0.5219,
+        "p_ssw": 0.4254,
+        "RR": 0.8151,
+        "d_hazard": 0.243,
+        "amplification": 1.2151
+      },
+      {
+        "weather_d": 0.3,
+        "n_triggers": 2,
+        "p_control": 0.5219,
+        "p_ssw": 0.3788,
+        "RR": 0.7259,
+        "d_hazard": 0.3634,
+        "amplification": 1.2114
+      },
+      {
+        "weather_d": 0.4,
+        "n_triggers": 2,
+        "p_control": 0.5219,
+        "p_ssw": 0.3342,
+        "RR": 0.6405,
+        "d_hazard": 0.4831,
+        "amplification": 1.2078
+      },
+      {
+        "weather_d": 0.5,
+        "n_triggers": 2,
+        "p_control": 0.5219,
+        "p_ssw": 0.2921,
+        "RR": 0.5598,
+        "d_hazard": 0.602,
+        "amplification": 1.204
+      },
+      {
+        "weather_d": 0.6,
+        "n_triggers": 2,
+        "p_control": 0.5219,
+        "p_ssw": 0.2529,
+        "RR": 0.4846,
+        "d_hazard": 0.7202,
+        "amplification": 1.2003
+      },
+      {
+        "weather_d": 0.7,
+        "n_triggers": 2,
+        "p_control": 0.5219,
+        "p_ssw": 0.2169,
+        "RR": 0.4156,
+        "d_hazard": 0.8376,
+        "amplification": 1.1965
+      },
+      {
+        "weather_d": 0.8,
+        "n_triggers": 2,
+        "p_control": 0.5219,
+        "p_ssw": 0.1842,
+        "RR": 0.353,
+        "d_hazard": 0.9542,
+        "amplification": 1.1928
+      },
+      {
+        "weather_d": 0.9,
+        "n_triggers": 2,
+        "p_control": 0.5219,
+        "p_ssw": 0.155,
+        "RR": 0.297,
+        "d_hazard": 1.0701,
+        "amplification": 1.189
+      },
+      {
+        "weather_d": 1.0,
+        "n_triggers": 2,
+        "p_control": 0.5219,
+        "p_ssw": 0.1292,
+        "RR": 0.2475,
+        "d_hazard": 1.1853,
+        "amplification": 1.1853
+      },
+      {
+        "weather_d": 1.1,
+        "n_triggers": 2,
+        "p_control": 0.5219,
+        "p_ssw": 0.1066,
+        "RR": 0.2043,
+        "d_hazard": 1.2997,
+        "amplification": 1.1816
+      },
+      {
+        "weather_d": 1.2,
+        "n_triggers": 2,
+        "p_control": 0.5219,
+        "p_ssw": 0.0871,
+        "RR": 0.167,
+        "d_hazard": 1.4134,
+        "amplification": 1.1779
+      },
+      {
+        "weather_d": 1.3,
+        "n_triggers": 2,
+        "p_control": 0.5219,
+        "p_ssw": 0.0706,
+        "RR": 0.1352,
+        "d_hazard": 1.5264,
+        "amplification": 1.1742
+      },
+      {
+        "weather_d": 1.4,
+        "n_triggers": 2,
+        "p_control": 0.5219,
+        "p_ssw": 0.0566,
+        "RR": 0.1085,
+        "d_hazard": 1.6388,
+        "amplification": 1.1705
+      }
+    ],
+    "n_trig_3": [
+      {
+        "weather_d": 0.1,
+        "n_triggers": 3,
+        "p_control": 0.6694,
+        "p_ssw": 0.6177,
+        "RR": 0.9228,
+        "d_hazard": 0.1387,
+        "amplification": 1.3869
+      },
+      {
+        "weather_d": 0.2,
+        "n_triggers": 3,
+        "p_control": 0.6694,
+        "p_ssw": 0.5644,
+        "RR": 0.8432,
+        "d_hazard": 0.2761,
+        "amplification": 1.3804
+      },
+      {
+        "weather_d": 0.3,
+        "n_triggers": 3,
+        "p_control": 0.6694,
+        "p_ssw": 0.5104,
+        "RR": 0.7625,
+        "d_hazard": 0.4121,
+        "amplification": 1.3737
+      },
+      {
+        "weather_d": 0.4,
+        "n_triggers": 3,
+        "p_control": 0.6694,
+        "p_ssw": 0.4568,
+        "RR": 0.6824,
+        "d_hazard": 0.5468,
+        "amplification": 1.367
+      },
+      {
+        "weather_d": 0.5,
+        "n_triggers": 3,
+        "p_control": 0.6694,
+        "p_ssw": 0.4044,
+        "RR": 0.6042,
+        "d_hazard": 0.6801,
+        "amplification": 1.3602
+      },
+      {
+        "weather_d": 0.6,
+        "n_triggers": 3,
+        "p_control": 0.6694,
+        "p_ssw": 0.3543,
+        "RR": 0.5293,
+        "d_hazard": 0.812,
+        "amplification": 1.3534
+      },
+      {
+        "weather_d": 0.7,
+        "n_triggers": 3,
+        "p_control": 0.6694,
+        "p_ssw": 0.307,
+        "RR": 0.4586,
+        "d_hazard": 0.9426,
+        "amplification": 1.3466
+      },
+      {
+        "weather_d": 0.8,
+        "n_triggers": 3,
+        "p_control": 0.6694,
+        "p_ssw": 0.2632,
+        "RR": 0.3932,
+        "d_hazard": 1.0718,
+        "amplification": 1.3397
+      },
+      {
+        "weather_d": 0.9,
+        "n_triggers": 3,
+        "p_control": 0.6694,
+        "p_ssw": 0.2232,
+        "RR": 0.3335,
+        "d_hazard": 1.1996,
+        "amplification": 1.3329
+      },
+      {
+        "weather_d": 1.0,
+        "n_triggers": 3,
+        "p_control": 0.6694,
+        "p_ssw": 0.1873,
+        "RR": 0.2798,
+        "d_hazard": 1.326,
+        "amplification": 1.326
+      },
+      {
+        "weather_d": 1.1,
+        "n_triggers": 3,
+        "p_control": 0.6694,
+        "p_ssw": 0.1556,
+        "RR": 0.2324,
+        "d_hazard": 1.4512,
+        "amplification": 1.3192
+      },
+      {
+        "weather_d": 1.2,
+        "n_triggers": 3,
+        "p_control": 0.6694,
+        "p_ssw": 0.1278,
+        "RR": 0.191,
+        "d_hazard": 1.575,
+        "amplification": 1.3125
+      },
+      {
+        "weather_d": 1.3,
+        "n_triggers": 3,
+        "p_control": 0.6694,
+        "p_ssw": 0.104,
+        "RR": 0.1553,
+        "d_hazard": 1.6975,
+        "amplification": 1.3058
+      },
+      {
+        "weather_d": 1.4,
+        "n_triggers": 3,
+        "p_control": 0.6694,
+        "p_ssw": 0.0837,
+        "RR": 0.125,
+        "d_hazard": 1.8189,
+        "amplification": 1.2992
+      }
+    ],
+    "n_trig_4": [
+      {
+        "weather_d": 0.1,
+        "n_triggers": 4,
+        "p_control": 0.7714,
+        "p_ssw": 0.7226,
+        "RR": 0.9367,
+        "d_hazard": 0.153,
+        "amplification": 1.5295
+      },
+      {
+        "weather_d": 0.2,
+        "n_triggers": 4,
+        "p_control": 0.7714,
+        "p_ssw": 0.6698,
+        "RR": 0.8683,
+        "d_hazard": 0.3041,
+        "amplification": 1.5204
+      },
+      {
+        "weather_d": 0.3,
+        "n_triggers": 4,
+        "p_control": 0.7714,
+        "p_ssw": 0.6141,
+        "RR": 0.7961,
+        "d_hazard": 0.4533,
+        "amplification": 1.5111
+      },
+      {
+        "weather_d": 0.4,
+        "n_triggers": 4,
+        "p_control": 0.7714,
+        "p_ssw": 0.5568,
+        "RR": 0.7218,
+        "d_hazard": 0.6007,
+        "amplification": 1.5017
+      },
+      {
+        "weather_d": 0.5,
+        "n_triggers": 4,
+        "p_control": 0.7714,
+        "p_ssw": 0.4989,
+        "RR": 0.6468,
+        "d_hazard": 0.7461,
+        "amplification": 1.4923
+      },
+      {
+        "weather_d": 0.6,
+        "n_triggers": 4,
+        "p_control": 0.7714,
+        "p_ssw": 0.4419,
+        "RR": 0.5728,
+        "d_hazard": 0.8897,
+        "amplification": 1.4828
+      },
+      {
+        "weather_d": 0.7,
+        "n_triggers": 4,
+        "p_control": 0.7714,
+        "p_ssw": 0.3868,
+        "RR": 0.5014,
+        "d_hazard": 1.0313,
+        "amplification": 1.4732
+      },
+      {
+        "weather_d": 0.8,
+        "n_triggers": 4,
+        "p_control": 0.7714,
+        "p_ssw": 0.3345,
+        "RR": 0.4337,
+        "d_hazard": 1.1709,
+        "amplification": 1.4637
+      },
+      {
+        "weather_d": 0.9,
+        "n_triggers": 4,
+        "p_control": 0.7714,
+        "p_ssw": 0.286,
+        "RR": 0.3707,
+        "d_hazard": 1.3087,
+        "amplification": 1.4541
+      },
+      {
+        "weather_d": 1.0,
+        "n_triggers": 4,
+        "p_control": 0.7714,
+        "p_ssw": 0.2416,
+        "RR": 0.3132,
+        "d_hazard": 1.4446,
+        "amplification": 1.4446
+      },
+      {
+        "weather_d": 1.1,
+        "n_triggers": 4,
+        "p_control": 0.7714,
+        "p_ssw": 0.2018,
+        "RR": 0.2616,
+        "d_hazard": 1.5786,
+        "amplification": 1.4351
+      },
+      {
+        "weather_d": 1.2,
+        "n_triggers": 4,
+        "p_control": 0.7714,
+        "p_ssw": 0.1667,
+        "RR": 0.2161,
+        "d_hazard": 1.7108,
+        "amplification": 1.4256
+      },
+      {
+        "weather_d": 1.3,
+        "n_triggers": 4,
+        "p_control": 0.7714,
+        "p_ssw": 0.1362,
+        "RR": 0.1765,
+        "d_hazard": 1.8412,
+        "amplification": 1.4163
+      },
+      {
+        "weather_d": 1.4,
+        "n_triggers": 4,
+        "p_control": 0.7714,
+        "p_ssw": 0.11,
+        "RR": 0.1426,
+        "d_hazard": 1.9699,
+        "amplification": 1.4071
+      }
+    ],
+    "n_trig_5": [
+      {
+        "weather_d": 0.1,
+        "n_triggers": 5,
+        "p_control": 0.8419,
+        "p_ssw": 0.7987,
+        "RR": 0.9486,
+        "d_hazard": 0.1656,
+        "amplification": 1.6558
+      },
+      {
+        "weather_d": 0.2,
+        "n_triggers": 5,
+        "p_control": 0.8419,
+        "p_ssw": 0.7497,
+        "RR": 0.8905,
+        "d_hazard": 0.3289,
+        "amplification": 1.6443
+      },
+      {
+        "weather_d": 0.3,
+        "n_triggers": 5,
+        "p_control": 0.8419,
+        "p_ssw": 0.6959,
+        "RR": 0.8265,
+        "d_hazard": 0.4898,
+        "amplification": 1.6327
+      },
+      {
+        "weather_d": 0.4,
+        "n_triggers": 5,
+        "p_control": 0.8419,
+        "p_ssw": 0.6383,
+        "RR": 0.7582,
+        "d_hazard": 0.6484,
+        "amplification": 1.621
+      },
+      {
+        "weather_d": 0.5,
+        "n_triggers": 5,
+        "p_control": 0.8419,
+        "p_ssw": 0.5784,
+        "RR": 0.687,
+        "d_hazard": 0.8046,
+        "amplification": 1.6091
+      },
+      {
+        "weather_d": 0.6,
+        "n_triggers": 5,
+        "p_control": 0.8419,
+        "p_ssw": 0.5176,
+        "RR": 0.6148,
+        "d_hazard": 0.9583,
+        "amplification": 1.5972
+      },
+      {
+        "weather_d": 0.7,
+        "n_triggers": 5,
+        "p_control": 0.8419,
+        "p_ssw": 0.4573,
+        "RR": 0.5432,
+        "d_hazard": 1.1096,
+        "amplification": 1.5852
+      },
+      {
+        "weather_d": 0.8,
+        "n_triggers": 5,
+        "p_control": 0.8419,
+        "p_ssw": 0.3989,
+        "RR": 0.4738,
+        "d_hazard": 1.2585,
+        "amplification": 1.5732
+      },
+      {
+        "weather_d": 0.9,
+        "n_triggers": 5,
+        "p_control": 0.8419,
+        "p_ssw": 0.3436,
+        "RR": 0.4081,
+        "d_hazard": 1.405,
+        "amplification": 1.5611
+      },
+      {
+        "weather_d": 1.0,
+        "n_triggers": 5,
+        "p_control": 0.8419,
+        "p_ssw": 0.2923,
+        "RR": 0.3472,
+        "d_hazard": 1.5491,
+        "amplification": 1.5491
+      },
+      {
+        "weather_d": 1.1,
+        "n_triggers": 5,
+        "p_control": 0.8419,
+        "p_ssw": 0.2456,
+        "RR": 0.2917,
+        "d_hazard": 1.6909,
+        "amplification": 1.5372
+      },
+      {
+        "weather_d": 1.2,
+        "n_triggers": 5,
+        "p_control": 0.8419,
+        "p_ssw": 0.2038,
+        "RR": 0.2421,
+        "d_hazard": 1.8304,
+        "amplification": 1.5254
+      },
+      {
+        "weather_d": 1.3,
+        "n_triggers": 5,
+        "p_control": 0.8419,
+        "p_ssw": 0.1672,
+        "RR": 0.1986,
+        "d_hazard": 1.9677,
+        "amplification": 1.5136
+      },
+      {
+        "weather_d": 1.4,
+        "n_triggers": 5,
+        "p_control": 0.8419,
+        "p_ssw": 0.1356,
+        "RR": 0.161,
+        "d_hazard": 2.1029,
+        "amplification": 1.5021
+      }
+    ]
+  },
+  "best_match": {
+    "n_trig": 7,
+    "thresh": 1.25,
+    "p_control": 0.5423,
+    "p_ssw": 0.1695,
+    "RR": 0.3126,
+    "d_hazard": 1.0623,
+    "amp": 1.54
+  }
+}

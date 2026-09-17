@@ -1,0 +1,1590 @@
+{
+  "part1_case_crossover": {
+    "all_natural_geomag_1_3d": {
+      "mh_rate_ratio": 0.9487124148692444,
+      "ci_low": 0.8139917285801169,
+      "ci_high": 1.1057302114077263,
+      "z": -0.6737802096892461,
+      "p_value": 0.5004510585877466,
+      "n_strata": 107,
+      "method": "Mantel-Haenszel stratified by winter x 15-day period"
+    },
+    "all_natural_geomag_5_21d": {
+      "mh_rate_ratio": 1.2856987149443573,
+      "ci_low": 1.0845442204996822,
+      "ci_high": 1.5241620898113077,
+      "z": 2.894941388869983,
+      "p_value": 0.003792293338164674,
+      "n_strata": 81,
+      "method": "Mantel-Haenszel stratified by winter x 15-day period"
+    },
+    "dry_natural_geomag_1_3d": {
+      "mh_rate_ratio": 0.6373525373305108,
+      "ci_low": 0.5347197707458172,
+      "ci_high": 0.7596843787448787,
+      "z": -5.028173996175652,
+      "p_value": 4.951724719807875e-07,
+      "n_strata": 107,
+      "method": "Mantel-Haenszel stratified by winter x 15-day period"
+    },
+    "dry_natural_geomag_5_21d": {
+      "mh_rate_ratio": 0.6747876138882047,
+      "ci_low": 0.5661472325054048,
+      "ci_high": 0.8042754564778164,
+      "z": -4.391953324320038,
+      "p_value": 1.1233681931522172e-05,
+      "n_strata": 81,
+      "method": "Mantel-Haenszel stratified by winter x 15-day period"
+    },
+    "wet_natural_geomag_1_3d": {
+      "mh_rate_ratio": 0.8969140525376181,
+      "ci_low": 0.7176317386075135,
+      "ci_high": 1.1209855617595879,
+      "z": -0.9562121869826405,
+      "p_value": 0.3389650440447044,
+      "n_strata": 107,
+      "method": "Mantel-Haenszel stratified by winter x 15-day period"
+    },
+    "wet_natural_geomag_5_21d": {
+      "mh_rate_ratio": 1.0478645066273933,
+      "ci_low": 0.7856707690061445,
+      "ci_high": 1.397557434443489,
+      "z": 0.31822015069984794,
+      "p_value": 0.7503179485764997,
+      "n_strata": 81,
+      "method": "Mantel-Haenszel stratified by winter x 15-day period"
+    },
+    "all_natural_ssw_0_15": {
+      "mh_rate_ratio": 0.8464837881064315,
+      "ci_low": 0.6155062902124943,
+      "ci_high": 1.1641388803348236,
+      "z": -1.0251564677086569,
+      "p_value": 0.30528936501520276,
+      "n_strata": 30
+    },
+    "dry_natural_ssw_0_15": {
+      "mh_rate_ratio": 0.6463844797178131,
+      "ci_low": 0.45107447093777236,
+      "ci_high": 0.926261454680522,
+      "z": -2.377313397564533,
+      "p_value": 0.01743926417540101,
+      "n_strata": 30
+    },
+    "norway_ssw_0_15": {
+      "mh_rate_ratio": 1.0243741765480896,
+      "ci_low": 0.8440106537248796,
+      "ci_high": 1.2432810521377953,
+      "z": 0.24371334921905483,
+      "p_value": 0.807452833884025,
+      "n_strata": 30
+    },
+    "all_natural_ssw_15_30": {
+      "mh_rate_ratio": 1.6574888840521123,
+      "ci_low": 1.1346335389823747,
+      "ci_high": 2.4212834420708873,
+      "z": 2.6132215685060687,
+      "p_value": 0.008969313328851833,
+      "n_strata": 30
+    },
+    "dry_natural_ssw_15_30": {
+      "mh_rate_ratio": 1.4315789473684206,
+      "ci_low": 0.9999127197054599,
+      "ci_high": 2.0495971719933355,
+      "z": 1.9595232839352275,
+      "p_value": 0.050051535807567785,
+      "n_strata": 30
+    },
+    "norway_ssw_15_30": {
+      "mh_rate_ratio": 0.8676824378508421,
+      "ci_low": 0.7232383127186581,
+      "ci_high": 1.040974737807689,
+      "z": -1.5277410265389608,
+      "p_value": 0.1265768495610972,
+      "n_strata": 30
+    }
+  },
+  "part2_anomaly": {
+    "all_natural_geomag_1_3d": {
+      "exposed_mean_anomaly": 0.1746477901679038,
+      "unexposed_mean_anomaly": -0.02063205711134422,
+      "diff": 0.19527984727924802,
+      "t_stat": 0.5026204802748478,
+      "t_p_value": 0.6154734238625726,
+      "mann_whitney_U": 398920.0,
+      "mann_whitney_p": 0.7306995620903549,
+      "n_exposed": 342,
+      "n_unexposed": 2360
+    },
+    "all_natural_geomag_5_21d": {
+      "exposed_mean_anomaly": 0.01110414974407478,
+      "unexposed_mean_anomaly": -0.006505435356983082,
+      "diff": 0.01760958510105786,
+      "t_stat": 0.06364069688687887,
+      "t_p_value": 0.9492620864583499,
+      "mann_whitney_U": 720693.0,
+      "mann_whitney_p": 7.409640046229232e-15,
+      "n_exposed": 1625,
+      "n_unexposed": 1077
+    },
+    "dry_natural_geomag_1_3d": {
+      "exposed_mean_anomaly": -0.2856956659150146,
+      "unexposed_mean_anomaly": -0.0303972560791273,
+      "diff": -0.2552984098358873,
+      "t_stat": -1.1201455501662103,
+      "t_p_value": 0.2629533035951512,
+      "mann_whitney_U": 397399.0,
+      "mann_whitney_p": 0.6476003497346355,
+      "n_exposed": 342,
+      "n_unexposed": 2360
+    },
+    "dry_natural_geomag_5_21d": {
+      "exposed_mean_anomaly": -0.17329104713626828,
+      "unexposed_mean_anomaly": 0.10413417781500517,
+      "diff": -0.2774252249512734,
+      "t_stat": -1.0116413882217785,
+      "t_p_value": 0.3118367716514828,
+      "mann_whitney_U": 822121.5,
+      "mann_whitney_p": 0.0076401364799674075,
+      "n_exposed": 1625,
+      "n_unexposed": 1077
+    },
+    "wet_natural_geomag_1_3d": {
+      "exposed_mean_anomaly": 0.08405953406468611,
+      "unexposed_mean_anomaly": 0.00026210097157699857,
+      "diff": 0.08379743309310911,
+      "t_stat": 0.32161352799186876,
+      "t_p_value": 0.7478618089873841,
+      "mann_whitney_U": 338739.0,
+      "mann_whitney_p": 0.07489833776446085,
+      "n_exposed": 321,
+      "n_unexposed": 2248
+    },
+    "wet_natural_geomag_5_21d": {
+      "exposed_mean_anomaly": 0.11496431758765836,
+      "unexposed_mean_anomaly": -0.1398130548803007,
+      "diff": 0.25477737246795906,
+      "t_stat": 1.0847784080454617,
+      "t_p_value": 0.2781239674294079,
+      "mann_whitney_U": 513455.5,
+      "mann_whitney_p": 1.0043846017247194e-53,
+      "n_exposed": 1518,
+      "n_unexposed": 1051
+    },
+    "norway_geomag_1_3d": {
+      "exposed_mean_anomaly": -0.48261219651318316,
+      "unexposed_mean_anomaly": -0.22186640673762148,
+      "diff": -0.2607457897755617,
+      "t_stat": -0.935937273941664,
+      "t_p_value": 0.3497545267252242,
+      "mann_whitney_U": 558234.0,
+      "mann_whitney_p": 0.9049062294881254,
+      "n_exposed": 404,
+      "n_unexposed": 2772
+    },
+    "norway_geomag_5_21d": {
+      "exposed_mean_anomaly": -0.4870701520128743,
+      "unexposed_mean_anomaly": 0.12348974519083424,
+      "diff": -0.6105598972037085,
+      "t_stat": -3.874124932903385,
+      "t_p_value": 0.0001091712097204203,
+      "mann_whitney_U": 1250576.5,
+      "mann_whitney_p": 0.002809033770098312,
+      "n_exposed": 1969,
+      "n_unexposed": 1207
+    },
+    "all_natural_ssw_0_15": {
+      "exposed_mean_anomaly": 0.12863923870757907,
+      "unexposed_mean_anomaly": -0.007228881410801244,
+      "diff": 0.13586812011838031,
+      "t_stat": 0.2346513467373666,
+      "t_p_value": 0.8146705196849489,
+      "mann_whitney_p": 0.9954054214497516,
+      "n_exposed": 225
+    },
+    "dry_natural_ssw_0_15": {
+      "exposed_mean_anomaly": 0.07300477254054837,
+      "unexposed_mean_anomaly": -0.07503896484105724,
+      "diff": 0.1480437373816056,
+      "t_stat": 0.6177770710532551,
+      "t_p_value": 0.5370071899049578,
+      "mann_whitney_p": 0.0008156266889922363,
+      "n_exposed": 225
+    },
+    "norway_ssw_0_15": {
+      "exposed_mean_anomaly": 0.12957092736783346,
+      "unexposed_mean_anomaly": -0.2843586802866063,
+      "diff": 0.41392960765443976,
+      "t_stat": 3.4372009804842905,
+      "t_p_value": 0.0006089760272397121,
+      "mann_whitney_p": 0.06018674705727177,
+      "n_exposed": 225
+    },
+    "all_natural_ssw_15_30": {
+      "exposed_mean_anomaly": -0.31680360867007157,
+      "unexposed_mean_anomaly": 0.033233226243607916,
+      "diff": -0.3500368349136795,
+      "t_stat": -0.8109116410630636,
+      "t_p_value": 0.41810381986251266,
+      "mann_whitney_p": 7.068221799469147e-05,
+      "n_exposed": 225
+    },
+    "dry_natural_ssw_15_30": {
+      "exposed_mean_anomaly": 0.32575324977893577,
+      "unexposed_mean_anomaly": -0.09799754674603794,
+      "diff": 0.4237507965249737,
+      "t_stat": 0.7719686096891123,
+      "t_p_value": 0.44085701338383043,
+      "mann_whitney_p": 0.3101827022388125,
+      "n_exposed": 225
+    },
+    "norway_ssw_15_30": {
+      "exposed_mean_anomaly": 0.2508609271523179,
+      "unexposed_mean_anomaly": -0.2936064776270024,
+      "diff": 0.5444674047793203,
+      "t_stat": 4.116060231527673,
+      "t_p_value": 4.2579059175428196e-05,
+      "mann_whitney_p": 0.25241315991484936,
+      "n_exposed": 225
+    }
+  },
+  "part3_winter_fe": {
+    "all_natural_geomag_1_3d": {
+      "rr": 0.8463125555664615,
+      "ci_low": 0.7045723318747049,
+      "ci_high": 1.016566943245801,
+      "coef": -0.1668665365819527,
+      "se": 0.09352097617981892,
+      "z": -1.7842685502031914,
+      "p_value": 0.07438003803958562,
+      "n": 2702,
+      "n_winter_dummies": 20,
+      "method": "NB GLM with winter fixed effects"
+    },
+    "all_natural_geomag_5_21d": {
+      "rr": 1.0087371064737598,
+      "ci_low": 0.871343203254474,
+      "ci_high": 1.1677953602856987,
+      "coef": 0.008699158833851499,
+      "se": 0.07470469158721138,
+      "z": 0.11644728930707075,
+      "p_value": 0.9072980588365414,
+      "n": 2702,
+      "n_winter_dummies": 20,
+      "method": "NB GLM with winter fixed effects"
+    },
+    "dry_natural_geomag_1_3d": {
+      "rr": 0.7496512728240551,
+      "ci_low": 0.6114302506344593,
+      "ci_high": 0.919118787897037,
+      "coef": -0.288147150151577,
+      "se": 0.1039851979713085,
+      "z": -2.7710400689055987,
+      "p_value": 0.005587755025660029,
+      "n": 2702,
+      "n_winter_dummies": 20,
+      "method": "NB GLM with winter fixed effects"
+    },
+    "dry_natural_geomag_5_21d": {
+      "rr": 0.8932729332965675,
+      "ci_low": 0.7673173063897478,
+      "ci_high": 1.0399042569684382,
+      "coef": -0.11286310841259165,
+      "se": 0.07754823962055209,
+      "z": -1.4553922689262477,
+      "p_value": 0.14556069548560605,
+      "n": 2702,
+      "n_winter_dummies": 20,
+      "method": "NB GLM with winter fixed effects"
+    },
+    "norway_geomag_1_3d": {
+      "rr": 0.9835954882238234,
+      "ci_low": 0.8701493944483056,
+      "ci_high": 1.1118321642545679,
+      "coef": -0.01654055565364615,
+      "se": 0.06252656152442186,
+      "z": -0.26453646658925384,
+      "p_value": 0.791366569007584,
+      "n": 3176,
+      "n_winter_dummies": 20,
+      "method": "NB GLM with winter fixed effects"
+    },
+    "norway_geomag_5_21d": {
+      "rr": 0.9085657916224399,
+      "ci_low": 0.8224042198216612,
+      "ci_high": 1.0037543312770443,
+      "coef": -0.09588797591166705,
+      "se": 0.05083525925095474,
+      "z": -1.8862493734575805,
+      "p_value": 0.059261357984042744,
+      "n": 3176,
+      "n_winter_dummies": 20,
+      "method": "NB GLM with winter fixed effects"
+    },
+    "all_natural_ssw_0_15": {
+      "rr": 0.9856437588823522,
+      "ci_low": 0.7963453455508832,
+      "ci_high": 1.2199400986662237,
+      "p_value": 0.8942757320493679,
+      "n": 2702
+    },
+    "dry_natural_ssw_0_15": {
+      "rr": 0.7341745972414735,
+      "ci_low": 0.574433546069145,
+      "ci_high": 0.9383371547903969,
+      "p_value": 0.013572989468570894,
+      "n": 2702
+    },
+    "norway_ssw_0_15": {
+      "rr": 0.8597888580346825,
+      "ci_low": 0.7248970064824272,
+      "ci_high": 1.0197819466626585,
+      "p_value": 0.08274252548572539,
+      "n": 3176
+    },
+    "all_natural_ssw_15_30": {
+      "rr": 0.827716364523981,
+      "ci_low": 0.6714947936353932,
+      "ci_high": 1.0202824900423542,
+      "p_value": 0.07642616777723389,
+      "n": 2702
+    },
+    "dry_natural_ssw_15_30": {
+      "rr": 1.424664161661772,
+      "ci_low": 1.135823421433759,
+      "ci_high": 1.7869573167996244,
+      "p_value": 0.0022012470173670647,
+      "n": 2702
+    },
+    "norway_ssw_15_30": {
+      "rr": 0.8729690349433161,
+      "ci_low": 0.7363368421230038,
+      "ci_high": 1.0349542388408177,
+      "p_value": 0.11773607202975775,
+      "n": 3176
+    }
+  },
+  "part4_block_bootstrap": {
+    "dry_geomag_1_3d": {
+      "observed_diff": -0.3249776984834968,
+      "null_mean": 0.0011892407572603797,
+      "null_std": 0.41603475078897373,
+      "p_two_sided": 0.476,
+      "p_one_sided_decrease": 0.2485,
+      "n_bootstrap": 2000,
+      "method": "Circular block bootstrap within winter"
+    },
+    "all_geomag_5_21d": {
+      "observed_diff": -0.09874302121277045,
+      "null_mean": -0.1266405758502964,
+      "null_std": 0.29263370693869567,
+      "p_two_sided": 0.7705,
+      "p_one_sided_decrease": 0.5225,
+      "n_bootstrap": 2000,
+      "method": "Circular block bootstrap within winter"
+    },
+    "all_natural_ssw_0_15": {
+      "observed_strat_diff": -0.023935786435786532,
+      "null_mean": 0.0044900154504370635,
+      "null_std": 1.0904178700651317,
+      "p_two_sided": 0.9755,
+      "p_one_sided_decrease": 0.4885,
+      "n_bootstrap": 2000,
+      "method": "SSW placement bootstrap with stratified statistic"
+    },
+    "dry_natural_ssw_0_15": {
+      "observed_strat_diff": -0.05783549783549793,
+      "null_mean": -0.03217808048187894,
+      "null_std": 1.0933970966741091,
+      "p_two_sided": 0.9415,
+      "p_one_sided_decrease": 0.4745,
+      "n_bootstrap": 2000,
+      "method": "SSW placement bootstrap with stratified statistic"
+    },
+    "norway_ssw_0_15": {
+      "observed_strat_diff": 0.061904761904761935,
+      "null_mean": -0.0028023016809067256,
+      "null_std": 0.29113249559253396,
+      "p_two_sided": 0.725,
+      "p_one_sided_decrease": 0.6405,
+      "n_bootstrap": 2000,
+      "method": "SSW placement bootstrap with stratified statistic"
+    }
+  },
+  "part5_spec_curve": {
+    "n_specifications": 60,
+    "n_significant": 37,
+    "n_decrease": 49,
+    "pct_significant": 61.66666666666667,
+    "pct_decrease": 81.66666666666667,
+    "median_rr": 0.7705349620450064,
+    "mean_rr": 0.8091120572844142,
+    "rr_range": [
+      0.5239963231930181,
+      1.1465889830811806
+    ],
+    "spec_all_natural": {
+      "n": 30,
+      "n_sig": 11,
+      "n_decrease": 23,
+      "median_rr": 0.8983312702279422,
+      "rr_range": [
+        0.62723786983656,
+        1.1465889830811806
+      ]
+    },
+    "spec_dry_natural": {
+      "n": 30,
+      "n_sig": 26,
+      "n_decrease": 26,
+      "median_rr": 0.7011516725746154,
+      "rr_range": [
+        0.5239963231930181,
+        1.0956846148537642
+      ]
+    },
+    "specifications": [
+      {
+        "outcome": "all_natural",
+        "exposure": "1_3d",
+        "season": "quadratic",
+        "confounders": "none",
+        "rr": 0.8974917900798289,
+        "coef": -0.10815130620490827,
+        "p_value": 0.19716933727318842,
+        "n": 2702,
+        "significant": false,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "1_3d",
+        "season": "quadratic",
+        "confounders": "nao",
+        "rr": 0.8981246342729854,
+        "coef": -0.10744642936063784,
+        "p_value": 0.2000165674954062,
+        "n": 2702,
+        "significant": false,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "1_3d",
+        "season": "quadratic",
+        "confounders": "nao_qbo",
+        "rr": 0.8985379061828991,
+        "coef": -0.10698638535360068,
+        "p_value": 0.20193217200773628,
+        "n": 2702,
+        "significant": false,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "1_3d",
+        "season": "quadratic",
+        "confounders": "nao_qbo_f107",
+        "rr": 0.9742110118996488,
+        "coef": -0.0261273541428373,
+        "p_value": 0.766009051933512,
+        "n": 2563,
+        "significant": false,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "1_3d",
+        "season": "quadratic",
+        "confounders": "full",
+        "rr": 0.702388502138879,
+        "coef": -0.3532686061874666,
+        "p_value": 0.002048670226991485,
+        "n": 1752,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "1_3d",
+        "season": "cubic",
+        "confounders": "none",
+        "rr": 0.9076700810745488,
+        "coef": -0.09687431324149616,
+        "p_value": 0.2473931254913656,
+        "n": 2702,
+        "significant": false,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "1_3d",
+        "season": "cubic",
+        "confounders": "nao",
+        "rr": 0.9080779765314061,
+        "coef": -0.09642502683085122,
+        "p_value": 0.24954356026908298,
+        "n": 2702,
+        "significant": false,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "1_3d",
+        "season": "cubic",
+        "confounders": "nao_qbo",
+        "rr": 0.9080278354891302,
+        "coef": -0.09648024502569066,
+        "p_value": 0.24928841407551705,
+        "n": 2702,
+        "significant": false,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "1_3d",
+        "season": "cubic",
+        "confounders": "nao_qbo_f107",
+        "rr": 0.9562041673873906,
+        "coef": -0.04478382451957428,
+        "p_value": 0.6111708331647312,
+        "n": 2563,
+        "significant": false,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "1_3d",
+        "season": "cubic",
+        "confounders": "full",
+        "rr": 0.711603873782633,
+        "coef": -0.34023387944103445,
+        "p_value": 0.0029978785645362604,
+        "n": 1752,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "1_3d",
+        "season": "winter_FE",
+        "confounders": "none",
+        "rr": 1.023838341483254,
+        "coef": 0.023558644509332028,
+        "p_value": 0.7854985713085566,
+        "n": 2702,
+        "significant": false,
+        "direction_decrease": false
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "1_3d",
+        "season": "winter_FE",
+        "confounders": "nao",
+        "rr": 1.0067972284136695,
+        "coef": 0.006774231408398675,
+        "p_value": 0.9378535878504852,
+        "n": 2702,
+        "significant": false,
+        "direction_decrease": false
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "1_3d",
+        "season": "winter_FE",
+        "confounders": "nao_qbo",
+        "rr": 0.9118624986659288,
+        "coef": -0.09226606928125185,
+        "p_value": 0.29668195969097066,
+        "n": 2702,
+        "significant": false,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "1_3d",
+        "season": "winter_FE",
+        "confounders": "nao_qbo_f107",
+        "rr": 0.8663262153773451,
+        "coef": -0.14349374922872146,
+        "p_value": 0.11604750282005866,
+        "n": 2563,
+        "significant": false,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "1_3d",
+        "season": "winter_FE",
+        "confounders": "full",
+        "rr": 0.62723786983656,
+        "coef": -0.4664294325649907,
+        "p_value": 0.0001083983823478997,
+        "n": 1752,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "5_21d",
+        "season": "quadratic",
+        "confounders": "none",
+        "rr": 0.7979002601690283,
+        "coef": -0.22577167660074315,
+        "p_value": 9.863877969764008e-05,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "5_21d",
+        "season": "quadratic",
+        "confounders": "nao",
+        "rr": 0.7953737008554025,
+        "coef": -0.22894321080420335,
+        "p_value": 8.227188029284755e-05,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "5_21d",
+        "season": "quadratic",
+        "confounders": "nao_qbo",
+        "rr": 0.7960923254560033,
+        "coef": -0.22804011310992459,
+        "p_value": 8.786308237130408e-05,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "5_21d",
+        "season": "quadratic",
+        "confounders": "nao_qbo_f107",
+        "rr": 0.8960509204718997,
+        "coef": -0.10975803673820346,
+        "p_value": 0.0879717979367131,
+        "n": 2563,
+        "significant": false,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "5_21d",
+        "season": "quadratic",
+        "confounders": "full",
+        "rr": 1.0463603441631055,
+        "coef": 0.045317803605028795,
+        "p_value": 0.542326591496276,
+        "n": 1752,
+        "significant": false,
+        "direction_decrease": false
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "5_21d",
+        "season": "cubic",
+        "confounders": "none",
+        "rr": 0.8005638385185537,
+        "coef": -0.2224390014195935,
+        "p_value": 0.0001283561390782051,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "5_21d",
+        "season": "cubic",
+        "confounders": "nao",
+        "rr": 0.7980368369233751,
+        "coef": -0.22560052103962602,
+        "p_value": 0.00010761834382785966,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "5_21d",
+        "season": "cubic",
+        "confounders": "nao_qbo",
+        "rr": 0.7983453169466859,
+        "coef": -0.22521404712872387,
+        "p_value": 0.00011065396503507191,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "5_21d",
+        "season": "cubic",
+        "confounders": "nao_qbo_f107",
+        "rr": 0.889735351665555,
+        "coef": -0.11683121815466424,
+        "p_value": 0.07020663410699314,
+        "n": 2563,
+        "significant": false,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "5_21d",
+        "season": "cubic",
+        "confounders": "full",
+        "rr": 1.0561050394642597,
+        "coef": 0.05458764952697778,
+        "p_value": 0.46428611913500417,
+        "n": 1752,
+        "significant": false,
+        "direction_decrease": false
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "5_21d",
+        "season": "winter_FE",
+        "confounders": "none",
+        "rr": 1.1465889830811806,
+        "coef": 0.1367914331093205,
+        "p_value": 0.04798004537171908,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": false
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "5_21d",
+        "season": "winter_FE",
+        "confounders": "nao",
+        "rr": 1.1054020583455122,
+        "coef": 0.10020912249735457,
+        "p_value": 0.1514591277539654,
+        "n": 2702,
+        "significant": false,
+        "direction_decrease": false
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "5_21d",
+        "season": "winter_FE",
+        "confounders": "nao_qbo",
+        "rr": 1.0291148215426438,
+        "coef": 0.02869903618807119,
+        "p_value": 0.6863362597982687,
+        "n": 2702,
+        "significant": false,
+        "direction_decrease": false
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "5_21d",
+        "season": "winter_FE",
+        "confounders": "nao_qbo_f107",
+        "rr": 0.924770995098216,
+        "coef": -0.07820914498772652,
+        "p_value": 0.2982397675224294,
+        "n": 2563,
+        "significant": false,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "all_natural",
+        "exposure": "5_21d",
+        "season": "winter_FE",
+        "confounders": "full",
+        "rr": 0.6548618766138917,
+        "coef": -0.4233309409828669,
+        "p_value": 3.5671459200510242e-06,
+        "n": 1752,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "1_3d",
+        "season": "quadratic",
+        "confounders": "none",
+        "rr": 0.7096875682899834,
+        "coef": -0.3429304504568362,
+        "p_value": 0.00013695677020554375,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "1_3d",
+        "season": "quadratic",
+        "confounders": "nao",
+        "rr": 0.7031325230485693,
+        "coef": -0.35220989419973664,
+        "p_value": 9.390457439612017e-05,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "1_3d",
+        "season": "quadratic",
+        "confounders": "nao_qbo",
+        "rr": 0.7020484018647938,
+        "coef": -0.35375292880781906,
+        "p_value": 8.809099817605907e-05,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "1_3d",
+        "season": "quadratic",
+        "confounders": "nao_qbo_f107",
+        "rr": 0.5567803481828436,
+        "coef": -0.5855844647966295,
+        "p_value": 2.3023145470208745e-08,
+        "n": 2563,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "1_3d",
+        "season": "quadratic",
+        "confounders": "full",
+        "rr": 0.6691638892939734,
+        "coef": -0.4017262723326281,
+        "p_value": 0.0005335696878166129,
+        "n": 1752,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "1_3d",
+        "season": "cubic",
+        "confounders": "none",
+        "rr": 0.7079682285262391,
+        "coef": -0.3453560612582677,
+        "p_value": 0.00012363819161770307,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "1_3d",
+        "season": "cubic",
+        "confounders": "nao",
+        "rr": 0.7006501645150363,
+        "coef": -0.35574656856248926,
+        "p_value": 8.045659493997098e-05,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "1_3d",
+        "season": "cubic",
+        "confounders": "nao_qbo",
+        "rr": 0.6992008292895124,
+        "coef": -0.35781726858672,
+        "p_value": 7.372440071562935e-05,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "1_3d",
+        "season": "cubic",
+        "confounders": "nao_qbo_f107",
+        "rr": 0.5525916906074289,
+        "coef": -0.5931359035088279,
+        "p_value": 1.5573257748842862e-08,
+        "n": 2563,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "1_3d",
+        "season": "cubic",
+        "confounders": "full",
+        "rr": 0.6668011657570749,
+        "coef": -0.4052633798210711,
+        "p_value": 0.00048391654205722157,
+        "n": 1752,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "1_3d",
+        "season": "winter_FE",
+        "confounders": "none",
+        "rr": 0.7216525617598557,
+        "coef": -0.32621147231017245,
+        "p_value": 0.001036831773704395,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "1_3d",
+        "season": "winter_FE",
+        "confounders": "nao",
+        "rr": 0.7423248574759168,
+        "coef": -0.2979683183171786,
+        "p_value": 0.0027107644393699207,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "1_3d",
+        "season": "winter_FE",
+        "confounders": "nao_qbo",
+        "rr": 0.7456962232346104,
+        "coef": -0.2934369691701561,
+        "p_value": 0.0032292900598136095,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "1_3d",
+        "season": "winter_FE",
+        "confounders": "nao_qbo_f107",
+        "rr": 0.5239963231930181,
+        "coef": -0.6462706114929301,
+        "p_value": 4.712209581662068e-09,
+        "n": 2563,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "1_3d",
+        "season": "winter_FE",
+        "confounders": "full",
+        "rr": 0.5347118456272874,
+        "coef": -0.6260272834907453,
+        "p_value": 5.791848053188732e-07,
+        "n": 1752,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "5_21d",
+        "season": "quadratic",
+        "confounders": "none",
+        "rr": 0.7279603978960505,
+        "coef": -0.31750863075953895,
+        "p_value": 2.3175826456245237e-08,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "5_21d",
+        "season": "quadratic",
+        "confounders": "nao",
+        "rr": 0.6859301647158923,
+        "coef": -0.3769794571439917,
+        "p_value": 5.824984905909463e-11,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "5_21d",
+        "season": "quadratic",
+        "confounders": "nao_qbo",
+        "rr": 0.6858860986407168,
+        "coef": -0.3770437020088001,
+        "p_value": 5.997773507343508e-11,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "5_21d",
+        "season": "quadratic",
+        "confounders": "nao_qbo_f107",
+        "rr": 1.083242601183496,
+        "coef": 0.07995895141238253,
+        "p_value": 0.22023919784063883,
+        "n": 2563,
+        "significant": false,
+        "direction_decrease": false
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "5_21d",
+        "season": "quadratic",
+        "confounders": "full",
+        "rr": 1.0956846148537642,
+        "coef": 0.09137938694499848,
+        "p_value": 0.20301365143888928,
+        "n": 1752,
+        "significant": false,
+        "direction_decrease": false
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "5_21d",
+        "season": "cubic",
+        "confounders": "none",
+        "rr": 0.7249180522427408,
+        "coef": -0.3216966619053142,
+        "p_value": 1.6421753437344747e-08,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "5_21d",
+        "season": "cubic",
+        "confounders": "nao",
+        "rr": 0.6816395042858947,
+        "coef": -0.38325434698061533,
+        "p_value": 3.0629797734466844e-11,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "5_21d",
+        "season": "cubic",
+        "confounders": "nao_qbo",
+        "rr": 0.6814345455157166,
+        "coef": -0.3835550771892972,
+        "p_value": 3.0712840444966754e-11,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "5_21d",
+        "season": "cubic",
+        "confounders": "nao_qbo_f107",
+        "rr": 1.0730969631099407,
+        "coef": 0.07054882593104304,
+        "p_value": 0.2804153533067678,
+        "n": 2563,
+        "significant": false,
+        "direction_decrease": false
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "5_21d",
+        "season": "cubic",
+        "confounders": "full",
+        "rr": 1.0948472964365392,
+        "coef": 0.09061489823457178,
+        "p_value": 0.2073017950250965,
+        "n": 1752,
+        "significant": false,
+        "direction_decrease": false
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "5_21d",
+        "season": "winter_FE",
+        "confounders": "none",
+        "rr": 0.6708086257083911,
+        "coef": -0.3992713902779651,
+        "p_value": 5.533102088538252e-08,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "5_21d",
+        "season": "winter_FE",
+        "confounders": "nao",
+        "rr": 0.6972783477356407,
+        "coef": -0.3605705968138766,
+        "p_value": 1.4329906172833525e-06,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "5_21d",
+        "season": "winter_FE",
+        "confounders": "nao_qbo",
+        "rr": 0.7101334015864449,
+        "coef": -0.34230243703743524,
+        "p_value": 5.117865265612366e-06,
+        "n": 2702,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "5_21d",
+        "season": "winter_FE",
+        "confounders": "nao_qbo_f107",
+        "rr": 0.7016531806341945,
+        "coef": -0.35431604171724423,
+        "p_value": 1.081588592344033e-05,
+        "n": 2563,
+        "significant": true,
+        "direction_decrease": true
+      },
+      {
+        "outcome": "dry_natural",
+        "exposure": "5_21d",
+        "season": "winter_FE",
+        "confounders": "full",
+        "rr": 0.5621004199218611,
+        "coef": -0.5760747619153919,
+        "p_value": 1.9079432342713484e-10,
+        "n": 1752,
+        "significant": true,
+        "direction_decrease": true
+      }
+    ]
+  },
+  "part6_falsification": {
+    "wet_control": {
+      "rr": 0.8547731920538487,
+      "p_value": 0.15684970644865742,
+      "expected": "null"
+    },
+    "pre_event_control": {
+      "rr": 0.8581133150615409,
+      "p_value": 0.027453153723819033,
+      "expected": "null"
+    },
+    "placebo_events": {
+      "n_trials": 10,
+      "mean_rr": 0.8044736062735005,
+      "std_rr": 0.34669751558153983,
+      "mean_p": 0.10091745377529346,
+      "n_significant": 8,
+      "expected": "null (mean RR~1, few significant)"
+    },
+    "summer_control": {
+      "rr": 1.0152412520868335,
+      "p_value": 0.9651022612649438,
+      "expected": "null"
+    },
+    "dry_pre_event": {
+      "rr": 0.6057906645465275,
+      "p_value": 1.9525931176796423e-11,
+      "expected": "null"
+    },
+    "score": "2/4 null as expected"
+  },
+  "part7_loocv": {
+    "dry_geomag": {
+      "n_folds": 21,
+      "mean_mse_base": 44.378885496622374,
+      "mean_mse_event": 44.40370044068506,
+      "mean_improvement": -0.02481494406268816,
+      "pct_folds_improved": 52.38095238095239,
+      "mean_rr_across_folds": 0.7116572833978972,
+      "std_rr_across_folds": 0.06830784287529104,
+      "all_rr_same_direction": true
+    },
+    "all_geomag": {
+      "n_folds": 21,
+      "mean_mse_base": 48.45771732620875,
+      "mean_mse_event": 48.50754054527287,
+      "mean_improvement": -0.04982321906411577,
+      "pct_folds_improved": 57.14285714285714,
+      "mean_rr_across_folds": 0.8977423165863152,
+      "std_rr_across_folds": 0.06099429500278001,
+      "all_rr_same_direction": true
+    },
+    "all_strat": {
+      "n_folds": 21,
+      "mean_mse_base": 48.45771732620875,
+      "mean_mse_event": 48.4694832873891,
+      "mean_improvement": -0.011765961180360936,
+      "pct_folds_improved": 57.14285714285714,
+      "mean_rr_across_folds": 0.7987673881763461,
+      "std_rr_across_folds": 0.03442587455793655,
+      "all_rr_same_direction": true
+    }
+  },
+  "part8_ssw_matched": {
+    "all_natural": {
+      "n_ssw_events": 15,
+      "mean_diff": -0.35819842472342456,
+      "std_diff": 2.5447372529664016,
+      "t_stat": -0.5266774714107927,
+      "t_p_value": 0.6066621876000159,
+      "n_negative": 13,
+      "n_total": 15,
+      "sign_test_p": 0.00738525390625,
+      "pct_decrease": 86.66666666666667,
+      "events": [
+        {
+          "ssw_date": "1998-12-15",
+          "ssw_mean": 0.03333333333333333,
+          "control_mean": 0.3857160894660895,
+          "diff": -0.35238275613275616,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "1999-02-26",
+          "ssw_mean": 1.4066666666666667,
+          "control_mean": 2.44049512987013,
+          "diff": -1.0338284632034633,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2001-02-11",
+          "ssw_mean": 0.08066666666666666,
+          "control_mean": 0.8542045454545453,
+          "diff": -0.7735378787878786,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2001-12-30",
+          "ssw_mean": 0.03333333333333333,
+          "control_mean": 1.0936022727272727,
+          "diff": -1.0602689393939393,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2002-02-17",
+          "ssw_mean": 0.15333333333333335,
+          "control_mean": 0.674375,
+          "diff": -0.5210416666666666,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2003-01-18",
+          "ssw_mean": 0.17333333333333334,
+          "control_mean": 2.266477272727273,
+          "diff": -2.0931439393939395,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2004-01-05",
+          "ssw_mean": 0.6733333333333333,
+          "control_mean": 2.0494886363636367,
+          "diff": -1.3761553030303033,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2006-01-21",
+          "ssw_mean": 0.11599999999999998,
+          "control_mean": 2.1676136363636362,
+          "diff": -2.051613636363636,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2007-02-24",
+          "ssw_mean": 1.5933333333333335,
+          "control_mean": 2.181818181818182,
+          "diff": -0.5884848484848486,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2008-02-22",
+          "ssw_mean": 3.166000000000001,
+          "control_mean": 2.1561931818181823,
+          "diff": 1.0098068181818185,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2009-01-24",
+          "ssw_mean": 0.13466666666666666,
+          "control_mean": 2.441931818181818,
+          "diff": -2.3072651515151517,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2010-02-09",
+          "ssw_mean": 0.30666666666666664,
+          "control_mean": 0.8889204545454545,
+          "diff": -0.5822537878787879,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2012-01-11",
+          "ssw_mean": 1.3733333333333335,
+          "control_mean": 1.7055681818181818,
+          "diff": -0.3322348484848483,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2013-01-07",
+          "ssw_mean": 0.1,
+          "control_mean": 2.040909090909091,
+          "diff": -1.940909090909091,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2019-01-01",
+          "ssw_mean": 9.736666666666668,
+          "control_mean": 1.1063295454545452,
+          "diff": 8.630337121212122,
+          "n_control_winters": 8
+        }
+      ],
+      "method": "Matched SSW vs same day-of-season in non-SSW winters"
+    },
+    "dry_natural": {
+      "n_ssw_events": 15,
+      "mean_diff": -1.4575745550745551,
+      "std_diff": 1.5434512262972315,
+      "t_stat": -3.533473884919633,
+      "t_p_value": 0.003307735768484764,
+      "n_negative": 14,
+      "n_total": 15,
+      "sign_test_p": 0.0009765625,
+      "pct_decrease": 93.33333333333333,
+      "events": [
+        {
+          "ssw_date": "1998-12-15",
+          "ssw_mean": 0.3333333333333333,
+          "control_mean": 0.7030122655122655,
+          "diff": -0.36967893217893216,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "1999-02-26",
+          "ssw_mean": 0.2,
+          "control_mean": 2.215909090909091,
+          "diff": -2.0159090909090907,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2001-02-11",
+          "ssw_mean": 0.26666666666666666,
+          "control_mean": 0.8238636363636365,
+          "diff": -0.5571969696969699,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2001-12-30",
+          "ssw_mean": 0.13333333333333333,
+          "control_mean": 2.3323863636363638,
+          "diff": -2.1990530303030305,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2002-02-17",
+          "ssw_mean": 0.4,
+          "control_mean": 1.403409090909091,
+          "diff": -1.003409090909091,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2003-01-18",
+          "ssw_mean": 0.5333333333333333,
+          "control_mean": 3.568181818181819,
+          "diff": -3.0348484848484856,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2004-01-05",
+          "ssw_mean": 0.13333333333333333,
+          "control_mean": 2.909090909090909,
+          "diff": -2.775757575757576,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2006-01-21",
+          "ssw_mean": 0.2,
+          "control_mean": 3.0795454545454546,
+          "diff": -2.8795454545454544,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2007-02-24",
+          "ssw_mean": 0.5333333333333333,
+          "control_mean": 2.3125,
+          "diff": -1.7791666666666668,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2008-02-22",
+          "ssw_mean": 0.0,
+          "control_mean": 2.3579545454545454,
+          "diff": -2.3579545454545454,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2009-01-24",
+          "ssw_mean": 0.4,
+          "control_mean": 2.846590909090909,
+          "diff": -2.4465909090909093,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2010-02-09",
+          "ssw_mean": 0.4,
+          "control_mean": 0.9147727272727273,
+          "diff": -0.5147727272727273,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2012-01-11",
+          "ssw_mean": 1.6666666666666667,
+          "control_mean": 2.4375,
+          "diff": -0.7708333333333333,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2013-01-07",
+          "ssw_mean": 0.4,
+          "control_mean": 2.818181818181819,
+          "diff": -2.418181818181819,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2019-01-01",
+          "ssw_mean": 5.866666666666666,
+          "control_mean": 2.6073863636363637,
+          "diff": 3.2592803030303026,
+          "n_control_winters": 8
+        }
+      ],
+      "method": "Matched SSW vs same day-of-season in non-SSW winters"
+    },
+    "norway": {
+      "n_ssw_events": 15,
+      "mean_diff": -12.534343434343436,
+      "std_diff": 5.370084013876337,
+      "t_stat": -8.733423644450374,
+      "t_p_value": 4.862493787375127e-07,
+      "n_negative": 14,
+      "n_total": 15,
+      "sign_test_p": 0.0009765625,
+      "pct_decrease": 93.33333333333333,
+      "events": [
+        {
+          "ssw_date": "1998-12-15",
+          "ssw_mean": 2.0,
+          "control_mean": 15.909090909090908,
+          "diff": -13.909090909090908,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "1999-02-26",
+          "ssw_mean": 2.0,
+          "control_mean": 16.0,
+          "diff": -14.0,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2001-02-11",
+          "ssw_mean": 2.0,
+          "control_mean": 16.079545454545453,
+          "diff": -14.079545454545453,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2001-12-30",
+          "ssw_mean": 2.0,
+          "control_mean": 16.056818181818183,
+          "diff": -14.056818181818183,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2002-02-17",
+          "ssw_mean": 2.0,
+          "control_mean": 16.017045454545453,
+          "diff": -14.017045454545453,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2003-01-18",
+          "ssw_mean": 2.0,
+          "control_mean": 15.96590909090909,
+          "diff": -13.96590909090909,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2004-01-05",
+          "ssw_mean": 2.0,
+          "control_mean": 16.0625,
+          "diff": -14.0625,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2006-01-21",
+          "ssw_mean": 2.0,
+          "control_mean": 16.113636363636363,
+          "diff": -14.113636363636363,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2007-02-24",
+          "ssw_mean": 2.0,
+          "control_mean": 16.022727272727273,
+          "diff": -14.022727272727273,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2008-02-22",
+          "ssw_mean": 2.0,
+          "control_mean": 15.954545454545453,
+          "diff": -13.954545454545453,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2009-01-24",
+          "ssw_mean": 2.0,
+          "control_mean": 16.05681818181818,
+          "diff": -14.05681818181818,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2010-02-09",
+          "ssw_mean": 2.0,
+          "control_mean": 16.113636363636363,
+          "diff": -14.113636363636363,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2012-01-11",
+          "ssw_mean": 2.0,
+          "control_mean": 16.125,
+          "diff": -14.125,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2013-01-07",
+          "ssw_mean": 3.066666666666667,
+          "control_mean": 16.142045454545453,
+          "diff": -13.075378787878787,
+          "n_control_winters": 8
+        },
+        {
+          "ssw_date": "2019-01-01",
+          "ssw_mean": 23.6,
+          "control_mean": 16.0625,
+          "diff": 7.537500000000001,
+          "n_control_winters": 8
+        }
+      ],
+      "method": "Matched SSW vs same day-of-season in non-SSW winters"
+    }
+  }
+}

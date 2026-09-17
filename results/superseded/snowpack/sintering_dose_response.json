@@ -1,0 +1,173 @@
+{
+  "n_events": 16,
+  "dose_response_sinter_rr": {
+    "r": -0.031,
+    "p": 0.9095
+  },
+  "dose_response_deltaT_rr": {
+    "r": -0.063,
+    "p": 0.8159
+  },
+  "per_event": [
+    {
+      "ssw_date": "1998-12-15",
+      "sintering_pct": 15.84,
+      "delta_T": 2.032,
+      "avalanche_rr": 2.508,
+      "ssw_rate": 0.52,
+      "ctrl_rate": 0.21,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 158
+    },
+    {
+      "ssw_date": "1999-02-26",
+      "sintering_pct": 22.51,
+      "delta_T": 3.024,
+      "avalanche_rr": 0.965,
+      "ssw_rate": 0.24,
+      "ctrl_rate": 0.25,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 158
+    },
+    {
+      "ssw_date": "2001-02-11",
+      "sintering_pct": 22.91,
+      "delta_T": 2.703,
+      "avalanche_rr": 2.639,
+      "ssw_rate": 0.29,
+      "ctrl_rate": 0.11,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 157
+    },
+    {
+      "ssw_date": "2001-12-30",
+      "sintering_pct": -8.99,
+      "delta_T": -0.906,
+      "avalanche_rr": 1.198,
+      "ssw_rate": 0.19,
+      "ctrl_rate": 0.16,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 151
+    },
+    {
+      "ssw_date": "2002-02-17",
+      "sintering_pct": -19.99,
+      "delta_T": -2.915,
+      "avalanche_rr": 2.397,
+      "ssw_rate": 0.33,
+      "ctrl_rate": 0.14,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 151
+    },
+    {
+      "ssw_date": "2003-01-18",
+      "sintering_pct": -2.65,
+      "delta_T": 0.076,
+      "avalanche_rr": 0.476,
+      "ssw_rate": 0.43,
+      "ctrl_rate": 0.9,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 151
+    },
+    {
+      "ssw_date": "2004-01-05",
+      "sintering_pct": 12.96,
+      "delta_T": 1.552,
+      "avalanche_rr": 7.571,
+      "ssw_rate": 0.24,
+      "ctrl_rate": 0.03,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 159
+    },
+    {
+      "ssw_date": "2006-01-21",
+      "sintering_pct": 13.25,
+      "delta_T": 1.588,
+      "avalanche_rr": 0.376,
+      "ssw_rate": 0.57,
+      "ctrl_rate": 1.52,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 140
+    },
+    {
+      "ssw_date": "2007-02-24",
+      "sintering_pct": 14.68,
+      "delta_T": 1.942,
+      "avalanche_rr": 1.116,
+      "ssw_rate": 0.52,
+      "ctrl_rate": 0.47,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 115
+    },
+    {
+      "ssw_date": "2008-02-22",
+      "sintering_pct": 10.56,
+      "delta_T": 1.179,
+      "avalanche_rr": 0.098,
+      "ssw_rate": 0.05,
+      "ctrl_rate": 0.49,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 162
+    },
+    {
+      "ssw_date": "2009-01-24",
+      "sintering_pct": 26.3,
+      "delta_T": 3.043,
+      "avalanche_rr": 0.876,
+      "ssw_rate": 0.33,
+      "ctrl_rate": 0.38,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 163
+    },
+    {
+      "ssw_date": "2010-02-09",
+      "sintering_pct": -0.06,
+      "delta_T": 0.023,
+      "avalanche_rr": 1.948,
+      "ssw_rate": 0.71,
+      "ctrl_rate": 0.37,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 150
+    },
+    {
+      "ssw_date": "2012-01-11",
+      "sintering_pct": 11.59,
+      "delta_T": 1.76,
+      "avalanche_rr": 2.369,
+      "ssw_rate": 1.43,
+      "ctrl_rate": 0.6,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 131
+    },
+    {
+      "ssw_date": "2013-01-07",
+      "sintering_pct": -9.32,
+      "delta_T": -1.258,
+      "avalanche_rr": 2.222,
+      "ssw_rate": 0.43,
+      "ctrl_rate": 0.19,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 140
+    },
+    {
+      "ssw_date": "2018-02-12",
+      "sintering_pct": -23.48,
+      "delta_T": -3.463,
+      "avalanche_rr": 1.198,
+      "ssw_rate": 2.38,
+      "ctrl_rate": 1.99,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 156
+    },
+    {
+      "ssw_date": "2019-01-01",
+      "sintering_pct": 0.94,
+      "delta_T": 0.324,
+      "avalanche_rr": 1.884,
+      "ssw_rate": 4.33,
+      "ctrl_rate": 2.3,
+      "n_ssw_days": 21,
+      "n_ctrl_days": 163
+    }
+  ]
+}

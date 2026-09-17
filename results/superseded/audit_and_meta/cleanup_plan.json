@@ -1,0 +1,1346 @@
+{
+ "remove": [
+  [
+   "scripts/analysis/00_preregistration.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/01_build_daily_panel.py",
+   "EXPOSURE_SOURCE: BUILDS the ssw_within_15d flag from the 16-event catalo"
+  ],
+  [
+   "scripts/analysis/04_stratospheric_propagation.py",
+   "SUPERSEDED: loads analysis_panel.parquet, which carries ssw_within_"
+  ],
+  [
+   "scripts/analysis/05_enhanced_analysis.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/06_primary_endpoint.py",
+   "SUPERSEDED: loads analysis_panel.parquet, which carries ssw_within_"
+  ],
+  [
+   "scripts/analysis/07_falsification.py",
+   "SUPERSEDED: loads analysis_panel.parquet, which carries ssw_within_"
+  ],
+  [
+   "scripts/analysis/08_figures.py",
+   "SUPERSEDED: loads analysis_panel.parquet, which carries ssw_within_"
+  ],
+  [
+   "scripts/analysis/09_synthesis.py",
+   "SUPERSEDED: loads analysis_panel.parquet, which carries ssw_within_"
+  ],
+  [
+   "scripts/analysis/10_publication_figures.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis/11_full_data_analysis.py",
+   "SUPERSEDED: loads analysis_panel.parquet, which carries ssw_within_"
+  ],
+  [
+   "scripts/analysis/13_nature_tier_analysis.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/14_final_synthesis.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis/15_nature_figures.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis/16_robustness_resolution.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/17_honest_synthesis.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis/18_updated_figures.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis/19_tier2_upgrade.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/20_final_synthesis.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis/21_final_figures.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis/22_meteorological_mediation.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/23_resolve_limitations.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/24_fresh_analysis.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/25_revision_analysis.py",
+   "SUPERSEDED: exposure=PANEL_FLAG (16-event list is wrong)"
+  ],
+  [
+   "scripts/analysis/26_mechanism_analysis.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/27_planetary_wave_analysis.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/28_mechanism_upgrade.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/29_z500_influence_diagnostics.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis/30_temporal_heterogeneity_test.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis/31_stratospheric_downward_propagation.py",
+   "SUPERSEDED: exposure=CATALOG_OLD (16-event list is wrong)"
+  ],
+  [
+   "scripts/analysis/32_extended_accident_ssw_response.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/33_ep_flux_wave_driving.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/34_merra2_cross_validation.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/35_prospective_2021_test.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/36_dose_response_extended.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/37_z500_blocking_timeseries.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/38_covid_adjusted_2021.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/39_bh_fdr_stratified.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis/40_ep_flux_window_sensitivity.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/41_accident_secular_trend.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/42_non_ssw_blocking_test.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/43_accident_detrending.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/44_z500_composite_figure.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/45_loaded_gun_divergence.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/46_formal_mediation.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/47_direct_ep_flux.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/48_climate_ssw_projections.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/49_mixed_effects_accident.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/50_count_rating_dissociation_fig.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/51_cross_hazard_regime.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/52_geographic_effect_map.py",
+   "figures for withdrawn manuscripts"
+  ],
+  [
+   "scripts/analysis/53_snowpack_trigger_joint.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/54_multi_hazard_figure.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis/55_power_analysis.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis/56_blocking_without_ssw.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/57_gee_accident_model.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/58_precipitation_phase.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/59_cold_wave_mortality_risk.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/60_monte_carlo_specurve_placebo.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/61_incremental_value_power.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/62_cross_country_meta_typology.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis/63_dispersion_correction.py",
+   "SUPERSEDED: exposure=PANEL_FLAG (16-event list is wrong)"
+  ],
+  [
+   "scripts/analysis/67_regime_occupancy_decomposition.py",
+   "SUPERSEDED: exposure=CATALOG_OLD (16-event list is wrong)"
+  ],
+  [
+   "scripts/analysis/68_comprehensive_stratification.py",
+   "SUPERSEDED: exposure=CATALOG_OLD (16-event list is wrong)"
+  ],
+  [
+   "scripts/analysis/68_mechanistic_deep_dive.py",
+   "SUPERSEDED: exposure=CATALOG_OLD (16-event list is wrong)"
+  ],
+  [
+   "scripts/analysis/_analysis_utils.py",
+   "SUPERSEDED: loads analysis_panel.parquet, which carries ssw_within_"
+  ],
+  [
+   "scripts/analysis/bo_bootstrap_ci.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis/r82_bulletin_validation.py",
+   "SUPERSEDED: exposure=CATALOG_OLD (16-event list is wrong)"
+  ],
+  [
+   "scripts/analysis/r82_hierarchical_synthesis.py",
+   "SUPERSEDED: exposure=CATALOG_OLD (16-event list is wrong)"
+  ],
+  [
+   "scripts/analysis/r82_problem_type_proxy.py",
+   "SUPERSEDED: exposure=CATALOG_OLD (16-event list is wrong)"
+  ],
+  [
+   "scripts/analysis/r82_pwl_depth_validation.py",
+   "SUPERSEDED: exposure=CATALOG_OLD (16-event list is wrong)"
+  ],
+  [
+   "scripts/analysis/r83_fix_all_consensus.py",
+   "SUPERSEDED: exposure=CATALOG_OLD (16-event list is wrong)"
+  ],
+  [
+   "scripts/analysis/r84_n16_resolution.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis/r86_browns_method.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis/r86_directional_skill.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis/r87_joint_compound_test.py",
+   "SUPERSEDED: single-window specification (control group contains the"
+  ],
+  [
+   "scripts/analysis/r88_formal_joint_copula_test.py",
+   "SUPERSEDED: single-window specification (control group contains the"
+  ],
+  [
+   "scripts/analysis/r88_pre_onset_stratification.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis/r89_compound_irreducibility.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis/r92_mls_satellite_validation.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis/size_threshold_sensitivity.py",
+   "SUPERSEDED: exposure=CATALOG_OLD (16-event list is wrong)"
+  ],
+  [
+   "scripts/analysis/window_sensitivity_events.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis_extra/analyze_us_danger.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis_extra/era5_mechanism.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis_extra/era5_rutschblock_link.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis_extra/era5_wind_mechanism.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis_extra/lagged_temp_aval.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis_extra/mechanism_analysis.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis_extra/mediation_analysis.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis_extra/norway_phase_analysis.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis_extra/norway_ssw_analysis.py",
+   "SUPERSEDED: single-window specification (control group contains the"
+  ],
+  [
+   "scripts/analysis_extra/planetary_wave_timing.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis_extra/pre_ssw_temperature.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis_extra/predictive_model.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis_extra/propagation_analysis.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis_extra/r100_oos_post2019.py",
+   "SUPERSEDED: single-window specification (control group contains the"
+  ],
+  [
+   "scripts/analysis_extra/r101_irreducibility_power.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis_extra/r102_snotel_extended_dissociation.py",
+   "SUPERSEDED: exposure=local detector (over-detects 40 vs 31)"
+  ],
+  [
+   "scripts/analysis_extra/r103_monitoring_blindspot.py",
+   "SUPERSEDED: exposure=CATALOG_OLD (16-event list is wrong)"
+  ],
+  [
+   "scripts/analysis_extra/r104_accident_case_crossover.py",
+   "SUPERSEDED: exposure=local detector (over-detects 40 vs 31)"
+  ],
+  [
+   "scripts/analysis_extra/r105_multiregion_meta.py",
+   "SUPERSEDED: exposure=local detector (over-detects 40 vs 31)"
+  ],
+  [
+   "scripts/analysis_extra/r106_canonical_catalog_headline.py",
+   "SUPERSEDED: single-window specification (control group contains the"
+  ],
+  [
+   "scripts/analysis_extra/r107_pooled_within_winter.py",
+   "SUPERSEDED: single-window specification (control group contains the"
+  ],
+  [
+   "scripts/analysis_extra/r108_pwl_seasonal_control.py",
+   "SUPERSEDED: single-window specification (control group contains the"
+  ],
+  [
+   "scripts/analysis_extra/r109_norway_problem_mechanism.py",
+   "SUPERSEDED: single-window specification (control group contains the"
+  ],
+  [
+   "scripts/analysis_extra/r110_albina_alpine_problems.py",
+   "SUPERSEDED: single-window specification (control group contains the"
+  ],
+  [
+   "scripts/analysis_extra/r111_kinetic_growth_instrumental.py",
+   "SUPERSEDED: single-window specification (control group contains the"
+  ],
+  [
+   "scripts/analysis_extra/r112_design_positive_control.py",
+   "SUPERSEDED: single-window specification (control group contains the"
+  ],
+  [
+   "scripts/analysis_extra/r98_continuous_vortex_framework.py",
+   "SUPERSEDED: loads analysis_panel.parquet, which carries ssw_within_"
+  ],
+  [
+   "scripts/analysis_extra/r98_continuous_vortex_framework_v2.py",
+   "SUPERSEDED: loads analysis_panel.parquet, which carries ssw_within_"
+  ],
+  [
+   "scripts/analysis_extra/r98b_blocking_modifier.py",
+   "SUPERSEDED: exposure=PANEL_FLAG (16-event list is wrong)"
+  ],
+  [
+   "scripts/analysis_extra/r99_blocking_ssw_interaction.py",
+   "SUPERSEDED: exposure=PANEL_FLAG (16-event list is wrong)"
+  ],
+  [
+   "scripts/analysis_extra/sintering_dose_response.py",
+   "SUPERSEDED: loads analysis_panel.parquet, which carries ssw_within_"
+  ],
+  [
+   "scripts/analysis_extra/sintering_timescale.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/analysis_extra/ssw_subtype.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis_extra/swiss_daily_lag.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis_extra/threshold_vs_continuous.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis_extra/timing_autocorrelation_correction.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/analysis_extra/window_phase_avalanche.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/config.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/download/01_download_solar_indices.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/02_download_omni.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/03_download_goes_xrs.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/04_download_flare_catalog.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/08_download_dscovr_ace.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/09_download_poes_meped.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/12_setup_geomagnetic.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/13_setup_psp_sdo.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/15_download_kyoto_dst.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/19_download_donki_catalog.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/20_download_goes_xrs_fixed.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/21_download_poes_fixed.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/22_download_goes_xrs_v2.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/23_download_psp_mag.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/25_download_kyoto_ae.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/26_download_goes_r_xrs.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/31_download_gsfc_flare_catalog.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/33_download_tsi.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/34_download_solar_spectral_proxies.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/35_download_bremen_mgii.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/41_download_dscovr_ace_cdaweb.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/42_download_hmi_sharp.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/43_download_goes_particle.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/44_download_poes_hapi_historical.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/46_download_supermag.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/48_download_goes_r_particle.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/52_download_omni_dst.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download/53_update_dst_processed.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download_extra/download_swpc_data.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/download_extra/supermag-api.py",
+   "download for the ABANDONED solar hypothesis"
+  ],
+  [
+   "scripts/figures/dose_response_mediation.py",
+   "SUPERSEDED: exposure=PANEL_FLAG (16-event list is wrong)"
+  ],
+  [
+   "scripts/figures/eaws_geographic_map.py",
+   "figures for withdrawn manuscripts"
+  ],
+  [
+   "scripts/figures/forest_plot_cross_regional.py",
+   "figures for withdrawn manuscripts"
+  ],
+  [
+   "scripts/figures/ng_fig_design_artifact.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/figures/r55_z500_composite_maps.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/process/_utils.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/process_extra/process_extended_era5.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/process_extra/snowpack_sintering_model.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/r56_zip_doy_resolution.py",
+   "SUPERSEDED: exposure=PANEL_FLAG (16-event list is wrong)"
+  ],
+  [
+   "scripts/r57_epflux_diagnostics.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/r57_nb_models.py",
+   "SUPERSEDED: exposure=PANEL_FLAG (16-event list is wrong)"
+  ],
+  [
+   "scripts/r57_pre_post_decomposition.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/r57_wind_transport_resolution.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/r77_height_time_composite.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/r77_observer_effort_table.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/r78_sign_randomisation.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/r79_epflux_height_time_figure.py",
+   "figures for withdrawn manuscripts"
+  ],
+  [
+   "scripts/r81_structural_ceiling_breakers.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/review_rounds/_avcan_flexible_utils.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/review_rounds/r11_mechanism_upgrade.py",
+   "SUPERSEDED: exposure=CATALOG_OLD (16-event list is wrong)"
+  ],
+  [
+   "scripts/review_rounds/r11_mechanism_upgrade_p2.py",
+   "SUPERSEDED: exposure=CATALOG_OLD (16-event list is wrong)"
+  ],
+  [
+   "scripts/review_rounds/r14_fdr_17tests.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/review_rounds/r14_mechanism_breakthrough.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r14_mediation_doy.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r15_analysis_v2.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r15_comprehensive_analysis.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r16_snowpack_mechanism.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r17_bridging_mechanism.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r20_comprehensive_analysis.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r20_definitive_analysis.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r20_multicenter_analysis.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r20_wai_reanalysis.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r21_paper_analysis.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r22_reviewer_upgrades.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r23_reviewer_upgrades.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r25_mechanism_analysis.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r25_mechanism_v2.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r25_mechanism_v3.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r28_mechanism.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r28_mediation.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r29_grand_analysis.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/review_rounds/r29_multicountry_eaws.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/review_rounds/r30_envidat_swiss_danger.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r31_snowpack_stability.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r31b_trigger_suppression.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r31c_albina_gradient.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/review_rounds/r32_mediation_analysis.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r34_multicountry_analysis.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/review_rounds/r34_wave_flux_bayesian.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r35_moisture_flux_roc_bayes.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r35_precip_wind.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r36_moisture_mediation.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r36_power_analysis.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/review_rounds/r36_teleconnection.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r37_eaws_gradient.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/review_rounds/r37_mediation.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r37_spec_curve.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r37_split_sample.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r38_norway_analysis.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/review_rounds/r39_french_bra_replication.py",
+   "SUPERSEDED: loads analysis_panel.parquet, which carries ssw_within_"
+  ],
+  [
+   "scripts/review_rounds/r40_french_bra_gradient.py",
+   "SUPERSEDED: loads analysis_panel.parquet, which carries ssw_within_"
+  ],
+  [
+   "scripts/review_rounds/r41_avcan_flexible_validation.py",
+   "SUPERSEDED: loads analysis_panel.parquet, which carries ssw_within_"
+  ],
+  [
+   "scripts/review_rounds/r42_avcan_owner_heterogeneity.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/review_rounds/r44_era5_composites.py",
+   "SUPERSEDED: single-window specification (control group contains the"
+  ],
+  [
+   "scripts/review_rounds/r44_winter_blocked_bootstrap.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/review_rounds/r45_correlated_channels.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/review_rounds/r45_multi_country_figure.py",
+   "figures for withdrawn manuscripts"
+  ],
+  [
+   "scripts/review_rounds/r46_study_area_map.py",
+   "figures for withdrawn manuscripts"
+  ],
+  [
+   "scripts/review_rounds/r52_pre_event_snowpack.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/review_rounds/r60_blocking_differentiation.py",
+   "SUPERSEDED: exposure=PANEL_FLAG (16-event list is wrong)"
+  ],
+  [
+   "scripts/review_rounds/r60_gee_power_simulation.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/review_rounds/r60_mixed_effects_nb.py",
+   "SUPERSEDED: exposure=PANEL_FLAG (16-event list is wrong)"
+  ],
+  [
+   "scripts/review_rounds/r60_mixed_effects_swiss.py",
+   "SUPERSEDED: exposure=PANEL_FLAG (16-event list is wrong)"
+  ],
+  [
+   "scripts/review_rounds/r61_comprehensive_stats.py",
+   "SUPERSEDED: exposure=PANEL_FLAG (16-event list is wrong)"
+  ],
+  [
+   "scripts/review_rounds/r61_comprehensive_stats_v2.py",
+   "SUPERSEDED: exposure=CATALOG_OLD (16-event list is wrong)"
+  ],
+  [
+   "scripts/review_rounds/r61_falsification.py",
+   "SUPERSEDED: exposure=CATALOG_OLD (16-event list is wrong)"
+  ],
+  [
+   "scripts/utilities/_inspect_qc.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/utilities/condense_paper.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/utilities/reviewer_fixes.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/utilities/save_results.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/utilities/verify_nh_circulation.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/utilities/verify_propagation.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ],
+  [
+   "scripts/utilities/verify_r14_results.py",
+   "SUPERSEDED: exposure=ssw_catalog.parquet (contains spurious 2012-01"
+  ],
+  [
+   "scripts/verification/reproducibility_check.py",
+   "LIMITED: descriptive only, no valid exposure"
+  ]
+ ],
+ "keep": [
+  [
+   "scripts/analysis/02_define_events.py",
+   "process: infrastructure"
+  ],
+  [
+   "scripts/analysis/03_chemistry_response.py",
+   "process: infrastructure"
+  ],
+  [
+   "scripts/analysis/12_rebuild_enhanced_panel.py",
+   "process: infrastructure"
+  ],
+  [
+   "scripts/analysis_extra/condpois.py",
+   "utility: infrastructure"
+  ],
+  [
+   "scripts/analysis_extra/r113_event_study.py",
+   "analysis: infrastructure"
+  ],
+  [
+   "scripts/analysis_extra/r114_avalanche_event_study.py",
+   "analysis: infrastructure"
+  ],
+  [
+   "scripts/download/05_download_ssw_catalog.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/06_download_caic_avalanche.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/07_download_snotel.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/10_setup_era5.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/11_setup_nasa_earthdata.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/14_download_norway_data.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/16_download_norway_fixed.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/17_download_snotel_fixed.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/18_download_varsom_fixed.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/24_derive_storm_catalog.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/27_download_ncep_stratosphere.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/28_download_snotel_state_reports.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/29_download_ncep_troposphere.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/30_download_senorge_swe.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/32_download_uac_avalanche.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/36_download_volcanic_aerosol.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/37_download_climate_indices.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/38_download_era5.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/39_download_nasa_earthdata.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/40_download_ims_snow.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/45_download_slf_envidat.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/47_download_era5_polar_strat.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/50_redownload_mls.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/51_redownload_era5_alps.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/download_all.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download/utils.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/download_albina.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/download_albina_caaml_problems.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/download_albina_obs.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/download_austrian.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/download_eaws_comprehensive.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/download_eaws_focused.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/download_eaws_pyavacore.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/download_eaws_recent.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/download_envidat.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/download_envidat2.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/download_era5_extended.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/download_era5_radiation.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/download_french.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/download_french_bra.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/download_international.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/download_lawis_full.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/download_norway_avalanche.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/download_norway_targeted.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/download_ssw_compendium_canonical.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/download_us_danger.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/r34_download_albina_extended.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/r36_download_extra.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/r36_download_indices.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/r38_albina_download.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/r38_download_extra.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/download_extra/r39_albina_extended.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/process/00_run_pipeline.py",
+   "process: infrastructure"
+  ],
+  [
+   "scripts/process/01_process_geomagnetic.py",
+   "process: infrastructure"
+  ],
+  [
+   "scripts/process/02_process_solar_catalogs.py",
+   "process: infrastructure"
+  ],
+  [
+   "scripts/process/03_process_omni.py",
+   "process: infrastructure"
+  ],
+  [
+   "scripts/process/04_process_goes_xrs.py",
+   "process: infrastructure"
+  ],
+  [
+   "scripts/process/05_process_goes_particle.py",
+   "process: infrastructure"
+  ],
+  [
+   "scripts/process/06_process_poes.py",
+   "process: infrastructure"
+  ],
+  [
+   "scripts/process/07_process_mls.py",
+   "process: infrastructure"
+  ],
+  [
+   "scripts/process/08_process_era5.py",
+   "process: infrastructure"
+  ],
+  [
+   "scripts/process/09_process_modis.py",
+   "process: infrastructure"
+  ],
+  [
+   "scripts/process/10_process_cryosphere.py",
+   "process: infrastructure"
+  ],
+  [
+   "scripts/process/11_process_psp_ace.py",
+   "process: infrastructure"
+  ],
+  [
+   "scripts/process_extra/fix_nc_units.py",
+   "process: infrastructure"
+  ],
+  [
+   "scripts/process_extra/fix_ncep_redownload.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/process_extra/fix_qc_fails.py",
+   "process: infrastructure"
+  ],
+  [
+   "scripts/process_extra/fix_qc_issues.py",
+   "process: infrastructure"
+  ],
+  [
+   "scripts/process_extra/fix_warnings.py",
+   "process: infrastructure"
+  ],
+  [
+   "scripts/review_rounds/r34_check_data.py",
+   "utility: infrastructure"
+  ],
+  [
+   "scripts/review_rounds/r38_albina_check.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/review_rounds/r38_norway_expanded.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/review_rounds/r38_norway_simple.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/review_rounds/r38_norway_targeted.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/review_rounds/r43_threshold_loo_cv.py",
+   "process: infrastructure"
+  ],
+  [
+   "scripts/review_rounds/r60_multi_predictor_loo.py",
+   "process: infrastructure"
+  ],
+  [
+   "scripts/utilities/audit_data_usage.py",
+   "utility: infrastructure"
+  ],
+  [
+   "scripts/utilities/audit_scripts.py",
+   "utility: infrastructure"
+  ],
+  [
+   "scripts/utilities/catalog_results.py",
+   "utility: infrastructure"
+  ],
+  [
+   "scripts/utilities/check_eaws.py",
+   "utility: infrastructure"
+  ],
+  [
+   "scripts/utilities/check_era5_gap.py",
+   "utility: infrastructure"
+  ],
+  [
+   "scripts/utilities/check_nc_status.py",
+   "utility: infrastructure"
+  ],
+  [
+   "scripts/utilities/find_french_data.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/utilities/find_more_data.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/utilities/inspect_european_alps.py",
+   "utility: infrastructure"
+  ],
+  [
+   "scripts/utilities/inspect_qc_fails.py",
+   "utility: infrastructure"
+  ],
+  [
+   "scripts/utilities/inventory_datasets.py",
+   "utility: infrastructure"
+  ],
+  [
+   "scripts/utilities/norway_robust_download.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/utilities/qc_check.py",
+   "utility: infrastructure"
+  ],
+  [
+   "scripts/utilities/save_butler_ssw.py",
+   "utility: infrastructure"
+  ],
+  [
+   "scripts/utilities/search_french_data.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/utilities/search_more_data.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/utilities/test_nc_write.py",
+   "utility: infrastructure"
+  ],
+  [
+   "scripts/utilities/test_nve.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/utilities/test_nve2.py",
+   "download: acquisition provenance for data in use"
+  ],
+  [
+   "scripts/utilities/test_pyavacore.py",
+   "utility: infrastructure"
+  ]
+ ]
+}

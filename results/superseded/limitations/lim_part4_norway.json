@@ -1,0 +1,40 @@
+{
+  "regime_cold": {
+    "label": "Cold (below-median 100hPa T)",
+    "ssw_mean": 2.7763975155279503,
+    "ssw_n": 161,
+    "non_ssw_mean": 9.248773651016117,
+    "non_ssw_n": 1427,
+    "diff": -6.472376135488167,
+    "t_p": 2.867549450404732e-14,
+    "mw_p": 3.08597908067036e-14
+  },
+  "regime_warm": {
+    "label": "Warm (above-median 100hPa T)",
+    "ssw_mean": 3.8223684210526314,
+    "ssw_n": 304,
+    "non_ssw_mean": 6.3473520249221185,
+    "non_ssw_n": 1284,
+    "diff": -2.524983603869487,
+    "t_p": 2.112756341672096e-06,
+    "mw_p": 9.493036076811191e-06
+  },
+  "season_early": {
+    "label": "Early winter (Nov-Jan, dry-dominant)",
+    "ssw_mean": 4.4601449275362315,
+    "ssw_n": 276,
+    "non_ssw_mean": 6.658816425120773,
+    "non_ssw_n": 1656,
+    "diff": -2.1986714975845416,
+    "t_p": 0.00013342916515377633
+  },
+  "season_late": {
+    "label": "Late winter (Feb-Apr, wet-dominant)",
+    "ssw_mean": 2.0,
+    "ssw_n": 189,
+    "non_ssw_mean": 9.782938388625592,
+    "non_ssw_n": 1055,
+    "diff": -7.782938388625592,
+    "t_p": 1.2874176394963949e-22
+  }
+}

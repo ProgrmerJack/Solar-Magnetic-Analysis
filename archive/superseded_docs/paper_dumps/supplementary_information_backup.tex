@@ -1,0 +1,379 @@
+%% ============================================================================
+%% Supplementary Information
+%% Planetary Wave Forcing Suppresses Natural Dry Slab Avalanche Activity
+%% via Stratospheric Sudden Warmings
+%%
+%% Target: Nature Geoscience (Article format)
+%% Format: Nature Portfolio Design Template
+%% ============================================================================
+\documentclass[11pt,letterpaper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{adjustbox}    % For table width adjustment
+\usepackage{array}        % Enhanced column types
+\usepackage{multirow}     % Multi-row cells
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+\usepackage{setspace}
+\onehalfspacing
+
+% Nature formatting
+\geometry{margin=1in}
+\sloppy  % Allow more flexible line breaking to prevent overfull hboxes
+
+% URL formatting - allow breaks at more characters
+\makeatletter
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\makeatother
+
+\title{Supplementary Information:\\
+Planetary Wave Forcing Suppresses Natural Dry Slab Avalanche Activity\\
+via Stratospheric Sudden Warmings: Multi-Country Evidence,\\
+Process-Model Validation, and Count--Rating Dissociation}
+
+\author{Abduxoliq Ashuraliyev}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\clearpage
+
+% ============================================================
+%  SUPPLEMENTARY METHODS
+% ============================================================
+\section{Supplementary Note 1: Methods}
+
+\subsection{Avalanche data}
+
+\textit{Switzerland.} Swiss avalanche data were obtained from the WSL Institute for Snow and Avalanche Research SLF, Davos. The database contains individual avalanche records classified by trigger type (natural, artificial), moisture content (dry, wet), and size class (1--5, following the Canadian classification system). We used naturally triggered avalanches of size class $\geq 1$, computing daily counts of all-natural, dry-natural, and wet-natural avalanches for 21~winters (November--April, 1999--2019; $n = 3{,}533$ total days with valid records). The baseline rate of dry slab avalanches is 0.86~day$^{-1}$, with 86\% of days recording zero dry slab events. Data quality auditing confirmed: (1)~no fill values or constant-value artifacts; (2)~continuous temporal coverage across all 21~winters; (3)~stable annual coefficient of variation (CV $= 1.14$); and (4)~consistent dry/wet classification ratios across years.
+
+\textit{Utah, USA.} Daily natural dry slab avalanche counts were derived from the Utah Avalanche Center (UAC) incident database (2012--2025). We selected events with Natural trigger and Soft Slab or Hard Slab avalanche type classification ($n = 2{,}209$~events). The resulting daily count series spans 13~winters with a baseline rate of 0.89~day$^{-1}$ (86\% zero-count days), remarkably similar to the Swiss series. The UAC database is operationally independent from the Swiss SLF: different reporting systems, different terrain, different continental weather regimes.
+
+\textit{Norway.} Daily avalanche danger level forecasts (scale 1--5) were obtained from the Norwegian Water Resources and Energy Directorate (NVE) via their public API (\texttt{api01.nve.no/hydrology/forecast/avalanche/v6.2.1/api}). Five inland mountain regions were selected: Lyngen (3010), Trollheimen (3022), Nord-Gudbrandsdalen (3025), Jotunheimen (3028), and Hardanger (3034), spanning latitudes 60--70$^\circ$N. Data cover 6~winters (2018--2023; $n = 3{,}255$~region-days). Danger levels are assessed daily by professional forecasters incorporating snowpack observations, weather forecasts, and terrain analysis. Four SSW events fall within the coverage period.
+
+\subsection{SSW event identification and classification}
+
+SSW events were identified from the Butler et al.\ catalog, which defines major SSW events as reversals of the 10~hPa 60$^\circ$N zonal-mean zonal wind from westerly to easterly. We supplemented the catalog with the well-documented February 2018 event (NCEP-verified 10~hPa wind reversal to $-19.3$~m/s on 2018-02-12), yielding 16~events within the Swiss study period (1999--2019) and 4~events within the Utah period (2012--2025).
+
+Each SSW event was classified as displacement-type or split-vortex-type following the methodology of Charlton \& Polvani (2007) and Mitchell et al.\ (2013). Within our study period: 10~displacement events and 6~split events. This classification was determined \textit{a priori} from established climatological literature based on vortex geometry---not from inspection of our avalanche data.
+
+\subsection{Matched SSW comparison}
+
+For each SSW event, we computed the mean daily avalanche count in the 15-day post-SSW window. The matched control was the mean of the same day-of-season window ($\pm 3$~days) across all non-SSW winters. Significance was assessed via sign test (two-sided), Wilcoxon signed-rank test, and paired $t$-test. Bootstrap confidence intervals were computed by resampling events with replacement 10,000~times. Results from both regions were combined using DerSimonian--Laird random-effects meta-analysis.
+
+\subsection{NAO-adjusted regression}
+
+Poisson GLMs regressed daily dry slab counts on SSW status (binary, within 15~days of SSW), with and without NAO as a covariate. Incidence rate ratios (IRR) were computed as $\exp(\beta)$. NAO tercile stratification tested the SSW effect within each group.
+
+\subsection{ERA5 Alpine surface analysis}
+
+ERA5 reanalysis data (0.25$^\circ$, 6-hourly) were obtained for the Swiss Alpine domain (46--48$^\circ$N, 6--11$^\circ$E) for 2004--2013. Variables included total precipitation, snowfall, 2~m temperature, snow depth, and 10~m winds. Daily anomalies were calculated relative to day-of-year winter climatology. Composite anomalies were computed at lags $-30$ to $+30$~days relative to SSW onset.
+
+\subsection{Process-based sintering model}
+
+We implemented a one-dimensional snowpack sintering model incorporating three physically-grounded components: (1)~Arrhenius-governed ice grain-boundary diffusion ($E_a = 0.6$~eV) controlling bond growth rate, (2)~Clausius--Clapeyron vapour transport driving grain rounding, and (3)~Mellor viscous densification. Slab tensile strength evolves as $\sigma_t \propto (\rho/\rho_{\text{ice}})^{2.4} \times (r_b/r_g)^2$, following Jamieson \& Johnston.
+
+\textit{Bond growth.} $\mathrm{BGR} = A \exp(-E_a / k_B T)$, where $E_a = 0.6$~eV, $k_B$ is the Boltzmann constant, and $T$ is absolute temperature. The bond-to-grain ratio evolves daily as $r_b(t+1) = r_b(t) + \alpha \cdot \mathrm{BGR}(T(t))$.
+
+\textit{Vapour transport.} $e_s(T) = 611.15 \exp[L_s (1/273.15 - 1/T) / R_v]$, where $L_s = 2.83 \times 10^6$~J~kg$^{-1}$ and $R_v = 461.5$~J~kg$^{-1}$~K$^{-1}$.
+
+\textit{Densification.} $\dot{\rho}/\rho = c_1 \sigma_o \exp(-c_2 \rho - E_\eta / k_B T)$.
+
+\textit{Strength.} $\sigma_t = \sigma_0 (\rho / \rho_{\text{ice}})^{2.4} (r_b / r_g)^2$. Initial conditions: slab density $= 250$~kg~m$^{-3}$; bond-to-grain ratio $= 0.2$; slab depth $= 0.8$~m.
+
+The model was forced with ERA5 daily 2~m temperature for $n = 16$~SSW events (1998--2019) using a 20-day integration window (days $-5$ to $+15$). Matched controls used the mean temperature from $\pm 1$--2~year offsets. Sensitivity analysis varied $E_a$ from 0.4 to 0.7~eV.
+
+\subsection{SNOWPACK-simulated stability data}
+
+SNOWPACK model output was obtained from the WSL/SLF operational simulation archive covering 129~automated IMIS stations across the Swiss Alps (December 2001--April 2020; 29{,}296~station-day records). We analysed eight stability metrics at persistent weak layers: ssi\_pwl, ssi\_pwl\_100, sn38\_pwl, sn38\_pwl\_100, sk38\_pwl, sk38\_pwl\_100, ccl\_pwl, and ccl\_pwl\_100. For each SSW event, station-mean values were computed for 30-day pre-SSW (control) and 30-day post-SSW (treatment) windows. Calendar-matched analysis compared post-SSW means against the same calendar dates averaged across 7~non-SSW winters.
+
+\subsection{Slab bridging quantification}
+
+We computed a slab bridging index as the ratio of modelled snow depth to critical crack length ($\mathrm{HS_{mod}} / \mathrm{ccl_{pwl}}$). For each SSW event, the 30-day post-SSW station-mean bridge ratio was compared against the 30-day pre-SSW baseline using paired Wilcoxon signed-rank tests. Cohen's $d$ effect sizes were computed from the paired differences.
+
+\subsection{European Alps danger level data}
+
+Pan-European daily maximum avalanche danger level data were obtained from EAWS, covering Austria ($n = 22{,}249$~region-days), Switzerland ($n = 58{,}147$), Italy ($n = 46{,}578$), France ($n = 11{,}383$), and Germany ($n = 2{,}982$), spanning December 2011--April 2015 (141{,}339~total observations). For each country, post-SSW mean danger levels were compared against calendar-matched controls for the 3~SSW events within the data range.
+
+\subsection{Daily-level atmospheric chain analysis}
+
+We computed lagged Spearman rank cross-correlations between key variables across all winter days (November--March) with valid data. Three chain links were tested: (1)~NCEP 10~hPa temperature anomaly $\to$ ERA5 2~m temperature at lags 1--14~days; (2)~ERA5 2~m temperature $\to$ daily dry slab counts at lags 0--14~days; (3)~NCEP stratospheric wind deceleration $\to$ 2~m temperature at lags 1--14~days. All anomalies were deseasonalised.
+
+\subsection{Planetary wave independence test}
+
+A wave activity index (WAI) was constructed from the 7-day backward difference in deseasonalised NCEP 10~hPa zonal wind: $\mathrm{WAI}(t) = -[\bar{u}_{10}(t) - \bar{u}_{10}(t{-}7)]$. The independence test excluded all days within $\pm$15~days of any SSW onset ($n = 2{,}822$~non-SSW days). WAI quintile analysis used Kruskal--Wallis $H$ tests.
+
+\subsection{Zero-inflated Poisson regression}
+
+Given the high proportion of zero-count days (87\%), we fitted a ZIP model with SSW status entering both the count and zero-inflation components:
+\[
+P(Y_i = y_i) = \begin{cases}
+\pi_i + (1 - \pi_i) e^{-\mu_i} & y_i = 0 \\
+(1 - \pi_i) \frac{\mu_i^{y_i} e^{-\mu_i}}{y_i!} & y_i > 0
+\end{cases}
+\]
+Model comparison between ZIP and standard Poisson was assessed via the Vuong test.
+
+\subsection{Event-level permutation inference}
+
+We generated 1,000 sets of pseudo-SSW onset dates by randomly sampling 16~winter days with $\geq 30$~day separation. Empirical $P$-values were computed as the fraction of permutation statistics as or more extreme than the observed value.
+
+\subsection{Specification curve analysis}
+
+Model variants were run across a grid combining: avalanche outcome (all-natural, dry, wet) and exposure definition (SSW 0--15d, 0--20d, 0--30d; pre-SSW $-$15--0d). For each specification, the Mantel--Haenszel RR and significance were recorded.
+
+\subsection{Cross-country temporal concordance analysis}
+
+Five-day rolling mean avalanche rate ratios were computed at each lag from $-25$ to $+25$~days relative to SSW onset. Five non-overlapping SSW lifecycle phases were defined: early pre-SSW ($-15$ to $-8$~days), late pre-SSW ($-7$ to $-1$), onset (days $0$ to $+3$), early post-SSW ($+4$ to $+10$), and late post-SSW ($+11$ to $+15$). Because the 5-day rolling window induces serial autocorrelation (lag-1: Swiss~$= 0.74$, Norway~$= 0.83$; Bretherton-corrected $P = 0.13$ for raw lag-by-lag $r = 0.614$), phase-level Spearman correlation ($r = 0.975$, $P = 0.005$, $n = 5$) is reported as the primary cross-country statistic.
+
+\subsection{Annular mode mediation analysis}
+
+Daily NAO and AO indices from the NOAA CPC (1950--2026) were used. Mediation followed Baron \& Kenny: (a)~SSW $\to$ NAO/AO, (b)~NAO/AO $\to$ avalanches controlling for SSW, (c)~SSW $\to$ avalanches controlling for NAO/AO. The indirect effect and proportion mediated were estimated with 2,000-iteration bootstrap CIs.
+
+\subsection{Formal causal mediation of weather variables}
+
+Baron--Kenny mediation analysis on daily winter data ($n \approx 3{,}000$~days). Three mediators: ERA5 2~m temperature, wind speed, and snowfall anomalies. A multi-mediator model entered all three simultaneously. Day-of-year-matched mediation provided an independent assessment.
+
+\subsection{Threshold versus continuous model comparison}
+
+Three Poisson regression models predicting daily dry slab counts ($n = 3{,}325$~days): (a)~continuous deseasonalised 10~hPa zonal wind, (b)~binary SSW indicator, and (c)~five vortex-strength quintile indicators. Model comparison via AIC, BIC, and likelihood ratio tests.
+
+\subsection{Extended mechanism analysis}
+
+Composite anomalies across all 24~SSW events (NCEP, 1979--2024): 100~hPa temperature, 10~hPa zonal wind, 500~hPa geopotential height, sea-level pressure, and 850~hPa zonal wind (Northern Hemisphere means). One-sample $t$-tests against zero at lags $-20$ to $+30$~days.
+
+\subsection{Multiple testing correction}
+
+Benjamini--Hochberg FDR correction applied across all primary hypothesis tests (Supplementary Table~\ref{stab:fdr}).
+
+\subsection{Bayesian inference}
+
+Bayes factors ($\mathrm{BF}_{10}$) computed using a one-sided uniform prior ($p \in [0.5, 1]$ under $H_1$; $p = 0.5$ under $H_0$). Evidence categories follow the Kass--Raftery scale.
+
+\subsection{Statistical power and test-statistic divergence}
+
+The Swiss sign test achieves high power given 14/16 concordance. The parametric paired $t$-test ($P = 0.41$) diverges because of two positive outliers (kurtosis~$= 4.2$). For ERA5, matched-control event-level comparisons ($n = 8$) have minimum detectable effect $d = 1.16$, but the deseasonalised daily analysis ($n = 237$ vs.\ $n = 1{,}576$) detects the temperature anomaly ($P = 0.0003$).
+
+% ============================================================
+%  SUPPLEMENTARY RESULTS
+% ============================================================
+\section{Supplementary Note 2: Results}
+
+\subsection{Zero-inflated model validation}
+
+With 87\% zero-count days, the ZIP model is strongly preferred over standard Poisson (Vuong $z = 6.5$, $P < 10^{-4}$; overdispersion ratio $\hat{c} = 45$). The ZIP decomposition: zero-inflation probability decreases during SSW windows ($\hat{\pi}$: 0.89 to 0.76; more active days), while active-day count IRR $= 0.43$ (57\% reduction; $P < 10^{-6}$). These partially offset: the net daily expected count decreases modestly, consistent with matched-comparison results.
+
+\subsection{NAO-adjusted SSW analysis}
+
+Poisson regression with NAO covariate: SSW IRR $= 0.78$ ($P < 0.001$) after controlling for NAO (NAO coefficient $= 0.31$, $P < 0.001$). The SSW association survives with modest attenuation (unadjusted IRR $= 0.75$). By tercile, the SSW effect is largest in NAO-positive conditions ($\Delta = -0.63$, $P = 0.052$).
+
+\subsection{Stratospheric downward propagation}
+
+Multi-level composite of displacement-type SSW events ($n = 10$) reveals downward propagation: 10~hPa $+14.7$~K ($P < 0.0001$), 20~hPa $+12.4$~K, 30~hPa $+10.3$~K, 50~hPa $+7.7$~K, 70~hPa $+6.1$~K, 100~hPa $+4.6$~K ($P = 0.001$). Descent rate $\sim$1--2~days per level. Signal penetrates into troposphere for displacement events: 500~hPa height $-2.7$~m ($P = 0.0003$), SLP $+31$~Pa ($P = 0.014$), 850~hPa zonal wind $-0.32$~m/s ($P < 0.0001$). These tropospheric responses are absent in full-SSW composites ($P > 0.65$).
+
+\subsection{Formal annular mode mediation}
+
+Step~1: Post-SSW daily NAO not significantly different from climatology ($P = 0.33$; only 55\% below climatology). Step~2: Daily NAO uncorrelated with dry slab counts ($r = 0.022$, $P = 0.25$). Step~3: NAO indirect effect $= +0.002$ (95\% CI $[-0.014, 0.021]$), proportion mediated $= -0.6\%$. AO: indirect effect $= -0.003$ (CI $[-0.042, 0.031]$), proportion $= 6.5\%$. \textbf{Mediation via NAO or AO is formally rejected.}
+
+\subsection{Extended mechanism analysis: the stratospheric--tropospheric disconnect}
+
+Full NCEP record ($n = 24$~SSW events, 1979--2024): stratospheric responses very strong (100~hPa: $+4.8$~K, $P < 10^{-7}$; 10~hPa wind: $-22.5$~m/s, $P < 10^{-6}$). Tropospheric: 500~hPa $-0.9$~m ($P = 0.77$), SLP $-7.6$~Pa ($P = 0.85$), 850~hPa wind $-0.07$~m/s ($P = 0.65$). The disconnect reflects regional, not hemispheric, coupling.
+
+\subsection{Hemispheric meteorological chain}
+
+Within the Swiss study period ($n = 16$), 850~hPa zonal wind weakens $-0.48$~m/s ($P = 0.004$) and 500~hPa height decreases ($P < 10^{-4}$). This does not reproduce in the extended record, indicating sampling variability. Event-level $\Delta$U850 does not predict $\Delta$dry avalanches ($r = 0.075$, $P = 0.79$).
+
+\subsection{Planetary wave forcing proxy}
+
+The 100~hPa temperature proxy does not predict event-level avalanche anomalies directly ($r = -0.09$, $P = 0.75$, $n = 16$). At the daily level, the wave activity index predicts dry slab counts at lag 10~d ($r = 0.050$, $P = 0.004$) and 14~d ($r = 0.043$, $P = 0.012$), consistent with the complete chain delay.
+
+\subsection{Norwegian data quality disclosure}
+
+The historical NGI avalanche registry contains a fill-value artifact (constant daily count $= 2$ from 1998--2012). Only two SSW events fall within the valid range post-2013---insufficient for inference. The NVE danger level forecasts (2018--2023) are a separate, independently verified dataset.
+
+\subsection{Additional robustness checks}
+
+\textit{Window sensitivity.} The primary 15-day window was pre-specified. Sensitivity: 10~d (14/16, $P = 0.004$), 15~d (14/16, $P = 0.004$), 20~d (12/16, $P = 0.077$), 30~d (13/16, $P = 0.021$). The weakening at 20~d reflects the cold-air outbreak after day $+16$.
+
+\textit{Seasonal distribution.} All 16~SSW events fall within December--February. The matched-control design selects same-calendar-day windows, eliminating seasonal confounding.
+
+\textit{Leave-one-out.} All 21 winter folds produce RR~$< 1$ (mean $= 0.36$, s.d.~$= 0.05$).
+
+\textit{Specification curve.} Across 16 variants, 69\% show decreased activity (median RR~$= 0.94$).
+
+\textit{Western US SNOTEL.} No corresponding snowpack response (SWE $P = 0.45$; precipitation $P = 0.74$; temperature $P = 0.34$).
+
+\textit{US fatalities.} 10/16 events show reduced fatality rates ($P = 0.14$; suggestive but inconclusive).
+
+\textit{Norway directional.} Two events (2018, 2019) both show decreased activity.
+
+\textit{Dose-response.} Three intensity metrics show no correlation with avalanche reduction (all $|r| < 0.1$, $P > 0.78$).
+
+% ============================================================
+%  SUPPLEMENTARY TABLES
+% ============================================================
+\section{Supplementary Note 3: Tables}
+
+\begin{table}[!ht]
+\centering
+\caption{\textbf{Supplementary Table 1: Leave-one-out jackknife stability.}
+Sign-test $P$-values after dropping each SSW event.}
+\label{stab:loo}
+\small
+\begin{tabular}{lc}
+\toprule
+Event dropped & Sign-test $P$ \\
+\midrule
+1998-12-15 & 0.004 \\
+1999-02-26 & 0.007 \\
+2001-02-11 & 0.004 \\
+2001-12-30 & 0.007 \\
+2002-02-17 & 0.004 \\
+2003-01-18 & 0.007 \\
+2004-01-05 & 0.007 \\
+2006-01-21 & 0.007 \\
+2007-02-24 & 0.007 \\
+2008-02-22 & 0.007 \\
+2009-01-24 & 0.007 \\
+2010-02-09 & 0.004 \\
+2012-01-11 & 0.004 \\
+2013-01-07 & 0.007 \\
+2018-02-12 & 0.001 \\
+2019-01-01 & $< 0.001$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\centering
+\caption{\textbf{Supplementary Table 2: Zero-inflated Poisson model comparison.}}
+\label{stab:zip}
+\small
+\begin{tabular}{lcccc}
+\toprule
+Model & $k$ & AIC & SSW IRR & Notes \\
+\midrule
+Poisson (null) & 1 & 20{,}672 & --- & Intercept only \\
+Poisson (SSW) & 2 & 20{,}674 & 0.962 & Minimal effect \\
+ZIP (null) & 2 & 10{,}964 & --- & Zero-infl.\ only \\
+ZIP (SSW) & 4 & 10{,}653 & 0.433$^\dagger$ & Count + zero-infl. \\
+\midrule
+\multicolumn{5}{l}{Vuong test: $z = 6.5$, $P < 10^{-4}$ (ZIP preferred)} \\
+\multicolumn{5}{l}{$^\dagger$Count-part IRR; zero-inflation $\hat{\pi}$: base $= 0.89$, SSW $= 0.76$} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\centering
+\caption{\textbf{Supplementary Table 3: Swiss data quality audit.}}
+\label{stab:quality}
+\small
+\begin{tabular}{lccccc}
+\toprule
+Series & Valid days & Mean & Max & Zero days (\%) & Annual CV \\
+\midrule
+Dry natural (size $\geq 1$) & 3,533 & 0.86 & 172 & 86\% & 1.14 \\
+Wet natural (size $\geq 1$) & 3,533 & 1.12 & 255 & 91\% & 1.00 \\
+All dry (AAI) & 3,533 & 0.78 & 158 & 74\% & 0.94 \\
+All wet (AAI) & 3,533 & 0.54 & 160 & 90\% & 0.88 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\centering
+\caption{\textbf{Supplementary Table 4: NAO-adjusted Poisson regression.}}
+\label{stab:nao}
+\small
+\begin{tabular}{lccc}
+\toprule
+Model & SSW IRR & SSW $P$ & NAO coef ($P$) \\
+\midrule
+SSW only & 0.75 & $< 0.001$ & --- \\
+SSW + NAO & 0.78 & $< 0.001$ & 0.31 ($< 0.001$) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\centering
+\caption{\textbf{Supplementary Table 5: Norwegian data quality disclosure.}}
+\label{stab:norway_quality}
+\small
+\begin{tabular}{lcccc}
+\toprule
+Year range & Daily count & Valid? & SSW events & Notes \\
+\midrule
+1998--2012 & Constant (2) & No & 13 & Fill value artifact \\
+2013--2019 & Variable (2--40) & Yes & 2 & Insufficient \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\centering
+\caption{\textbf{Supplementary Table 6: Threshold versus continuous model comparison.}}
+\label{stab:model}
+\small
+\begin{tabular}{lccccc}
+\toprule
+Model & $k$ & Log-lik & AIC & $\Delta$AIC & $\Delta$BIC \\
+\midrule
+Null (intercept) & 1 & $-9{,}924$ & 19,851 & 13,384 & 13,360 \\
+Continuous vortex & 2 & $-3{,}308$ & 6,620 & 153 & 135 \\
+Binary SSW & 2 & $-3{,}306$ & 6,616 & 149 & 131 \\
+SSW + vortex + int. & 4 & $-3{,}278$ & 6,564 & 98 & 92 \\
+\textbf{Vortex quintiles} & \textbf{5} & $\mathbf{-3{,}228}$ & \textbf{6,466} & \textbf{0} & \textbf{0} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\centering
+\caption{\textbf{Supplementary Table 7: Benjamini--Hochberg FDR correction.}}
+\label{stab:fdr}
+\small
+\begin{tabular}{lccl}
+\toprule
+Test & Raw $P$ & FDR $P$ & Status \\
+\midrule
+Snowfall $\to$ avalanche (daily) & $<10^{-12}$ & $<10^{-11}$ & Significant \\
+Vuong test (ZIP vs Poisson) & $<10^{-4}$ & $<10^{-3}$ & Significant \\
+ZIP SSW LRT & $<10^{-6}$ & $<10^{-5}$ & Significant \\
+Combined sign test (18/20) & 0.0002 & 0.001 & Significant \\
+Swiss sign test (14/16) & 0.002 & 0.007 & Significant \\
+NAO-adjusted SSW IRR & 0.001 & 0.004 & Significant \\
+Rutschblock (MWU, 1-sided) & 0.003 & 0.009 & Significant \\
+ERA5 T2m deseasonalised & 0.0003 & 0.002 & Significant \\
+ERA5 T2m post-SSW & 0.001 & 0.004 & Significant \\
+Window 10d sign & 0.004 & 0.012 & Significant \\
+Window 15d sign & 0.004 & 0.012 & Significant \\
+Size distribution $\chi^2$ & 0.006 & 0.016 & Significant \\
+ERA5 T2m late post-SSW & 0.006 & 0.016 & Significant \\
+Utah pre-SSW matched & 0.008 & 0.022 & Significant \\
+Pre-SSW matched (Swiss) & 0.009 & 0.023 & Significant \\
+RE meta-analysis pooled & 0.012 & 0.028 & Significant \\
+Rutschblock $\chi^2$ dist. & 0.020 & 0.040 & Significant \\
+Trigger type $\chi^2$ & 0.024 & 0.044 & Significant \\
+ERA5 u10 zonal wind & 0.039 & 0.068 & Marginal \\
+Utah paired $t$ & 0.041 & 0.072 & Not sig. \\
+Swiss Wilcoxon & 0.058 & 0.097 & Not sig. \\
+Event-level permutation & 0.083 & 0.128 & Not sig. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}

@@ -1,0 +1,66 @@
+{
+  "albina_expanded": {
+    "total_records": 47004,
+    "unique_dates": 695,
+    "date_range": "2018-12-04 to 2024-04-30",
+    "ssw_events": [
+      "SSW 2019-01",
+      "SSW 2021-01",
+      "SSW 2023-02"
+    ],
+    "ssw_records": 6199,
+    "control_records": 24809,
+    "results_by_country": {
+      "AT": {
+        "ssw_mean": 2.636,
+        "ctrl_mean": 2.106,
+        "delta": 0.53,
+        "d": 0.647,
+        "direction": "increase",
+        "P": "<0.0001"
+      },
+      "IT": {
+        "ssw_mean": 2.214,
+        "ctrl_mean": 1.898,
+        "delta": 0.317,
+        "d": 0.404,
+        "direction": "increase_weaker",
+        "P": "<0.0001"
+      }
+    },
+    "AT_IT_divergence": 0.213,
+    "per_event": {
+      "SSW_2019_AT": {
+        "ssw_mean": 3.03,
+        "d": 1.158,
+        "direction": "increase"
+      },
+      "SSW_2019_IT": {
+        "ssw_mean": 1.87,
+        "d": -0.195,
+        "direction": "decrease"
+      },
+      "SSW_2021_AT": {
+        "ssw_mean": 2.65,
+        "d": 0.775,
+        "direction": "increase"
+      },
+      "SSW_2021_IT": {
+        "ssw_mean": 2.77,
+        "d": 1.468,
+        "direction": "increase"
+      },
+      "SSW_2023_AT": {
+        "ssw_mean": 2.32,
+        "d": 0.154,
+        "direction": "increase"
+      },
+      "SSW_2023_IT": {
+        "ssw_mean": 1.87,
+        "d": 0.056,
+        "direction": "neutral"
+      }
+    },
+    "interpretation": "AT consistently increases more than IT during SSW, confirming geographic gradient. Overall danger-level increases confirm count-rating dissociation independently."
+  }
+}

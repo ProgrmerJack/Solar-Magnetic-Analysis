@@ -1,0 +1,104 @@
+{
+  "n_events": 1888,
+  "per_model": {
+    "BCC-ESM1": 65,
+    "CanESM5": 856,
+    "CESM2-FV2": 94,
+    "GFDL-CM4": 70,
+    "INM-CM5-0": 123,
+    "IPSL-CM5A2-INCA": 102,
+    "MIROC6": 192,
+    "MPI-ESM-1-2-HAM": 138,
+    "MPI-ESM1-2-LR": 188,
+    "NorESM2-LM": 60
+  },
+  "n_pseudo_per_member": 60,
+  "outcome_window": [
+    8,
+    52
+  ],
+  "stratifiers": {
+    "u10_pre": {
+      "class": "pre",
+      "window": [
+        -45,
+        -16
+      ],
+      "n_events": 1745,
+      "dY_observed": 0.1616,
+      "dS": 1.2578,
+      "beta": 0.1523,
+      "predicted_bias": 0.1915,
+      "residual": -0.0299,
+      "null_residual_sd": 0.0261,
+      "null_realisation_size": 1745,
+      "n_null_realisations": 60,
+      "p_residual": 0.26666666666666666,
+      "pct_explained_by_stratifier": 118.5,
+      "causally_interpretable": true
+    },
+    "u10_post30": {
+      "class": "strat",
+      "window": [
+        0,
+        30
+      ],
+      "n_events": 1888,
+      "dY_observed": 0.3516,
+      "dS": 1.0908,
+      "beta": 0.2305,
+      "predicted_bias": 0.2514,
+      "residual": 0.1002,
+      "null_residual_sd": 0.0276,
+      "null_realisation_size": 1887,
+      "n_null_realisations": 60,
+      "p_residual": 0.0,
+      "pct_explained_by_stratifier": 71.5,
+      "causally_interpretable": false
+    },
+    "u10_post45": {
+      "class": "strat",
+      "window": [
+        0,
+        45
+      ],
+      "n_events": 1888,
+      "dY_observed": 0.3195,
+      "dS": 0.9712,
+      "beta": 0.2276,
+      "predicted_bias": 0.221,
+      "residual": 0.0985,
+      "null_residual_sd": 0.027,
+      "null_realisation_size": 1887,
+      "n_null_realisations": 60,
+      "p_residual": 0.0,
+      "pct_explained_by_stratifier": 69.2,
+      "causally_interpretable": false
+    },
+    "AM_post": {
+      "class": "outcome",
+      "window": [
+        8,
+        52
+      ],
+      "n_events": 1888,
+      "dY_observed": 1.1432,
+      "dS": 0.9968,
+      "beta": 1.101,
+      "predicted_bias": 1.0975,
+      "residual": 0.0457,
+      "null_residual_sd": 0.0039,
+      "null_realisation_size": 1887,
+      "n_null_realisations": 60,
+      "p_residual": 0.0,
+      "pct_explained_by_stratifier": 96.0,
+      "causally_interpretable": true
+    }
+  },
+  "law_across_stratifiers": {
+    "slope": 1.0012,
+    "intercept": 0.0015,
+    "r2": 1.0,
+    "n_points": 4
+  }
+}

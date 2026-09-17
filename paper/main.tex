@@ -45,8 +45,38 @@
 \let\bibcite\XR@bibcite
 \makeatother
 
+% =====================================================================
+% REVISION STATUS -- 2026-07-26 (verification round R104-R108)
+% DO NOT SUBMIT THIS DRAFT AS-IS: title and abstract have been corrected
+% to match verified evidence, but the BODY still asserts claims that the
+% re-tests falsified. See FINDINGS_R104_R108.md and REVIEWER_INDEX.md.
+%
+% Body sections still requiring rewrite:
+%   1. PWL / "loaded gun" structural mechanism. FALSIFIED as a seasonal
+%      artifact: Pen_depth +1.68 cm uncontrolled (P~0) -> -0.11 cm
+%      (P = 0.80) once day-of-year, winter and station are controlled;
+%      8/17 events. The same uncontrolled design "detects" a rise in
+%      TOTAL SNOW DEPTH at P = 1.6e-53, which is simply seasonal.
+%      (scripts/analysis_extra/r108_pwl_seasonal_control.py)
+%   2. Opposing-direction / human-trigger increase. CONTRADICTED by
+%      4,859 Alpine incidents and 787 US accidents: no increase anywhere.
+%      (r104_accident_case_crossover.py, r107_pooled_within_winter.py)
+%   3. Multi-region corroboration. Pooled Alpine within-winter IRR = 1.01
+%      [0.64, 1.50] at this paper's own window; placebo correctly null.
+%      (r107_pooled_within_winter.py)
+%   4. Every "n = 16 events" / 14-16 / 15-16 / 13-16 count. The canonical
+%      catalog has 17 events in this era; 2012-01-11 is NOT a major SSW in
+%      any of six reanalyses; 2000-03-20 and 2010-03-24 were omitted.
+%      (data/processed/atmospheric/ssw_canonical.csv)
+%   5. Forecast-skill and blind-spot framing built on 1, 2 or 3.
+%
+% What survives: Davos natural dry-slab suppression, between-winter
+% gmRR = 0.241 (15/17, P = 0.0012) but within-winter IRR = 0.622
+% (P = 0.060) -- single region, single observable, design-dependent.
+% =====================================================================
+
 % ---- Title ----
-\title{Stratospheric sudden warming episodes are associated with opposing-direction avalanche hazard signals through planetary-wave Alpine blocking}
+\title{Reduced natural dry-slab avalanche activity during stratospheric sudden warmings in the Swiss Alps, and the seasonal confounding that inflates it}
 
 \author{
     Abduxoliq Ashuraliyev$^{1,*}$
@@ -66,7 +96,7 @@
 %  ABSTRACT
 % ============================================================
 \begin{abstract}
-Whether a single meteorological forcing can simultaneously suppress observable triggers while intensifying structural instability---producing an opposing-direction hazard state---is unknown. Here we show that stratospheric sudden warming (SSW) episodes coincide with a 68\% reduction in Swiss natural dry-slab avalanche counts ($\mathrm{gmRR} = 0.32$; 14/16 events; $P = 0.004$; Bayes factor 17.9--178.7, `strong evidence' per Kass-Raftery) while buried weak layers deepen (15/16 events; $P = 0.0005$) and expert danger bulletins rise in 13/16 events. Planetary-wave amplification during SSW episodes organises Alpine blocking into a persistent cold-dry regime that simultaneously suppresses natural trigger channels and promotes kinetic-growth metamorphism---a loaded-gun state in which structural hazard intensifies as observable warning signals disappear. The opposing-direction signature appears across convergent measurement systems in French and western-US data. No calibrated probabilistic forecast skill is demonstrated at this sample size (LOO BSS $= -0.95$), but SSW onset provides a categorical prior shift: empirical suppression probability rises from $\sim$50\% to 87.5\% within SSW windows through a 2--4-week planetary-wave/blocking pathway. These observations are consistent with a candidate opposing-direction hazard state---proposed here as a \emph{hypothesised} compound-event sub-type whose formal confirmation would require $\approx$57--70 SSW events ($\sim$3--4$\times$ the 16 available) to power the irreducibility test---and suggest a systematic operational blind spot for count-based monitoring systems.
+Whether stratospheric variability modulates snow-avalanche hazard has not been tested systematically. Using the authoritative sudden stratospheric warming (SSW) compendium---which yields 17 major mid-winter events in the Swiss observational era, and which corrects an event list used previously---we find that natural dry-slab avalanche counts at Davos are lower during SSW windows than on day-of-year-matched days drawn from non-SSW winters ($\mathrm{gmRR} = 0.24$; 15/17 events; $P = 0.0012$). This association is, however, strongly design-dependent. Under a within-winter design in which each winter serves as its own control, the effect roughly halves and becomes marginal (incidence rate ratio $= 0.62$; 95\% CI 0.24--1.14; $P = 0.060$), indicating that much of the raw contrast reflects between-winter variability rather than the events themselves; the control pool comprises only seven non-SSW winters. We find no corroboration in three independent directions. First, modelled snowpack structure shows no SSW-related change once day-of-year, winter and station are controlled (weak-layer penetration depth $-0.11$\,cm, $P = 0.80$; 8/17 events); critically, the uncontrolled design that yields positive structural results also `detects' a highly significant rise in \emph{total snow depth} ($P = 1.6\times10^{-53}$), which is simply the seasonal deepening of the snowpack. Second, 4{,}859 Alpine avalanche incidents (1992--2026) and 787 western-US avalanche accidents (1979--2024) show no increase in human-involved events. Third, pooling Swiss and Austrian records under the within-winter design gives $\mathrm{IRR} = 1.01$ (0.64--1.50), with a correctly null pre-onset placebo. We therefore do not support a compound `loaded-gun' hazard state. The broader methodological result is that comparing SSW windows against all remaining winter days conflates the event with the season, and that single-window contrasts can invert in sign against a contaminated reference.
 \end{abstract}
 
 Compound weather events---where multiple drivers interact to produce impacts exceeding any single-driver prediction---are increasingly recognised as a dominant mode of hazard amplification\cite{Zscheischler2020,Leonard2014}. Existing typologies cover preconditioned, multivariate and temporally compounding events, but whether a single upstream forcing can simultaneously \emph{increase} structural hazard while \emph{suppressing} its observable expression---creating an opposing-direction compound event---is unknown. This gap has critical operational implications: any count-based or trigger-only monitoring system will systematically underestimate risk whenever signal and hazard decouple, yet this decoupling mode does not exist in the current compound-event framework. Stratospheric sudden warmings (SSWs) provide a natural experiment: they are the strongest disturbances of the winter polar vortex and produce persistent surface anomalies including cold outbreaks, blocked circulation and precipitation shifts\cite{Matsuno1971,Baldwin2001,Kidston2015}, with catastrophic societal consequences demonstrated by the February 2021 Texas cold-air outbreak (over 200 deaths, \$100~billion damages\cite{Cohen2021}). Whether SSWs can substantially modulate threshold-governed geophysical hazards beyond meteorology remains untested. Avalanches provide a uniquely stringent test because release depends on multiple trigger conditions acting on a preconditioned snowpack\cite{Schweizer2003}, because the trigger--hazard distinction is operationally observable (natural vs.\ human-triggered release), and because independent occurrence, forecast and process-model records are simultaneously available\cite{Reuter2018}---enabling triangulation unavailable in other threshold-governed systems.

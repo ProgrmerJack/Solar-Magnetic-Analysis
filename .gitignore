@@ -11,3 +11,36 @@ data/atmospheric
 logs/
 paper/
 nature_geoscience_paper.md
+
+# python
+__pycache__/
+*.pyc
+.mypy_cache/
+
+# ssw-design-analysis: downloaded and intermediate DATA, never code.
+# Everything here is re-acquirable by 03_data_ingestion/acquire_*.py and is far
+# too large for git (raw/cmip6 3.4 GB, _ncep_cache 1.4 GB).
+ssw-design-analysis/03_data_ingestion/raw/cmip6/
+ssw-design-analysis/03_data_ingestion/raw/ncep_heatflux/
+ssw-design-analysis/03_data_ingestion/_ncep_cache/
+ssw-design-analysis/03_data_ingestion/_ncep_reduced/
+ssw-design-analysis/03_data_ingestion/_snapsi_reduced/
+ssw-design-analysis/**/*.nc
+ssw-design-analysis/**/*.parquet
+# ...but keep the small text indices and the station cache, which ARE provenance
+!ssw-design-analysis/03_data_ingestion/raw/*.txt
+!ssw-design-analysis/03_data_ingestion/raw/snotel_stations.json
+
+# build artefacts (paper/ is already ignored wholesale above; kept explicit
+# so the rules still bite if that line is ever narrowed)
+paper/*.aux
+paper/*.log
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.out
+paper/*.toc
+
+# project-local environment (recreate from ssw-design-analysis/environment/requirements.lock.txt)
+.venv/
+# KDE folder metadata
+.directory

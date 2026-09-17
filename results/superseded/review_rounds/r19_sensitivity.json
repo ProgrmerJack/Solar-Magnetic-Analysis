@@ -1,0 +1,28 @@
+{
+  "overdispersion_ratio": 45.080209773454776,
+  "nb_alpha": 7.3,
+  "lr_p": 0.0,
+  "excl_jan2019": {
+    "n": 15,
+    "geo_rr": 0.2112604115051566,
+    "p": 3.218170370117633e-06
+  },
+  "displacement_only": {
+    "n": 11,
+    "geo_rr": 0.2659342292312422,
+    "n_decrease": 10
+  },
+  "split_only": {
+    "n": 5,
+    "geo_rr": 0.22233603653477305,
+    "n_decrease": 4
+  },
+  "loo_r2_est": 0.36580526315789463,
+  "threshold_amp": {
+    "n_triggers": 7,
+    "threshold": 1.25,
+    "weather_d": 0.69,
+    "hazard_d": 1.06,
+    "amplification": 1.54
+  }
+}

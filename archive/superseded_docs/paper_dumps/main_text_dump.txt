@@ -1,0 +1,735 @@
+%% ============================================================================
+%% Stratospheric sudden warmings mark episodes of natural avalanche
+%% suppression via weather-regime threshold amplification
+%%
+%% Target: Nature Geoscience (Article format)
+%% Format: Nature Portfolio Design Template
+%% ============================================================================
+\documentclass[11pt,letterpaper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{lineno}
+\usepackage{adjustbox}    % For table width adjustment
+\usepackage{array}        % Enhanced column types
+\usepackage{tabularx}     % Auto-width tables
+\usepackage{makecell}     % Multi-line cells
+\usepackage{multirow}     % Multi-row cells
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+
+% Nature formatting
+\geometry{margin=1in}
+\linenumbers
+\sloppy  % Allow more flexible line breaking to prevent overfull hboxes
+
+% URL formatting - allow breaks at more characters
+\makeatletter
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\makeatother
+
+% ---- Title ----
+\title{Stratospheric sudden warmings are associated with suppressed natural avalanche activity in the European Alps}
+
+\author{
+    Abduxoliq Ashuraliyev$^{1,*}$
+    \\[6pt]
+    $^1$Independent Researcher, Tashkent, Uzbekistan\\[6pt]
+    $^*$Corresponding author: Jack00040008@outlook.com\\[6pt]
+    ORCID: 0009-0003-5482-5526
+}
+
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+% ============================================================
+%  ABSTRACT  (~200 words)
+% ============================================================
+\begin{abstract}
+Stratospheric sudden warming (SSW) events produce persistent surface weather anomalies, but whether they can measurably alter threshold-governed natural hazards is unknown. Here we report that natural dry slab avalanche counts in Switzerland decrease by two-thirds during SSW windows (14 of 16 events show suppression; geometric mean $\mathrm{RR} = 0.32$, 95\% CI $[0.26, 0.53]$; permutation $P < 0.001$). In a complementary 55-year accident record ($n = 29$ SSW events), fatal-incident rates \emph{increase} by 40\% ($\mathrm{RR} = 1.40$, 95\% CI $[1.00, 1.95]$; $P = 0.067$), consistent with a ``loaded-gun'' mechanism in which natural releases decrease while human-triggered accidents on persistent weak layers increase. The January 2021 SSW event, post-dating the primary study, produced the highest post-2019 Swiss accident rate (1.87~day$^{-1}$; 28 fatalities), though pandemic-era recreation shifts may partly inflate this comparison. Directionally concordant responses emerge in Norwegian, French and Utah datasets. An EP-flux proxy links wave-driving intensity to the hazard signal ($\rho = -0.54$, $P = 0.032$), and Z500 blocking mediates the surface response. No calibrated forecast skill is demonstrated (LOO BSS $= -0.95$). The loaded-gun mechanism---regime redistribution that simultaneously loads structural hazard while suppressing natural triggers---may represent a general class of compound-hazard amplification.
+\end{abstract}
+
+Stratospheric sudden warming events are among the strongest disturbances of the winter polar vortex and are followed by persistent surface anomalies including cold outbreaks, blocked circulation and precipitation shifts\cite{Matsuno1971,Baldwin2001,Kidston2015}. Those responses are well established for temperature and precipitation extremes---the February 2021 Texas cold-air outbreak, linked to a polar-vortex disruption, caused over 200 deaths and \$100~billion in damages\cite{Cohen2021}---but whether SSWs can substantially modulate threshold-governed geophysical hazards beyond meteorology remains unclear. Avalanches provide a stringent test because release depends on modest meteorological perturbations acting on a preconditioned snowpack, and because independent occurrence, forecast and process-model records are available\cite{Schweizer2003,Reuter2018}.
+
+Any avalanche anomaly near SSW onset has at least two physically plausible interpretations. SSW events are preceded by enhanced planetary wave activity\cite{Polvani2004} that simultaneously reorganises tropospheric circulation; the avalanche anomaly could therefore reflect this shared tropospheric reorganisation (common cause) rather than a top-down stratospheric influence. Alternatively, post-onset downward coupling could contribute an additional component. Distinguishing these interpretations requires event timing, cross-region consistency and mechanism tests.
+
+Here we test whether SSW windows reorganize avalanche trigger environments strongly enough to alter natural dry slab occurrence. We focus on natural dry slabs because they respond directly to atmospheric forcing, whereas human-triggered releases also depend on exposure. We then ask whether the anomaly is better explained by wholesale snowpack stabilization or by threshold amplification, in which several natural release pathways are weakened simultaneously.
+
+% ============================================================
+%  RESULTS
+% ============================================================
+\section*{Results}
+
+\noindent\textit{Analytical hierarchy and study origin.} This study evolved from an exploratory geomagnetic hypothesis to the SSW framework reported here; the effective multiple-testing burden from this trajectory is difficult to quantify, and readers should interpret all results as requiring prospective replication. The primary confirmatory test is the Swiss event-level sign test (14/16 events with $\mathrm{RR} < 1$; permutation $P < 0.001$). Multi-country comparisons, process-model diagnostics, mediation analyses and spatial gradient estimates are treated as exploratory consistency checks and are clearly labelled as such throughout. The SSW event ($n = 16$) is the inferential unit; region-day and station-day analyses are used descriptively. To avoid inflating significance by mixing different inferential units, hypothesis tests are corrected with BH-FDR stratified into three families: event-level ($n = 15$ tests), daily/station-day-level ($n = 7$ tests) and multi-country/external ($n = 7$ tests). Under this stratified approach, 3 of 12 de-duplicated event-level tests survive correction (sign test, partial correlation Z500$|$stratosphere and pre-onset sign test), all 7 daily-level tests survive, and 3 of 7 external tests survive. A combined single-family correction is also reported for comparison (Supplementary Tables~7 and \ref{tab:fdr_stratified}).
+
+\subsection*{Natural dry slab avalanches decline during SSW windows}
+
+We analysed daily counts of natural-trigger dry slab avalanches (size class $\geq$1) from the Swiss WSL/SLF database across 21 winters (1998/99--2018/19; Fig.~\ref{fig:study_area}). For each of 16 SSW events identified from the Butler et al. catalog\cite{Butler2015}, we compared observed counts in a $\pm$15-day window around onset with day-of-year-matched expectations from non-SSW winters. Fourteen of 16 events yield $\mathrm{RR} < 1$ (sign test $P = 0.002$; Fig.~\ref{fig:ssw_matched}). The geometric mean rate ratio is $\mathrm{RR} = 0.32$ (95\% CI $[0.26, 0.53]$, winter-blocked bootstrap; Supplementary Table~\ref{tab:winter_boot}), corresponding to a 68\% reduction in natural dry slab counts. The effect remains significant by paired $t$-test on $\log(\mathrm{RR})$ ($P < 0.001$), Wilcoxon signed-rank test ($P < 0.001$) and permutation testing ($P = 0.0005$), with a large effect size ($d = -1.06$).
+
+The two contrary events occur during exceptional synoptic situations rather than under ordinary SSW conditions: the February 2018 split-vortex event with strong wind-slab loading and the January 2019 Alpine snowfall extreme. Even so, the core signal is not driven by any single event. All leave-one-out folds remain significant (Extended Data Table~\ref{tab:loo}), excluding January 2019 strengthens the mean suppression (Extended Data Table~\ref{tab:outlier}), and a 180-specification curve in the SI returns $\mathrm{RR} < 1$ for every analytical variant.
+
+Timing helps distinguish mechanism from coincidence. Suppression is already present before the official wind reversal: in the pre-SSW interval ($-15$ to $-6$~d), 13 of 16 events show lower activity (median $\mathrm{RR} = 0.16$, $P = 0.011$), and suppression then persists through onset and post-onset windows (Extended Data Table~\ref{tab:phases}; Fig.~\ref{fig:event_study}). Swiss and Norwegian lag profiles peak at $-13$ and $-12$~days, respectively, and are positively correlated across lags $-15$ to $+15$~days (Spearman $r = 0.62$, $P = 2.2 \times 10^{-4}$), indicating that the precursor structure is shared across independent countries and measurement systems. Because SSW events are preceded by enhanced upward planetary wave activity\cite{Polvani2004}, this pre-onset anomaly is consistent with a common-cause interpretation in which the tropospheric circulation reorganisation, rather than the stratospheric warming per se, drives the avalanche response.
+
+\subsection*{Independent datasets show a shared large-scale signal}
+
+Independent measurement systems support the same directional result. All four Norwegian SSW events show lower mean NVE danger than matched controls across ten inland mountain regions ($\Delta = -0.48$, $d = -0.67$; underpowered at the event level with $n = 4$, but directionality is consistent). All four SSW events in the Utah Avalanche Center record also show reduced dry slab activity (geometric mean $\mathrm{RR} = 0.34$; Extended Data Table~\ref{tab:utah}). A reconstructed M\'et\'eo-France BRA archive for 14 northern-Alpine massifs is directionally consistent ($\Delta = -0.15$, 95\% bootstrap CI $[-0.30, -0.01]$; three of four events negative), although extending to all 22 French massifs attenuates the signal ($\Delta = -0.08$, $P = 0.083$), with suppression concentrated in the northern Alps (Supplementary Table 26b--c). A post-2022 Avalanche Canada flexible-forecast panel shows the opposite sign at the national scale ($\Delta = +0.37$; Supplementary Table 26d), but owner-level decomposition shows that this mean is carried by the western Avalanche Canada and Parks Canada domains, whereas continental Avalanche Qu\'ebec is strongly negative ($\Delta = -0.94$; Supplementary Table 26e). We therefore treat Canada as a structured boundary condition demonstrating regional dependence rather than as a single monolithic falsification. Across Switzerland and Utah---the two direct occurrence-count datasets---18 of 20 event pairs decrease (random-effects meta-analysis: pooled $\Delta = -0.75$ aval.~day$^{-1}$, 95\% CI $[-1.33, -0.17]$, $P = 0.012$, $I^2 = 32\%$; Extended Data Table~\ref{tab:multi}; Extended Data Fig.~\ref{fig:multi_country}). Norwegian and French results are interpreted as directional consistency checks rather than standalone significance tests. Exploratory spatial analyses using EAWS data (only two SSW events) are reported in the SI.
+
+\subsection*{Differential trigger response}
+
+Swiss occurrence counts and Swiss danger ratings move in opposite directions. Re-analysed Swiss dry-avalanche danger levels increase in 11 of 14 SSW events even as natural dry slab counts fall. The differential trigger response is visible in the contrast between natural and human-triggered counts: natural counts decrease strongly (RR = 0.32) while human-triggered dry slabs decrease less (RR = 0.68, $P = 0.13$, non-significant), shifting the human-to-natural ratio 1.81-fold ($P = 0.058$; Supplementary Table~32). When all avalanche types are considered, human-triggered counts increase overall ($\mathrm{RR} = 1.45$; Extended Data Table~\ref{tab:human}), and Austrian LAWIS incident data, dominated by human-triggered encounters, show the same sign. The resulting count--rating dissociation is the central mechanical result: SSW windows preserve or even intensify loaded snowpack states without restoring the broad spontaneous-release pathways required for a natural dry-slab cycle.
+
+\subsection*{Extended historical record and prospective out-of-sample test}
+
+The loaded-gun mechanism predicts a specific dual-metric signature: natural avalanche \emph{activity} should decrease while human-triggered \emph{accidents} should increase. We tested this prediction using the independent SLF fatal-accident database (1970--2025; 4,868 records), which extends the analysable SSW sample from 16 to 29 events and provides a true out-of-sample prospective test.
+
+Across 29 SSW events spanning 55 winters, fatal and near-fatal accident rates \emph{increase} during SSW windows ($\mathrm{RR} = 1.40$, 95\% CI $[1.00, 1.95]$; permutation $P = 0.067$; $d = 0.35$; Supplementary Table~\ref{tab:accident_extended}). This direction is opposite to the natural-activity suppression ($\mathrm{RR} = 0.32$), providing evidence consistent with the loaded-gun prediction: SSW windows reduce spontaneous natural release while preserving or enhancing the persistent weak layers that govern human-triggered instability. The accident signal does not reach conventional significance after correction ($P = 0.067$); the directional consistency across 29 independent events spanning 55 years is the primary evidential contribution. The 12 pre-1998 events that predate the primary study period show the same directional pattern ($\mathrm{RR} = 1.43$, 95\% CI $[0.78, 2.64]$), providing independent temporal replication over a period that shares no data with the primary analysis.
+
+The January 2021 SSW event provides a prospective out-of-sample test. This event post-dates the primary study (which ends in 2019) by two years and was not used in any model calibration. The SSW winter of 2020/21 produced 242 accidents (1.34~day$^{-1}$; 29 fatalities), compared with 129--138 accidents (0.71--0.76~day$^{-1}$; 14--18 fatalities) in the two pandemic-free non-SSW winters of 2021/22 and 2022/23 (Supplementary Table~\ref{tab:prospective_2021}). The COVID-adjusted seasonal rate ratio is $\mathrm{RR} = 1.81$ (excluding 2019/20, which was depressed by pandemic lockdowns to 0.48~day$^{-1}$); the 30-day post-onset window gives $\mathrm{RR} = 2.52$ against pandemic-free comparators (Supplementary Table~\ref{tab:covid_adjusted}). A single prospective event cannot establish statistical significance alone, but the direction and magnitude are consistent with the loaded-gun prediction.
+
+SNOWPACK diagnostics help characterise the snowpack state but do not independently explain the count decline. Across 292,837 station-days from 130 Swiss stations, SSW windows show more loading (HN24 $+9.8\%$, SWE $+8.1\%$), greater persistent-weak-layer prevalence and lower modelled stability indices---conditions that should favour natural release, not suppress it. The count decline therefore cannot reflect wholesale snowpack stabilisation. Instead, the proximate natural-release triggers are suppressed: snow-surface warming events decrease by 57\%, rain-on-snow events by 29\%, and incoming shortwave radiation by 17.5\%. Wind transport nevertheless increases by 22.7\%. In this framework, wind is a positive loading term inside a larger negative trigger balance rather than an all-sufficient release pathway: SSW windows preserve skier-triggerable lee-slope instability while simultaneously removing the liquid-water and surface-energy perturbations needed for widespread spontaneous release. Independent Rutschblock tests show a small but statistically significant stability increase ($d = 0.10$, $P = 0.003$; Extended Data Table~\ref{tab:rutsch}), reflecting a well-known scale dependence in avalanche mechanics\cite{Schweizer2008}: point-scale structural instability can persist while landscape-scale trigger propagation is reduced under cold-dry conditions\cite{Reuter2018}. The trigger-suppression interpretation is consistent with all three diagnostic lines but remains descriptive; it explains what changes (fewer triggers despite elevated instability) rather than providing a deductive prediction of the magnitude of count reduction.
+
+Large-scale circulation integrates the response better than local surface variables alone. Alpine SSW windows are colder and shifted toward cold-dry regimes (Fig.~\ref{fig:era5_composites}). At the daily level, a four-regime decomposition shows that SSW windows nearly double the frequency of cold-dry days while reducing warm-wet days. Within regimes, SSW and non-SSW days have near-identical avalanche rates in three of four cases; the warm-dry regime is the exception, with a within-regime $\mathrm{IRR} = 1.89$ ($P = 0.013$), attributable to seasonal clustering of SSW warm-dry days in late February--March when background activity is elevated. This indicates that the association operates primarily through regime redistribution rather than within-regime rate changes. When weather regime and day-of-year are controlled simultaneously, the residual SSW effect is $\mathrm{IRR} = 0.89$ ($P = 0.06$; SI~Table~14)---not significant at conventional thresholds, consistent with regime redistribution as the primary mediating pathway. We cannot distinguish full from partial mediation at this sample size.
+
+Composite stratospheric diagnostics show that SSW events in our sample exhibit the classic downward-propagation signature documented by Baldwin \& Dunkerton\cite{Baldwin2001}: temperature anomalies peak at $+17.6$~K at 10~hPa on the onset day and descend through the stratosphere, reaching $+6.1$~K at 100~hPa by lag $+20$~days (Supplementary Table~\ref{tab:downward_prop}). Conventional intensity metrics (vortex deceleration rate, cumulative warming, wind-reversal duration) show near-zero event-level correlations with $\log(\mathrm{RR})$ ($|\rho| \leq 0.10$, $P > 0.70$; Supplementary Table~\ref{tab:strat_correlations}). An EP-flux proxy constructed from the rate of vortex deceleration during the 10-day pre-onset forcing window---selected after conventional post-onset metrics showed no signal, and thus treated as exploratory---shows a dose-response relationship: events with stronger wave driving produce larger natural-activity reductions (Spearman $\rho = -0.54$, $P = 0.032$; Fig.~\ref{fig:ep_flux_dose}; Supplementary Table~\ref{tab:ep_flux}). This result does not survive stratified BH-FDR correction within the event-level family ($P = 0.032$ vs.\ threshold $= 0.021$; Supplementary Table~\ref{tab:fdr_stratified}) and uses a vortex-deceleration proxy rather than direct $\overline{v'T'}$ computation; it should therefore be interpreted as exploratory evidence for a wave-driving pathway rather than a confirmed dose-response. The distinction between forcing metrics (wave driving) and response metrics (vortex disruption) is nevertheless physically informative and consistent with the common-cause interpretation: the wave-driving episode, not the stratospheric warming per se, governs the avalanche response.
+
+The partial-correlation geometry resolves the apparent disconnect between stratospheric and surface signals. After controlling for 10~hPa vortex deceleration, Z500 retains a strong partial correlation with the avalanche response ($\rho_{\mathrm{partial}} = 0.64$, $P = 0.008$). Conversely, after controlling for Z500, the stratospheric deceleration shows no residual correlation ($\rho_{\mathrm{partial}} = -0.28$, $P = 0.29$). The pre-SSW tropospheric state already contains predictive information: Z500 anomalies in the 10~days immediately preceding onset correlate with the eventual avalanche response ($\rho = 0.51$, $P = 0.045$; Supplementary Table~\ref{tab:mediation}). At this sample size, the safest interpretation is therefore not that the stratosphere is irrelevant, but that the surface manifestation of the coupled event is carried primarily by regional blocking once the planetary-wave episode is underway.
+
+At the event level, Z500 anomalies correlate with avalanche response ($r = 0.56$, $R^2 = 0.31$, $P = 0.024$; bootstrap 95\% CI for $r$: $[0.22, 0.78]$). Influence diagnostics indicate that no single event drives this relationship: Cook's $D$ identifies one marginally influential point (January 2019), leave-one-out analysis yields $r = 0.50$--$0.62$ across all 16 folds (15/16 with $P < 0.05$), and Spearman rank correlation ($\rho = 0.59$, $P = 0.015$) is consistent with the Pearson estimate (Supplementary Table~\ref{tab:z500_diag}). After removing the two most influential events, $r$ weakens to 0.46 ($P = 0.098$), preserving the direction but indicating sensitivity to event composition. Regional Alpine Z500 substantially outperforms hemispheric AO and NAO indices ($R^2 < 0.01$ for both), consistent with the finding that SSW surface impacts are regionally mediated rather than hemispherically uniform\cite{Kretschmer2018}.
+
+\subsection*{Robustness and confounding checks}
+
+The suppression is specific to the trigger class that should be most sensitive to weather forcing. Natural dry slabs show the primary signal, whereas wet natural avalanches show an increase ($\mathrm{RR} = 1.62$, $P = 0.038$; adjusted $P = 0.044$ after BH-FDR correction), consistent with spring rebound following cold-suppressed melt cycles (SI~Section~1). This divergence is hypothesis-generating rather than confirmatory. Potential observer-effort bias is also inconsistent with the data: total avalanche reports increase during SSW windows, human-triggered counts across all avalanche types increase, and professional danger ratings rise. The decline is therefore selective to spontaneous dry-slab release rather than to access or reporting intensity.
+
+Sensitivity tests point in the same direction. The signal survives leave-one-out analysis, changes little across reasonable day-of-year bandwidths and SSW window widths, and remains present for both displacement and split-vortex events (Extended Data Tables~\ref{tab:loo} and \ref{tab:sensitivity}). The full specification curve (Extended Data Fig.~\ref{fig:spec_curve}), Bayesian analysis and alternative catalog tests are reported in the SI, but every one of the 180 analytical variants yields $\mathrm{RR} < 1$. When restricting to the post-2005 subperiod ($n = 9$ events), the effect direction is preserved ($\mathrm{RR} = 0.45$) but significance is lost ($P = 0.18$). Formal temporal heterogeneity tests find no significant difference between early ($\leq$2005, $n = 7$, $\mathrm{RR} = 0.24$) and late ($> 2005$, $n = 9$, $\mathrm{RR} = 0.40$) subperiods (two-sample $t$-test $P = 0.37$; Mann--Whitney $P = 0.41$; permutation $P = 0.37$; Cochran's $Q = 0.99$, $P = 0.32$; Supplementary Table~\ref{tab:temporal_het}). A continuous year trend in $\log(\mathrm{RR})$ is borderline ($\beta = +0.081$~yr$^{-1}$, $P = 0.058$), warranting monitoring in extended datasets. The non-significant heterogeneity is consistent with the power explanation: the minimum detectable effect at 80\% power is $d = 1.06$ for $n = 9$ versus $0.75$ for $n = 16$.
+
+\subsection*{Weather--hazard amplification gap}
+
+The composite near-surface temperature shift during SSW windows is $d_{\mathrm{weather}} = 0.69$, whereas the avalanche response is $d_{\mathrm{hazard}} = 1.06$---a gap qualitatively consistent with the simultaneous weakening of multiple partially independent trigger channels. A multi-trigger solution family explains this amplification without requiring a unique integer fit: independent-channel models with $k = 6$--$8$ reproduce both the observed RR and $d_{\mathrm{hazard}}$, while positively correlated-channel simulations recover nearly the same RR with only $\sim$1--3 effective channels, and $k = 1$ cannot reproduce the observed amplification (Supplementary Tables~\ref{tab:threshold_amp}, \ref{tab:threshold_loo}, \ref{tab:corr_sensitivity}). The inference is therefore structural rather than numerological: multi-channel triggering can amplify modest weather anomalies into a large hazard response, but the present data do not identify a single unique $k$.
+
+% ============================================================
+%  DISCUSSION
+% ============================================================
+\section*{Discussion}
+
+We report that Swiss natural dry slab avalanche counts fall by about two-thirds during SSW windows---the first event-level evidence that stratospheric variability is associated with a discrete natural-hazard response. The signal is directionally consistent across independent occurrence and forecast systems in three countries, with a Canadian archive showing the opposite sign. The primary confirmatory result is the Swiss sign test (14/16, $P = 0.002$; permutation $P < 0.001$); all supporting analyses are exploratory.
+
+\paragraph{Broader significance.} SSW-driven cold-air outbreaks have been linked to energy-grid failures\cite{Cohen2021}, excess mortality\cite{Gasparrini2015} and transport disruption, but these are continuous-response systems where hazard scales approximately linearly with temperature. Avalanches represent a qualitatively different case: a threshold-governed system in which release requires one or more trigger conditions to be satisfied. The weather-regime redistribution mechanism documented here---in which a large-scale circulation anomaly simultaneously loads the system (increasing structural hazard) while suppressing natural triggers (decreasing observed events)---creates a ``loaded-gun'' state with two important consequences. First, fewer natural releases mean that unstable snowpack configurations persist longer, potentially increasing the severity of individual events when triggers eventually resume\cite{Reuter2018}. Second, the divergent human-trigger response ($\mathrm{RR} = 1.45$ for all avalanche types; $\mathrm{RR} = 1.40$ for fatal incidents across 29 events spanning 55 years) indicates that the risk to recreationists \emph{increases} during SSW windows even as spontaneous releases decline---a paradox with direct implications for avalanche warning services. The 2021 prospective SSW winter produced 28 fatalities (the most of any post-2019 winter), demonstrating that this loaded-gun effect is not merely retrospective. Whether analogous regime-redistribution mechanisms modulate other threshold-governed compound hazards---such as atmospheric rivers triggering landslides on drought-preconditioned slopes\cite{Zscheischler2020}, or heat domes suppressing convective initiation while loading atmospheric instability\cite{Leonard2014}---remains an open question that the present framework is designed to address.
+
+\paragraph{Regional circulation mediates the signal.} The null AO/NAO result ($R^2 < 0.01$) does not undermine the stratospheric framing; it clarifies it. Hemispheric annular-mode indices average over regional heterogeneity and are known to be poor predictors of local surface impacts\cite{Kretschmer2018}. Regional Alpine Z500 explains 31\% of event-level variance ($P = 0.024$; bootstrap CI $[0.22, 0.78]$; Spearman $\rho = 0.59$, $P = 0.015$), with influence diagnostics indicating that no single event dominates the relationship. The partial-correlation geometry shows that Z500 carries the surface manifestation of the coupled event: after controlling for stratospheric vortex deceleration, Z500 retains strong predictive power ($\rho_{\mathrm{partial}} = 0.64$, $P = 0.008$), whereas the stratospheric metric shows no residual information ($\rho_{\mathrm{partial}} = -0.28$, $P = 0.29$). The pre-SSW tropospheric state already predicts the eventual response ($\rho = 0.51$, $P = 0.045$ for Z500 anomalies in days $-10$ to $0$), consistent with planetary-wave preconditioning of the surface response\cite{Karpechko2017}. These results identify Z500 blocking as the proximate mediator: the stratosphere and troposphere are coupled through the same wave-forcing episode, and the SSW label marks a phase of this coupled system that is associated with altered avalanche regimes.
+
+\paragraph{Mechanistic interpretation and independent validation.} SNOWPACK diagnostics reveal that SSW windows do not stabilise the snowpack in a simple sense: loading and persistent-weak-layer susceptibility remain elevated while natural-release triggers are selectively suppressed (warming $-57\%$, rain-on-snow $-29\%$, shortwave $-17.5\%$). This dissociation between structural instability and trigger availability---rather than being a paradox---is itself the primary mechanistic finding: it rules out a ``SSW stabilises the snowpack'' interpretation and instead identifies trigger suppression as the proximate cause of count reduction. The associated weather-to-hazard amplification is not tied to a single exactly identified $k = 7$ fit: independent-channel solutions with $k = 6$--$8$ and correlated-channel solutions with only $\sim$1--3 effective channels all reproduce the observed RR, whereas $k = 1$ does not (Supplementary Tables~\ref{tab:threshold_amp}, \ref{tab:threshold_loo}, \ref{tab:corr_sensitivity}). Wind transport increases 22.7\%, but this does not force a natural-release increase because wind is only one positive term inside a broader trigger balance. The same SSW state that enhances lee-slope loading simultaneously suppresses radiative and liquid-water release pathways, preserving skier-triggerable instability without restoring widespread spontaneous release. The French BRA suppression ($\Delta = -0.15$; three of four events negative) provides cross-model validation: the S2M reanalysis chain\cite{Vernay2022} uses ARPEGE forcing and the Crocus snowpack model, entirely independent of the ERA5/SNOWPACK chain used for Swiss diagnostics. SAFRAN has been validated against 665 independent snow-depth measurements\cite{Durand2009}. The directional consistency of the French signal therefore tests the association across model families, not merely across political boundaries.
+
+\paragraph{Regional dependence and the Canadian sign reversal.} The Canadian flexible-forecast archive shows an increase in danger during SSW windows at the national scale ($\Delta = +0.37$), in contrast to the Alpine suppression. This opposing sign is not a monolithic falsification. Owner-stratified analysis resolves the national mean into a maritime/transitional west-Canadian branch and a continental Qu\'ebec branch: the Avalanche Canada and Parks Canada domains remain positive and dominate the daily forecast area, whereas Avalanche Qu\'ebec is strongly negative ($\Delta = -0.94$; 53 of 61 daily pairs decrease). The structured internal Canadian split therefore already follows the direction predicted by avalanche-climate theory. The European Alps, Rocky Mountains, and Qu\'ebec are dominated by continental snow climates where persistent weak layers and temperature-gradient metamorphism govern the primary hazard\cite{McClung2006}, whereas western Canadian ranges are characterised by transitional-to-maritime snow climates where heavy Pacific precipitation and wind loading dominate avalanche activity. SSW-associated blocking patterns that suppress precipitation triggers in continental climates may simultaneously redirect moisture-laden Pacific flow into western Canadian ranges, increasing loading and natural release there. What remains unresolved is the precise circulation-to-owner mapping, not the existence of internal Canadian heterogeneity itself.
+
+\paragraph{Common-cause mechanism and stratospheric coupling.} Suppression begins before the formal wind reversal (pre-onset: 13/16 events, median $\mathrm{RR} = 0.16$, $P = 0.011$). Enhanced upward wave-activity flux consistently precedes SSW onset by 7--10~days\cite{Polvani2004}, and Swiss and Norwegian lag profiles both peak at $-12$ to $-13$~days, coinciding with this precursor forcing window. The mediation architecture therefore supports a common-cause mechanism: the same planetary-wave episode that triggers the SSW simultaneously establishes the tropospheric blocking pattern that suppresses avalanche triggers. The exploratory EP-flux proxy dose-response ($\rho = -0.54$, $P = 0.032$; does not survive stratified FDR) is directionally consistent with this pathway but requires confirmation with direct wave-flux diagnostics. Composite Z500 blocking analysis further shows that SSW onset precedes peak Alpine-sector blocking by $25 \pm 13$~days (range: 5--44~days; Supplementary Table~\ref{tab:blocking_lead}), providing a potential forecast lead-time advantage. Composite stratospheric diagnostics show that the warming propagates downward through the stratosphere (10~hPa peak at lag~0 to 100~hPa peak at lag~$+20$; Supplementary Table~\ref{tab:downward_prop}), maintaining the canonical Baldwin--Dunkerton dripping-paint structure\cite{Baldwin2001}. The SSW label therefore remains operationally useful: it identifies a coupled atmosphere state in which (i) the troposphere has already been reorganised by planetary-wave forcing, (ii) blocking and cold-dry regimes are enhanced, and (iii) natural release triggers are suppressed. Because operational SSW forecasts extend to 2-week lead times\cite{Sigmond2013}, the association warrants prospective evaluation by avalanche warning services---not as a standalone predictor (the LOO BSS of $-0.95$ precludes any current claim of calibrated forecast skill), but as one element in multi-predictor situational-awareness frameworks.
+
+\paragraph{Limitations.} (1)~The primary natural-activity result rests on $n = 16$ events from 21 Swiss winters; the post-2005 subperiod ($n = 9$) preserves the effect direction ($\mathrm{RR} = 0.45$) but loses significance ($P = 0.18$), consistent with a power explanation (97.6\% power at $n = 16$, only 64.7\% at $n = 9$; Supplementary Table~\ref{tab:temporal_het}). However, the extended accident-based analysis on $n = 29$ events over 55 years is consistent with the loaded-gun direction in an entirely independent outcome measure, and the 2021 prospective test (COVID-adjusted $\mathrm{RR} = 1.81$) is consistent with the predicted signal. (2)~The accident record exhibits a strong secular trend ($R^2 = 0.73$, $+0.016$~accidents~day$^{-1}$~year$^{-1}$; Supplementary Table~\ref{tab:secular_trend}), driven by expanding backcountry recreation since the 1990s. Decade-stratified analysis shows that SSW--accident rate ratios are detectable only from the 2000s onward, consistent with the loaded-gun mechanism requiring human exposure in terrain traps for the elevated triggerable instability to manifest as fatalities. (3)~Direct occurrence-count replication comes from Switzerland and Utah only ($n = 20$ event pairs); Norwegian and French supporting datasets use ordinal danger forecasts and are interpreted as directional checks. (4)~The Canadian archive shows the opposite sign at the national scale, but owner-level decomposition already supports the continental-versus-maritime interpretation; what remains missing is a larger disaggregated Canadian sample spanning more than two recent SSW events. (5)~The project evolved from an exploratory geomagnetic hypothesis to the SSW framework; the effective multiple-testing burden is difficult to quantify. Under stratified BH-FDR correction, only 3 of 12 de-duplicated event-level tests survive (Supplementary Table~\ref{tab:fdr_stratified}). (6)~The pipeline was executed by a single author; the open code repository and REVIEWER\_INDEX enable post-publication verification but do not substitute for independent team replication. (7)~No calibrated retrospective forecast skill is demonstrated (LOO BSS $= -0.95$); the threshold-amplification model identifies a family of multi-channel solutions rather than a unique integer $k$. (8)~The EP-flux dose-response uses vortex deceleration as an EP-flux-divergence proxy and does not survive event-level FDR correction ($P = 0.032$ vs.\ threshold $= 0.021$); direct computation of zonal-mean $\overline{v'T'}$ at 100~hPa across 45--75$^\circ$N would provide stronger quantification. (9)~The accident-based extended analysis measures a different outcome (human-triggered fatal incidents) than the primary analysis (natural-trigger activity counts); the two metrics test complementary aspects of the loaded-gun mechanism rather than replicating the same test.
+
+These results establish an observational association between stratospheric circulation variability and a threshold-governed natural hazard, and provide both a mediation architecture and a dose-response relationship for quantifying the pathway. The convergence across independent measurement systems (Swiss activity counts, Swiss fatal accidents, Norwegian forecasts, French BRA, Utah counts), across temporal windows (1970--2025, including 2021 prospective), and across mechanistic diagnostics (trigger suppression, EP-flux dose-response, Z500 blocking lead time) collectively support the association, while the limitations above constrain the strength of causal inference. The ``loaded-gun'' mechanism---in which regime redistribution simultaneously increases structural hazard while suppressing natural triggers---may represent a general class of compound-hazard amplification relevant beyond the avalanche domain.
+
+% ============================================================
+%  METHODS
+% ============================================================
+\section*{Methods}
+
+\subsection*{Avalanche and hazard datasets}
+
+The primary outcome was the Swiss WSL/SLF daily count of natural-trigger dry slab avalanches of size class $\geq$1 across 21 winters (1998/99--2018/19; 7,518~days). We selected natural dry slabs because they respond directly to atmospheric forcing, whereas human-triggered avalanches also depend on recreation patterns and access. An independent outcome---the SLF fatal and near-fatal avalanche incident database (1970--2025; 4,868 records dominated by backcountry touring and off-piste incidents)---was used for extended historical ($n = 29$ SSW events) and prospective (January 2021) analyses, measuring a complementary metric to the primary natural-activity counts. Supporting datasets were the Utah Avalanche Center dry slab record (2012--2025), Norwegian NVE avalanche danger forecasts from ten inland mountain regions (2017/18--2022/23), reconstructed M\'et\'eo-France BRA danger bulletins for 14 northern-Alpine massifs (2016/17--2022/23; 6,839 massif-days), a post-2022 Avalanche Canada flexible-forecast panel aggregated from dated metadata and matching forecast polygons (189 forecast dates; 4,661 region-days), EAWS daily maximum danger levels for approximately 100 Alpine regions across Austria, Switzerland, France, Italy and Germany (2011--2015), Swiss EnviDat reanalysed regional danger levels and human-triggered avalanche counts, ALBINA danger levels for Tyrol, South Tyrol and Trentino (2018--2024), Austrian LAWIS incident records (1992--2024), Swiss Rutschblock tests, and SNOWPACK simulations from 130 Swiss stations. Detailed data access routes, variable definitions and additional regional summaries are provided in the SI.
+
+\subsection*{SSW identification and matched-control design}
+
+SSW events were identified from the Butler et al. catalog\cite{Butler2015} as reversals of the 10~hPa 60$^\circ$N zonal-mean zonal wind from westerly to easterly. Sixteen events fall within the Swiss study period, four each within the Utah, Norwegian and French BRA periods, and two within the post-2022 Avalanche Canada flexible-forecast period.
+
+For each event we computed the rate ratio $\mathrm{RR} = O / E$, where $O$ is the observed natural dry slab count in the $\pm$15-day window around onset and $E$ is the day-of-year-matched expectation. The expected value was obtained from the same day of year $\pm$3~days across non-SSW winters only, summed over the event window. This design controls seasonality by construction and prevents SSW contamination of the reference climatology. For ordinal danger data we compared SSW-window and matched-control distributions rather than counts; the Avalanche Canada extension used area-weighted daily national summaries because flexible forecast regions change through time.
+
+\subsection*{Circulation, snowpack and trigger diagnostics}
+
+ERA5 daily fields for the Swiss Alps (2~m temperature, total precipitation, snowfall, rainfall partition, wind speed and surface-radiation terms) were used to diagnose Alpine surface anomalies during SSW windows. The ERA5 surface analysis covers 2004--2013, the period for which SNOWPACK model runs from the WSL/SLF EnviDat archive provide complete station-level forcing and output across all 130 automatic weather stations; 11 of 16 SSW events fall within this window (selection criterion: completeness of SNOWPACK forcing, not outcome). Northern Hemisphere sea-level pressure, 500~hPa geopotential height and 850~hPa zonal wind from NCEP reanalysis were used to quantify large-scale circulation anomalies across the full 1998--2019 study period. SNOWPACK output provided loading, stability and persistent-weak-layer diagnostics, and daily trigger-frequency metrics were derived from station-level warming, rain-on-snow and radiative conditions. Full variable lists, station filtering and supporting analyses are reported in the SI.
+
+\subsection*{Independent cross-model validation}
+
+The French BRA danger-level analysis provides methodologically independent evidence for the mechanistic pathway. The S2M reanalysis chain\cite{Vernay2022} uses SAFRAN meteorological analysis (driven by the ARPEGE numerical weather prediction model and assimilating observations from a dense French Alpine station network) coupled to the Crocus snowpack model and the MEPRA avalanche hazard module. This chain is entirely independent of the ERA5 global reanalysis and the SNOWPACK model used for Swiss diagnostics: different meteorological forcing, different station networks, different snowpack physics and different hazard indices. SAFRAN has been validated against 665 independent snow depth measurements across 130 French stations with correlation coefficients exceeding 0.9 for seasonal snow depth\cite{Durand2009}. The directional consistency of French BRA suppression with the Swiss occurrence-count result therefore tests whether the SSW--avalanche association generalises across model families, not merely across political boundaries.
+
+\subsection*{Statistics}
+
+Primary inference used the 16 event-level Swiss rate ratios and was assessed with an exact sign test, Wilcoxon signed-rank test on $\log(\mathrm{RR})$, one-sample $t$-test on $\log(\mathrm{RR})$ and a permutation test using 10,000 random winter-date sets. Bootstrap 95\% confidence intervals for the geometric mean RR were obtained from 10,000 event resamples; a winter-blocked bootstrap (resampling entire winter seasons rather than individual events) yields a slightly wider CI ([0.26, 0.53] versus [0.26, 0.51] standard), indicating that within-winter dependence does not inflate inference (Supplementary Table 34c). Norwegian, French BRA, Avalanche Canada, EAWS, ALBINA, LAWIS and Rutschblock comparisons used matched-control danger comparisons with Mann--Whitney, sign or Wilcoxon tests as appropriate. Pearson correlation and small multivariable models were used for event-level circulation predictors. Primary hypothesis tests were corrected with the Benjamini--Hochberg procedure (Extended Data Table~\ref{tab:fdr}), and extended sensitivity, Bayesian and mediation analyses are provided in the SI. Power considerations for the Swiss, Norwegian and Utah event-level analyses are reported in Supplementary Table 26; Norway and Utah are interpreted as directional external checks rather than standalone null-hypothesis tests.
+
+\subsection*{Data and code availability}
+
+Swiss avalanche data are available from WSL/SLF upon request. Re-analysed Swiss regional danger levels, human-triggered avalanche rates, Rutschblock test results, and SNOWPACK process-model output (weather, stability indices, persistent weak layer diagnostics) are available from the WSL/SLF EnviDat repository (\url{https://www.envidat.ch}). EAWS danger-level data are available via avalanches.org. ALBINA danger-level data are available via \url{https://avalanche.report}. Utah data are publicly available from the Utah Avalanche Center. Norwegian NVE data are available via their public API. French BRA bulletins are publicly available from the M\'et\'eo-France archive (\url{https://donneespubliques.meteofrance.fr/donnees_libres/Pdf/BRA/}). ERA5 data were generated using Copernicus Climate Change Service information. All processed analysis datasets are archived on Zenodo: raw source data at \url{https://zenodo.org/records/19493865} and processed/derived datasets at \url{https://zenodo.org/records/19495580}. All analysis code is available at \url{https://github.com/ProgrmerJack/Solar-Magnetic-Analysis}. A reviewer index mapping every paper claim to the generating script is provided in \texttt{REVIEWER\_INDEX.md} in the repository.
+
+% ============================================================
+%  REFERENCES
+% ============================================================
+\begin{thebibliography}{30}
+
+\bibitem{Matsuno1971}
+Matsuno, T. A dynamical model of the stratospheric sudden warming. \textit{J.\ Atmos.\ Sci.}\ \textbf{28}, 1479--1494 (1971).
+
+\bibitem{Charlton2007}
+Charlton, A.~J.\ \& Polvani, L.~M. A new look at stratospheric sudden warmings.\ Part~I: Climatology and modeling benchmarks. \textit{J.\ Climate}\ \textbf{20}, 449--469 (2007).
+
+\bibitem{Baldwin2001}
+Baldwin, M.~P.\ \& Dunkerton, T.~J. Stratospheric harbingers of anomalous weather regimes. \textit{Science}\ \textbf{294}, 581--584 (2001).
+
+\bibitem{Thompson2002}
+Thompson, D.~W.~J., Baldwin, M.~P.\ \& Wallace, J.~M. Stratospheric connection to Northern Hemisphere wintertime weather: Implications for prediction. \textit{J.\ Climate}\ \textbf{15}, 1421--1428 (2002).
+
+\bibitem{Kidston2015}
+Kidston, J.\ et~al. Stratospheric influence on tropospheric jet streams, storm tracks and surface weather. \textit{Nature Geosci.}\ \textbf{8}, 433--440 (2015).
+
+\bibitem{Sigmond2013}
+Sigmond, M., Scinocca, J.~F., Kharin, V.~V.\ \& Shepherd, T.~G. Enhanced seasonal forecast skill following stratospheric sudden warmings. \textit{Nature Geosci.}\ \textbf{6}, 98--102 (2013).
+
+\bibitem{Techel2016}
+Techel, F.\ et~al. Avalanche fatalities in the European Alps: long-term trends and statistics. \textit{Geogr.\ Helv.}\ \textbf{71}, 147--159 (2016).
+
+\bibitem{Schweizer2003}
+Schweizer, J., Bruce~Jamieson, J.\ \& Schneebeli, M. Snow avalanche formation. \textit{Rev.\ Geophys.}\ \textbf{41}, 1016 (2003).
+
+\bibitem{Schweizer2008}
+Schweizer, J., Kronholm, K., Jamieson, J.~B.\ \& Birkeland, K.~W. Review of spatial variability of snowpack properties and its importance for avalanche formation. \textit{Cold Reg.\ Sci.\ Technol.}\ \textbf{51}, 253--272 (2008).
+
+\bibitem{McClung2006}
+McClung, D.~M.\ \& Schaerer, P. \textit{The Avalanche Handbook} 3rd edn (The Mountaineers Books, 2006).
+
+\bibitem{Reuter2018}
+Reuter, B.\ \& Schweizer, J. Describing snow instability by failure initiation, crack propagation, and slab tensile support. \textit{Geophys.\ Res.\ Lett.}\ \textbf{45}, 7019--7027 (2018).
+
+\bibitem{Butler2015}
+Butler, A.~H.\ et~al. Defining sudden stratospheric warmings. \textit{Bull.\ Am.\ Meteorol.\ Soc.}\ \textbf{96}, 1913--1928 (2015).
+
+\bibitem{Polvani2004}
+Polvani, L.~M.\ \& Waugh, D.~W. Upward wave activity flux as a precursor to extreme stratospheric events and subsequent anomalous surface weather regimes. \textit{J.\ Climate}\ \textbf{17}, 3548--3554 (2004).
+
+\bibitem{Wilcox2017}
+Wilcox, R.~R. \textit{Introduction to Robust Estimation and Hypothesis Testing} 4th edn (Academic Press, 2017).
+
+\bibitem{Hobbs1974}
+Hobbs, P.~V. \textit{Ice Physics} (Clarendon Press, 1974).
+
+\bibitem{Colbeck1997}
+Colbeck, S.~C. A review of sintering in seasonal snow. CRREL Report 97-10 (US Army Corps of Engineers, 1997).
+
+\bibitem{Mitchell2013}
+Mitchell, D.~M., Gray, L.~J., Anstey, J., Baldwin, M.~P.\ \& Charlton-Perez, A.~J. The influence of stratospheric vortex displacements and splits on surface climate. \textit{J.\ Climate}\ \textbf{26}, 2668--2682 (2013).
+
+\bibitem{Hitchcock2013}
+Hitchcock, P.\ \& Simpson, I.~R. The downward influence of stratospheric sudden warmings. \textit{J.\ Atmos.\ Sci.}\ \textbf{71}, 3856--3876 (2014).
+
+\bibitem{Bartelt2002}
+Bartelt, P.\ \& Lehning, M. A physical SNOWPACK model for the Swiss avalanche warning. Part I: numerical model. \textit{Cold Reg.\ Sci.\ Technol.}\ \textbf{35}, 123--145 (2002).
+
+\bibitem{Lehning2002}
+Lehning, M., Bartelt, P., Brown, B.\ \& Fierz, C. A physical SNOWPACK model for the Swiss avalanche warning. Part III: meteorological forcing, thin layer formation and evaluation. \textit{Cold Reg.\ Sci.\ Technol.}\ \textbf{35}, 169--184 (2002).
+
+\bibitem{Kolstad2010}
+Kolstad, E.~W., Breiteig, T.\ \& Scaife, A.~A. The association between stratospheric weak polar vortex events and cold air outbreaks in the Northern Hemisphere. \textit{Q.\ J.\ R.\ Meteorol.\ Soc.}\ \textbf{136}, 886--893 (2010).
+
+\bibitem{KassRaftery1995}
+Kass, R.~E.\ \& Raftery, A.~E. Bayes factors. \textit{J.\ Am.\ Statist.\ Assoc.}\ \textbf{90}, 773--795 (1995).
+
+\bibitem{Mellor1975}
+Mellor, M. A review of basic snow mechanics. \textit{IAHS Publication} \textbf{114}, 251--291 (1975).
+
+\bibitem{Simenhois2009}
+Simenhois, R.\ \& Birkeland, K.~W. The Extended Column Test: test effectiveness, spatial variability, and comparison with the Rutschblock. \textit{Cold Reg.\ Sci.\ Technol.}\ \textbf{59}, 210--216 (2009).
+
+\bibitem{Gray2010}
+Gray, L.~J.\ et~al. Solar influences on climate. \textit{Rev.\ Geophys.}\ \textbf{48}, RG4001 (2010).
+
+\bibitem{Butler2017}
+Butler, A.~H.\ et~al. A sudden stratospheric warming compendium. \textit{Earth Syst.\ Sci.\ Data}\ \textbf{9}, 63--76 (2017).
+
+\bibitem{Gasparrini2015}
+Gasparrini, A.\ et~al. Mortality risk attributable to high and low ambient temperature: a multicountry observational study. \textit{Lancet}\ \textbf{386}, 369--375 (2015).
+
+\bibitem{Baldwin2021}
+Baldwin, M.~P.\ et~al. Sudden stratospheric warmings. \textit{Rev.\ Geophys.}\ \textbf{59}, e2020RG000708 (2021).
+
+\bibitem{Cohen2021}
+Cohen, J.\ et~al. Linking Arctic variability and change with extreme winter weather in the United States. \textit{Science}\ \textbf{373}, 1116--1121 (2021).
+
+\bibitem{Kretschmer2018}
+Kretschmer, M., Coumou, D., Agel, L., Barlow, M., Tziperman, E.\ \& Cohen, J. More-persistent weak stratospheric polar vortex states linked to cold extremes. \textit{Bull.\ Am.\ Meteorol.\ Soc.}\ \textbf{99}, 49--60 (2018).
+
+\bibitem{Zscheischler2020}
+Zscheischler, J.\ et~al. A typology of compound weather and climate events. \textit{Nature Rev.\ Earth Environ.}\ \textbf{1}, 333--347 (2020).
+
+\bibitem{Leonard2014}
+Leonard, M.\ et~al. A compound event framework for understanding extreme impacts. \textit{WIREs Clim.\ Change}\ \textbf{5}, 113--128 (2014).
+
+\bibitem{Vernay2022}
+Vernay, M.\ et~al. The S2M meteorological and snow cover reanalysis over the French mountainous areas: description and evaluation (1958--2021). \textit{Earth Syst.\ Sci.\ Data}\ \textbf{14}, 1707--1733 (2022).
+
+\bibitem{Durand2009}
+Durand, Y., Laternser, M., Giraud, G., Etchevers, P., L\'{e}sendro, B.\ \& M\'{e}rindol, L. Reanalysis of 44~yr of climate in the French Alps (1958--2002): methodology, model validation, climatology, and trends for air temperature and precipitation. \textit{J.\ Appl.\ Meteorol.\ Climatol.}\ \textbf{48}, 429--449 (2009).
+
+\bibitem{Karpechko2017}
+Karpechko, A.~Y., Hitchcock, P., Peters, D.~H.~W.\ \& Schneidereit, A. Predictability of downward propagation of major sudden stratospheric warmings. \textit{Q.\ J.\ R.\ Meteorol.\ Soc.}\ \textbf{143}, 1459--1470 (2017).
+
+\end{thebibliography}
+
+% ============================================================
+%  ACKNOWLEDGEMENTS
+% ============================================================
+\section*{Acknowledgements}
+
+We thank the WSL Institute for Snow and Avalanche Research SLF for providing access to the Swiss avalanche database and Rutschblock stability test records, the Norwegian Water Resources and Energy Directorate (NVE) for public avalanche danger level forecasts, and the Utah Avalanche Center for publicly accessible dry slab avalanche records. ERA5 reanalysis data were generated using Copernicus Climate Change Service information. AO and NAO daily indices were obtained from the NOAA Climate Prediction Center.
+
+\section*{Author Contributions}
+A.A. conceived and designed the study, performed all analyses, and wrote the manuscript.
+
+\section*{Competing Interests}
+The authors declare no competing interests.
+
+% ============================================================
+%  FIGURES
+% ============================================================
+\clearpage
+
+\begin{figure}[!ht]
+\centering
+\begin{tikzpicture}[
+    node distance=2.5cm and 3.5cm,
+    every node/.style={draw, rounded corners, minimum width=2.8cm, minimum height=1cm, align=center, font=\small},
+    arr/.style={-{Stealth[length=3mm]}, thick},
+    xarr/.style={-{Stealth[length=3mm]}, thick, red, line width=1.5pt},
+    garr/.style={-{Stealth[length=3mm]}, thick, green!60!black, line width=1.5pt},
+    harr/.style={-{Stealth[length=3mm]}, thick, blue!60!black, line width=1.5pt, dashed},
+]
+% Nodes
+\node (pw) [fill=blue!10] {Planetary wave\\forcing};
+\node (ssw) [right=of pw, fill=orange!15] {Stratospheric\\sudden warming};
+\node (nao) [below right=1.5cm and 0.5cm of ssw, fill=yellow!15] {NAO / AO};
+\node (z500) [below=1.5cm of pw, fill=green!15] {Z500 depression\\($d = -0.83$)};
+\node (regime) [right=of z500, fill=green!15] {Cold-dry regime\\shift ($\chi^2 = 83.5$)};
+\node (aval) [below=1.5cm of regime, fill=cyan!10] {Natural dry slab\\avalanche $\downarrow$ 68\%};
+
+% Supported pathway arrows (green) - tropospheric chain
+\draw[garr] (ssw) -- node[draw=none,right,font=\scriptsize\itshape,minimum width=0pt,minimum height=0pt] {$d = +0.90$} (z500);
+\draw[garr] (z500) -- node[draw=none,above,font=\scriptsize\itshape,minimum width=0pt,minimum height=0pt] {$\rho_{\mathrm{partial}} = 0.64$\\$P = 0.008$} (regime);
+\draw[garr] (regime) -- node[draw=none,right,font=\scriptsize\itshape,minimum width=0pt,minimum height=0pt] {within-regime\\RR $\approx 1.0$\\(3/4 regimes)} (aval);
+
+% Hypothesised common-cause pathway (dashed blue) - not directly tested
+\draw[harr] (pw) -- node[draw=none,above,font=\scriptsize\itshape,minimum width=0pt,minimum height=0pt] {triggers} (ssw);
+\draw[harr] (pw) -- node[draw=none,left,font=\scriptsize\itshape,minimum width=0pt,minimum height=0pt] {reorganises?} (z500);
+
+% Rejected pathways (red)
+\draw[xarr] (ssw) -- node[draw=none,above right,font=\scriptsize\bfseries,minimum width=0pt,minimum height=0pt,text=red] {$R^2 < 0.01$} (nao);
+\draw[xarr] (nao) -- node[draw=none,below right,font=\scriptsize\bfseries,minimum width=0pt,minimum height=0pt,text=red] {$R^2 < 0.01$} (aval);
+
+% Legend
+\node[draw=none, minimum width=0pt, minimum height=0pt, font=\scriptsize] at (3.5, -7.5) {Green: supported pathways \quad Blue dashed: hypothesised (not directly tested) \quad Red: rejected pathways};
+\end{tikzpicture}
+\caption{\textbf{Causal diagram for the SSW--avalanche association.}
+The \textbf{primary pathway} (green arrows): tropospheric circulation reorganisation through Z500 blocking produces a weather regime shift toward cold-dry conditions. Formal mediation analysis indicates that Z500 carries the signal: partial correlation $\rho = 0.64$ ($P = 0.008$) after controlling for stratospheric vortex deceleration, whereas stratospheric metrics show no residual effect ($\rho = -0.28$, $P = 0.29$). The \textbf{common driver} (dashed blue): enhanced planetary-wave forcing simultaneously triggers the SSW and reorganises tropospheric circulation\cite{Polvani2004}; pre-SSW Z500 anomalies already predict the eventual avalanche response ($\rho = 0.51$, $P = 0.045$). Composite propagation shows warming descends from 10~hPa (lag~0) to 100~hPa (lag~$+20$~d), maintaining stratosphere--troposphere coupling throughout. Within each regime, SSW and non-SSW days show near-identical avalanche rates ($\mathrm{RR}_{\mathrm{within}} = 0.98$--$1.16$ in three of four regimes; warm-dry residual $\mathrm{IRR} = 1.89$, $P = 0.013$, attributable to seasonal clustering). The \textbf{rejected pathways} (red arrows): annular modes are not supported as dominant mediators ($R^2 < 0.01$ for both AO and NAO).}
+\label{fig:dag}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{../data/figures/rev_fig1_ssw_swiss.pdf}
+\caption{\textbf{SSW events suppress natural dry slab avalanche activity in Switzerland.}
+\textbf{a},~Rate ratios (RR $=$ observed/expected) for each of 16~SSW events during 1998/99--2018/19. Expected counts are derived from day-of-year-matched climatology ($\pm$3~days, non-SSW winters). Blue bars: $\mathrm{RR} < 1$ (14 events); coral: $\mathrm{RR} > 1$ (2 events). Dashed line: geometric mean $\mathrm{RR} = 0.32$. Event-level RR values range from 0.05 (Jan 2004) to 3.43 (Jan 2019); the two contrary events (Feb 2018: RR $= 1.05$; Jan 2019: RR $= 3.43$) occurred during exceptional synoptic conditions.
+\textbf{b},~Bootstrap distribution of geometric mean RR (10,000 winter-blocked resamples). The distribution is unimodal and right-skewed, with 95\% CI $[0.26, 0.53]$ (Supplementary Table~\ref{tab:winter_boot}) entirely below 1.0.}
+\label{fig:ssw_matched}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{../data/figures/fig4_event_study_fresh.pdf}
+\caption{\textbf{Event-study: daily avalanche anomalies around SSW onset.}
+Composite anomalies (observed minus DOY-matched expectation) stacked across 16~SSW events, lags $-30$ to $+30$~days. Suppression emerges $\sim$13~days before onset and persists through post-onset, with the deepest anomalies at lags $-10$ to $+5$~d (composite anomaly $< -1.0$ avalanches day$^{-1}$). The pre-onset suppression (13/16 events show RR $< 1$ during days $-15$ to $-6$; $P = 0.011$) coincides with the enhanced planetary-wave activity that precedes SSW onset by 7--10 days. Blue shading: 95\% CI across events. Navy curve: 7-day rolling mean. Red dashed vertical line: SSW onset (lag 0).}
+\label{fig:event_study}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{../data/figures/mech_fig1_era5_composites.pdf}
+\caption{\textbf{ERA5 Alpine surface meteorology around SSW onset.}
+Event-level composite anomalies for 16~SSW events (each event weighted equally).
+\textbf{a},~2~m temperature: modest cooling that does not reach significance at the event level ($\Delta T = -0.4$~K, $P = 0.32$, $n = 16$). The pooled daily aggregate across all SSW-window days is larger ($d = -0.69$, $P < 10^{-47}$; see text) because it reflects both SSW-specific and seasonal effects.
+\textbf{b},~Snowfall: no change ($P > 0.99$).
+\textbf{c},~Wind speed: no change.
+Event-level temperature and precipitation explain only $\sim$1\% of the avalanche signal ($R^2 = 0.011$), indicating that synoptic-scale circulation reorganisation, not local surface meteorology, drives event-level variability. Shaded bands: 95\% CI. Red dashed line: SSW onset.}
+\label{fig:era5_composites}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{../data/figures/fig_study_area_map.pdf}
+\caption{\textbf{Study area and data sources.}
+\textbf{Left},~European overview showing primary (Switzerland, Norway) and validation (France, EAWS, ALBINA) data sources. Norway NVE covers 10~forecast regions spanning $58$--$71$\textdegree N.
+\textbf{Centre},~Alpine detail showing Swiss SLF monitoring domain, 130~SNOWPACK automatic weather stations (cyan dots), French BRA massifs, and the EAWS/ALBINA pan-Alpine forecast network.
+\textbf{Bottom right},~Utah Avalanche Center domain in the Wasatch Range.
+Data span 1998/99--2018/19 (Switzerland), 2017/18--2022/23 (Norway), 2006/07--2018/19 (Utah), and 2012/13--2022/23 (EAWS/ALBINA).}
+\label{fig:study_area}
+\end{figure}
+
+% ============================================================
+%  EXTENDED DATA
+% ============================================================
+\clearpage
+\section*{Extended Data}
+
+\begin{table}[!ht]
+\centering
+\caption{\textbf{Extended Data Table 1: Leave-one-out cross-validation.}
+Sign-test $P$-values and geometric mean RR after dropping each SSW event in turn. All 16 jackknife folds remain significant at $P < 0.004$, demonstrating that no single event drives the result.}
+\label{tab:loo}
+\small
+\begin{tabular}{lccc}
+\toprule
+Event dropped & Excluded RR & Remaining sign $P$ & Remaining geom.\ RR \\
+\midrule
+1998-12-15 & 0.88 & 0.004 & 0.30 \\
+1999-02-26 & 0.44 & 0.004 & 0.32 \\
+2001-02-11 & 0.18 & 0.004 & 0.33 \\
+2001-12-30 & 0.11 & 0.004 & 0.35 \\
+2002-02-17 & 0.27 & 0.004 & 0.32 \\
+2003-01-18 & 0.19 & 0.004 & 0.34 \\
+2004-01-05 & 0.11 & 0.004 & 0.35 \\
+2006-01-21 & 0.21 & 0.004 & 0.34 \\
+2007-02-24 & 0.32 & 0.004 & 0.32 \\
+2008-02-22 & 0.05 & 0.004 & 0.36 \\
+2009-01-24 & 0.11 & 0.004 & 0.35 \\
+2010-02-09 & 0.65 & 0.004 & 0.31 \\
+2012-01-11 & 0.85 & 0.004 & 0.30 \\
+2013-01-07 & 0.34 & 0.004 & 0.32 \\
+2018-02-12 & 1.05 & $< 0.001$ & 0.30 \\
+2019-01-01 & 3.43 & $< 0.001$ & 0.28 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\centering
+\caption{\textbf{Extended Data Table 2: Phase-resolved analysis.}
+Rate ratios in four non-overlapping SSW lifecycle phases. All phases show suppression, with the strongest signal in the pre-SSW period---supporting a precursor wave-forced component rather than a purely post-onset pathway. Note: these four tests share the same 16 SSW events; phase-level $P$-values are included in the BH-FDR family (Supplementary Table~7, $m = 29$) but within-event dependence may further inflate Type~I error.}
+\label{tab:phases}
+\small
+\begin{tabular}{lcccc}
+\toprule
+Phase & Days relative to onset & $n$ decrease / total & Median RR & Sign $P$ \\
+\midrule
+Pre & $-15$ to $-6$ & 13/16 & 0.16 & 0.011 \\
+Onset & $-5$ to $+5$ & 14/16 & 0.37 & 0.002 \\
+Post & $+6$ to $+15$ & 12/16 & 0.22 & 0.038 \\
+Late & $+16$ to $+30$ & 12/16 & 0.29 & 0.038 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\centering
+\caption{\textbf{Extended Data Table 3: Multi-country evidence summary.}
+Concordance across three countries using independent measurement systems. The Swiss and Norwegian results use different instruments (occurrence counts vs.\ danger forecasts) and are statistically independent.}
+\label{tab:multi}
+\small
+\begin{tabular}{lcccccc}
+\toprule
+Country & Measure & $n$ events & $n$ decrease & Effect size & $P$ & Cohen's $d$ \\
+\midrule
+Switzerland & Natural dry slab count & 16 & 14 & $\mathrm{RR} = 0.32$ & 0.002 & $-1.06$ \\
+Norway & NVE danger level & 4 & 4 & $\Delta = -0.48$ & $< 10^{-6}$ & $-0.67$ \\
+Utah & Dry slab count & 4 & 4 & $\mathrm{RR} = 0.34$ & 0.063 & --- \\
+\midrule
+\multicolumn{2}{l}{Combined (22/24 event-level pairs)} & 24 & 22 & --- & $< 10^{-5}$ & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\centering
+\caption{\textbf{Extended Data Table 4: Rutschblock stability class distribution.}
+Stability class frequencies during SSW windows ($\pm$15~d) versus non-SSW periods. SSW windows show fewer unstable profiles (class~1) and more very stable profiles (class~4).}
+\label{tab:rutsch}
+\small
+\begin{tabular}{lcccc}
+\toprule
+Stability class & SSW ($n = 961$) & Non-SSW ($n = 3{,}472$) & SSW \% & Non-SSW \% \\
+\midrule
+1 (least stable) & 342 & 1,413 & 35.6\% & 40.7\% \\
+2 & 387 & 1,296 & 40.3\% & 37.3\% \\
+3 & 128 & 458 & 13.3\% & 13.2\% \\
+4 (most stable) & 104 & 305 & 10.8\% & 8.8\% \\
+\midrule
+\multicolumn{5}{l}{Mann--Whitney $P = 0.003$ (one-sided, SSW more stable); Cohen's $d = 0.10$} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% AO/NAO independence results are presented in Extended Data Table 11 (synoptic circulation mediation)
+
+\begin{table}[!ht]
+\centering
+\caption{\textbf{Extended Data Table 5: Utah event-level results.}
+Rate ratios for each SSW event in the Utah Avalanche Center database (2012--2025). All four events show decreased dry slab activity, consistent with the Swiss pattern.}
+\label{tab:utah}
+\small
+\begin{tabular}{lcccc}
+\toprule
+SSW event & Observed & Expected & RR & Direction \\
+\midrule
+2013-01-07 & 9 & 57.4 & 0.16 & Decrease \\
+2018-02-12 & 23 & 50.0 & 0.46 & Decrease \\
+2019-01-01 & 33 & 55.5 & 0.60 & Decrease \\
+2021-01-05 & 17 & 57.6 & 0.30 & Decrease \\
+\midrule
+\multicolumn{3}{l}{Geometric mean RR: 0.34} & \multicolumn{2}{l}{Sign test $P = 0.063$} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\centering
+\caption{\textbf{Extended Data Table 6: Complete mechanism chain and pathway tests.}
+Every link in the SSW $\to$ avalanche chain with effect sizes, significance, and interpretation. All links in the identified pathway are independently significant. The within-regime residual ($\mathrm{IRR} = 0.89$, $P = 0.06$) is consistent with regime redistribution as the primary mediating pathway but does not reach significance; full vs partial mediation cannot be distinguished at this sample size. Rejected pathways (AO, NAO, sintering) are listed for completeness.}
+\label{tab:mechanism}
+\small
+\begin{tabular}{lccccl}
+\toprule
+Link / pathway & Variable & $d$ or statistic & $P$ & $R^2$ & Interpretation \\
+\midrule
+\multicolumn{6}{l}{\textit{Identified mechanism chain (all links $P < 0.05$)}} \\
+1. Strat.\ warming & T(50~hPa) & $d = +0.90$ & $6 \times 10^{-57}$ & --- & By definition \\
+2. Z500 depression & Z500 (NH) & $d = -0.83$ & $5 \times 10^{-74}$ & --- & Highly significant \\
+3. Surface cooling & T2m (Alpine) & $d = -0.69$ & $< 10^{-47}$ & --- & Large shift \\
+4. Precip reduction & Precip (Alpine) & $d = -0.12$ & 0.001 & --- & Moderate shift \\
+5. Regime shift & $\chi^2 = 83.5$ & 4 regimes & $5 \times 10^{-18}$ & --- & Cold-dry doubled \\
+6. Within-regime null & $\mathrm{RR}_\mathrm{w} \approx 1.0$ & 3/4 regimes n.s.\ & --- & --- & Predom.\ mediation \\
+\midrule
+\multicolumn{6}{l}{\textit{Event-level predictors ($\log\mathrm{RR}$, $n = 16$ events)}} \\
+Z500 (NH mean) & & $r = 0.56$ & 0.024 & 0.316 & Best single predictor \\
+SLP (NH mean) & & $r = 0.52$ & 0.037 & 0.290 & Synoptic-scale \\
+Surface only (T2m + precip) & & $r < 0.1$ & $> 0.7$ & 0.011 & Near zero \\
+Z500 + surface & & $\Delta R^2$ & --- & 0.317 & Surface adds 0.001 \\
+\midrule
+\multicolumn{6}{l}{\textit{Confirmed supplementary evidence}} \\
+Rutschblock stability & $\Delta = +0.09$ & $d = 0.10$ & 0.003 & --- & Modest field-stability increase \\
+Dose--response (SLP) & Strong reorg. & $\mathrm{RR} = 0.19$ & --- & --- & vs.\ weak RR $= 0.56$ \\
+\midrule
+\multicolumn{6}{l}{\textit{Rejected pathways}} \\
+AO mediation & & $r = -0.07$ & 0.79 & 0.005 & Rejected \\
+NAO mediation & & $r = 0.03$ & 0.92 & $< 0.001$ & Rejected \\
+Sintering (Arrhenius) & & 17\% slower & --- & --- & Consistent (cold $\to$ slow) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\centering
+\caption{\textbf{Extended Data Table 7: Benjamini--Hochberg FDR correction (main-text subset).}
+Primary hypothesis tests ordered by raw $P$-value with FDR-corrected values. The complete 29-test family including all phase-level, mechanism, and multi-country tests is in Supplementary Table~7.}
+\label{tab:fdr}
+\small
+\begin{tabular}{lccl}
+\toprule
+Test & Raw $P$ & FDR $P$ & Status \\
+\midrule
+Norway MW (SSW vs.\ control) & $< 10^{-15}$ & $< 10^{-14}$ & Significant \\
+Combined sign (32/36) & $< 10^{-6}$ & $< 10^{-5}$ & Significant \\
+Swiss permutation (10,000) & 0.0005 & 0.003 & Significant \\
+Swiss Wilcoxon ($\log$RR) & $< 0.001$ & 0.003 & Significant \\
+Swiss $t$-test ($\log$RR) & $< 0.001$ & 0.003 & Significant \\
+Swiss sign test (14/16) & 0.002 & 0.006 & Significant \\
+Norway pairs sign (14/16) & 0.002 & 0.006 & Significant \\
+Rutschblock MW (1-sided) & 0.003 & 0.008 & Significant \\
+Phase: onset (14/16) & 0.002 & 0.006 & Significant \\
+Phase: pre-SSW (13/16, sign) & 0.011 & 0.024 & Significant \\
+Phase: post (12/16) & 0.038 & 0.066 & Marginal \\
+Phase: late (12/16) & 0.038 & 0.066 & Marginal \\
+Utah sign (4/4) & 0.063 & 0.097 & Not sig. \\
+ERA5 T2m (event-level) & 0.32 & 0.46 & Not sig. \\
+AO mediation & 0.79 & 0.90 & Not sig. \\
+Sintering model & 0.86 & 0.92 & Not sig. \\
+NAO mediation & 0.92 & 0.92 & Not sig. \\
+ERA5 snowfall & $> 0.99$ & $> 0.99$ & Not sig. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\centering
+\caption{\textbf{Extended Data Table 8: Robustness and sensitivity.}
+Combined results for SSW-type stratification and sensitivity to analytical choices. The result is insensitive to SSW type, DOY matching bandwidth, window width, and SSW definition. $P$ values here are sign-test (binomial) probabilities; corresponding one-sample $t$-test results on log(RR) are reported in the Supplementary Information.}
+\label{tab:sensitivity}
+\small
+\begin{tabular}{lccc}
+\toprule
+Parameter & Geo.\ mean RR & $n$ decrease / 16 & Sign $P$ \\
+\midrule
+\multicolumn{4}{l}{\textit{SSW type (displacement vs.\ split-vortex; MW type difference $P = 1.00$)}} \\
+Displacement ($n = 11$) & 0.33 & 10/11 & 0.006 \\
+Split ($n = 5$) & 0.32 & 4/5 & 0.188 \\
+Stricter definition ($> -5$~m/s; $n = 14$) & 0.33 & 12/14 & 0.006 \\
+\midrule
+\multicolumn{4}{l}{\textit{DOY matching bandwidth (window $= \pm$15~d)}} \\
+$\pm$1 day & 0.33 & 14/16 & 0.002 \\
+$\pm$2 days & 0.32 & 14/16 & 0.002 \\
+$\pm$3 days (primary) & 0.32 & 14/16 & 0.002 \\
+$\pm$5 days & 0.33 & 14/16 & 0.002 \\
+$\pm$7 days & 0.33 & 14/16 & 0.002 \\
+$\pm$10 days & 0.32 & 14/16 & 0.002 \\
+\midrule
+\multicolumn{4}{l}{\textit{SSW window width (DOY margin $= \pm$3~d)}} \\
+$\pm$5 days & 0.38 & 12/16 & 0.038 \\
+$\pm$7 days & 0.39 & 14/16 & 0.002 \\
+$\pm$10 days & 0.34 & 12/16 & 0.038 \\
+$\pm$12 days & 0.30 & 13/16 & 0.011 \\
+$\pm$15 days (primary) & 0.32 & 14/16 & 0.002 \\
+$\pm$20 days & 0.35 & 13/16 & 0.011 \\
+$\pm$25 days & 0.31 & 13/16 & 0.011 \\
+$\pm$30 days & 0.32 & 13/16 & 0.011 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\centering
+\caption{\textbf{Extended Data Table 9: Synoptic-scale circulation mediation.}
+Correlations between hemispheric circulation anomalies and event-level avalanche response ($\log\mathrm{RR}$). Z500 explains 31\% of variance; adding surface weather contributes $< 0.1\%$ additional variance. Event-level surface weather correlations are near zero despite significant aggregate differences ($P < 0.001$).}
+\label{tab:synoptic}
+\small
+\begin{tabular}{lccccc}
+\toprule
+Variable & Pearson $r$ & $P$ & $R^2$ & Scale & Aggregate $d$ \\
+\midrule
+\multicolumn{6}{l}{\textit{Synoptic-scale (significant event-level predictors)}} \\
+NCEP Z500 (NH mean) & 0.56 & 0.024 & 0.31 & Hemispheric & $-0.83$ \\
+NCEP SLP (NH mean) & 0.52 & 0.037 & 0.27 & Hemispheric & --- \\
+NCEP U850 (NH mean) & $-0.32$ & 0.229 & 0.10 & Hemispheric & --- \\
+\midrule
+\multicolumn{6}{l}{\textit{Local surface (aggregate significant, event-level null)}} \\
+ERA5 T2m (Alpine) & 0.04 & 0.90 & $< 0.01$ & Regional & $-0.69^{***}$ \\
+ERA5 precip (Alpine) & $-0.10$ & 0.72 & 0.01 & Regional & $-0.12^{**}$ \\
+ERA5 wind speed (Alpine) & 0.14 & 0.61 & 0.02 & Regional & 0.04 \\
+\midrule
+\multicolumn{6}{l}{\textit{Stratospheric (non-significant)}} \\
+NCEP T 50~hPa & $-0.11$ & 0.70 & 0.01 & Stratospheric & $+0.90^{***}$ \\
+NCEP U 50~hPa & $-0.10$ & 0.70 & 0.01 & Stratospheric & --- \\
+\midrule
+\multicolumn{6}{l}{\textit{Annular modes (non-significant)}} \\
+AO index & $-0.07$ & 0.790 & $< 0.01$ & Hemispheric & --- \\
+NAO index & 0.03 & 0.920 & $< 0.01$ & Atlantic & --- \\
+\midrule
+\multicolumn{6}{l}{\textit{Stepwise model comparison}} \\
+\multicolumn{3}{l}{Z500 only} & 0.316 & \multicolumn{2}{l}{Best single predictor} \\
+\multicolumn{3}{l}{Surface only (T2m + precip)} & 0.011 & \multicolumn{2}{l}{Near zero} \\
+\multicolumn{3}{l}{Z500 + surface} & 0.317 & \multicolumn{2}{l}{$\Delta R^2 = 0.001$} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\centering
+\caption{\textbf{Extended Data Table 10: Outlier and robustness diagnostics.}
+Grubbs test, robust statistics, and leave-one-out hindcast cross-validation results.}
+\label{tab:outlier}
+\small
+\begin{tabular}{lcc}
+\toprule
+Diagnostic & Value & Interpretation \\
+\midrule
+\multicolumn{3}{l}{\textit{Grubbs outlier test (Jan 2019, RR $= 3.43$)}} \\
+Grubbs $G$ statistic & 2.29 & Not significant \\
+Critical value ($\alpha = 0.05$) & 2.59 & $G < G_{\mathrm{crit}}$ \\
+\midrule
+\multicolumn{3}{l}{\textit{Robust statistics}} \\
+Median RR (all 16 events) & 0.31 & Insensitive to outlier \\
+Without Jan 2019 ($n = 15$) & $\mathrm{RR} = 0.28$ & Stronger without outlier \\
+$t$-test without Jan 2019 & $P < 0.0001$ & Highly significant \\
+\midrule
+\multicolumn{3}{l}{\textit{Hindcast cross-validation (LOO)}} \\
+Direction accuracy & 14/16 (87.5\%) & $P = 0.002$ vs.\ chance \\
+LOO Brier score & 0.213 & Raw LOO Brier score \\
+Climatological Brier score & 0.109 & Base rate $p = 14/16 = 0.875$ \\
+Brier skill score (1 $-$ BS/BS$_{\mathrm{clim}}$) & $-0.95$ & No skill vs.\ climatology$^{\dagger}$ \\
+\midrule
+\multicolumn{3}{l}{\textit{Power analysis}} \\
+Min.\ detectable $d$ ($n = 16$, 80\% power) & 0.75 & ERA5 underpowered ($d \approx 0.2$) \\
+\bottomrule
+\multicolumn{3}{l}{\footnotesize $^{\dagger}$BSS $= 1 - 0.213/0.109 = -0.95$: LOO probabilities perform worse than} \\
+\multicolumn{3}{l}{\footnotesize always predicting the climatological suppression rate. Direction accuracy is} \\
+\multicolumn{3}{l}{\footnotesize high (87.5\%) but calibrated probability adds no value over the base rate.} \\
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\centering
+\caption{\textbf{Extended Data Table 11: Human-triggered avalanche response during SSW windows.}
+Differential trigger response separating the all-type human-triggered signal from the type-specific dry slab signal. The divergence between natural and human triggers is consistent with wind-slab formation enhancing human-triggerable instability while cold-dry conditions suppress spontaneous release.}
+\label{tab:human}
+\small
+\begin{tabular}{lcccl}
+\toprule
+Trigger--type combination & RR & $P$ & Direction & Interpretation \\
+\midrule
+Natural dry slab & 0.32 & 0.002 & Decrease & Primary signal \\
+Human dry slab & 0.68 & 0.126 & Decrease (n.s.) & Weaker suppression \\
+Human all types & 1.45 & --- & Increase & Wind-slab dominated \\
+Human/natural ratio shift & $1.81\times$ & 0.058 & Shift to human & Differential response \\
+\midrule
+Austrian LAWIS incidents & Increase & --- & Increase & Consistent (human-dominated) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% EAWS geographic gradient figure moved to Supplementary Information (n_eff = 2 events)
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{../data/figures/fig3_specification_curve.pdf}
+\caption{\textbf{Extended Data Figure~1: Specification curve analysis (180 variants).}
+All 180 analytical specifications---varying window width ($\pm$5 to $\pm$30~d), DOY bandwidth ($\pm$1 to $\pm$10~d), avalanche type (natural dry slab, all natural) and SSW definition (all events, displacement only, strict)---yield geometric mean $\mathrm{RR} < 1$. Each dot represents one specification, sorted by effect size. 100\% of specifications show $\mathrm{RR} < 1$. The result is not an artefact of any single analytical choice.}
+\label{fig:spec_curve}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{../data/figures/fig_mechanism_chain.pdf}
+\caption{\textbf{Extended Data Figure~2: Mechanism chain from stratosphere to surface.}
+\textbf{a,} Regional Alpine Z500 anomalies predict event-level avalanche response ($r = 0.56$, $P = 0.024$, $n = 16$; scatter plot with regression line). Events with stronger Z500 depression show greater avalanche suppression. 
+\textbf{b,} Stratospheric warming intensity (50~hPa temperature) does \emph{not} predict avalanche response ($r \approx 0$, flat scatter), consistent with a common-cause pathway rather than a top-down dose--response.
+\textbf{c,} Trigger suppression across events: 14/16 events show colder temperatures, 13/16 show less rainfall, 12/16 show fewer rain-on-snow events.}
+\label{fig:mechanism_chain}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{../data/figures/fig_dose_response_comparison.pdf}
+\caption{\textbf{Extended Data Figure~3: Alternative dose--response analysis.}
+\textbf{a,} Regional Alpine Z500 anomaly (tropospheric ``dose'') significantly predicts event-level log(RR) ($r = 0.56$, $R^2 = 0.31$, $P = 0.024$).
+\textbf{b,} Mean sea-level pressure provides additional predictive power.
+\textbf{c,} Stratospheric temperature at 50~hPa (``stratospheric dose'') shows no predictive relationship ($r \approx 0$). The null stratospheric dose--response is \emph{expected} under the common-cause mechanism: SSW intensity varies independently of regional surface reorganisation, because the same wave-forcing can produce different surface patterns depending on the background tropospheric state. Blue dots: suppression events (RR~$< 1$); red dots: enhancement events (RR~$> 1$).}
+\label{fig:dose_response}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{../data/figures/fig_multi_country_comparison.pdf}
+\caption{\textbf{Extended Data Figure~4: Multi-country and multi-system evidence summary.}
+\textbf{a,} Swiss event-level rate ratios for all 16~SSW events: 14 bars below $\mathrm{RR} = 1$ (green), 2 above (red). Geometric mean $\mathrm{RR} = 0.32$ (dashed blue line).
+\textbf{b,} Cross-country comparison: Switzerland (14/16 decrease, $P = 0.002$), Norway (4/4, $P < 10^{-6}$), Utah (4/4, $P = 0.063$), France (3/4 decrease, $P = 0.011$). Canada is a boundary condition (enhancement, $P < 0.001$).
+\textbf{c,} Evidence triangulation: four independent measurement systems (occurrence counts, danger forecasts, human-trigger reports, process-model diagnostics) yield internally consistent results---natural counts decrease, human triggers increase, danger ratings rise, and trigger mechanisms are suppressed.}
+\label{fig:multi_country}
+\end{figure}
+
+\end{document}
+

@@ -1,0 +1,209 @@
+{
+  "daily_chain": {
+    "strat_t10_to_t2m_lag1": {
+      "r": 0.0759,
+      "p": 2.5e-05,
+      "n": 3080
+    },
+    "strat_t10_to_t2m_lag3": {
+      "r": 0.0705,
+      "p": 9.1e-05,
+      "n": 3078
+    },
+    "strat_t10_to_t2m_lag5": {
+      "r": 0.0634,
+      "p": 0.00043,
+      "n": 3076
+    },
+    "strat_t10_to_t2m_lag7": {
+      "r": 0.0478,
+      "p": 0.008054,
+      "n": 3074
+    },
+    "strat_t10_to_t2m_lag10": {
+      "r": 0.028,
+      "p": 0.120395,
+      "n": 3071
+    },
+    "strat_t10_to_t2m_lag14": {
+      "r": 0.0003,
+      "p": 0.986913,
+      "n": 3067
+    },
+    "u10_decel_to_t2m_lag1": {
+      "r": -0.0507,
+      "p": 0.004908
+    },
+    "u10_decel_to_t2m_lag3": {
+      "r": -0.0416,
+      "p": 0.021121
+    },
+    "u10_decel_to_t2m_lag5": {
+      "r": -0.0053,
+      "p": 0.769756
+    },
+    "u10_decel_to_t2m_lag7": {
+      "r": -0.0007,
+      "p": 0.968302
+    },
+    "u10_decel_to_t2m_lag10": {
+      "r": 0.0205,
+      "p": 0.255926
+    },
+    "u10_decel_to_t2m_lag14": {
+      "r": 0.018,
+      "p": 0.317987
+    },
+    "t2m_to_aval_lag0": {
+      "r": -0.0212,
+      "p": 0.274886
+    },
+    "t2m_to_aval_lag1": {
+      "r": -0.0225,
+      "p": 0.245661
+    },
+    "t2m_to_aval_lag3": {
+      "r": -0.0377,
+      "p": 0.051904
+    },
+    "t2m_to_aval_lag5": {
+      "r": -0.0539,
+      "p": 0.00543
+    },
+    "t2m_to_aval_lag7": {
+      "r": -0.0638,
+      "p": 0.000997
+    },
+    "t2m_to_aval_lag10": {
+      "r": -0.0611,
+      "p": 0.001605
+    },
+    "t2m_to_aval_lag14": {
+      "r": -0.0156,
+      "p": 0.422054
+    },
+    "strat_t10_to_aval_lag0": {
+      "r": 0.0239,
+      "p": 0.16931
+    },
+    "strat_t10_to_aval_lag3": {
+      "r": 0.0196,
+      "p": 0.258278
+    },
+    "strat_t10_to_aval_lag7": {
+      "r": 0.0101,
+      "p": 0.560218
+    },
+    "strat_t10_to_aval_lag10": {
+      "r": -0.0019,
+      "p": 0.913941
+    },
+    "strat_t10_to_aval_lag14": {
+      "r": -0.0183,
+      "p": 0.292557
+    },
+    "strat_t10_to_aval_lag21": {
+      "r": -0.0344,
+      "p": 0.047835
+    }
+  },
+  "phase_resolved": {
+    "phases": [
+      {
+        "phase": "Early pre-SSW",
+        "lag_range": "-15 to -8",
+        "t2m_anom_K": -0.74,
+        "t2m_p": 0.3918,
+        "strat_t10_anom_K": NaN,
+        "strat_p": null,
+        "mean_aval_rate": 0.686,
+        "sf_anom_mm": -0.058,
+        "n_events": 16
+      },
+      {
+        "phase": "Late pre-SSW",
+        "lag_range": "-7 to -1",
+        "t2m_anom_K": 0.22,
+        "t2m_p": 0.6912,
+        "strat_t10_anom_K": NaN,
+        "strat_p": null,
+        "mean_aval_rate": 1.697,
+        "sf_anom_mm": -0.019,
+        "n_events": 16
+      },
+      {
+        "phase": "Onset",
+        "lag_range": "0 to 3",
+        "t2m_anom_K": 0.544,
+        "t2m_p": 0.4728,
+        "strat_t10_anom_K": NaN,
+        "strat_p": null,
+        "mean_aval_rate": 0.302,
+        "sf_anom_mm": -0.068,
+        "n_events": 16
+      },
+      {
+        "phase": "Early post-SSW",
+        "lag_range": "4 to 10",
+        "t2m_anom_K": 0.089,
+        "t2m_p": 0.8871,
+        "strat_t10_anom_K": NaN,
+        "strat_p": null,
+        "mean_aval_rate": 0.98,
+        "sf_anom_mm": 0.049,
+        "n_events": 16
+      },
+      {
+        "phase": "Late post-SSW",
+        "lag_range": "11 to 15",
+        "t2m_anom_K": -0.18,
+        "t2m_p": 0.7946,
+        "strat_t10_anom_K": NaN,
+        "strat_p": null,
+        "mean_aval_rate": 2.466,
+        "sf_anom_mm": 0.033,
+        "n_events": 16
+      },
+      {
+        "phase": "Cold reversal",
+        "lag_range": "16 to 30",
+        "t2m_anom_K": -0.745,
+        "t2m_p": 0.2279,
+        "strat_t10_anom_K": NaN,
+        "strat_p": null,
+        "mean_aval_rate": 0.964,
+        "sf_anom_mm": 0.03,
+        "n_events": 16
+      }
+    ],
+    "phase_t2m_vs_aval_r": -0.3,
+    "phase_t2m_vs_aval_p": 0.6238,
+    "full_phase_r": -0.086,
+    "full_phase_p": 0.8717
+  },
+  "sintering_by_type": {
+    "displacement": {
+      "n": 10,
+      "mean_pct": 12.5,
+      "positive": 9,
+      "p_ttest": 0.0006
+    },
+    "split": {
+      "n": 6,
+      "mean_pct": -6.4,
+      "positive": 1
+    },
+    "warming": {
+      "n": 12,
+      "mean_pct": 12.4,
+      "positive": 10,
+      "p_ttest": 0.0007,
+      "p_sign": 0.0386
+    },
+    "cooling": {
+      "n": 4,
+      "mean_pct": -15.4,
+      "positive": 0
+    }
+  }
+}

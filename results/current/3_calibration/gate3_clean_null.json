@@ -1,0 +1,80 @@
+{
+  "n_mean_draws": 4000,
+  "n_cover_draws": 300,
+  "influence_zone": [
+    -60,
+    75
+  ],
+  "n_days_total": 13864,
+  "n_days_clean": 8862,
+  "diagnosis": {
+    "old_design_baseline_contamination": 0.509
+  },
+  "specs": {
+    "harm3": {
+      "null_mean": 0.0052,
+      "null_sd": 0.3669,
+      "mean_CI95": [
+        -0.0062,
+        0.0166
+      ],
+      "n_draws": 4000,
+      "coverage": 0.93,
+      "coverage_CI95": [
+        0.895,
+        0.956
+      ],
+      "fpr": 0.07,
+      "fpr_CI95": [
+        0.044,
+        0.105
+      ],
+      "n_cover": 300,
+      "passes": true
+    },
+    "harm6": {
+      "null_mean": 0.0227,
+      "null_sd": 0.3687,
+      "mean_CI95": [
+        0.0113,
+        0.0342
+      ],
+      "n_draws": 4000,
+      "coverage": 0.93,
+      "coverage_CI95": [
+        0.895,
+        0.956
+      ],
+      "fpr": 0.07,
+      "fpr_CI95": [
+        0.044,
+        0.105
+      ],
+      "n_cover": 300,
+      "passes": true
+    },
+    "cyclic_spline12": {
+      "null_mean": 0.0397,
+      "null_sd": 0.363,
+      "mean_CI95": [
+        0.0285,
+        0.051
+      ],
+      "n_draws": 4000,
+      "coverage": 0.937,
+      "coverage_CI95": [
+        0.903,
+        0.961
+      ],
+      "fpr": 0.063,
+      "fpr_CI95": [
+        0.039,
+        0.097
+      ],
+      "n_cover": 300,
+      "passes": true
+    }
+  },
+  "n_boot": 1000,
+  "partial": false
+}

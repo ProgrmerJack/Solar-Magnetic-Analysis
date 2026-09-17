@@ -1,0 +1,24 @@
+{
+  "mediation": {
+    "n_events": 16,
+    "path_a_effect": 0.17584434512242517,
+    "path_b_slope": 0.2977206861439654,
+    "path_b_r": 0.06785984487352253,
+    "path_b_p": 0.8028132852330438,
+    "path_c_total": 0.05068882391666352,
+    "indirect_effect": 0.05235249908438468,
+    "proportion_mediated": 1.032821340863153,
+    "bootstrap_ci_lo": -5.404626979065721,
+    "bootstrap_ci_hi": 6.313109299622816
+  },
+  "effective_sample_size": {
+    "swiss_n_eff": 16,
+    "norway_n_eff": 5.2631578947368425,
+    "utah_n_eff": 4,
+    "total_n_eff": 25.263157894736842,
+    "naive_n": 36,
+    "icc_norway": 0.7,
+    "deff_norway": 3.8,
+    "adjusted_sign_test_p": 7.826089859008789e-05
+  }
+}

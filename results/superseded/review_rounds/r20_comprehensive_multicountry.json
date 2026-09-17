@@ -1,0 +1,360 @@
+{
+  "swiss": {
+    "n_events": 16,
+    "n_decrease": 12,
+    "sign_p": 0.076812744140625,
+    "t_p": 0.9173082398192497,
+    "wilcoxon_p": 0.2978515625,
+    "permutation_p": 0.5169,
+    "bootstrap_ci": [
+      -0.6873829610605073,
+      1.1288776182503355
+    ],
+    "mean_pct_change": 5.897365034046059,
+    "cohen_d": 0.02639702581513462,
+    "events": [
+      {
+        "onset": "1998-12-15",
+        "ssw_mean": 0.18870967741935485,
+        "ctrl_mean": 0.6207481343283582,
+        "diff": -0.43203845690900333,
+        "pct_change": -69.59963840672089,
+        "ssw_n": 31,
+        "ctrl_n": 284
+      },
+      {
+        "onset": "1999-02-26",
+        "ssw_mean": 2.0935483870967744,
+        "ctrl_mean": 0.7483417355371901,
+        "diff": 1.3452066515595842,
+        "pct_change": 179.75833602197,
+        "ssw_n": 31,
+        "ctrl_n": 242
+      },
+      {
+        "onset": "2001-02-11",
+        "ssw_mean": 0.6280645161290322,
+        "ctrl_mean": 1.5474536480686694,
+        "diff": -0.9193891319396371,
+        "pct_change": -59.4130320534705,
+        "ssw_n": 31,
+        "ctrl_n": 233
+      },
+      {
+        "onset": "2001-12-30",
+        "ssw_mean": 0.2913548387096775,
+        "ctrl_mean": 0.6399985915492958,
+        "diff": -0.34864375283961835,
+        "pct_change": -54.475706266107316,
+        "ssw_n": 31,
+        "ctrl_n": 145
+      },
+      {
+        "onset": "2002-02-17",
+        "ssw_mean": 0.14490322580645165,
+        "ctrl_mean": 0.925353982300885,
+        "diff": -0.7804507564944333,
+        "pct_change": -84.34077892590346,
+        "ssw_n": 31,
+        "ctrl_n": 226
+      },
+      {
+        "onset": "2003-01-18",
+        "ssw_mean": 0.13003225806451615,
+        "ctrl_mean": 1.7274162162162165,
+        "diff": -1.5973839581517004,
+        "pct_change": -92.47244197178243,
+        "ssw_n": 31,
+        "ctrl_n": 222
+      },
+      {
+        "onset": "2004-01-05",
+        "ssw_mean": 0.4071935483870968,
+        "ctrl_mean": 0.9873730994152046,
+        "diff": -0.5801795510281078,
+        "pct_change": -58.75991065299765,
+        "ssw_n": 31,
+        "ctrl_n": 171
+      },
+      {
+        "onset": "2006-01-21",
+        "ssw_mean": 0.7516870967741935,
+        "ctrl_mean": 1.616100432900433,
+        "diff": -0.8644133361262394,
+        "pct_change": -53.48760006052764,
+        "ssw_n": 31,
+        "ctrl_n": 231
+      },
+      {
+        "onset": "2007-02-24",
+        "ssw_mean": 0.8831096774193549,
+        "ctrl_mean": 0.8881789029535865,
+        "diff": -0.005069225534231614,
+        "pct_change": -0.5707437451367291,
+        "ssw_n": 31,
+        "ctrl_n": 237
+      },
+      {
+        "onset": "2008-02-22",
+        "ssw_mean": 0.03274193548387097,
+        "ctrl_mean": 0.8696879828326181,
+        "diff": -0.8369460473487471,
+        "pct_change": -96.23520893352708,
+        "ssw_n": 31,
+        "ctrl_n": 233
+      },
+      {
+        "onset": "2009-01-24",
+        "ssw_mean": 0.3369903225806452,
+        "ctrl_mean": 1.619251260504202,
+        "diff": -1.2822609379235568,
+        "pct_change": -79.18850947963979,
+        "ssw_n": 31,
+        "ctrl_n": 238
+      },
+      {
+        "onset": "2010-02-09",
+        "ssw_mean": 1.8058580645161288,
+        "ctrl_mean": 1.4266029914529912,
+        "diff": 0.37925507306313766,
+        "pct_change": 26.584486036782206,
+        "ssw_n": 31,
+        "ctrl_n": 234
+      },
+      {
+        "onset": "2012-01-11",
+        "ssw_mean": 2.5845193548387093,
+        "ctrl_mean": 1.187070673076923,
+        "diff": 1.3974486817617864,
+        "pct_change": 117.7224501839943,
+        "ssw_n": 31,
+        "ctrl_n": 208
+      },
+      {
+        "onset": "2013-01-07",
+        "ssw_mean": 0.9882129032258065,
+        "ctrl_mean": 1.0391832487309647,
+        "diff": -0.05097034550515822,
+        "pct_change": -4.904846721442293,
+        "ssw_n": 31,
+        "ctrl_n": 197
+      },
+      {
+        "onset": "2018-02-12",
+        "ssw_mean": 0.3424516129032258,
+        "ctrl_mean": 1.521868965517241,
+        "diff": -1.1794173526140153,
+        "pct_change": -77.49795674512386,
+        "ssw_n": 31,
+        "ctrl_n": 232
+      },
+      {
+        "onset": "2019-01-01",
+        "ssw_mean": 7.884096774193549,
+        "ctrl_mean": 1.3113084033613447,
+        "diff": 6.572788370832204,
+        "pct_change": 501.2389422643701,
+        "ssw_n": 31,
+        "ctrl_n": 119
+      }
+    ]
+  },
+  "us": {
+    "n_centers": 20,
+    "n_centers_decrease": 11,
+    "center_sign_p": 0.8238029479980469,
+    "center_results": {
+      "Bridger-Teton Avalanche Center": {
+        "n_events": 5,
+        "n_decrease": 4,
+        "mean_diff": -0.3821489621489621
+      },
+      "Sierra Avalanche Center": {
+        "n_events": 3,
+        "n_decrease": 2,
+        "mean_diff": -0.1934552102752777
+      },
+      "Utah Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 0,
+        "mean_diff": 0.04544635814239495
+      },
+      "Colorado Avalanche Information Center": {
+        "n_events": 1,
+        "n_decrease": 1,
+        "mean_diff": -0.06927883017613823
+      },
+      "Chugach National Forest Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 0,
+        "mean_diff": 0.42361111111111116
+      },
+      "Eastern Sierra Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 1,
+        "mean_diff": -0.6949820788530467
+      },
+      "Payette Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 1,
+        "mean_diff": -0.06676342525399104
+      },
+      "Flathead Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 0,
+        "mean_diff": 0.061537557305748614
+      },
+      "Gallatin NF Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 0,
+        "mean_diff": 0.33583114401719616
+      },
+      "Mount Shasta Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 1,
+        "mean_diff": -0.7108695652173911
+      },
+      "Sawtooth Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 0,
+        "mean_diff": 0.2772300469483566
+      },
+      "Northwest Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 1,
+        "mean_diff": -0.14679944882876095
+      },
+      "Hatcher Pass Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 0,
+        "mean_diff": 0.0
+      },
+      "West Central Montana Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 0,
+        "mean_diff": 0.29289617486338804
+      },
+      "Idaho Panhandle Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 1,
+        "mean_diff": -0.03204327923429018
+      },
+      "Mount Washington Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 0,
+        "mean_diff": 0.6025641025641026
+      },
+      "Crested Butte Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 1,
+        "mean_diff": -0.3095238095238093
+      },
+      "Taos Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 1,
+        "mean_diff": -0.43333333333333357
+      },
+      "Wallowa Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 0,
+        "mean_diff": 0.18131868131868112
+      },
+      "Central Oregon Avalanche Center": {
+        "n_events": 1,
+        "n_decrease": 1,
+        "mean_diff": -0.0013071895424836555
+      }
+    },
+    "us_wide_events": [
+      {
+        "onset": "2012-01-11",
+        "ssw_mean": 2.7111111111111117,
+        "ctrl_mean": 2.425,
+        "diff": 0.28611111111111187
+      },
+      {
+        "onset": "2013-01-07",
+        "ssw_mean": 1.2333333333333334,
+        "ctrl_mean": 2.225,
+        "diff": -0.9916666666666667
+      },
+      {
+        "onset": "2018-02-12",
+        "ssw_mean": 2.125,
+        "ctrl_mean": 2.3668384626423706,
+        "diff": -0.24183846264237063
+      },
+      {
+        "onset": "2019-01-01",
+        "ssw_mean": 2.125,
+        "ctrl_mean": 2.5559679030724873,
+        "diff": -0.43096790307248733
+      },
+      {
+        "onset": "2021-01-05",
+        "ssw_mean": 2.470861815378955,
+        "ctrl_mean": 2.452160425487853,
+        "diff": 0.01870138989110215
+      }
+    ]
+  },
+  "norway": {
+    "n_events": 3,
+    "events": [
+      {
+        "onset": "2018-02-12",
+        "ssw_mean": 1.6387096774193548,
+        "ctrl_mean": 1.9674418604651163,
+        "diff": -0.32873218304576146
+      },
+      {
+        "onset": "2019-01-01",
+        "ssw_mean": 1.8516129032258064,
+        "ctrl_mean": 1.92,
+        "diff": -0.06838709677419352
+      },
+      {
+        "onset": "2021-01-05",
+        "ssw_mean": 1.6709677419354838,
+        "ctrl_mean": 1.9433333333333334,
+        "diff": -0.27236559139784955
+      }
+    ]
+  },
+  "meta_analysis": {
+    "n_countries": 3,
+    "countries": {
+      "Switzerland": {
+        "n_events": 16,
+        "n_decrease": 12,
+        "sign_p": 0.076812744140625,
+        "mean_pct": 5.897365034046059,
+        "measure": "dry slab count"
+      },
+      "US (25 centers)": {
+        "n_events": 20,
+        "n_decrease": 11,
+        "sign_p": 0.8238029479980469,
+        "mean_pct": -1.6401399122330105,
+        "measure": "danger rating"
+      },
+      "Norway": {
+        "n_events": 3,
+        "n_decrease": 3,
+        "sign_p": 0.25,
+        "mean_pct": -11.15808118696341,
+        "measure": "danger level"
+      }
+    },
+    "grand_n": 39,
+    "grand_decrease": 26,
+    "grand_p": 0.05325191409792752,
+    "fisher_p": 0.2174132299070879
+  },
+  "ssw_type": {
+    "n_split": 3,
+    "n_displacement": 13,
+    "split_mean": -0.8375495453475766,
+    "disp_mean": 0.2561680431419226
+  }
+}

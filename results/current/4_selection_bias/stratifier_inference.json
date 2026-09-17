@@ -1,0 +1,197 @@
+{
+  "n_beta": 4042,
+  "n_null": 3000,
+  "stratifiers": {
+    "vT_pre30": {
+      "class": "pre",
+      "n_events": 42,
+      "window": [
+        -30,
+        -1
+      ],
+      "dY_observed": 0.1643,
+      "dS": 0.4384,
+      "beta": -0.5562,
+      "residual": 0.4081,
+      "p_residual": 0.303,
+      "null_residual_sd": 0.3678,
+      "slope_observed": 0.126,
+      "slope_residual": 0.6822,
+      "p_slope": 0.20466666666666666,
+      "interpretable_causally": true,
+      "note": "",
+      "q_residual": 0.707,
+      "q_slope": 0.5983
+    },
+    "vT_pre15": {
+      "class": "pre",
+      "n_events": 42,
+      "window": [
+        -15,
+        -1
+      ],
+      "dY_observed": -0.0266,
+      "dS": 0.7868,
+      "beta": -0.3472,
+      "residual": 0.2465,
+      "p_residual": 0.5486666666666666,
+      "null_residual_sd": 0.3653,
+      "slope_observed": 0.4113,
+      "slope_residual": 0.7585,
+      "p_slope": 0.053,
+      "interpretable_causally": true,
+      "note": "",
+      "q_residual": 0.7271,
+      "q_slope": 0.371
+    },
+    "u10_pre": {
+      "class": "pre",
+      "n_events": 29,
+      "window": [
+        -45,
+        -16
+      ],
+      "dY_observed": -0.7058,
+      "dS": 0.8631,
+      "beta": -0.0261,
+      "residual": -0.6833,
+      "p_residual": 0.15933333333333333,
+      "null_residual_sd": 0.4878,
+      "slope_observed": -0.4504,
+      "slope_residual": -0.4244,
+      "p_slope": 0.25641880626875624,
+      "interpretable_causally": true,
+      "note": "",
+      "q_residual": 0.5577,
+      "q_slope": 0.5983
+    },
+    "u10_post30": {
+      "class": "strat",
+      "n_events": 29,
+      "window": [
+        0,
+        30
+      ],
+      "dY_observed": 0.4786,
+      "dS": 0.9826,
+      "beta": 0.5603,
+      "residual": -0.072,
+      "p_residual": 0.8749583194398133,
+      "null_residual_sd": 0.4715,
+      "slope_observed": 0.3682,
+      "slope_residual": -0.1922,
+      "p_slope": 0.5115038346115371,
+      "interpretable_causally": false,
+      "note": "post-onset stratospheric: residual is an UPPER BOUND on contamination, not a causal effect",
+      "q_residual": 0.875,
+      "q_slope": 0.8866
+    },
+    "u10_post45": {
+      "class": "strat",
+      "n_events": 29,
+      "window": [
+        0,
+        45
+      ],
+      "dY_observed": 0.6942,
+      "dS": 0.752,
+      "beta": 0.6178,
+      "residual": 0.2296,
+      "p_residual": 0.6232077359119707,
+      "null_residual_sd": 0.4647,
+      "slope_observed": 0.6562,
+      "slope_residual": 0.0384,
+      "p_slope": 0.9146382127375792,
+      "interpretable_causally": false,
+      "note": "post-onset stratospheric: residual is an UPPER BOUND on contamination, not a causal effect",
+      "q_residual": 0.7271,
+      "q_slope": 0.9146
+    },
+    "z100_post": {
+      "class": "strat",
+      "n_events": 29,
+      "window": [
+        0,
+        30
+      ],
+      "dY_observed": 0.9793,
+      "dS": 1.0689,
+      "beta": 0.6562,
+      "residual": 0.2779,
+      "p_residual": 0.5421807269089697,
+      "null_residual_sd": 0.4444,
+      "slope_observed": 0.5721,
+      "slope_residual": -0.0841,
+      "p_slope": 0.7599199733244415,
+      "interpretable_causally": false,
+      "note": "post-onset stratospheric: residual is an UPPER BOUND on contamination, not a causal effect",
+      "q_residual": 0.7271,
+      "q_slope": 0.8866
+    },
+    "AO_post": {
+      "class": "outcome",
+      "n_events": 43,
+      "window": [
+        8,
+        52
+      ],
+      "dY_observed": 1.7681,
+      "dS": 0.9198,
+      "beta": 1.8484,
+      "residual": 0.068,
+      "p_residual": 0.039,
+      "null_residual_sd": 0.0331,
+      "slope_observed": 1.8683,
+      "slope_residual": 0.0199,
+      "p_slope": 0.6603333333333333,
+      "interpretable_causally": true,
+      "note": "",
+      "q_residual": 0.273,
+      "q_slope": 0.8866
+    }
+  },
+  "u10_pre_stress": {
+    "window_-45_-16": {
+      "contrast": -0.7058,
+      "beta": -0.0781,
+      "residual": -0.6384,
+      "n": 29
+    },
+    "window_-60_-31": {
+      "contrast": 0.1784,
+      "beta": -0.0439,
+      "residual": 0.2211,
+      "n": 29
+    },
+    "window_-30_-1": {
+      "contrast": -0.3525,
+      "beta": 0.0519,
+      "residual": -0.4003,
+      "n": 29
+    },
+    "window_-45_-1": {
+      "contrast": -0.234,
+      "beta": 0.0017,
+      "residual": -0.2354,
+      "n": 29
+    },
+    "window_-60_-16": {
+      "contrast": -0.1526,
+      "beta": -0.0029,
+      "residual": -0.1503,
+      "n": 29
+    },
+    "split_median": -0.6563,
+    "split_terciles": -0.7141,
+    "split_quartiles": -0.578,
+    "slope_full": -0.4504,
+    "jackknife_range": [
+      -0.7296,
+      -0.3294
+    ],
+    "jackknife_sign_stable": true,
+    "doy_high_mean": 46.1,
+    "doy_low_mean": 16.5
+  },
+  "u10_pre_verdict": "DOES NOT SURVIVE as a confirmed result: fails FDR. Report as exploratory only."
+}

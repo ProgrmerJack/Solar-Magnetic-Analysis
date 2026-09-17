@@ -1,0 +1,137 @@
+{
+  "phase1_bridging": {
+    "n_events": 13,
+    "bridge_ratio_increase": 12,
+    "bridge_ratio_p": 0.00048828125,
+    "bridge_ratio_d": 0.9847805698257116,
+    "bridge_ratio_mean_delta": 145.80263202275734,
+    "overburden_increase": 13,
+    "overburden_p": 0.000244140625,
+    "overburden_mean_delta_mm": 137.1240544276706,
+    "pen_depth_increase": 7,
+    "pen_depth_p": 0.2734375,
+    "pen_depth_mean_delta": 1.167230840183799
+  },
+  "phase2_interaction": {
+    "swe_vs_sn38": {
+      "r": -0.07371817693409242,
+      "p": 0.000308941308909273
+    },
+    "swe_vs_avalanche": {
+      "r": 0.08235954071758403,
+      "p": 5.754581016834222e-05
+    },
+    "bridge_vs_avalanche": {
+      "r": 0.04589626046188078,
+      "p": 0.025274607607664663
+    },
+    "high_swe_stability_aval": {
+      "r": -0.15771373837763636,
+      "p": 4.184198166543243e-08
+    },
+    "low_swe_stability_aval": {
+      "r": -0.14880293298203112,
+      "p": 2.8253019359483623e-07
+    },
+    "swe_tercile_corrs": [
+      {
+        "tercile": "low",
+        "r": -0.16381190819498792,
+        "p": 4.189829755037683e-06,
+        "n": 781
+      },
+      {
+        "tercile": "mid",
+        "r": -0.10901871098575655,
+        "p": 0.0020555415627497844,
+        "n": 797
+      },
+      {
+        "tercile": "high",
+        "r": -0.1734460609165759,
+        "p": 8.248810915161352e-07,
+        "n": 798
+      }
+    ],
+    "hs_tercile_corrs": [
+      {
+        "tercile": "low",
+        "r": -0.1749299375826558,
+        "p": 8.849166488197565e-07,
+        "n": 780
+      },
+      {
+        "tercile": "mid",
+        "r": -0.12291170204096089,
+        "p": 0.0004975608604246112,
+        "n": 799
+      },
+      {
+        "tercile": "high",
+        "r": -0.1298991528801682,
+        "p": 0.00023595438251630102,
+        "n": 797
+      }
+    ]
+  },
+  "phase4_variance": {
+    "observed_chain": [
+      {
+        "link": "Strat 10hPa \u2192 Surface 2m T",
+        "r": 0.076,
+        "p": 0.0001
+      },
+      {
+        "link": "Surface 2m T \u2192 Dry avalanches",
+        "r": -0.064,
+        "p": 0.001
+      }
+    ],
+    "end_to_end_r": 0.004864,
+    "published_comparison": [
+      {
+        "study": "Baldwin & Dunkerton 2001",
+        "metric": "NAO shift after SSW",
+        "r_approx": 0.15,
+        "context": "SSW\u2192NAO index"
+      },
+      {
+        "study": "Sigmond et al 2013",
+        "metric": "Surface temp anomaly",
+        "r_approx": 0.1,
+        "context": "SSW\u21922m temp"
+      },
+      {
+        "study": "Kidston et al 2015",
+        "metric": "NH surface weather skill",
+        "r_approx": 0.08,
+        "context": "Strat\u2192surface forecast"
+      },
+      {
+        "study": "Kolstad et al 2010",
+        "metric": "Cold outbreak probability",
+        "r_approx": 0.12,
+        "context": "Weak vortex\u2192cold"
+      }
+    ]
+  },
+  "phase5_event_mechanism": {
+    "bridge_vs_aval": {
+      "r": 0.08827661782921417,
+      "p": 0.7742848945872517
+    },
+    "swe_vs_aval": {
+      "r": 0.06344881906474768,
+      "p": 0.836851263546061
+    },
+    "hs_vs_aval": {
+      "r": 0.2565539205661537,
+      "p": 0.39749132118901254
+    },
+    "sn38_vs_aval": {
+      "r": -0.4137966460744415,
+      "p": 0.15984525085415474
+    },
+    "n_events": 13
+  }
+}

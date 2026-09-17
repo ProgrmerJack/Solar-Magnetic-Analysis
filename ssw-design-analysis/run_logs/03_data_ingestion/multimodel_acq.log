@@ -1,0 +1,51 @@
+=== CESM2-FV2 ===
+CESM2-FV2 historical: 1 members with both ua and psl daily
+  ['r1i1p1f1']
+
+    chunks 70 MB x 382 -> 24 threads
+C:\Users\Jack0\Solar-Magnetic-Analysis\ssw-design-analysis\03_data_ingestion\acquire_cmip6_ensemble.py:101: RuntimeWarning: Mean of empty slice
+  return np.nanmean(blk, axis=-1)                          # mean over lon
+    chunks 89 MB x 38 -> 24 threads
+[1/1] r1i1p1f1: 60,226 days, read 30.0 GB in 20.5 min (24 MB/s) -> CESM2-FV2_r1i1p1f1_zm.nc (209 MB)
+
+1 members on disk, 0.21 GB retained
+  ~165 model winters available (observations provide 47)
+=== MPI-ESM1-2-LR ===
+MPI-ESM1-2-LR historical: 1 members with both ua and psl daily
+  ['r1i1p1f1']
+
+    chunks 90 MB x 397 -> 24 threads
+    chunks 108 MB x 42 -> 24 threads
+[1/1] r1i1p1f1: 60,265 days, read 40.0 GB in 23.9 min (28 MB/s) -> MPI-ESM1-2-LR_r1i1p1f1_zm.nc (209 MB)
+
+1 members on disk, 0.21 GB retained
+  ~165 model winters available (observations provide 47)
+=== IITM-ESM ===
+IITM-ESM historical: 1 members with both ua and psl daily
+  ['r1i1p1f1']
+
+    chunks 54 MB x 649 -> 24 threads
+[1/1] r1i1p1f1: FAILED ValueError day 29 must be in range 1..28 for month 2 in year 1900, at position 18
+
+0 members on disk, 0.00 GB retained
+  ~0 model winters available (observations provide 47)
+=== MPI-ESM-1-2-HAM ===
+MPI-ESM-1-2-HAM historical: 1 members with both ua and psl daily
+  ['r1i1p1f1']
+
+    chunks 90 MB x 397 -> 24 threads
+    chunks 107 MB x 42 -> 24 threads
+[1/1] r1i1p1f1: 60,265 days, read 40.0 GB in 25.1 min (27 MB/s) -> MPI-ESM-1-2-HAM_r1i1p1f1_zm.nc (209 MB)
+
+1 members on disk, 0.21 GB retained
+  ~165 model winters available (observations provide 47)
+=== INM-CM5-0 ===
+INM-CM5-0 historical: 1 members with both ua and psl daily
+  ['r1i1p1f1']
+
+    chunks 68 MB x 615 -> 24 threads
+    chunks 90 MB x 59 -> 24 threads
+[1/1] r1i1p1f1: 60,225 days, read 46.8 GB in 24.3 min (32 MB/s) -> INM-CM5-0_r1i1p1f1_zm.nc (261 MB)
+
+1 members on disk, 0.26 GB retained
+  ~165 model winters available (observations provide 47)

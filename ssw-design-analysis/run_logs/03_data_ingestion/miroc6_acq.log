@@ -1,0 +1,12 @@
+C:\Users\Jack0\Solar-Magnetic-Analysis\ssw-design-analysis\03_data_ingestion\acquire_cmip6_ensemble.py:92: RuntimeWarning: Mean of empty slice
+  return np.nanmean(blk, axis=-1)                          # mean over lon
+MIROC6 historical: 2 members with both ua and psl daily
+  ['r10i1p1f1', 'r1i1p1f1']
+
+[1/2] r10i1p1f1: 60,265 days, read 71.1 GB in 38.8 min (31 MB/s) -> MIROC6_r10i1p1f1_zm.nc (278 MB)
+C:\Users\Jack0\Solar-Magnetic-Analysis\ssw-design-analysis\03_data_ingestion\acquire_cmip6_ensemble.py:92: RuntimeWarning: Mean of empty slice
+  return np.nanmean(blk, axis=-1)                          # mean over lon
+[2/2] r1i1p1f1: 60,265 days, read 71.1 GB in 33.4 min (36 MB/s) -> MIROC6_r1i1p1f1_zm.nc (278 MB)
+
+2 members on disk, 0.56 GB retained
+  ~330 model winters available (observations provide 47)

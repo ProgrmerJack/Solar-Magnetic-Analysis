@@ -1,0 +1,29 @@
+REAL events: 43  ->  dSSW 30, nSSW 13 (70% classified downward)
+
+outcome   ALL events    dSSW only
+--------------------------------
+ao           -0.895       -1.433
+nao          -0.300       -0.464
+pna          +0.119       +0.186
+  300/1500 null draws
+  600/1500 null draws
+  900/1500 null draws
+  1200/1500 null draws
+  1500/1500 null draws
+
+=== NULL (1500 draws, true effect = 0) ===
+  null centres on zero? all-pseudo-event mean AO = +0.003  (was +0.279 before correction (a))
+  classification RATE: real 70% vs null 38%   P(null >= real) = 0.0000
+
+outcome   real dSSW   null crit  null matched  reproduced
+------------------------------------------------------------
+ao          -1.433      -1.051        -0.529         37%
+nao         -0.464      -0.292        -0.140         30%
+pna         +0.186      +0.110        +0.082         44%
+
+  'null matched' selects the same FRACTION of pseudo-events as the
+  criterion selects of real ones, so it is the fair comparison.
+  'reproduced' = how much of the published-style dSSW number that
+  selection alone accounts for, with a true effect of exactly zero.
+
+Saved -> selection_on_outcome.json

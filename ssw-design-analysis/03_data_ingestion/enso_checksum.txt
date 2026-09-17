@@ -1,0 +1,2 @@
+e4d7f0a58015964fce39e6ecb1df2552af5de87bd11237ec86e4253121199ac7  oni.data
+# https://psl.noaa.gov/data/correlation/oni.data, retrieved 2026-07-30T17:32:19Z

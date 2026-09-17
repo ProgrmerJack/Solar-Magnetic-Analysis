@@ -1,0 +1,20 @@
+AAO: 8638 winter days 1979-01-01..2026-04-30, 30 real onsets in range
+observed +45..+60: -0.659 (p=0.0200)
+clean days after removing real-event zone (-60, 75): 5121/8638 (59%)
+  500/2000 draws, running mean -0.0124
+  1000/2000 draws, running mean -0.0145
+  1500/2000 draws, running mean -0.0132
+  2000/2000 draws, running mean -0.0178
+
+=== clean pseudo-onset null on the AAO, 2000 draws ===
+  null mean at +45..+60: -0.0178  (sd 0.3681)
+  null 95% range      : [-0.733, +0.691]
+  observed            : -0.659
+  P(null <= observed) : 0.0405
+
+  null mean by bin: -60..-46 -0.032  -45..-31 -0.029  -30..-16 -0.040  -15..-1 -0.034  +0..+14 -0.031  +15..+29 +0.031  +30..+44 -0.073  +45..+60 -0.018
+
+  null far from zero at this bin -> reading B (AAO-specific residual structure; AO results stand)
+  null centred on zero          -> reading A (estimator clean; the AAO anomaly is real and unexplained)
+
+Saved -> aao_null.json

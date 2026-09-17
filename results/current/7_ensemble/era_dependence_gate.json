@@ -1,0 +1,415 @@
+{
+  "split": "1979-01-01",
+  "variance": {
+    "air_K_100hPa": {
+      "anom_sd_pre": 3.447,
+      "anom_sd_post": 3.618,
+      "sd_ratio": 0.953,
+      "interannual_sd_ratio": 0.98,
+      "mean_diff": 1.043,
+      "pass": true
+    },
+    "air_K_70hPa": {
+      "anom_sd_pre": 4.171,
+      "anom_sd_post": 4.159,
+      "sd_ratio": 1.003,
+      "interannual_sd_ratio": 1.047,
+      "mean_diff": 1.466,
+      "pass": true
+    },
+    "air_K_50hPa": {
+      "anom_sd_pre": 4.607,
+      "anom_sd_post": 4.648,
+      "sd_ratio": 0.991,
+      "interannual_sd_ratio": 1.064,
+      "mean_diff": 1.607,
+      "pass": true
+    },
+    "air_K_30hPa": {
+      "anom_sd_pre": 5.15,
+      "anom_sd_post": 5.468,
+      "sd_ratio": 0.942,
+      "interannual_sd_ratio": 1.069,
+      "mean_diff": 1.147,
+      "pass": true
+    },
+    "air_K_20hPa": {
+      "anom_sd_pre": 5.57,
+      "anom_sd_post": 6.314,
+      "sd_ratio": 0.882,
+      "interannual_sd_ratio": 1.01,
+      "mean_diff": 0.83,
+      "pass": true
+    },
+    "air_K_10hPa": {
+      "anom_sd_pre": 5.858,
+      "anom_sd_post": 7.926,
+      "sd_ratio": 0.739,
+      "interannual_sd_ratio": 0.685,
+      "mean_diff": -0.228,
+      "pass": false
+    },
+    "hgt_m_100hPa": {
+      "anom_sd_pre": 116.042,
+      "anom_sd_post": 113.476,
+      "sd_ratio": 1.023,
+      "interannual_sd_ratio": 1.077,
+      "mean_diff": 16.694,
+      "pass": true
+    },
+    "hgt_m_70hPa": {
+      "anom_sd_pre": 149.852,
+      "anom_sd_post": 148.197,
+      "sd_ratio": 1.011,
+      "interannual_sd_ratio": 1.072,
+      "mean_diff": 29.884,
+      "pass": true
+    },
+    "hgt_m_50hPa": {
+      "anom_sd_pre": 187.518,
+      "anom_sd_post": 186.4,
+      "sd_ratio": 1.006,
+      "interannual_sd_ratio": 1.071,
+      "mean_diff": 45.213,
+      "pass": true
+    },
+    "hgt_m_30hPa": {
+      "anom_sd_pre": 251.444,
+      "anom_sd_post": 251.385,
+      "sd_ratio": 1.0,
+      "interannual_sd_ratio": 1.078,
+      "mean_diff": 67.406,
+      "pass": true
+    },
+    "hgt_m_20hPa": {
+      "anom_sd_pre": 304.491,
+      "anom_sd_post": 308.388,
+      "sd_ratio": 0.987,
+      "interannual_sd_ratio": 1.08,
+      "mean_diff": 78.768,
+      "pass": true
+    },
+    "hgt_m_10hPa": {
+      "anom_sd_pre": 382.743,
+      "anom_sd_post": 416.807,
+      "sd_ratio": 0.918,
+      "interannual_sd_ratio": 1.026,
+      "mean_diff": 86.943,
+      "pass": true
+    },
+    "uwnd_ms_100hPa": {
+      "anom_sd_pre": 5.3,
+      "anom_sd_post": 5.372,
+      "sd_ratio": 0.987,
+      "interannual_sd_ratio": 1.059,
+      "mean_diff": -0.275,
+      "pass": true
+    },
+    "uwnd_ms_70hPa": {
+      "anom_sd_pre": 6.641,
+      "anom_sd_post": 6.874,
+      "sd_ratio": 0.966,
+      "interannual_sd_ratio": 1.043,
+      "mean_diff": -0.241,
+      "pass": true
+    },
+    "uwnd_ms_50hPa": {
+      "anom_sd_pre": 8.089,
+      "anom_sd_post": 8.486,
+      "sd_ratio": 0.953,
+      "interannual_sd_ratio": 1.029,
+      "mean_diff": -0.216,
+      "pass": true
+    },
+    "uwnd_ms_30hPa": {
+      "anom_sd_pre": 10.366,
+      "anom_sd_post": 11.036,
+      "sd_ratio": 0.939,
+      "interannual_sd_ratio": 1.01,
+      "mean_diff": -0.125,
+      "pass": true
+    },
+    "uwnd_ms_20hPa": {
+      "anom_sd_pre": 11.999,
+      "anom_sd_post": 12.913,
+      "sd_ratio": 0.929,
+      "interannual_sd_ratio": 0.995,
+      "mean_diff": 0.074,
+      "pass": true
+    },
+    "uwnd_ms_10hPa": {
+      "anom_sd_pre": 14.16,
+      "anom_sd_post": 15.733,
+      "sd_ratio": 0.9,
+      "interannual_sd_ratio": 0.967,
+      "mean_diff": 0.666,
+      "pass": true
+    }
+  },
+  "independent_era5": {
+    "era5_column": "nam_150",
+    "1959-1978": {
+      "n": 3025,
+      "corr": 0.9315
+    },
+    "1979-2022": {
+      "n": 6665,
+      "corr": 0.9485
+    },
+    "drop": 0.017
+  },
+  "n_events_total": 42,
+  "n_events_pre": 12,
+  "n_events_post": 30,
+  "beta": {
+    "vT_pre30": {
+      "pre": -1.1668,
+      "pre_CI95": [
+        -1.313,
+        -1.011
+      ],
+      "post": -0.5652,
+      "post_CI95": [
+        -0.672,
+        -0.466
+      ],
+      "CIs_overlap": false
+    },
+    "vT_pre15": {
+      "pre": -0.5149,
+      "pre_CI95": [
+        -0.608,
+        -0.421
+      ],
+      "post": -0.3389,
+      "post_CI95": [
+        -0.417,
+        -0.271
+      ],
+      "CIs_overlap": false
+    },
+    "u10_pre": {
+      "pre": -0.0123,
+      "pre_CI95": [
+        -0.073,
+        0.054
+      ],
+      "post": -0.0058,
+      "post_CI95": [
+        -0.063,
+        0.055
+      ],
+      "CIs_overlap": true
+    },
+    "u10_post30": {
+      "pre": 0.6189,
+      "pre_CI95": [
+        0.565,
+        0.674
+      ],
+      "post": 0.5543,
+      "post_CI95": [
+        0.51,
+        0.598
+      ],
+      "CIs_overlap": true
+    },
+    "u10_post45": {
+      "pre": 0.642,
+      "pre_CI95": [
+        0.578,
+        0.701
+      ],
+      "post": 0.6019,
+      "post_CI95": [
+        0.552,
+        0.654
+      ],
+      "CIs_overlap": true
+    },
+    "z100_post": {
+      "pre": 0.688,
+      "pre_CI95": [
+        0.646,
+        0.728
+      ],
+      "post": 0.646,
+      "post_CI95": [
+        0.603,
+        0.689
+      ],
+      "CIs_overlap": true
+    },
+    "AO_post": {
+      "pre": 1.8733,
+      "pre_CI95": [
+        1.861,
+        1.886
+      ],
+      "post": 1.7901,
+      "post_CI95": [
+        1.774,
+        1.804
+      ],
+      "CIs_overlap": false
+    }
+  },
+  "residual": {
+    "vT_pre30": {
+      "pre": 1.1084,
+      "post": 0.0753,
+      "difference": 1.0331,
+      "difference_CI95": [
+        -0.848,
+        1.947
+      ],
+      "consistent": true
+    },
+    "vT_pre15": {
+      "pre": 0.6532,
+      "post": 0.3878,
+      "difference": 0.2655,
+      "difference_CI95": [
+        -1.087,
+        1.665
+      ],
+      "consistent": true
+    },
+    "u10_pre": {
+      "pre": 1.3293,
+      "post": -0.498,
+      "difference": 1.8273,
+      "difference_CI95": [
+        0.542,
+        2.699
+      ],
+      "consistent": false
+    },
+    "u10_post30": {
+      "pre": -0.2508,
+      "post": -0.1367,
+      "difference": -0.114,
+      "difference_CI95": [
+        -1.032,
+        1.625
+      ],
+      "consistent": true
+    },
+    "u10_post45": {
+      "pre": -0.1145,
+      "post": 0.1507,
+      "difference": -0.2653,
+      "difference_CI95": [
+        -1.295,
+        1.129
+      ],
+      "consistent": true
+    },
+    "z100_post": {
+      "pre": 0.0599,
+      "post": 0.2789,
+      "difference": -0.219,
+      "difference_CI95": [
+        -1.273,
+        1.1
+      ],
+      "consistent": true
+    },
+    "AO_post": {
+      "pre": 0.1053,
+      "post": 0.052,
+      "difference": 0.0532,
+      "difference_CI95": [
+        -0.369,
+        0.257
+      ],
+      "consistent": true
+    }
+  },
+  "T1_pass": true,
+  "T2_pass": false,
+  "T2_n_betas_agreeing": 4,
+  "pooling_allowed": false,
+  "verdict": "POOLING REFUSED. T1 passed, T2 4/7 betas agree. The observational arm stays at n=30 (1979 onward) and the pre-satellite extension is reported only as a sensitivity test, with the failing diagnostic stated.",
+  "per_stratifier": {
+    "vT_pre30": {
+      "delta_beta": -0.6016,
+      "dS_pre": 0.4781,
+      "correction_shift": -0.2876,
+      "residual_CI_halfwidth": 1.3975,
+      "shift_over_uncertainty": 0.206,
+      "beta_difference_immaterial": true,
+      "residuals_agree": true,
+      "pool": true
+    },
+    "vT_pre15": {
+      "delta_beta": -0.1761,
+      "dS_pre": 0.804,
+      "correction_shift": -0.1415,
+      "residual_CI_halfwidth": 1.376,
+      "shift_over_uncertainty": 0.103,
+      "beta_difference_immaterial": true,
+      "residuals_agree": true,
+      "pool": true
+    },
+    "u10_pre": {
+      "delta_beta": -0.0066,
+      "dS_pre": 0.6914,
+      "correction_shift": -0.0045,
+      "residual_CI_halfwidth": 1.0785,
+      "shift_over_uncertainty": 0.004,
+      "beta_difference_immaterial": true,
+      "residuals_agree": false,
+      "pool": false
+    },
+    "u10_post30": {
+      "delta_beta": 0.0646,
+      "dS_pre": 1.0118,
+      "correction_shift": 0.0653,
+      "residual_CI_halfwidth": 1.3285,
+      "shift_over_uncertainty": 0.049,
+      "beta_difference_immaterial": true,
+      "residuals_agree": true,
+      "pool": true
+    },
+    "u10_post45": {
+      "delta_beta": 0.0401,
+      "dS_pre": 0.7631,
+      "correction_shift": 0.0306,
+      "residual_CI_halfwidth": 1.212,
+      "shift_over_uncertainty": 0.025,
+      "beta_difference_immaterial": true,
+      "residuals_agree": true,
+      "pool": true
+    },
+    "z100_post": {
+      "delta_beta": 0.042,
+      "dS_pre": 0.8346,
+      "correction_shift": 0.0351,
+      "residual_CI_halfwidth": 1.1865,
+      "shift_over_uncertainty": 0.03,
+      "beta_difference_immaterial": true,
+      "residuals_agree": true,
+      "pool": true
+    },
+    "AO_post": {
+      "delta_beta": 0.0832,
+      "dS_pre": 0.753,
+      "correction_shift": 0.0627,
+      "residual_CI_halfwidth": 0.313,
+      "shift_over_uncertainty": 0.2,
+      "beta_difference_immaterial": true,
+      "residuals_agree": true,
+      "pool": true
+    }
+  },
+  "poolable_stratifiers": [
+    "vT_pre30",
+    "vT_pre15",
+    "u10_post30",
+    "u10_post45",
+    "z100_post",
+    "AO_post"
+  ],
+  "headline_recommendation": "Pre-specified global rule REFUSES pooling, and that verdict stands as the headline: the observational arm is n=30. Per-stratifier, 6/7 survive both checks (vT_pre30, vT_pre15, u10_post30, u10_post45, z100_post, AO_post) and the n=42 record is reported for those as a pre-registered sensitivity test, never as the primary number."
+}

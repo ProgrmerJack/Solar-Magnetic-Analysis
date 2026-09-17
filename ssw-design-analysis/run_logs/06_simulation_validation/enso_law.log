@@ -1,0 +1,10 @@
+El Nino onsets (ONI >= 0.5): 14 in 1980-01-01..2026-04-02
+  ['1982-05-15', '1986-09-15', '1991-06-15', '1993-03-15', '1994-09-15', '1997-05-15', '2002-06-15', '2004-08-15'] ...
+  classified 'teleconnecting' on the outcome: 0/14 (0%)
+Traceback (most recent call last):
+  File "C:\Users\Jack0\Solar-Magnetic-Analysis\ssw-design-analysis\06_simulation_validation\selection_law_enso.py", line 177, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\Jack0\Solar-Magnetic-Analysis\ssw-design-analysis\06_simulation_validation\selection_law_enso.py", line 129, in main
+    A = np.concatenate(wsel)
+ValueError: need at least one array to concatenate

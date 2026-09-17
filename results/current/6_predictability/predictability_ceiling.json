@@ -1,0 +1,72 @@
+{
+  "outcome_window": [
+    8,
+    52
+  ],
+  "results": {
+    "CMIP6": {
+      "P1 pre-onset": {
+        "n_features": 20,
+        "ridge": {
+          "cv_r2": 0.0998,
+          "null_mean": -0.002,
+          "null_p95": 0.0067,
+          "p_value": 0.0,
+          "significant": true
+        },
+        "gb": {
+          "cv_r2": 0.0451,
+          "null_mean": -0.0412,
+          "null_p95": -0.018,
+          "p_value": 0.0,
+          "significant": true
+        }
+      },
+      "P2 at-onset": {
+        "n_features": 26,
+        "ridge": {
+          "cv_r2": 0.1121,
+          "null_mean": -0.0002,
+          "null_p95": 0.0081,
+          "p_value": 0.0,
+          "significant": true
+        },
+        "gb": {
+          "cv_r2": 0.0652,
+          "null_mean": -0.0367,
+          "null_p95": -0.0147,
+          "p_value": 0.0,
+          "significant": true
+        }
+      },
+      "P3 + post-onset stratosphere": {
+        "n_features": 38,
+        "ridge": {
+          "cv_r2": 0.4245,
+          "null_mean": 0.0024,
+          "null_p95": 0.0138,
+          "p_value": 0.0,
+          "significant": true
+        },
+        "gb": {
+          "cv_r2": 0.3663,
+          "null_mean": -0.0305,
+          "null_p95": -0.0081,
+          "p_value": 0.0,
+          "significant": true
+        }
+      }
+    }
+  },
+  "power_CMIP6": {
+    "R2=0.02": 0.7,
+    "R2=0.05": 1.0,
+    "R2=0.1": 1.0,
+    "R2=0.2": 1.0
+  },
+  "implied": {
+    "CMIP6 DW-NDW contrast": 0.6294,
+    "Karpechko AO, observations": 1.2852,
+    "ACP 26,3723 published NAO": 0.3368
+  }
+}

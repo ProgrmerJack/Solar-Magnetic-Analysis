@@ -1,0 +1,147 @@
+{
+  "timestamp": "2026-04-17T13:43:56.705933",
+  "data_info": {
+    "file": "data/processed/analysis_panel_v2.parquet",
+    "n_total_rows": 7518,
+    "n_winter_rows": 3176,
+    "n_model_obs": 3176,
+    "n_winters": 21,
+    "outcome_variable": "norway_aval_count (daily avalanche counts)",
+    "exposure_variable": "ssw_within_15d (SSW in prior 15 days)",
+    "grouping_variable": "winter_id",
+    "covariates": [
+      "z500_standardized",
+      "precip_standardized"
+    ]
+  },
+  "descriptive_statistics": {
+    "avalanche_counts": {
+      "mean": 7.228274559193955,
+      "median": 2.0,
+      "std": 9.497807470895575,
+      "min": 2,
+      "max": 40,
+      "variance": 90.20834675419981,
+      "dispersion_ratio": 12.479928095628287
+    },
+    "ssw_exposure": {
+      "n_days_with_ssw": 465,
+      "pct_days_with_ssw": 14.641057934508817,
+      "mean_aval_no_ssw": 7.874585023976392,
+      "mean_aval_with_ssw": 3.460215053763441
+    }
+  },
+  "models": {
+    "gee_nb2_exchangeable": {
+      "method": "GEE NB2 (Exchangeable)",
+      "n_obs": 3176,
+      "n_groups": 21,
+      "ssw_effect": {
+        "coefficient": -0.25208419536231086,
+        "se": 0.0722478171615469,
+        "p_value": 0.00048454098688217135,
+        "irr": 0.7771793004214321,
+        "irr_ci_lower": 0.6745631943933956,
+        "irr_ci_upper": 0.8954056047287068,
+        "interpretation": "SSW reduces avalanche rate by 22.3% (IRR=0.777)"
+      },
+      "z500_effect": {
+        "coefficient": -0.36032140674927804,
+        "p_value": 6.402657575628047e-28
+      },
+      "precip_effect": {
+        "coefficient": 0.1597660737609404,
+        "p_value": 1.0380979690486933e-14
+      },
+      "model_fit": {
+        "aic": 19417.06886354473,
+        "bic": -21745.976242463526,
+        "scale": 1.0
+      }
+    },
+    "gee_poisson_exchangeable": {
+      "method": "GEE Poisson (Exchangeable)",
+      "n_obs": 3176,
+      "n_groups": 21,
+      "ssw_effect": {
+        "coefficient": -0.15374968824157334,
+        "se": 0.03704132810195198,
+        "p_value": 3.3137211418027594e-05,
+        "irr": 0.8574866331373355,
+        "irr_ci_lower": 0.7974383978982056,
+        "irr_ci_upper": 0.9220565851195238,
+        "interpretation": "SSW reduces avalanche rate by 14.3% (IRR=0.857)"
+      },
+      "z500_effect": {
+        "coefficient": -0.1751765010787864,
+        "p_value": 6.235241404673471e-34
+      },
+      "precip_effect": {
+        "coefficient": 0.09266242795798167,
+        "p_value": 3.811812005164444e-13
+      }
+    },
+    "glm_nb2_simple": {
+      "method": "GLM NB2 (no random intercepts)",
+      "n_obs": 3176,
+      "n_groups": 21,
+      "ssw_effect": {
+        "coefficient": -1.0106258188837456,
+        "se": 0.05893280894349413,
+        "p_value": 6.418505505949907e-66,
+        "irr": 0.36399111576446247,
+        "irr_ci_lower": 0.32428447978067093,
+        "irr_ci_upper": 0.4085595846124592,
+        "interpretation": "SSW reduces avalanche rate by 63.6% (IRR=0.364)"
+      },
+      "z500_effect": {
+        "coefficient": -0.301926668484108,
+        "p_value": 2.976697012399564e-38
+      },
+      "precip_effect": {
+        "coefficient": 0.1358992064705847,
+        "p_value": 6.642388400294078e-10
+      },
+      "model_fit": {
+        "aic": 18901.55896271887,
+        "bic": -22261.48614328939,
+        "null_deviance": 3758.665924603255,
+        "deviance": 3315.548309258824
+      }
+    }
+  },
+  "icc": 0.9897615351948958,
+  "comparison_to_prior_results": {
+    "prior_nb2_glm": {
+      "method": "NB2 GLM",
+      "irr": 0.72,
+      "p_value": "<0.001",
+      "note": "Published result"
+    },
+    "prior_gee": {
+      "method": "GEE",
+      "irr": 0.89,
+      "p_value": 0.2,
+      "note": "Published result"
+    },
+    "current_gee_nb2": {
+      "irr": 0.7771793004214321,
+      "p_value": 0.00048454098688217135,
+      "note": "This analysis (exchangeable correlation)"
+    },
+    "current_glm_nb2": {
+      "irr": 0.36399111576446247,
+      "p_value": 6.418505505949907e-66,
+      "note": "This analysis (no random intercepts)"
+    }
+  },
+  "notes": [
+    "GEE with exchangeable correlation approximates random intercept structure",
+    "All covariates are standardized (z-score) for interpretability",
+    "NB2 family: variance = mu + alpha * mu^2 (quadratic)",
+    "Poisson family: variance = mu (for comparison)",
+    "ICC: Intraclass correlation (between-winter variation)",
+    "IRR: Incidence rate ratio = exp(coefficient)",
+    "SSW_within_15d indicates SSW event in prior 15 days"
+  ]
+}

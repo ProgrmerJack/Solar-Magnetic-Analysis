@@ -1,0 +1,29 @@
+{
+  "n_seeds": 60,
+  "n_boot": 6000,
+  "watch_bin": "+45..+60",
+  "indices": {
+    "aao": {
+      "n_events": 30,
+      "effect": -0.6591,
+      "effect_spread_across_seeds": 0.0,
+      "p_min": 0.011,
+      "p_max": 0.0233,
+      "p_median": 0.0167,
+      "seeds_significant": 60,
+      "n_seeds": 60,
+      "verdict": "STABLE"
+    },
+    "pna": {
+      "n_events": 43,
+      "effect": 0.2306,
+      "effect_spread_across_seeds": 0.0,
+      "p_min": 0.0737,
+      "p_max": 0.0977,
+      "p_median": 0.088,
+      "seeds_significant": 0,
+      "n_seeds": 60,
+      "verdict": "STABLE"
+    }
+  }
+}

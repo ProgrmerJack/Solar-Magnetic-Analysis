@@ -1,0 +1,8 @@
+aao: n=30 effect -0.659 (point estimate varies 0.00e+00 across seeds -- it is not random)
+      raw p range 0.0110..0.0233, median 0.0167
+      p<0.05 in 60/60 seeds -> STABLE
+pna: n=43 effect +0.231 (point estimate varies 0.00e+00 across seeds -- it is not random)
+      raw p range 0.0737..0.0977, median 0.0880
+      p<0.05 in 0/60 seeds -> STABLE
+
+Saved -> negcontrol_stability.json

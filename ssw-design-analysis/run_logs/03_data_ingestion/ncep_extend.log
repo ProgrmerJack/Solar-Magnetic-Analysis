@@ -1,0 +1,36 @@
+existing: 1979-01-01 00:00:00+00:00 .. 2024-12-31 00:00:00+00:00  (16,802 days)
+378 variable-year-level requests, 4 workers
+  25/378
+  50/378
+  75/378
+  100/378
+  125/378
+  150/378
+  175/378
+  200/378
+  225/378
+  250/378
+  275/378
+  300/378
+  325/378
+  350/378
+  375/378
+
+extension: 1958-01-01 00:00:00+00:00 .. 1978-12-31 00:00:00+00:00 (7,670 days, 36 cols) -> ncep_presatellite_extension.parquet
+target columns not produced: none
+
+=== PRE-SATELLITE PLAUSIBILITY CHECK (winter DJF) ===
+column                     1958-1978   1979-2024    ratio
+----------------------------------------------------------
+uwnd_ms_10hPa                  26.54       25.87    1.026
+uwnd_ms_100hPa                 11.42       11.70    0.976
+air_K_10hPa                   215.77      216.00    0.999
+hgt_m_100hPa                15452.26    15435.56    1.001
+
+uwnd_ms_10hPa        SD       14.34       16.44    0.873
+air_K_10hPa          SD        6.29        9.34    0.673
+hgt_m_100hPa         SD      121.45      120.06    1.012
+
+  A variance ratio far below 1 at 10 hPa is the signature of a
+  radiosonde-era analysis being nudged toward climatology, and would
+  suppress event detection in the pre-satellite arm.

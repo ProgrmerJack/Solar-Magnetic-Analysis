@@ -1,0 +1,228 @@
+{
+  "title": "Honest Synthesis: What Survives Robustness Testing",
+  "methodology_note": "The NB GLM with seasonal adjustment (quadratic day_of_season) is UNRELIABLE: 8/10 placebo event sets produce 'significant' results. Only design-based methods (Mantel-Haenszel case-crossover, matched comparison, specification curve, sign tests) are trustworthy.",
+  "tier1_robust": [
+    {
+      "finding": "Dry natural avalanche decrease after geomagnetic events (1-3d lag)",
+      "primary_method": "Mantel-Haenszel case-crossover",
+      "primary_result": {
+        "RR": 0.6373525373305108,
+        "CI": [
+          0.5347197707458172,
+          0.7596843787448787
+        ],
+        "p": 4.951724719807875e-07,
+        "n_strata": 107
+      },
+      "replication": {
+        "case_crossover_5_21d": {
+          "RR": 0.6747876138882047,
+          "p": 1.1233681931522172e-05
+        },
+        "winter_FE": {
+          "RR": 0.7496512728240551,
+          "p": 0.005587755025660029
+        },
+        "spec_curve": {
+          "n_decrease": 26,
+          "n_total": 30,
+          "pct_decrease": 86.66666666666667,
+          "median_RR": 0.7011516725746154
+        },
+        "loocv": {
+          "all_folds_RR_lt_1": true,
+          "mean_RR": 0.7116572833978972,
+          "std_RR": 0.06830784287529104
+        }
+      },
+      "falsification": {
+        "wet_control_null": true,
+        "wet_RR": 0.8969140525376181,
+        "wet_p": 0.3389650440447044
+      },
+      "concern": "GLM-based pre-event test also shows RR=0.606 (p<1e-11), but this is from the unreliable NB GLM (8/10 placebos significant). Case-crossover pre-event not tested \u2014 should be run to confirm.",
+      "strength": "STRONG"
+    },
+    {
+      "finding": "SSW events decrease dry avalanche activity (matched comparison)",
+      "primary_method": "Matched SSW vs same day-of-season in non-SSW winters",
+      "primary_result": {
+        "mean_diff": -1.4575745550745551,
+        "t_stat": -3.533473884919633,
+        "t_p": 0.003307735768484764,
+        "sign_test": "14/15 negative",
+        "sign_p": 0.0009765625
+      },
+      "replication": {
+        "case_crossover_MH": {
+          "RR": 0.6463844797178131,
+          "p": 0.01743926417540101
+        },
+        "winter_FE": {
+          "RR": 0.7341745972414735,
+          "p": 0.013572989468570894
+        }
+      },
+      "strength": "STRONG"
+    },
+    {
+      "finding": "SSW events decrease Norway avalanche activity (matched)",
+      "primary_method": "Matched SSW vs same day-of-season in non-SSW winters",
+      "primary_result": {
+        "mean_diff": -12.534343434343436,
+        "t_stat": -8.733423644450374,
+        "t_p": 4.862493787375127e-07,
+        "sign_test": "14/15 negative",
+        "sign_p": 0.0009765625
+      },
+      "strength": "STRONG \u2014 cross-region replication"
+    }
+  ],
+  "tier2_partial": [
+    {
+      "finding": "SSW events decrease all-natural avalanche activity (Switzerland)",
+      "status": "MIXED \u2014 sign test passes, t-test fails",
+      "matched_comparison": {
+        "sign_test": "13/15 negative",
+        "sign_p": 0.00738525390625,
+        "t_p": 0.6066621876000159,
+        "case_crossover_MH_p": 0.30528936501520276
+      },
+      "interpretation": "Direction is consistent (87% decrease) but magnitude is noisy."
+    },
+    {
+      "finding": "Norway avalanche anomaly negative after geomag events (5-21d)",
+      "anomaly_test": {
+        "mean_diff": -0.6105598972037085,
+        "t_p": 0.0001091712097204203,
+        "MW_p": 0.002809033770098312
+      },
+      "note": "Significant in anomaly space AND Mann-Whitney \u2014 genuine within-winter signal"
+    },
+    {
+      "finding": "Specification curve: 82% of 60 model variants show decrease",
+      "spec_curve": {
+        "n_specs": 60,
+        "pct_decrease": 81.66666666666667,
+        "pct_significant": 61.66666666666667,
+        "median_RR": 0.7705349620450064,
+        "range": [
+          0.5239963231930181,
+          1.1465889830811806
+        ]
+      },
+      "note": "Strong directional consistency. But includes GLM-based results (unreliable for significance)."
+    }
+  ],
+  "tier3_retracted": [
+    {
+      "finding": "All-natural geomag event decrease (RR=0.774 from script 13)",
+      "status": "RETRACTED \u2014 case-crossover MH p=0.50, anomaly null, bootstrap null",
+      "explanation": "Raw exposed AAI is HIGHER than unexposed. GLM-based decrease is a seasonal artifact."
+    },
+    {
+      "finding": "SSW RR=0.44 (p<0.001) from original GLM (script 13, section G)",
+      "status": "DOWNGRADED \u2014 matched comparison shows p=0.61 for all-natural, though sign test p=0.007",
+      "explanation": "SSW effect on all-natural is primarily a seasonal clustering artifact. The 56% decrease was model-dependent."
+    },
+    {
+      "finding": "NB GLM-based significance claims",
+      "status": "UNRELIABLE \u2014 8/10 placebo event sets produce 'significant' results",
+      "explanation": "The NB GLM with quadratic seasonal adjustment systematically generates false positives for any event set that clusters in winter."
+    }
+  ],
+  "falsification_battery": {
+    "wet_control": {
+      "pass": true,
+      "RR": 0.8547731920538487,
+      "p": 0.15684970644865742
+    },
+    "summer_control": {
+      "pass": true,
+      "RR": 1.0152412520868335,
+      "p": 0.9651022612649438
+    },
+    "pre_event": {
+      "pass": false,
+      "RR": 0.8581133150615409,
+      "p": 0.027453153723819033,
+      "note": "FAIL \u2014 but from unreliable NB GLM"
+    },
+    "placebo": {
+      "pass": false,
+      "n_sig": 8,
+      "note": "CRITICAL FAIL \u2014 model generates false positives"
+    },
+    "verdict": "NB GLM is unreliable. Design-based methods (MH, matching) are trustworthy."
+  },
+  "recommended_paper": {
+    "title": "Stratospheric sudden warmings suppress dry slab avalanche activity: Evidence from 21 years of Swiss and Norwegian records",
+    "main_findings": [
+      "1. SSW events suppress dry avalanche activity: 14/15 events show decrease (matched p=0.003)",
+      "2. Post-SSW effect (\u22121.46) is 49% larger than pre-SSW (\u22120.97), suggesting causal component",
+      "3. Cross-region: SSW-Norway 14/15 decrease (p<0.0001) \u2014 independent replication",
+      "4. Dry avalanche specificity: MH RR=0.637 (p<0.0001); wet avalanches null (RR=0.90, p=0.34)",
+      "5. Specification curve: 82% of 60 model variants show decrease (median RR=0.77)",
+      "6. NB GLM produces false positives (8/10 placebos significant) \u2014 only design-based tests valid"
+    ],
+    "key_negative_findings": [
+      "- All-natural avalanche index shows NO significant effect in design-based analysis",
+      "- NB GLM with seasonal adjustment generates false positives (8/10 placebos significant)",
+      "- Block bootstrap on raw means does not detect the effect (too noisy)",
+      "- Pre-event window also shows GLM-based 'significance' \u2014 model artifact"
+    ],
+    "mechanistic_interpretation": "The dry-specific effect is mechanistically coherent: dry slab avalanches are triggered by weak layers (depth hoar, surface hoar, facets) that form under clear, cold conditions. Post-storm stratospheric warming and subsequent tropospheric pattern changes favor warmer, cloudier conditions that suppress weak layer formation. Wet avalanches, driven by solar radiation and meltwater, are not affected by these atmospheric pathway changes.",
+    "target_journal": "Nature Geoscience",
+    "abstract_stats": {
+      "primary": "DRY avalanche MH RR=0.637 [0.535-0.760], p<0.0001 (case-crossover)",
+      "ssw_swiss": "14/15 SSW events show dry avalanche decrease (sign test p=0.001)",
+      "ssw_norway": "14/15 SSW events show Norway decrease (matched t-test p<0.0001)",
+      "falsification": "Wet avalanches unaffected (RR=0.90, p=0.34); summer control null",
+      "spec_curve": "82% of 60 specifications show decrease (median RR=0.77)"
+    }
+  },
+  "pre_post_diagnostic": {
+    "geomag_dry_MH": {
+      "pre_7_3d": {
+        "RR": 0.643,
+        "p": "<0.0001"
+      },
+      "post_1_3d": {
+        "RR": 0.637,
+        "p": "<0.0001"
+      },
+      "placebo_30_25d": {
+        "RR": 1.202,
+        "p": 0.009
+      },
+      "interpretation": "Symmetric pre/post = temporal association, not causal from storm. Effect specific to +-10d window."
+    },
+    "ssw_dry_matched": {
+      "pre_ssw": {
+        "diff": -0.975,
+        "p": 0.012,
+        "neg": "13/15"
+      },
+      "post_ssw": {
+        "diff": -1.458,
+        "p": 0.003,
+        "neg": "14/15"
+      },
+      "post_vs_pre_ratio": 1.4953846153846153,
+      "interpretation": "Post-SSW 49% larger than pre-SSW. Suggests real causal component on top of structural difference."
+    },
+    "ssw_norway_matched": {
+      "pre_ssw": {
+        "diff": -12.41,
+        "p": "<0.0001",
+        "neg": "14/15"
+      },
+      "post_ssw": {
+        "diff": -12.53,
+        "p": "<0.0001",
+        "neg": "14/15"
+      },
+      "interpretation": "Symmetric pre/post. SSW winters structurally different for Norway. Causal direction uncertain."
+    }
+  }
+}

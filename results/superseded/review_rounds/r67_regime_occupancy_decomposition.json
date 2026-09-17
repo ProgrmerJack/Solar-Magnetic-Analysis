@@ -1,0 +1,478 @@
+{
+  "per_event": [
+    {
+      "event_date": "1998-12-15",
+      "n_ssw_days": 31,
+      "n_ctrl_days": 185,
+      "ssw_regime_fractions": {
+        "cold_dry": 0.2903,
+        "cold_wet": 0.3548,
+        "warm_dry": 0.2903,
+        "warm_wet": 0.0645
+      },
+      "ctrl_regime_fractions": {
+        "cold_dry": 0.1027,
+        "cold_wet": 0.3027,
+        "warm_dry": 0.5027,
+        "warm_wet": 0.0919
+      },
+      "regime_shift": {
+        "cold_dry": 0.1876,
+        "cold_wet": 0.0521,
+        "warm_dry": -0.2124,
+        "warm_wet": -0.0274
+      },
+      "ssw_count_mean": 0.5483870967741935,
+      "ctrl_count_mean": 0.2810810810810811,
+      "event_rr": 0.2618
+    },
+    {
+      "event_date": "1999-02-26",
+      "n_ssw_days": 31,
+      "n_ctrl_days": 217,
+      "ssw_regime_fractions": {
+        "cold_dry": 0.0645,
+        "cold_wet": 0.5161,
+        "warm_dry": 0.1935,
+        "warm_wet": 0.2258
+      },
+      "ctrl_regime_fractions": {
+        "cold_dry": 0.2166,
+        "cold_wet": 0.4332,
+        "warm_dry": 0.2442,
+        "warm_wet": 0.106
+      },
+      "regime_shift": {
+        "cold_dry": -0.1521,
+        "cold_wet": 0.0829,
+        "warm_dry": -0.0507,
+        "warm_wet": 0.1198
+      },
+      "ssw_count_mean": 0.5483870967741935,
+      "ctrl_count_mean": 1.7972350230414746,
+      "event_rr": 3.9553
+    },
+    {
+      "event_date": "2001-02-11",
+      "n_ssw_days": 31,
+      "n_ctrl_days": 217,
+      "ssw_regime_fractions": {
+        "cold_dry": 0.3226,
+        "cold_wet": 0.2903,
+        "warm_dry": 0.2581,
+        "warm_wet": 0.129
+      },
+      "ctrl_regime_fractions": {
+        "cold_dry": 0.2673,
+        "cold_wet": 0.4286,
+        "warm_dry": 0.1843,
+        "warm_wet": 0.1198
+      },
+      "regime_shift": {
+        "cold_dry": 0.0553,
+        "cold_wet": -0.1382,
+        "warm_dry": 0.0737,
+        "warm_wet": 0.0092
+      },
+      "ssw_count_mean": 0.2903225806451613,
+      "ctrl_count_mean": 1.8755760368663594,
+      "event_rr": 0.5459
+    },
+    {
+      "event_date": "2001-12-30",
+      "n_ssw_days": 31,
+      "n_ctrl_days": 208,
+      "ssw_regime_fractions": {
+        "cold_dry": 0.4839,
+        "cold_wet": 0.2581,
+        "warm_dry": 0.2258,
+        "warm_wet": 0.0323
+      },
+      "ctrl_regime_fractions": {
+        "cold_dry": 0.1587,
+        "cold_wet": 0.3029,
+        "warm_dry": 0.399,
+        "warm_wet": 0.1394
+      },
+      "regime_shift": {
+        "cold_dry": 0.3252,
+        "cold_wet": -0.0448,
+        "warm_dry": -0.1732,
+        "warm_wet": -0.1072
+      },
+      "ssw_count_mean": 0.12903225806451613,
+      "ctrl_count_mean": 1.1346153846153846,
+      "event_rr": 0.3519
+    },
+    {
+      "event_date": "2002-02-17",
+      "n_ssw_days": 31,
+      "n_ctrl_days": 217,
+      "ssw_regime_fractions": {
+        "cold_dry": 0.0323,
+        "cold_wet": 0.4839,
+        "warm_dry": 0.2258,
+        "warm_wet": 0.2581
+      },
+      "ctrl_regime_fractions": {
+        "cold_dry": 0.2304,
+        "cold_wet": 0.4885,
+        "warm_dry": 0.1659,
+        "warm_wet": 0.1152
+      },
+      "regime_shift": {
+        "cold_dry": -0.1982,
+        "cold_wet": -0.0046,
+        "warm_dry": 0.0599,
+        "warm_wet": 0.1429
+      },
+      "ssw_count_mean": 0.3548387096774194,
+      "ctrl_count_mean": 0.8894009216589862,
+      "event_rr": 0.1271
+    },
+    {
+      "event_date": "2003-01-18",
+      "n_ssw_days": 31,
+      "n_ctrl_days": 217,
+      "ssw_regime_fractions": {
+        "cold_dry": 0.5161,
+        "cold_wet": 0.4194,
+        "warm_dry": 0.0323,
+        "warm_wet": 0.0323
+      },
+      "ctrl_regime_fractions": {
+        "cold_dry": 0.2903,
+        "cold_wet": 0.3548,
+        "warm_dry": 0.2212,
+        "warm_wet": 0.1336
+      },
+      "regime_shift": {
+        "cold_dry": 0.2258,
+        "cold_wet": 0.0645,
+        "warm_dry": -0.1889,
+        "warm_wet": -0.1014
+      },
+      "ssw_count_mean": 0.3548387096774194,
+      "ctrl_count_mean": 2.903225806451613,
+      "event_rr": 0.101
+    },
+    {
+      "event_date": "2004-01-05",
+      "n_ssw_days": 31,
+      "n_ctrl_days": 216,
+      "ssw_regime_fractions": {
+        "cold_dry": 0.0968,
+        "cold_wet": 0.6129,
+        "warm_dry": 0.1613,
+        "warm_wet": 0.129
+      },
+      "ctrl_regime_fractions": {
+        "cold_dry": 0.1898,
+        "cold_wet": 0.3194,
+        "warm_dry": 0.3657,
+        "warm_wet": 0.125
+      },
+      "regime_shift": {
+        "cold_dry": -0.093,
+        "cold_wet": 0.2935,
+        "warm_dry": -0.2045,
+        "warm_wet": 0.004
+      },
+      "ssw_count_mean": 0.16129032258064516,
+      "ctrl_count_mean": 1.9444444444444444,
+      "event_rr": 0.2974
+    },
+    {
+      "event_date": "2006-01-21",
+      "n_ssw_days": 31,
+      "n_ctrl_days": 217,
+      "ssw_regime_fractions": {
+        "cold_dry": 0.5484,
+        "cold_wet": 0.1935,
+        "warm_dry": 0.2258,
+        "warm_wet": 0.0323
+      },
+      "ctrl_regime_fractions": {
+        "cold_dry": 0.2949,
+        "cold_wet": 0.3641,
+        "warm_dry": 0.2166,
+        "warm_wet": 0.1244
+      },
+      "regime_shift": {
+        "cold_dry": 0.2535,
+        "cold_wet": -0.1705,
+        "warm_dry": 0.0092,
+        "warm_wet": -0.0922
+      },
+      "ssw_count_mean": 0.41935483870967744,
+      "ctrl_count_mean": 2.792626728110599,
+      "event_rr": 0.3177
+    },
+    {
+      "event_date": "2007-02-24",
+      "n_ssw_days": 31,
+      "n_ctrl_days": 217,
+      "ssw_regime_fractions": {
+        "cold_dry": 0.0323,
+        "cold_wet": 0.2581,
+        "warm_dry": 0.3548,
+        "warm_wet": 0.3548
+      },
+      "ctrl_regime_fractions": {
+        "cold_dry": 0.2074,
+        "cold_wet": 0.4608,
+        "warm_dry": 0.2212,
+        "warm_wet": 0.1106
+      },
+      "regime_shift": {
+        "cold_dry": -0.1751,
+        "cold_wet": -0.2028,
+        "warm_dry": 0.1336,
+        "warm_wet": 0.2442
+      },
+      "ssw_count_mean": 0.3870967741935484,
+      "ctrl_count_mean": 1.9262672811059909,
+      "event_rr": 1.5567
+    },
+    {
+      "event_date": "2008-02-22",
+      "n_ssw_days": 30,
+      "n_ctrl_days": 217,
+      "ssw_regime_fractions": {
+        "cold_dry": 0.1,
+        "cold_wet": 0.1,
+        "warm_dry": 0.7,
+        "warm_wet": 0.1
+      },
+      "ctrl_regime_fractions": {
+        "cold_dry": 0.1982,
+        "cold_wet": 0.4931,
+        "warm_dry": 0.1982,
+        "warm_wet": 0.1106
+      },
+      "regime_shift": {
+        "cold_dry": -0.0982,
+        "cold_wet": -0.3931,
+        "warm_dry": 0.5018,
+        "warm_wet": -0.0106
+      },
+      "ssw_count_mean": 0.06666666666666667,
+      "ctrl_count_mean": 1.9216589861751152,
+      "event_rr": 0.0416
+    },
+    {
+      "event_date": "2009-01-24",
+      "n_ssw_days": 31,
+      "n_ctrl_days": 217,
+      "ssw_regime_fractions": {
+        "cold_dry": 0.4839,
+        "cold_wet": 0.3871,
+        "warm_dry": 0.129,
+        "warm_wet": 0.0
+      },
+      "ctrl_regime_fractions": {
+        "cold_dry": 0.3041,
+        "cold_wet": 0.3871,
+        "warm_dry": 0.1843,
+        "warm_wet": 0.1244
+      },
+      "regime_shift": {
+        "cold_dry": 0.1797,
+        "cold_wet": 0.0,
+        "warm_dry": -0.0553,
+        "warm_wet": -0.1244
+      },
+      "ssw_count_mean": 0.22580645161290322,
+      "ctrl_count_mean": 2.838709677419355,
+      "event_rr": 0.1735
+    },
+    {
+      "event_date": "2010-02-09",
+      "n_ssw_days": 31,
+      "n_ctrl_days": 217,
+      "ssw_regime_fractions": {
+        "cold_dry": 0.4516,
+        "cold_wet": 0.4194,
+        "warm_dry": 0.0,
+        "warm_wet": 0.129
+      },
+      "ctrl_regime_fractions": {
+        "cold_dry": 0.2719,
+        "cold_wet": 0.4378,
+        "warm_dry": 0.1797,
+        "warm_wet": 0.1106
+      },
+      "regime_shift": {
+        "cold_dry": 0.1797,
+        "cold_wet": -0.0184,
+        "warm_dry": -0.1797,
+        "warm_wet": 0.0184
+      },
+      "ssw_count_mean": 1.064516129032258,
+      "ctrl_count_mean": 1.880184331797235,
+      "event_rr": 0.9787
+    },
+    {
+      "event_date": "2012-01-11",
+      "n_ssw_days": 31,
+      "n_ctrl_days": 217,
+      "ssw_regime_fractions": {
+        "cold_dry": 0.2258,
+        "cold_wet": 0.4839,
+        "warm_dry": 0.1613,
+        "warm_wet": 0.129
+      },
+      "ctrl_regime_fractions": {
+        "cold_dry": 0.2488,
+        "cold_wet": 0.3594,
+        "warm_dry": 0.2857,
+        "warm_wet": 0.106
+      },
+      "regime_shift": {
+        "cold_dry": -0.023,
+        "cold_wet": 0.1244,
+        "warm_dry": -0.1244,
+        "warm_wet": 0.023
+      },
+      "ssw_count_mean": 1.3870967741935485,
+      "ctrl_count_mean": 2.0230414746543777,
+      "event_rr": 1.5874
+    },
+    {
+      "event_date": "2013-01-07",
+      "n_ssw_days": 31,
+      "n_ctrl_days": 210,
+      "ssw_regime_fractions": {
+        "cold_dry": 0.1935,
+        "cold_wet": 0.3226,
+        "warm_dry": 0.3548,
+        "warm_wet": 0.129
+      },
+      "ctrl_regime_fractions": {
+        "cold_dry": 0.2143,
+        "cold_wet": 0.3476,
+        "warm_dry": 0.3238,
+        "warm_wet": 0.1143
+      },
+      "regime_shift": {
+        "cold_dry": -0.0207,
+        "cold_wet": -0.025,
+        "warm_dry": 0.031,
+        "warm_wet": 0.0147
+      },
+      "ssw_count_mean": 0.5161290322580645,
+      "ctrl_count_mean": 2.0476190476190474,
+      "event_rr": 0.7052
+    },
+    {
+      "event_date": "2018-02-12",
+      "n_ssw_days": 31,
+      "n_ctrl_days": 217,
+      "ssw_regime_fractions": {
+        "cold_dry": 0.6129,
+        "cold_wet": 0.1935,
+        "warm_dry": 0.129,
+        "warm_wet": 0.0645
+      },
+      "ctrl_regime_fractions": {
+        "cold_dry": 0.2488,
+        "cold_wet": 0.4378,
+        "warm_dry": 0.1843,
+        "warm_wet": 0.129
+      },
+      "regime_shift": {
+        "cold_dry": 0.3641,
+        "cold_wet": -0.2442,
+        "warm_dry": -0.0553,
+        "warm_wet": -0.0645
+      },
+      "ssw_count_mean": 1.6451612903225807,
+      "ctrl_count_mean": 1.8064516129032258,
+      "event_rr": 0.3306
+    },
+    {
+      "event_date": "2019-01-01",
+      "n_ssw_days": 31,
+      "n_ctrl_days": 211,
+      "ssw_regime_fractions": {
+        "cold_dry": 0.1613,
+        "cold_wet": 0.4516,
+        "warm_dry": 0.2258,
+        "warm_wet": 0.1613
+      },
+      "ctrl_regime_fractions": {
+        "cold_dry": 0.1611,
+        "cold_wet": 0.3081,
+        "warm_dry": 0.3981,
+        "warm_wet": 0.1327
+      },
+      "regime_shift": {
+        "cold_dry": 0.0002,
+        "cold_wet": 0.1436,
+        "warm_dry": -0.1723,
+        "warm_wet": 0.0286
+      },
+      "ssw_count_mean": 4.258064516129032,
+      "ctrl_count_mean": 1.4834123222748816,
+      "event_rr": 5.9207
+    }
+  ],
+  "aggregate": {
+    "regime_occupancy": {
+      "cold_dry": {
+        "ssw_fraction": 0.2889,
+        "ctrl_fraction": 0.1484,
+        "shift": 0.1404,
+        "ratio": 1.946,
+        "ssw_daily_rate": 0.2867,
+        "ctrl_daily_rate": 0.491,
+        "within_regime_rr": 0.5839
+      },
+      "cold_wet": {
+        "ssw_fraction": 0.3596,
+        "ctrl_fraction": 0.2951,
+        "shift": 0.0645,
+        "ratio": 1.219,
+        "ssw_daily_rate": 1.1404,
+        "ctrl_daily_rate": 1.5572,
+        "within_regime_rr": 0.7324
+      },
+      "warm_dry": {
+        "ssw_fraction": 0.2283,
+        "ctrl_fraction": 0.384,
+        "shift": -0.1557,
+        "ratio": 0.594,
+        "ssw_daily_rate": 0.3274,
+        "ctrl_daily_rate": 0.2731,
+        "within_regime_rr": 1.1987
+      },
+      "warm_wet": {
+        "ssw_fraction": 0.1232,
+        "ctrl_fraction": 0.1724,
+        "shift": -0.0492,
+        "ratio": 0.715,
+        "ssw_daily_rate": 1.6721,
+        "ctrl_daily_rate": 3.0619,
+        "within_regime_rr": 0.5461
+      }
+    },
+    "decomposition": {
+      "actual_rr": 0.664,
+      "occupancy_shift_only_rr": 0.9795,
+      "rate_change_only_rr": 0.6806,
+      "pct_explained_by_occupancy": 6.1,
+      "pct_explained_by_rate_change": 95.1
+    },
+    "event_consistency": {
+      "n_events": 16,
+      "n_cold_dry_increase": 9,
+      "n_warm_wet_decrease": 7,
+      "cold_dry_sign_test_p": 0.40181,
+      "warm_wet_sign_test_p": 0.772751
+    },
+    "cold_dry_shift_vs_rr": {
+      "spearman_r": -0.1589,
+      "p_value": 0.556567
+    }
+  }
+}

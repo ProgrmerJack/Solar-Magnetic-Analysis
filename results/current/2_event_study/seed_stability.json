@@ -1,0 +1,66 @@
+{
+  "n_seeds": 40,
+  "n_boot": 1200,
+  "cases": {
+    "AO|primary": {
+      "-30..-16": {
+        "effect": -0.8195,
+        "p_min": 0.005,
+        "p_max": 0.0167,
+        "p_median": 0.0092,
+        "seeds_significant": 40,
+        "n_seeds": 40,
+        "verdict": "STABLE"
+      },
+      "+15..+29": {
+        "effect": -1.0261,
+        "p_min": 0.0,
+        "p_max": 0.0067,
+        "p_median": 0.0,
+        "seeds_significant": 40,
+        "n_seeds": 40,
+        "verdict": "STABLE"
+      }
+    },
+    "AO|consensus_strict": {
+      "-30..-16": {
+        "effect": -0.6704,
+        "p_min": 0.0317,
+        "p_max": 0.0617,
+        "p_median": 0.045,
+        "seeds_significant": 32,
+        "n_seeds": 40,
+        "verdict": "SEED-DEPENDENT"
+      },
+      "+15..+29": {
+        "effect": -1.0464,
+        "p_min": 0.0,
+        "p_max": 0.0033,
+        "p_median": 0.0,
+        "seeds_significant": 40,
+        "n_seeds": 40,
+        "verdict": "STABLE"
+      }
+    },
+    "NAO|primary": {
+      "-30..-16": {
+        "effect": -0.3287,
+        "p_min": 0.0067,
+        "p_max": 0.0217,
+        "p_median": 0.0133,
+        "seeds_significant": 40,
+        "n_seeds": 40,
+        "verdict": "STABLE"
+      },
+      "+15..+29": {
+        "effect": -0.3086,
+        "p_min": 0.01,
+        "p_max": 0.0333,
+        "p_median": 0.0183,
+        "seeds_significant": 40,
+        "n_seeds": 40,
+        "verdict": "STABLE"
+      }
+    }
+  }
+}

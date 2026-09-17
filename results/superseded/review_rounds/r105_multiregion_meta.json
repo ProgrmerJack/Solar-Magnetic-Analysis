@@ -1,0 +1,222 @@
+{
+  "n_ssw": 40,
+  "main_post_onset": {
+    "per_region": [
+      {
+        "region": "CH-Davos natural counts",
+        "n_winters": 14,
+        "n_events_total": 2234,
+        "IRR": 0.7329,
+        "log_irr": -0.3106977436061609,
+        "se_winter_block": 0.3671443415909035,
+        "CI95": [
+          0.4801,
+          1.9986
+        ],
+        "p_one_sided_suppression": 0.2645,
+        "n_boot": 2000
+      },
+      {
+        "region": "AT-Tirol incidents",
+        "n_winters": 18,
+        "n_events_total": 1218,
+        "IRR": 0.7799,
+        "log_irr": -0.24852579178541154,
+        "se_winter_block": 0.20306854430654414,
+        "CI95": [
+          0.5265,
+          1.1431
+        ],
+        "p_one_sided_suppression": 0.1,
+        "n_boot": 2000
+      },
+      {
+        "region": "US-continental accidents",
+        "n_winters": 30,
+        "n_events_total": 378,
+        "IRR": 1.259,
+        "log_irr": 0.23028767003401263,
+        "se_winter_block": 0.17749269301326698,
+        "CI95": [
+          0.8502,
+          1.7309
+        ],
+        "p_one_sided_suppression": 0.897,
+        "n_boot": 2000
+      },
+      {
+        "region": "US-maritime accidents",
+        "n_winters": 29,
+        "n_events_total": 142,
+        "IRR": 1.2312,
+        "log_irr": 0.20802969763857992,
+        "se_winter_block": 0.17596995242176058,
+        "CI95": [
+          0.8429,
+          1.6971
+        ],
+        "p_one_sided_suppression": 0.879,
+        "n_boot": 2000
+      }
+    ],
+    "pooled": {
+      "pooled_IRR": 1.035,
+      "CI95": [
+        0.7919,
+        1.3528
+      ],
+      "p_two_sided": 0.8012196004127089,
+      "p_one_sided_suppression": 0.5993901997936455,
+      "tau2": 0.02895,
+      "Q": 4.956,
+      "I2_percent": 39.5,
+      "k_regions": 4
+    }
+  },
+  "placebo_pre_onset": {
+    "per_region": [
+      {
+        "region": "CH-Davos natural counts",
+        "n_winters": 14,
+        "n_events_total": 2234,
+        "IRR": 1.5427,
+        "log_irr": 0.4335526675771172,
+        "se_winter_block": 0.3204108437676362,
+        "CI95": [
+          0.8009,
+          2.8399
+        ],
+        "p_one_sided_suppression": 0.9055,
+        "n_boot": 2000
+      },
+      {
+        "region": "AT-Tirol incidents",
+        "n_winters": 18,
+        "n_events_total": 1218,
+        "IRR": 1.1853,
+        "log_irr": 0.1699663093195223,
+        "se_winter_block": 0.2706491478024443,
+        "CI95": [
+          0.7415,
+          2.1298
+        ],
+        "p_one_sided_suppression": 0.7395,
+        "n_boot": 2000
+      },
+      {
+        "region": "US-continental accidents",
+        "n_winters": 30,
+        "n_events_total": 378,
+        "IRR": 0.8754,
+        "log_irr": -0.13312484062784752,
+        "se_winter_block": 0.18168694512152928,
+        "CI95": [
+          0.6015,
+          1.224
+        ],
+        "p_one_sided_suppression": 0.219,
+        "n_boot": 2000
+      },
+      {
+        "region": "US-maritime accidents",
+        "n_winters": 29,
+        "n_events_total": 142,
+        "IRR": 1.1508,
+        "log_irr": 0.14049257674085872,
+        "se_winter_block": 0.2727244129284781,
+        "CI95": [
+          0.6664,
+          1.9475
+        ],
+        "p_one_sided_suppression": 0.706,
+        "n_boot": 2000
+      }
+    ],
+    "pooled": {
+      "pooled_IRR": 1.0677,
+      "CI95": [
+        0.8406,
+        1.3563
+      ],
+      "p_two_sided": 0.5913006727572234,
+      "p_one_sided_suppression": 0.7043496636213883,
+      "tau2": 0.0,
+      "Q": 2.739,
+      "I2_percent": 0.0,
+      "k_regions": 4
+    }
+  },
+  "early_post_onset": {
+    "per_region": [
+      {
+        "region": "CH-Davos natural counts",
+        "n_winters": 14,
+        "n_events_total": 2234,
+        "IRR": 1.5911,
+        "log_irr": 0.4644385158144122,
+        "se_winter_block": 0.4285099279561086,
+        "CI95": [
+          0.5184,
+          2.5141
+        ],
+        "p_one_sided_suppression": 0.777,
+        "n_boot": 2000
+      },
+      {
+        "region": "AT-Tirol incidents",
+        "n_winters": 18,
+        "n_events_total": 1218,
+        "IRR": 0.986,
+        "log_irr": -0.014128499353392589,
+        "se_winter_block": 0.13223521979722785,
+        "CI95": [
+          0.7512,
+          1.2456
+        ],
+        "p_one_sided_suppression": 0.4415,
+        "n_boot": 2000
+      },
+      {
+        "region": "US-continental accidents",
+        "n_winters": 30,
+        "n_events_total": 378,
+        "IRR": 0.9823,
+        "log_irr": -0.017883239059987045,
+        "se_winter_block": 0.20976729070640482,
+        "CI95": [
+          0.6349,
+          1.4315
+        ],
+        "p_one_sided_suppression": 0.4585,
+        "n_boot": 2000
+      },
+      {
+        "region": "US-maritime accidents",
+        "n_winters": 29,
+        "n_events_total": 142,
+        "IRR": 0.6486,
+        "log_irr": -0.43290430656034457,
+        "se_winter_block": 0.32632457442903245,
+        "CI95": [
+          0.3142,
+          1.1528
+        ],
+        "p_one_sided_suppression": 0.0645,
+        "n_boot": 2000
+      }
+    ],
+    "pooled": {
+      "pooled_IRR": 0.9714,
+      "CI95": [
+        0.7942,
+        1.1881
+      ],
+      "p_two_sided": 0.7775205840880091,
+      "p_one_sided_suppression": 0.38876029204400453,
+      "tau2": 0.0,
+      "Q": 2.873,
+      "I2_percent": 0.0,
+      "k_regions": 4
+    }
+  }
+}

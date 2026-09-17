@@ -1,0 +1,30 @@
+
+=== AO, window full_record  (1950-01-01..2026-03-31, 77 winters) ===
+  primary            n=43  -30..-16 -0.820 (p=0.005)  +15..+29 -1.026 (p=0.002)
+  consensus_strict   n=36  -30..-16 -0.670 (p=0.040)  +15..+29 -1.046 (p=0.000)
+  consensus_half     n=42  -30..-16 -0.847 (p=0.005)  +15..+29 -1.078 (p=0.002)
+  union              n=47  -30..-16 -0.946 (p=0.000)  +15..+29 -1.111 (p=0.000)
+  era5               n=42  -30..-16 -0.856 (p=0.008)  +15..+29 -1.053 (p=0.002)
+  jra_55             n=41  -30..-16 -0.805 (p=0.010)  +15..+29 -1.141 (p=0.000)
+  ncep_ncar          n=39  -30..-16 -0.835 (p=0.012)  +15..+29 -0.958 (p=0.007)
+  merra2             n=27  -30..-16 -0.520 (p=0.168)  +15..+29 -1.071 (p=0.000)
+  -> spread across catalogues at -30..-16: 0.426
+  -> spread across catalogues at +15..+29: 0.183
+
+=== AO, window common_1980_2019  (1980-01-01..2019-12-31, 41 winters) ===
+  primary            n=25  -30..-16 -0.368 (p=0.308)  +15..+29 -0.936 (p=0.003)
+  consensus_strict   n=24  -30..-16 -0.485 (p=0.202)  +15..+29 -1.014 (p=0.003)
+  consensus_half     n=26  -30..-16 -0.382 (p=0.297)  +15..+29 -0.971 (p=0.010)
+  union              n=27  -30..-16 -0.454 (p=0.185)  +15..+29 -0.984 (p=0.005)
+  era5               n=26  -30..-16 -0.385 (p=0.293)  +15..+29 -0.966 (p=0.005)
+  jra_55             n=26  -30..-16 -0.458 (p=0.197)  +15..+29 -0.954 (p=0.005)
+  ncep_ncar          n=24  -30..-16 -0.510 (p=0.155)  +15..+29 -1.013 (p=0.005)
+  merra2             n=25  -30..-16 -0.501 (p=0.155)  +15..+29 -1.051 (p=0.000)
+  -> spread across catalogues at -30..-16: 0.141
+  -> spread across catalogues at +15..+29: 0.115
+
+=== attribution ===
+  -30..-16: spread 0.426 (full record) -> 0.141 (common window); estimator contrast for reference: 0.002
+  +15..+29: spread 0.183 (full record) -> 0.115 (common window); estimator contrast for reference: 0.002
+
+Saved -> common_period.json
