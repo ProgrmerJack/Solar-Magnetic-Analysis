@@ -64,7 +64,8 @@ Unit-specific 3 harmonics, 60 draws × 1,000 winter-block bootstrap replicates:
 The criteria are met, but the point estimates say something the pass/fail line hides:
 **the intervals are too wide, not too narrow.** Coverage 0.983 against a nominal 0.95, and a
 false-positive rate of 0.017 against 0.05, mean the estimator is *conservative* on spatial
-data — the opposite of the index case, which sat at 0.947 / 0.053.
+data — the opposite of the index case, which sits at 0.930 / 0.070 on the 43-event
+catalogue (the 0.947 / 0.053 once quoted here was the 39-event build).
 
 Conservative is far safer than anti-conservative: it costs power, not validity. A real
 effect is harder to detect, but a spurious one is not easier to claim.

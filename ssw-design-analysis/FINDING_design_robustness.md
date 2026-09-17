@@ -217,7 +217,8 @@ post-onset results are far enough from 0.05 to be unaffected.
 Supported:
 - the SSW→AO surface response, −1.0 σ at +15..+29 d, robust to catalogue
   (0.115 σ), estimator (0.002 σ), era, and event isolation
-- a calibrated, preregistered estimator with validated coverage (Gate 3, 0.947)
+- a calibrated, preregistered estimator with validated coverage (Gate 3, **0.930**
+  [0.895, 0.956], FPR 0.070; the 0.947 once quoted here was the 39-event build)
 - a demonstration that the record period, not the event definition, drives most
   apparent disagreement between reanalysis-derived catalogues
 

@@ -518,19 +518,65 @@ re-frozen 2026-07-30 (39 → 43 events) after the consensus rule was found to be
 era-dependent. The JSONs were all regenerated; several markdown files were not, and
 still describe "frozen primary catalogue (39 events / 33 winters)":
 
-- `05_corrected_estimators/FINDING_canonical.md`
-- `05_corrected_estimators/FINDING_multi_index.md`
-- `06_simulation_validation/GATE3_CLOSURE.md`, `GATE3_FINAL.md`,
-  `FINDING_gate3_contamination.md`
-- `07_physical_decomposition/FINDING_gate8.md` (30 of 39 events)
+**All six were resolved on 2026-09-17.** The list is kept because two of them were
+not merely stale — their conclusions had been reversed by the re-freeze:
 
-**`FINDING_canonical.md`'s headline is now reversed by its own JSON.** It states
-"under the preregistered primary catalogue the AO pre-onset bins are not
-significant (−30..−16: −0.57, n.s.)" and builds a finding on pre-onset
-significance being catalogue-dependent. The current
+| document | what was wrong | now |
+|---|---|---|
+| `05_corrected_estimators/FINDING_canonical.md` | headline **reversed** | rewritten from the JSON |
+| `05_corrected_estimators/FINDING_multi_index.md` | two conclusions **reversed** | rewritten from the JSON |
+| `07_physical_decomposition/FINDING_gate8.md` | 39-event numbers, "30 of 39" | refreshed; no conclusion changed |
+| `06_simulation_validation/FINDING_gate3_contamination.md` | quoted the withdrawn 0.947 / 0.053 | corrected to 0.930 / 0.070 |
+| `06_simulation_validation/GATE3_CLOSURE.md`, `GATE3_FINAL.md` | already carried their own corrections | verified, left as they stand |
+
+Three further documents quoted the withdrawn 0.947 / 0.053 pair as current and were
+corrected at the same time: `GO_NO_GO.md` condition 3, `FINDING_design_robustness.md`,
+and `06_simulation_validation/FINDING_spatial.md`.
+
+**`FINDING_canonical.md` was reversed by its own JSON, and has been rewritten from
+it (2026-09-17).** It had stated "under the preregistered primary catalogue the AO
+pre-onset bins are not significant (−30..−16: −0.57, n.s.)" and built a finding on
+pre-onset significance being catalogue-dependent. The current
 `canonical_event_study.json` (43 events, 3 harmonics, 1,200 replicates) gives
-**−0.8195, p = 0.005 — significant**, and −30..−16 is significant in *every*
-catalogue except `merra2`. That document must not be cited as written.
+**−0.8195, p = 0.005 — significant**.
+
+**The corrected finding inverts the old one:** pre-onset significance is *not*
+catalogue-dependent. AO at −30..−16 is significant in **8 of 9** catalogue sets
+(p = 0.005 under `primary`), and NAO at the same bin in 8 of 9 (p = 0.003–0.018).
+The sole exception in both outcomes is `merra2`, which is **record length, not
+event definition** — MERRA-2 starts in 1980, giving 27 events / 23 winters against
+43 / 36, and its post-onset bins remain significant and of ordinary size.
+`consensus_strict` (36 events) shows the same attrition more mildly. This agrees
+with A/B: catalogue choice moves the AO estimate 0.115 σ once the window is fixed.
+
+A second stable feature was not previously recorded: **AO peaks at +15..+29 in 8 of
+9 catalogues while NAO peaks at +30..+44 in all 9** — the NAO response lags the AO
+response by about two weeks, in every set including the two shortest.
+
+**`FINDING_multi_index.md` was reversed the same way, on two counts, and has been
+rewritten (2026-09-17).** On the 43-event catalogue, under the *same* preregistered
+32-test BH family:
+
+| outcome | old (39 events) | current (43 events) |
+|---|---|---|
+| AO | 3/8 survive, no pre-onset | **5/8**, incl. −30..−16 (q=0.027) |
+| NAO | 3/8 survive, no pre-onset | **4/8**, incl. −30..−16 (q=0.049) |
+| PNA | **0/8** | **3/8**, all **positive**: −30..−16 +0.354 (q=0.030), −15..−1 +0.354, +15..+29 +0.283 |
+| AAO (control) | 0/8 | **0/8**, own family, min q = 0.24 — still passes |
+
+Two statements are therefore withdrawn: *"no pre-onset bin survives FDR in any
+outcome"* and *"the circulation response is annular/Atlantic, not hemisphere-wide —
+PNA shows nothing"*. The cause is the catalogue re-freeze, not the test: PNA
+survives under the unchanged preregistered family. Consequently **GO_NO_GO
+condition 6 flips from NOT MET to MET** — the response is not driven by AO/NAO
+alone — and it closes on circulation indices, without the non-circulation outcomes
+that were blocked behind the struck census.
+
+This does **not** revive the precursor as causal. A precursor cannot be caused by
+the event that follows it, and §7.3 stands: CanESM5 gives −0.387 and MIROC6 +0.380,
+both p < 0.0001, so models disagree in sign. What is established is narrower — the
+pre-onset depression is not an artifact of catalogue choice and not an artifact of
+multiple testing.
 
 ### 5c. Artifact integrity
 
