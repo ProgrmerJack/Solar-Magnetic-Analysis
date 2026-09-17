@@ -1,0 +1,8 @@
+centres    ['CCCma', 'CNR-ISAC', 'ECCC', 'ECMWF', 'KMA', 'Meteo-France', 'NCAR', 'NRL', 'SNU', 'UKMO']
+inits      ['s20180125', 's20180208', 's20181213', 's20190108', 's20190829', 's20191001']
+matched    6,171 members
+cached     100
+to fetch   6,071
+CEDA token valid, 70.7 h remaining (user mikhail001)
+
+gating CNR-ISAC -- full file vs OPeNDAP subset ...

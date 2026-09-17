@@ -83,3 +83,30 @@ CEDA token valid, 71.2 h remaining (user mikhail001)
   cache REJECTED, refetching: CNR-ISAC_control_s20191001_r1i33p1f1.parquet
   700/6171  5.8 min  (121 files/min)
   800/6171  10.6 min  (75 files/min)
+  retrying CNR-ISAC/s20190108/r1i47p1f1: HTTPError: HTTP Error 404: Not Found
+  retrying CNR-ISAC/s20190108/r1i48p1f1: HTTPError: HTTP Error 404: Not Found
+  retrying CNR-ISAC/s20190108/r1i49p1f1: HTTPError: HTTP Error 404: Not Found
+  retrying CNR-ISAC/s20190108/r1i4p1f1: HTTPError: HTTP Error 404: Not Found
+  retrying CNR-ISAC/s20190108/r1i50p1f1: HTTPError: HTTP Error 404: Not Found
+  retrying CNR-ISAC/s20190108/r1i5p1f1: HTTPError: HTTP Error 404: Not Found
+  FAILED CNR-ISAC/nudged/s20190108/r1i47p1f1: HTTP Error 404: Not Found
+  retrying CNR-ISAC/s20190108/r1i6p1f1: HTTPError: HTTP Error 404: Not Found
+  retrying CNR-ISAC/s20190108/r1i7p1f1: HTTPError: HTTP Error 404: Not Found
+  FAILED CNR-ISAC/nudged/s20190108/r1i48p1f1: HTTP Error 404: Not Found
+  retrying CNR-ISAC/s20190108/r1i8p1f1: HTTPError: HTTP Error 404: Not Found
+  retrying CNR-ISAC/s20190108/r1i9p1f1: HTTPError: HTTP Error 404: Not Found
+  FAILED CNR-ISAC/nudged/s20190108/r1i49p1f1: HTTP Error 404: Not Found
+  FAILED CNR-ISAC/nudged/s20190108/r1i4p1f1: HTTP Error 404: Not Found
+  FAILED CNR-ISAC/nudged/s20190108/r1i50p1f1: HTTP Error 404: Not Found
+  FAILED CNR-ISAC/nudged/s20190108/r1i5p1f1: HTTP Error 404: Not Found
+  FAILED CNR-ISAC/nudged/s20190108/r1i6p1f1: HTTP Error 404: Not Found
+  FAILED CNR-ISAC/nudged/s20190108/r1i7p1f1: HTTP Error 404: Not Found
+  FAILED CNR-ISAC/nudged/s20190108/r1i8p1f1: HTTP Error 404: Not Found
+  FAILED CNR-ISAC/nudged/s20190108/r1i9p1f1: HTTP Error 404: Not Found
+  900/6171  17.2 min  (52 files/min)
+  retrying CNR-ISAC/s20191001/r1i6p1f1: IncompleteRead: IncompleteRead(7200810 bytes read, 26939520 more expected)
+  1000/6171  22.2 min  (45 files/min)
+  retrying ECCC/s20181213/r1i18p1f1: IncompleteRead: IncompleteRead(11201886 bytes read, 20423270 more expected)
+  retrying ECCC/s20180208/r1i8p1f1: IncompleteRead: IncompleteRead(23240958 bytes read, 8660284 more expected)
+  1100/6171  27.3 min  (40 files/min)
+  retrying ECCC/s20181213/r1i2p1f1: IncompleteRead: IncompleteRead(5429544 bytes read, 26222733 more expected)

@@ -137,17 +137,40 @@ def cap_means(da, lat):
     return np.asarray(n, dtype=float), np.asarray(s, dtype=float)
 
 
-def lead_days(tv):
+_UNIT_TO_DAYS = {"day": 1.0, "days": 1.0,
+                 "hour": 1 / 24, "hours": 1 / 24,
+                 "minute": 1 / 1440, "minutes": 1 / 1440,
+                 "second": 1 / 86400, "seconds": 1 / 86400}
+
+
+def lead_days(tv, units=None):
     """Forecast lead in days, without reconciling the calendar.
 
-    CCCma runs a 365-day NoLeap calendar whose time axis decodes to cftime
-    objects pandas refuses to convert. Lead is a difference within one file, so
-    absolute dates are never needed and no 365-vs-366 drift can creep in.
+    Absolute dates are never needed -- lead is a difference within one file --
+    so no 365-vs-366 drift from the model calendars can creep in. CCCma runs a
+    365_day calendar, which is exactly why decoding is avoided.
+
+    Opened with decode_times=False, the axis arrives as raw numbers in the
+    file's own units ("days since 1850-01-01" for CanESM5, 6-hourly, so values
+    step by 0.25). The first version assumed cftime objects and called
+    .total_seconds() on a float, failing every member. The units attribute is
+    honoured rather than assumed, and an unrecognised one RAISES: silently
+    treating hours as days would scale every lead by 24 and quietly misplace
+    the analysis windows.
     """
-    t0 = tv[0]
-    if np.issubdtype(np.asarray(tv).dtype, np.datetime64):
-        return (pd.to_datetime(tv) - pd.to_datetime(t0)).total_seconds() / 86400.0
-    return np.array([(x - t0).total_seconds() / 86400.0 for x in tv], dtype=float)
+    arr = np.asarray(tv)
+    t0 = arr[0]
+    if np.issubdtype(arr.dtype, np.datetime64):
+        return (pd.to_datetime(arr) - pd.to_datetime(t0)).total_seconds() / 86400.0
+    if np.issubdtype(arr.dtype, np.number):
+        if not units:
+            raise ValueError("numeric time axis with no units attribute")
+        unit = str(units).strip().split()[0].lower()
+        if unit not in _UNIT_TO_DAYS:
+            raise ValueError(f"unhandled time unit {unit!r} in {units!r}")
+        return (arr.astype(float) - float(t0)) * _UNIT_TO_DAYS[unit]
+    # cftime objects
+    return np.array([(x - t0).total_seconds() / 86400.0 for x in arr], dtype=float)
 
 
 def plausible(z) -> bool:
@@ -245,7 +268,8 @@ def fetch(row, sess):
                 lat = rem["lat"]
                 da = rem["zg"].sel(plev=TARGET_PA)
                 cap_n, cap_s = cap_means(da.load(), lat)
-                lead = lead_days(rem["time"].values)
+                lead = lead_days(rem["time"].values,
+                                 rem["time"].attrs.get("units"))
             if not (plausible(cap_n) and plausible(cap_s)):
                 raise ValueError(
                     f"implausible 100 hPa GPH: N={np.nanmean(cap_n):.0f} "
