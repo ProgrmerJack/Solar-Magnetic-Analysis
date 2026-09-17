@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T11:53:38+00:00",
+ "generated": "2026-09-17T12:07:48+00:00",
  "generator": "tools/catalog_repo.py",
  "note": "Every ssw-design-analysis result in one file. The per-script JSONs remain on disk as write-side provenance; this is the read path. Regenerate with tools/catalog_repo.py.",
  "results": {
@@ -6807,16 +6807,16 @@
      "P1 pre-onset": {
       "n_features": 20,
       "ridge": {
-       "cv_r2": 0.0998,
-       "null_mean": -0.002,
-       "null_p95": 0.0067,
+       "cv_r2": 0.1026,
+       "null_mean": 0.001,
+       "null_p95": 0.0094,
        "p_value": 0.0,
        "significant": true
       },
       "gb": {
-       "cv_r2": 0.0451,
-       "null_mean": -0.0412,
-       "null_p95": -0.018,
+       "cv_r2": 0.0532,
+       "null_mean": -0.0394,
+       "null_p95": -0.0222,
        "p_value": 0.0,
        "significant": true
       }
@@ -6824,16 +6824,16 @@
      "P2 at-onset": {
       "n_features": 26,
       "ridge": {
-       "cv_r2": 0.1121,
-       "null_mean": -0.0002,
-       "null_p95": 0.0081,
+       "cv_r2": 0.1133,
+       "null_mean": 0.003,
+       "null_p95": 0.0115,
        "p_value": 0.0,
        "significant": true
       },
       "gb": {
-       "cv_r2": 0.0652,
-       "null_mean": -0.0367,
-       "null_p95": -0.0147,
+       "cv_r2": 0.0644,
+       "null_mean": -0.034,
+       "null_p95": -0.011,
        "p_value": 0.0,
        "significant": true
       }
@@ -6841,16 +6841,16 @@
      "P3 + post-onset stratosphere": {
       "n_features": 38,
       "ridge": {
-       "cv_r2": 0.4245,
-       "null_mean": 0.0024,
-       "null_p95": 0.0138,
+       "cv_r2": 0.4226,
+       "null_mean": 0.005,
+       "null_p95": 0.016,
        "p_value": 0.0,
        "significant": true
       },
       "gb": {
-       "cv_r2": 0.3663,
-       "null_mean": -0.0305,
-       "null_p95": -0.0081,
+       "cv_r2": 0.3719,
+       "null_mean": -0.0296,
+       "null_p95": -0.0089,
        "p_value": 0.0,
        "significant": true
       }
@@ -6858,15 +6858,32 @@
     }
    },
    "power_CMIP6": {
-    "R2=0.02": 0.7,
+    "R2=0.02": 0.575,
     "R2=0.05": 1.0,
     "R2=0.1": 1.0,
     "R2=0.2": 1.0
    },
    "implied": {
-    "CMIP6 DW-NDW contrast": 0.6294,
-    "Karpechko AO, observations": 1.2852,
-    "ACP 26,3723 published NAO": 0.3368
+    "CMIP6 DW-NDW contrast": {
+     "implied_r2": 0.6294,
+     "over_achievable": 6.13
+    },
+    "Karpechko AO, observations": {
+     "implied_r2": 0.5972,
+     "over_achievable": 5.82
+    },
+    "ERA5 1000 hPa NAM, Karpechko": {
+     "implied_r2": 0.1041,
+     "over_achievable": 1.01
+    },
+    "ERA5 850 hPa NAM, ACP": {
+     "implied_r2": 0.0885,
+     "over_achievable": 0.86
+    },
+    "ACP 26,3723 published NAO": {
+     "implied_r2": 0.1565,
+     "over_achievable": 1.53
+    }
    }
   },
   "predictability_wave_driving.json": {

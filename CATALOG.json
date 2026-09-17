@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T11:53:38+00:00",
+ "generated": "2026-09-17T12:07:48+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -3205,9 +3205,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 1624,
-   "modified": "2026-08-03 12:51",
-   "sha256_16": "abbbc17360371fda",
+   "bytes": 1925,
+   "modified": "2026-09-17 12:05",
+   "sha256_16": "071d506f0c120a52",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/predictability_ceiling.py"
    ],
