@@ -409,6 +409,27 @@ assumption. Apply Karpechko conditions 1–2 (the surface conditions) and split.
 | **nudged** | stratospheric forcing **identical** across members | **−1.624 σ** (sd 0.300, n=25) | **0.842** |
 | **control** | **no SSW forcing at all** | **−1.590 σ** (sd 0.089, n=36) | **0.450** |
 
+> **SOUTHERN HEMISPHERE, added 2026-09-17 — L replicates there too.**
+> Using `s20190829`, the one SH initialisation whose forecasts span the +8..+25
+> window (`s20191001` starts 13 days after the central date and is excluded by
+> the coverage guard rather than averaged over a shorter stretch):
+>
+> | arm | contrast | DW rate |
+> |---|---|---|
+> | nudged | **−1.969 σ** (n=7 of 8) | 0.791 |
+> | control | **−1.585 σ** (n=8 of 8) | 0.413 |
+>
+> Same signature as the NH: a large contrast in both arms, and the rate doing
+> the separating. **Two caveats travel with every SH number.** The central date
+> is 18 September 2019 from the SNAPSI protocol, where the 10 hPa 60°S wind
+> *"did not reverse"* but reached its minimum — so this is an **austral MINOR
+> warming, not an SSW under the WMO definition**. It tests generality to a
+> different hemisphere *and* to a weaker class of event, which is more than the
+> NH result covers but is not the same event mirrored. And it rests on one
+> initialisation, so it is a replication, not an independent second sample.
+>
+> NH and SH are never pooled: they are summarised in separate blocks.
+
 > **Re-run 2026-09-17 on the COMPLETE archive: 9 usable centres, 4 NH
 > initialisations, 36 ensembles per arm, against the 3 centres and 9-12
 > ensembles the original rested on. The result holds and tightens.** The
