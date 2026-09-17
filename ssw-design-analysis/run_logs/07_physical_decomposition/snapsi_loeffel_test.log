@@ -25,24 +25,59 @@ centres with psl: ['CCCma', 'CNR-ISAC', 'KMA', 'SNU']
 
 === DESIGN GATE: is 100 hPa free enough for the test to mean anything? ===
   CCCma        s20180125   sd nudged   37.01 m   control   38.41 m   ratio 0.964
-  median ratio 0.964 vs threshold 0.5 -> PASS
+  CCCma        s20180208   sd nudged   33.26 m   control   26.22 m   ratio 1.268
+  CCCma        s20181213   sd nudged   29.46 m   control   32.83 m   ratio 0.897
+  CCCma        s20190108   sd nudged    4.98 m   control    5.24 m   ratio 0.951
+  median ratio 0.958 vs threshold 0.5 -> PASS
 
 === PRIMARY response window: post-onset days 15-25 ===
-  nudged   pooled r = +0.371 [+0.104, +0.589]  (1 ensembles, 50 members)
+  nudged   pooled r = +0.150 [+0.004, +0.291]  (4 ensembles, 188 members)
+           excl s20190108: r = +0.240 [+0.079, +0.388]  (3 ensembles, 150 members)
       CCCma        s20180125   Feb-2018  n=50  r=+0.371  perm p=0.0086
-  control  pooled r = +0.094 [-0.189, +0.363]  (1 ensembles, 50 members)
-      CCCma        s20180125   Feb-2018  n=50  r=+0.094  perm p=0.5145
+      CCCma        s20180208   Feb-2018  n=50  r=+0.087  perm p=0.5513
+      CCCma        s20181213   Jan-2019  n=50  r=+0.250  perm p=0.0754
+      CCCma        s20190108   Jan-2019  n=38  r=-0.218  perm p=0.1790
+  control  pooled r = -0.001 [-0.144, +0.142]  (4 ensembles, 197 members)
+           excl s20190108: r = -0.028 [-0.191, +0.136]  (3 ensembles, 150 members)
+      CCCma        s20180125   Feb-2018  n=50  r=+0.094  perm p=0.5043
+      CCCma        s20180208   Feb-2018  n=50  r=-0.310  perm p=0.0300
+      CCCma        s20181213   Jan-2019  n=50  r=+0.141  perm p=0.3315
+      CCCma        s20190108   Jan-2019  n=47  r=+0.086  perm p=0.5657
 
 === FIDELITY response window: post-onset days 15-49 ===
-  nudged   no ensemble with enough members
-  control  no ensemble with enough members
+  nudged   pooled r = +0.190 [-0.138, +0.480]  (1 ensembles, 38 members)
+      CCCma        s20190108   Jan-2019  n=38  r=+0.190  perm p=0.2497
+  control  pooled r = +0.095 [-0.198, +0.372]  (1 ensembles, 47 members)
+      CCCma        s20190108   Jan-2019  n=47  r=+0.095  perm p=0.5049
 
 (max_available response window resolved to days 15-25 from the shortest member)
 
 === MAX_AVAILABLE response window: post-onset days 15-25 ===
-  nudged   pooled r = +0.371 [+0.104, +0.589]  (1 ensembles, 50 members)
-      CCCma        s20180125   Feb-2018  n=50  r=+0.371  perm p=0.0070
-  control  pooled r = +0.094 [-0.189, +0.363]  (1 ensembles, 50 members)
-      CCCma        s20180125   Feb-2018  n=50  r=+0.094  perm p=0.5177
+  nudged   pooled r = +0.150 [+0.004, +0.291]  (4 ensembles, 188 members)
+           excl s20190108: r = +0.240 [+0.079, +0.388]  (3 ensembles, 150 members)
+      CCCma        s20180125   Feb-2018  n=50  r=+0.371  perm p=0.0080
+      CCCma        s20180208   Feb-2018  n=50  r=+0.087  perm p=0.5489
+      CCCma        s20181213   Jan-2019  n=50  r=+0.250  perm p=0.0864
+      CCCma        s20190108   Jan-2019  n=38  r=-0.218  perm p=0.1930
+  control  pooled r = -0.001 [-0.144, +0.142]  (4 ensembles, 197 members)
+           excl s20190108: r = -0.028 [-0.191, +0.136]  (3 ensembles, 150 members)
+      CCCma        s20180125   Feb-2018  n=50  r=+0.094  perm p=0.5041
+      CCCma        s20180208   Feb-2018  n=50  r=-0.310  perm p=0.0260
+      CCCma        s20181213   Jan-2019  n=50  r=+0.141  perm p=0.3345
+      CCCma        s20190108   Jan-2019  n=47  r=+0.086  perm p=0.5589
+
+=== POWER (within-ensemble, n=50, two-sided alpha=0.05) ===
+  true r = 0.1   detected with probability 0.106
+  true r = 0.2   detected with probability 0.285
+  true r = 0.3   detected with probability 0.564
+  true r = 0.4   detected with probability 0.828
+  true r = 0.5   detected with probability 0.965
+  true r = 0.85  detected with probability 1.000
+
+between-ensemble (DESCRIPTIVE, nudged): r = +0.734 over 4 ensembles spanning only 2 distinct event(s)
+  Not a test of Loeffel: the spread is between MODELS, not events.
+
+between-ensemble (DESCRIPTIVE, control): r = +0.225 over 4 ensembles spanning only 2 distinct event(s)
+  Not a test of Loeffel: the spread is between MODELS, not events.
 
 Saved -> snapsi_loeffel_test.json

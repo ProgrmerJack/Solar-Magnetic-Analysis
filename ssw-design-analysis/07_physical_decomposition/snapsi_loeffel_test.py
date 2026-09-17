@@ -122,6 +122,17 @@ PRED_WIN = (8, 14)          # Loeffel week 2
 RESP_PRIMARY = (15, 25)     # widest window every NH initialisation covers
 RESP_FIDELITY = (15, 49)    # Loeffel weeks 3-7, where coverage allows
 GATE_MIN_RATIO = 0.5        # pre-specified, fixed before looking at the data
+
+# s20190108 initialises 2019-01-08 with onset 2019-01-02, so onset PRECEDES the
+# initialisation by 6 days and the week-2 predictor window falls at forecast lead
+# 2-8 days, before the ensemble has diverged. snapsi_distribution_test.py already
+# reports this initialisation SEPARATELY for the same reason, flagging it from the
+# spread and confirming it by the lead arithmetic. The same signature is visible
+# here without looking at any correlation: its week-2 100 hPa spread is ~5 m
+# against 29-37 m at the other initialisations. Pooled results are reported both
+# with and without it; excluding it is NOT a post-hoc choice, it is the guard the
+# project already applies to this initialisation.
+SHORT_LEAD_INIT = "s20190108"
 N_PERM = 5000
 SEED = zlib.crc32(b"snapsi_loeffel_test") % (2 ** 32)
 
@@ -299,16 +310,29 @@ def main() -> int:
                             "arm": arm, "n_members": int(len(j)),
                             "r": round(r, 4), "perm_p": round(p, 5)})
                 rs.append(r); ns.append(len(j))
-            out.setdefault(tag, {})[arm] = {"per_ensemble": [q for q in per if q["arm"] == arm],
-                                            "pooled": fisher_pool(rs, ns)}
+            mine = [q for q in per if q["arm"] == arm]
+            keep = [(q["r"], q["n_members"]) for q in mine
+                    if q["init"] != SHORT_LEAD_INIT]
+            out.setdefault(tag, {})[arm] = {
+                "per_ensemble": mine,
+                "pooled": fisher_pool(rs, ns),
+                "pooled_excl_short_lead": (
+                    fisher_pool([k[0] for k in keep], [k[1] for k in keep])
+                    if keep else None)}
         print(f"\n=== {tag.upper()} response window: post-onset days {win[0]}-{win[1]} ===")
         for arm in ("nudged", "control"):
             pooled = out[tag][arm]["pooled"]
+            excl = out[tag][arm]["pooled_excl_short_lead"]
             print(f"  {arm:<8} " + (
                 f"pooled r = {pooled['r']:+.3f} "
                 f"[{pooled['CI95'][0]:+.3f}, {pooled['CI95'][1]:+.3f}]  "
                 f"({pooled['n_ensembles']} ensembles, {pooled['n_members_total']} members)"
                 if pooled else "no ensemble with enough members"))
+            if excl:
+                print(f"           excl {SHORT_LEAD_INIT}: r = {excl['r']:+.3f} "
+                      f"[{excl['CI95'][0]:+.3f}, {excl['CI95'][1]:+.3f}]  "
+                      f"({excl['n_ensembles']} ensembles, "
+                      f"{excl['n_members_total']} members)")
             for q in out[tag][arm]["per_ensemble"]:
                 print(f"      {q['centre']:<12} {q['init']:<11} {q['event']:<9} "
                       f"n={q['n_members']:<3} r={q['r']:+.3f}  perm p={q['perm_p']:.4f}")
