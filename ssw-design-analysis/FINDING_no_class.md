@@ -90,6 +90,12 @@ The one-population model makes a hard prediction here: displacing event-free dat
 by the measured shift must reproduce the observed classification rate. Tested on
 ERA5 (`08_literature_audit/era5_recompute_and_two_thirds.py`, 39 events):
 
+> **That 39 is not the old 39-event catalogue.** It is the current `primary` set of
+> 43 restricted to the ERA5 NAM record (1959-01-01 .. 2023-01-10) with a 70-day
+> margin at each end, which drops 1958-01-30 at the start and 2023-02-16,
+> 2024-01-16 and 2024-03-04 at the end. The collision with the pre-2026-07-30
+> primary count is a coincidence — see `CONSOLIDATED_RESULTS.md` §5b.
+
 | | surface conditions (1 AND 2) pass rate |
 |---|---|
 | observed at real SSWs | **69.2%** |

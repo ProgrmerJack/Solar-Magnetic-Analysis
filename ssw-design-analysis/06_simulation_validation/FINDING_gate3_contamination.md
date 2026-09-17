@@ -110,10 +110,17 @@ replicates changed:
 | replicates | coverage (95% CI) | FPR |
 |---|---|---|
 | 150 | 0.920 (0.889, 0.945) | 0.080 |
-| **1000** | **0.947 (0.915, 0.969)** | **0.053** |
+| **1000** | **0.930 (0.895, 0.956)** | **0.070** |
 
 At 1,000 replicates both criteria are met: the coverage interval contains 0.95 and the
-false-positive rate contains 0.05. A percentile interval built from 150 replicates has
+false-positive rate contains 0.05.
+
+> **Values corrected 2026-09-17.** The pair originally in this table, 0.947 / 0.053,
+> was the 39-event build and is not reproducible; the current figures come from
+> `results/current/3_calibration/gate3_clean_null.json` on the 43-event catalogue
+> (8,862 clean days / 73 winters, N_BOOT=1000, N_COVER=300). The 150-vs-1000
+> contrast that this table exists to make is unaffected — it is still the reason
+> for the replicate floor. A percentile interval built from 150 replicates has
 2.5th/97.5th percentiles estimated from roughly 4 order statistics in each tail, which is
 far too coarse; the resulting intervals are systematically too narrow.
 

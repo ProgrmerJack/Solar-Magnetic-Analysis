@@ -1,12 +1,11 @@
-> **⚠ PRE-RE-FREEZE DOCUMENT.** Written before 2026-07-30, when the event
-> catalogue was re-frozen from **39 events / 33 winters** to **43 / 36** after the
-> consensus rule was found to be era-dependent
-> (see `../02_event_catalogues/FREEZE_RECORD.md`). Every count below is the old
-> build. The JSONs in `results/` were all regenerated; this document was not.
-> Qualitative conclusions are mostly unaffected, but **no number here should be
-> quoted without checking it against `results/`.**
-
 # Gate 8 — and a result that overturns the paper's framing
+
+> **Refreshed 2026-09-17 from `design_sensitivity.json` on the 43-event catalogue.**
+> This document previously carried the 39-event build behind a warning banner. Every
+> number below is now read from the artifact. **No conclusion changed** — R² moved
+> 0.210 → 0.2167 and the permutation P 0.30 → 0.2808, both still nothing. The event
+> subset is still 30, but it is now 30 of 43 rather than 30 of 39, which makes the
+> coverage caveat at the foot of this file stronger, not weaker.
 
 Script: `design_sensitivity.py` · Output: `design_sensitivity.json`
 Data acquired for this: 100 hPa eddy heat flux 45–75°N, 1958–2024, from NCEP/NCAR via
@@ -16,15 +15,15 @@ winter mean +13.8 ± 10.3 K m/s).
 ## The headline: the two estimators agree
 
 Per event, same frozen catalogue, same window (+15..+29 d), both DOY-adjusted against the
-same non-event seasonal cycle (n = 30 of 39 events with sufficient baseline):
+same non-event seasonal cycle (n = **30 of 43** events with sufficient baseline):
 
 | estimator | mean AO response |
 |---|---|
-| conventional (day-of-year-matched, non-event winters) | **−0.902** |
-| corrected (own winter, >75 d from onset) | **−0.910** |
-| **difference** | **+0.008** |
+| conventional (day-of-year-matched, non-event winters) | **-0.9536** |
+| corrected (own winter, >75 d from onset) | **-0.9518** |
+| **difference** | **-0.0018** |
 
-**They agree to 0.008 σ.** Once the catalogue is fixed and the seasonal adjustment is
+**They agree to 0.002 σ.** Once the catalogue is fixed and the seasonal adjustment is
 applied consistently to both, the between-winter / within-winter distinction makes
 essentially no difference to the estimated response.
 
@@ -65,21 +64,21 @@ to predict.
 | predictor (standardised) | β | robust SE | permutation p |
 |---|---|---|---|
 | precursor v′T′ (100 hPa, −45..−1 d) | −0.084 | 0.261 | 0.67 |
-| vortex u10 (−5..+5 d) | −0.037 | 0.212 | 0.84 |
-| polar-cap Z100 (0..+30 d) | −0.247 | 0.200 | 0.21 |
-| onset day-of-year | −0.246 | 0.181 | 0.22 |
-| **winter AO anomaly** | **+0.265** | 0.201 | 0.12 |
+| vortex u10 (−5..+5 d) | -0.041 | 0.211 | 0.82 |
+| polar-cap Z100 (0..+30 d) | -0.265 | 0.201 | 0.18 |
+| onset day-of-year | -0.246 | 0.179 | 0.22 |
+| **winter AO anomaly** | **+0.261** | 0.199 | 0.13 |
 
-R² = 0.210, **permutation P = 0.30** (5,000 shuffles). Nothing survives.
+R² = 0.2167, **permutation P = 0.2808** (5,000 shuffles). Nothing survives.
 
 The one suggestive signal is the winter AO anomaly — the direct selection variable —
-with pairwise r = +0.352, p = 0.057. Its sign is what winter selection predicts, and it is
+with pairwise r = +0.353, p = 0.0557. Its sign is what winter selection predicts, and it is
 the largest coefficient, but at n = 30 it is not significant and must not be reported as a
 mechanism.
 
 ## Honest note on scope
 
-Only 30 of 39 events had enough within-winter baseline for the corrected estimator. The
+Only 30 of 43 events had enough within-winter baseline for the corrected estimator. The
 comparison is therefore on a subset, and events in winters densely packed with warmings are
 under-represented — exactly the winters where the two designs might diverge most. That is a
 real limitation of this test, not a reason to discount it, and it should be probed with a
