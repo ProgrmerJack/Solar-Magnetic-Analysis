@@ -1,0 +1,56 @@
+  EXCLUDED NRL: S = 0 at every init
+
+centre   init          nN   nC  sd_ctrl   shift  var ratio    KS p
+--------------------------------------------------------------------
+CCCma    s20180125     50   50    466.0  -0.697      0.903   0.967
+CCCma    s20180208     50   50    270.3  -0.822      1.067   0.998
+CCCma    s20181213     50   50    464.8  -0.499      0.513   0.869
+CCCma    s20190108     38   47    205.8  -0.650      0.878   0.801  <- short lead
+CNR-ISAC s20180125     50   50    378.5  -0.883      0.725   0.396
+CNR-ISAC s20180208     50   50    318.4  -0.833      0.615   0.549
+CNR-ISAC s20181213     50   50    293.0  -0.096      1.670   0.717
+CNR-ISAC s20190108     40   50    117.5  -2.805      0.922   0.765  <- short lead
+ECCC     s20180125     50   50    403.0  -2.180      0.729   0.179
+ECCC     s20180208     50   50    336.8  -3.520      0.601   0.869
+ECCC     s20181213     50   50    361.4  -4.303      1.746   0.549
+ECCC     s20190108     50   50    219.2  -4.289      0.684   0.717  <- short lead
+ECMWF    s20180125     51   51    336.1  -0.962      0.811   0.728
+ECMWF    s20180208     51   51    293.4  -1.730      1.244   0.877
+ECMWF    s20181213     51   51    340.3  -1.188      1.414   0.728
+ECMWF    s20190108     51   51    206.4  -2.453      0.620   0.728  <- short lead
+KMA      s20180125     50   50    354.8  -1.170      1.121   0.967
+KMA      s20180208     50   50    318.8  -1.361      0.762   0.272
+KMA      s20181213     52   50    428.7  -0.767      0.690   0.936
+KMA      s20190108     50   50    138.0  -3.428      1.058   0.998  <- short lead
+Meteo-France s20180125     50   50    413.0  -0.599      0.790   0.549
+Meteo-France s20180208     50   50    360.0  -2.110      0.406   0.179
+Meteo-France s20181213     50   50    373.8  -0.796      1.941   0.396
+Meteo-France s20190108     50   50    125.7  -2.533      0.380   0.272  <- short lead
+NCAR     s20180125     51   51    444.8  -0.934      0.857   0.998
+NCAR     s20180208     51   51    335.9  -1.749      0.913   0.970
+NCAR     s20181213     51   51    408.9  -1.260      1.647   0.562
+NCAR     s20190108     51   51    296.4  -1.219      1.119   0.728  <- short lead
+SNU      s20180125     50   50    339.4  -0.963      1.326   0.967
+SNU      s20180208     50   50    320.3  -1.178      0.706   0.869
+SNU      s20181213     50   50    377.0  -0.577      0.679   0.967
+SNU      s20190108     50   50    137.6  -2.537      1.175   0.717  <- short lead
+UKMO     s20180125     50   50    374.7  -0.751      1.059   0.717
+UKMO     s20180208     50   50    419.3  -0.855      0.697   0.549
+UKMO     s20181213     50   50    382.5  -1.288      1.237   0.869
+UKMO     s20190108     50   50    213.1  -2.155      0.541   0.549  <- short lead
+
+=== POOLED (pooled_all) — 36 cases, 1788 nudged vs 1805 control members ===
+  causal shift                : -1.559 sigma (sd across cases 1.071, range -4.30..-0.10)
+  variance ratio nudged/control: 0.952 [0.869, 1.047]   (1.0 = shape unchanged)
+  pure translation, KS        : D = 0.032, p = 0.322
+  two-component mixture       : p = 0.990 (calibrated on the unforced ensemble)
+  power to detect a 2/3 mixture: critical_value_BIC_at_5pct -1.854, sep=0.25 0.04, sep=0.5 0.005, sep=0.75 0.005, sep=1.0 0.0, sep=1.5 0.04
+
+=== POOLED (pooled_excluding_short_lead_init) — 27 cases, 1358 nudged vs 1356 control members ===
+  causal shift                : -1.262 sigma (sd across cases 0.904, range -4.30..-0.10)
+  variance ratio nudged/control: 0.995 [0.890, 1.105]   (1.0 = shape unchanged)
+  pure translation, KS        : D = 0.028, p = 0.650
+  two-component mixture       : p = 0.995 (calibrated on the unforced ensemble)
+  power to detect a 2/3 mixture: critical_value_BIC_at_5pct 0.125, sep=0.25 0.04, sep=0.5 0.03, sep=0.75 0.005, sep=1.0 0.005, sep=1.5 0.0
+
+Saved -> results/current/8_experiment/snapsi_distribution_test.json

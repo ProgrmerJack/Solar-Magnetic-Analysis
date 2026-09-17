@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T13:54:46+00:00",
+ "generated": "2026-09-17T16:45:51+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -116,8 +116,8 @@
    "stage": "03_data_ingestion",
    "title": "Downloads the SNAPSI surface field and reduces it to a polar-cap index on the fly, so the CAUSAL stratosphere-to-surface effect can be measured by experimental design rather than inferred from composites.",
    "loc": 366,
-   "modified": "2026-09-17 13:08",
-   "sha256_16": "a16f6337d6959432",
+   "modified": "2026-09-17 16:31",
+   "sha256_16": "1e4638dfcaf37b49",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_manifest.csv",
@@ -130,9 +130,9 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "SNAPSI geopotential height at 100 hPa, reduced to a polar-cap mean, fetched by OPeNDAP subsetting rather than by downloading whole files.",
-   "loc": 413,
-   "modified": "2026-09-17 13:34",
-   "sha256_16": "3462b08c4cd2675a",
+   "loc": 416,
+   "modified": "2026-09-17 16:31",
+   "sha256_16": "f56e3699e79d1798",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_manifest.csv",
@@ -864,9 +864,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "Does a sudden stratospheric warming SHIFT the surface distribution, or SPLIT it? WHY THIS IS THE TEST THAT MATTERS The project's central physical claim -- \"downward propagation\" is a threshold on ONE shifted population, not a class of event -- currently rests on CMIP6",
-   "loc": 237,
-   "modified": "2026-08-04 10:37",
-   "sha256_16": "ee4e94990ccb2952",
+   "loc": 270,
+   "modified": "2026-09-17 16:40",
+   "sha256_16": "c620da1f65075b46",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_distribution_test.json"
@@ -894,9 +894,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "THE DECISIVE TEST: does the published \"downward-propagating SSW\" classification manufacture its own contrast even when the causal forcing is held EXACTLY fixed by experimental design? WHY THIS IS THE CLEAN EXPERIMENT",
-   "loc": 241,
-   "modified": "2026-08-04 06:41",
-   "sha256_16": "6d07e7b375c9db83",
+   "loc": 288,
+   "modified": "2026-09-17 16:33",
+   "sha256_16": "c73891f3c225ffd6",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_selection_test.json"
@@ -980,9 +980,9 @@
    "tree": "ssw-design-analysis",
    "stage": "tests",
    "title": "The repository's standing checks. Every one of them exists because something here once went wrong in that exact way -- see FAILURES.md, which this file is the executable half of.",
-   "loc": 295,
-   "modified": "2026-09-17 11:52",
-   "sha256_16": "047d92c38e940eaf",
+   "loc": 313,
+   "modified": "2026-09-17 16:31",
+   "sha256_16": "0b0fa78e6091bc19",
    "flags": [],
    "filenames_mentioned": [
     "CATALOG.json",
@@ -3550,9 +3550,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 6284,
-   "modified": "2026-08-04 10:41",
-   "sha256_16": "d66dbd79a1e8c963",
+   "bytes": 10298,
+   "modified": "2026-09-17 16:44",
+   "sha256_16": "5834e66c0e42e8b3",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_distribution_test.py"
    ],
@@ -3560,7 +3560,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_distribution_test.py": "ee4e94990ccb2952"
+    "ssw-design-analysis/07_physical_decomposition/snapsi_distribution_test.py": "c620da1f65075b46"
    },
    "verdicts": [],
    "counts": {},
@@ -3569,8 +3569,7 @@
     "per_case",
     "excluded",
     "pooled_all",
-    "pooled_excluding_short_lead_init",
-    "interpretation"
+    "pooled_excluding_short_lead_init"
    ]
   },
   {
@@ -3584,8 +3583,8 @@
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_loeffel_test.py"
    ],
-   "state": "unverified",
-   "detail": "no provenance baseline recorded",
+   "state": "current",
+   "detail": "",
    "flags": [],
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/snapsi_loeffel_test.py": "5a0829c47578e896"
@@ -3623,9 +3622,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 8218,
-   "modified": "2026-08-04 06:41",
-   "sha256_16": "64943fa2187c691c",
+   "bytes": 35376,
+   "modified": "2026-09-17 16:34",
+   "sha256_16": "349c09892dfa0649",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py"
    ],
@@ -3633,7 +3632,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "6d07e7b375c9db83"
+    "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "c73891f3c225ffd6"
    },
    "verdicts": [],
    "counts": {
@@ -3647,7 +3646,9 @@
     "published_contrast_for_scale",
     "excluded",
     "per_case",
+    "all_ensembles",
     "summary",
+    "filter_caveat",
     "units_caveat"
    ]
   },

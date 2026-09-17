@@ -72,7 +72,10 @@ import xarray as xr
 HERE = pathlib.Path(__file__).resolve().parent
 MANIFEST = HERE / "snapsi_manifest.csv"
 OUT = HERE / "snapsi_polarcap_zg100.parquet"
-CACHE = HERE / "_snapsi_reduced"          # shared; keys carry the variable
+# zg gets its OWN cache directory. It must not share _snapsi_reduced: the
+# analysis scripts read that directory by filename and parse the centre from
+# the first underscore-delimited field, so anything not psl corrupts them.
+CACHE = HERE / "_snapsi_zg100"
 GATE = HERE / "snapsi_zg_opendap_gate.json"
 ENV = pathlib.Path(os.environ.get("CEDA_ENV", HERE.parents[1] / ".env"))
 

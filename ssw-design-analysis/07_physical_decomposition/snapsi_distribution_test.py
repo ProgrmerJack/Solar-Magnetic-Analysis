@@ -157,17 +157,38 @@ def main():
               f"{ks:7.3f}{flag}")
 
     def pooled(sel, label):
-        N = np.concatenate([k["N"] for k in sel])
-        C = np.concatenate([k["C"] for k in sel])
-        shift = float(N.mean() - C.mean())
+        # EACH ENSEMBLE IS RE-CENTRED ON ITS OWN MEAN BEFORE POOLING.
+        #
+        # Standardisation uses the CONTROL mean and sd of each (centre, init),
+        # so the control arm lands at ~0 in every case while the nudged arm
+        # lands on THAT case's causal shift. Concatenating without re-centring
+        # therefore adds the between-ensemble spread of those shifts to the
+        # nudged variance and to nothing else, and the shape tests then measure
+        # that spread rather than the within-ensemble dispersion they are for.
+        #
+        # It stayed invisible at 3 centres because the shift spread was only
+        # 0.295 sigma, contributing 0.087 to a ratio of 0.941. At 9 centres the
+        # spread is 1.07 sigma, contributing 1.15 -- more than the quantity
+        # being estimated -- and the uncorrected ratio reads 2.085 while the
+        # within-ensemble ratio is 0.952. The correction does not overturn the
+        # published conclusion, it is what lets it survive the larger sample.
+        #
+        # The shift itself is still measured, between ensembles, where it
+        # belongs -- and reported with its spread, which is a real quantity.
+        Nc_by_case = [k["N"] - k["N"].mean() for k in sel]
+        Cc_by_case = [k["C"] - k["C"].mean() for k in sel]
+        N = np.concatenate(Nc_by_case)
+        C = np.concatenate(Cc_by_case)
+        case_shifts = np.array([float(k["N"].mean() - k["C"].mean()) for k in sel])
+        shift = float(case_shifts.mean())
         vr = float(N.var(ddof=1) / C.var(ddof=1))
         # bootstrap the variance ratio, resampling MEMBERS within case
         vrs = []
         for _ in range(N_BOOT):
-            a = np.concatenate([rng.choice(k["N"], len(k["N"]), replace=True)
-                                for k in sel])
-            b = np.concatenate([rng.choice(k["C"], len(k["C"]), replace=True)
-                                for k in sel])
+            a = np.concatenate([rng.choice(x, len(x), replace=True)
+                                for x in Nc_by_case])
+            b = np.concatenate([rng.choice(x, len(x), replace=True)
+                                for x in Cc_by_case])
             vrs.append(a.var(ddof=1) / b.var(ddof=1))
         lo, hi = np.percentile(vrs, [2.5, 97.5])
         ks = stats.ks_2samp(N - N.mean(), C - C.mean())
@@ -201,6 +222,16 @@ def main():
         res = {"n_cases": len(sel), "n_nudged": int(len(N)),
                "n_control": int(len(C)),
                "shift_sigma": round(shift, 4),
+               # Between-ensemble spread of the causal shift. NOT sigma_f: it
+               # mixes between-MODEL with between-EVENT variation, since the
+               # ensembles span 9 centres and only 2 events. Reported because
+               # it is what contaminates an uncentred pooled variance ratio,
+               # and because it is large -- it must not be quoted as an
+               # event-to-event forced spread.
+               "shift_sd_across_cases": round(float(case_shifts.std(ddof=1)), 4),
+               "shift_range_across_cases": [round(float(case_shifts.min()), 4),
+                                            round(float(case_shifts.max()), 4)],
+               "variance_ratio_is_within_ensemble": True,
                "variance_ratio": round(vr, 4),
                "variance_ratio_CI95": [round(float(lo), 4), round(float(hi), 4)],
                "forced_variance_sigma2": round(vr - 1.0, 4),
@@ -211,7 +242,9 @@ def main():
         out[label] = res
         print(f"\n=== POOLED ({label}) — {len(sel)} cases, "
               f"{len(N)} nudged vs {len(C)} control members ===")
-        print(f"  causal shift                : {shift:+.3f} sigma")
+        print(f"  causal shift                : {shift:+.3f} sigma "
+              f"(sd across cases {case_shifts.std(ddof=1):.3f}, "
+              f"range {case_shifts.min():+.2f}..{case_shifts.max():+.2f})")
         print(f"  variance ratio nudged/control: {vr:.3f} "
               f"[{lo:.3f}, {hi:.3f}]   (1.0 = shape unchanged)")
         print(f"  pure translation, KS        : D = {ks.statistic:.3f}, "

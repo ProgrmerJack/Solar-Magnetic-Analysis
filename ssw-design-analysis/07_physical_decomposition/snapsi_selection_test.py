@@ -139,6 +139,7 @@ def main():
     print(f"{'centre':8s} {'init':11s} {'arm':8s} {'n':>4s} {'DW':>4s} "
           f"{'NDW':>4s} {'rate':>6s} {'DW':>8s} {'NDW':>8s} {'contrast':>9s}")
     print("-" * 82)
+    out["all_ensembles"] = []
 
     for c in usable:
         for init in sorted(ONSET):
@@ -170,6 +171,21 @@ def main():
                 dw = (mean_nam < 0) & (frac_neg > 0.5)   # conditions 1 AND 2
 
                 n_dw, n_nd = int(dw.sum()), int((~dw).sum())
+                # The DW RATE is defined for every ensemble and is recorded
+                # before any filtering. The CONTRAST is not: it needs both
+                # groups to be non-empty. The <3 filter below is therefore
+                # ASYMMETRIC BY CONSTRUCTION -- it can only bite the arm with a
+                # strong forced shift, where nearly every member lands in one
+                # class, and never the control arm, which sits near 50/50.
+                # Taking the rate only over surviving ensembles understated it:
+                # 11 of 36 nudged ensembles are dropped and their DW rate is
+                # 0.993, so the kept-only mean of 0.776 is not the rate.
+                out["all_ensembles"].append({
+                    "centre": c, "init": init, "arm": arm,
+                    "n_members": int(len(mean_nam)),
+                    "n_DW": n_dw, "n_NDW": n_nd,
+                    "DW_rate": round(n_dw / len(mean_nam), 3),
+                    "contrast_estimable": bool(n_dw >= 3 and n_nd >= 3)})
                 if n_dw < 3 or n_nd < 3:
                     continue
                 dwm = float(mean_nam[dw].mean())
@@ -202,10 +218,34 @@ def main():
             "mean_contrast_sigma": round(float(con.mean()), 4),
             "sd_across_cases": round(float(con.std(ddof=1)), 4),
             "range": [round(float(con.min()), 4), round(float(con.max()), 4)],
-            "mean_DW_rate": round(float(rate.mean()), 3),
+            "mean_DW_rate_contrast_subset": round(float(rate.mean()), 3),
             "ratio_to_published": round(
                 abs(float(con.mean())) / abs(PUBLISHED_CONTRAST), 2),
         }
+    # Unconditional DW rate: every ensemble, nothing dropped.
+    for arm in ("nudged", "control"):
+        alls = [r for r in out["all_ensembles"] if r["arm"] == arm]
+        if not alls or arm not in out["summary"]:
+            continue
+        rates = np.array([r["DW_rate"] for r in alls])
+        dropped = [r for r in alls if not r["contrast_estimable"]]
+        out["summary"][arm]["n_ensembles_all"] = len(alls)
+        out["summary"][arm]["n_dropped_for_contrast"] = len(dropped)
+        out["summary"][arm]["mean_DW_rate_UNCONDITIONAL"] = round(
+            float(rates.mean()), 3)
+        if dropped:
+            dr = np.array([r["DW_rate"] for r in dropped])
+            out["summary"][arm]["dropped_DW_rate_mean"] = round(float(dr.mean()), 3)
+            out["summary"][arm]["dropped_DW_rate_range"] = [
+                round(float(dr.min()), 3), round(float(dr.max()), 3)]
+    out["filter_caveat"] = (
+        "The DW-NDW contrast requires >=3 members in BOTH groups, which is "
+        "asymmetric by construction: only an arm with a strong forced shift "
+        "can push nearly every member into one class. 11 of 36 nudged "
+        "ensembles are dropped that way, with a mean DW rate of 0.993, while "
+        "0 of 36 control ensembles are. Quote mean_DW_rate_UNCONDITIONAL for "
+        "the rate; the contrast is necessarily conditioned on the ensembles "
+        "where both groups exist, which are the weaker-responding ones.")
     out["units_caveat"] = (
         "Contrasts here are standardised by the CONTROL ensemble's "
         "member-to-member spread for a single event. The published -0.850 is "
@@ -223,7 +263,14 @@ def main():
         print(f"     manufactured DW-NDW contrast : "
               f"{s['mean_contrast_sigma']:+.3f} sigma "
               f"(sd {s['sd_across_cases']:.3f}, n={s['n_cases']})")
-        print(f"     DW rate                      : {s['mean_DW_rate']:.2f}")
+        print(f"     DW rate, contrast subset     : "
+              f"{s['mean_DW_rate_contrast_subset']:.3f}  "
+              f"({s['n_cases']} of {s.get('n_ensembles_all', '?')} ensembles)")
+        print(f"     DW rate, UNCONDITIONAL       : "
+              f"{s.get('mean_DW_rate_UNCONDITIONAL', float('nan')):.3f}"
+              + (f"   [{s['n_dropped_for_contrast']} dropped, "
+                 f"their rate {s['dropped_DW_rate_mean']:.3f}]"
+                 if s.get("n_dropped_for_contrast") else ""))
     print(f"\n  published contrast, same criterion: {PUBLISHED_CONTRAST:+.3f} sigma")
     print("\n  In BOTH arms the classifier produces a large contrast. In the")
     print("  nudged arm every member had the SAME stratosphere; in the control")

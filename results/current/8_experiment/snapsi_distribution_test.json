@@ -45,6 +45,126 @@
       "pure_translation_KS_p": 0.8015
     },
     {
+      "centre": "CNR-ISAC",
+      "init": "s20180125",
+      "n_nudged": 50,
+      "n_control": 50,
+      "sd_control_Pa": 378.5,
+      "shift_sigma": -0.8832,
+      "variance_ratio": 0.7248,
+      "pure_translation_KS_p": 0.3959
+    },
+    {
+      "centre": "CNR-ISAC",
+      "init": "s20180208",
+      "n_nudged": 50,
+      "n_control": 50,
+      "sd_control_Pa": 318.4,
+      "shift_sigma": -0.8327,
+      "variance_ratio": 0.6148,
+      "pure_translation_KS_p": 0.5487
+    },
+    {
+      "centre": "CNR-ISAC",
+      "init": "s20181213",
+      "n_nudged": 50,
+      "n_control": 50,
+      "sd_control_Pa": 293.0,
+      "shift_sigma": -0.0959,
+      "variance_ratio": 1.6704,
+      "pure_translation_KS_p": 0.7166
+    },
+    {
+      "centre": "CNR-ISAC",
+      "init": "s20190108",
+      "n_nudged": 40,
+      "n_control": 50,
+      "sd_control_Pa": 117.5,
+      "shift_sigma": -2.8053,
+      "variance_ratio": 0.9224,
+      "pure_translation_KS_p": 0.7652
+    },
+    {
+      "centre": "ECCC",
+      "init": "s20180125",
+      "n_nudged": 50,
+      "n_control": 50,
+      "sd_control_Pa": 403.0,
+      "shift_sigma": -2.1802,
+      "variance_ratio": 0.7291,
+      "pure_translation_KS_p": 0.1786
+    },
+    {
+      "centre": "ECCC",
+      "init": "s20180208",
+      "n_nudged": 50,
+      "n_control": 50,
+      "sd_control_Pa": 336.8,
+      "shift_sigma": -3.5197,
+      "variance_ratio": 0.6007,
+      "pure_translation_KS_p": 0.8693
+    },
+    {
+      "centre": "ECCC",
+      "init": "s20181213",
+      "n_nudged": 50,
+      "n_control": 50,
+      "sd_control_Pa": 361.4,
+      "shift_sigma": -4.3033,
+      "variance_ratio": 1.7458,
+      "pure_translation_KS_p": 0.5487
+    },
+    {
+      "centre": "ECCC",
+      "init": "s20190108",
+      "n_nudged": 50,
+      "n_control": 50,
+      "sd_control_Pa": 219.2,
+      "shift_sigma": -4.2887,
+      "variance_ratio": 0.6838,
+      "pure_translation_KS_p": 0.7166
+    },
+    {
+      "centre": "ECMWF",
+      "init": "s20180125",
+      "n_nudged": 51,
+      "n_control": 51,
+      "sd_control_Pa": 336.1,
+      "shift_sigma": -0.9617,
+      "variance_ratio": 0.8105,
+      "pure_translation_KS_p": 0.728
+    },
+    {
+      "centre": "ECMWF",
+      "init": "s20180208",
+      "n_nudged": 51,
+      "n_control": 51,
+      "sd_control_Pa": 293.4,
+      "shift_sigma": -1.7296,
+      "variance_ratio": 1.2442,
+      "pure_translation_KS_p": 0.8768
+    },
+    {
+      "centre": "ECMWF",
+      "init": "s20181213",
+      "n_nudged": 51,
+      "n_control": 51,
+      "sd_control_Pa": 340.3,
+      "shift_sigma": -1.1882,
+      "variance_ratio": 1.4138,
+      "pure_translation_KS_p": 0.728
+    },
+    {
+      "centre": "ECMWF",
+      "init": "s20190108",
+      "n_nudged": 51,
+      "n_control": 51,
+      "sd_control_Pa": 206.4,
+      "shift_sigma": -2.4527,
+      "variance_ratio": 0.6201,
+      "pure_translation_KS_p": 0.728
+    },
+    {
       "centre": "KMA",
       "init": "s20180125",
       "n_nudged": 50,
@@ -85,6 +205,86 @@
       "pure_translation_KS_p": 0.9977
     },
     {
+      "centre": "Meteo-France",
+      "init": "s20180125",
+      "n_nudged": 50,
+      "n_control": 50,
+      "sd_control_Pa": 413.0,
+      "shift_sigma": -0.5995,
+      "variance_ratio": 0.7904,
+      "pure_translation_KS_p": 0.5487
+    },
+    {
+      "centre": "Meteo-France",
+      "init": "s20180208",
+      "n_nudged": 50,
+      "n_control": 50,
+      "sd_control_Pa": 360.0,
+      "shift_sigma": -2.1102,
+      "variance_ratio": 0.4057,
+      "pure_translation_KS_p": 0.1786
+    },
+    {
+      "centre": "Meteo-France",
+      "init": "s20181213",
+      "n_nudged": 50,
+      "n_control": 50,
+      "sd_control_Pa": 373.8,
+      "shift_sigma": -0.7956,
+      "variance_ratio": 1.9415,
+      "pure_translation_KS_p": 0.3959
+    },
+    {
+      "centre": "Meteo-France",
+      "init": "s20190108",
+      "n_nudged": 50,
+      "n_control": 50,
+      "sd_control_Pa": 125.7,
+      "shift_sigma": -2.533,
+      "variance_ratio": 0.3797,
+      "pure_translation_KS_p": 0.2719
+    },
+    {
+      "centre": "NCAR",
+      "init": "s20180125",
+      "n_nudged": 51,
+      "n_control": 51,
+      "sd_control_Pa": 444.8,
+      "shift_sigma": -0.9345,
+      "variance_ratio": 0.8573,
+      "pure_translation_KS_p": 0.998
+    },
+    {
+      "centre": "NCAR",
+      "init": "s20180208",
+      "n_nudged": 51,
+      "n_control": 51,
+      "sd_control_Pa": 335.9,
+      "shift_sigma": -1.7486,
+      "variance_ratio": 0.9134,
+      "pure_translation_KS_p": 0.9696
+    },
+    {
+      "centre": "NCAR",
+      "init": "s20181213",
+      "n_nudged": 51,
+      "n_control": 51,
+      "sd_control_Pa": 408.9,
+      "shift_sigma": -1.2601,
+      "variance_ratio": 1.6474,
+      "pure_translation_KS_p": 0.5616
+    },
+    {
+      "centre": "NCAR",
+      "init": "s20190108",
+      "n_nudged": 51,
+      "n_control": 51,
+      "sd_control_Pa": 296.4,
+      "shift_sigma": -1.2193,
+      "variance_ratio": 1.1188,
+      "pure_translation_KS_p": 0.728
+    },
+    {
       "centre": "SNU",
       "init": "s20180125",
       "n_nudged": 50,
@@ -107,12 +307,12 @@
     {
       "centre": "SNU",
       "init": "s20181213",
-      "n_nudged": 49,
+      "n_nudged": 50,
       "n_control": 50,
       "sd_control_Pa": 377.0,
-      "shift_sigma": -0.5441,
-      "variance_ratio": 0.6363,
-      "pure_translation_KS_p": 0.9315
+      "shift_sigma": -0.5775,
+      "variance_ratio": 0.6792,
+      "pure_translation_KS_p": 0.9667
     },
     {
       "centre": "SNU",
@@ -123,66 +323,107 @@
       "shift_sigma": -2.537,
       "variance_ratio": 1.175,
       "pure_translation_KS_p": 0.7166
+    },
+    {
+      "centre": "UKMO",
+      "init": "s20180125",
+      "n_nudged": 50,
+      "n_control": 50,
+      "sd_control_Pa": 374.7,
+      "shift_sigma": -0.7512,
+      "variance_ratio": 1.0587,
+      "pure_translation_KS_p": 0.7166
+    },
+    {
+      "centre": "UKMO",
+      "init": "s20180208",
+      "n_nudged": 50,
+      "n_control": 50,
+      "sd_control_Pa": 419.3,
+      "shift_sigma": -0.8545,
+      "variance_ratio": 0.6967,
+      "pure_translation_KS_p": 0.5487
+    },
+    {
+      "centre": "UKMO",
+      "init": "s20181213",
+      "n_nudged": 50,
+      "n_control": 50,
+      "sd_control_Pa": 382.5,
+      "shift_sigma": -1.2877,
+      "variance_ratio": 1.2367,
+      "pure_translation_KS_p": 0.8693
+    },
+    {
+      "centre": "UKMO",
+      "init": "s20190108",
+      "n_nudged": 50,
+      "n_control": 50,
+      "sd_control_Pa": 213.1,
+      "shift_sigma": -2.1546,
+      "variance_ratio": 0.5414,
+      "pure_translation_KS_p": 0.5487
     }
   ],
   "excluded": {
     "NRL": "nudged-minus-control ensemble effect identically zero (max |S| = 0.00781 Pa) -- corrupt submission"
   },
   "pooled_all": {
-    "n_cases": 12,
-    "n_nudged": 589,
-    "n_control": 597,
-    "shift_sigma": -1.2293,
-    "variance_ratio": 1.6442,
-    "variance_ratio_CI95": [
-      1.4131,
-      1.9259
+    "n_cases": 36,
+    "n_nudged": 1788,
+    "n_control": 1805,
+    "shift_sigma": -1.5595,
+    "shift_sd_across_cases": 1.0709,
+    "shift_range_across_cases": [
+      -4.3033,
+      -0.0959
     ],
-    "forced_variance_sigma2": 0.6442,
-    "pure_translation_KS_stat": 0.0938,
-    "pure_translation_KS_p": 0.0099,
-    "mixture_BIC_p_vs_control": 0.0,
+    "variance_ratio_is_within_ensemble": true,
+    "variance_ratio": 0.9521,
+    "variance_ratio_CI95": [
+      0.8692,
+      1.0468
+    ],
+    "forced_variance_sigma2": -0.0479,
+    "pure_translation_KS_stat": 0.0316,
+    "pure_translation_KS_p": 0.3223,
+    "mixture_BIC_p_vs_control": 0.99,
     "power_to_detect_mixture": {
-      "critical_value_BIC_at_5pct": -6.38,
-      "sep=0.25": 0.06,
-      "sep=0.5": 0.035,
-      "sep=0.75": 0.0,
+      "critical_value_BIC_at_5pct": -1.854,
+      "sep=0.25": 0.04,
+      "sep=0.5": 0.005,
+      "sep=0.75": 0.005,
       "sep=1.0": 0.0,
-      "sep=1.5": 0.01
+      "sep=1.5": 0.04
     }
   },
   "pooled_excluding_short_lead_init": {
-    "n_cases": 9,
-    "n_nudged": 451,
-    "n_control": 450,
-    "shift_sigma": -0.8894,
-    "variance_ratio": 0.9391,
-    "variance_ratio_CI95": [
-      0.7806,
-      1.1301
+    "n_cases": 27,
+    "n_nudged": 1358,
+    "n_control": 1356,
+    "shift_sigma": -1.2619,
+    "shift_sd_across_cases": 0.9043,
+    "shift_range_across_cases": [
+      -4.3033,
+      -0.0959
     ],
-    "forced_variance_sigma2": -0.0609,
-    "pure_translation_KS_stat": 0.0416,
-    "pure_translation_KS_p": 0.805,
-    "mixture_BIC_p_vs_control": 0.415,
+    "variance_ratio_is_within_ensemble": true,
+    "variance_ratio": 0.9954,
+    "variance_ratio_CI95": [
+      0.8905,
+      1.1052
+    ],
+    "forced_variance_sigma2": -0.0046,
+    "pure_translation_KS_stat": 0.0279,
+    "pure_translation_KS_p": 0.65,
+    "mixture_BIC_p_vs_control": 0.995,
     "power_to_detect_mixture": {
-      "critical_value_BIC_at_5pct": -1.046,
+      "critical_value_BIC_at_5pct": 0.125,
       "sep=0.25": 0.04,
-      "sep=0.5": 0.015,
-      "sep=0.75": 0.0,
+      "sep=0.5": 0.03,
+      "sep=0.75": 0.005,
       "sep=1.0": 0.005,
       "sep=1.5": 0.0
     }
-  },
-  "interpretation": {
-    "headline": "An SSW SHIFTS the surface distribution without inflating its between-member variance. Causal shift -0.889 sigma; variance ratio 0.9391 [0.7806, 1.1301], consistent with 1.",
-    "forced_variance_bound_sigma2": [
-      -0.219,
-      0.13
-    ],
-    "why_that_matters": "If coupling strength genuinely varied between events -- if some SSWs were 'downward-propagating' and others not -- the forced ensemble would be MORE dispersed than the unforced one. It is not. With the stratospheric forcing identical across members by construction, the added between-member variance is bounded at +0.13 sigma^2 at 95%.",
-    "pure_translation": "KS p = 0.805 (D over 451 vs 450 members): the forced distribution is a pure translation of the unforced one.",
-    "POWER LIMITATION -- STATED, NOT BURIED": "The Gaussian-mixture BIC test has essentially NO power here: at a proper 5% critical value, power is 0.04 at separation 0.25 sigma and 0.00 at 1.0-1.5 sigma, because the within-component spread stays at ~1 sigma while the separation grows. Its p = 0.415 is therefore NOT evidence for one population and must never be quoted as such. The VARIANCE BOUND and the KS test carry this result; the mixture test does not. A first version of the power code compared the statistic against a SINGLE null draw, which is a coin flip under the null and produced power DECREASING with separation -- impossible, and the giveaway that it was wrong.",
-    "guard_that_mattered": "Including the s20190108 initialisation flips every conclusion: variance ratio 1.644 [1.41, 1.93] and KS p = 0.010. That initialisation starts 6 days AFTER onset, so the +8..+25 window sits at lead 2-19 days before the ensemble has diverged; its control spread is ~138 Pa against 205-466 Pa elsewhere. Standardising by forecast spread growth rather than climatological spread inflates both statistics."
   }
 }

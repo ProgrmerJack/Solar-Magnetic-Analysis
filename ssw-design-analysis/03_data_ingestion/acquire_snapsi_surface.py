@@ -155,14 +155,16 @@ def cache_ok(df):
 
 def fetch_reduce(row, tok):
     """Download one file, reduce to a polar-cap mean, discard the raw bytes."""
-    # The variable is part of the key. Without it a future zg or ta run would
-    # collide with the psl entry for the same member and silently serve the
-    # wrong field from cache.
-    key = f"{row.variable}_{row.centre}_{row.experiment}_{row.start_date}_{row.member}"
+    # CENTRE-FIRST, and it must stay that way. snapsi_selection_test.py and
+    # snapsi_distribution_test.py read this directory by filename --
+    # `p.name.split("_")[0]` for the centre and `{centre}_{exp}_{init}_*` to
+    # load -- so the cache name is a PUBLIC CONTRACT, not an internal detail.
+    # Prefixing it with the variable on 2026-09-17 broke both silently: they
+    # parsed "psl" as a centre name and quietly analysed only the 2,026
+    # legacy-named members while ignoring 4,135 new ones. Other variables get
+    # their own DIRECTORY (see acquire_snapsi_zg.py), never a prefix here.
+    key = f"{row.centre}_{row.experiment}_{row.start_date}_{row.member}"
     cf = CACHE / f"{key}.parquet"
-    legacy = CACHE / f"{row.centre}_{row.experiment}_{row.start_date}_{row.member}.parquet"
-    if not cf.exists() and row.variable == "psl" and legacy.exists():
-        cf = legacy          # 2,466 psl members were cached before the key changed
 
     if cf.exists():
         # A cached file is NOT trusted on existence alone. A process killed
@@ -321,10 +323,8 @@ def main():
     # members land beside these a bare *.parquet glob would concatenate
     # different fields into one column. Legacy entries have no variable prefix
     # and are psl by construction -- they predate the key change.
-    cached_files = sorted(
-        f for f in CACHE.glob("*.parquet")
-        if f.name.startswith("psl_") or not f.name.split("_")[0] in {"zg", "ta", "ua", "va"}
-    )
+    # This directory holds psl and nothing else; other variables live elsewhere.
+    cached_files = sorted(CACHE.glob("*.parquet"))
     stray = list(CACHE.glob("*.parquet.tmp"))
     for s in stray:
         s.unlink(missing_ok=True)
