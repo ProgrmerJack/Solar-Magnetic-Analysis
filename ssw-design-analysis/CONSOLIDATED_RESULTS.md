@@ -362,14 +362,38 @@ Both arms carry identical nudging machinery; only the target differs (observed
 event vs 1979–2019 climatology). Differencing against `free` would confound the
 anomaly with the act of nudging.
 
-**S = +0.972 σ**, 3 models × 2 NH events × 2 initialisations, 38–80 members each.
-Between-model spread **0.667 to 1.681** (sd 0.513) — models disagree by 2.5× on
-downward-coupling strength, measured causally rather than diagnosed.
-Between-event difference +0.19 σ (n=2, indicative only).
+**Re-run 2026-09-17 on 9 usable centres** (10 downloaded, NRL excluded by the
+duplicate guard at ratio 0.004), 2 NH events × 2 initialisations, 38–52 members
+each. The original 3-centre figure is reproducible: CCCma, KMA and SNU alone give
+**+0.976 σ** against the published +0.972.
 
-Implied NDW response given S: AO **−0.275** (reversed sign); the other four
-**+0.40 to +0.60** — non-propagating events would still carry a large real
-response, which is a continuum, not two populations.
+| centre set | mean S | sd | note |
+|---|---|---|---|
+| original 3 (CCCma, KMA, SNU) | **+0.976 σ** | — | reproduces the published +0.972 |
+| all 9 | **+1.358 σ** | 0.809 | |
+| **9 excluding ECCC** | **+1.101 σ** | **0.271** | the robust figure |
+
+**ECCC is a statistical outlier and must not be averaged in silently.** Its
+S/σ is **+3.407** when the next highest is ECMWF at +1.467 and the other eight
+span +0.618 to +1.467. A Tukey test on the other eight puts the upper fence at
+1.674, so ECCC sits well outside it, at 2.9× their median. Including it moves the
+grand mean from +1.10 to +1.36 and triples the between-model sd, 0.271 → 0.809.
+**Quote +1.10 σ (or the median +1.21) as the causal effect, with the all-9 mean of
++1.36 as the ECCC-inclusive sensitivity.** Whether ECCC's response is physical or
+a submission problem is not established here; its duplicate-guard ratio is 2.501,
+the highest of any centre, which is the opposite of NRL's failure mode and is not
+by itself evidence of a defect.
+
+**The dominant uncertainty is between MODELS, not between events.** Between-model
+sd is 0.271 excluding ECCC and 0.809 including it; the between-event difference is
+**+0.055 σ** on n=2. Models disagree about downward-coupling strength by far more
+than the two events differ from each other — which is the same ordering results
+H, I and M report, arrived at by a completely different route.
+
+Implied NDW response given S = +1.358: 1 of 5 published contrasts forces NDW to
+**+0.110** (effectively zero); the other four imply **+0.79 to +0.99 σ** — events
+labelled "non-propagating" would still carry a large real surface response. That
+is a continuum, not two populations.
 
 ### L — THE DECISIVE TEST: selection under experimentally fixed forcing (`snapsi_selection_test.py`)
 

@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T16:45:51+00:00",
+ "generated": "2026-09-17T17:14:45+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -130,9 +130,9 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "SNAPSI geopotential height at 100 hPa, reduced to a polar-cap mean, fetched by OPeNDAP subsetting rather than by downloading whole files.",
-   "loc": 416,
-   "modified": "2026-09-17 16:31",
-   "sha256_16": "f56e3699e79d1798",
+   "loc": 436,
+   "modified": "2026-09-17 17:13",
+   "sha256_16": "7e83bffca9a28dcc",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_manifest.csv",
@@ -3516,9 +3516,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 6116,
-   "modified": "2026-08-03 12:44",
-   "sha256_16": "a12c6c22c1de6301",
+   "bytes": 14120,
+   "modified": "2026-09-17 17:12",
+   "sha256_16": "894d25dd004525fe",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_causal_effect.py"
    ],

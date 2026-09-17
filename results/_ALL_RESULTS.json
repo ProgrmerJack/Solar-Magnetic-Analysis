@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T16:45:51+00:00",
+ "generated": "2026-09-17T17:14:45+00:00",
  "generator": "tools/catalog_repo.py",
  "note": "Every ssw-design-analysis result in one file. The per-script JSONs remain on disk as write-side provenance; this is the read path. Regenerate with tools/catalog_repo.py.",
  "results": {
@@ -8543,6 +8543,174 @@
      "S_sigma_pooled": 0.3623
     },
     {
+     "centre": "CNR-ISAC",
+     "init": "s20180125",
+     "event": "Feb-2018",
+     "S_Pa": 334.3324,
+     "sd_control_Pa": 378.5343,
+     "S_sigma": 0.8832,
+     "se_Pa": 70.3052,
+     "se_sigma": 0.1857,
+     "n_nudged": 50,
+     "n_control": 50,
+     "sd_pooled_Pa": 291.1733,
+     "S_sigma_pooled": 1.1482
+    },
+    {
+     "centre": "CNR-ISAC",
+     "init": "s20180208",
+     "event": "Feb-2018",
+     "S_Pa": 265.1553,
+     "sd_control_Pa": 318.4219,
+     "S_sigma": 0.8327,
+     "se_Pa": 57.2238,
+     "se_sigma": 0.1797,
+     "n_nudged": 50,
+     "n_control": 50,
+     "sd_pooled_Pa": 291.1733,
+     "S_sigma_pooled": 0.9106
+    },
+    {
+     "centre": "CNR-ISAC",
+     "init": "s20181213",
+     "event": "Jan-2019",
+     "S_Pa": 28.0815,
+     "sd_control_Pa": 292.961,
+     "S_sigma": 0.0959,
+     "se_Pa": 67.7034,
+     "se_sigma": 0.2311,
+     "n_nudged": 50,
+     "n_control": 50,
+     "sd_pooled_Pa": 291.1733,
+     "S_sigma_pooled": 0.0964
+    },
+    {
+     "centre": "CNR-ISAC",
+     "init": "s20190108",
+     "event": "Jan-2019",
+     "S_Pa": 329.6801,
+     "sd_control_Pa": 117.5223,
+     "S_sigma": 2.8053,
+     "se_Pa": 24.3871,
+     "se_sigma": 0.2075,
+     "n_nudged": 40,
+     "n_control": 50,
+     "sd_pooled_Pa": 291.1733,
+     "S_sigma_pooled": 1.1322
+    },
+    {
+     "centre": "ECCC",
+     "init": "s20180125",
+     "event": "Feb-2018",
+     "S_Pa": 878.5189,
+     "sd_control_Pa": 402.9614,
+     "S_sigma": 2.1802,
+     "se_Pa": 74.9354,
+     "se_sigma": 0.186,
+     "n_nudged": 50,
+     "n_control": 50,
+     "sd_pooled_Pa": 334.523,
+     "S_sigma_pooled": 2.6262
+    },
+    {
+     "centre": "ECCC",
+     "init": "s20180208",
+     "event": "Feb-2018",
+     "S_Pa": 1185.4471,
+     "sd_control_Pa": 336.8002,
+     "S_sigma": 3.5197,
+     "se_Pa": 60.2623,
+     "se_sigma": 0.1789,
+     "n_nudged": 50,
+     "n_control": 50,
+     "sd_pooled_Pa": 334.523,
+     "S_sigma_pooled": 3.5437
+    },
+    {
+     "centre": "ECCC",
+     "init": "s20181213",
+     "event": "Jan-2019",
+     "S_Pa": 1555.1864,
+     "sd_control_Pa": 361.393,
+     "S_sigma": 4.3033,
+     "se_Pa": 84.6901,
+     "se_sigma": 0.2343,
+     "n_nudged": 50,
+     "n_control": 50,
+     "sd_pooled_Pa": 334.523,
+     "S_sigma_pooled": 4.649
+    },
+    {
+     "centre": "ECCC",
+     "init": "s20190108",
+     "event": "Jan-2019",
+     "S_Pa": 940.1566,
+     "sd_control_Pa": 219.2188,
+     "S_sigma": 4.2887,
+     "se_Pa": 40.2287,
+     "se_sigma": 0.1835,
+     "n_nudged": 50,
+     "n_control": 50,
+     "sd_pooled_Pa": 334.523,
+     "S_sigma_pooled": 2.8104
+    },
+    {
+     "centre": "ECMWF",
+     "init": "s20180125",
+     "event": "Feb-2018",
+     "S_Pa": 323.2399,
+     "sd_control_Pa": 336.1107,
+     "S_sigma": 0.9617,
+     "se_Pa": 63.3288,
+     "se_sigma": 0.1884,
+     "n_nudged": 51,
+     "n_control": 51,
+     "sd_pooled_Pa": 296.7137,
+     "S_sigma_pooled": 1.0894
+    },
+    {
+     "centre": "ECMWF",
+     "init": "s20180208",
+     "event": "Feb-2018",
+     "S_Pa": 507.4733,
+     "sd_control_Pa": 293.4105,
+     "S_sigma": 1.7296,
+     "se_Pa": 61.5497,
+     "se_sigma": 0.2098,
+     "n_nudged": 51,
+     "n_control": 51,
+     "sd_pooled_Pa": 296.7137,
+     "S_sigma_pooled": 1.7103
+    },
+    {
+     "centre": "ECMWF",
+     "init": "s20181213",
+     "event": "Jan-2019",
+     "S_Pa": 404.2919,
+     "sd_control_Pa": 340.2663,
+     "S_sigma": 1.1882,
+     "se_Pa": 74.0266,
+     "se_sigma": 0.2176,
+     "n_nudged": 51,
+     "n_control": 51,
+     "sd_pooled_Pa": 296.7137,
+     "S_sigma_pooled": 1.3626
+    },
+    {
+     "centre": "ECMWF",
+     "init": "s20190108",
+     "event": "Jan-2019",
+     "S_Pa": 506.2045,
+     "sd_control_Pa": 206.3906,
+     "S_sigma": 2.4527,
+     "se_Pa": 36.7849,
+     "se_sigma": 0.1782,
+     "n_nudged": 51,
+     "n_control": 51,
+     "sd_pooled_Pa": 296.7137,
+     "S_sigma_pooled": 1.706
+    },
+    {
      "centre": "KMA",
      "init": "s20180125",
      "event": "Feb-2018",
@@ -8599,6 +8767,118 @@
      "S_sigma_pooled": 1.4527
     },
     {
+     "centre": "Meteo-France",
+     "init": "s20180125",
+     "event": "Feb-2018",
+     "S_Pa": 247.5727,
+     "sd_control_Pa": 412.9689,
+     "S_sigma": 0.5995,
+     "se_Pa": 78.1458,
+     "se_sigma": 0.1892,
+     "n_nudged": 50,
+     "n_control": 50,
+     "sd_pooled_Pa": 334.9387,
+     "S_sigma_pooled": 0.7392
+    },
+    {
+     "centre": "Meteo-France",
+     "init": "s20180208",
+     "event": "Feb-2018",
+     "S_Pa": 759.5901,
+     "sd_control_Pa": 359.9601,
+     "S_sigma": 2.1102,
+     "se_Pa": 60.3547,
+     "se_sigma": 0.1677,
+     "n_nudged": 50,
+     "n_control": 50,
+     "sd_pooled_Pa": 334.9387,
+     "S_sigma_pooled": 2.2678
+    },
+    {
+     "centre": "Meteo-France",
+     "init": "s20181213",
+     "event": "Jan-2019",
+     "S_Pa": 297.365,
+     "sd_control_Pa": 373.7619,
+     "S_sigma": 0.7956,
+     "se_Pa": 90.6555,
+     "se_sigma": 0.2425,
+     "n_nudged": 50,
+     "n_control": 50,
+     "sd_pooled_Pa": 334.9387,
+     "S_sigma_pooled": 0.8878
+    },
+    {
+     "centre": "Meteo-France",
+     "init": "s20190108",
+     "event": "Jan-2019",
+     "S_Pa": 318.3095,
+     "sd_control_Pa": 125.6649,
+     "S_sigma": 2.533,
+     "se_Pa": 20.8744,
+     "se_sigma": 0.1661,
+     "n_nudged": 50,
+     "n_control": 50,
+     "sd_pooled_Pa": 334.9387,
+     "S_sigma_pooled": 0.9504
+    },
+    {
+     "centre": "NCAR",
+     "init": "s20180125",
+     "event": "Feb-2018",
+     "S_Pa": 415.6472,
+     "sd_control_Pa": 444.8032,
+     "S_sigma": 0.9345,
+     "se_Pa": 84.8847,
+     "se_sigma": 0.1908,
+     "n_nudged": 51,
+     "n_control": 51,
+     "sd_pooled_Pa": 373.2701,
+     "S_sigma_pooled": 1.1135
+    },
+    {
+     "centre": "NCAR",
+     "init": "s20180208",
+     "event": "Feb-2018",
+     "S_Pa": 587.3319,
+     "sd_control_Pa": 335.8872,
+     "S_sigma": 1.7486,
+     "se_Pa": 65.0591,
+     "se_sigma": 0.1937,
+     "n_nudged": 51,
+     "n_control": 51,
+     "sd_pooled_Pa": 373.2701,
+     "S_sigma_pooled": 1.5735
+    },
+    {
+     "centre": "NCAR",
+     "init": "s20181213",
+     "event": "Jan-2019",
+     "S_Pa": 515.2,
+     "sd_control_Pa": 408.8503,
+     "S_sigma": 1.2601,
+     "se_Pa": 93.1506,
+     "se_sigma": 0.2278,
+     "n_nudged": 51,
+     "n_control": 51,
+     "sd_pooled_Pa": 373.2701,
+     "S_sigma_pooled": 1.3802
+    },
+    {
+     "centre": "NCAR",
+     "init": "s20190108",
+     "event": "Jan-2019",
+     "S_Pa": 361.4153,
+     "sd_control_Pa": 296.4006,
+     "S_sigma": 1.2193,
+     "se_Pa": 60.4145,
+     "se_sigma": 0.2038,
+     "n_nudged": 51,
+     "n_control": 51,
+     "sd_pooled_Pa": 373.2701,
+     "S_sigma_pooled": 0.9682
+    },
+    {
      "centre": "SNU",
      "init": "s20180125",
      "event": "Feb-2018",
@@ -8630,15 +8910,15 @@
      "centre": "SNU",
      "init": "s20181213",
      "event": "Jan-2019",
-     "S_Pa": 205.1285,
+     "S_Pa": 217.725,
      "sd_control_Pa": 377.0164,
-     "S_sigma": 0.5441,
-     "se_Pa": 68.4743,
-     "se_sigma": 0.1816,
-     "n_nudged": 49,
+     "S_sigma": 0.5775,
+     "se_Pa": 69.091,
+     "se_sigma": 0.1833,
+     "n_nudged": 50,
      "n_control": 50,
      "sd_pooled_Pa": 305.418,
-     "S_sigma_pooled": 0.6716
+     "S_sigma_pooled": 0.7129
     },
     {
      "centre": "SNU",
@@ -8653,69 +8933,137 @@
      "n_control": 50,
      "sd_pooled_Pa": 305.418,
      "S_sigma_pooled": 1.1433
+    },
+    {
+     "centre": "UKMO",
+     "init": "s20180125",
+     "event": "Feb-2018",
+     "S_Pa": 281.4813,
+     "sd_control_Pa": 374.6975,
+     "S_sigma": 0.7512,
+     "se_Pa": 76.0321,
+     "se_sigma": 0.2029,
+     "n_nudged": 50,
+     "n_control": 50,
+     "sd_pooled_Pa": 353.6452,
+     "S_sigma_pooled": 0.7959
+    },
+    {
+     "centre": "UKMO",
+     "init": "s20180208",
+     "event": "Feb-2018",
+     "S_Pa": 358.2871,
+     "sd_control_Pa": 419.2703,
+     "S_sigma": 0.8545,
+     "se_Pa": 77.2355,
+     "se_sigma": 0.1842,
+     "n_nudged": 50,
+     "n_control": 50,
+     "sd_pooled_Pa": 353.6452,
+     "S_sigma_pooled": 1.0131
+    },
+    {
+     "centre": "UKMO",
+     "init": "s20181213",
+     "event": "Jan-2019",
+     "S_Pa": 492.5668,
+     "sd_control_Pa": 382.5062,
+     "S_sigma": 1.2877,
+     "se_Pa": 80.9009,
+     "se_sigma": 0.2115,
+     "n_nudged": 50,
+     "n_control": 50,
+     "sd_pooled_Pa": 353.6452,
+     "S_sigma_pooled": 1.3928
+    },
+    {
+     "centre": "UKMO",
+     "init": "s20190108",
+     "event": "Jan-2019",
+     "S_Pa": 459.1835,
+     "sd_control_Pa": 213.1198,
+     "S_sigma": 2.1546,
+     "se_Pa": 37.4192,
+     "se_sigma": 0.1756,
+     "n_nudged": 50,
+     "n_control": 50,
+     "sd_pooled_Pa": 353.6452,
+     "S_sigma_pooled": 1.2984
     }
    ],
    "reported": {
     "Karpechko-criterion AO contrast, observations": {
      "contrast": 1.782,
      "dw_fraction": 0.7,
-     "implied_DW_sigma": 1.507,
-     "implied_NDW_sigma": -0.275
+     "implied_DW_sigma": 1.892,
+     "implied_NDW_sigma": 0.11
     },
     "CMIP6 ensemble DW-NDW contrast": {
      "contrast": 1.143,
      "dw_fraction": 0.5,
-     "implied_DW_sigma": 1.543,
-     "implied_NDW_sigma": 0.4
+     "implied_DW_sigma": 1.929,
+     "implied_NDW_sigma": 0.786
     },
     "ACP 26, 3723 (2026) published NAO contrast": {
      "contrast": 0.85,
      "dw_fraction": 0.59,
-     "implied_DW_sigma": 1.32,
-     "implied_NDW_sigma": 0.47
+     "implied_DW_sigma": 1.706,
+     "implied_NDW_sigma": 0.856
     },
     "ERA5 1000 hPa NAM contrast, Karpechko criterion": {
      "contrast": 0.684,
      "dw_fraction": 0.54,
-     "implied_DW_sigma": 1.287,
-     "implied_NDW_sigma": 0.603
+     "implied_DW_sigma": 1.672,
+     "implied_NDW_sigma": 0.988
     },
     "ERA5 850 hPa NAM contrast, ACP criterion": {
      "contrast": 0.639,
      "dw_fraction": 0.59,
-     "implied_DW_sigma": 1.234,
-     "implied_NDW_sigma": 0.595
+     "implied_DW_sigma": 1.62,
+     "implied_NDW_sigma": 0.981
     }
    },
    "pooled_sigma_Pa": {
     "CCCma": 369.45,
+    "CNR-ISAC": 291.17,
+    "ECCC": 334.52,
+    "ECMWF": 296.71,
     "KMA": 325.54,
-    "SNU": 305.42
+    "Meteo-France": 334.94,
+    "NCAR": 373.27,
+    "SNU": 305.42,
+    "UKMO": 353.65
    },
    "S_sigma_per_init": {
-    "Feb-2018|s20180125": 1.075,
-    "Feb-2018|s20180208": 1.057,
-    "Jan-2019|s20181213": 0.7696,
-    "Jan-2019|s20190108": 0.9861
+    "Feb-2018|s20180125": 1.193,
+    "Feb-2018|s20180208": 1.5767,
+    "Jan-2019|s20181213": 1.3466,
+    "Jan-2019|s20190108": 1.3138
    },
    "S_sigma_per_event": {
-    "Feb-2018": 1.066,
-    "Jan-2019": 0.8779
+    "Feb-2018": 1.3849,
+    "Jan-2019": 1.3302
    },
-   "S_sigma_grand_mean": 0.9719,
-   "between_event_difference": 0.1881,
-   "between_model_sd": 0.3288,
+   "S_sigma_grand_mean": 1.3575,
+   "between_event_difference": 0.0547,
+   "between_model_sd": 0.8094,
    "S_sigma_per_model": {
     "CCCma": 0.6179,
+    "CNR-ISAC": 0.8219,
+    "ECCC": 3.4073,
+    "ECMWF": 1.4671,
     "KMA": 1.2676,
-    "SNU": 1.0303
+    "Meteo-France": 1.2113,
+    "NCAR": 1.2589,
+    "SNU": 1.0406,
+    "UKMO": 1.1251
    },
    "implied_NDW_sigma": {
-    "Karpechko-criterion AO contrast, observations": -0.2755,
-    "CMIP6 ensemble DW-NDW contrast": 0.4004,
-    "ACP 26, 3723 (2026) published NAO contrast": 0.4704,
-    "ERA5 1000 hPa NAM contrast, Karpechko criterion": 0.6026,
-    "ERA5 850 hPa NAM contrast, ACP criterion": 0.5949
+    "Karpechko-criterion AO contrast, observations": 0.1101,
+    "CMIP6 ensemble DW-NDW contrast": 0.786,
+    "ACP 26, 3723 (2026) published NAO contrast": 0.856,
+    "ERA5 1000 hPa NAM contrast, Karpechko criterion": 0.9882,
+    "ERA5 850 hPa NAM contrast, ACP criterion": 0.9805
    }
   },
   "snapsi_distribution_test.json": {
