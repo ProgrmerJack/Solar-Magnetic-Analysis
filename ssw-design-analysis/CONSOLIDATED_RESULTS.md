@@ -320,6 +320,27 @@ contrasts imply almost exactly the achievable variance. Only the large ones exce
 it. (They remain compromised for the *separate* reason that they are outcome-based;
 β×ΔS puts them at 93–102% selection.)
 
+> **The artifact now backs this table (re-run 2026-09-17).** Until today the table
+> above existed only in this document: `predictability_ceiling.json` still held the
+> pre-correction values, including the impossible **R² = 1.2852** for the
+> observational Karpechko contrast, produced by dividing it by the CMIP6 variance.
+> The script had been fixed and never re-run. Re-running it reproduces every figure
+> in the table — 0.6294, 0.5972, 0.1041, 0.0885, 0.1565 — on Var(CMIP6) = 0.519 and
+> Var(obs) = 1.117, and adds the two ERA5 rows, which the old JSON did not contain
+> at all. The ACP NAO entry also moved, 0.3368 → 0.1565, for the same denominator
+> reason.
+>
+> **The cross-validated R² moved at the third decimal and I could not establish
+> why.** Same 1,888 events, same 38 features, same 20 groups, same fixed seed
+> (20260803), same matched variances — but ridge P1 0.0998 → **0.1026**, P2 0.1121 →
+> 0.1133, P3 0.4245 → **0.4226**, and gradient boosting up to 0.0081. The most
+> likely cause is a library version difference: the original run's package versions
+> were never recorded, so this cannot be demonstrated, only suspected. No conclusion
+> moves — the tier contrast is (0.4226 − 0.1026)/0.4226 = **75.7%** of apparent
+> diagnostic skill unavailable in advance, against the 73% quoted above for the
+> 86-feature wave-driving run. From now on the environment is pinned
+> (`environment/requirements.lock.txt`) so the next re-run is answerable.
+
 **Convergence.** Placebo-corrected σ_f upper bound (0.2388) implies R² = **0.110**;
 cross-validation measures **0.100**. Two methods, no shared assumptions, one needing
 a 91% correction and one needing none, agreeing to 0.01.

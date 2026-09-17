@@ -58,6 +58,11 @@ Tried: re-running `build_catalogue.py` and `ensemble_precursor.py` on Linux to c
 Failed: nothing reproduced. Every artifact in this repo was written on Windows, where text-mode writes translate `\n` to `\r\n` — `event_catalogue.csv` came back 7,894 bytes against 7,943, `ensemble_precursor_CanESM5.json` 1,590 against 1,692 — while `DataFrame.equals` and parsed-JSON equality were both True and all invariance tests passed. **50 of 54 live result JSONs are CRLF and all 60 `write_text` sites lack `newline="\n"`.**
 Rule: compare results **parsed, never byte-wise**, across platforms. Pin `lineterminator="\n"` on `to_csv` and `newline="\n"` on `write_text` in any script you touch — do not mass-edit all 60, because that restamps every producer hash and marks all 53 results stale at once. A reproducibility claim established on one OS is not established until it is re-run on the other.
 
+## 2026-09-17 — A re-run moved and the cause could not be established
+Tried: re-running `predictability_ceiling.py` to clear an impossible R² = 1.2852 that a corrected-but-never-re-run script had left in its JSON.
+Failed: the correction worked, but the cross-validated R² also moved — ridge P1 0.0998 → 0.1026, P3 0.4245 → 0.4226, gradient boosting up to 0.0081 — on identical data (n=1888), features (38), groups (20) and seed (20260803). The original run's package versions were never recorded, so a library difference can be suspected and not shown.
+Rule: record package versions alongside every result, as the global protocol requires. The environment is now pinned in `environment/requirements.lock.txt`; a result produced before that pin cannot be re-run for comparison, only superseded.
+
 ## Standing traps that are not failures of a single run
 - **Post-hoc catalogue substitution.** Swapping `primary` (43) for `union` (47) to raise n is the practice that produced four incompatible catalogues in the superseded project. `load_catalogue(which)` is the only permitted event source; inline date lists are forbidden.
 - **Guards that compare the wrong thing.** The first SNAPSI corruption guard compared members by *label* and passed NRL, whose members differ while the ensemble mean is identically zero. Test the effect, not the labels.
