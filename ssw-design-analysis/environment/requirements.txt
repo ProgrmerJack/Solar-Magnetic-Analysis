@@ -26,3 +26,5 @@ requests         # CEDA, THREDDS, CPC downloads
 zarr             # ERA5 via WeatherBench2 public GCS
 gcsfs            # anonymous GCS access for the above
 dask             # chunked reads of the CMIP6 / SNAPSI ensembles
+pydap            # CEDA OPeNDAP. The ONLY way to get SNAPSI 3-D fields: full zg
+                 # is ~5 TB, a 100 hPa polar-cap subset is ~33 GB (152x smaller)
