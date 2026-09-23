@@ -194,6 +194,41 @@ def fisher_pool(rs, ns):
             "n_members_total": int(ns[keep].sum())}
 
 
+def arm_contrast(per):
+    """Nudged minus control, on ensembles present in BOTH arms, plus heterogeneity.
+
+    This is the pre-specified falsifier made quantitative: if the control arm
+    (no SSW) reproduces the nudged correlation, the difference is ~0. Matching
+    on (centre, init) keeps an arm-missing ensemble from moving one side only.
+    Cochran's Q asks whether per-ensemble r differ by more than sampling error.
+    """
+    from scipy import stats as _st
+    by = {(q["centre"], q["init"], q["arm"]): q for q in per}
+    keys = sorted({(c, i) for c, i, a in by if (c, i, "nudged") in by
+                   and (c, i, "control") in by})
+    out = {"n_matched_ensembles": len(keys)}
+    if not keys:
+        return out
+    zs, ws = {}, {}
+    for arm in ("nudged", "control"):
+        r = np.array([by[(c, i, arm)]["r"] for c, i in keys], float)
+        n = np.array([by[(c, i, arm)]["n_members"] for c, i in keys], float)
+        z, w = np.arctanh(np.clip(r, -0.999999, 0.999999)), n - 3
+        zbar = float(np.sum(w * z) / np.sum(w))
+        q_stat = float(np.sum(w * (z - zbar) ** 2))
+        zs[arm], ws[arm] = zbar, float(np.sum(w))
+        out[arm] = {"r_matched": round(float(np.tanh(zbar)), 4),
+                    "cochran_Q": round(q_stat, 3), "Q_df": len(keys) - 1,
+                    "Q_p": (round(float(_st.chi2.sf(q_stat, len(keys) - 1)), 4)
+                            if len(keys) > 1 else None)}
+    dz = zs["nudged"] - zs["control"]
+    se = float(np.sqrt(1 / ws["nudged"] + 1 / ws["control"]))
+    out["delta_z_nudged_minus_control"] = round(dz, 4)
+    out["delta_z_CI95"] = [round(dz - 1.96 * se, 4), round(dz + 1.96 * se, 4)]
+    out["delta_p_two_sided"] = round(float(2 * _st.norm.sf(abs(dz) / se)), 4)
+    return out
+
+
 def perm_p(x, y, r_obs, rng, n=N_PERM):
     """P(|r| >= |r_obs|) when members are paired at random within the ensemble."""
     cnt = 0
@@ -319,7 +354,21 @@ def main() -> int:
                 "pooled_excl_short_lead": (
                     fisher_pool([k[0] for k in keep], [k[1] for k in keep])
                     if keep else None)}
+        allper = out[tag]["nudged"]["per_ensemble"] + out[tag]["control"]["per_ensemble"]
+        out[tag]["arm_contrast"] = arm_contrast(allper)
+        out[tag]["arm_contrast_excl_short_lead"] = arm_contrast(
+            [q for q in allper if q["init"] != SHORT_LEAD_INIT])
         print(f"\n=== {tag.upper()} response window: post-onset days {win[0]}-{win[1]} ===")
+        for lab in ("arm_contrast", "arm_contrast_excl_short_lead"):
+            ac = out[tag][lab]
+            if "delta_z_nudged_minus_control" in ac:
+                print(f"  {lab}: {ac['n_matched_ensembles']} matched ensembles, "
+                      f"r nudged {ac['nudged']['r_matched']:+.3f} vs control "
+                      f"{ac['control']['r_matched']:+.3f}; dz = "
+                      f"{ac['delta_z_nudged_minus_control']:+.3f} "
+                      f"[{ac['delta_z_CI95'][0]:+.3f}, {ac['delta_z_CI95'][1]:+.3f}] "
+                      f"p={ac['delta_p_two_sided']:.3f}; heterogeneity Q p: nudged "
+                      f"{ac['nudged']['Q_p']}, control {ac['control']['Q_p']}")
         for arm in ("nudged", "control"):
             pooled = out[tag][arm]["pooled"]
             excl = out[tag][arm]["pooled_excl_short_lead"]

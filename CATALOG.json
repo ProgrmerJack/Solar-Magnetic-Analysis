@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T17:18:38+00:00",
+ "generated": "2026-09-23T12:13:01+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -878,9 +878,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "IS DOWNWARD COUPLING A PROPERTY OF THE EVENT, OR OF WHAT FOLLOWS IT? THE PAPER, IN ITS PUBLISHED FORM Loeffel, Rupp, Kiefer, Pinto, Birner, Garny (2026), \"Quantifying the tropospheric response to individual sudden stratospheric warmings revealed by",
-   "loc": 411,
-   "modified": "2026-09-17 13:54",
-   "sha256_16": "5a0829c47578e896",
+   "loc": 460,
+   "modified": "2026-09-23 12:11",
+   "sha256_16": "c269aa052f735ae9",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_loeffel_test.json",
@@ -1751,7 +1751,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-09-17 11:52",
+   "modified": "2026-09-23 12:12",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -3577,9 +3577,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 8360,
-   "modified": "2026-09-17 13:54",
-   "sha256_16": "fb1bd5b72cb338b0",
+   "bytes": 43364,
+   "modified": "2026-09-23 12:11",
+   "sha256_16": "e9aab62d6c9afbac",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_loeffel_test.py"
    ],
@@ -3587,7 +3587,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_loeffel_test.py": "5a0829c47578e896"
+    "ssw-design-analysis/07_physical_decomposition/snapsi_loeffel_test.py": "c269aa052f735ae9"
    },
    "verdicts": [
     {
