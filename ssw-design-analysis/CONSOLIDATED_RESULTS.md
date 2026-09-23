@@ -25,7 +25,7 @@ criterion to dates with no SSW in them. Measured out of sample within a single
 climate, **an SSW adds essentially nothing to the predictability of the surface
 response** (+0.002 pre-onset, +0.012 post-onset), while the splits in use implicitly
 claim up to **0.63**. SSWs do have a large, real surface effect — measured causally
-in a nudged experiment at **+0.97 σ** — and the all-event composite stands. What
+in a nudged experiment at **+1.10 σ** across 9 models — and the all-event composite stands. What
 carries little information is the sub-classification.
 
 *(An earlier version of this paragraph put the predictable share at R² ≈ 0.11. That
@@ -51,9 +51,10 @@ intervals — see §5.)*
 | H | the response distribution is one shifted population | CMIP6 n=1888 | established, power-bounded |
 | I | forced between-event variance σ_f ≈ 0.24 σ | CMIP6 n=1888 | established, 91% placebo correction |
 | J | **out-of-sample predictable share R² = 0.115; 73% of diagnostic skill is window overlap** | CMIP6 n=1888 | **established, no correction** |
-| K | causal stratosphere→surface effect S = +0.97 σ | SNAPSI, 3 models | established, 2 NH events — **not yet re-run on all 9 centres** |
+| K | causal stratosphere→surface effect S = +1.10 σ (sd 0.271; +1.36 incl. ECCC) | SNAPSI, 9 centres | established, 2 NH events; ECCC a Tukey outlier |
 | **L** | **the DW/NDW contrast is identical with and without an SSW, in a designed experiment** | **SNAPSI, 9 centres, 61 ensembles** | **established — the decisive test, replicated at 3x scale 2026-09-17** |
 | **M** | **an SSW shifts the surface distribution without inflating its variance** | **SNAPSI, 9 centres, 1788 vs 1805 members** | **established causally; ratio 0.952 [0.869, 1.047] after an estimator fix** |
+| N | the week-2 100 hPa → surface coupling between members is the same with and without an SSW | SNAPSI, 8 centres, 28 matched ensembles | established on 8 of 9 centres; Meteo-France and ECCC `control` not yet acquired |
 
 **J is the headline.** It needs no correction of any kind, it answers the field's
 own question in the field's own terms, and it independently confirms I.
@@ -536,6 +537,56 @@ one needing a 91% placebo correction (I), one needing none (M).
 
 ---
 
+### N — Loeffel head-to-head: is the coupling a property of the event? (`snapsi_loeffel_test.py`)
+
+Loeffel et al. (2026, WCD 7, 895–913) correlate week-2 100 hPa polar-cap GPH with
+the weeks 3–7 surface response **across 18 events, on ensemble means** (r = 0.85)
+and conclude that SSWs differ in their capacity to couple downward. In a SNAPSI
+`nudged` ensemble the event is identical in every member, so the same relation can
+be measured **between members**, where no event-to-event difference exists; the
+`control` arm measures it with no SSW at all.
+
+**Design gate (pre-specified, sd ratio > 0.5): passes**, median 0.948 over 28
+ensembles — nudging above 50 hPa does not pin 100 hPa.
+
+Primary window (post-onset days 15–25; days 15–49 is covered by only 10 of 36
+ensembles), Fisher-z pooled:
+
+| | nudged (SSW fixed) | control (no SSW) |
+|---|---|---|
+| all ensembles | **+0.099** [+0.048, +0.149], 32 ens., 1,579 members | **+0.101** [+0.047, +0.154], 28 ens., 1,405 members |
+| 28 matched ensembles | +0.100 | +0.101 |
+| **difference Δz, matched** | **−0.001 [−0.077, +0.076], p = 0.98** | |
+| excl. `s20190108`, 21 matched | +0.109 vs +0.121, Δz −0.013 [−0.101, +0.075] | |
+
+The max-available window (days 15–24) gives Δz = +0.005 [−0.072, +0.082]. Loeffel's
+own days 15–49 window, on the 8 matched ensembles that reach it (7 of them the
+short-lead `s20190108`), gives Δz = −0.045 [−0.192, +0.101].
+
+**Reading.** Between members, the 100 hPa → surface relation is weak (r ≈ 0.10)
+and **identical with no SSW present**: it is a general lower-stratosphere–surface
+persistence, not something an SSW adds. The pre-specified falsifier — the control
+arm reproducing the nudged correlation — is met exactly, so this relation carries
+no event-specific information. The per-ensemble r are mildly heterogeneous in the
+nudged arm (Cochran Q p = 0.027; 0.098 excluding `s20190108`), not in control
+(p = 0.127) — at most a weak dependence on model or initialisation.
+
+**What it does NOT test.** Loeffel's between-event coefficient: SNAPSI has 2 NH
+events. Across the 32 nudged ensembles (centre × initialisation) the correlation of
+ensemble means is **+0.750**, against +0.100 in control — a correlation of this
+size arises across **models** simulating the **same two events**. That is
+descriptive only (raw means, not anomalies; spread is between models), and must
+not be quoted as a test of their claim. It does show that a large across-ensemble-
+mean r does not by itself require event-to-event differences.
+
+**Power.** At n = 50, a within-ensemble r = 0.3 is detected with probability 0.56
+per ensemble; pooled over 28 matched ensembles the Δz interval half-width is 0.077.
+
+**Coverage.** 8 of 9 usable centres. Meteo-France is refused by the OPeNDAP subset
+gate (its zg names the vertical dimension `snap34`, not `plev`); ECCC `control`
+(4 NH initialisations, 200 members) and 144 other members failed on DNS during a hibernation
+and need a valid CEDA token to refetch.
+
 ## 4. Prior art — verified from source, all must be cited
 
 1. **Karpechko et al. (2017)**, QJRMS 143, 1459, doi 10.1002/qj.3017 — the
@@ -553,7 +604,7 @@ one needing a 91% placebo correction (I), one needing none (M).
 5. **Baldwin et al. (2021)**, Rev. Geophys. 59, e2020RG000708, §7.2 — *"about two
    thirds … of SSW events are characterized as having a visible downward impact"*,
    with no uncertainty range and no null comparison.
-6. **Loeffel et al. (2025)**, EGUsphere 2025-4164 — live preprint, ICON ensemble
+6. **Loeffel et al. (2026)**, WCD 7, 895–913 (preprint EGUsphere 2025-4164), ICON ensemble
    re-forecasts, case-to-case variability. **Their r = 0.85 survives our control**
    (P(null ≥ 0.85) = 0.003), though the missing baseline is real and large: with no
    event at all, window overlap alone gives r = **+0.530** [+0.162, +0.789].
@@ -717,6 +768,7 @@ multiple testing.
 | **J** | `07_physical_decomposition/predictability_ceiling.py`, `predictability_wave_driving.py` | `predictability_ceiling.json` |
 | K | `03_data_ingestion/acquire_snapsi_surface.py`, `07_physical_decomposition/snapsi_causal_effect.py` | `snapsi_causal_effect.json` |
 | Loeffel control | `08_literature_audit/loeffel2025_missing_control.py` | `loeffel2025_missing_control.json` |
+| N | `03_data_ingestion/acquire_snapsi_zg.py`, `07_physical_decomposition/snapsi_loeffel_test.py` | `snapsi_loeffel_test.json` |
 | era gate | `06_simulation_validation/era_dependence_gate.py` | `era_dependence_gate.json` |
 
 **Layout changed 2026-08-04.** There is now ONE results tree for the whole

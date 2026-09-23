@@ -101,7 +101,11 @@ is a positive physical claim rather than a complaint:
 5. **The classification carries no extra information, proven by experiment** —
    the DW/NDW contrast is the same with the SSW held identical and with no SSW at
    all, in both hemispheres (L).
-6. **The constructive replacement** — report the classification **rate** against a
+6. **Neither is the lower-stratospheric precursor** — between members of one
+   event, week-2 100 hPa GPH correlates with the surface at r = +0.100; with no
+   SSW at all, +0.101 (Δz −0.001 [−0.077, +0.076], 8 models). Löffel's r = 0.85
+   across events does not require events to differ in coupling (N).
+7. **The constructive replacement** — report the classification **rate** against a
    matched null. It is uncontaminated and it separates cleanly: 0.842 vs 0.450.
 
 **Why this is Earth-system significance rather than methodology:** it turns a
@@ -122,7 +126,7 @@ the event.
 
 | # | task | state |
 |---|---|---|
-| 1 | **Löffel head-to-head** (WCD 7, 895–913, 2026) | design gate passes (sd ratio 0.958); CCCma done; zg acquiring for the rest |
+| 1 | **Löffel head-to-head** (WCD 7, 895–913, 2026) | **done on 8 of 9 centres** (result N): within-ensemble r = +0.100 nudged vs +0.101 control, Δz −0.001 [−0.077, +0.076] on 28 matched ensembles. Outstanding: Meteo-France (`snap34` axis) and ECCC control, both need a valid CEDA token |
 | 2 | **Intervals on the J-REVISED withdrawal** | still 3 point estimates from one seed. **The weakest joint in the chain.** |
 | 3 | **The operational/S2S bite** | unanswered. The one lead that changes the significance category |
 | 4 | Re-run H and I on the 9-centre archive | not started; both are CMIP6-based so unaffected, but the SNAPSI cross-checks should match |
