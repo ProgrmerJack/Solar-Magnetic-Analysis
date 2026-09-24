@@ -259,10 +259,19 @@ def record_provenance(results):
     return len(out)
 
 
+READER_ONLY_DIRS = {"09_figures", "10_tables"}
+
+
 def scan_results(scripts):
     """Attribute each result to whichever script mentions its basename."""
     prov = load_provenance()
     flag_by_script = {s["path"]: s.get("flags", []) for s in scripts}
+    # Display-item scripts READ results and never write them. Attributing by
+    # mention made every figure script a "producer" of the JSON it plots, so
+    # adding a figure marked K, L and predictability_ceiling stale (2026-09-24).
+    readers = [s for s in scripts
+               if set(Path(s["path"]).parts) & READER_ONLY_DIRS]
+    scripts = [s for s in scripts if s not in readers]
     mention = {}
     for s in scripts:
         for fn in s["filenames_mentioned"]:

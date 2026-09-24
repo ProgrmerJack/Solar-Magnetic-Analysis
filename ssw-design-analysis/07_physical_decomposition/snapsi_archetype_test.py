@@ -138,7 +138,7 @@ def main() -> int:
     usable = [c for c in centres if not L.corruption_guard(c)[0]]
     print(f"usable centres: {usable}")
 
-    rows, members = [], {}
+    rows, members, member_A = [], {}, {}
     for c in usable:
         for init in L.ONSET:                       # NH only
             con, nud = L.load(c, "control", init), L.load(c, "nudged", init)
@@ -158,6 +158,8 @@ def main() -> int:
             a_n = np.array([v[0] for v in ns.values()])
             a_c = np.array([v[0] for v in cs.values()])
             members[(c, init)] = a_n
+            member_A[f"{c}|{init}"] = {"nudged": [round(float(x), 4) for x in a_n],
+                                       "control": [round(float(x), 4) for x in a_c]}
 
             wl = nud[(nud["lead_days"] >= lo) & (nud["lead_days"] <= hi)]
             per_member = wl.groupby("member")["lead_days"].apply(lambda s: tuple(sorted(s)))
@@ -297,6 +299,7 @@ def main() -> int:
                   f"{(sw < 0).mean():.0%} negative, c1={a} c2={b} c3={c} "
                   f"-> {'DW' if l else 'NDW'}")
     out["observed_labels"] = lab_rows
+    out["member_A"] = member_A          # per-member NAM proxy, for the display item
 
     RESULTS.mkdir(parents=True, exist_ok=True)
     (RESULTS / "snapsi_archetype_test.json").write_text(

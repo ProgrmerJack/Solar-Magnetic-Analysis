@@ -107,3 +107,8 @@ Rule: compare coordinates against thresholds with an explicit tolerance and ASSE
 Tried: `lead_days` = time since the first time step in each SNAPSI file, converted downstream to post-onset day assuming lead 0 is 00 UTC on the init date.
 Failed: UKMO files start at 06 UTC, so every UKMO window in K, L, M, N and O sat 6 h early, for a week, in every result. Nothing checked it; the filenames said so (`201801250600-...`).
 Rule: a time axis's origin is a measured property, not an assumption. The origin is now measured per ensemble (`--measure-time-origin`), every cache is rebased and marked, and the smoke test fails on an unmarked member.
+
+## 2026-09-24 — A reader counted as a producer
+Tried: `tools/catalog_repo.py` attributes each result to every script that mentions its filename.
+Failed: the first figure scripts READ K, L and predictability_ceiling, so the tool listed them as producers and marked three unchanged results stale; I recorded before checking which six were stale, which was the wrong order.
+Rule: `09_figures/` and `10_tables/` are reader-only and excluded from attribution. Before `--record`, list what is stale and account for every entry.

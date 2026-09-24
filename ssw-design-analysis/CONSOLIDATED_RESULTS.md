@@ -448,7 +448,7 @@ assumption. Apply Karpechko conditions 1–2 (the surface conditions) and split.
 
 | arm | what is true of it | DW−NDW contrast | DW rate (unconditional) |
 |---|---|---|---|
-| **nudged** | stratospheric forcing **identical** across members | **−1.624 σ** (sd 0.300, n=25) | **0.842** |
+| **nudged** | stratospheric forcing **identical** across members | **−1.622 σ** (sd 0.303, n=25) | **0.842** |
 | **control** | **no SSW forcing at all** | **−1.590 σ** (sd 0.089, n=36) | **0.450** |
 
 > **SOUTHERN HEMISPHERE, added 2026-09-17 — L replicates there too.**
@@ -458,8 +458,8 @@ assumption. Apply Karpechko conditions 1–2 (the surface conditions) and split.
 >
 > | arm | contrast | DW rate |
 > |---|---|---|
-> | nudged | **−1.969 σ** (n=7 of 8) | 0.791 |
-> | control | **−1.585 σ** (n=8 of 8) | 0.413 |
+> | nudged | **−1.958 σ** (n=7 of 8) | 0.786 |
+> | control | **−1.584 σ** (n=8 of 8) | 0.413 |
 >
 > Same signature as the NH: a large contrast in both arms, and the rate doing
 > the separating. **Two caveats travel with every SH number.** The central date
@@ -476,7 +476,18 @@ assumption. Apply Karpechko conditions 1–2 (the surface conditions) and split.
 > initialisations, 36 ensembles per arm, against the 3 centres and 9-12
 > ensembles the original rested on. The result holds and tightens.** The
 > contrast is the same with the SSW held identical and with no SSW at all
-> (−1.624 vs −1.590), while the rate separates as before.
+> (−1.622 vs −1.590), while the rate separates as before.
+
+> **The control contrast is the value a threshold gives on pure noise.** Control
+> members are standardised by their own ensemble, so they are close to a
+> unit-variance Gaussian with mean 0. Splitting such a distribution at its mean
+> gives a difference of group means of exactly 2√(2/π) = **1.596 σ**; the
+> measured control contrast is **−1.590 σ** (sd 0.089 across 36 ensembles). The
+> DW/NDW contrast is therefore not an effect size that the atmosphere supplies —
+> it is the half-normal mean difference, a property of splitting a distribution
+> at a threshold, and it appears at full size with no SSW. (Fig. 2a. The nudged
+> arm cannot be read off the same line exactly: its members are shifted, and the
+> 11 ensembles with < 3 NDW members, DW rate 0.99, cannot form a contrast.)
 >
 > **One correction the larger sample exposed.** The contrast needs ≥3 members in
 > BOTH groups, which is asymmetric by construction: only an arm with a strong
@@ -647,7 +658,11 @@ busts. SNAPSI nudges each model's stratosphere to each observed event, so the
 forced odds of each outcome can be read off directly.
 
 **1. The forced odds are the same.** Causal shift (K) +1.390 σ vs +1.336 σ;
-probability of a DW outcome across 9 models (L) 0.837 vs 0.848.
+probability of a DW outcome across 9 models (L) 0.837 vs 0.848 — both averaged
+over each event's two initialisations. At the primary pair plotted in Fig. 4
+(s20180125 / s20181213, onset at lead 18 / 20 d) Jan-2019 has the LARGER forced
+shift, +1.35 σ against +1.19 σ, with DW odds 0.75 vs 0.80 (control 0.46 / 0.47).
+Nothing forced makes 2019 the weaker event.
 
 **2. The observed outcomes sit inside their own ensembles.** ERA5 polar-cap psl
 (60–90N including the 60N row, 6-hourly, at exactly the members' forecast
