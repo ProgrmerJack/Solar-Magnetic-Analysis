@@ -112,15 +112,15 @@
       "centre": "CNR-ISAC",
       "init": "s20190108",
       "event": "Jan-2019",
-      "S_Pa": 329.6801,
+      "S_Pa": 344.0176,
       "sd_control_Pa": 117.5223,
-      "S_sigma": 2.8053,
-      "se_Pa": 24.3871,
-      "se_sigma": 0.2075,
-      "n_nudged": 40,
+      "S_sigma": 2.9273,
+      "se_Pa": 23.7152,
+      "se_sigma": 0.2018,
+      "n_nudged": 50,
       "n_control": 50,
       "sd_pooled_Pa": 291.1733,
-      "S_sigma_pooled": 1.1322
+      "S_sigma_pooled": 1.1815
     },
     {
       "centre": "ECCC",
@@ -294,57 +294,57 @@
       "centre": "Meteo-France",
       "init": "s20180125",
       "event": "Feb-2018",
-      "S_Pa": 247.5727,
-      "sd_control_Pa": 412.9689,
-      "S_sigma": 0.5995,
-      "se_Pa": 78.1458,
-      "se_sigma": 0.1892,
+      "S_Pa": 247.7304,
+      "sd_control_Pa": 413.8749,
+      "S_sigma": 0.5986,
+      "se_Pa": 78.2057,
+      "se_sigma": 0.189,
       "n_nudged": 50,
       "n_control": 50,
-      "sd_pooled_Pa": 334.9387,
-      "S_sigma_pooled": 0.7392
+      "sd_pooled_Pa": 332.9515,
+      "S_sigma_pooled": 0.744
     },
     {
       "centre": "Meteo-France",
       "init": "s20180208",
       "event": "Feb-2018",
-      "S_Pa": 759.5901,
-      "sd_control_Pa": 359.9601,
-      "S_sigma": 2.1102,
-      "se_Pa": 60.3547,
-      "se_sigma": 0.1677,
+      "S_Pa": 776.3536,
+      "sd_control_Pa": 357.2101,
+      "S_sigma": 2.1734,
+      "se_Pa": 59.759,
+      "se_sigma": 0.1673,
       "n_nudged": 50,
       "n_control": 50,
-      "sd_pooled_Pa": 334.9387,
-      "S_sigma_pooled": 2.2678
+      "sd_pooled_Pa": 332.9515,
+      "S_sigma_pooled": 2.3317
     },
     {
       "centre": "Meteo-France",
       "init": "s20181213",
       "event": "Jan-2019",
-      "S_Pa": 297.365,
-      "sd_control_Pa": 373.7619,
-      "S_sigma": 0.7956,
-      "se_Pa": 90.6555,
-      "se_sigma": 0.2425,
+      "S_Pa": 301.4404,
+      "sd_control_Pa": 370.2745,
+      "S_sigma": 0.8141,
+      "se_Pa": 89.9945,
+      "se_sigma": 0.243,
       "n_nudged": 50,
       "n_control": 50,
-      "sd_pooled_Pa": 334.9387,
-      "S_sigma_pooled": 0.8878
+      "sd_pooled_Pa": 332.9515,
+      "S_sigma_pooled": 0.9054
     },
     {
       "centre": "Meteo-France",
       "init": "s20190108",
       "event": "Jan-2019",
-      "S_Pa": 318.3095,
-      "sd_control_Pa": 125.6649,
-      "S_sigma": 2.533,
-      "se_Pa": 20.8744,
-      "se_sigma": 0.1661,
+      "S_Pa": 323.7435,
+      "sd_control_Pa": 119.2443,
+      "S_sigma": 2.715,
+      "se_Pa": 19.8307,
+      "se_sigma": 0.1663,
       "n_nudged": 50,
       "n_control": 50,
-      "sd_pooled_Pa": 334.9387,
-      "S_sigma_pooled": 0.9504
+      "sd_pooled_Pa": 332.9515,
+      "S_sigma_pooled": 0.9723
     },
     {
       "centre": "NCAR",
@@ -462,89 +462,89 @@
       "centre": "UKMO",
       "init": "s20180125",
       "event": "Feb-2018",
-      "S_Pa": 281.4813,
-      "sd_control_Pa": 374.6975,
-      "S_sigma": 0.7512,
-      "se_Pa": 76.0321,
-      "se_sigma": 0.2029,
+      "S_Pa": 279.3142,
+      "sd_control_Pa": 374.7284,
+      "S_sigma": 0.7454,
+      "se_Pa": 75.9713,
+      "se_sigma": 0.2027,
       "n_nudged": 50,
       "n_control": 50,
-      "sd_pooled_Pa": 353.6452,
-      "S_sigma_pooled": 0.7959
+      "sd_pooled_Pa": 351.6845,
+      "S_sigma_pooled": 0.7942
     },
     {
       "centre": "UKMO",
       "init": "s20180208",
       "event": "Feb-2018",
-      "S_Pa": 358.2871,
-      "sd_control_Pa": 419.2703,
-      "S_sigma": 0.8545,
-      "se_Pa": 77.2355,
-      "se_sigma": 0.1842,
+      "S_Pa": 365.573,
+      "sd_control_Pa": 417.3419,
+      "S_sigma": 0.876,
+      "se_Pa": 76.8992,
+      "se_sigma": 0.1843,
       "n_nudged": 50,
       "n_control": 50,
-      "sd_pooled_Pa": 353.6452,
-      "S_sigma_pooled": 1.0131
+      "sd_pooled_Pa": 351.6845,
+      "S_sigma_pooled": 1.0395
     },
     {
       "centre": "UKMO",
       "init": "s20181213",
       "event": "Jan-2019",
-      "S_Pa": 492.5668,
-      "sd_control_Pa": 382.5062,
-      "S_sigma": 1.2877,
-      "se_Pa": 80.9009,
-      "se_sigma": 0.2115,
+      "S_Pa": 495.0334,
+      "sd_control_Pa": 380.6736,
+      "S_sigma": 1.3004,
+      "se_Pa": 80.7375,
+      "se_sigma": 0.2121,
       "n_nudged": 50,
       "n_control": 50,
-      "sd_pooled_Pa": 353.6452,
-      "S_sigma_pooled": 1.3928
+      "sd_pooled_Pa": 351.6845,
+      "S_sigma_pooled": 1.4076
     },
     {
       "centre": "UKMO",
       "init": "s20190108",
       "event": "Jan-2019",
-      "S_Pa": 459.1835,
-      "sd_control_Pa": 213.1198,
-      "S_sigma": 2.1546,
-      "se_Pa": 37.4192,
-      "se_sigma": 0.1756,
+      "S_Pa": 455.0779,
+      "sd_control_Pa": 206.8633,
+      "S_sigma": 2.1999,
+      "se_Pa": 36.2637,
+      "se_sigma": 0.1753,
       "n_nudged": 50,
       "n_control": 50,
-      "sd_pooled_Pa": 353.6452,
-      "S_sigma_pooled": 1.2984
+      "sd_pooled_Pa": 351.6845,
+      "S_sigma_pooled": 1.294
     }
   ],
   "reported": {
     "Karpechko-criterion AO contrast, observations": {
       "contrast": 1.782,
       "dw_fraction": 0.7,
-      "implied_DW_sigma": 1.892,
-      "implied_NDW_sigma": 0.11
+      "implied_DW_sigma": 1.897,
+      "implied_NDW_sigma": 0.115
     },
     "CMIP6 ensemble DW-NDW contrast": {
       "contrast": 1.143,
       "dw_fraction": 0.5,
-      "implied_DW_sigma": 1.929,
-      "implied_NDW_sigma": 0.786
+      "implied_DW_sigma": 1.934,
+      "implied_NDW_sigma": 0.791
     },
     "ACP 26, 3723 (2026) published NAO contrast": {
       "contrast": 0.85,
       "dw_fraction": 0.59,
-      "implied_DW_sigma": 1.706,
-      "implied_NDW_sigma": 0.856
+      "implied_DW_sigma": 1.711,
+      "implied_NDW_sigma": 0.861
     },
     "ERA5 1000 hPa NAM contrast, Karpechko criterion": {
       "contrast": 0.684,
       "dw_fraction": 0.54,
-      "implied_DW_sigma": 1.672,
-      "implied_NDW_sigma": 0.988
+      "implied_DW_sigma": 1.678,
+      "implied_NDW_sigma": 0.994
     },
     "ERA5 850 hPa NAM contrast, ACP criterion": {
       "contrast": 0.639,
       "dw_fraction": 0.59,
-      "implied_DW_sigma": 1.62,
-      "implied_NDW_sigma": 0.981
+      "implied_DW_sigma": 1.625,
+      "implied_NDW_sigma": 0.986
     }
   },
   "pooled_sigma_Pa": {
@@ -553,40 +553,40 @@
     "ECCC": 334.52,
     "ECMWF": 296.71,
     "KMA": 325.54,
-    "Meteo-France": 334.94,
+    "Meteo-France": 332.95,
     "NCAR": 373.27,
     "SNU": 305.42,
-    "UKMO": 353.65
+    "UKMO": 351.68
   },
   "S_sigma_per_init": {
-    "Feb-2018|s20180125": 1.193,
-    "Feb-2018|s20180208": 1.5767,
-    "Jan-2019|s20181213": 1.3466,
-    "Jan-2019|s20190108": 1.3138
+    "Feb-2018|s20180125": 1.1934,
+    "Feb-2018|s20180208": 1.5867,
+    "Jan-2019|s20181213": 1.3502,
+    "Jan-2019|s20190108": 1.3212
   },
   "S_sigma_per_event": {
-    "Feb-2018": 1.3849,
-    "Jan-2019": 1.3302
+    "Feb-2018": 1.39,
+    "Jan-2019": 1.3357
   },
-  "S_sigma_grand_mean": 1.3575,
-  "between_event_difference": 0.0547,
-  "between_model_sd": 0.8094,
+  "S_sigma_grand_mean": 1.3629,
+  "between_event_difference": 0.0544,
+  "between_model_sd": 0.8075,
   "S_sigma_per_model": {
     "CCCma": 0.6179,
-    "CNR-ISAC": 0.8219,
+    "CNR-ISAC": 0.8342,
     "ECCC": 3.4073,
     "ECMWF": 1.4671,
     "KMA": 1.2676,
-    "Meteo-France": 1.2113,
+    "Meteo-France": 1.2384,
     "NCAR": 1.2589,
     "SNU": 1.0406,
-    "UKMO": 1.1251
+    "UKMO": 1.1338
   },
   "implied_NDW_sigma": {
-    "Karpechko-criterion AO contrast, observations": 0.1101,
-    "CMIP6 ensemble DW-NDW contrast": 0.786,
-    "ACP 26, 3723 (2026) published NAO contrast": 0.856,
-    "ERA5 1000 hPa NAM contrast, Karpechko criterion": 0.9882,
-    "ERA5 850 hPa NAM contrast, ACP criterion": 0.9805
+    "Karpechko-criterion AO contrast, observations": 0.1155,
+    "CMIP6 ensemble DW-NDW contrast": 0.7914,
+    "ACP 26, 3723 (2026) published NAO contrast": 0.8614,
+    "ERA5 1000 hPa NAM contrast, Karpechko criterion": 0.9935,
+    "ERA5 850 hPa NAM contrast, ACP criterion": 0.9859
   }
 }

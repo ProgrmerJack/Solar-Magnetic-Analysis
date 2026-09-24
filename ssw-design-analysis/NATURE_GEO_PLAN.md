@@ -39,9 +39,9 @@ identically zero, duplicate-guard ratio 0.004).
 
 | result | 3 centres (published) | 9 centres (now) | verdict |
 |---|---|---|---|
-| **K** causal effect S | +0.972 σ | **+1.101 σ** (sd 0.271) excl. ECCC; +1.358 incl. | holds, ECCC is an outlier |
+| **K** causal effect S | +0.972 σ | **+1.107 σ** (sd 0.271) excl. ECCC; +1.363 incl. | holds, ECCC is an outlier |
 | **L** contrast nudged vs control | −1.518 vs −1.558 | **−1.624 vs −1.590** | **replicates, 3× the ensembles** |
-| **M** variance ratio | 0.939 [0.781, 1.130] | **0.952 [0.869, 1.047]** | holds, tighter — *after an estimator fix* |
+| **M** variance ratio | 0.939 [0.781, 1.130] | **0.955 [0.873, 1.051]** | holds, tighter — *after an estimator fix* |
 
 **Three things the larger sample exposed. All three are in the record.**
 
@@ -51,14 +51,14 @@ identically zero, duplicate-guard ratio 0.004).
    spread of shifts to the nudged variance and to nothing else. At 3 centres that
    spread was 0.295 σ and the bias was invisible; at 9 it is 1.071 σ and the
    uncorrected ratio reads **2.085** with KS p = 0.000 — a flat contradiction of
-   M, produced entirely by the pooling. Re-centring restores 0.952. **The naive
+   M, produced entirely by the pooling. Re-centring restores 0.952 (0.955 with the 10 recovered members). **The naive
    scale-up would have overturned the result and been wrong.**
 2. **L's DW rate was understated.** The contrast needs ≥3 members in both groups,
    which only an arm with a strong forced shift can fail. 11 of 36 nudged
    ensembles are dropped that way (their rate: 0.993); 0 of 36 control are. The
    unconditional rate is **0.842 vs 0.450**, not 0.776 vs 0.450.
-3. **ECCC is a K outlier** at +3.407 σ against a Tukey fence of 1.674 on the other
-   eight. Quote **+1.10 σ**, with +1.36 as the ECCC-inclusive sensitivity.
+3. **ECCC is a K outlier** at +3.407 σ against a Tukey fence of 1.669 on the other
+   eight. Quote **+1.11 σ**, with +1.36 as the ECCC-inclusive sensitivity.
 
 ---
 
@@ -86,13 +86,14 @@ is a positive physical claim rather than a complaint:
 
 > ### Forecast skill after a sudden stratospheric warming comes from a common shift, not from the individual event
 
-1. **The shift is real, large and causal** — S = **+1.10 σ**, measured by nudging
+1. **The shift is real, large and causal** — S = **+1.11 σ**, measured by nudging
    across 9 models (K). This is emphatically not "SSWs don't matter".
 2. **The shift is all there is** — with the stratospheric driver held identical by
    experiment, the surface distribution translates without dispersing: variance
-   ratio **0.952 [0.869, 1.047]**, KS p = 0.322, on 1,788 vs 1,805 members (M).
-3. **So nothing event-specific is recoverable** — an SSW adds +0.002 to
-   out-of-sample pre-onset R² over an ordinary winter day, and 97% of apparent
+   ratio **0.955 [0.873, 1.051]**, KS p = 0.371, on 1,798 vs 1,805 members (M).
+3. **So nothing event-specific is recoverable** — an SSW adds +0.004
+   [−0.022, +0.027] to out-of-sample pre-onset R² over an ordinary winter day
+   (size-matched null, 1,000 draws), and 95% of apparent
    post-onset diagnostic skill reproduces with no SSW present (J).
 4. **Which explains the field's organising number** — displacing event-free dates
    by the measured shift gives a 74.4% [61.5, 87.2] "downward propagation" pass
@@ -105,7 +106,12 @@ is a positive physical claim rather than a complaint:
    event, week-2 100 hPa GPH correlates with the surface at r = +0.100; with no
    SSW at all, +0.101 (Δz −0.001 [−0.077, +0.076], 8 models). Löffel's r = 0.85
    across events does not require events to differ in coupling (N).
-7. **The constructive replacement** — report the classification **rate** against a
+7. **The field's own showcase pair is two draws from one distribution** — Feb-2018
+   ("propagating") and Jan-2019 ("not") receive the same forced shift (+1.39 vs
+   +1.34 σ) and the same DW odds (0.84 vs 0.85) in 9 models; their observed
+   difference is inside the central 95% of member-pair differences in 9 of 9;
+   and Jan-2019's NDW label holds in one of four criterion variants, by 0.02 σ (O).
+8. **The constructive replacement** — report the classification **rate** against a
    matched null. It is uncontaminated and it separates cleanly: 0.842 vs 0.450.
 
 **Why this is Earth-system significance rather than methodology:** it turns a
@@ -127,8 +133,8 @@ the event.
 | # | task | state |
 |---|---|---|
 | 1 | **Löffel head-to-head** (WCD 7, 895–913, 2026) | **done on 8 of 9 centres** (result N): within-ensemble r = +0.100 nudged vs +0.101 control, Δz −0.001 [−0.077, +0.076] on 28 matched ensembles. Outstanding: Meteo-France (`snap34` axis) and ECCC control, both need a valid CEDA token |
-| 2 | **Intervals on the J-REVISED withdrawal** | still 3 point estimates from one seed. **The weakest joint in the chain.** |
-| 3 | **The operational/S2S bite** | unanswered. The one lead that changes the significance category |
+| 2 | **Intervals on the J-REVISED withdrawal** | **done**: event-specific +0.004 [−0.022, +0.027] pre-onset, +0.022 [−0.015, +0.060] post-onset, against 1,000 size-matched null draws; the old baseline was size-biased by +0.005–0.010 |
+| 3 | **The operational/S2S bite** | **partly answered** (result O): the Feb-2018/Jan-2019 contrast that S2S studies (Rao 2020; Nebel 2024 frames NDW outcomes as forecast busts) treat as an event property is member-to-member noise under identical forcing. Still open: whether a published S2S *skill* number is conditioned on the observed outcome; read Nebel 2024 in full |
 | 4 | Re-run H and I on the 9-centre archive | not started; both are CMIP6-based so unaffected, but the SNAPSI cross-checks should match |
 | 5 | Figures and manuscript | `09_figures/`, `10_tables/` still empty |
 
@@ -173,7 +179,7 @@ classification and becomes about forecasts people actually issue.
   Cite it prominently. Never lead with "unrecognised."
 - **SNAPSI has two NH events.** Anything about how events *differ* rests on n=2.
   The between-model spread (sd 0.271 excluding ECCC) dwarfs the between-event
-  difference (+0.055 σ) — models disagree about downward coupling far more than
+  difference (+0.054 σ) — models disagree about downward coupling far more than
   these two events do.
 - **The SH case is an austral MINOR warming**, not an SSW: the 10 hPa 60°S wind
   never reversed. It tests generality to a different hemisphere *and* a weaker

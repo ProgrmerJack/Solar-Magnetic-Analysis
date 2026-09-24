@@ -1,22 +1,25 @@
 rebuilding CMIP6 real and pseudo tables ...
-real 1,888 | pseudo 11,323 | 20 members
+generating 1000 matched draws x 20 members on 20 processes ...
+real 1,888 | pseudo 11,321 | 20 members
 
 ==================================================================================
 === POOLED (as published) vs WITHIN-MODEL STANDARDISED ===
 tier                                pooled    within  retained  pseudo-w
 ----------------------------------------------------------------------------
-P1 pre-onset                       +0.0998   +0.0664      0.66   +0.0646
-P2 at-onset                        +0.1121   +0.0746      0.67   +0.0767
-P3 + post-onset stratosphere       +0.4245   +0.4013      0.95   +0.3894
+P1 pre-onset                       +0.1026   +0.0667      0.65   +0.0694
+P2 at-onset                        +0.1133   +0.0738      0.65   +0.0799
+P3 + post-onset stratosphere       +0.4226   +0.4013      0.95   +0.3888
 
-=== READING ===
-  P1 skill SURVIVES within-model standardisation, so it is genuine
-  event-to-event predictability inside a single climate, which is the
-  quantity the field's question is about. Headline stands.
+  event-specific within-model share, 6-draw pooled pseudo arm (original):
+    P1 pre-onset                     -0.0027
+    P2 at-onset                      -0.0061
+    P3 + post-onset stratosphere     +0.0124
 
-  event-specific within-model share (within minus pseudo-within):
-    P1 pre-onset                     +0.0017
-    P2 at-onset                      -0.0021
-    P3 + post-onset stratosphere     +0.0119
+=== SIZE-MATCHED NULL: 1000 draws, each the size of the real set ===
+  draws with fewer usable outcomes than the real set (NaN outcome window): 1017 of 20000 member-draws
+null: 1000 draws; bootstrap: 1000 replicates; 20 processes ...
+  P1 pre-onset                   real +0.0667 | null +0.0629 (sd 0.0121) | event-specific +0.0038 [-0.0218, +0.0271] p=0.3646 | boot [-0.0477, +0.0514] | 6-draw size bias +0.0065
+  P2 at-onset                    real +0.0738 | null +0.0748 (sd 0.0127) | event-specific -0.0010 [-0.0276, +0.0229] p=0.5165 | boot [-0.0600, +0.0504] | 6-draw size bias +0.0051
+  P3 + post-onset stratosphere   real +0.4013 | null +0.3792 (sd 0.0189) | event-specific +0.0220 [-0.0153, +0.0595] p=0.1119 | boot [-0.0539, +0.0921] | 6-draw size bias +0.0096
 
 Saved -> within_model_check.json

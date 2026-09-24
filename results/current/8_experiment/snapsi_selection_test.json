@@ -578,10 +578,10 @@
       "n_DW": 33,
       "n_NDW": 17,
       "DW_rate": 0.66,
-      "DW_mean_sigma": -1.071,
-      "NDW_mean_sigma": 0.3157,
-      "contrast_sigma": -1.3867,
-      "ensemble_mean_sigma": -0.5995
+      "DW_mean_sigma": -1.0644,
+      "NDW_mean_sigma": 0.3058,
+      "contrast_sigma": -1.3702,
+      "ensemble_mean_sigma": -0.5985
     },
     {
       "centre": "Meteo-France",
@@ -589,13 +589,13 @@
       "arm": "control",
       "hemisphere": "NH",
       "n_members": 50,
-      "n_DW": 28,
-      "n_NDW": 22,
-      "DW_rate": 0.56,
-      "DW_mean_sigma": -0.6752,
-      "NDW_mean_sigma": 0.8593,
-      "contrast_sigma": -1.5345,
-      "ensemble_mean_sigma": -0.0
+      "n_DW": 26,
+      "n_NDW": 24,
+      "DW_rate": 0.52,
+      "DW_mean_sigma": -0.7267,
+      "NDW_mean_sigma": 0.7873,
+      "contrast_sigma": -1.5141,
+      "ensemble_mean_sigma": 0.0
     },
     {
       "centre": "Meteo-France",
@@ -606,10 +606,10 @@
       "n_DW": 44,
       "n_NDW": 6,
       "DW_rate": 0.88,
-      "DW_mean_sigma": -2.252,
-      "NDW_mean_sigma": -1.0706,
-      "contrast_sigma": -1.1814,
-      "ensemble_mean_sigma": -2.1102
+      "DW_mean_sigma": -2.3131,
+      "NDW_mean_sigma": -1.1489,
+      "contrast_sigma": -1.1642,
+      "ensemble_mean_sigma": -2.1734
     },
     {
       "centre": "Meteo-France",
@@ -620,9 +620,9 @@
       "n_DW": 27,
       "n_NDW": 23,
       "DW_rate": 0.54,
-      "DW_mean_sigma": -0.7606,
-      "NDW_mean_sigma": 0.8929,
-      "contrast_sigma": -1.6536,
+      "DW_mean_sigma": -0.7638,
+      "NDW_mean_sigma": 0.8967,
+      "contrast_sigma": -1.6606,
       "ensemble_mean_sigma": 0.0
     },
     {
@@ -634,10 +634,10 @@
       "n_DW": 32,
       "n_NDW": 18,
       "DW_rate": 0.64,
-      "DW_mean_sigma": -1.5427,
-      "NDW_mean_sigma": 0.5326,
-      "contrast_sigma": -2.0753,
-      "ensemble_mean_sigma": -0.7956
+      "DW_mean_sigma": -1.5643,
+      "NDW_mean_sigma": 0.5197,
+      "contrast_sigma": -2.084,
+      "ensemble_mean_sigma": -0.8141
     },
     {
       "centre": "Meteo-France",
@@ -648,9 +648,9 @@
       "n_DW": 23,
       "n_NDW": 27,
       "DW_rate": 0.46,
-      "DW_mean_sigma": -0.8362,
-      "NDW_mean_sigma": 0.7123,
-      "contrast_sigma": -1.5485,
+      "DW_mean_sigma": -0.8372,
+      "NDW_mean_sigma": 0.7132,
+      "contrast_sigma": -1.5505,
       "ensemble_mean_sigma": 0.0
     },
     {
@@ -662,9 +662,9 @@
       "n_DW": 23,
       "n_NDW": 27,
       "DW_rate": 0.46,
-      "DW_mean_sigma": -0.8459,
-      "NDW_mean_sigma": 0.7206,
-      "contrast_sigma": -1.5665,
+      "DW_mean_sigma": -0.8461,
+      "NDW_mean_sigma": 0.7208,
+      "contrast_sigma": -1.5668,
       "ensemble_mean_sigma": 0.0
     },
     {
@@ -676,10 +676,10 @@
       "n_DW": 36,
       "n_NDW": 14,
       "DW_rate": 0.72,
-      "DW_mean_sigma": -1.2967,
-      "NDW_mean_sigma": 0.3914,
-      "contrast_sigma": -1.6881,
-      "ensemble_mean_sigma": -0.824
+      "DW_mean_sigma": -1.3027,
+      "NDW_mean_sigma": 0.3805,
+      "contrast_sigma": -1.6832,
+      "ensemble_mean_sigma": -0.8314
     },
     {
       "centre": "Meteo-France",
@@ -690,10 +690,10 @@
       "n_DW": 23,
       "n_NDW": 27,
       "DW_rate": 0.46,
-      "DW_mean_sigma": -0.8459,
-      "NDW_mean_sigma": 0.7206,
-      "contrast_sigma": -1.5666,
-      "ensemble_mean_sigma": 0.0
+      "DW_mean_sigma": -0.8452,
+      "NDW_mean_sigma": 0.72,
+      "contrast_sigma": -1.5652,
+      "ensemble_mean_sigma": -0.0
     },
     {
       "centre": "NCAR",
@@ -956,10 +956,10 @@
       "n_DW": 39,
       "n_NDW": 11,
       "DW_rate": 0.78,
-      "DW_mean_sigma": -1.1247,
-      "NDW_mean_sigma": 0.573,
-      "contrast_sigma": -1.6977,
-      "ensemble_mean_sigma": -0.7512
+      "DW_mean_sigma": -1.117,
+      "NDW_mean_sigma": 0.5721,
+      "contrast_sigma": -1.6891,
+      "ensemble_mean_sigma": -0.7454
     },
     {
       "centre": "UKMO",
@@ -970,10 +970,10 @@
       "n_DW": 24,
       "n_NDW": 26,
       "DW_rate": 0.48,
-      "DW_mean_sigma": -0.8805,
-      "NDW_mean_sigma": 0.8127,
-      "contrast_sigma": -1.6932,
-      "ensemble_mean_sigma": 0.0
+      "DW_mean_sigma": -0.8788,
+      "NDW_mean_sigma": 0.8112,
+      "contrast_sigma": -1.6901,
+      "ensemble_mean_sigma": -0.0
     },
     {
       "centre": "UKMO",
@@ -984,10 +984,10 @@
       "n_DW": 40,
       "n_NDW": 10,
       "DW_rate": 0.8,
-      "DW_mean_sigma": -1.1516,
-      "NDW_mean_sigma": 0.3338,
-      "contrast_sigma": -1.4854,
-      "ensemble_mean_sigma": -0.8545
+      "DW_mean_sigma": -1.1718,
+      "NDW_mean_sigma": 0.3075,
+      "contrast_sigma": -1.4794,
+      "ensemble_mean_sigma": -0.876
     },
     {
       "centre": "UKMO",
@@ -998,10 +998,10 @@
       "n_DW": 21,
       "n_NDW": 29,
       "DW_rate": 0.42,
-      "DW_mean_sigma": -0.9769,
-      "NDW_mean_sigma": 0.7074,
-      "contrast_sigma": -1.6843,
-      "ensemble_mean_sigma": 0.0
+      "DW_mean_sigma": -0.9757,
+      "NDW_mean_sigma": 0.7065,
+      "contrast_sigma": -1.6822,
+      "ensemble_mean_sigma": -0.0
     },
     {
       "centre": "UKMO",
@@ -1012,10 +1012,10 @@
       "n_DW": 43,
       "n_NDW": 7,
       "DW_rate": 0.86,
-      "DW_mean_sigma": -1.5608,
-      "NDW_mean_sigma": 0.3898,
-      "contrast_sigma": -1.9506,
-      "ensemble_mean_sigma": -1.2877
+      "DW_mean_sigma": -1.5741,
+      "NDW_mean_sigma": 0.3807,
+      "contrast_sigma": -1.9548,
+      "ensemble_mean_sigma": -1.3004
     },
     {
       "centre": "UKMO",
@@ -1023,12 +1023,12 @@
       "arm": "control",
       "hemisphere": "NH",
       "n_members": 50,
-      "n_DW": 24,
-      "n_NDW": 26,
-      "DW_rate": 0.48,
-      "DW_mean_sigma": -0.822,
-      "NDW_mean_sigma": 0.7588,
-      "contrast_sigma": -1.5808,
+      "n_DW": 25,
+      "n_NDW": 25,
+      "DW_rate": 0.5,
+      "DW_mean_sigma": -0.7906,
+      "NDW_mean_sigma": 0.7906,
+      "contrast_sigma": -1.5812,
       "ensemble_mean_sigma": -0.0
     },
     {
@@ -1040,10 +1040,10 @@
       "n_DW": 21,
       "n_NDW": 29,
       "DW_rate": 0.42,
-      "DW_mean_sigma": -0.9068,
-      "NDW_mean_sigma": 0.6567,
-      "contrast_sigma": -1.5635,
-      "ensemble_mean_sigma": -0.0
+      "DW_mean_sigma": -0.9091,
+      "NDW_mean_sigma": 0.6583,
+      "contrast_sigma": -1.5673,
+      "ensemble_mean_sigma": 0.0
     },
     {
       "centre": "UKMO",
@@ -1051,13 +1051,13 @@
       "arm": "nudged",
       "hemisphere": "SH",
       "n_members": 50,
-      "n_DW": 42,
-      "n_NDW": 8,
-      "DW_rate": 0.84,
-      "DW_mean_sigma": -1.9814,
-      "NDW_mean_sigma": 0.6333,
-      "contrast_sigma": -2.6147,
-      "ensemble_mean_sigma": -1.5631
+      "n_DW": 40,
+      "n_NDW": 10,
+      "DW_rate": 0.8,
+      "DW_mean_sigma": -2.0506,
+      "NDW_mean_sigma": 0.4917,
+      "contrast_sigma": -2.5424,
+      "ensemble_mean_sigma": -1.5422
     },
     {
       "centre": "UKMO",
@@ -1068,9 +1068,9 @@
       "n_DW": 21,
       "n_NDW": 29,
       "DW_rate": 0.42,
-      "DW_mean_sigma": -0.9625,
-      "NDW_mean_sigma": 0.697,
-      "contrast_sigma": -1.6594,
+      "DW_mean_sigma": -0.9582,
+      "NDW_mean_sigma": 0.6939,
+      "contrast_sigma": -1.6521,
       "ensemble_mean_sigma": -0.0
     }
   ],
@@ -1234,8 +1234,8 @@
       "init": "s20190108",
       "arm": "nudged",
       "hemisphere": "NH",
-      "n_members": 40,
-      "n_DW": 40,
+      "n_members": 50,
+      "n_DW": 50,
       "n_NDW": 0,
       "DW_rate": 1.0,
       "contrast_estimable": false
@@ -1620,9 +1620,9 @@
       "arm": "control",
       "hemisphere": "NH",
       "n_members": 50,
-      "n_DW": 28,
-      "n_NDW": 22,
-      "DW_rate": 0.56,
+      "n_DW": 26,
+      "n_NDW": 24,
+      "DW_rate": 0.52,
       "contrast_estimable": true
     },
     {
@@ -1994,9 +1994,9 @@
       "arm": "control",
       "hemisphere": "NH",
       "n_members": 50,
-      "n_DW": 24,
-      "n_NDW": 26,
-      "DW_rate": 0.48,
+      "n_DW": 25,
+      "n_NDW": 25,
+      "DW_rate": 0.5,
       "contrast_estimable": true
     },
     {
@@ -2027,9 +2027,9 @@
       "arm": "nudged",
       "hemisphere": "SH",
       "n_members": 50,
-      "n_DW": 42,
-      "n_NDW": 8,
-      "DW_rate": 0.84,
+      "n_DW": 40,
+      "n_NDW": 10,
+      "DW_rate": 0.8,
       "contrast_estimable": true
     },
     {
@@ -2047,10 +2047,10 @@
   "summary": {
     "nudged": {
       "n_cases": 25,
-      "mean_contrast_sigma": -1.6237,
-      "sd_across_cases": 0.3001,
+      "mean_contrast_sigma": -1.6222,
+      "sd_across_cases": 0.3025,
       "range": [
-        -2.0753,
+        -2.084,
         -1.0828
       ],
       "mean_DW_rate_contrast_subset": 0.776,
@@ -2066,8 +2066,8 @@
     },
     "control": {
       "n_cases": 36,
-      "mean_contrast_sigma": -1.5899,
-      "sd_across_cases": 0.0887,
+      "mean_contrast_sigma": -1.5896,
+      "sd_across_cases": 0.089,
       "range": [
         -1.7624,
         -1.3256
@@ -2085,12 +2085,12 @@
     "nudged": {
       "n_ensembles_all": 8,
       "n_cases_with_contrast": 7,
-      "mean_DW_rate_UNCONDITIONAL": 0.791,
+      "mean_DW_rate_UNCONDITIONAL": 0.786,
       "inits_present": [
         "s20190829"
       ],
-      "mean_contrast_sigma": -1.9692,
-      "sd_across_cases": 0.4071
+      "mean_contrast_sigma": -1.9581,
+      "sd_across_cases": 0.3891
     },
     "control": {
       "n_ensembles_all": 8,
@@ -2099,8 +2099,8 @@
       "inits_present": [
         "s20190829"
       ],
-      "mean_contrast_sigma": -1.5852,
-      "sd_across_cases": 0.0584
+      "mean_contrast_sigma": -1.5841,
+      "sd_across_cases": 0.0571
     }
   },
   "filter_caveat": "The DW-NDW contrast requires >=3 members in BOTH groups, which is asymmetric by construction: only an arm with a strong forced shift can push nearly every member into one class. 11 of 36 nudged ensembles are dropped that way, with a mean DW rate of 0.993, while 0 of 36 control ensembles are. Quote mean_DW_rate_UNCONDITIONAL for the rate; the contrast is necessarily conditioned on the ensembles where both groups exist, which are the weaker-responding ones.",

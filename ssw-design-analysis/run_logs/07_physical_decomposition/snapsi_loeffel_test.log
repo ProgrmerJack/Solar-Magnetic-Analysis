@@ -22,10 +22,10 @@ post-onset coverage per centre x initialisation (days), from the data:
          KMA s20180208  -4.0 41.0         False
          KMA s20181213 -20.0 25.0         False
          KMA s20190108   6.0 51.0          True
-Meteo-France s20180125 -18.0 26.8         False
-Meteo-France s20180208  -4.0 40.8         False
-Meteo-France s20181213 -20.0 24.8         False
-Meteo-France s20190108   6.0 50.8          True
+Meteo-France s20180125 -17.8 27.0         False
+Meteo-France s20180208  -3.8 41.0         False
+Meteo-France s20181213 -19.8 25.0         False
+Meteo-France s20190108   6.2 51.0          True
         NCAR s20180125 -18.0 27.0         False
         NCAR s20180208  -4.0 41.0         False
         NCAR s20181213 -20.0 25.0         False
@@ -34,13 +34,13 @@ Meteo-France s20190108   6.0 50.8          True
          SNU s20180208  -4.0 41.0         False
          SNU s20181213 -20.0 25.0         False
          SNU s20190108   6.0 51.0          True
-        UKMO s20180125 -18.0 41.8         False
-        UKMO s20180208  -4.0 55.8          True
-        UKMO s20181213 -20.0 39.8         False
-        UKMO s20190108   6.0 65.8          True
+        UKMO s20180125 -17.8 42.0         False
+        UKMO s20180208  -3.8 56.0          True
+        UKMO s20181213 -19.8 40.0         False
+        UKMO s20190108   6.2 66.0          True
   ensembles covering Loeffel's exact weeks 3-7 window: 10 of 36
 
-centres with zg: ['CCCma', 'CNR-ISAC', 'ECCC', 'ECMWF', 'KMA', 'NCAR', 'SNU', 'UKMO']
+centres with zg: ['CCCma', 'CNR-ISAC', 'ECCC', 'ECMWF', 'KMA', 'Meteo-France', 'NCAR', 'SNU', 'UKMO']
 centres with psl: ['CCCma', 'CNR-ISAC', 'ECCC', 'ECMWF', 'KMA', 'Meteo-France', 'NCAR', 'SNU', 'UKMO']
 
 === DESIGN GATE: is 100 hPa free enough for the test to mean anything? ===
@@ -51,7 +51,10 @@ centres with psl: ['CCCma', 'CNR-ISAC', 'ECCC', 'ECMWF', 'KMA', 'Meteo-France', 
   CNR-ISAC     s20180125   sd nudged   28.31 m   control   35.85 m   ratio 0.79
   CNR-ISAC     s20180208   sd nudged   15.73 m   control   25.25 m   ratio 0.623
   CNR-ISAC     s20181213   sd nudged   30.16 m   control   35.21 m   ratio 0.857
-  CNR-ISAC     s20190108   sd nudged    5.66 m   control    8.29 m   ratio 0.683
+  CNR-ISAC     s20190108   sd nudged    8.80 m   control    8.29 m   ratio 1.062
+  ECCC         s20180125   sd nudged   63.17 m   control   42.24 m   ratio 1.495
+  ECCC         s20180208   sd nudged   30.82 m   control   42.56 m   ratio 0.724
+  ECCC         s20181213   sd nudged   51.16 m   control   34.47 m   ratio 1.484
   ECMWF        s20180125   sd nudged   37.47 m   control   28.22 m   ratio 1.328
   ECMWF        s20180208   sd nudged   30.85 m   control   30.31 m   ratio 1.018
   ECMWF        s20181213   sd nudged   31.35 m   control   36.75 m   ratio 0.853
@@ -68,16 +71,16 @@ centres with psl: ['CCCma', 'CNR-ISAC', 'ECCC', 'ECMWF', 'KMA', 'Meteo-France', 
   SNU          s20180208   sd nudged   37.59 m   control   42.09 m   ratio 0.893
   SNU          s20181213   sd nudged   42.73 m   control   53.10 m   ratio 0.805
   SNU          s20190108   sd nudged    3.69 m   control    3.74 m   ratio 0.988
-  UKMO         s20180125   sd nudged   51.15 m   control   44.30 m   ratio 1.155
-  UKMO         s20180208   sd nudged   37.16 m   control   38.13 m   ratio 0.974
-  UKMO         s20181213   sd nudged   45.97 m   control   41.34 m   ratio 1.112
-  UKMO         s20190108   sd nudged    3.01 m   control    3.19 m   ratio 0.944
-  median ratio 0.948 vs threshold 0.5 -> PASS
+  UKMO         s20180125   sd nudged   51.16 m   control   44.54 m   ratio 1.148
+  UKMO         s20180208   sd nudged   36.65 m   control   37.94 m   ratio 0.966
+  UKMO         s20181213   sd nudged   45.91 m   control   41.58 m   ratio 1.104
+  UKMO         s20190108   sd nudged    2.80 m   control    2.91 m   ratio 0.963
+  median ratio 0.964 vs threshold 0.5 -> PASS
 
 === PRIMARY response window: post-onset days 15-25 ===
-  arm_contrast: 28 matched ensembles, r nudged +0.100 vs control +0.101; dz = -0.001 [-0.077, +0.076] p=0.983; heterogeneity Q p: nudged 0.0266, control 0.1272
-  arm_contrast_excl_short_lead: 21 matched ensembles, r nudged +0.109 vs control +0.121; dz = -0.013 [-0.101, +0.075] p=0.773; heterogeneity Q p: nudged 0.0981, control 0.0936
-  nudged   pooled r = +0.099 [+0.048, +0.149]  (32 ensembles, 1579 members)
+  arm_contrast: 31 matched ensembles, r nudged +0.108 vs control +0.085; dz = +0.023 [-0.050, +0.096] p=0.537; heterogeneity Q p: nudged 0.0114, control 0.0695
+  arm_contrast_excl_short_lead: 24 matched ensembles, r nudged +0.109 vs control +0.099; dz = +0.009 [-0.073, +0.092] p=0.824; heterogeneity Q p: nudged 0.0623, control 0.0408
+  nudged   pooled r = +0.106 [+0.056, +0.156]  (32 ensembles, 1597 members)
            excl s20190108: r = +0.109 [+0.051, +0.166]  (24 ensembles, 1208 members)
       CCCma        s20180125   Feb-2018  n=50  r=+0.371  perm p=0.0086
       CCCma        s20180208   Feb-2018  n=50  r=+0.087  perm p=0.5513
@@ -86,156 +89,166 @@ centres with psl: ['CCCma', 'CNR-ISAC', 'ECCC', 'ECMWF', 'KMA', 'Meteo-France', 
       CNR-ISAC     s20180125   Feb-2018  n=50  r=+0.008  perm p=0.9572
       CNR-ISAC     s20180208   Feb-2018  n=50  r=-0.017  perm p=0.9122
       CNR-ISAC     s20181213   Jan-2019  n=50  r=+0.218  perm p=0.1360
-      CNR-ISAC     s20190108   Jan-2019  n=31  r=+0.036  perm p=0.8346
-      ECCC         s20180125   Feb-2018  n=50  r=+0.300  perm p=0.0376
-      ECCC         s20180208   Feb-2018  n=50  r=+0.182  perm p=0.2146
-      ECCC         s20181213   Jan-2019  n=50  r=-0.163  perm p=0.2586
-      ECCC         s20190108   Jan-2019  n=50  r=+0.046  perm p=0.7435
-      ECMWF        s20180125   Feb-2018  n=51  r=-0.095  perm p=0.4923
-      ECMWF        s20180208   Feb-2018  n=51  r=-0.133  perm p=0.3471
-      ECMWF        s20181213   Jan-2019  n=51  r=+0.330  perm p=0.0158
-      ECMWF        s20190108   Jan-2019  n=51  r=+0.218  perm p=0.1306
-      KMA          s20180125   Feb-2018  n=50  r=+0.062  perm p=0.6799
-      KMA          s20180208   Feb-2018  n=50  r=+0.123  perm p=0.4109
-      KMA          s20181213   Jan-2019  n=52  r=+0.091  perm p=0.5255
-      KMA          s20190108   Jan-2019  n=50  r=-0.054  perm p=0.7063
-      NCAR         s20180125   Feb-2018  n=51  r=+0.106  perm p=0.4625
-      NCAR         s20180208   Feb-2018  n=51  r=-0.167  perm p=0.2404
-      NCAR         s20181213   Jan-2019  n=51  r=+0.381  perm p=0.0058
+      CNR-ISAC     s20190108   Jan-2019  n=49  r=+0.293  perm p=0.0392
+      ECCC         s20180125   Feb-2018  n=50  r=+0.300  perm p=0.0368
+      ECCC         s20180208   Feb-2018  n=50  r=+0.182  perm p=0.2198
+      ECCC         s20181213   Jan-2019  n=50  r=-0.163  perm p=0.2545
+      ECCC         s20190108   Jan-2019  n=50  r=+0.046  perm p=0.7497
+      ECMWF        s20180125   Feb-2018  n=51  r=-0.095  perm p=0.5009
+      ECMWF        s20180208   Feb-2018  n=51  r=-0.133  perm p=0.3419
+      ECMWF        s20181213   Jan-2019  n=51  r=+0.330  perm p=0.0184
+      ECMWF        s20190108   Jan-2019  n=51  r=+0.218  perm p=0.1270
+      KMA          s20180125   Feb-2018  n=50  r=+0.062  perm p=0.6761
+      KMA          s20180208   Feb-2018  n=50  r=+0.123  perm p=0.3985
+      KMA          s20181213   Jan-2019  n=52  r=+0.091  perm p=0.5175
+      KMA          s20190108   Jan-2019  n=50  r=-0.054  perm p=0.7031
+      NCAR         s20180125   Feb-2018  n=51  r=+0.106  perm p=0.4665
+      NCAR         s20180208   Feb-2018  n=51  r=-0.167  perm p=0.2450
+      NCAR         s20181213   Jan-2019  n=51  r=+0.381  perm p=0.0056
       NCAR         s20190108   Jan-2019  n=51  r=+0.441  perm p=0.0008
-      SNU          s20180125   Feb-2018  n=50  r=+0.173  perm p=0.2234
-      SNU          s20180208   Feb-2018  n=50  r=+0.122  perm p=0.3937
-      SNU          s20181213   Jan-2019  n=50  r=-0.204  perm p=0.1588
-      SNU          s20190108   Jan-2019  n=50  r=-0.100  perm p=0.4713
-      UKMO         s20180125   Feb-2018  n=50  r=+0.057  perm p=0.6959
-      UKMO         s20180208   Feb-2018  n=50  r=+0.231  perm p=0.1060
-      UKMO         s20181213   Jan-2019  n=50  r=+0.233  perm p=0.0950
-      UKMO         s20190108   Jan-2019  n=50  r=+0.036  perm p=0.8072
-  control  pooled r = +0.101 [+0.047, +0.154]  (28 ensembles, 1405 members)
-           excl s20190108: r = +0.121 [+0.060, +0.182]  (21 ensembles, 1056 members)
-      CCCma        s20180125   Feb-2018  n=50  r=+0.094  perm p=0.5091
-      CCCma        s20180208   Feb-2018  n=50  r=-0.310  perm p=0.0244
-      CCCma        s20181213   Jan-2019  n=50  r=+0.141  perm p=0.3325
-      CCCma        s20190108   Jan-2019  n=47  r=+0.086  perm p=0.5651
-      CNR-ISAC     s20180125   Feb-2018  n=50  r=-0.044  perm p=0.7544
-      CNR-ISAC     s20180208   Feb-2018  n=50  r=+0.030  perm p=0.8398
-      CNR-ISAC     s20181213   Jan-2019  n=50  r=+0.109  perm p=0.4531
-      CNR-ISAC     s20190108   Jan-2019  n=50  r=-0.163  perm p=0.2710
-      ECMWF        s20180125   Feb-2018  n=51  r=+0.218  perm p=0.1218
-      ECMWF        s20180208   Feb-2018  n=51  r=+0.066  perm p=0.6417
-      ECMWF        s20181213   Jan-2019  n=51  r=+0.211  perm p=0.1370
-      ECMWF        s20190108   Jan-2019  n=51  r=+0.070  perm p=0.6281
-      KMA          s20180125   Feb-2018  n=50  r=+0.344  perm p=0.0172
-      KMA          s20180208   Feb-2018  n=50  r=-0.149  perm p=0.2949
-      KMA          s20181213   Jan-2019  n=50  r=+0.322  perm p=0.0254
-      KMA          s20190108   Jan-2019  n=50  r=+0.026  perm p=0.8546
-      NCAR         s20180125   Feb-2018  n=51  r=+0.218  perm p=0.1242
-      NCAR         s20180208   Feb-2018  n=51  r=-0.078  perm p=0.5807
-      NCAR         s20181213   Jan-2019  n=51  r=+0.107  perm p=0.4567
-      NCAR         s20190108   Jan-2019  n=51  r=+0.232  perm p=0.1002
-      SNU          s20180125   Feb-2018  n=50  r=+0.145  perm p=0.3021
-      SNU          s20180208   Feb-2018  n=50  r=+0.366  perm p=0.0108
-      SNU          s20181213   Jan-2019  n=50  r=+0.024  perm p=0.8680
-      SNU          s20190108   Jan-2019  n=50  r=+0.097  perm p=0.4775
-      UKMO         s20180125   Feb-2018  n=50  r=+0.309  perm p=0.0300
-      UKMO         s20180208   Feb-2018  n=50  r=+0.158  perm p=0.2827
-      UKMO         s20181213   Jan-2019  n=50  r=+0.218  perm p=0.1274
-      UKMO         s20190108   Jan-2019  n=50  r=-0.095  perm p=0.5143
+      SNU          s20180125   Feb-2018  n=50  r=+0.173  perm p=0.2357
+      SNU          s20180208   Feb-2018  n=50  r=+0.122  perm p=0.3927
+      SNU          s20181213   Jan-2019  n=50  r=-0.204  perm p=0.1576
+      SNU          s20190108   Jan-2019  n=50  r=-0.100  perm p=0.4623
+      UKMO         s20180125   Feb-2018  n=50  r=+0.054  perm p=0.7079
+      UKMO         s20180208   Feb-2018  n=50  r=+0.229  perm p=0.1118
+      UKMO         s20181213   Jan-2019  n=50  r=+0.235  perm p=0.0952
+      UKMO         s20190108   Jan-2019  n=50  r=+0.029  perm p=0.8498
+  control  pooled r = +0.092 [+0.043, +0.141]  (33 ensembles, 1653 members)
+           excl s20190108: r = +0.107 [+0.051, +0.162]  (26 ensembles, 1304 members)
+      CCCma        s20180125   Feb-2018  n=50  r=+0.094  perm p=0.5107
+      CCCma        s20180208   Feb-2018  n=50  r=-0.310  perm p=0.0274
+      CCCma        s20181213   Jan-2019  n=50  r=+0.141  perm p=0.3337
+      CCCma        s20190108   Jan-2019  n=47  r=+0.086  perm p=0.5623
+      CNR-ISAC     s20180125   Feb-2018  n=50  r=-0.044  perm p=0.7572
+      CNR-ISAC     s20180208   Feb-2018  n=50  r=+0.030  perm p=0.8346
+      CNR-ISAC     s20181213   Jan-2019  n=50  r=+0.109  perm p=0.4465
+      CNR-ISAC     s20190108   Jan-2019  n=50  r=-0.163  perm p=0.2702
+      ECCC         s20180125   Feb-2018  n=50  r=-0.012  perm p=0.9378
+      ECCC         s20180208   Feb-2018  n=50  r=+0.110  perm p=0.4457
+      ECCC         s20181213   Jan-2019  n=49  r=-0.264  perm p=0.0650
+      ECMWF        s20180125   Feb-2018  n=51  r=+0.218  perm p=0.1174
+      ECMWF        s20180208   Feb-2018  n=51  r=+0.066  perm p=0.6519
+      ECMWF        s20181213   Jan-2019  n=51  r=+0.211  perm p=0.1284
+      ECMWF        s20190108   Jan-2019  n=51  r=+0.070  perm p=0.6199
+      KMA          s20180125   Feb-2018  n=50  r=+0.344  perm p=0.0126
+      KMA          s20180208   Feb-2018  n=50  r=-0.149  perm p=0.2999
+      KMA          s20181213   Jan-2019  n=50  r=+0.322  perm p=0.0208
+      KMA          s20190108   Jan-2019  n=50  r=+0.026  perm p=0.8656
+      Meteo-France s20180125   Feb-2018  n=50  r=+0.319  perm p=0.0258
+      Meteo-France s20180208   Feb-2018  n=49  r=+0.072  perm p=0.6315
+      NCAR         s20180125   Feb-2018  n=51  r=+0.218  perm p=0.1272
+      NCAR         s20180208   Feb-2018  n=51  r=-0.078  perm p=0.5989
+      NCAR         s20181213   Jan-2019  n=51  r=+0.107  perm p=0.4557
+      NCAR         s20190108   Jan-2019  n=51  r=+0.232  perm p=0.1054
+      SNU          s20180125   Feb-2018  n=50  r=+0.145  perm p=0.3179
+      SNU          s20180208   Feb-2018  n=50  r=+0.366  perm p=0.0100
+      SNU          s20181213   Jan-2019  n=50  r=+0.024  perm p=0.8766
+      SNU          s20190108   Jan-2019  n=50  r=+0.097  perm p=0.4845
+      UKMO         s20180125   Feb-2018  n=50  r=+0.301  perm p=0.0314
+      UKMO         s20180208   Feb-2018  n=50  r=+0.139  perm p=0.3321
+      UKMO         s20181213   Jan-2019  n=50  r=+0.236  perm p=0.1020
+      UKMO         s20190108   Jan-2019  n=50  r=-0.101  perm p=0.4973
 
 === FIDELITY response window: post-onset days 15-49 ===
-  arm_contrast: 8 matched ensembles, r nudged +0.040 vs control +0.086; dz = -0.045 [-0.192, +0.101] p=0.542; heterogeneity Q p: nudged 0.0424, control 0.6408
-  arm_contrast_excl_short_lead: 1 matched ensembles, r nudged +0.248 vs control +0.141; dz = +0.112 [-0.292, +0.516] p=0.587; heterogeneity Q p: nudged None, control None
-  nudged   pooled r = +0.027 [-0.072, +0.125]  (9 ensembles, 421 members)
-           excl s20190108: r = +0.248 [-0.032, +0.493]  (1 ensembles, 50 members)
-      CCCma        s20190108   Jan-2019  n=38  r=+0.190  perm p=0.2557
-      CNR-ISAC     s20190108   Jan-2019  n=31  r=+0.153  perm p=0.4013
-      ECCC         s20190108   Jan-2019  n=50  r=-0.071  perm p=0.6181
-      ECMWF        s20190108   Jan-2019  n=51  r=-0.056  perm p=0.6971
-      KMA          s20190108   Jan-2019  n=50  r=-0.151  perm p=0.3001
-      NCAR         s20190108   Jan-2019  n=51  r=+0.215  perm p=0.1218
-      SNU          s20190108   Jan-2019  n=50  r=-0.334  perm p=0.0196
-      UKMO         s20180208   Feb-2018  n=50  r=+0.248  perm p=0.0818
-      UKMO         s20190108   Jan-2019  n=50  r=+0.140  perm p=0.3109
-  control  pooled r = +0.086 [-0.015, +0.185]  (8 ensembles, 399 members)
-           excl s20190108: r = +0.141 [-0.143, +0.403]  (1 ensembles, 50 members)
-      CCCma        s20190108   Jan-2019  n=47  r=+0.095  perm p=0.5141
-      CNR-ISAC     s20190108   Jan-2019  n=50  r=+0.286  perm p=0.0416
-      ECMWF        s20190108   Jan-2019  n=51  r=+0.179  perm p=0.2168
-      KMA          s20190108   Jan-2019  n=50  r=-0.013  perm p=0.9310
-      NCAR         s20190108   Jan-2019  n=51  r=-0.043  perm p=0.7627
-      SNU          s20190108   Jan-2019  n=50  r=-0.077  perm p=0.6193
-      UKMO         s20180208   Feb-2018  n=50  r=+0.141  perm p=0.3213
-      UKMO         s20190108   Jan-2019  n=50  r=+0.108  perm p=0.4553
+  arm_contrast: 8 matched ensembles, r nudged +0.050 vs control +0.083; dz = -0.033 [-0.177, +0.112] p=0.659; heterogeneity Q p: nudged 0.0327, control 0.6471
+  arm_contrast_excl_short_lead: 1 matched ensembles, r nudged +0.245 vs control +0.135; dz = +0.114 [-0.291, +0.518] p=0.582; heterogeneity Q p: nudged None, control None
+  nudged   pooled r = +0.037 [-0.060, +0.132]  (9 ensembles, 439 members)
+           excl s20190108: r = +0.245 [-0.036, +0.490]  (1 ensembles, 50 members)
+      CCCma        s20190108   Jan-2019  n=38  r=+0.190  perm p=0.2586
+      CNR-ISAC     s20190108   Jan-2019  n=49  r=+0.209  perm p=0.1514
+      ECCC         s20190108   Jan-2019  n=50  r=-0.071  perm p=0.6217
+      ECMWF        s20190108   Jan-2019  n=51  r=-0.056  perm p=0.6941
+      KMA          s20190108   Jan-2019  n=50  r=-0.151  perm p=0.3035
+      NCAR         s20190108   Jan-2019  n=51  r=+0.215  perm p=0.1304
+      SNU          s20190108   Jan-2019  n=50  r=-0.334  perm p=0.0178
+      UKMO         s20180208   Feb-2018  n=50  r=+0.245  perm p=0.0846
+      UKMO         s20190108   Jan-2019  n=50  r=+0.122  perm p=0.4043
+  control  pooled r = +0.083 [-0.018, +0.182]  (8 ensembles, 399 members)
+           excl s20190108: r = +0.135 [-0.149, +0.399]  (1 ensembles, 50 members)
+      CCCma        s20190108   Jan-2019  n=47  r=+0.095  perm p=0.5319
+      CNR-ISAC     s20190108   Jan-2019  n=50  r=+0.286  perm p=0.0460
+      ECMWF        s20190108   Jan-2019  n=51  r=+0.179  perm p=0.1994
+      KMA          s20190108   Jan-2019  n=50  r=-0.013  perm p=0.9278
+      NCAR         s20190108   Jan-2019  n=51  r=-0.043  perm p=0.7612
+      SNU          s20190108   Jan-2019  n=50  r=-0.077  perm p=0.6251
+      UKMO         s20180208   Feb-2018  n=50  r=+0.135  perm p=0.3367
+      UKMO         s20190108   Jan-2019  n=50  r=+0.090  perm p=0.5299
 
-(max_available response window resolved to days 15-24 from the shortest member)
+(max_available response window resolved to days 15-25 from the shortest member)
 
-=== MAX_AVAILABLE response window: post-onset days 15-24 ===
-  arm_contrast: 28 matched ensembles, r nudged +0.109 vs control +0.104; dz = +0.005 [-0.072, +0.082] p=0.899; heterogeneity Q p: nudged 0.0191, control 0.1003
-  arm_contrast_excl_short_lead: 21 matched ensembles, r nudged +0.118 vs control +0.125; dz = -0.008 [-0.096, +0.080] p=0.863; heterogeneity Q p: nudged 0.1117, control 0.0832
-  nudged   pooled r = +0.106 [+0.055, +0.156]  (32 ensembles, 1579 members)
-           excl s20190108: r = +0.116 [+0.058, +0.173]  (24 ensembles, 1208 members)
-      CCCma        s20180125   Feb-2018  n=50  r=+0.361  perm p=0.0102
-      CCCma        s20180208   Feb-2018  n=50  r=+0.118  perm p=0.4167
-      CCCma        s20181213   Jan-2019  n=50  r=+0.256  perm p=0.0760
-      CCCma        s20190108   Jan-2019  n=38  r=-0.225  perm p=0.1812
-      CNR-ISAC     s20180125   Feb-2018  n=50  r=+0.025  perm p=0.8712
-      CNR-ISAC     s20180208   Feb-2018  n=50  r=+0.028  perm p=0.8532
-      CNR-ISAC     s20181213   Jan-2019  n=50  r=+0.220  perm p=0.1258
-      CNR-ISAC     s20190108   Jan-2019  n=31  r=+0.008  perm p=0.9676
-      ECCC         s20180125   Feb-2018  n=50  r=+0.304  perm p=0.0310
-      ECCC         s20180208   Feb-2018  n=50  r=+0.171  perm p=0.2435
-      ECCC         s20181213   Jan-2019  n=50  r=-0.181  perm p=0.2186
-      ECCC         s20190108   Jan-2019  n=50  r=+0.030  perm p=0.8392
-      ECMWF        s20180125   Feb-2018  n=51  r=-0.069  perm p=0.6253
-      ECMWF        s20180208   Feb-2018  n=51  r=-0.117  perm p=0.4095
-      ECMWF        s20181213   Jan-2019  n=51  r=+0.355  perm p=0.0100
-      ECMWF        s20190108   Jan-2019  n=51  r=+0.233  perm p=0.0996
-      KMA          s20180125   Feb-2018  n=50  r=+0.063  perm p=0.6585
-      KMA          s20180208   Feb-2018  n=50  r=+0.129  perm p=0.3771
-      KMA          s20181213   Jan-2019  n=52  r=+0.096  perm p=0.5069
-      KMA          s20190108   Jan-2019  n=50  r=-0.056  perm p=0.7019
-      NCAR         s20180125   Feb-2018  n=51  r=+0.102  perm p=0.4801
-      NCAR         s20180208   Feb-2018  n=51  r=-0.195  perm p=0.1710
-      NCAR         s20181213   Jan-2019  n=51  r=+0.380  perm p=0.0076
-      NCAR         s20190108   Jan-2019  n=51  r=+0.476  perm p=0.0006
-      SNU          s20180125   Feb-2018  n=50  r=+0.185  perm p=0.2088
-      SNU          s20180208   Feb-2018  n=50  r=+0.123  perm p=0.3963
-      SNU          s20181213   Jan-2019  n=50  r=-0.188  perm p=0.1906
-      SNU          s20190108   Jan-2019  n=50  r=-0.090  perm p=0.5281
-      UKMO         s20180125   Feb-2018  n=50  r=+0.071  perm p=0.6209
-      UKMO         s20180208   Feb-2018  n=50  r=+0.238  perm p=0.0982
-      UKMO         s20181213   Jan-2019  n=50  r=+0.235  perm p=0.0990
-      UKMO         s20190108   Jan-2019  n=50  r=+0.058  perm p=0.6857
-  control  pooled r = +0.104 [+0.051, +0.157]  (28 ensembles, 1405 members)
-           excl s20190108: r = +0.125 [+0.064, +0.186]  (21 ensembles, 1056 members)
-      CCCma        s20180125   Feb-2018  n=50  r=+0.095  perm p=0.5087
-      CCCma        s20180208   Feb-2018  n=50  r=-0.329  perm p=0.0218
-      CCCma        s20181213   Jan-2019  n=50  r=+0.152  perm p=0.2923
-      CCCma        s20190108   Jan-2019  n=47  r=+0.065  perm p=0.6669
-      CNR-ISAC     s20180125   Feb-2018  n=50  r=-0.051  perm p=0.7187
-      CNR-ISAC     s20180208   Feb-2018  n=50  r=+0.055  perm p=0.7107
-      CNR-ISAC     s20181213   Jan-2019  n=50  r=+0.159  perm p=0.2670
-      CNR-ISAC     s20190108   Jan-2019  n=50  r=-0.184  perm p=0.2004
-      ECMWF        s20180125   Feb-2018  n=51  r=+0.222  perm p=0.1210
-      ECMWF        s20180208   Feb-2018  n=51  r=+0.083  perm p=0.5687
-      ECMWF        s20181213   Jan-2019  n=51  r=+0.223  perm p=0.1122
-      ECMWF        s20190108   Jan-2019  n=51  r=+0.045  perm p=0.7584
-      KMA          s20180125   Feb-2018  n=50  r=+0.348  perm p=0.0140
-      KMA          s20180208   Feb-2018  n=50  r=-0.143  perm p=0.3145
-      KMA          s20181213   Jan-2019  n=50  r=+0.312  perm p=0.0252
-      KMA          s20190108   Jan-2019  n=50  r=+0.042  perm p=0.7734
-      NCAR         s20180125   Feb-2018  n=51  r=+0.211  perm p=0.1400
-      NCAR         s20180208   Feb-2018  n=51  r=-0.060  perm p=0.6623
-      NCAR         s20181213   Jan-2019  n=51  r=+0.095  perm p=0.5045
-      NCAR         s20190108   Jan-2019  n=51  r=+0.253  perm p=0.0732
-      SNU          s20180125   Feb-2018  n=50  r=+0.166  perm p=0.2417
-      SNU          s20180208   Feb-2018  n=50  r=+0.372  perm p=0.0098
-      SNU          s20181213   Jan-2019  n=50  r=-0.000  perm p=0.9994
-      SNU          s20190108   Jan-2019  n=50  r=+0.126  perm p=0.3801
-      UKMO         s20180125   Feb-2018  n=50  r=+0.284  perm p=0.0510
-      UKMO         s20180208   Feb-2018  n=50  r=+0.154  perm p=0.2821
-      UKMO         s20181213   Jan-2019  n=50  r=+0.234  perm p=0.0966
-      UKMO         s20190108   Jan-2019  n=50  r=-0.073  perm p=0.6145
+=== MAX_AVAILABLE response window: post-onset days 15-25 ===
+  arm_contrast: 31 matched ensembles, r nudged +0.108 vs control +0.085; dz = +0.023 [-0.050, +0.096] p=0.537; heterogeneity Q p: nudged 0.0114, control 0.0695
+  arm_contrast_excl_short_lead: 24 matched ensembles, r nudged +0.109 vs control +0.099; dz = +0.009 [-0.073, +0.092] p=0.824; heterogeneity Q p: nudged 0.0623, control 0.0408
+  nudged   pooled r = +0.106 [+0.056, +0.156]  (32 ensembles, 1597 members)
+           excl s20190108: r = +0.109 [+0.051, +0.166]  (24 ensembles, 1208 members)
+      CCCma        s20180125   Feb-2018  n=50  r=+0.371  perm p=0.0084
+      CCCma        s20180208   Feb-2018  n=50  r=+0.087  perm p=0.5513
+      CCCma        s20181213   Jan-2019  n=50  r=+0.250  perm p=0.0768
+      CCCma        s20190108   Jan-2019  n=38  r=-0.218  perm p=0.1884
+      CNR-ISAC     s20180125   Feb-2018  n=50  r=+0.008  perm p=0.9572
+      CNR-ISAC     s20180208   Feb-2018  n=50  r=-0.017  perm p=0.9056
+      CNR-ISAC     s20181213   Jan-2019  n=50  r=+0.218  perm p=0.1254
+      CNR-ISAC     s20190108   Jan-2019  n=49  r=+0.293  perm p=0.0416
+      ECCC         s20180125   Feb-2018  n=50  r=+0.300  perm p=0.0312
+      ECCC         s20180208   Feb-2018  n=50  r=+0.182  perm p=0.2066
+      ECCC         s20181213   Jan-2019  n=50  r=-0.163  perm p=0.2571
+      ECCC         s20190108   Jan-2019  n=50  r=+0.046  perm p=0.7480
+      ECMWF        s20180125   Feb-2018  n=51  r=-0.095  perm p=0.5063
+      ECMWF        s20180208   Feb-2018  n=51  r=-0.133  perm p=0.3505
+      ECMWF        s20181213   Jan-2019  n=51  r=+0.330  perm p=0.0200
+      ECMWF        s20190108   Jan-2019  n=51  r=+0.218  perm p=0.1260
+      KMA          s20180125   Feb-2018  n=50  r=+0.062  perm p=0.6805
+      KMA          s20180208   Feb-2018  n=50  r=+0.123  perm p=0.3943
+      KMA          s20181213   Jan-2019  n=52  r=+0.091  perm p=0.5301
+      KMA          s20190108   Jan-2019  n=50  r=-0.054  perm p=0.7005
+      NCAR         s20180125   Feb-2018  n=51  r=+0.106  perm p=0.4747
+      NCAR         s20180208   Feb-2018  n=51  r=-0.167  perm p=0.2627
+      NCAR         s20181213   Jan-2019  n=51  r=+0.381  perm p=0.0068
+      NCAR         s20190108   Jan-2019  n=51  r=+0.441  perm p=0.0018
+      SNU          s20180125   Feb-2018  n=50  r=+0.173  perm p=0.2273
+      SNU          s20180208   Feb-2018  n=50  r=+0.122  perm p=0.3947
+      SNU          s20181213   Jan-2019  n=50  r=-0.204  perm p=0.1588
+      SNU          s20190108   Jan-2019  n=50  r=-0.100  perm p=0.4633
+      UKMO         s20180125   Feb-2018  n=50  r=+0.054  perm p=0.6957
+      UKMO         s20180208   Feb-2018  n=50  r=+0.229  perm p=0.1082
+      UKMO         s20181213   Jan-2019  n=50  r=+0.235  perm p=0.1012
+      UKMO         s20190108   Jan-2019  n=50  r=+0.029  perm p=0.8424
+  control  pooled r = +0.092 [+0.043, +0.141]  (33 ensembles, 1653 members)
+           excl s20190108: r = +0.107 [+0.051, +0.162]  (26 ensembles, 1304 members)
+      CCCma        s20180125   Feb-2018  n=50  r=+0.094  perm p=0.5125
+      CCCma        s20180208   Feb-2018  n=50  r=-0.310  perm p=0.0270
+      CCCma        s20181213   Jan-2019  n=50  r=+0.141  perm p=0.3341
+      CCCma        s20190108   Jan-2019  n=47  r=+0.086  perm p=0.5703
+      CNR-ISAC     s20180125   Feb-2018  n=50  r=-0.044  perm p=0.7540
+      CNR-ISAC     s20180208   Feb-2018  n=50  r=+0.030  perm p=0.8380
+      CNR-ISAC     s20181213   Jan-2019  n=50  r=+0.109  perm p=0.4649
+      CNR-ISAC     s20190108   Jan-2019  n=50  r=-0.163  perm p=0.2594
+      ECCC         s20180125   Feb-2018  n=50  r=-0.012  perm p=0.9348
+      ECCC         s20180208   Feb-2018  n=50  r=+0.110  perm p=0.4443
+      ECCC         s20181213   Jan-2019  n=49  r=-0.264  perm p=0.0676
+      ECMWF        s20180125   Feb-2018  n=51  r=+0.218  perm p=0.1154
+      ECMWF        s20180208   Feb-2018  n=51  r=+0.066  perm p=0.6397
+      ECMWF        s20181213   Jan-2019  n=51  r=+0.211  perm p=0.1426
+      ECMWF        s20190108   Jan-2019  n=51  r=+0.070  perm p=0.6223
+      KMA          s20180125   Feb-2018  n=50  r=+0.344  perm p=0.0118
+      KMA          s20180208   Feb-2018  n=50  r=-0.149  perm p=0.2989
+      KMA          s20181213   Jan-2019  n=50  r=+0.322  perm p=0.0240
+      KMA          s20190108   Jan-2019  n=50  r=+0.026  perm p=0.8520
+      Meteo-France s20180125   Feb-2018  n=50  r=+0.319  perm p=0.0254
+      Meteo-France s20180208   Feb-2018  n=49  r=+0.072  perm p=0.6197
+      NCAR         s20180125   Feb-2018  n=51  r=+0.218  perm p=0.1224
+      NCAR         s20180208   Feb-2018  n=51  r=-0.078  perm p=0.5883
+      NCAR         s20181213   Jan-2019  n=51  r=+0.107  perm p=0.4523
+      NCAR         s20190108   Jan-2019  n=51  r=+0.232  perm p=0.1014
+      SNU          s20180125   Feb-2018  n=50  r=+0.145  perm p=0.3099
+      SNU          s20180208   Feb-2018  n=50  r=+0.366  perm p=0.0086
+      SNU          s20181213   Jan-2019  n=50  r=+0.024  perm p=0.8692
+      SNU          s20190108   Jan-2019  n=50  r=+0.097  perm p=0.4875
+      UKMO         s20180125   Feb-2018  n=50  r=+0.301  perm p=0.0386
+      UKMO         s20180208   Feb-2018  n=50  r=+0.139  perm p=0.3331
+      UKMO         s20181213   Jan-2019  n=50  r=+0.236  perm p=0.0936
+      UKMO         s20190108   Jan-2019  n=50  r=-0.101  perm p=0.4771
 
 === POWER (within-ensemble, n=50, two-sided alpha=0.05) ===
   true r = 0.1   detected with probability 0.106
@@ -248,7 +261,7 @@ centres with psl: ['CCCma', 'CNR-ISAC', 'ECCC', 'ECMWF', 'KMA', 'Meteo-France', 
 between-ensemble (DESCRIPTIVE, nudged): r = +0.750 over 32 ensembles spanning only 2 distinct event(s)
   Not a test of Loeffel: the spread is between MODELS, not events.
 
-between-ensemble (DESCRIPTIVE, control): r = +0.100 over 28 ensembles spanning only 2 distinct event(s)
+between-ensemble (DESCRIPTIVE, control): r = +0.852 over 34 ensembles spanning only 2 distinct event(s)
   Not a test of Loeffel: the spread is between MODELS, not events.
 
 Saved -> snapsi_loeffel_test.json

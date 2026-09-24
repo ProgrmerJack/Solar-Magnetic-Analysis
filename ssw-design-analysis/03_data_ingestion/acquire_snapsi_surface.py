@@ -133,6 +133,101 @@ def lead_days(tv):
     return np.array([(x - t0).total_seconds() / 86400.0 for x in tv], dtype=float)
 
 
+# ------------------------------------------------------------ time origin ---
+# `lead_days()` measures lead from the FILE'S FIRST TIME STEP. Every consumer then
+# computes post-onset day as lead - (onset - init date), i.e. it assumes lead 0 is
+# 00 UTC on the initialisation date. UKMO files start at 06 UTC (their names say
+# 201801250600-...), so every UKMO window in K, L, M, N and O sat 6 h early --
+# found in review 2026-09-24. The origin is MEASURED per ensemble from one
+# member's time axis (`--measure-time-origin`, recorded in TIME_ORIGIN) and every
+# cached member is rebased so that lead_days = days since 00 UTC on the init
+# date. Rebased frames carry lead_origin == LEAD_ORIGIN; the smoke test checks.
+TIME_ORIGIN = HERE / "snapsi_time_origin.json"
+LEAD_ORIGIN = "init_00UTC"
+
+
+def measure_time_origin(tok, sample=3):
+    """First time step of each (centre, experiment, init), in hours after 00 UTC
+    of the init date, read from `sample` members' files. Refuses a centre whose
+    sampled members disagree -- the rebase applies one offset per ensemble."""
+    import cftime
+    import h5py
+    d = pd.read_csv(MANIFEST)
+    q = d[(d.variable == "psl") & d.experiment.isin(EXPERIMENTS)]
+    rows = q.groupby(["centre", "experiment", "start_date"]).head(sample)
+
+    import fsspec
+    fs = fsspec.filesystem("http", client_kwargs={
+        "headers": {"Authorization": f"Bearer {tok}"}})
+
+    def first(r):
+        # Byte-range read of the time variable only (4 KB blocks): the first
+        # version downloaded 240 whole files to read one number from each and
+        # starved the concurrent zg fetches of bandwidth for 40 minutes.
+        path = r.archive_path if bool(r.verified) else resolve_archive_path(r.archive_path, tok)
+        with fs.open(f"{FILE_ROOT}{path}", "rb", block_size=2 ** 12) as fh, \
+                h5py.File(fh, "r") as f:
+            t = f["time"]
+            u = t.attrs["units"]; u = u.decode() if isinstance(u, bytes) else str(u)
+            cal = t.attrs.get("calendar", b"standard")
+            cal = cal.decode() if isinstance(cal, bytes) else str(cal)
+            t0 = cftime.num2date(t[0], u, cal)
+        init = pd.Timestamp(str(r.start_date)[1:])
+        hrs = (pd.Timestamp(year=t0.year, month=t0.month, day=t0.day, hour=t0.hour,
+                            minute=t0.minute) - init).total_seconds() / 3600
+        return (r.centre, r.experiment, str(r.start_date)), hrs, str(t0)
+
+    def first_retry(r):
+        for attempt in range(6):
+            try:
+                return first(r)
+            except Exception as exc:
+                if attempt == 5:
+                    raise
+                print(f"  retry {attempt + 1} {r.centre}/{r.start_date}/{r.member}: "
+                      f"{type(exc).__name__}", flush=True)
+                time.sleep(3 * (attempt + 1))
+
+    with ThreadPoolExecutor(8) as ex:
+        got = list(ex.map(first_retry, list(rows.itertuples())))
+    table = {}
+    for key, hrs, t0 in got:
+        k = "|".join(key)
+        if k in table and table[k]["offset_hours"] != hrs:
+            raise ValueError(f"{k}: members start at different times "
+                             f"({table[k]['first_time']} vs {t0})")
+        table[k] = {"offset_hours": hrs, "first_time": t0}
+    TIME_ORIGIN.write_text(json.dumps(table, indent=1, sort_keys=True),
+                           encoding="utf8", newline="\n")
+    return table
+
+
+def origin_days(centre, experiment, init):
+    """Measured offset of lead 0 from 00 UTC on the init date, in days."""
+    table = json.loads(TIME_ORIGIN.read_text())
+    k = f"{centre}|{experiment}|{init}"
+    if k not in table:
+        raise KeyError(f"no measured time origin for {k}; run --measure-time-origin")
+    return table[k]["offset_hours"] / 24.0
+
+
+def rebase_cache(cache_dir, pattern="*.parquet"):
+    """Rebase every cached member not yet marked. Idempotent; atomic per file."""
+    n = 0
+    for f in sorted(pathlib.Path(cache_dir).glob(pattern)):
+        df = pd.read_parquet(f)
+        if "lead_origin" in df.columns and (df["lead_origin"] == LEAD_ORIGIN).all():
+            continue
+        r = df.iloc[0]
+        df["lead_days"] = df["lead_days"] + origin_days(r.centre, r.experiment, r.init)
+        df["lead_origin"] = LEAD_ORIGIN
+        tmp = f.with_suffix(f".parquet.{os.getpid()}.rebase")
+        df.to_parquet(tmp)
+        tmp.replace(f)
+        n += 1
+    return n
+
+
 def cache_ok(df):
     """Is a cached member usable? Cheap structural + physical plausibility test."""
     if df is None or len(df) == 0:
@@ -151,6 +246,41 @@ def cache_ok(df):
         return False
     # polar-cap sea-level pressure in Pa; anything outside this is not psl
     return 90000.0 < float(v.mean()) < 110000.0
+
+
+FILE_ROOT = "https://dap.ceda.ac.uk"
+
+
+def resolve_archive_path(archive_path: str, tok: str) -> str:
+    """The path that actually exists, for a manifest row marked verified=False.
+
+    `acquire_snapsi.py` builds the manifest by discovering one member's layout
+    and substituting the other member ids, then samples the result. When the
+    sample fails it flags the whole node `verified=False` -- and until
+    2026-09-23 no consumer read the flag. CNR-ISAC nudged s20190108 is such a
+    node: 10 of its 50 members live under version v20230307, not the v20230110
+    the manifest constructed, so they 404ed and were silently absent.
+
+    Lists the member's <var>/<grid>/ directory and requires EXACTLY one version
+    holding a file of the manifest's name. Anything else raises: guessing
+    between versions would mix data vintages without saying so.
+    """
+    parts = archive_path.rstrip("/").split("/")
+    fname, grid_dir = parts[-1], "/".join(parts[:-2]) + "/"
+
+    def listing(path):
+        req = urllib.request.Request(f"{FILE_ROOT}{path}",
+                                     headers={"Authorization": f"Bearer {tok}"})
+        with urllib.request.urlopen(req, timeout=120) as r:
+            return r.read().decode("utf8", "replace")
+
+    versions = sorted(set(re.findall(r'href="(v\d{8})/"', listing(grid_dir))))
+    hits = [v for v in versions
+            if f'href="{fname}"' in listing(f"{grid_dir}{v}/")]
+    if len(hits) != 1:
+        raise FileNotFoundError(
+            f"{fname}: {len(hits)} versions hold it (listed {versions}); refusing to guess")
+    return f"{grid_dir}{hits[0]}/{fname}"
 
 
 def fetch_reduce(row, tok):
@@ -181,6 +311,8 @@ def fetch_reduce(row, tok):
         cf = CACHE / f"{key}.parquet"
 
     url = row.download_url
+    if not bool(row.verified):
+        url = FILE_ROOT + resolve_archive_path(row.archive_path, tok)
     if not url.endswith("?download=1"):
         url = url.rstrip("/") + "?download=1"
     last = None
@@ -214,7 +346,10 @@ def fetch_reduce(row, tok):
             out = pd.DataFrame({
                 "centre": row.centre, "model": row.model,
                 "experiment": row.experiment, "init": str(row.start_date),
-                "member": row.member, "lead_days": lead,
+                "member": row.member,
+                "lead_days": lead + origin_days(row.centre, row.experiment,
+                                                str(row.start_date)),
+                "lead_origin": LEAD_ORIGIN,
                 "psl_cap_N": cap_n, "psl_cap_S": cap_s,
                 # the cap of the hemisphere the event is IN -- what an analysis
                 # of that event should use
@@ -251,6 +386,8 @@ def main():
       acquire_snapsi_surface.py --centres UKMO,NCAR  only those centres
       acquire_snapsi_surface.py --inits sh           only the two SH inits
       acquire_snapsi_surface.py --dry-run            print the budget, transfer nothing
+      acquire_snapsi_surface.py --measure-time-origin  record each ensemble's lead-0 time
+      acquire_snapsi_surface.py --rebase             rebase cached leads, then continue
 
     Already-reduced members are served from _snapsi_reduced/ and cost no
     transfer, so re-running to widen the scope only fetches what is new.
@@ -270,6 +407,12 @@ def main():
         inits_arg, [i.strip() for i in inits_arg.split(",")])
 
     CACHE.mkdir(exist_ok=True)
+    if "--measure-time-origin" in argv:
+        t = measure_time_origin(token())
+        print(json.dumps({k: v["offset_hours"] for k, v in t.items()}, indent=1))
+        return 0
+    if "--rebase" in argv:
+        print(f"rebased {rebase_cache(CACHE)} psl cache file(s)")
     d = pd.read_csv(MANIFEST)
     q = d[(d.variable == "psl")
           & (d.experiment.isin(EXPERIMENTS))
@@ -324,6 +467,9 @@ def main():
     # different fields into one column. Legacy entries have no variable prefix
     # and are psl by construction -- they predate the key change.
     # This directory holds psl and nothing else; other variables live elsewhere.
+    rb = rebase_cache(CACHE)
+    if rb:
+        print(f"rebased {rb} cached member(s) to lead 0 = 00 UTC on the init date")
     cached_files = sorted(CACHE.glob("*.parquet"))
     stray = list(CACHE.glob("*.parquet.tmp"))
     for s in stray:

@@ -83,6 +83,25 @@ def check_layout() -> None:
     else:
         rec("SKIP", "snapsi cache naming", "cache absent")
 
+    # Lead 0 must mean 00 UTC on the init date for every member, because every
+    # analysis converts lead to post-onset day by that assumption. UKMO files
+    # start at 06 UTC and sat 6 h early until the caches were rebased
+    # (acquire_snapsi_surface.rebase_cache, 2026-09-24). Schema-only read: fast.
+    import pyarrow.parquet as pq
+    for label, d, pat in (("psl", red, "*.parquet"),
+                          ("zg100", SSW / "03_data_ingestion" / "_snapsi_zg100",
+                           "zg100_*.parquet")):
+        if not d.is_dir():
+            rec("SKIP", f"snapsi {label} lead origin", "cache absent")
+            continue
+        files = sorted(d.glob(pat))
+        unmarked = [f.name for f in files
+                    if "lead_origin" not in pq.read_schema(f).names]
+        rec("PASS" if not unmarked else "FAIL", f"snapsi {label} lead origin",
+            f"{len(files)} members rebased to 00 UTC on the init date" if not unmarked
+            else f"{len(unmarked)} of {len(files)} not rebased (run the acquisition "
+                 f"script with --rebase), e.g. {unmarked[0]}")
+
     for required in ("FAILURES.md", "CLAUDE.md", "CATALOG.md"):
         rec("PASS" if (ROOT / required).exists() else "FAIL",
             f"root file {required}",

@@ -43,15 +43,15 @@ KMA      s20181213   control    50   23   27   0.46   -0.802   +0.683    -1.486
 KMA      s20190108   control    50   17   33   0.34   -1.035   +0.533    -1.568
 KMA      s20190829   nudged     50   42    8   0.84   -1.927   +0.369    -2.296
 KMA      s20190829   control    50   21   29   0.42   -0.940   +0.680    -1.620
-Meteo-France s20180125   nudged     50   33   17   0.66   -1.071   +0.316    -1.387
-Meteo-France s20180125   control    50   28   22   0.56   -0.675   +0.859    -1.535
-Meteo-France s20180208   nudged     50   44    6   0.88   -2.252   -1.071    -1.181
-Meteo-France s20180208   control    50   27   23   0.54   -0.761   +0.893    -1.654
-Meteo-France s20181213   nudged     50   32   18   0.64   -1.543   +0.533    -2.075
-Meteo-France s20181213   control    50   23   27   0.46   -0.836   +0.712    -1.548
+Meteo-France s20180125   nudged     50   33   17   0.66   -1.064   +0.306    -1.370
+Meteo-France s20180125   control    50   26   24   0.52   -0.727   +0.787    -1.514
+Meteo-France s20180208   nudged     50   44    6   0.88   -2.313   -1.149    -1.164
+Meteo-France s20180208   control    50   27   23   0.54   -0.764   +0.897    -1.661
+Meteo-France s20181213   nudged     50   32   18   0.64   -1.564   +0.520    -2.084
+Meteo-France s20181213   control    50   23   27   0.46   -0.837   +0.713    -1.550
 Meteo-France s20190108   control    50   23   27   0.46   -0.846   +0.721    -1.567
-Meteo-France s20190829   nudged     50   36   14   0.72   -1.297   +0.391    -1.688
-Meteo-France s20190829   control    50   23   27   0.46   -0.846   +0.721    -1.567
+Meteo-France s20190829   nudged     50   36   14   0.72   -1.303   +0.381    -1.683
+Meteo-France s20190829   control    50   23   27   0.46   -0.845   +0.720    -1.565
 NCAR     s20180125   nudged     51   43    8   0.84   -1.154   +0.248    -1.402
 NCAR     s20180125   control    51   20   31   0.39   -1.051   +0.678    -1.729
 NCAR     s20180208   control    51   27   24   0.53   -0.788   +0.886    -1.674
@@ -70,25 +70,25 @@ SNU      s20181213   control    50   22   28   0.44   -0.884   +0.694    -1.578
 SNU      s20190108   control    50   21   29   0.42   -0.769   +0.557    -1.326
 SNU      s20190829   nudged     50   35   15   0.70   -1.143   +0.409    -1.552
 SNU      s20190829   control    50   20   30   0.40   -0.920   +0.614    -1.534
-UKMO     s20180125   nudged     50   39   11   0.78   -1.125   +0.573    -1.698
-UKMO     s20180125   control    50   24   26   0.48   -0.880   +0.813    -1.693
-UKMO     s20180208   nudged     50   40   10   0.80   -1.152   +0.334    -1.485
-UKMO     s20180208   control    50   21   29   0.42   -0.977   +0.707    -1.684
-UKMO     s20181213   nudged     50   43    7   0.86   -1.561   +0.390    -1.951
-UKMO     s20181213   control    50   24   26   0.48   -0.822   +0.759    -1.581
-UKMO     s20190108   control    50   21   29   0.42   -0.907   +0.657    -1.563
-UKMO     s20190829   nudged     50   42    8   0.84   -1.981   +0.633    -2.615
-UKMO     s20190829   control    50   21   29   0.42   -0.962   +0.697    -1.659
+UKMO     s20180125   nudged     50   39   11   0.78   -1.117   +0.572    -1.689
+UKMO     s20180125   control    50   24   26   0.48   -0.879   +0.811    -1.690
+UKMO     s20180208   nudged     50   40   10   0.80   -1.172   +0.308    -1.479
+UKMO     s20180208   control    50   21   29   0.42   -0.976   +0.707    -1.682
+UKMO     s20181213   nudged     50   43    7   0.86   -1.574   +0.381    -1.955
+UKMO     s20181213   control    50   25   25   0.50   -0.791   +0.791    -1.581
+UKMO     s20190108   control    50   21   29   0.42   -0.909   +0.658    -1.567
+UKMO     s20190829   nudged     50   40   10   0.80   -2.051   +0.492    -2.542
+UKMO     s20190829   control    50   21   29   0.42   -0.958   +0.694    -1.652
 
 === SOUTHERN HEMISPHERE (austral MINOR warming, reported separately) ===
-  nudged   contrast -1.969 sigma (n=7 of 8), DW rate unconditional 0.791, inits ['s20190829']
-  control  contrast -1.585 sigma (n=8 of 8), DW rate unconditional 0.413, inits ['s20190829']
+  nudged   contrast -1.958 sigma (n=7 of 8), DW rate unconditional 0.786, inits ['s20190829']
+  control  contrast -1.584 sigma (n=8 of 8), DW rate unconditional 0.413, inits ['s20190829']
   The wind never reversed: this is a MINOR warming, not an SSW.
 
 === RESULT ===
 
   NUDGED   -- stratospheric forcing IDENTICAL by design
-     manufactured DW-NDW contrast : -1.624 sigma (sd 0.300, n=25)
+     manufactured DW-NDW contrast : -1.622 sigma (sd 0.302, n=25)
      DW rate, contrast subset     : 0.776  (25 of 36 ensembles)
      DW rate, UNCONDITIONAL       : 0.842   [11 dropped, their rate 0.993]
 

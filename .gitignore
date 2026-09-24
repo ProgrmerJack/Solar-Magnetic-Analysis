@@ -25,6 +25,8 @@ ssw-design-analysis/03_data_ingestion/raw/ncep_heatflux/
 ssw-design-analysis/03_data_ingestion/_ncep_cache/
 ssw-design-analysis/03_data_ingestion/_ncep_reduced/
 ssw-design-analysis/03_data_ingestion/_snapsi_reduced/
+ssw-design-analysis/03_data_ingestion/_snapsi_zg100/
+ssw-design-analysis/03_data_ingestion/_gate_download/
 ssw-design-analysis/**/*.nc
 ssw-design-analysis/**/*.parquet
 # ...but keep the small text indices and the station cache, which ARE provenance

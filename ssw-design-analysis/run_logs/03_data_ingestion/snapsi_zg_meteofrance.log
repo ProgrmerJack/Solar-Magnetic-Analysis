@@ -1,0 +1,17 @@
+centres    ['Meteo-France']
+inits      ['s20180125', 's20180208', 's20181213', 's20190108', 's20190829', 's20191001']
+matched    600 members
+cached     0
+to fetch   600
+CEDA token valid, 44.4 h remaining (user mikhail001)
+
+gating Meteo-France -- full file vs byte-range read ...
+  PASS  max|diff|=0 corr=1.0000000000 mean=15329.2 m  199.6x smaller
+  retrying Meteo-France/s20180125/r2i1p1f1: AttributeError: 'NoneType' object has no attribute 'lstrip'
+  retrying Meteo-France/s20180208/r44i1p1f1: ServerDisconnectedError: Server disconnected
+  retrying Meteo-France/s20180208/r42i1p1f1: ServerDisconnectedError: Server disconnected
+  retrying Meteo-France/s20180208/r39i1p1f1: OSError: short or failed range read at t=178 y0=91 x0=180
+  retrying Meteo-France/s20180208/r3i1p1f1: OSError: short or failed range read at t=148 y0=91 x0=0
+  retrying Meteo-France/s20181213/r10i1p1f1: FSTimeoutError: 
+  100/600  56.1 min  (2 members/min)
+'.venv/bin/python' terminated by signal TERM.

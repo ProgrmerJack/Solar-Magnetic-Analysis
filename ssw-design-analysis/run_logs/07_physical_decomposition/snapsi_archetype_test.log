@@ -1,0 +1,84 @@
+usable centres: ['CCCma', 'CNR-ISAC', 'ECCC', 'ECMWF', 'KMA', 'Meteo-France', 'NCAR', 'SNU', 'UKMO']
+
+per ensemble (A < 0 is the downward-propagating sign):
+      centre      init    event  nudged_DW_rate  nudged_mean_A  obs_A  obs_DW  obs_pct_in_nudged  obs_pct_in_nudged_adjusted  init_offset_model_minus_era5_Pa
+       CCCma s20180125 Feb-2018           0.740         -0.697 -0.686    True              0.400                       0.320                            191.6
+       CCCma s20180208 Feb-2018           0.760         -0.822 -0.023   False              0.760                       0.920                           -211.1
+       CCCma s20181213 Jan-2019           0.720         -0.499  0.317   False              0.880                       0.960                           -164.0
+       CCCma s20190108 Jan-2019           0.763         -0.650 -0.121    True              0.684                       0.895                            -76.6
+    CNR-ISAC s20180125 Feb-2018           0.760         -0.883 -0.254   False              0.760                       0.780                            -92.0
+    CNR-ISAC s20180208 Feb-2018           0.780         -0.833 -0.613    True              0.620                       0.640                            -10.3
+    CNR-ISAC s20181213 Jan-2019           0.480         -0.096  0.527   False              0.700                       0.740                            -81.4
+    CNR-ISAC s20190108 Jan-2019           1.000         -2.927  0.265   False              1.000                       1.000                            -40.1
+        ECCC s20180125 Feb-2018           1.000         -2.180 -4.872    True              0.000                       0.740                          -1212.9
+        ECCC s20180208 Feb-2018           1.000         -3.520 -5.761    True              0.000                       0.420                           -699.7
+        ECCC s20181213 Jan-2019           1.000         -4.303 -5.900    True              0.120                       0.220                           -109.8
+        ECCC s20190108 Jan-2019           1.000         -4.289 -8.171    True              0.000                       0.020                           -460.2
+       ECMWF s20180125 Feb-2018           0.843         -0.962 -1.201    True              0.431                       0.451                            -11.2
+       ECMWF s20180208 Feb-2018           0.922         -1.730 -1.815    True              0.490                       0.510                            -22.5
+       ECMWF s20181213 Jan-2019           0.784         -1.188 -0.729    True              0.569                       0.588                            -10.5
+       ECMWF s20190108 Jan-2019           1.000         -2.453 -1.038    True              0.961                       0.961                              3.4
+         KMA s20180125 Feb-2018           0.820         -1.170 -0.817    True              0.620                       0.640                            -29.9
+         KMA s20180208 Feb-2018           0.900         -1.361 -1.202    True              0.580                       0.720                            -49.4
+         KMA s20181213 Jan-2019           0.750         -0.767 -0.037    True              0.769                       0.846                            -45.1
+         KMA s20190108 Jan-2019           1.000         -3.428 -1.264    True              1.000                       1.000                            -26.8
+Meteo-France s20180125 Feb-2018           0.660         -0.599 -1.851    True              0.080                       0.120                            -88.5
+Meteo-France s20180208 Feb-2018           0.880         -2.173 -3.143    True              0.020                       0.280                           -174.6
+Meteo-France s20181213 Jan-2019           0.640         -0.814 -1.341    True              0.280                       0.400                           -144.7
+Meteo-France s20190108 Jan-2019           1.000         -2.715 -4.776    True              0.000                       0.000                             52.4
+        NCAR s20180125 Feb-2018           0.843         -0.934 -1.602    True              0.235                       0.275                            -54.2
+        NCAR s20180208 Feb-2018           0.961         -1.749 -1.697    True              0.490                       0.647                            -80.2
+        NCAR s20181213 Jan-2019           0.804         -1.260 -0.554    True              0.667                       0.725                            -40.9
+        NCAR s20190108 Jan-2019           0.804         -1.219 -0.073    True              0.863                       0.863                              3.7
+         SNU s20180125 Feb-2018           0.780         -0.963 -0.786    True              0.480                       0.460                             74.8
+         SNU s20180208 Feb-2018           0.840         -1.178 -1.361    True              0.460                       0.300                             79.1
+         SNU s20181213 Jan-2019           0.680         -0.577 -0.190    True              0.680                       0.560                             57.6
+         SNU s20190108 Jan-2019           0.960         -2.537 -0.692    True              0.960                       0.900                             79.0
+        UKMO s20180125 Feb-2018           0.780         -0.745 -0.341    True              0.680                       0.760                            -54.6
+        UKMO s20180208 Feb-2018           0.800         -0.876 -0.810    True              0.540                       0.660                            -49.9
+        UKMO s20181213 Jan-2019           0.860         -1.300 -0.152    True              0.860                       0.900                            -73.5
+        UKMO s20190108 Jan-2019           1.000         -2.200 -0.510    True              1.000                       1.000                              3.2
+
+per initialisation:
+  s20180125 Feb-2018: obs DW in 8/9 centres' frames; nudged DW rate 0.803; obs percentile median 0.431 (range [0.0, 0.76]); <2.5%: 1, >97.5%: 0 | adjusted median 0.46
+  s20180208 Feb-2018: obs DW in 8/9 centres' frames; nudged DW rate 0.871; obs percentile median 0.49 (range [0.0, 0.76]); <2.5%: 2, >97.5%: 0 | adjusted median 0.64
+  s20181213 Jan-2019: obs DW in 7/9 centres' frames; nudged DW rate 0.746; obs percentile median 0.68 (range [0.12, 0.88]); <2.5%: 0, >97.5%: 0 | adjusted median 0.725
+  s20190108 Jan-2019: obs DW in 8/9 centres' frames; nudged DW rate 0.947; obs percentile median 0.96 (range [0.0, 1.0]); <2.5%: 2, >97.5%: 3 | adjusted median 0.9
+
+pair test [primary] s20180125 minus s20181213 (A_2018 - A_2019; negative = 2018 more downward):
+      centre  model_diff_mean  model_diff_sd  obs_diff  obs_diff_pct  two_sided_p  obs_diff_pct_adjusted
+       CCCma           -0.198          1.178    -1.004         0.250        0.499                  0.100
+    CNR-ISAC           -0.787          1.532    -0.781         0.520        0.961                  0.511
+        ECCC            2.123          1.558     1.029         0.237        0.474                  0.842
+       ECMWF            0.226          1.477    -0.471         0.331        0.661                  0.331
+         KMA           -0.403          1.333    -0.780         0.388        0.775                  0.382
+Meteo-France            0.216          1.639    -0.510         0.351        0.702                  0.305
+        NCAR            0.326          1.567    -1.049         0.193        0.386                  0.197
+         SNU           -0.386          1.402    -0.596         0.433        0.866                  0.417
+        UKMO            0.555          1.503    -0.189         0.305        0.610                  0.292
+  outside the central 95%: 0 of 9 centres (adjusted: 0)
+
+pair test [short_lead] s20180208 minus s20190108 (A_2018 - A_2019; negative = 2018 more downward):
+      centre  model_diff_mean  model_diff_sd  obs_diff  obs_diff_pct  two_sided_p  obs_diff_pct_adjusted
+       CCCma           -0.172          1.379     0.099         0.594        0.812                  0.691
+    CNR-ISAC            2.095          1.272    -0.877         0.010        0.020                  0.005
+        ECCC            0.769          1.122     2.410         0.928        0.143                  0.926
+       ECMWF            0.723          1.352    -0.777         0.135        0.271                  0.146
+         KMA            2.066          1.336     0.062         0.054        0.109                  0.051
+Meteo-France            0.542          0.876     1.633         0.888        0.223                  0.985
+        NCAR           -0.529          1.412    -1.624         0.227        0.454                  0.290
+         SNU            1.359          1.358    -0.669         0.069        0.138                  0.104
+        UKMO            1.324          1.100    -0.300         0.072        0.145                  0.089
+  outside the central 95%: 1 of 9 centres (adjusted: 2)
+
+observed class, Karpechko conditions 1-3 on ERA5 (project implementation):
+  Feb-2018 1000hPa days (8, 52): NAM mean -0.625, 78% negative, c1=True c2=True c3=True -> DW
+  Jan-2019 1000hPa days (8, 52): NAM mean +0.019, 62% negative, c1=False c2=True c3=True -> NDW
+  Feb-2018 1000hPa days (8, 25): NAM mean -0.977, 100% negative, c1=True c2=True c3=True -> DW
+  Jan-2019 1000hPa days (8, 25): NAM mean -0.214, 83% negative, c1=True c2=True c3=True -> DW
+  Feb-2018 850hPa days (8, 52): NAM mean -0.693, 80% negative, c1=True c2=True c3=True -> DW
+  Jan-2019 850hPa days (8, 52): NAM mean -0.041, 62% negative, c1=True c2=True c3=True -> DW
+  Feb-2018 850hPa days (8, 25): NAM mean -1.201, 100% negative, c1=True c2=True c3=True -> DW
+  Jan-2019 850hPa days (8, 25): NAM mean -0.199, 83% negative, c1=True c2=True c3=True -> DW
+
+Saved -> snapsi_archetype_test.json

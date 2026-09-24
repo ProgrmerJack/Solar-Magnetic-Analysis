@@ -77,12 +77,12 @@
     {
       "centre": "CNR-ISAC",
       "init": "s20190108",
-      "n_nudged": 40,
+      "n_nudged": 50,
       "n_control": 50,
       "sd_control_Pa": 117.5,
-      "shift_sigma": -2.8053,
-      "variance_ratio": 0.9224,
-      "pure_translation_KS_p": 0.7652
+      "shift_sigma": -2.9273,
+      "variance_ratio": 1.036,
+      "pure_translation_KS_p": 0.8693
     },
     {
       "centre": "ECCC",
@@ -209,29 +209,29 @@
       "init": "s20180125",
       "n_nudged": 50,
       "n_control": 50,
-      "sd_control_Pa": 413.0,
-      "shift_sigma": -0.5995,
-      "variance_ratio": 0.7904,
-      "pure_translation_KS_p": 0.5487
+      "sd_control_Pa": 413.9,
+      "shift_sigma": -0.5986,
+      "variance_ratio": 0.7853,
+      "pure_translation_KS_p": 0.8693
     },
     {
       "centre": "Meteo-France",
       "init": "s20180208",
       "n_nudged": 50,
       "n_control": 50,
-      "sd_control_Pa": 360.0,
-      "shift_sigma": -2.1102,
-      "variance_ratio": 0.4057,
-      "pure_translation_KS_p": 0.1786
+      "sd_control_Pa": 357.2,
+      "shift_sigma": -2.1734,
+      "variance_ratio": 0.3994,
+      "pure_translation_KS_p": 0.1124
     },
     {
       "centre": "Meteo-France",
       "init": "s20181213",
       "n_nudged": 50,
       "n_control": 50,
-      "sd_control_Pa": 373.8,
-      "shift_sigma": -0.7956,
-      "variance_ratio": 1.9415,
+      "sd_control_Pa": 370.3,
+      "shift_sigma": -0.8141,
+      "variance_ratio": 1.9536,
       "pure_translation_KS_p": 0.3959
     },
     {
@@ -239,10 +239,10 @@
       "init": "s20190108",
       "n_nudged": 50,
       "n_control": 50,
-      "sd_control_Pa": 125.7,
-      "shift_sigma": -2.533,
-      "variance_ratio": 0.3797,
-      "pure_translation_KS_p": 0.2719
+      "sd_control_Pa": 119.2,
+      "shift_sigma": -2.715,
+      "variance_ratio": 0.3828,
+      "pure_translation_KS_p": 0.1786
     },
     {
       "centre": "NCAR",
@@ -330,8 +330,8 @@
       "n_nudged": 50,
       "n_control": 50,
       "sd_control_Pa": 374.7,
-      "shift_sigma": -0.7512,
-      "variance_ratio": 1.0587,
+      "shift_sigma": -0.7454,
+      "variance_ratio": 1.0551,
       "pure_translation_KS_p": 0.7166
     },
     {
@@ -339,9 +339,9 @@
       "init": "s20180208",
       "n_nudged": 50,
       "n_control": 50,
-      "sd_control_Pa": 419.3,
-      "shift_sigma": -0.8545,
-      "variance_ratio": 0.6967,
+      "sd_control_Pa": 417.3,
+      "shift_sigma": -0.876,
+      "variance_ratio": 0.6976,
       "pure_translation_KS_p": 0.5487
     },
     {
@@ -349,9 +349,9 @@
       "init": "s20181213",
       "n_nudged": 50,
       "n_control": 50,
-      "sd_control_Pa": 382.5,
-      "shift_sigma": -1.2877,
-      "variance_ratio": 1.2367,
+      "sd_control_Pa": 380.7,
+      "shift_sigma": -1.3004,
+      "variance_ratio": 1.2491,
       "pure_translation_KS_p": 0.8693
     },
     {
@@ -359,10 +359,10 @@
       "init": "s20190108",
       "n_nudged": 50,
       "n_control": 50,
-      "sd_control_Pa": 213.1,
-      "shift_sigma": -2.1546,
-      "variance_ratio": 0.5414,
-      "pure_translation_KS_p": 0.5487
+      "sd_control_Pa": 206.9,
+      "shift_sigma": -2.1999,
+      "variance_ratio": 0.5366,
+      "pure_translation_KS_p": 0.3959
     }
   ],
   "excluded": {
@@ -370,59 +370,59 @@
   },
   "pooled_all": {
     "n_cases": 36,
-    "n_nudged": 1788,
+    "n_nudged": 1798,
     "n_control": 1805,
-    "shift_sigma": -1.5595,
-    "shift_sd_across_cases": 1.0709,
+    "shift_sigma": -1.5722,
+    "shift_sd_across_cases": 1.0812,
     "shift_range_across_cases": [
       -4.3033,
       -0.0959
     ],
     "variance_ratio_is_within_ensemble": true,
-    "variance_ratio": 0.9521,
+    "variance_ratio": 0.9554,
     "variance_ratio_CI95": [
-      0.8692,
-      1.0468
+      0.8732,
+      1.0507
     ],
-    "forced_variance_sigma2": -0.0479,
-    "pure_translation_KS_stat": 0.0316,
-    "pure_translation_KS_p": 0.3223,
-    "mixture_BIC_p_vs_control": 0.99,
+    "forced_variance_sigma2": -0.0446,
+    "pure_translation_KS_stat": 0.0302,
+    "pure_translation_KS_p": 0.3714,
+    "mixture_BIC_p_vs_control": 0.985,
     "power_to_detect_mixture": {
-      "critical_value_BIC_at_5pct": -1.854,
-      "sep=0.25": 0.04,
-      "sep=0.5": 0.005,
+      "critical_value_BIC_at_5pct": -3.261,
+      "sep=0.25": 0.07,
+      "sep=0.5": 0.025,
       "sep=0.75": 0.005,
       "sep=1.0": 0.0,
-      "sep=1.5": 0.04
+      "sep=1.5": 0.06
     }
   },
   "pooled_excluding_short_lead_init": {
     "n_cases": 27,
     "n_nudged": 1358,
     "n_control": 1356,
-    "shift_sigma": -1.2619,
-    "shift_sd_across_cases": 0.9043,
+    "shift_sigma": -1.266,
+    "shift_sd_across_cases": 0.9061,
     "shift_range_across_cases": [
       -4.3033,
       -0.0959
     ],
     "variance_ratio_is_within_ensemble": true,
-    "variance_ratio": 0.9954,
+    "variance_ratio": 0.9958,
     "variance_ratio_CI95": [
-      0.8905,
-      1.1052
+      0.8953,
+      1.1056
     ],
-    "forced_variance_sigma2": -0.0046,
+    "forced_variance_sigma2": -0.0042,
     "pure_translation_KS_stat": 0.0279,
-    "pure_translation_KS_p": 0.65,
-    "mixture_BIC_p_vs_control": 0.995,
+    "pure_translation_KS_p": 0.6499,
+    "mixture_BIC_p_vs_control": 1.0,
     "power_to_detect_mixture": {
-      "critical_value_BIC_at_5pct": 0.125,
-      "sep=0.25": 0.04,
+      "critical_value_BIC_at_5pct": -1.887,
+      "sep=0.25": 0.1,
       "sep=0.5": 0.03,
-      "sep=0.75": 0.005,
-      "sep=1.0": 0.005,
+      "sep=0.75": 0.01,
+      "sep=1.0": 0.0,
       "sep=1.5": 0.0
     }
   }
