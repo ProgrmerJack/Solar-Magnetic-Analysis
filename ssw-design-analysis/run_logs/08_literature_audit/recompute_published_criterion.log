@@ -1,0 +1,22 @@
+criterion applied to 43 events: DW 30, NDW 13 (70% downward)
+fitting beta on ~4000 event-free pseudo-onsets ...
+null: applying the criterion to 3000 pseudo-onset sets ...
+  1000/3000
+  2000/3000
+  3000/3000
+
+outcome       DW      NDW  contrast    beta  beta*dS  residual       p  %selection
+----------------------------------------------------------------------------------
+nao      -0.464   +0.078    -0.543  +0.259   -0.464    -0.079  0.4433         85%
+ao       -1.433   +0.349    -1.782  +0.980   -1.756    -0.026  0.5953         99%
+pna      +0.186   -0.036    +0.222  -0.094   +0.169    +0.053  0.6983         76%
+
+=== THE NULL: same criterion, pseudo-events, TRUE contrast = 0 ===
+  nao    null DW-minus-NDW contrast = -0.476  (observed -0.543; 88% reproduced with no effect)
+  ao     null DW-minus-NDW contrast = -1.712  (observed -1.782; 96% reproduced with no effect)
+  pna    null DW-minus-NDW contrast = +0.149  (observed +0.222; 67% reproduced with no effect)
+
+=== VERDICT ===
+  The published criterion produces a DW-minus-NDW NAO contrast of -0.543; 86% of it is the selection term beta x dS. Residual -0.079 (p=0.443). For scale, ACP 26, 3723 (2026) publishes -0.708 from the same criterion.
+
+Saved -> recompute_published_criterion.json

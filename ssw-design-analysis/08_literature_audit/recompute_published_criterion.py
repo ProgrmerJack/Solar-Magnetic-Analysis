@@ -17,8 +17,9 @@ THE CRITERION, VERIFIED FROM SOURCE 2026-08-01
   In active use. ACP 26, 3723 (2026) states "The definition of DWs used in this
   paper follows the method by Karpechko et al. (2017)" (moving 1000 -> 850 hPa)
   and reports, for 60 days post-onset in ERA5, mean NAO of -0.762 (BOTH subtype),
-  -0.567 (EA), -0.435 (NA) against +0.088 for NDW -- a DW-minus-NDW contrast of
-  -0.850. J. Climate 32, 85 (2019) uses the same definition (850/100 hPa) and
+  -0.567 (EA), -0.435 (NA) against +0.088 for NDW. Weighted by the ERA5 subtype
+  counts (13, 14, 6) the all-DW mean is -0.620, so the DW-minus-NDW contrast is
+  -0.708 (the -0.850 used until 2026-09-25 subtracted the BOTH subtype alone). J. Climate 32, 85 (2019) uses the same definition (850/100 hPa) and
   reports DW tropospheric anomalies "of around twice that of the total" composite.
 
 WHAT IS COMPUTED HERE
@@ -35,7 +36,7 @@ WHAT IS COMPUTED HERE
   zero) gives the p-value and the bound.
 
 WHAT THIS IS NOT
-  This does NOT reproduce ACP 2026's -0.850. They use ERA5 850 hPa NAM and a
+  This does NOT reproduce ACP 2026's -0.708. They use ERA5 850 hPa NAM and a
   1000 hPa-height NAO; this uses the CPC AO as the 1000 hPa NAM index and the CPC
   NAO, on a different catalogue. The published value is quoted for scale only.
   The claim made here is about the DECOMPOSITION of a contrast produced by this
@@ -70,8 +71,9 @@ N_NULL = 3000
 SEED = 20260801
 
 PUBLISHED = {"ACP_26_3723_2026_NAO_DW_BOTH": -0.762,
+             "ACP_26_3723_2026_NAO_DW_all": -0.620,     # (13*-0.762+14*-0.567+6*-0.435)/33
              "ACP_26_3723_2026_NAO_NDW": 0.088,
-             "ACP_26_3723_2026_contrast": -0.850}
+             "ACP_26_3723_2026_contrast": -0.708}
 
 
 def strat_nam_150():

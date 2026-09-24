@@ -14,3 +14,9 @@ verifying the byte-range reader for Meteo-France against its cache ...
   retrying ECCC/s20190108/r1i26p1f1: FSTimeoutError: 
   retrying ECCC/s20190108/r1i34p1f1: FSTimeoutError: 
   200/1200  38.3 min  (5 members/min)
+  300/1200  45.7 min  (7 members/min)
+  400/1200  45.8 min  (9 members/min)
+  500/1200  45.8 min  (11 members/min)
+  600/1200  45.8 min  (13 members/min)
+  700/1200  49.1 min  (14 members/min)
+  retrying Meteo-France/s20181213/r27i1p1f1: AttributeError: 'NoneType' object has no attribute 'lstrip'

@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-24T18:48:01+00:00",
+ "generated": "2026-09-24T19:17:25+00:00",
  "note": "Known-good baseline: each result was produced by the script at the recorded sha256. catalog_repo.py flags STALE when a producer's hash no longer matches. Re-record with --record only AFTER re-running the analysis.",
  "results": {
   "catalogue_sets.json": {
@@ -367,9 +367,9 @@
     "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py": "6111821892b96631"
+    "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py": "7d34eaafc46e6376"
    },
-   "result_sha256_16": "95c9189f6bbffc02",
+   "result_sha256_16": "0a25b8e4224c8208",
    "needs_rerun": false
   },
   "headline_stress_test.json": {
@@ -397,9 +397,9 @@
     "ssw-design-analysis/07_physical_decomposition/predictability_ceiling.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/predictability_ceiling.py": "530e71ce62c85582"
+    "ssw-design-analysis/07_physical_decomposition/predictability_ceiling.py": "9ae0637d0888bbca"
    },
-   "result_sha256_16": "071d506f0c120a52",
+   "result_sha256_16": "89929bd2a1395edb",
    "needs_rerun": false
   },
   "predictability_wave_driving.json": {
@@ -487,9 +487,9 @@
     "ssw-design-analysis/07_physical_decomposition/snapsi_causal_effect.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_causal_effect.py": "1163410f07ff530e"
+    "ssw-design-analysis/07_physical_decomposition/snapsi_causal_effect.py": "e2e5472324155af8"
    },
-   "result_sha256_16": "4f936ac2de5e3a73",
+   "result_sha256_16": "2ff1510ebe8e56ce",
    "needs_rerun": false
   },
   "snapsi_distribution_test.json": {
@@ -517,9 +517,9 @@
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "5c1ed25e0d67e989"
+    "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "daf52a6bd3136f34"
    },
-   "result_sha256_16": "b765b4ad9b06edbf",
+   "result_sha256_16": "16ff33163baa9ced",
    "needs_rerun": false
   },
   "era5_recompute_and_two_thirds.json": {
@@ -527,9 +527,9 @@
     "ssw-design-analysis/08_literature_audit/era5_recompute_and_two_thirds.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/08_literature_audit/era5_recompute_and_two_thirds.py": "8a1cc7e33fbea00a"
+    "ssw-design-analysis/08_literature_audit/era5_recompute_and_two_thirds.py": "4713f90dfc949faf"
    },
-   "result_sha256_16": "d1d75890894c3a85",
+   "result_sha256_16": "a1b39b1f6739fa37",
    "needs_rerun": false
   },
   "loeffel2025_missing_control.json": {
@@ -547,9 +547,9 @@
     "ssw-design-analysis/08_literature_audit/recompute_published_criterion.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/08_literature_audit/recompute_published_criterion.py": "ed8b3667618eef5a"
+    "ssw-design-analysis/08_literature_audit/recompute_published_criterion.py": "9e95735435db6eed"
    },
-   "result_sha256_16": "b6331938bbbb9b25",
+   "result_sha256_16": "634d3aed22cdb8de",
    "needs_rerun": false
   }
  }

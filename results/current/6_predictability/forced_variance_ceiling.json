@@ -61,10 +61,10 @@
           "matched_system": true
         },
         "ACP 26, 3723 (2026) published NAO contrast": {
-          "reported": 0.85,
-          "split_fraction": 0.59,
-          "ceiling_upper95_at_q": 0.9,
-          "over_upper_bound_ratio": 0.94,
+          "reported": 0.708,
+          "split_fraction": 0.635,
+          "ceiling_upper95_at_q": 0.9082,
+          "over_upper_bound_ratio": 0.78,
           "matched_system": true
         },
         "CMIP6 ensemble DW-NDW (this project)": {
@@ -78,69 +78,69 @@
     },
     "cmip6": {
       "n_events": 1888,
-      "n_pseudo": 37747,
-      "mean_shift": -0.5087,
+      "n_pseudo": 37734,
+      "mean_shift": -0.5057,
       "var_event": 0.5189,
-      "var_pseudo": 0.448,
-      "sigma_f2": 0.07085,
+      "var_pseudo": 0.4405,
+      "sigma_f2": 0.07838,
       "sigma_f2_CI95": [
-        0.03535,
-        0.10742
+        0.04256,
+        0.11528
       ],
-      "sigma_f": 0.2662,
-      "sigma_f_upper95": 0.3277,
-      "placebo_sigma_f2": 0.06425,
+      "sigma_f": 0.28,
+      "sigma_f_upper95": 0.3395,
+      "placebo_sigma_f2": 0.06551,
       "placebo_CI95": [
-        0.0222,
-        0.10752
+        0.02414,
+        0.10846
       ],
       "placebo_clean": false,
-      "placebo_share_of_raw_pct": 90.7,
-      "corrected_sigma_f2": 0.00661,
+      "placebo_share_of_raw_pct": 83.6,
+      "corrected_sigma_f2": 0.01287,
       "corrected_CI95": [
-        -0.04602,
-        0.057
+        -0.04012,
+        0.06557
       ],
-      "corrected_sigma_f": 0.0813,
-      "corrected_sigma_f_upper95": 0.2388,
-      "corrected_ceiling_upper95": 0.381,
-      "pre_onset_variance_ratio": 1.1312,
-      "ceiling_point": 0.4248,
-      "ceiling_upper95": 0.523,
+      "corrected_sigma_f": 0.1134,
+      "corrected_sigma_f_upper95": 0.2561,
+      "corrected_ceiling_upper95": 0.4086,
+      "pre_onset_variance_ratio": 1.1341,
+      "ceiling_point": 0.4468,
+      "ceiling_upper95": 0.5418,
       "reported_vs_ceiling": {
         "Karpechko-criterion AO, observations (this project)": {
           "reported": 1.782,
           "split_fraction": 0.7,
-          "ceiling_upper95_at_q": 0.5426,
-          "over_upper_bound_ratio": 3.28,
+          "ceiling_upper95_at_q": 0.5622,
+          "over_upper_bound_ratio": 3.17,
           "matched_system": false
         },
         "ERA5 1000 hPa NAM, Karpechko criterion (this project)": {
           "reported": 0.684,
           "split_fraction": 0.54,
-          "ceiling_upper95_at_q": 0.5237,
-          "over_upper_bound_ratio": 1.31,
+          "ceiling_upper95_at_q": 0.5426,
+          "over_upper_bound_ratio": 1.26,
           "matched_system": false
         },
         "ERA5 850 hPa NAM, ACP 26,3723 criterion (this project)": {
           "reported": 0.639,
           "split_fraction": 0.59,
-          "ceiling_upper95_at_q": 0.5267,
-          "over_upper_bound_ratio": 1.21,
+          "ceiling_upper95_at_q": 0.5456,
+          "over_upper_bound_ratio": 1.17,
           "matched_system": false
         },
         "ACP 26, 3723 (2026) published NAO contrast": {
-          "reported": 0.85,
-          "split_fraction": 0.59,
-          "ceiling_upper95_at_q": 0.5267,
-          "over_upper_bound_ratio": 1.61,
+          "reported": 0.708,
+          "split_fraction": 0.635,
+          "ceiling_upper95_at_q": 0.5506,
+          "over_upper_bound_ratio": 1.29,
           "matched_system": false
         },
         "CMIP6 ensemble DW-NDW (this project)": {
           "reported": 1.143,
           "split_fraction": 0.5,
-          "ceiling_upper95_at_q": 0.523,
-          "over_upper_bound_ratio": 2.19,
+          "ceiling_upper95_at_q": 0.5418,
+          "over_upper_bound_ratio": 2.11,
           "matched_system": true
         }
       }

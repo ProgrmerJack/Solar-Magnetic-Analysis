@@ -1,0 +1,30 @@
+ERA5 NAM 1959-01-01 .. 2023-01-10 (23,386 d)
+events inside ERA5 coverage: 39
+
+=== Karpechko_1000hPa  (selection on nam_1000) ===
+  DW 21/39 = 54%   (null rate 11%)
+  DW -0.932   NDW -0.248   contrast -0.684
+  beta +0.986 x dS -0.667 = -0.658  -> 96% of the contrast
+  residual -0.026 (p=0.589)
+  same criterion on pseudo-events reproduces 97% of it
+
+=== ACP2026_850hPa  (selection on nam_850) ===
+  DW 23/39 = 59%   (null rate 13%)
+  DW -0.878   NDW -0.239   contrast -0.639
+  beta +0.956 x dS -0.683 = -0.653  -> 102% of the contrast
+  residual +0.013 (p=0.906)
+  same criterion on pseudo-events reproduces 93% of it
+
+========================================================================
+=== DOES A PURE SHIFT PREDICT 'ABOUT TWO THIRDS'? ===
+  measured surface shift, real minus pseudo: -0.639 sigma
+  surface conditions (1 AND 2) pass rate:
+    observed at real SSWs         69.2%
+    pseudo-events, no shift       30.9%
+    pseudo-events SHIFTED by delta  74.4%  [61.5, 87.2]
+    -> shift model REPRODUCES the observed rate
+
+=== VERDICT ===
+  In ERA5 the published criterion gives a DW-minus-NDW contrast of -0.684 of which 96% is the selection term. A pure surface shift of -0.639 sigma applied to event-free dates gives a 74% pass rate against 69% observed -- so 'about two thirds propagate downward' is what ONE shifted population produces, with no classes in it.
+
+Saved -> era5_recompute_and_two_thirds.json

@@ -107,8 +107,8 @@ is a positive physical claim rather than a complaint:
    SSW at all, +0.101 (Δz −0.001 [−0.077, +0.076], 8 models). Löffel's r = 0.85
    across events does not require events to differ in coupling (N).
 7. **The field's own showcase pair is two draws from one distribution** — Feb-2018
-   ("propagating") and Jan-2019 ("not") receive the same forced shift (+1.39 vs
-   +1.34 σ) and the same DW odds (0.84 vs 0.85) in 9 models; their observed
+   ("propagating") and Jan-2019 ("not") receive the same DW odds (0.82 vs 0.83)
+   and comparable forced shifts (1.18 vs 1.04 σ) in 8 models; their observed
    difference is inside the central 95% of member-pair differences in 9 of 9;
    and Jan-2019's NDW label holds in one of four criterion variants, by 0.02 σ (O).
 8. **The constructive replacement** — report the classification **rate** against a
@@ -136,7 +136,7 @@ the event.
 | 2 | **Intervals on the J-REVISED withdrawal** | **done**: event-specific +0.004 [−0.022, +0.027] pre-onset, +0.022 [−0.015, +0.060] post-onset, against 1,000 size-matched null draws; the old baseline was size-biased by +0.005–0.010 |
 | 3 | **The operational/S2S bite** | **partly answered** (result O): the Feb-2018/Jan-2019 contrast that S2S studies (Rao 2020; Nebel 2024 frames NDW outcomes as forecast busts) treat as an event property is member-to-member noise under identical forcing. Still open: whether a published S2S *skill* number is conditioned on the observed outcome; read Nebel 2024 in full |
 | 4 | Re-run H and I on the 9-centre archive | not started; both are CMIP6-based so unaffected, but the SNAPSI cross-checks should match |
-| 5 | Figures and manuscript | `09_figures/`, `10_tables/` still empty |
+| 5 | Figures and manuscript | **four main figures built** (`09_figures/fig1-4`); **draft** `manuscript/main.md` (183-word abstract, ~1,860-word main text); Extended Data Fig. 1 (N) waits on the Meteo-France zg; reference list to complete |
 
 Items 6–8 of the old list are **done**: the impossible R² is cleared, Gate 3's
 conflicting artifact is resolved, and all six stale documents are rewritten —
@@ -178,9 +178,9 @@ classification and becomes about forecasts people actually issue.
   that DW−NDW positive-lag differences are *"entirely there by construction."*
   Cite it prominently. Never lead with "unrecognised."
 - **SNAPSI has two NH events.** Anything about how events *differ* rests on n=2.
-  The between-model spread (sd 0.271 excluding ECCC) dwarfs the between-event
-  difference (+0.054 σ) — models disagree about downward coupling far more than
-  these two events do.
+  Excluding ECCC, the between-model spread (sd 0.271) is about twice the
+  between-event difference (0.142 σ) — models disagree about downward coupling
+  more than these two events differ, but not by an order of magnitude.
 - **The SH case is an austral MINOR warming**, not an SSW: the 10 hPa 60°S wind
   never reversed. It tests generality to a different hemisphere *and* a weaker
   class of event, on one initialisation.

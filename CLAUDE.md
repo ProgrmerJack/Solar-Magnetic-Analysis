@@ -23,7 +23,8 @@ ssw-design-analysis/     THE LIVE PROJECT. Numbered stages, executed in order.
   06_simulation_validation/ nulls, calibration, selection-bias simulation
   07_physical_decomposition/ mechanism, predictability, SNAPSI analyses
   08_literature_audit/     recomputing published criteria on our data
-  09_figures/ 10_tables/   display items (empty until the manuscript is built)
+  09_figures/ 10_tables/   display items; scripts READ results, never compute them
+  manuscript/              main.md, the submission draft (written from CONSOLIDATED_RESULTS.md)
   environment/             the pinned environment and its check
   run_logs/<stage>/        stdout of every run, mirroring the stage layout
   tests/smoke_test.py      the standing checks

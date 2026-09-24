@@ -319,7 +319,10 @@ def main():
                                ("Karpechko AO, observations", 1.782, 0.70, var_o),
                                ("ERA5 1000 hPa NAM, Karpechko", 0.684, 0.54, var_o),
                                ("ERA5 850 hPa NAM, ACP", 0.639, 0.59, var_o),
-                               ("ACP 26,3723 published NAO", 0.850, 0.59, var_o)):
+                               # Lu & Rao (2026, ACP 26, 3723) give ERA5 60-day NAO means by DW subtype: BOTH -0.762 (n=13), EA -0.567 (14), NA -0.435 (6); NDW +0.088 (19). All-DW mean -0.620, contrast -0.708, DW fraction 33/52 = 0.635. The -0.850 used until 2026-09-25 subtracted the BOTH subtype alone. Their NAO index is not the AO
+                               # whose variance var_o is: unmatched denominator,
+                               # so this row is for scale only.
+                               ("ACP 26,3723 published NAO (unmatched index)", 0.708, 0.635, var_o)):
             v = q * (1 - q) * c ** 2 / var
             res["implied"][lab] = {"implied_r2": round(float(v), 4),
                                    "over_achievable": round(float(v / r1), 2)}

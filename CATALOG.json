@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-24T18:48:02+00:00",
+ "generated": "2026-09-24T19:17:26+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -58,8 +58,8 @@
    "stage": "03_data_ingestion",
    "title": "Builds the NAM indices in the SOURCE VARIABLES the published criterion is defined on, so the body count can be computed in the literature's own terms rather than in CPC index proxies.",
    "loc": 106,
-   "modified": "2026-08-01 13:48",
-   "sha256_16": "8f9292bd16975d8e",
+   "modified": "2026-09-24 19:01",
+   "sha256_16": "8822834400fdc4b0",
    "flags": [],
    "filenames_mentioned": [
     "era5_nam_daily.parquet"
@@ -716,9 +716,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "THE POSITIVE CLAIM UNDERNEATH THE WHOLE PROJECT, AND A HARD CEILING ON EVERY CLASSIFIER IN THIS LITERATURE.",
-   "loc": 500,
-   "modified": "2026-08-04 05:30",
-   "sha256_16": "6111821892b96631",
+   "loc": 501,
+   "modified": "2026-09-24 19:01",
+   "sha256_16": "7d34eaafc46e6376",
    "flags": [],
    "filenames_mentioned": [
     "forced_variance_ceiling.json"
@@ -836,9 +836,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "CAN ANYONE PREDICT WHICH SSWs COUPLE DOWNWARD? OUT OF SAMPLE, WITH NO CORRECTION.",
-   "loc": 341,
-   "modified": "2026-08-04 05:30",
-   "sha256_16": "530e71ce62c85582",
+   "loc": 344,
+   "modified": "2026-09-24 19:01",
+   "sha256_16": "9ae0637d0888bbca",
    "flags": [],
    "filenames_mentioned": [
     "predictability_ceiling.json"
@@ -881,9 +881,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "THE CAUSAL STRATOSPHERE-TO-SURFACE EFFECT, MEASURED BY EXPERIMENT RATHER THAN INFERRED FROM COMPOSITES -- AND THE NUMBER THE WHOLE LITERATURE IS TRYING TO ESTIMATE.",
-   "loc": 303,
-   "modified": "2026-08-04 05:30",
-   "sha256_16": "1163410f07ff530e",
+   "loc": 304,
+   "modified": "2026-09-24 19:01",
+   "sha256_16": "e2e5472324155af8",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_causal_effect.json",
@@ -926,9 +926,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "THE DECISIVE TEST: does the published \"downward-propagating SSW\" classification manufacture its own contrast even when the causal forcing is held EXACTLY fixed by experimental design? WHY THIS IS THE CLEAN EXPERIMENT",
-   "loc": 381,
-   "modified": "2026-09-17 17:18",
-   "sha256_16": "5c1ed25e0d67e989",
+   "loc": 382,
+   "modified": "2026-09-24 19:01",
+   "sha256_16": "daf52a6bd3136f34",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_selection_test.json"
@@ -954,9 +954,9 @@
    "tree": "ssw-design-analysis",
    "stage": "08_literature_audit",
    "title": "Two things the audit still needed, in the literature's own variables.",
-   "loc": 245,
-   "modified": "2026-08-04 05:30",
-   "sha256_16": "8a1cc7e33fbea00a",
+   "loc": 247,
+   "modified": "2026-09-24 19:01",
+   "sha256_16": "4713f90dfc949faf",
    "flags": [],
    "filenames_mentioned": [
     "era5_nam_daily.parquet",
@@ -986,9 +986,9 @@
    "tree": "ssw-design-analysis",
    "stage": "08_literature_audit",
    "title": "THE BODY COUNT. Applies the published classification exactly as specified and decomposes the number it produces.",
-   "loc": 232,
-   "modified": "2026-08-04 05:30",
-   "sha256_16": "ed8b3667618eef5a",
+   "loc": 234,
+   "modified": "2026-09-24 19:01",
+   "sha256_16": "9e95735435db6eed",
    "flags": [],
    "filenames_mentioned": [
     "recompute_published_criterion.json"
@@ -1029,9 +1029,9 @@
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
    "title": "fig3_predictability.py -- Figure 3: an SSW adds no out-of-sample predictability.",
-   "loc": 94,
-   "modified": "2026-09-24 18:34",
-   "sha256_16": "9d9d4078afc1e711",
+   "loc": 98,
+   "modified": "2026-09-24 19:02",
+   "sha256_16": "2a3ad2ac570714eb",
    "flags": [],
    "filenames_mentioned": [
     "predictability_ceiling.json",
@@ -1044,9 +1044,9 @@
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
    "title": "fig4_archetypes.py -- Figure 4: the field's two archetypes are two draws.",
-   "loc": 129,
-   "modified": "2026-09-24 18:20",
-   "sha256_16": "1468af1cde4a60d6",
+   "loc": 133,
+   "modified": "2026-09-24 19:02",
+   "sha256_16": "c89dc8bab8159eb0",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_archetype_test.json",
@@ -1854,7 +1854,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-09-24 18:47",
+   "modified": "2026-09-24 18:48",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -3252,9 +3252,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 4951,
-   "modified": "2026-08-03 11:47",
-   "sha256_16": "95c9189f6bbffc02",
+   "bytes": 4788,
+   "modified": "2026-09-24 19:15",
+   "sha256_16": "0a25b8e4224c8208",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py"
    ],
@@ -3262,7 +3262,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py": "6111821892b96631"
+    "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py": "7d34eaafc46e6376"
    },
    "verdicts": [],
    "counts": {
@@ -3340,9 +3340,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 1925,
-   "modified": "2026-09-17 12:05",
-   "sha256_16": "071d506f0c120a52",
+   "bytes": 1942,
+   "modified": "2026-09-24 19:14",
+   "sha256_16": "89929bd2a1395edb",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/predictability_ceiling.py"
    ],
@@ -3350,7 +3350,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/predictability_ceiling.py": "530e71ce62c85582"
+    "ssw-design-analysis/07_physical_decomposition/predictability_ceiling.py": "9ae0637d0888bbca"
    },
    "verdicts": [],
    "counts": {},
@@ -3658,9 +3658,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 14117,
-   "modified": "2026-09-24 17:56",
-   "sha256_16": "4f936ac2de5e3a73",
+   "bytes": 14119,
+   "modified": "2026-09-24 19:02",
+   "sha256_16": "2ff1510ebe8e56ce",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_causal_effect.py"
    ],
@@ -3668,7 +3668,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_causal_effect.py": "1163410f07ff530e"
+    "ssw-design-analysis/07_physical_decomposition/snapsi_causal_effect.py": "e2e5472324155af8"
    },
    "verdicts": [],
    "counts": {},
@@ -3765,9 +3765,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 48413,
-   "modified": "2026-09-24 17:57",
-   "sha256_16": "b765b4ad9b06edbf",
+   "bytes": 48414,
+   "modified": "2026-09-24 19:02",
+   "sha256_16": "16ff33163baa9ced",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py"
    ],
@@ -3775,7 +3775,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "5c1ed25e0d67e989"
+    "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "daf52a6bd3136f34"
    },
    "verdicts": [],
    "counts": {
@@ -3801,9 +3801,9 @@
    "tree": "current",
    "stage": "9_literature",
    "readable": true,
-   "bytes": 2316,
-   "modified": "2026-08-02 07:44",
-   "sha256_16": "d1d75890894c3a85",
+   "bytes": 2239,
+   "modified": "2026-09-24 19:05",
+   "sha256_16": "a1b39b1f6739fa37",
    "producers": [
     "ssw-design-analysis/08_literature_audit/era5_recompute_and_two_thirds.py"
    ],
@@ -3811,7 +3811,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/08_literature_audit/era5_recompute_and_two_thirds.py": "8a1cc7e33fbea00a"
+    "ssw-design-analysis/08_literature_audit/era5_recompute_and_two_thirds.py": "4713f90dfc949faf"
    },
    "verdicts": [
     {
@@ -3871,9 +3871,9 @@
    "tree": "current",
    "stage": "9_literature",
    "readable": true,
-   "bytes": 1770,
-   "modified": "2026-08-01 13:40",
-   "sha256_16": "b6331938bbbb9b25",
+   "bytes": 1753,
+   "modified": "2026-09-24 19:05",
+   "sha256_16": "634d3aed22cdb8de",
    "producers": [
     "ssw-design-analysis/08_literature_audit/recompute_published_criterion.py"
    ],
@@ -3881,12 +3881,12 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/08_literature_audit/recompute_published_criterion.py": "ed8b3667618eef5a"
+    "ssw-design-analysis/08_literature_audit/recompute_published_criterion.py": "9e95735435db6eed"
    },
    "verdicts": [
     {
      "key": "verdict",
-     "text": "The published criterion produces a DW-minus-NDW NAO contrast of -0.543; 86% of it is the selection term beta x dS. Residual -0.079 (p=0.443). For scale, ACP 26, 3723 (2026) publishes -0.850 from the same criterion."
+     "text": "The published criterion produces a DW-minus-NDW NAO contrast of -0.543; 86% of it is the selection term beta x dS. Residual -0.079 (p=0.443). For scale, ACP 26, 3723 (2026) publishes -0.708 from the same criterion."
     }
    ],
    "counts": {

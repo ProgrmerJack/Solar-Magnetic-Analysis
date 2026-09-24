@@ -112,3 +112,8 @@ Rule: a time axis's origin is a measured property, not an assumption. The origin
 Tried: `tools/catalog_repo.py` attributes each result to every script that mentions its filename.
 Failed: the first figure scripts READ K, L and predictability_ceiling, so the tool listed them as producers and marked three unchanged results stale; I recorded before checking which six were stale, which was the wrong order.
 Rule: `09_figures/` and `10_tables/` are reader-only and excluded from attribution. Before `--record`, list what is stale and account for every entry.
+
+## 2026-09-25 — A subtype mean quoted as the class mean
+Tried: taking Lu & Rao (2026)'s "DW" NAO as −0.762 and the published DW−NDW contrast as −0.850, in six scripts.
+Failed: −0.762 is the mean of the BOTH subtype only (13 of 33 DWs); weighted over the three subtypes the DW mean is −0.620 and the contrast −0.708. One script's own docstring said "(BOTH subtype)" and still subtracted it. Also used a DW fraction of 0.59 (our rate), not theirs (0.635). Found only because a reviewer asked where the number came from.
+Rule: when extracting a published number, record the sentence it came from and the group it describes; if the paper reports subgroups, weight them by the reported counts before calling it the class value.

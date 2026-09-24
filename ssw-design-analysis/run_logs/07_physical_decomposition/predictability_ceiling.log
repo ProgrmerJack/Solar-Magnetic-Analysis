@@ -21,7 +21,7 @@ building CMIP6 event table ...
     Karpechko AO, observations       implies R^2 = 0.597   (5.8x the 0.103 achievable out of sample)
     ERA5 1000 hPa NAM, Karpechko     implies R^2 = 0.104   (1.0x the 0.103 achievable out of sample)
     ERA5 850 hPa NAM, ACP            implies R^2 = 0.088   (0.9x the 0.103 achievable out of sample)
-    ACP 26,3723 published NAO        implies R^2 = 0.157   (1.5x the 0.103 achievable out of sample)
+    ACP 26,3723 published NAO (unmatched index) implies R^2 = 0.104   (1.0x the 0.103 achievable out of sample)
 
   NOT every published contrast is an overclaim on this metric: the
   two ERA5 contrasts imply R^2 ~ 0.09-0.10, essentially equal to the

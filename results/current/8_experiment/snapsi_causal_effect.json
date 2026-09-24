@@ -529,10 +529,10 @@
       "implied_NDW_sigma": 0.791
     },
     "ACP 26, 3723 (2026) published NAO contrast": {
-      "contrast": 0.85,
-      "dw_fraction": 0.59,
-      "implied_DW_sigma": 1.711,
-      "implied_NDW_sigma": 0.861
+      "contrast": 0.708,
+      "dw_fraction": 0.635,
+      "implied_DW_sigma": 1.621,
+      "implied_NDW_sigma": 0.913
     },
     "ERA5 1000 hPa NAM contrast, Karpechko criterion": {
       "contrast": 0.684,
@@ -585,7 +585,7 @@
   "implied_NDW_sigma": {
     "Karpechko-criterion AO contrast, observations": 0.1155,
     "CMIP6 ensemble DW-NDW contrast": 0.7914,
-    "ACP 26, 3723 (2026) published NAO contrast": 0.8614,
+    "ACP 26, 3723 (2026) published NAO contrast": 0.9133,
     "ERA5 1000 hPa NAM contrast, Karpechko criterion": 0.9935,
     "ERA5 850 hPa NAM contrast, ACP criterion": 0.9859
   }

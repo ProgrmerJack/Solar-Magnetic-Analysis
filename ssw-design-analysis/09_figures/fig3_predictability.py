@@ -3,16 +3,17 @@
 fig3_predictability.py -- Figure 3: an SSW adds no out-of-sample predictability.
 
 Reads results/current/6_predictability/within_model_check.json (result J) and
-predictability_ceiling.json (the R^2 each published split implies). Recomputes
+predictability_ceiling.json (the R^2 each DW/NDW split implies). Recomputes
 nothing but histograms.
 
-  a-c  within-model cross-validated R^2 at real SSWs (line) against 1,000
+  a-c  within-member cross-validated R^2 at real SSWs (line) against 1,000
        event-free pseudo-onset draws of the SAME size (histogram), per
        predictor tier
   d    event-specific R^2 (real minus null mean) with its null-based and
-       member-bootstrap 95% intervals, against the R^2 implied by five
-       published DW/NDW contrasts. Not every published split overclaims: the
-       ERA5 NAM contrasts imply ~0.09-0.10, near the post-onset upper bound.
+       member-bootstrap 95% intervals, against the R^2 implied by DW/NDW
+       contrasts: four from the published criterion applied to this project's
+       data, one published (Lu & Rao 2026; a different index, so its
+       denominator is not matched -- shown open, for scale only).
 """
 import json
 import sys
@@ -70,9 +71,12 @@ def main():
     imp = pc["implied"]
     order = sorted(imp, key=lambda k_: imp[k_]["implied_r2"])
     for name in order:
+        published = "published" in name
         dx.scatter([imp[name]["implied_r2"]], [y], s=14, marker="D",
-                   color=S.C["vermillion"], zorder=3)
-        labels.append(f"implied by: {name}")
+                   facecolor="white" if published else S.C["vermillion"],
+                   edgecolor=S.C["vermillion"], zorder=3)
+        labels.append(("published, different index: " if published
+                       else "criterion applied here: ") + name.split(" (")[0])
         y += 1
     dx.axvline(0, color="k", lw=0.4)
     dx.set_yticks(range(2))
@@ -83,7 +87,7 @@ def main():
     dx.set_xlabel("R² of the between-event surface response")
     dx.set_xlim(-0.08, 0.7)
     dx.plot([], [], color=S.C["blue"], lw=2.4, label="95%, event-free null")
-    dx.plot([], [], color=S.C["blue"], lw=0.8, label="95%, model bootstrap")
+    dx.plot([], [], color=S.C["blue"], lw=0.8, label="95%, member bootstrap")
     dx.legend(loc="lower right", fontsize=5.2, bbox_to_anchor=(1.0, 0.22))
     S.panel_label(dx, "d", x=-0.05, y=1.08)
     S.save(fig, "fig3_predictability")

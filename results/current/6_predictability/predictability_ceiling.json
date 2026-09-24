@@ -81,9 +81,9 @@
       "implied_r2": 0.0885,
       "over_achievable": 0.86
     },
-    "ACP 26,3723 published NAO": {
-      "implied_r2": 0.1565,
-      "over_achievable": 1.53
+    "ACP 26,3723 published NAO (unmatched index)": {
+      "implied_r2": 0.104,
+      "over_achievable": 1.01
     }
   }
 }
