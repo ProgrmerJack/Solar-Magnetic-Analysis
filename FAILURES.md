@@ -71,7 +71,7 @@ Rule: a capability check must exercise the same code path as the caller. `check_
 ## Standing traps that are not failures of a single run
 - **Post-hoc catalogue substitution.** Swapping `primary` (43) for `union` (47) to raise n is the practice that produced four incompatible catalogues in the superseded project. `load_catalogue(which)` is the only permitted event source; inline date lists are forbidden.
 - **Guards that compare the wrong thing.** The first SNAPSI corruption guard compared members by *label* and passed NRL, whose members differ while the ensemble mean is identically zero. Test the effect, not the labels.
-- **Automated verdicts printed by scripts.** `within_model_check.py` prints "Headline stands" from the wrong criterion (`within > 0.3×pooled` instead of `within − pseudo_within`). Read the table, not the verdict line.
+- **Automated verdicts printed by scripts.** `within_model_check.py` printed "Headline stands" for months from the wrong criterion (`within > 0.3×pooled` instead of `within − pseudo_within`); removed 2026-09-23. Read the table, not a verdict line.
 
 ## 2026-09-17 — A cache filename was treated as an internal detail
 Tried: prefixing the SNAPSI reduced-cache keys with the variable (`psl_CCCma_…`) so a later zg run could not collide with psl for the same member.
@@ -87,3 +87,23 @@ Rule: before pooling groups to measure a WITHIN-group quantity, re-centre each g
 Tried: extending the polar-cap reduction and the L window to the Southern Hemisphere case.
 Failed: twice in one day. The reduction took `lat >= 60` for every initialisation, giving the two SH cases an ARCTIC cap; and `s20191001`, which initialises 13 days after the central date, was averaged over the nominal +8..+25 window when its data only cover +13..+25 — moving the SH rate from 0.791 to 0.891.
 Rule: when a window or region is nominal, assert the data actually span it and DROP what does not, rather than averaging over whatever is present. Compute both hemispheres at reduction time so the question can never be asked of the wrong one.
+
+## 2026-09-23 — A guard flag that no consumer read
+Tried: fetching every SNAPSI member at the path `snapsi_manifest.csv` constructed by substituting member ids into one discovered layout.
+Failed: the builder's sample check failed for CNR-ISAC nudged s20190108 and flagged all 50 rows `verified=False`, but neither acquisition script read the column. 10 members live under v20230307, not the constructed v20230110; they 404ed for months and were counted as "10 missing" without a cause. One member (r1i46p1f1) has psl and zg in DIFFERENT versions.
+Rule: a flag is only a guard if its consumers branch on it. Unverified rows are now resolved against the archive listing, exactly one version or refuse; psl and zg for one member must share a version.
+
+## 2026-09-23 — Drawing random numbers while iterating a set of strings
+Tried: `{m: rng.integers(K) for m in set(pick)}` to give each bootstrap-resampled member one pseudo draw, with a fixed seed.
+Failed: set iteration order follows the per-process string hash, so the same seed paired members with different draws on every run and the bootstrap CI was not reproducible — the `hash(str)` trap again, one step removed. Found by the fresh-context review, not by the run.
+Rule: never consume an rng inside iteration over a set or any hash-ordered container of strings; iterate `sorted(...)`. The smoke test's AST check catches `hash(str)` only.
+
+## 2026-09-24 — A float-rounded grid edge dropped from a threshold
+Tried: `lat >= 60` to build the ERA5 60-90N polar cap for comparison with SNAPSI members.
+Failed: WeatherBench2 stores the 60N row as 59.999999999999986, so the cap silently became 61.5-90N (the SH cap kept -60.0 exactly), while seven of nine SNAPSI grids keep an exact 60.0 row; up to 116 Pa of difference and one flipped DW label. Found by review.
+Rule: compare coordinates against thresholds with an explicit tolerance and ASSERT where the edge landed. Check what the other side of a comparison does with the same row before calling two reductions "identical".
+
+## 2026-09-24 — Lead measured from the file's first step, used as if from 00 UTC
+Tried: `lead_days` = time since the first time step in each SNAPSI file, converted downstream to post-onset day assuming lead 0 is 00 UTC on the init date.
+Failed: UKMO files start at 06 UTC, so every UKMO window in K, L, M, N and O sat 6 h early, for a week, in every result. Nothing checked it; the filenames said so (`201801250600-...`).
+Rule: a time axis's origin is a measured property, not an assumption. The origin is now measured per ensemble (`--measure-time-origin`), every cache is rebased and marked, and the smoke test fails on an unmarked member.

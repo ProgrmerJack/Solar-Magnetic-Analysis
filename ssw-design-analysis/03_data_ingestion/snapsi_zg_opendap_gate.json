@@ -120,8 +120,22 @@
  },
  "Meteo-France": {
   "centre": "Meteo-France",
-  "passes": false,
-  "error": "KeyError: \"'plev' is not a valid dimension or coordinate for Dataset with dimensions FrozenMappingWarningOnValuesAccess({'lon': 360, 'lat': 181, 'snap34': 34, 'time': 180})\""
+  "transport": "byte_range",
+  "file": "zg_6hrPt_CNRM-CM61_control_s20180125-r10i1p1f1_gr_20180125-20180310.nc",
+  "full_MB": 1604.08,
+  "full_seconds": 3393.9,
+  "subset_MB": 8.035,
+  "subset_seconds": 26.7,
+  "saving_x": 199.6,
+  "all_zero": false,
+  "any_nan": false,
+  "max_abs_diff": 0.0,
+  "nan_pattern_equal": true,
+  "correlation": 1.0,
+  "truth_mean": 15329.156899761654,
+  "subset_mean": 15329.156899761654,
+  "plausible": true,
+  "passes": true
  },
  "UKMO": {
   "centre": "UKMO",
@@ -138,6 +152,74 @@
   "truth_mean": 15428.953053272046,
   "subset_mean": 15428.953053272046,
   "plausible": true,
+  "passes": true
+ },
+ "ECCC|byte_range": {
+  "centre": "ECCC",
+  "transport": "byte_range",
+  "checked": [
+   {
+    "member": "control/s20180125/r1i10p1f1",
+    "max_diff_N": 0.0,
+    "max_diff_S": 0.0,
+    "n_steps": [
+     185,
+     185
+    ]
+   },
+   {
+    "member": "nudged/s20180125/r1i48p1f1",
+    "max_diff_N": 0.0,
+    "max_diff_S": 0.0,
+    "n_steps": [
+     185,
+     185
+    ]
+   },
+   {
+    "member": "nudged/s20191001/r1i9p1f1",
+    "max_diff_N": 0.0,
+    "max_diff_S": 0.0,
+    "n_steps": [
+     185,
+     185
+    ]
+   }
+  ],
+  "passes": true
+ },
+ "Meteo-France|byte_range": {
+  "centre": "Meteo-France",
+  "transport": "byte_range",
+  "checked": [
+   {
+    "member": "control/s20180125/r10i1p1f1",
+    "max_diff_N": 0.0,
+    "max_diff_S": 0.0,
+    "n_steps": [
+     180,
+     180
+    ]
+   },
+   {
+    "member": "control/s20180208/r10i1p1f1",
+    "max_diff_N": 0.0,
+    "max_diff_S": 0.0,
+    "n_steps": [
+     180,
+     180
+    ]
+   },
+   {
+    "member": "control/s20181213/r11i1p1f1",
+    "max_diff_N": 0.0,
+    "max_diff_S": 0.0,
+    "n_steps": [
+     180,
+     180
+    ]
+   }
+  ],
   "passes": true
  }
 }

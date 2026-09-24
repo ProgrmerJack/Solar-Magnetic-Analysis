@@ -23,16 +23,16 @@ overlaps the response window, so splitting events on it splits one distribution 
 its own tail — 93–102% of the published contrast is reproduced by applying the same
 criterion to dates with no SSW in them. Measured out of sample within a single
 climate, **an SSW adds essentially nothing to the predictability of the surface
-response** (+0.002 pre-onset, +0.012 post-onset), while the splits in use implicitly
+response** (+0.004 [−0.022, +0.027] pre-onset, +0.022 [−0.015, +0.060] post-onset,
+against a size-matched null of 1,000 event-free draws), while the splits in use implicitly
 claim up to **0.63**. SSWs do have a large, real surface effect — measured causally
-in a nudged experiment at **+1.10 σ** across 9 models — and the all-event composite stands. What
+in a nudged experiment at **+1.11 σ** across 9 models — and the all-event composite stands. What
 carries little information is the sub-classification.
 
 *(An earlier version of this paragraph put the predictable share at R² ≈ 0.11. That
 figure was pooled across ensemble members and uncontrolled for what the same
-pipeline achieves with no event present; it is withdrawn in §3 J-REVISED. The
-withdrawal itself rests on point estimates from a single seed and still needs
-intervals — see §5.)*
+pipeline achieves with no event present; it is withdrawn in §3 J-REVISED, and the
+withdrawal now carries intervals.)*
 
 ---
 
@@ -51,9 +51,10 @@ intervals — see §5.)*
 | H | the response distribution is one shifted population | CMIP6 n=1888 | established, power-bounded |
 | I | forced between-event variance σ_f ≈ 0.24 σ | CMIP6 n=1888 | established, 91% placebo correction |
 | J | **out-of-sample predictable share R² = 0.115; 73% of diagnostic skill is window overlap** | CMIP6 n=1888 | **established, no correction** |
-| K | causal stratosphere→surface effect S = +1.10 σ (sd 0.271; +1.36 incl. ECCC) | SNAPSI, 9 centres | established, 2 NH events; ECCC a Tukey outlier |
+| K | causal stratosphere→surface effect S = +1.11 σ (sd 0.271; +1.36 incl. ECCC) | SNAPSI, 9 centres | established, 2 NH events; ECCC a Tukey outlier |
 | **L** | **the DW/NDW contrast is identical with and without an SSW, in a designed experiment** | **SNAPSI, 9 centres, 61 ensembles** | **established — the decisive test, replicated at 3x scale 2026-09-17** |
-| **M** | **an SSW shifts the surface distribution without inflating its variance** | **SNAPSI, 9 centres, 1788 vs 1805 members** | **established causally; ratio 0.952 [0.869, 1.047] after an estimator fix** |
+| **M** | **an SSW shifts the surface distribution without inflating its variance** | **SNAPSI, 9 centres, 1798 vs 1805 members** | **established causally; ratio 0.955 [0.873, 1.051] after an estimator fix** |
+| O | the field's two archetypes (Feb-2018 "propagating", Jan-2019 "not") have the same forced odds, and their observed difference is ordinary member-to-member noise | SNAPSI 9 centres + ERA5 | established for these 2 events; Jan-2019's NDW label flips with the pressure level |
 | N | the week-2 100 hPa → surface coupling between members is the same with and without an SSW | SNAPSI, 8 centres, 28 matched ensembles | established on 8 of 9 centres; Meteo-France and ECCC `control` not yet acquired |
 
 **J is the headline.** It needs no correction of any kind, it answers the field's
@@ -261,18 +262,21 @@ report as "genuine predictability". `headline_stress_test.py` and
    within-climate value is 0.066, and the field's question is a within-climate one.
 2. **Essentially all of what remains is not SSW-specific.** Applying the identical
    pipeline to pseudo-onsets on event-cleaned days gives 0.0646 against 0.0664 at
-   real events. **The event contributes +0.002.**
+   real events. Against a size-matched null (below) **the event contributes
+   +0.004 [−0.022, +0.027].**
 
 **So "about 11% of between-event variance is genuinely predictable" is WRONG and is
 withdrawn.** The correct statements are:
 - there is real stratosphere→surface predictability in winter (~0.066 pre-onset,
   ~0.40 post-onset, within-climate);
-- **an SSW adds essentially nothing to it** (+0.002 pre-onset, +0.012 post-onset);
-- **97% of post-onset "diagnostic skill" is reproducible with no SSW present**
-  (0.3894 of 0.4013), measured directly rather than inferred from a tier gap.
+- **an SSW adds essentially nothing to it** (+0.004 pre-onset, +0.022 post-onset,
+  neither distinguishable from zero — intervals below);
+- **95% of post-onset "diagnostic skill" is reproducible with no SSW present**
+  (0.3792 of 0.4013), measured directly rather than inferred from a tier gap.
 
 Against this, the DW/NDW split's implied R² of 0.63 stands against an event-specific
-share of ~0.01 — a gap of roughly **50×**, not 5.5×.
+share whose largest 95% upper bound in any tier is 0.092 — **at least 6.8× smaller**
+(12× for the pre-onset tier), not 5.5×.
 
 **My earlier retraction of "there is nothing to classify" was itself premature.**
 The defensible claim is narrower and sharper than either version: *the surface
@@ -288,10 +292,43 @@ Stress tests that this survived (`headline_stress_test.json`):
 - **in-sample objection**: this model's optimism is only +0.015, so the published
   0.63 cannot be explained as ordinary overfitting.
 
-**Caution for whoever reads the script:** `within_model_check.py` prints an
-automated verdict of "Headline stands". That verdict is WRONG — it tests
-`within > 0.3 × pooled` instead of `within − pseudo_within`. Ignore the printed
-line and read the table.
+#### J-REVISED with intervals (2026-09-24) — the numbers to quote
+
+The table above compared the real arm against **6 pooled pseudo draws: 11,321
+pseudo-events against 1,888 real ones**. A ridge fit on 6× the data scores higher
+out of sample for that reason alone, which inflates the baseline and biases
+"event-specific" toward zero. `within_model_check.py` now compares the real arm
+against **1,000 independent pseudo draws, each the size of the real set** (same
+members, same calendar days, event-cleaned days), and adds a member-cluster
+bootstrap (1,000 resamples of the 20 members). Every draw and replicate has its own
+seeded stream, so the numbers are identical at any worker count (checked: 4 vs 12).
+
+| tier | real, within-model | null mean (sd) | **event-specific** [95% from null] | p(null ≥ real) | cluster bootstrap 95% |
+|---|---|---|---|---|---|
+| P1 pre-onset | 0.0667 | 0.0629 (0.0121) | **+0.004** [−0.022, +0.027] | 0.36 | [−0.048, +0.051] |
+| P2 at-onset | 0.0738 | 0.0748 (0.0127) | **−0.001** [−0.028, +0.023] | 0.52 | [−0.060, +0.050] |
+| P3 + post-onset strat. | 0.4013 | 0.3792 (0.0189) | **+0.022** [−0.015, +0.060] | 0.11 | [−0.054, +0.092] |
+
+- **The withdrawal holds.** No tier's event-specific share differs from zero. The
+  largest upper bound in any tier, P3's bootstrap +0.092, is 6.8× below the 0.63
+  the DW/NDW split implies; the pre-onset tier's, +0.051, is 12× below it.
+- **The 6-draw baseline was biased by size, by +0.005 to +0.010** — real, and
+  smaller than feared. The old event-specific column was that much too low.
+- **Two intervals, and they differ for a reason.** The null interval holds the 20
+  models fixed; the bootstrap also resamples WHICH models, so it carries
+  between-model heterogeneity and is about 2.5× wider. Quote the bootstrap as the
+  conservative bound.
+- **Imperfect matching errs against the claim.** Every draw has the real onset
+  count, but in 1,017 of 20,000 member-draws some pseudo onsets' +8..+52 day windows
+  lack enough in-season days, so their outcome is missing and the draw has fewer
+  usable rows than the real set (all 1,888 real outcomes are present). Fewer rows
+  lower the null, which raises "event-specific" — conservative for the conclusion.
+- **Reproduction is partial, and the cause is known in part.** Re-running the
+  original 6-draw arm gives within 0.0667 (was 0.0664) — reproduced — but pooled
+  0.1026 (was 0.0998, the drift logged in `FAILURES.md`) and 6-draw pseudo
+  0.0694 (was 0.0646) on a 2-event difference in the draws (11,321 vs 11,323).
+  That a single 6-draw baseline moves by 0.005 is itself why the 1,000-draw null
+  replaces it. Seeds, K, N_BOOT and package versions are now in the JSON.
 
 ### J — predictability ceiling, ORIGINAL POOLED NUMBERS (superseded by J-REVISED)
 CMIP6, 1888 events, 20 members as CV groups, GroupKFold by member, ridge +
@@ -365,34 +402,38 @@ anomaly with the act of nudging.
 
 **Re-run 2026-09-17 on 9 usable centres** (10 downloaded, NRL excluded by the
 duplicate guard at ratio 0.004), 2 NH events × 2 initialisations, 38–52 members
-each. The original 3-centre figure is reproducible: CCCma, KMA and SNU alone give
+each; re-run 2026-09-23 with the 10 CNR-ISAC `nudged s20190108` members the
+manifest had mis-versioned (40 → 50 in that case), and 2026-09-24 after the
+time-origin fix (UKMO and Meteo-France files start at 06 UTC, and every lead had
+been measured from the file's first step — their windows sat 6 h early in K, L,
+M, N and O; figures below are current). The original 3-centre figure is reproducible: CCCma, KMA and SNU alone give
 **+0.976 σ** against the published +0.972.
 
 | centre set | mean S | sd | note |
 |---|---|---|---|
 | original 3 (CCCma, KMA, SNU) | **+0.976 σ** | — | reproduces the published +0.972 |
-| all 9 | **+1.358 σ** | 0.809 | |
-| **9 excluding ECCC** | **+1.101 σ** | **0.271** | the robust figure |
+| all 9 | **+1.363 σ** | 0.808 | |
+| **9 excluding ECCC** | **+1.107 σ** | **0.271** | the robust figure |
 
 **ECCC is a statistical outlier and must not be averaged in silently.** Its
 S/σ is **+3.407** when the next highest is ECMWF at +1.467 and the other eight
 span +0.618 to +1.467. A Tukey test on the other eight puts the upper fence at
-1.674, so ECCC sits well outside it, at 2.9× their median. Including it moves the
-grand mean from +1.10 to +1.36 and triples the between-model sd, 0.271 → 0.809.
-**Quote +1.10 σ (or the median +1.21) as the causal effect, with the all-9 mean of
+1.669, so ECCC sits well outside it, at 2.9× their median. Including it moves the
+grand mean from +1.11 to +1.36 and triples the between-model sd, 0.271 → 0.808.
+**Quote +1.11 σ (or the all-9 median +1.24) as the causal effect, with the all-9 mean of
 +1.36 as the ECCC-inclusive sensitivity.** Whether ECCC's response is physical or
 a submission problem is not established here; its duplicate-guard ratio is 2.501,
 the highest of any centre, which is the opposite of NRL's failure mode and is not
 by itself evidence of a defect.
 
 **The dominant uncertainty is between MODELS, not between events.** Between-model
-sd is 0.271 excluding ECCC and 0.809 including it; the between-event difference is
-**+0.055 σ** on n=2. Models disagree about downward-coupling strength by far more
+sd is 0.271 excluding ECCC and 0.808 including it; the between-event difference is
+**+0.054 σ** on n=2. Models disagree about downward-coupling strength by far more
 than the two events differ from each other — which is the same ordering results
 H, I and M report, arrived at by a completely different route.
 
-Implied NDW response given S = +1.358: 1 of 5 published contrasts forces NDW to
-**+0.110** (effectively zero); the other four imply **+0.79 to +0.99 σ** — events
+Implied NDW response given S = +1.363: 1 of 5 published contrasts forces NDW to
+**+0.116** (effectively zero); the other four imply **+0.79 to +0.99 σ** — events
 labelled "non-propagating" would still carry a large real surface response. That
 is a continuum, not two populations.
 
@@ -478,14 +519,14 @@ already present before onset. That correction is the obvious line of attack.
 SNAPSI measures the same quantity **causally, with no correction at all**:
 `control` has no SSW, `nudged` has the same SSW in every member.
 
-Pooled over 9 case-ensembles, **451 nudged against 450 control members**:
+Pooled over case-ensembles:
 
 | quantity | 3 centres (original) | **9 centres, 36 ensembles (2026-09-17)** |
 |---|---|---|
-| causal shift | −0.889 σ | **−1.559 σ** (sd across cases 1.071) |
-| **variance ratio** nudged/control | 0.939 [0.781, 1.130] | **0.952 [0.869, 1.047]** |
-| pure translation (KS) | p = 0.805 (451 v 450) | **p = 0.322** (1788 v 1805) |
-| excluding the short-lead init | — | **0.995 [0.890, 1.105]**, KS p = 0.650 |
+| causal shift | −0.889 σ | **−1.572 σ** (sd across cases 1.081) |
+| **variance ratio** nudged/control | 0.939 [0.781, 1.130] | **0.955 [0.873, 1.051]** |
+| pure translation (KS) | p = 0.805 (451 v 450) | **p = 0.371** (1798 v 1805) |
+| excluding the short-lead init | — | **0.995 [0.895, 1.106]**, KS p = 0.650 |
 
 > **The conclusion survives a fourfold expansion — but only after an estimator
 > defect was fixed, and the naive scale-up would have overturned it.**
@@ -501,11 +542,12 @@ Pooled over 9 case-ensembles, **451 nudged against 450 control members**:
 > the pooling.
 >
 > Re-centring each ensemble before pooling — which is what the within-ensemble
-> quantity requires — gives **0.952 [0.869, 1.047]** across all 9 centres and
-> **0.995** excluding the short-lead initialisation. The arithmetic closes:
-> 0.952 within + 1.147 between ≈ 2.085 pooled.
+> quantity requires — gave **0.952 [0.869, 1.047]** across all 9 centres and
+> **0.995** excluding the short-lead initialisation. The arithmetic closed on that
+> run: 0.952 within + 1.147 between ≈ 2.085 pooled. (With the 10 recovered
+> CNR-ISAC members and the 06 UTC time-origin fix: **0.955 [0.873, 1.051]**.)
 >
-> **`shift_sd_across_cases` = 1.071 σ is NOT σ_f.** It mixes between-model with
+> **`shift_sd_across_cases` = 1.081 σ is NOT σ_f.** It mixes between-model with
 > between-event variation, since the 36 ensembles span 9 centres and only 2
 > events. It must never be quoted as an event-to-event forced spread.
 
@@ -545,6 +587,14 @@ and conclude that SSWs differ in their capacity to couple downward. In a SNAPSI
 `nudged` ensemble the event is identical in every member, so the same relation can
 be measured **between members**, where no event-to-event difference exists; the
 `control` arm measures it with no SSW at all.
+
+> **Re-run pending.** The table below is the 2026-09-23 run on 8 centres. It
+> predates the 06 UTC time-origin fix and the Meteo-France / ECCC-control zg
+> acquisition, which is still downloading. Interim re-run 2026-09-24 on the
+> rebased data with those members cached so far: nudged +0.108 vs control
+> +0.085, **Δz = +0.023 [−0.050, +0.096], p = 0.54, 31 matched ensembles**
+> (excl. `s20190108`: +0.009 [−0.073, +0.092], 24). The conclusion is unchanged;
+> the numbers here will be replaced when the acquisition completes.
 
 **Design gate (pre-specified, sd ratio > 0.5): passes**, median 0.948 over 28
 ensembles — nudging above 50 hPa does not pin 100 hPa.
@@ -587,6 +637,66 @@ gate (its zg names the vertical dimension `snap34`, not `plev`); ECCC `control`
 (4 NH initialisations, 200 members) and 144 other members failed on DNS during a hibernation
 and need a valid CEDA token to refetch.
 
+### O — the two archetypes: different events, or two draws? (`snapsi_archetype_test.py`)
+
+Rao, Garfinkel & White (2020, JGR-Atmos 125, e2019JD031919) present Feb-2018 as a
+strong downward-propagating SSW and Jan-2019 as one with a weak or opposite
+surface response, attributing the difference chiefly to SSW strength; Nebel et
+al. (2024, GRL 51, e2024GL110529) frame such outcomes as potential forecast
+busts. SNAPSI nudges each model's stratosphere to each observed event, so the
+forced odds of each outcome can be read off directly.
+
+**1. The forced odds are the same.** Causal shift (K) +1.390 σ vs +1.336 σ;
+probability of a DW outcome across 9 models (L) 0.837 vs 0.848.
+
+**2. The observed outcomes sit inside their own ensembles.** ERA5 polar-cap psl
+(60–90N including the 60N row, 6-hourly, at exactly the members' forecast
+times), placed in each model's nudged distribution for days +8..+25. A < 0 is
+the downward sign, so a "weak" outcome sits in the TOP tail:
+
+| init | event | obs percentile in nudged, median (range) | models with obs < 2.5% / > 97.5% |
+|---|---|---|---|
+| s20180125 | Feb-2018 | 0.43 (0.00–0.76) | 1 / 0 (0 / 0 after offset adjustment) |
+| s20181213 | Jan-2019 | **0.68** (0.12–0.88) | **0 / 0** |
+| s20190108 (short lead) | Jan-2019 | 0.96 (0.00–1.00) | 2 / 3 |
+
+The falsifier — observed Jan-2019 above the 97.5th percentile (weaker than its
+forced distribution) in ≥5 of 9 models — is met in 0 of 9 at the primary init
+and 3 of 9 at the short-lead init. *(The first write-up named the 2.5th
+percentile, the wrong tail for this sign convention; corrected after review.)*
+
+**3. Their observed difference is ordinary.** A_2018 − A_2019, observed, against
+every pairing of a 2018 member with a 2019 member of the same model (primary
+pair s20180125 / s20181213, the two inits with comparable lead to onset): the
+observed difference (−1.05 to +1.03 σ across the 9 model frames) lies inside
+the central 95% in **9 of 9 models** (median percentile 0.33), against
+member-pair sd 1.2–1.6 σ. The short-lead pair (s20180208 / s20190108) is outside
+in 1 of 9 (2 of 9 after offset adjustment).
+
+**4. The "non-propagating" label is a threshold call.** The project's ERA5
+implementation of Karpechko et al. (2017), conditions 1–3:
+
+| Jan-2019 | NAM mean | days negative | class |
+|---|---|---|---|
+| 1000 hPa, days +8..+52 (Karpechko) | **+0.019 σ** | 62% | **NDW** — condition 1 fails by 0.019 σ |
+| 850 hPa, days +8..+52 (ACP 26, 3723) | −0.041 σ | 62% | DW |
+| 1000 hPa, days +8..+25 | −0.214 σ | 83% | DW |
+| 850 hPa, days +8..+25 | −0.199 σ | 83% | DW |
+
+Feb-2018 is DW under all four. **The field's canonical non-propagating event is
+non-propagating in one of four reasonable variants of the criterion, by 0.02 σ.**
+
+**Reading.** The pair the field uses to illustrate that SSWs differ in their
+downward impact received the same forced response and the same odds; their
+observed outcomes are both ordinary draws; and the one label that separates them
+sits on the threshold. Nothing here requires an event property.
+
+**Limits.** Two events. Model–ERA5 representation offsets are large for some
+centres (ECCC −1,213 Pa at s20180125 init; the adjusted column removes the
+initial-time offset but not lead-dependent drift), which is why the event-pair
+difference — where a model's bias largely cancels — is the robust test. One
+observation per event, so the 9 per-model percentiles are not independent.
+
 ## 4. Prior art — verified from source, all must be cited
 
 1. **Karpechko et al. (2017)**, QJRMS 143, 1459, doi 10.1002/qj.3017 — the
@@ -609,6 +719,18 @@ and need a valid CEDA token to refetch.
    (P(null ≥ 0.85) = 0.003), though the missing baseline is real and large: with no
    event at all, window overlap alone gives r = **+0.530** [+0.162, +0.789].
 
+7. **Rao, Garfinkel & White (2020)**, JGR-Atmos 125, e2019JD031919 (read in
+   full via PMC7507786) — Feb-2018 vs Jan-2019 in S2S models; *"the strength of
+   the SSW is more important than the vortex morphology in determining the
+   magnitude of its downward impact."* Result O tests this pair directly.
+8. **Nebel, Garfinkel, Cohen, Domeisen, Rao & Schwartz (2024)**, GRL 51,
+   e2024GL110529 — 7 S2S models, 16 SSWs 1998–2022: models predict which SSWs
+   have a stronger downward response to 100 hPa but *"struggle to predict which
+   have a stronger tropospheric response"*; frames non-propagating outcomes as
+   forecast busts. **Only the abstract has been read** (the publisher and
+   preprint server refuse automated fetches); do not cite its internals until
+   the full text is read.
+
 **What remains novel:** the quantification (β×ΔS, R²=0.99–1.00 in two systems); the
 extension to stratospheric stratifiers; the power-bounded distributional test; the
 shift predicting "two thirds"; and above all **the out-of-sample predictability
@@ -623,7 +745,6 @@ ceiling and the pre/post tier contrast**, which nobody has measured.
 | gap | status |
 |---|---|
 | **forecast/operational circularity** | **UNANSWERED** — died twice on agent session limits. The one lead that could change the venue category. |
-| **error bars on the J-REVISED withdrawal** | the event-specific column (+0.0017, −0.0021, +0.0119) is three point estimates from one seed with **no intervals**. The withdrawal of J is provisional until they exist. |
 | **R re-validation** | `validate_R_diagnostic.py` must add a precursor arm (anomaly concentrated *before* onset) before any R-based claim is made again. |
 | true v'T' in CMIP6 | proxy only; needs hundreds of GB of daily 3-D va/ta |
 | observational power | 35% at R²=0.10; n=46 is the whole record |
@@ -769,6 +890,7 @@ multiple testing.
 | K | `03_data_ingestion/acquire_snapsi_surface.py`, `07_physical_decomposition/snapsi_causal_effect.py` | `snapsi_causal_effect.json` |
 | Loeffel control | `08_literature_audit/loeffel2025_missing_control.py` | `loeffel2025_missing_control.json` |
 | N | `03_data_ingestion/acquire_snapsi_zg.py`, `07_physical_decomposition/snapsi_loeffel_test.py` | `snapsi_loeffel_test.json` |
+| O | `03_data_ingestion/acquire_era5_psl_cap.py`, `07_physical_decomposition/snapsi_archetype_test.py` | `snapsi_archetype_test.json` |
 | era gate | `06_simulation_validation/era_dependence_gate.py` | `era_dependence_gate.json` |
 
 **Layout changed 2026-08-04.** There is now ONE results tree for the whole

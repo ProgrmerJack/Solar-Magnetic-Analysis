@@ -1,0 +1,13 @@
+centres    ['Meteo-France', 'ECCC']
+inits      ['s20180125', 's20180208', 's20181213', 's20190108', 's20190829', 's20191001']
+matched    1,200 members
+cached     617
+to fetch   583
+CEDA token valid, 42.4 h remaining (user mikhail001)
+
+verifying the byte-range reader for ECCC against its cache ...
+  PASS  {'centre': 'ECCC', 'transport': 'byte_range', 'checked': [{'member': 'control/s20180125/r1i10p1f1', 'max_diff_N': 0.0, 'max_diff_S': 0.0, 'n_steps': [185, 185]}, {'member': 'nudged/s20180125/r1i48p1f1', 'max_diff_N': 0.0, 'max_diff_S': 0.0, 'n_steps': [185, 185]}, {'member': 'nudged/s20191001/r1i9p1f1', 'max_diff_N': 0.0, 'max_diff_S': 0.0, 'n_steps': [185, 185]}], 'passes': True}
+
+verifying the byte-range reader for Meteo-France against its cache ...
+  PASS  {'centre': 'Meteo-France', 'transport': 'byte_range', 'checked': [{'member': 'control/s20180125/r10i1p1f1', 'max_diff_N': 0.0, 'max_diff_S': 0.0, 'n_steps': [180, 180]}, {'member': 'control/s20180208/r10i1p1f1', 'max_diff_N': 0.0, 'max_diff_S': 0.0, 'n_steps': [180, 180]}, {'member': 'control/s20181213/r11i1p1f1', 'max_diff_N': 0.0, 'max_diff_S': 0.0, 'n_steps': [180, 180]}], 'passes': True}
+  100/1200  0.0 min  (49224 members/min)

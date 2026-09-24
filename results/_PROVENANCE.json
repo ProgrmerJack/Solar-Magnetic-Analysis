@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-23T12:13:01+00:00",
+ "generated": "2026-09-24T18:10:49+00:00",
  "note": "Known-good baseline: each result was produced by the script at the recorded sha256. catalog_repo.py flags STALE when a producer's hash no longer matches. Re-record with --record only AFTER re-running the analysis.",
  "results": {
   "catalogue_sets.json": {
@@ -417,9 +417,9 @@
     "ssw-design-analysis/07_physical_decomposition/within_model_check.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/within_model_check.py": "7391dc245ac3a808"
+    "ssw-design-analysis/07_physical_decomposition/within_model_check.py": "ffd3107eb9258e91"
    },
-   "result_sha256_16": "d1485bb026847e8a",
+   "result_sha256_16": "ecbcf1e53111998c",
    "needs_rerun": false
   },
   "consensus_monotonicity.json": {
@@ -472,6 +472,16 @@
    "result_sha256_16": "5ee12588081c16ff",
    "needs_rerun": false
   },
+  "snapsi_archetype_test.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_archetype_test.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_archetype_test.py": "a1da1a9b8c4abe19"
+   },
+   "result_sha256_16": "2e5d51623aa1599a",
+   "needs_rerun": false
+  },
   "snapsi_causal_effect.json": {
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_causal_effect.py"
@@ -479,7 +489,7 @@
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/snapsi_causal_effect.py": "1163410f07ff530e"
    },
-   "result_sha256_16": "894d25dd004525fe",
+   "result_sha256_16": "4f936ac2de5e3a73",
    "needs_rerun": false
   },
   "snapsi_distribution_test.json": {
@@ -489,7 +499,7 @@
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/snapsi_distribution_test.py": "c620da1f65075b46"
    },
-   "result_sha256_16": "5834e66c0e42e8b3",
+   "result_sha256_16": "08baeecf53d261f7",
    "needs_rerun": false
   },
   "snapsi_loeffel_test.json": {
@@ -499,7 +509,7 @@
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/snapsi_loeffel_test.py": "c269aa052f735ae9"
    },
-   "result_sha256_16": "e9aab62d6c9afbac",
+   "result_sha256_16": "ad7f2b83f81b7812",
    "needs_rerun": false
   },
   "snapsi_selection_test.json": {
@@ -509,7 +519,7 @@
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "5c1ed25e0d67e989"
    },
-   "result_sha256_16": "ec40cf9d37e299c3",
+   "result_sha256_16": "b765b4ad9b06edbf",
    "needs_rerun": false
   },
   "era5_recompute_and_two_thirds.json": {

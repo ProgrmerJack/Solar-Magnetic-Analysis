@@ -1,10 +1,10 @@
 {
- "generated": "2026-09-23T12:13:01+00:00",
+ "generated": "2026-09-24T18:10:49+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 112,
-  "results": 54
+  "scripts": 114,
+  "results": 55
  },
  "scripts": [
   {
@@ -67,6 +67,20 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_era5_psl_cap.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Observed polar-cap mean sea-level pressure, reduced EXACTLY as the SNAPSI members are, so the observed outcome of each SNAPSI event can be placed inside its own ensemble.",
+   "loc": 90,
+   "modified": "2026-09-24 16:49",
+   "sha256_16": "8b6dc6f3bc27a8d4",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_psl_cap_6h.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/03_data_ingestion/acquire_heatflux.py",
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
@@ -115,13 +129,14 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "Downloads the SNAPSI surface field and reduces it to a polar-cap index on the fly, so the CAUSAL stratosphere-to-surface effect can be measured by experimental design rather than inferred from composites.",
-   "loc": 366,
-   "modified": "2026-09-17 16:31",
-   "sha256_16": "1e4638dfcaf37b49",
+   "loc": 512,
+   "modified": "2026-09-24 17:43",
+   "sha256_16": "95a48d9b8a925920",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_manifest.csv",
-    "snapsi_polarcap_psl.parquet"
+    "snapsi_polarcap_psl.parquet",
+    "snapsi_time_origin.json"
    ],
    "filename_prefixes": []
   },
@@ -130,16 +145,18 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "SNAPSI geopotential height at 100 hPa, reduced to a polar-cap mean, fetched by OPeNDAP subsetting rather than by downloading whole files.",
-   "loc": 436,
-   "modified": "2026-09-17 17:13",
-   "sha256_16": "7e83bffca9a28dcc",
+   "loc": 754,
+   "modified": "2026-09-24 17:55",
+   "sha256_16": "ab73f6827ce73a03",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_manifest.csv",
     "snapsi_polarcap_zg100.parquet",
     "snapsi_zg_opendap_gate.json"
    ],
-   "filename_prefixes": []
+   "filename_prefixes": [
+    "zg100_"
+   ]
   },
   {
    "path": "ssw-design-analysis/03_data_ingestion/acquire_snotel_stations.py",
@@ -845,6 +862,21 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/07_physical_decomposition/snapsi_archetype_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "WERE FEB-2018 AND JAN-2019 DIFFERENT EVENTS, OR TWO DRAWS FROM ONE DISTRIBUTION? THE ARCHETYPES The two NH SNAPSI events are the field's standard pair of opposites. Rao, Garfinkel & White (2020, JGR-Atmos 125, e2019JD031919) describe Feb-2018 as a",
+   "loc": 310,
+   "modified": "2026-09-24 16:50",
+   "sha256_16": "a1da1a9b8c4abe19",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_psl_cap_6h.parquet",
+    "snapsi_archetype_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/07_physical_decomposition/snapsi_causal_effect.py",
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
@@ -908,9 +940,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "IS THE HEADLINE R^2 WITHIN-MODEL SKILL, OR BETWEEN-MODEL SIGNAL? THE PROBLEM, FOUND BY STRESS-TESTING RATHER THAN BY A REFEREE `headline_stress_test.py` computed CV R^2 separately inside each ensemble member and found it scattered around ZERO (-0.18 to +0.17 across 20 members),",
-   "loc": 183,
-   "modified": "2026-08-04 05:30",
-   "sha256_16": "7391dc245ac3a808",
+   "loc": 381,
+   "modified": "2026-09-24 16:50",
+   "sha256_16": "ffd3107eb9258e91",
    "flags": [],
    "filenames_mentioned": [
     "within_model_check.json"
@@ -980,9 +1012,9 @@
    "tree": "ssw-design-analysis",
    "stage": "tests",
    "title": "The repository's standing checks. Every one of them exists because something here once went wrong in that exact way -- see FAILURES.md, which this file is the executable half of.",
-   "loc": 313,
-   "modified": "2026-09-17 16:31",
-   "sha256_16": "0b0fa78e6091bc19",
+   "loc": 332,
+   "modified": "2026-09-24 16:51",
+   "sha256_16": "a3cd3769b76ad2d7",
    "flags": [],
    "filenames_mentioned": [
     "CATALOG.json",
@@ -1751,7 +1783,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-09-23 12:12",
+   "modified": "2026-09-24 18:10",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -3289,9 +3321,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 589,
-   "modified": "2026-08-03 16:01",
-   "sha256_16": "d1485bb026847e8a",
+   "bytes": 2880,
+   "modified": "2026-09-24 16:29",
+   "sha256_16": "ecbcf1e53111998c",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/within_model_check.py"
    ],
@@ -3299,14 +3331,22 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/within_model_check.py": "7391dc245ac3a808"
+    "ssw-design-analysis/07_physical_decomposition/within_model_check.py": "ffd3107eb9258e91"
    },
    "verdicts": [],
-   "counts": {},
+   "counts": {
+    "n_boot": [
+     1000
+    ],
+    "n_members": [
+     20
+    ]
+   },
    "top_level_keys": [
     "P1 pre-onset",
     "P2 at-onset",
-    "P3 + post-onset stratosphere"
+    "P3 + post-onset stratosphere",
+    "_meta"
    ]
   },
   {
@@ -3512,13 +3552,43 @@
    ]
   },
   {
+   "path": "results/current/8_experiment/snapsi_archetype_test.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 27002,
+   "modified": "2026-09-24 18:00",
+   "sha256_16": "2e5d51623aa1599a",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_archetype_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_archetype_test.py": "a1da1a9b8c4abe19"
+   },
+   "verdicts": [],
+   "counts": {},
+   "top_level_keys": [
+    "window_post_onset_days",
+    "pairs",
+    "centres",
+    "era5_input",
+    "per_ensemble",
+    "per_init",
+    "pair_test",
+    "observed_labels"
+   ]
+  },
+  {
    "path": "results/current/8_experiment/snapsi_causal_effect.json",
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 14120,
-   "modified": "2026-09-17 17:12",
-   "sha256_16": "894d25dd004525fe",
+   "bytes": 14117,
+   "modified": "2026-09-24 17:56",
+   "sha256_16": "4f936ac2de5e3a73",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_causal_effect.py"
    ],
@@ -3550,9 +3620,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 10298,
-   "modified": "2026-09-17 16:44",
-   "sha256_16": "5834e66c0e42e8b3",
+   "bytes": 10293,
+   "modified": "2026-09-24 18:00",
+   "sha256_16": "08baeecf53d261f7",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_distribution_test.py"
    ],
@@ -3577,9 +3647,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 43364,
-   "modified": "2026-09-23 12:11",
-   "sha256_16": "e9aab62d6c9afbac",
+   "bytes": 46525,
+   "modified": "2026-09-24 18:10",
+   "sha256_16": "ad7f2b83f81b7812",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_loeffel_test.py"
    ],
@@ -3622,9 +3692,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 48415,
-   "modified": "2026-09-17 17:18",
-   "sha256_16": "ec40cf9d37e299c3",
+   "bytes": 48413,
+   "modified": "2026-09-24 17:57",
+   "sha256_16": "b765b4ad9b06edbf",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py"
    ],

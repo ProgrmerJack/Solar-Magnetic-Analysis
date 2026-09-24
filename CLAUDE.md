@@ -112,8 +112,6 @@ with no NetCDF backend and cannot open any `.nc` in this repo.
   reversed by its own JSON. Listed in `CONSOLIDATED_RESULTS.md` §5b.
 - **Two Gate 3 artifacts disagree.** `gate3_clean_null.json` is correct (0.930/0.070,
   passes). `gate3_final.json` is output of the flawed `finalise_gate3.py`.
-- **`within_model_check.py` prints "Headline stands" from the wrong criterion.** Read
-  the table.
 - Full log of traps: `FAILURES.md`.
 
 ## Superseded

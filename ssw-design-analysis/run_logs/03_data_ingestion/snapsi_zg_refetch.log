@@ -1,0 +1,19 @@
+centres    ['CCCma', 'CNR-ISAC', 'ECCC', 'ECMWF', 'KMA', 'NCAR', 'SNU', 'UKMO']
+inits      ['s20180125', 's20180208', 's20181213', 's20190108', 's20190829', 's20191001']
+matched    4,611 members
+cached     4,462
+to fetch   149
+CEDA token valid, 44.4 h remaining (user mikhail001)
+  100/4611  0.0 min  (24433 members/min)
+  200/4611  0.0 min  (26442 members/min)
+  300/4611  0.0 min  (29182 members/min)
+  400/4611  0.0 min  (30936 members/min)
+  500/4611  0.0 min  (31121 members/min)
+  600/4611  0.0 min  (31781 members/min)
+  700/4611  0.0 min  (32259 members/min)
+  800/4611  0.0 min  (32356 members/min)
+  900/4611  0.0 min  (32933 members/min)
+  1000/4611  0.0 min  (34077 members/min)
+  FAILED CNR-ISAC/nudged/s20190108/r1i46p1f1: zg not in psl's version for r1i46p1f1; refusing to mix
+  1100/4611  66.7 min  (16 members/min)
+'.venv/bin/python' terminated by signal TERM.
