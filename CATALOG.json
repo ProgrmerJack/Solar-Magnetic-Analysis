@@ -1,9 +1,9 @@
 {
- "generated": "2026-09-24T18:10:49+00:00",
+ "generated": "2026-09-24T18:48:02+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 114,
+  "scripts": 119,
   "results": 55
  },
  "scripts": [
@@ -866,9 +866,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "WERE FEB-2018 AND JAN-2019 DIFFERENT EVENTS, OR TWO DRAWS FROM ONE DISTRIBUTION? THE ARCHETYPES The two NH SNAPSI events are the field's standard pair of opposites. Rao, Garfinkel & White (2020, JGR-Atmos 125, e2019JD031919) describe Feb-2018 as a",
-   "loc": 310,
-   "modified": "2026-09-24 16:50",
-   "sha256_16": "a1da1a9b8c4abe19",
+   "loc": 313,
+   "modified": "2026-09-24 18:18",
+   "sha256_16": "ec27afe78dd553ee",
    "flags": [],
    "filenames_mentioned": [
     "era5_psl_cap_6h.parquet",
@@ -896,9 +896,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "Does a sudden stratospheric warming SHIFT the surface distribution, or SPLIT it? WHY THIS IS THE TEST THAT MATTERS The project's central physical claim -- \"downward propagation\" is a threshold on ONE shifted population, not a class of event -- currently rests on CMIP6",
-   "loc": 270,
-   "modified": "2026-09-17 16:40",
-   "sha256_16": "c620da1f65075b46",
+   "loc": 274,
+   "modified": "2026-09-24 18:23",
+   "sha256_16": "7d4ef571af328a7d",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_distribution_test.json"
@@ -940,9 +940,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "IS THE HEADLINE R^2 WITHIN-MODEL SKILL, OR BETWEEN-MODEL SIGNAL? THE PROBLEM, FOUND BY STRESS-TESTING RATHER THAN BY A REFEREE `headline_stress_test.py` computed CV R^2 separately inside each ensemble member and found it scattered around ZERO (-0.18 to +0.17 across 20 members),",
-   "loc": 381,
-   "modified": "2026-09-24 16:50",
-   "sha256_16": "ffd3107eb9258e91",
+   "loc": 385,
+   "modified": "2026-09-24 18:18",
+   "sha256_16": "082d36709118344b",
    "flags": [],
    "filenames_mentioned": [
     "within_model_check.json"
@@ -993,6 +993,77 @@
    "filenames_mentioned": [
     "recompute_published_criterion.json"
    ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/fig1_shift.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "fig1_shift.py -- Figure 1: an SSW shifts the surface distribution; it does not split it.",
+   "loc": 108,
+   "modified": "2026-09-24 18:40",
+   "sha256_16": "185e9eeb026ebd56",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_causal_effect.json",
+    "snapsi_distribution_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/fig2_selection.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "fig2_selection.py -- Figure 2: the DW/NDW contrast needs no SSW.",
+   "loc": 92,
+   "modified": "2026-09-24 18:21",
+   "sha256_16": "ac273157ee6e45c9",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_selection_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/fig3_predictability.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "fig3_predictability.py -- Figure 3: an SSW adds no out-of-sample predictability.",
+   "loc": 94,
+   "modified": "2026-09-24 18:34",
+   "sha256_16": "9d9d4078afc1e711",
+   "flags": [],
+   "filenames_mentioned": [
+    "predictability_ceiling.json",
+    "within_model_check.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/fig4_archetypes.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "fig4_archetypes.py -- Figure 4: the field's two archetypes are two draws.",
+   "loc": 129,
+   "modified": "2026-09-24 18:20",
+   "sha256_16": "1468af1cde4a60d6",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_archetype_test.json",
+    "snapsi_causal_effect.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/nature_style.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "Shared look for every display item, so the figures agree with each other and with Nature Portfolio's artwork guide: sans-serif type at 5-7 pt, 89 mm single and 183 mm double column widths, vector PDF plus a 300-dpi PNG preview, and the",
+   "loc": 61,
+   "modified": "2026-09-24 18:19",
+   "sha256_16": "ced4a4928920e264",
+   "flags": [],
+   "filenames_mentioned": [],
    "filename_prefixes": []
   },
   {
@@ -1768,9 +1839,9 @@
    "tree": "tools",
    "stage": "",
    "title": "The single cataloguing tool for this repository. Run it after any analysis and it rebuilds every index from the files themselves -- nothing here is maintained by hand, so nothing here can silently go stale.",
-   "loc": 466,
-   "modified": "2026-09-17 11:46",
-   "sha256_16": "4c7cfd1addb43ac2",
+   "loc": 475,
+   "modified": "2026-09-24 18:47",
+   "sha256_16": "a73c2ae85f906afc",
    "flags": [],
    "filenames_mentioned": [],
    "filename_prefixes": []
@@ -1783,7 +1854,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-09-24 18:10",
+   "modified": "2026-09-24 18:47",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -3321,9 +3392,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 2880,
-   "modified": "2026-09-24 16:29",
-   "sha256_16": "ecbcf1e53111998c",
+   "bytes": 105712,
+   "modified": "2026-09-24 18:46",
+   "sha256_16": "17125512d0615fff",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/within_model_check.py"
    ],
@@ -3331,7 +3402,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/within_model_check.py": "ffd3107eb9258e91"
+    "ssw-design-analysis/07_physical_decomposition/within_model_check.py": "082d36709118344b"
    },
    "verdicts": [],
    "counts": {
@@ -3556,9 +3627,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 27002,
-   "modified": "2026-09-24 18:00",
-   "sha256_16": "2e5d51623aa1599a",
+   "bytes": 74803,
+   "modified": "2026-09-24 18:18",
+   "sha256_16": "bc3d6aeadf8deab1",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_archetype_test.py"
    ],
@@ -3566,7 +3637,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_archetype_test.py": "a1da1a9b8c4abe19"
+    "ssw-design-analysis/07_physical_decomposition/snapsi_archetype_test.py": "ec27afe78dd553ee"
    },
    "verdicts": [],
    "counts": {},
@@ -3578,7 +3649,8 @@
     "per_ensemble",
     "per_init",
     "pair_test",
-    "observed_labels"
+    "observed_labels",
+    "member_A"
    ]
   },
   {
@@ -3620,9 +3692,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 10293,
-   "modified": "2026-09-24 18:00",
-   "sha256_16": "08baeecf53d261f7",
+   "bytes": 73082,
+   "modified": "2026-09-24 18:38",
+   "sha256_16": "81296c9279fade5d",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_distribution_test.py"
    ],
@@ -3630,7 +3702,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_distribution_test.py": "c620da1f65075b46"
+    "ssw-design-analysis/07_physical_decomposition/snapsi_distribution_test.py": "7d4ef571af328a7d"
    },
    "verdicts": [],
    "counts": {},
@@ -3638,6 +3710,7 @@
     "window_post_onset_days",
     "per_case",
     "excluded",
+    "member_A",
     "pooled_all",
     "pooled_excluding_short_lead_init"
    ]

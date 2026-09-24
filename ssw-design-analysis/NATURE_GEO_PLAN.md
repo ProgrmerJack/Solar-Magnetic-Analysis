@@ -21,8 +21,8 @@ The condition declared on 2026-08-04, before any of the data existed:
 
 | | contrast, nudged (SSW identical in every member) | contrast, control (no SSW at all) | DW rate |
 |---|---|---|---|
-| **NH**, 9 centres, 36 ensembles/arm | **−1.624 σ** (sd 0.300, n=25) | **−1.590 σ** (sd 0.089, n=36) | 0.842 vs 0.450 |
-| **SH**, 9 centres, `s20190829` | **−1.969 σ** (n=7 of 8) | **−1.585 σ** (n=8 of 8) | 0.791 vs 0.413 |
+| **NH**, 9 centres, 36 ensembles/arm | **−1.622 σ** (sd 0.303, n=25) | **−1.590 σ** (sd 0.089, n=36) | 0.842 vs 0.450 |
+| **SH**, 8 centres, `s20190829` | **−1.958 σ** (n=7 of 8) | **−1.584 σ** (n=8 of 8) | 0.786 vs 0.413 |
 
 The condition is met. **That does not mean the paper will clear the desk**, and
 §5 states the odds honestly. It means the scientific precondition the project set
@@ -40,7 +40,7 @@ identically zero, duplicate-guard ratio 0.004).
 | result | 3 centres (published) | 9 centres (now) | verdict |
 |---|---|---|---|
 | **K** causal effect S | +0.972 σ | **+1.107 σ** (sd 0.271) excl. ECCC; +1.363 incl. | holds, ECCC is an outlier |
-| **L** contrast nudged vs control | −1.518 vs −1.558 | **−1.624 vs −1.590** | **replicates, 3× the ensembles** |
+| **L** contrast nudged vs control | −1.518 vs −1.558 | **−1.622 vs −1.590** | **replicates, 3× the ensembles** |
 | **M** variance ratio | 0.939 [0.781, 1.130] | **0.955 [0.873, 1.051]** | holds, tighter — *after an estimator fix* |
 
 **Three things the larger sample exposed. All three are in the record.**

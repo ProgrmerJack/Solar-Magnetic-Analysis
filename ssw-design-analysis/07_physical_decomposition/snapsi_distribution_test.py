@@ -151,6 +151,10 @@ def main():
             "shift_sigma": round(shift, 4),
             "variance_ratio": round(vr, 4),
             "pure_translation_KS_p": round(ks, 4)})
+        # member values in control-sd units (NAM sign), for the display item
+        out.setdefault("member_A", {})[f"{k['centre']}|{k['init']}"] = {
+            "nudged": [round(float(x), 4) for x in N],
+            "control": [round(float(x), 4) for x in C]}
         flag = "  <- short lead" if k["init"] == SHORT_LEAD_INIT else ""
         print(f"{k['centre']:8s} {k['init']:11s} {len(N):4d} {len(C):4d} "
               f"{k['sd_control_Pa']:8.1f} {shift:+7.3f} {vr:10.3f} "
@@ -261,7 +265,7 @@ def main():
         pooled(keep, "pooled_excluding_short_lead_init")
 
     (RESULTS / "snapsi_distribution_test.json").write_text(
-        json.dumps(out, indent=2), encoding="utf8")
+        json.dumps(out, indent=2), encoding="utf8", newline="\n")
     print("\nSaved -> results/current/8_experiment/snapsi_distribution_test.json")
 
 

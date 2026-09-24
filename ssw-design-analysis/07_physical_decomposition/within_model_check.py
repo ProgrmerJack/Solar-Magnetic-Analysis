@@ -349,7 +349,11 @@ def main():
                                round(float(np.quantile(diffs, 0.975)), 4)],
             "n_boot_valid": int(len(diffs)),
             "size_bias_of_6draw_pooled_arm": round(
-                res[lab]["pseudo_within_cv_r2"] - float(null.mean()), 4)}
+                res[lab]["pseudo_within_cv_r2"] - float(null.mean()), 4),
+            # Full distributions, for the display item and for anyone who wants
+            # a different interval than the one reported above.
+            "null_draws": [round(float(x), 5) for x in null],
+            "bootstrap_diffs": [round(float(x), 5) for x in diffs]}
         sm = res[lab]["size_matched"]
         print(f"  {lab:<30s} real {real_w:+.4f} | null {sm['null_mean']:+.4f} "
               f"(sd {sm['null_sd']:.4f}) | event-specific {es:+.4f} "

@@ -11,3 +11,6 @@ verifying the byte-range reader for ECCC against its cache ...
 verifying the byte-range reader for Meteo-France against its cache ...
   PASS  {'centre': 'Meteo-France', 'transport': 'byte_range', 'checked': [{'member': 'control/s20180125/r10i1p1f1', 'max_diff_N': 0.0, 'max_diff_S': 0.0, 'n_steps': [180, 180]}, {'member': 'control/s20180208/r10i1p1f1', 'max_diff_N': 0.0, 'max_diff_S': 0.0, 'n_steps': [180, 180]}, {'member': 'control/s20181213/r11i1p1f1', 'max_diff_N': 0.0, 'max_diff_S': 0.0, 'n_steps': [180, 180]}], 'passes': True}
   100/1200  0.0 min  (49224 members/min)
+  retrying ECCC/s20190108/r1i26p1f1: FSTimeoutError: 
+  retrying ECCC/s20190108/r1i34p1f1: FSTimeoutError: 
+  200/1200  38.3 min  (5 members/min)
