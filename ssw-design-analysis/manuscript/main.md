@@ -2,8 +2,7 @@
 
 *Draft for Nature Geoscience (Article). Every number is taken from
 `ssw-design-analysis/CONSOLIDATED_RESULTS.md`; display items are built by
-`09_figures/fig*.py` from `results/current/`. Numbers marked [interim] await the
-completion of the Meteo-France zg acquisition.*
+`09_figures/fig*.py` from `results/current/`.*
 
 ---
 
@@ -182,8 +181,10 @@ that week-2 geopotential height at 100 hPa predicts the weeks 3–7 surface
 response across 18 events (r = 0.85) and conclude that SSWs differ in their
 capacity to couple downward. Between members of a single nudged ensemble, where
 no event-to-event difference exists, the same relation is weak (r = 0.11) and is
-equally present with no SSW (r = 0.09; difference Δz = +0.02 [−0.05, +0.10],
-31 matched ensembles; Extended Data Fig. 1) [interim]. A large correlation of
+equally present with no SSW (r = 0.09; difference Δz = +0.02 [−0.04, +0.09],
+36 matched ensembles in nine models; Extended Data Fig. 1). Across ensembles, the
+correlation of ensemble means is 0.64 with the SSW imposed and 0.83 with no SSW,
+driven by differences between models. A large correlation of
 ensemble means does not require the events to differ.
 
 ### Discussion
@@ -291,7 +292,7 @@ geopotential height against days 15–25 polar-cap sea-level pressure, correlate
 across members within each ensemble; Fisher-z pooling; nudged-minus-control
 difference on matched ensembles; permutation p-values. A pre-specified design
 gate required the nudged/control spread ratio at 100 hPa to exceed 0.5 (median
-0.96 [interim]).
+0.96).
 
 **Reproducibility.** Every result is produced by one script writing one JSON with
 its seed, resample count and input counts; producer hashes are recorded and
@@ -373,6 +374,15 @@ Karpechko et al. (2017) criterion; the only NDW label is January 2019 at 1000 hP
 over days 8–52 (+0.019 σ).
 
 ---
+
+**Extended Data Fig. 1 | The lower-stratospheric precursor couples to the surface
+as strongly with no SSW.** **a**, For each of 36 SNAPSI ensembles, the
+within-member correlation of week-2 (days 8–14) 100 hPa polar-cap geopotential
+height with the days 15–25 polar-cap surface response, with the SSW imposed
+(nudged) against the same model and initialisation with no SSW (control); open
+squares, the initialisation that starts after onset. **b**, Fisher-pooled
+correlations with 95% intervals and the nudged-minus-control difference, for all
+matched ensembles and excluding the short-lead initialisation.
 
 ## Data and code availability
 

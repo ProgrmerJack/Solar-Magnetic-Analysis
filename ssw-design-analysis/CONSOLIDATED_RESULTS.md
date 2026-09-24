@@ -55,7 +55,7 @@ withdrawal now carries intervals.)*
 | **L** | **the DW/NDW contrast is identical with and without an SSW, in a designed experiment** | **SNAPSI, 9 centres, 61 ensembles** | **established — the decisive test, replicated at 3x scale 2026-09-17** |
 | **M** | **an SSW shifts the surface distribution without inflating its variance** | **SNAPSI, 9 centres, 1798 vs 1805 members** | **established causally; ratio 0.955 [0.873, 1.051] after an estimator fix** |
 | O | the field's two archetypes (Feb-2018 "propagating", Jan-2019 "not") have the same forced odds, and their observed difference is ordinary member-to-member noise | SNAPSI 9 centres + ERA5 | established for these 2 events; Jan-2019's NDW label flips with the pressure level |
-| N | the week-2 100 hPa → surface coupling between members is the same with and without an SSW | SNAPSI, 8 centres, 28 matched ensembles | established on 8 of 9 centres; Meteo-France and ECCC `control` not yet acquired |
+| N | the week-2 100 hPa → surface coupling between members is the same with and without an SSW | SNAPSI, 9 centres, 36 matched ensembles | established; Δz +0.023 [−0.044, +0.090] |
 
 **J is the headline.** It needs no correction of any kind, it answers the field's
 own question in the field's own terms, and it independently confirms I.
@@ -618,54 +618,45 @@ and conclude that SSWs differ in their capacity to couple downward. In a SNAPSI
 be measured **between members**, where no event-to-event difference exists; the
 `control` arm measures it with no SSW at all.
 
-> **Re-run pending.** The table below is the 2026-09-23 run on 8 centres. It
-> predates the 06 UTC time-origin fix and the Meteo-France / ECCC-control zg
-> acquisition, which is still downloading. Interim re-run 2026-09-24 on the
-> rebased data with those members cached so far: nudged +0.108 vs control
-> +0.085, **Δz = +0.023 [−0.050, +0.096], p = 0.54, 31 matched ensembles**
-> (excl. `s20190108`: +0.009 [−0.073, +0.092], 24). The conclusion is unchanged;
-> the numbers here will be replaced when the acquisition completes.
+**Final run 2026-09-25 on the complete archive:** 9 centres, 4 NH
+initialisations, both arms, 36 matched ensembles (5,210 zg members; leads on
+the corrected 00 UTC origin). Supersedes the 8-centre run of 2026-09-23
+(Δz −0.001 on 28 ensembles) and the interim of 2026-09-24.
 
-**Design gate (pre-specified, sd ratio > 0.5): passes**, median 0.948 over 28
+**Design gate (pre-specified, sd ratio > 0.5): passes**, median 0.964 over 36
 ensembles — nudging above 50 hPa does not pin 100 hPa.
 
 Primary window (post-onset days 15–25; days 15–49 is covered by only 10 of 36
 ensembles), Fisher-z pooled:
 
-| | nudged (SSW fixed) | control (no SSW) |
+| | nudged (SSW imposed) | control (no SSW) |
 |---|---|---|
-| all ensembles | **+0.099** [+0.048, +0.149], 32 ens., 1,579 members | **+0.101** [+0.047, +0.154], 28 ens., 1,405 members |
-| 28 matched ensembles | +0.100 | +0.101 |
-| **difference Δz, matched** | **−0.001 [−0.077, +0.076], p = 0.98** | |
-| excl. `s20190108`, 21 matched | +0.109 vs +0.121, Δz −0.013 [−0.101, +0.075] | |
+| all 36 matched ensembles | **+0.111** [+0.063, +0.158], 1,797 members | **+0.088** [+0.041, +0.135], 1,805 members |
+| **difference Δz** | **+0.023 [−0.044, +0.090], p = 0.50** | |
+| excl. `s20190108`, 27 matched | +0.109 vs +0.108, **Δz +0.002 [−0.076, +0.079], p = 0.97** | |
 
-The max-available window (days 15–24) gives Δz = +0.005 [−0.072, +0.082]. Loeffel's
-own days 15–49 window, on the 8 matched ensembles that reach it (7 of them the
-short-lead `s20190108`), gives Δz = −0.045 [−0.192, +0.101].
+Loeffel's own days 15–49 window, on the 10 matched ensembles that reach it (9 of
+them the short-lead `s20190108`): +0.020 vs +0.070, Δz −0.049 [−0.178, +0.079].
+The max-available window now resolves to days 15–25, identical to the primary.
 
-**Reading.** Between members, the 100 hPa → surface relation is weak (r ≈ 0.10)
-and **identical with no SSW present**: it is a general lower-stratosphere–surface
+**Reading.** Between members, the 100 hPa → surface relation is weak (r ≈ 0.1)
+and **the same with no SSW present**: a general lower-stratosphere–surface
 persistence, not something an SSW adds. The pre-specified falsifier — the control
-arm reproducing the nudged correlation — is met exactly, so this relation carries
-no event-specific information. The per-ensemble r are mildly heterogeneous in the
-nudged arm (Cochran Q p = 0.027; 0.098 excluding `s20190108`), not in control
-(p = 0.127) — at most a weak dependence on model or initialisation.
+arm reproducing the nudged correlation — is met. The per-ensemble r vary more
+than sampling alone allows **in both arms** (Cochran Q p = 0.009 nudged, 0.025
+control; 0.036 and 0.052 excluding `s20190108`): the coupling depends somewhat on
+model or initialisation, but that dependence is not specific to the SSW.
 
 **What it does NOT test.** Loeffel's between-event coefficient: SNAPSI has 2 NH
-events. Across the 32 nudged ensembles (centre × initialisation) the correlation of
-ensemble means is **+0.750**, against +0.100 in control — a correlation of this
-size arises across **models** simulating the **same two events**. That is
-descriptive only (raw means, not anomalies; spread is between models), and must
-not be quoted as a test of their claim. It does show that a large across-ensemble-
-mean r does not by itself require event-to-event differences.
+events. Across the 36 ensembles (centre × initialisation) the correlation of
+ensemble means is **+0.641 nudged and +0.834 in control** — correlations of
+Loeffel's size arise across **models**, and are larger with **no SSW at all**.
+Descriptive only (raw means, not anomalies; the spread is between models); never
+to be quoted as a test of their claim. It shows that a large across-ensemble-mean
+r does not by itself require event-to-event differences.
 
 **Power.** At n = 50, a within-ensemble r = 0.3 is detected with probability 0.56
-per ensemble; pooled over 28 matched ensembles the Δz interval half-width is 0.077.
-
-**Coverage.** 8 of 9 usable centres. Meteo-France is refused by the OPeNDAP subset
-gate (its zg names the vertical dimension `snap34`, not `plev`); ECCC `control`
-(4 NH initialisations, 200 members) and 144 other members failed on DNS during a hibernation
-and need a valid CEDA token to refetch.
+per ensemble; pooled over 36 matched ensembles the Δz interval half-width is 0.067.
 
 ### O — the two archetypes: different events, or two draws? (`snapsi_archetype_test.py`)
 

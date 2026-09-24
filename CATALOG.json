@@ -1,9 +1,9 @@
 {
- "generated": "2026-09-24T19:17:26+00:00",
+ "generated": "2026-09-24T23:01:21+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 119,
+  "scripts": 120,
   "results": 55
  },
  "scripts": [
@@ -1055,6 +1055,20 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/09_figures/figED1_loeffel.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "figED1_loeffel.py -- Extended Data Fig. 1: the lower-stratospheric precursor couples to the surface just as strongly with no SSW.",
+   "loc": 88,
+   "modified": "2026-09-24 23:00",
+   "sha256_16": "01ca95cbf075e619",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_loeffel_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/09_figures/nature_style.py",
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
@@ -1854,7 +1868,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-09-24 18:48",
+   "modified": "2026-09-24 22:59",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -3720,9 +3734,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 46525,
-   "modified": "2026-09-24 18:10",
-   "sha256_16": "ad7f2b83f81b7812",
+   "bytes": 51292,
+   "modified": "2026-09-24 22:59",
+   "sha256_16": "5843507bdcd23426",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_loeffel_test.py"
    ],

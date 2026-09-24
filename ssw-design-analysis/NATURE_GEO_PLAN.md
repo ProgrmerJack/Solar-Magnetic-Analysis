@@ -103,8 +103,8 @@ is a positive physical claim rather than a complaint:
    the DW/NDW contrast is the same with the SSW held identical and with no SSW at
    all, in both hemispheres (L).
 6. **Neither is the lower-stratospheric precursor** — between members of one
-   event, week-2 100 hPa GPH correlates with the surface at r = +0.100; with no
-   SSW at all, +0.101 (Δz −0.001 [−0.077, +0.076], 8 models). Löffel's r = 0.85
+   event, week-2 100 hPa GPH correlates with the surface at r = +0.111; with no
+   SSW at all, +0.088 (Δz +0.023 [−0.044, +0.090], 36 ensembles, 9 models). Löffel's r = 0.85
    across events does not require events to differ in coupling (N).
 7. **The field's own showcase pair is two draws from one distribution** — Feb-2018
    ("propagating") and Jan-2019 ("not") receive the same DW odds (0.82 vs 0.83)
@@ -132,11 +132,11 @@ the event.
 
 | # | task | state |
 |---|---|---|
-| 1 | **Löffel head-to-head** (WCD 7, 895–913, 2026) | **done on 8 of 9 centres** (result N): within-ensemble r = +0.100 nudged vs +0.101 control, Δz −0.001 [−0.077, +0.076] on 28 matched ensembles. Outstanding: Meteo-France (`snap34` axis) and ECCC control, both need a valid CEDA token |
+| 1 | **Löffel head-to-head** (WCD 7, 895–913, 2026) | **done, all 9 centres** (result N): within-ensemble r = +0.111 nudged vs +0.088 control, Δz +0.023 [−0.044, +0.090] on 36 matched ensembles; Extended Data Fig. 1 |
 | 2 | **Intervals on the J-REVISED withdrawal** | **done**: event-specific +0.004 [−0.022, +0.027] pre-onset, +0.022 [−0.015, +0.060] post-onset, against 1,000 size-matched null draws; the old baseline was size-biased by +0.005–0.010 |
 | 3 | **The operational/S2S bite** | **partly answered** (result O): the Feb-2018/Jan-2019 contrast that S2S studies (Rao 2020; Nebel 2024 frames NDW outcomes as forecast busts) treat as an event property is member-to-member noise under identical forcing. Still open: whether a published S2S *skill* number is conditioned on the observed outcome; read Nebel 2024 in full |
-| 4 | Re-run H and I on the 9-centre archive | not started; both are CMIP6-based so unaffected, but the SNAPSI cross-checks should match |
-| 5 | Figures and manuscript | **four main figures built** (`09_figures/fig1-4`); **draft** `manuscript/main.md` (183-word abstract, ~1,860-word main text); Extended Data Fig. 1 (N) waits on the Meteo-France zg; reference list to complete |
+| 4 | Re-run H and I | I (`forced_variance_ceiling.py`) and H's ERA5 part (`era5_recompute_and_two_thirds.py`) re-run 2026-09-25 in the pinned environment; I's CMIP6 column moved (σ_f upper 0.239 → 0.256), see §3 I. H's CMIP6 script (`is_downward_propagation_a_class.py`) not yet re-run |
+| 5 | Figures and manuscript | **four main figures built** (`09_figures/fig1-4`); **draft** `manuscript/main.md` (183-word abstract, ~1,860-word main text); Extended Data Fig. 1 (N) built; reference list to complete |
 
 Items 6–8 of the old list are **done**: the impossible R² is cleared, Gate 3's
 conflicting artifact is resolved, and all six stale documents are rewritten —
