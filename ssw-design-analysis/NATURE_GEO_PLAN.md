@@ -96,8 +96,8 @@ is a positive physical claim rather than a complaint:
    (size-matched null, 1,000 draws), and 95% of apparent
    post-onset diagnostic skill reproduces with no SSW present (J).
 4. **Which explains the field's organising number** — displacing event-free dates
-   by the measured shift gives a 74.4% [61.5, 87.2] "downward propagation" pass
-   rate against 69.2% observed. *"About two thirds propagate downward"* is what
+   by the measured shift gives a 74.4% [61.5, 87.2] pass rate on the criterion's
+   surface conditions against 69.2% observed (53.8% with all three conditions). *"About two thirds propagate downward"* is what
    one shifted population produces (H).
 5. **The classification carries no extra information, proven by experiment** —
    the DW/NDW contrast is the same with the SSW held identical and with no SSW at
