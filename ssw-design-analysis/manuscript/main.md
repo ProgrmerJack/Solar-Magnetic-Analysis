@@ -89,8 +89,8 @@ as the control (1,805 members) — ratio 0.955 [0.873, 1.051] — and the same s
 outcomes; it does not divide it into responders and non-responders. The
 observational record and CMIP6 say the same: the per-event surface response is
 unimodal and consistent with a pure shift (observations p = 0.33, n = 43; CMIP6
-p = 0.19, n = 1,888), although a two-population mixture with separation below
-about 0.75 σ cannot be excluded at this sample size; and once the variance
+p = 0.28, n = 1,888), although a two-population mixture with separation below
+about 1 σ cannot be excluded at this sample size; and once the variance
 already present before onset is removed, the forced between-event standard
 deviation is at most 0.26 σ (CMIP6, upper 95% bound).
 

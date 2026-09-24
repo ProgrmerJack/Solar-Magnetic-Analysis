@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-24T23:01:21+00:00",
+ "generated": "2026-09-24T23:08:46+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -1868,7 +1868,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-09-24 22:59",
+   "modified": "2026-09-24 23:01",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -3322,9 +3322,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 1483,
-   "modified": "2026-08-01 14:04",
-   "sha256_16": "7012f875f912faa8",
+   "bytes": 1431,
+   "modified": "2026-09-24 23:08",
+   "sha256_16": "855bfb45e83e824e",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/is_downward_propagation_a_class.py"
    ],
@@ -3337,7 +3337,7 @@
    "verdicts": [
     {
      "key": "verdict",
-     "text": "NO CLASS in CMIP6_ensemble (n=1888): the per-event surface response is unimodal (dip p=0.8460), one Gaussian component suffices (BIC-gap p=0.8650), and the whole distribution is a pure SHIFT of -0.511 sigma of the ordinary winter distribution (KS p=0.1907). 'Downward propagation' is a threshold on a continuum, not a population."
+     "text": "NO CLASS in CMIP6_ensemble (n=1888): the per-event surface response is unimodal (dip p=0.8880), one Gaussian component suffices (BIC-gap p=0.8350), and the whole distribution is a pure SHIFT of -0.514 sigma of the ordinary winter distribution (KS p=0.2789). 'Downward propagation' is a threshold on a continuum, not a population."
     }
    ],
    "counts": {},

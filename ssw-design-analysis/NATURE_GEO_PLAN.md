@@ -135,7 +135,7 @@ the event.
 | 1 | **Löffel head-to-head** (WCD 7, 895–913, 2026) | **done, all 9 centres** (result N): within-ensemble r = +0.111 nudged vs +0.088 control, Δz +0.023 [−0.044, +0.090] on 36 matched ensembles; Extended Data Fig. 1 |
 | 2 | **Intervals on the J-REVISED withdrawal** | **done**: event-specific +0.004 [−0.022, +0.027] pre-onset, +0.022 [−0.015, +0.060] post-onset, against 1,000 size-matched null draws; the old baseline was size-biased by +0.005–0.010 |
 | 3 | **The operational/S2S bite** | **partly answered** (result O): the Feb-2018/Jan-2019 contrast that S2S studies (Rao 2020; Nebel 2024 frames NDW outcomes as forecast busts) treat as an event property is member-to-member noise under identical forcing. Still open: whether a published S2S *skill* number is conditioned on the observed outcome; read Nebel 2024 in full |
-| 4 | Re-run H and I | I (`forced_variance_ceiling.py`) and H's ERA5 part (`era5_recompute_and_two_thirds.py`) re-run 2026-09-25 in the pinned environment; I's CMIP6 column moved (σ_f upper 0.239 → 0.256), see §3 I. H's CMIP6 script (`is_downward_propagation_a_class.py`) not yet re-run |
+| 4 | Re-run H and I | I (`forced_variance_ceiling.py`) and H's ERA5 part (`era5_recompute_and_two_thirds.py`) re-run 2026-09-25 in the pinned environment; I's CMIP6 column moved (σ_f upper 0.239 → 0.256), see §3 I. H's CMIP6 script re-run too (KS p 0.19 → 0.28, power at 1σ 0.86 → 0.95; verdict unchanged). All deterministic now |
 | 5 | Figures and manuscript | **four main figures built** (`09_figures/fig1-4`); **draft** `manuscript/main.md` (183-word abstract, ~1,860-word main text); Extended Data Fig. 1 (N) built; reference list to complete |
 
 Items 6–8 of the old list are **done**: the impossible R² is cleared, Gate 3's
