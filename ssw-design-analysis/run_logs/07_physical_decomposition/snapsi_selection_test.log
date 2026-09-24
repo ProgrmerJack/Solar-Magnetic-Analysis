@@ -97,13 +97,13 @@ UKMO     s20190829   control    50   21   29   0.42   -0.958   +0.694    -1.652
      DW rate, contrast subset     : 0.450  (36 of 36 ensembles)
      DW rate, UNCONDITIONAL       : 0.450
 
-  published contrast, same criterion: -0.850 sigma
+  published contrast, same criterion: -0.708 sigma
 
   In BOTH arms the classifier produces a large contrast. In the
   nudged arm every member had the SAME stratosphere; in the control
   arm there was no SSW at all. Neither contrast can reflect a
   physical difference between groups -- both are entirely the cut.
 
-  Contrasts here are standardised by the CONTROL ensemble's member-to-member spread for a single event. The published -0.850 is standardised by the BETWEEN-EVENT spread in observations. These are different yardsticks, so ratio_to_published indicates scale and is not an exact like-for-like fraction.
+  Contrasts here are standardised by the CONTROL ensemble's member-to-member spread for a single event. The published -0.708 is standardised by the BETWEEN-EVENT spread in observations. These are different yardsticks, so ratio_to_published indicates scale and is not an exact like-for-like fraction.
 
 Saved -> results/current/8_experiment/snapsi_selection_test.json

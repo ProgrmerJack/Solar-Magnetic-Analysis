@@ -11,7 +11,7 @@ WHY
   using the CPC AO as a stand-in for the 1000 hPa NAM and the CPC NAO as the
   outcome. That establishes the DECOMPOSITION but cannot speak to any published
   number, because ACP 26, 3723 (2026) uses ERA5 850 hPa NAM for classification and
-  a 1000 hPa-geopotential NAO for the outcome, reporting -0.762 (DW) vs +0.088
+  a 1000 hPa-geopotential NAO for the outcome, reporting -0.620 (all DW) vs +0.088
   (NDW).
 
 SOURCE

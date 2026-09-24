@@ -13,7 +13,8 @@ Two things the audit still needed, in the literature's own variables.
     criterion runs on the actual fields:
       Karpechko original : conditions on NAM_1000 and NAM_150
       ACP 26, 3723 (2026): the same with 850 hPa substituted for 1000 hPa,
-                           reporting NAO -0.762 (DW) vs +0.088 (NDW).
+                           reporting NAO -0.620 (all DW; -0.762 is the BOTH
+                           subtype only) vs +0.088 (NDW).
 
 (B) DOES THE SHIFT PREDICT "TWO THIRDS"?
     Baldwin et al. (2021), Reviews of Geophysics 59, e2020RG000708, section 7.2 --
@@ -68,8 +69,9 @@ SEL_WIN = (8, 52)
 OUT_WIN = (1, 60)
 N_NULL = 2000
 SEED = 20260801
-PUBLISHED = {"ACP_2026_NAO_DW": -0.762, "ACP_2026_NAO_NDW": 0.088,
-             "ACP_2026_contrast": -0.850,
+# Lu & Rao (2026, ACP 26, 3723) give ERA5 60-day NAO means by DW subtype: BOTH -0.762 (n=13), EA -0.567 (14), NA -0.435 (6); NDW +0.088 (19). All-DW mean -0.620, contrast -0.708, DW fraction 33/52 = 0.635. The -0.850 used until 2026-09-25 subtracted the BOTH subtype alone.
+PUBLISHED = {"ACP_2026_NAO_DW": -0.620, "ACP_2026_NAO_NDW": 0.088,
+             "ACP_2026_contrast": -0.708,
              "Baldwin_2021_fraction": "about two thirds"}
 
 

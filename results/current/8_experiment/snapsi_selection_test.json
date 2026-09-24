@@ -4,7 +4,7 @@
     25
   ],
   "criterion": "Karpechko et al. (2017) conditions 1 and 2 (the surface conditions) applied to nudged members whose stratospheric forcing is identical by design",
-  "published_contrast_for_scale": -0.85,
+  "published_contrast_for_scale": -0.708,
   "excluded": {
     "NRL": "|nudged - control| ensemble-mean effect is < 1 Pa at every initialisation (max 0.00781 Pa): corrupt submission, not a null result"
   },
@@ -2054,7 +2054,7 @@
         -1.0828
       ],
       "mean_DW_rate_contrast_subset": 0.776,
-      "ratio_to_published": 1.91,
+      "ratio_to_published": 2.29,
       "n_ensembles_all": 36,
       "n_dropped_for_contrast": 11,
       "mean_DW_rate_UNCONDITIONAL": 0.842,
@@ -2073,7 +2073,7 @@
         -1.3256
       ],
       "mean_DW_rate_contrast_subset": 0.45,
-      "ratio_to_published": 1.87,
+      "ratio_to_published": 2.25,
       "n_ensembles_all": 36,
       "n_dropped_for_contrast": 0,
       "mean_DW_rate_UNCONDITIONAL": 0.45
@@ -2104,5 +2104,5 @@
     }
   },
   "filter_caveat": "The DW-NDW contrast requires >=3 members in BOTH groups, which is asymmetric by construction: only an arm with a strong forced shift can push nearly every member into one class. 11 of 36 nudged ensembles are dropped that way, with a mean DW rate of 0.993, while 0 of 36 control ensembles are. Quote mean_DW_rate_UNCONDITIONAL for the rate; the contrast is necessarily conditioned on the ensembles where both groups exist, which are the weaker-responding ones.",
-  "units_caveat": "Contrasts here are standardised by the CONTROL ensemble's member-to-member spread for a single event. The published -0.850 is standardised by the BETWEEN-EVENT spread in observations. These are different yardsticks, so ratio_to_published indicates scale and is not an exact like-for-like fraction."
+  "units_caveat": "Contrasts here are standardised by the CONTROL ensemble's member-to-member spread for a single event. The published -0.708 is standardised by the BETWEEN-EVENT spread in observations. These are different yardsticks, so ratio_to_published indicates scale and is not an exact like-for-like fraction."
 }

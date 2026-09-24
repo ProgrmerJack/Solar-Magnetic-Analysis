@@ -164,7 +164,7 @@ reported quantity                                     C     q      DW     NDW
 ------------------------------------------------------------------------------
 Karpechko-criterion AO contrast, observations     1.782  0.70  +1.897  +0.115
 CMIP6 ensemble DW-NDW contrast                    1.143  0.50  +1.934  +0.791
-ACP 26, 3723 (2026) published NAO contrast        0.850  0.59  +1.711  +0.861
+ACP 26, 3723 (2026) published NAO contrast        0.708  0.64  +1.621  +0.913
 ERA5 1000 hPa NAM contrast, Karpechko criterion   0.684  0.54  +1.678  +0.994
 ERA5 850 hPa NAM contrast, ACP criterion          0.639  0.59  +1.625  +0.986
 

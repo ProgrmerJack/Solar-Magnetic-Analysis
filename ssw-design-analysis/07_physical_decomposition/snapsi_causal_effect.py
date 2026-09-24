@@ -84,7 +84,8 @@ WIN = (8, 25)          # common post-onset window covered by every initialisatio
 REPORTED = [
     ("Karpechko-criterion AO contrast, observations", 1.782, 0.70),
     ("CMIP6 ensemble DW-NDW contrast", 1.143, 0.50),
-    ("ACP 26, 3723 (2026) published NAO contrast", 0.850, 0.59),
+    # Lu & Rao (2026, ACP 26, 3723) give ERA5 60-day NAO means by DW subtype: BOTH -0.762 (n=13), EA -0.567 (14), NA -0.435 (6); NDW +0.088 (19). All-DW mean -0.620, contrast -0.708, DW fraction 33/52 = 0.635. The -0.850 used until 2026-09-25 subtracted the BOTH subtype alone.
+    ("ACP 26, 3723 (2026) published NAO contrast", 0.708, 0.635),
     ("ERA5 1000 hPa NAM contrast, Karpechko criterion", 0.684, 0.54),
     ("ERA5 850 hPa NAM contrast, ACP criterion", 0.639, 0.59),
 ]

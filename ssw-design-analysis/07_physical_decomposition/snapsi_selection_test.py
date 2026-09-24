@@ -84,7 +84,8 @@ WINDOW = (8, 25)          # post-onset days, as in snapsi_causal_effect.py
 # see spans_window(). Averaging a partially-covering ensemble over the nominal
 # window computes a different quantity and reports it under the same name.
 REQUIRE_FULL_WINDOW = True
-PUBLISHED_CONTRAST = -0.850   # ACP 26, 3723 (2026), same criterion
+# Lu & Rao (2026, ACP 26, 3723) give ERA5 60-day NAO means by DW subtype: BOTH -0.762 (n=13), EA -0.567 (14), NA -0.435 (6); NDW +0.088 (19). All-DW mean -0.620, contrast -0.708, DW fraction 33/52 = 0.635. The -0.850 used until 2026-09-25 subtracted the BOTH subtype alone.
+PUBLISHED_CONTRAST = -0.708   # ACP 26, 3723 (2026), same criterion
 
 
 def load(centre, exp, init):
@@ -341,7 +342,7 @@ def main():
         "where both groups exist, which are the weaker-responding ones.")
     out["units_caveat"] = (
         "Contrasts here are standardised by the CONTROL ensemble's "
-        "member-to-member spread for a single event. The published -0.850 is "
+        "member-to-member spread for a single event. The published -0.708 is "
         "standardised by the BETWEEN-EVENT spread in observations. These are "
         "different yardsticks, so ratio_to_published indicates scale and is "
         "not an exact like-for-like fraction.")

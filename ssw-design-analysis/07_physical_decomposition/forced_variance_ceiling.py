@@ -120,7 +120,8 @@ REPORTED = [
     ("Karpechko-criterion AO, observations (this project)", 1.782, 0.70, "obs"),
     ("ERA5 1000 hPa NAM, Karpechko criterion (this project)", 0.684, 0.54, "obs"),
     ("ERA5 850 hPa NAM, ACP 26,3723 criterion (this project)", 0.639, 0.59, "obs"),
-    ("ACP 26, 3723 (2026) published NAO contrast", 0.850, 0.59, "obs"),
+    # Lu & Rao (2026, ACP 26, 3723) give ERA5 60-day NAO means by DW subtype: BOTH -0.762 (n=13), EA -0.567 (14), NA -0.435 (6); NDW +0.088 (19). All-DW mean -0.620, contrast -0.708, DW fraction 33/52 = 0.635. The -0.850 used until 2026-09-25 subtracted the BOTH subtype alone.
+    ("ACP 26, 3723 (2026) published NAO contrast", 0.708, 0.635, "obs"),
     ("CMIP6 ensemble DW-NDW (this project)", 1.143, 0.50, "cmip6"),
 ]
 
