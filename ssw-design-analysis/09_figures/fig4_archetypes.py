@@ -61,14 +61,16 @@ def main():
     ax.set_xlim(-7.5, 3)
     ax.text(-0.25, len(centres) - 0.35, "DW  ←", ha="right", fontsize=6)
     ax.text(0.25, len(centres) - 0.35, "→  NDW", ha="left", fontsize=6)
-    # Forced shift (K, S_sigma_pooled) and DW odds (O) AT THE PLOTTED
-    # INITIALISATIONS, averaged over the 8 models excluding ECCC -- the same
-    # basis as the paper's headline. The first draft quoted K's all-9
-    # S_sigma_per_init, where ECCC alone made Jan-2019 look like the larger shift.
+    # Forced shift and DW odds AT THE PLOTTED INITIALISATIONS, averaged over
+    # the 8 models excluding ECCC (the headline basis), and in the SAME units as
+    # the plotted members: O's nudged_mean_A, standardised by each ensemble's own
+    # control spread. Two earlier drafts got this wrong: the first quoted K's
+    # all-9 S_sigma_per_init (ECCC alone made Jan-2019 the larger shift), the
+    # second K's S_sigma_pooled, a different yardstick from the points plotted.
     for init in PAIR:
         e, col = EV[init], S.EVENT[EV[init]]
-        sh = -np.mean([r["S_sigma_pooled"] for r in k["per_case"]
-                       if r["init"] == init and r["centre"] != "ECCC"])   # NAM sign
+        sh = np.mean([r["nudged_mean_A"] for r in o["per_ensemble"]
+                      if r["init"] == init and r["centre"] != "ECCC"])
         dw = np.mean([r["nudged_DW_rate"] for r in o["per_ensemble"]
                       if r["init"] == init and r["centre"] != "ECCC"])
         ax.scatter([], [], s=12, marker="D", facecolor=col, edgecolor="k",

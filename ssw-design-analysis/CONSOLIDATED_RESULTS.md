@@ -231,7 +231,8 @@ is excluded and the claim must always carry that bound.
 > I and J. The verdict is unchanged.
 
 **"About two thirds propagate downward" is what one shifted population produces:**
-observed pass rate 69.2%; unshifted pseudo-events 30.9%; pseudo-events displaced by
+observed pass rate on the criterion's surface conditions (1–2) 69.2% (53.8% with
+all three conditions; 39 events in ERA5 coverage); unshifted pseudo-events 30.9%; pseudo-events displaced by
 the measured −0.639 σ **74.4% [61.5, 87.2]**.
 
 ### I — forced variance (`FINDING_forced_variance_ceiling.md`)
