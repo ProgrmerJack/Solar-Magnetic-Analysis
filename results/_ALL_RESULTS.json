@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-24T23:01:21+00:00",
+ "generated": "2026-09-24T23:08:46+00:00",
  "generator": "tools/catalog_repo.py",
  "note": "Every ssw-design-analysis result in one file. The per-script JSONs remain on disk as write-side provenance; this is the read path. Regenerate with tools/catalog_repo.py.",
  "results": {
@@ -6772,13 +6772,13 @@
     "CMIP6_ensemble": {
      "n": 1888,
      "dip": 0.24682,
-     "dip_p": 0.846,
+     "dip_p": 0.888,
      "bic_gap": -13.486,
-     "bic_gap_pseudo_median": -11.071,
-     "bic_gap_p": 0.865,
-     "shift": -0.5114,
-     "ks": 0.0255,
-     "ks_p": 0.19065009236520214,
+     "bic_gap_pseudo_median": -11.232,
+     "bic_gap_p": 0.835,
+     "shift": -0.5141,
+     "ks": 0.0233,
+     "ks_p": 0.2789064588870507,
      "mean": -0.5096,
      "sd": 0.7202,
      "skew": -0.2219,
@@ -6790,12 +6790,12 @@
    "power_CMIP6": {
     "d=0.25": 0.0,
     "d=0.5": 0.0,
-    "d=0.75": 0.01,
-    "d=1.0": 0.86,
+    "d=0.75": 0.04,
+    "d=1.0": 0.95,
     "d=1.5": 1.0,
     "min_detectable_separation_80pct": 1.0
    },
-   "verdict": "NO CLASS in CMIP6_ensemble (n=1888): the per-event surface response is unimodal (dip p=0.8460), one Gaussian component suffices (BIC-gap p=0.8650), and the whole distribution is a pure SHIFT of -0.511 sigma of the ordinary winter distribution (KS p=0.1907). 'Downward propagation' is a threshold on a continuum, not a population."
+   "verdict": "NO CLASS in CMIP6_ensemble (n=1888): the per-event surface response is unimodal (dip p=0.8880), one Gaussian component suffices (BIC-gap p=0.8350), and the whole distribution is a pure SHIFT of -0.514 sigma of the ordinary winter distribution (KS p=0.2789). 'Downward propagation' is a threshold on a continuum, not a population."
   },
   "predictability_ceiling.json": {
    "outcome_window": [

@@ -215,14 +215,20 @@ the naive estimate, so 53.9% is a **lower bound**.
 
 | test | observations (n=43) | CMIP6 (n=1888) |
 |---|---|---|
-| dip, pseudo-calibrated | p = 0.964 | p = 0.846 |
-| BIC k=1 vs k=2 | p = 0.140 | p = 0.865 |
-| pure-shift KS | p = 0.326 | p = 0.191 |
-| implied shift | −0.892 σ | −0.511 σ |
+| dip, pseudo-calibrated | p = 0.964 | p = 0.888 |
+| BIC k=1 vs k=2 | p = 0.140 | p = 0.835 |
+| pure-shift KS | p = 0.326 | p = 0.279 |
+| implied shift | −0.892 σ | −0.514 σ |
 
 Power at n=1888, mixing fraction 2/3, total variance held fixed: **0.00** at 0.25σ
-and 0.50σ, 0.01 at 0.75σ, **0.86 at 1.00σ**, 1.00 at 1.50σ. Nothing below ~0.75σ
+and 0.50σ, 0.04 at 0.75σ, **0.95 at 1.00σ**, 1.00 at 1.50σ. Nothing below ~1σ
 is excluded and the claim must always carry that bound.
+
+> **Re-run 2026-09-25 in the pinned environment:** the CMIP6 column moved (dip
+> 0.846 → 0.888, BIC 0.865 → 0.835, KS 0.191 → 0.279, shift −0.511 → −0.514; power
+> at 0.75σ 0.01 → 0.04, at 1.0σ 0.86 → 0.95); the observational column did not.
+> Deterministic now (two runs identical); same pre-pin environment signature as
+> I and J. The verdict is unchanged.
 
 **"About two thirds propagate downward" is what one shifted population produces:**
 observed pass rate 69.2%; unshifted pseudo-events 30.9%; pseudo-events displaced by
