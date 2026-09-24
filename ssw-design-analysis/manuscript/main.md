@@ -301,32 +301,48 @@ several that would have changed a result, are logged in the repository.
 
 ---
 
-## References (verified from source)
+## References (verified from source; metadata from Crossref)
 
 1. Sigmond, M., Scinocca, J. F., Kharin, V. V. & Shepherd, T. G. Enhanced seasonal
    forecast skill following stratospheric sudden warmings. *Nat. Geosci.* **6**,
-   98–102 (2013).
-2. Karpechko, A. Yu. et al. *Q. J. R. Meteorol. Soc.* **143**, 1459 (2017).
+   98–102 (2013). doi:10.1038/ngeo1698
+2. Karpechko, A. Y., Hitchcock, P., Peters, D. H. W. & Schneidereit, A.
+   Predictability of downward propagation of major sudden stratospheric warmings.
+   *Q. J. R. Meteorol. Soc.* **143**, 1459–1470 (2017). doi:10.1002/qj.3017
 3. Baldwin, M. P. et al. Sudden stratospheric warmings. *Rev. Geophys.* **59**,
-   e2020RG000708 (2021).
-4. Rao, J., Garfinkel, C. I. & White, I. P. *J. Geophys. Res. Atmos.* **125**,
-   e2019JD031919 (2020).
+   e2020RG000708 (2021). doi:10.1029/2020RG000708
+4. Rao, J., Garfinkel, C. I. & White, I. P. Predicting the downward and surface
+   influence of the February 2018 and January 2019 sudden stratospheric warming
+   events in subseasonal to seasonal (S2S) models. *J. Geophys. Res. Atmos.*
+   **125**, e2019JD031919 (2020). doi:10.1029/2019JD031919
 5. Nebel, D. M., Garfinkel, C. I., Cohen, J., Domeisen, D. I. V., Rao, J. &
-   Schwartz, C. *Geophys. Res. Lett.* **51**, e2024GL110529 (2024).
-6. Loeffel, S. et al. *Weather Clim. Dynam.* **7**, 895–913 (2026).
-7. White, I. et al. *J. Climate* **32**, 85 (2019).
+   Schwartz, C. The predictability of the downward versus non-downward
+   propagation of sudden stratospheric warmings in S2S hindcasts. *Geophys. Res.
+   Lett.* **51**, e2024GL110529 (2024). doi:10.1029/2024GL110529
+6. Loeffel, S., Rupp, P., Kiefer, S., Pinto, J. G., Birner, T. & Garny, H.
+   Quantifying the tropospheric response to individual sudden stratospheric
+   warmings revealed by an ensemble simulation strategy. *Weather Clim. Dynam.*
+   **7**, 895–913 (2026). doi:10.5194/wcd-7-895-2026
+7. White, I., Garfinkel, C. I., Gerber, E. P., Jucker, M., Aquila, V. & Oman, L. D.
+   The downward influence of sudden stratospheric warmings: association with
+   tropospheric precursors. *J. Clim.* **32**, 85–108 (2019).
+   doi:10.1175/JCLI-D-18-0053.1
 8. Hitchcock, P. et al. Stratospheric Nudging And Predictable Surface Impacts
-   (SNAPSI). *Geosci. Model Dev.* **15**, 5073–5092 (2022).
+   (SNAPSI): a protocol for investigating the role of stratospheric polar vortex
+   disturbances in subseasonal to seasonal forecasts. *Geosci. Model Dev.* **15**,
+   5073–5092 (2022). doi:10.5194/gmd-15-5073-2022
 9. Coughlin, K. & Gray, L. J. A continuum of sudden stratospheric warmings.
-   *J. Atmos. Sci.* **66**, 531 (2009).
-10. Maury, P. et al. *J. Geophys. Res. Atmos.* (2016), doi:10.1002/2015JD024226.
-11. Lu, R. & Rao, J. Sorting sudden stratospheric warmings with the
-    downward tropospheric influence using ERA5 and CESM2-WACCM. *Atmos. Chem.
-    Phys.* **26**, 3723–3742 (2026).
+   *J. Atmos. Sci.* **66**, 531–540 (2009). doi:10.1175/2008JAS2792.1
+10. Maury, P., Claud, C., Manzini, E., Hauchecorne, A. & Keckhut, P. Characteristics
+    of stratospheric warming events during Northern winter. *J. Geophys. Res.
+    Atmos.* **121**, 5368–5380 (2016). doi:10.1002/2015JD024226
+11. Lu, R. & Rao, J. Sorting sudden stratospheric warmings with the downward
+    tropospheric influence using ERA5 and CESM2-WACCM. *Atmos. Chem. Phys.* **26**,
+    3723–3742 (2026). doi:10.5194/acp-26-3723-2026
 
-*To complete before submission: full titles and author lists for refs 2, 4–7, 10,
-11 from the publishers' records; Nebel et al. 2024 read in full (only the
-abstract has been read; the text cites only what the abstract states).*
+*Before submission: convert author–year citations to Nature numbering; read
+Nebel et al. (2024) in full — only its abstract has been read, and the text
+cites only what the abstract states.*
 
 ---
 
