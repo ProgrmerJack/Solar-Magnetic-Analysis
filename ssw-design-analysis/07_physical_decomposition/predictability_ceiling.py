@@ -137,8 +137,13 @@ def cv_r2(X, y, groups, model="ridge", n_splits=5, seed=SEED):
                 min_samples_leaf=20, random_state=seed)
         m.fit(X[tr], y[tr])
         pred[te] = m.predict(X[te])
-    # R^2 against the TRAINING-MEAN baseline is the honest denominator: a model
-    # that learns nothing must score 0, not something flattering.
+    # Pooled out-of-sample R^2: the out-of-fold predictions against the mean of
+    # all y (the usual cross-validated R^2, as sklearn's r2_score on
+    # cross_val_predict output). This baseline scores a no-skill model slightly
+    # BELOW 0 at small n (about -0.05 at n=42, 5 folds), because each fold's
+    # mean differs from the pooled one; a training-fold-mean baseline would
+    # score it 0. The audit of 2026-09-25 found that choice moves the
+    # observational arm from -0.126 to -0.022; neither is positive.
     ss_res = np.nansum((y - pred) ** 2)
     ss_tot = np.nansum((y - y.mean()) ** 2)
     return float(1 - ss_res / ss_tot)
@@ -186,19 +191,45 @@ def power_curve(X, y, groups, rng, model="ridge", reps=40):
     return out
 
 
-def implied_r2(contrast, q, sd=1.0):
-    """R^2 a binary split with this contrast implies, if it were a real predictor.
+def implied_r2(Y, lab):
+    """R^2 a binary split implies, if it were a real predictor: q(1-q)C^2/Var0(Y).
 
     Between-group variance for a split at fraction q with mean difference C is
-    q(1-q)C^2; dividing by total variance gives the share of between-event
-    variance that split claims to explain.
+    q(1-q)C^2; dividing by the total variance of the SAME outcome gives the share
+    of between-event variance the split claims to explain (eta^2). q, C and the
+    variance all come from Y and lab, so the denominator is matched by
+    construction. The earlier version took contrasts and fractions typed in from
+    other scripts and divided them by a hard-coded observational AO variance,
+    which was the wrong denominator for the ERA5 NAM rows (methods audit
+    2026-09-25).
     """
-    return float(q * (1 - q) * contrast ** 2 / sd ** 2)
+    Y = np.asarray(Y, float)
+    lab = np.asarray(lab, float)
+    ok = np.isfinite(Y) & np.isfinite(lab)
+    y, g = Y[ok], lab[ok].astype(bool)
+    q = g.mean()
+    c = y[g].mean() - y[~g].mean()
+    return float(q * (1 - q) * c ** 2 / y.var()), float(q), float(c), int(ok.sum())
+
+
+def karpechko_surface(z, onsets, win=OUT_WIN, need=20):
+    """Karpechko et al. (2017) conditions 1 and 2 on a daily surface anomaly:
+    mean over days +8..+52 negative AND more than half of those days negative.
+    Condition 3 (150 hPa NAM) cannot be applied: this CMIP6 archive holds
+    zonal-mean u and psl only. Events with fewer than `need` days are NaN
+    (excluded), not NDW."""
+    out = []
+    for o in pd.DatetimeIndex(onsets):
+        a = z[(z.index >= o + pd.Timedelta(days=win[0]))
+              & (z.index <= o + pd.Timedelta(days=win[1]))].dropna()
+        out.append(float(a.mean() < 0 and (a < 0).mean() > 0.5)
+                   if len(a) >= need else np.nan)
+    return np.array(out)
 
 
 def build_cmip6():
     """Per-event target and predictors from the zonal-mean CMIP6 archive."""
-    rows, Ys, groups = [], [], []
+    rows, Ys, groups, labs = [], [], [], []
     for f in sorted(RAW.glob("*_zm.nc")):
         try:
             m = EP.load_member(f)
@@ -207,13 +238,14 @@ def build_cmip6():
         m2 = m[np.isin(m.index.month, SEASON)].dropna()
         if len(m2) < 2000:
             continue
-        on = EP.detect_ssw(m2["u10"].values, m2.index)
+        on = EP.detect_ssw(m["u10"].values, m.index)   # full daily series: CP07 needs contiguous days
         if len(on) < 15:
             continue
         am = m2["am"]
         msk = C6.influence_mask(am.index, on)
         cl = am[~msk].groupby(am[~msk].index.dayofyear).mean()
         Y = C6.anom(am, on, cl, OUT_WIN)
+        labs.append(karpechko_surface(am - cl.reindex(am.index.dayofyear).values, on))
 
         # raw fields for predictors
         ds = xr.open_dataset(f)
@@ -249,9 +281,9 @@ def build_cmip6():
         Ys.append(Y)
         groups.append(np.full(len(Y), f.stem))
     if not rows:
-        return None, None, None
+        return None, None, None, None
     X = pd.concat(rows, ignore_index=True)
-    return X, np.concatenate(Ys), np.concatenate(groups)
+    return X, np.concatenate(Ys), np.concatenate(groups), np.concatenate(labs)
 
 
 def _wm(series, onsets, win):
@@ -300,42 +332,33 @@ def main():
     res = {"outcome_window": list(OUT_WIN), "results": {}}
 
     print("building CMIP6 event table ...")
-    Xc, yc, gc = build_cmip6()
+    Xc, yc, gc, lc = build_cmip6()
     if Xc is not None:
         run("CMIP6", Xc, yc, gc, rng, res["results"])
         print("\n  POWER (P2 features, ridge):")
         cols = tier_cols(Xc.columns, 2) + ["doy_sin", "doy_cos"]
         res["power_CMIP6"] = power_curve(Xc[cols].values, yc, gc, rng)
 
-        # Implied R^2 must use the variance of the SAME system the contrast was
-        # measured in. An earlier version divided observational contrasts by the
-        # CMIP6 sd, which inflated the Karpechko AO figure to R^2 = 1.285 -- an
-        # impossible value, and the giveaway that the denominator was wrong.
-        sd_c = float(np.nanstd(yc, ddof=1))
-        var_c = sd_c ** 2
-        var_o = 1.1167          # Var(Y|SSW) observations, forced_variance_ceiling
-        print(f"\n  implied R^2 of published splits "
-              f"(Var CMIP6 = {var_c:.3f}, Var obs = {var_o:.3f}):")
-        res["implied"] = {}
+        # Implied R^2 of the published criterion, applied in CMIP6 with the
+        # variance of the same outcome. The observational rows (Karpechko AO,
+        # ERA5 1000 and 850 hPa NAM) are computed, matched in the same way, by
+        # recompute_published_criterion.py and era5_recompute_and_two_thirds.py;
+        # Fig. 3d reads them there. The median split used here before gave
+        # 2/pi ~ 0.64 by construction and the published ACP row divided an NAO
+        # contrast by an AO variance; both are dropped (methods audit 2026-09-25).
         r1 = res["results"]["CMIP6"]["P1 pre-onset"]["ridge"]["cv_r2"]
-        for lab, c, q, var in (("CMIP6 DW-NDW contrast", 1.143, 0.50, var_c),
-                               ("Karpechko AO, observations", 1.782, 0.70, var_o),
-                               ("ERA5 1000 hPa NAM, Karpechko", 0.684, 0.54, var_o),
-                               ("ERA5 850 hPa NAM, ACP", 0.639, 0.59, var_o),
-                               # Lu & Rao (2026, ACP 26, 3723) give ERA5 60-day NAO means by DW subtype: BOTH -0.762 (n=13), EA -0.567 (14), NA -0.435 (6); NDW +0.088 (19). All-DW mean -0.620, contrast -0.708, DW fraction 33/52 = 0.635. The -0.850 used until 2026-09-25 subtracted the BOTH subtype alone. Their NAO index is not the AO
-                               # whose variance var_o is: unmatched denominator,
-                               # so this row is for scale only.
-                               ("ACP 26,3723 published NAO (unmatched index)", 0.708, 0.635, var_o)):
-            v = q * (1 - q) * c ** 2 / var
-            res["implied"][lab] = {"implied_r2": round(float(v), 4),
-                                   "over_achievable": round(float(v / r1), 2)}
-            print(f"    {lab:<32s} implies R^2 = {v:.3f}   "
-                  f"({v / r1:.1f}x the {r1:.3f} achievable out of sample)")
-        print("\n  NOT every published contrast is an overclaim on this metric: the")
-        print("  two ERA5 contrasts imply R^2 ~ 0.09-0.10, essentially equal to the")
-        print("  genuine predictable variance. The large ones (CMIP6 DW-NDW, and the")
-        print("  observational AO) imply ~0.60, which exceeds even the post-onset")
-        print("  diagnostic value and is ~6x what can be predicted in advance.")
+        v, q, c, n = implied_r2(yc, lc)
+        res["implied"] = {"CMIP6 Karpechko conditions 1-2": {
+            "implied_r2": round(v, 4), "rate_DW": round(q, 3),
+            "contrast": round(c, 4), "n_events": n,
+            "n_excluded_short_window": int(np.isfinite(yc).sum() - n),
+            "var_outcome": round(float(np.var(yc[np.isfinite(yc) & np.isfinite(lc)])), 4),
+            "criterion": "Karpechko 2017 conditions 1-2 on the daily annular-mode "
+                         "anomaly over days +8..+52; condition 3 not available",
+            "over_achievable": round(float(v / r1), 2) if r1 > 0 else None}}
+        print(f"\n  CMIP6, Karpechko conditions 1-2: DW fraction {q:.3f}, "
+              f"contrast {c:+.3f}, implied R^2 = {v:.3f} (n={n})"
+              f"   pre-onset CV R^2 = {r1:+.3f}")
 
     (RESULTS / "predictability_ceiling.json").write_text(json.dumps(res, indent=2),
                                                       encoding="utf8")

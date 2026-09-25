@@ -5,142 +5,142 @@
   ],
   "models": {
     "BCC-ESM1": {
-      "between": -0.3789,
-      "within": -0.2715,
-      "R": 0.7167,
+      "between": -0.3397,
+      "within": -0.2045,
+      "R": 0.6019,
       "R_CI95": [
-        0.15,
-        0.987
+        -0.166,
+        0.935
       ],
-      "n_events": 64,
+      "n_events": 58,
       "n_members": 1,
-      "ssw_per_winter": 0.392,
+      "ssw_per_winter": 0.355,
       "n_winters": 166,
       "rate_plausible": true
     },
     "CESM2-FV2": {
-      "between": -0.7563,
-      "within": -0.6294,
-      "R": 0.8322,
+      "between": -0.7742,
+      "within": -0.6239,
+      "R": 0.8058,
       "R_CI95": [
-        0.686,
-        0.986
+        0.656,
+        0.952
       ],
-      "n_events": 93,
+      "n_events": 75,
       "n_members": 1,
-      "ssw_per_winter": 0.566,
+      "ssw_per_winter": 0.458,
       "n_winters": 166,
       "rate_plausible": true
     },
     "CanESM5": {
-      "between": -0.7155,
-      "within": -0.5904,
-      "R": 0.8252,
+      "between": -0.6564,
+      "within": -0.5637,
+      "R": 0.8587,
       "R_CI95": [
-        0.759,
-        0.886
+        0.798,
+        0.934
       ],
-      "n_events": 846,
+      "n_events": 675,
       "n_members": 10,
-      "ssw_per_winter": 0.516,
+      "ssw_per_winter": 0.411,
       "n_winters": 1660,
       "rate_plausible": true
     },
     "GFDL-CM4": {
-      "between": -0.2439,
-      "within": -0.0894,
-      "R": 0.3664,
+      "between": -0.2319,
+      "within": -0.0903,
+      "R": 0.3894,
       "R_CI95": [
-        -0.779,
-        0.967
+        -1.004,
+        1.026
       ],
-      "n_events": 70,
+      "n_events": 64,
       "n_members": 1,
-      "ssw_per_winter": 0.422,
+      "ssw_per_winter": 0.386,
       "n_winters": 166,
       "rate_plausible": true
     },
     "INM-CM5-0": {
-      "between": -0.4365,
-      "within": -0.3494,
-      "R": 0.8006,
+      "between": -0.3805,
+      "within": -0.2695,
+      "R": 0.7082,
       "R_CI95": [
-        0.494,
-        1.042
+        0.305,
+        0.971
       ],
-      "n_events": 123,
+      "n_events": 97,
       "n_members": 1,
-      "ssw_per_winter": 0.741,
+      "ssw_per_winter": 0.584,
       "n_winters": 166,
       "rate_plausible": true
     },
     "IPSL-CM5A2-INCA": {
-      "between": -0.8186,
-      "within": -0.7278,
-      "R": 0.8891,
+      "between": -0.7081,
+      "within": -0.569,
+      "R": 0.8036,
       "R_CI95": [
-        0.708,
-        1.033
+        0.576,
+        0.987
       ],
-      "n_events": 100,
+      "n_events": 82,
       "n_members": 1,
-      "ssw_per_winter": 0.614,
+      "ssw_per_winter": 0.5,
       "n_winters": 166,
       "rate_plausible": true
     },
     "MIROC6": {
-      "between": -0.1379,
-      "within": -0.0438,
-      "R": 0.318,
+      "between": -0.1363,
+      "within": -0.0429,
+      "R": 0.3146,
       "R_CI95": [
-        -4.395,
-        1.028
+        -4.186,
+        1.712
       ],
-      "n_events": 189,
+      "n_events": 150,
       "n_members": 2,
-      "ssw_per_winter": 0.578,
+      "ssw_per_winter": 0.458,
       "n_winters": 332,
       "rate_plausible": true
     },
     "MPI-ESM-1-2-HAM": {
-      "between": -0.5461,
-      "within": -0.5484,
-      "R": 1.0043,
+      "between": -0.4371,
+      "within": -0.4324,
+      "R": 0.9891,
       "R_CI95": [
-        0.808,
-        1.205
+        0.737,
+        1.261
       ],
-      "n_events": 137,
+      "n_events": 108,
       "n_members": 1,
-      "ssw_per_winter": 0.831,
+      "ssw_per_winter": 0.657,
       "n_winters": 166,
       "rate_plausible": true
     },
     "MPI-ESM1-2-LR": {
-      "between": -0.4442,
-      "within": -0.393,
-      "R": 0.8847,
+      "between": -0.4098,
+      "within": -0.358,
+      "R": 0.8736,
       "R_CI95": [
-        0.66,
-        1.122
+        0.571,
+        1.127
       ],
-      "n_events": 187,
+      "n_events": 140,
       "n_members": 1,
-      "ssw_per_winter": 1.133,
+      "ssw_per_winter": 0.849,
       "n_winters": 166,
       "rate_plausible": true
     },
     "NorESM2-LM": {
-      "between": 0.0719,
-      "within": -0.0539,
-      "R": -0.7491,
+      "between": 0.1062,
+      "within": -0.0096,
+      "R": -0.0905,
       "R_CI95": [
-        -9.926,
-        13.826
+        -10.976,
+        6.135
       ],
-      "n_events": 59,
+      "n_events": 52,
       "n_members": 1,
-      "ssw_per_winter": 0.909,
+      "ssw_per_winter": 0.803,
       "n_winters": 66,
       "rate_plausible": true
     }
@@ -160,17 +160,17 @@
   },
   "headline": {
     "n_models": 8,
-    "corr_composite_R": -0.6342,
-    "p": 0.09123943276080623,
+    "corr_composite_R": -0.5607,
+    "p": 0.14823594185463698,
     "R_range": [
-      0.366,
-      1.004
+      0.389,
+      0.989
     ],
     "composite_range": [
-      -0.819,
-      -0.244
+      -0.774,
+      -0.232
     ],
-    "n_near_observed_composite": 2,
+    "n_near_observed_composite": 1,
     "R_range_among_near": null
   }
 }

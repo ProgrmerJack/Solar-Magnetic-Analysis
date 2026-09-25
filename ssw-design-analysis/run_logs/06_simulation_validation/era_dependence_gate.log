@@ -36,38 +36,38 @@ events with full predictor coverage: 42 (1960-01-17 .. 2024-03-04)
 === T2  BETA STABILITY (refitted per era on event-free draws) ===
 stratifier               beta 58-78             beta 79-24  verdict
 --------------------------------------------------------------------
-vT_pre30      -1.167 [-1.313,-1.011]  -0.565 [-0.672,-0.466]  DIFFER
-vT_pre15      -0.515 [-0.608,-0.421]  -0.339 [-0.417,-0.271]  DIFFER
-u10_pre       -0.012 [-0.073,+0.054]  -0.006 [-0.063,+0.055]  ok
-u10_post30    +0.619 [+0.565,+0.674]  +0.554 [+0.510,+0.598]  ok
-u10_post45    +0.642 [+0.578,+0.701]  +0.602 [+0.552,+0.654]  ok
-z100_post     +0.688 [+0.646,+0.728]  +0.646 [+0.603,+0.689]  ok
-AO_post       +1.873 [+1.861,+1.886]  +1.790 [+1.774,+1.804]  DIFFER
+vT_pre30      -1.001 [-1.128,-0.886]  -0.551 [-0.644,-0.449]  DIFFER
+vT_pre15      -0.397 [-0.478,-0.311]  -0.388 [-0.459,-0.316]  ok
+u10_pre       +0.040 [-0.016,+0.094]  -0.093 [-0.143,-0.038]  DIFFER
+u10_post30    +0.498 [+0.452,+0.551]  +0.577 [+0.535,+0.624]  ok
+u10_post45    +0.502 [+0.445,+0.549]  +0.631 [+0.577,+0.683]  DIFFER
+z100_post     +0.574 [+0.531,+0.619]  +0.645 [+0.603,+0.687]  ok
+AO_post       +1.875 [+1.862,+1.886]  +1.773 [+1.757,+1.788]  DIFFER
 
 === T3  RESIDUAL AGREEMENT AT EVENTS (n=12 vs 30; LOW POWER) ===
 stratifier    resid pre  resid post  difference       95% CI of diff
 ----------------------------------------------------------------------
-vT_pre30         +1.108      +0.075      +1.033 [ -0.848, +1.947]
-vT_pre15         +0.653      +0.388      +0.265 [ -1.087, +1.665]
-u10_pre          +1.329      -0.498      +1.827 [ +0.542, +2.699]
-u10_post30       -0.251      -0.137      -0.114 [ -1.032, +1.625]
-u10_post45       -0.115      +0.151      -0.265 [ -1.295, +1.129]
-z100_post        +0.060      +0.279      -0.219 [ -1.273, +1.100]
-AO_post          +0.105      +0.052      +0.053 [ -0.369, +0.257]
+vT_pre30         +1.006      +0.065      +0.941 [ -0.791, +1.815]
+vT_pre15         +0.551      +0.424      +0.127 [ -1.328, +1.592]
+u10_pre          +1.278      -0.442      +1.720 [ +0.433, +2.627]
+u10_post30       -0.132      -0.155      +0.023 [ -1.084, +1.637]
+u10_post45       -0.011      +0.135      -0.146 [ -1.387, +1.259]
+z100_post        +0.158      +0.289      -0.131 [ -1.334, +1.190]
+AO_post          +0.097      +0.070      +0.027 [ -0.377, +0.247]
 
 === VERDICT ===
-  POOLING REFUSED. T1 passed, T2 4/7 betas agree. The observational arm stays at n=30 (1979 onward) and the pre-satellite extension is reported only as a sensitivity test, with the failing diagnostic stated.
+  POOLING REFUSED. T1 passed, T2 3/7 betas agree. The observational arm stays at n=30 (1979 onward) and the pre-satellite extension is reported only as a sensitivity test, with the failing diagnostic stated.
 
 === POST-HOC: PER-STRATIFIER POOLING, WITH CONSEQUENCE ===
 stratifier      dbeta   dS_pre   dResid  resid CI hw   ratio  pool?
 ----------------------------------------------------------------------------
-vT_pre30       -0.602   +0.478   -0.288        1.397    0.21  YES
-vT_pre15       -0.176   +0.804   -0.142        1.376    0.10  YES
-u10_pre        -0.007   +0.691   -0.005        1.079    0.00  no
-u10_post30     +0.065   +1.012   +0.065        1.329    0.05  YES
-u10_post45     +0.040   +0.763   +0.031        1.212    0.03  YES
-z100_post      +0.042   +0.835   +0.035        1.187    0.03  YES
-AO_post        +0.083   +0.753   +0.063        0.313    0.20  YES
+vT_pre30       -0.450   +0.478   -0.215        1.303    0.17  YES
+vT_pre15       -0.009   +0.804   -0.007        1.460    0.00  YES
+u10_pre        +0.132   +0.691   +0.092        1.097    0.08  no
+u10_post30     -0.079   +1.012   -0.080        1.361    0.06  YES
+u10_post45     -0.129   +0.763   -0.099        1.323    0.07  YES
+z100_post      -0.072   +0.835   -0.060        1.262    0.05  YES
+AO_post        +0.102   +0.753   +0.077        0.312    0.25  YES
 
   poolable per-stratifier: ['vT_pre30', 'vT_pre15', 'u10_post30', 'u10_post45', 'z100_post', 'AO_post']
 

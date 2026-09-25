@@ -98,6 +98,26 @@ def real_influence_mask(index, real_onsets):
     return m
 
 
+def zone_free_index(index, real_onsets):
+    """Candidate pseudo-onset days whose OWN influence zone overlaps no real
+    event's zone: |d - o| > INFLUENCE[1] - INFLUENCE[0] for every real onset o.
+
+    Cleaning only the onset day (the previous practice) still let a pseudo-
+    event's predictor, placebo and outcome windows run into a real SSW's
+    response -- 6.3% of CMIP6 and 4.3% of ERA5 pseudo outcome windows, found by
+    the methods audit 2026-09-25 -- which makes the null resemble real events and
+    biases "event-specific" toward zero. A pseudo-event now gets the same
+    exclusion zone a real one does; in practice it comes from an SSW-free winter.
+    """
+    dd = pd.DatetimeIndex(index).values.astype("datetime64[D]")
+    ok = np.ones(len(dd), bool)
+    sep = INFLUENCE[1] - INFLUENCE[0]
+    for o in real_onsets:
+        lag = (dd - np.datetime64(pd.Timestamp(o), "D")).astype(int)
+        ok &= np.abs(lag) > sep
+    return pd.DatetimeIndex(index)[ok]
+
+
 def build_by_doy(clean_index):
     """Day-of-year -> candidate days. Built ONCE; see draw_clean."""
     by_doy = {}

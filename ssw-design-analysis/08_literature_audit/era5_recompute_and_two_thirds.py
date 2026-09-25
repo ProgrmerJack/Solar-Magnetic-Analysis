@@ -66,13 +66,27 @@ import selection_on_outcome as SO                   # noqa: E402
 
 ERA5 = ROOT / "ssw-design-analysis" / "03_data_ingestion" / "era5_nam_daily.parquet"
 SEL_WIN = (8, 52)
-OUT_WIN = (1, 60)
 N_NULL = 2000
 SEED = 20260801
 # Lu & Rao (2026, ACP 26, 3723) give ERA5 60-day NAO means by DW subtype: BOTH -0.762 (n=13), EA -0.567 (14), NA -0.435 (6); NDW +0.088 (19). All-DW mean -0.620, contrast -0.708, DW fraction 33/52 = 0.635. The -0.850 used until 2026-09-25 subtracted the BOTH subtype alone.
 PUBLISHED = {"ACP_2026_NAO_DW": -0.620, "ACP_2026_NAO_NDW": 0.088,
              "ACP_2026_contrast": -0.708,
              "Baldwin_2021_fraction": "about two thirds"}
+
+
+def eta2(Y, lab):
+    """Share of Var(Y) explained by the two-class label: q(1-q)*C^2 / Var0(Y),
+    with q, the contrast C and the variance all from the SAME events, so the
+    denominator is matched by construction (the implied-R^2 table used to divide
+    ERA5-NAM contrasts by the CPC-AO variance; methods audit 2026-09-25)."""
+    Y = np.asarray(Y, float); lab = np.asarray(lab, bool)
+    ok = np.isfinite(Y)
+    y, l = Y[ok], lab[ok]
+    if l.all() or (~l).all():
+        return None
+    q = l.mean()
+    c = y[l].mean() - y[~l].mean()
+    return float(q * (1 - q) * c ** 2 / y.var())
 
 
 def win_days(series, o, win):
@@ -103,19 +117,21 @@ def main():
         e.index = e.index.tz_convert("UTC").tz_localize(None)
     print(f"ERA5 NAM {e.index.min().date()} .. {e.index.max().date()} ({len(e):,} d)")
 
-    real = load_catalogue("primary")
-    real = real[(real >= e.index.min() + pd.Timedelta(days=70))
-                & (real <= e.index.max() - pd.Timedelta(days=70))]
+    allev = load_catalogue("primary")   # EXCLUSION set: every event, even ones not scored here
+    real = allev[(allev >= e.index.min() + pd.Timedelta(days=70))
+                 & (allev <= e.index.max() - pd.Timedelta(days=70))]
     print(f"events inside ERA5 coverage: {len(real)}")
 
-    mask = G.real_influence_mask(e.index, real)
-    clean_idx = e[~mask].index
+    # exclude every catalogued event (2023-02-16 is outside the scored set but
+    # its zone reaches back into the record)
+    mask = G.real_influence_mask(e.index, allev)
+    clean_idx = G.zone_free_index(e.index, allev)
     doys = np.array([t.dayofyear for t in pd.DatetimeIndex(real)])
     clim = {c: e[c][~mask].groupby(e[c][~mask].index.dayofyear).mean()
             for c in ("nam_1000", "nam_850")}
 
     res = {"published": PUBLISHED, "n_events": int(len(real)),
-           "selection_window": list(SEL_WIN), "outcome_window": list(OUT_WIN),
+           "selection_window": list(SEL_WIN), "outcome_window": list(SO.WIN),
            "variants": {}}
 
     for name, selcol in (("Karpechko_1000hPa", "nam_1000"),
@@ -159,6 +175,8 @@ def main():
             "rate_DW_null": round(float(np.mean(rates)), 3),
             "DW_composite": round(dw, 4), "NDW_composite": round(ndw, 4),
             "contrast": round(dY, 4), "dS": round(dS, 4),
+            "implied_r2_eta2": round(eta2(Y[ok], lab[ok]), 4),
+            "var_outcome": round(float(np.var(Y[ok])), 4),
             "beta": round(beta, 4),
             "selection_term": round(float(beta * dS), 4),
             "residual": round(float(resid), 4), "p_residual": p,

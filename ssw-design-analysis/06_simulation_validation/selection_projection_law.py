@@ -87,7 +87,8 @@ def main():
     outcomes.update(SN.load_snotel())
     names = list(outcomes)
 
-    real = load_catalogue("primary")
+    allev = load_catalogue("primary")   # EXCLUSION set: every event, even ones not scored here
+    real = allev
     # common window: every outcome must cover it
     lo = max(max(v.index.min() for v in outcomes.values()), ao.index.min())
     hi = min(min(v.index.max() for v in outcomes.values()), ao.index.max())
@@ -97,7 +98,7 @@ def main():
     # clean climatologies and the clean-data correlation with the selection variable
     clims, clean_series = {}, {}
     for k, v in outcomes.items():
-        cv = v[~G.real_influence_mask(v.index, real)]
+        cv = v[~G.real_influence_mask(v.index, allev)]   # every catalogued event
         clims[k] = cv.groupby(cv.index.dayofyear).mean()
         clean_series[k] = cv
     ao_clean = clean_series["ao"]
@@ -110,7 +111,7 @@ def main():
     rate = float(lab.mean())
     print(f"dSSW {int(lab.sum())}/{len(real)} ({100 * rate:.0f}%)\n")
 
-    clean_idx = ao[~G.real_influence_mask(ao.index, real)].index
+    clean_idx = G.zone_free_index(ao.index, allev)
     clean_idx = clean_idx[(clean_idx >= lo) & (clean_idx <= hi)]
     doys = np.array([t.dayofyear for t in pd.DatetimeIndex(real)])
     rng = np.random.default_rng(20260731)

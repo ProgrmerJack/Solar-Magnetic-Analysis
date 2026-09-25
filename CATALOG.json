@@ -1,10 +1,10 @@
 {
- "generated": "2026-09-25T05:09:20+00:00",
+ "generated": "2026-09-25T10:12:24+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 120,
-  "results": 55
+  "scripts": 122,
+  "results": 57
  },
  "scripts": [
   {
@@ -58,7 +58,7 @@
    "stage": "03_data_ingestion",
    "title": "Builds the NAM indices in the SOURCE VARIABLES the published criterion is defined on, so the body count can be computed in the literature's own terms rather than in CPC index proxies.",
    "loc": 106,
-   "modified": "2026-09-24 19:01",
+   "modified": "2026-09-25 07:10",
    "sha256_16": "8822834400fdc4b0",
    "flags": [],
    "filenames_mentioned": [
@@ -71,9 +71,9 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "Observed polar-cap mean sea-level pressure, reduced EXACTLY as the SNAPSI members are, so the observed outcome of each SNAPSI event can be placed inside its own ensemble.",
-   "loc": 90,
-   "modified": "2026-09-24 16:49",
-   "sha256_16": "8b6dc6f3bc27a8d4",
+   "loc": 95,
+   "modified": "2026-09-25 06:07",
+   "sha256_16": "238da5761c5f9380",
    "flags": [],
    "filenames_mentioned": [
     "era5_psl_cap_6h.parquet"
@@ -129,9 +129,9 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "Downloads the SNAPSI surface field and reduces it to a polar-cap index on the fly, so the CAUSAL stratosphere-to-surface effect can be measured by experimental design rather than inferred from composites.",
-   "loc": 520,
-   "modified": "2026-09-25 03:23",
-   "sha256_16": "5454ea1eb634d4f1",
+   "loc": 521,
+   "modified": "2026-09-25 07:00",
+   "sha256_16": "852b64c94c429c67",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_manifest.csv",
@@ -439,9 +439,9 @@
    "tree": "ssw-design-analysis",
    "stage": "06_simulation_validation",
    "title": "THE GATE THAT DECIDES WHETHER THE PRE-SATELLITE EVENTS MAY BE USED AT ALL.",
-   "loc": 424,
-   "modified": "2026-08-04 05:30",
-   "sha256_16": "c152f59447efca3a",
+   "loc": 426,
+   "modified": "2026-09-25 10:06",
+   "sha256_16": "b7374806e8ebb188",
    "flags": [],
    "filenames_mentioned": [
     "era5_nam_daily.parquet",
@@ -476,9 +476,9 @@
    "tree": "ssw-design-analysis",
    "stage": "06_simulation_validation",
    "title": "Corrects a flaw found in the previous Gate 3 attempt.",
-   "loc": 252,
-   "modified": "2026-08-04 13:35",
-   "sha256_16": "83d9818232161719",
+   "loc": 272,
+   "modified": "2026-09-25 06:38",
+   "sha256_16": "bcce92d9cdc2aa66",
    "flags": [],
    "filenames_mentioned": [
     "_gate3_clean_null_checkpoint.json",
@@ -507,8 +507,8 @@
    "stage": "06_simulation_validation",
    "title": "THE DESIGN CHOICE THAT ACTUALLY MATTERS.",
    "loc": 227,
-   "modified": "2026-08-04 05:30",
-   "sha256_16": "560d47dcd918f9e2",
+   "modified": "2026-09-25 06:38",
+   "sha256_16": "458e4408dedc18d5",
    "flags": [],
    "filenames_mentioned": [
     "ncep_stratosphere.parquet",
@@ -521,9 +521,9 @@
    "tree": "ssw-design-analysis",
    "stage": "06_simulation_validation",
    "title": "Turns the selection-bias observation into a quantitative, falsifiable law.",
-   "loc": 194,
-   "modified": "2026-08-04 05:30",
-   "sha256_16": "9e41014bba32bfc1",
+   "loc": 195,
+   "modified": "2026-09-25 10:06",
+   "sha256_16": "b361490d9f1b8669",
    "flags": [],
    "filenames_mentioned": [
     "selection_projection_law.json"
@@ -536,8 +536,8 @@
    "stage": "06_simulation_validation",
    "title": "Extends selection_on_outcome.py from circulation indices to a REAL surface impact variable.",
    "loc": 172,
-   "modified": "2026-08-04 05:30",
-   "sha256_16": "cac3878a3482764a",
+   "modified": "2026-09-25 06:38",
+   "sha256_16": "663bc89774448ea9",
    "flags": [],
    "filenames_mentioned": [
     "selection_snotel.json",
@@ -550,9 +550,9 @@
    "tree": "ssw-design-analysis",
    "stage": "06_simulation_validation",
    "title": "THE GENERALISATION, AND THE TEST THAT CAN KILL IT.",
-   "loc": 316,
-   "modified": "2026-08-04 05:30",
-   "sha256_16": "1b8bb1f38e2da316",
+   "loc": 319,
+   "modified": "2026-09-25 10:06",
+   "sha256_16": "3eda32af7826c680",
    "flags": [],
    "filenames_mentioned": [
     "heatflux_daily.parquet",
@@ -569,8 +569,8 @@
    "stage": "06_simulation_validation",
    "title": "Proper inference on stratifier_bias_law.py, which produced point estimates and bootstrap intervals but no p-values, and one candidate positive result that has not been stress-tested.",
    "loc": 286,
-   "modified": "2026-08-04 05:30",
-   "sha256_16": "b0097aa697a778f9",
+   "modified": "2026-09-25 06:38",
+   "sha256_16": "488c5d43bd0a4e4a",
    "flags": [],
    "filenames_mentioned": [
     "stratifier_inference.json"
@@ -582,9 +582,9 @@
    "tree": "ssw-design-analysis",
    "stage": "06_simulation_validation",
    "title": "THE POWER THE OBSERVATIONS DO NOT HAVE.",
-   "loc": 270,
-   "modified": "2026-08-04 05:30",
-   "sha256_16": "ee6a458c78371fe3",
+   "loc": 291,
+   "modified": "2026-09-25 06:38",
+   "sha256_16": "8afd5fe3c301d0c6",
    "flags": [],
    "filenames_mentioned": [
     "stratifier_law_cmip6.json"
@@ -602,6 +602,20 @@
    "flags": [],
    "filenames_mentioned": [
     "validate_R_diagnostic.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/validate_ssw_detector.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "Does `ensemble_precursor.detect_ssw`, the detector every CMIP6 analysis uses, reproduce the published Charlton & Polvani (2007) central dates when it is run on the reanalysis those dates were computed from?",
+   "loc": 117,
+   "modified": "2026-09-25 07:01",
+   "sha256_16": "619fe05ffb333c79",
+   "flags": [],
+   "filenames_mentioned": [
+    "validate_ssw_detector.json"
    ],
    "filename_prefixes": []
   },
@@ -624,9 +638,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "R as a function of lag -- and the test that REFUTED the causal reading of R.",
-   "loc": 224,
-   "modified": "2026-08-04 05:30",
-   "sha256_16": "190a01b6d9f7e969",
+   "loc": 225,
+   "modified": "2026-09-25 06:38",
+   "sha256_16": "5396a98ef5f37fa7",
    "flags": [],
    "filenames_mentioned": [
     "R_profile.json"
@@ -638,9 +652,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "Turns this project's central NULL result into a causal diagnostic.",
-   "loc": 289,
-   "modified": "2026-08-04 05:30",
-   "sha256_16": "244da556c9e8e4f9",
+   "loc": 291,
+   "modified": "2026-09-25 06:38",
+   "sha256_16": "63e88597e9b254e5",
    "flags": [],
    "filenames_mentioned": [
     "causal_timescale_ratio.json"
@@ -702,9 +716,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "Settles the question 43 observed events cannot: is the pre-onset surface anomaly before a sudden stratospheric warming REAL? THE OBSERVATIONAL DEAD END On the frozen 43-event catalogue the AO at -30..-16 d is -0.82 (p=0.015). It",
-   "loc": 328,
-   "modified": "2026-09-17 11:44",
-   "sha256_16": "fbe3bfe27c243583",
+   "loc": 357,
+   "modified": "2026-09-25 07:00",
+   "sha256_16": "5fa127cb56dfcde5",
    "flags": [],
    "filenames_mentioned": [],
    "filename_prefixes": [
@@ -716,9 +730,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "THE POSITIVE CLAIM UNDERNEATH THE WHOLE PROJECT, AND A HARD CEILING ON EVERY CLASSIFIER IN THIS LITERATURE.",
-   "loc": 503,
-   "modified": "2026-09-25 03:23",
-   "sha256_16": "b0a2fe3b05e33682",
+   "loc": 519,
+   "modified": "2026-09-25 06:58",
+   "sha256_16": "fbf4b52a0be7c41d",
    "flags": [],
    "filenames_mentioned": [
     "forced_variance_ceiling.json"
@@ -747,8 +761,8 @@
    "stage": "07_physical_decomposition",
    "title": "THE THREE ATTACKS THAT DECIDE WHETHER THE HEADLINE SURVIVES REVIEW.",
    "loc": 261,
-   "modified": "2026-08-04 05:30",
-   "sha256_16": "79a5baed4d60beec",
+   "modified": "2026-09-25 07:00",
+   "sha256_16": "9d448ae986026dca",
    "flags": [],
    "filenames_mentioned": [
     "headline_stress_test.json"
@@ -760,9 +774,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "THE PHYSICAL QUESTION UNDERNEATH THE METHODS RESULT.",
-   "loc": 312,
-   "modified": "2026-08-04 05:30",
-   "sha256_16": "857c8761608b0108",
+   "loc": 313,
+   "modified": "2026-09-25 07:00",
+   "sha256_16": "529d687348381550",
    "flags": [],
    "filenames_mentioned": [
     "is_downward_propagation_a_class.json"
@@ -822,9 +836,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "R across the CMIP6 archive, and the test that motivates it: DO MODELS THAT REPRODUCE THE OBSERVED SURFACE RESPONSE GET THE MECHANISM RIGHT? The field evaluates stratosphere-troposphere coupling with composites: does the",
-   "loc": 170,
-   "modified": "2026-08-04 05:30",
-   "sha256_16": "6a88255f48d62e42",
+   "loc": 171,
+   "modified": "2026-09-25 06:38",
+   "sha256_16": "3fef8d98b77b89c9",
    "flags": [],
    "filenames_mentioned": [
     "multimodel_R.json"
@@ -836,9 +850,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "CAN ANYONE PREDICT WHICH SSWs COUPLE DOWNWARD? OUT OF SAMPLE, WITH NO CORRECTION.",
-   "loc": 347,
-   "modified": "2026-09-25 03:43",
-   "sha256_16": "c8cfa1aa319f9e13",
+   "loc": 370,
+   "modified": "2026-09-25 10:06",
+   "sha256_16": "7fdb5f3d824a39c2",
    "flags": [],
    "filenames_mentioned": [
     "predictability_ceiling.json"
@@ -850,9 +864,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "CLOSES THE LAST GAP IN `predictability_ceiling.py`: NO WAVE-DRIVING PREDICTOR.",
-   "loc": 274,
-   "modified": "2026-09-25 03:43",
-   "sha256_16": "530452b8e9b60911",
+   "loc": 283,
+   "modified": "2026-09-25 07:16",
+   "sha256_16": "373e0e2e8a832dfb",
    "flags": [],
    "filenames_mentioned": [
     "heatflux_daily.parquet",
@@ -866,9 +880,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "WERE FEB-2018 AND JAN-2019 DIFFERENT EVENTS, OR TWO DRAWS FROM ONE DISTRIBUTION? THE ARCHETYPES The two NH SNAPSI events are the field's standard pair of opposites. Rao, Garfinkel & White (2020, JGR-Atmos 125, e2019JD031919) describe Feb-2018 as a",
-   "loc": 313,
-   "modified": "2026-09-24 18:18",
-   "sha256_16": "ec27afe78dd553ee",
+   "loc": 317,
+   "modified": "2026-09-25 06:53",
+   "sha256_16": "fb862211654960f2",
    "flags": [],
    "filenames_mentioned": [
     "era5_psl_cap_6h.parquet",
@@ -881,9 +895,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "THE CAUSAL STRATOSPHERE-TO-SURFACE EFFECT, MEASURED BY EXPERIMENT RATHER THAN INFERRED FROM COMPOSITES -- AND THE NUMBER THE WHOLE LITERATURE IS TRYING TO ESTIMATE.",
-   "loc": 304,
-   "modified": "2026-09-24 19:01",
-   "sha256_16": "e2e5472324155af8",
+   "loc": 306,
+   "modified": "2026-09-25 07:00",
+   "sha256_16": "5b199ee3cef72813",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_causal_effect.json",
@@ -896,9 +910,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "Does a sudden stratospheric warming SHIFT the surface distribution, or SPLIT it? WHY THIS IS THE TEST THAT MATTERS The project's central physical claim -- \"downward propagation\" is a threshold on ONE shifted population, not a class of event -- currently rests on CMIP6",
-   "loc": 274,
-   "modified": "2026-09-24 18:23",
-   "sha256_16": "7d4ef571af328a7d",
+   "loc": 270,
+   "modified": "2026-09-25 07:00",
+   "sha256_16": "f1808d11b4060b15",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_distribution_test.json"
@@ -910,9 +924,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "IS DOWNWARD COUPLING A PROPERTY OF THE EVENT, OR OF WHAT FOLLOWS IT? THE PAPER, IN ITS PUBLISHED FORM Loeffel, Rupp, Kiefer, Pinto, Birner, Garny (2026), \"Quantifying the tropospheric response to individual sudden stratospheric warmings revealed by",
-   "loc": 460,
-   "modified": "2026-09-23 12:11",
-   "sha256_16": "c269aa052f735ae9",
+   "loc": 459,
+   "modified": "2026-09-25 07:00",
+   "sha256_16": "1d636117b6939a7c",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_loeffel_test.json",
@@ -927,8 +941,8 @@
    "stage": "07_physical_decomposition",
    "title": "THE DECISIVE TEST: does the published \"downward-propagating SSW\" classification manufacture its own contrast even when the causal forcing is held EXACTLY fixed by experimental design? WHY THIS IS THE CLEAN EXPERIMENT",
    "loc": 382,
-   "modified": "2026-09-24 19:01",
-   "sha256_16": "daf52a6bd3136f34",
+   "modified": "2026-09-25 07:00",
+   "sha256_16": "dc6ab604cad5298d",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_selection_test.json"
@@ -941,11 +955,26 @@
    "stage": "07_physical_decomposition",
    "title": "IS THE HEADLINE R^2 WITHIN-MODEL SKILL, OR BETWEEN-MODEL SIGNAL? THE PROBLEM, FOUND BY STRESS-TESTING RATHER THAN BY A REFEREE `headline_stress_test.py` computed CV R^2 separately inside each ensemble member and found it scattered around ZERO (-0.18 to +0.17 across 20 members),",
    "loc": 385,
-   "modified": "2026-09-24 18:18",
-   "sha256_16": "082d36709118344b",
+   "modified": "2026-09-25 06:33",
+   "sha256_16": "dfb1ec4e8449fe45",
    "flags": [],
    "filenames_mentioned": [
     "within_model_check.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/08_literature_audit/era5_nam_daily_mean_check.py",
+   "tree": "ssw-design-analysis",
+   "stage": "08_literature_audit",
+   "title": "Does the January 2019 Karpechko label at 1000 hPa survive a TRUE daily mean? `03_data_ingestion/era5_nam_daily.parquet` builds NAM_1000 from the 00 UTC field of each day. Under the Karpechko et al. (2017) criterion the January 2019 SSW",
+   "loc": 161,
+   "modified": "2026-09-25 07:11",
+   "sha256_16": "bc059f8b30142674",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_nam_daily.parquet",
+    "era5_nam_daily_mean_check.json"
    ],
    "filename_prefixes": []
   },
@@ -954,9 +983,9 @@
    "tree": "ssw-design-analysis",
    "stage": "08_literature_audit",
    "title": "Two things the audit still needed, in the literature's own variables.",
-   "loc": 247,
-   "modified": "2026-09-24 19:01",
-   "sha256_16": "4713f90dfc949faf",
+   "loc": 265,
+   "modified": "2026-09-25 10:06",
+   "sha256_16": "70e9a7f4e83c5427",
    "flags": [],
    "filenames_mentioned": [
     "era5_nam_daily.parquet",
@@ -970,8 +999,8 @@
    "stage": "08_literature_audit",
    "title": "THE CONTROL A LIVE 2025 PAPER DOES NOT RUN, RUN ON ITS OWN DIAGNOSTIC.",
    "loc": 309,
-   "modified": "2026-08-04 05:30",
-   "sha256_16": "2d674fa3c89b0d6d",
+   "modified": "2026-09-25 10:06",
+   "sha256_16": "28cf5f46d1dc6fe1",
    "flags": [],
    "filenames_mentioned": [
     "era5_cap60_z100_z1000.parquet",
@@ -986,9 +1015,9 @@
    "tree": "ssw-design-analysis",
    "stage": "08_literature_audit",
    "title": "THE BODY COUNT. Applies the published classification exactly as specified and decomposes the number it produces.",
-   "loc": 234,
-   "modified": "2026-09-24 19:01",
-   "sha256_16": "9e95735435db6eed",
+   "loc": 251,
+   "modified": "2026-09-25 06:39",
+   "sha256_16": "76e76a07a2ff2fef",
    "flags": [],
    "filenames_mentioned": [
     "recompute_published_criterion.json"
@@ -1000,9 +1029,9 @@
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
    "title": "fig1_shift.py -- Figure 1: an SSW shifts the surface distribution; it does not split it.",
-   "loc": 108,
-   "modified": "2026-09-24 18:40",
-   "sha256_16": "185e9eeb026ebd56",
+   "loc": 111,
+   "modified": "2026-09-25 07:20",
+   "sha256_16": "888f9cfb7125f891",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_causal_effect.json",
@@ -1029,12 +1058,14 @@
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
    "title": "fig3_predictability.py -- Figure 3: an SSW adds no out-of-sample predictability.",
-   "loc": 98,
-   "modified": "2026-09-24 19:02",
-   "sha256_16": "2a3ad2ac570714eb",
+   "loc": 102,
+   "modified": "2026-09-25 07:20",
+   "sha256_16": "a6bb07fa1f6f9ef8",
    "flags": [],
    "filenames_mentioned": [
+    "era5_recompute_and_two_thirds.json",
     "predictability_ceiling.json",
+    "recompute_published_criterion.json",
     "within_model_check.json"
    ],
    "filename_prefixes": []
@@ -1870,7 +1901,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-09-25 05:02",
+   "modified": "2026-09-25 07:20",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -1895,6 +1926,40 @@
     "jra_55",
     "merra2",
     "era5"
+   ]
+  },
+  {
+   "path": "results/current/1_catalogue/validate_ssw_detector.json",
+   "tree": "current",
+   "stage": "1_catalogue",
+   "readable": true,
+   "bytes": 750,
+   "modified": "2026-09-25 07:01",
+   "sha256_16": "4683749efdc83b6f",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/validate_ssw_detector.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/validate_ssw_detector.py": "619fe05ffb333c79"
+   },
+   "verdicts": [],
+   "counts": {},
+   "top_level_keys": [
+    "question",
+    "passes",
+    "inputs",
+    "tolerance_days",
+    "coverage_end",
+    "n_published",
+    "n_matched",
+    "n_exact",
+    "missed",
+    "extra_in_coverage",
+    "after_coverage",
+    "offsets_days"
    ]
   },
   {
@@ -2443,7 +2508,7 @@
    "stage": "3_calibration",
    "readable": true,
    "bytes": 1372,
-   "modified": "2026-09-25 05:01",
+   "modified": "2026-09-25 07:55",
    "sha256_16": "71f92703e499279d",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/gate3_clean_null.py"
@@ -2452,7 +2517,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/06_simulation_validation/gate3_clean_null.py": "83d9818232161719"
+    "ssw-design-analysis/06_simulation_validation/gate3_clean_null.py": "bcce92d9cdc2aa66"
    },
    "verdicts": [],
    "counts": {
@@ -2662,9 +2727,9 @@
    "tree": "current",
    "stage": "4_selection_bias",
    "readable": true,
-   "bytes": 1277,
-   "modified": "2026-09-25 03:16",
-   "sha256_16": "44a5ee71d6a0992c",
+   "bytes": 1291,
+   "modified": "2026-09-25 06:57",
+   "sha256_16": "d2280066b0a8c819",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/selection_on_outcome.py"
    ],
@@ -2672,7 +2737,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/06_simulation_validation/selection_on_outcome.py": "560d47dcd918f9e2"
+    "ssw-design-analysis/06_simulation_validation/selection_on_outcome.py": "458e4408dedc18d5"
    },
    "verdicts": [],
    "counts": {
@@ -2697,9 +2762,9 @@
    "tree": "current",
    "stage": "4_selection_bias",
    "readable": true,
-   "bytes": 975,
-   "modified": "2026-09-25 03:15",
-   "sha256_16": "d228520df7cbe102",
+   "bytes": 977,
+   "modified": "2026-09-25 10:07",
+   "sha256_16": "66a5aef78194a6e1",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/selection_projection_law.py"
    ],
@@ -2707,7 +2772,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/06_simulation_validation/selection_projection_law.py": "9e41014bba32bfc1"
+    "ssw-design-analysis/06_simulation_validation/selection_projection_law.py": "b361490d9f1b8669"
    },
    "verdicts": [
     {
@@ -2738,9 +2803,9 @@
    "tree": "current",
    "stage": "4_selection_bias",
    "readable": true,
-   "bytes": 789,
-   "modified": "2026-09-25 03:15",
-   "sha256_16": "cd2b95bedc9df3bb",
+   "bytes": 786,
+   "modified": "2026-09-25 06:56",
+   "sha256_16": "e9122456f80860ec",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/selection_snotel.py"
    ],
@@ -2748,7 +2813,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/06_simulation_validation/selection_snotel.py": "cac3878a3482764a"
+    "ssw-design-analysis/06_simulation_validation/selection_snotel.py": "663bc89774448ea9"
    },
    "verdicts": [],
    "counts": {
@@ -2771,9 +2836,9 @@
    "tree": "current",
    "stage": "4_selection_bias",
    "readable": true,
-   "bytes": 5158,
-   "modified": "2026-09-25 03:16",
-   "sha256_16": "d8da6c4a0e9b97fd",
+   "bytes": 5166,
+   "modified": "2026-09-25 10:07",
+   "sha256_16": "063de3a28dcbdb79",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/stratifier_bias_law.py"
    ],
@@ -2781,7 +2846,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/06_simulation_validation/stratifier_bias_law.py": "1b8bb1f38e2da316"
+    "ssw-design-analysis/06_simulation_validation/stratifier_bias_law.py": "3eda32af7826c680"
    },
    "verdicts": [
     {
@@ -2811,9 +2876,9 @@
    "tree": "current",
    "stage": "4_selection_bias",
    "readable": true,
-   "bytes": 5392,
-   "modified": "2026-08-03 10:58",
-   "sha256_16": "db92bea42ed6d2b2",
+   "bytes": 5175,
+   "modified": "2026-09-25 10:09",
+   "sha256_16": "41f549d838c50324",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/stratifier_bias_law.py"
    ],
@@ -2821,7 +2886,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/06_simulation_validation/stratifier_bias_law.py": "1b8bb1f38e2da316"
+    "ssw-design-analysis/06_simulation_validation/stratifier_bias_law.py": "3eda32af7826c680"
    },
    "verdicts": [
     {
@@ -2851,9 +2916,9 @@
    "tree": "current",
    "stage": "4_selection_bias",
    "readable": true,
-   "bytes": 4806,
-   "modified": "2026-09-25 03:18",
-   "sha256_16": "42dfa7037b703a03",
+   "bytes": 4825,
+   "modified": "2026-09-25 06:55",
+   "sha256_16": "00fec485e682fe17",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/stratifier_inference.py"
    ],
@@ -2861,7 +2926,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/06_simulation_validation/stratifier_inference.py": "b0097aa697a778f9"
+    "ssw-design-analysis/06_simulation_validation/stratifier_inference.py": "488c5d43bd0a4e4a"
    },
    "verdicts": [
     {
@@ -2904,9 +2969,9 @@
    "tree": "current",
    "stage": "4_selection_bias",
    "readable": true,
-   "bytes": 2325,
-   "modified": "2026-09-25 03:18",
-   "sha256_16": "bf715c5f14947a03",
+   "bytes": 2334,
+   "modified": "2026-09-25 06:55",
+   "sha256_16": "44ead71258074873",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/stratifier_law_cmip6.py"
    ],
@@ -2914,13 +2979,13 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/06_simulation_validation/stratifier_law_cmip6.py": "ee6a458c78371fe3"
+    "ssw-design-analysis/06_simulation_validation/stratifier_law_cmip6.py": "8afd5fe3c301d0c6"
    },
    "verdicts": [],
    "counts": {
     "n_events": [
-     1745,
-     1888
+     1386,
+     1517
     ]
    },
    "top_level_keys": [
@@ -2976,8 +3041,8 @@
    "stage": "5_mechanism",
    "readable": true,
    "bytes": 3698,
-   "modified": "2026-09-25 03:16",
-   "sha256_16": "059f82658ac0243f",
+   "modified": "2026-09-25 06:56",
+   "sha256_16": "7888a28a20848e4b",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/R_profile.py"
    ],
@@ -2985,7 +3050,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/R_profile.py": "190a01b6d9f7e969"
+    "ssw-design-analysis/07_physical_decomposition/R_profile.py": "5396a98ef5f37fa7"
    },
    "verdicts": [],
    "counts": {},
@@ -3000,9 +3065,9 @@
    "tree": "current",
    "stage": "5_mechanism",
    "readable": true,
-   "bytes": 593,
-   "modified": "2026-09-25 03:16",
-   "sha256_16": "af1f4a354106fec4",
+   "bytes": 594,
+   "modified": "2026-09-25 06:55",
+   "sha256_16": "3e1ce4ce5d2fb76d",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/causal_timescale_ratio.py"
    ],
@@ -3010,7 +3075,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/causal_timescale_ratio.py": "244da556c9e8e4f9"
+    "ssw-design-analysis/07_physical_decomposition/causal_timescale_ratio.py": "63e88597e9b254e5"
    },
    "verdicts": [],
    "counts": {
@@ -3019,8 +3084,8 @@
     ],
     "n_events": [
      43,
-     189,
-     846
+     150,
+     675
     ]
    },
    "top_level_keys": [
@@ -3217,9 +3282,9 @@
    "tree": "current",
    "stage": "5_mechanism",
    "readable": true,
-   "bytes": 3366,
-   "modified": "2026-09-25 03:20",
-   "sha256_16": "de327c13a4752cce",
+   "bytes": 3365,
+   "modified": "2026-09-25 06:56",
+   "sha256_16": "2d4148e81f4124d7",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/multimodel_R.py"
    ],
@@ -3227,22 +3292,22 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/multimodel_R.py": "6a88255f48d62e42"
+    "ssw-design-analysis/07_physical_decomposition/multimodel_R.py": "3fef8d98b77b89c9"
    },
    "verdicts": [],
    "counts": {
     "n_events": [
      43,
-     59,
+     52,
+     58,
      64,
-     70,
-     93,
-     100,
-     123,
-     137,
-     187,
-     189,
-     846
+     75,
+     82,
+     97,
+     108,
+     140,
+     150,
+     675
     ],
     "n_members": [
      1,
@@ -3269,9 +3334,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 4789,
-   "modified": "2026-09-25 03:45",
-   "sha256_16": "daf5cfdc746d9281",
+   "bytes": 2830,
+   "modified": "2026-09-25 06:59",
+   "sha256_16": "3332f54b9a379f78",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py"
    ],
@@ -3279,13 +3344,13 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py": "b0a2fe3b05e33682"
+    "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py": "fbf4b52a0be7c41d"
    },
    "verdicts": [],
    "counts": {
     "n_events": [
      43,
-     1888
+     1517
     ]
    },
    "top_level_keys": [
@@ -3300,9 +3365,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 3234,
-   "modified": "2026-09-25 03:20",
-   "sha256_16": "39ec5b7bc614a086",
+   "bytes": 2782,
+   "modified": "2026-09-25 07:03",
+   "sha256_16": "2d3a3bc09ad62c55",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/headline_stress_test.py"
    ],
@@ -3310,7 +3375,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/headline_stress_test.py": "79a5baed4d60beec"
+    "ssw-design-analysis/07_physical_decomposition/headline_stress_test.py": "9d448ae986026dca"
    },
    "verdicts": [],
    "counts": {},
@@ -3325,9 +3390,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 1431,
-   "modified": "2026-09-25 03:20",
-   "sha256_16": "855bfb45e83e824e",
+   "bytes": 1432,
+   "modified": "2026-09-25 07:05",
+   "sha256_16": "be5ccf61c0837b85",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/is_downward_propagation_a_class.py"
    ],
@@ -3335,12 +3400,12 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/is_downward_propagation_a_class.py": "857c8761608b0108"
+    "ssw-design-analysis/07_physical_decomposition/is_downward_propagation_a_class.py": "529d687348381550"
    },
    "verdicts": [
     {
      "key": "verdict",
-     "text": "NO CLASS in CMIP6_ensemble (n=1888): the per-event surface response is unimodal (dip p=0.8880), one Gaussian component suffices (BIC-gap p=0.8350), and the whole distribution is a pure SHIFT of -0.514 sigma of the ordinary winter distribution (KS p=0.2789). 'Downward propagation' is a threshold on a continuum, not a population."
+     "text": "NO CLASS in CMIP6_ensemble (n=1517): the per-event surface response is unimodal (dip p=0.8235), one Gaussian component suffices (BIC-gap p=0.9650), and the whole distribution is a pure SHIFT of -0.476 sigma of the ordinary winter distribution (KS p=0.3456). 'Downward propagation' is a threshold on a continuum, not a population."
     }
    ],
    "counts": {},
@@ -3357,9 +3422,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 1942,
-   "modified": "2026-09-25 03:46",
-   "sha256_16": "89929bd2a1395edb",
+   "bytes": 1810,
+   "modified": "2026-09-25 10:08",
+   "sha256_16": "8e549fa002e6d3e6",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/predictability_ceiling.py"
    ],
@@ -3367,10 +3432,14 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/predictability_ceiling.py": "c8cfa1aa319f9e13"
+    "ssw-design-analysis/07_physical_decomposition/predictability_ceiling.py": "7fdb5f3d824a39c2"
    },
    "verdicts": [],
-   "counts": {},
+   "counts": {
+    "n_events": [
+     1516
+    ]
+   },
    "top_level_keys": [
     "outcome_window",
     "results",
@@ -3383,9 +3452,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 2107,
-   "modified": "2026-09-25 03:48",
-   "sha256_16": "8e57881a6c8b065b",
+   "bytes": 2110,
+   "modified": "2026-09-25 07:18",
+   "sha256_16": "abba7bfed0915433",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/predictability_wave_driving.py"
    ],
@@ -3393,7 +3462,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/predictability_wave_driving.py": "530452b8e9b60911"
+    "ssw-design-analysis/07_physical_decomposition/predictability_wave_driving.py": "373e0e2e8a832dfb"
    },
    "verdicts": [],
    "counts": {},
@@ -3409,9 +3478,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 105712,
-   "modified": "2026-09-25 03:57",
-   "sha256_16": "17125512d0615fff",
+   "bytes": 106000,
+   "modified": "2026-09-25 07:14",
+   "sha256_16": "fcec8484529e0cba",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/within_model_check.py"
    ],
@@ -3419,7 +3488,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/within_model_check.py": "082d36709118344b"
+    "ssw-design-analysis/07_physical_decomposition/within_model_check.py": "dfb1ec4e8449fe45"
    },
    "verdicts": [],
    "counts": {
@@ -3476,9 +3545,9 @@
    "tree": "current",
    "stage": "7_ensemble",
    "readable": true,
-   "bytes": 1590,
-   "modified": "2026-09-25 03:20",
-   "sha256_16": "197313ea94dc590a",
+   "bytes": 1591,
+   "modified": "2026-09-25 07:08",
+   "sha256_16": "66c91d0f1abb4034",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/ensemble_precursor.py"
    ],
@@ -3486,7 +3555,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/ensemble_precursor.py": "fbe3bfe27c243583"
+    "ssw-design-analysis/07_physical_decomposition/ensemble_precursor.py": "5fa127cb56dfcde5"
    },
    "verdicts": [],
    "counts": {
@@ -3520,9 +3589,9 @@
    "tree": "current",
    "stage": "7_ensemble",
    "readable": true,
-   "bytes": 1564,
-   "modified": "2026-09-17 11:49",
-   "sha256_16": "ee8491ebd853c98a",
+   "bytes": 1563,
+   "modified": "2026-09-25 09:58",
+   "sha256_16": "3b22248612f675d2",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/ensemble_precursor.py"
    ],
@@ -3530,7 +3599,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/ensemble_precursor.py": "fbe3bfe27c243583"
+    "ssw-design-analysis/07_physical_decomposition/ensemble_precursor.py": "5fa127cb56dfcde5"
    },
    "verdicts": [],
    "counts": {
@@ -3564,9 +3633,9 @@
    "tree": "current",
    "stage": "7_ensemble",
    "readable": true,
-   "bytes": 9467,
-   "modified": "2026-09-25 03:14",
-   "sha256_16": "f69861ce26a3da7e",
+   "bytes": 9469,
+   "modified": "2026-09-25 10:06",
+   "sha256_16": "ece0acc0a941f182",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/era_dependence_gate.py"
    ],
@@ -3574,12 +3643,12 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/06_simulation_validation/era_dependence_gate.py": "c152f59447efca3a"
+    "ssw-design-analysis/06_simulation_validation/era_dependence_gate.py": "b7374806e8ebb188"
    },
    "verdicts": [
     {
      "key": "verdict",
-     "text": "POOLING REFUSED. T1 passed, T2 4/7 betas agree. The observational arm stays at n=30 (1979 onward) and the pre-satellite extension is reported only as a sensitivity test, with the failing diagnostic stated."
+     "text": "POOLING REFUSED. T1 passed, T2 3/7 betas agree. The observational arm stays at n=30 (1979 onward) and the pre-satellite extension is reported only as a sensitivity test, with the failing diagnostic stated."
     },
     {
      "key": "headline_recommendation",
@@ -3644,9 +3713,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 74803,
-   "modified": "2026-09-25 03:20",
-   "sha256_16": "bc3d6aeadf8deab1",
+   "bytes": 74806,
+   "modified": "2026-09-25 06:56",
+   "sha256_16": "f96669ba1c415de8",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_archetype_test.py"
    ],
@@ -3654,7 +3723,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_archetype_test.py": "ec27afe78dd553ee"
+    "ssw-design-analysis/07_physical_decomposition/snapsi_archetype_test.py": "fb862211654960f2"
    },
    "verdicts": [],
    "counts": {},
@@ -3676,7 +3745,7 @@
    "stage": "8_experiment",
    "readable": true,
    "bytes": 14119,
-   "modified": "2026-09-25 03:20",
+   "modified": "2026-09-25 07:01",
    "sha256_16": "2ff1510ebe8e56ce",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_causal_effect.py"
@@ -3685,7 +3754,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_causal_effect.py": "e2e5472324155af8"
+    "ssw-design-analysis/07_physical_decomposition/snapsi_causal_effect.py": "5b199ee3cef72813"
    },
    "verdicts": [],
    "counts": {},
@@ -3710,7 +3779,7 @@
    "stage": "8_experiment",
    "readable": true,
    "bytes": 73082,
-   "modified": "2026-09-25 03:22",
+   "modified": "2026-09-25 07:06",
    "sha256_16": "81296c9279fade5d",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_distribution_test.py"
@@ -3719,7 +3788,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_distribution_test.py": "7d4ef571af328a7d"
+    "ssw-design-analysis/07_physical_decomposition/snapsi_distribution_test.py": "f1808d11b4060b15"
    },
    "verdicts": [],
    "counts": {},
@@ -3738,7 +3807,7 @@
    "stage": "8_experiment",
    "readable": true,
    "bytes": 51292,
-   "modified": "2026-09-25 03:21",
+   "modified": "2026-09-25 07:01",
    "sha256_16": "5843507bdcd23426",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_loeffel_test.py"
@@ -3747,7 +3816,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_loeffel_test.py": "c269aa052f735ae9"
+    "ssw-design-analysis/07_physical_decomposition/snapsi_loeffel_test.py": "1d636117b6939a7c"
    },
    "verdicts": [
     {
@@ -3783,7 +3852,7 @@
    "stage": "8_experiment",
    "readable": true,
    "bytes": 48414,
-   "modified": "2026-09-25 03:21",
+   "modified": "2026-09-25 07:01",
    "sha256_16": "16ff33163baa9ced",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py"
@@ -3792,7 +3861,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "daf52a6bd3136f34"
+    "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "dc6ab604cad5298d"
    },
    "verdicts": [],
    "counts": {
@@ -3814,13 +3883,47 @@
    ]
   },
   {
+   "path": "results/current/9_literature/era5_nam_daily_mean_check.json",
+   "tree": "current",
+   "stage": "9_literature",
+   "readable": true,
+   "bytes": 981,
+   "modified": "2026-09-25 07:15",
+   "sha256_16": "37f7bfe8cf3eae61",
+   "producers": [
+    "ssw-design-analysis/08_literature_audit/era5_nam_daily_mean_check.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/08_literature_audit/era5_nam_daily_mean_check.py": "bc059f8b30142674"
+   },
+   "verdicts": [],
+   "counts": {},
+   "top_level_keys": [
+    "question",
+    "onset",
+    "window_days",
+    "level_hPa",
+    "n_days",
+    "inputs",
+    "check_00utc_rebuild_max_abs",
+    "nam_00utc",
+    "nam_daily_mean",
+    "window_mean_correction",
+    "day_to_day_spread_ratio_dm_over_00",
+    "label_unchanged"
+   ]
+  },
+  {
    "path": "results/current/9_literature/era5_recompute_and_two_thirds.json",
    "tree": "current",
    "stage": "9_literature",
    "readable": true,
-   "bytes": 2239,
-   "modified": "2026-09-25 03:27",
-   "sha256_16": "a1b39b1f6739fa37",
+   "bytes": 2367,
+   "modified": "2026-09-25 10:08",
+   "sha256_16": "d5f9db3e47834314",
    "producers": [
     "ssw-design-analysis/08_literature_audit/era5_recompute_and_two_thirds.py"
    ],
@@ -3828,12 +3931,12 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/08_literature_audit/era5_recompute_and_two_thirds.py": "4713f90dfc949faf"
+    "ssw-design-analysis/08_literature_audit/era5_recompute_and_two_thirds.py": "70e9a7f4e83c5427"
    },
    "verdicts": [
     {
      "key": "verdict",
-     "text": "In ERA5 the published criterion gives a DW-minus-NDW contrast of -0.684 of which 96% is the selection term. A pure surface shift of -0.639 sigma applied to event-free dates gives a 74% pass rate against 69% observed -- so 'about two thirds propagate downward' is what ONE shifted population produces, with no classes in it."
+     "text": "In ERA5 the published criterion gives a DW-minus-NDW contrast of -0.682 of which 97% is the selection term. A pure surface shift of -0.636 sigma applied to event-free dates gives a 75% pass rate against 69% observed -- so 'about two thirds propagate downward' is what ONE shifted population produces, with no classes in it."
     }
    ],
    "counts": {
@@ -3857,8 +3960,8 @@
    "stage": "9_literature",
    "readable": true,
    "bytes": 903,
-   "modified": "2026-09-25 03:25",
-   "sha256_16": "b62dddd8831e0765",
+   "modified": "2026-09-25 10:11",
+   "sha256_16": "bb2f997d08dfd265",
    "producers": [
     "ssw-design-analysis/08_literature_audit/loeffel2025_missing_control.py"
    ],
@@ -3866,7 +3969,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/08_literature_audit/loeffel2025_missing_control.py": "2d674fa3c89b0d6d"
+    "ssw-design-analysis/08_literature_audit/loeffel2025_missing_control.py": "28cf5f46d1dc6fe1"
    },
    "verdicts": [
     {
@@ -3888,9 +3991,9 @@
    "tree": "current",
    "stage": "9_literature",
    "readable": true,
-   "bytes": 1753,
-   "modified": "2026-09-25 03:28",
-   "sha256_16": "634d3aed22cdb8de",
+   "bytes": 1924,
+   "modified": "2026-09-25 06:55",
+   "sha256_16": "32b4532e4b022cdb",
    "producers": [
     "ssw-design-analysis/08_literature_audit/recompute_published_criterion.py"
    ],
@@ -3898,12 +4001,12 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/08_literature_audit/recompute_published_criterion.py": "9e95735435db6eed"
+    "ssw-design-analysis/08_literature_audit/recompute_published_criterion.py": "76e76a07a2ff2fef"
    },
    "verdicts": [
     {
      "key": "verdict",
-     "text": "The published criterion produces a DW-minus-NDW NAO contrast of -0.543; 86% of it is the selection term beta x dS. Residual -0.079 (p=0.443). For scale, ACP 26, 3723 (2026) publishes -0.708 from the same criterion."
+     "text": "The published criterion produces a DW-minus-NDW NAO contrast of -0.543; 88% of it is the selection term beta x dS. Residual -0.067 (p=0.495). For scale, ACP 26, 3723 (2026) publishes -0.708 from the same criterion."
     }
    ],
    "counts": {

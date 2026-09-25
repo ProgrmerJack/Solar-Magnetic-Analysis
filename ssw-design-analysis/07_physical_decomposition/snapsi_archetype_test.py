@@ -14,9 +14,9 @@ THE ARCHETYPES
   forecast busts.
 
 WHAT SNAPSI ALREADY SAYS, AND WHAT THIS ADDS
-  With the stratosphere nudged to each observed event, 9 models give the two
-  events the same forced surface shift (K: +1.385 vs +1.333 sigma) and the same
-  probability of a downward-propagating outcome (L: 0.837 vs 0.848). This script
+  With the stratosphere nudged to each observed event, the models give the two
+  events comparable forced surface shifts (result K) and the same probability
+  of a downward-propagating outcome (result L). This script
   asks where the OBSERVED outcome of each event falls inside its own nudged
   ensemble, and whether the observed difference between the two events is
   unusual for two members drawn from the two nudged ensembles.
@@ -32,7 +32,9 @@ DEFINITIONS -- IDENTICAL TO RESULT L, IMPORTED FROM IT
 TWO REFERENCES FOR THE OBSERVATION, BECAUSE THE MODELS HAVE BIASES
   primary   obs placed against the model's own control base, as members are
   adjusted  obs shifted by the model-minus-ERA5 offset at forecast leads 0-1 d
-            (control ensemble mean minus ERA5), which removes a representation
+            (control ensemble mean minus ERA5 at the SAME forecast times; UKMO
+            and Meteo-France start at 06 UTC, so their first day has four
+            steps, not five), which removes a representation
             offset (psl extrapolation over Greenland differs between models) but
             not lead-dependent drift
   The EVENT-PAIR test is the robust one: a model bias common to both winters
@@ -118,9 +120,8 @@ def obs_window(obs, init, leads):
     """ERA5 values at EXACTLY the forecast leads the ensemble has in the window.
 
     Not the nominal window: an ensemble can be admitted by spans_window() while
-    ending one 6-hourly step short (Meteo-France s20181213 has 68 steps, ERA5
-    69), and the observation must be averaged over the same times as the
-    members it is compared with.
+    ending one 6-hourly step short, and the observation must be averaged over
+    the same times as the members it is compared with.
     """
     lead = ((obs["time"] - pd.Timestamp(L.INIT_DATE[init])).dt.total_seconds()
             / 86400).round(4)
@@ -167,10 +168,13 @@ def main() -> int:
                 raise ValueError(f"{c} {init}: members sample different leads")
             ow = obs_window(obs, init, per_member.iloc[0])
             # representation offset at the start of the forecast
-            e0 = con[(con["lead_days"] >= OFFSET_LEADS[0])
-                     & (con["lead_days"] <= OFFSET_LEADS[1])]["psl_cap"].mean()
-            olead = (obs["time"] - pd.Timestamp(L.INIT_DATE[init])).dt.total_seconds() / 86400
-            o0 = obs[(olead >= OFFSET_LEADS[0]) & (olead <= OFFSET_LEADS[1])]["psl_cap_N"].mean()
+            # at the control ensemble's own forecast times: averaging ERA5 over
+            # leads 0-1 d while a 06 UTC-start model has only 0.25-1 d moved the
+            # UKMO offset by up to 25 Pa (methods audit 2026-09-25)
+            c0 = con[(con["lead_days"] >= OFFSET_LEADS[0])
+                     & (con["lead_days"] <= OFFSET_LEADS[1])]
+            e0 = c0["psl_cap"].mean()
+            o0 = float(obs_window(obs, init, np.unique(c0["lead_days"].values)).mean())
             offset = float(e0 - o0)
 
             a_obs, f_obs, dw_obs = classify(nam(ow, base, sd))

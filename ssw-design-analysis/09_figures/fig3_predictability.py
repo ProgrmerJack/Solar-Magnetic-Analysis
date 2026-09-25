@@ -3,17 +3,18 @@
 fig3_predictability.py -- Figure 3: an SSW adds no out-of-sample predictability.
 
 Reads results/current/6_predictability/within_model_check.json (result J) and
-predictability_ceiling.json (the R^2 each DW/NDW split implies). Recomputes
-nothing but histograms.
+the R^2 each DW/NDW split implies (eta^2: q(1-q)C^2 over the variance of the
+same outcome) from the scripts that apply the criterion:
+predictability_ceiling.json (CMIP6), and 9_literature/
+recompute_published_criterion.json (AO) and era5_recompute_and_two_thirds.json
+(ERA5 NAM). Recomputes nothing but histograms.
 
   a-c  within-member cross-validated R^2 at real SSWs (line) against 1,000
        event-free pseudo-onset draws of the SAME size (histogram), per
        predictor tier
   d    event-specific R^2 (real minus null mean) with its null-based and
-       member-bootstrap 95% intervals, against the R^2 implied by DW/NDW
-       contrasts: four from the published criterion applied to this project's
-       data, one published (Lu & Rao 2026; a different index, so its
-       denominator is not matched -- shown open, for scale only).
+       member-bootstrap 95% intervals, against the R^2 implied by the DW/NDW
+       split when the published criterion is applied to this project's data
 """
 import json
 import sys
@@ -51,7 +52,7 @@ def main():
                 transform=ax.transAxes, va="top", fontsize=5.5)
         S.panel_label(ax, "abc"[i], x=-0.12, y=1.08)
     ax.plot([], [], color=S.C["vermillion"], lw=1.2, label="real SSWs")
-    ax.plot([], [], color="0.78", lw=4, label="no SSW, same size")
+    ax.plot([], [], color="0.78", lw=4, label="no SSW, same onset counts")
     ax.legend(loc="upper right", fontsize=5.3, bbox_to_anchor=(1.02, 0.8))
 
     dx = fig.add_subplot(gs[0, 3])
@@ -68,15 +69,18 @@ def main():
         labels.append(short)
         y += 1
     y += 0.4
-    imp = pc["implied"]
-    order = sorted(imp, key=lambda k_: imp[k_]["implied_r2"])
+    lit = S.RESULTS / "9_literature"
+    rc = json.loads((lit / "recompute_published_criterion.json").read_text())
+    er = json.loads((lit / "era5_recompute_and_two_thirds.json").read_text())
+    imp = {"CMIP6, Karpechko cond. 1-2":
+               pc["implied"]["CMIP6 Karpechko conditions 1-2"]["implied_r2"],
+           "obs. AO, Karpechko": rc["outcomes"]["ao"]["implied_r2_eta2"],
+           "ERA5 1000 hPa, Karpechko": er["variants"]["Karpechko_1000hPa"]["implied_r2_eta2"],
+           "ERA5 850 hPa, ACP 2026": er["variants"]["ACP2026_850hPa"]["implied_r2_eta2"]}
+    order = sorted(imp, key=imp.get)
     for name in order:
-        published = "published" in name
-        dx.scatter([imp[name]["implied_r2"]], [y], s=14, marker="D",
-                   facecolor="white" if published else S.C["vermillion"],
-                   edgecolor=S.C["vermillion"], zorder=3)
-        labels.append(("published, different index: " if published
-                       else "criterion applied here: ") + name.split(" (")[0])
+        dx.scatter([imp[name]], [y], s=14, marker="D", color=S.C["vermillion"], zorder=3)
+        labels.append("DW/NDW split implies: " + name)
         y += 1
     dx.axvline(0, color="k", lw=0.4)
     dx.set_yticks(range(2))

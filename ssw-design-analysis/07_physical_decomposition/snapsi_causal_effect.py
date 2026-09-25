@@ -13,7 +13,8 @@ WHY THIS IS DIFFERENT FROM EVERYTHING ELSE IN THIS PROJECT
   counterfactual, because the counterfactual does not exist in that data.
 
   SNAPSI manipulates it. `nudged` relaxes the zonally symmetric stratosphere
-  (50-90 hPa) toward the OBSERVED evolution of a real SSW; `control` applies the
+  (full strength above 50 hPa, tapering to none below 90 hPa; Hitchcock et al.
+  2022) toward the OBSERVED evolution of a real SSW; `control` applies the
   IDENTICAL nudging toward a 1979-2019 climatology. The two ensembles share
   initial conditions, model, resolution and nudging machinery, and differ only in
   whether the stratosphere carries the event. So
@@ -34,7 +35,8 @@ THE WINDOW, CHOSEN TO BE COMPARABLE ACROSS INITIALISATIONS
       s20180208  Feb-2018 SSW                            onset at lead  +4
       s20181213  Jan-2019 SSW (central date 2019-01-02)  onset at lead +20
       s20190108  Jan-2019 SSW                            onset at lead  -6
-  Forecasts run 45 days, so the post-onset coverage differs (+27, +41, +25, +51).
+  Forecasts run 45-60 days depending on the centre, so post-onset coverage
+  differs between initialisations.
   The primary window is therefore the COMMON overlap, post-onset days +8..+25,
   which every initialisation covers in full and which starts where the published
   surface window starts. Each initialisation's own maximum window is reported
@@ -56,8 +58,8 @@ UNITS, SO THE NUMBER IS COMPARABLE TO PUBLISHED CONTRASTS
 SAMPLE SIZE, STATED UP FRONT
   Two NH EVENTS, each at two initialisations. Not four events. Anything said here
   about how events DIFFER rests on n=2 and is reported as indicative only. What
-  is precisely estimated is the MEAN causal effect, from 50-80 members per
-  ensemble across 4 models.
+  is precisely estimated is the MEAN causal effect, from 38-52 members per
+  ensemble across 9 models.
 
 Output: snapsi_causal_effect.json
 """
@@ -95,9 +97,9 @@ def duplicate_guard(d):
     """Refuse any centre whose `nudged` and `control` ensembles are the same data.
 
     NRL/NAVGEM returns S = -0.000 sigma for all four initialisations. That is not a
-    model with weak downward coupling: paired member-by-member differences are
-    EXACTLY zero for three of the four initialisations and average 3 Pa for the
-    fourth, against a within-ensemble spread of ~110 Pa. Two independent 45-day
+    model with weak downward coupling: paired member-by-member differences are at
+    most 0.023 Pa at three of the four initialisations and average 3 Pa at the
+    fourth (s20180125), against a within-ensemble spread of ~110 Pa. Two independent 45-day
     forecasts from perturbed states diverge by O(100 Pa); near-identical
     trajectories mean the archived files are duplicates, an artefact of the
     submission rather than a property of the atmosphere. NRL's within-ensemble

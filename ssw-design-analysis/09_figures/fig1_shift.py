@@ -88,16 +88,19 @@ def main():
     bx.hist(Cc + shift, bins=bins, density=True, histtype="step", lw=0.7,
             color="k", ls=(0, (2, 1.5)), label="control, translated by the shift")
     bx.axvline(0, color="k", lw=0.4, ls=(0, (2, 2)))
-    bx.annotate("", xy=(shift, 0.47), xytext=(0, 0.47),
+    bx.annotate("", xy=(shift, 0.515), xytext=(0, 0.515),
                 arrowprops=dict(arrowstyle="->", lw=0.7))
-    bx.text(shift / 2, 0.48, f"shift {shift:+.2f}σ", ha="center", va="bottom", fontsize=5.5)
+    # per-ensemble units, all 36 ensembles including ECCC: not the -1.11 sigma of
+    # panel a (model-pooled units, eight models), so say which it is
+    bx.text(-0.15, 0.53, f"mean shift {shift:+.2f}σ\n(36 ensembles, incl. ECCC)",
+            ha="right", va="bottom", fontsize=5.2)
     lo, hi = pa["variance_ratio_CI95"]
     bx.text(0.98, 0.62, f"variance ratio {pa['variance_ratio']:.3f}\n[{lo:.3f}, {hi:.3f}]\n"
                         f"KS (shape) p = {pa['pure_translation_KS_p']:.2f}",
             transform=bx.transAxes, ha="right", va="top", fontsize=5.5)
     bx.set_xlabel("member surface NAM proxy, days +8 to +25\n(σ of that ensemble's control)")
     bx.set_ylabel("density")
-    bx.set_ylim(0, 0.56)
+    bx.set_ylim(0, 0.64)
     bx.legend(loc="lower left", bbox_to_anchor=(0, 1.0), fontsize=5.3)
     S.panel_label(bx, "b", x=-0.14, y=1.12)
     S.save(fig, "fig1_shift")

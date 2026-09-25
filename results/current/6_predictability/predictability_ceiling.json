@@ -8,16 +8,16 @@
       "P1 pre-onset": {
         "n_features": 20,
         "ridge": {
-          "cv_r2": 0.1026,
-          "null_mean": 0.001,
-          "null_p95": 0.0094,
+          "cv_r2": 0.0839,
+          "null_mean": -0.009,
+          "null_p95": 0.002,
           "p_value": 0.0,
           "significant": true
         },
         "gb": {
-          "cv_r2": 0.0532,
-          "null_mean": -0.0394,
-          "null_p95": -0.0222,
+          "cv_r2": 0.0259,
+          "null_mean": -0.0611,
+          "null_p95": -0.0374,
           "p_value": 0.0,
           "significant": true
         }
@@ -25,16 +25,16 @@
       "P2 at-onset": {
         "n_features": 26,
         "ridge": {
-          "cv_r2": 0.1133,
-          "null_mean": 0.003,
-          "null_p95": 0.0115,
+          "cv_r2": 0.0917,
+          "null_mean": -0.0075,
+          "null_p95": 0.0023,
           "p_value": 0.0,
           "significant": true
         },
         "gb": {
-          "cv_r2": 0.0644,
-          "null_mean": -0.034,
-          "null_p95": -0.011,
+          "cv_r2": 0.0379,
+          "null_mean": -0.0607,
+          "null_p95": -0.0412,
           "p_value": 0.0,
           "significant": true
         }
@@ -42,16 +42,16 @@
       "P3 + post-onset stratosphere": {
         "n_features": 38,
         "ridge": {
-          "cv_r2": 0.4226,
-          "null_mean": 0.005,
-          "null_p95": 0.016,
+          "cv_r2": 0.4073,
+          "null_mean": -0.0062,
+          "null_p95": 0.005,
           "p_value": 0.0,
           "significant": true
         },
         "gb": {
-          "cv_r2": 0.3719,
-          "null_mean": -0.0296,
-          "null_p95": -0.0089,
+          "cv_r2": 0.3513,
+          "null_mean": -0.0527,
+          "null_p95": -0.0226,
           "p_value": 0.0,
           "significant": true
         }
@@ -59,31 +59,21 @@
     }
   },
   "power_CMIP6": {
-    "R2=0.02": 0.575,
+    "R2=0.02": 0.75,
     "R2=0.05": 1.0,
     "R2=0.1": 1.0,
     "R2=0.2": 1.0
   },
   "implied": {
-    "CMIP6 DW-NDW contrast": {
-      "implied_r2": 0.6294,
-      "over_achievable": 6.13
-    },
-    "Karpechko AO, observations": {
-      "implied_r2": 0.5972,
-      "over_achievable": 5.82
-    },
-    "ERA5 1000 hPa NAM, Karpechko": {
-      "implied_r2": 0.1041,
-      "over_achievable": 1.01
-    },
-    "ERA5 850 hPa NAM, ACP": {
-      "implied_r2": 0.0885,
-      "over_achievable": 0.86
-    },
-    "ACP 26,3723 published NAO (unmatched index)": {
-      "implied_r2": 0.104,
-      "over_achievable": 1.01
+    "CMIP6 Karpechko conditions 1-2": {
+      "implied_r2": 0.5275,
+      "rate_DW": 0.704,
+      "contrast": -1.1539,
+      "n_events": 1516,
+      "n_excluded_short_window": 1,
+      "var_outcome": 0.5255,
+      "criterion": "Karpechko 2017 conditions 1-2 on the daily annular-mode anomaly over days +8..+52; condition 3 not available",
+      "over_achievable": 6.29
     }
   }
 }

@@ -52,8 +52,9 @@ THE CEILING, WHICH IS THE POINT -- STATED CAREFULLY
   compare the single most extreme event against the rest.
 
   So the honest quantity is the maximum contrast achievable AT THE SPLIT FRACTION
-  THE STUDY ITSELF USES. Each reported contrast below is therefore paired with the
-  DW rate that study reports, and (**) is evaluated at that q. For the split
+  THE CRITERION ITSELF PRODUCES. Each contrast is therefore computed here with the
+  published criterion, on the same outcome as s_f, and (**) is evaluated at the
+  DW fraction it gives. For the split
   fractions actually in use (54-70% DW) the factor lands in 1.60-1.66, so the
   numbers barely move -- but the claim is now the one the algebra supports.
 
@@ -63,10 +64,11 @@ ASSUMPTION, STATED
   that, and it is recorded as an assumption rather than buried.
 
 WHY THE TEST IS CONSERVATIVE AGAINST ITS OWN CONCLUSION
-  Pseudo-onsets are drawn from EVENT-CLEANED data, with the +-[60,75] day
-  neighbourhood of every real onset removed. That deletes the most disturbed
-  periods of winter, which DEFLATES Var(Y | pseudo) and therefore INFLATES s_f^2
-  by (*). The bias runs against the finding of small s_f, not toward it.
+  Pseudo-onsets are drawn only from days more than 135 days from every real
+  onset, so no pseudo-event's -60..+75 day neighbourhood overlaps a real event's.
+  That excludes the most disturbed periods of winter, which DEFLATES
+  Var(Y | pseudo) and therefore INFLATES s_f^2 by (*). The bias runs against the
+  finding of small s_f, not toward it.
 
 THREE CONTROLS, BECAUSE (*) HAS ASSUMPTIONS
   C1 PRE-ONSET PLACEBO. Run the identical decomposition on the window BEFORE onset
@@ -97,12 +99,15 @@ sys.path.insert(0, str(SIM))
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE.parents[0] / "02_event_catalogues"))
 sys.path.insert(0, str(HERE.parents[0] / "05_corrected_estimators"))
+sys.path.insert(0, str(HERE.parents[0] / "08_literature_audit"))
 from build_catalogue import load_catalogue          # noqa: E402
 import gate3_clean_null as G                        # noqa: E402
 import multi_index_event_study as M                 # noqa: E402
 import selection_on_outcome as SO                   # noqa: E402
 import ensemble_precursor as EP                     # noqa: E402
 import stratifier_law_cmip6 as C6                   # noqa: E402
+import predictability_ceiling as PC                 # noqa: E402
+import recompute_published_criterion as RPC         # noqa: E402
 
 RAW = ROOT / "ssw-design-analysis" / "03_data_ingestion" / "raw" / "cmip6"
 OUT_WIN = (8, 52)
@@ -112,20 +117,21 @@ N_PSEUDO = 400               # pseudo-onset draws (observations)
 N_BOOT = 3000
 SEED = 20260803
 
-# Reported DW-minus-NDW contrasts, each with the DW RATE that study reports, so
-# the ceiling is evaluated at the split fraction actually used. All verified from
-# source earlier in this project; `system` marks which arm it must be compared
-# against, since a cross-system comparison is weaker than a matched one.
-REPORTED = [
-    ("Karpechko-criterion AO, observations (this project)", 1.782, 0.70, "obs"),
-    ("ERA5 1000 hPa NAM, Karpechko criterion (this project)", 0.684, 0.54, "obs"),
-    ("ERA5 850 hPa NAM, ACP 26,3723 criterion (this project)", 0.639, 0.59, "obs"),
-    # Lu & Rao (2026, ACP 26, 3723) give ERA5 60-day NAO means by DW subtype: BOTH -0.762 (n=13), EA -0.567 (14), NA -0.435 (6); NDW +0.088 (19). All-DW mean -0.620, contrast -0.708, DW fraction 33/52 = 0.635. The -0.850 used until 2026-09-25 subtracted the BOTH subtype alone.
-    # System "published_nao": their NAO is not this project's AO/NAM, so the
-    # denominator is never matched (flagged in review 2026-09-25).
-    ("ACP 26, 3723 (2026) published NAO contrast", 0.708, 0.635, "published_nao"),
-    ("CMIP6 ensemble DW-NDW (this project)", 1.143, 0.50, "cmip6"),
-]
+# The DW-minus-NDW contrast each ceiling is compared with is COMPUTED here, on the
+# same per-event outcome the ceiling's s_f comes from, with the split fraction q
+# that the criterion produced on those events. Until 2026-09-25 this was a typed-in
+# list: ERA5 NAM contrasts were tagged as matched to the CPC-AO s_f, and the CMIP6
+# row was a median split (q = 0.5 by construction) from an older event set. The
+# cross-index rows are gone; their matched implied R^2 is in their own scripts.
+
+
+def matched_contrast(Y, lab):
+    """(contrast DW - NDW, DW fraction, n) on events with a finite outcome and label."""
+    Y = np.asarray(Y, float)
+    lab = np.asarray(lab, float)
+    ok = np.isfinite(Y) & np.isfinite(lab)
+    g = lab[ok].astype(bool)
+    return float(Y[ok][g].mean() - Y[ok][~g].mean()), float(g.mean()), int(ok.sum())
 
 
 def sigma_f2(Y_ev, Y_ps):
@@ -247,7 +253,7 @@ def validate_known_truth(pool, n_ev, rng, n_rep=400):
 
 
 def analyse(name, ao_like, onsets, clim, clean_idx, doys, per_event, rng,
-            draw, n_pseudo=N_PSEUDO, system="obs"):
+            draw, n_pseudo=N_PSEUDO, reported=()):
     print("\n" + "=" * 74)
     print(f"=== {name} ===")
     Y_ev = per_event(ao_like, onsets, clim, OUT_WIN)
@@ -309,18 +315,18 @@ def analyse(name, ao_like, onsets, clim, clean_idx, doys, per_event, rng,
           f"{'ratio':>7s}  match")
     print("  " + "-" * 84)
     comp = {}
-    for lab, v, q, sysname in REPORTED:
+    for lab, v, q, n in reported:
+        v = abs(v)
         c_hi_q = ceiling(ci[1], q)
         ratio = v / c_hi_q if c_hi_q > 0 else np.inf
-        matched = (sysname == system)
-        comp[lab] = {"reported": v, "split_fraction": q,
+        comp[lab] = {"contrast_abs": round(v, 4), "split_fraction": round(q, 3),
+                     "n_events": n,
                      "ceiling_upper95_at_q": round(float(c_hi_q), 4),
                      "over_upper_bound_ratio":
                          None if not np.isfinite(ratio) else round(float(ratio), 2),
-                     "matched_system": bool(matched)}
+                     "matched_system": True}
         rs = "inf" if not np.isfinite(ratio) else f"{ratio:.1f}x"
-        print(f"  {lab:<50s} {q:5.2f} {v:7.3f} {c_hi_q:7.3f} {rs:>7s}  "
-              f"{'YES' if matched else 'cross'}")
+        print(f"  {lab:<50s} {q:5.2f} {v:7.3f} {c_hi_q:7.3f} {rs:>7s}  YES")
     c_pt, c_hi = ceiling(s2, 0.5), ceiling(ci[1], 0.5)
     print(f"\n  (median-split reference: point {c_pt:.3f}, upper 95% {c_hi:.3f} sigma)")
 
@@ -356,7 +362,7 @@ def main():
     real = real[(real >= ao.index.min()) & (real <= ao.index.max())]
     mask = G.real_influence_mask(ao.index, real)
     clim = ao[~mask].groupby(ao[~mask].index.dayofyear).mean()
-    clean_idx = ao[~mask].index
+    clean_idx = G.zone_free_index(ao.index, real)
     doys = np.array([t.dayofyear for t in pd.DatetimeIndex(real)])
 
     def _win_anom(s, on, cl, win):
@@ -383,32 +389,40 @@ def main():
           f"max|diff| = {dmax:.2e} on {both.sum()} events")
     assert dmax < 1e-9, "windowed estimator disagrees with the project's own"
 
+    # Karpechko et al. (2017) conditions 1-3 on these events, exactly as
+    # recompute_published_criterion applies them, and the contrast on THIS outcome
+    lab_obs = RPC.classify(real, ao, RPC.strat_nam_150()).astype(float)
+    rep_obs = [("Karpechko criterion, CPC AO, days 8-52",
+                *matched_contrast(mine, lab_obs))]
     r_obs, pool_obs = analyse("OBSERVATIONS (CPC AO, 43 events)", ao, real, clim,
-                              clean_idx, doys, _win_anom, rng, G.draw_clean)
+                              clean_idx, doys, _win_anom, rng, G.draw_clean,
+                              reported=rep_obs)
     res["results"]["observations"] = r_obs
     res["validation_known_truth"] = validate_known_truth(
         pool_obs, r_obs["n_events"], rng)
 
     # ------------------------------------------------ CMIP6
     print("\nloading CMIP6 ensemble ...")
-    Yc, Yc_pre, psc, psc_pre, wids = [], [], [], [], []
+    Yc, Yc_pre, psc, psc_pre, wids, labc = [], [], [], [], [], []
     for f in sorted(RAW.glob("*_zm.nc")):
         try:
             m = EP.load_member(f)
+            full = m
         except Exception:
             continue
         m = m[np.isin(m.index.month, SEASON)].dropna()
         if len(m) < 2000:
             continue
-        on = EP.detect_ssw(m["u10"].values, m.index)
+        on = EP.detect_ssw(full["u10"].values, full.index)   # full daily series: CP07 needs contiguous days
         if len(on) < 15:
             continue
         am = m["am"]
         msk = C6.influence_mask(am.index, on)
         cl = am[~msk].groupby(am[~msk].index.dayofyear).mean()
-        cln = am[~msk].index
+        cln = C6.zone_free_index(am.index, on)
         dy = np.array([t.dayofyear for t in pd.DatetimeIndex(on)])
         Yc.append(C6.anom(am, on, cl, OUT_WIN))
+        labc.append(PC.karpechko_surface(am - cl.reindex(am.index.dayofyear).values, on))
         Yc_pre.append(C6.anom(am, on, cl, PRE_WIN))
         wids.append(winter_of(on) + 10000 * len(wids))   # keep winters distinct per member
         for _ in range(20):
@@ -456,17 +470,19 @@ def main():
               f"{'ratio':>7s}  match")
         print("  " + "-" * 84)
         comp = {}
-        for lab, v, q, sysname in REPORTED:
+        v, q, n = matched_contrast(Yall, np.concatenate(labc))
+        for lab, v, q, n in [("Karpechko conditions 1-2, CMIP6 annular mode", v, q, n)]:
+            v = abs(v)
             ch = ceiling(ci[1], q)
             ratio = v / ch if ch > 0 else np.inf
-            comp[lab] = {"reported": v, "split_fraction": q,
+            comp[lab] = {"contrast_abs": round(v, 4), "split_fraction": round(q, 3),
+                         "n_events": n,
                          "ceiling_upper95_at_q": round(float(ch), 4),
                          "over_upper_bound_ratio":
                              None if not np.isfinite(ratio) else round(float(ratio), 2),
-                         "matched_system": bool(sysname == "cmip6")}
+                         "matched_system": True}
             print(f"  {lab:<50s} {q:5.2f} {v:7.3f} {ch:7.3f} "
-                  f"{('inf' if not np.isfinite(ratio) else f'{ratio:.1f}x'):>7s}  "
-                  f"{'YES' if sysname == 'cmip6' else 'cross'}")
+                  f"{('inf' if not np.isfinite(ratio) else f'{ratio:.1f}x'):>7s}  YES")
         c_pt, c_hi = ceiling(s2, 0.5), ceiling(ci[1], 0.5)
         print(f"  placebo-CORRECTED ceiling at q=0.5, upper 95% = "
               f"{ceiling(max(cic[1], 0), 0.5):.3f} sigma")

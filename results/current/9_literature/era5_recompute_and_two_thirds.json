@@ -11,8 +11,8 @@
     52
   ],
   "outcome_window": [
-    1,
-    60
+    8,
+    52
   ],
   "variants": {
     "Karpechko_1000hPa": {
@@ -20,17 +20,19 @@
       "n_DW": 21,
       "n_NDW": 18,
       "rate_DW": 0.538,
-      "rate_DW_null": 0.113,
-      "DW_composite": -0.9317,
-      "NDW_composite": -0.2481,
-      "contrast": -0.6836,
+      "rate_DW_null": 0.116,
+      "DW_composite": -0.9324,
+      "NDW_composite": -0.2505,
+      "contrast": -0.6819,
       "dS": -0.6671,
-      "beta": 0.9858,
-      "selection_term": -0.6576,
-      "residual": -0.026,
-      "p_residual": 0.5888235294117647,
-      "pct_from_selection": 96.2,
-      "null_contrast": -0.6636,
+      "implied_r2_eta2": 0.4016,
+      "var_outcome": 0.2877,
+      "beta": 0.9881,
+      "selection_term": -0.6591,
+      "residual": -0.0227,
+      "p_residual": 0.6637478108581436,
+      "pct_from_selection": 96.7,
+      "null_contrast": -0.6619,
       "pct_reproduced_under_null": 97.1,
       "cond_pass_rates": {
         "c1_mean_negative": 0.718,
@@ -43,18 +45,20 @@
       "n_DW": 23,
       "n_NDW": 16,
       "rate_DW": 0.59,
-      "rate_DW_null": 0.131,
-      "DW_composite": -0.8784,
-      "NDW_composite": -0.2393,
-      "contrast": -0.6392,
+      "rate_DW_null": 0.136,
+      "DW_composite": -0.8791,
+      "NDW_composite": -0.2419,
+      "contrast": -0.6371,
       "dS": -0.6827,
-      "beta": 0.9559,
-      "selection_term": -0.6525,
-      "residual": 0.0134,
-      "p_residual": 0.90574456218628,
-      "pct_from_selection": 102.1,
-      "null_contrast": -0.5934,
-      "pct_reproduced_under_null": 92.8,
+      "implied_r2_eta2": 0.3414,
+      "var_outcome": 0.2877,
+      "beta": 0.9579,
+      "selection_term": -0.6539,
+      "residual": 0.0168,
+      "p_residual": 0.8596966413867823,
+      "pct_from_selection": 102.6,
+      "null_contrast": -0.5938,
+      "pct_reproduced_under_null": 93.2,
       "cond_pass_rates": {
         "c1_mean_negative": 0.744,
         "c2_frac_negative": 0.718,
@@ -63,16 +67,16 @@
     }
   },
   "two_thirds_test": {
-    "measured_shift_sigma": -0.639,
+    "measured_shift_sigma": -0.6364,
     "observed_pass_rate_c1c2": 0.6923,
-    "null_pass_rate_c1c2": 0.3094,
-    "shifted_pseudo_pass_rate_c1c2": 0.7437,
+    "null_pass_rate_c1c2": 0.3129,
+    "shifted_pseudo_pass_rate_c1c2": 0.7535,
     "shifted_pseudo_CI95": [
-      0.6154,
+      0.6147,
       0.8718
     ],
     "shift_model_reproduces_observed_rate": true,
     "full_criterion_rate_observed": 0.5385
   },
-  "verdict": "In ERA5 the published criterion gives a DW-minus-NDW contrast of -0.684 of which 96% is the selection term. A pure surface shift of -0.639 sigma applied to event-free dates gives a 74% pass rate against 69% observed -- so 'about two thirds propagate downward' is what ONE shifted population produces, with no classes in it."
+  "verdict": "In ERA5 the published criterion gives a DW-minus-NDW contrast of -0.682 of which 97% is the selection term. A pure surface shift of -0.636 sigma applied to event-free dates gives a 75% pass rate against 69% observed -- so 'about two thirds propagate downward' is what ONE shifted population produces, with no classes in it."
 }

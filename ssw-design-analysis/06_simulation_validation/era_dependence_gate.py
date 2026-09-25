@@ -242,7 +242,8 @@ def main():
     SRC = {nm: pred[var] for nm, _, var, _, _ in L.STRATIFIERS}
     WINS = {nm: w for nm, _, _, w, _ in L.STRATIFIERS}
 
-    real = load_catalogue("primary")
+    allev = load_catalogue("primary")   # EXCLUSION set: every event, even ones not scored here
+    real = allev
     lo_cov = max(v.index.min() for v in pred.values())
     hi_cov = min(v.index.max() for v in pred.values())
     real = real[(real >= max(lo_cov, ao.index.min()) + pd.Timedelta(days=60))
@@ -254,7 +255,7 @@ def main():
     res["n_events_pre"] = int((real < SPLIT).sum())
     res["n_events_post"] = int((real >= SPLIT).sum())
 
-    mask = G.real_influence_mask(ao.index, real)
+    mask = G.real_influence_mask(ao.index, allev)   # every catalogued event
     clean = ao[~mask]
     doys = np.array([t.dayofyear for t in pd.DatetimeIndex(real)])
 
@@ -265,7 +266,8 @@ def main():
     eras = {"pre": clean.index < SPLIT, "post": clean.index >= SPLIT}
     betas, cis, Yps, Sps = {}, {}, {}, {}
     for era, sel in eras.items():
-        idx = clean.index[sel]
+        zf = G.zone_free_index(clean.index, allev)    # pseudo zones clear of every event
+        idx = zf[zf < SPLIT] if era == "pre" else zf[zf >= SPLIT]
         clim = clean[sel].groupby(clean[sel].index.dayofyear).mean()
         dd = doys[(pd.DatetimeIndex(real) < SPLIT) if era == "pre"
                   else (pd.DatetimeIndex(real) >= SPLIT)]

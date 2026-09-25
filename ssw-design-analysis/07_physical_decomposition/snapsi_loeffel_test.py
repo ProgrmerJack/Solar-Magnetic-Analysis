@@ -27,8 +27,7 @@ WHY THAT CONCLUSION DOES NOT FOLLOW FROM THAT CORRELATION, AND WHAT IS TESTED
   A correlation of ensemble means across events is SCALE-FREE. r = 0.85 says the
   forced lower-stratospheric and forced surface responses move TOGETHER across
   events. It says nothing about how far apart those events are, which is the
-  quantity `snapsi_distribution_test.py` bounds (variance ratio 0.939
-  [0.781, 1.130], sigma_f^2 <= +0.13).
+  quantity `snapsi_distribution_test.py` bounds (its variance ratio, result M).
 
   So both can be true at once, and the question this script asks is which:
   is the 100 hPa -> surface relation a property that DISTINGUISHES events, or a
@@ -159,8 +158,8 @@ def win_mean(d, col, lo, hi):
 def duplicate_guard(psl):
     """Refuse a centre whose nudged and control ensembles are the same data.
 
-    NRL/NAVGEM's submission is corrupt: paired member differences are exactly
-    zero at three of four initialisations. Tests the EFFECT, not the labels --
+    NRL/NAVGEM's submission is defective: paired member differences are at most
+    0.023 Pa at three of four initialisations. Tests the EFFECT, not the labels --
     an earlier version compared members by name and passed it.
     """
     bad = []

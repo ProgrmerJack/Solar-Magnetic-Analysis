@@ -11,136 +11,82 @@
     "observations": {
       "n_events": 43,
       "n_pseudo": 17200,
-      "mean_shift": -0.9044,
+      "mean_shift": -0.8953,
       "var_event": 1.1167,
-      "var_pseudo": 1.1788,
-      "sigma_f2": -0.06202,
+      "var_pseudo": 1.1403,
+      "sigma_f2": -0.02357,
       "sigma_f2_CI95": [
-        -0.43318,
-        0.31361
+        -0.39269,
+        0.35463
       ],
       "sigma_f": 0.0,
-      "sigma_f_upper95": 0.56,
-      "placebo_sigma_f2": 0.28323,
+      "sigma_f_upper95": 0.5955,
+      "placebo_sigma_f2": 0.29328,
       "placebo_CI95": [
-        -0.44124,
-        1.12623
+        -0.43166,
+        1.16176
       ],
       "placebo_clean": true,
-      "corrected_sigma_f2": -0.34525,
+      "corrected_sigma_f2": -0.31685,
       "corrected_CI95": [
-        -1.16651,
-        0.40568
+        -1.15769,
+        0.46376
       ],
       "corrected_sigma_f": 0.0,
-      "corrected_sigma_f_upper95": 0.6369,
-      "pre_onset_variance_ratio": 1.237,
+      "corrected_sigma_f_upper95": 0.681,
+      "pre_onset_variance_ratio": 1.2475,
       "noise_equality_ok": true,
       "ceiling_point": 0.0,
-      "ceiling_upper95": 0.8936,
+      "ceiling_upper95": 0.9503,
       "reported_vs_ceiling": {
-        "Karpechko-criterion AO, observations (this project)": {
-          "reported": 1.782,
-          "split_fraction": 0.7,
-          "ceiling_upper95_at_q": 0.9272,
-          "over_upper_bound_ratio": 1.92,
+        "Karpechko criterion, CPC AO, days 8-52": {
+          "contrast_abs": 1.782,
+          "split_fraction": 0.698,
+          "n_events": 43,
+          "ceiling_upper95_at_q": 0.9851,
+          "over_upper_bound_ratio": 1.81,
           "matched_system": true
-        },
-        "ERA5 1000 hPa NAM, Karpechko criterion (this project)": {
-          "reported": 0.684,
-          "split_fraction": 0.54,
-          "ceiling_upper95_at_q": 0.8949,
-          "over_upper_bound_ratio": 0.76,
-          "matched_system": true
-        },
-        "ERA5 850 hPa NAM, ACP 26,3723 criterion (this project)": {
-          "reported": 0.639,
-          "split_fraction": 0.59,
-          "ceiling_upper95_at_q": 0.9,
-          "over_upper_bound_ratio": 0.71,
-          "matched_system": true
-        },
-        "ACP 26, 3723 (2026) published NAO contrast": {
-          "reported": 0.708,
-          "split_fraction": 0.635,
-          "ceiling_upper95_at_q": 0.9082,
-          "over_upper_bound_ratio": 0.78,
-          "matched_system": false
-        },
-        "CMIP6 ensemble DW-NDW (this project)": {
-          "reported": 1.143,
-          "split_fraction": 0.5,
-          "ceiling_upper95_at_q": 0.8936,
-          "over_upper_bound_ratio": 1.28,
-          "matched_system": false
         }
       }
     },
     "cmip6": {
-      "n_events": 1888,
-      "n_pseudo": 37734,
-      "mean_shift": -0.5057,
-      "var_event": 0.5189,
-      "var_pseudo": 0.4405,
-      "sigma_f2": 0.07838,
+      "n_events": 1517,
+      "n_pseudo": 30320,
+      "mean_shift": -0.4795,
+      "var_event": 0.5258,
+      "var_pseudo": 0.4474,
+      "sigma_f2": 0.07835,
       "sigma_f2_CI95": [
-        0.04256,
-        0.11528
+        0.04009,
+        0.11672
       ],
-      "sigma_f": 0.28,
-      "sigma_f_upper95": 0.3395,
-      "placebo_sigma_f2": 0.06551,
+      "sigma_f": 0.2799,
+      "sigma_f_upper95": 0.3416,
+      "placebo_sigma_f2": 0.05949,
       "placebo_CI95": [
-        0.02414,
-        0.10846
+        0.01707,
+        0.10106
       ],
       "placebo_clean": false,
-      "placebo_share_of_raw_pct": 83.6,
-      "corrected_sigma_f2": 0.01287,
+      "placebo_share_of_raw_pct": 75.9,
+      "corrected_sigma_f2": 0.01885,
       "corrected_CI95": [
-        -0.04012,
-        0.06557
+        -0.03318,
+        0.07225
       ],
-      "corrected_sigma_f": 0.1134,
-      "corrected_sigma_f_upper95": 0.2561,
-      "corrected_ceiling_upper95": 0.4086,
-      "pre_onset_variance_ratio": 1.1341,
-      "ceiling_point": 0.4468,
-      "ceiling_upper95": 0.5418,
+      "corrected_sigma_f": 0.1373,
+      "corrected_sigma_f_upper95": 0.2688,
+      "corrected_ceiling_upper95": 0.4289,
+      "pre_onset_variance_ratio": 1.1224,
+      "ceiling_point": 0.4467,
+      "ceiling_upper95": 0.5452,
       "reported_vs_ceiling": {
-        "Karpechko-criterion AO, observations (this project)": {
-          "reported": 1.782,
-          "split_fraction": 0.7,
-          "ceiling_upper95_at_q": 0.5622,
-          "over_upper_bound_ratio": 3.17,
-          "matched_system": false
-        },
-        "ERA5 1000 hPa NAM, Karpechko criterion (this project)": {
-          "reported": 0.684,
-          "split_fraction": 0.54,
-          "ceiling_upper95_at_q": 0.5426,
-          "over_upper_bound_ratio": 1.26,
-          "matched_system": false
-        },
-        "ERA5 850 hPa NAM, ACP 26,3723 criterion (this project)": {
-          "reported": 0.639,
-          "split_fraction": 0.59,
-          "ceiling_upper95_at_q": 0.5456,
-          "over_upper_bound_ratio": 1.17,
-          "matched_system": false
-        },
-        "ACP 26, 3723 (2026) published NAO contrast": {
-          "reported": 0.708,
-          "split_fraction": 0.635,
-          "ceiling_upper95_at_q": 0.5506,
-          "over_upper_bound_ratio": 1.29,
-          "matched_system": false
-        },
-        "CMIP6 ensemble DW-NDW (this project)": {
-          "reported": 1.143,
-          "split_fraction": 0.5,
-          "ceiling_upper95_at_q": 0.5418,
-          "over_upper_bound_ratio": 2.11,
+        "Karpechko conditions 1-2, CMIP6 annular mode": {
+          "contrast_abs": 1.1539,
+          "split_fraction": 0.704,
+          "n_events": 1516,
+          "ceiling_upper95_at_q": 0.5667,
+          "over_upper_bound_ratio": 2.04,
           "matched_system": true
         }
       }
@@ -148,29 +94,29 @@
   },
   "validation_known_truth": {
     "s_f=0.0": {
-      "recovered_mean": 0.1967,
-      "bias": 0.1967,
-      "sd": 0.2534
+      "recovered_mean": 0.2331,
+      "bias": 0.2331,
+      "sd": 0.2535
     },
     "s_f=0.2": {
-      "recovered_mean": 0.237,
-      "bias": 0.037,
-      "sd": 0.2579
+      "recovered_mean": 0.2467,
+      "bias": 0.0467,
+      "sd": 0.2644
     },
     "s_f=0.4": {
-      "recovered_mean": 0.3493,
-      "bias": -0.0507,
-      "sd": 0.2936
+      "recovered_mean": 0.3722,
+      "bias": -0.0278,
+      "sd": 0.2935
     },
     "s_f=0.6": {
-      "recovered_mean": 0.5291,
-      "bias": -0.0709,
-      "sd": 0.302
+      "recovered_mean": 0.5471,
+      "bias": -0.0529,
+      "sd": 0.2954
     },
     "s_f=0.8": {
-      "recovered_mean": 0.7542,
-      "bias": -0.0458,
-      "sd": 0.2983
+      "recovered_mean": 0.7572,
+      "bias": -0.0428,
+      "sd": 0.2768
     }
   }
 }

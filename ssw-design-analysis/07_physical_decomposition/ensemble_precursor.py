@@ -25,15 +25,15 @@ THE FIX
   observed -0.82 is very likely sampling noise. If they show one, it is real and
   its magnitude is finally pinned down.
 
-SSW DETECTION -- Charlton-Polvani, applied identically in every member
-  zonal-mean zonal wind at 10 hPa, 60N reverses (< 0) between 1 Nov and 31 Mar;
-  final warmings excluded by requiring a return to westerly for >=10 consecutive
-  days before 30 April; consecutive events separated by >=20 days.
+SSW DETECTION -- Charlton & Polvani (2007), applied identically in every member
+  (detect_ssw; validated against the published NCEP-NCAR compendium dates by
+  06_simulation_validation/validate_ssw_detector.py).
 
 SURFACE INDEX
-  Annular mode from zonal-mean SLP: area-weighted mean over 35-55N minus
-  65-90N, standardised per member. Positive = strong vortex / positive AO, the
-  same sign convention as the CPC AO index used throughout this project.
+  Annular mode as the leading EOF of zonal-mean SLP over 20-90N (Nov-Mar),
+  computed per member and standardised (see load_member). Positive = strong
+  vortex / positive AO, the same sign convention as the CPC AO index used
+  throughout this project.
 
 ESTIMATOR
   Identical to the observational canonical study: mutually exclusive lead/lag
@@ -134,31 +134,59 @@ def load_member(f):
 
 
 def detect_ssw(u, idx):
-    """Charlton-Polvani central dates, final warmings excluded."""
-    rev = (u < 0) & np.isin(idx.month, (11, 12, 1, 2, 3))
+    """Charlton & Polvani (2007) central dates, as stated by Butler et al.
+    (2017, ESSD 9, 63): "the central date ... occurs when the daily-mean
+    zonal-mean zonal winds at 10 hPa and 60N first change from westerly to
+    easterly between November and March. The winds must return to westerly
+    for 20 consecutive days between events ... If the winds do not return to
+    westerly for at least 10 consecutive days before 30 April, the warming is
+    a final warming and is not included."
+
+    The first version flagged ANY easterly day and skipped 20 steps, so 254 of
+    1,888 CMIP6 onsets were not westerly-to-easterly changes and 84 re-counted
+    one easterly spell (found by the methods audit, 2026-09-25). Days must be
+    consecutive for a change or a run to count: a gap of more than 2 days
+    (missing data; a noleap calendar's absent 29 Feb is allowed) breaks a run,
+    and NaN counts as neither westerly nor easterly.
+    """
+    u = np.asarray(u, dtype=float)
+    idx = pd.DatetimeIndex(idx)
+    n = len(u)
+    step = np.r_[np.inf, np.diff(idx.values).astype("timedelta64[D]").astype(float)]
+    contiguous = step <= 2
+    west = u > 0
+    east = u < 0
+    ndjfm = np.isin(idx.month, (11, 12, 1, 2, 3))
     onsets = []
-    i = 0
-    while i < len(idx):
-        if rev[i]:
-            o = idx[i]
-            # final-warming test: must return westerly for >=10 consecutive days
-            # before 30 April of this winter
-            yr = o.year + 1 if o.month >= 11 else o.year
-            end = pd.Timestamp(year=yr, month=4, day=30)
-            seg = (idx > o) & (idx <= end)
-            west = (u > 0) & seg
-            ok = False
+    separated = True          # no event yet, so the first needs no separation
+    run = 0                   # consecutive westerly days since the last event
+    for i in range(1, n):
+        if step[i] > 60:
+            # A season-filtered series jumps from 30 April to 1 November; the
+            # summer in between always separates two winters' events.
+            separated = True
+        run = (run + 1 if (west[i] and contiguous[i]) else (1 if west[i] else 0))
+        if not separated and run >= 20:
+            separated = True
+        if not (ndjfm[i] and east[i] and west[i - 1] and contiguous[i]):
+            continue
+        if not separated:
+            continue
+        # final-warming test: 10 consecutive westerly days before 30 April
+        o = idx[i]
+        yr = o.year + 1 if o.month >= 11 else o.year
+        end = pd.Timestamp(year=yr, month=4, day=30)
+        k, r, ok = i + 1, 0, False
+        while k < n and idx[k] <= end:
+            r = (r + 1 if (west[k] and contiguous[k]) else (1 if west[k] else 0))
+            if r >= 10:
+                ok = True
+                break
+            k += 1
+        if ok:
+            onsets.append(o)
+            separated = False
             run = 0
-            for v in west[seg]:
-                run = run + 1 if v else 0
-                if run >= 10:
-                    ok = True
-                    break
-            if ok and (not onsets or (o - onsets[-1]).days >= 20):
-                onsets.append(o)
-            i += 20
-        else:
-            i += 1
     return pd.DatetimeIndex(onsets)
 
 
@@ -216,8 +244,9 @@ def main():
     frames, n_ssw = [], 0
     for f in files:
         m = load_member(f)
+        full = m
         m = m[np.isin(m.index.month, SEASON)]
-        on = detect_ssw(m["u10"].values, m.index)
+        on = detect_ssw(full["u10"].values, full.index)   # full daily series: CP07 needs contiguous days
         n_ssw += len(on)
         mem = f.stem.split("_")[1]
         d = m.copy()

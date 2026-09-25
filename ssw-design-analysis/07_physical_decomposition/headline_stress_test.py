@@ -28,8 +28,8 @@ ATTACK 2 -- "CMIP6 UNDER-COUPLES, SO 0.115 IS TOO LOW."
   precursor. If weak coupling suppresses predictability, the real atmosphere
   could be far more predictable than 0.115 and the whole argument inverts.
 
-  THE TEST: compute CV R^2 SEPARATELY per model, and regress it on that model's
-  own coupling strength (its post-onset composite magnitude). A positive slope
+  THE TEST: compute CV R^2 SEPARATELY per member (folds are blocks of 12
+  consecutive events), and regress it on that member's own coupling strength (its post-onset composite magnitude). A positive slope
   means predictability scales with coupling and the ensemble estimate is a floor
   that must be extrapolated. A flat slope means R^2 is a structural property that
   does not inherit the coupling bias.
@@ -133,13 +133,13 @@ def main():
         m2 = m[np.isin(m.index.month, SEASON)].dropna()
         if len(m2) < 2000:
             continue
-        on = EP.detect_ssw(m2["u10"].values, m2.index)
+        on = EP.detect_ssw(m["u10"].values, m.index)   # full daily series: CP07 needs contiguous days
         if len(on) < 15:
             continue
         am = m2["am"]
         msk = C6.influence_mask(am.index, on)
         cl = am[~msk].groupby(am[~msk].index.dayofyear).mean()
-        cln = am[~msk].index
+        cln = C6.zone_free_index(am.index, on)
         dy = np.array([t.dayofyear for t in pd.DatetimeIndex(on)])
 
         ds = xr.open_dataset(f)
@@ -207,7 +207,7 @@ def main():
         sel = gr == mem
         if np.isfinite(yr[sel]).sum() < 60:
             continue
-        # within-member CV needs groups; split on winter-decade blocks instead
+        # within-member CV needs groups; split on blocks of 12 consecutive events
         yy = yr[sel]
         XX = Xr[cols2].values[sel]
         blk = (np.arange(sel.sum()) // 12).astype(str)

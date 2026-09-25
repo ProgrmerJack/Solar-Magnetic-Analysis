@@ -95,7 +95,7 @@ def main():
     full = full[(full >= ao.index.min()) & (full <= ao.index.max())]
     mask = G.real_influence_mask(ao.index, full)
     clim = ao[~mask].groupby(ao[~mask].index.dayofyear).mean()
-    clean_idx = ao[~mask].index
+    clean_idx = G.zone_free_index(ao.index, full)
     doys = np.array([t.dayofyear for t in pd.DatetimeIndex(full)])
 
     # ---- per-stratifier maximal event set --------------------------------

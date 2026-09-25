@@ -4,7 +4,7 @@
     8,
     52
   ],
-  "all_event_composite": -0.8115,
+  "all_event_composite": -0.8532,
   "n_beta_pseudo": 3024,
   "stratifiers": {
     "vT_pre30": {
@@ -15,24 +15,24 @@
         -1
       ],
       "description": "wave driving, 30 d before onset",
-      "dY_observed": 0.1691,
+      "dY_observed": 0.1643,
       "dS": 0.4384,
-      "beta": -0.9092,
-      "predicted_bias": -0.3986,
-      "residual_causal": 0.5677,
+      "beta": -0.6531,
+      "predicted_bias": -0.2863,
+      "residual_causal": 0.4506,
       "residual_CI95": [
-        -0.28,
-        1.201
+        -0.395,
+        1.089
       ],
-      "frac_pct_of_dY_explained_by_stratifier": -235.8,
-      "support_fraction": 0.929,
+      "frac_pct_of_dY_explained_by_stratifier": -174.3,
+      "support_fraction": 0.857,
       "n": 42,
-      "null_dY": -0.4911,
-      "null_predicted": -0.4935,
-      "null_residual": 0.0024,
+      "null_dY": -0.4252,
+      "null_predicted": -0.3475,
+      "null_residual": -0.0778,
       "null_residual_CI95": [
-        -0.724,
-        0.737
+        -0.788,
+        0.643
       ],
       "law_holds_under_null": true
     },
@@ -44,24 +44,24 @@
         -1
       ],
       "description": "wave driving, 15 d before onset",
-      "dY_observed": -0.0244,
+      "dY_observed": -0.0266,
       "dS": 0.7868,
-      "beta": -0.5229,
-      "predicted_bias": -0.4114,
-      "residual_causal": 0.387,
+      "beta": -0.3538,
+      "predicted_bias": -0.2784,
+      "residual_causal": 0.2518,
       "residual_CI95": [
-        -0.438,
-        1.145
+        -0.556,
+        0.999
       ],
-      "frac_pct_of_dY_explained_by_stratifier": 1685.1,
-      "support_fraction": 0.786,
+      "frac_pct_of_dY_explained_by_stratifier": 1045.2,
+      "support_fraction": 0.643,
       "n": 42,
-      "null_dY": -0.4068,
-      "null_predicted": -0.4072,
-      "null_residual": 0.0004,
+      "null_dY": -0.3574,
+      "null_predicted": -0.275,
+      "null_residual": -0.0823,
       "null_residual_CI95": [
-        -0.787,
-        0.739
+        -0.794,
+        0.67
       ],
       "law_holds_under_null": true
     },
@@ -73,24 +73,24 @@
         -16
       ],
       "description": "vortex preconditioning",
-      "dY_observed": -0.0562,
+      "dY_observed": -0.0709,
       "dS": 0.7506,
-      "beta": 0.0086,
-      "predicted_bias": 0.0064,
-      "residual_causal": -0.0627,
+      "beta": 0.0205,
+      "predicted_bias": 0.0154,
+      "residual_causal": -0.0863,
       "residual_CI95": [
-        -0.737,
-        0.628
+        -0.756,
+        0.604
       ],
-      "frac_pct_of_dY_explained_by_stratifier": -11.4,
+      "frac_pct_of_dY_explained_by_stratifier": -21.7,
       "support_fraction": 1.0,
       "n": 42,
-      "null_dY": 0.1038,
-      "null_predicted": 0.0085,
-      "null_residual": 0.0953,
+      "null_dY": 0.0828,
+      "null_predicted": 0.0205,
+      "null_residual": 0.0623,
       "null_residual_CI95": [
-        -0.643,
-        0.868
+        -0.645,
+        0.835
       ],
       "law_holds_under_null": true
     },
@@ -102,24 +102,24 @@
         30
       ],
       "description": "reversal depth, 10 hPa",
-      "dY_observed": 0.274,
+      "dY_observed": 0.2769,
       "dS": 1.0938,
-      "beta": 0.5997,
-      "predicted_bias": 0.6559,
-      "residual_causal": -0.3819,
+      "beta": 0.481,
+      "predicted_bias": 0.5261,
+      "residual_causal": -0.2492,
       "residual_CI95": [
-        -1.026,
-        0.301
+        -0.907,
+        0.427
       ],
-      "frac_pct_of_dY_explained_by_stratifier": 239.4,
+      "frac_pct_of_dY_explained_by_stratifier": 190.0,
       "support_fraction": 0.524,
       "n": 42,
-      "null_dY": 0.6122,
-      "null_predicted": 0.6992,
-      "null_residual": -0.087,
+      "null_dY": 0.5055,
+      "null_predicted": 0.5618,
+      "null_residual": -0.0562,
       "null_residual_CI95": [
-        -0.843,
-        0.72
+        -0.803,
+        0.713
       ],
       "law_holds_under_null": true
     },
@@ -131,24 +131,24 @@
         45
       ],
       "description": "reversal persistence, 10 hPa",
-      "dY_observed": 0.1246,
+      "dY_observed": 0.1309,
       "dS": 0.8745,
-      "beta": 0.5933,
-      "predicted_bias": 0.5188,
-      "residual_causal": -0.3942,
+      "beta": 0.4754,
+      "predicted_bias": 0.4158,
+      "residual_causal": -0.2849,
       "residual_CI95": [
-        -1.033,
-        0.464
+        -0.927,
+        0.575
       ],
-      "frac_pct_of_dY_explained_by_stratifier": 416.4,
-      "support_fraction": 0.643,
+      "frac_pct_of_dY_explained_by_stratifier": 317.6,
+      "support_fraction": 0.667,
       "n": 42,
-      "null_dY": 0.5762,
-      "null_predicted": 0.6647,
-      "null_residual": -0.0885,
+      "null_dY": 0.4996,
+      "null_predicted": 0.5365,
+      "null_residual": -0.0369,
       "null_residual_CI95": [
-        -0.827,
-        0.616
+        -0.738,
+        0.661
       ],
       "law_holds_under_null": true
     },
@@ -160,24 +160,24 @@
         30
       ],
       "description": "lower-stratospheric descent (PJO-like)",
-      "dY_observed": 0.7096,
+      "dY_observed": 0.715,
       "dS": 0.9995,
-      "beta": 0.7415,
-      "predicted_bias": 0.7412,
-      "residual_causal": -0.0316,
+      "beta": 0.6286,
+      "predicted_bias": 0.6283,
+      "residual_causal": 0.0867,
       "residual_CI95": [
-        -0.67,
-        0.54
+        -0.557,
+        0.66
       ],
-      "frac_pct_of_dY_explained_by_stratifier": 104.5,
-      "support_fraction": 0.929,
+      "frac_pct_of_dY_explained_by_stratifier": 87.9,
+      "support_fraction": 0.69,
       "n": 42,
-      "null_dY": 0.9052,
-      "null_predicted": 0.9174,
-      "null_residual": -0.0122,
+      "null_dY": 0.8024,
+      "null_predicted": 0.7641,
+      "null_residual": 0.0383,
       "null_residual_CI95": [
-        -0.68,
-        0.657
+        -0.654,
+        0.714
       ],
       "law_holds_under_null": true
     },
@@ -189,24 +189,24 @@
         52
       ],
       "description": "the published surface criterion",
-      "dY_observed": 1.7333,
+      "dY_observed": 1.7351,
       "dS": 0.9038,
-      "beta": 1.8384,
-      "predicted_bias": 1.6615,
-      "residual_causal": 0.0718,
+      "beta": 1.8425,
+      "predicted_bias": 1.6651,
+      "residual_causal": 0.07,
       "residual_CI95": [
-        -0.04,
-        0.145
+        -0.049,
+        0.147
       ],
-      "frac_pct_of_dY_explained_by_stratifier": 95.9,
-      "support_fraction": 0.976,
+      "frac_pct_of_dY_explained_by_stratifier": 96.0,
+      "support_fraction": 0.929,
       "n": 42,
-      "null_dY": 1.7135,
-      "null_predicted": 1.7151,
-      "null_residual": -0.0016,
+      "null_dY": 1.6503,
+      "null_predicted": 1.6589,
+      "null_residual": -0.0086,
       "null_residual_CI95": [
-        -0.066,
-        0.062
+        -0.074,
+        0.058
       ],
       "law_holds_under_null": true
     }

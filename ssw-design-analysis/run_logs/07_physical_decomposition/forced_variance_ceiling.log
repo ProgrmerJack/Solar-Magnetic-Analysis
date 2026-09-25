@@ -3,61 +3,53 @@ estimator agreement with selection_on_outcome.per_event: max|diff| = 4.44e-16 on
 ==========================================================================
 === OBSERVATIONS (CPC AO, 43 events) ===
   events 43, pseudo-events 17,200
-  mean shift S           = -0.904 sigma
+  mean shift S           = -0.895 sigma
   Var(Y | SSW)           = 1.1167
-  Var(Y | pseudo)        = 1.1788
+  Var(Y | pseudo)        = 1.1403
 
-  s_f^2 = Var(SSW) - Var(pseudo) = -0.0620  95% CI [-0.4332, +0.3136]
-  s_f   = 0.000 sigma   (upper 95% bound 0.560 sigma)
+  s_f^2 = Var(SSW) - Var(pseudo) = -0.0236  95% CI [-0.3927, +0.3546]
+  s_f   = 0.000 sigma   (upper 95% bound 0.596 sigma)
 
   C1 PLACEBO, pre-onset days -52..-8 (true s_f = 0 by construction):
-     s_f^2 = +0.2832  95% CI [-0.4412, +1.1262]  -> consistent with zero
-     placebo-CORRECTED s_f^2 = -0.3453 [-1.1665, +0.4057]  -> s_f = 0.000 (upper 95% 0.637)
-  C3 NOISE EQUALITY, pre-onset variance ratio events/pseudo = 1.237  -> ok
+     s_f^2 = +0.2933  95% CI [-0.4317, +1.1618]  -> consistent with zero
+     placebo-CORRECTED s_f^2 = -0.3169 [-1.1577, +0.4638]  -> s_f = 0.000 (upper 95% 0.681)
+  C3 NOISE EQUALITY, pre-onset variance ratio events/pseudo = 1.247  -> ok
 
   === CEILING ON ANY CLASSIFIER (uncorrected s_f, the conservative arm) ===
   reported contrast                                      q   |obs|  ceil95   ratio  match
   ------------------------------------------------------------------------------------
-  Karpechko-criterion AO, observations (this project)  0.70   1.782   0.927    1.9x  YES
-  ERA5 1000 hPa NAM, Karpechko criterion (this project)  0.54   0.684   0.895    0.8x  YES
-  ERA5 850 hPa NAM, ACP 26,3723 criterion (this project)  0.59   0.639   0.900    0.7x  YES
-  ACP 26, 3723 (2026) published NAO contrast          0.64   0.708   0.908    0.8x  cross
-  CMIP6 ensemble DW-NDW (this project)                0.50   1.143   0.894    1.3x  cross
+  Karpechko criterion, CPC AO, days 8-52              0.70   1.782   0.985    1.8x  YES
 
-  (median-split reference: point 0.000, upper 95% 0.894 sigma)
+  (median-split reference: point 0.000, upper 95% 0.950 sigma)
 
 === C2  RECOVERY UNDER KNOWN TRUTH ===
   n_events = 43, noise drawn from the pseudo-event pool
    true s_f   recovered s_f     bias       sd
   --------------------------------------------
-       0.00           0.197   +0.197    0.253
-       0.20           0.237   +0.037    0.258
-       0.40           0.349   -0.051    0.294
-       0.60           0.529   -0.071    0.302
-       0.80           0.754   -0.046    0.298
+       0.00           0.233   +0.233    0.253
+       0.20           0.247   +0.047    0.264
+       0.40           0.372   -0.028    0.293
+       0.60           0.547   -0.053    0.295
+       0.80           0.757   -0.043    0.277
 
 loading CMIP6 ensemble ...
 
 ==========================================================================
 === CMIP6 ENSEMBLE ===
-  events 1,888, pseudo 37,734
-  mean shift S    = -0.506 sigma
-  Var(SSW) 0.5189   Var(pseudo) 0.4405
-  s_f^2 = +0.0784  95% CI [+0.0426, +0.1153]
-  s_f   = 0.280  (upper 95% 0.340)
-  C1 placebo s_f^2 = +0.0655 [+0.0241, +0.1085] -> NON-ZERO confound, corrected below
-     placebo-CORRECTED s_f^2 = +0.0129 [-0.0401, +0.0656]  -> s_f = 0.113 (upper 95% 0.256)
-     84% of the raw excess variance is already present BEFORE onset
-  C3 pre-onset variance ratio = 1.134
+  events 1,517, pseudo 30,320
+  mean shift S    = -0.479 sigma
+  Var(SSW) 0.5258   Var(pseudo) 0.4474
+  s_f^2 = +0.0783  95% CI [+0.0401, +0.1167]
+  s_f   = 0.280  (upper 95% 0.342)
+  C1 placebo s_f^2 = +0.0595 [+0.0171, +0.1011] -> NON-ZERO confound, corrected below
+     placebo-CORRECTED s_f^2 = +0.0189 [-0.0332, +0.0722]  -> s_f = 0.137 (upper 95% 0.269)
+     76% of the raw excess variance is already present BEFORE onset
+  C3 pre-onset variance ratio = 1.122
 
   === CEILING (uncorrected s_f, at each study's own split q) ===
   reported contrast                                      q   |obs|  ceil95   ratio  match
   ------------------------------------------------------------------------------------
-  Karpechko-criterion AO, observations (this project)  0.70   1.782   0.562    3.2x  cross
-  ERA5 1000 hPa NAM, Karpechko criterion (this project)  0.54   0.684   0.543    1.3x  cross
-  ERA5 850 hPa NAM, ACP 26,3723 criterion (this project)  0.59   0.639   0.546    1.2x  cross
-  ACP 26, 3723 (2026) published NAO contrast          0.64   0.708   0.551    1.3x  cross
-  CMIP6 ensemble DW-NDW (this project)                0.50   1.143   0.542    2.1x  YES
-  placebo-CORRECTED ceiling at q=0.5, upper 95% = 0.409 sigma
+  Karpechko conditions 1-2, CMIP6 annular mode        0.70   1.154   0.567    2.0x  YES
+  placebo-CORRECTED ceiling at q=0.5, upper 95% = 0.429 sigma
 
 Saved -> forced_variance_ceiling.json

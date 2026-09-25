@@ -1,32 +1,32 @@
 MIROC6: 2 members on disk
-  r10i1p1f1: 97 SSWs in 166 winters (0.58/winter)
-  r1i1p1f1: 95 SSWs in 166 winters (0.57/winter)
+  r10i1p1f1: 78 SSWs in 166 winters (0.47/winter)
+  r1i1p1f1: 74 SSWs in 166 winters (0.45/winter)
 
-POOLED: 192 SSWs, 332 winters, 57,227 days
+POOLED: 152 SSWs, 332 winters, 56,948 days
   observations for comparison: 43 SSWs, 36 winters
   -> 4x the events, 9x the winters
 
 bin           effect                 95% CI         p
 ------------------------------------------------------
--60..-46      +0.140 [  -0.063,  +0.357]    0.1740
--45..-31      +0.189 [  -0.022,  +0.388]    0.0660
--30..-16      +0.380 [  +0.194,  +0.573]    0.0000  *
--15..-1       +0.485 [  +0.310,  +0.661]    0.0000  *
-+0..+14       -0.072 [  -0.259,  +0.133]    0.4480
-+15..+29      +0.055 [  -0.133,  +0.259]    0.5800
-+30..+44      -0.055 [  -0.239,  +0.133]    0.5460
-+45..+60      -0.018 [  -0.213,  +0.186]    0.8540
+-60..-46      +0.140 [  -0.065,  +0.357]    0.1800
+-45..-31      +0.192 [  -0.021,  +0.388]    0.0640
+-30..-16      +0.385 [  +0.200,  +0.578]    0.0000  *
+-15..-1       +0.571 [  +0.375,  +0.750]    0.0000  *
++0..+14       -0.007 [  -0.212,  +0.193]    0.9380
++15..+29      -0.019 [  -0.209,  +0.200]    0.8420
++30..+44      -0.085 [  -0.255,  +0.108]    0.3960
++45..+60      -0.031 [  -0.215,  +0.170]    0.7520
 
 === THE PRE-ONSET QUESTION ===
   observed (43 events):  -0.820  CI [-1.413, -0.202]  p=0.015
-  ensemble (192 events): +0.380  CI [+0.194, +0.574]  p=0.0000
-  interval width: 0.379 vs 1.211 observed -> 3.2x tighter
+  ensemble (152 events): +0.385  CI [+0.200, +0.578]  p=0.0000
+  interval width: 0.378 vs 1.211 observed -> 3.2x tighter
   the observed -0.820 is NOT consistent with the ensemble
 
 === IS THE OBSERVED -0.820 JUST 43-EVENT SAMPLING NOISE? ===
-  36-winter subsamples of the ensemble: mean +0.339, sd 0.210
-  5th-95th pct: [-0.010, +0.664]
-  P(estimate <= -0.820 | truth = +0.380) = 0.000
+  36-winter subsamples of the ensemble: mean +0.357, sd 0.211
+  5th-95th pct: [+0.018, +0.685]
+  P(estimate <= -0.820 | truth = +0.385) = 0.000
   -> the observed value is extreme even allowing for 43-event noise
 
 Saved -> ensemble_precursor_MIROC6.json

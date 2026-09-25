@@ -65,7 +65,6 @@ import multi_index_event_study as M                 # noqa: E402
 import selection_on_outcome as SO                   # noqa: E402
 
 SEL_WIN = (8, 52)          # the classification window, as published
-OUT_WIN = (1, 60)          # ACP 2026's reporting window
 N_BETA = 4000
 N_NULL = 3000
 SEED = 20260801
@@ -74,6 +73,21 @@ PUBLISHED = {"ACP_26_3723_2026_NAO_DW_BOTH": -0.762,
              "ACP_26_3723_2026_NAO_DW_all": -0.620,     # (13*-0.762+14*-0.567+6*-0.435)/33
              "ACP_26_3723_2026_NAO_NDW": 0.088,
              "ACP_26_3723_2026_contrast": -0.708}
+
+
+def eta2(Y, lab):
+    """Share of Var(Y) explained by the two-class label: q(1-q)*C^2 / Var0(Y),
+    with q, the contrast C and the variance all from the SAME events, so the
+    denominator is matched by construction (the implied-R^2 table used to divide
+    ERA5-NAM contrasts by the CPC-AO variance; methods audit 2026-09-25)."""
+    Y = np.asarray(Y, float); lab = np.asarray(lab, bool)
+    ok = np.isfinite(Y)
+    y, l = Y[ok], lab[ok]
+    if l.all() or (~l).all():
+        return None
+    q = l.mean()
+    c = y[l].mean() - y[~l].mean()
+    return float(q * (1 - q) * c ** 2 / y.var())
 
 
 def strat_nam_150():
@@ -95,7 +109,8 @@ def win_mean(series, onsets, win, need=20):
 
 
 def classify(onsets, ao, snam):
-    """Karpechko et al. (2017), conditions 1-3, exactly as published."""
+    """Karpechko et al. (2017), conditions 1-3, except that condition 3 uses the
+    100 hPa NAM: the NCEP archive here has no 150 hPa level."""
     lab = []
     for o in onsets:
         lo, hi = o + pd.Timedelta(days=SEL_WIN[0]), o + pd.Timedelta(days=SEL_WIN[1])
@@ -120,7 +135,7 @@ def main():
     real = load_catalogue("primary")
     real = real[(real >= ao.index.min()) & (real <= ao.index.max())]
     mask = G.real_influence_mask(ao.index, real)
-    clean_idx = ao[~mask].index
+    clean_idx = G.zone_free_index(ao.index, real)
     doys = np.array([t.dayofyear for t in pd.DatetimeIndex(real)])
     clims = {k: v[~G.real_influence_mask(v.index, real)].groupby(
         v[~G.real_influence_mask(v.index, real)].index.dayofyear).mean()
@@ -176,8 +191,8 @@ def main():
         if (i + 1) % 1000 == 0:
             print(f"  {i + 1}/{N_NULL}", flush=True)
 
-    res = {"criterion": "Karpechko et al. 2017 conditions 1-3, verified from source",
-           "selection_window": list(SEL_WIN), "outcome_window": list(OUT_WIN),
+    res = {"criterion": "Karpechko et al. 2017 conditions 1-3 (condition 3 at 100 hPa, not 150)",
+           "selection_window": list(SEL_WIN), "outcome_window": list(SO.WIN),
            "n_events": int(len(real)), "n_DW": int(lab.sum()),
            "rate_DW": round(float(lab.mean()), 3),
            "published_for_scale": PUBLISHED, "outcomes": {}}
@@ -199,6 +214,8 @@ def main():
         res["outcomes"][k] = {
             "DW_composite": round(dw, 4), "NDW_composite": round(ndw, 4),
             "contrast": round(dY, 4), "dS": round(dS, 4),
+            "implied_r2_eta2": round(eta2(Y[ok], lab[ok]), 4),
+            "var_outcome": round(float(np.var(Y[ok])), 4),
             "beta": round(beta[k], 4), "selection_term": round(float(pb), 4),
             "residual": round(float(resid), 4), "p_residual": p,
             "pct_contrast_from_selection": round(float(pct), 1),

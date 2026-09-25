@@ -96,7 +96,7 @@ def build_cmip6_plus():
         m2 = m[np.isin(m.index.month, SEASON)].dropna()
         if len(m2) < 2000:
             continue
-        on = EP.detect_ssw(m2["u10"].values, m2.index)
+        on = EP.detect_ssw(m["u10"].values, m.index)   # full daily series: CP07 needs contiguous days
         if len(on) < 15:
             continue
         am = m2["am"]
@@ -208,8 +208,17 @@ def main():
         print(f"n={np.isfinite(y).sum()} events, {X.shape[1]} features "
               f"(was 38), {len(np.unique(g))} groups")
         res["cmip6"] = P.run("CMIP6+wave", X, y, g, rng, {})
-        prev = {"P1 pre-onset": 0.0998, "P2 at-onset": 0.1121,
-                "P3 + post-onset stratosphere": 0.4245}
+        # the same pipeline WITHOUT the wave proxies, on the same events, computed
+        # here: the typed-in 0.0998/0.1121/0.4245 used until 2026-09-25 came from
+        # an older event set and made the "gain" a cross-sample difference
+        Xp, yp, gp, _ = P.build_cmip6()
+        assert np.array_equal(np.isfinite(yp), np.isfinite(y)) and \
+            np.allclose(yp[np.isfinite(yp)], y[np.isfinite(y)]), "event sets differ"
+        prev = {}
+        for tier, lab in ((1, "P1 pre-onset"), (2, "P2 at-onset"),
+                          (3, "P3 + post-onset stratosphere")):
+            cols = P.tier_cols(Xp.columns, tier) + ["doy_sin", "doy_cos"]
+            prev[lab] = round(P.cv_r2(Xp[cols].values, yp, gp, "ridge"), 4)
         print(f"\n  {'tier':<32s} {'was':>8s} {'now':>8s} {'gain':>8s}")
         print("  " + "-" * 58)
         for k, v in prev.items():

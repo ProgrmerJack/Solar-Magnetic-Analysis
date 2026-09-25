@@ -20,12 +20,12 @@ The literature classifies sudden stratospheric warmings into "downward-propagati
 and not, and reports the between-group surface contrast as an effect size. That
 contrast is mostly manufactured by the classification itself: the classifier window
 overlaps the response window, so splitting events on it splits one distribution on
-its own tail — 93–102% of the published contrast is reproduced by applying the same
+its own tail — 93–103% of the published contrast is reproduced by applying the same
 criterion to dates with no SSW in them. Measured out of sample within a single
 climate, **an SSW adds essentially nothing to the predictability of the surface
-response** (+0.004 [−0.022, +0.027] pre-onset, +0.022 [−0.015, +0.060] post-onset,
-against a size-matched null of 1,000 event-free draws), while the splits in use implicitly
-claim up to **0.63**. SSWs do have a large, real surface effect — measured causally
+response** (−0.006 [−0.033, +0.020] pre-onset, +0.015 [−0.028, +0.059] post-onset,
+against a size-matched null of 1,000 event-free draws), while the published
+criterion's splits implicitly claim **0.34–0.61**. SSWs do have a large, real surface effect — measured causally
 in a nudged experiment at **+1.11 σ** across 9 models — and the all-event composite stands. What
 carries little information is the sub-classification.
 
@@ -42,15 +42,15 @@ withdrawal now carries intervals.)*
 |---|---|---|---|
 | A | design choices (estimator, catalogue) do **not** reshape estimates | obs, n=43 | established |
 | B | the SSW→AO response is robust: −1.03 σ at +15..+29 d | obs, n=43 | established |
-| C | R = 0.82 measures temporal **concentration**, not causal fraction | obs + 846 model events | **corrected — see §3C** |
+| C | R = 0.82 measures temporal **concentration**, not causal fraction | obs + 675 model events | **corrected — see §3C** |
 | C2 | Granger vortex→surface asymmetry | obs n.s. (P=0.213); 4 models sig. | **not established in obs** |
 | D | mediator measurement error under-attributes the stratosphere | obs, 6,958 days | established |
-| E | selection on the outcome manufactures 30–44% of a reported impact | obs | established |
-| F | the bias obeys a projection law, β × ΔS | obs R²=0.9945, CMIP6 R²=1.0000 | established |
+| E | selection on the outcome manufactures 31–45% of a reported impact | obs | established |
+| F | the bias obeys a projection law, β × ΔS | obs R²=0.9963, CMIP6 R²=0.9999 | established |
 | G | stratospheric classification is **not** exempt from it | obs + CMIP6 | established |
-| H | the response distribution is one shifted population | CMIP6 n=1888 | established, power-bounded |
-| I | forced between-event sd σ_f ≤ 0.26 σ (upper 95%) | CMIP6 n=1888 | established, 84% placebo correction |
-| J | **out-of-sample predictable share R² = 0.115; 73% of diagnostic skill is window overlap** | CMIP6 n=1888 | **established, no correction** |
+| H | the response distribution is one shifted population | CMIP6 n=1,517 | established, power-bounded |
+| I | forced between-event sd σ_f ≤ 0.27 σ (upper 95%) | CMIP6 n=1,517 | established, 76% placebo correction |
+| J | **an SSW adds no out-of-sample predictability: event-specific R² −0.006 pre-onset, +0.015 post-onset; 96% of diagnostic skill occurs with no SSW** | CMIP6 n=1,517 | **established, no correction** |
 | K | causal stratosphere→surface effect S = +1.11 σ (sd 0.271; +1.36 incl. ECCC) | SNAPSI, 9 centres | established, 2 NH events; ECCC a Tukey outlier |
 | **L** | **the DW/NDW contrast is identical with and without an SSW, in a designed experiment** | **SNAPSI, 9 centres, 61 ensembles** | **established — the decisive test, replicated at 3x scale 2026-09-17** |
 | **M** | **an SSW shifts the surface distribution without inflating its variance** | **SNAPSI, 9 centres, 1798 vs 1805 members** | **established causally; ratio 0.955 [0.873, 1.051] after an estimator fix** |
@@ -83,16 +83,16 @@ scale rather than suspected at n=43.**
 
 R is **flat across lag** in both systems:
 
-| lag bin | observations (n=43) | CanESM5 (10 members) |
+| lag bin | observations (n=43) | CanESM5 (10 members, CP07 events) |
 |---|---|---|
-| −30..−16 (**pre**-onset) | **+0.789** [0.34, 1.16] | **+0.754** [0.65, 0.84] (n=794) |
-| −15..−1 | +0.714 | +0.744 |
-| +0..+14 | +0.784 | +0.820 |
-| +15..+29 (**post**-onset) | **+0.824** [0.49, 1.09] | **+0.825** [0.76, 0.89] (n=846) |
+| −30..−16 (**pre**-onset) | **+0.789** [0.34, 1.16] | **+0.809** [0.70, 0.91] (n=633) |
+| −15..−1 | +0.714 | +0.757 |
+| +0..+14 | +0.784 | +0.847 |
+| +15..+29 (**post**-onset) | **+0.824** [0.49, 1.09] | **+0.859** [0.79, 0.93] (n=675) |
 
 A precursor cannot be caused by the event that follows it, so R at a pre-onset
 lag cannot be a causal fraction — yet it equals the post-onset value in both
-systems, and in CanESM5 the intervals are ±0.10 wide. Flatness also survives
+systems, and in CanESM5 the intervals are about ±0.10 wide. Flatness also survives
 every baseline gap tested, 60/75/90 d (`R_gap_sensitivity.json`: "FLAT AT EVERY
 GAP").
 
@@ -185,18 +185,20 @@ vortex state: **0.592**, i.e. 41% error variance. Correlated errors bias toward
 the naive estimate, so 53.9% is a **lower bound**.
 
 ### E/F/G — selection and the projection law (`FINDING_selection_on_outcome.md`, `FINDING_stratifier_law.md`)
-- rate-matched selection bias under a true null: **AO 37%, NAO 30%, PNA 44%** of
+- rate-matched selection bias under a true null: **AO 38%, NAO 31%, PNA 45%** of
   the reported dSSW impact
 - decomposition closes numerically: residuals **0.010–0.024 σ** across three
   independent outcomes
-- **the classification rate is uncontaminated**: 70% of real events vs 38% of
+- **the classification rate is uncontaminated**: 70% of real events vs 39% of
   pseudo-events satisfy the criterion, **P < 0.0001** — this is the quantity the
   field should report
 - projection law `bias(Y) = β(Y-window on A-window) × bias(A)`, β the OLS **slope**:
-  obs **R² = 0.9945** (7 stratifiers), CMIP6 **R² = 1.0000** (1888 events)
+  obs **R² = 0.9963** (7 stratifiers; slope 1.023, intercept −0.034), CMIP6
+  **R² = 0.9999** (1,517 events; slope 0.992, intercept +0.011)
 - **stratospheric classification is not exempt**: splitting random winter dates
-  with no SSW by lower-stratospheric descent manufactures **+0.889 σ**; real SSWs
-  split identically give +0.909 σ. The event adds 0.020 σ.
+  with no SSW by lower-stratospheric descent manufactures **+0.795 σ**; real SSWs
+  split identically give +0.979 σ (n=29). The residual after β × ΔS is +0.292,
+  95% [−0.585, +0.870] — indistinguishable from zero.
 - **selection is not always inflationary** — for western-US snowpack the bias runs
   *opposite* to the effect. "Selection can only inflate, so this is a lower bound"
   is unsafe.
@@ -204,225 +206,106 @@ the naive estimate, so 53.9% is a **lower bound**.
 
 | outcome | contrast | share from selection | assumption-free null reproduces |
 |---|---|---|---|
-| AO | −1.782 | 99% | **96%** |
-| NAO | −0.543 | 85% | **88%** |
-| PNA | +0.222 | 76% | 67% |
+| AO | −1.782 | 98% | **94%** |
+| NAO | −0.543 | 88% | **87%** |
+| PNA | +0.222 | 78% | 66% |
 
-- ERA5, in the literature's own fields: Karpechko 1000 hPa **96%** from selection
-  (residual −0.026, p=0.589); ACP-2026 850 hPa **102%** (residual +0.013, p=0.906)
+- ERA5, in the literature's own fields: Karpechko 1000 hPa **97%** from selection
+  (residual −0.023, p=0.664), 97% reproduced by event-free dates; ACP-2026 850 hPa
+  **103%** (residual +0.017, p=0.860), 93% reproduced
 
 ### H — one shifted population (`FINDING_no_class.md`)
 
-| test | observations (n=43) | CMIP6 (n=1888) |
+| test | observations (n=43) | CMIP6 (n=1,517) |
 |---|---|---|
-| dip, pseudo-calibrated | p = 0.964 | p = 0.888 |
-| BIC k=1 vs k=2 | p = 0.140 | p = 0.835 |
-| pure-shift KS | p = 0.326 | p = 0.279 |
-| implied shift | −0.892 σ | −0.514 σ |
+| dip, pseudo-calibrated | p = 0.959 | p = 0.824 |
+| BIC k=1 vs k=2 | p = 0.160 | p = 0.965 |
+| pure-shift KS | p = 0.374 | p = 0.346 |
+| implied shift | −0.865 σ | −0.476 σ |
 
-Power at n=1888, mixing fraction 2/3, total variance held fixed: **0.00** at 0.25σ
-and 0.50σ, 0.04 at 0.75σ, **0.95 at 1.00σ**, 1.00 at 1.50σ. Nothing below ~1σ
+Power at n=1,517, mixing fraction 2/3, total variance held fixed: **0.00** at 0.25σ
+and 0.50σ, 0.005 at 0.75σ, **0.85 at 1.00σ**, 1.00 at 1.50σ. Nothing below ~1σ
 is excluded and the claim must always carry that bound.
-
-> **Re-run 2026-09-25 in the pinned environment:** the CMIP6 column moved (dip
-> 0.846 → 0.888, BIC 0.865 → 0.835, KS 0.191 → 0.279, shift −0.511 → −0.514; power
-> at 0.75σ 0.01 → 0.04, at 1.0σ 0.86 → 0.95); the observational column did not.
-> Deterministic now (two runs identical); same pre-pin environment signature as
-> I and J. The verdict is unchanged.
 
 **"About two thirds propagate downward" is what one shifted population produces:**
 observed pass rate on the criterion's surface conditions (1–2) 69.2% (53.8% with
-all three conditions; 39 events in ERA5 coverage); unshifted pseudo-events 30.9%; pseudo-events displaced by
-the measured −0.639 σ **74.4% [61.5, 87.2]**.
+all three conditions; 39 events in ERA5 coverage); unshifted pseudo-events 31.3%;
+pseudo-events displaced by the measured −0.636 σ **75.4% [61.5, 87.2]**.
 
 ### I — forced variance (`FINDING_forced_variance_ceiling.md`)
 `σ_f² = Var(Y|SSW) − Var(Y|pseudo)`.
 
-| | CMIP6 (n=1888) | observations (n=43) |
+| | CMIP6 (n=1,517) | observations (n=43) |
 |---|---|---|
-| naive σ_f² | +0.0709 [+0.0354, +0.1074] | −0.0620 [−0.4332, +0.3136] |
-| **placebo σ_f²** (pre-onset, true value 0) | **+0.0655** | +0.2832 |
-| corrected σ_f² | **+0.0129 [−0.0401, +0.0656]** | −0.3453 |
-| σ_f upper 95% | 0.256 (corrected) / 0.340 (raw) | 0.560 |
+| naive σ_f² | +0.0783 [+0.0401, +0.1167] | −0.0236 [−0.3927, +0.3546] |
+| **placebo σ_f²** (pre-onset, true value 0) | **+0.0595** [+0.0171, +0.1011] | +0.2933 |
+| corrected σ_f² | **+0.0189 [−0.0332, +0.0722]** | −0.3169 [−1.158, +0.464] |
+| σ_f upper 95% | **0.269** (corrected) / 0.342 (raw) | 0.596 (raw) / 0.681 (corrected) |
 
-**84% of the raw excess variance is present before onset** — SSWs cluster in
+**76% of the raw excess variance is present before onset** — SSWs cluster in
 disturbed winters whose variance is already elevated (pre-onset variance ratio
-1.13). Without the placebo this was a clean false positive.
+1.12). Without the placebo this was a clean false positive. σ_f² is
+indistinguishable from zero and bounded near 0.27 σ.
 
-> **Re-run 2026-09-25 in the pinned environment (for the ACP constant) moved the
-> CMIP6 column:** corrected σ_f² +0.0066 → +0.0129, upper 95% σ_f 0.239 → 0.256,
-> placebo share 91% → 84%. Same 1,888 events; the pseudo-event set differs
-> (37,747 → 37,734), the signature already seen in J (11,323 → 11,321) and
-> attributed to package versions in the unpinned pre-2026-09-17 environment,
-> which were never recorded. The new result is deterministic (two runs
-> identical). The old one cannot be re-run, so it is superseded, not reconciled.
-> The conclusion — σ_f² indistinguishable from zero, bounded near 0.25 σ — holds.
+**Ceiling against the published criterion, matched.** The DW−NDW contrast the
+Karpechko criterion produces on the same outcome is 1.8× the largest contrast
+the uncorrected σ_f bound allows in observations (|C| 1.782 at q 0.70, ceiling
+0.985) and 2.0× in CMIP6 (conditions 1–2, |C| 1.154 at q 0.70, ceiling 0.567).
 
-### J-REVISED (2026-08-03, after stress-testing) — READ THIS BEFORE THE TABLE BELOW
+### J — predictability: an SSW adds nothing (`within_model_check.py`, `predictability_ceiling.py`, `headline_stress_test.py`, `predictability_wave_driving.py`)
 
-The figures in the original J are **pooled across ensemble members and uncontrolled
-for what the same pipeline achieves with no event present**. Both were wrong to
-report as "genuine predictability". `headline_stress_test.py` and
-`within_model_check.py` correct them.
+CMIP6, 1,517 events (Charlton & Polvani detection, validated: §5c), 20 members
+from 10 models (10 of them CanESM5). Ridge, GroupKFold(5) by member, three
+predictor tiers (P1 before onset, 20 features; P2 to onset, 26; P3 adds the
+stratosphere over days 0..+30, 38). Response: annular mode over the in-season
+days of +8..+52 (18% of events, mostly March onsets, have < 44 of 45 days).
 
-| tier | pooled (orig.) | within-model | pseudo-events, within-model | **event-specific** |
-|---|---|---|---|---|
-| P1 pre-onset | +0.0998 | +0.0664 | +0.0646 | **+0.0017** |
-| P2 at-onset | +0.1121 | +0.0746 | +0.0767 | **−0.0021** |
-| P3 + post-onset strat. | +0.4245 | +0.4013 | +0.3894 | **+0.0119** |
+**The numbers to quote — within-member standardisation, against 1,000
+size-matched event-free draws** (same members, onset counts and calendar days;
+pseudo-onsets > 135 d from every real onset) and a member-cluster bootstrap
+(1,000 resamples). Every draw has its own seeded stream.
 
-**Two corrections, both against the earlier claim.**
-1. **A third of the pooled 0.115 was BETWEEN-MODEL signal.** GroupKFold by member
-   prevents memorising a member but not exploiting cross-model structure — models
-   with stronger vortex anomalies also have stronger surface responses. The
-   within-climate value is 0.066, and the field's question is a within-climate one.
-2. **Essentially all of what remains is not SSW-specific.** Applying the identical
-   pipeline to pseudo-onsets on event-cleaned days gives 0.0646 against 0.0664 at
-   real events. Against a size-matched null (below) **the event contributes
-   +0.004 [−0.022, +0.027].**
-
-**So "about 11% of between-event variance is genuinely predictable" is WRONG and is
-withdrawn.** The correct statements are:
-- there is real stratosphere→surface predictability in winter (~0.066 pre-onset,
-  ~0.40 post-onset, within-climate);
-- **an SSW adds essentially nothing to it** (+0.004 pre-onset, +0.022 post-onset,
-  neither distinguishable from zero — intervals below);
-- **94.5% of post-onset "diagnostic skill" is reproducible with no SSW present**
-  (0.3792 of 0.4013), measured directly rather than inferred from a tier gap.
-
-Against this, the DW/NDW split's implied R² of 0.63 stands against an event-specific
-share whose largest 95% upper bound in any tier is 0.092 — **at least 6.8× smaller**
-(12× for the pre-onset tier), not 5.5×.
-
-**My earlier retraction of "there is nothing to classify" was itself premature.**
-The defensible claim is narrower and sharper than either version: *the surface
-response following an SSW is no more predictable from the stratosphere than that
-of an ordinary winter day.*
-
-Stress tests that this survived (`headline_stress_test.json`):
-- **mediation objection**: P3 scores 0.377 on pseudo-events, 89% of its real value,
-  so the post-onset gain is structural covariance and not downward mediation;
-- **weak-coupling objection**: CV R² does not scale with a model's coupling
-  strength (slope on \|coupling\|, r = +0.123), so the CMIP under-coupling bias
-  does not suppress the estimate;
-- **in-sample objection**: this model's optimism is only +0.013, so the published
-  0.63 cannot be explained as ordinary overfitting.
-
-#### J-REVISED with intervals (2026-09-24) — the numbers to quote
-
-The table above compared the real arm against **6 pooled pseudo draws: 11,321
-pseudo-events against 1,888 real ones**. A ridge fit on 6× the data scores higher
-out of sample for that reason alone, which inflates the baseline and biases
-"event-specific" toward zero. `within_model_check.py` now compares the real arm
-against **1,000 independent pseudo draws, each the size of the real set** (same
-members, same calendar days, event-cleaned days), and adds a member-cluster
-bootstrap (1,000 resamples of the 20 members). Every draw and replicate has its own
-seeded stream, so the numbers are identical at any worker count (checked: 4 vs 12).
-
-| tier | real, within-model | null mean (sd) | **event-specific** [95% from null] | p(null ≥ real) | cluster bootstrap 95% |
+| tier | real | null mean (sd) | **event-specific** [95% from null] | p(null ≥ real) | cluster bootstrap 95% |
 |---|---|---|---|---|---|
-| P1 pre-onset | 0.0667 | 0.0629 (0.0121) | **+0.004** [−0.022, +0.027] | 0.36 | [−0.048, +0.051] |
-| P2 at-onset | 0.0738 | 0.0748 (0.0127) | **−0.001** [−0.028, +0.023] | 0.52 | [−0.060, +0.050] |
-| P3 + post-onset strat. | 0.4013 | 0.3792 (0.0189) | **+0.022** [−0.015, +0.060] | 0.11 | [−0.054, +0.092] |
+| P1 pre-onset | 0.0544 | 0.0601 (0.0138) | **−0.006** [−0.033, +0.020] | 0.64 | [−0.061, +0.047] |
+| P2 at-onset | 0.0583 | 0.0720 (0.0144) | **−0.014** [−0.043, +0.013] | 0.82 | [−0.076, +0.045] |
+| P3 + post-onset strat. | 0.3815 | 0.3663 (0.0222) | **+0.015** [−0.028, +0.059] | 0.25 | [−0.061, +0.095] |
 
-- **The withdrawal holds.** No tier's event-specific share differs from zero. The
-  largest upper bound in any tier, P3's bootstrap +0.092, is 6.8× below the 0.63
-  the DW/NDW split implies; the pre-onset tier's, +0.051, is 12× below it.
-- **The 6-draw baseline was biased by size, by +0.005 to +0.010** — real, and
-  smaller than feared. The old event-specific column was that much too low.
-- **Two intervals, and they differ for a reason.** The null interval holds the 20
-  simulation members fixed; the bootstrap also resamples WHICH members, so it
-  carries between-member (largely between-model) heterogeneity and is about 2.5×
-  wider. The 20 members come from 11 models, 10 of them CanESM5; "within-model"
-  in the tables here means standardised within MEMBER. Quote the bootstrap as the
-  conservative bound.
-- **Imperfect matching errs against the claim.** Every draw has the real onset
-  count, but in 1,017 of 20,000 member-draws some pseudo onsets' +8..+52 day windows
-  lack enough in-season days, so their outcome is missing and the draw has fewer
-  usable rows than the real set (all 1,888 real outcomes are present). Fewer rows
-  lower the null, which raises "event-specific" — conservative for the conclusion.
-- **Reproduction is partial, and the cause is known in part.** Re-running the
-  original 6-draw arm gives within 0.0667 (was 0.0664) — reproduced — but pooled
-  0.1026 (was 0.0998, the drift logged in `FAILURES.md`) and 6-draw pseudo
-  0.0694 (was 0.0646) on a 2-event difference in the draws (11,321 vs 11,323).
-  That a single 6-draw baseline moves by 0.005 is itself why the 1,000-draw null
-  replaces it. Seeds, K, N_BOOT and package versions are now in the JSON.
+- **No tier's event-specific share differs from zero.** 96% of the post-onset
+  "diagnostic skill" (0.3663 of 0.3815) is reproduced with no SSW present.
+- **Against the split's implied share.** q(1−q)C²/Var(Y), computed on the same
+  events as the contrast: CMIP6 Karpechko conditions 1–2 **0.528** (q 0.70;
+  `predictability_ceiling.json`), observed AO **0.614** (q 0.70;
+  `recompute_published_criterion.json`), ERA5 NAM 1000 hPa **0.402** (q 0.54) and
+  850 hPa **0.341** (q 0.59) (`era5_recompute_and_two_thirds.json`). The largest
+  event-specific upper bound, P3's bootstrap +0.095, is 3.6× below the smallest
+  of these and 6.5× below the largest; P1's +0.047 is 7× to 13× below.
+- **Imperfect matching errs against the claim**: in 1,022 of 20,000 member-draws
+  some pseudo-onsets lack enough in-season outcome days, which lowers the null.
+- **Pooled across members** the same tiers score 0.084 / 0.092 / 0.407 (ridge;
+  gradient boosting 0.026 / 0.038 / 0.351); about a third of the pooled P1 skill is
+  between-model structure (within-member 0.054). The within-member value is the
+  one that answers the field's question.
+- **Stress tests** (`headline_stress_test.json`): on pseudo-events the pooled
+  pipeline retains 75% (P1) and 89% (P3) of its real skill; per-member CV R² does
+  not scale with a member's coupling strength (r = +0.016); in-sample optimism
+  is +0.020 (P1), so a split's 0.5–0.6 is not ordinary overfitting.
+- **Wave driving** (TEM-identity proxies, 86 features): P1 0.084 → 0.097, P2
+  +0.001, P3 −0.016, against the same pipeline without them on the same events.
+- **Power** (pooled P2 features): injected R² 0.02 detected in 75% of trials,
+  0.05 in 100%.
+- **Consistency with I**: the placebo-corrected σ_f upper bound 0.269 implies a
+  classifier R² ≤ 0.269²/Var(Y) ≈ 0.14 (Var(Y|SSW) 0.526); the pooled
+  cross-validated 0.084 sits inside it.
 
-### J — predictability ceiling, ORIGINAL POOLED NUMBERS (superseded by J-REVISED)
-CMIP6, 1888 events, 20 members as CV groups, GroupKFold by member, ridge +
-gradient boosting, permutation null, power curve, 86 features.
-
-| tier | overlaps response window? | CV R² | p |
-|---|---|---|---|
-| **P1 pre-onset** | no | **+0.115** | 0.000 |
-| **P2 at-onset** | no | +0.113 | 0.000 |
-| **P3 + post-onset stratosphere** | **yes, 22 d** | **+0.422** | 0.000 |
-
-**73% of apparent diagnostic skill is unavailable in advance.**
-Power: detection 0.70 at injected R²=0.02, 1.00 at 0.05.
-
-Implied R² of published splits, `q(1−q)C²/Var`, **matched variance**:
-
-| split | C | q | implied R² | vs 0.115 |
-|---|---|---|---|---|
-| CMIP6 DW−NDW | 1.143 | 0.50 | **0.629** | 5.5× |
-| Karpechko AO, obs | 1.782 | 0.70 | **0.597** | 5.2× |
-| ACP 26,3723 NAO (published; different index, unmatched denominator — scale only) | 0.708 | 0.635 | 0.104 | 1.0× |
-| ERA5 1000 hPa | 0.684 | 0.54 | 0.104 | 0.9× |
-| ERA5 850 hPa | 0.639 | 0.59 | 0.088 | 0.8× |
-
-**Not every published contrast is an overclaim on this metric** — the two ERA5
-contrasts imply almost exactly the achievable variance. Only the large ones exceed
-it. (They remain compromised for the *separate* reason that they are outcome-based;
-β×ΔS puts them at 93–102% selection.)
-
-> **The artifact now backs this table (re-run 2026-09-17).** Until today the table
-> above existed only in this document: `predictability_ceiling.json` still held the
-> pre-correction values, including the impossible **R² = 1.2852** for the
-> observational Karpechko contrast, produced by dividing it by the CMIP6 variance.
-> The script had been fixed and never re-run. Re-running it reproduces every figure
-> in the table — 0.6294, 0.5972, 0.1041, 0.0885, 0.1565 — on Var(CMIP6) = 0.519 and
-> Var(obs) = 1.117, and adds the two ERA5 rows, which the old JSON did not contain
-> at all. The ACP NAO entry also moved, 0.3368 → 0.1565, for the same denominator
-> reason.
->
-> **The cross-validated R² moved at the third decimal and I could not establish
-> why.** Same 1,888 events, same 38 features, same 20 groups, same fixed seed
-> (20260803), same matched variances — but ridge P1 0.0998 → **0.1026**, P2 0.1121 →
-> 0.1133, P3 0.4245 → **0.4226**, and gradient boosting up to 0.0081. The most
-> likely cause is a library version difference: the original run's package versions
-> were never recorded, so this cannot be demonstrated, only suspected. No conclusion
-> moves — the tier contrast is (0.4226 − 0.1026)/0.4226 = **75.7%** of apparent
-> diagnostic skill unavailable in advance, against the 73% quoted above for the
-> 86-feature wave-driving run. From now on the environment is pinned
-> (`environment/requirements.lock.txt`) so the next re-run is answerable.
->
-> **2026-09-25:** the ACP row used C = 0.850, which subtracted the BOTH subtype
-> alone (see §4, Lu & Rao). With the all-DW contrast 0.708 and their DW fraction
-> 0.635 it implies 0.104 — and because their NAO index is not the AO whose
-> variance is the denominator, the row is for scale only.
-
-**Consistency.** The placebo-corrected σ_f upper bound (0.256, re-run 2026-09-25)
-implies R² ≤ **0.126**; pooled cross-validation measures **0.103**. The two methods
-are consistent — the measured value sits inside the bound — but the earlier
-"agreeing to 0.01" (0.110 vs 0.100) does not survive the re-run and is withdrawn.
-
-**Wave driving closed the last gap.** CMIP6 has no 3-D fields, so v'T' was proxied
-via the TEM identity (div F enters through ∂ū/∂t): windowed tendency, 10−100 hPa
-shear, 75N−45N vortex geometry. P1 0.1026 → **0.1171** (re-run 2026-09-25; was
-0.0998 → 0.1148); P2 +0.001; P3 +0.002. Wave driving helps **only before onset**,
-which is physically right.
-
-**Observations cannot settle it.** Primary n=42 (re-run 2026-09-25): vortex only
-R² = −0.126, vortex + wave R² = −0.112. **At n=42 the value depends on how GroupKFold
-breaks ties between winters**: over 200 equivalent fold assignments vortex-only
-ranges up to −0.002 (never positive) and vortex+wave up to +0.017 (positive in 2%).
-The old −0.081 was one such split. A permutation p of 0.003 for vortex+wave used to
-print "SKILL" for a model worse than the mean; skill now requires R² > 0 as well.
-Catalogue variants (2026-08 run, not re-run): union n=46 (−0.011), consensus_half
-41 (+0.012), era5 41 (+0.002), jra_55 40 (−0.020), all p > 0.2. Power at n=42 is **0.35** against a true R² of
-0.10. **The observational null is uninformative, not negative, and must never be
-cited as evidence against predictability.**
+**Observations cannot settle it.** n = 42 (the heat-flux record bounds the
+window): vortex only R² = −0.126, vortex + wave −0.112; over 200 equivalent
+assignments of winters to folds the 5–95% ranges are −0.21 to −0.04 and −0.36 to
+−0.03, positive in 0% and 2.5% of assignments. Skill requires p < 0.05 **and**
+R² > 0. With the training-fold mean as baseline instead of the pooled mean, the
+two values are −0.022 and −0.009 (methods audit 2026-09-25); neither is
+positive. **The observational null is uninformative, not negative, and must
+never be cited as evidence against predictability.**
 
 ### K — SNAPSI causal effect (`snapsi_causal_effect.py`)
 `S = mean(nudged) − mean(control)`, the causal contrast by experimental design.
@@ -531,20 +414,21 @@ assumption. Apply Karpechko conditions 1–2 (the surface conditions) and split.
 > necessarily conditioned on the ensembles where both groups exist, which are
 > the weaker-responding ones — stated rather than hidden.
 
-**The contrast is the same whether or not an SSW happened** (−1.52 vs −1.56).
+**The contrast is the same whether or not an SSW happened** (−1.622 vs −1.590).
 It cannot be reporting a physical difference between groups: in the nudged arm
 there is none to report, and in the control arm there is no event. The contrast
 is the cut.
 
-**The rate is where the signal lives** — 0.78 with forcing against 0.44 without.
+**The rate is where the signal lives** — 0.842 with forcing against 0.450 without.
 This independently reproduces, in a designed experiment, what
 `FINDING_selection_on_outcome.md` §6 found in observations (70% real vs 38%
 pseudo, P < 0.0001). *The classification rate is real and uncontaminated; the
 selected group's magnitude is not.*
 
-**NRL excluded, and the guard was fixed to catch it.** Its nudged-minus-control
-ensemble-mean effect is identically zero at all four initialisations, and for
-`s20181213` its nudged submission is an exact duplicate of control. A first
+**NRL excluded, and the guard was fixed to catch it.** At three of its four NH
+initialisations (s20180208, s20181213, s20190108) its nudged and control members
+differ by at most 0.023 Pa (7, 10 and 2 of 80 members differ at all); at
+s20180125 by up to 10.4 Pa (mean 3.1 Pa), against a member spread of ~110 Pa. A first
 version of the guard compared members *by label* and passed NRL, whose members
 differ while the ensemble mean does not. The guard now tests the effect itself.
 
@@ -569,7 +453,7 @@ Pooled over case-ensembles:
 | causal shift | −0.889 σ | **−1.572 σ** (sd across cases 1.081) |
 | **variance ratio** nudged/control | 0.939 [0.781, 1.130] | **0.955 [0.873, 1.051]** |
 | pure translation (KS) | p = 0.805 (451 v 450) | **p = 0.371** (1798 v 1805) |
-| excluding the short-lead init | — | **0.995 [0.895, 1.106]**, KS p = 0.650 |
+| excluding the short-lead init | — | **0.996 [0.895, 1.106]**, KS p = 0.650 |
 
 > **The conclusion survives a fourfold expansion — but only after an estimator
 > defect was fixed, and the naive scale-up would have overturned it.**
@@ -598,27 +482,23 @@ Pooled over case-ensembles:
 some SSWs were "downward-propagating" and others not — the forced ensemble would
 be *more dispersed* than the unforced one. It is not. With the stratospheric
 forcing identical across members by construction, the added between-member
-variance is bounded at **+0.13 σ² at 95%**. Two independent routes now agree —
+variance is bounded at **+0.05 σ² at 95%** (variance-ratio upper bound 1.051). Two independent routes now agree —
 one needing an 84% placebo correction (I), one needing none (M).
 
 > **POWER LIMITATION, stated not buried.** The Gaussian-mixture BIC test in this
 > script has **essentially no power**: at a proper 5% critical value it detects a
-> 2/3 mixture with probability 0.04 at 0.25 σ separation and **0.00 at 1.0–1.5 σ**,
-> because the within-component spread stays near 1 σ while the separation grows.
-> Its p = 0.415 is **not** evidence for one population and must never be quoted as
+> 2/3 mixture with probability 0.07 at 0.25 σ separation, **0.00 at 1.0 σ** and
+> 0.06 at 1.5 σ, because the within-component spread stays near 1 σ while the
+> separation grows. Its p = 0.985 is **not** evidence for one population and must never be quoted as
 > such. **The variance bound and the KS test carry this result; the mixture test
 > does not.** A first version of the power code compared the statistic against a
 > *single* null draw — a coin flip under the null — and produced power
 > *decreasing* with separation, which is impossible and is what exposed it.
 
-> **The guard that decided the answer.** Including the `s20190108` initialisation
-> flips every conclusion: variance ratio 1.644 [1.41, 1.93], KS p = 0.010. That
-> initialisation begins **6 days after onset**, so the +8..+25 window sits at lead
-> 2–19 days, before the ensemble has diverged; its control spread is ~138 Pa
-> against 205–466 Pa elsewhere. Standardising by forecast-spread growth instead of
-> climatological spread inflates both statistics. The anomaly was flagged from the
-> spread *before* the run and confirmed by the lead arithmetic afterwards — and it
-> is a property of the **initialisation**, present at both centres, not of a centre.
+> **The short-lead initialisation.** `s20190108` begins **6 days after onset**, so
+> the +8..+25 window sits at lead 2–19 days, before the ensemble has fully
+> diverged. The headline (0.955, KS p = 0.37, 36 ensembles) includes it; without
+> it the ratio is 0.996 [0.895, 1.106], KS p = 0.650. Both support a pure shift.
 
 ---
 
@@ -758,8 +638,8 @@ observation per event, so the 9 per-model percentiles are not independent.
    with no uncertainty range and no null comparison.
 6. **Loeffel et al. (2026)**, WCD 7, 895–913 (preprint EGUsphere 2025-4164), ICON ensemble
    re-forecasts, case-to-case variability. **Their r = 0.85 survives our control**
-   (P(null ≥ 0.85) = 0.003), though the missing baseline is real and large: with no
-   event at all, window overlap alone gives r = **+0.530** [+0.162, +0.789].
+   (P(null ≥ 0.85) = 0.0005), though the missing baseline is real and large: with no
+   event at all, window overlap alone gives r = **+0.489** [+0.107, +0.766].
 
 7. **Rao, Garfinkel & White (2020)**, JGR-Atmos 125, e2019JD031919 (read in
    full via PMC7507786) — Feb-2018 vs Jan-2019 in S2S models; *"the strength of
@@ -772,9 +652,17 @@ observation per event, so the 9 per-model percentiles are not independent.
    e2024GL110529 — 7 S2S models, 16 SSWs 1998–2022: models predict which SSWs
    have a stronger downward response to 100 hPa but *"struggle to predict which
    have a stronger tropospheric response"*; frames non-propagating outcomes as
-   forecast busts. **Only the abstract has been read** (the publisher and
-   preprint server refuse automated fetches); do not cite its internals until
-   the full text is read.
+   forecast busts. **Full text read 2026-09-25** (open access, CC BY; local copy
+   in archive/, git-ignored). Findings we use: (i) Zcap100 (days 0–14) from
+   initialisations 2–9 d before onset explains ~2/3 of the inter-event spread,
+   Zcap500 only ~25%; (ii) the SSW-date skill for Zcap500 over days 5–35 (r = 0.52,
+   13 hindcast SSWs, predictor model Zcap100) sits at the **91st percentile** of
+   10,000 sets of 13 random Dec–Mar dates (mean r 0.15) — *not* significant at 95%,
+   in their words indistinguishable from sampling variability: an operational
+   analogue of J; (iii) Zcap500 response significantly stronger after **split**
+   SSWs (and after Kodera-absorbing events) in models and ERA5 — a non-zonal event
+   property that neither SNAPSI (zonal-mean nudging) nor our zonal-mean CMIP6
+   predictors can test; stated as a limit in the manuscript.
 
 9. **Sigmond, Scinocca, Kharin & Shepherd (2013)**, Nature Geoscience 6, 98–102,
    doi 10.1038/ngeo1698 (abstract read from the publisher) — forecasts initialised
@@ -801,6 +689,16 @@ observation per event, so the 9 per-model percentiles are not independent.
    18 events, across events on ensemble means; conclusion *"pronounced and robust
    event-to-event differences in the tropospheric response to SSWs"*.
 
+13. **Spaeth, Rupp, Garny & Birner (2024)**, Commun. Earth Environ. 5, 126,
+   doi 10.1038/s43247-024-01292-z (abstract read via OpenAlex) — S2S ensemble spread
+   in near-surface geopotential height is *reduced* after weak polar vortex states
+   over the Norwegian Sea and Scandinavia, by up to 20%. **Scope of M:** M's
+   "shape unchanged" is for the POLAR-CAP MEAN; regional spread can change. Say so.
+14. **Roberts & Vitart**, QJRMS (arXiv 2411.17694, abstract read) — ECMWF
+   subseasonal wintertime NAO, days 16–45, 2001–2020: RPC ≈ 1.5 (signal-to-noise
+   paradox, possible unreliability); well calibrated over 1959–2023. **Any
+   forecast-reliability test must check calibration on non-SSW start dates.**
+
 **What remains novel:** the quantification (β×ΔS, R²=0.99–1.00 in two systems); the
 extension to stratospheric stratifiers; the power-bounded distributional test; the
 shift predicting "two thirds"; and above all **the out-of-sample predictability
@@ -814,12 +712,10 @@ ceiling and the pre/post tier contrast**, which nobody has measured.
 
 | gap | status |
 |---|---|
-| **forecast/operational circularity** | **UNANSWERED** — died twice on agent session limits. The one lead that could change the venue category. |
-| **R re-validation** | `validate_R_diagnostic.py` must add a precursor arm (anomaly concentrated *before* onset) before any R-based claim is made again. |
+| **forecast/operational test** | **UNANSWERED** — planned with ECMWF S2S reforecasts; blocked until the S2S licence is accepted on the account. |
 | true v'T' in CMIP6 | proxy only; needs hundreds of GB of daily 3-D va/ta |
-| observational power | 35% at R²=0.10; n=46 is the whole record |
+| observational power | not quantified: at n=42 the CV R² moves by up to 0.3 with the fold assignment (§3 J); n=46 is the whole record |
 | SNAPSI NH events | 2. Not fixable. σ_f not estimable there. |
-| manuscript n inconsistency | manuscript uses 47 (union), analyses use 43 primary / 42 usable — **must be one choice** |
 | `ncep_ncar` catalogue variant | crashes the CV loop (empty permutation array) |
 
 ### 5b. Event counts are NOT inconsistent — they are named catalogue sets
@@ -932,15 +828,26 @@ multiple testing.
   not 0.947/0.053 — the latter are not reproducible and must not be requoted.
   The ordering that justified 3 harmonics as primary survives (+0.005 < +0.023 <
   +0.040).
-- **`predictability_ceiling.json` still holds the superseded implied-R² values**,
-  including `Karpechko AO, observations: 1.2852` — an impossible R² > 1 caused by
-  dividing an observational contrast by the CMIP6 variance. The script was
-  corrected afterwards but never re-run, so the matched-variance numbers in §3J
-  exist only in this document. **Re-run `predictability_ceiling.py`.**
-- Genuinely stale outputs (script newer than its JSON by more than a few minutes):
-  `stratifier_bias_law.py` (2 days), `ensemble_precursor.py` (1 day),
-  `marginal_events.py` (6 h). `ao_null_perbin.py` and `predictability_ceiling.py`
-  differ by 2–6 minutes, i.e. the script was touched just after it wrote its output.
+- **CMIP6 event detection is validated** (`validate_ssw_detector.json`, 2026-09-25).
+  `detect_ssw` implements Charlton & Polvani (2007) as stated by Butler et al.
+  (2017): first easterly day at 10 hPa 60N in Nov–Mar, 20 consecutive westerly
+  days between events, final warmings (no 10 consecutive westerly days before
+  30 April) excluded. On NCEP R1 1958–2024 it reproduces all 39 NCEP-NCAR
+  compendium dates to the day, with no extra events in the compendium's
+  coverage; after it, 2024-01-17 and 2024-03-04. The detector used until then
+  (any easterly day, then a 20-day skip) gave 1,888 CMIP6 events; every CMIP6
+  result was re-run on the 1,517 CP07 events, all callers detecting on the full
+  daily series.
+- **Pseudo-events are zone-free** (2026-09-25): onsets > 135 days from every real
+  onset (`zone_free_index`), so no pseudo-event window overlaps a real event's
+  −60..+75-day zone. Cleaning only the onset day had left 3.6% of observational
+  draws (and 5–9% of CMIP6 windows) contaminated. All affected producers re-run.
+- **Implied R² is computed where the contrast is**, from the same outcome and
+  events (`implied_r2_eta2` in the two literature JSONs, `implied` in
+  `predictability_ceiling.json`); no contrast is typed into another script.
+- **January 2019's label survives a true daily mean**
+  (`era5_nam_daily_mean_check.json`): +0.025 σ (±0.003) against +0.019 σ from
+  00 UTC; still NDW at 1000 hPa over days 8–52.
 
 ---
 
@@ -1041,7 +948,7 @@ Communications**, **npj Climate and Atmospheric Science**, and **Communications
 Earth & Environment**. NGeo's recent climate output is broad observational impact
 work (global hail climatology, agricultural drought).
 
-Against that: the headline is model-based, the observational arm has 35% power, and
+Against that: the headline is model-based, the observational arm is uninformative at n=42, and
 the framing is corrective over prior art that includes White et al. (2019) saying
 the differences are "entirely there by construction."
 

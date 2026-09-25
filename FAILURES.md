@@ -127,3 +127,28 @@ Rule: after any library upgrade, re-run every producer, not just the ones being 
 Tried: calling a cross-validated model skilful when its R² beat 95% of a permutation null.
 Failed: in the 42-event observational arm the null itself is negative, so a model with R² = −0.11 (worse than predicting the mean) was printed "SKILL" at p = 0.003; and its R² ranged −0.32 to −0.006 across 200 equivalent fold tie-breaks, so one split's value was arbitrary.
 Rule: skill needs p < 0.05 AND R² > 0. At small n, report the spread over fold assignments, not a single split.
+
+## 2026-09-25 — An SSW detector that was not Charlton & Polvani
+Tried: `detect_ssw` flagged every u10 sign change with a fixed day gap, on a Nov–Apr subset, and was called "CP07" in the text.
+Failed: no 20-day westerly separation and no final-warming test; on NCEP R1 it gave 12 events absent from the published list (CMIP6 1,888 events, true CP07 1,517). Scripts also disagreed on input (subset vs full series), one event apart.
+Rule: validate any event detector against a published catalogue on the same reanalysis before using it; every caller detects on the full daily series.
+
+## 2026-09-25 — Pseudo-events whose windows overlapped real SSWs
+Tried: drawing pseudo-onsets from days outside real events' influence zones, checking only the onset day.
+Failed: a pseudo-event's own −60..+75 window still ran into real SSWs; 3.6% of observational draws were contaminated, biasing nulls toward the real effect.
+Rule: a pseudo-onset must be > 135 days from every real onset (`zone_free_index`); check the contamination rate, not just the onset.
+
+## 2026-09-25 — Implied R² with a borrowed denominator
+Tried: a table of "R² implied by the DW/NDW split", with contrasts typed in from other scripts divided by one hard-coded AO variance, plus a CMIP6 median split.
+Failed: ERA5 NAM contrasts were divided by the CPC AO variance; the median split gives 2/π by construction, not the published criterion's value.
+Rule: compute q(1−q)C²/Var in the script that computes the contrast, from the same outcome and events; never type a number from one result into another script.
+
+## 2026-09-25 — A producer rewrote an input another producer was reading
+Tried: re-running era_dependence_gate.py and loeffel2025_missing_control.py in parallel.
+Failed: era_dependence_gate rewrites ncep_stratosphere_1958.parquet on every run; loeffel read it mid-write and crashed ("Parquet magic bytes not found").
+Rule: never run a producer concurrently with one that writes a file it reads; run era_dependence_gate alone, or first.
+
+## 2026-09-25 — The exclusion set was trimmed along with the scored set
+Tried: zone_free_index / real_influence_mask called with `real` after it had been cut to predictor coverage or a ±70 d margin.
+Failed: the dropped events (1958-78, 2023-02-16, 1979-02-22) still sat inside the pseudo pool and the climatology; 21% of Nov-Mar candidates in stratifier_bias_law. Found by independent review.
+Rule: exclude with the FULL catalogue (`allev`); restrict only the events being scored.

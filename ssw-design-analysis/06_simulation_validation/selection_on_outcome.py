@@ -146,7 +146,7 @@ def main():
         print(f"{k:6s} {real_all[k]:+12.3f} {real_d[k]:+12.3f}")
 
     # ---------------- null: pseudo-onsets, true effect exactly zero ----------
-    clean_idx = ao[~mask].index
+    clean_idx = G.zone_free_index(ao.index, real)
     doys = np.array([t.dayofyear for t in pd.DatetimeIndex(real)])
     rng = np.random.default_rng(20260731)
     null = {k: {"all": [], "crit": [], "matched": []} for k in OUTCOMES}

@@ -158,8 +158,8 @@ def main():
     ao = M.load("ao")["y"]
     pred = load_predictors()
 
-    real = load_catalogue("primary")
-    real = real[(real >= ao.index.min()) & (real <= ao.index.max())]
+    allev = load_catalogue("primary")   # EXCLUSION set: every event, even ones not scored here
+    real = allev[(allev >= ao.index.min()) & (allev <= ao.index.max())]
     # every stratifier must be computable, so restrict to the common coverage
     lo_cov = max(v.index.min() for v in pred.values())
     hi_cov = min(v.index.max() for v in pred.values())
@@ -170,9 +170,12 @@ def main():
 
     # CLEAN day-of-year climatology for the OUTCOME -- the contamination trap
     # that has already cost this project three times.
-    mask = G.real_influence_mask(ao.index, real)
+    # Mask and pseudo pool exclude EVERY catalogued event, not only the scored
+    # ones: passing the coverage-trimmed `real` left the 1958-78 events inside
+    # the pool and the climatology (review 2026-09-25, 21% of NDJFM candidates).
+    mask = G.real_influence_mask(ao.index, allev)
     clim = ao[~mask].groupby(ao[~mask].index.dayofyear).mean()
-    clean_idx = ao[~mask].index
+    clean_idx = G.zone_free_index(ao.index, allev)
     doys = np.array([t.dayofyear for t in pd.DatetimeIndex(real)])
 
     Y_real = S.per_event(ao, real, clim)

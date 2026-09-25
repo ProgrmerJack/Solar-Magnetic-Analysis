@@ -1,34 +1,34 @@
 using ncep_stratosphere_1958.parquet (100 hPa, 60-90N cap) + CPC AO: 1958-01-01 .. 2024-12-31  12,143 days
-ERA5 1958-01-01..2024-12-31; events in range 42; clean days 7,277/12,143
+ERA5 1958-01-01..2024-12-31; events in range 42; clean days 7,172/12,143
 
 === TEST A  their Fig.4 LS-signal split, on single realisations ===
   criterion: 100 hPa anomaly > 1.5 sigma for >= 10 consecutive days in days 0-42
   response : 1000 hPa anomaly averaged over days 21-49
   windows overlap by 21 days
 
-  REAL SSWs (n=42): LS-signal rate 64.3%, contrast +0.098 sigma
-  PSEUDO-EVENTS, NO SSW (3,630 draws): LS-signal rate 8.9%, contrast +0.403 [-0.408, +1.238]
+  REAL SSWs (n=42): LS-signal rate 64.3%, contrast +0.115 sigma
+  PSEUDO-EVENTS, NO SSW (3,876 draws): LS-signal rate 11.8%, contrast +0.080 [-0.512, +0.699]
 
   READ THIS CAREFULLY, THE RATIO IS NOT THE STORY:
    - the null contrast's CI CONTAINS zero, so the threshold does NOT reliably manufacture a contrast
-   - the OBSERVED contrast at real SSWs is only +0.098 sigma, so a '% of observed'
-     figure divides by a near-zero denominator and is meaningless here (412%).
+   - the OBSERVED contrast at real SSWs is only +0.115 sigma, so a '% of observed'
+     figure divides by a near-zero denominator and is meaningless here (69%).
    - the substantive point is that this threshold barely separates the surface at all
-     in observations (+0.098 sigma), while selecting 64% of real events versus
-     9% of random dates.
+     in observations (+0.115 sigma), while selecting 64% of real events versus
+     12% of random dates.
 
 === TEST B  their Fig.9-10 correlation, matched to n=18 ===
   UPPER BOUND ONLY: they correlate ENSEMBLE MEANS across 18 re-forecasts,
   which suppresses the internal noise this bias feeds on. Single realisations
   here therefore OVERSTATE the structural share. Reported as a bound, not a refutation.
 
-  REAL SSWs (n=42): r(100 hPa d14-42, surface d21-49) = +0.134
-  PSEUDO-EVENTS, NO SSW, n=18 each (4,000 draws): r = +0.530 [+0.162, +0.789]
-  P(null r >= 0.85) = 0.0030
+  REAL SSWs (n=42): r(100 hPa d14-42, surface d21-49) = +0.132
+  PSEUDO-EVENTS, NO SSW, n=18 each (4,000 draws): r = +0.489 [+0.107, +0.766]
+  P(null r >= 0.85) = 0.0005
 
   VERDICT ON THEIR r = 0.85:
    - the MISSING BASELINE IS REAL AND LARGE: with no event at all, window overlap
-     alone gives r = +0.530. Their 0.85 must be read against that, not against 0.
-   - but it SURVIVES the control: P(null >= 0.85) = 0.0030. The headline is NOT overturned.
+     alone gives r = +0.489. Their 0.85 must be read against that, not against 0.
+   - but it SURVIVES the control: P(null >= 0.85) = 0.0005. The headline is NOT overturned.
 
 Saved -> loeffel2025_missing_control.json

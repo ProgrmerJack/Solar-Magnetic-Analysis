@@ -10,15 +10,15 @@ window-level regression slopes from 34,800 clean pseudo-event windows
 
 outcome        rho     beta   predicted   measured     error
 ------------------------------------------------------------
-ao          +1.000   +1.000      -0.660     -0.660    +0.000
-nao         +0.625   +0.200      -0.132     -0.133    -0.001
-pna         -0.460   -0.179      +0.118     +0.126    +0.008
-tavg_c      -0.109   -0.035      +0.023     +0.009    -0.014
-snwd_mm     +0.075   +0.064      -0.042     -0.056    -0.014
+ao          +1.000   +1.000      -0.657     -0.657    +0.000
+nao         +0.633   +0.207      -0.136     -0.140    -0.004
+pna         -0.487   -0.180      +0.118     +0.127    +0.008
+tavg_c      -0.093   -0.027      +0.018     -0.004    -0.022
+snwd_mm     +0.084   +0.073      -0.048     -0.048    -0.001
 
   regression of measured bias on correlation:
-    slope -0.657 (bias at corr=1 should equal bias_AO = -0.660)
-    intercept -0.005 (should be ~0)   r = -1.000   R2 = 0.999   P = 0.0000
+    slope -0.655 (bias at corr=1 should equal bias_AO = -0.657)
+    intercept -0.004 (should be ~0)   r = -0.999   R2 = 0.999   P = 0.0000
     -> LAW HOLDS
 
 Saved -> selection_projection_law.json

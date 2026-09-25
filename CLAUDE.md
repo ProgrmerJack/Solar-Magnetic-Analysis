@@ -7,7 +7,7 @@ Global rules in `~/.claude/CLAUDE.md` apply. This file covers what is specific t
 Whether the literature's split of sudden stratospheric warmings into
 "downward-propagating" and not carries information about the Earth system, or is a
 threshold applied to one continuous population. Evidence comes from observations
-(n=43 events), CMIP6 (n=1888), and the SNAPSI nudged-ensemble experiment.
+(n=43 events), CMIP6 (n=1,517 Charlton–Polvani events), and the SNAPSI nudged-ensemble experiment.
 
 **The repository name is a fossil.** It was a solar/geomagnetic–avalanche project
 that was abandoned; see "Superseded" below. Nothing solar is live.
@@ -29,7 +29,7 @@ ssw-design-analysis/     THE LIVE PROJECT. Numbered stages, executed in order.
   run_logs/<stage>/        stdout of every run, mirroring the stage layout
   tests/smoke_test.py      the standing checks
 results/
-  current/<theme>/         56 live result JSONs, grouped by question answered
+  current/<theme>/         57 live result JSONs, grouped by question answered
   superseded/<family>/     retired results, kept for provenance
   _ALL_RESULTS.json        every live payload in one file -- the read path
   _PROVENANCE.json         producer path + sha256 baseline, drives staleness

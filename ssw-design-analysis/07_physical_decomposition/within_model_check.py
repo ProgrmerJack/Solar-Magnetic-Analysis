@@ -138,13 +138,13 @@ def prepare_member(f):
     m2 = m[np.isin(m.index.month, SEASON)].dropna()
     if len(m2) < 2000:
         return None
-    on = EP.detect_ssw(m2["u10"].values, m2.index)
+    on = EP.detect_ssw(m["u10"].values, m.index)   # full daily series: CP07 needs contiguous days
     if len(on) < 15:
         return None
     am = m2["am"]
     msk = C6.influence_mask(am.index, on)
     cl = am[~msk].groupby(am[~msk].index.dayofyear).mean()
-    cln = am[~msk].index
+    cln = C6.zone_free_index(am.index, on)
     dy = np.array([t.dayofyear for t in pd.DatetimeIndex(on)])
     ds = xr.open_dataset(f)
     lat, plev, u = ds["lat"].values, ds["plev"].values, ds["u_zm"].values
