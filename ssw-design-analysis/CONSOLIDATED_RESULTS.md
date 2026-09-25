@@ -56,6 +56,7 @@ withdrawal now carries intervals.)*
 | **M** | **an SSW shifts the surface distribution without inflating its variance** | **SNAPSI, 9 centres, 1798 vs 1805 members** | **established causally; ratio 0.955 [0.873, 1.051] after an estimator fix** |
 | O | the field's two archetypes (Feb-2018 "propagating", Jan-2019 "not") have the same forced odds, and their observed difference is ordinary member-to-member noise | SNAPSI 9 centres + ERA5 | established for these 2 events; Jan-2019's NDW label flips with the pressure level |
 | N | the week-2 100 hPa → surface coupling between members is the same with and without an SSW | SNAPSI, 9 centres, 36 matched ensembles | established; Δz +0.023 [−0.044, +0.090] |
+| P | operational forecasts show no significant event-specific skill at SSWs; they underestimate the common shift | ECMWF S2S reforecasts, 12 SSWs 2003–2021 | established for one system; conditional p 0.115 / 0.366, power 0.88–0.90 |
 
 **J is the headline.** It needs no correction of any kind, it answers the field's
 own question in the field's own terms, and it independently confirms I.
@@ -619,6 +620,52 @@ initial-time offset but not lead-dependent drift), which is why the event-pair
 difference — where a model's bias largely cancels — is the robust test. One
 observation per event, so the 9 per-model percentiles are not independent.
 
+### P — operational forecasts: no event-specific skill; the shift is underestimated (`s2s_forecast_test.py`)
+
+Plan approved 2026-09-25 before any data were retrieved. ECMWF S2S reforecasts from
+the ECMWF Data Store (model year 2022, one version; hindcasts 2002–2021; 11 members;
+all 35 Monday/Thursday starts Dec–Mar; `acquire_s2s_reforecasts.py`), polar-cap
+MSLP at 00 UTC (instantaneous; GRIB `stepType=instant`), reduced with the ERA5
+`cap()`. 12 primary-catalogue SSWs 2003–2021; ~2,200 zone-free control starts.
+Outcome: days +8..+25 NAM proxy; DW = Karpechko conditions 1–2.
+
+| | short (starts 2–9 d before) | mid (10–17 d before) |
+|---|---|---|
+| r(ensemble mean, observed) across events | +0.765 (null mean +0.563) | +0.466 (+0.385) |
+| **conditional p** (primary) | **0.115** | **0.366** |
+| Brier skill of P(DW); conditional p | +0.294; 0.069 | +0.005; 0.629 |
+| forecast P(DW), SSW vs control | 0.60 vs 0.35 | 0.48 vs 0.37 |
+| observed DW rate, SSW vs control | 0.75 vs 0.29 | 0.75 vs 0.30 |
+| ensemble-mean vs observed A (Pa), SSW | −166 vs −269 | −25 vs −269 |
+| mean PIT at SSW starts (0.5 = calibrated) | 0.39 | 0.30 |
+| outer-bin share (0.167 expected); binomial p | 0.04; 0.11 | 0.14; 1.00 |
+
+- **Discrimination:** not significantly better at SSWs than at event-free dates of
+  the same calendar period and lead. Short-lead point estimate is above the null;
+  "no strong event-specific skill", not "zero". Consistent with Nebel et al. 2024
+  (their SSW skill at the 91st percentile of random dates).
+- **No second population:** the rank histogram at SSW starts is not U-shaped (the
+  pre-stated falsifier). The deviation is a one-sided offset: outcomes more
+  downward than the members.
+- **The shift is underestimated:** right direction, about three fifths of the
+  observed size at short lead; the forecast raises P(DW) 0.35 → 0.60 while reality
+  goes 0.29 → 0.75.
+
+**Validation** (`validate_s2s_null.py`, 40 synthetic datasets per case on the real
+layout; binomial s.e. 0.034): conditional-r rejection rate 0.03/0.05 under no
+skill and 0.05/0.05 under equal skill everywhere; power against skill present only
+before SSWs 0.88/0.90. Brier test: power 0.28/0.15, rejection 0.10 under no skill at
+short lead: secondary only. Two design changes made during validation, before the
+real forecasts were analysed: the first null (moving each event to another year)
+had only 8 event-free winters and rejected 20% under noise in the first check; the
+unconditional correlation test was conservative (mean p 0.67 under equal skill),
+biased toward our thesis, so the null is conditioned on the across-event spread of
+the outcome.
+
+**Limits:** 12 events; one model version; starts of one event share an outcome, so
+start-level reliability tests are liberal (the event is the unit); spread/error
+1.36 (short) indicates an over-dispersed ensemble at SSW starts.
+
 ## 4. Prior art — verified from source, all must be cited
 
 1. **Karpechko et al. (2017)**, QJRMS 143, 1459, doi 10.1002/qj.3017 — the
@@ -712,7 +759,7 @@ ceiling and the pre/post tier contrast**, which nobody has measured.
 
 | gap | status |
 |---|---|
-| **forecast/operational test** | **UNANSWERED** — planned with ECMWF S2S reforecasts; blocked until the S2S licence is accepted on the account. |
+| forecast/operational test | answered for ECMWF (result P); other S2S systems not tested |
 | true v'T' in CMIP6 | proxy only; needs hundreds of GB of daily 3-D va/ta |
 | observational power | not quantified: at n=42 the CV R² moves by up to 0.3 with the fold assignment (§3 J); n=46 is the whole record |
 | SNAPSI NH events | 2. Not fixable. σ_f not estimable there. |

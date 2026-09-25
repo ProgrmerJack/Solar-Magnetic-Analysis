@@ -80,6 +80,13 @@ def main():
         print(f"  {a} .. {b}: {len(s.time)} steps, "
               f"N mean {np.nanmean(n):.0f} Pa, S mean {np.nanmean(so):.0f} Pa", flush=True)
     out = pd.concat(frames, ignore_index=True)
+    # The SH period (Aug-Nov 2019) overlaps the NH winter 2019/20 from 1 Nov, so
+    # 2019-11 was written twice until 2026-09-25 (identical values). Keep one
+    # copy, and refuse if overlapping periods ever disagree.
+    dup = out[out["time"].duplicated(keep=False)]
+    if len(dup) and (dup.groupby("time")[["psl_cap_N", "psl_cap_S"]].nunique() > 1).any().any():
+        raise ValueError("overlapping periods give different values for the same time")
+    out = out.drop_duplicates("time").sort_values("time", ignore_index=True)
     if out[["psl_cap_N", "psl_cap_S"]].isna().any().any():
         raise ValueError("NaN in the ERA5 polar cap")
     for c in ("psl_cap_N", "psl_cap_S"):

@@ -152,3 +152,8 @@ Rule: never run a producer concurrently with one that writes a file it reads; ru
 Tried: zone_free_index / real_influence_mask called with `real` after it had been cut to predictor coverage or a ±70 d margin.
 Failed: the dropped events (1958-78, 2023-02-16, 1979-02-22) still sat inside the pseudo pool and the climatology; 21% of Nov-Mar candidates in stratifier_bias_law. Found by independent review.
 Rule: exclude with the FULL catalogue (`allev`); restrict only the events being scored.
+
+## 2026-09-25 — Overlapping acquisition periods wrote duplicate timestamps
+Tried: extending era5_psl_cap_6h.parquet to every NH winter (from 1 Nov) while it still held the SH case (Aug-Nov 2019).
+Failed: 2019-11 was written twice (identical values); a reader using Series.get or map on time crashed, and a mean over a window could have double-counted. Found by the known-truth harness.
+Rule: an acquisition that concatenates periods drops duplicate times (refusing if they differ); readers assert a unique time index.

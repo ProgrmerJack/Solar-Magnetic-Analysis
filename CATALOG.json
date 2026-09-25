@@ -1,10 +1,10 @@
 {
- "generated": "2026-09-25T10:12:24+00:00",
+ "generated": "2026-09-25T15:13:11+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 122,
-  "results": 57
+  "scripts": 125,
+  "results": 59
  },
  "scripts": [
   {
@@ -71,9 +71,9 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "Observed polar-cap mean sea-level pressure, reduced EXACTLY as the SNAPSI members are, so the observed outcome of each SNAPSI event can be placed inside its own ensemble.",
-   "loc": 95,
-   "modified": "2026-09-25 06:07",
-   "sha256_16": "238da5761c5f9380",
+   "loc": 102,
+   "modified": "2026-09-25 10:59",
+   "sha256_16": "45fdc9c527436628",
    "flags": [],
    "filenames_mentioned": [
     "era5_psl_cap_6h.parquet"
@@ -107,6 +107,21 @@
    "filenames_mentioned": [
     "daily_indices.parquet",
     "index_checksums.txt"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_s2s_reforecasts.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "ECMWF S2S reforecasts of polar-cap mean sea-level pressure, reduced EXACTLY as the ERA5 observation is (`acquire_era5_psl_cap.cap`: cos-lat weighted 60-90N, the 60N row included), for the forecast-reliability test",
+   "loc": 216,
+   "modified": "2026-09-25 12:07",
+   "sha256_16": "090e5e82a5de8ffa",
+   "flags": [],
+   "filenames_mentioned": [
+    "s2s_ecmf_psl_cap.parquet",
+    "s2s_manifest.json"
    ],
    "filename_prefixes": []
   },
@@ -606,6 +621,20 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/06_simulation_validation/validate_s2s_null.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "Is the discrimination test in s2s_forecast_test.py calibrated, and how much power does it have? Known truth, on the real forecast layout and the real ERA5 outcomes.",
+   "loc": 150,
+   "modified": "2026-09-25 12:59",
+   "sha256_16": "1eaf64a058c7aef1",
+   "flags": [],
+   "filenames_mentioned": [
+    "validate_s2s_null.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/06_simulation_validation/validate_ssw_detector.py",
    "tree": "ssw-design-analysis",
    "stage": "06_simulation_validation",
@@ -872,6 +901,22 @@
     "heatflux_daily.parquet",
     "ncep_stratosphere_1958.parquet",
     "predictability_wave_driving.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/s2s_forecast_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "DO OPERATIONAL FORECASTS STARTED BEFORE AN SSW KNOW WHICH EVENTS WILL COUPLE? Plan approved 2026-09-25 (before any data were downloaded).",
+   "loc": 365,
+   "modified": "2026-09-25 12:59",
+   "sha256_16": "9101767f880eb8ac",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_psl_cap_6h.parquet",
+    "s2s_ecmf_psl_cap.parquet",
+    "s2s_forecast_test.json"
    ],
    "filename_prefixes": []
   },
@@ -1901,7 +1946,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-09-25 07:20",
+   "modified": "2026-09-25 10:12",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -2671,6 +2716,42 @@
     "grid",
     "arms",
     "verdict"
+   ]
+  },
+  {
+   "path": "results/current/3_calibration/validate_s2s_null.json",
+   "tree": "current",
+   "stage": "3_calibration",
+   "readable": true,
+   "bytes": 3567,
+   "modified": "2026-09-25 13:03",
+   "sha256_16": "cd1ce7f92f7bfd70",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_null.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_null.py": "1eaf64a058c7aef1"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_seeds": [
+     40
+    ],
+    "n_null": [
+     1000
+    ]
+   },
+   "top_level_keys": [
+    "n_seeds",
+    "n_null",
+    "forecast_layout",
+    "synthetic",
+    "workers",
+    "cases",
+    "binomial_se_at_0.05"
    ]
   },
   {
@@ -3474,6 +3555,57 @@
    ]
   },
   {
+   "path": "results/current/6_predictability/s2s_forecast_test.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 32499,
+   "modified": "2026-09-25 12:59",
+   "sha256_16": "3be7b089eb53f09c",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_forecast_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_forecast_test.py": "9101767f880eb8ac"
+   },
+   "verdicts": [
+    {
+     "key": "bins.short.reliability.note",
+     "text": "starts of one event share an observed window, and control starts at neighbouring k share windows: tests treat starts as independent and are therefore liberal; the event, not the start, is the independent unit"
+    },
+    {
+     "key": "bins.mid.reliability.note",
+     "text": "starts of one event share an observed window, and control starts at neighbouring k share windows: tests treat starts as independent and are therefore liberal; the event, not the start, is the independent unit"
+    }
+   ],
+   "counts": {
+    "n_null": [
+     10000
+    ],
+    "n_events": [
+     12
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "model_year",
+    "origin",
+    "window_post_onset_days",
+    "lead_bins",
+    "n_null",
+    "seed",
+    "zone_sep_days",
+    "null_mode",
+    "null_window_days",
+    "inputs",
+    "n_starts_total",
+    "bins"
+   ]
+  },
+  {
    "path": "results/current/6_predictability/within_model_check.json",
    "tree": "current",
    "stage": "6_predictability",
@@ -3714,7 +3846,7 @@
    "stage": "8_experiment",
    "readable": true,
    "bytes": 74806,
-   "modified": "2026-09-25 06:56",
+   "modified": "2026-09-25 11:08",
    "sha256_16": "f96669ba1c415de8",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_archetype_test.py"
