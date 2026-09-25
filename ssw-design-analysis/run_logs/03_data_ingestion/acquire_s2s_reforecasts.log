@@ -1,0 +1,40 @@
+35 model dates in 2022 (('12', '01', '02', '03')); 20 hindcast years; 33 leads
+  2022-01-10 cached
+  2022-01-13 cached
+  2022-01-17 cached
+  2022-01-06 cached
+  2022-01-03 cached
+  2022-01-20 cached
+  2022-01-24 fetched
+  2022-01-27 fetched
+  2022-01-31 fetched
+  2022-02-10 fetched
+  2022-02-07 fetched
+  2022-02-03 fetched
+  2022-02-14 fetched
+  2022-02-17 fetched
+  2022-02-21 fetched
+  2022-02-24 fetched
+  2022-02-28 fetched
+  2022-03-03 fetched
+  2022-03-07 fetched
+  2022-03-10 fetched
+  2022-03-14 fetched
+  2022-03-17 fetched
+  2022-03-21 fetched
+  2022-03-24 fetched
+  2022-03-28 fetched
+  2022-03-31 fetched
+  2022-12-01 fetched
+  2022-12-05 fetched
+  2022-12-08 fetched
+  2022-12-12 fetched
+  2022-12-15 fetched
+  2022-12-19 fetched
+  2022-12-22 fetched
+  2022-12-26 fetched
+  2022-12-29 fetched
+
+254,100 rows, 700 starts (2002-01-03 .. 2021-12-29), members [np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(6), np.int64(7), np.int64(8), np.int64(9), np.int64(10)]
+Saved -> s2s_ecmf_psl_cap.parquet
+exit=0

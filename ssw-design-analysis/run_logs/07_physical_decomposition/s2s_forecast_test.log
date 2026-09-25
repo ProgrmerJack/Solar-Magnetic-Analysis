@@ -1,0 +1,17 @@
+700 starts 2002-01-03..2021-12-29, hindcast years 2002-2021; 12 catalogued events in range
+
+=== short (2-9 d before onset): 12 events, 26 SSW starts, 2272 control starts
+  r(ens mean, obs) = +0.765  null mean +0.563, 95th +0.849, p = 0.173
+  conditional on outcome spread: p_r = 0.1147 (n = 2990); on DW count: p_BSS = 0.0687 (n = 131); spread events/null 105318/141533 Pa^2
+  BSS of P(DW)     = +0.294  null mean +0.132, 95th +0.448, p = 0.219
+  shift: A_ens SSW -166 Pa vs control +104; P(DW) 0.60 vs 0.35; observed DW rate 0.75 vs 0.29
+  PIT mean 0.39 (control 0.54); outer-bin share 0.04 vs 0.13 (expected 0.17; binomial p SSW 0.110); flat-histogram p SSW 0.268, control 0.000; spread/error 1.36 vs 1.13
+
+=== mid (10-17 d before onset): 12 events, 28 SSW starts, 2128 control starts
+  r(ens mean, obs) = +0.466  null mean +0.385, 95th +0.766, p = 0.451
+  conditional on outcome spread: p_r = 0.3655 (n = 3045); on DW count: p_BSS = 0.6294 (n = 143); spread events/null 105318/140574 Pa^2
+  BSS of P(DW)     = +0.005  null mean +0.031, 95th +0.296, p = 0.581
+  shift: A_ens SSW -25 Pa vs control +88; P(DW) 0.48 vs 0.37; observed DW rate 0.75 vs 0.30
+  PIT mean 0.30 (control 0.55); outer-bin share 0.14 vs 0.14 (expected 0.17; binomial p SSW 1.000); flat-histogram p SSW 0.085, control 0.000; spread/error 1.11 vs 1.10
+
+Saved -> s2s_forecast_test.json

@@ -31,4 +31,4 @@ aiohttp          # fsspec's HTTP backend
 pydap            # CEDA OPeNDAP. The ONLY way to get SNAPSI 3-D fields: full zg
                  # is ~5 TB, a 100 hPa polar-cap subset is ~33 GB (152x smaller)
 pypdf            # reading open-access papers (PDF text) for source verification; pure Python
-ecmwf-api-client # ECMWF Web API: S2S reforecasts for the forecast-reliability test
+cdsapi>=0.7.7    # ECMWF Data Store (ECDS): S2S reforecasts for the forecast-reliability test

@@ -23,4 +23,4 @@
   2020-11-01 .. 2021-04-30T18: 724 steps, N mean 101451 Pa, S mean 98594 Pa
   2021-11-01 .. 2022-04-30T18: 724 steps, N mean 101329 Pa, S mean 98655 Pa
   2019-08-01 .. 2019-11-30T18: 488 steps, N mean 101227 Pa, S mean 99018 Pa
-17,888 rows -> era5_psl_cap_6h.parquet
+17,768 rows -> era5_psl_cap_6h.parquet

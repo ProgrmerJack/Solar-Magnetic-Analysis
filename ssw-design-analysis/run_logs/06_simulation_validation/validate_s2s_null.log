@@ -1,0 +1,5 @@
+calendar_window  noise        short r-cond 0.03 (uncond 0.00) BSS-cond 0.10  mid r-cond 0.05 (uncond 0.03) BSS-cond 0.03
+calendar_window  equal_skill  short r-cond 0.05 (uncond 0.05) BSS-cond 0.07  mid r-cond 0.05 (uncond 0.03) BSS-cond 0.05
+calendar_window  ssw_skill    short r-cond 0.88 (uncond 0.88) BSS-cond 0.28  mid r-cond 0.90 (uncond 0.88) BSS-cond 0.15
+year_shift       noise        short r-cond 0.10 (uncond 0.07) BSS-cond 0.05  mid r-cond 0.05 (uncond 0.05) BSS-cond 0.00
+Saved -> validate_s2s_null.json

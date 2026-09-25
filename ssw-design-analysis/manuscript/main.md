@@ -20,11 +20,11 @@ eight models; one outlier) without changing its shape (variance ratio 0.955 [0.8
 Splitting members into "downward" and "non-downward" produces the same −1.6 σ
 contrast whether the SSW is imposed or absent, the value a threshold yields on
 pure noise. In 1,517 simulated events, an SSW adds no out-of-sample
-predictability over an ordinary winter day (R² −0.006; 95% upper bound 0.05). The field's two archetype events receive the same
+predictability over an ordinary winter day (R² −0.006; 95% upper bound 0.05), and operational reforecasts gain no significant event-specific skill. The field's two archetype events receive the same
 forced odds. The skill after an SSW is the common shift; the
 classification adds nothing to it.
 
-*(189 words by `wc`; limit 200.)*
+*(197 words by `wc`; limit 200.)*
 
 ---
 
@@ -144,7 +144,18 @@ without changing the conclusion. Operational forecasts point the same way: in
 seven subseasonal systems, the skill with which the 500 hPa polar-cap response
 after 13 SSWs was predicted before onset (r = 0.52) lay at the 91st percentile of
 the same skill at randomly chosen winter dates, and could not be distinguished
-from sampling variability^5^.
+from sampling variability^5^. Our own test of the ECMWF subseasonal
+reforecasts^13^ agrees. Across the 12 SSWs of 2003–2021, forecasts started 2–9
+days before onset track the event-to-event differences in the polar-cap response
+(r = 0.77) no better, within sampling error, than they do for event-free winter
+dates of the same calendar period and lead (p = 0.11; p = 0.37 for starts 10–17
+days before onset), in a test that detects strong event-specific skill in about
+90% of synthetic trials. The observed outcomes are not scattered into both tails
+of the forecast ensembles, as a missed second population would require; they
+lie on its downward side (mean rank 0.39 and 0.30, against 0.5 for a calibrated
+forecast): the forecasts raise the probability of a downward outcome from 0.35
+to 0.60, whereas in reality it rises from 0.29 to 0.75. What the forecasts miss
+is the size of the common shift, not the class of the event.
 
 Splits made with the published criterion imply far larger event-specific
 shares. Expressed as the fraction of between-event variance a two-class split
@@ -211,10 +222,14 @@ about one member in six lands there.
 The practical consequence is a change of forecast product. After an SSW the
 appropriate statement is a shifted probability distribution — the probability of
 a negative NAM, of a cold-air outbreak, of a given precipitation anomaly — rather
-than a categorical prediction of whether this event will propagate. The same
-applies wherever "downward-propagating SSW" is used to stratify impacts: the
-classification rate against a matched null is an honest quantity; the contrast
-between classes is not.
+than a categorical prediction of whether this event will propagate. In the ECMWF
+reforecasts the shift itself is the weak point: forecasts started a few days
+before onset predict it in the right direction but at about three fifths of its
+observed size (−166 Pa against −269 Pa in the polar-cap mean), so improving its
+amplitude, not classifying events, is where skill after an SSW can be gained.
+More broadly, wherever "downward-propagating SSW" is used to stratify impacts,
+the classification rate against a matched null is an honest quantity; the
+contrast between classes is not.
 
 Four limits bound these conclusions. First, the evidence is model-based: with
 42 usable observed events, the observational out-of-sample R² is negative and
@@ -231,7 +246,7 @@ nor among our predictors. Fourth, the Southern Hemisphere case is a minor
 warming, not an SSW. None of this implies that SSWs do not matter: the shift they
 cause is large, causal, and the foundation of the skill that follows them.
 
-*(Main text: 2,087 words by `wc`, headings excluded; limit 3,000.)*
+*(Main text: 2,298 words by `wc`, headings excluded; limit 3,000.)*
 
 ---
 
@@ -239,12 +254,12 @@ cause is large, causal, and the foundation of the skill that follows them.
 
 **Event catalogue.** The 43 observed SSWs over 36 winters 1958–2024 (primary
 catalogue, frozen; file checksum recorded in the repository) are the 41 major
-events of the NOAA CSL SSW compendium^13^ detected in at least two thirds of the
+events of the NOAA CSL SSW compendium^14^ detected in at least two thirds of the
 reanalyses that cover their date, and the two major warmings of 16 January and
-4 March 2024 that post-date it^14^.
+4 March 2024 that post-date it^15^.
 
-**Reanalysis.** ERA5^15^ is read from the WeatherBench 2 public
-copy^16^ (1.5°, 6-hourly).
+**Reanalysis.** ERA5^16^ is read from the WeatherBench 2 public
+copy^17^ (1.5°, 6-hourly).
 Polar-cap sea-level pressure is the cos-latitude-weighted mean over 60–90° N
 (60–90° S for the SH case), including the 60° row. NAM indices at 1000, 850 and
 150 hPa follow the polar-cap definition: the cos-latitude-weighted geopotential
@@ -290,12 +305,12 @@ requires at least three members in each class; the DW rate is reported for all
 ensembles.
 
 **Predictability (Fig. 3).** CMIP6 zonal-mean fields for 20 members. SSWs follow
-Charlton and Polvani^17^: the central date is the first day from November to March
+Charlton and Polvani^18^: the central date is the first day from November to March
 on which the daily zonal-mean wind at 10 hPa, 60° N turns easterly; a further
 event requires 20 consecutive westerly days in between; a reversal not followed
 by 10 consecutive westerly days before 30 April is a final warming and is
 excluded. Applied to NCEP–NCAR reanalysis 1958–2023, this detector reproduces
-all 39 NCEP–NCAR central dates of the compendium^13^ to the day, with no
+all 39 NCEP–NCAR central dates of the compendium^14^ to the day, with no
 additional events. Members with fewer than 15 events are not used (one member
 of an eleventh model). Predictors: 10, 50 and 100 hPa zonal wind at 60° N and
 over the cap in windows before, at and after onset, plus seasonality; 20, 26 and
@@ -319,6 +334,30 @@ the ERA5 150 hPa NAM gives identical labels (30 of 43 downward). The 20 members 
 (10 are CanESM5), so
 standardisation and resampling are by member. Each draw and replicate has its own seeded stream, so the results are
 identical at any degree of parallelism.
+
+**Forecast test.** ECMWF S2S reforecasts^13^ from the ECMWF Data Store (model
+year 2022, one model version; hindcasts 2002–2021; 11 members; every Monday and
+Thursday start in December–March): polar-cap sea-level pressure at 00 UTC,
+reduced as for ERA5. Anomalies are departures from the leave-one-year-out mean of
+the other 19 hindcast years at the same start date and lead (forecasts) or the
+same calendar dates (ERA5). SSW starts lie 2–9 or 10–17 days before a
+primary-catalogue onset (12 events); control starts have a pseudo-onset more than
+135 days from every catalogued onset. For each event the ensemble-mean days
++8..+25 NAM proxy and the fraction of members meeting Karpechko conditions 1–2
+are compared with the observed outcome across events (correlation; Brier skill
+against a constant forecast), and against 10,000 sets of pseudo-onsets drawn
+within ±21 days of each event's calendar date, restricted to sets whose
+across-event spread of the observed outcome is within a factor of 1.25 of the
+events' (correlation) or whose number of downward outcomes differs by at most
+one (Brier skill). The design was fixed before the data were retrieved and
+validated on synthetic forecasts with the same layout: the conditional
+correlation test rejected in 3–5% of trials under both no skill and equal skill
+everywhere, and detected skill present only before SSWs in 88–90%. Two changes
+were made during validation, before the real forecasts were analysed: the first
+null design (moving each event to another year) had too few event-free winters
+to be calibrated, and the unconditional test was conservative. The Brier test
+has little power (15–28%) and is reported as secondary. Reliability is judged by
+the rank of the observed outcome among the members.
 
 **Archetypes (Fig. 4).** Observed polar-cap sea-level pressure from ERA5 at exactly
 the members' forecast times, placed in each model's nudged distribution using the
@@ -383,18 +422,20 @@ several that would have changed a result, are logged in the repository.
 12. Lu, R. & Rao, J. Sorting sudden stratospheric warmings with the downward
     tropospheric influence using ERA5 and CESM2-WACCM. *Atmos. Chem. Phys.* **26**,
     3723–3742 (2026). doi:10.5194/acp-26-3723-2026
-13. Butler, A. H., Sjoberg, J. P., Seidel, D. J. & Rosenlof, K. H. A sudden
+13. Vitart, F. et al. The Subseasonal to Seasonal (S2S) Prediction Project Database.
+    *Bull. Am. Meteorol. Soc.* **98**, 163–173 (2017). doi:10.1175/BAMS-D-16-0017.1
+14. Butler, A. H., Sjoberg, J. P., Seidel, D. J. & Rosenlof, K. H. A sudden
     stratospheric warming compendium. *Earth Syst. Sci. Data* **9**, 63–76 (2017).
     doi:10.5194/essd-9-63-2017
-14. Lee, S. H., Butler, A. H. & Manney, G. L. Two major sudden stratospheric
+15. Lee, S. H., Butler, A. H. & Manney, G. L. Two major sudden stratospheric
     warmings during winter 2023/2024. *Weather* **80**, 45–53 (2025).
     doi:10.1002/wea.7656
-15. Hersbach, H. et al. The ERA5 global reanalysis. *Q. J. R. Meteorol. Soc.* **146**,
+16. Hersbach, H. et al. The ERA5 global reanalysis. *Q. J. R. Meteorol. Soc.* **146**,
     1999–2049 (2020). doi:10.1002/qj.3803
-16. Rasp, S. et al. WeatherBench 2: a benchmark for the next generation of
+17. Rasp, S. et al. WeatherBench 2: a benchmark for the next generation of
     data-driven global weather models. *J. Adv. Model. Earth Syst.* **16**,
     e2023MS004019 (2024). doi:10.1029/2023MS004019
-17. Charlton, A. J. & Polvani, L. M. A new look at stratospheric sudden warmings.
+18. Charlton, A. J. & Polvani, L. M. A new look at stratospheric sudden warmings.
     Part I: Climatology and modeling benchmarks. *J. Clim.* **20**, 449–469 (2007).
     doi:10.1175/JCLI3996.1
 
@@ -457,8 +498,20 @@ squares, the initialisation that starts after onset. **b**, Fisher-pooled
 correlations with 95% intervals and the nudged-minus-control difference, for all
 matched ensembles and excluding the short-lead initialisation.
 
+## Acknowledgements
+
+This work is based on S2S data. S2S is a joint initiative of the World Weather
+Research Programme (WWRP) and the World Climate Research Programme (WCRP). The
+original S2S database is hosted at ECMWF as an extension of the TIGGE database.
+
 ## Data and code availability
 
 SNAPSI data: CEDA archive (free registration). ERA5: WeatherBench2 public
-cloud copy. CMIP6: ESGF. NOAA CSL SSW compendium: public. All code, result files
+cloud copy. S2S reforecasts: ECMWF Data Store, dataset s2s-reforecasts
+(https://ecds.ecmwf.int/); Copyright © 2026 European Centre for Medium-Range
+Weather Forecasts (ECMWF); licence CC BY-NC 4.0
+(https://creativecommons.org/licenses/by-nc/4.0/legalcode); ECMWF does not accept
+any liability whatsoever for any error or omission in the data, their
+availability, or for any loss or damage arising from their use; the data were
+reduced here to polar-cap means. CMIP6: ESGF. NOAA CSL SSW compendium: public. All code, result files
 and run logs: the project repository.
