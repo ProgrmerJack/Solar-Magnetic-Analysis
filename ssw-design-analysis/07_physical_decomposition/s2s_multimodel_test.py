@@ -26,7 +26,9 @@ TESTS (per centre; multi-model = mean over centres covering the event)
   D   discrimination: r(ensemble-mean A, observed A) across events; conditional
       calendar-window null as in P (pseudo-onsets within +-21 calendar days of the
       event date, > 135 d from every catalogued onset; draws whose across-event
-      variance of observed A is within a factor 1.25 of the events').
+      variance of observed A is within a factor 1.25 of the events'). For the
+      multi-model mean a pseudo-onset qualifies if at least half of the event's
+      centres have forecasts for it, and those centres are averaged.
   H1  (confirmatory) observed outcomes after SSWs lie on the DOWNWARD side of the
       forecast ensembles: mean PIT over events is LOWER than on pseudo-events.
       p = P(null mean PIT <= observed).
@@ -36,6 +38,17 @@ TESTS (per centre; multi-model = mean over centres covering the event)
       pseudo-events. p = P(null gain >= observed gain).
   Primary: the multi-model mean over the CONFIRMATORY centres. Per-centre and
   "all centres incl. ECMWF" are reported as secondary.
+
+SENSITIVITIES ADDED 2026-09-26, AFTER the primary result, in response to review
+  (labelled as such; the primary tests above are unchanged):
+  - confirmatory_excl_cptec: CPTEC's archive has 2-4 hindcast years per start
+    date, so its leave-one-year-out forecast climatology rests on 1-3 years.
+  - H1c: each system's PIT minus that system's mean PIT over all its candidate
+    pseudo-onsets, before averaging. A null draw averages fewer systems than the
+    real event (quorum), so a system with an unusual PIT level (NCEP: 0.36) enters
+    events and null unequally; centring removes that level.
+  Observed anomalies use ERA5 from 1998-11, so for systems with earlier hindcasts
+  (HMCR, JMA from 1991; KMA from 1993) the observed climatology omits those years.
 
 Output: results/current/6_predictability/s2s_multimodel_test.json
 """
@@ -127,8 +140,9 @@ def summarise(rows):
 
 
 def mm_rows(per):
-    """Combine centres at event level: means of A_ens, A_obs and PIT; members pooled
-    per centre so each centre's CRPS enters with equal weight."""
+    """Combine centres at event level: means over centres of A_ens, A_obs and PIT;
+    the per-start member sets are pooled, so in H2 each start's CRPS has equal
+    weight (a centre with more starts in the window weighs more)."""
     return {"A_ens": float(np.mean([p["A_ens"] for p in per])),
             "A_obs": float(np.mean([p["A_obs"] for p in per])),
             "pit": float(np.mean([p["pit"] for p in per])),
@@ -189,11 +203,15 @@ def main():
         mv = np.abs(np.log(nvar / obs["var_obs"])) < np.log(1.25)
         out = {"n_events": len(ev), "events": [str(o.date()) for o in ev],
                "D_r": round(obs["r"], 4), "D_r_null_mean": round(float(np.nanmean(nr)), 4),
+               "D_r_null_cond_q025_q975": [round(float(q), 4) for q in np.nanquantile(nr[mv], [0.025, 0.975])]
+               if mv.sum() else None,
                "D_p_conditional": round(float(np.nanmean(nr[mv] >= obs["r"])), 4) if mv.sum() else None,
                "D_n_conditional": int(mv.sum()),
                "H1_mean_pit": round(obs["pit"], 4), "H1_null_mean_pit": round(float(np.mean(npit)), 4),
+               "H1_null_pit_q025_q975": [round(float(q), 4) for q in np.quantile(npit, [0.025, 0.975])],
                "H1_p": round(float(np.mean(npit <= obs["pit"])), 4),
                "H2_crps_gain": round(obs["gain"], 3), "H2_null_mean_gain": round(float(np.nanmean(ngain)), 3),
+               "H2_null_gain_q025_q975": [round(float(q), 3) for q in np.nanquantile(ngain, [0.025, 0.975])],
                "H2_p": round(float(np.nanmean(ngain >= obs["gain"])), 4),
                "A_ens_mean": round(obs["A_ens"], 1), "A_obs_mean": round(obs["A_obs"], 1)}
         print(f"{label:22s} n={len(ev):2d}  D r={out['D_r']:+.2f} (null {out['D_r_null_mean']:+.2f}) "
@@ -208,27 +226,52 @@ def main():
         res["centres"][c] = {"n_members": C.n_mem, "hindcast_years": [C.hyears[0], C.hyears[-1]],
                              **report(c, ev, obs, nr, npit, ngain, nvar)}
 
-    # multi-model: event-level mean over the centres covering the event; each null
-    # draw moves every event to one pseudo-onset valid for ALL of those centres
+    # multi-model: event-level mean over the centres covering the event. Each null
+    # draw moves every event to one pseudo-onset (shared observation) at which at
+    # least half of those centres have forecasts, and averages the centres that
+    # do. Requiring ALL of them left no candidate for 4 events (sparse CPTEC/JMA
+    # start dates) -- found on synthetic data, before any real result was seen.
+    # each system's mean PIT over all its candidate pseudo-onsets (for H1c)
+    mu = {}
+    for c, C in cen.items():
+        ps = {p for o in events for p in cands[o]}
+        v = [C.at(p)["pit"] for p in ps if C.at(p) is not None]
+        mu[c] = float(np.mean(v))
+    res["pit_level_by_system"] = {c: round(v, 4) for c, v in mu.items()}
+
     for label, group in (("confirmatory", [c for c in CONFIRM if c in cen]),
-                         ("all_incl_ecmwf", list(cen))):
+                         ("all_incl_ecmwf", list(cen)),
+                         ("confirmatory_excl_cptec", [c for c in CONFIRM if c in cen and c != "cptec"])):
         cover = {o: [c for c in group if o in real[c]] for o in events}
         ev = [o for o in events if cover[o]]
         rows = [mm_rows([real[c][o] for c in cover[o]]) for o in ev]
         obs = summarise(rows)
-        pools = {o: [p for p in cands[o] if all(cen[c].at(p) is not None for c in cover[o])]
-                 for o in ev}
+        pitc_obs = float(np.mean([np.mean([real[c][o]["pit"] - mu[c] for c in cover[o]]) for o in ev]))
+        npitc = []
+        need = {o: int(np.ceil(len(cover[o]) / 2)) for o in ev}
+        pools = {o: [p for p in cands[o]
+                     if sum(cen[c].at(p) is not None for c in cover[o]) >= need[o]] for o in ev}
         nr, npit, ngain, nvar = [], [], [], []
         if ev and all(pools[o] for o in ev):
             for _ in range(N_NULL):
-                rr = []
+                rr, pc = [], []
                 for o in ev:
                     p = pools[o][rng.integers(len(pools[o]))]
-                    rr.append(mm_rows([cen[c].at(p) for c in cover[o]]))
+                    have = [c for c in cover[o] if cen[c].at(p) is not None]
+                    rr.append(mm_rows([cen[c].at(p) for c in have]))
+                    pc.append(np.mean([cen[c].at(p)["pit"] - mu[c] for c in have]))
+                npitc.append(float(np.mean(pc)))
                 s = summarise(rr); nr.append(s["r"]); npit.append(s["pit"])
                 ngain.append(s["gain"]); nvar.append(s["var_obs"])
         out = report(f"MULTI-MODEL {label}", ev, obs, np.array(nr), np.array(npit),
                      np.array(ngain), np.array(nvar))
+        if npitc:
+            npitc = np.array(npitc)
+            out["H1c_mean_pit_centred"] = round(pitc_obs, 4)
+            out["H1c_null_mean"] = round(float(npitc.mean()), 4)
+            out["H1c_p"] = round(float(np.mean(npitc <= pitc_obs)), 4)
+            print(f"{'':22s} H1c (system-centred PIT) {pitc_obs:+.3f} (null {npitc.mean():+.3f}) "
+                  f"p={out['H1c_p']:.4f}", flush=True)
         out["centres_per_event"] = {str(o.date()): cover[o] for o in ev}
         out["null_candidates_per_event"] = {str(o.date()): len(pools[o]) for o in ev}
         res["multimodel"][label] = out

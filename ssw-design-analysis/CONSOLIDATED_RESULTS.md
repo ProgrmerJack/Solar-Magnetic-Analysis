@@ -56,7 +56,8 @@ withdrawal now carries intervals.)*
 | **M** | **an SSW shifts the surface distribution without inflating its variance** | **SNAPSI, 9 centres, 1798 vs 1805 members** | **established causally; ratio 0.955 [0.873, 1.051] after an estimator fix** |
 | O | the field's two archetypes (Feb-2018 "propagating", Jan-2019 "not") have the same forced odds, and their observed difference is ordinary member-to-member noise | SNAPSI 9 centres + ERA5 | established for these 2 events; Jan-2019's NDW label flips with the pressure level |
 | N | the week-2 100 hPa → surface coupling between members is the same with and without an SSW | SNAPSI, 9 centres, 36 matched ensembles | established; Δz +0.023 [−0.044, +0.090] |
-| P | operational forecasts show no significant event-specific skill at SSWs; they underestimate the common shift | ECMWF S2S reforecasts, 12 SSWs 2003–2021 | established for one system; conditional p 0.115 / 0.366, power 0.88–0.90; multi-model confirmation in progress |
+| P | operational forecasts show no significant event-specific skill at SSWs; they underestimate the common shift | ECMWF S2S reforecasts, 12 SSWs 2003–2021 | established for one system; conditional p 0.115 / 0.366, power 0.88–0.90 |
+| P′ | confirmed in 9 other systems: no event-specific discrimination (r +0.23 vs +0.52 event-free, p 0.91); outcomes on the downward side of the ensembles (mean PIT 0.40 vs 0.54, p 0.005); shift-size correction not significant (p 0.16, low power) | S2S reforecasts, 9 systems, 17 SSWs 1998–2021 | established (H1/H2 pre-registered; D, H1, H2 calibrated, D power 1.00 against strong skill) |
 | Q | knowing the event adds no probabilistic forecast skill beyond the shift (CRPSS +0.008 [−0.003, +0.014]), less than on ordinary days (+0.037) | CMIP6, 1,517 events, leave-one-model-out | established |
 | L′ | paired label test: contrast identical with and without an SSW on the same pairs (−0.03σ [−0.12, +0.05]); threshold model exact in controls | SNAPSI, 25 pairs, 8 centres | established |
 
@@ -660,9 +661,12 @@ Outcome: days +8..+25 NAM proxy; DW = Karpechko conditions 1–2.
 - **No second population:** the rank histogram at SSW starts is not U-shaped (the
   pre-stated falsifier). The deviation is a one-sided offset: outcomes more
   downward than the members.
-- **The shift is underestimated:** right direction, about three fifths of the
-  observed size at short lead; the forecast raises P(DW) 0.35 → 0.60 while reality
-  goes 0.29 → 0.75.
+- **The shift is underestimated:** the −166 / −269 Pa above are anomalies against
+  a climatology that includes the SSW years, not shifts. Relative to ordinary
+  (control) starts the forecast shift is **−270 Pa against −423 Pa observed (64%)**
+  at short lead and **−113 against −428 Pa (26%)** at mid lead
+  (`shift_forecast`, `shift_observed`, added 2026-09-26). The forecast raises
+  P(DW) 0.35 → 0.60 while reality goes 0.29 → 0.75.
 
 **Validation** (`validate_s2s_null.py`, 40 synthetic datasets per case on the real
 layout; binomial s.e. 0.034): conditional-r rejection rate 0.03/0.05 under no
@@ -678,6 +682,88 @@ the outcome.
 **Limits:** 12 events; one model version; starts of one event share an outcome, so
 start-level reliability tests are liberal (the event is the unit); spread/error
 1.36 (short) indicates an over-dispersed ensemble at SSW starts.
+
+### P′ — nine more systems: no event-specific skill; outcomes lie low in the ensembles (`s2s_multimodel_test.py`)
+
+Plan approved 2026-09-25 (item A); H1 and H2 written into the script before any
+non-ECMWF forecast was retrieved (D was run as in P but is not among the registered
+hypotheses). ECMWF is the discovery set; the confirmatory set is nine of the other
+eleven S2S systems in the ECMWF Data Store (BoM: only a 2014 version; UKMO, IAP-CAS:
+no msl), one model version each (`acquire_s2s_reforecasts.py`; members per start as
+archived; KMA has Jan–Mar starts only):
+
+| system | version (model date) | hindcasts | members | starts used |
+|---|---|---|---|---|
+| ECCC | on the fly, 2025 | 2001–2020 | 4 | 700 |
+| CMA | on the fly, 2022 | 2007–2021 | 4 | 525 |
+| HMCR | on the fly, 2025 | 1991–2020 | 11 | 510 |
+| KMA | on the fly, 2026 | 1993–2016 | 7 | 288 |
+| CNRM | fixed, 2025-06-01 | 1999–2024 | 11 | 416 |
+| JMA | fixed, 2022-09-30 | 1991–2020 | 5 | 240 |
+| CNR-ISAC | fixed, 2023-10-16 | 2001–2020 | 8 | 480 |
+| NCEP | fixed, 2011-03-01 | 1999–2010 | 4 | 516 |
+| CPTEC | fixed, 2023-01-04 | 1999–2018 | 11 | 123 |
+
+Starts 2–9 d before onset; each system's event value is the mean over its starts;
+the multi-model value is the mean over the systems covering the event (2–8 per
+event). Null: 10,000 draws moving every event to a zone-free date within ±21
+calendar days (any hindcast year) at which at least half of the event's systems
+have starts; D conditioned on the across-event variance of the outcome (factor
+1.25).
+
+| | D: r (event-free mean) | D p (cond.) | H1: mean PIT (event-free mean) | H1 p | H2: CRPS gain (event-free mean) | H2 p |
+|---|---|---|---|---|---|---|
+| **multi-model, 9 systems, 17 SSWs** | **+0.23 (+0.52)** | **0.91** | **0.398 (0.544)** | **0.005** | +121 (−39) | 0.16 |
+| incl. ECMWF | +0.24 (+0.53) | 0.91 | 0.399 (0.545) | 0.004 | +106 (−40) | 0.17 |
+
+Per system (secondary): mean PIT below its event-free mean in 9 of 10 systems
+(not NCEP, whose null itself sits at 0.36, 1999–2010 hindcasts, 4 members);
+individual H1 p < 0.05 for ECMWF 0.035, CMA 0.001, HMCR 0.004, KMA 0.005,
+CNR-ISAC 0.020 (CNRM 0.050). No system shows discrimination significantly above
+its event-free null (smallest conditional p: ECMWF 0.11). Ensemble-mean vs
+observed A at SSWs, multi-model: −116 vs −241 Pa (anomalies against a
+climatology that includes SSW years; not a shift, see P).
+
+- **Discrimination** of event-to-event differences after SSWs is not better than
+  on event-free dates; the multi-model point estimate is below it.
+- **H1 confirmed:** outcomes after SSWs fall on the downward side of the
+  ensembles, more than on event-free dates — the systems under-forecast the
+  common shift. (The rank-histogram / second-population test exists only for
+  ECMWF, in P; it was not run for the nine systems.)
+- **H2 not confirmed**; calibration gives it little power (0.11 under damping), so
+  this is absence of evidence.
+- ECMWF here (event-weighted PIT 0.401, p_cond 0.110) differs slightly from P
+  (start-weighted 0.391, 0.115): different weighting, min-other-years rule and
+  random stream; same data.
+
+**Validation** (`validate_s2s_multimodel.py`, 100 synthetic datasets per case on
+every system's real layout; binomial s.e. 0.022): equal skill everywhere — D 0.06,
+H1 0.03, H2 0.03; no information — D 0.07, H1 1.00 (correctly: a forecast that
+knows nothing misses the shift), H2 0.00 (mean p 0.19: low power); damped 0.6×
+truth — H1 power 0.66, H2 0.11; skill only at starts 2–9 d before SSWs (another
+year's outcome elsewhere; added after the real result, because D's multi-model power
+had not been measured) — D power 1.00. H1c (sensitivity below): 0.02 under equal
+skill, 1.00 no information, 0.55 damped. One
+design change, found on synthetic data before the real result: the first null
+required ALL covering systems at a pseudo-onset and had no candidate for 4 events.
+
+**Sensitivities (added 2026-09-26, after the primary result, from review):**
+| | D p (cond.) | H1 p | H1c p (system-centred PIT) | H2 p |
+|---|---|---|---|---|
+| confirmatory (primary) | 0.91 | 0.005 | 0.012 | 0.16 |
+| excluding CPTEC | 0.90 | 0.005 | 0.009 | 0.15 |
+| incl. ECMWF | 0.91 | 0.004 | 0.009 | 0.17 |
+
+H1c removes each system's mean PIT over its candidate pseudo-onsets before
+averaging: a null draw averages only the systems present (quorum), so a system with
+an unusual PIT level (NCEP 0.36) otherwise enters events and null unequally, which
+favours H1. CPTEC's forecast climatology rests on 1–3 other years per start date.
+
+**Limits:** 17 events, many shared across systems (not independent tests);
+per-system versions differ in age (NCEP 2011); starts of one event share an outcome;
+ERA5 starts 1998-11, so the observed climatology omits HMCR/JMA 1991–98 and KMA
+1993–98 hindcast years (a constant offset per start date and lead, applied alike
+to events and null; not quantified here).
 
 ### Q — forecast value: knowing the event adds no probabilistic skill (`forecast_value_test.py`)
 
@@ -950,6 +1036,9 @@ multiple testing.
 | N | `03_data_ingestion/acquire_snapsi_zg.py`, `07_physical_decomposition/snapsi_loeffel_test.py` | `snapsi_loeffel_test.json` |
 | O | `03_data_ingestion/acquire_era5_psl_cap.py`, `07_physical_decomposition/snapsi_archetype_test.py` | `snapsi_archetype_test.json` |
 | era gate | `06_simulation_validation/era_dependence_gate.py` | `era_dependence_gate.json` |
+| P | `03_data_ingestion/acquire_s2s_reforecasts.py`, `07_physical_decomposition/s2s_forecast_test.py` | `s2s_forecast_test.json` |
+| P′ | `07_physical_decomposition/s2s_multimodel_test.py`, `06_simulation_validation/validate_s2s_multimodel.py` | `s2s_multimodel_test.json`, `validate_s2s_multimodel.json` |
+| Q | `07_physical_decomposition/forecast_value_test.py` | `forecast_value_test.json` |
 
 **Layout changed 2026-08-04.** There is now ONE results tree for the whole
 repository, at the repo root, replacing results scattered across six stage

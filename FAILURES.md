@@ -162,3 +162,18 @@ Rule: an acquisition that concatenates periods drops duplicate times (refusing i
 Tried: forecast_value_test.py filled a module-level dict, then mapped a function over a ProcessPoolExecutor.
 Failed: Python 3.14 no longer forks by default on Linux, so workers started empty (KeyError) after 24 min of work; within_model_check.py had avoided it by asking for "fork".
 Rule: any pool whose workers read parent state passes mp_context=multiprocessing.get_context("fork"), or passes the data explicitly.
+
+## 2026-09-26 — Mass-submitting requests to the ECMWF Data Store
+Tried: submitting every S2S reforecast request up front, one per start date, with parallel workers.
+Failed: ECDS runs ~1 request per user at a time and queues ~4; the rest were rejected ("Number queued requests ... temporarily limited"), and one connection downloads at ~60 KB/s.
+Rule: at most 4 in flight with backoff on rejection; pack many dates per request (only valid combinations are returned); download with parallel byte ranges, checking 206, Content-Range and byte count.
+
+## 2026-09-26 — A multi-model null that required every system at one pseudo-onset
+Tried: moving each event to pseudo-onsets where ALL systems covering the event had starts 2–9 d before, as for the real value.
+Failed: sparse-start systems (JMA twice a month, CPTEC, KMA) left no candidate for 4 of 17 events; the known-truth calibration returned NaN for every case.
+Rule: run a synthetic calibration before any real result; for multi-model nulls require a quorum (here half) of the covering systems and average those present.
+
+## 2026-09-26 — Synthetic-forecast files filled a RAM-backed /tmp
+Tried: known-truth calibration writing each run's synthetic forecasts (10 systems) to tempfile.mkdtemp() and never removing them.
+Failed: /tmp is a 16 GB tmpfs here; 89 leftover directories filled it and the four-case run died after 19 min ("No space left on device").
+Rule: a harness that writes per-run temp files deletes them as soon as they are read; check `df -h /tmp` before long runs.

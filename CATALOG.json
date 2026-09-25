@@ -1,10 +1,10 @@
 {
- "generated": "2026-09-25T18:18:21+00:00",
+ "generated": "2026-09-25T22:05:11+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 129,
-  "results": 60
+  "scripts": 130,
+  "results": 62
  },
  "scripts": [
   {
@@ -115,9 +115,9 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "ECMWF S2S reforecasts of polar-cap mean sea-level pressure, reduced EXACTLY as the ERA5 observation is (`acquire_era5_psl_cap.cap`: cos-lat weighted 60-90N, the 60N row included), for the forecast-reliability test",
-   "loc": 418,
-   "modified": "2026-09-25 17:39",
-   "sha256_16": "175814c2d1efad3c",
+   "loc": 423,
+   "modified": "2026-09-25 20:13",
+   "sha256_16": "ae85e9058d8d8515",
    "flags": [],
    "filenames_mentioned": [
     "s2s_ecmf_psl_cap.parquet",
@@ -627,9 +627,9 @@
    "tree": "ssw-design-analysis",
    "stage": "06_simulation_validation",
    "title": "Known-truth calibration of s2s_multimodel_test.py on every centre's real layout (starts, members, leads) and the real ERA5 outcome.",
-   "loc": 119,
-   "modified": "2026-09-25 16:56",
-   "sha256_16": "db518114ffd99dcd",
+   "loc": 145,
+   "modified": "2026-09-25 21:36",
+   "sha256_16": "4675e648b4ec542f",
    "flags": [],
    "filenames_mentioned": [
     "s2s_multimodel_test.json",
@@ -940,9 +940,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "DO OPERATIONAL FORECASTS STARTED BEFORE AN SSW KNOW WHICH EVENTS WILL COUPLE? Plan approved 2026-09-25 (before any data were downloaded).",
-   "loc": 366,
-   "modified": "2026-09-25 16:29",
-   "sha256_16": "7ac6a756f7f0ebc8",
+   "loc": 373,
+   "modified": "2026-09-25 20:23",
+   "sha256_16": "fc726afb34e11d44",
    "flags": [],
    "filenames_mentioned": [
     "era5_psl_cap_6h.parquet",
@@ -956,9 +956,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "MULTI-MODEL S2S TEST: EVENT DISCRIMINATION (D) AND THE SIZE OF THE SHIFT (H1, H2) Plan approved 2026-09-25 (item A). Hypotheses H1 and H2 were written into this docstring before any non-ECMWF forecast was retrieved; ECMWF (result P) is the",
-   "loc": 243,
-   "modified": "2026-09-25 16:32",
-   "sha256_16": "fce93350157711a8",
+   "loc": 286,
+   "modified": "2026-09-25 21:16",
+   "sha256_16": "d1f8823f5e771950",
    "flags": [],
    "filenames_mentioned": [
     "s2s_ecmf_psl_cap.parquet",
@@ -1156,6 +1156,21 @@
    "filenames_mentioned": [
     "forecast_value_test.json",
     "within_model_check.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/fig4_operational.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "fig4_operational.py -- Figure 4: operational reforecasts after SSWs.",
+   "loc": 82,
+   "modified": "2026-09-25 21:23",
+   "sha256_16": "8ecb196b85ea1bad",
+   "flags": [],
+   "filenames_mentioned": [
+    "s2s_forecast_test.json",
+    "s2s_multimodel_test.json"
    ],
    "filename_prefixes": []
   },
@@ -2002,7 +2017,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-09-25 15:13",
+   "modified": "2026-09-25 22:05",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -2772,6 +2787,40 @@
     "grid",
     "arms",
     "verdict"
+   ]
+  },
+  {
+   "path": "results/current/3_calibration/validate_s2s_multimodel.json",
+   "tree": "current",
+   "stage": "3_calibration",
+   "readable": true,
+   "bytes": 1925,
+   "modified": "2026-09-25 22:04",
+   "sha256_16": "334fdda8edb32987",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "4675e648b4ec542f"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_seeds": [
+     100
+    ],
+    "n_null": [
+     1000
+    ]
+   },
+   "top_level_keys": [
+    "n_seeds",
+    "n_null",
+    "centres",
+    "binomial_se_at_0.05",
+    "cases"
    ]
   },
   {
@@ -3657,9 +3706,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 32499,
-   "modified": "2026-09-25 16:31",
-   "sha256_16": "3be7b089eb53f09c",
+   "bytes": 32709,
+   "modified": "2026-09-25 20:24",
+   "sha256_16": "5b0673656e8b327a",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/s2s_forecast_test.py"
    ],
@@ -3667,7 +3716,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/s2s_forecast_test.py": "7ac6a756f7f0ebc8"
+    "ssw-design-analysis/07_physical_decomposition/s2s_forecast_test.py": "fc726afb34e11d44"
    },
    "verdicts": [
     {
@@ -3701,6 +3750,61 @@
     "inputs",
     "n_starts_total",
     "bins"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/s2s_multimodel_test.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 23241,
+   "modified": "2026-09-25 21:22",
+   "sha256_16": "60211c864f0333c0",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py",
+    "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "4675e648b4ec542f",
+    "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_test.py": "d1f8823f5e771950"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_null": [
+     10000
+    ],
+    "n_members": [
+     4,
+     5,
+     7,
+     8,
+     11
+    ],
+    "n_events": [
+     4,
+     9,
+     11,
+     12,
+     14,
+     16,
+     17
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "k_short",
+    "n_null",
+    "seed",
+    "null_window_days",
+    "confirmatory",
+    "discovery",
+    "missing_centres",
+    "centres",
+    "multimodel",
+    "pit_level_by_system"
    ]
   },
   {

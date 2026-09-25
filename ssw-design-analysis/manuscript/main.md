@@ -1,4 +1,4 @@
-# Labelling stratospheric warmings by surface impact adds no forecast information
+# Surface-impact labels of stratospheric warmings add no detectable forecast skill
 
 *Draft for Nature Geoscience (Analysis). Every number is taken from
 `ssw-design-analysis/CONSOLIDATED_RESULTS.md`; display items are built by
@@ -9,23 +9,25 @@
 ## Abstract
 
 Sudden stratospheric warmings (SSWs) shift the odds of cold, blocked winter
-weather for weeks, and forecasts initialised at an SSW are measurably more
-skilful. Research and forecast practice nonetheless sort SSWs into the roughly
-two thirds that propagate downward to the surface and the rest, and ask which
-events will couple. Here we show that this label does not identify a kind of
-event and adds no forecast information beyond a shifted distribution. In a
-multi-model experiment that imposes the same observed SSW on every ensemble
+weather for weeks, and forecasts initialised at an SSW are more
+skilful. Research and forecasting nonetheless sort SSWs into the roughly
+two thirds that propagate downward to the surface and the rest. Here we show
+that this label does not identify a kind of event and that knowing the event
+adds no detectable forecast skill beyond a shifted distribution. In a
+multi-model experiment imposing one observed SSW on every ensemble
 member, the contrast between downward and non-downward members (−1.62σ) equals
 that in paired ensembles with no SSW (−1.59σ; difference −0.03σ [−0.12, 0.05]),
-as a threshold on one Gaussian population predicts, while the SSW shifts the
+which is what a threshold on one Gaussian population gives. The SSW shifts the
 distribution by about one standard deviation without changing its spread. In
 1,517 simulated SSWs, stratospheric information available at onset improves a
 probabilistic forecast by 0.8% [−0.3, 1.4] over the shifted distribution alone,
-less than on ordinary winter days (3.7%). [PENDING-A] After an SSW, forecasts
-should issue the shifted distribution; the label records where a threshold cuts
-it.
+less than on ordinary winter days (3.7%). In ten operational systems,
+differences between events are predicted no better than on ordinary days, and
+outcomes lie low in the ensembles: the shift is under-forecast. After an
+SSW, forecasts should issue the shifted distribution; the label records where a
+threshold cuts it.
 
-*(words by `wc` to be recounted when [PENDING-A] is filled; limit 200.)*
+*(199 words by `wc`; limit 200.)*
 
 ---
 
@@ -98,11 +100,12 @@ non-downward (NDW) members. With the same SSW imposed on every member, the DW
 minus NDW contrast is −1.62σ; in the same models and initialisations with no SSW
 it is −1.59σ (Fig. 2a). On the 25 centre–initialisation pairs where both arms
 can form a contrast, the paired difference is −0.03σ [−0.12, +0.05]
-(centre-cluster bootstrap). The contrast is what a cut at zero produces on one
-Gaussian population: in the controls it matches that prediction to within
-0.002σ [−0.02, +0.02], and in the nudged ensembles it is smaller than predicted
-(by 0.19σ [0.11, 0.30]), the opposite of what two distinct populations would
-give. The Southern Hemisphere case shows the same signature (−1.96σ nudged,
+(centre-cluster bootstrap). With no SSW the contrast is exactly what a cut at
+zero produces on one Gaussian population (within 0.002σ [−0.02, +0.02]). With
+the SSW imposed the distribution is shifted, so a single population would give a
+slightly larger contrast than at the median; the observed contrast is instead
+smaller than that expectation (by 0.19σ [0.11, 0.30]; in 22 of 25 ensembles),
+the opposite of what two distinct populations would give. The Southern Hemisphere case shows the same signature (−1.96σ nudged,
 −1.58σ control).
 
 What the SSW changes is the rate: 84% of nudged members are classified DW
@@ -114,7 +117,7 @@ events meeting the surface conditions, 69.2%, is reproduced by event-free dates
 displaced by the measured shift (75.4% [61.5, 87.2]): "about two thirds" is what
 one shifted population produces.
 
-### The label carries no forecast information
+### Knowing the event adds no detectable forecast skill
 
 If downward coupling were a property of events, knowing the event should improve
 a forecast of how strongly it couples. We compare two probabilistic forecasts of
@@ -125,29 +128,46 @@ the continuous ranked probability score on events of held-out models, the
 event-aware forecast improves on the shift by 0.8% [−0.3, 1.4] (Fig. 3a). The
 same information improves forecasts on size-matched ordinary winter days by 3.7%
 [2.3, 5.3], and in none of 200 such samples was it worth as little as after
-SSWs: the stratospheric state is informative in general, but after an SSW its
-information is the shift.
+SSWs. The stratospheric state is informative in general; after an SSW, what it
+adds beyond the shift is not detectable. The label itself cannot be a
+predictor — it is defined from the outcome — so the test is of the event
+information the label is meant to summarise.
 
 Point prediction agrees. Before onset, the out-of-sample R² of the surface
 response within a model is 0.054 at SSWs and 0.060 on event-free dates: the
-event adds −0.006 [−0.033, +0.020] (Fig. 3b). With the post-onset stratosphere,
-R² rises to 0.38 at SSWs and to 0.37 on event-free dates: 96% of that diagnostic
-skill is present without an SSW, and the event adds +0.015 [−0.028, +0.059].
+event adds −0.006 [−0.033, +0.020] (95% from the event-free null; [−0.061,
++0.047] when simulation members are also resampled; Fig. 3b). With the post-onset
+stratosphere, R² rises to 0.38 at SSWs and to 0.37 on event-free dates: 96% of
+that diagnostic skill is present without an SSW, and the event adds +0.015
+[−0.028, +0.059] ([−0.061, +0.095]; Fig. 3c).
 
-Operational forecasts point the same way. In seven subseasonal systems, the
-skill with which the 500 hPa polar-cap response after 13 SSWs was predicted
-before onset lay at the 91st percentile of the skill at random winter
-dates^{nebel24}^. In the ECMWF reforecasts^{vitart17}^, forecasts started 2–9
-days before 12 SSWs track the event-to-event differences (r = 0.77) no better,
-within sampling error, than they track differences between event-free dates of
-the same calendar period and lead (p = 0.11; p = 0.37 for starts 10–17 days
-before onset), in a test that detects strong event-specific skill in about 90%
-of synthetic trials (Fig. 4). [PENDING-A: multi-model result.] The observed
-outcomes do not scatter into both tails of the forecast ensembles, as a missed
-second population would require; they fall on the downward side (mean rank 0.39
-against 0.5 for a calibrated forecast). The forecasts raise the probability of a
+Operational forecasts are consistent with this, although their point estimates
+favour SSW dates. In seven subseasonal systems, the skill with which the 500 hPa
+polar-cap response after 13 SSWs was predicted before onset lay at the 91st
+percentile of the skill at random winter dates, not significantly
+higher^{nebel24}^. In the ECMWF reforecasts^{vitart17}^, forecasts started 2–9
+days before 12 SSWs track the event-to-event differences with r = 0.77, against
+0.52 on average for event-free dates of the same calendar period and lead
+(p = 0.11; p = 0.37 for starts 10–17 days before onset), in a test that detects
+strong event-specific skill in about 90% of synthetic trials (Fig. 4a). Nine
+further systems, analysed as a confirmatory set, show no event-specific skill
+either: across 17
+SSWs their multi-model mean correlates with the observed response at r = 0.23,
+against 0.52 on event-free dates (p = 0.91), and no single system does
+significantly better than on event-free dates (Fig. 4b), although the
+multi-model test detects strong event-specific skill in all of 100 synthetic
+trials. In ECMWF the
+observed outcomes do not scatter into both tails of the ensembles, as a missed
+second population would require (4% in the two outer rank bins against 17%
+expected); they fall on the downward side. So they do in the nine further
+systems, as registered before their data were retrieved: mean rank 0.40 against
+0.54 on event-free dates (p = 0.005; 0.012 with each system's own rank level
+removed), lower than the event-free value in nine of ten systems (Fig. 4c). The
+ECMWF forecasts raise the probability of a
 downward outcome from 0.35 on ordinary dates to 0.60 after SSWs, whereas in
-reality it rises from 0.29 to 0.75: they miss part of the shift, not the class.
+reality it rises from 0.29 to 0.75: they capture 64% of the observed shift
+relative to ordinary dates (−270 Pa against −423 Pa), and 26% from starts 10–17
+days before onset. What they miss is part of the shift.
 
 ### Event differences follow a general stratosphere–surface relation
 
@@ -162,15 +182,18 @@ surface as well on ordinary winter days as after SSWs (above). The relation is a
 general property of stratosphere–troposphere coupling, measurable continuously
 after onset, not a feature that sorts SSWs into kinds. Consistently, the field's
 archetype pair, February 2018 and January 2019, received comparable forced
-shifts and the same forced probability of a downward outcome, and each observed
-outcome is an ordinary draw from its model distributions (Extended Data Fig. 2).
+shifts and similar forced probabilities of a downward outcome (0.78 and 0.72 in
+eight models at the primary initialisations), and at those initialisations the
+observed outcomes lie within the central 95% of the model distributions in 17 of
+18 model–event cases (Extended Data Fig. 2).
 
 ### Discussion
 
 The downward label measures where a threshold cuts a shifted distribution. Under
 an imposed SSW, members fall into both classes in proportions set by the shift,
-the contrast between classes equals the threshold's own, and knowledge of the
-event adds nothing detectable to a probabilistic forecast beyond the shift. None
+the contrast between classes is no larger than a threshold on one population
+produces, and knowledge of the event adds nothing detectable to a probabilistic
+forecast beyond the shift. None
 of this denies that SSWs matter or that events differ: the shift is large and
 causal, and the post-onset lower stratosphere carries information, as it does on
 any winter day.
@@ -180,8 +203,12 @@ statement is the shifted distribution of the circulation — for the polar-cap
 NAM, the probability of a negative state — rather than a categorical prediction
 of whether this event will propagate. In the ECMWF reforecasts the shift itself
 is the weak point: forecasts started a few days before onset predict it in the
-right direction but at about three fifths of its observed size (−166 Pa against
-−269 Pa). [PENDING-A: generality across systems.] Wherever "downward-propagating
+right direction but at 64% of its observed size, and forecasts started two weeks
+before onset at 26%. The same one-sided error appears in eight of nine further
+systems and in their mean, so the size of the shift, not the class of event, is
+the error these forecasts share; a leave-one-event-out correction of its size did not
+improve their probabilistic score significantly (p = 0.16), a test with little
+power at 17 events. Wherever "downward-propagating
 SSW" is used to stratify impacts, the classification rate against a matched null
 is an honest quantity; the contrast between classes is not.
 
@@ -189,8 +216,8 @@ Four limits bound these conclusions. First, the decisive evidence is from models
 with 42 usable observed events the observational out-of-sample tests are
 uninformative. Second, SNAPSI contains two Northern Hemisphere events, so
 statements about how events differ rest on n = 2; the result that the class
-contrast is the threshold's does not depend on n, because it holds in each
-ensemble. Third, SNAPSI nudges only the zonal-mean stratosphere and our CMIP6
+contrast is no larger than the threshold's does not depend on n, because it is
+measured within each ensemble. Third, SNAPSI nudges only the zonal-mean stratosphere and our CMIP6
 fields are zonal means, so non-zonal vortex geometry, which is associated with
 stronger responses^{nebel24}^ and differs between nudged members^{feng25}^, is
 neither held fixed nor among our predictors. Fourth, our endpoint is the
@@ -286,16 +313,22 @@ seeded stream.
 
 **Operational reforecasts (Fig. 4).** S2S reforecasts^{vitart17}^ from the ECMWF
 Data Store: ECMWF (model year 2022; hindcasts 2002–2021; 11 members; Monday and
-Thursday starts) as the discovery set, and [PENDING-A: confirmatory centres,
-versions, members]. Polar-cap sea-level pressure at 00 UTC (instantaneous),
+Thursday starts) as the discovery set, and as the confirmatory set, one model
+version each (members per start; hindcast years): ECCC (2025; 4; 2001–2020), CMA
+(2022; 4; 2007–2021), HMCR (2025; 11; 1991–2020), KMA (2026; 7; 1993–2016),
+CNRM (1 June 2025; 11; 1999–2024), JMA (30 September 2022; 5; 1991–2020),
+CNR-ISAC (16 October 2023; 8; 2001–2020), NCEP (1 March 2011; 4; 1999–2010) and
+CPTEC (4 January 2023; 11; 1999–2018); December–March starts (KMA January–March),
+leads to 34 days; BoM (whose only version is from 2014) and UKMO and IAP-CAS (no sea-level
+pressure) were not used. Polar-cap sea-level pressure at 00 UTC (instantaneous),
 reduced as for ERA5; anomalies from the leave-one-year-out mean of the other
 hindcast years at the same start date and lead (forecasts) or calendar dates
 (ERA5). SSW starts lie 2–9 days (and, for ECMWF, 10–17 days) before a catalogued
 onset. Discrimination: correlation across events between the ensemble-mean days
 +8..+25 NAM proxy and the observed value, against 10,000 sets of pseudo-onsets
 within ±21 days of each event's calendar date and more than 135 days from every
-catalogued onset, restricted to sets whose across-event spread of the observed
-value is within a factor of 1.25 of the events'. The design was fixed before the
+catalogued onset, restricted to sets whose across-event variance of the observed
+value is within a factor of 1.25 of the events' (s.d. within about 1.12). The design was fixed before the
 data were retrieved and validated on synthetic forecasts with each system's
 layout; the first null design (moving each event to another year) had too few
 event-free winters to be calibrated and was replaced before the real forecasts
@@ -303,7 +336,24 @@ were analysed. For the other systems two hypotheses were registered before their
 data were retrieved: observed outcomes lie on the downward side of the ensembles
 (mean rank below that at pseudo-onsets; H1), and adding the leave-one-event-out
 mean (observed − forecast) to every member lowers the ensemble CRPS more than at
-pseudo-onsets (H2).
+pseudo-onsets (H2). The primary statistic is the mean over the confirmatory
+systems covering each event (2–8 of them; 17 events 1998–2021); a pseudo-onset
+enters the null for an event if at least half of that event's systems have
+starts before it, and those systems are averaged. On 100 synthetic datasets per
+case with every system's layout, rejection rates at p < 0.05 were 0.06 (D),
+0.03 (H1) and 0.03 (H2) for forecasts equally skilful at all dates, 0.07 (D) for
+forecasts without information, 0.66 (H1) and 0.11 (H2) for forecasts that
+under-predict every anomaly by 40%, and 1.00 (D) for forecasts skilful only
+before SSWs (the outcome of another year elsewhere). A first multi-model null that required all
+of an event's systems at each pseudo-onset had no candidates for four events;
+it was replaced on synthetic data, before the real forecasts were analysed.
+Because a null draw averages only the systems with starts at that pseudo-onset,
+a system's overall rank level can enter events and null unequally; removing
+each system's mean rank over its pseudo-onsets before averaging gives H1
+p = 0.012 (rejection rate 0.02 under equal skill). CPTEC's forecast climatology rests on one to three other years per
+start date; without CPTEC, H1 p = 0.005 and D p = 0.90. ERA5 begins in late
+1998, so for HMCR, JMA and KMA the observed climatology omits their earliest
+hindcast years. Both sensitivities were added after the primary result.
 
 **Precursor coupling (Extended Data Fig. 1).** Week-2 (days 8–14) 100 hPa
 polar-cap geopotential height against days 15–25 polar-cap sea-level pressure,
@@ -358,8 +408,17 @@ out-of-sample R² of the surface response at SSWs (vermilion lines) and on 1,000
 event-free sets with the same onset counts (grey histograms), for predictors
 before onset (**b**) and including the post-onset stratosphere (**c**).
 
-**Fig. 4 | Operational reforecasts after SSWs.** [PENDING-A: panels to be fixed
-when the multi-model result is in.]
+**Fig. 4 | Operational reforecasts after SSWs.** **a**, ECMWF reforecasts
+started 2–9 days before 12 SSWs: ensemble-mean against observed days +8..+25
+polar-cap sea-level-pressure response (sign reversed, so negative is the
+downward, negative-NAM outcome); dotted, equality. **b**, Correlation across
+events between the ensemble-mean and observed responses for each system and for
+the mean of the nine confirmatory systems (diamond), against the central 95% of
+event-free dates of the same calendar period and lead with matched spread of the
+outcome (grey bars); numbers, events per system. **c**, Mean rank (probability
+integral transform) of the observed outcome within the ensemble, against the
+central 95% of the same event-free dates without the spread restriction; 0.5, a
+calibrated forecast.
 
 **Extended Data Fig. 1 | The lower-stratospheric precursor couples to the surface
 as strongly with no SSW.** **a**, For each of 36 SNAPSI ensembles, the correlation

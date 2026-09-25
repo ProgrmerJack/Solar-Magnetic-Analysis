@@ -320,7 +320,14 @@ def main():
                       "P_dw_mean_ssw": round(float(np.mean([e["P_dw"] for e in ev_rows])), 3),
                       "DW_obs_rate_ssw": round(float(np.mean([e["DW_obs"] for e in ev_rows])), 3),
                       "P_dw_mean_control": round(float(np.mean([s["P_dw"] for s in ctl_all])), 3),
-                      "DW_obs_rate_control": round(float(np.mean([s["DW_obs"] for s in ctl_all])), 3)},
+                      "DW_obs_rate_control": round(float(np.mean([s["DW_obs"] for s in ctl_all])), 3),
+                      # anomalies above are against a climatology that INCLUDES the SSW
+                      # years; the shift is SSW minus ordinary (control) starts
+                      "A_obs_mean_control": round(float(np.mean([s["A_obs"] for s in ctl_all])), 1),
+                      "shift_forecast": round(float(np.mean([e["A_ens"] for e in ev_rows])
+                                                    - np.mean([s["A_ens"] for s in ctl_all])), 1),
+                      "shift_observed": round(float(np.mean([e["A_obs"] for e in ev_rows])
+                                                    - np.mean([s["A_obs"] for s in ctl_all])), 1)},
             "reliability": {
                 "pit_ssw_mean": round(float(pit_s.mean()), 3),
                 "pit_control_mean": round(float(pit_c.mean()), 3),
