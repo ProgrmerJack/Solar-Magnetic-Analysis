@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-25T05:02:52+00:00",
+ "generated": "2026-09-25T05:09:20+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -1870,7 +1870,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-09-25 03:24",
+   "modified": "2026-09-25 05:02",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -2480,9 +2480,9 @@
    "tree": "current",
    "stage": "3_calibration",
    "readable": true,
-   "bytes": 854,
-   "modified": "2026-07-28 19:05",
-   "sha256_16": "c36b2ffbac0b3e56",
+   "bytes": 814,
+   "modified": "2026-09-25 05:09",
+   "sha256_16": "0a87becf132d77da",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/calibrate_spatial.py"
    ],
