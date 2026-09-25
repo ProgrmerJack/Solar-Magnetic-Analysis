@@ -10,6 +10,8 @@ data/raw
 data/atmospheric
 logs/
 paper/
+# the old manuscript, moved 2026-09-25; its build outputs stay untracked
+archive/superseded_paper/
 nature_geoscience_paper.md
 
 # python

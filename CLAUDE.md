@@ -105,7 +105,7 @@ with no NetCDF backend and cannot open any `.nc` in this repo.
 
 ## Known pitfalls
 
-- **`CONSOLIDATED_RESULTS.md` is the source of truth; `paper/ng_manuscript.tex` is not.**
+- **`CONSOLIDATED_RESULTS.md` is the source of truth; `archive/superseded_paper/ng_manuscript.tex` is not.**
   The manuscript predates every current result and still leads with the abandoned
   avalanche application.
 - **Six FINDING docs are stale**, written against the pre-2026-07-30 39-event catalogue.
@@ -117,7 +117,7 @@ with no NetCDF backend and cannot open any `.nc` in this repo.
 
 ## Superseded
 
-`paper/`, `notebooks/`, `scripts/`, `docs/`, `ZENODO_DEPOSITS.json`, `requirements.txt`
+`archive/superseded_paper/` (moved from `paper/` 2026-09-25), `notebooks/`, `scripts/`, `docs/`, `ZENODO_DEPOSITS.json`, `requirements.txt`
 and nearly all of `data/` belong to the abandoned solar/geomagnetic–avalanche project.
 Four files under `data/processed/` are still read by live code
 (`ao_daily_cpc.txt`, `ncep_stratosphere.parquet`, `ssw_canonical.csv`,

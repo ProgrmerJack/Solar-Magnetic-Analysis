@@ -52,6 +52,6 @@ needs a free account only to download. Everything under `data/` is read-only.
 
 This began as a solar/geomagnetic study of avalanche activity. That project was
 abandoned: three headline claims collapsed under stricter specifications and both of
-its manuscripts are marked do-not-submit. `paper/`, `scripts/`, `docs/`, most of
+its manuscripts are marked do-not-submit. `archive/superseded_paper/`, `scripts/`, `docs/`, most of
 `data/` and everything in `archive/` belong to it. Four files under `data/processed/`
 are still read by live code; the rest is inert. Nothing solar is live.
