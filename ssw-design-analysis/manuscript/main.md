@@ -32,34 +32,33 @@ classification adds nothing to it.
 
 Sudden stratospheric warmings — the rapid breakdown of the winter polar vortex —
 are often followed by weeks of anomalous surface weather, projecting onto a
-negative Northern Annular Mode (NAM) (Baldwin et al. 2021). Forecasts initialised
+negative Northern Annular Mode (NAM)^1^. Forecasts initialised
 at SSW onset reproduce the observed mean tropospheric conditions of the following
 months and are more skilful than forecasts initialised at other times, for
 circulation patterns, surface temperatures over northern Russia and eastern
-Canada, and North Atlantic precipitation (Sigmond et al. 2013).
+Canada, and North Atlantic precipitation^2^.
 
 The dominant account of that predictability is event-specific. SSWs are divided
 into those whose signal "propagates downward" to the surface and those whose
-signal does not, commonly with the criterion of Karpechko et al. (2017), and
+signal does not, commonly with the criterion of Karpechko et al.^3^, and
 "about two thirds" of events are said to have a visible downward impact (Baldwin
 et al. 2021). The difference between the two groups is then read as a property of
 the events — of their strength, morphology or wave forcing — and recent work asks
-which SSWs will couple downward, and how well forecast systems can tell in advance
-(Rao et al. 2020; Nebel et al. 2024; Loeffel et al. 2026); non-downward outcomes
-are framed as potential forecast busts (Nebel et al. 2024).
+which SSWs will couple downward, and how well forecast systems can tell in advance^4–6^
+; non-downward outcomes
+are framed as potential forecast busts^5^.
 
 That reading has a known weakness. The classification is made on the surface
 response itself, so a contrast between classes is partly guaranteed by the
-selection: White et al. (2019) noted that differences between downward and
+selection: White et al.^7^ noted that differences between downward and
 non-downward composites at positive lags are "entirely there by construction".
-Others have argued that SSWs form a continuum rather than classes (Coughlin &
-Gray 2009; Maury et al. 2016). What has been missing is a test that separates the
+Others have argued that SSWs form a continuum rather than classes^8,9^. What has been missing is a test that separates the
 two readings — an experiment
 in which the stratospheric forcing is identical by design, so that any difference
 between classes cannot come from the event.
 
 The Stratospheric Nudging And Predictable Surface Impacts (SNAPSI) experiment
-provides one (Hitchcock et al. 2022). In its `nudged` ensembles the zonal-mean
+provides one^10^. In its `nudged` ensembles the zonal-mean
 stratosphere of every member is relaxed to the observed evolution of a real SSW
 above 50 hPa, with no nudging below 90 hPa; in its `control` ensembles it is
 relaxed to climatology. Members of a nudged ensemble therefore share the same
@@ -96,7 +95,7 @@ deviation is at most 0.26 σ (CMIP6, upper 95% bound).
 
 ### The downward/non-downward contrast needs no SSW
 
-We apply the surface conditions of the Karpechko et al. (2017) criterion to every
+We apply the surface conditions of the Karpechko et al.^3^ criterion to every
 member and split each ensemble into downward-propagating (DW) and non-downward
 (NDW) members over days 8–25. In the nudged ensembles, where the same SSW is imposed on every
 member, the DW-minus-NDW surface contrast is −1.62 σ (25 ensembles; Fig. 2a). In
@@ -153,7 +152,7 @@ the upper bound of the post-onset event-specific share.
 February 2018 and January 2019 are the standard pair of opposites: the first a
 strong downward-propagating event with a cold northern Eurasia, the second an
 event whose surface response was weak or reversed, a difference attributed
-chiefly to the strength of the SSW (Rao et al. 2020). SNAPSI nudges each model's
+chiefly to the strength of the SSW^4^. SNAPSI nudges each model's
 stratosphere to each event, so their forced consequences can be compared
 directly. Averaged over both initialisations and the eight models, the two
 events receive comparable forced shifts (−1.18 σ for February 2018, −1.04 σ for
@@ -177,7 +176,7 @@ their surface impact received the same forced odds, produced ordinary
 outcomes, and is separated by a label that flips with the choice of pressure
 level.
 
-The same holds for the lower-stratospheric precursor. Loeffel et al. (2026) find
+The same holds for the lower-stratospheric precursor. Loeffel et al.^6^ find
 that week-2 geopotential height at 100 hPa predicts the weeks 3–7 surface
 response across 18 events (r = 0.85) and conclude that SSWs differ in their
 capacity to couple downward. Between members of a single nudged ensemble, where
@@ -192,7 +191,7 @@ ensemble means does not require the events to differ.
 
 After an SSW, the surface distribution is displaced by about one standard
 deviation of the model's own spread, and it keeps its shape. That single number
-is where the skill documented by Sigmond et al. (2013) lives: a forecast that
+is where the skill documented by Sigmond et al.^2^ lives: a forecast that
 knows the stratosphere knows the shift. What the downward-propagation
 classification adds on top of it — a claim about which events will couple and
 which will not — is not supported by the experiment. With the event held
@@ -228,11 +227,11 @@ cause is large, causal, and the foundation of the skill that follows them.
 ## Methods
 
 **Event catalogue.** Observed SSWs are the 43 major events of the NOAA CSL SSW
-compendium (Butler et al. 2017) over 36 winters 1958–2024 (primary catalogue, frozen; file checksum
+compendium^11^ over 36 winters 1958–2024 (primary catalogue, frozen; file checksum
 recorded in the repository). No inline date lists are used.
 
-**Reanalysis.** ERA5 (Hersbach et al. 2020) is read from the WeatherBench 2 public
-copy (Rasp et al. 2024; 1.5°, 6-hourly).
+**Reanalysis.** ERA5^12^ is read from the WeatherBench 2 public
+copy^13^ (1.5°, 6-hourly).
 Polar-cap sea-level pressure is the cos-latitude-weighted mean over 60–90° N
 (60–90° S for the SH case), including the 60° row. NAM indices at 1000, 850 and
 150 hPa follow the polar-cap definition (65–90° N geopotential height anomaly,
@@ -262,7 +261,7 @@ the nudged variance only. Variance-ratio interval from 4,000 bootstrap resamples
 members within ensembles. A two-component mixture test was also run
 but has no power at this sample size and is not used as evidence.
 
-**Classification (Fig. 2).** Karpechko et al. (2017) conditions 1–2, over post-onset
+**Classification (Fig. 2).** Karpechko et al.^3^ conditions 1–2, over post-onset
 days +8..+25 (the window every Northern Hemisphere initialisation and s20190829
 cover; s20191001, which starts after the SH central date, is excluded), on the member's NAM
 proxy −(polar-cap sea-level pressure − control mean)/control s.d.:
@@ -271,7 +270,7 @@ requires at least three members in each class; the DW rate is reported for all
 ensembles.
 
 **Predictability (Fig. 3).** CMIP6 zonal-mean fields for 20 members; SSWs detected
-by the reversal of the 10 hPa, 60° N zonal-mean wind (Charlton & Polvani 2007)
+by the reversal of the 10 hPa, 60° N zonal-mean wind^14^
 (November–March, final warmings excluded). Predictors: 10, 50 and 100 hPa zonal wind at
 60° N and over the cap in windows before, at and after onset, plus seasonality;
 38 features. Response: each member's annular-mode index (leading EOF of zonal-mean
@@ -307,14 +306,14 @@ several that would have changed a result, are logged in the repository.
 
 ## References (verified from source; metadata from Crossref)
 
-1. Sigmond, M., Scinocca, J. F., Kharin, V. V. & Shepherd, T. G. Enhanced seasonal
+1. Baldwin, M. P. et al. Sudden stratospheric warmings. *Rev. Geophys.* **59**,
+   e2020RG000708 (2021). doi:10.1029/2020RG000708
+2. Sigmond, M., Scinocca, J. F., Kharin, V. V. & Shepherd, T. G. Enhanced seasonal
    forecast skill following stratospheric sudden warmings. *Nat. Geosci.* **6**,
    98–102 (2013). doi:10.1038/ngeo1698
-2. Karpechko, A. Y., Hitchcock, P., Peters, D. H. W. & Schneidereit, A.
+3. Karpechko, A. Y., Hitchcock, P., Peters, D. H. W. & Schneidereit, A.
    Predictability of downward propagation of major sudden stratospheric warmings.
    *Q. J. R. Meteorol. Soc.* **143**, 1459–1470 (2017). doi:10.1002/qj.3017
-3. Baldwin, M. P. et al. Sudden stratospheric warmings. *Rev. Geophys.* **59**,
-   e2020RG000708 (2021). doi:10.1029/2020RG000708
 4. Rao, J., Garfinkel, C. I. & White, I. P. Predicting the downward and surface
    influence of the February 2018 and January 2019 sudden stratospheric warming
    events in subseasonal to seasonal (S2S) models. *J. Geophys. Res. Atmos.*
@@ -331,33 +330,31 @@ several that would have changed a result, are logged in the repository.
    The downward influence of sudden stratospheric warmings: association with
    tropospheric precursors. *J. Clim.* **32**, 85–108 (2019).
    doi:10.1175/JCLI-D-18-0053.1
-8. Hitchcock, P. et al. Stratospheric Nudging And Predictable Surface Impacts
-   (SNAPSI): a protocol for investigating the role of stratospheric polar vortex
-   disturbances in subseasonal to seasonal forecasts. *Geosci. Model Dev.* **15**,
-   5073–5092 (2022). doi:10.5194/gmd-15-5073-2022
-9. Coughlin, K. & Gray, L. J. A continuum of sudden stratospheric warmings.
+8. Coughlin, K. & Gray, L. J. A continuum of sudden stratospheric warmings.
    *J. Atmos. Sci.* **66**, 531–540 (2009). doi:10.1175/2008JAS2792.1
-10. Maury, P., Claud, C., Manzini, E., Hauchecorne, A. & Keckhut, P. Characteristics
-    of stratospheric warming events during Northern winter. *J. Geophys. Res.
-    Atmos.* **121**, 5368–5380 (2016). doi:10.1002/2015JD024226
-11. Lu, R. & Rao, J. Sorting sudden stratospheric warmings with the downward
-    tropospheric influence using ERA5 and CESM2-WACCM. *Atmos. Chem. Phys.* **26**,
-    3723–3742 (2026). doi:10.5194/acp-26-3723-2026
-12. Charlton, A. J. & Polvani, L. M. A new look at stratospheric sudden warmings.
-    Part I: Climatology and modeling benchmarks. *J. Clim.* **20**, 449–469 (2007).
-    doi:10.1175/JCLI3996.1
-13. Butler, A. H., Sjoberg, J. P., Seidel, D. J. & Rosenlof, K. H. A sudden
+9. Maury, P., Claud, C., Manzini, E., Hauchecorne, A. & Keckhut, P. Characteristics
+   of stratospheric warming events during Northern winter. *J. Geophys. Res.
+   Atmos.* **121**, 5368–5380 (2016). doi:10.1002/2015JD024226
+10. Hitchcock, P. et al. Stratospheric Nudging And Predictable Surface Impacts
+    (SNAPSI): a protocol for investigating the role of stratospheric polar vortex
+    disturbances in subseasonal to seasonal forecasts. *Geosci. Model Dev.* **15**,
+    5073–5092 (2022). doi:10.5194/gmd-15-5073-2022
+11. Butler, A. H., Sjoberg, J. P., Seidel, D. J. & Rosenlof, K. H. A sudden
     stratospheric warming compendium. *Earth Syst. Sci. Data* **9**, 63–76 (2017).
     doi:10.5194/essd-9-63-2017
-14. Hersbach, H. et al. The ERA5 global reanalysis. *Q. J. R. Meteorol. Soc.* **146**,
+12. Hersbach, H. et al. The ERA5 global reanalysis. *Q. J. R. Meteorol. Soc.* **146**,
     1999–2049 (2020). doi:10.1002/qj.3803
-15. Rasp, S. et al. WeatherBench 2: a benchmark for the next generation of
+13. Rasp, S. et al. WeatherBench 2: a benchmark for the next generation of
     data-driven global weather models. *J. Adv. Model. Earth Syst.* **16**,
     e2023MS004019 (2024). doi:10.1029/2023MS004019
+14. Charlton, A. J. & Polvani, L. M. A new look at stratospheric sudden warmings.
+    Part I: Climatology and modeling benchmarks. *J. Clim.* **20**, 449–469 (2007).
+    doi:10.1175/JCLI3996.1
+15. Lu, R. & Rao, J. Sorting sudden stratospheric warmings with the downward
+    tropospheric influence using ERA5 and CESM2-WACCM. *Atmos. Chem. Phys.* **26**,
+    3723–3742 (2026). doi:10.5194/acp-26-3723-2026
 
-*Before submission: convert author–year citations to Nature numbering; read
-Nebel et al. (2024) in full — only its abstract has been read, and the text
-cites only what the abstract states.*
+*Before submission: read Nebel et al. (ref. 5) in full — only its abstract has been read, and the text cites only what the abstract states.*
 
 ---
 
@@ -378,7 +375,7 @@ circles, Northern Hemisphere; triangles, Southern Hemisphere minor warming;
 black bars, means. 11 of 36 nudged ensembles have fewer than three NDW members
 (their DW rate 0.99) and cannot form a contrast. Green dashed line, the contrast a
 threshold at the mean produces on a unit Gaussian, −2√(2/π); grey dotted line,
-the published ERA5 NAO contrast of Lu & Rao (2026), −0.708, for scale only (a
+the published ERA5 NAO contrast of Lu & Rao^15^, −0.708, for scale only (a
 different index and yardstick). **b**, Fraction of members classified
 DW, all 36 Northern Hemisphere ensembles per arm.
 
@@ -401,7 +398,7 @@ model-minus-ERA5 initial offset removed; legend values are means over the eight
 models excluding ECCC. **b**, Percentile of the observed
 2018-minus-2019 difference among all member pairings of the same model; grey,
 central 95%. **c**, Observed NAM means for both events under four variants of the
-Karpechko et al. (2017) criterion; the only NDW label is January 2019 at 1000 hPa
+Karpechko et al.^3^ criterion; the only NDW label is January 2019 at 1000 hPa
 over days 8–52 (+0.019 σ).
 
 ---

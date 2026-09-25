@@ -1,0 +1,26 @@
+union events with a detection count: 45
+detection-count distribution: {1.0: 3, 3.0: 5, 4.0: 12, 5.0: 12, 6.0: 13}
+
+=== AO  (45 events with usable baselines) ===
+  detected by 1/6: n= 3  pre -1.074   post -1.744
+  detected by 3/6: n= 5  pre -1.708   post -0.496
+  detected by 4/6: n=12  pre -0.516   post -0.656
+  detected by 5/6: n=12  pre -0.897   post -0.723
+  detected by 6/6: n=13  pre -0.262   post -1.218
+  Spearman(n_detect, pre ) rho=+0.221  perm P=0.1468
+  Spearman(n_detect, post) rho=-0.055  perm P=0.7219
+  Spearman(n_detect, u10) rho=-0.017  perm P=0.9253
+    u10 by count: {1: 14.79, 3: 1.39, 4: -1.66, 5: -1.03, 6: 0.01}
+
+=== NAO  (45 events with usable baselines) ===
+  detected by 1/6: n= 3  pre -0.293   post -0.341
+  detected by 3/6: n= 5  pre -0.946   post +0.032
+  detected by 4/6: n=12  pre -0.249   post -0.170
+  detected by 5/6: n=12  pre -0.610   post -0.468
+  detected by 6/6: n=13  pre -0.023   post -0.350
+  Spearman(n_detect, pre ) rho=+0.240  perm P=0.1154
+  Spearman(n_detect, post) rho=-0.134  perm P=0.3874
+  Spearman(n_detect, u10) rho=-0.017  perm P=0.9253
+    u10 by count: {1: 14.79, 3: 1.39, 4: -1.66, 5: -1.03, 6: 0.01}
+
+Saved -> /home/xola/Solar-Magnetic-Analysis/results/current/7_ensemble/consensus_monotonicity.json

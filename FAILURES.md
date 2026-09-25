@@ -58,10 +58,10 @@ Tried: re-running `build_catalogue.py` and `ensemble_precursor.py` on Linux to c
 Failed: nothing reproduced. Every artifact in this repo was written on Windows, where text-mode writes translate `\n` to `\r\n` — `event_catalogue.csv` came back 7,894 bytes against 7,943, `ensemble_precursor_CanESM5.json` 1,590 against 1,692 — while `DataFrame.equals` and parsed-JSON equality were both True and all invariance tests passed. **50 of 54 live result JSONs are CRLF and all 60 `write_text` sites lack `newline="\n"`.**
 Rule: compare results **parsed, never byte-wise**, across platforms. Pin `lineterminator="\n"` on `to_csv` and `newline="\n"` on `write_text` in any script you touch — do not mass-edit all 60, because that restamps every producer hash and marks all 53 results stale at once. A reproducibility claim established on one OS is not established until it is re-run on the other.
 
-## 2026-09-17 — A re-run moved and the cause could not be established
-Tried: re-running `predictability_ceiling.py` to clear an impossible R² = 1.2852 that a corrected-but-never-re-run script had left in its JSON.
-Failed: the correction worked, but the cross-validated R² also moved — ridge P1 0.0998 → 0.1026, P3 0.4245 → 0.4226, gradient boosting up to 0.0081 — on identical data (n=1888), features (38), groups (20) and seed (20260803). The original run's package versions were never recorded, so a library difference can be suspected and not shown.
-Rule: record package versions alongside every result, as the global protocol requires. The environment is now pinned in `environment/requirements.lock.txt`; a result produced before that pin cannot be re-run for comparison, only superseded.
+## 2026-09-17 — A re-run moved; cause found 2026-09-25: file ORDER
+Tried: re-running `predictability_ceiling.py` on identical data, features, groups and seed.
+Failed: ridge P1 moved 0.0998 → 0.1026; later I, H and J moved the same way. Cause located 2026-09-25: the Windows runs listed the 20 CMIP6 member files case-insensitively (CanESM5 before CESM2-FV2), Linux `sorted()` by code point (CESM2-FV2 first). Member order decides which random draws each member gets and how GroupKFold cuts folds; imposing the Windows order reproduces the old pseudo-event count exactly (11,323 vs 11,321).
+Rule: iterate inputs in an explicit, platform-independent order (`sorted()`), and treat a result's sensitivity to arbitrary order, seed or fold tie-breaking as part of its uncertainty — report it rather than one draw.
 
 ## 2026-09-17 — A passing environment check while every download failed
 Tried: starting the SNAPSI expansion after `check_environment.py` reported ENVIRONMENT OK, 0 failures.
@@ -117,3 +117,13 @@ Rule: `09_figures/` and `10_tables/` are reader-only and excluded from attributi
 Tried: taking Lu & Rao (2026)'s "DW" NAO as −0.762 and the published DW−NDW contrast as −0.850, in six scripts.
 Failed: −0.762 is the mean of the BOTH subtype only (13 of 33 DWs); weighted over the three subtypes the DW mean is −0.620 and the contrast −0.708. One script's own docstring said "(BOTH subtype)" and still subtracted it. Also used a DW fraction of 0.59 (our rate), not theirs (0.635). Found only because a reviewer asked where the number came from.
 Rule: when extracting a published number, record the sentence it came from and the group it describes; if the paper reports subgroups, weight them by the reported counts before calling it the class value.
+
+## 2026-09-25 — pandas 3 dropped the grouping column from groupby.apply
+Tried: `meta.groupby("band").apply(lambda g: g.sample(...))` in `calibrate_station_level.py`, written under pandas 2.
+Failed: pandas 3 no longer passes the grouping column into apply, so "band" vanished and the script crashed; it had not been re-run since the upgrade, so its committed result could not be reproduced by its own code. Found only by re-running every producer.
+Rule: after any library upgrade, re-run every producer, not just the ones being edited; prefer an explicit loop over groupby.apply when the group key is needed in the output.
+
+## 2026-09-25 — "Significant" skill below zero
+Tried: calling a cross-validated model skilful when its R² beat 95% of a permutation null.
+Failed: in the 42-event observational arm the null itself is negative, so a model with R² = −0.11 (worse than predicting the mean) was printed "SKILL" at p = 0.003; and its R² ranged −0.32 to −0.006 across 200 equivalent fold tie-breaks, so one split's value was arbitrary.
+Rule: skill needs p < 0.05 AND R² > 0. At small n, report the spread over fold assignments, not a single split.

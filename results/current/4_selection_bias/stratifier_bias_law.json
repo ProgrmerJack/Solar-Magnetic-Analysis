@@ -213,5 +213,6 @@
   },
   "n_stratifiers_passing_null": 7,
   "n_stratifiers": 7,
-  "verdict": "LAW HOLDS on observations: every stratifier's null residual contains zero, so beta x dS accounts for the whole non-causal contrast and the residual is an unbiased differential effect."
+  "verdict": "LAW HOLDS on observations: every stratifier's null residual contains zero, so beta x dS accounts for the whole non-causal contrast and the residual is an unbiased differential effect.",
+  "stratosphere_record": "ncep_stratosphere.parquet"
 }

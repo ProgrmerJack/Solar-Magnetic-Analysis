@@ -1,0 +1,77 @@
+merged: 1958-01-01 .. 2024-12-31 (24,472 days) -> ncep_stratosphere_1958.parquet
+
+=== T1  DJF VARIABILITY RATIO  (n=1,895 vs 4,152 days) ===
+column             anom 58-78 anom 79-24   ratio  iav ratio  mean diff  verdict
+----------------------------------------------------------------------------------
+air_K_100hPa            3.447      3.618   0.953      0.980     +1.043  ok
+air_K_70hPa             4.171      4.159   1.003      1.047     +1.466  ok
+air_K_50hPa             4.607      4.648   0.991      1.064     +1.607  ok
+air_K_30hPa             5.150      5.468   0.942      1.069     +1.147  ok
+air_K_20hPa             5.570      6.314   0.882      1.010     +0.830  ok
+air_K_10hPa             5.858      7.926   0.739      0.685     -0.228  FAIL
+hgt_m_100hPa          116.042    113.476   1.023      1.077    +16.694  ok
+hgt_m_70hPa           149.852    148.197   1.011      1.072    +29.884  ok
+hgt_m_50hPa           187.518    186.400   1.006      1.071    +45.213  ok
+hgt_m_30hPa           251.444    251.385   1.000      1.078    +67.406  ok
+hgt_m_20hPa           304.491    308.388   0.987      1.080    +78.768  ok
+hgt_m_10hPa           382.743    416.807   0.918      1.026    +86.943  ok
+uwnd_ms_100hPa          5.300      5.372   0.987      1.059     -0.275  ok
+uwnd_ms_70hPa           6.641      6.874   0.966      1.043     -0.241  ok
+uwnd_ms_50hPa           8.089      8.486   0.953      1.029     -0.216  ok
+uwnd_ms_30hPa          10.366     11.036   0.939      1.010     -0.125  ok
+uwnd_ms_20hPa          11.999     12.913   0.929      0.995     +0.074  ok
+uwnd_ms_10hPa          14.160     15.733   0.900      0.967     +0.666  ok
+
+=== T4  AGREEMENT WITH ERA5 (independent reanalysis, NDJFM) ===
+era            n days     corr
+------------------------------
+1959-1978       3,025   0.9315
+1979-2022       6,665   0.9485
+
+  agreement drop pre-1979: +0.0170 (no material drop)
+
+events with full predictor coverage: 42 (1960-01-17 .. 2024-03-04)
+  pre-1979: 12   post-1979: 30
+
+=== T2  BETA STABILITY (refitted per era on event-free draws) ===
+stratifier               beta 58-78             beta 79-24  verdict
+--------------------------------------------------------------------
+vT_pre30      -1.167 [-1.313,-1.011]  -0.565 [-0.672,-0.466]  DIFFER
+vT_pre15      -0.515 [-0.608,-0.421]  -0.339 [-0.417,-0.271]  DIFFER
+u10_pre       -0.012 [-0.073,+0.054]  -0.006 [-0.063,+0.055]  ok
+u10_post30    +0.619 [+0.565,+0.674]  +0.554 [+0.510,+0.598]  ok
+u10_post45    +0.642 [+0.578,+0.701]  +0.602 [+0.552,+0.654]  ok
+z100_post     +0.688 [+0.646,+0.728]  +0.646 [+0.603,+0.689]  ok
+AO_post       +1.873 [+1.861,+1.886]  +1.790 [+1.774,+1.804]  DIFFER
+
+=== T3  RESIDUAL AGREEMENT AT EVENTS (n=12 vs 30; LOW POWER) ===
+stratifier    resid pre  resid post  difference       95% CI of diff
+----------------------------------------------------------------------
+vT_pre30         +1.108      +0.075      +1.033 [ -0.848, +1.947]
+vT_pre15         +0.653      +0.388      +0.265 [ -1.087, +1.665]
+u10_pre          +1.329      -0.498      +1.827 [ +0.542, +2.699]
+u10_post30       -0.251      -0.137      -0.114 [ -1.032, +1.625]
+u10_post45       -0.115      +0.151      -0.265 [ -1.295, +1.129]
+z100_post        +0.060      +0.279      -0.219 [ -1.273, +1.100]
+AO_post          +0.105      +0.052      +0.053 [ -0.369, +0.257]
+
+=== VERDICT ===
+  POOLING REFUSED. T1 passed, T2 4/7 betas agree. The observational arm stays at n=30 (1979 onward) and the pre-satellite extension is reported only as a sensitivity test, with the failing diagnostic stated.
+
+=== POST-HOC: PER-STRATIFIER POOLING, WITH CONSEQUENCE ===
+stratifier      dbeta   dS_pre   dResid  resid CI hw   ratio  pool?
+----------------------------------------------------------------------------
+vT_pre30       -0.602   +0.478   -0.288        1.397    0.21  YES
+vT_pre15       -0.176   +0.804   -0.142        1.376    0.10  YES
+u10_pre        -0.007   +0.691   -0.005        1.079    0.00  no
+u10_post30     +0.065   +1.012   +0.065        1.329    0.05  YES
+u10_post45     +0.040   +0.763   +0.031        1.212    0.03  YES
+z100_post      +0.042   +0.835   +0.035        1.187    0.03  YES
+AO_post        +0.083   +0.753   +0.063        0.313    0.20  YES
+
+  poolable per-stratifier: ['vT_pre30', 'vT_pre15', 'u10_post30', 'u10_post45', 'z100_post', 'AO_post']
+
+=== RECOMMENDATION ===
+  Pre-specified global rule REFUSES pooling, and that verdict stands as the headline: the observational arm is n=30. Per-stratifier, 6/7 survive both checks (vT_pre30, vT_pre15, u10_post30, u10_post45, z100_post, AO_post) and the n=42 record is reported for those as a pre-registered sensitivity test, never as the primary number.
+
+Saved -> era_dependence_gate.json

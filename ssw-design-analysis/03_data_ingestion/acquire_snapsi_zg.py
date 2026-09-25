@@ -407,11 +407,19 @@ def verify_ranges_against_cache(centre, tok, n=3):
                                       f"{r.start_date}_{r.member}.parquet")
         da, tv, tu = read_zg100_ranges(f"{FILE_ROOT}{zg_path(r, tok)}", tok)
         cn, cs = cap_means(da, da["lat"])
+        # Lead axis too, as the docstring promises: the reader's leads plus the
+        # measured origin must equal the cached (rebased) leads.
+        lead = lead_days(tv, tu) + S.origin_days(r.centre, r.experiment,
+                                                  str(r.start_date))
+        same_len = len(lead) == len(old)
         res.append({"member": f"{r.experiment}/{r.start_date}/{r.member}",
                     "max_diff_N": float(np.max(np.abs(cn - old.zg100_cap_N.values))),
                     "max_diff_S": float(np.max(np.abs(cs - old.zg100_cap_S.values))),
+                    "max_diff_lead_days": (float(np.max(np.abs(lead - old.lead_days.values)))
+                                           if same_len else None),
                     "n_steps": [int(len(cn)), int(len(old))]})
     ok = all(x["max_diff_N"] == 0.0 and x["max_diff_S"] == 0.0
+             and x["max_diff_lead_days"] is not None and x["max_diff_lead_days"] < 1e-9
              and x["n_steps"][0] == x["n_steps"][1] for x in res)
     return {"centre": centre, "transport": "byte_range", "checked": res,
             "passes": bool(ok)}
@@ -608,6 +616,8 @@ def fetch(row, sess, tok=None):
             out.to_parquet(tmp)
             tmp.replace(cf)
             return out
+        except S.MissingTimeOrigin:
+            raise
         except (ImportError, ModuleNotFoundError) as exc:
             raise SystemExit(
                 f"missing dependency, not a transfer error: {exc}\n"

@@ -21,7 +21,7 @@ estimator agreement with selection_on_outcome.per_event: max|diff| = 4.44e-16 on
   Karpechko-criterion AO, observations (this project)  0.70   1.782   0.927    1.9x  YES
   ERA5 1000 hPa NAM, Karpechko criterion (this project)  0.54   0.684   0.895    0.8x  YES
   ERA5 850 hPa NAM, ACP 26,3723 criterion (this project)  0.59   0.639   0.900    0.7x  YES
-  ACP 26, 3723 (2026) published NAO contrast          0.64   0.708   0.908    0.8x  YES
+  ACP 26, 3723 (2026) published NAO contrast          0.64   0.708   0.908    0.8x  cross
   CMIP6 ensemble DW-NDW (this project)                0.50   1.143   0.894    1.3x  cross
 
   (median-split reference: point 0.000, upper 95% 0.894 sigma)

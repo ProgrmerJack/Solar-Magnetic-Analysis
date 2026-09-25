@@ -1,26 +1,29 @@
-REAL events: 43  ->  dSSW 30, nSSW 13  (70% classified downward)
+REAL events: 43  ->  dSSW 30, nSSW 13 (70% classified downward)
 
-outcome   ALL events    dSSW only   difference
-----------------------------------------------
-ao           -0.620       -1.162       -0.542
-nao          -0.206       -0.372       -0.166
-pna          +0.069       +0.136       +0.067
+outcome   ALL events    dSSW only
+--------------------------------
+ao           -0.895       -1.433
+nao          -0.300       -0.464
+pna          +0.119       +0.186
   300/1500 null draws
   600/1500 null draws
   900/1500 null draws
   1200/1500 null draws
   1500/1500 null draws
 
-=== SELECTION BIAS UNDER A TRUE NULL (1500 draws) ===
-  pseudo-events classified 'downward-propagating': 38%   (real events: 70%)
+=== NULL (1500 draws, true effect = 0) ===
+  null centres on zero? all-pseudo-event mean AO = +0.003  (was +0.279 before correction (a))
+  classification RATE: real 70% vs null 38%   P(null >= real) = 0.0000
 
-outcome   null ALL   null dSSW      BIAS   real dSSW  bias share
-------------------------------------------------------------------
-ao         +0.279      -0.774    -1.052      -1.162         91%
-nao        +0.092      -0.196    -0.288      -0.372         78%
-pna        -0.029      +0.060    +0.089      +0.136         65%
+outcome   real dSSW   null crit  null matched  reproduced
+------------------------------------------------------------
+ao          -1.433      -1.051        -0.529         37%
+nao         -0.464      -0.292        -0.140         30%
+pna         +0.186      +0.110        +0.082         44%
 
-  BIAS is what the selection manufactures when the true effect is ZERO.
-  bias share is how much of the published-style dSSW number it explains.
+  'null matched' selects the same FRACTION of pseudo-events as the
+  criterion selects of real ones, so it is the fair comparison.
+  'reproduced' = how much of the published-style dSSW number that
+  selection alone accounts for, with a true effect of exactly zero.
 
 Saved -> selection_on_outcome.json

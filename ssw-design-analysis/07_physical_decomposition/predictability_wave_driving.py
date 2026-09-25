@@ -48,6 +48,7 @@ Output: predictability_wave_driving.json
 import json
 import sys
 import warnings
+import zlib
 from pathlib import Path
 
 import numpy as np
@@ -228,11 +229,34 @@ def main():
         null = P.permutation_null(Xt.values, yo, wint, "ridge", rng, 400)
         p95 = float(np.percentile(null, 95))
         p = float((null >= r).mean())
+        # With 42 events in 35 winters most groups tie in size, so GroupKFold's
+        # fold assignment is an arbitrary tie-break, and it moved between
+        # library versions (cv_r2 -0.030 -> -0.126 on identical data). Report
+        # the spread over 200 relabelings of the winters, which vary only the
+        # tie-breaking, so the verdict does not rest on one arbitrary split.
+        frng = np.random.default_rng(zlib.crc32(f"folds|{lab}".encode()) % (2 ** 32))
+        uw = np.unique(wint)
+        spread = []
+        for _ in range(200):
+            relab = dict(zip(uw, frng.permutation(len(uw))))
+            spread.append(P.cv_r2(Xt.values, yo, np.array([relab[w] for w in wint]),
+                                  "ridge", n_splits=5))
+        spread = np.array(spread)
         ob[lab] = {"n_features": Xt.shape[1], "cv_r2": round(r, 4),
                    "null_p95": round(p95, 4), "p_value": round(p, 4),
-                   "significant": bool(p < 0.05)}
+                   # skill = beats the null AND beats the mean (R^2 > 0)
+                   "significant": bool(p < 0.05 and r > 0),
+                   "fold_assignment_spread": {
+                       "n": 200, "median": round(float(np.median(spread)), 4),
+                       "p05_p95": [round(float(np.percentile(spread, 5)), 4),
+                                   round(float(np.percentile(spread, 95)), 4)],
+                       "max": round(float(spread.max()), 4),
+                       "fraction_positive": round(float((spread > 0).mean()), 3)}}
+        fs = ob[lab]["fold_assignment_spread"]
         print(f"  {lab:<30s} CV R^2 = {r:+.4f}   null p95 = {p95:+.4f}   "
-              f"p = {p:.3f}   {'SKILL' if p < 0.05 else 'no skill'}")
+              f"p = {p:.3f}   {'SKILL' if (p < 0.05 and r > 0) else 'no skill'}"
+              f"   | 200 fold assignments: median {fs['median']:+.4f}, "
+              f"max {fs['max']:+.4f}, positive {fs['fraction_positive']:.0%}")
     res["observations"] = ob
     gain = ob["vortex + WAVE (v'T', du/dt)"]["cv_r2"] - ob["vortex only (u10, z100)"]["cv_r2"]
     print(f"\n  wave-driving gain in observations: {gain:+.4f}")
@@ -241,7 +265,7 @@ def main():
     res["observations_wave_gain"] = round(float(gain), 4)
 
     (RESULTS / "predictability_wave_driving.json").write_text(
-        json.dumps(res, indent=2), encoding="utf8")
+        json.dumps(res, indent=2), encoding="utf8", newline="\n")
     print("\nSaved -> predictability_wave_driving.json")
 
 

@@ -1,0 +1,16 @@
+AO 1950-01-01..2026-03-31: 13,864 winter days, 77 winters, 47 real events
+observed onset DOY: median 48, IQR [19.5 73. ]
+  harm3            matched  null mean=-0.0237 sd=0.255 cov=0.933 FPR=0.067
+  harm3            uniform  null mean=-0.0071 sd=0.306 cov=0.967 FPR=0.033
+  harm6            matched  null mean=-0.0177 sd=0.256 cov=0.95 FPR=0.05
+  harm6            uniform  null mean=+0.0055 sd=0.307 cov=0.983 FPR=0.017
+  cyclic_spline    matched  null mean=-0.0454 sd=0.251 cov=0.933 FPR=0.067
+  cyclic_spline    uniform  null mean=-0.0405 sd=0.302 cov=0.967 FPR=0.033
+  cyclic_spline12  matched  null mean=-0.0124 sd=0.253 cov=0.95 FPR=0.05
+  cyclic_spline12  uniform  null mean=-0.0213 sd=0.302 cov=0.967 FPR=0.033
+  lowo_clim        matched  null mean=-0.0243 sd=0.223 cov=0.917 FPR=0.083
+  lowo_clim        uniform  null mean=-0.0101 sd=0.271 cov=0.95 FPR=0.05
+
+==================================================================
+PASS (matched null centred, coverage 0.93-0.97, FPR 0.03-0.07): ['harm3', 'harm6', 'cyclic_spline', 'cyclic_spline12']
+Saved -> /home/xola/Solar-Magnetic-Analysis/results/current/3_calibration/calibration_results.json

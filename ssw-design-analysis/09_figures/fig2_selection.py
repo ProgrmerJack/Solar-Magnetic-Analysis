@@ -61,7 +61,9 @@ def main():
     ax.set_xticks([0, 1])
     ax.set_xticklabels([lab[a] for a in arms])
     ax.set_xlim(-0.5, 2.45)
-    ax.set_ylim(-2.6, -0.75)
+    # Upper limit must clear the published line: after the ACP correction
+    # (-0.850 -> -0.708) a fixed -0.75 hid it and left its label floating.
+    ax.set_ylim(-2.6, max(-0.55, pub + 0.12))
     ax.set_ylabel("DW − NDW surface contrast (σ)")
     ax.scatter([], [], s=6, color="0.4", label="NH ensemble (centre × initialisation)")
     ax.scatter([], [], s=9, marker="^", facecolor="white", edgecolor="0.4",

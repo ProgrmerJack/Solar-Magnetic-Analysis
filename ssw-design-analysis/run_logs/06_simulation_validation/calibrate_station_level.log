@@ -1,0 +1,13 @@
+station-level sample: 103 stations, 510,269 station-days, 46 winters
+  elevation 9-3560 m, latitude 36.1-68.1 deg
+
+heterogeneity: seasonal amplitude 5.94-39.33 degC (median 11.77); corr(elev, amplitude) = -0.28, corr(elev, level) = -0.003
+events 28; removed 189,350 influenced (37%); clean 320,919 rows
+  [means] shared_harm3   null=+0.2564 degC (+0.037 sd)  sd=0.673  n=400
+  [means] band_harm3     null=+0.2558 degC (+0.037 sd)  sd=0.672  n=400
+  [means] station_clim   null=+0.0621 degC (+0.009 sd)  sd=0.625  n=400
+
+  least-biased: station_clim -> coverage (40 draws x 1000 reps)
+  [coverage] station_clim: cov=0.95 (0.831, 0.994)  FPR=0.05  (n=40)
+
+Saved -> /home/xola/Solar-Magnetic-Analysis/results/current/3_calibration/station_calibration.json

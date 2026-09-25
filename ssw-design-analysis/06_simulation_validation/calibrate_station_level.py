@@ -82,8 +82,12 @@ def load_stations():
     rng = np.random.default_rng(SEED_SAMPLE)
     meta["band"] = pd.qcut(meta["elevation_m"], 10, labels=False, duplicates="drop")
     per = max(1, N_STATIONS // meta["band"].nunique())
-    keep = (meta.groupby("band", group_keys=False)
-                .apply(lambda g: g.sample(min(per, len(g)), random_state=SEED_SAMPLE)))
+    # Explicit loop, not groupby.apply: pandas 3 no longer passes the grouping
+    # column into apply, so the result lost "band" and the merge below raised
+    # KeyError (found in the 2026-09-25 full re-run). Same groups, same order,
+    # same per-group random_state, so the same stations as before.
+    keep = pd.concat([g.sample(min(per, len(g)), random_state=SEED_SAMPLE)
+                      for _, g in meta.groupby("band")])
     sel = set(keep["station_id"])
 
     sn = pd.read_parquet(ROOT / "data/processed/cryosphere/snotel_daily.parquet",

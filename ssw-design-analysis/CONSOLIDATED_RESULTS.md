@@ -300,12 +300,12 @@ response following an SSW is no more predictable from the stratosphere than that
 of an ordinary winter day.*
 
 Stress tests that this survived (`headline_stress_test.json`):
-- **mediation objection**: P3 scores 0.386 on pseudo-events, 91% of its real value,
+- **mediation objection**: P3 scores 0.377 on pseudo-events, 89% of its real value,
   so the post-onset gain is structural covariance and not downward mediation;
 - **weak-coupling objection**: CV R² does not scale with a model's coupling
-  strength (slope on \|coupling\|, r = +0.085), so the CMIP under-coupling bias
+  strength (slope on \|coupling\|, r = +0.123), so the CMIP under-coupling bias
   does not suppress the estimate;
-- **in-sample objection**: this model's optimism is only +0.015, so the published
+- **in-sample objection**: this model's optimism is only +0.013, so the published
   0.63 cannot be explained as ordinary overfitting.
 
 #### J-REVISED with intervals (2026-09-24) — the numbers to quote
@@ -409,12 +409,18 @@ are consistent — the measured value sits inside the bound — but the earlier
 
 **Wave driving closed the last gap.** CMIP6 has no 3-D fields, so v'T' was proxied
 via the TEM identity (div F enters through ∂ū/∂t): windowed tendency, 10−100 hPa
-shear, 75N−45N vortex geometry. P1 0.0998 → **0.1148**; P2 +0.001; P3 −0.003. Wave
-driving helps **only before onset**, which is physically right.
+shear, 75N−45N vortex geometry. P1 0.1026 → **0.1171** (re-run 2026-09-25; was
+0.0998 → 0.1148); P2 +0.001; P3 +0.002. Wave driving helps **only before onset**,
+which is physically right.
 
-**Observations cannot settle it.** No skill in any catalogue — primary n=42
-(R²=−0.081), union n=46 (−0.011), consensus_half 41 (+0.012), era5 41 (+0.002),
-jra_55 40 (−0.020), all p > 0.2. Power at n=42 is **0.35** against a true R² of
+**Observations cannot settle it.** Primary n=42 (re-run 2026-09-25): vortex only
+R² = −0.126, vortex + wave R² = −0.112. **At n=42 the value depends on how GroupKFold
+breaks ties between winters**: over 200 equivalent fold assignments vortex-only
+ranges up to −0.002 (never positive) and vortex+wave up to +0.017 (positive in 2%).
+The old −0.081 was one such split. A permutation p of 0.003 for vortex+wave used to
+print "SKILL" for a model worse than the mean; skill now requires R² > 0 as well.
+Catalogue variants (2026-08 run, not re-run): union n=46 (−0.011), consensus_half
+41 (+0.012), era5 41 (+0.002), jra_55 40 (−0.020), all p > 0.2. Power at n=42 is **0.35** against a true R² of
 0.10. **The observational null is uninformative, not negative, and must never be
 cited as evidence against predictability.**
 

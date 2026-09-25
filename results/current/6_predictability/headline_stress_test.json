@@ -1,31 +1,36 @@
 {
   "attack1_pseudo_event_skill": {
     "P1 pre-onset": {
-      "real_cv_r2": 0.0998,
-      "pseudo_cv_r2": 0.0603,
-      "retained_fraction": 0.604
+      "real_cv_r2": 0.1026,
+      "pseudo_cv_r2": 0.063,
+      "retained_fraction": 0.614
     },
     "P2 at-onset": {
-      "real_cv_r2": 0.1121,
-      "pseudo_cv_r2": 0.0733,
-      "retained_fraction": 0.654
+      "real_cv_r2": 0.1133,
+      "pseudo_cv_r2": 0.0732,
+      "retained_fraction": 0.646
     },
     "P3 + post-onset stratosphere": {
-      "real_cv_r2": 0.4245,
-      "pseudo_cv_r2": 0.3857,
-      "retained_fraction": 0.909
+      "real_cv_r2": 0.4226,
+      "pseudo_cv_r2": 0.3769,
+      "retained_fraction": 0.892
     }
   },
   "attack2": {
-    "slope": 0.02998,
-    "r": 0.0851,
-    "intercept": -0.01761,
-    "extrapolated_to_observed": 0.0131,
+    "slope": 0.03705,
+    "r": 0.1232,
+    "intercept": -0.02619,
+    "extrapolated_to_observed": 0.0118,
     "per_member": [
       {
         "member": "BCC-ESM1_r1i1p1f1_zm",
         "coupling": -0.3675,
         "cv_r2": -0.0427
+      },
+      {
+        "member": "CESM2-FV2_r1i1p1f1_zm",
+        "coupling": -0.6546,
+        "cv_r2": -0.0102
       },
       {
         "member": "CanESM5_r10i1p1f1_zm",
@@ -35,22 +40,22 @@
       {
         "member": "CanESM5_r10i1p2f1_zm",
         "coupling": -0.8319,
-        "cv_r2": -0.0178
+        "cv_r2": -0.0174
       },
       {
         "member": "CanESM5_r11i1p1f1_zm",
         "coupling": -0.7222,
-        "cv_r2": 0.1729
+        "cv_r2": 0.1301
       },
       {
         "member": "CanESM5_r12i1p1f1_zm",
         "coupling": -0.6003,
-        "cv_r2": -0.0927
+        "cv_r2": -0.0604
       },
       {
         "member": "CanESM5_r13i1p1f1_zm",
         "coupling": -0.7606,
-        "cv_r2": 0.1512
+        "cv_r2": 0.1311
       },
       {
         "member": "CanESM5_r14i1p1f1_zm",
@@ -60,7 +65,7 @@
       {
         "member": "CanESM5_r15i1p1f1_zm",
         "coupling": -0.5646,
-        "cv_r2": -0.0359
+        "cv_r2": -0.0279
       },
       {
         "member": "CanESM5_r16i1p1f1_zm",
@@ -78,11 +83,6 @@
         "cv_r2": 0.049
       },
       {
-        "member": "CESM2-FV2_r1i1p1f1_zm",
-        "coupling": -0.6546,
-        "cv_r2": -0.0298
-      },
-      {
         "member": "GFDL-CM4_r1i1p1f1_zm",
         "coupling": -0.2727,
         "cv_r2": -0.0391
@@ -95,17 +95,17 @@
       {
         "member": "IPSL-CM5A2-INCA_r1i1p1f1_zm",
         "coupling": -0.7088,
-        "cv_r2": 0.0111
+        "cv_r2": -0.0255
       },
       {
         "member": "MIROC6_r10i1p1f1_zm",
         "coupling": -0.1363,
-        "cv_r2": 0.1014
+        "cv_r2": 0.0411
       },
       {
         "member": "MIROC6_r1i1p1f1_zm",
         "coupling": -0.1442,
-        "cv_r2": -0.0135
+        "cv_r2": -0.013
       },
       {
         "member": "MPI-ESM-1-2-HAM_r1i1p1f1_zm",
@@ -115,7 +115,7 @@
       {
         "member": "MPI-ESM1-2-LR_r1i1p1f1_zm",
         "coupling": -0.3894,
-        "cv_r2": -0.0266
+        "cv_r2": -0.0273
       },
       {
         "member": "NorESM2-LM_r1i1p1f1_zm",
@@ -127,18 +127,18 @@
   "attack3_in_vs_out": {
     "P1 pre-onset": {
       "in_sample_r2": 0.1152,
-      "out_of_sample_r2": 0.0998,
-      "optimism": 0.0154
+      "out_of_sample_r2": 0.1026,
+      "optimism": 0.0125
     },
     "P2 at-onset": {
       "in_sample_r2": 0.1275,
-      "out_of_sample_r2": 0.1121,
-      "optimism": 0.0154
+      "out_of_sample_r2": 0.1133,
+      "optimism": 0.0142
     },
     "P3 + post-onset stratosphere": {
       "in_sample_r2": 0.4567,
-      "out_of_sample_r2": 0.4245,
-      "optimism": 0.0323
+      "out_of_sample_r2": 0.4226,
+      "optimism": 0.0341
     }
   }
 }
