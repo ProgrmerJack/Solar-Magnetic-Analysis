@@ -57,3 +57,7 @@ paper/*.toc
 *.pem
 *_token.txt
 credentials.json
+
+# third-party papers (copyrighted; public repo) -- never commit
+*.pdf
+!ssw-design-analysis/09_figures/out/*.pdf

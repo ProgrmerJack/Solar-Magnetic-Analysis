@@ -34,17 +34,13 @@ WHAT IS MEASURED, per (centre, initialisation), then pooled
 GUARDS DECIDED BEFORE RUNNING
   - standardise per (centre, init) by the CONTROL spread; the raw spread varies
     3-4x across cases and pooling raw values would be meaningless
-  - the s20190108 initialisation is reported separately, at BOTH centres.
-    It initialises 2019-01-08 with onset 2019-01-02, so onset PRECEDES the
-    initialisation by 6 days and the +8..+25 post-onset window falls at lead
-    2-19 days, before the ensemble has diverged. Its control spread is
-    137-138 Pa against 205-466 Pa elsewhere -- that is forecast spread growth,
-    not climatological spread, and standardising by it inflates both the shift
-    and the variance ratio. Flagged in advance from the sd, then confirmed by
-    the lead arithmetic; it is a property of the INITIALISATION, not of a
-    centre, which is why both centres' s20190108 cases are separated.
-  - NRL is excluded: nudged-minus-control ensemble effect is identically zero at
-    all four initialisations and one submission duplicates control exactly.
+  - s20190108 initialises 2019-01-08 with onset 2019-01-02, so onset PRECEDES
+    the initialisation by 6 days and the +8..+25 post-onset window falls at lead
+    2-19 days, before the ensemble has fully diverged; its control spread is
+    smaller than elsewhere. The headline pool (`pooled_all`) INCLUDES it; the
+    pool without it is reported alongside as the sensitivity.
+  - NRL is excluded: its nudged-minus-control effect is zero to within 0.023 Pa
+    per member at three of four initialisations (defective submission).
 
 Output: results/current/8_experiment/snapsi_distribution_test.json
 """

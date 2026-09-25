@@ -23,7 +23,7 @@ any difference between "downward" and "non-downward" members cannot come from
 the event. Across nine forecast models we find that the SSW shifts the surface
 distribution by about one standard deviation without changing its shape; that
 the downward/non-downward contrast is the same with the SSW imposed as with no
-SSW at all — the value a threshold produces on noise; that in 1,888 simulated
+SSW at all — the value a threshold produces on noise; that in 1,517 simulated
 events an SSW adds no out-of-sample predictability over an ordinary winter day;
 and that the field's two archetype events (February 2018, "propagating"; January
 2019, "not") received the same forced odds and differ by ordinary member-to-member

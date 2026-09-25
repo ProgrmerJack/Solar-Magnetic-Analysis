@@ -181,17 +181,17 @@ def main():
     # group becomes a POSITIVE contrast here.
     z1000 = -df["ao"]
 
-    real = load_catalogue("primary")
-    real = real[(real >= df.index.min() + pd.Timedelta(days=60))
-                & (real <= df.index.max() - pd.Timedelta(days=60))]
-    mask = G.real_influence_mask(df.index, real)
+    allev = load_catalogue("primary")   # EXCLUSION set: every event, even ones not scored here
+    real = allev[(allev >= df.index.min() + pd.Timedelta(days=60))
+                 & (allev <= df.index.max() - pd.Timedelta(days=60))]
+    mask = G.real_influence_mask(df.index, allev)   # every catalogued event
     clean = ~mask
     print(f"ERA5 {df.index.min().date()}..{df.index.max().date()}; "
           f"events in range {len(real)}; clean days {clean.sum():,}/{len(df):,}")
 
     ls = standardise(z100, clean)
     sfc = standardise(z1000, clean)
-    clean_idx = df.index[clean]
+    clean_idx = G.zone_free_index(df.index, allev)
     doys = np.array([t.dayofyear for t in pd.DatetimeIndex(real)])
 
     res = {"paper": "Loeffel et al. 2025, EGUsphere egusphere-2025-4164",

@@ -19,8 +19,8 @@ models. The SSW shifts the surface distribution by −1.11 σ (s.d. 0.27 across
 eight models; one outlier) without changing its shape (variance ratio 0.955 [0.873, 1.051]).
 Splitting members into "downward" and "non-downward" produces the same −1.6 σ
 contrast whether the SSW is imposed or absent, the value a threshold yields on
-pure noise. In 1,888 simulated events, an SSW adds no out-of-sample
-predictability over an ordinary winter day (R² +0.004; 95% upper bound 0.05). The field's two archetype events receive the same
+pure noise. In 1,517 simulated events, an SSW adds no out-of-sample
+predictability over an ordinary winter day (R² −0.006; 95% upper bound 0.05). The field's two archetype events receive the same
 forced odds. The skill after an SSW is the common shift; the
 classification adds nothing to it.
 
@@ -41,8 +41,7 @@ Canada, and North Atlantic precipitation^2^.
 The dominant account of that predictability is event-specific. SSWs are divided
 into those whose signal "propagates downward" to the surface and those whose
 signal does not, commonly with the criterion of Karpechko et al.^3^, and
-"about two thirds" of events are said to have a visible downward impact (Baldwin
-et al. 2021). The difference between the two groups is then read as a property of
+"about two thirds" of events are said to have a visible downward impact^1^. The difference between the two groups is then read as a property of
 the events — of their strength, morphology or wave forcing — and recent work asks
 which SSWs will couple downward, and how well forecast systems can tell in advance^4–6^
 ; non-downward outcomes
@@ -64,11 +63,11 @@ above 50 hPa, with no nudging below 90 hPa; in its `control` ensembles it is
 relaxed to climatology. Members of a nudged ensemble therefore share the same
 zonal-mean stratospheric evolution and differ in tropospheric weather. We analyse the complete archive
 for nine models (4,407 members: 3,603 in the Northern Hemisphere, 804 in the
-Southern; a tenth submission is excluded as corrupt), the two Northern
+Southern; a tenth submission is excluded because its two arms are near-identical), the two Northern
 Hemisphere events it contains — February 2018 and January 2019, each
 from two initialisations — and the September 2019 Southern Hemisphere minor
-warming (eight models), together with 43 observed events and 1,888 events in 20
-CMIP6 members of 11 models.
+warming (eight models), together with 43 observed events and 1,517 events in 20
+CMIP6 members of 10 models.
 
 ### An SSW shifts the surface distribution without splitting it
 
@@ -85,13 +84,16 @@ The effect is a translation. Re-centring each ensemble on its own mean and pooli
 across 36 ensembles, the nudged distribution (1,798 members) has the same variance
 as the control (1,805 members) — ratio 0.955 [0.873, 1.051] — and the same shape
 (Kolmogorov–Smirnov p = 0.37; Fig. 1b). The SSW moves the whole distribution of surface
-outcomes; it does not divide it into responders and non-responders. The
+outcomes; it does not divide it into responders and non-responders. This concerns the
+polar-cap mean: regional forecast spread can still change after weak-vortex states
+— it is reduced by up to 20% over the Norwegian Sea and Scandinavia^11^ — without
+the cap-mean distribution changing shape. The
 observational record and CMIP6 say the same: the per-event surface response is
-unimodal and consistent with a pure shift (observations p = 0.33, n = 43; CMIP6
-p = 0.28, n = 1,888), although a two-population mixture with separation below
+unimodal and consistent with a pure shift (observations p = 0.37, n = 43; CMIP6
+p = 0.35, n = 1,517), although a two-population mixture with separation below
 about 1 σ cannot be excluded at this sample size; and once the variance
 already present before onset is removed, the forced between-event standard
-deviation is at most 0.26 σ (CMIP6, upper 95% bound).
+deviation is at most 0.27 σ (CMIP6, upper 95% bound).
 
 ### The downward/non-downward contrast needs no SSW
 
@@ -116,13 +118,13 @@ ERA5 ourselves, 97% of the resulting DW–NDW contrast is reproduced by event-fr
 dates, and the fraction of the 39 events in ERA5 coverage that pass the
 criterion's surface conditions — 69.2% (53.8% for the full three-condition
 criterion) — is reproduced by event-free dates displaced by the measured shift
-(74.4% [61.5, 87.2]). "About two thirds"
+(75.4% [61.5, 87.2]). "About two thirds"
 is what one shifted population produces.
 
 ### An SSW adds no predictability beyond the shift
 
 If downward coupling were an event property, knowing the event should predict
-how strongly it couples. We measure that directly, out of sample, in CMIP6 (1,888
+how strongly it couples. We measure that directly, out of sample, in CMIP6 (1,517
 events in 20 members). Ridge regressions predict each event's surface response
 (days 8–52) from stratospheric winds at three sets of predictors: strictly before
 onset, up to onset, and including the stratosphere after onset. Every variable is
@@ -132,20 +134,25 @@ then applied to 1,000 sets of event-free winter dates with the same onset counts
 and calendar days (Fig. 3a–c).
 
 Real SSWs are not more predictable than ordinary winter days. Before onset the
-out-of-sample R² is 0.067 at SSWs and 0.063 on event-free dates: the event adds
-+0.004 [−0.022, +0.027] (p = 0.36). Including the post-onset stratosphere raises R²
-to 0.40 — but to 0.38 on event-free dates as well, so 94.5% of that apparent
-diagnostic skill is reproduced with no SSW present, and the event adds +0.022
-[−0.015, +0.060] (p = 0.11). Resampling simulation members as well as dates
-widens the intervals (pre-onset [−0.048, +0.051]; post-onset [−0.054, +0.092])
-without changing the conclusion.
+out-of-sample R² is 0.054 at SSWs and 0.060 on event-free dates: the event adds
+−0.006 [−0.033, +0.020] (p = 0.64). Including the post-onset stratosphere raises R²
+to 0.38 — but to 0.37 on event-free dates as well, so 96% of that apparent
+diagnostic skill is reproduced with no SSW present, and the event adds +0.015
+[−0.028, +0.059] (p = 0.25). Resampling simulation members as well as dates
+widens the intervals (pre-onset [−0.061, +0.047]; post-onset [−0.061, +0.095])
+without changing the conclusion. Operational forecasts point the same way: in
+seven subseasonal systems, the skill with which the 500 hPa polar-cap response
+after 13 SSWs was predicted before onset (r = 0.52) lay at the 91st percentile of
+the same skill at randomly chosen winter dates, and could not be distinguished
+from sampling variability^5^.
 
-DW/NDW contrasts obtained with the published criterion imply much larger
-event-specific shares. Converted to the fraction of between-event variance a
-two-class split explains, the CMIP6 DW–NDW contrast and the observational
-Karpechko AO contrast imply R² of 0.63 and 0.60 — six to seven times the largest upper bound we measure (Fig. 3d). Not
-every published split overstates: the ERA5 NAM contrasts imply 0.09–0.10, near
-the upper bound of the post-onset event-specific share.
+Splits made with the published criterion imply far larger event-specific
+shares. Expressed as the fraction of between-event variance a two-class split
+explains, q(1−q)C²/Var(Y), with the class fraction q, the contrast C and the
+variance all taken from the same events, the criterion implies R² of 0.53 in
+CMIP6 (conditions 1–2), 0.61 for the observed AO, and 0.40 and 0.34 for the ERA5
+NAM at 1000 and 850 hPa — 3.6 to 6.5 times the largest upper bound we measure
+(Fig. 3d).
 
 ### The field's two archetypes are two draws
 
@@ -209,45 +216,58 @@ applies wherever "downward-propagating SSW" is used to stratify impacts: the
 classification rate against a matched null is an honest quantity; the contrast
 between classes is not.
 
-Three limits bound these conclusions. First, the evidence is model-based: with
-42 usable observed events, the observational arm has 35% power at a true R² of
-0.10 and
-cannot settle the question on its own, although every observational test we can
-make agrees with the models. Second, SNAPSI contains two Northern Hemisphere
+Four limits bound these conclusions. First, the evidence is model-based: with
+42 usable observed events, the observational out-of-sample R² is negative and
+moves by up to 0.3 with the arbitrary assignment of winters to folds, so the
+observations cannot settle the question on their own, although every
+observational test we can make agrees with the models. Second, SNAPSI contains two Northern Hemisphere
 events, so statements about how events differ rest on n = 2; the conclusion that
 the classification contrast is manufactured does not depend on n, because it
-holds in every ensemble in which a contrast can be formed. Third, the Southern Hemisphere case is a minor
+holds in every ensemble in which a contrast can be formed. Third, SNAPSI nudges
+only the zonal-mean stratosphere and our CMIP6 fields are zonal means, so the
+non-zonal geometry of the vortex — split or displaced, which has been associated
+with a stronger tropospheric response^5^ — is neither held fixed across members
+nor among our predictors. Fourth, the Southern Hemisphere case is a minor
 warming, not an SSW. None of this implies that SSWs do not matter: the shift they
 cause is large, causal, and the foundation of the skill that follows them.
 
-*(Main text: 1,982 words by `wc`, headings excluded; limit 3,000.)*
+*(Main text: 2,087 words by `wc`, headings excluded; limit 3,000.)*
 
 ---
 
 ## Methods
 
-**Event catalogue.** Observed SSWs are the 43 major events of the NOAA CSL SSW
-compendium^11^ over 36 winters 1958–2024 (primary catalogue, frozen; file checksum
-recorded in the repository). No inline date lists are used.
+**Event catalogue.** The 43 observed SSWs over 36 winters 1958–2024 (primary
+catalogue, frozen; file checksum recorded in the repository) are the 41 major
+events of the NOAA CSL SSW compendium^13^ detected in at least two thirds of the
+reanalyses that cover their date, and the two major warmings of 16 January and
+4 March 2024 that post-date it^14^.
 
-**Reanalysis.** ERA5^12^ is read from the WeatherBench 2 public
-copy^13^ (1.5°, 6-hourly).
+**Reanalysis.** ERA5^15^ is read from the WeatherBench 2 public
+copy^16^ (1.5°, 6-hourly).
 Polar-cap sea-level pressure is the cos-latitude-weighted mean over 60–90° N
 (60–90° S for the SH case), including the 60° row. NAM indices at 1000, 850 and
-150 hPa follow the polar-cap definition (65–90° N geopotential height anomaly,
-negated and standardised by day of year).
+150 hPa follow the polar-cap definition: the cos-latitude-weighted geopotential
+height over the grid rows poleward of 65° N (66–90° N on this grid) from the
+00 UTC field of each day, as an anomaly from its day-of-year mean, negated and
+standardised by day of year. With true daily means (the four 6-hourly fields)
+the January 2019 value that decides its label (Fig. 4c) is +0.025 σ instead of
++0.019 σ, and the label is unchanged.
 
 **SNAPSI.** Nudged and control ensembles for CCCma, CNR-ISAC, ECCC, ECMWF, KMA,
 Meteo-France, NCAR, SNU and UKMO (38–52 members each) at initialisations
 s20180125, s20180208 (February 2018; central date 12 February), s20181213,
 s20190108 (January 2019; central date 2 January) and s20190829 (SH, central date
-18 September 2019). NRL is excluded because its nudged-minus-control effect is
-identically zero (its nudged and control submissions are duplicates in effect,
-exactly so at s20181213). Forecast lead is measured from 00 UTC on
+18 September 2019). NRL is excluded: at three of its four Northern Hemisphere
+initialisations its nudged and control members differ by at most 0.02 Pa, so the
+nudging had no effect. Forecast lead is measured from 00 UTC on
 the initialisation date; the time origin of every ensemble was measured from its
-files (UKMO and Meteo-France start at 06 UTC). Post-onset windows are applied only
-to ensembles whose forecasts span them. s20190108 initialises six days after
-onset and is reported separately where its short lead matters.
+files (UKMO and Meteo-France start at 06 UTC). "Days +8..+25" denotes the 69
+six-hourly steps from 00 UTC on day 8 to 00 UTC on day 25 after the central
+date; every Northern Hemisphere ensemble and s20190829 covers them in full.
+s20190108 initialises six days after onset and is reported separately where its
+short lead matters. The later SH initialisation, s20191001 (804 members), starts
+after the central date and is not used.
 
 **Causal shift (Fig. 1a).** S = mean(nudged) − mean(control) of the day +8..+25
 polar-cap sea-level pressure, divided by each model's control spread pooled over
@@ -269,17 +289,34 @@ window mean negative and more than half of 6-hourly values negative. The contras
 requires at least three members in each class; the DW rate is reported for all
 ensembles.
 
-**Predictability (Fig. 3).** CMIP6 zonal-mean fields for 20 members; SSWs detected
-by the reversal of the 10 hPa, 60° N zonal-mean wind^14^
-(November–March, final warmings excluded). Predictors: 10, 50 and 100 hPa zonal wind at
-60° N and over the cap in windows before, at and after onset, plus seasonality;
-38 features. Response: each member's annular-mode index (leading EOF of zonal-mean
-sea-level pressure, 20–90° N) averaged over days +8..+52. Ridge regression, five-fold
-cross-validation grouped by member, all variables standardised within member.
-The null repeats the pipeline on 1,000 draws of event-free days (days influenced
-by any real event removed), each with the same members and calendar days as the
-real set; a cluster bootstrap (1,000 resamples of members) gives the second
-interval. The 20 members come from 11 models (10 are CanESM5), so
+**Predictability (Fig. 3).** CMIP6 zonal-mean fields for 20 members. SSWs follow
+Charlton and Polvani^17^: the central date is the first day from November to March
+on which the daily zonal-mean wind at 10 hPa, 60° N turns easterly; a further
+event requires 20 consecutive westerly days in between; a reversal not followed
+by 10 consecutive westerly days before 30 April is a final warming and is
+excluded. Applied to NCEP–NCAR reanalysis 1958–2023, this detector reproduces
+all 39 NCEP–NCAR central dates of the compendium^13^ to the day, with no
+additional events. Members with fewer than 15 events are not used (one member
+of an eleventh model). Predictors: 10, 50 and 100 hPa zonal wind at 60° N and
+over the cap in windows before, at and after onset, plus seasonality; 20, 26 and
+38 features in the three sets. Response: each member's annular-mode index
+(leading EOF of zonal-mean sea-level pressure, 20–90° N) averaged over the
+November–April days of days +8..+52; for 18% of events, mostly March onsets,
+fewer than 44 of the 45 days are available (minimum 14). Ridge regression,
+five-fold cross-validation grouped by member, all variables standardised within
+member; R² is computed on the pooled out-of-fold predictions. The null repeats
+the pipeline on 1,000 draws of pseudo-onsets, each with the same members, onset
+counts and calendar days as the real set, taken only from days more than 135
+days from every real onset, so that no pseudo-event's −60..+75-day neighbourhood
+overlaps a real event's; in 1,022 of 20,000 member-draws some pseudo-onsets lack
+enough in-season outcome days, which lowers the null and so errs against our
+conclusion. A cluster bootstrap (1,000 resamples of members) gives the second
+interval. The implied R² of a split is q(1−q)C²/Var(Y), computed in each dataset
+on the events the criterion was applied to. For the observed AO (43 events), the
+criterion's third condition uses the NCEP–NCAR 100 hPa NAM, which begins in 1979,
+so the 13 earlier events are judged on conditions 1–2; applying it instead with
+the ERA5 150 hPa NAM gives identical labels (30 of 43 downward). The 20 members come from 10 models
+(10 are CanESM5), so
 standardisation and resampling are by member. Each draw and replicate has its own seeded stream, so the results are
 identical at any degree of parallelism.
 
@@ -292,8 +329,9 @@ removed in a sensitivity.
 
 **Loeffel comparison (Extended Data Fig. 1).** Week-2 (days 8–14) 100 hPa polar-cap
 geopotential height against days 15–25 polar-cap sea-level pressure, correlated
-across members within each ensemble; Fisher-z pooling; nudged-minus-control
-difference on matched ensembles; permutation p-values. A pre-specified design
+across members within each ensemble; Fisher-z pooling weighted by n − 3;
+nudged-minus-control difference on matched ensembles, with a normal-theory
+interval and p-value on the Fisher-z scale. A pre-specified design
 gate required the nudged/control spread ratio at 100 hPa to exceed 0.5 (median
 0.96).
 
@@ -339,22 +377,26 @@ several that would have changed a result, are logged in the repository.
     (SNAPSI): a protocol for investigating the role of stratospheric polar vortex
     disturbances in subseasonal to seasonal forecasts. *Geosci. Model Dev.* **15**,
     5073–5092 (2022). doi:10.5194/gmd-15-5073-2022
-11. Butler, A. H., Sjoberg, J. P., Seidel, D. J. & Rosenlof, K. H. A sudden
-    stratospheric warming compendium. *Earth Syst. Sci. Data* **9**, 63–76 (2017).
-    doi:10.5194/essd-9-63-2017
-12. Hersbach, H. et al. The ERA5 global reanalysis. *Q. J. R. Meteorol. Soc.* **146**,
-    1999–2049 (2020). doi:10.1002/qj.3803
-13. Rasp, S. et al. WeatherBench 2: a benchmark for the next generation of
-    data-driven global weather models. *J. Adv. Model. Earth Syst.* **16**,
-    e2023MS004019 (2024). doi:10.1029/2023MS004019
-14. Charlton, A. J. & Polvani, L. M. A new look at stratospheric sudden warmings.
-    Part I: Climatology and modeling benchmarks. *J. Clim.* **20**, 449–469 (2007).
-    doi:10.1175/JCLI3996.1
-15. Lu, R. & Rao, J. Sorting sudden stratospheric warmings with the downward
+11. Spaeth, J., Rupp, P., Garny, H. & Birner, T. Stratospheric impact on subseasonal
+    forecast uncertainty in the northern extratropics. *Commun. Earth Environ.* **5**,
+    126 (2024). doi:10.1038/s43247-024-01292-z
+12. Lu, R. & Rao, J. Sorting sudden stratospheric warmings with the downward
     tropospheric influence using ERA5 and CESM2-WACCM. *Atmos. Chem. Phys.* **26**,
     3723–3742 (2026). doi:10.5194/acp-26-3723-2026
-
-*Before submission: read Nebel et al. (ref. 5) in full — only its abstract has been read, and the text cites only what the abstract states.*
+13. Butler, A. H., Sjoberg, J. P., Seidel, D. J. & Rosenlof, K. H. A sudden
+    stratospheric warming compendium. *Earth Syst. Sci. Data* **9**, 63–76 (2017).
+    doi:10.5194/essd-9-63-2017
+14. Lee, S. H., Butler, A. H. & Manney, G. L. Two major sudden stratospheric
+    warmings during winter 2023/2024. *Weather* **80**, 45–53 (2025).
+    doi:10.1002/wea.7656
+15. Hersbach, H. et al. The ERA5 global reanalysis. *Q. J. R. Meteorol. Soc.* **146**,
+    1999–2049 (2020). doi:10.1002/qj.3803
+16. Rasp, S. et al. WeatherBench 2: a benchmark for the next generation of
+    data-driven global weather models. *J. Adv. Model. Earth Syst.* **16**,
+    e2023MS004019 (2024). doi:10.1029/2023MS004019
+17. Charlton, A. J. & Polvani, L. M. A new look at stratospheric sudden warmings.
+    Part I: Climatology and modeling benchmarks. *J. Clim.* **20**, 449–469 (2007).
+    doi:10.1175/JCLI3996.1
 
 ---
 
@@ -365,9 +407,11 @@ several that would have changed a result, are logged in the repository.
 SNAPSI models and four Northern Hemisphere initialisations, in units of each
 model's control spread; bars, ±1.96 s.e.; black ticks, model means; grey band,
 mean ± s.d. over models excluding ECCC. **b**, Members of all 36 ensembles, each
-re-centred on its own mean and pooled: control (grey), nudged (red) and the
-control translated by the mean shift (dashed), in units of each ensemble's control
-spread.
+re-centred on its own mean and pooled: control (grey), nudged (red, placed at the
+mean shift) and the control translated by the same shift (dashed), in units of
+each ensemble's control spread. The shift here is the mean over all 36
+ensembles, ECCC included, in these per-ensemble units, and so is larger than the
+−1.11 σ of **a**.
 
 **Fig. 2 | The downward/non-downward contrast needs no SSW.** **a**, DW-minus-NDW
 surface contrast per ensemble with the SSW imposed (nudged) and absent (control);
@@ -375,26 +419,27 @@ circles, Northern Hemisphere; triangles, Southern Hemisphere minor warming;
 black bars, means. 11 of 36 nudged ensembles have fewer than three NDW members
 (their DW rate 0.99) and cannot form a contrast. Green dashed line, the contrast a
 threshold at the mean produces on a unit Gaussian, −2√(2/π); grey dotted line,
-the published ERA5 NAO contrast of Lu & Rao^15^, −0.708, for scale only (a
+the published ERA5 NAO contrast of Lu & Rao^12^, −0.708, for scale only (a
 different index and yardstick). **b**, Fraction of members classified
 DW, all 36 Northern Hemisphere ensembles per arm.
 
 **Fig. 3 | An SSW adds no out-of-sample predictability.** **a–c**, Within-model
 cross-validated R² (variables standardised within simulation member) of the
 surface response in CMIP6 at real SSWs (red line)
-and on 1,000 event-free sets of the same size (histogram), for three predictor
+and on 1,000 event-free sets with the same onset counts (histogram), for three predictor
 sets. **d**, Event-specific R² (real minus null mean; thick bars, 95% from the
 null; thin bars, 95% from a member-cluster bootstrap) against the R² implied by
-DW/NDW contrasts: four obtained by applying the published criterion to this
-study's data (filled) and one published contrast in a different index (open, for
-scale). The implied values measure variance explained by a diagnostic split and
-are shown for scale, not as the same estimand.
+the DW/NDW split when the published criterion is applied to this study's data,
+q(1−q)C²/Var(Y) on the same events. The implied values measure variance
+explained by a diagnostic split and are shown for scale, not as the same
+estimand.
 
 **Fig. 4 | The field's two archetype events are two draws.** **a**, Nudged members
 of nine models for February 2018 (s20180125) and January 2019 (s20181213) as the
 surface NAM proxy over days +8 to +25 (negative, downward-propagating); bars,
 interquartile range; filled diamonds, ERA5; open diamonds, ERA5 with the
-model-minus-ERA5 initial offset removed; legend values are means over the eight
+model-minus-ERA5 initial offset removed, drawn where removing it moves the value
+by more than 0.25 σ; legend values are means over the eight
 models excluding ECCC. **b**, Percentile of the observed
 2018-minus-2019 difference among all member pairings of the same model; grey,
 central 95%. **c**, Observed NAM means for both events under four variants of the

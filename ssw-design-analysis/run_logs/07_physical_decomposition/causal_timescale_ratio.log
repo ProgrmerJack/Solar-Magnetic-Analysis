@@ -6,8 +6,8 @@ R = within-winter / between-winter effect at +15..+29 d
 dataset          between    within       R             95% CI
 --------------------------------------------------------------
 observations      -0.991    -0.817   +0.82 [  +0.50,  +1.09]  n=43
-CanESM5           -0.716    -0.590   +0.83 [  +0.76,  +0.89]  n=846
-MIROC6            -0.138    -0.044   +0.32 [  -4.39,  +1.03]  n=189
+CanESM5           -0.656    -0.564   +0.86 [  +0.80,  +0.93]  n=675
+MIROC6            -0.136    -0.043   +0.31 [  -4.19,  +1.71]  n=150
 
   A model can reproduce the observed COMPOSITE while getting R wrong,
   i.e. the right surface response for the wrong mechanism. The standard

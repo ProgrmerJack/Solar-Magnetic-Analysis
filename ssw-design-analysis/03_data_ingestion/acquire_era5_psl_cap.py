@@ -22,10 +22,10 @@ SOURCE
   resolution difference from the model grids, not glossed.
 
 PERIODS
-  Both NH SNAPSI winters with margin (2017-12-01 .. 2018-04-30 and
-  2018-12-01 .. 2019-04-30) and the SH case (2019-08-01 .. 2019-11-30). Both caps
-  are computed for every time, as in the SNAPSI reduction, so the question can
-  never be asked of the wrong hemisphere.
+  Every NH winter Nov-Apr 1998/99 .. 2021/22 (SNAPSI's two winters and the S2S
+  reforecast span) and the SH case (2019-08-01 .. 2019-11-30). Both caps are
+  computed for every time, as in the SNAPSI reduction, so the question can never
+  be asked of the wrong hemisphere.
 
 Output: era5_psl_cap_6h.parquet  time, psl_cap_N, psl_cap_S  (Pa)
 """
@@ -40,8 +40,13 @@ OUT = HERE / "era5_psl_cap_6h.parquet"
 STORE = ("gs://weatherbench2/datasets/era5/"
          "1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr")
 CAP_LAT = 60.0
-PERIODS = [("2017-12-01", "2018-04-30T18"), ("2018-12-01", "2019-04-30T18"),
-           ("2019-08-01", "2019-11-30T18")]
+# Every NH winter (Nov-Apr) 1998/99-2021/22 -- the span of the ECMWF S2S
+# reforecasts used by the forecast-reliability test, with margin for its
+# leave-one-year-out climatology -- plus the SH SNAPSI case. The first version
+# held only the two SNAPSI winters; the reduction is unchanged, so their values
+# are identical.
+PERIODS = ([(f"{y}-11-01", f"{y + 1}-04-30T18") for y in range(1998, 2022)]
+           + [("2019-08-01", "2019-11-30T18")])
 
 
 # WeatherBench2 stores the 60N row as 59.999999999999986, so `lat >= 60` silently

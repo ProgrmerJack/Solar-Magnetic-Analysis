@@ -223,8 +223,9 @@ def model(name):
     frames, ons = [], []
     for f in files:
         m = EP.load_member(f)
+        full = m
         m = m[np.isin(m.index.month, SEASON)].dropna()
-        o = EP.detect_ssw(m["u10"].values, m.index)
+        o = EP.detect_ssw(full["u10"].values, full.index)   # full daily series: CP07 needs contiguous days
         mem = f.stem.split("_")[1]
         d = m.rename(columns={"am": "y"})[["y"]].copy()
         d["doy"] = d.index.dayofyear
@@ -261,8 +262,9 @@ def main():
         pairs = []
         for k, f in enumerate(files):
             m = EP.load_member(f)
+            full = m
             m = m[np.isin(m.index.month, SEASON)].dropna()
-            o = EP.detect_ssw(m["u10"].values, m.index)
+            o = EP.detect_ssw(full["u10"].values, full.index)   # full daily series: CP07 needs contiguous days
             dm = m.rename(columns={"am": "y"})[["y"]].copy()
             dm["doy"] = dm.index.dayofyear
             dm["winter"] = EP.winter_of(dm.index) + 100000 * (k + 1)

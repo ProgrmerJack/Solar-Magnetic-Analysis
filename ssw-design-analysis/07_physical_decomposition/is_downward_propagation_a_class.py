@@ -23,20 +23,20 @@ THE TESTS
   1. HARTIGAN DIP STATISTIC on the per-event surface anomaly. Implemented here
      directly (the `diptest` package is not installed) as the sup-norm distance
      between the ECDF and its greatest convex minorant / least concave majorant
-     over the modal interval. Calibrated by simulation against a uniform, per
-     Hartigan & Hartigan (1985).
+     over the modal interval. Calibrated by resampling the pseudo-event pool,
+     re-centred on the event mean (see dip_pvalue for why not the uniform).
   2. GAUSSIAN MIXTURE, k=1 vs k=2, by BIC. A two-component fit will beat one
      component by chance some of the time, so the BIC difference is CALIBRATED
      against pseudo-events, which are a single population by construction.
   3. THE SHIFT TEST, which is the sharpest of the three. If SSWs merely displace
      the ordinary winter distribution rather than creating a second population,
      then Y_ssw should be distributable as Y_pseudo + constant. A two-sample KS
-     test against the optimally shifted pseudo-event distribution asks exactly
-     that. Failing to reject means a pure shift suffices and no second class is
+     test against the pseudo-event distribution shifted by the difference in
+     means asks exactly that. Failing to reject means a pure shift suffices and no second class is
      needed.
 
   Observations give n=43, which cannot settle a mixture question -- the CMIP6
-  ensemble already assembled for this project gives ~1888 events and can.
+  ensemble already assembled for this project gives ~1,500 events and can.
 
 WHAT WOULD FALSIFY THE "CONTINUUM" READING
   A significant dip statistic, a BIC preference for k=2 beyond what pseudo-events
@@ -236,7 +236,7 @@ def main():
     real = real[(real >= ao.index.min()) & (real <= ao.index.max())]
     mask = G.real_influence_mask(ao.index, real)
     clim = ao[~mask].groupby(ao[~mask].index.dayofyear).mean()
-    clean_idx = ao[~mask].index
+    clean_idx = G.zone_free_index(ao.index, real)
     doys = np.array([t.dayofyear for t in pd.DatetimeIndex(real)])
 
     Y_obs = SO.per_event(ao, real, clim)
@@ -253,18 +253,19 @@ def main():
     for f in sorted(RAW.glob("*_zm.nc")):
         try:
             m = EP.load_member(f)
+            full = m
         except Exception:
             continue
         m = m[np.isin(m.index.month, SEASON)].dropna()
         if len(m) < 2000:
             continue
-        on = EP.detect_ssw(m["u10"].values, m.index)
+        on = EP.detect_ssw(full["u10"].values, full.index)   # full daily series: CP07 needs contiguous days
         if len(on) < 15:
             continue
         am = m["am"]
         msk = C6.influence_mask(am.index, on)
         cl = am[~msk].groupby(am[~msk].index.dayofyear).mean()
-        cln = am[~msk].index
+        cln = C6.zone_free_index(am.index, on)
         dy = np.array([t.dayofyear for t in pd.DatetimeIndex(on)])
         Yc.append(C6.anom(am, on, cl, OUT_WIN))
         for _ in range(20):

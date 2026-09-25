@@ -97,7 +97,7 @@ def main():
     print(f"  dSSW {int(lab.sum())}/{len(real_s)} ({100 * rate_real:.0f}%)")
 
     mask_full = G.real_influence_mask(ao.index, real)
-    clean_idx = ao[~mask_full].index
+    clean_idx = G.zone_free_index(ao.index, real)
     clean_idx = clean_idx[(clean_idx >= lo) & (clean_idx <= hi)]
     clims = {}
     for v, s in sno.items():

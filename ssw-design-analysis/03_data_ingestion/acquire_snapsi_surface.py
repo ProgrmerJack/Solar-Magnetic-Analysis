@@ -17,7 +17,8 @@ THE CONTRAST, AND THE TRAP THAT WAS AVOIDED
   Verified from the protocol paper (Hitchcock et al., GMD 15, 5073, 2022):
     nudged  -- "the zonally symmetric stratospheric state is nudged globally to
                 the observed time evolution of the stratospheric event of
-                interest", 50-90 hPa, 6-hourly relaxation
+                interest", full strength above 50 hPa tapering to none
+                below 90 hPa, 6-hour relaxation timescale
     control -- "nudged globally to a time-evolving climatological state"
                (1979-2019 climatology), SAME nudging machinery
     free    -- "the atmosphere evolves freely after initialization", NO nudging
@@ -36,10 +37,10 @@ THE CONTRAST, AND THE TRAP THAT WAS AVOIDED
   between them is reported as such.
 
 WHAT IS DOWNLOADED
-  psl (sea level pressure), 6hrPt, 45-day forecasts, global 1 deg, for the four
-  NH initialisations, experiments `nudged` and `control`, across the cheapest
-  centres that carry both. Each file is reduced IN MEMORY to a cos-weighted
-  60-90N polar-cap mean and discarded; only the reduced series are written, so the
+  psl (sea level pressure), 6hrPt, 45-60 day forecasts, for all six
+  initialisations (four NH, two SH), experiments `nudged` and `control`, across
+  every centre that carries both. Each file is reduced IN MEMORY to cos-weighted
+  60-90N and 60-90S polar-cap means and discarded; only the reduced series are written, so the
   ~12 GB of transfer leaves a few MB on disk.
 
 AUTH
@@ -85,8 +86,8 @@ ALL_INITS = NH_INITS + SH_INITS
 EXPERIMENTS = ["nudged", "control"]
 
 # Every centre in the archive carrying psl for both experiments. NRL is retained
-# in the manifest but its submission is corrupt -- nudged and control are
-# byte-identical at three of four initialisations -- and the analysis scripts
+# in the manifest but its submission is defective -- nudged and control members
+# differ by at most 0.023 Pa at three of four initialisations -- and the analysis scripts
 # exclude it by their own guard, not by this list.
 ALL_CENTRES = ["CCCma", "CNR-ISAC", "ECCC", "ECMWF", "KMA", "Meteo-France",
                "NCAR", "NRL", "SNU", "UKMO"]

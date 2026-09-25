@@ -12,8 +12,8 @@ WHY THIS IS THE CLEAN EXPERIMENT
   manufactured" always rests on a modelled or pseudo-event null.
 
   SNAPSI removes that weakness. In the `nudged` runs the stratosphere of EVERY
-  member is nudged to the SAME observed evolution (zonally symmetric, 50-90 hPa,
-  6-hourly). Members differ ONLY in tropospheric initial condition and internal
+  member is nudged to the SAME observed evolution (zonally symmetric, full
+  strength above 50 hPa tapering to none below 90 hPa, 6-hour timescale). Members differ ONLY in tropospheric initial condition and internal
   noise. The stratospheric driver is therefore identical across members BY
   CONSTRUCTION -- not modelled, not assumed, not matched: identical.
 
@@ -37,9 +37,9 @@ WHAT IS APPLIED
   annular mode, the usual sign convention.
 
 GUARD
-  NRL is excluded: its `nudged` and `control` submissions are byte-identical for
-  three of four initialisations, which is a corrupt submission rather than a
-  null result. The guard re-checks this rather than trusting the note.
+  NRL is excluded: its `nudged` and `control` members differ by at most 0.023 Pa
+  at three of four initialisations, which is a defective submission rather than
+  a null result. The guard re-checks this rather than trusting the note.
 
 Output: results/current/8_experiment/snapsi_selection_test.json
 """
@@ -73,7 +73,7 @@ INIT_DATE = {"s20180125": "2018-01-25", "s20180208": "2018-02-08",
 #     AND to a weaker, different class of event -- not to the same event mirrored.
 #  2. s20191001 initialises 13 days AFTER the central date, so its post-onset
 #     coverage starts at +13 and it cannot span the +8..+25 window at all. Only
-#     s20190829 (onset at lead +20) covers it, giving 9 ensembles per arm.
+#     s20190829 (onset at lead +20) covers it, giving 8 ensembles per arm.
 SH_ONSET = {"s20190829": "2019-09-18", "s20191001": "2019-09-18"}
 SH_INIT_DATE = {"s20190829": "2019-08-29", "s20191001": "2019-10-01"}
 ONSET_ALL = {**ONSET, **SH_ONSET}

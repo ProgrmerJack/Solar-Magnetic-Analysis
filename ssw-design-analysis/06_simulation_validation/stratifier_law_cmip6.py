@@ -85,6 +85,26 @@ def influence_mask(index, onsets):
     return m
 
 
+def zone_free_index(index, real_onsets):
+    """Candidate pseudo-onset days whose OWN influence zone overlaps no real
+    event's zone: |d - o| > INFLUENCE[1] - INFLUENCE[0] for every real onset o.
+
+    Cleaning only the onset day (the previous practice) still let a pseudo-
+    event's predictor, placebo and outcome windows run into a real SSW's
+    response -- 6.3% of CMIP6 and 4.3% of ERA5 pseudo outcome windows, found by
+    the methods audit 2026-09-25 -- which makes the null resemble real events and
+    biases "event-specific" toward zero. A pseudo-event now gets the same
+    exclusion zone a real one does; in practice it comes from an SSW-free winter.
+    """
+    dd = pd.DatetimeIndex(index).values.astype("datetime64[D]")
+    ok = np.ones(len(dd), bool)
+    sep = INFLUENCE[1] - INFLUENCE[0]
+    for o in real_onsets:
+        lag = (dd - np.datetime64(pd.Timestamp(o), "D")).astype(int)
+        ok &= np.abs(lag) > sep
+    return pd.DatetimeIndex(index)[ok]
+
+
 def draw_pseudo(clean_index, doys, rng):
     by = {}
     for t in clean_index:
@@ -133,6 +153,7 @@ def main():
         model = f.name.split("_")[0]
         try:
             m = EP.load_member(f)
+            full = m
         except Exception as e:
             print(f"  {f.name}: SKIP ({e})")
             continue
@@ -140,7 +161,7 @@ def main():
         if len(m) < 2000:
             print(f"  {f.name}: SKIP (only {len(m)} days)")
             continue
-        on = EP.detect_ssw(m["u10"].values, m.index)
+        on = EP.detect_ssw(full["u10"].values, full.index)   # full daily series: CP07 needs contiguous days
         if len(on) < 15:
             print(f"  {f.name}: SKIP ({len(on)} events)")
             continue
@@ -149,7 +170,7 @@ def main():
         am = m["am"]
         msk = influence_mask(am.index, on)
         clim = am[~msk].groupby(am[~msk].index.dayofyear).mean()
-        clean = am[~msk].index
+        clean = zone_free_index(am.index, on)
         doys = np.array([t.dayofyear for t in pd.DatetimeIndex(on)])
 
         Yr = anom(am, on, clim, OUT_WIN)

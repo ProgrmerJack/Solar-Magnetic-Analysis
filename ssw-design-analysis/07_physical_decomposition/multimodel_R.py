@@ -65,10 +65,11 @@ def model_pairs(name):
     pairs, n_ssw, n_win = [], 0, 0
     for k, f in enumerate(files):
         m = EP.load_member(f)
+        full = m
         m = m[np.isin(m.index.month, SEASON)].dropna()
         if len(m) < 5000:
             continue
-        o = EP.detect_ssw(m["u10"].values, m.index)
+        o = EP.detect_ssw(full["u10"].values, full.index)   # full daily series: CP07 needs contiguous days
         d = m.rename(columns={"am": "y"})[["y"]].copy()
         d["doy"] = d.index.dayofyear
         off = 100000 * (k + 1)

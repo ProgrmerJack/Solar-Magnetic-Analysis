@@ -1,32 +1,21 @@
 building CMIP6 event table ...
 
 ==============================================================================
-=== CMIP6: n=1888 events, 38 features, 20 groups ===
-  P1 pre-onset                   ridge  CV R^2 = +0.1026   null p95 = +0.0094   p = 0.000   SKILL
-  P1 pre-onset                   gb     CV R^2 = +0.0532   null p95 = -0.0222   p = 0.000   SKILL
-  P2 at-onset                    ridge  CV R^2 = +0.1133   null p95 = +0.0115   p = 0.000   SKILL
-  P2 at-onset                    gb     CV R^2 = +0.0644   null p95 = -0.0110   p = 0.000   SKILL
-  P3 + post-onset stratosphere   ridge  CV R^2 = +0.4226   null p95 = +0.0160   p = 0.000   SKILL
-  P3 + post-onset stratosphere   gb     CV R^2 = +0.3719   null p95 = -0.0089   p = 0.000   SKILL
+=== CMIP6: n=1517 events, 38 features, 20 groups ===
+  P1 pre-onset                   ridge  CV R^2 = +0.0839   null p95 = +0.0020   p = 0.000   SKILL
+  P1 pre-onset                   gb     CV R^2 = +0.0259   null p95 = -0.0374   p = 0.000   SKILL
+  P2 at-onset                    ridge  CV R^2 = +0.0917   null p95 = +0.0023   p = 0.000   SKILL
+  P2 at-onset                    gb     CV R^2 = +0.0379   null p95 = -0.0412   p = 0.000   SKILL
+  P3 + post-onset stratosphere   ridge  CV R^2 = +0.4073   null p95 = +0.0050   p = 0.000   SKILL
+  P3 + post-onset stratosphere   gb     CV R^2 = +0.3513   null p95 = -0.0226   p = 0.000   SKILL
 
   POWER (P2 features, ridge):
-    permutation 95th percentile R^2 = +0.0122
-    injected R^2 0.02 -> detection rate 0.57
+    permutation 95th percentile R^2 = +0.0009
+    injected R^2 0.02 -> detection rate 0.75
     injected R^2 0.05 -> detection rate 1.00
     injected R^2 0.10 -> detection rate 1.00
     injected R^2 0.20 -> detection rate 1.00
 
-  implied R^2 of published splits (Var CMIP6 = 0.519, Var obs = 1.117):
-    CMIP6 DW-NDW contrast            implies R^2 = 0.629   (6.1x the 0.103 achievable out of sample)
-    Karpechko AO, observations       implies R^2 = 0.597   (5.8x the 0.103 achievable out of sample)
-    ERA5 1000 hPa NAM, Karpechko     implies R^2 = 0.104   (1.0x the 0.103 achievable out of sample)
-    ERA5 850 hPa NAM, ACP            implies R^2 = 0.088   (0.9x the 0.103 achievable out of sample)
-    ACP 26,3723 published NAO (unmatched index) implies R^2 = 0.104   (1.0x the 0.103 achievable out of sample)
-
-  NOT every published contrast is an overclaim on this metric: the
-  two ERA5 contrasts imply R^2 ~ 0.09-0.10, essentially equal to the
-  genuine predictable variance. The large ones (CMIP6 DW-NDW, and the
-  observational AO) imply ~0.60, which exceeds even the post-onset
-  diagnostic value and is ~6x what can be predicted in advance.
+  CMIP6, Karpechko conditions 1-2: DW fraction 0.704, contrast -1.154, implied R^2 = 0.527 (n=1516)   pre-onset CV R^2 = +0.084
 
 Saved -> predictability_ceiling.json
