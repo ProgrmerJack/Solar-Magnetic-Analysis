@@ -202,12 +202,18 @@ def measure_time_origin(tok, sample=3):
     return table
 
 
+class MissingTimeOrigin(Exception):
+    """An ensemble with no measured lead-0 time. Not a transfer error: fetch
+    loops re-raise it immediately instead of retrying the download."""
+
+
 def origin_days(centre, experiment, init):
     """Measured offset of lead 0 from 00 UTC on the init date, in days."""
     table = json.loads(TIME_ORIGIN.read_text())
     k = f"{centre}|{experiment}|{init}"
     if k not in table:
-        raise KeyError(f"no measured time origin for {k}; run --measure-time-origin")
+        raise MissingTimeOrigin(f"no measured time origin for {k}; "
+                                f"run --measure-time-origin")
     return table[k]["offset_hours"] / 24.0
 
 
@@ -362,6 +368,8 @@ def fetch_reduce(row, tok):
             out.to_parquet(tmp)
             tmp.replace(cf)
             return out
+        except MissingTimeOrigin:
+            raise
         except (ImportError, ModuleNotFoundError) as exc:
             # Not transient. Retrying a missing backend just re-downloads the
             # file four times and reports it as a network problem: this cost a

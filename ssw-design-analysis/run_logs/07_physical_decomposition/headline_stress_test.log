@@ -1,5 +1,5 @@
 building real and PSEUDO event tables from CMIP6 ...
-real events 1,888 | pseudo-events 11,323
+real events 1,888 | pseudo-events 11,321
 
 ============================================================================
 === ATTACK 1: is the P3 gain mediation, or structural covariance? ===
@@ -8,9 +8,9 @@ real events 1,888 | pseudo-events 11,323
 
   tier                                  real    pseudo  reading
   --------------------------------------------------------------------
-  P1 pre-onset                       +0.0998   +0.0603  structural
-  P2 at-onset                        +0.1121   +0.0733  structural
-  P3 + post-onset stratosphere       +0.4245   +0.3857  structural
+  P1 pre-onset                       +0.1026   +0.0630  structural
+  P2 at-onset                        +0.1133   +0.0732  structural
+  P3 + post-onset stratosphere       +0.4226   +0.3769  structural
 
 ============================================================================
 === ATTACK 2: does R^2 scale with a model's coupling strength? ===
@@ -20,34 +20,34 @@ real events 1,888 | pseudo-events 11,323
   member                        coupling    CV R^2
   --------------------------------------------------
   BCC-ESM1_r1i1p1f1_zm            -0.368   -0.0427
+  CESM2-FV2_r1i1p1f1_zm           -0.655   -0.0102
   CanESM5_r10i1p1f1_zm            -0.636   -0.1839
-  CanESM5_r10i1p2f1_zm            -0.832   -0.0178
-  CanESM5_r11i1p1f1_zm            -0.722   +0.1729
-  CanESM5_r12i1p1f1_zm            -0.600   -0.0927
-  CanESM5_r13i1p1f1_zm            -0.761   +0.1512
+  CanESM5_r10i1p2f1_zm            -0.832   -0.0174
+  CanESM5_r11i1p1f1_zm            -0.722   +0.1301
+  CanESM5_r12i1p1f1_zm            -0.600   -0.0604
+  CanESM5_r13i1p1f1_zm            -0.761   +0.1311
   CanESM5_r14i1p1f1_zm            -0.438   -0.0536
-  CanESM5_r15i1p1f1_zm            -0.565   -0.0359
+  CanESM5_r15i1p1f1_zm            -0.565   -0.0279
   CanESM5_r16i1p1f1_zm            -0.668   -0.0562
   CanESM5_r17i1p1f1_zm            -0.752   +0.0231
   CanESM5_r18i1p1f1_zm            -0.558   +0.0490
-  CESM2-FV2_r1i1p1f1_zm           -0.655   -0.0298
   GFDL-CM4_r1i1p1f1_zm            -0.273   -0.0391
   INM-CM5-0_r1i1p1f1_zm           -0.417   +0.0561
-  IPSL-CM5A2-INCA_r1i1p1f1_zm     -0.709   +0.0111
-  MIROC6_r10i1p1f1_zm             -0.136   +0.1014
-  MIROC6_r1i1p1f1_zm              -0.144   -0.0135
+  IPSL-CM5A2-INCA_r1i1p1f1_zm     -0.709   -0.0255
+  MIROC6_r10i1p1f1_zm             -0.136   +0.0411
+  MIROC6_r1i1p1f1_zm              -0.144   -0.0130
   MPI-ESM-1-2-HAM_r1i1p1f1_zm     -0.514   +0.0069
-  MPI-ESM1-2-LR_r1i1p1f1_zm       -0.389   -0.0266
+  MPI-ESM1-2-LR_r1i1p1f1_zm       -0.389   -0.0273
   NorESM2-LM_r1i1p1f1_zm          -0.015   -0.0277
 
-  regression of CV R^2 on |coupling|: slope +0.0300, r = +0.085
-  extrapolated to the observed coupling of 1.026: R^2 ~ +0.0131
+  regression of CV R^2 on |coupling|: slope +0.0370, r = +0.123
+  extrapolated to the observed coupling of 1.026: R^2 ~ +0.0118
 
 ============================================================================
 === ATTACK 3: in-sample vs out-of-sample, the like-for-like check ===
-  P1 pre-onset                     in-sample +0.1152   out-of-sample +0.0998   optimism +0.0154
-  P2 at-onset                      in-sample +0.1275   out-of-sample +0.1121   optimism +0.0154
-  P3 + post-onset stratosphere     in-sample +0.4567   out-of-sample +0.4245   optimism +0.0323
+  P1 pre-onset                     in-sample +0.1152   out-of-sample +0.1026   optimism +0.0125
+  P2 at-onset                      in-sample +0.1275   out-of-sample +0.1133   optimism +0.0142
+  P3 + post-onset stratosphere     in-sample +0.4567   out-of-sample +0.4226   optimism +0.0341
 
   The published splits' implied R^2 of 0.63 is an UNVALIDATED,
   outcome-based, in-sample quantity. Compare it against the in-sample

@@ -3,18 +3,18 @@ n=1888 events, 86 features (was 38), 20 groups
 
 ==============================================================================
 === CMIP6+wave: n=1888 events, 86 features, 20 groups ===
-  P1 pre-onset                   ridge  CV R^2 = +0.1148   null p95 = +0.0105   p = 0.000   SKILL
-  P1 pre-onset                   gb     CV R^2 = +0.0507   null p95 = -0.0128   p = 0.000   SKILL
-  P2 at-onset                    ridge  CV R^2 = +0.1133   null p95 = +0.0136   p = 0.000   SKILL
-  P2 at-onset                    gb     CV R^2 = +0.0568   null p95 = -0.0197   p = 0.000   SKILL
-  P3 + post-onset stratosphere   ridge  CV R^2 = +0.4220   null p95 = +0.0135   p = 0.000   SKILL
-  P3 + post-onset stratosphere   gb     CV R^2 = +0.3724   null p95 = -0.0117   p = 0.000   SKILL
+  P1 pre-onset                   ridge  CV R^2 = +0.1171   null p95 = +0.0145   p = 0.000   SKILL
+  P1 pre-onset                   gb     CV R^2 = +0.0633   null p95 = -0.0082   p = 0.000   SKILL
+  P2 at-onset                    ridge  CV R^2 = +0.1146   null p95 = +0.0165   p = 0.000   SKILL
+  P2 at-onset                    gb     CV R^2 = +0.0750   null p95 = -0.0097   p = 0.000   SKILL
+  P3 + post-onset stratosphere   ridge  CV R^2 = +0.4242   null p95 = +0.0166   p = 0.000   SKILL
+  P3 + post-onset stratosphere   gb     CV R^2 = +0.3790   null p95 = -0.0051   p = 0.000   SKILL
 
   tier                                  was      now     gain
   ----------------------------------------------------------
-  P1 pre-onset                      +0.0998  +0.1148  +0.0150
-  P2 at-onset                       +0.1121  +0.1133  +0.0012
-  P3 + post-onset stratosphere      +0.4245  +0.4220  -0.0025
+  P1 pre-onset                      +0.0998  +0.1171  +0.0173
+  P2 at-onset                       +0.1121  +0.1146  +0.0025
+  P3 + post-onset stratosphere      +0.4245  +0.4242  -0.0003
 
 
 === OBSERVATIONS WITH THE REAL EDDY HEAT FLUX ===
@@ -22,11 +22,11 @@ n=42 events, 35 winters
 PREDICTION MADE BEFORE RUNNING: at this n the null p95 is expected
 around 0.10-0.15, so this arm should yield a BOUND, not a detection.
 
-  vortex only (u10, z100)        CV R^2 = -0.0298   null p95 = -0.0197   p = 0.395   no skill
-  vortex + WAVE (v'T', du/dt)    CV R^2 = -0.0811   null p95 = -0.0581   p = 0.185   no skill
+  vortex only (u10, z100)        CV R^2 = -0.1264   null p95 = -0.1178   p = 0.230   no skill   | 200 fold assignments: median -0.1099, max -0.0021, positive 0%
+  vortex + WAVE (v'T', du/dt)    CV R^2 = -0.1116   null p95 = -0.1146   p = 0.003   no skill   | 200 fold assignments: median -0.1335, max +0.0168, positive 2%
 
-  wave-driving gain in observations: -0.0513
-  null p95 here is -0.0197, so any
+  wave-driving gain in observations: +0.0148
+  null p95 here is -0.1178, so any
   true effect below that is undetectable at n=42 -- as predicted.
 
 Saved -> predictability_wave_driving.json

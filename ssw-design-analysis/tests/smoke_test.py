@@ -95,12 +95,28 @@ def check_layout() -> None:
             rec("SKIP", f"snapsi {label} lead origin", "cache absent")
             continue
         files = sorted(d.glob(pat))
+        # The VALUE, not just the column's presence (review 2026-09-25).
         unmarked = [f.name for f in files
-                    if "lead_origin" not in pq.read_schema(f).names]
+                    if "lead_origin" not in pq.read_schema(f).names
+                    or set(pq.read_table(f, columns=["lead_origin"]).column(0)
+                           .to_pylist()) != {"init_00UTC"}]
         rec("PASS" if not unmarked else "FAIL", f"snapsi {label} lead origin",
             f"{len(files)} members rebased to 00 UTC on the init date" if not unmarked
             else f"{len(unmarked)} of {len(files)} not rebased (run the acquisition "
                  f"script with --rebase), e.g. {unmarked[0]}")
+
+    # The combined files are what K and N actually read; check them as well.
+    for label, f in (("psl", SSW / "03_data_ingestion" / "snapsi_polarcap_psl.parquet"),
+                     ("zg100", SSW / "03_data_ingestion" / "snapsi_polarcap_zg100.parquet")):
+        if not f.exists():
+            rec("SKIP", f"combined {label} lead origin", "file absent")
+            continue
+        names = pq.read_schema(f).names
+        vals = (set(pq.read_table(f, columns=["lead_origin"]).column(0).to_pylist())
+                if "lead_origin" in names else set())
+        rec("PASS" if vals == {"init_00UTC"} else "FAIL", f"combined {label} lead origin",
+            f"{f.name}: all rows rebased" if vals == {"init_00UTC"}
+            else f"{f.name}: lead_origin values {sorted(vals) or 'missing'} -- rebuild it")
 
     for required in ("FAILURES.md", "CLAUDE.md", "CATALOG.md"):
         rec("PASS" if (ROOT / required).exists() else "FAIL",

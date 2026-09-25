@@ -283,10 +283,13 @@ def run(name, X, y, groups, rng, res):
                         "null_mean": round(float(null.mean()), 4),
                         "null_p95": round(float(np.percentile(null, 95)), 4),
                         "p_value": round(p, 4),
-                        "significant": bool(p < 0.05)}
+                        # Skill needs BOTH beating the null and beating the
+                        # mean: a negative R^2 that is merely less bad than
+                        # shuffled data is not skill (2026-09-25).
+                        "significant": bool(p < 0.05 and obs > 0)}
             print(f"  {lab:<30s} {model:<6s} CV R^2 = {obs:+.4f}   "
                   f"null p95 = {np.percentile(null, 95):+.4f}   p = {p:.3f}"
-                  f"   {'SKILL' if p < 0.05 else 'no skill'}")
+                  f"   {'SKILL' if (p < 0.05 and obs > 0) else 'no skill'}")
         r[lab] = {"n_features": len(cols), **e}
     res[name] = r
     return r

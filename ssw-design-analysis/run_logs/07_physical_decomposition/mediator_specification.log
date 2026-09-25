@@ -1,0 +1,18 @@
+mediator             n   r(M,Y)   r(X,M)    total  indirect   mediated share  overlap
+----------------------------------------------------------------------------------------
+u10_day           6958   +0.185   -0.437   -0.152    -0.021    14.2% [   -35,   +60]   no
+u10_0_10          6954   +0.222   -0.412   -0.151    -0.069    45.2% [    +8,   +88]   no
+u10_0_20          6949   +0.250   -0.389   -0.151    -0.113    74.4% [   +42,  +125]   YES
+u10_0_30          6944   +0.261   -0.359   -0.151    -0.136    89.7% [   +59,  +143]   YES
+z100_0_20         6949   +0.278   -0.094   -0.151    -0.116    76.9% [   +41,  +151]   YES
+z10_0_20          6949   +0.148   -0.367   -0.151    -0.157   103.8% [   +68,  +159]   YES
+nam_composite     6949   +0.281   -0.256   -0.151    -0.134    88.4% [   +51,  +157]   YES
+
+  Non-overlapping specifications only (the interpretable ones):
+    u10_day         mediated share 14.2%
+    u10_0_10        mediated share 45.2%
+
+  If the share climbs steeply as the mediator captures more of the
+  persistent anomaly, the original 14% was attenuation, not physics.
+
+Saved -> mediator_specification.json

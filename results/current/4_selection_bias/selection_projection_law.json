@@ -8,7 +8,7 @@
       "corr_with_AO": 1.0,
       "predicted_bias": -0.6598,
       "measured_bias": -0.6598,
-      "error": -0.0
+      "error": 0.0
     },
     "nao": {
       "corr_with_AO": 0.2002,
@@ -40,7 +40,7 @@
     "intercept": -0.0047,
     "r": -0.9995,
     "r2": 0.999,
-    "p": 1.319003585094171e-05
+    "p": 1.3190035850941708e-05
   },
   "verdict": "LAW HOLDS"
 }

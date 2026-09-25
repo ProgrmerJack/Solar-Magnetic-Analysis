@@ -1,0 +1,16 @@
+R = within-winter / between-winter effect at +15..+29 d
+
+  R ~ 1  event-scale response -> consistent with CAUSAL stratospheric influence
+  R ~ 0  winter-scale response -> signature of a COMMON CAUSE
+
+dataset          between    within       R             95% CI
+--------------------------------------------------------------
+observations      -0.991    -0.817   +0.82 [  +0.50,  +1.09]  n=43
+CanESM5           -0.716    -0.590   +0.83 [  +0.76,  +0.89]  n=846
+MIROC6            -0.138    -0.044   +0.32 [  -4.39,  +1.03]  n=189
+
+  A model can reproduce the observed COMPOSITE while getting R wrong,
+  i.e. the right surface response for the wrong mechanism. The standard
+  composite cannot detect that; R can.
+
+Saved -> causal_timescale_ratio.json

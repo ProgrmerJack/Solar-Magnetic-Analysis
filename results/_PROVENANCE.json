@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-24T19:17:25+00:00",
+ "generated": "2026-09-25T05:02:52+00:00",
  "note": "Known-good baseline: each result was produced by the script at the recorded sha256. catalog_repo.py flags STALE when a producer's hash no longer matches. Re-record with --record only AFTER re-running the analysis.",
  "results": {
   "catalogue_sets.json": {
@@ -19,7 +19,7 @@
    "producer_sha256": {
     "ssw-design-analysis/05_corrected_estimators/canonical_event_study.py": "63de525060939d6c"
    },
-   "result_sha256_16": "9718492bc82d8b47",
+   "result_sha256_16": "2ad84f01e8acd8fa",
    "needs_rerun": false
   },
   "clean_subset.json": {
@@ -29,7 +29,7 @@
    "producer_sha256": {
     "ssw-design-analysis/05_corrected_estimators/clean_subset.py": "d7c6d32c6aa6264a"
    },
-   "result_sha256_16": "6e766d80dd816da5",
+   "result_sha256_16": "a50f9c5b476931af",
    "needs_rerun": false
   },
   "common_period.json": {
@@ -39,7 +39,7 @@
    "producer_sha256": {
     "ssw-design-analysis/05_corrected_estimators/common_period.py": "6bc45fe5fe837c6f"
    },
-   "result_sha256_16": "996a6a1a13cb100a",
+   "result_sha256_16": "659d2bfb06b41cee",
    "needs_rerun": false
   },
   "enso_confound.json": {
@@ -49,7 +49,7 @@
    "producer_sha256": {
     "ssw-design-analysis/05_corrected_estimators/enso_confound.py": "5fb6c6e06a81b483"
    },
-   "result_sha256_16": "91f369ceb0a183b6",
+   "result_sha256_16": "8ad1af523108486b",
    "needs_rerun": false
   },
   "era_split.json": {
@@ -59,7 +59,7 @@
    "producer_sha256": {
     "ssw-design-analysis/05_corrected_estimators/era_split.py": "6cfcc8fee3a2d6c9"
    },
-   "result_sha256_16": "7b577aaef878a5c7",
+   "result_sha256_16": "4d74894e8a933301",
    "needs_rerun": false
   },
   "isolated_events.json": {
@@ -69,7 +69,7 @@
    "producer_sha256": {
     "ssw-design-analysis/05_corrected_estimators/isolated_events.py": "0c2cc5cfa9098ca6"
    },
-   "result_sha256_16": "72d55d7ecb0a345c",
+   "result_sha256_16": "de1ea4e4dbf5bd2f",
    "needs_rerun": false
   },
   "isolation_interaction.json": {
@@ -79,7 +79,7 @@
    "producer_sha256": {
     "ssw-design-analysis/05_corrected_estimators/isolation_interaction.py": "193f2933ac8815eb"
    },
-   "result_sha256_16": "0f56a6a1d51946fc",
+   "result_sha256_16": "4d6e3b558970d8d4",
    "needs_rerun": false
   },
   "multi_index_event_study.json": {
@@ -89,7 +89,7 @@
    "producer_sha256": {
     "ssw-design-analysis/05_corrected_estimators/multi_index_event_study.py": "2f533f6cc36cd34a"
    },
-   "result_sha256_16": "383dabbfd760607f",
+   "result_sha256_16": "3f1c806a1570e153",
    "needs_rerun": false
   },
   "negcontrol_stability.json": {
@@ -99,7 +99,7 @@
    "producer_sha256": {
     "ssw-design-analysis/05_corrected_estimators/negcontrol_stability.py": "331eccfa4f180449"
    },
-   "result_sha256_16": "ca730de3e021ff38",
+   "result_sha256_16": "6751656d48bef99d",
    "needs_rerun": false
   },
   "seed_stability.json": {
@@ -109,7 +109,7 @@
    "producer_sha256": {
     "ssw-design-analysis/05_corrected_estimators/seed_stability.py": "7110403a6f665243"
    },
-   "result_sha256_16": "1b0e2335b3c96d3e",
+   "result_sha256_16": "d69b7ac57c080e9e",
    "needs_rerun": false
   },
   "aao_null.json": {
@@ -119,7 +119,7 @@
    "producer_sha256": {
     "ssw-design-analysis/06_simulation_validation/aao_null.py": "636da89e80351e2d"
    },
-   "result_sha256_16": "9226a52851bf3acc",
+   "result_sha256_16": "e79f34277b3fd86b",
    "needs_rerun": false
   },
   "ao_null_perbin.json": {
@@ -129,7 +129,7 @@
    "producer_sha256": {
     "ssw-design-analysis/06_simulation_validation/ao_null_perbin.py": "177c5430f3d992c8"
    },
-   "result_sha256_16": "f677e9413fa9fcf0",
+   "result_sha256_16": "bbd57d4a279ce3f2",
    "needs_rerun": false
   },
   "boot_calibration.json": {
@@ -139,7 +139,7 @@
    "producer_sha256": {
     "ssw-design-analysis/06_simulation_validation/boot_calibration.py": "87f2f8d8899a615e"
    },
-   "result_sha256_16": "ba14ef85f3e39961",
+   "result_sha256_16": "a2f69dae0e21d78a",
    "needs_rerun": false
   },
   "calibration_results.json": {
@@ -149,7 +149,7 @@
    "producer_sha256": {
     "ssw-design-analysis/06_simulation_validation/calibrate_seasonality.py": "d0df387de0b919aa"
    },
-   "result_sha256_16": "670e33d28b3a3cc8",
+   "result_sha256_16": "88119e150d8bb44f",
    "needs_rerun": false
   },
   "gate3_clean_null.json": {
@@ -159,7 +159,7 @@
    "producer_sha256": {
     "ssw-design-analysis/06_simulation_validation/gate3_clean_null.py": "83d9818232161719"
    },
-   "result_sha256_16": "80ebd1a0a21ac6f9",
+   "result_sha256_16": "71f92703e499279d",
    "needs_rerun": false
   },
   "spatial_calibration.json": {
@@ -177,9 +177,9 @@
     "ssw-design-analysis/06_simulation_validation/calibrate_station_level.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/06_simulation_validation/calibrate_station_level.py": "abf86f6b35534678"
+    "ssw-design-analysis/06_simulation_validation/calibrate_station_level.py": "31e0be2037fe176a"
    },
-   "result_sha256_16": "ab64b055b44ebf47",
+   "result_sha256_16": "7b00ddb8fd5165de",
    "needs_rerun": false
   },
   "validate_R_diagnostic.json": {
@@ -189,7 +189,7 @@
    "producer_sha256": {
     "ssw-design-analysis/06_simulation_validation/validate_R_diagnostic.py": "35236d01a1c4ec7e"
    },
-   "result_sha256_16": "b955610fe9008a07",
+   "result_sha256_16": "98dd69eb09649328",
    "needs_rerun": false
   },
   "selection_law_enso.json": {
@@ -199,7 +199,7 @@
    "producer_sha256": {
     "ssw-design-analysis/06_simulation_validation/selection_law_enso.py": "cbcc2f7452ac92b0"
    },
-   "result_sha256_16": "13764e6b198125c7",
+   "result_sha256_16": "49acbbea6ddc0b95",
    "needs_rerun": false
   },
   "selection_on_outcome.json": {
@@ -209,7 +209,7 @@
    "producer_sha256": {
     "ssw-design-analysis/06_simulation_validation/selection_on_outcome.py": "560d47dcd918f9e2"
    },
-   "result_sha256_16": "833301c6bc2b9601",
+   "result_sha256_16": "44a5ee71d6a0992c",
    "needs_rerun": false
   },
   "selection_projection_law.json": {
@@ -219,7 +219,7 @@
    "producer_sha256": {
     "ssw-design-analysis/06_simulation_validation/selection_projection_law.py": "9e41014bba32bfc1"
    },
-   "result_sha256_16": "09002bd822ca8549",
+   "result_sha256_16": "d228520df7cbe102",
    "needs_rerun": false
   },
   "selection_snotel.json": {
@@ -229,7 +229,7 @@
    "producer_sha256": {
     "ssw-design-analysis/06_simulation_validation/selection_snotel.py": "cac3878a3482764a"
    },
-   "result_sha256_16": "a1419fe776553288",
+   "result_sha256_16": "cd2b95bedc9df3bb",
    "needs_rerun": false
   },
   "stratifier_bias_law.json": {
@@ -239,7 +239,7 @@
    "producer_sha256": {
     "ssw-design-analysis/06_simulation_validation/stratifier_bias_law.py": "1b8bb1f38e2da316"
    },
-   "result_sha256_16": "183c6b66a5b33c0f",
+   "result_sha256_16": "d8da6c4a0e9b97fd",
    "needs_rerun": false
   },
   "stratifier_bias_law_1958.json": {
@@ -259,7 +259,7 @@
    "producer_sha256": {
     "ssw-design-analysis/06_simulation_validation/stratifier_inference.py": "b0097aa697a778f9"
    },
-   "result_sha256_16": "e034221b9bc36631",
+   "result_sha256_16": "42dfa7037b703a03",
    "needs_rerun": false
   },
   "stratifier_law_cmip6.json": {
@@ -269,7 +269,7 @@
    "producer_sha256": {
     "ssw-design-analysis/06_simulation_validation/stratifier_law_cmip6.py": "ee6a458c78371fe3"
    },
-   "result_sha256_16": "28210d29a242b4bd",
+   "result_sha256_16": "bf715c5f14947a03",
    "needs_rerun": false
   },
   "R_gap_sensitivity.json": {
@@ -279,7 +279,7 @@
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/R_gap_sensitivity.py": "c2608c93d580e9d9"
    },
-   "result_sha256_16": "dd4bf33d44110dd6",
+   "result_sha256_16": "9f9e6aaee228534c",
    "needs_rerun": false
   },
   "R_profile.json": {
@@ -289,7 +289,7 @@
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/R_profile.py": "190a01b6d9f7e969"
    },
-   "result_sha256_16": "631b4faf0cb633fb",
+   "result_sha256_16": "059f82658ac0243f",
    "needs_rerun": false
   },
   "causal_timescale_ratio.json": {
@@ -299,7 +299,7 @@
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/causal_timescale_ratio.py": "244da556c9e8e4f9"
    },
-   "result_sha256_16": "251ef2c7c4469793",
+   "result_sha256_16": "af1f4a354106fec4",
    "needs_rerun": false
   },
   "continuous_mediation.json": {
@@ -309,7 +309,7 @@
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/continuous_mediation.py": "b674deff426b7c35"
    },
-   "result_sha256_16": "4ab6487c0c79b4ce",
+   "result_sha256_16": "cab93813578cb2ed",
    "needs_rerun": false
   },
   "design_sensitivity.json": {
@@ -319,7 +319,7 @@
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/design_sensitivity.py": "156475db4c34916b"
    },
-   "result_sha256_16": "91173433e23660a8",
+   "result_sha256_16": "826b2cb77be39f7a",
    "needs_rerun": false
   },
   "granger_direction.json": {
@@ -339,7 +339,7 @@
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/mediation_disattenuated.py": "e7162868d434bd53"
    },
-   "result_sha256_16": "33ed0048caf1aa03",
+   "result_sha256_16": "0df81256d52f6179",
    "needs_rerun": false
   },
   "mediator_specification.json": {
@@ -349,7 +349,7 @@
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/mediator_specification.py": "b9ca488b090cf635"
    },
-   "result_sha256_16": "9eda1e7e2afbf742",
+   "result_sha256_16": "ce8337220055af06",
    "needs_rerun": false
   },
   "multimodel_R.json": {
@@ -359,7 +359,7 @@
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/multimodel_R.py": "6a88255f48d62e42"
    },
-   "result_sha256_16": "cae569ca6a20fb3e",
+   "result_sha256_16": "de327c13a4752cce",
    "needs_rerun": false
   },
   "forced_variance_ceiling.json": {
@@ -367,9 +367,9 @@
     "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py": "7d34eaafc46e6376"
+    "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py": "b0a2fe3b05e33682"
    },
-   "result_sha256_16": "0a25b8e4224c8208",
+   "result_sha256_16": "daf5cfdc746d9281",
    "needs_rerun": false
   },
   "headline_stress_test.json": {
@@ -379,7 +379,7 @@
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/headline_stress_test.py": "79a5baed4d60beec"
    },
-   "result_sha256_16": "8bde1d61add6278d",
+   "result_sha256_16": "39ec5b7bc614a086",
    "needs_rerun": false
   },
   "is_downward_propagation_a_class.json": {
@@ -389,7 +389,7 @@
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/is_downward_propagation_a_class.py": "857c8761608b0108"
    },
-   "result_sha256_16": "7012f875f912faa8",
+   "result_sha256_16": "855bfb45e83e824e",
    "needs_rerun": false
   },
   "predictability_ceiling.json": {
@@ -397,7 +397,7 @@
     "ssw-design-analysis/07_physical_decomposition/predictability_ceiling.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/predictability_ceiling.py": "9ae0637d0888bbca"
+    "ssw-design-analysis/07_physical_decomposition/predictability_ceiling.py": "c8cfa1aa319f9e13"
    },
    "result_sha256_16": "89929bd2a1395edb",
    "needs_rerun": false
@@ -407,9 +407,9 @@
     "ssw-design-analysis/07_physical_decomposition/predictability_wave_driving.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/predictability_wave_driving.py": "ca09ac629ced593a"
+    "ssw-design-analysis/07_physical_decomposition/predictability_wave_driving.py": "530452b8e9b60911"
    },
-   "result_sha256_16": "beb9df31ef2fb740",
+   "result_sha256_16": "8e57881a6c8b065b",
    "needs_rerun": false
   },
   "within_model_check.json": {
@@ -429,7 +429,7 @@
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/consensus_monotonicity.py": "5238237b5ad1ce3a"
    },
-   "result_sha256_16": "895228c318b340d8",
+   "result_sha256_16": "ab93e027154e73e9",
    "needs_rerun": false
   },
   "ensemble_precursor_CanESM5.json": {
@@ -459,7 +459,7 @@
    "producer_sha256": {
     "ssw-design-analysis/06_simulation_validation/era_dependence_gate.py": "c152f59447efca3a"
    },
-   "result_sha256_16": "b50b1e0c540f6666",
+   "result_sha256_16": "f69861ce26a3da7e",
    "needs_rerun": false
   },
   "marginal_events.json": {
@@ -469,7 +469,7 @@
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/marginal_events.py": "33d183b910c2d49a"
    },
-   "result_sha256_16": "5ee12588081c16ff",
+   "result_sha256_16": "8a1b3cb002cef128",
    "needs_rerun": false
   },
   "snapsi_archetype_test.json": {
@@ -509,7 +509,7 @@
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/snapsi_loeffel_test.py": "c269aa052f735ae9"
    },
-   "result_sha256_16": "ad7f2b83f81b7812",
+   "result_sha256_16": "5843507bdcd23426",
    "needs_rerun": false
   },
   "snapsi_selection_test.json": {
@@ -539,7 +539,7 @@
    "producer_sha256": {
     "ssw-design-analysis/08_literature_audit/loeffel2025_missing_control.py": "2d674fa3c89b0d6d"
    },
-   "result_sha256_16": "56e5b7de3bed9e29",
+   "result_sha256_16": "b62dddd8831e0765",
    "needs_rerun": false
   },
   "recompute_published_criterion.json": {

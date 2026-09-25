@@ -1,0 +1,52 @@
+outcome window set to +150..+300 d (the winter following onset)
+El Nino onsets (ONI >= 0.5): 14 in 1980-01-01..2026-04-02
+  ['1982-05-15', '1986-09-15', '1991-06-15', '1993-03-15', '1994-09-15', '1997-05-15', '2002-06-15', '2004-08-15'] ...
+  usable events: 13/14
+  classified 'teleconnecting' on the outcome: 12/13 (92%)
+  clean pseudo-onset pool: 5,618 of 16,894 calendar days
+
+  NOTE: at the natural classification rate (92%) the selection
+  is almost no selection at all -- ENSO's PNA teleconnection is far more
+  consistent than the SSW/AO one (70%), so nearly every event qualifies and
+  the bias is ~0 by construction. Testing the law at that single rate is
+  uninformative. The law is therefore tested across a SWEEP of selection
+  rates, which is a stronger test than any single rate on either phenomenon.
+  300/1200 draws
+  600/1200 draws
+  900/1200 draws
+  1200/1200 draws
+
+  rate outcome        beta   predicted   measured     error
+------------------------------------------------------------
+  0.15 pna          +1.000      +0.452     +0.452    +0.000
+  0.15 ao           -1.311      -0.593     -0.702    -0.109
+  0.15 nao          -0.365      -0.165     -0.135    +0.030
+  0.15 tavg_c       -0.044      -0.020     +0.029    +0.049
+  0.15 snwd_mm      +0.446      +0.202     -0.150    -0.351
+  0.30 pna          +1.000      +0.337     +0.337    +0.000
+  0.30 ao           -1.311      -0.442     -0.426    +0.016
+  0.30 nao          -0.365      -0.123     -0.073    +0.050
+  0.30 tavg_c       -0.044      -0.015     +0.043    +0.058
+  0.30 snwd_mm      +0.446      +0.151     +0.123    -0.028
+  0.50 pna          +1.000      +0.218     +0.218    +0.000
+  0.50 ao           -1.311      -0.286     -0.246    +0.040
+  0.50 nao          -0.365      -0.080     -0.051    +0.028
+  0.50 tavg_c       -0.044      -0.010     +0.015    +0.024
+  0.50 snwd_mm      +0.446      +0.097     +0.203    +0.106
+  0.70 pna          +1.000      +0.113     +0.113    +0.000
+  0.70 ao           -1.311      -0.148     -0.162    -0.014
+  0.70 nao          -0.365      -0.041     -0.058    -0.017
+  0.70 tavg_c       -0.044      -0.005     -0.007    -0.002
+  0.70 snwd_mm      +0.446      +0.050     +0.138    +0.088
+  0.92 pna          +1.000      +0.000     +0.000    +0.000
+  0.92 ao           -1.311      -0.000     +0.000    +0.000
+  0.92 nao          -0.365      -0.000     +0.000    +0.000
+  0.92 tavg_c       -0.044      -0.000     +0.000    +0.000
+  0.92 snwd_mm      +0.446      +0.000     +0.000    +0.000
+
+  measured vs predicted across 25 (rate x outcome) points:
+    slope +0.976 (should be 1)   intercept -0.0015 (should be 0)
+    R2 = 0.8679   P = 1.37e-11
+  -> LAW APPROXIMATE on ENSO  (on SSW it was R2 = 0.999)
+
+Saved -> selection_law_enso.json

@@ -1,0 +1,44 @@
+AO winter days 13,864; removed 5,002 within [-60,+75] d of a real onset (36%); 8,862 clean days remain across 73 winters
+diagnosis: under the old 'excluded' draw, 51% of baseline days lay inside real-event influence -> the positive bias
+    harm3: 25/300 draws, cov=0.920
+    harm3: 50/300 draws, cov=0.940
+    harm3: 75/300 draws, cov=0.933
+    harm3: 100/300 draws, cov=0.920
+    harm3: 125/300 draws, cov=0.936
+    harm3: 150/300 draws, cov=0.933
+    harm3: 175/300 draws, cov=0.937
+    harm3: 200/300 draws, cov=0.940
+    harm3: 225/300 draws, cov=0.942
+    harm3: 250/300 draws, cov=0.940
+    harm3: 275/300 draws, cov=0.938
+    harm3: 300/300 draws, cov=0.930
+  harm3            null=+0.0052 [-0.0062, 0.0166]  cov=0.93 (0.895, 0.956)  FPR=0.07 (0.044, 0.105)  pass=True
+    harm6: 25/300 draws, cov=0.920
+    harm6: 50/300 draws, cov=0.940
+    harm6: 75/300 draws, cov=0.933
+    harm6: 100/300 draws, cov=0.920
+    harm6: 125/300 draws, cov=0.936
+    harm6: 150/300 draws, cov=0.933
+    harm6: 175/300 draws, cov=0.937
+    harm6: 200/300 draws, cov=0.940
+    harm6: 225/300 draws, cov=0.942
+    harm6: 250/300 draws, cov=0.940
+    harm6: 275/300 draws, cov=0.938
+    harm6: 300/300 draws, cov=0.930
+  harm6            null=+0.0227 [0.0113, 0.0342]  cov=0.93 (0.895, 0.956)  FPR=0.07 (0.044, 0.105)  pass=True
+    cyclic_spline12: 25/300 draws, cov=0.920
+    cyclic_spline12: 50/300 draws, cov=0.940
+    cyclic_spline12: 75/300 draws, cov=0.933
+    cyclic_spline12: 100/300 draws, cov=0.920
+    cyclic_spline12: 125/300 draws, cov=0.936
+    cyclic_spline12: 150/300 draws, cov=0.933
+    cyclic_spline12: 175/300 draws, cov=0.937
+    cyclic_spline12: 200/300 draws, cov=0.940
+    cyclic_spline12: 225/300 draws, cov=0.942
+    cyclic_spline12: 250/300 draws, cov=0.940
+    cyclic_spline12: 275/300 draws, cov=0.942
+    cyclic_spline12: 300/300 draws, cov=0.937
+  cyclic_spline12  null=+0.0397 [0.0285, 0.051]  cov=0.937 (0.903, 0.961)  FPR=0.063 (0.039, 0.097)  pass=True
+
+passing: ['harm3', 'harm6', 'cyclic_spline12']
+Saved -> /home/xola/Solar-Magnetic-Analysis/results/current/3_calibration/gate3_clean_null.json

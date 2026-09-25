@@ -42,7 +42,7 @@
       "monotonicity": {
         "pre": {
           "spearman_rho": 0.2212,
-          "p_asymptotic": 0.1442075307856202,
+          "p_asymptotic": 0.14420753078562018,
           "p_permutation": 0.1468
         },
         "post": {
@@ -337,7 +337,7 @@
       "monotonicity": {
         "pre": {
           "spearman_rho": 0.2397,
-          "p_asymptotic": 0.11272558805417114,
+          "p_asymptotic": 0.1127255880541711,
           "p_permutation": 0.1154
         },
         "post": {

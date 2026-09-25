@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-24T23:17:17+00:00",
+ "generated": "2026-09-25T05:02:52+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -129,9 +129,9 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "Downloads the SNAPSI surface field and reduces it to a polar-cap index on the fly, so the CAUSAL stratosphere-to-surface effect can be measured by experimental design rather than inferred from composites.",
-   "loc": 512,
-   "modified": "2026-09-24 17:43",
-   "sha256_16": "95a48d9b8a925920",
+   "loc": 520,
+   "modified": "2026-09-25 03:23",
+   "sha256_16": "5454ea1eb634d4f1",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_manifest.csv",
@@ -145,9 +145,9 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "SNAPSI geopotential height at 100 hPa, reduced to a polar-cap mean, fetched by OPeNDAP subsetting rather than by downloading whole files.",
-   "loc": 754,
-   "modified": "2026-09-24 17:55",
-   "sha256_16": "ab73f6827ce73a03",
+   "loc": 764,
+   "modified": "2026-09-25 03:24",
+   "sha256_16": "4fbd0567f1bd2e0e",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_manifest.csv",
@@ -424,9 +424,9 @@
    "tree": "ssw-design-analysis",
    "stage": "06_simulation_validation",
    "title": "GATE 3 for STATION-LEVEL outcomes -- the case the aggregated test could not speak to.",
-   "loc": 311,
-   "modified": "2026-08-04 05:30",
-   "sha256_16": "abf86f6b35534678",
+   "loc": 315,
+   "modified": "2026-09-25 03:15",
+   "sha256_16": "31e0be2037fe176a",
    "flags": [],
    "filenames_mentioned": [
     "snotel_stations.csv",
@@ -716,9 +716,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "THE POSITIVE CLAIM UNDERNEATH THE WHOLE PROJECT, AND A HARD CEILING ON EVERY CLASSIFIER IN THIS LITERATURE.",
-   "loc": 501,
-   "modified": "2026-09-24 19:01",
-   "sha256_16": "7d34eaafc46e6376",
+   "loc": 503,
+   "modified": "2026-09-25 03:23",
+   "sha256_16": "b0a2fe3b05e33682",
    "flags": [],
    "filenames_mentioned": [
     "forced_variance_ceiling.json"
@@ -836,9 +836,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "CAN ANYONE PREDICT WHICH SSWs COUPLE DOWNWARD? OUT OF SAMPLE, WITH NO CORRECTION.",
-   "loc": 344,
-   "modified": "2026-09-24 19:01",
-   "sha256_16": "9ae0637d0888bbca",
+   "loc": 347,
+   "modified": "2026-09-25 03:43",
+   "sha256_16": "c8cfa1aa319f9e13",
    "flags": [],
    "filenames_mentioned": [
     "predictability_ceiling.json"
@@ -850,9 +850,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "CLOSES THE LAST GAP IN `predictability_ceiling.py`: NO WAVE-DRIVING PREDICTOR.",
-   "loc": 250,
-   "modified": "2026-08-04 05:30",
-   "sha256_16": "ca09ac629ced593a",
+   "loc": 274,
+   "modified": "2026-09-25 03:43",
+   "sha256_16": "530452b8e9b60911",
    "flags": [],
    "filenames_mentioned": [
     "heatflux_daily.parquet",
@@ -1015,9 +1015,9 @@
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
    "title": "fig2_selection.py -- Figure 2: the DW/NDW contrast needs no SSW.",
-   "loc": 92,
-   "modified": "2026-09-24 18:21",
-   "sha256_16": "ac273157ee6e45c9",
+   "loc": 94,
+   "modified": "2026-09-25 03:23",
+   "sha256_16": "8eecf838fdf8843a",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_selection_test.json"
@@ -1097,14 +1097,16 @@
    "tree": "ssw-design-analysis",
    "stage": "tests",
    "title": "The repository's standing checks. Every one of them exists because something here once went wrong in that exact way -- see FAILURES.md, which this file is the executable half of.",
-   "loc": 332,
-   "modified": "2026-09-24 16:51",
-   "sha256_16": "a3cd3769b76ad2d7",
+   "loc": 348,
+   "modified": "2026-09-25 03:24",
+   "sha256_16": "03c3ae137e9e0db9",
    "flags": [],
    "filenames_mentioned": [
     "CATALOG.json",
     "catalogue_checksum.txt",
-    "event_catalogue.csv"
+    "event_catalogue.csv",
+    "snapsi_polarcap_psl.parquet",
+    "snapsi_polarcap_zg100.parquet"
    ],
    "filename_prefixes": []
   },
@@ -1868,7 +1870,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-09-24 23:08",
+   "modified": "2026-09-25 03:24",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -1900,9 +1902,9 @@
    "tree": "current",
    "stage": "2_event_study",
    "readable": true,
-   "bytes": 32511,
-   "modified": "2026-07-30 18:56",
-   "sha256_16": "9718492bc82d8b47",
+   "bytes": 31185,
+   "modified": "2026-09-25 03:15",
+   "sha256_16": "2ad84f01e8acd8fa",
    "producers": [
     "ssw-design-analysis/05_corrected_estimators/canonical_event_study.py"
    ],
@@ -1948,9 +1950,9 @@
    "tree": "current",
    "stage": "2_event_study",
    "readable": true,
-   "bytes": 6127,
-   "modified": "2026-07-30 15:54",
-   "sha256_16": "6e766d80dd816da5",
+   "bytes": 5841,
+   "modified": "2026-09-25 03:15",
+   "sha256_16": "a50f9c5b476931af",
    "producers": [
     "ssw-design-analysis/05_corrected_estimators/clean_subset.py"
    ],
@@ -1989,9 +1991,9 @@
    "tree": "current",
    "stage": "2_event_study",
    "readable": true,
-   "bytes": 4105,
-   "modified": "2026-07-30 15:46",
-   "sha256_16": "996a6a1a13cb100a",
+   "bytes": 3917,
+   "modified": "2026-09-25 03:14",
+   "sha256_16": "659d2bfb06b41cee",
    "producers": [
     "ssw-design-analysis/05_corrected_estimators/common_period.py"
    ],
@@ -2029,9 +2031,9 @@
    "tree": "current",
    "stage": "2_event_study",
    "readable": true,
-   "bytes": 1245,
-   "modified": "2026-07-30 17:34",
-   "sha256_16": "91f369ceb0a183b6",
+   "bytes": 1191,
+   "modified": "2026-09-25 03:14",
+   "sha256_16": "8ad1af523108486b",
    "producers": [
     "ssw-design-analysis/05_corrected_estimators/enso_confound.py"
    ],
@@ -2061,9 +2063,9 @@
    "tree": "current",
    "stage": "2_event_study",
    "readable": true,
-   "bytes": 2045,
-   "modified": "2026-07-30 15:49",
-   "sha256_16": "7b577aaef878a5c7",
+   "bytes": 1957,
+   "modified": "2026-09-25 03:13",
+   "sha256_16": "4d74894e8a933301",
    "producers": [
     "ssw-design-analysis/05_corrected_estimators/era_split.py"
    ],
@@ -2098,9 +2100,9 @@
    "tree": "current",
    "stage": "2_event_study",
    "readable": true,
-   "bytes": 5127,
-   "modified": "2026-07-30 15:47",
-   "sha256_16": "72d55d7ecb0a345c",
+   "bytes": 4868,
+   "modified": "2026-09-25 03:13",
+   "sha256_16": "de1ea4e4dbf5bd2f",
    "producers": [
     "ssw-design-analysis/05_corrected_estimators/isolated_events.py"
    ],
@@ -2135,9 +2137,9 @@
    "tree": "current",
    "stage": "2_event_study",
    "readable": true,
-   "bytes": 1886,
-   "modified": "2026-07-30 15:53",
-   "sha256_16": "0f56a6a1d51946fc",
+   "bytes": 1801,
+   "modified": "2026-09-25 03:13",
+   "sha256_16": "4d6e3b558970d8d4",
    "producers": [
     "ssw-design-analysis/05_corrected_estimators/isolation_interaction.py"
    ],
@@ -2164,9 +2166,9 @@
    "tree": "current",
    "stage": "2_event_study",
    "readable": true,
-   "bytes": 7380,
-   "modified": "2026-07-30 18:42",
-   "sha256_16": "383dabbfd760607f",
+   "bytes": 7054,
+   "modified": "2026-09-25 03:13",
+   "sha256_16": "3f1c806a1570e153",
    "producers": [
     "ssw-design-analysis/05_corrected_estimators/multi_index_event_study.py"
    ],
@@ -2204,9 +2206,9 @@
    "tree": "current",
    "stage": "2_event_study",
    "readable": true,
-   "bytes": 623,
-   "modified": "2026-07-30 16:55",
-   "sha256_16": "ca730de3e021ff38",
+   "bytes": 595,
+   "modified": "2026-09-25 04:21",
+   "sha256_16": "6751656d48bef99d",
    "producers": [
     "ssw-design-analysis/05_corrected_estimators/negcontrol_stability.py"
    ],
@@ -2250,9 +2252,9 @@
    "tree": "current",
    "stage": "2_event_study",
    "readable": true,
-   "bytes": 1507,
-   "modified": "2026-07-30 15:58",
-   "sha256_16": "1b0e2335b3c96d3e",
+   "bytes": 1442,
+   "modified": "2026-09-25 03:34",
+   "sha256_16": "d69b7ac57c080e9e",
    "producers": [
     "ssw-design-analysis/05_corrected_estimators/seed_stability.py"
    ],
@@ -2307,9 +2309,9 @@
    "tree": "current",
    "stage": "3_calibration",
    "readable": true,
-   "bytes": 450,
-   "modified": "2026-07-30 16:57",
-   "sha256_16": "9226a52851bf3acc",
+   "bytes": 431,
+   "modified": "2026-09-25 03:13",
+   "sha256_16": "e79f34277b3fd86b",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/aao_null.py"
    ],
@@ -2342,9 +2344,9 @@
    "tree": "current",
    "stage": "3_calibration",
    "readable": true,
-   "bytes": 1945,
-   "modified": "2026-07-30 17:00",
-   "sha256_16": "f677e9413fa9fcf0",
+   "bytes": 1868,
+   "modified": "2026-09-25 03:14",
+   "sha256_16": "bbd57d4a279ce3f2",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/ao_null_perbin.py"
    ],
@@ -2378,9 +2380,9 @@
    "tree": "current",
    "stage": "3_calibration",
    "readable": true,
-   "bytes": 2640,
-   "modified": "2026-07-30 17:25",
-   "sha256_16": "ba14ef85f3e39961",
+   "bytes": 2535,
+   "modified": "2026-09-25 03:44",
+   "sha256_16": "a2f69dae0e21d78a",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/boot_calibration.py"
    ],
@@ -2410,9 +2412,9 @@
    "tree": "current",
    "stage": "3_calibration",
    "readable": true,
-   "bytes": 3792,
-   "modified": "2026-07-28 08:44",
-   "sha256_16": "670e33d28b3a3cc8",
+   "bytes": 3636,
+   "modified": "2026-09-25 04:01",
+   "sha256_16": "88119e150d8bb44f",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/calibrate_seasonality.py"
    ],
@@ -2440,9 +2442,9 @@
    "tree": "current",
    "stage": "3_calibration",
    "readable": true,
-   "bytes": 1451,
-   "modified": "2026-08-04 14:36",
-   "sha256_16": "80ebd1a0a21ac6f9",
+   "bytes": 1372,
+   "modified": "2026-09-25 05:01",
+   "sha256_16": "71f92703e499279d",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/gate3_clean_null.py"
    ],
@@ -2522,9 +2524,9 @@
    "tree": "current",
    "stage": "3_calibration",
    "readable": true,
-   "bytes": 1126,
-   "modified": "2026-07-28 22:20",
-   "sha256_16": "ab64b055b44ebf47",
+   "bytes": 1074,
+   "modified": "2026-09-25 04:50",
+   "sha256_16": "7b00ddb8fd5165de",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/calibrate_station_level.py"
    ],
@@ -2532,7 +2534,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/06_simulation_validation/calibrate_station_level.py": "abf86f6b35534678"
+    "ssw-design-analysis/06_simulation_validation/calibrate_station_level.py": "31e0be2037fe176a"
    },
    "verdicts": [],
    "counts": {
@@ -2567,9 +2569,9 @@
    "tree": "current",
    "stage": "3_calibration",
    "readable": true,
-   "bytes": 2934,
-   "modified": "2026-08-04 11:00",
-   "sha256_16": "b955610fe9008a07",
+   "bytes": 2800,
+   "modified": "2026-09-25 03:19",
+   "sha256_16": "98dd69eb09649328",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/validate_R_diagnostic.py"
    ],
@@ -2611,9 +2613,9 @@
    "tree": "current",
    "stage": "4_selection_bias",
    "readable": true,
-   "bytes": 4810,
-   "modified": "2026-07-31 06:43",
-   "sha256_16": "13764e6b198125c7",
+   "bytes": 4582,
+   "modified": "2026-09-25 03:14",
+   "sha256_16": "49acbbea6ddc0b95",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/selection_law_enso.py"
    ],
@@ -2660,9 +2662,9 @@
    "tree": "current",
    "stage": "4_selection_bias",
    "readable": true,
-   "bytes": 1330,
-   "modified": "2026-07-31 05:49",
-   "sha256_16": "833301c6bc2b9601",
+   "bytes": 1277,
+   "modified": "2026-09-25 03:16",
+   "sha256_16": "44a5ee71d6a0992c",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/selection_on_outcome.py"
    ],
@@ -2695,9 +2697,9 @@
    "tree": "current",
    "stage": "4_selection_bias",
    "readable": true,
-   "bytes": 1020,
-   "modified": "2026-07-31 06:02",
-   "sha256_16": "09002bd822ca8549",
+   "bytes": 975,
+   "modified": "2026-09-25 03:15",
+   "sha256_16": "d228520df7cbe102",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/selection_projection_law.py"
    ],
@@ -2736,9 +2738,9 @@
    "tree": "current",
    "stage": "4_selection_bias",
    "readable": true,
-   "bytes": 821,
-   "modified": "2026-07-31 05:52",
-   "sha256_16": "a1419fe776553288",
+   "bytes": 789,
+   "modified": "2026-09-25 03:15",
+   "sha256_16": "cd2b95bedc9df3bb",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/selection_snotel.py"
    ],
@@ -2769,9 +2771,9 @@
    "tree": "current",
    "stage": "4_selection_bias",
    "readable": true,
-   "bytes": 5320,
-   "modified": "2026-08-01 13:20",
-   "sha256_16": "183c6b66a5b33c0f",
+   "bytes": 5158,
+   "modified": "2026-09-25 03:16",
+   "sha256_16": "d8da6c4a0e9b97fd",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/stratifier_bias_law.py"
    ],
@@ -2800,7 +2802,8 @@
     "stratifiers",
     "n_stratifiers_passing_null",
     "n_stratifiers",
-    "verdict"
+    "verdict",
+    "stratosphere_record"
    ]
   },
   {
@@ -2848,9 +2851,9 @@
    "tree": "current",
    "stage": "4_selection_bias",
    "readable": true,
-   "bytes": 5002,
-   "modified": "2026-08-01 13:26",
-   "sha256_16": "e034221b9bc36631",
+   "bytes": 4806,
+   "modified": "2026-09-25 03:18",
+   "sha256_16": "42dfa7037b703a03",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/stratifier_inference.py"
    ],
@@ -2901,9 +2904,9 @@
    "tree": "current",
    "stage": "4_selection_bias",
    "readable": true,
-   "bytes": 2441,
-   "modified": "2026-08-01 13:33",
-   "sha256_16": "28210d29a242b4bd",
+   "bytes": 2325,
+   "modified": "2026-09-25 03:18",
+   "sha256_16": "bf715c5f14947a03",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/stratifier_law_cmip6.py"
    ],
@@ -2934,9 +2937,9 @@
    "tree": "current",
    "stage": "5_mechanism",
    "readable": true,
-   "bytes": 3858,
-   "modified": "2026-08-04 05:42",
-   "sha256_16": "dd4bf33d44110dd6",
+   "bytes": 3638,
+   "modified": "2026-09-25 03:16",
+   "sha256_16": "9f9e6aaee228534c",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/R_gap_sensitivity.py"
    ],
@@ -2972,9 +2975,9 @@
    "tree": "current",
    "stage": "5_mechanism",
    "readable": true,
-   "bytes": 3892,
-   "modified": "2026-08-03 18:27",
-   "sha256_16": "631b4faf0cb633fb",
+   "bytes": 3698,
+   "modified": "2026-09-25 03:16",
+   "sha256_16": "059f82658ac0243f",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/R_profile.py"
    ],
@@ -2997,9 +3000,9 @@
    "tree": "current",
    "stage": "5_mechanism",
    "readable": true,
-   "bytes": 631,
-   "modified": "2026-07-31 10:59",
-   "sha256_16": "251ef2c7c4469793",
+   "bytes": 593,
+   "modified": "2026-09-25 03:16",
+   "sha256_16": "af1f4a354106fec4",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/causal_timescale_ratio.py"
    ],
@@ -3031,9 +3034,9 @@
    "tree": "current",
    "stage": "5_mechanism",
    "readable": true,
-   "bytes": 849,
-   "modified": "2026-07-31 06:17",
-   "sha256_16": "4ab6487c0c79b4ce",
+   "bytes": 793,
+   "modified": "2026-09-25 03:16",
+   "sha256_16": "cab93813578cb2ed",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/continuous_mediation.py"
    ],
@@ -3074,9 +3077,9 @@
    "tree": "current",
    "stage": "5_mechanism",
    "readable": true,
-   "bytes": 14723,
-   "modified": "2026-07-30 15:23",
-   "sha256_16": "91173433e23660a8",
+   "bytes": 14144,
+   "modified": "2026-09-25 03:16",
+   "sha256_16": "826b2cb77be39f7a",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/design_sensitivity.py"
    ],
@@ -3115,7 +3118,7 @@
    "stage": "5_mechanism",
    "readable": true,
    "bytes": 1422,
-   "modified": "2026-09-17 11:47",
+   "modified": "2026-09-25 03:23",
    "sha256_16": "201bb23a57c50271",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/granger_direction.py"
@@ -3143,9 +3146,9 @@
    "tree": "current",
    "stage": "5_mechanism",
    "readable": true,
-   "bytes": 902,
-   "modified": "2026-07-31 06:23",
-   "sha256_16": "33ed0048caf1aa03",
+   "bytes": 859,
+   "modified": "2026-09-25 03:19",
+   "sha256_16": "0df81256d52f6179",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/mediation_disattenuated.py"
    ],
@@ -3184,9 +3187,9 @@
    "tree": "current",
    "stage": "5_mechanism",
    "readable": true,
-   "bytes": 2624,
-   "modified": "2026-07-31 06:19",
-   "sha256_16": "9eda1e7e2afbf742",
+   "bytes": 2507,
+   "modified": "2026-09-25 03:20",
+   "sha256_16": "ce8337220055af06",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/mediator_specification.py"
    ],
@@ -3214,9 +3217,9 @@
    "tree": "current",
    "stage": "5_mechanism",
    "readable": true,
-   "bytes": 3540,
-   "modified": "2026-08-01 08:09",
-   "sha256_16": "cae569ca6a20fb3e",
+   "bytes": 3366,
+   "modified": "2026-09-25 03:20",
+   "sha256_16": "de327c13a4752cce",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/multimodel_R.py"
    ],
@@ -3266,9 +3269,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 4788,
-   "modified": "2026-09-24 19:15",
-   "sha256_16": "0a25b8e4224c8208",
+   "bytes": 4789,
+   "modified": "2026-09-25 03:45",
+   "sha256_16": "daf5cfdc746d9281",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py"
    ],
@@ -3276,7 +3279,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py": "7d34eaafc46e6376"
+    "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py": "b0a2fe3b05e33682"
    },
    "verdicts": [],
    "counts": {
@@ -3297,9 +3300,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 3378,
-   "modified": "2026-08-03 15:57",
-   "sha256_16": "8bde1d61add6278d",
+   "bytes": 3234,
+   "modified": "2026-09-25 03:20",
+   "sha256_16": "39ec5b7bc614a086",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/headline_stress_test.py"
    ],
@@ -3323,7 +3326,7 @@
    "stage": "6_predictability",
    "readable": true,
    "bytes": 1431,
-   "modified": "2026-09-24 23:08",
+   "modified": "2026-09-25 03:20",
    "sha256_16": "855bfb45e83e824e",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/is_downward_propagation_a_class.py"
@@ -3355,7 +3358,7 @@
    "stage": "6_predictability",
    "readable": true,
    "bytes": 1942,
-   "modified": "2026-09-24 19:14",
+   "modified": "2026-09-25 03:46",
    "sha256_16": "89929bd2a1395edb",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/predictability_ceiling.py"
@@ -3364,7 +3367,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/predictability_ceiling.py": "9ae0637d0888bbca"
+    "ssw-design-analysis/07_physical_decomposition/predictability_ceiling.py": "c8cfa1aa319f9e13"
    },
    "verdicts": [],
    "counts": {},
@@ -3380,9 +3383,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 1757,
-   "modified": "2026-08-03 13:07",
-   "sha256_16": "beb9df31ef2fb740",
+   "bytes": 2107,
+   "modified": "2026-09-25 03:48",
+   "sha256_16": "8e57881a6c8b065b",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/predictability_wave_driving.py"
    ],
@@ -3390,7 +3393,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/predictability_wave_driving.py": "ca09ac629ced593a"
+    "ssw-design-analysis/07_physical_decomposition/predictability_wave_driving.py": "530452b8e9b60911"
    },
    "verdicts": [],
    "counts": {},
@@ -3407,7 +3410,7 @@
    "stage": "6_predictability",
    "readable": true,
    "bytes": 105712,
-   "modified": "2026-09-24 18:46",
+   "modified": "2026-09-25 03:57",
    "sha256_16": "17125512d0615fff",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/within_model_check.py"
@@ -3439,9 +3442,9 @@
    "tree": "current",
    "stage": "7_ensemble",
    "readable": true,
-   "bytes": 15424,
-   "modified": "2026-07-30 13:56",
-   "sha256_16": "895228c318b340d8",
+   "bytes": 14821,
+   "modified": "2026-09-25 03:16",
+   "sha256_16": "ab93e027154e73e9",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/consensus_monotonicity.py"
    ],
@@ -3474,7 +3477,7 @@
    "stage": "7_ensemble",
    "readable": true,
    "bytes": 1590,
-   "modified": "2026-09-17 11:49",
+   "modified": "2026-09-25 03:20",
    "sha256_16": "197313ea94dc590a",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/ensemble_precursor.py"
@@ -3561,9 +3564,9 @@
    "tree": "current",
    "stage": "7_ensemble",
    "readable": true,
-   "bytes": 9881,
-   "modified": "2026-08-03 10:56",
-   "sha256_16": "b50b1e0c540f6666",
+   "bytes": 9467,
+   "modified": "2026-09-25 03:14",
+   "sha256_16": "f69861ce26a3da7e",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/era_dependence_gate.py"
    ],
@@ -3608,9 +3611,9 @@
    "tree": "current",
    "stage": "7_ensemble",
    "readable": true,
-   "bytes": 5864,
-   "modified": "2026-07-30 09:50",
-   "sha256_16": "5ee12588081c16ff",
+   "bytes": 5597,
+   "modified": "2026-09-25 03:19",
+   "sha256_16": "8a1b3cb002cef128",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/marginal_events.py"
    ],
@@ -3642,7 +3645,7 @@
    "stage": "8_experiment",
    "readable": true,
    "bytes": 74803,
-   "modified": "2026-09-24 18:18",
+   "modified": "2026-09-25 03:20",
    "sha256_16": "bc3d6aeadf8deab1",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_archetype_test.py"
@@ -3673,7 +3676,7 @@
    "stage": "8_experiment",
    "readable": true,
    "bytes": 14119,
-   "modified": "2026-09-24 19:02",
+   "modified": "2026-09-25 03:20",
    "sha256_16": "2ff1510ebe8e56ce",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_causal_effect.py"
@@ -3707,7 +3710,7 @@
    "stage": "8_experiment",
    "readable": true,
    "bytes": 73082,
-   "modified": "2026-09-24 18:38",
+   "modified": "2026-09-25 03:22",
    "sha256_16": "81296c9279fade5d",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_distribution_test.py"
@@ -3735,7 +3738,7 @@
    "stage": "8_experiment",
    "readable": true,
    "bytes": 51292,
-   "modified": "2026-09-24 22:59",
+   "modified": "2026-09-25 03:21",
    "sha256_16": "5843507bdcd23426",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_loeffel_test.py"
@@ -3780,7 +3783,7 @@
    "stage": "8_experiment",
    "readable": true,
    "bytes": 48414,
-   "modified": "2026-09-24 19:02",
+   "modified": "2026-09-25 03:21",
    "sha256_16": "16ff33163baa9ced",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py"
@@ -3816,7 +3819,7 @@
    "stage": "9_literature",
    "readable": true,
    "bytes": 2239,
-   "modified": "2026-09-24 19:05",
+   "modified": "2026-09-25 03:27",
    "sha256_16": "a1b39b1f6739fa37",
    "producers": [
     "ssw-design-analysis/08_literature_audit/era5_recompute_and_two_thirds.py"
@@ -3853,9 +3856,9 @@
    "tree": "current",
    "stage": "9_literature",
    "readable": true,
-   "bytes": 945,
-   "modified": "2026-08-03 11:59",
-   "sha256_16": "56e5b7de3bed9e29",
+   "bytes": 903,
+   "modified": "2026-09-25 03:25",
+   "sha256_16": "b62dddd8831e0765",
    "producers": [
     "ssw-design-analysis/08_literature_audit/loeffel2025_missing_control.py"
    ],
@@ -3886,7 +3889,7 @@
    "stage": "9_literature",
    "readable": true,
    "bytes": 1753,
-   "modified": "2026-09-24 19:05",
+   "modified": "2026-09-25 03:28",
    "sha256_16": "634d3aed22cdb8de",
    "producers": [
     "ssw-design-analysis/08_literature_audit/recompute_published_criterion.py"
