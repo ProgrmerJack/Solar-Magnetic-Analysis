@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-25T05:02:52+00:00",
+ "generated": "2026-09-25T05:09:20+00:00",
  "generator": "tools/catalog_repo.py",
  "note": "Every ssw-design-analysis result in one file. The per-script JSONs remain on disk as write-side provenance; this is the read path. Regenerate with tools/catalog_repo.py.",
  "results": {

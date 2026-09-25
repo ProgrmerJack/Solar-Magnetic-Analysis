@@ -1,0 +1,10 @@
+SNOTEL state-days 81,836 across 10 units, 47 winters, 1980-01-01..2026-04-02
+events in range 29; removed 32,342 influenced (40%); clean 49,494 rows, 5,034 distinct clean dates
+  [means] shared_harm3   null=+0.1573 degC (+0.026 sd)  sd=0.598  n=1500
+  [means] unit_harm2     null=+0.1855 degC (+0.031 sd)  sd=0.595  n=1500
+  [means] unit_harm3     null=+0.1571 degC (+0.026 sd)  sd=0.598  n=1500
+
+  least-biased spec: unit_harm3 -> computing coverage (60 draws x 1000 reps)
+  [coverage] unit_harm3     cov=0.983 (0.911, 1.0)  FPR=0.017  (n=60; interval wide by design)
+
+Saved -> /home/xola/Solar-Magnetic-Analysis/results/current/3_calibration/spatial_calibration.json
