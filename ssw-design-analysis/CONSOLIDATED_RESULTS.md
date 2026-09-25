@@ -2,7 +2,7 @@
 
 **Compiled 2026-08-03. This is the single source of truth for the project.**
 
-It supersedes `paper/ng_manuscript.tex` (last modified 2026-07-28), which predates
+It supersedes `archive/superseded_paper/ng_manuscript.tex` (last modified 2026-07-28), which predates
 every result below, contains none of them, and still leads with the snow-avalanche
 application that the project abandoned. **Do not write from the manuscript. Write
 from this file.**
