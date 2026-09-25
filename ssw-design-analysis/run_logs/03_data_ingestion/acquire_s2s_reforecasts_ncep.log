@@ -1,0 +1,9 @@
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+ncep: 43 requests; hindcast years 1999-2010
+  2011-03-01_h01-07 FAILED: ECDS request 0aeed804-b589-4ed9-832f-bb93da08186a ended accepted
+ncep exit=143

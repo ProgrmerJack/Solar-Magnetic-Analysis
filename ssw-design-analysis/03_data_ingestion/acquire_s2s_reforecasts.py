@@ -59,7 +59,7 @@ HYEARS = [str(y) for y in range(2002, 2022)]
 LEAD_DAYS = list(range(10, 43))
 AREA = [90, -180, 60, 180]
 N_MEMBERS = 11
-WORKERS = 3                  # model dates downloaded at once
+WORKERS = int(os.environ.get("S2S_WORKERS", 6))   # requests in flight (queue-limit rejections are retried)
 RANGES = 16                  # parallel byte-ranges per file
 CHUNK = 4 * 1024 * 1024
 
@@ -81,17 +81,18 @@ def model_dates():
     return sorted(out)
 
 
-def request(md):
-    return {"origin": ["ecmwf"], "year": [f"{md.year}"], "month": [f"{md.month:02d}"],
-            "day": [f"{md.day:02d}"], "time": ["00:00"], "hyear": HYEARS,
-            "hmonth": [f"{md.month:02d}"], "hday": [f"{md.day:02d}"],
+def request(md, origin="ecmwf", hm=None, hd=None, hyears=None, leads=None):
+    hm, hd = hm or md.month, hd or md.day
+    return {"origin": [origin], "year": [f"{md.year}"], "month": [f"{md.month:02d}"],
+            "day": [f"{md.day:02d}"], "time": ["00:00"], "hyear": hyears or HYEARS,
+            "hmonth": [f"{hm:02d}"], "hday": [f"{hd:02d}"],
             "level_type": "single_level", "variable": ["mean_sea_level_pressure"],
             "forecast_type": ["control_forecast", "perturbed_forecast"],
-            "leadtime_hour": [str(24 * d) for d in LEAD_DAYS],
+            "leadtime_hour": [str(24 * d) for d in (leads or LEAD_DAYS)],
             "data_format": "grib", "area": AREA}
 
 
-def reduce(grib, md):
+def reduce(grib, md, origin="ecmwf", n_hyears=None, leads=None):
     frames = []
     for dtype, member_of in (("cf", None), ("pf", "number")):
         ds = xr.open_dataset(grib, engine="cfgrib",
@@ -107,15 +108,97 @@ def reduce(grib, md):
     df["init"] = pd.to_datetime(df["time"])
     df["lead_day"] = (pd.to_timedelta(df["step"]) / pd.Timedelta(days=1)).round().astype(int)
     df["valid"] = df["init"] + pd.to_timedelta(df["lead_day"], unit="D")
-    df["model_date"] = md
+    # model_date: the calendar start key the anomaly climatology groups on. For
+    # ECMWF (and every on-the-fly system) it is the model date; for a fixed
+    # hindcast set it is the hindcast month-day (the model version date is the
+    # same for every start and would lump them together).
+    df["model_date"] = md if origin == "ecmwf" else pd.Timestamp(
+        year=2000, month=int(df["init"].dt.month.iloc[0]), day=int(df["init"].dt.day.iloc[0]))
     df = df[["model_date", "init", "member", "lead_day", "valid", "psl_cap_N"]]
-    want = len(HYEARS) * N_MEMBERS * len(LEAD_DAYS)
-    if len(df) != want or df["psl_cap_N"].isna().any():
-        raise ValueError(f"{md.date()}: {len(df)} rows, {df['psl_cap_N'].isna().sum()} NaN; "
-                         f"expected {want} complete")
+    if origin == "ecmwf":
+        want = len(HYEARS) * N_MEMBERS * len(LEAD_DAYS)
+        if len(df) != want or df["psl_cap_N"].isna().any():
+            raise ValueError(f"{md.date()}: {len(df)} rows, {df['psl_cap_N'].isna().sum()} NaN; "
+                             f"expected {want} complete")
+    else:
+        # complete and rectangular: every start has the same members at every lead
+        per = df.groupby(["init", "member"])["lead_day"].nunique()
+        mem = df.groupby("init")["member"].nunique()
+        if (df["psl_cap_N"].isna().any() or (per != len(leads)).any()
+                or mem.nunique() != 1 or df["init"].nunique() != n_hyears):
+            raise ValueError(f"{origin} {md.date()}: incomplete -- starts {df['init'].nunique()}/"
+                             f"{n_hyears}, members per start {sorted(mem.unique())}, "
+                             f"leads {sorted(per.unique())}/{len(leads)}, NaN {df['psl_cap_N'].isna().sum()}")
     if not df["psl_cap_N"].between(95000, 106000).all():
         raise ValueError(f"{md.date()}: cap mean outside 950-1060 hPa")
     return df
+
+
+# Other S2S systems (multi-model test, plan approved 2026-09-25). Short-lead
+# window only (starts 2-9 d before onset -> leads 10-34 d); one model version per
+# centre, the one that best covers the 2003-2021 events; Dec-Mar hindcast starts.
+# "otf": hindcasts follow the model date (same day and month in each hindcast
+# year); "fixed": a fixed hindcast set addressed by hmonth/hday. Daily-start
+# fixed sets are thinned to every THIN-th day. BoM (2014, poorly resolved
+# stratosphere, very large hindcast ensemble) and UKMO / IAP-CAS (no msl) are not
+# used. ECMWF keeps its own configuration above, unchanged.
+CENTRES = {
+    "eccc":     {"year": "2025", "kind": "otf",   "thin": 1},
+    "cma":      {"year": "2022", "kind": "otf",   "thin": 1},
+    "hmcr":     {"year": "2025", "kind": "otf",   "thin": 1},
+    "kma":      {"year": "2026", "kind": "otf",   "thin": 1},
+    "cnrm":     {"year": "2025", "kind": "fixed", "thin": 1},
+    "jma":      {"year": "2022", "kind": "fixed", "thin": 1},
+    "cnr_isac": {"year": "2023", "kind": "fixed", "thin": 1},
+    "ncep":     {"year": "2011", "kind": "fixed", "thin": 3},
+    "cptec":    {"year": "2023", "kind": "fixed", "thin": 3},
+}
+MULTI_LEAD_DAYS = list(range(10, 35))
+
+
+def jobs(origin):
+    """One job per (model date, hindcast month-day), all hindcast years, from the
+    ECDS constraint service. For ECMWF this reproduces the original model dates."""
+    p = client().get_process(DATASET)
+    if origin == "ecmwf":
+        return [{"origin": "ecmwf", "md": md, "hm": md.month, "hd": md.day,
+                 "hyears": HYEARS, "key": str(md.date()),
+                 "cache": CACHE / f"{md.date()}.parquet"} for md in model_dates()]
+    cfg = CENTRES[origin]
+    q = {"origin": [origin], "year": [cfg["year"]], "variable": ["mean_sea_level_pressure"]}
+    # constraint queries in parallel: one sequential query per (date, hindcast
+    # date) took most of an hour when ECDS was returning 502s
+    def days_of(m):
+        return [(m, d) for d in p.apply_constraints({**q, "month": [m]}).get("day", [])]
+
+    def combos_of(md):
+        m, d = md
+        q2 = {**q, "month": [m], "day": [d]}
+        out_ = []
+        for hm in p.apply_constraints(q2).get("hmonth", []):
+            if hm not in MONTHS or (cfg["kind"] == "otf" and hm != m):
+                continue
+            for hd in p.apply_constraints({**q2, "hmonth": [hm]}).get("hday", []):
+                if (cfg["kind"] == "otf" and hd != d) or (int(hd) - 1) % cfg["thin"]:
+                    continue
+                out_.append((m, d, hm, hd))
+        return out_
+
+    def job_of(c):
+        m, d, hm, hd = c
+        hy = p.apply_constraints({**q, "month": [m], "day": [d], "hmonth": [hm],
+                                  "hday": [hd]}).get("hyear", [])
+        key = f"{cfg['year']}-{m}-{d}_h{hm}-{hd}"
+        return {"origin": origin, "md": pd.Timestamp(f"{cfg['year']}-{m}-{d}"),
+                "hm": int(hm), "hd": int(hd), "hyears": sorted(hy), "key": key,
+                "cache": CACHE / origin / f"{key}.parquet"}
+
+    months = p.apply_constraints(q).get("month", [])
+    with ThreadPoolExecutor(8) as ex:
+        mds = [x for lst in ex.map(days_of, months) for x in lst]
+        combos = [x for lst in ex.map(combos_of, mds) for x in lst]
+        out = sorted(ex.map(job_of, combos), key=lambda j: j["key"])
+    return out
 
 
 def client():
@@ -157,59 +240,178 @@ def ranged_download(url, size, path):
         raise IOError(f"wrote {written} of {size} bytes")
 
 
-def fetch(md):
-    out = CACHE / f"{md.date()}.parquet"
+def fetch(job):
+    out = job["cache"]
     if out.exists():
-        return md, "cached", None
+        return job, "cached", None
+    out.parent.mkdir(parents=True, exist_ok=True)
+    leads = LEAD_DAYS if job["origin"] == "ecmwf" else MULTI_LEAD_DAYS
     with tempfile.TemporaryDirectory() as td:
         g = Path(td) / "req.grib"
-        remote = client().submit(DATASET, request(md))
-        while remote.status not in ("successful", "failed", "rejected", "dismissed", "deleted"):
-            time.sleep(10)
-        if remote.status != "successful":
-            raise IOError(f"ECDS request {remote.request_id} ended {remote.status}")
+        # ECDS limits queued requests per user and dataset ("Number queued
+        # requests for this dataset is temporarily limited"): a rejection is
+        # retried with back-off, never treated as data failure.
+        for attempt in range(40):
+            remote = client().submit(DATASET, request(job["md"], job["origin"], job["hm"], job["hd"],
+                                                      job["hyears"], leads))
+            # read the status ONCE per poll: every access re-queries ECDS, and
+            # checking it three times raced ("FAILED ... ended successful")
+            while True:
+                st = remote.status
+                if st in ("successful", "failed", "rejected", "dismissed", "deleted"):
+                    break
+                time.sleep(10)
+            if st != "rejected":
+                break
+            time.sleep(60 + 30 * min(attempt, 8))
+        if st != "successful":
+            raise IOError(f"ECDS request {remote.request_id} ended {st}")
         res = remote.get_results()
         ranged_download(res.location, int(res.content_length), g)
         size = g.stat().st_size
         sha = hashlib.sha256(g.read_bytes()).hexdigest()
-        df = reduce(str(g), md)
+        df = reduce(str(g), job["md"], job["origin"], len(job["hyears"]), leads)
     df.to_parquet(out)
-    return md, "fetched", {"bytes": size, "sha256": sha}
+    return job, "fetched", {"bytes": size, "sha256": sha}
 
 
-def main():
+def main(origin="ecmwf"):
     CACHE.mkdir(exist_ok=True)
-    mds = model_dates()
-    print(f"{len(mds)} model dates in {MODEL_YEAR} ({MONTHS}); "
-          f"{len(HYEARS)} hindcast years; {len(LEAD_DAYS)} leads", flush=True)
-    man = json.loads(MANIFEST.read_text()) if MANIFEST.exists() else {}
+    js = jobs(origin)
+    out_path = OUT if origin == "ecmwf" else HERE / f"s2s_{origin}_psl_cap.parquet"
+    man_path = MANIFEST if origin == "ecmwf" else HERE / f"s2s_manifest_{origin}.json"
+    print(f"{origin}: {len(js)} requests; hindcast years "
+          f"{min(min(j['hyears']) for j in js)}-{max(max(j['hyears']) for j in js)}", flush=True)
+    man = json.loads(man_path.read_text()) if man_path.exists() else {}
     failed = []
     with ThreadPoolExecutor(WORKERS) as ex:
-        futs = {ex.submit(fetch, md): md for md in mds}
-        for f in as_completed(futs):
-            md = futs[f]
+        futs = {ex.submit(fetch, j): j for j in js}
+        for fu in as_completed(futs):
+            j = futs[fu]
             try:
-                _, how, meta = f.result()
+                _, how, meta = fu.result()
                 if meta:
-                    man[str(md.date())] = meta
-                    MANIFEST.write_text(json.dumps(man, indent=2, sort_keys=True),
-                                        newline="\n")
-                print(f"  {md.date()} {how}", flush=True)
-            except Exception as e:
-                failed.append(str(md.date()))
-                print(f"  {md.date()} FAILED: {str(e)[:200]}", flush=True)
+                    man[j["key"]] = meta
+                    man_path.write_text(json.dumps(man, indent=2, sort_keys=True), newline="\n")
+                print(f"  {j['key']} {how}", flush=True)
+            except Exception as ex_:
+                failed.append(j["key"])
+                print(f"  {j['key']} FAILED: {str(ex_)[:200]}", flush=True)
     if failed:
-        print(f"\n{len(failed)} model dates failed: {failed}; re-run to resume")
+        print(f"\n{len(failed)} requests failed: {failed}; re-run to resume")
         return 1
-    df = pd.concat([pd.read_parquet(CACHE / f"{md.date()}.parquet") for md in mds],
+    df = pd.concat([pd.read_parquet(j["cache"]) for j in js],
                    ignore_index=True).sort_values(["init", "member", "lead_day"])
-    df.to_parquet(OUT)
+    df.to_parquet(out_path)
     print(f"\n{len(df):,} rows, {df['init'].nunique()} starts "
           f"({df['init'].min().date()} .. {df['init'].max().date()}), "
-          f"members {sorted(df['member'].unique())}")
-    print(f"Saved -> {OUT.name}")
+          f"members {sorted(int(m) for m in df['member'].unique())}")
+    print(f"Saved -> {out_path.name}")
     return 0
 
 
+# ---------------------------------------------------------------------------
+# PACKED retrieval. ECDS runs about four requests per user and dataset at a
+# time and rejects the rest (measured 2026-09-25: 74 of 80 rejected when 27 were
+# in flight), so throughput is set by the NUMBER of requests. A request may list
+# several dates: ECDS returns only the valid (date, hindcast date) combinations
+# (checked on ECCC and CNRM). One request per centre, model date and hindcast
+# month; the result is split back into the per-start cache files above, and each
+# start is checked for completeness on its own.
+QUEUE_SLOTS = 4
+
+
+def packs(origin):
+    out = {}
+    for j in jobs(origin):
+        if j["cache"].exists():
+            continue
+        cfg = CENTRES[origin]
+        k = (j["md"].month, j["hm"]) if cfg["kind"] == "otf" else (j["md"], j["hm"])
+        out.setdefault(k, []).append(j)
+    return [(origin, v) for v in out.values()]
+
+
+def fetch_pack(item):
+    origin, js = item
+    leads = MULTI_LEAD_DAYS
+    req = request(js[0]["md"], origin, js[0]["hm"], js[0]["hd"],
+                  sorted({h for j in js for h in j["hyears"]}), leads)
+    req["day"] = sorted({f"{j['md'].day:02d}" for j in js})
+    req["hday"] = sorted({f"{j['hd']:02d}" for j in js})
+    with tempfile.TemporaryDirectory() as td:
+        g = Path(td) / "req.grib"
+        for attempt in range(60):
+            remote = client().submit(DATASET, req)
+            while True:
+                st = remote.status
+                if st in ("successful", "failed", "rejected", "dismissed", "deleted"):
+                    break
+                time.sleep(10)
+            if st != "rejected":
+                break
+            time.sleep(60)
+        if st != "successful":
+            raise IOError(f"ECDS request {remote.request_id} ended {st}")
+        res = remote.get_results()
+        ranged_download(res.location, int(res.content_length), g)
+        sha = hashlib.sha256(g.read_bytes()).hexdigest()
+        size = g.stat().st_size
+        frames = []
+        for dtype, member_of in (("cf", None), ("pf", "number")):
+            ds = xr.open_dataset(str(g), engine="cfgrib",
+                                 backend_kwargs={"indexpath": "", "filter_by_keys": {"dataType": dtype}})
+            c = E.cap(ds[list(ds.data_vars)[0]], north=True)
+            df = c.to_dataframe(name="psl_cap_N").reset_index()
+            df["member"] = 0 if member_of is None else df["number"].astype(int)
+            frames.append(df); ds.close()
+    df = pd.concat(frames, ignore_index=True)
+    df["init"] = pd.to_datetime(df["time"])
+    df["lead_day"] = (pd.to_timedelta(df["step"]) / pd.Timedelta(days=1)).round().astype(int)
+    df["valid"] = df["init"] + pd.to_timedelta(df["lead_day"], unit="D")
+    if not df["psl_cap_N"].between(95000, 106000).all():
+        raise ValueError(f"{origin}: cap mean outside 950-1060 hPa")
+    done = []
+    for j in js:
+        sub = df[(df["init"].dt.month == j["hm"]) & (df["init"].dt.day == j["hd"])
+                 & df["init"].dt.year.astype(str).isin(j["hyears"])].copy()
+        sub["model_date"] = pd.Timestamp(year=2000, month=j["hm"], day=j["hd"])
+        sub = sub[["model_date", "init", "member", "lead_day", "valid", "psl_cap_N"]]
+        per = sub.groupby(["init", "member"])["lead_day"].nunique()
+        mem = sub.groupby("init")["member"].nunique()
+        if (sub.empty or sub["psl_cap_N"].isna().any() or (per != len(leads)).any()
+                or mem.nunique() != 1 or sub["init"].nunique() != len(j["hyears"])):
+            raise ValueError(f"{origin} {j['key']}: incomplete in packed result")
+        j["cache"].parent.mkdir(parents=True, exist_ok=True)
+        sub.to_parquet(j["cache"])
+        done.append(j["key"])
+    return origin, done, {"bytes": size, "sha256": sha, "starts": done}
+
+
+def main_packed(origins):
+    with ThreadPoolExecutor(len(origins)) as ex:
+        allp = [p for lst in ex.map(packs, origins) for p in lst]
+    print(f"{len(allp)} packed requests for {origins}", flush=True)
+    failed = []
+    with ThreadPoolExecutor(QUEUE_SLOTS) as ex:
+        futs = {ex.submit(fetch_pack, p): p for p in allp}
+        for fu in as_completed(futs):
+            origin, js = futs[fu]
+            try:
+                _, done, meta = fu.result()
+                mp_ = HERE / f"s2s_manifest_{origin}.json"
+                man = json.loads(mp_.read_text()) if mp_.exists() else {}
+                man["packed:" + "+".join(done)] = meta
+                mp_.write_text(json.dumps(man, indent=2, sort_keys=True), newline="\n")
+                print(f"  {origin} {len(done)} starts: {done[0]} .. {done[-1]} fetched", flush=True)
+            except Exception as ex_:
+                failed.append((origin, [j["key"] for j in js]))
+                print(f"  {origin} pack {js[0]['key']} FAILED: {str(ex_)[:200]}", flush=True)
+    print(f"packed done; {len(failed)} packs failed", flush=True)
+    return 1 if failed else 0
+
+
 if __name__ == "__main__":
-    sys.exit(main())
+    if len(sys.argv) > 2 and sys.argv[1] == "--packed":
+        sys.exit(main_packed(sys.argv[2:]))
+    sys.exit(main(sys.argv[1] if len(sys.argv) > 1 else "ecmwf"))

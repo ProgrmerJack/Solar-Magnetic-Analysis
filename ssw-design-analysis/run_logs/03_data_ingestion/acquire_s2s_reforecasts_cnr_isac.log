@@ -1,0 +1,8 @@
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+cnr_isac: 24 requests; hindcast years 2001-2020
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+  2023-10-16_h01-11 fetched
+  2023-10-16_h01-01 FAILED: ECDS request b471fa39-92d5-4d0b-add4-8c843467d3c5 ended accepted
+cnr_isac exit=143

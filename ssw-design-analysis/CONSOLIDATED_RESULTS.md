@@ -56,7 +56,9 @@ withdrawal now carries intervals.)*
 | **M** | **an SSW shifts the surface distribution without inflating its variance** | **SNAPSI, 9 centres, 1798 vs 1805 members** | **established causally; ratio 0.955 [0.873, 1.051] after an estimator fix** |
 | O | the field's two archetypes (Feb-2018 "propagating", Jan-2019 "not") have the same forced odds, and their observed difference is ordinary member-to-member noise | SNAPSI 9 centres + ERA5 | established for these 2 events; Jan-2019's NDW label flips with the pressure level |
 | N | the week-2 100 hPa → surface coupling between members is the same with and without an SSW | SNAPSI, 9 centres, 36 matched ensembles | established; Δz +0.023 [−0.044, +0.090] |
-| P | operational forecasts show no significant event-specific skill at SSWs; they underestimate the common shift | ECMWF S2S reforecasts, 12 SSWs 2003–2021 | established for one system; conditional p 0.115 / 0.366, power 0.88–0.90 |
+| P | operational forecasts show no significant event-specific skill at SSWs; they underestimate the common shift | ECMWF S2S reforecasts, 12 SSWs 2003–2021 | established for one system; conditional p 0.115 / 0.366, power 0.88–0.90; multi-model confirmation in progress |
+| Q | knowing the event adds no probabilistic forecast skill beyond the shift (CRPSS +0.008 [−0.003, +0.014]), less than on ordinary days (+0.037) | CMIP6, 1,517 events, leave-one-model-out | established |
+| L′ | paired label test: contrast identical with and without an SSW on the same pairs (−0.03σ [−0.12, +0.05]); threshold model exact in controls | SNAPSI, 25 pairs, 8 centres | established |
 
 **J is the headline.** It needs no correction of any kind, it answers the field's
 own question in the field's own terms, and it independently confirms I.
@@ -415,6 +417,17 @@ assumption. Apply Karpechko conditions 1–2 (the surface conditions) and split.
 > necessarily conditioned on the ensembles where both groups exist, which are
 > the weaker-responding ones — stated rather than hidden.
 
+**Paired test (added 2026-09-25, `paired_NH` in the same JSON).** On the 25
+centre × initialisation pairs where both arms form a contrast (8 centres):
+nudged −1.622 vs control −1.594, **paired difference −0.028σ [−0.122, +0.054]**
+(10,000 centre-cluster bootstrap). Against the one-population expectation (a cut
+at zero on a Gaussian with the ensemble's own mean and sd): control residual
+**+0.002 [−0.024, +0.023]** — the threshold model is exact with no SSW; nudged
+residual +0.195 [+0.107, +0.302] — the forced contrast is SMALLER than one
+population predicts, the opposite of what two populations would give (probably
+Karpechko condition 2 or skewness; not tested). Falsifier (|paired difference|
+> 0.2σ) not met.
+
 **The contrast is the same whether or not an SSW happened** (−1.622 vs −1.590).
 It cannot be reporting a physical difference between groups: in the nudged arm
 there is none to report, and in the control arm there is no event. The contrast
@@ -665,6 +678,27 @@ the outcome.
 **Limits:** 12 events; one model version; starts of one event share an outcome, so
 start-level reliability tests are liberal (the event is the unit); spread/error
 1.36 (short) indicates an over-dispersed ensemble at SSW starts.
+
+### Q — forecast value: knowing the event adds no probabilistic skill (`forecast_value_test.py`)
+
+Plan approved 2026-09-25. CMIP6, 1,517 events, 20 members, 10 models. Gaussian
+forecasts of the days +8..+52 annular-mode response (member sigma units, not
+demeaned): SHIFT (calendar regression on other models' SSWs) vs EVENT-AWARE
+(ridge on stratospheric predictors + calendar; out-of-fold residual spread).
+Leave-one-MODEL-out, closed-form CRPS, 2,000 model-bootstrap replicates; the same
+pipeline on 200 size-matched sets of event-free dates.
+
+| predictors | CRPSS after SSWs [95%] | CRPSS ordinary days [2.5–97.5%] | SSW-specific | p(pseudo ≥ SSW) |
+|---|---|---|---|---|
+| P2 up to onset | **+0.0076 [−0.0028, +0.0142]** | +0.0374 [+0.0234, +0.0530] | −0.030 | 1.000 |
+| P1 before onset | +0.0065 [−0.0028, +0.0139] | +0.0314 [+0.0185, +0.0437] | −0.025 | 1.000 |
+
+Event-aware information improves on the shifted distribution by <1% of CRPS
+after SSWs (interval includes 0; upper bound 1.4%), and is worth ~4x more on
+ordinary winter days; in none of 200 matched samples was it worth as little as
+after SSWs. Falsifier (SSW-specific value > 0 at p < 0.05) not met — the data
+point the other way. Interpretation (not tested): after an SSW the stratosphere's
+information is mostly the shift.
 
 ## 4. Prior art — verified from source, all must be cited
 

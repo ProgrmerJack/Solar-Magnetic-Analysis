@@ -1,10 +1,10 @@
 {
- "generated": "2026-09-25T15:13:11+00:00",
+ "generated": "2026-09-25T18:18:21+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 125,
-  "results": 59
+  "scripts": 129,
+  "results": 60
  },
  "scripts": [
   {
@@ -115,15 +115,17 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "ECMWF S2S reforecasts of polar-cap mean sea-level pressure, reduced EXACTLY as the ERA5 observation is (`acquire_era5_psl_cap.cap`: cos-lat weighted 60-90N, the 60N row included), for the forecast-reliability test",
-   "loc": 216,
-   "modified": "2026-09-25 12:07",
-   "sha256_16": "090e5e82a5de8ffa",
+   "loc": 418,
+   "modified": "2026-09-25 17:39",
+   "sha256_16": "175814c2d1efad3c",
    "flags": [],
    "filenames_mentioned": [
     "s2s_ecmf_psl_cap.parquet",
     "s2s_manifest.json"
    ],
-   "filename_prefixes": []
+   "filename_prefixes": [
+    "s2s_manifest_"
+   ]
   },
   {
    "path": "ssw-design-analysis/03_data_ingestion/acquire_snapsi.py",
@@ -621,6 +623,21 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "Known-truth calibration of s2s_multimodel_test.py on every centre's real layout (starts, members, leads) and the real ERA5 outcome.",
+   "loc": 119,
+   "modified": "2026-09-25 16:56",
+   "sha256_16": "db518114ffd99dcd",
+   "flags": [],
+   "filenames_mentioned": [
+    "s2s_multimodel_test.json",
+    "validate_s2s_multimodel.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/06_simulation_validation/validate_s2s_null.py",
    "tree": "ssw-design-analysis",
    "stage": "06_simulation_validation",
@@ -769,6 +786,20 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/07_physical_decomposition/forecast_value_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "DOES KNOWING THE EVENT IMPROVE A PROBABILISTIC FORECAST BEYOND THE SHIFT? Plan approved 2026-09-25 (item C of the Nature Geoscience revision plan).",
+   "loc": 186,
+   "modified": "2026-09-25 16:49",
+   "sha256_16": "14fc77ebe7bb2916",
+   "flags": [],
+   "filenames_mentioned": [
+    "forecast_value_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/07_physical_decomposition/granger_direction.py",
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
@@ -909,14 +940,29 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "DO OPERATIONAL FORECASTS STARTED BEFORE AN SSW KNOW WHICH EVENTS WILL COUPLE? Plan approved 2026-09-25 (before any data were downloaded).",
-   "loc": 365,
-   "modified": "2026-09-25 12:59",
-   "sha256_16": "9101767f880eb8ac",
+   "loc": 366,
+   "modified": "2026-09-25 16:29",
+   "sha256_16": "7ac6a756f7f0ebc8",
    "flags": [],
    "filenames_mentioned": [
     "era5_psl_cap_6h.parquet",
     "s2s_ecmf_psl_cap.parquet",
     "s2s_forecast_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "MULTI-MODEL S2S TEST: EVENT DISCRIMINATION (D) AND THE SIZE OF THE SHIFT (H1, H2) Plan approved 2026-09-25 (item A). Hypotheses H1 and H2 were written into this docstring before any non-ECMWF forecast was retrieved; ECMWF (result P) is the",
+   "loc": 243,
+   "modified": "2026-09-25 16:32",
+   "sha256_16": "fce93350157711a8",
+   "flags": [],
+   "filenames_mentioned": [
+    "s2s_ecmf_psl_cap.parquet",
+    "s2s_multimodel_test.json"
    ],
    "filename_prefixes": []
   },
@@ -985,9 +1031,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "THE DECISIVE TEST: does the published \"downward-propagating SSW\" classification manufacture its own contrast even when the causal forcing is held EXACTLY fixed by experimental design? WHY THIS IS THE CLEAN EXPERIMENT",
-   "loc": 382,
-   "modified": "2026-09-25 07:00",
-   "sha256_16": "dc6ab604cad5298d",
+   "loc": 448,
+   "modified": "2026-09-25 16:06",
+   "sha256_16": "6626a155b09d3623",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_selection_test.json"
@@ -1088,10 +1134,10 @@
    "path": "ssw-design-analysis/09_figures/fig2_selection.py",
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
-   "title": "fig2_selection.py -- Figure 2: the DW/NDW contrast needs no SSW.",
-   "loc": 94,
-   "modified": "2026-09-25 03:23",
-   "sha256_16": "8eecf838fdf8843a",
+   "title": "fig2_selection.py -- Figure 2: the downward label is a threshold on one population.",
+   "loc": 83,
+   "modified": "2026-09-25 18:16",
+   "sha256_16": "68726d439073e7c4",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_selection_test.json"
@@ -1102,31 +1148,14 @@
    "path": "ssw-design-analysis/09_figures/fig3_predictability.py",
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
-   "title": "fig3_predictability.py -- Figure 3: an SSW adds no out-of-sample predictability.",
-   "loc": 102,
-   "modified": "2026-09-25 07:20",
-   "sha256_16": "a6bb07fa1f6f9ef8",
+   "title": "fig3_predictability.py -- Figure 3: knowing the event adds no forecast information after an SSW.",
+   "loc": 83,
+   "modified": "2026-09-25 18:17",
+   "sha256_16": "78b96d92bbc19c0b",
    "flags": [],
    "filenames_mentioned": [
-    "era5_recompute_and_two_thirds.json",
-    "predictability_ceiling.json",
-    "recompute_published_criterion.json",
+    "forecast_value_test.json",
     "within_model_check.json"
-   ],
-   "filename_prefixes": []
-  },
-  {
-   "path": "ssw-design-analysis/09_figures/fig4_archetypes.py",
-   "tree": "ssw-design-analysis",
-   "stage": "09_figures",
-   "title": "fig4_archetypes.py -- Figure 4: the field's two archetypes are two draws.",
-   "loc": 135,
-   "modified": "2026-09-24 23:16",
-   "sha256_16": "67d52888e6c5b5fb",
-   "flags": [],
-   "filenames_mentioned": [
-    "snapsi_archetype_test.json",
-    "snapsi_causal_effect.json"
    ],
    "filename_prefixes": []
   },
@@ -1141,6 +1170,21 @@
    "flags": [],
    "filenames_mentioned": [
     "snapsi_loeffel_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/figED2_archetypes.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "figED2_archetypes.py -- Extended Data Fig. 2: the field's two archetypes are two draws.",
+   "loc": 135,
+   "modified": "2026-09-25 18:17",
+   "sha256_16": "c53e0929358d44d8",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_archetype_test.json",
+    "snapsi_causal_effect.json"
    ],
    "filename_prefixes": []
   },
@@ -1164,6 +1208,18 @@
    "loc": 182,
    "modified": "2026-09-17 12:38",
    "sha256_16": "8298bfa378aa34ef",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/manuscript/number_citations.py",
+   "tree": "ssw-design-analysis",
+   "stage": "manuscript",
+   "title": "number_citations.py -- replace ^{key}^ citation keys in main.md with numbers in Nature order (main text, then figure legends, then Methods) and write the reference list. Every entry below was checked against Crossref or the publisher",
+   "loc": 76,
+   "modified": "2026-09-25 18:15",
+   "sha256_16": "9e5b0743f08096e2",
    "flags": [],
    "filenames_mentioned": [],
    "filename_prefixes": []
@@ -1946,7 +2002,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-09-25 10:12",
+   "modified": "2026-09-25 15:13",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -3442,6 +3498,48 @@
    ]
   },
   {
+   "path": "results/current/6_predictability/forecast_value_test.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 1047,
+   "modified": "2026-09-25 16:54",
+   "sha256_16": "54b7c49433e8c052",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/forecast_value_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/forecast_value_test.py": "14fc77ebe7bb2916"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_events": [
+     1517
+    ],
+    "n_members": [
+     20
+    ],
+    "n_boot": [
+     2000
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "n_events",
+    "n_members",
+    "n_models",
+    "outcome_window_days",
+    "k_pseudo",
+    "n_boot",
+    "seed",
+    "cv",
+    "tiers"
+   ]
+  },
+  {
    "path": "results/current/6_predictability/headline_stress_test.json",
    "tree": "current",
    "stage": "6_predictability",
@@ -3560,7 +3658,7 @@
    "stage": "6_predictability",
    "readable": true,
    "bytes": 32499,
-   "modified": "2026-09-25 12:59",
+   "modified": "2026-09-25 16:31",
    "sha256_16": "3be7b089eb53f09c",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/s2s_forecast_test.py"
@@ -3569,7 +3667,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/s2s_forecast_test.py": "9101767f880eb8ac"
+    "ssw-design-analysis/07_physical_decomposition/s2s_forecast_test.py": "7ac6a756f7f0ebc8"
    },
    "verdicts": [
     {
@@ -3983,9 +4081,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 48414,
-   "modified": "2026-09-25 07:01",
-   "sha256_16": "16ff33163baa9ced",
+   "bytes": 55839,
+   "modified": "2026-09-25 16:07",
+   "sha256_16": "c26057a7c4a2e49e",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py"
    ],
@@ -3993,12 +4091,20 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "dc6ab604cad5298d"
+    "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "6626a155b09d3623"
    },
-   "verdicts": [],
+   "verdicts": [
+    {
+     "key": "paired_NH.note",
+     "text": "residual = observed contrast minus the contrast a cut at zero gives on one Gaussian with the ensemble's own mean and sd; ~0 means one population suffices. Pairs exist only where BOTH arms have >=3 members per class, so the 11 nearly-all-DW nudged ensembles are absent from the paired test (they cannot form a contrast); the DW rate uses all ensembles."
+    }
+   ],
    "counts": {
     "n_members": [
      50
+    ],
+    "n_boot": [
+     10000
     ]
    },
    "top_level_keys": [
@@ -4009,6 +4115,7 @@
     "per_case",
     "all_ensembles",
     "summary",
+    "paired_NH",
     "southern_hemisphere",
     "filter_caveat",
     "units_caveat"

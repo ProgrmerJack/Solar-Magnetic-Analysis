@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-25T15:13:11+00:00",
+ "generated": "2026-09-25T18:18:21+00:00",
  "generator": "tools/catalog_repo.py",
  "note": "Every ssw-design-analysis result in one file. The per-script JSONs remain on disk as write-side provenance; this is the read path. Regenerate with tools/catalog_repo.py.",
  "results": {
@@ -6722,6 +6722,56 @@
      "recovered_mean": 0.7572,
      "bias": -0.0428,
      "sd": 0.2768
+    }
+   }
+  },
+  "forecast_value_test.json": {
+   "plan_approved": "2026-09-25",
+   "n_events": 1517,
+   "n_members": 20,
+   "n_models": 10,
+   "outcome_window_days": [
+    8,
+    52
+   ],
+   "k_pseudo": 200,
+   "n_boot": 2000,
+   "seed": 3586372888,
+   "cv": "leave one model out",
+   "tiers": {
+    "P2 at-onset": {
+     "n_features": 24,
+     "CRPS_shift": 0.40929,
+     "CRPS_event_aware": 0.40617,
+     "CRPSS_ssw": 0.0076,
+     "CRPSS_ssw_CI95_model_bootstrap": [
+      -0.0028,
+      0.0142
+     ],
+     "CRPSS_pseudo_mean": 0.0374,
+     "CRPSS_pseudo_q025_q975": [
+      0.0234,
+      0.053
+     ],
+     "ssw_specific_CRPSS": -0.0298,
+     "p_pseudo_ge_ssw": 1.0
+    },
+    "P1 pre-onset": {
+     "n_features": 18,
+     "CRPS_shift": 0.40929,
+     "CRPS_event_aware": 0.40664,
+     "CRPSS_ssw": 0.0065,
+     "CRPSS_ssw_CI95_model_bootstrap": [
+      -0.0028,
+      0.0139
+     ],
+     "CRPSS_pseudo_mean": 0.0314,
+     "CRPSS_pseudo_q025_q975": [
+      0.0185,
+      0.0437
+     ],
+     "ssw_specific_CRPSS": -0.0249,
+     "p_pseudo_ge_ssw": 1.0
     }
    }
   },
@@ -28440,7 +28490,9 @@
      "DW_mean_sigma": -1.0726,
      "NDW_mean_sigma": 0.3703,
      "contrast_sigma": -1.4429,
-     "ensemble_mean_sigma": -0.6974
+     "ensemble_mean_sigma": -0.6974,
+     "ensemble_sd_sigma": 0.9504,
+     "threshold_contrast_sigma": -1.6279
     },
     {
      "centre": "CCCma",
@@ -28454,7 +28506,9 @@
      "DW_mean_sigma": -0.8481,
      "NDW_mean_sigma": 0.7224,
      "contrast_sigma": -1.5705,
-     "ensemble_mean_sigma": 0.0
+     "ensemble_mean_sigma": 0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "CCCma",
@@ -28468,7 +28522,9 @@
      "DW_mean_sigma": -1.2637,
      "NDW_mean_sigma": 0.5751,
      "contrast_sigma": -1.8387,
-     "ensemble_mean_sigma": -0.8224
+     "ensemble_mean_sigma": -0.8224,
+     "ensemble_sd_sigma": 1.0329,
+     "threshold_contrast_sigma": -1.7906
     },
     {
      "centre": "CCCma",
@@ -28482,7 +28538,9 @@
      "DW_mean_sigma": -0.8662,
      "NDW_mean_sigma": 0.7995,
      "contrast_sigma": -1.6657,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "CCCma",
@@ -28496,7 +28554,9 @@
      "DW_mean_sigma": -0.8022,
      "NDW_mean_sigma": 0.2806,
      "contrast_sigma": -1.0828,
-     "ensemble_mean_sigma": -0.499
+     "ensemble_mean_sigma": -0.499,
+     "ensemble_sd_sigma": 0.716,
+     "threshold_contrast_sigma": -1.2183
     },
     {
      "centre": "CCCma",
@@ -28510,7 +28570,9 @@
      "DW_mean_sigma": -0.8244,
      "NDW_mean_sigma": 0.597,
      "contrast_sigma": -1.4214,
-     "ensemble_mean_sigma": 0.0
+     "ensemble_mean_sigma": 0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "CCCma",
@@ -28524,7 +28586,9 @@
      "DW_mean_sigma": -0.9746,
      "NDW_mean_sigma": 0.3943,
      "contrast_sigma": -1.3689,
-     "ensemble_mean_sigma": -0.6504
+     "ensemble_mean_sigma": -0.6504,
+     "ensemble_sd_sigma": 0.9371,
+     "threshold_contrast_sigma": -1.5936
     },
     {
      "centre": "CCCma",
@@ -28538,7 +28602,9 @@
      "DW_mean_sigma": -0.8589,
      "NDW_mean_sigma": 0.7558,
      "contrast_sigma": -1.6147,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "CNR-ISAC",
@@ -28552,7 +28618,9 @@
      "DW_mean_sigma": -1.2641,
      "NDW_mean_sigma": 0.3228,
      "contrast_sigma": -1.5869,
-     "ensemble_mean_sigma": -0.8832
+     "ensemble_mean_sigma": -0.8832,
+     "ensemble_sd_sigma": 0.8513,
+     "threshold_contrast_sigma": -1.5572
     },
     {
      "centre": "CNR-ISAC",
@@ -28566,7 +28634,9 @@
      "DW_mean_sigma": -0.9869,
      "NDW_mean_sigma": 0.7754,
      "contrast_sigma": -1.7624,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "CNR-ISAC",
@@ -28580,7 +28650,9 @@
      "DW_mean_sigma": -1.1475,
      "NDW_mean_sigma": 0.2833,
      "contrast_sigma": -1.4308,
-     "ensemble_mean_sigma": -0.8327
+     "ensemble_mean_sigma": -0.8327,
+     "ensemble_sd_sigma": 0.7841,
+     "threshold_contrast_sigma": -1.4429
     },
     {
      "centre": "CNR-ISAC",
@@ -28594,7 +28666,9 @@
      "DW_mean_sigma": -0.9982,
      "NDW_mean_sigma": 0.6118,
      "contrast_sigma": -1.61,
-     "ensemble_mean_sigma": 0.0
+     "ensemble_mean_sigma": 0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "CNR-ISAC",
@@ -28608,7 +28682,9 @@
      "DW_mean_sigma": -1.125,
      "NDW_mean_sigma": 0.8541,
      "contrast_sigma": -1.9791,
-     "ensemble_mean_sigma": -0.0959
+     "ensemble_mean_sigma": -0.0959,
+     "ensemble_sd_sigma": 1.2924,
+     "threshold_contrast_sigma": -2.064
     },
     {
      "centre": "CNR-ISAC",
@@ -28622,7 +28698,9 @@
      "DW_mean_sigma": -0.8489,
      "NDW_mean_sigma": 0.7231,
      "contrast_sigma": -1.572,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "CNR-ISAC",
@@ -28636,7 +28714,9 @@
      "DW_mean_sigma": -0.804,
      "NDW_mean_sigma": 0.7422,
      "contrast_sigma": -1.5462,
-     "ensemble_mean_sigma": 0.0
+     "ensemble_mean_sigma": 0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "CNR-ISAC",
@@ -28650,7 +28730,9 @@
      "DW_mean_sigma": -1.0626,
      "NDW_mean_sigma": 0.6133,
      "contrast_sigma": -1.676,
-     "ensemble_mean_sigma": -0.7274
+     "ensemble_mean_sigma": -0.7274,
+     "ensemble_sd_sigma": 0.9488,
+     "threshold_contrast_sigma": -1.6355
     },
     {
      "centre": "CNR-ISAC",
@@ -28664,7 +28746,9 @@
      "DW_mean_sigma": -1.0036,
      "NDW_mean_sigma": 0.6151,
      "contrast_sigma": -1.6187,
-     "ensemble_mean_sigma": 0.0
+     "ensemble_mean_sigma": 0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "ECCC",
@@ -28678,7 +28762,9 @@
      "DW_mean_sigma": -0.8577,
      "NDW_mean_sigma": 0.7917,
      "contrast_sigma": -1.6495,
-     "ensemble_mean_sigma": 0.0
+     "ensemble_mean_sigma": 0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "ECCC",
@@ -28692,7 +28778,9 @@
      "DW_mean_sigma": -0.8818,
      "NDW_mean_sigma": 0.6929,
      "contrast_sigma": -1.5747,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "ECCC",
@@ -28706,7 +28794,9 @@
      "DW_mean_sigma": -0.9808,
      "NDW_mean_sigma": 0.7103,
      "contrast_sigma": -1.6911,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "ECCC",
@@ -28720,7 +28810,9 @@
      "DW_mean_sigma": -1.0447,
      "NDW_mean_sigma": 0.5382,
      "contrast_sigma": -1.5828,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "ECCC",
@@ -28734,7 +28826,9 @@
      "DW_mean_sigma": -1.0405,
      "NDW_mean_sigma": 0.536,
      "contrast_sigma": -1.5766,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "ECMWF",
@@ -28748,7 +28842,9 @@
      "DW_mean_sigma": -1.2113,
      "NDW_mean_sigma": 0.38,
      "contrast_sigma": -1.5913,
-     "ensemble_mean_sigma": -0.9617
+     "ensemble_mean_sigma": -0.9617,
+     "ensemble_sd_sigma": 0.9003,
+     "threshold_contrast_sigma": -1.6593
     },
     {
      "centre": "ECMWF",
@@ -28762,7 +28858,9 @@
      "DW_mean_sigma": -0.8186,
      "NDW_mean_sigma": 0.7277,
      "contrast_sigma": -1.5463,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "ECMWF",
@@ -28776,7 +28874,9 @@
      "DW_mean_sigma": -1.8917,
      "NDW_mean_sigma": 0.1752,
      "contrast_sigma": -2.0668,
-     "ensemble_mean_sigma": -1.7296
+     "ensemble_mean_sigma": -1.7296,
+     "ensemble_sd_sigma": 1.1155,
+     "threshold_contrast_sigma": -2.3529
     },
     {
      "centre": "ECMWF",
@@ -28790,7 +28890,9 @@
      "DW_mean_sigma": -0.9091,
      "NDW_mean_sigma": 0.7468,
      "contrast_sigma": -1.6559,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "ECMWF",
@@ -28804,7 +28906,9 @@
      "DW_mean_sigma": -1.6101,
      "NDW_mean_sigma": 0.3462,
      "contrast_sigma": -1.9564,
-     "ensemble_mean_sigma": -1.1882
+     "ensemble_mean_sigma": -1.1882,
+     "ensemble_sd_sigma": 1.189,
+     "threshold_contrast_sigma": -2.1551
     },
     {
      "centre": "ECMWF",
@@ -28818,7 +28922,9 @@
      "DW_mean_sigma": -0.8209,
      "NDW_mean_sigma": 0.7297,
      "contrast_sigma": -1.5506,
-     "ensemble_mean_sigma": 0.0
+     "ensemble_mean_sigma": 0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "ECMWF",
@@ -28832,7 +28938,9 @@
      "DW_mean_sigma": -0.894,
      "NDW_mean_sigma": 0.7344,
      "contrast_sigma": -1.6283,
-     "ensemble_mean_sigma": 0.0
+     "ensemble_mean_sigma": 0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "ECMWF",
@@ -28846,7 +28954,9 @@
      "DW_mean_sigma": -1.8725,
      "NDW_mean_sigma": 0.3632,
      "contrast_sigma": -2.2357,
-     "ensemble_mean_sigma": -1.4341
+     "ensemble_mean_sigma": -1.4341,
+     "ensemble_sd_sigma": 1.4366,
+     "threshold_contrast_sigma": -2.6031
     },
     {
      "centre": "ECMWF",
@@ -28860,7 +28970,9 @@
      "DW_mean_sigma": -0.7832,
      "NDW_mean_sigma": 0.6962,
      "contrast_sigma": -1.4794,
-     "ensemble_mean_sigma": 0.0
+     "ensemble_mean_sigma": 0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "KMA",
@@ -28874,7 +28986,9 @@
      "DW_mean_sigma": -1.4867,
      "NDW_mean_sigma": 0.274,
      "contrast_sigma": -1.7607,
-     "ensemble_mean_sigma": -1.1697
+     "ensemble_mean_sigma": -1.1697,
+     "ensemble_sd_sigma": 1.0588,
+     "threshold_contrast_sigma": -1.9695
     },
     {
      "centre": "KMA",
@@ -28888,7 +29002,9 @@
      "DW_mean_sigma": -0.8071,
      "NDW_mean_sigma": 0.745,
      "contrast_sigma": -1.5521,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "KMA",
@@ -28902,7 +29018,9 @@
      "DW_mean_sigma": -1.5487,
      "NDW_mean_sigma": 0.3239,
      "contrast_sigma": -1.8726,
-     "ensemble_mean_sigma": -1.3615
+     "ensemble_mean_sigma": -1.3615,
+     "ensemble_sd_sigma": 0.8732,
+     "threshold_contrast_sigma": -1.8468
     },
     {
      "centre": "KMA",
@@ -28916,7 +29034,9 @@
      "DW_mean_sigma": -0.9397,
      "NDW_mean_sigma": 0.7383,
      "contrast_sigma": -1.678,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "KMA",
@@ -28930,7 +29050,9 @@
      "DW_mean_sigma": -1.1013,
      "NDW_mean_sigma": 0.2378,
      "contrast_sigma": -1.3391,
-     "ensemble_mean_sigma": -0.7665
+     "ensemble_mean_sigma": -0.7665,
+     "ensemble_sd_sigma": 0.8307,
+     "threshold_contrast_sigma": -1.4793
     },
     {
      "centre": "KMA",
@@ -28944,7 +29066,9 @@
      "DW_mean_sigma": -0.8022,
      "NDW_mean_sigma": 0.6834,
      "contrast_sigma": -1.4856,
-     "ensemble_mean_sigma": 0.0
+     "ensemble_mean_sigma": 0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "KMA",
@@ -28958,7 +29082,9 @@
      "DW_mean_sigma": -1.0352,
      "NDW_mean_sigma": 0.5333,
      "contrast_sigma": -1.5684,
-     "ensemble_mean_sigma": 0.0
+     "ensemble_mean_sigma": 0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "KMA",
@@ -28972,7 +29098,9 @@
      "DW_mean_sigma": -1.9267,
      "NDW_mean_sigma": 0.3692,
      "contrast_sigma": -2.2958,
-     "ensemble_mean_sigma": -1.5593
+     "ensemble_mean_sigma": -1.5593,
+     "ensemble_sd_sigma": 1.3906,
+     "threshold_contrast_sigma": -2.5977
     },
     {
      "centre": "KMA",
@@ -28986,7 +29114,9 @@
      "DW_mean_sigma": -0.9396,
      "NDW_mean_sigma": 0.6804,
      "contrast_sigma": -1.62,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "Meteo-France",
@@ -29000,7 +29130,9 @@
      "DW_mean_sigma": -1.0644,
      "NDW_mean_sigma": 0.3058,
      "contrast_sigma": -1.3702,
-     "ensemble_mean_sigma": -0.5985
+     "ensemble_mean_sigma": -0.5985,
+     "ensemble_sd_sigma": 0.8862,
+     "threshold_contrast_sigma": -1.5021
     },
     {
      "centre": "Meteo-France",
@@ -29014,7 +29146,9 @@
      "DW_mean_sigma": -0.7267,
      "NDW_mean_sigma": 0.7873,
      "contrast_sigma": -1.5141,
-     "ensemble_mean_sigma": 0.0
+     "ensemble_mean_sigma": 0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "Meteo-France",
@@ -29028,7 +29162,9 @@
      "DW_mean_sigma": -2.3131,
      "NDW_mean_sigma": -1.1489,
      "contrast_sigma": -1.1642,
-     "ensemble_mean_sigma": -2.1734
+     "ensemble_mean_sigma": -2.1734,
+     "ensemble_sd_sigma": 0.6319,
+     "threshold_contrast_sigma": -2.3351
     },
     {
      "centre": "Meteo-France",
@@ -29042,7 +29178,9 @@
      "DW_mean_sigma": -0.7638,
      "NDW_mean_sigma": 0.8967,
      "contrast_sigma": -1.6606,
-     "ensemble_mean_sigma": 0.0
+     "ensemble_mean_sigma": 0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "Meteo-France",
@@ -29056,7 +29194,9 @@
      "DW_mean_sigma": -1.5643,
      "NDW_mean_sigma": 0.5197,
      "contrast_sigma": -2.084,
-     "ensemble_mean_sigma": -0.8141
+     "ensemble_mean_sigma": -0.8141,
+     "ensemble_sd_sigma": 1.3977,
+     "threshold_contrast_sigma": -2.3337
     },
     {
      "centre": "Meteo-France",
@@ -29070,7 +29210,9 @@
      "DW_mean_sigma": -0.8372,
      "NDW_mean_sigma": 0.7132,
      "contrast_sigma": -1.5505,
-     "ensemble_mean_sigma": 0.0
+     "ensemble_mean_sigma": 0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "Meteo-France",
@@ -29084,7 +29226,9 @@
      "DW_mean_sigma": -0.8461,
      "NDW_mean_sigma": 0.7208,
      "contrast_sigma": -1.5668,
-     "ensemble_mean_sigma": 0.0
+     "ensemble_mean_sigma": 0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "Meteo-France",
@@ -29098,7 +29242,9 @@
      "DW_mean_sigma": -1.3027,
      "NDW_mean_sigma": 0.3805,
      "contrast_sigma": -1.6832,
-     "ensemble_mean_sigma": -0.8314
+     "ensemble_mean_sigma": -0.8314,
+     "ensemble_sd_sigma": 1.1095,
+     "threshold_contrast_sigma": -1.9061
     },
     {
      "centre": "Meteo-France",
@@ -29112,7 +29258,9 @@
      "DW_mean_sigma": -0.8452,
      "NDW_mean_sigma": 0.72,
      "contrast_sigma": -1.5652,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "NCAR",
@@ -29126,7 +29274,9 @@
      "DW_mean_sigma": -1.1544,
      "NDW_mean_sigma": 0.2476,
      "contrast_sigma": -1.402,
-     "ensemble_mean_sigma": -0.9345
+     "ensemble_mean_sigma": -0.9345,
+     "ensemble_sd_sigma": 0.9259,
+     "threshold_contrast_sigma": -1.6822
     },
     {
      "centre": "NCAR",
@@ -29140,7 +29290,9 @@
      "DW_mean_sigma": -1.0509,
      "NDW_mean_sigma": 0.678,
      "contrast_sigma": -1.729,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "NCAR",
@@ -29154,7 +29306,9 @@
      "DW_mean_sigma": -0.7877,
      "NDW_mean_sigma": 0.8862,
      "contrast_sigma": -1.6739,
-     "ensemble_mean_sigma": 0.0
+     "ensemble_mean_sigma": 0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "NCAR",
@@ -29168,7 +29322,9 @@
      "DW_mean_sigma": -1.6521,
      "NDW_mean_sigma": 0.3471,
      "contrast_sigma": -1.9992,
-     "ensemble_mean_sigma": -1.2601
+     "ensemble_mean_sigma": -1.2601,
+     "ensemble_sd_sigma": 1.2835,
+     "threshold_contrast_sigma": -2.3167
     },
     {
      "centre": "NCAR",
@@ -29182,7 +29338,9 @@
      "DW_mean_sigma": -0.7251,
      "NDW_mean_sigma": 0.6972,
      "contrast_sigma": -1.4223,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "NCAR",
@@ -29196,7 +29354,9 @@
      "DW_mean_sigma": -1.5307,
      "NDW_mean_sigma": 0.0571,
      "contrast_sigma": -1.5878,
-     "ensemble_mean_sigma": -1.2193
+     "ensemble_mean_sigma": -1.2193,
+     "ensemble_sd_sigma": 1.0577,
+     "threshold_contrast_sigma": -1.992
     },
     {
      "centre": "NCAR",
@@ -29210,7 +29370,9 @@
      "DW_mean_sigma": -0.8019,
      "NDW_mean_sigma": 0.7128,
      "contrast_sigma": -1.5147,
-     "ensemble_mean_sigma": 0.0
+     "ensemble_mean_sigma": 0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "NCAR",
@@ -29224,7 +29386,9 @@
      "DW_mean_sigma": -1.0767,
      "NDW_mean_sigma": 0.6453,
      "contrast_sigma": -1.7219,
-     "ensemble_mean_sigma": -0.4352
+     "ensemble_mean_sigma": -0.4352,
+     "ensemble_sd_sigma": 1.064,
+     "threshold_contrast_sigma": -1.7367
     },
     {
      "centre": "NCAR",
@@ -29238,7 +29402,9 @@
      "DW_mean_sigma": -0.9571,
      "NDW_mean_sigma": 0.67,
      "contrast_sigma": -1.627,
-     "ensemble_mean_sigma": 0.0
+     "ensemble_mean_sigma": 0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "SNU",
@@ -29252,7 +29418,9 @@
      "DW_mean_sigma": -1.3844,
      "NDW_mean_sigma": 0.5291,
      "contrast_sigma": -1.9135,
-     "ensemble_mean_sigma": -0.9634
+     "ensemble_mean_sigma": -0.9634,
+     "ensemble_sd_sigma": 1.1515,
+     "threshold_contrast_sigma": -2.0128
     },
     {
      "centre": "SNU",
@@ -29266,7 +29434,9 @@
      "DW_mean_sigma": -0.8927,
      "NDW_mean_sigma": 0.7604,
      "contrast_sigma": -1.6531,
-     "ensemble_mean_sigma": 0.0
+     "ensemble_mean_sigma": 0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "SNU",
@@ -29280,7 +29450,9 @@
      "DW_mean_sigma": -1.3998,
      "NDW_mean_sigma": -0.0161,
      "contrast_sigma": -1.3837,
-     "ensemble_mean_sigma": -1.1784
+     "ensemble_mean_sigma": -1.1784,
+     "ensemble_sd_sigma": 0.84,
+     "threshold_contrast_sigma": -1.6957
     },
     {
      "centre": "SNU",
@@ -29294,7 +29466,9 @@
      "DW_mean_sigma": -1.0164,
      "NDW_mean_sigma": 0.5717,
      "contrast_sigma": -1.5882,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "SNU",
@@ -29308,7 +29482,9 @@
      "DW_mean_sigma": -0.9651,
      "NDW_mean_sigma": 0.2461,
      "contrast_sigma": -1.2112,
-     "ensemble_mean_sigma": -0.5775
+     "ensemble_mean_sigma": -0.5775,
+     "ensemble_sd_sigma": 0.8241,
+     "threshold_contrast_sigma": -1.4032
     },
     {
      "centre": "SNU",
@@ -29322,7 +29498,9 @@
      "DW_mean_sigma": -0.8839,
      "NDW_mean_sigma": 0.6945,
      "contrast_sigma": -1.5783,
-     "ensemble_mean_sigma": 0.0
+     "ensemble_mean_sigma": 0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "SNU",
@@ -29336,7 +29514,9 @@
      "DW_mean_sigma": -0.7688,
      "NDW_mean_sigma": 0.5567,
      "contrast_sigma": -1.3256,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "SNU",
@@ -29350,7 +29530,9 @@
      "DW_mean_sigma": -1.143,
      "NDW_mean_sigma": 0.409,
      "contrast_sigma": -1.552,
-     "ensemble_mean_sigma": -0.6774
+     "ensemble_mean_sigma": -0.6774,
+     "ensemble_sd_sigma": 0.9296,
+     "threshold_contrast_sigma": -1.5909
     },
     {
      "centre": "SNU",
@@ -29364,7 +29546,9 @@
      "DW_mean_sigma": -0.9203,
      "NDW_mean_sigma": 0.6135,
      "contrast_sigma": -1.5338,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "UKMO",
@@ -29378,7 +29562,9 @@
      "DW_mean_sigma": -1.117,
      "NDW_mean_sigma": 0.5721,
      "contrast_sigma": -1.6891,
-     "ensemble_mean_sigma": -0.7454
+     "ensemble_mean_sigma": -0.7454,
+     "ensemble_sd_sigma": 1.0272,
+     "threshold_contrast_sigma": -1.7569
     },
     {
      "centre": "UKMO",
@@ -29392,7 +29578,9 @@
      "DW_mean_sigma": -0.8788,
      "NDW_mean_sigma": 0.8112,
      "contrast_sigma": -1.6901,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "UKMO",
@@ -29406,7 +29594,9 @@
      "DW_mean_sigma": -1.1718,
      "NDW_mean_sigma": 0.3075,
      "contrast_sigma": -1.4794,
-     "ensemble_mean_sigma": -0.876
+     "ensemble_mean_sigma": -0.876,
+     "ensemble_sd_sigma": 0.8352,
+     "threshold_contrast_sigma": -1.532
     },
     {
      "centre": "UKMO",
@@ -29420,7 +29610,9 @@
      "DW_mean_sigma": -0.9757,
      "NDW_mean_sigma": 0.7065,
      "contrast_sigma": -1.6822,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "UKMO",
@@ -29434,7 +29626,9 @@
      "DW_mean_sigma": -1.5741,
      "NDW_mean_sigma": 0.3807,
      "contrast_sigma": -1.9548,
-     "ensemble_mean_sigma": -1.3004
+     "ensemble_mean_sigma": -1.3004,
+     "ensemble_sd_sigma": 1.1176,
+     "threshold_contrast_sigma": -2.1108
     },
     {
      "centre": "UKMO",
@@ -29448,7 +29642,9 @@
      "DW_mean_sigma": -0.7906,
      "NDW_mean_sigma": 0.7906,
      "contrast_sigma": -1.5812,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "UKMO",
@@ -29462,7 +29658,9 @@
      "DW_mean_sigma": -0.9091,
      "NDW_mean_sigma": 0.6583,
      "contrast_sigma": -1.5673,
-     "ensemble_mean_sigma": 0.0
+     "ensemble_mean_sigma": 0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     },
     {
      "centre": "UKMO",
@@ -29476,7 +29674,9 @@
      "DW_mean_sigma": -2.0506,
      "NDW_mean_sigma": 0.4917,
      "contrast_sigma": -2.5424,
-     "ensemble_mean_sigma": -1.5422
+     "ensemble_mean_sigma": -1.5422,
+     "ensemble_sd_sigma": 1.6944,
+     "threshold_contrast_sigma": -3.0088
     },
     {
      "centre": "UKMO",
@@ -29490,7 +29690,9 @@
      "DW_mean_sigma": -0.9582,
      "NDW_mean_sigma": 0.6939,
      "contrast_sigma": -1.6521,
-     "ensemble_mean_sigma": -0.0
+     "ensemble_mean_sigma": -0.0,
+     "ensemble_sd_sigma": 1.0,
+     "threshold_contrast_sigma": -1.5958
     }
    ],
    "all_ensembles": [
@@ -30497,6 +30699,61 @@
      "n_dropped_for_contrast": 0,
      "mean_DW_rate_UNCONDITIONAL": 0.45
     }
+   },
+   "paired_NH": {
+    "n_pairs": 25,
+    "n_centres": 8,
+    "n_boot": 10000,
+    "pairs": [
+     "CCCma|s20180125",
+     "CCCma|s20180208",
+     "CCCma|s20181213",
+     "CCCma|s20190108",
+     "CNR-ISAC|s20180125",
+     "CNR-ISAC|s20180208",
+     "CNR-ISAC|s20181213",
+     "ECMWF|s20180125",
+     "ECMWF|s20180208",
+     "ECMWF|s20181213",
+     "KMA|s20180125",
+     "KMA|s20180208",
+     "KMA|s20181213",
+     "Meteo-France|s20180125",
+     "Meteo-France|s20180208",
+     "Meteo-France|s20181213",
+     "NCAR|s20180125",
+     "NCAR|s20181213",
+     "NCAR|s20190108",
+     "SNU|s20180125",
+     "SNU|s20180208",
+     "SNU|s20181213",
+     "UKMO|s20180125",
+     "UKMO|s20180208",
+     "UKMO|s20181213"
+    ],
+    "mean_contrast_nudged": -1.6222,
+    "mean_contrast_control": -1.594,
+    "paired_difference": -0.0283,
+    "paired_difference_CI95_centre_bootstrap": [
+     -0.1219,
+     0.0544
+    ],
+    "residual_from_threshold_nudged": 0.195,
+    "residual_nudged_CI95": [
+     0.1074,
+     0.3024
+    ],
+    "residual_from_threshold_control": 0.0018,
+    "residual_control_CI95": [
+     -0.0236,
+     0.0233
+    ],
+    "paired_residual_difference": 0.1932,
+    "paired_residual_difference_CI95": [
+     0.1162,
+     0.2909
+    ],
+    "note": "residual = observed contrast minus the contrast a cut at zero gives on one Gaussian with the ensemble's own mean and sd; ~0 means one population suffices. Pairs exist only where BOTH arms have >=3 members per class, so the 11 nearly-all-DW nudged ensembles are absent from the paired test (they cannot form a contrast); the DW rate uses all ensembles."
    },
    "southern_hemisphere": {
     "event": "Austral MINOR warming, central date 2019-09-18 (SNAPSI protocol, Hitchcock et al. GMD 15, 5073, 2022)",

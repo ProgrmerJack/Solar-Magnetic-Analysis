@@ -157,3 +157,8 @@ Rule: exclude with the FULL catalogue (`allev`); restrict only the events being 
 Tried: extending era5_psl_cap_6h.parquet to every NH winter (from 1 Nov) while it still held the SH case (Aug-Nov 2019).
 Failed: 2019-11 was written twice (identical values); a reader using Series.get or map on time crashed, and a mean over a window could have double-counted. Found by the known-truth harness.
 Rule: an acquisition that concatenates periods drops duplicate times (refusing if they differ); readers assert a unique time index.
+
+## 2026-09-25 — Worker processes did not inherit module state (Python 3.14)
+Tried: forecast_value_test.py filled a module-level dict, then mapped a function over a ProcessPoolExecutor.
+Failed: Python 3.14 no longer forks by default on Linux, so workers started empty (KeyError) after 24 min of work; within_model_check.py had avoided it by asking for "fork".
+Rule: any pool whose workers read parent state passes mp_context=multiprocessing.get_context("fork"), or passes the data explicitly.

@@ -1,0 +1,5 @@
+1517 real events, 20 members, 10 models
+P2 at-onset    CRPSS at SSWs +0.0076 [-0.0028, 0.0142] | ordinary dates +0.0374 [0.0234, 0.053] | SSW-specific -0.0298, p = 1.000
+P1 pre-onset   CRPSS at SSWs +0.0065 [-0.0028, 0.0139] | ordinary dates +0.0314 [0.0185, 0.0437] | SSW-specific -0.0249, p = 1.000
+Saved -> forecast_value_test.json
+exit=0 secs=302
