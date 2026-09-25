@@ -101,7 +101,7 @@ def load():
     return fc, ob
 
 
-def obs_anom(ob, anchors, offsets, hyears):
+def obs_anom(ob, anchors, offsets, hyears, min_other=15):
     """Observed anomaly at anchor + offset days, against the leave-one-year-out
     ERA5 mean at the same calendar dates in the other hindcast years (the whole
     window shifted by whole years). Anchored on the (pseudo-)onset, so every start
@@ -116,7 +116,7 @@ def obs_anom(ob, anchors, offsets, hyears):
                              + pd.Timedelta(days=int(d)), np.nan)
                       for y in hyears if int(y) != a.year]
             ok = np.isfinite(others)
-            vals.append(v - np.mean(np.asarray(others)[ok]) if ok.sum() >= 15 else np.nan)
+            vals.append(v - np.mean(np.asarray(others)[ok]) if ok.sum() >= min_other else np.nan)
         out[a] = np.array(vals)
     return out
 
@@ -127,25 +127,26 @@ def classify(a):
     return m, (m < 0) & (np.nanmean(a < 0, axis=-1) > 0.5)
 
 
-def start_stats(fc_by_init, ob, init, k, hyears):
-    """Window statistics for one start whose (pseudo-)onset is init + k days."""
+def start_stats(fc_by_init, ob, init, k, hyears, n_members=11, min_other=15):
+    """Window statistics for one start whose (pseudo-)onset is init + k days.
+    n_members / min_other default to the ECMWF configuration (result P)."""
     leads = np.arange(k + WIN[0], k + WIN[1] + 1)
     f = fc_by_init.get(init)
     if f is None:
         return None
     piv = f[f["lead_day"].isin(leads)].pivot(index="member", columns="lead_day",
                                               values="anom")
-    if piv.shape != (11, len(leads)) or piv.isna().any().any():
+    if piv.shape != (n_members, len(leads)) or piv.isna().any().any():
         return None
     onset = init + pd.Timedelta(days=int(k))
-    o = obs_anom(ob, [onset], range(WIN[0], WIN[1] + 1), hyears)[onset]
+    o = obs_anom(ob, [onset], range(WIN[0], WIN[1] + 1), hyears, min_other)[onset]
     if np.isnan(o).any():
         return None
     Am, DWm = classify(-piv.values)
     Ao, DWo = classify(-o)
     return {"A_members": Am, "A_ens": float(Am.mean()), "P_dw": float(DWm.mean()),
             "A_obs": float(Ao), "DW_obs": bool(DWo),
-            "pit": float((np.sum(Am < Ao) + 0.5 * np.sum(Am == Ao) + 0.5) / 12.0),
+            "pit": float((np.sum(Am < Ao) + 0.5 * np.sum(Am == Ao) + 0.5) / (n_members + 1)),
             "spread": float(Am.std(ddof=1))}
 
 

@@ -1,0 +1,16 @@
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 2 of 500
+Retrying in 120 seconds
+hmcr: 17 requests; hindcast years 1991-2020
+  2025-01-02_h01-02 FAILED: ECDS request 0f2e20ca-8ed1-4f97-b279-4617c886f437 ended accepted
+  2025-01-09_h01-09 FAILED: ECDS request e46fd039-2844-4f7b-ac18-0db8e732a592 ended accepted
+hmcr exit=143

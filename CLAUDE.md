@@ -29,7 +29,7 @@ ssw-design-analysis/     THE LIVE PROJECT. Numbered stages, executed in order.
   run_logs/<stage>/        stdout of every run, mirroring the stage layout
   tests/smoke_test.py      the standing checks
 results/
-  current/<theme>/         59 live result JSONs, grouped by question answered
+  current/<theme>/         60 live result JSONs, grouped by question answered
   superseded/<family>/     retired results, kept for provenance
   _ALL_RESULTS.json        every live payload in one file -- the read path
   _PROVENANCE.json         producer path + sha256 baseline, drives staleness

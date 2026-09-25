@@ -1,0 +1,7 @@
+cnrm: 16 requests; hindcast years 1999-2024
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+  2025-06-01_h01-01 FAILED: ECDS request bf347135-720a-4c00-af90-0c1aa6baefbb ended successful
+  2025-06-01_h01-17 fetched
+  2025-06-01_h01-25 fetched
+cnrm exit=143

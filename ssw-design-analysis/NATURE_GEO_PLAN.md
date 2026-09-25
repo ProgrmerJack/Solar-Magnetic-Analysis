@@ -24,9 +24,9 @@ The condition declared on 2026-08-04, before any of the data existed:
 | **NH**, 9 centres, 36 ensembles/arm | **−1.622 σ** (sd 0.303, n=25) | **−1.590 σ** (sd 0.089, n=36) | 0.842 vs 0.450 |
 | **SH**, 8 centres, `s20190829` | **−1.958 σ** (n=7 of 8) | **−1.584 σ** (n=8 of 8) | 0.786 vs 0.413 |
 
-The condition is met. **That does not mean the paper will clear the desk**, and
-§5 states the odds honestly. It means the scientific precondition the project set
-itself is satisfied and the remaining risk is framing and fit, not evidence.
+The condition is met. **That does not mean the paper will clear the desk.** It
+means the scientific precondition the project set itself is satisfied; §5 gives
+the route and the go/no-go conditions.
 
 ---
 
@@ -144,36 +144,26 @@ two of which had been asserting the opposite of their own JSONs.
 
 ---
 
-## 5. The odds, stated honestly
+## 5. Venue and route
 
-**Nature Geoscience sends 15–20% of submissions to review and rejects about half
-of those: roughly 7–10% overall.** No paper has a "high probability" of
-acceptance there. With zero subfield precedent since 2013, the dominant risk is
-the desk, not the referees.
-
-| route | realistic odds |
-|---|---|
-| NGeo, corrective framing | ~0 — desk reject |
-| NGeo, §3 framing, items 1–3 done | perhaps 15–25% of reaching review; ~10% overall |
-| Nature Communications / npj Clim Atmos Sci / Comms Earth Environ | good — this is where the field's Nature-family work appears |
-| WCD / JGR-Atmos / J. Climate | high — where SNAPSI work lands, and where Löffel published |
-
-**The strategy that maximises expected outcome is not to pick NGeo. It is to build
-the paper in NGeo's shape and submit there first with a pre-planned cascade.** A
-desk rejection costs 1–3 weeks and the Nature Portfolio transfer service carries
-the file onward. The §3 framing is also the strongest framing for the fallback
-venues, so nothing is wasted.
-
-**What would most move the needle is item 3.** If a published S2S or operational
-skill claim is contaminated by the same cut, the paper stops being about a
-classification and becomes about forecasts people actually issue.
+No numerical acceptance odds are given: none can be supported from the
+evidence available, and they must not drive the decision. Nature Geoscience
+does **not** accept presubmission enquiries (checked on its site 2026-09-25), so
+the route is a full submission, as an Article or as an Analysis ("examines
+existing data ... in a comparative study", which fits this work). Title <= 90
+characters, abstract <= 200 words with a "Here we show" statement, main text
+<= 3,000 words, 4-6 display items. Go/no-go: the paired label test (B), the
+multi-model forecast test (A) and the forecast-value test (C) must each give a
+clear result; if event-aware forecasts beat the shift, publish that finding
+instead. If the tests are not decisive, a specialist journal is the better target.
 
 ---
 
 ## 6. What must be disclosed, not buried
 
-- **The evidence is model-based.** The observational arm has 35% power at true
-  R² = 0.10 and cannot carry the claim. Say so before a referee finds it.
+- **The evidence is model-based.** At n = 42 the observational out-of-sample R²
+  is negative and moves by up to 0.3 with the fold assignment; it cannot carry
+  the claim. Say so before a referee finds it.
 - **Prior art is close.** White et al. (2019, J. Climate 32, 85 §3b) already wrote
   that DW−NDW positive-lag differences are *"entirely there by construction."*
   Cite it prominently. Never lead with "unrecognised."

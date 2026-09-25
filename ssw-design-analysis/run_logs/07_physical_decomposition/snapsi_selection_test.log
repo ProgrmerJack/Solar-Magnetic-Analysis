@@ -80,6 +80,9 @@ UKMO     s20190108   control    50   21   29   0.42   -0.909   +0.658    -1.567
 UKMO     s20190829   nudged     50   40   10   0.80   -2.051   +0.492    -2.542
 UKMO     s20190829   control    50   21   29   0.42   -0.958   +0.694    -1.652
 
+PAIRED (NH, 25 centre x init pairs, 8 centres): nudged -1.622 vs control -1.594; difference -0.028 [-0.1219, 0.0544]
+  residual from one-population threshold: nudged +0.195 [0.1074, 0.3024], control +0.002 [-0.0236, 0.0233]; paired +0.193 [0.1162, 0.2909]
+
 === SOUTHERN HEMISPHERE (austral MINOR warming, reported separately) ===
   nudged   contrast -1.958 sigma (n=7 of 8), DW rate unconditional 0.786, inits ['s20190829']
   control  contrast -1.584 sigma (n=8 of 8), DW rate unconditional 0.413, inits ['s20190829']

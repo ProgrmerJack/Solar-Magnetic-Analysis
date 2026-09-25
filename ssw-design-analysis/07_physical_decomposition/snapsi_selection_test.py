@@ -158,6 +158,59 @@ def corruption_guard(centre):
     return S and max(S) < 1.0, S       # 1 Pa against control spreads of ~100-470
 
 
+def threshold_contrast(mu, sd):
+    """DW-minus-NDW contrast that a cut at zero produces on ONE Gaussian
+    population N(mu, sd): E[X | X<0] - E[X | X>0] = -sd*phi(a)*(1/Phi(a) + 1/(1-Phi(a))),
+    a = -mu/sd. At mu = 0 this is -2*sqrt(2/pi)*sd = -1.596 sd; it grows as the
+    cut moves into a tail, i.e. as the DW rate departs from 0.5. Karpechko
+    condition 2 (half of days negative) is not modelled, so this is the
+    one-population expectation for the condition-1 cut."""
+    from scipy.stats import norm
+    a = -mu / sd
+    return float(-sd * norm.pdf(a) * (1 / norm.cdf(a) + 1 / norm.sf(a)))
+
+
+def paired(per_case, n_boot=10000, seed=None):
+    """Nudged minus control on the SAME eligible centre x initialisation pairs
+    (NH), with a cluster bootstrap over centres. Also the paired difference of
+    the residual from the one-population threshold expectation."""
+    import zlib
+    rows = {}
+    for r in per_case:
+        if r["hemisphere"] == "NH":
+            rows.setdefault((r["centre"], r["init"]), {})[r["arm"]] = r
+    pairs = [(k, v) for k, v in sorted(rows.items()) if {"nudged", "control"} <= set(v)]
+    d = np.array([v["nudged"]["contrast_sigma"] - v["control"]["contrast_sigma"] for _, v in pairs])
+    res = {arm: np.array([v[arm]["contrast_sigma"] - v[arm]["threshold_contrast_sigma"]
+                          for _, v in pairs]) for arm in ("nudged", "control")}
+    dres = res["nudged"] - res["control"]
+    cen = np.array([k[0] for k, _ in pairs]); uc = np.unique(cen)
+    rng = np.random.default_rng(zlib.crc32(b"snapsi_selection_test|paired") if seed is None else seed)
+    boot = {"d": [], "dres": [], "res_n": [], "res_c": []}
+    for _ in range(n_boot):
+        pick = rng.choice(uc, len(uc), replace=True)
+        idx = np.concatenate([np.flatnonzero(cen == c) for c in pick])
+        boot["d"].append(d[idx].mean()); boot["dres"].append(dres[idx].mean())
+        boot["res_n"].append(res["nudged"][idx].mean()); boot["res_c"].append(res["control"][idx].mean())
+    ci = lambda x: [round(float(np.percentile(x, 2.5)), 4), round(float(np.percentile(x, 97.5)), 4)]
+    return {"n_pairs": len(pairs), "n_centres": int(len(uc)), "n_boot": n_boot,
+            "pairs": [f"{k[0]}|{k[1]}" for k, _ in pairs],
+            "mean_contrast_nudged": round(float(np.mean([v["nudged"]["contrast_sigma"] for _, v in pairs])), 4),
+            "mean_contrast_control": round(float(np.mean([v["control"]["contrast_sigma"] for _, v in pairs])), 4),
+            "paired_difference": round(float(d.mean()), 4), "paired_difference_CI95_centre_bootstrap": ci(boot["d"]),
+            "residual_from_threshold_nudged": round(float(res["nudged"].mean()), 4),
+            "residual_nudged_CI95": ci(boot["res_n"]),
+            "residual_from_threshold_control": round(float(res["control"].mean()), 4),
+            "residual_control_CI95": ci(boot["res_c"]),
+            "paired_residual_difference": round(float(dres.mean()), 4),
+            "paired_residual_difference_CI95": ci(boot["dres"]),
+            "note": "residual = observed contrast minus the contrast a cut at zero gives on one "
+                    "Gaussian with the ensemble's own mean and sd; ~0 means one population "
+                    "suffices. Pairs exist only where BOTH arms have >=3 members per class, "
+                    "so the 11 nearly-all-DW nudged ensembles are absent from the paired test "
+                    "(they cannot form a contrast); the DW rate uses all ensembles."}
+
+
 def main():
     centres = sorted({p.name.split("_")[0] for p in RED.glob("*.parquet")})
     out = {"window_post_onset_days": list(WINDOW),
@@ -244,7 +297,10 @@ def main():
                     "DW_mean_sigma": round(dwm, 4),
                     "NDW_mean_sigma": round(ndm, 4),
                     "contrast_sigma": round(dwm - ndm, 4),
-                    "ensemble_mean_sigma": round(float(mean_nam.mean()), 4)})
+                    "ensemble_mean_sigma": round(float(mean_nam.mean()), 4),
+                    "ensemble_sd_sigma": round(float(mean_nam.std(ddof=1)), 4),
+                    "threshold_contrast_sigma": round(threshold_contrast(
+                        float(mean_nam.mean()), float(mean_nam.std(ddof=1))), 4)})
                 print(f"{c:8s} {init:11s} {arm:8s} {len(mean_nam):4d} "
                       f"{n_dw:4d} {n_nd:4d} {n_dw/len(mean_nam):6.2f} "
                       f"{dwm:+8.3f} {ndm:+8.3f} {dwm-ndm:+9.3f}")
@@ -289,6 +345,16 @@ def main():
             out["summary"][arm]["dropped_DW_rate_mean"] = round(float(dr.mean()), 3)
             out["summary"][arm]["dropped_DW_rate_range"] = [
                 round(float(dr.min()), 3), round(float(dr.max()), 3)]
+    # ---- paired nudged-minus-control label test (plan approved 2026-09-25) ----
+    out["paired_NH"] = paired(out["per_case"])
+    pr = out["paired_NH"]
+    print(f"\nPAIRED (NH, {pr['n_pairs']} centre x init pairs, {pr['n_centres']} centres): "
+          f"nudged {pr['mean_contrast_nudged']:+.3f} vs control {pr['mean_contrast_control']:+.3f}; "
+          f"difference {pr['paired_difference']:+.3f} {pr['paired_difference_CI95_centre_bootstrap']}")
+    print(f"  residual from one-population threshold: nudged {pr['residual_from_threshold_nudged']:+.3f} "
+          f"{pr['residual_nudged_CI95']}, control {pr['residual_from_threshold_control']:+.3f} "
+          f"{pr['residual_control_CI95']}; paired {pr['paired_residual_difference']:+.3f} "
+          f"{pr['paired_residual_difference_CI95']}")
     # ---- Southern Hemisphere, its own block. NEVER pooled with NH. ----
     out["southern_hemisphere"] = {
         "event": "Austral MINOR warming, central date 2019-09-18 "
@@ -373,7 +439,7 @@ def main():
     print("\n  " + out["units_caveat"])
 
     (RESULTS / "snapsi_selection_test.json").write_text(
-        json.dumps(out, indent=2), encoding="utf8")
+        json.dumps(out, indent=2), encoding="utf8", newline="\n")
     print("\nSaved -> results/current/8_experiment/snapsi_selection_test.json")
 
 

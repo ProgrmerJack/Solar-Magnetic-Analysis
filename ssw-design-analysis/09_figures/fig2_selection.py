@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-fig2_selection.py -- Figure 2: the DW/NDW contrast needs no SSW.
+fig2_selection.py -- Figure 2: the downward label is a threshold on one population.
 
 Reads results/current/8_experiment/snapsi_selection_test.json (result L).
 Recomputes nothing except one closed-form reference line:
@@ -10,8 +10,9 @@ Recomputes nothing except one closed-form reference line:
   their own ensemble (mean 0, sd 1), so this is what the Karpechko surface
   conditions produce when applied to pure noise.
 
-  a  DW-minus-NDW surface contrast per ensemble, nudged vs control, NH, with
-     the SH minor warming and the published ACP 26, 3723 (2026) value for scale
+  a  PAIRED: DW-minus-NDW contrast of the same centre x initialisation with the
+     SSW imposed (nudged) against no SSW (control), NH, with the paired
+     difference and its centre-bootstrap interval from paired_NH
   b  the fraction of members classified DW, per ensemble (unconditional)
 """
 import json
@@ -31,45 +32,33 @@ REF = -2 * math.sqrt(2 / math.pi)
 def main():
     S.apply()
     d = json.loads((S.RESULTS / "8_experiment" / "snapsi_selection_test.json").read_text())
-    fig, (ax, bx) = plt.subplots(1, 2, figsize=(S.DOUBLE, 62 * S.MM),
-                                 gridspec_kw={"width_ratios": [1.35, 1], "wspace": 0.3})
-    rng = np.random.default_rng(0)          # jitter only
+    fig, (ax, bx) = plt.subplots(1, 2, figsize=(S.DOUBLE * 0.82, 66 * S.MM),
+                                 gridspec_kw={"width_ratios": [1, 1], "wspace": 0.45})
+    rng = np.random.default_rng(0)          # jitter only (panel b)
     arms = ("nudged", "control")
-    lab = {"nudged": "SSW imposed\n(nudged, identical in every member)",
-           "control": "no SSW\n(control)"}
-    for x, arm in enumerate(arms):
-        nh = [r["contrast_sigma"] for r in d["per_case"]
-              if r["arm"] == arm and r["hemisphere"] == "NH"]
-        sh = [r["contrast_sigma"] for r in d["per_case"]
-              if r["arm"] == arm and r["hemisphere"] == "SH"]
-        ax.scatter(x + rng.uniform(-0.12, 0.12, len(nh)), nh, s=6,
-                   color=S.ARM[arm], alpha=0.8, linewidths=0, label=None)
-        ax.scatter(x + 0.3 + rng.uniform(-0.04, 0.04, len(sh)), sh, s=9, marker="^",
-                   facecolor="white", edgecolor=S.ARM[arm], linewidths=0.6)
-        m = d["summary"][arm]["mean_contrast_sigma"]
-        ax.plot([x - 0.2, x + 0.2], [m, m], color="k", lw=1.2)
-        ax.text(x - 0.24, m, f"{m:+.2f}", ha="right", va="center", fontsize=6)
-    ax.axhline(REF, color=S.C["green"], lw=0.8, ls=(0, (3, 2)))
-    ax.text(1.5, REF - 0.05, "pure noise split at its mean:\n$-2\\sqrt{2/\\pi}$ = −1.60σ",
-            color=S.C["green"], fontsize=5.5, va="top", ha="left")
-    pub = d["published_contrast_for_scale"]
-    ax.axhline(pub, color="0.4", lw=0.6, ls=":")
-    ax.text(1.5, pub - 0.04, "published contrast\n(ACP 26, 3723, 2026)", color="0.4",
-            fontsize=5.5, va="top", ha="left")
-    # Caption, not panel: 11 of 36 nudged ensembles have < 3 NDW members (DW
-    # rate 0.99) and cannot form a contrast, so panel a shows 25 of 36.
-    ax.set_xticks([0, 1])
-    ax.set_xticklabels([lab[a] for a in arms])
-    ax.set_xlim(-0.5, 2.45)
-    # Upper limit must clear the published line: after the ACP correction
-    # (-0.850 -> -0.708) a fixed -0.75 hid it and left its label floating.
-    ax.set_ylim(-2.6, max(-0.55, pub + 0.12))
-    ax.set_ylabel("DW − NDW surface contrast (σ)")
-    ax.scatter([], [], s=6, color="0.4", label="NH ensemble (centre × initialisation)")
-    ax.scatter([], [], s=9, marker="^", facecolor="white", edgecolor="0.4",
-               linewidths=0.6, label="SH minor warming, Sep 2019")
-    ax.legend(loc="lower left", bbox_to_anchor=(0, 1.0), ncol=2)
-    S.panel_label(ax, "a", x=-0.14, y=1.08)
+    # a: PAIRED -- the same centre x initialisation with and without the SSW
+    rows = {}
+    for r in d["per_case"]:
+        if r["hemisphere"] == "NH":
+            rows.setdefault((r["centre"], r["init"]), {})[r["arm"]] = r["contrast_sigma"]
+    pairs = [v for v in rows.values() if {"nudged", "control"} <= set(v)]
+    xs = np.array([v["control"] for v in pairs]); ys = np.array([v["nudged"] for v in pairs])
+    lim = (-2.45, -0.95)
+    ax.plot(lim, lim, color="k", lw=0.6, ls=(0, (3, 2)))
+    ax.axvline(REF, color=S.C["green"], lw=0.6, ls=":")
+    ax.axhline(REF, color=S.C["green"], lw=0.6, ls=":")
+    ax.scatter(xs, ys, s=10, color=S.ARM["nudged"], edgecolor="white", linewidths=0.3, zorder=3)
+    pr = d["paired_NH"]
+    lo, hi = pr["paired_difference_CI95_centre_bootstrap"]
+    ax.text(0.03, 0.97, f"{pr['n_pairs']} pairs, {pr['n_centres']} models\n"
+                        f"SSW imposed − no SSW:\n{pr['paired_difference']:+.2f}σ [{lo:+.2f}, {hi:+.2f}]",
+            transform=ax.transAxes, va="top", fontsize=5.8)
+    ax.text(lim[0] + 0.03, REF - 0.03, "dotted: −2√(2/π)\n(one Gaussian cut)",
+            color=S.C["green"], fontsize=5.2, va="top", ha="left")
+    ax.set_xlim(lim); ax.set_ylim(lim); ax.set_aspect("equal")
+    ax.set_xlabel("DW − NDW contrast, no SSW (control, σ)")
+    ax.set_ylabel("DW − NDW contrast, SSW imposed (nudged, σ)")
+    S.panel_label(ax, "a", x=-0.2, y=1.05)
 
     for x, arm in enumerate(arms):
         r = [e["DW_rate"] for e in d["all_ensembles"]
