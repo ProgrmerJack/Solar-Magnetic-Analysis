@@ -573,7 +573,10 @@
         "P_dw_mean_ssw": 0.596,
         "DW_obs_rate_ssw": 0.75,
         "P_dw_mean_control": 0.349,
-        "DW_obs_rate_control": 0.294
+        "DW_obs_rate_control": 0.294,
+        "A_obs_mean_control": 153.5,
+        "shift_forecast": -270.3,
+        "shift_observed": -422.8
       },
       "reliability": {
         "pit_ssw_mean": 0.391,
@@ -1202,7 +1205,10 @@
         "P_dw_mean_ssw": 0.476,
         "DW_obs_rate_ssw": 0.75,
         "P_dw_mean_control": 0.367,
-        "DW_obs_rate_control": 0.298
+        "DW_obs_rate_control": 0.298,
+        "A_obs_mean_control": 158.8,
+        "shift_forecast": -112.8,
+        "shift_observed": -428.0
       },
       "reliability": {
         "pit_ssw_mean": 0.301,

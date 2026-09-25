@@ -148,7 +148,10 @@ CENTRES = {
     "hmcr":     {"year": "2025", "kind": "otf",   "thin": 1},
     "kma":      {"year": "2026", "kind": "otf",   "thin": 1},
     "cnrm":     {"year": "2025", "kind": "fixed", "thin": 1},
-    "jma":      {"year": "2022", "kind": "fixed", "thin": 1},
+    # JMA lists two 2022 model versions (31 Mar, 30 Sep); MARS holds no msl for
+    # the 31 Mar one ("MARS returned no data", 2026-09-26), and one version per
+    # centre is the design anyway: the 30 Sep version only.
+    "jma":      {"year": "2022", "kind": "fixed", "thin": 1, "model_md": ("09", "30")},
     "cnr_isac": {"year": "2023", "kind": "fixed", "thin": 1},
     "ncep":     {"year": "2011", "kind": "fixed", "thin": 3},
     "cptec":    {"year": "2023", "kind": "fixed", "thin": 3},
@@ -196,6 +199,8 @@ def jobs(origin):
     months = p.apply_constraints(q).get("month", [])
     with ThreadPoolExecutor(8) as ex:
         mds = [x for lst in ex.map(days_of, months) for x in lst]
+        if "model_md" in cfg:
+            mds = [md for md in mds if md == cfg["model_md"]]
         combos = [x for lst in ex.map(combos_of, mds) for x in lst]
         out = sorted(ex.map(job_of, combos), key=lambda j: j["key"])
     return out

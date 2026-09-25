@@ -6,11 +6,25 @@ Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
 Retrying in 120 seconds
 Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
 Retrying in 120 seconds
-Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
-Retrying in 120 seconds
-Recovering from HTTP error [502 Bad Gateway], attempt 2 of 500
-Retrying in 120 seconds
 hmcr: 17 requests; hindcast years 1991-2020
-  2025-01-02_h01-02 FAILED: ECDS request 0f2e20ca-8ed1-4f97-b279-4617c886f437 ended accepted
-  2025-01-09_h01-09 FAILED: ECDS request e46fd039-2844-4f7b-ac18-0db8e732a592 ended accepted
-hmcr exit=143
+  2025-01-30_h01-30 cached
+  2025-02-20_h02-20 cached
+  2025-02-06_h02-06 cached
+  2025-12-04_h12-04 cached
+  2025-03-27_h03-27 cached
+  2025-01-02_h01-02 cached
+  2025-01-09_h01-09 cached
+  2025-03-06_h03-06 cached
+  2025-01-23_h01-23 cached
+  2025-02-27_h02-27 cached
+  2025-01-16_h01-16 cached
+  2025-12-18_h12-18 cached
+  2025-02-13_h02-13 cached
+  2025-12-11_h12-11 cached
+  2025-12-25_h12-25 cached
+  2025-03-13_h03-13 cached
+  2025-03-20_h03-20 cached
+
+140,250 rows, 510 starts (1991-01-02 .. 2020-12-25), members [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Saved -> s2s_hmcr_psl_cap.parquet
+hmcr exit=0

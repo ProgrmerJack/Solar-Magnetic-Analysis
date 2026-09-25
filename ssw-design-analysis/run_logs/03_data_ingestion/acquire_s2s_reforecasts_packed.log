@@ -51,3 +51,38 @@ Retrying in 120 seconds
   eccc 8 starts: 2025-02-03_h02-03 .. 2025-02-27_h02-27 fetched
   eccc 9 starts: 2025-12-01_h12-01 .. 2025-12-29_h12-29 fetched
   eccc 9 starts: 2025-03-03_h03-03 .. 2025-03-31_h03-31 fetched
+  cma 9 starts: 2022-01-03_h01-03 .. 2022-01-31_h01-31 fetched
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+  cma 8 starts: 2022-02-03_h02-03 .. 2022-02-28_h02-28 fetched
+  cma 9 starts: 2022-03-03_h03-03 .. 2022-03-31_h03-31 fetched
+  cma 9 starts: 2022-12-01_h12-01 .. 2022-12-29_h12-29 fetched
+  hmcr 4 starts: 2025-02-06_h02-06 .. 2025-02-27_h02-27 fetched
+  hmcr 5 starts: 2025-01-02_h01-02 .. 2025-01-30_h01-30 fetched
+  hmcr 4 starts: 2025-03-06_h03-06 .. 2025-03-27_h03-27 fetched
+  cnrm 2 starts: 2025-06-01_h01-01 .. 2025-06-01_h01-09 fetched
+  hmcr 4 starts: 2025-12-04_h12-04 .. 2025-12-25_h12-25 fetched
+  cnrm 4 starts: 2025-06-01_h02-01 .. 2025-06-01_h02-25 fetched
+  cnrm 4 starts: 2025-06-01_h03-01 .. 2025-06-01_h03-25 fetched
+  cnrm 4 starts: 2025-06-01_h12-01 .. 2025-06-01_h12-25 fetched
+  cnr_isac 6 starts: 2023-10-16_h01-01 .. 2023-10-16_h01-31 fetched
+  cnr_isac 5 starts: 2023-10-16_h02-05 .. 2023-10-16_h02-25 fetched
+  jma pack 2022-03-31_h01-15 FAILED: ECDS request 3838af8e-cd7c-443b-80b4-ff70d19e6c9e ended failed
+  jma pack 2022-03-31_h02-15 FAILED: ECDS request d889d520-a890-4e85-aa3d-3fd0cec2852e ended failed
+  cnr_isac 6 starts: 2023-10-16_h03-02 .. 2023-10-16_h03-27 fetched
+  jma pack 2022-03-31_h03-15 FAILED: ECDS request 28749b3b-046c-47d5-ad6e-85a847ae4f83 ended failed
+  jma pack 2022-03-31_h12-15 FAILED: ECDS request 85222318-be14-4fb7-b8d0-04061d8b2613 ended failed
+  jma 2 starts: 2022-09-30_h01-16 .. 2022-09-30_h01-31 fetched
+  cnr_isac 6 starts: 2023-10-16_h12-02 .. 2023-10-16_h12-27 fetched
+  jma 2 starts: 2022-09-30_h02-10 .. 2022-09-30_h02-25 fetched
+  jma 2 starts: 2022-09-30_h03-12 .. 2022-09-30_h03-27 fetched
+  jma 2 starts: 2022-09-30_h12-12 .. 2022-09-30_h12-27 fetched
+  ncep 11 starts: 2011-03-01_h01-01 .. 2011-03-01_h01-31 fetched
+  cptec 1 starts: 2023-01-04_h02-01 .. 2023-01-04_h02-01 fetched
+  ncep 10 starts: 2011-03-01_h02-01 .. 2011-03-01_h02-28 fetched
+  ncep 11 starts: 2011-03-01_h03-01 .. 2011-03-01_h03-31 fetched
+  cptec 6 starts: 2023-01-04_h03-16 .. 2023-01-04_h03-31 fetched
+  ncep 11 starts: 2011-03-01_h12-01 .. 2011-03-01_h12-31 fetched
+  cptec 11 starts: 2023-01-04_h12-01 .. 2023-01-04_h12-31 fetched
+packed done; 4 packs failed
+exit=1 secs=9190

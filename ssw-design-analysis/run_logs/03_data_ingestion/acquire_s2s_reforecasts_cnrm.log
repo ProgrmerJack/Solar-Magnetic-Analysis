@@ -1,7 +1,21 @@
 cnrm: 16 requests; hindcast years 1999-2024
-Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
-Retrying in 120 seconds
-  2025-06-01_h01-01 FAILED: ECDS request bf347135-720a-4c00-af90-0c1aa6baefbb ended successful
-  2025-06-01_h01-17 fetched
-  2025-06-01_h01-25 fetched
-cnrm exit=143
+  2025-06-01_h01-01 cached
+  2025-06-01_h02-01 cached
+  2025-06-01_h03-09 cached
+  2025-06-01_h12-17 cached
+  2025-06-01_h01-09 cached
+  2025-06-01_h03-01 cached
+  2025-06-01_h02-25 cached
+  2025-06-01_h12-09 cached
+  2025-06-01_h03-17 cached
+  2025-06-01_h01-17 cached
+  2025-06-01_h01-25 cached
+  2025-06-01_h02-17 cached
+  2025-06-01_h02-09 cached
+  2025-06-01_h12-01 cached
+  2025-06-01_h03-25 cached
+  2025-06-01_h12-25 cached
+
+114,400 rows, 416 starts (1999-01-01 .. 2024-12-25), members [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Saved -> s2s_cnrm_psl_cap.parquet
+cnrm exit=0

@@ -1,0 +1,54 @@
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+cptec: 43 requests; hindcast years 1999-2018
+  2023-01-04_h02-10 cached
+  2023-01-04_h02-16 cached
+  2023-01-04_h01-22 cached
+  2023-01-04_h01-19 cached
+  2023-01-04_h01-10 cached
+  2023-01-04_h02-04 cached
+  2023-01-04_h02-01 cached
+  2023-01-04_h01-25 cached
+  2023-01-04_h02-07 cached
+  2023-01-04_h01-07 cached
+  2023-01-04_h01-01 cached
+  2023-01-04_h01-04 cached
+  2023-01-04_h01-31 cached
+  2023-01-04_h01-16 cached
+  2023-01-04_h02-25 cached
+  2023-01-04_h01-13 cached
+  2023-01-04_h01-28 cached
+  2023-01-04_h02-19 cached
+  2023-01-04_h03-07 cached
+  2023-01-04_h03-10 cached
+  2023-01-04_h03-13 cached
+  2023-01-04_h03-16 cached
+  2023-01-04_h03-19 cached
+  2023-01-04_h03-22 cached
+  2023-01-04_h03-25 cached
+  2023-01-04_h03-28 cached
+  2023-01-04_h03-31 cached
+  2023-01-04_h12-01 cached
+  2023-01-04_h12-04 cached
+  2023-01-04_h02-13 cached
+  2023-01-04_h02-22 cached
+  2023-01-04_h12-13 cached
+  2023-01-04_h12-16 cached
+  2023-01-04_h12-19 cached
+  2023-01-04_h12-22 cached
+  2023-01-04_h12-25 cached
+  2023-01-04_h12-28 cached
+  2023-01-04_h02-28 cached
+  2023-01-04_h12-10 cached
+  2023-01-04_h03-04 cached
+  2023-01-04_h12-31 cached
+  2023-01-04_h12-07 cached
+  2023-01-04_h03-01 cached
+
+33,825 rows, 123 starts (1999-01-13 .. 2018-12-19), members [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Saved -> s2s_cptec_psl_cap.parquet
+cptec exit=0

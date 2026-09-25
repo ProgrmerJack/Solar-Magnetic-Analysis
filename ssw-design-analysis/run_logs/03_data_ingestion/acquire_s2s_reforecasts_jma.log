@@ -2,7 +2,16 @@ Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
 Retrying in 120 seconds
 Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
 Retrying in 120 seconds
-Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
-Retrying in 120 seconds
-jma: 16 requests; hindcast years 1991-2020
-jma exit=143
+jma: 8 requests; hindcast years 1991-2020
+  2022-09-30_h02-25 cached
+  2022-09-30_h01-31 cached
+  2022-09-30_h01-16 cached
+  2022-09-30_h03-27 cached
+  2022-09-30_h03-12 cached
+  2022-09-30_h02-10 cached
+  2022-09-30_h12-12 cached
+  2022-09-30_h12-27 cached
+
+30,000 rows, 240 starts (1991-01-16 .. 2020-12-27), members [0, 1, 2, 3, 4]
+Saved -> s2s_jma_psl_cap.parquet
+jma exit=0

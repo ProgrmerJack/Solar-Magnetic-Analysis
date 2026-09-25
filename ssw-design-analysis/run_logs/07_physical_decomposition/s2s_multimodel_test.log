@@ -1,0 +1,19 @@
+centres: ['ecmwf', 'eccc', 'cma', 'hmcr', 'kma', 'cnrm', 'jma', 'cnr_isac', 'ncep', 'cptec']; missing: []
+ecmwf                  n=12  D r=+0.77 (null +0.55) p_cond=0.1097 | H1 PIT 0.401 (null 0.535) p=0.0345 | H2 gain +53.0 (null -69.6) p=0.1685 | A ens/obs -166/-269 Pa
+eccc                   n=14  D r=+0.53 (null +0.47) p_cond=0.4572 | H1 PIT 0.464 (null 0.529) p=0.1498 | H2 gain -130.9 (null -86.5) p=0.4872 | A ens/obs -170/-238 Pa
+cma                    n= 9  D r=+0.33 (null +0.42) p_cond=0.6173 | H1 PIT 0.337 (null 0.579) p=0.0010 | H2 gain +397.2 (null -13.2) p=0.0858 | A ens/obs -141/-371 Pa
+hmcr                   n=16  D r=-0.09 (null +0.43) p_cond=0.9736 | H1 PIT 0.365 (null 0.549) p=0.0039 | H2 gain +122.0 (null -59.2) p=0.1742 | A ens/obs -53/-223 Pa
+kma                    n=12  D r=+0.28 (null +0.48) p_cond=0.798 | H1 PIT 0.344 (null 0.541) p=0.0051 | H2 gain +172.7 (null -93.3) p=0.0907 | A ens/obs -83/-245 Pa
+cnrm                   n=16  D r=+0.29 (null +0.36) p_cond=0.7111 | H1 PIT 0.427 (null 0.550) p=0.0503 | H2 gain -92.8 (null -65.9) p=0.3922 | A ens/obs -159/-260 Pa
+jma                    n=11  D r=+0.45 (null +0.40) p_cond=0.5183 | H1 PIT 0.417 (null 0.519) p=0.1303 | H2 gain -178.5 (null -122.6) p=0.5153 | A ens/obs -154/-242 Pa
+cnr_isac               n=14  D r=+0.16 (null +0.42) p_cond=0.8755 | H1 PIT 0.393 (null 0.551) p=0.0198 | H2 gain +53.7 (null -46.8) p=0.2356 | A ens/obs -109/-238 Pa
+ncep                   n=12  D r=+0.06 (null +0.07) p_cond=0.5924 | H1 PIT 0.450 (null 0.363) p=0.9091 | H2 gain -312.8 (null +217.4) p=0.9932 | A ens/obs -91/-128 Pa
+cptec                  n= 4  D r=-0.66 (null +0.17) p_cond=0.9406 | H1 PIT 0.312 (null 0.502) p=0.1344 | H2 gain -178.8 (null -195.0) p=0.4333 | A ens/obs -76/-289 Pa
+MULTI-MODEL confirmatory n=17  D r=+0.23 (null +0.52) p_cond=0.9129 | H1 PIT 0.398 (null 0.544) p=0.0050 | H2 gain +120.9 (null -38.6) p=0.1604 | A ens/obs -116/-241 Pa
+                       H1c (system-centred PIT) -0.132 (null -0.003) p=0.0122
+MULTI-MODEL all_incl_ecmwf n=17  D r=+0.24 (null +0.53) p_cond=0.9103 | H1 PIT 0.399 (null 0.545) p=0.0036 | H2 gain +105.6 (null -39.6) p=0.1683 | A ens/obs -117/-240 Pa
+                       H1c (system-centred PIT) -0.131 (null -0.000) p=0.0090
+MULTI-MODEL confirmatory_excl_cptec n=17  D r=+0.25 (null +0.52) p_cond=0.8989 | H1 PIT 0.397 (null 0.545) p=0.0054 | H2 gain +138.7 (null -42.5) p=0.1470 | A ens/obs -116/-243 Pa
+                       H1c (system-centred PIT) -0.134 (null -0.003) p=0.0091
+Saved -> s2s_multimodel_test.json
+exit=0 secs=307

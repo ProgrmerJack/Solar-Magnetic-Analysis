@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-25T18:18:21+00:00",
+ "generated": "2026-09-25T22:04:58+00:00",
  "note": "Known-good baseline: each result was produced by the script at the recorded sha256. catalog_repo.py flags STALE when a producer's hash no longer matches. Re-record with --record only AFTER re-running the analysis.",
  "results": {
   "catalogue_sets.json": {
@@ -200,6 +200,16 @@
     "ssw-design-analysis/06_simulation_validation/validate_R_diagnostic.py": "35236d01a1c4ec7e"
    },
    "result_sha256_16": "98dd69eb09649328",
+   "needs_rerun": false
+  },
+  "validate_s2s_multimodel.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "4675e648b4ec542f"
+   },
+   "result_sha256_16": "334fdda8edb32987",
    "needs_rerun": false
   },
   "validate_s2s_null.json": {
@@ -447,9 +457,21 @@
     "ssw-design-analysis/07_physical_decomposition/s2s_forecast_test.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/s2s_forecast_test.py": "7ac6a756f7f0ebc8"
+    "ssw-design-analysis/07_physical_decomposition/s2s_forecast_test.py": "fc726afb34e11d44"
    },
-   "result_sha256_16": "3be7b089eb53f09c",
+   "result_sha256_16": "5b0673656e8b327a",
+   "needs_rerun": false
+  },
+  "s2s_multimodel_test.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py",
+    "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_test.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "4675e648b4ec542f",
+    "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_test.py": "d1f8823f5e771950"
+   },
+   "result_sha256_16": "60211c864f0333c0",
    "needs_rerun": false
   },
   "within_model_check.json": {
