@@ -11,9 +11,12 @@ ncep                   n=12  D r=+0.06 (null +0.07) p_cond=0.5924 | H1 PIT 0.450
 cptec                  n= 4  D r=-0.66 (null +0.17) p_cond=0.9406 | H1 PIT 0.312 (null 0.502) p=0.1344 | H2 gain -178.8 (null -195.0) p=0.4333 | A ens/obs -76/-289 Pa
 MULTI-MODEL confirmatory n=17  D r=+0.23 (null +0.52) p_cond=0.9129 | H1 PIT 0.398 (null 0.544) p=0.0050 | H2 gain +120.9 (null -38.6) p=0.1604 | A ens/obs -116/-241 Pa
                        H1c (system-centred PIT) -0.132 (null -0.003) p=0.0122
+                       H1 leave-one-event-out: max p 0.0219 (without 1999-02-26)
 MULTI-MODEL all_incl_ecmwf n=17  D r=+0.24 (null +0.53) p_cond=0.9103 | H1 PIT 0.399 (null 0.545) p=0.0036 | H2 gain +105.6 (null -39.6) p=0.1683 | A ens/obs -117/-240 Pa
                        H1c (system-centred PIT) -0.131 (null -0.000) p=0.0090
+                       H1 leave-one-event-out: max p 0.0181 (without 1999-02-26)
 MULTI-MODEL confirmatory_excl_cptec n=17  D r=+0.25 (null +0.52) p_cond=0.8989 | H1 PIT 0.397 (null 0.545) p=0.0054 | H2 gain +138.7 (null -42.5) p=0.1470 | A ens/obs -116/-243 Pa
                        H1c (system-centred PIT) -0.134 (null -0.003) p=0.0091
+                       H1 leave-one-event-out: max p 0.0179 (without 1999-02-26)
 Saved -> s2s_multimodel_test.json
-exit=0 secs=307
+exit=0 secs=177

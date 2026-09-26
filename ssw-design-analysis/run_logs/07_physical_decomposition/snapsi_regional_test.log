@@ -1,0 +1,7 @@
+NEURASIA   S_T -0.853 [-1.4049, -0.4924]  R -0.099 [-0.36, 0.0592]  explained 0.884  cold obs 0.324 pred 0.313 (control 0.100)  label(nudged) -0.0359 [-0.1916, 0.0923]
+HI_EUROPE  S_T -0.866 [-1.215, -0.6288]  R -0.273 [-0.4653, -0.1372]  explained 0.685  cold obs 0.322 pred 0.255 (control 0.100)  label(nudged) 0.1427 [-0.0333, 0.3604]
+MID_EASIA  S_T -0.515 [-0.7972, -0.2731]  R -0.208 [-0.4964, 0.0334]  explained 0.596  cold obs 0.265 pred 0.202 (control 0.100)  label(nudged) -0.0988 [-0.2324, 0.0296]
+MID_NAMER  S_T +0.492 [0.3744, 0.626]  R +0.796 [0.63, 1.0443]  explained -0.617  cold obs 0.075 pred 0.183 (control 0.100)  label(nudged) 0.2902 [0.0558, 0.5339]
+falsifier met: False
+Saved -> snapsi_regional_test.json
+exit=0 secs=27

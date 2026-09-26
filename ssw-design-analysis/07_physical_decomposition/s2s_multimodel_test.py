@@ -47,6 +47,9 @@ SENSITIVITIES ADDED 2026-09-26, AFTER the primary result, in response to review
     pseudo-onsets, before averaging. A null draw averages fewer systems than the
     real event (quorum), so a system with an unusual PIT level (NCEP: 0.36) enters
     events and null unequally; centring removes that level.
+  - H1 leave-one-event-out: the H1 test with each event removed in turn, using
+    the same null draws without that event (referees' obvious check: does one
+    event, e.g. Feb 2018, carry the result?).
   Observed anomalies use ERA5 from 1998-11, so for systems with earlier hindcasts
   (HMCR, JMA from 1991; KMA from 1993) the observed climatology omits those years.
 
@@ -247,7 +250,7 @@ def main():
         rows = [mm_rows([real[c][o] for c in cover[o]]) for o in ev]
         obs = summarise(rows)
         pitc_obs = float(np.mean([np.mean([real[c][o]["pit"] - mu[c] for c in cover[o]]) for o in ev]))
-        npitc = []
+        npitc, npit_ev = [], []
         need = {o: int(np.ceil(len(cover[o]) / 2)) for o in ev}
         pools = {o: [p for p in cands[o]
                      if sum(cen[c].at(p) is not None for c in cover[o]) >= need[o]] for o in ev}
@@ -261,6 +264,7 @@ def main():
                     rr.append(mm_rows([cen[c].at(p) for c in have]))
                     pc.append(np.mean([cen[c].at(p)["pit"] - mu[c] for c in have]))
                 npitc.append(float(np.mean(pc)))
+                npit_ev.append([r["pit"] for r in rr])
                 s = summarise(rr); nr.append(s["r"]); npit.append(s["pit"])
                 ngain.append(s["gain"]); nvar.append(s["var_obs"])
         out = report(f"MULTI-MODEL {label}", ev, obs, np.array(nr), np.array(npit),
@@ -272,6 +276,17 @@ def main():
             out["H1c_p"] = round(float(np.mean(npitc <= pitc_obs)), 4)
             print(f"{'':22s} H1c (system-centred PIT) {pitc_obs:+.3f} (null {npitc.mean():+.3f}) "
                   f"p={out['H1c_p']:.4f}", flush=True)
+        if npit_ev:
+            M = np.array(npit_ev)                                   # (draw, event)
+            po = np.array([r["pit"] for r in rows])
+            loo = {}
+            for e, o in enumerate(ev):
+                keep = np.arange(len(ev)) != e
+                loo[str(o.date())] = round(float(np.mean(M[:, keep].mean(1) <= po[keep].mean())), 4)
+            out["H1_p_leave_one_event_out"] = loo
+            out["H1_p_loo_max"] = max(loo.values())
+            print(f"{'':22s} H1 leave-one-event-out: max p {max(loo.values()):.4f} "
+                  f"(without {max(loo, key=loo.get)})", flush=True)
         out["centres_per_event"] = {str(o.date()): cover[o] for o in ev}
         out["null_candidates_per_event"] = {str(o.date()): len(pools[o]) for o in ev}
         res["multimodel"][label] = out

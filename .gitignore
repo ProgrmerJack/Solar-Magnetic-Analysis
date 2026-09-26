@@ -61,3 +61,6 @@ credentials.json
 # third-party papers (copyrighted; public repo) -- never commit
 *.pdf
 !ssw-design-analysis/09_figures/out/*.pdf
+
+# reduced SNAPSI near-surface temperature (daily 2.5-degree fields, ~3.5 GB), rebuilt by acquire_snapsi_tas.py
+ssw-design-analysis/03_data_ingestion/_snapsi_tas/
