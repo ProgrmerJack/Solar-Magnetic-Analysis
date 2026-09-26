@@ -1,5 +1,5 @@
 {
-  "var": "msl",
+  "var": "t2m",
   "n_seeds": 100,
   "n_null": 1000,
   "centres": [
@@ -18,89 +18,89 @@
   "cases": {
     "equal_skill": {
       "D_p_conditional": {
-        "rate_below_0.05": 0.06,
-        "mean": 0.393,
+        "rate_below_0.05": 0.12,
+        "mean": 0.364,
         "n": 100
       },
       "H1_p": {
-        "rate_below_0.05": 0.03,
-        "mean": 0.5,
+        "rate_below_0.05": 0.02,
+        "mean": 0.471,
         "n": 100
       },
       "H2_p": {
-        "rate_below_0.05": 0.03,
-        "mean": 0.451,
+        "rate_below_0.05": 0.02,
+        "mean": 0.397,
         "n": 100
       },
       "H1c_p": {
         "rate_below_0.05": 0.02,
-        "mean": 0.508,
+        "mean": 0.475,
         "n": 100
       }
     },
     "noise": {
       "D_p_conditional": {
-        "rate_below_0.05": 0.07,
-        "mean": 0.484,
+        "rate_below_0.05": 0.05,
+        "mean": 0.486,
         "n": 100
       },
       "H1_p": {
         "rate_below_0.05": 1.0,
-        "mean": 0.0,
+        "mean": 0.004,
         "n": 100
       },
       "H2_p": {
         "rate_below_0.05": 0.0,
-        "mean": 0.191,
+        "mean": 0.33,
         "n": 100
       },
       "H1c_p": {
         "rate_below_0.05": 1.0,
-        "mean": 0.0,
+        "mean": 0.011,
         "n": 100
       }
     },
     "damped": {
       "D_p_conditional": {
-        "rate_below_0.05": 0.07,
-        "mean": 0.39,
+        "rate_below_0.05": 0.09,
+        "mean": 0.401,
         "n": 100
       },
       "H1_p": {
-        "rate_below_0.05": 0.66,
-        "mean": 0.059,
+        "rate_below_0.05": 0.23,
+        "mean": 0.244,
         "n": 100
       },
       "H2_p": {
-        "rate_below_0.05": 0.11,
-        "mean": 0.325,
+        "rate_below_0.05": 0.02,
+        "mean": 0.432,
         "n": 100
       },
       "H1c_p": {
-        "rate_below_0.05": 0.55,
-        "mean": 0.076,
+        "rate_below_0.05": 0.23,
+        "mean": 0.264,
         "n": 100
       }
     },
     "ssw_skill": {
       "D_p_conditional": {
         "rate_below_0.05": 1.0,
-        "mean": 0.0,
+        "mean": 0.001,
         "n": 100
       },
       "H1_p": {
-        "rate_below_0.05": 0.39,
-        "mean": 0.104,
+        "rate_below_0.05": 0.19,
+        "mean": 0.149,
         "n": 100
       },
       "H2_p": {
         "rate_below_0.05": 0.0,
-        "mean": 0.477,
+        "mean": 0.388,
         "n": 100
       },
       "H1c_p": {
-        "rate_below_0.05": 0.28,
-        "mean": 0.13,
+        "rate_below_0.05": 0.19,
+        "mean": 0.159,
         "n": 100
       }
     }

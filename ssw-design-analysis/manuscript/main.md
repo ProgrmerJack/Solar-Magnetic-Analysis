@@ -20,13 +20,13 @@ difference −0.03σ [−0.12, 0.05]), where it is what a threshold on one Gauss
 gives. The SSW triples the chance of a cold fortnight over northern Eurasia, and
 the circulation shift predicts it. In 1,517 simulated SSWs, stratospheric
 information up to onset adds 0.8% [−0.3, 1.4] to probabilistic skill beyond the
-shift, less than on ordinary days (3.7%). In ten operational systems,
-differences between events are not predicted significantly better than on
-ordinary days, and outcomes lie low in the ensembles: the shift is
-under-forecast. After an SSW, forecasts should issue the shifted distribution;
-the label records where a threshold cuts it.
+shift, less than on ordinary days (3.7%). Ten operational systems predict
+differences between events not significantly better than on ordinary days and
+under-forecast the shift and its northern-Eurasian cold. After an SSW, forecasts
+should issue the shifted distribution; the label records where a threshold cuts
+it.
 
-*(199 words by `wc`; limit 200.)*
+*(194 words by `wc`; limit 200.)*
 
 ---
 
@@ -211,6 +211,20 @@ starts 2–9 days before onset include forecasts that do not predict the warming
 itself, which would also explain the fall to 26% at longer lead. What it
 establishes is the forecast consequence: before onset, operational ensembles place
 too little probability on the shifted state, whatever the cause.
+
+The same holds for the regional cold. Registered before the data were analysed,
+the primary regional test asks whether observed northern-Eurasian temperature
+after SSWs lies on the cold side of the forecast ensembles more than on
+event-free dates. It does: mean rank 0.39 against 0.53 across the nine further
+systems (p = 0.014; 0.021 with each system's own rank level removed; at most
+0.036 with any one event left out), below the event-free value in all ten
+systems (Fig. 5d). The ensemble-mean anomaly after these SSWs is −0.3 K where
+the observed is −1.3 K. High-latitude Europe points the same way (0.43 against
+0.53, p = 0.07); mid-latitude East Asia and North America, where the imposed SSW
+cools less or warms, show no such error. On synthetic forecasts this test is
+conservative (2% false positives) and weak (it detected a 40% under-prediction of
+every anomaly in 23% of trials), so the absence of a signal elsewhere is not
+evidence of calibration.
 
 ### Event differences follow a general stratosphere–surface relation
 
@@ -431,6 +445,21 @@ onset, and R is compared with 10,000 sets of such dates within ±21 calendar day
 of each event. The design, regions and falsifier (an interval excluding zero and
 |R| > 0.2σ in northern Eurasia) were fixed before any regional temperature was
 analysed; the analysis without ECCC was added after.
+Operational: daily-mean 2 m temperature ("2t", averaged over each 24 h lead
+window; the definition of the daily mean differs between centres) for the same
+ten systems, model versions and starts, over the same regions from the S2S
+reforecast archive (1.5° grid), and the ERA5 regional series above as the
+observation; anomalies, event and pseudo-onset definitions, null and statistics
+as for the polar-cap tests, with the outcome the mean over days +8..+24 and the
+sign chosen so that a low rank means colder than forecast. The primary test (rank
+in northern Eurasia, multi-model mean of the nine confirmatory systems) was
+registered before the regional data were analysed; the other regions are
+secondary (Holm-adjusted p for northern Eurasia over the four regions, 0.054).
+On 100 synthetic datasets per case with the real temperature layouts and
+outcome, rejection rates for the rank test were 0.02 for equally skilful
+forecasts, 1.00 for forecasts without information and 0.23 for forecasts that
+under-predict every anomaly by 40%; the discrimination test rejected 12% of
+equally skilful datasets, so it is not interpreted for temperature.
 
 **Precursor coupling (Extended Data Fig. 1).** Week-2 (days 8–14) 100 hPa
 polar-cap geopotential height against days 15–25 polar-cap sea-level pressure,
@@ -507,7 +536,12 @@ the residual (vermilion, with interval), in units of the control spread.
 (0.10 by construction), SSW imposed, and predicted from the circulation shift
 alone (hatched). **c**, ERA5, 39 observed SSWs: the same decomposition in kelvin;
 whiskers, the central 95% of the residual on event-free dates of the same
-calendar period.
+calendar period. **d**, Ten S2S reforecast systems, 17 SSWs: mean rank
+(probability integral transform) of the observed days 8–24 regional temperature
+within the forecast ensembles, for the mean of the nine confirmatory systems
+(diamonds) and each system (dots), against the central 95% of event-free dates
+of the same calendar period and lead (grey); p, the registered one-sided test
+that outcomes are colder than forecast more often than on event-free dates.
 
 **Extended Data Fig. 1 | The lower-stratospheric precursor couples to the surface
 as strongly with no SSW.** **a**, For each of 36 SNAPSI ensembles, the correlation

@@ -59,7 +59,7 @@ withdrawal now carries intervals.)*
 | P | operational forecasts show no significant event-specific skill at SSWs; they underestimate the common shift | ECMWF S2S reforecasts, 12 SSWs 2003–2021 | established for one system; conditional p 0.115 / 0.366, power 0.88–0.90 |
 | P′ | confirmed in 9 other systems: no event-specific discrimination (r +0.23 vs +0.52 event-free, p 0.91); outcomes on the downward side of the ensembles (mean PIT 0.40 vs 0.54, p 0.005); shift-size correction not significant (p 0.16, low power) | S2S reforecasts, 9 systems, 17 SSWs 1998–2021 | established (H1/H2 pre-registered; D, H1, H2 calibrated, D power 1.00 against strong skill) |
 | Q | knowing the event adds no probabilistic forecast skill beyond the shift (CRPSS +0.008 [−0.003, +0.014]), less than on ordinary days (+0.037) | CMIP6, 1,517 events, leave-one-model-out | established |
-| R | an imposed SSW triples the chance of a cold fortnight over northern Eurasia (0.10 → 0.32); the polar-cap shift through the ordinary relation predicts it (0.31), residual −0.10σ [−0.36, +0.06]; the label adds nothing. Europe has extra cooling, N America an unexplained warming | SNAPSI 36 pairs (9 centres); ERA5 39 events | established (preregistered); operational counterpart pending |
+| R | an imposed SSW triples the chance of a cold fortnight over northern Eurasia (0.10 → 0.32); the polar-cap shift through the ordinary relation predicts it (0.31), residual −0.10σ [−0.36, +0.06]; the label adds nothing. Europe has extra cooling, N America an unexplained warming | SNAPSI 36 pairs (9 centres); ERA5 39 events; 10 S2S systems, 17 events | established (preregistered); operational: N Eurasia colder than forecast, rank 0.39 vs 0.53, p 0.014 |
 | L′ | paired label test: contrast identical with and without an SSW on the same pairs (−0.03σ [−0.12, +0.05]); threshold model exact in controls | SNAPSI, 25 pairs, 8 centres | established |
 
 **J is the headline.** It needs no correction of any kind, it answers the field's
@@ -829,8 +829,27 @@ detectable here. Label coefficients uninformative (intervals ±1.7 K).
   America that the NAM relation does not predict (+0.7 to +0.8σ; same sign in
   ERA5). The forecast product after an SSW should therefore be the shifted
   distribution of the regional variable itself, not a label or the NAM alone.
-- Operational counterpart (`s2s_regional_test.py`, S2S 2 m temperature): pending
-  the retrieval.
+**Operational (`s2s_regional_test.py`; S2S daily-mean 2 m temperature of the ten
+systems of P′, `acquire_s2s_reforecasts.py --var t2m`; 17 SSWs; P′ machinery; H1-T
+registered as primary before the data were analysed):**
+
+| region | mean rank (event-free mean) | H1-T p | system-centred p | leave-one-out max p | ens-mean / obs anomaly |
+|---|---|---|---|---|---|
+| **NEURASIA** | **0.390 (0.527)** | **0.014** | 0.021 | 0.036 | −0.3 / −1.3 K |
+| HI_EUROPE | 0.426 (0.529) | 0.069 | 0.083 | 0.134 | −0.8 / −1.3 K |
+| MID_EASIA | 0.539 (0.497) | 0.74 | 0.79 | 0.88 | +0.1 / +0.2 K |
+| MID_NAMER | 0.484 (0.532) | 0.22 | 0.27 | 0.34 | +0.3 / +0.2 K |
+
+Holm over the four regions: NEURASIA 0.054. Over NEURASIA all ten systems lie below
+their event-free value. Discrimination D is not interpretable here: its calibration
+rejected 12% under equal skill (below). Anomalies are against climatologies that
+include the SSW years (not shifts).
+**Calibration** (`validate_s2s_multimodel.py --var t2m`, 100 datasets per case, real
+t2m layouts and ERA5 NEURASIA outcome, noise scaled to the pressure case): equal
+skill — D 0.12 (liberal), H1 0.02, H2 0.02, H1c 0.02; no information — D 0.05, H1
+1.00; damped 0.6× — H1 0.23 (low power), H2 0.02; skill only before SSWs — D 1.00.
+- The operational systems under-forecast the northern-Eurasian cold after SSWs as
+  they under-forecast the polar-cap shift (P′), with a test of low power.
 
 ## 4. Prior art — verified from source, all must be cited
 

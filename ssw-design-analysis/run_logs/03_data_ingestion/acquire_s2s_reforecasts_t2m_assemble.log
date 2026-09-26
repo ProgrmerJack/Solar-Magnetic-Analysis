@@ -1,0 +1,42 @@
+184,800 rows, 700 starts -> s2s_ecmf_t2m_regions.parquet
+ecmwf exit=0
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+67,200 rows, 700 starts -> s2s_eccc_t2m_regions.parquet
+eccc exit=0
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 2 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+50,400 rows, 525 starts -> s2s_cma_t2m_regions.parquet
+cma exit=0
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+134,640 rows, 510 starts -> s2s_hmcr_t2m_regions.parquet
+hmcr exit=0
+48,384 rows, 288 starts -> s2s_kma_t2m_regions.parquet
+kma exit=0
+109,824 rows, 416 starts -> s2s_cnrm_t2m_regions.parquet
+cnrm exit=0
+28,800 rows, 240 starts -> s2s_jma_t2m_regions.parquet
+jma exit=0
+92,160 rows, 480 starts -> s2s_cnr_isac_t2m_regions.parquet
+cnr_isac exit=0
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+49,536 rows, 516 starts -> s2s_ncep_t2m_regions.parquet
+ncep exit=0
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+32,472 rows, 123 starts -> s2s_cptec_t2m_regions.parquet
+cptec exit=0
