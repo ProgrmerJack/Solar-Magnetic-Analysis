@@ -1,0 +1,7 @@
+NEURASIA   H1-T PIT 0.3896 (null 0.5273) p=0.0135  centred p=0.021  LOO max p=0.0359  D r=0.4479 p=0.8901  H2 p=0.101  A ens/obs -0.3/-1.3 K
+HI_EUROPE  H1-T PIT 0.4263 (null 0.5287) p=0.0689  centred p=0.0832  LOO max p=0.1343  D r=0.5129 p=0.4948  H2 p=0.2751  A ens/obs -0.8/-1.3 K
+MID_EASIA  H1-T PIT 0.5386 (null 0.4968) p=0.7435  centred p=0.7948  LOO max p=0.8762  D r=0.3462 p=0.9988  H2 p=0.9861  A ens/obs 0.1/0.2 K
+MID_NAMER  H1-T PIT 0.4837 (null 0.5324) p=0.2225  centred p=0.2659  LOO max p=0.3391  D r=0.6292 p=0.2578  H2 p=0.6613  A ens/obs 0.3/0.2 K
+Holm: {'NEURASIA': 0.054, 'HI_EUROPE': 0.2067, 'MID_EASIA': 0.7435, 'MID_NAMER': 0.445}  falsifier met: False
+Saved -> s2s_regional_test.json
+exit=0 secs=682

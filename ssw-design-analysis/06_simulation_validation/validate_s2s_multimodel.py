@@ -23,6 +23,13 @@ Known-truth calibration of s2s_multimodel_test.py on every centre's real layout
 
 Rates are for the primary statistic, the confirmatory multi-model mean.
 Output: results/current/3_calibration/validate_s2s_multimodel.json
+
+--var t2m (added 2026-09-26): the same cases for s2s_regional_test.py, with the
+real ERA5 northern-Eurasia temperature (days +8..+24 daily means) as the outcome
+and every system's real t2m layout; all noise amplitudes are scaled by the ratio
+of the winter daily s.d. of the temperature series to that of polar-cap pressure,
+so each case has the same signal-to-noise as in the pressure calibration.
+Output: results/current/3_calibration/validate_s2s_multimodel_t2m.json
 """
 import contextlib
 import functools
@@ -44,6 +51,7 @@ RESULTS = ROOT / "results" / "current" / "3_calibration"
 sys.path.insert(0, str(HERE.parents[0] / "07_physical_decomposition"))
 import s2s_multimodel_test as MM                     # noqa: E402
 import s2s_forecast_test as T                        # noqa: E402
+import s2s_regional_test as SR                       # noqa: E402
 sys.path.insert(0, str(HERE.parents[0] / "02_event_catalogues"))
 from build_catalogue import load_catalogue          # noqa: E402
 
@@ -52,12 +60,27 @@ N_NULL = 1000
 WORKERS = 16
 NAME = "validate_s2s_multimodel"
 CASES = ("equal_skill", "noise", "damped", "ssw_skill")
+VAR = "msl"                  # "t2m" with --var t2m
 _G = {}
+
+
+def _winter_sd(series):
+    m = pd.DatetimeIndex(series.index).month
+    return float(series[np.isin(m, (12, 1, 2, 3))].std())
 
 
 def _setup():
     ob = pd.read_parquet(T.OBS)
     ob = ob[pd.to_datetime(ob["time"]).dt.hour == 0].set_index("time")["psl_cap_N"]
+    scale, col = 1.0, "psl_cap_N"
+    if VAR == "t2m":
+        et = pd.read_parquet(SR.OBS)
+        et = pd.Series(et[SR.PRIMARY].values, index=pd.to_datetime(et["date"]))
+        scale, col = _winter_sd(et) / _winter_sd(ob), SR.PRIMARY
+        ob = et
+        MM.FILES = SR.FILES
+        T.WIN = SR.WIN_T
+        T.load = SR.loader(SR.PRIMARY)
     lay = {}
     for c, f in MM.FILES.items():
         if f.exists():
@@ -75,13 +98,17 @@ def _setup():
                 ssw |= ((k >= MM.K_SHORT[0]) & (k <= MM.K_SHORT[1])).values
             lay[c] = (b, truth, key, other, ssw)
     orig = T.obs_anom
+    # the loader hands T.start_stats the SIGN-REVERSED temperature (see
+    # s2s_regional_test.loader); the cached observed anomaly must match it
+    ob_used = -ob if VAR == "t2m" else ob
 
     @functools.lru_cache(maxsize=None)
     def oa(a, offs, hy, mo):
-        return orig(ob, [a], list(offs), list(hy), mo)[a]
+        return orig(ob_used, [a], list(offs), list(hy), mo)[a]
     T.obs_anom = lambda o, anchors, offs, hy, mo=15: {
         a: oa(a, tuple(int(x) for x in offs), tuple(hy), mo) for a in anchors}
-    _G.update(lay=lay, td=Path(tempfile.mkdtemp()))
+    _G.update(lay=lay, td=Path(tempfile.mkdtemp()), scale=scale, col=col,
+              mean=float(ob.mean()))
 
 
 def _one(task):
@@ -92,18 +119,19 @@ def _one(task):
     for c, (b, truth, key, other, ssw) in _G["lay"].items():
         rng = np.random.default_rng(zlib.crc32(f"{NAME}|{case}|{c}|{seed}".encode()))
         n = len(b)
-        shared = rng.normal(0, 2500, key.max() + 1)[key]
-        noise = rng.normal(0, 2500, n) + shared
+        sc, mu = _G["scale"], (101300 if VAR == "msl" else _G["mean"])
+        shared = rng.normal(0, 2500 * sc, key.max() + 1)[key]
+        noise = rng.normal(0, 2500 * sc, n) + shared
         if case == "equal_skill":
             v = truth + noise
         elif case == "ssw_skill":
             v = np.where(ssw, truth, other) + noise
         elif case == "damped":
-            v = 101300 + 0.6 * (truth - 101300) + noise
+            v = mu + 0.6 * (truth - mu) + noise
         else:
-            v = 101300 + rng.normal(0, 900, n)
+            v = mu + rng.normal(0, 900 * sc, n)
         f = _G["td"] / f"{case}_{seed}_{c}.parquet"
-        b.assign(psl_cap_N=v).to_parquet(f)
+        b.assign(**{_G["col"]: v}).to_parquet(f)
         files[c] = f
     MM.FILES, MM.N_NULL, MM.RESULTS = files, N_NULL, _G["td"]
     MM.ROOT = Path("/")
@@ -123,7 +151,9 @@ def main():
     tasks = [(c, s) for c in CASES for s in range(N_SEEDS)]
     with ProcessPoolExecutor(WORKERS, mp_context=ctx) as ex:
         got = list(ex.map(_one, tasks))
-    res = {"n_seeds": N_SEEDS, "n_null": N_NULL, "centres": [c for c in MM.FILES],
+    if VAR == "t2m":
+        MM.FILES = SR.FILES                           # the layouts to be used
+    res = {"var": VAR, "n_seeds": N_SEEDS, "n_null": N_NULL, "centres": [c for c in MM.FILES],
            "binomial_se_at_0.05": round(float(np.sqrt(0.05 * 0.95 / N_SEEDS)), 3), "cases": {}}
     for case in CASES:
         rows = [r for c, s, r in got if c == case]
@@ -135,10 +165,14 @@ def main():
         res["cases"][case] = out
         print(f"{case:12s} " + "  ".join(f"{k} {v['rate_below_0.05']:.2f} (mean p {v['mean']:.2f})"
                                           for k, v in out.items()), flush=True)
-    (RESULTS / "validate_s2s_multimodel.json").write_text(json.dumps(res, indent=2),
-                                                          encoding="utf8", newline="\n")
-    print("Saved -> validate_s2s_multimodel.json")
+    out = (RESULTS / "validate_s2s_multimodel.json" if VAR == "msl"
+           else RESULTS / "validate_s2s_multimodel_t2m.json")
+    out.write_text(json.dumps(res, indent=2), encoding="utf8", newline="\n")
+    print(f"Saved -> {out.name}")
 
 
 if __name__ == "__main__":
+    if "--var" in sys.argv:
+        VAR = sys.argv[sys.argv.index("--var") + 1]
+        assert VAR in ("msl", "t2m"), VAR
     main()

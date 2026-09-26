@@ -1,10 +1,10 @@
 {
- "generated": "2026-09-26T10:22:06+00:00",
+ "generated": "2026-09-26T13:41:15+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
   "scripts": 136,
-  "results": 64
+  "results": 66
  },
  "scripts": [
   {
@@ -654,13 +654,14 @@
    "tree": "ssw-design-analysis",
    "stage": "06_simulation_validation",
    "title": "Known-truth calibration of s2s_multimodel_test.py on every centre's real layout (starts, members, leads) and the real ERA5 outcome.",
-   "loc": 145,
-   "modified": "2026-09-25 21:36",
-   "sha256_16": "4675e648b4ec542f",
+   "loc": 179,
+   "modified": "2026-09-26 12:21",
+   "sha256_16": "d530c434b43785c3",
    "flags": [],
    "filenames_mentioned": [
     "s2s_multimodel_test.json",
-    "validate_s2s_multimodel.json"
+    "validate_s2s_multimodel.json",
+    "validate_s2s_multimodel_t2m.json"
    ],
    "filename_prefixes": []
   },
@@ -1252,12 +1253,13 @@
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
    "title": "fig5_regional.py -- Figure 5: regional cold risk after an imposed SSW is the circulation shift acting through the ordinary relation.",
-   "loc": 95,
-   "modified": "2026-09-26 10:19",
-   "sha256_16": "ba90675cc0e5ae1d",
+   "loc": 121,
+   "modified": "2026-09-26 13:12",
+   "sha256_16": "6c7d34a4a4a917e3",
    "flags": [],
    "filenames_mentioned": [
     "era5_regional_test.json",
+    "s2s_regional_test.json",
     "snapsi_regional_test.json"
    ],
    "filename_prefixes": []
@@ -2105,7 +2107,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-09-25 22:05",
+   "modified": "2026-09-26 10:22",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -2927,9 +2929,9 @@
    "tree": "current",
    "stage": "3_calibration",
    "readable": true,
-   "bytes": 1925,
-   "modified": "2026-09-25 22:04",
-   "sha256_16": "334fdda8edb32987",
+   "bytes": 1941,
+   "modified": "2026-09-26 13:40",
+   "sha256_16": "0f944d1fa01d3e65",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py"
    ],
@@ -2937,7 +2939,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "4675e648b4ec542f"
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "d530c434b43785c3"
    },
    "verdicts": [],
    "counts": {
@@ -2949,6 +2951,42 @@
     ]
    },
    "top_level_keys": [
+    "var",
+    "n_seeds",
+    "n_null",
+    "centres",
+    "binomial_se_at_0.05",
+    "cases"
+   ]
+  },
+  {
+   "path": "results/current/3_calibration/validate_s2s_multimodel_t2m.json",
+   "tree": "current",
+   "stage": "3_calibration",
+   "readable": true,
+   "bytes": 1950,
+   "modified": "2026-09-26 13:00",
+   "sha256_16": "acf2ac1754413521",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "d530c434b43785c3"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_seeds": [
+     100
+    ],
+    "n_null": [
+     1000
+    ]
+   },
+   "top_level_keys": [
+    "var",
     "n_seeds",
     "n_null",
     "centres",
@@ -3901,7 +3939,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "4675e648b4ec542f",
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "d530c434b43785c3",
     "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_test.py": "4f974e1a74330b3a"
    },
    "verdicts": [],
@@ -3938,6 +3976,41 @@
     "centres",
     "multimodel",
     "pit_level_by_system"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/s2s_regional_test.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 117104,
+   "modified": "2026-09-26 13:11",
+   "sha256_16": "e767050cf988daba",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_regional_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_regional_test.py": "1ff822d226a3f6c0"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_null": [
+     10000
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "primary",
+    "window_days",
+    "n_null",
+    "seed",
+    "inputs",
+    "regions",
+    "H1_holm_over_regions",
+    "falsifier_primary"
    ]
   },
   {

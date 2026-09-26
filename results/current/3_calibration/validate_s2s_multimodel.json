@@ -1,4 +1,5 @@
 {
+  "var": "msl",
   "n_seeds": 100,
   "n_null": 1000,
   "centres": [
