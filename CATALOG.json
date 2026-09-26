@@ -1,10 +1,10 @@
 {
- "generated": "2026-09-25T22:05:11+00:00",
+ "generated": "2026-09-26T10:22:06+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 130,
-  "results": 62
+  "scripts": 136,
+  "results": 64
  },
  "scripts": [
   {
@@ -81,6 +81,20 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_era5_t2m_regions.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "ERA5 daily-mean 2 m temperature over the four regions of the regional cold-risk plan (approved 2026-09-26), the observation for the S2S regional test and the observed-event regional analysis.",
+   "loc": 67,
+   "modified": "2026-09-26 08:16",
+   "sha256_16": "9469b0c0094cf6cc",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_t2m_regions_daily.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/03_data_ingestion/acquire_heatflux.py",
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
@@ -115,16 +129,17 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "ECMWF S2S reforecasts of polar-cap mean sea-level pressure, reduced EXACTLY as the ERA5 observation is (`acquire_era5_psl_cap.cap`: cos-lat weighted 60-90N, the 60N row included), for the forecast-reliability test",
-   "loc": 423,
-   "modified": "2026-09-25 20:13",
-   "sha256_16": "ae85e9058d8d8515",
+   "loc": 500,
+   "modified": "2026-09-26 10:10",
+   "sha256_16": "12b37acd443e4e7a",
    "flags": [],
    "filenames_mentioned": [
     "s2s_ecmf_psl_cap.parquet",
     "s2s_manifest.json"
    ],
    "filename_prefixes": [
-    "s2s_manifest_"
+    "s2s_manifest_",
+    "s2s_manifest_t2m_"
    ]
   },
   {
@@ -155,6 +170,18 @@
     "snapsi_polarcap_psl.parquet",
     "snapsi_time_origin.json"
    ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_snapsi_tas.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "SNAPSI near-surface air temperature (tas, 6hrPt), reduced on the fly to DAILY MEANS on a common 2.5-degree grid north of 20N, for the regional cold-risk analysis (plan approved 2026-09-26).",
+   "loc": 216,
+   "modified": "2026-09-26 10:16",
+   "sha256_16": "bbcf2b9a48e30f68",
+   "flags": [],
+   "filenames_mentioned": [],
    "filename_prefixes": []
   },
   {
@@ -772,6 +799,22 @@
    ]
   },
   {
+   "path": "ssw-design-analysis/07_physical_decomposition/era5_regional_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "OBSERVED SSWs: IS THE REGIONAL COLD AFTER AN SSW WHAT ITS NAM SHIFT IMPLIES? Plan approved 2026-09-26 (regional cold-risk plan). Written before the ERA5 regional temperature series was analysed. The observational counterpart of",
+   "loc": 165,
+   "modified": "2026-09-26 10:21",
+   "sha256_16": "f1adbb9235f60d21",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_nam_daily.parquet",
+    "era5_regional_test.json",
+    "era5_t2m_regions_daily.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py",
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
@@ -956,13 +999,29 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "MULTI-MODEL S2S TEST: EVENT DISCRIMINATION (D) AND THE SIZE OF THE SHIFT (H1, H2) Plan approved 2026-09-25 (item A). Hypotheses H1 and H2 were written into this docstring before any non-ECMWF forecast was retrieved; ECMWF (result P) is the",
-   "loc": 286,
-   "modified": "2026-09-25 21:16",
-   "sha256_16": "d1f8823f5e771950",
+   "loc": 301,
+   "modified": "2026-09-26 08:03",
+   "sha256_16": "4f974e1a74330b3a",
    "flags": [],
    "filenames_mentioned": [
     "s2s_ecmf_psl_cap.parquet",
     "s2s_multimodel_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/s2s_regional_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "DO OPERATIONAL FORECASTS UNDER-FORECAST REGIONAL COLD AFTER SSWs? Plan approved 2026-09-26 (regional cold-risk plan). Written before any regional forecast or observed temperature was analysed. The operational counterpart of",
+   "loc": 138,
+   "modified": "2026-09-26 10:21",
+   "sha256_16": "1ff822d226a3f6c0",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_t2m_regions_daily.parquet",
+    "s2s_ecmf_t2m_regions.parquet",
+    "s2s_regional_test.json"
    ],
    "filename_prefixes": []
   },
@@ -1023,6 +1082,20 @@
     "snapsi_loeffel_test.json",
     "snapsi_polarcap_psl.parquet",
     "snapsi_polarcap_zg100.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/snapsi_regional_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "REGIONAL COLD RISK UNDER AN IMPOSED SSW: IS IT THE CIRCULATION SHIFT, OR MORE? Plan approved 2026-09-26 (\"I approve the new plan\"). Everything below -- regions, window, metrics, tests, falsifiers -- was written before any regional",
+   "loc": 283,
+   "modified": "2026-09-26 10:21",
+   "sha256_16": "b26003e288e34231",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_regional_test.json"
    ],
    "filename_prefixes": []
   },
@@ -1175,6 +1248,21 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/09_figures/fig5_regional.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "fig5_regional.py -- Figure 5: regional cold risk after an imposed SSW is the circulation shift acting through the ordinary relation.",
+   "loc": 95,
+   "modified": "2026-09-26 10:19",
+   "sha256_16": "ba90675cc0e5ae1d",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_regional_test.json",
+    "snapsi_regional_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/09_figures/figED1_loeffel.py",
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
@@ -1232,9 +1320,9 @@
    "tree": "ssw-design-analysis",
    "stage": "manuscript",
    "title": "number_citations.py -- replace ^{key}^ citation keys in main.md with numbers in Nature order (main text, then figure legends, then Methods) and write the reference list. Every entry below was checked against Crossref or the publisher",
-   "loc": 76,
-   "modified": "2026-09-25 18:15",
-   "sha256_16": "9e5b0743f08096e2",
+   "loc": 82,
+   "modified": "2026-09-26 10:20",
+   "sha256_16": "4de83f4296357528",
    "flags": [],
    "filenames_mentioned": [],
    "filename_prefixes": []
@@ -2237,6 +2325,51 @@
    "top_level_keys": [
     "n_boot",
     "series"
+   ]
+  },
+  {
+   "path": "results/current/2_event_study/era5_regional_test.json",
+   "tree": "current",
+   "stage": "2_event_study",
+   "readable": true,
+   "bytes": 3621,
+   "modified": "2026-09-26 10:21",
+   "sha256_16": "1fbac5f1a4af1335",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/era5_regional_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/era5_regional_test.py": "f1adbb9235f60d21"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_null": [
+     10000
+    ],
+    "n_boot": [
+     10000
+    ],
+    "n_events": [
+     39
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "seed",
+    "n_null",
+    "n_boot",
+    "primary",
+    "nam_window",
+    "t_window",
+    "inputs",
+    "events",
+    "n_events",
+    "n_pseudo",
+    "regions",
+    "falsifier_primary"
    ]
   },
   {
@@ -3757,9 +3890,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 23241,
-   "modified": "2026-09-25 21:22",
-   "sha256_16": "60211c864f0333c0",
+   "bytes": 24989,
+   "modified": "2026-09-26 08:06",
+   "sha256_16": "68ded2f4ef0fa1e6",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py",
     "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_test.py"
@@ -3769,7 +3902,7 @@
    "flags": [],
    "producer_sha256": {
     "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "4675e648b4ec542f",
-    "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_test.py": "d1f8823f5e771950"
+    "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_test.py": "4f974e1a74330b3a"
    },
    "verdicts": [],
    "counts": {
@@ -4178,6 +4311,47 @@
     "max_available",
     "power_within_ensemble",
     "between_ensemble_descriptive"
+   ]
+  },
+  {
+   "path": "results/current/8_experiment/snapsi_regional_test.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 65009,
+   "modified": "2026-09-26 10:21",
+   "sha256_16": "ba65b95a0e9571cf",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_regional_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_regional_test.py": "b26003e288e34231"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_boot": [
+     10000
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "seed",
+    "n_boot",
+    "regions",
+    "primary",
+    "tas_days",
+    "nam_window_days",
+    "cold_quantile",
+    "inputs",
+    "n_pairs",
+    "centres",
+    "results",
+    "sensitivity_excl_ECCC",
+    "pairs",
+    "falsifier_primary"
    ]
   },
   {

@@ -1,0 +1,2875 @@
+{
+  "plan_approved": "2026-09-26",
+  "seed": 644835403,
+  "n_boot": 10000,
+  "regions": {
+    "NEURASIA": [
+      50,
+      65,
+      10,
+      130
+    ],
+    "HI_EUROPE": [
+      55,
+      70,
+      0,
+      60
+    ],
+    "MID_EASIA": [
+      35,
+      55,
+      90,
+      150
+    ],
+    "MID_NAMER": [
+      35,
+      55,
+      240,
+      300
+    ]
+  },
+  "primary": "NEURASIA",
+  "tas_days": [
+    8,
+    24
+  ],
+  "nam_window_days": [
+    8,
+    25
+  ],
+  "cold_quantile": 0.1,
+  "inputs": [
+    "ssw-design-analysis/03_data_ingestion/_snapsi_tas",
+    "ssw-design-analysis/03_data_ingestion/_snapsi_reduced"
+  ],
+  "n_pairs": 36,
+  "centres": [
+    "CCCma",
+    "CNR-ISAC",
+    "ECCC",
+    "ECMWF",
+    "KMA",
+    "Meteo-France",
+    "NCAR",
+    "SNU",
+    "UKMO"
+  ],
+  "results": {
+    "NEURASIA": {
+      "S_T": {
+        "mean": -0.8526,
+        "ci95": [
+          -1.4049,
+          -0.4924
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "R": {
+        "mean": -0.099,
+        "ci95": [
+          -0.36,
+          0.0592
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "slope_control": {
+        "mean": 0.4905,
+        "ci95": [
+          0.4519,
+          0.532
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "cold_obs": {
+        "mean": 0.3243,
+        "ci95": [
+          0.224,
+          0.4677
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "cold_pred": {
+        "mean": 0.3133,
+        "ci95": [
+          0.2341,
+          0.4164
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "cold_control": {
+        "mean": 0.0997,
+        "ci95": [
+          0.0991,
+          0.1004
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "label_coef_nudged": {
+        "mean": -0.0359,
+        "ci95": [
+          -0.1916,
+          0.0923
+        ],
+        "n_pairs": 25,
+        "n_centres": 8
+      },
+      "label_coef_control": {
+        "mean": 0.0021,
+        "ci95": [
+          -0.0947,
+          0.0953
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "share_of_shift_explained": 0.884,
+      "R_by_init": {
+        "s20180125": -0.055,
+        "s20180208": -0.373,
+        "s20181213": -0.148,
+        "s20190108": 0.18
+      }
+    },
+    "HI_EUROPE": {
+      "S_T": {
+        "mean": -0.8661,
+        "ci95": [
+          -1.215,
+          -0.6288
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "R": {
+        "mean": -0.2726,
+        "ci95": [
+          -0.4653,
+          -0.1372
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "slope_control": {
+        "mean": 0.4066,
+        "ci95": [
+          0.3666,
+          0.4473
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "cold_obs": {
+        "mean": 0.322,
+        "ci95": [
+          0.2525,
+          0.406
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "cold_pred": {
+        "mean": 0.255,
+        "ci95": [
+          0.2026,
+          0.3155
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "cold_control": {
+        "mean": 0.0997,
+        "ci95": [
+          0.0991,
+          0.1004
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "label_coef_nudged": {
+        "mean": 0.1427,
+        "ci95": [
+          -0.0333,
+          0.3604
+        ],
+        "n_pairs": 25,
+        "n_centres": 8
+      },
+      "label_coef_control": {
+        "mean": 0.0867,
+        "ci95": [
+          -0.0287,
+          0.2093
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "share_of_shift_explained": 0.685,
+      "R_by_init": {
+        "s20180125": -0.219,
+        "s20180208": -0.133,
+        "s20181213": -0.248,
+        "s20190108": -0.491
+      }
+    },
+    "MID_EASIA": {
+      "S_T": {
+        "mean": -0.5147,
+        "ci95": [
+          -0.7972,
+          -0.2731
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "R": {
+        "mean": -0.208,
+        "ci95": [
+          -0.4964,
+          0.0334
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "slope_control": {
+        "mean": 0.2538,
+        "ci95": [
+          0.1727,
+          0.3382
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "cold_obs": {
+        "mean": 0.2653,
+        "ci95": [
+          0.1971,
+          0.3409
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "cold_pred": {
+        "mean": 0.2018,
+        "ci95": [
+          0.1555,
+          0.244
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "cold_control": {
+        "mean": 0.0997,
+        "ci95": [
+          0.0991,
+          0.1004
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "label_coef_nudged": {
+        "mean": -0.0988,
+        "ci95": [
+          -0.2324,
+          0.0296
+        ],
+        "n_pairs": 25,
+        "n_centres": 8
+      },
+      "label_coef_control": {
+        "mean": -0.146,
+        "ci95": [
+          -0.2194,
+          -0.0828
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "share_of_shift_explained": 0.596,
+      "R_by_init": {
+        "s20180125": 0.226,
+        "s20180208": -0.687,
+        "s20181213": -0.375,
+        "s20190108": 0.005
+      }
+    },
+    "MID_NAMER": {
+      "S_T": {
+        "mean": 0.4925,
+        "ci95": [
+          0.3744,
+          0.626
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "R": {
+        "mean": 0.7962,
+        "ci95": [
+          0.63,
+          1.0443
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "slope_control": {
+        "mean": 0.1785,
+        "ci95": [
+          0.1194,
+          0.2419
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "cold_obs": {
+        "mean": 0.0755,
+        "ci95": [
+          0.055,
+          0.0989
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "cold_pred": {
+        "mean": 0.1832,
+        "ci95": [
+          0.1474,
+          0.2259
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "cold_control": {
+        "mean": 0.0997,
+        "ci95": [
+          0.0991,
+          0.1004
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "label_coef_nudged": {
+        "mean": 0.2902,
+        "ci95": [
+          0.0558,
+          0.5339
+        ],
+        "n_pairs": 25,
+        "n_centres": 8
+      },
+      "label_coef_control": {
+        "mean": 0.0422,
+        "ci95": [
+          -0.0342,
+          0.1221
+        ],
+        "n_pairs": 36,
+        "n_centres": 9
+      },
+      "share_of_shift_explained": -0.617,
+      "R_by_init": {
+        "s20180125": 0.509,
+        "s20180208": 1.157,
+        "s20181213": 0.607,
+        "s20190108": 0.912
+      }
+    }
+  },
+  "sensitivity_excl_ECCC": {
+    "NEURASIA": {
+      "S_T": {
+        "mean": -0.5963,
+        "ci95": [
+          -0.711,
+          -0.4385
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "R": {
+        "mean": 0.0246,
+        "ci95": [
+          -0.0203,
+          0.0726
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "slope_control": {
+        "mean": 0.4897,
+        "ci95": [
+          0.447,
+          0.5358
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "cold_obs": {
+        "mean": 0.2611,
+        "ci95": [
+          0.2056,
+          0.312
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "cold_pred": {
+        "mean": 0.2699,
+        "ci95": [
+          0.2195,
+          0.3161
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "cold_control": {
+        "mean": 0.0997,
+        "ci95": [
+          0.099,
+          0.1004
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "label_coef_nudged": {
+        "mean": -0.0359,
+        "ci95": [
+          -0.1935,
+          0.093
+        ],
+        "n_pairs": 25,
+        "n_centres": 8
+      },
+      "label_coef_control": {
+        "mean": -0.0094,
+        "ci95": [
+          -0.114,
+          0.1009
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "share_of_shift_explained": 1.041,
+      "R_by_init": {
+        "s20180125": 0.006,
+        "s20180208": -0.171,
+        "s20181213": -0.108,
+        "s20190108": 0.37
+      }
+    },
+    "HI_EUROPE": {
+      "S_T": {
+        "mean": -0.708,
+        "ci95": [
+          -0.8382,
+          -0.5986
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "R": {
+        "mean": -0.1872,
+        "ci95": [
+          -0.2612,
+          -0.1192
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "slope_control": {
+        "mean": 0.4186,
+        "ci95": [
+          0.3806,
+          0.4571
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "cold_obs": {
+        "mean": 0.2879,
+        "ci95": [
+          0.2394,
+          0.3388
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "cold_pred": {
+        "mean": 0.2303,
+        "ci95": [
+          0.1909,
+          0.2663
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "cold_control": {
+        "mean": 0.0997,
+        "ci95": [
+          0.099,
+          0.1004
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "label_coef_nudged": {
+        "mean": 0.1427,
+        "ci95": [
+          -0.0351,
+          0.3543
+        ],
+        "n_pairs": 25,
+        "n_centres": 8
+      },
+      "label_coef_control": {
+        "mean": 0.0631,
+        "ci95": [
+          -0.0533,
+          0.1964
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "share_of_shift_explained": 0.736,
+      "R_by_init": {
+        "s20180125": -0.237,
+        "s20180208": -0.091,
+        "s20181213": -0.228,
+        "s20190108": -0.192
+      }
+    },
+    "MID_EASIA": {
+      "S_T": {
+        "mean": -0.4082,
+        "ci95": [
+          -0.5956,
+          -0.219
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "R": {
+        "mean": -0.0876,
+        "ci95": [
+          -0.2436,
+          0.0836
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "slope_control": {
+        "mean": 0.2745,
+        "ci95": [
+          0.1908,
+          0.3552
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "cold_obs": {
+        "mean": 0.2372,
+        "ci95": [
+          0.1807,
+          0.2951
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "cold_pred": {
+        "mean": 0.1943,
+        "ci95": [
+          0.1448,
+          0.2409
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "cold_control": {
+        "mean": 0.0997,
+        "ci95": [
+          0.099,
+          0.1004
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "label_coef_nudged": {
+        "mean": -0.0988,
+        "ci95": [
+          -0.2381,
+          0.0276
+        ],
+        "n_pairs": 25,
+        "n_centres": 8
+      },
+      "label_coef_control": {
+        "mean": -0.1655,
+        "ci95": [
+          -0.2364,
+          -0.106
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "share_of_shift_explained": 0.785,
+      "R_by_init": {
+        "s20180125": 0.309,
+        "s20180208": -0.57,
+        "s20181213": -0.255,
+        "s20190108": 0.166
+      }
+    },
+    "MID_NAMER": {
+      "S_T": {
+        "mean": 0.4437,
+        "ci95": [
+          0.3512,
+          0.5427
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "R": {
+        "mean": 0.6859,
+        "ci95": [
+          0.6071,
+          0.7646
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "slope_control": {
+        "mean": 0.1721,
+        "ci95": [
+          0.1085,
+          0.2394
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "cold_obs": {
+        "mean": 0.0768,
+        "ci95": [
+          0.0537,
+          0.1022
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "cold_pred": {
+        "mean": 0.1656,
+        "ci95": [
+          0.1402,
+          0.1916
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "cold_control": {
+        "mean": 0.0997,
+        "ci95": [
+          0.099,
+          0.1004
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "label_coef_nudged": {
+        "mean": 0.2902,
+        "ci95": [
+          0.0557,
+          0.5225
+        ],
+        "n_pairs": 25,
+        "n_centres": 8
+      },
+      "label_coef_control": {
+        "mean": 0.0284,
+        "ci95": [
+          -0.0481,
+          0.117
+        ],
+        "n_pairs": 32,
+        "n_centres": 8
+      },
+      "share_of_shift_explained": -0.546,
+      "R_by_init": {
+        "s20180125": 0.503,
+        "s20180208": 0.798,
+        "s20181213": 0.607,
+        "s20190108": 0.835
+      }
+    }
+  },
+  "pairs": [
+    {
+      "centre": "CCCma",
+      "init": "s20180125",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.3562,
+      "R": -0.0032,
+      "slope_control": 0.506,
+      "cold_obs": 0.2,
+      "cold_pred": 0.1787,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.0421,
+      "label_coef_control": 0.1352
+    },
+    {
+      "centre": "CCCma",
+      "init": "s20180125",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.4508,
+      "R": -0.1732,
+      "slope_control": 0.3979,
+      "cold_obs": 0.22,
+      "cold_pred": 0.1564,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.2007,
+      "label_coef_control": 0.5572
+    },
+    {
+      "centre": "CCCma",
+      "init": "s20180125",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.076,
+      "R": 0.2201,
+      "slope_control": 0.4245,
+      "cold_obs": 0.12,
+      "cold_pred": 0.1476,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.1411,
+      "label_coef_control": -0.2736
+    },
+    {
+      "centre": "CCCma",
+      "init": "s20180125",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.4463,
+      "R": 0.5947,
+      "slope_control": 0.2128,
+      "cold_obs": 0.08,
+      "cold_pred": 0.1361,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.4277,
+      "label_coef_control": -0.4576
+    },
+    {
+      "centre": "CCCma",
+      "init": "s20180208",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.3882,
+      "R": -0.0785,
+      "slope_control": 0.3766,
+      "cold_obs": 0.2,
+      "cold_pred": 0.1807,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.0389,
+      "label_coef_control": 0.1033
+    },
+    {
+      "centre": "CCCma",
+      "init": "s20180208",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.6234,
+      "R": -0.2323,
+      "slope_control": 0.4756,
+      "cold_obs": 0.14,
+      "cold_pred": 0.1218,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.5119,
+      "label_coef_control": 0.5316
+    },
+    {
+      "centre": "CCCma",
+      "init": "s20180208",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.0512,
+      "R": -0.1256,
+      "slope_control": -0.215,
+      "cold_obs": 0.22,
+      "cold_pred": 0.0844,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.3943,
+      "label_coef_control": -0.7991
+    },
+    {
+      "centre": "CCCma",
+      "init": "s20180208",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.9479,
+      "R": 0.8719,
+      "slope_control": -0.0925,
+      "cold_obs": 0.04,
+      "cold_pred": 0.1625,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.1583,
+      "label_coef_control": -0.359
+    },
+    {
+      "centre": "CCCma",
+      "init": "s20181213",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.2246,
+      "R": 0.0146,
+      "slope_control": 0.4794,
+      "cold_obs": 0.12,
+      "cold_pred": 0.1125,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.7283,
+      "label_coef_control": -0.3655
+    },
+    {
+      "centre": "CCCma",
+      "init": "s20181213",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.0264,
+      "R": 0.2801,
+      "slope_control": 0.6141,
+      "cold_obs": 0.06,
+      "cold_pred": 0.0936,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.4587,
+      "label_coef_control": -0.1321
+    },
+    {
+      "centre": "CCCma",
+      "init": "s20181213",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.8012,
+      "R": -0.7746,
+      "slope_control": 0.0532,
+      "cold_obs": 0.24,
+      "cold_pred": 0.0896,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.2935,
+      "label_coef_control": -0.296
+    },
+    {
+      "centre": "CCCma",
+      "init": "s20181213",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.1839,
+      "R": 0.2979,
+      "slope_control": 0.2285,
+      "cold_obs": 0.08,
+      "cold_pred": 0.143,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.5526,
+      "label_coef_control": 0.3909
+    },
+    {
+      "centre": "CCCma",
+      "init": "s20190108",
+      "region": "NEURASIA",
+      "n_nudged": 38,
+      "n_control": 47,
+      "S_T": 0.4717,
+      "R": 0.579,
+      "slope_control": 0.1651,
+      "cold_obs": 0.0,
+      "cold_pred": 0.1442,
+      "cold_control": 0.1064,
+      "label_coef_nudged": -0.0848,
+      "label_coef_control": 0.4504
+    },
+    {
+      "centre": "CCCma",
+      "init": "s20190108",
+      "region": "HI_EUROPE",
+      "n_nudged": 38,
+      "n_control": 47,
+      "S_T": -0.7286,
+      "R": -0.7289,
+      "slope_control": -0.0004,
+      "cold_obs": 0.2368,
+      "cold_pred": 0.1113,
+      "cold_control": 0.1064,
+      "label_coef_nudged": -0.1303,
+      "label_coef_control": 0.7357
+    },
+    {
+      "centre": "CCCma",
+      "init": "s20190108",
+      "region": "MID_EASIA",
+      "n_nudged": 38,
+      "n_control": 47,
+      "S_T": 0.7952,
+      "R": 0.8528,
+      "slope_control": 0.0885,
+      "cold_obs": 0.0263,
+      "cold_pred": 0.1222,
+      "cold_control": 0.1064,
+      "label_coef_nudged": 0.5008,
+      "label_coef_control": 0.3896
+    },
+    {
+      "centre": "CCCma",
+      "init": "s20190108",
+      "region": "MID_NAMER",
+      "n_nudged": 38,
+      "n_control": 47,
+      "S_T": 0.1197,
+      "R": 0.3157,
+      "slope_control": 0.3014,
+      "cold_obs": 0.1053,
+      "cold_pred": 0.1268,
+      "cold_control": 0.1064,
+      "label_coef_nudged": -0.2164,
+      "label_coef_control": 0.8292
+    },
+    {
+      "centre": "CNR-ISAC",
+      "init": "s20180125",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.8845,
+      "R": -0.4803,
+      "slope_control": 0.4576,
+      "cold_obs": 0.18,
+      "cold_pred": 0.1051,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.8767,
+      "label_coef_control": -0.5972
+    },
+    {
+      "centre": "CNR-ISAC",
+      "init": "s20180125",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.8172,
+      "R": -0.4127,
+      "slope_control": 0.458,
+      "cold_obs": 0.26,
+      "cold_pred": 0.1459,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.455,
+      "label_coef_control": -0.4853
+    },
+    {
+      "centre": "CNR-ISAC",
+      "init": "s20180125",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.4233,
+      "R": -0.1462,
+      "slope_control": 0.3137,
+      "cold_obs": 0.16,
+      "cold_pred": 0.1332,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.0462,
+      "label_coef_control": -0.0903
+    },
+    {
+      "centre": "CNR-ISAC",
+      "init": "s20180125",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.5406,
+      "R": 0.7659,
+      "slope_control": 0.2551,
+      "cold_obs": 0.04,
+      "cold_pred": 0.1896,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.8436,
+      "label_coef_control": -0.2211
+    },
+    {
+      "centre": "CNR-ISAC",
+      "init": "s20180208",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.9412,
+      "R": -0.4279,
+      "slope_control": 0.6165,
+      "cold_obs": 0.22,
+      "cold_pred": 0.1238,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.8423,
+      "label_coef_control": 0.1238
+    },
+    {
+      "centre": "CNR-ISAC",
+      "init": "s20180208",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.6363,
+      "R": -0.2248,
+      "slope_control": 0.4941,
+      "cold_obs": 0.22,
+      "cold_pred": 0.1827,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.4825,
+      "label_coef_control": 0.3274
+    },
+    {
+      "centre": "CNR-ISAC",
+      "init": "s20180208",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.0733,
+      "R": -0.0176,
+      "slope_control": 0.067,
+      "cold_obs": 0.12,
+      "cold_pred": 0.0935,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.477,
+      "label_coef_control": 0.1749
+    },
+    {
+      "centre": "CNR-ISAC",
+      "init": "s20180208",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 1.317,
+      "R": 1.6761,
+      "slope_control": 0.4313,
+      "cold_obs": 0.0,
+      "cold_pred": 0.1412,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.1341,
+      "label_coef_control": -0.1341
+    },
+    {
+      "centre": "CNR-ISAC",
+      "init": "s20181213",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.1757,
+      "R": 0.218,
+      "slope_control": 0.442,
+      "cold_obs": 0.04,
+      "cold_pred": 0.0764,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.1413,
+      "label_coef_control": -0.0908
+    },
+    {
+      "centre": "CNR-ISAC",
+      "init": "s20181213",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.076,
+      "R": -0.0368,
+      "slope_control": 0.4092,
+      "cold_obs": 0.22,
+      "cold_pred": 0.1639,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.1376,
+      "label_coef_control": -0.2121
+    },
+    {
+      "centre": "CNR-ISAC",
+      "init": "s20181213",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.2504,
+      "R": -0.2271,
+      "slope_control": 0.2422,
+      "cold_obs": 0.14,
+      "cold_pred": 0.0749,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.4858,
+      "label_coef_control": -0.2471
+    },
+    {
+      "centre": "CNR-ISAC",
+      "init": "s20181213",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.4063,
+      "R": 0.4427,
+      "slope_control": 0.3795,
+      "cold_obs": 0.0,
+      "cold_pred": 0.1055,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.3131,
+      "label_coef_control": -0.0621
+    },
+    {
+      "centre": "CNR-ISAC",
+      "init": "s20190108",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.569,
+      "R": 0.6198,
+      "slope_control": 0.4061,
+      "cold_obs": 0.32,
+      "cold_pred": 0.4117,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": 0.1739
+    },
+    {
+      "centre": "CNR-ISAC",
+      "init": "s20190108",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -1.0907,
+      "R": -0.2446,
+      "slope_control": 0.289,
+      "cold_obs": 0.3,
+      "cold_pred": 0.2253,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": 0.1061
+    },
+    {
+      "centre": "CNR-ISAC",
+      "init": "s20190108",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.0649,
+      "R": -0.3449,
+      "slope_control": -0.0957,
+      "cold_obs": 0.16,
+      "cold_pred": 0.0299,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.3219
+    },
+    {
+      "centre": "CNR-ISAC",
+      "init": "s20190108",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.1014,
+      "R": 0.6691,
+      "slope_control": 0.1939,
+      "cold_obs": 0.12,
+      "cold_pred": 0.2907,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": 0.3278
+    },
+    {
+      "centre": "ECCC",
+      "init": "s20180125",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -1.3737,
+      "R": -0.5417,
+      "slope_control": 0.3816,
+      "cold_obs": 0.46,
+      "cold_pred": 0.2891,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": 0.3217
+    },
+    {
+      "centre": "ECCC",
+      "init": "s20180125",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.6431,
+      "R": -0.0689,
+      "slope_control": 0.2634,
+      "cold_obs": 0.34,
+      "cold_pred": 0.2689,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.287
+    },
+    {
+      "centre": "ECCC",
+      "init": "s20180125",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.7697,
+      "R": -0.4369,
+      "slope_control": 0.1526,
+      "cold_obs": 0.36,
+      "cold_pred": 0.1906,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.0976
+    },
+    {
+      "centre": "ECCC",
+      "init": "s20180125",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.0206,
+      "R": 0.5576,
+      "slope_control": 0.2652,
+      "cold_obs": 0.06,
+      "cold_pred": 0.2571,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.2268
+    },
+    {
+      "centre": "ECCC",
+      "init": "s20180208",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -4.1096,
+      "R": -1.9911,
+      "slope_control": 0.6019,
+      "cold_obs": 0.96,
+      "cold_pred": 0.9009,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": 0.046
+    },
+    {
+      "centre": "ECCC",
+      "init": "s20180208",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.8148,
+      "R": -0.4671,
+      "slope_control": 0.0988,
+      "cold_obs": 0.26,
+      "cold_pred": 0.1505,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": 0.0343
+    },
+    {
+      "centre": "ECCC",
+      "init": "s20180208",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -3.5342,
+      "R": -1.6297,
+      "slope_control": 0.5411,
+      "cold_obs": 0.98,
+      "cold_pred": 0.7398,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": 0.5534
+    },
+    {
+      "centre": "ECCC",
+      "init": "s20180208",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 3.1486,
+      "R": 4.0225,
+      "slope_control": 0.2483,
+      "cold_obs": 0.02,
+      "cold_pred": 0.3249,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": 0.3393
+    },
+    {
+      "centre": "ECCC",
+      "init": "s20181213",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -3.2646,
+      "R": -0.4732,
+      "slope_control": 0.6487,
+      "cold_obs": 0.96,
+      "cold_pred": 0.9361,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.0135
+    },
+    {
+      "centre": "ECCC",
+      "init": "s20181213",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -2.8963,
+      "R": -0.4031,
+      "slope_control": 0.5794,
+      "cold_obs": 0.78,
+      "cold_pred": 0.8543,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": 0.2547
+    },
+    {
+      "centre": "ECCC",
+      "init": "s20181213",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -1.0665,
+      "R": -1.3345,
+      "slope_control": -0.0623,
+      "cold_obs": 0.5,
+      "cold_pred": 0.1087,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.1956
+    },
+    {
+      "centre": "ECCC",
+      "init": "s20181213",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.086,
+      "R": 0.6094,
+      "slope_control": 0.1616,
+      "cold_obs": 0.14,
+      "cold_pred": 0.293,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": 0.458
+    },
+    {
+      "centre": "ECCC",
+      "init": "s20190108",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -2.8627,
+      "R": -1.3463,
+      "slope_control": 0.3536,
+      "cold_obs": 0.94,
+      "cold_pred": 0.5145,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": 0.0198
+    },
+    {
+      "centre": "ECCC",
+      "init": "s20190108",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -4.1683,
+      "R": -2.8835,
+      "slope_control": 0.2996,
+      "cold_obs": 1.0,
+      "cold_pred": 0.5353,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": 1.0986
+    },
+    {
+      "centre": "ECCC",
+      "init": "s20190108",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.0976,
+      "R": -1.2835,
+      "slope_control": -0.2765,
+      "cold_obs": 0.12,
+      "cold_pred": 0.0078,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.2195
+    },
+    {
+      "centre": "ECCC",
+      "init": "s20190108",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.4904,
+      "R": 1.5274,
+      "slope_control": 0.2418,
+      "cold_obs": 0.04,
+      "cold_pred": 0.4198,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": 0.0412
+    },
+    {
+      "centre": "ECMWF",
+      "init": "s20180125",
+      "region": "NEURASIA",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -0.5645,
+      "R": -0.0161,
+      "slope_control": 0.5703,
+      "cold_obs": 0.2353,
+      "cold_pred": 0.1969,
+      "cold_control": 0.098,
+      "label_coef_nudged": -0.5267,
+      "label_coef_control": 1.0794
+    },
+    {
+      "centre": "ECMWF",
+      "init": "s20180125",
+      "region": "HI_EUROPE",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -0.6838,
+      "R": -0.2067,
+      "slope_control": 0.4961,
+      "cold_obs": 0.2549,
+      "cold_pred": 0.1999,
+      "cold_control": 0.098,
+      "label_coef_nudged": -0.0723,
+      "label_coef_control": 0.5892
+    },
+    {
+      "centre": "ECMWF",
+      "init": "s20180125",
+      "region": "MID_EASIA",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -0.053,
+      "R": 0.4695,
+      "slope_control": 0.5433,
+      "cold_obs": 0.0392,
+      "cold_pred": 0.2943,
+      "cold_control": 0.098,
+      "label_coef_nudged": 0.0509,
+      "label_coef_control": 0.2581
+    },
+    {
+      "centre": "ECMWF",
+      "init": "s20180125",
+      "region": "MID_NAMER",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": 0.4043,
+      "R": 0.4271,
+      "slope_control": 0.0237,
+      "cold_obs": 0.0196,
+      "cold_pred": 0.115,
+      "cold_control": 0.098,
+      "label_coef_nudged": 0.0621,
+      "label_coef_control": 0.5717
+    },
+    {
+      "centre": "ECMWF",
+      "init": "s20180208",
+      "region": "NEURASIA",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -0.6475,
+      "R": -0.1522,
+      "slope_control": 0.2864,
+      "cold_obs": 0.2941,
+      "cold_pred": 0.2369,
+      "cold_control": 0.098,
+      "label_coef_nudged": 0.7057,
+      "label_coef_control": 0.0692
+    },
+    {
+      "centre": "ECMWF",
+      "init": "s20180208",
+      "region": "HI_EUROPE",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -0.6458,
+      "R": -0.1419,
+      "slope_control": 0.2913,
+      "cold_obs": 0.3922,
+      "cold_pred": 0.2992,
+      "cold_control": 0.098,
+      "label_coef_nudged": 0.1125,
+      "label_coef_control": -0.1715
+    },
+    {
+      "centre": "ECMWF",
+      "init": "s20180208",
+      "region": "MID_EASIA",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -1.1587,
+      "R": -1.0591,
+      "slope_control": 0.0576,
+      "cold_obs": 0.549,
+      "cold_pred": 0.1734,
+      "cold_control": 0.098,
+      "label_coef_nudged": 0.6842,
+      "label_coef_control": -0.2635
+    },
+    {
+      "centre": "ECMWF",
+      "init": "s20180208",
+      "region": "MID_NAMER",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": 0.5714,
+      "R": 0.9921,
+      "slope_control": 0.2432,
+      "cold_obs": 0.0392,
+      "cold_pred": 0.1531,
+      "cold_control": 0.098,
+      "label_coef_nudged": 0.0904,
+      "label_coef_control": 0.0386
+    },
+    {
+      "centre": "ECMWF",
+      "init": "s20181213",
+      "region": "NEURASIA",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -0.5255,
+      "R": 0.0864,
+      "slope_control": 0.515,
+      "cold_obs": 0.3137,
+      "cold_pred": 0.3359,
+      "cold_control": 0.098,
+      "label_coef_nudged": -0.0282,
+      "label_coef_control": 0.0367
+    },
+    {
+      "centre": "ECMWF",
+      "init": "s20181213",
+      "region": "HI_EUROPE",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -0.6226,
+      "R": -0.1064,
+      "slope_control": 0.4345,
+      "cold_obs": 0.2941,
+      "cold_pred": 0.2811,
+      "cold_control": 0.098,
+      "label_coef_nudged": -0.0101,
+      "label_coef_control": -0.4656
+    },
+    {
+      "centre": "ECMWF",
+      "init": "s20181213",
+      "region": "MID_EASIA",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -0.4043,
+      "R": 0.0228,
+      "slope_control": 0.3595,
+      "cold_obs": 0.2353,
+      "cold_pred": 0.1859,
+      "cold_control": 0.098,
+      "label_coef_nudged": -0.2832,
+      "label_coef_control": 0.0131
+    },
+    {
+      "centre": "ECMWF",
+      "init": "s20181213",
+      "region": "MID_NAMER",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": 0.3032,
+      "R": 0.437,
+      "slope_control": 0.1126,
+      "cold_obs": 0.0784,
+      "cold_pred": 0.1666,
+      "cold_control": 0.098,
+      "label_coef_nudged": 0.3702,
+      "label_coef_control": 0.3551
+    },
+    {
+      "centre": "ECMWF",
+      "init": "s20190108",
+      "region": "NEURASIA",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -1.371,
+      "R": -0.1228,
+      "slope_control": 0.5089,
+      "cold_obs": 0.6471,
+      "cold_pred": 0.5905,
+      "cold_control": 0.098,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.2645
+    },
+    {
+      "centre": "ECMWF",
+      "init": "s20190108",
+      "region": "HI_EUROPE",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -0.8717,
+      "R": -0.7155,
+      "slope_control": 0.0637,
+      "cold_obs": 0.3333,
+      "cold_pred": 0.1517,
+      "cold_control": 0.098,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.119
+    },
+    {
+      "centre": "ECMWF",
+      "init": "s20190108",
+      "region": "MID_EASIA",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -1.2701,
+      "R": -0.9602,
+      "slope_control": 0.1264,
+      "cold_obs": 0.4314,
+      "cold_pred": 0.1617,
+      "cold_control": 0.098,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.4086
+    },
+    {
+      "centre": "ECMWF",
+      "init": "s20190108",
+      "region": "MID_NAMER",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": 0.0991,
+      "R": 0.877,
+      "slope_control": 0.3172,
+      "cold_obs": 0.0784,
+      "cold_pred": 0.2785,
+      "cold_control": 0.098,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.5208
+    },
+    {
+      "centre": "KMA",
+      "init": "s20180125",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.6674,
+      "R": 0.0812,
+      "slope_control": 0.64,
+      "cold_obs": 0.24,
+      "cold_pred": 0.1892,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.834,
+      "label_coef_control": 0.1065
+    },
+    {
+      "centre": "KMA",
+      "init": "s20180125",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.8864,
+      "R": -0.2853,
+      "slope_control": 0.5139,
+      "cold_obs": 0.32,
+      "cold_pred": 0.2352,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.5927,
+      "label_coef_control": 0.576
+    },
+    {
+      "centre": "KMA",
+      "init": "s20180125",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.3857,
+      "R": 0.2481,
+      "slope_control": 0.5418,
+      "cold_obs": 0.28,
+      "cold_pred": 0.3211,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.0878,
+      "label_coef_control": -0.4782
+    },
+    {
+      "centre": "KMA",
+      "init": "s20180125",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.4795,
+      "R": 0.3558,
+      "slope_control": -0.1057,
+      "cold_obs": 0.04,
+      "cold_pred": 0.0723,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.6135,
+      "label_coef_control": -0.6759
+    },
+    {
+      "centre": "KMA",
+      "init": "s20180208",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -1.0226,
+      "R": -0.4134,
+      "slope_control": 0.4474,
+      "cold_obs": 0.32,
+      "cold_pred": 0.2687,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.014,
+      "label_coef_control": -0.0695
+    },
+    {
+      "centre": "KMA",
+      "init": "s20180208",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.4509,
+      "R": 0.4094,
+      "slope_control": 0.6319,
+      "cold_obs": 0.22,
+      "cold_pred": 0.3945,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.5687,
+      "label_coef_control": -0.0088
+    },
+    {
+      "centre": "KMA",
+      "init": "s20180208",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -2.1083,
+      "R": -2.1061,
+      "slope_control": 0.0016,
+      "cold_obs": 0.82,
+      "cold_pred": 0.1791,
+      "cold_control": 0.1,
+      "label_coef_nudged": -1.2167,
+      "label_coef_control": -0.2987
+    },
+    {
+      "centre": "KMA",
+      "init": "s20180208",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.969,
+      "R": 1.0117,
+      "slope_control": 0.0314,
+      "cold_obs": 0.0,
+      "cold_pred": 0.1232,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.1809,
+      "label_coef_control": 0.429
+    },
+    {
+      "centre": "KMA",
+      "init": "s20181213",
+      "region": "NEURASIA",
+      "n_nudged": 52,
+      "n_control": 50,
+      "S_T": -0.4929,
+      "R": 0.0202,
+      "slope_control": 0.6693,
+      "cold_obs": 0.2308,
+      "cold_pred": 0.2036,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.4734,
+      "label_coef_control": -0.093
+    },
+    {
+      "centre": "KMA",
+      "init": "s20181213",
+      "region": "HI_EUROPE",
+      "n_nudged": 52,
+      "n_control": 50,
+      "S_T": -0.6821,
+      "R": -0.4525,
+      "slope_control": 0.2996,
+      "cold_obs": 0.3462,
+      "cold_pred": 0.1404,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.2443,
+      "label_coef_control": -0.3502
+    },
+    {
+      "centre": "KMA",
+      "init": "s20181213",
+      "region": "MID_EASIA",
+      "n_nudged": 52,
+      "n_control": 50,
+      "S_T": -0.3724,
+      "R": 0.0379,
+      "slope_control": 0.5353,
+      "cold_obs": 0.1923,
+      "cold_pred": 0.1421,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.1421,
+      "label_coef_control": 0.2382
+    },
+    {
+      "centre": "KMA",
+      "init": "s20181213",
+      "region": "MID_NAMER",
+      "n_nudged": 52,
+      "n_control": 50,
+      "S_T": 0.5698,
+      "R": 0.6186,
+      "slope_control": 0.0637,
+      "cold_obs": 0.0,
+      "cold_pred": 0.0749,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.1053,
+      "label_coef_control": 0.054
+    },
+    {
+      "centre": "KMA",
+      "init": "s20190108",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -1.0009,
+      "R": 0.0907,
+      "slope_control": 0.3185,
+      "cold_obs": 0.48,
+      "cold_pred": 0.4855,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.1544
+    },
+    {
+      "centre": "KMA",
+      "init": "s20190108",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.9723,
+      "R": -0.0594,
+      "slope_control": 0.2663,
+      "cold_obs": 0.46,
+      "cold_pred": 0.4231,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": 0.2331
+    },
+    {
+      "centre": "KMA",
+      "init": "s20190108",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.4405,
+      "R": 0.2062,
+      "slope_control": 0.1887,
+      "cold_obs": 0.2,
+      "cold_pred": 0.2703,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.0463
+    },
+    {
+      "centre": "KMA",
+      "init": "s20190108",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.2144,
+      "R": 0.8691,
+      "slope_control": 0.3161,
+      "cold_obs": 0.14,
+      "cold_pred": 0.3936,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.2763
+    },
+    {
+      "centre": "Meteo-France",
+      "init": "s20180125",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.5373,
+      "R": -0.2446,
+      "slope_control": 0.4891,
+      "cold_obs": 0.28,
+      "cold_pred": 0.1666,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.2243,
+      "label_coef_control": -0.4187
+    },
+    {
+      "centre": "Meteo-France",
+      "init": "s20180125",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.9796,
+      "R": -0.7954,
+      "slope_control": 0.3077,
+      "cold_obs": 0.4,
+      "cold_pred": 0.1189,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.2527,
+      "label_coef_control": 0.0623
+    },
+    {
+      "centre": "Meteo-France",
+      "init": "s20180125",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.1806,
+      "R": 0.4986,
+      "slope_control": 0.5312,
+      "cold_obs": 0.06,
+      "cold_pred": 0.1771,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.1824,
+      "label_coef_control": -0.4683
+    },
+    {
+      "centre": "Meteo-France",
+      "init": "s20180125",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.616,
+      "R": 0.6862,
+      "slope_control": 0.1174,
+      "cold_obs": 0.04,
+      "cold_pred": 0.1414,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.3061,
+      "label_coef_control": 0.314
+    },
+    {
+      "centre": "Meteo-France",
+      "init": "s20180208",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -1.0529,
+      "R": -0.0005,
+      "slope_control": 0.4842,
+      "cold_obs": 0.44,
+      "cold_pred": 0.4289,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.3366,
+      "label_coef_control": 0.054
+    },
+    {
+      "centre": "Meteo-France",
+      "init": "s20180208",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -1.3668,
+      "R": -0.4724,
+      "slope_control": 0.4115,
+      "cold_obs": 0.52,
+      "cold_pred": 0.3455,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.0522,
+      "label_coef_control": -0.0697
+    },
+    {
+      "centre": "Meteo-France",
+      "init": "s20180208",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.2269,
+      "R": -0.3083,
+      "slope_control": -0.0374,
+      "cold_obs": 0.1,
+      "cold_pred": 0.0869,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.4346,
+      "label_coef_control": -0.5454
+    },
+    {
+      "centre": "Meteo-France",
+      "init": "s20180208",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -1.4074,
+      "R": -1.2931,
+      "slope_control": 0.0526,
+      "cold_obs": 0.5,
+      "cold_pred": 0.1077,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.7164,
+      "label_coef_control": 0.6123
+    },
+    {
+      "centre": "Meteo-France",
+      "init": "s20181213",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.6975,
+      "R": -0.3957,
+      "slope_control": 0.3706,
+      "cold_obs": 0.24,
+      "cold_pred": 0.1833,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.4825,
+      "label_coef_control": 0.3422
+    },
+    {
+      "centre": "Meteo-France",
+      "init": "s20181213",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -1.0195,
+      "R": -0.6462,
+      "slope_control": 0.4586,
+      "cold_obs": 0.36,
+      "cold_pred": 0.1797,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.2684,
+      "label_coef_control": 0.2097
+    },
+    {
+      "centre": "Meteo-France",
+      "init": "s20181213",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.2748,
+      "R": -0.14,
+      "slope_control": 0.1657,
+      "cold_obs": 0.18,
+      "cold_pred": 0.0868,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.5311,
+      "label_coef_control": 0.0905
+    },
+    {
+      "centre": "Meteo-France",
+      "init": "s20181213",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.4811,
+      "R": 0.5823,
+      "slope_control": 0.1243,
+      "cold_obs": 0.04,
+      "cold_pred": 0.101,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.2069,
+      "label_coef_control": -0.6355
+    },
+    {
+      "centre": "Meteo-France",
+      "init": "s20190108",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.4829,
+      "R": 0.8206,
+      "slope_control": 0.4801,
+      "cold_obs": 0.14,
+      "cold_pred": 0.5236,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": 0.7142
+    },
+    {
+      "centre": "Meteo-France",
+      "init": "s20190108",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.9923,
+      "R": 0.3977,
+      "slope_control": 0.512,
+      "cold_obs": 0.38,
+      "cold_pred": 0.5272,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": 0.2912
+    },
+    {
+      "centre": "Meteo-France",
+      "init": "s20190108",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.9412,
+      "R": -0.5013,
+      "slope_control": 0.162,
+      "cold_obs": 0.4,
+      "cold_pred": 0.2084,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": 0.7384
+    },
+    {
+      "centre": "Meteo-France",
+      "init": "s20190108",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 3.1277,
+      "R": 3.1154,
+      "slope_control": -0.0045,
+      "cold_obs": 0.0,
+      "cold_pred": 0.1153,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.258
+    },
+    {
+      "centre": "NCAR",
+      "init": "s20180125",
+      "region": "NEURASIA",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -0.2509,
+      "R": 0.4442,
+      "slope_control": 0.7439,
+      "cold_obs": 0.0784,
+      "cold_pred": 0.2193,
+      "cold_control": 0.098,
+      "label_coef_nudged": 0.2725,
+      "label_coef_control": 0.257
+    },
+    {
+      "centre": "NCAR",
+      "init": "s20180125",
+      "region": "HI_EUROPE",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -0.4336,
+      "R": 0.1707,
+      "slope_control": 0.6467,
+      "cold_obs": 0.1961,
+      "cold_pred": 0.2049,
+      "cold_control": 0.098,
+      "label_coef_nudged": 0.5902,
+      "label_coef_control": 0.9949
+    },
+    {
+      "centre": "NCAR",
+      "init": "s20180125",
+      "region": "MID_EASIA",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -0.1848,
+      "R": 0.3209,
+      "slope_control": 0.5411,
+      "cold_obs": 0.1373,
+      "cold_pred": 0.2331,
+      "cold_control": 0.098,
+      "label_coef_nudged": -0.011,
+      "label_coef_control": -0.4111
+    },
+    {
+      "centre": "NCAR",
+      "init": "s20180125",
+      "region": "MID_NAMER",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": 0.1845,
+      "R": 0.1266,
+      "slope_control": -0.062,
+      "cold_obs": 0.0196,
+      "cold_pred": 0.0585,
+      "cold_control": 0.098,
+      "label_coef_nudged": 0.475,
+      "label_coef_control": -0.1354
+    },
+    {
+      "centre": "NCAR",
+      "init": "s20180208",
+      "region": "NEURASIA",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -1.0062,
+      "R": 0.0584,
+      "slope_control": 0.6089,
+      "cold_obs": 0.549,
+      "cold_pred": 0.5086,
+      "cold_control": 0.098,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.3533
+    },
+    {
+      "centre": "NCAR",
+      "init": "s20180208",
+      "region": "HI_EUROPE",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -1.0462,
+      "R": -0.1001,
+      "slope_control": 0.5411,
+      "cold_obs": 0.451,
+      "cold_pred": 0.412,
+      "cold_control": 0.098,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.5468
+    },
+    {
+      "centre": "NCAR",
+      "init": "s20180208",
+      "region": "MID_EASIA",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -1.0813,
+      "R": -0.3823,
+      "slope_control": 0.3998,
+      "cold_obs": 0.4902,
+      "cold_pred": 0.317,
+      "cold_control": 0.098,
+      "label_coef_nudged": NaN,
+      "label_coef_control": 0.2806
+    },
+    {
+      "centre": "NCAR",
+      "init": "s20180208",
+      "region": "MID_NAMER",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": 1.0651,
+      "R": 0.9366,
+      "slope_control": -0.0735,
+      "cold_obs": 0.0392,
+      "cold_pred": 0.0848,
+      "cold_control": 0.098,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.4228
+    },
+    {
+      "centre": "NCAR",
+      "init": "s20181213",
+      "region": "NEURASIA",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -1.2413,
+      "R": -0.5316,
+      "slope_control": 0.5632,
+      "cold_obs": 0.4902,
+      "cold_pred": 0.2778,
+      "cold_control": 0.098,
+      "label_coef_nudged": -0.2118,
+      "label_coef_control": -0.3837
+    },
+    {
+      "centre": "NCAR",
+      "init": "s20181213",
+      "region": "HI_EUROPE",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -0.9388,
+      "R": -0.4441,
+      "slope_control": 0.3926,
+      "cold_obs": 0.3922,
+      "cold_pred": 0.2469,
+      "cold_control": 0.098,
+      "label_coef_nudged": 0.4056,
+      "label_coef_control": 0.2649
+    },
+    {
+      "centre": "NCAR",
+      "init": "s20181213",
+      "region": "MID_EASIA",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -1.203,
+      "R": -0.716,
+      "slope_control": 0.3865,
+      "cold_obs": 0.4314,
+      "cold_pred": 0.2299,
+      "cold_control": 0.098,
+      "label_coef_nudged": 0.1648,
+      "label_coef_control": -0.4332
+    },
+    {
+      "centre": "NCAR",
+      "init": "s20181213",
+      "region": "MID_NAMER",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": 0.7531,
+      "R": 0.8647,
+      "slope_control": 0.0885,
+      "cold_obs": 0.0196,
+      "cold_pred": 0.1503,
+      "cold_control": 0.098,
+      "label_coef_nudged": 1.0823,
+      "label_coef_control": 0.2577
+    },
+    {
+      "centre": "NCAR",
+      "init": "s20190108",
+      "region": "NEURASIA",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -0.1665,
+      "R": 0.5119,
+      "slope_control": 0.5564,
+      "cold_obs": 0.2157,
+      "cold_pred": 0.4093,
+      "cold_control": 0.098,
+      "label_coef_nudged": 0.2431,
+      "label_coef_control": 0.526
+    },
+    {
+      "centre": "NCAR",
+      "init": "s20190108",
+      "region": "HI_EUROPE",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -0.4723,
+      "R": -0.124,
+      "slope_control": 0.2856,
+      "cold_obs": 0.1569,
+      "cold_pred": 0.105,
+      "cold_control": 0.098,
+      "label_coef_nudged": 1.3966,
+      "label_coef_control": 0.1322
+    },
+    {
+      "centre": "NCAR",
+      "init": "s20190108",
+      "region": "MID_EASIA",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": 0.1402,
+      "R": 0.8396,
+      "slope_control": 0.5736,
+      "cold_obs": 0.098,
+      "cold_pred": 0.37,
+      "cold_control": 0.098,
+      "label_coef_nudged": -1.0439,
+      "label_coef_control": 0.1181
+    },
+    {
+      "centre": "NCAR",
+      "init": "s20190108",
+      "region": "MID_NAMER",
+      "n_nudged": 51,
+      "n_control": 51,
+      "S_T": -0.1202,
+      "R": 0.2261,
+      "slope_control": 0.284,
+      "cold_obs": 0.098,
+      "cold_pred": 0.1648,
+      "cold_control": 0.098,
+      "label_coef_nudged": 0.3995,
+      "label_coef_control": -0.1231
+    },
+    {
+      "centre": "SNU",
+      "init": "s20180125",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.4929,
+      "R": 0.1174,
+      "slope_control": 0.6336,
+      "cold_obs": 0.28,
+      "cold_pred": 0.3025,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.3435,
+      "label_coef_control": -0.1069
+    },
+    {
+      "centre": "SNU",
+      "init": "s20180125",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.7196,
+      "R": -0.2198,
+      "slope_control": 0.5188,
+      "cold_obs": 0.3,
+      "cold_pred": 0.2625,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.1664,
+      "label_coef_control": 0.3385
+    },
+    {
+      "centre": "SNU",
+      "init": "s20180125",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.1491,
+      "R": 0.4623,
+      "slope_control": 0.3251,
+      "cold_obs": 0.02,
+      "cold_pred": 0.1664,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.1367,
+      "label_coef_control": -0.4208
+    },
+    {
+      "centre": "SNU",
+      "init": "s20180125",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.2474,
+      "R": 0.4328,
+      "slope_control": 0.1924,
+      "cold_obs": 0.04,
+      "cold_pred": 0.131,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.9218,
+      "label_coef_control": -0.0557
+    },
+    {
+      "centre": "SNU",
+      "init": "s20180208",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.6199,
+      "R": 0.0396,
+      "slope_control": 0.5597,
+      "cold_obs": 0.28,
+      "cold_pred": 0.2646,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.4691,
+      "label_coef_control": -0.4356
+    },
+    {
+      "centre": "SNU",
+      "init": "s20180208",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.6487,
+      "R": 0.1506,
+      "slope_control": 0.6783,
+      "cold_obs": 0.2,
+      "cold_pred": 0.2581,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.0169,
+      "label_coef_control": -0.6342
+    },
+    {
+      "centre": "SNU",
+      "init": "s20180208",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.054,
+      "R": 0.1171,
+      "slope_control": 0.0535,
+      "cold_obs": 0.16,
+      "cold_pred": 0.1129,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.5087,
+      "label_coef_control": -0.1877
+    },
+    {
+      "centre": "SNU",
+      "init": "s20180208",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.8446,
+      "R": 1.3486,
+      "slope_control": 0.4277,
+      "cold_obs": 0.0,
+      "cold_pred": 0.1956,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.4132,
+      "label_coef_control": 0.3228
+    },
+    {
+      "centre": "SNU",
+      "init": "s20181213",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.5236,
+      "R": -0.2053,
+      "slope_control": 0.5511,
+      "cold_obs": 0.24,
+      "cold_pred": 0.1739,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.4481,
+      "label_coef_control": -0.158
+    },
+    {
+      "centre": "SNU",
+      "init": "s20181213",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.5655,
+      "R": -0.2535,
+      "slope_control": 0.5402,
+      "cold_obs": 0.3,
+      "cold_pred": 0.2126,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.2698,
+      "label_coef_control": 0.1373
+    },
+    {
+      "centre": "SNU",
+      "init": "s20181213",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.216,
+      "R": 0.0571,
+      "slope_control": 0.4728,
+      "cold_obs": 0.2,
+      "cold_pred": 0.1804,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.1738,
+      "label_coef_control": 0.0452
+    },
+    {
+      "centre": "SNU",
+      "init": "s20181213",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.592,
+      "R": 0.7274,
+      "slope_control": 0.2344,
+      "cold_obs": 0.08,
+      "cold_pred": 0.1684,
+      "cold_control": 0.1,
+      "label_coef_nudged": 1.1962,
+      "label_coef_control": 0.4312
+    },
+    {
+      "centre": "SNU",
+      "init": "s20190108",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.7785,
+      "R": 0.2273,
+      "slope_control": 0.3965,
+      "cold_obs": 0.3,
+      "cold_pred": 0.4384,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.2899
+    },
+    {
+      "centre": "SNU",
+      "init": "s20190108",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.9723,
+      "R": -0.1113,
+      "slope_control": 0.3394,
+      "cold_obs": 0.36,
+      "cold_pred": 0.3116,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.4207
+    },
+    {
+      "centre": "SNU",
+      "init": "s20190108",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.3632,
+      "R": 0.9573,
+      "slope_control": 0.5205,
+      "cold_obs": 0.24,
+      "cold_pred": 0.593,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.935
+    },
+    {
+      "centre": "SNU",
+      "init": "s20190108",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.7336,
+      "R": 0.3972,
+      "slope_control": 0.4457,
+      "cold_obs": 0.28,
+      "cold_pred": 0.4131,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.7758
+    },
+    {
+      "centre": "UKMO",
+      "init": "s20180125",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.3109,
+      "R": 0.1511,
+      "slope_control": 0.6198,
+      "cold_obs": 0.08,
+      "cold_pred": 0.1804,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.019,
+      "label_coef_control": 0.1437
+    },
+    {
+      "centre": "UKMO",
+      "init": "s20180125",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.3411,
+      "R": 0.0243,
+      "slope_control": 0.4902,
+      "cold_obs": 0.26,
+      "cold_pred": 0.2889,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.1516,
+      "label_coef_control": 0.4453
+    },
+    {
+      "centre": "UKMO",
+      "init": "s20180125",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.0686,
+      "R": 0.3963,
+      "slope_control": 0.4396,
+      "cold_obs": 0.1,
+      "cold_pred": 0.2117,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.1972,
+      "label_coef_control": -0.4695
+    },
+    {
+      "centre": "UKMO",
+      "init": "s20180125",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.5141,
+      "R": 0.6357,
+      "slope_control": 0.1631,
+      "cold_obs": 0.02,
+      "cold_pred": 0.1394,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.0526,
+      "label_coef_control": 0.3595
+    },
+    {
+      "centre": "UKMO",
+      "init": "s20180208",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.7171,
+      "R": -0.3895,
+      "slope_control": 0.374,
+      "cold_obs": 0.28,
+      "cold_pred": 0.1624,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.2921,
+      "label_coef_control": 0.2907
+    },
+    {
+      "centre": "UKMO",
+      "init": "s20180208",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.4082,
+      "R": -0.1179,
+      "slope_control": 0.3314,
+      "cold_obs": 0.16,
+      "cold_pred": 0.126,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.5473,
+      "label_coef_control": 0.5103
+    },
+    {
+      "centre": "UKMO",
+      "init": "s20180208",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.9669,
+      "R": -0.6743,
+      "slope_control": 0.334,
+      "cold_obs": 0.44,
+      "cold_pred": 0.2095,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.3371,
+      "label_coef_control": -0.1291
+    },
+    {
+      "centre": "UKMO",
+      "init": "s20180208",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.9195,
+      "R": 0.8425,
+      "slope_control": -0.0879,
+      "cold_obs": 0.0,
+      "cold_pred": 0.0767,
+      "cold_control": 0.1,
+      "label_coef_nudged": 1.0933,
+      "label_coef_control": 0.3608
+    },
+    {
+      "centre": "UKMO",
+      "init": "s20181213",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.7502,
+      "R": -0.0683,
+      "slope_control": 0.5243,
+      "cold_obs": 0.3,
+      "cold_pred": 0.2549,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.1256,
+      "label_coef_control": -0.656
+    },
+    {
+      "centre": "UKMO",
+      "init": "s20181213",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.7522,
+      "R": -0.1664,
+      "slope_control": 0.4505,
+      "cold_obs": 0.32,
+      "cold_pred": 0.2099,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.1533,
+      "label_coef_control": -0.6984
+    },
+    {
+      "centre": "UKMO",
+      "init": "s20181213",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.8298,
+      "R": -0.3006,
+      "slope_control": 0.4069,
+      "cold_obs": 0.46,
+      "cold_pred": 0.3534,
+      "cold_control": 0.1,
+      "label_coef_nudged": 0.1202,
+      "label_coef_control": -0.0687
+    },
+    {
+      "centre": "UKMO",
+      "init": "s20181213",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": 0.4569,
+      "R": 0.8872,
+      "slope_control": 0.3309,
+      "cold_obs": 0.14,
+      "cold_pred": 0.1799,
+      "cold_control": 0.1,
+      "label_coef_nudged": -0.1911,
+      "label_coef_control": 0.0749
+    },
+    {
+      "centre": "UKMO",
+      "init": "s20190108",
+      "region": "NEURASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.4459,
+      "R": 0.2372,
+      "slope_control": 0.3105,
+      "cold_obs": 0.12,
+      "cold_pred": 0.3031,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.4689
+    },
+    {
+      "centre": "UKMO",
+      "init": "s20190108",
+      "region": "HI_EUROPE",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.7353,
+      "R": 0.0495,
+      "slope_control": 0.3567,
+      "cold_obs": 0.18,
+      "cold_pred": 0.2341,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.7082
+    },
+    {
+      "centre": "UKMO",
+      "init": "s20190108",
+      "region": "MID_EASIA",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.3312,
+      "R": 0.2756,
+      "slope_control": 0.2758,
+      "cold_obs": 0.14,
+      "cold_pred": 0.1783,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": -0.052
+    },
+    {
+      "centre": "UKMO",
+      "init": "s20190108",
+      "region": "MID_NAMER",
+      "n_nudged": 50,
+      "n_control": 50,
+      "S_T": -0.5883,
+      "R": 0.209,
+      "slope_control": 0.3625,
+      "cold_obs": 0.28,
+      "cold_pred": 0.3997,
+      "cold_control": 0.1,
+      "label_coef_nudged": NaN,
+      "label_coef_control": 0.2917
+    }
+  ],
+  "falsifier_primary": {
+    "rule": "R interval excludes 0 AND |R| > 0.2 sigma in NEURASIA",
+    "met": false
+  }
+}

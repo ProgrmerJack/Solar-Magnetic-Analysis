@@ -31,6 +31,18 @@ WHAT IS RETRIEVED (fixed before any download; analysis plan approved 2026-09-25)
 Output: s2s_ecmf_psl_cap.parquet
         model_date, init (hindcast start, 00 UTC), member (0 = control),
         lead_day, valid, psl_cap_N (Pa)
+
+SECOND VARIABLE: `--var t2m` (plan approved 2026-09-26, regional cold risk)
+  Daily-mean 2 m temperature ("2_m_temperature", requested as 24 h lead windows
+  "24k_24(k+1)", k = 10..33 -- post-onset days +8..+24 for starts 2-9 d before
+  onset; JMA's 12 h-offset windows are not requested), area 35-70N, reduced to the
+  four regions of snapsi_regional_test.py (cos-lat means, land and sea):
+  NEURASIA 50-65N 10-130E, HI_EUROPE 55-70N 0-60E, MID_EASIA 35-55N 90-150E,
+  MID_NAMER 35-55N 120-60W. lead_day is the START day of the 24 h window; valid is
+  init + lead_day. Centres define the daily average differently (true daily mean
+  or the mean of 00/06/12/18 UTC); anomalies are taken within each system.
+  Retrieved by the packed path only, ECMWF included (hindcasts on the fly).
+  Output: s2s_<origin>_t2m_regions.parquet (ECMWF: s2s_ecmf_t2m_regions.parquet)
 """
 import hashlib
 import json
@@ -59,6 +71,12 @@ HYEARS = [str(y) for y in range(2002, 2022)]
 LEAD_DAYS = list(range(10, 43))
 AREA = [90, -180, 60, 180]
 N_MEMBERS = 11
+VAR = "msl"                  # "t2m" with --var t2m
+T2M_CACHE = HERE / "_s2s_reduced_t2m"
+T2M_AREA = [70, -180, 35, 180]
+T2M_LEADS = list(range(10, 34))
+T2M_REGIONS = {"NEURASIA": (50, 65, 10, 130), "HI_EUROPE": (55, 70, 0, 60),
+               "MID_EASIA": (35, 55, 90, 150), "MID_NAMER": (35, 55, 240, 300)}
 WORKERS = int(os.environ.get("S2S_WORKERS", 6))   # requests in flight (queue-limit rejections are retried)
 RANGES = 16                  # parallel byte-ranges per file
 CHUNK = 4 * 1024 * 1024
@@ -83,6 +101,14 @@ def model_dates():
 
 def request(md, origin="ecmwf", hm=None, hd=None, hyears=None, leads=None):
     hm, hd = hm or md.month, hd or md.day
+    if VAR == "t2m":
+        return {"origin": [origin], "year": [f"{md.year}"], "month": [f"{md.month:02d}"],
+                "day": [f"{md.day:02d}"], "time": ["00:00"], "hyear": hyears or HYEARS,
+                "hmonth": [f"{hm:02d}"], "hday": [f"{hd:02d}"],
+                "level_type": "single_level", "variable": ["2_m_temperature"],
+                "forecast_type": ["control_forecast", "perturbed_forecast"],
+                "leadtime_hour": [f"{24 * d}_{24 * (d + 1)}" for d in T2M_LEADS],
+                "data_format": "grib", "area": T2M_AREA}
     return {"origin": [origin], "year": [f"{md.year}"], "month": [f"{md.month:02d}"],
             "day": [f"{md.day:02d}"], "time": ["00:00"], "hyear": hyears or HYEARS,
             "hmonth": [f"{hm:02d}"], "hday": [f"{hd:02d}"],
@@ -90,6 +116,18 @@ def request(md, origin="ecmwf", hm=None, hd=None, hyears=None, leads=None):
             "forecast_type": ["control_forecast", "perturbed_forecast"],
             "leadtime_hour": [str(24 * d) for d in (leads or LEAD_DAYS)],
             "data_format": "grib", "area": AREA}
+
+
+def regions_mean(da):
+    """cos-lat means over T2M_REGIONS (bounds inclusive; longitudes 0-360)."""
+    da = da.assign_coords(longitude=np.mod(da["longitude"], 360.0))
+    out = {}
+    for r, (la0, la1, lo0, lo1) in T2M_REGIONS.items():
+        m = ((da.latitude >= la0) & (da.latitude <= la1)
+             & (da.longitude >= lo0) & (da.longitude <= lo1))
+        sub = da.where(m, drop=True)
+        out[r] = sub.weighted(np.cos(np.deg2rad(sub.latitude))).mean(("latitude", "longitude"))
+    return xr.Dataset(out)
 
 
 def reduce(grib, md, origin="ecmwf", n_hyears=None, leads=None):
@@ -164,11 +202,13 @@ def jobs(origin):
     ECDS constraint service. For ECMWF this reproduces the original model dates."""
     p = client().get_process(DATASET)
     if origin == "ecmwf":
+        root = CACHE if VAR == "msl" else T2M_CACHE / "ecmwf"
         return [{"origin": "ecmwf", "md": md, "hm": md.month, "hd": md.day,
                  "hyears": HYEARS, "key": str(md.date()),
-                 "cache": CACHE / f"{md.date()}.parquet"} for md in model_dates()]
+                 "cache": root / f"{md.date()}.parquet"} for md in model_dates()]
     cfg = CENTRES[origin]
-    q = {"origin": [origin], "year": [cfg["year"]], "variable": ["mean_sea_level_pressure"]}
+    q = {"origin": [origin], "year": [cfg["year"]],
+         "variable": ["mean_sea_level_pressure" if VAR == "msl" else "2_m_temperature"]}
     # constraint queries in parallel: one sequential query per (date, hindcast
     # date) took most of an hour when ECDS was returning 502s
     def days_of(m):
@@ -194,7 +234,7 @@ def jobs(origin):
         key = f"{cfg['year']}-{m}-{d}_h{hm}-{hd}"
         return {"origin": origin, "md": pd.Timestamp(f"{cfg['year']}-{m}-{d}"),
                 "hm": int(hm), "hd": int(hd), "hyears": sorted(hy), "key": key,
-                "cache": CACHE / origin / f"{key}.parquet"}
+                "cache": (CACHE if VAR == "msl" else T2M_CACHE) / origin / f"{key}.parquet"}
 
     months = p.apply_constraints(q).get("month", [])
     with ThreadPoolExecutor(8) as ex:
@@ -207,8 +247,13 @@ def jobs(origin):
 
 
 def client():
+    # ECDS runs ONE request at a time per account (measured 2026-09-26: each job
+    # started as the previous finished, 2-11 min of server time each), so client
+    # threads cannot add throughput; a second account can. ECDS_RC names another
+    # rc file (same format as ~/.cdsapirc) for a second process on other origins.
     from ecmwf.datastores import Client
-    key = Path("~/.cdsapirc").expanduser().read_text().split("key:")[1].split()[0]
+    rc = Path(os.environ.get("ECDS_RC", "~/.cdsapirc")).expanduser()
+    key = rc.read_text().split("key:")[1].split()[0]
     return Client(url="https://ecds.ecmwf.int/api", key=key)
 
 
@@ -283,6 +328,18 @@ def fetch(job):
 def main(origin="ecmwf"):
     CACHE.mkdir(exist_ok=True)
     js = jobs(origin)
+    if VAR == "t2m":
+        missing = [j["key"] for j in js if not j["cache"].exists()]
+        if missing:
+            print(f"{origin} t2m: {len(missing)} starts not cached; run --packed first")
+            return 1
+        tag = "ecmf" if origin == "ecmwf" else origin
+        df = pd.concat([pd.read_parquet(j["cache"]) for j in js],
+                       ignore_index=True).sort_values(["init", "member", "lead_day"])
+        out_path = HERE / f"s2s_{tag}_t2m_regions.parquet"
+        df.to_parquet(out_path)
+        print(f"{len(df):,} rows, {df['init'].nunique()} starts -> {out_path.name}")
+        return 0
     out_path = OUT if origin == "ecmwf" else HERE / f"s2s_{origin}_psl_cap.parquet"
     man_path = MANIFEST if origin == "ecmwf" else HERE / f"s2s_manifest_{origin}.json"
     print(f"{origin}: {len(js)} requests; hindcast years "
@@ -331,7 +388,7 @@ def packs(origin):
     for j in jobs(origin):
         if j["cache"].exists():
             continue
-        cfg = CENTRES[origin]
+        cfg = CENTRES.get(origin, {"kind": "otf"})         # ECMWF: on the fly
         k = (j["md"].month, j["hm"]) if cfg["kind"] == "otf" else (j["md"], j["hm"])
         out.setdefault(k, []).append(j)
     return [(origin, v) for v in out.values()]
@@ -339,7 +396,8 @@ def packs(origin):
 
 def fetch_pack(item):
     origin, js = item
-    leads = MULTI_LEAD_DAYS
+    leads = MULTI_LEAD_DAYS if VAR == "msl" else T2M_LEADS
+    col = "psl_cap_N" if VAR == "msl" else list(T2M_REGIONS)
     req = request(js[0]["md"], origin, js[0]["hm"], js[0]["hd"],
                   sorted({h for j in js for h in j["hyears"]}), leads)
     req["day"] = sorted({f"{j['md'].day:02d}" for j in js})
@@ -366,25 +424,38 @@ def fetch_pack(item):
         for dtype, member_of in (("cf", None), ("pf", "number")):
             ds = xr.open_dataset(str(g), engine="cfgrib",
                                  backend_kwargs={"indexpath": "", "filter_by_keys": {"dataType": dtype}})
-            c = E.cap(ds[list(ds.data_vars)[0]], north=True)
-            df = c.to_dataframe(name="psl_cap_N").reset_index()
+            if VAR == "msl":
+                c = E.cap(ds[list(ds.data_vars)[0]], north=True)
+                df = c.to_dataframe(name="psl_cap_N").reset_index()
+            else:
+                df = regions_mean(ds[list(ds.data_vars)[0]]).to_dataframe().reset_index()
             df["member"] = 0 if member_of is None else df["number"].astype(int)
             frames.append(df); ds.close()
     df = pd.concat(frames, ignore_index=True)
     df["init"] = pd.to_datetime(df["time"])
     df["lead_day"] = (pd.to_timedelta(df["step"]) / pd.Timedelta(days=1)).round().astype(int)
+    if VAR == "t2m":
+        # an averaged field carries the window END as its step: "240_264" -> 11 d.
+        # lead_day is the window START; the requested set must come back exactly
+        df["lead_day"] -= 1
+        if set(df["lead_day"]) != set(T2M_LEADS):
+            raise ValueError(f"{origin}: lead days {sorted(set(df['lead_day']))[:4]}... "
+                             f"!= requested windows {T2M_LEADS[0]}..{T2M_LEADS[-1]}")
+        if not df[col].stack().between(200, 310).all():
+            raise ValueError(f"{origin}: regional 2 m temperature outside 200-310 K")
     df["valid"] = df["init"] + pd.to_timedelta(df["lead_day"], unit="D")
-    if not df["psl_cap_N"].between(95000, 106000).all():
+    if VAR == "msl" and not df["psl_cap_N"].between(95000, 106000).all():
         raise ValueError(f"{origin}: cap mean outside 950-1060 hPa")
     done = []
     for j in js:
         sub = df[(df["init"].dt.month == j["hm"]) & (df["init"].dt.day == j["hd"])
                  & df["init"].dt.year.astype(str).isin(j["hyears"])].copy()
         sub["model_date"] = pd.Timestamp(year=2000, month=j["hm"], day=j["hd"])
-        sub = sub[["model_date", "init", "member", "lead_day", "valid", "psl_cap_N"]]
+        cols = [col] if isinstance(col, str) else col
+        sub = sub[["model_date", "init", "member", "lead_day", "valid", *cols]]
         per = sub.groupby(["init", "member"])["lead_day"].nunique()
         mem = sub.groupby("init")["member"].nunique()
-        if (sub.empty or sub["psl_cap_N"].isna().any() or (per != len(leads)).any()
+        if (sub.empty or sub[cols].isna().any().any() or (per != len(leads)).any()
                 or mem.nunique() != 1 or sub["init"].nunique() != len(j["hyears"])):
             raise ValueError(f"{origin} {j['key']}: incomplete in packed result")
         j["cache"].parent.mkdir(parents=True, exist_ok=True)
@@ -404,7 +475,8 @@ def main_packed(origins):
             origin, js = futs[fu]
             try:
                 _, done, meta = fu.result()
-                mp_ = HERE / f"s2s_manifest_{origin}.json"
+                mp_ = HERE / (f"s2s_manifest_{origin}.json" if VAR == "msl"
+                              else f"s2s_manifest_t2m_{origin}.json")
                 man = json.loads(mp_.read_text()) if mp_.exists() else {}
                 man["packed:" + "+".join(done)] = meta
                 mp_.write_text(json.dumps(man, indent=2, sort_keys=True), newline="\n")
@@ -417,6 +489,11 @@ def main_packed(origins):
 
 
 if __name__ == "__main__":
+    if "--var" in sys.argv:
+        i = sys.argv.index("--var")
+        VAR = sys.argv[i + 1]
+        del sys.argv[i:i + 2]
+        assert VAR in ("msl", "t2m"), VAR
     if len(sys.argv) > 2 and sys.argv[1] == "--packed":
         sys.exit(main_packed(sys.argv[2:]))
     sys.exit(main(sys.argv[1] if len(sys.argv) > 1 else "ecmwf"))

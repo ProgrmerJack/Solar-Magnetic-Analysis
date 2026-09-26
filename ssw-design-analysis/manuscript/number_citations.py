@@ -3,7 +3,8 @@
 number_citations.py -- replace ^{key}^ citation keys in main.md with numbers in
 Nature order (main text, then figure legends, then Methods) and write the
 reference list. Every entry below was checked against Crossref or the publisher
-page on 2026-09-25. Run once the text is final; it rewrites main.md in place.
+page on 2026-09-25 (kretschmer18, huang21, kolstad20, garfinkel25 and dai25 on
+2026-09-26). Run once the text is final; it rewrites main.md in place.
 """
 import re
 import sys
@@ -32,6 +33,11 @@ REFS = {
     "leeSH25": "Lee, S. H., Butler, A. H. & Manney, G. L. Two major sudden stratospheric warmings during winter 2023/2024. *Weather* **80**, 45–53 (2025).",
     "hersbach20": "Hersbach, H. et al. The ERA5 global reanalysis. *Q. J. R. Meteorol. Soc.* **146**, 1999–2049 (2020).",
     "rasp24": "Rasp, S. et al. WeatherBench 2: a benchmark for the next generation of data-driven global weather models. *J. Adv. Model. Earth Syst.* **16**, e2023MS004019 (2024).",
+    "kretschmer18": "Kretschmer, M., Cohen, J., Matthias, V., Runge, J. & Coumou, D. The different stratospheric influence on cold-extremes in Eurasia and North America. *npj Clim. Atmos. Sci.* **1**, 44 (2018).",
+    "huang21": "Huang, J., Hitchcock, P., Maycock, A. C., McKenna, C. M. & Tian, W. Northern hemisphere cold air outbreaks are more likely to be severe during weak polar vortex conditions. *Commun. Earth Environ.* **2**, 147 (2021).",
+    "kolstad20": "Kolstad, E. W., Wulff, C. O., Domeisen, D. I. V. & Woollings, T. Tracing North Atlantic Oscillation forecast errors to stratospheric origins. *J. Clim.* **33**, 9145–9157 (2020).",
+    "garfinkel25": "Garfinkel, C. I. et al. A process-based evaluation of biases in extratropical stratosphere–troposphere coupling in subseasonal forecast systems. *Weather Clim. Dynam.* **6**, 171–195 (2025).",
+    "dai25": "Dai, Y., Hitchcock, P., Butler, A. H., Garfinkel, C. I. & Seviour, W. J. M. Assessing stratospheric contributions to subseasonal predictions of precipitation after the 2018 sudden stratospheric warming from the Stratospheric Nudging And Predictable Surface Impacts (SNAPSI) project. *Weather Clim. Dynam.* **6**, 841–862 (2025).",
     "charlton07": "Charlton, A. J. & Polvani, L. M. A new look at stratospheric sudden warmings. Part I: climatology and modeling benchmarks. *J. Clim.* **20**, 449–469 (2007).",
 }
 KEY = re.compile(r"\^\{([A-Za-z0-9,]+)\}\^")

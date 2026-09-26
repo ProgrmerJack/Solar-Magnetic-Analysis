@@ -165,8 +165,8 @@ Rule: any pool whose workers read parent state passes mp_context=multiprocessing
 
 ## 2026-09-26 — Mass-submitting requests to the ECMWF Data Store
 Tried: submitting every S2S reforecast request up front, one per start date, with parallel workers.
-Failed: ECDS runs ~1 request per user at a time and queues ~4; the rest were rejected ("Number queued requests ... temporarily limited"), and one connection downloads at ~60 KB/s.
-Rule: at most 4 in flight with backoff on rejection; pack many dates per request (only valid combinations are returned); download with parallel byte ranges, checking 206, Content-Range and byte count.
+Failed: ECDS runs exactly 1 request per account at a time (job list 2026-09-26: each started as the previous finished, 2-11 min server time) and queues ~4; the rest were rejected, and one connection downloads at ~60 KB/s.
+Rule: at most 4 in flight with backoff; pack many dates per request; parallel byte-range downloads (206, Content-Range, byte count). Client threads cannot beat the per-account serialisation; only a second account (ECDS_RC) adds throughput.
 
 ## 2026-09-26 — A multi-model null that required every system at one pseudo-onset
 Tried: moving each event to pseudo-onsets where ALL systems covering the event had starts 2–9 d before, as for the real value.
@@ -177,3 +177,8 @@ Rule: run a synthetic calibration before any real result; for multi-model nulls 
 Tried: known-truth calibration writing each run's synthetic forecasts (10 systems) to tempfile.mkdtemp() and never removing them.
 Failed: /tmp is a 16 GB tmpfs here; 89 leftover directories filled it and the four-case run died after 19 min ("No space left on device").
 Rule: a harness that writes per-run temp files deletes them as soon as they are read; check `df -h /tmp` before long runs.
+
+## 2026-09-26 — CEDA served 0.06 MB/s per connection
+Tried: whole-file SNAPSI tas downloads, one connection per file, 12 workers (as psl had run at ~15 MB/s in total).
+Failed: 0.3 GB took 19 min; reduction took 0.5 s per file, so transfer was the whole cost, and the CEDA token had 8 h left for 107 GB.
+Rule: measure per-connection speed first; CEDA honours byte ranges (206), and 24 ranges x 16 files gave ~22 MB/s (acquire_snapsi_tas.ranged).

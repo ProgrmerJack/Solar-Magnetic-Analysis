@@ -59,6 +59,7 @@ withdrawal now carries intervals.)*
 | P | operational forecasts show no significant event-specific skill at SSWs; they underestimate the common shift | ECMWF S2S reforecasts, 12 SSWs 2003–2021 | established for one system; conditional p 0.115 / 0.366, power 0.88–0.90 |
 | P′ | confirmed in 9 other systems: no event-specific discrimination (r +0.23 vs +0.52 event-free, p 0.91); outcomes on the downward side of the ensembles (mean PIT 0.40 vs 0.54, p 0.005); shift-size correction not significant (p 0.16, low power) | S2S reforecasts, 9 systems, 17 SSWs 1998–2021 | established (H1/H2 pre-registered; D, H1, H2 calibrated, D power 1.00 against strong skill) |
 | Q | knowing the event adds no probabilistic forecast skill beyond the shift (CRPSS +0.008 [−0.003, +0.014]), less than on ordinary days (+0.037) | CMIP6, 1,517 events, leave-one-model-out | established |
+| R | an imposed SSW triples the chance of a cold fortnight over northern Eurasia (0.10 → 0.32); the polar-cap shift through the ordinary relation predicts it (0.31), residual −0.10σ [−0.36, +0.06]; the label adds nothing. Europe has extra cooling, N America an unexplained warming | SNAPSI 36 pairs (9 centres); ERA5 39 events | established (preregistered); operational counterpart pending |
 | L′ | paired label test: contrast identical with and without an SSW on the same pairs (−0.03σ [−0.12, +0.05]); threshold model exact in controls | SNAPSI, 25 pairs, 8 centres | established |
 
 **J is the headline.** It needs no correction of any kind, it answers the field's
@@ -785,6 +786,51 @@ ordinary winter days; in none of 200 matched samples was it worth as little as
 after SSWs. Falsifier (SSW-specific value > 0 at p < 0.05) not met — the data
 point the other way. Interpretation (not tested): after an SSW the stratosphere's
 information is mostly the shift.
+
+### R — regional cold risk: the shift, acting through the ordinary circulation–temperature relation (`snapsi_regional_test.py`, `era5_regional_test.py`)
+
+Plan approved 2026-09-26, written into both scripts before any regional
+temperature was analysed. Regions from the literature: NEURASIA 50–65N 10–130E
+(Kretschmer et al. 2018; PRIMARY), HI_EUROPE 55–70N 0–60E, MID_EASIA 35–55N
+90–150E, MID_NAMER 35–55N 120–60W (Huang et al. 2021). Window: daily means of
+post-onset days +8..+24; T in sigma of the control (SNAPSI) or event-free (ERA5)
+distribution. Mediation test: fit T on the member's/date's polar-cap NAM WITHOUT an
+SSW, predict with the SSW, residual R. Label test: does the downward indicator add
+to N? SNAPSI tas: `acquire_snapsi_tas.py` (3,603 members, 9 centres, 2.5° daily);
+ERA5: `acquire_era5_t2m_regions.py` (WB2, 1959–Jan 2023; 39 of 43 events).
+
+**SNAPSI (causal; 36 centre × initialisation pairs, ~450 members per arm and init;
+centre-cluster bootstrap):**
+
+| region | SSW effect S_T (σ) | residual beyond NAM, R (σ) | share explained | P(cold fortnight): control / nudged / predicted from shift | label coef (nudged) |
+|---|---|---|---|---|---|
+| **NEURASIA** | **−0.85 [−1.40, −0.49]** | **−0.10 [−0.36, +0.06]** | 88% | 0.10 / 0.32 / 0.31 | −0.04 [−0.19, +0.09] |
+| HI_EUROPE | −0.87 [−1.22, −0.63] | −0.27 [−0.47, −0.14] | 69% | 0.10 / 0.32 / 0.26 | +0.14 [−0.03, +0.36] |
+| MID_EASIA | −0.52 [−0.80, −0.27] | −0.21 [−0.50, +0.03] | 60% | 0.10 / 0.27 / 0.20 | −0.10 [−0.23, +0.03] |
+| MID_NAMER | +0.49 [+0.37, +0.63] | +0.80 [+0.63, +1.04] | — | 0.10 / 0.08 / 0.18 | +0.29 [+0.06, +0.53] |
+
+Excluding ECCC (post-hoc, as in K): NEURASIA S_T −0.60, R +0.02 [−0.02, +0.07];
+HI_EUROPE R −0.19 [−0.26, −0.12]; MID_NAMER R +0.69 [+0.61, +0.76].
+Primary falsifier (R interval excludes 0 AND |R| > 0.2σ in NEURASIA): **not met**.
+Self-test: the 8-centre bootstrap interval covered 0 in 180/200 null draws (90%,
+nominal 95%: slightly liberal) and detected a −0.5σ direct effect in 200/200.
+
+**ERA5 (39 events; calendar-window null of event-free dates):** NEURASIA −1.00 K,
+R −0.33 K (−0.12 sd), p 0.38, 67% explained; HI_EUROPE −1.04 K, R −0.42 K, p 0.27;
+MID_EASIA −0.19 K, R +0.15 K, p 0.53; MID_NAMER +0.04 K, R +0.55 K (+0.27 sd),
+p 0.09. The null's 95% range is about ±0.7 K: residuals below ~0.27 sd are not
+detectable here. Label coefficients uninformative (intervals ±1.7 K).
+
+- Over northern Eurasia an imposed SSW triples the chance of a cold fortnight
+  (0.10 → 0.32), and the shift of the polar-cap circulation, acting through the
+  ordinary SSW-free relation, predicts it (0.31). The downward label adds nothing.
+- Regionally the polar-cap index is not the whole story: extra cooling over
+  high-latitude Europe (−0.19 to −0.27σ) and a warming of mid-latitude North
+  America that the NAM relation does not predict (+0.7 to +0.8σ; same sign in
+  ERA5). The forecast product after an SSW should therefore be the shifted
+  distribution of the regional variable itself, not a label or the NAM alone.
+- Operational counterpart (`s2s_regional_test.py`, S2S 2 m temperature): pending
+  the retrieval.
 
 ## 4. Prior art — verified from source, all must be cited
 
