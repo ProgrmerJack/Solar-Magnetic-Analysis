@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-26T13:41:15+00:00",
+ "generated": "2026-09-29T12:15:52+00:00",
  "note": "Known-good baseline: each result was produced by the script at the recorded sha256. catalog_repo.py flags STALE when a producer's hash no longer matches. Re-record with --record only AFTER re-running the analysis.",
  "results": {
   "catalogue_sets.json": {
@@ -67,9 +67,9 @@
     "ssw-design-analysis/07_physical_decomposition/era5_regional_test.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/era5_regional_test.py": "f1adbb9235f60d21"
+    "ssw-design-analysis/07_physical_decomposition/era5_regional_test.py": "395760ee71ea4a89"
    },
-   "result_sha256_16": "1fbac5f1a4af1335",
+   "result_sha256_16": "5f43b5caf139ab81",
    "needs_rerun": false
   },
   "era_split.json": {
@@ -130,6 +130,16 @@
     "ssw-design-analysis/05_corrected_estimators/seed_stability.py": "7110403a6f665243"
    },
    "result_sha256_16": "d69b7ac57c080e9e",
+   "needs_rerun": false
+  },
+  "vortex_geometry_test.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/vortex_geometry_test.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/vortex_geometry_test.py": "9b653be72be2dfb8"
+   },
+   "result_sha256_16": "2ca9c790bfd038a1",
    "needs_rerun": false
   },
   "aao_null.json": {
@@ -217,7 +227,7 @@
     "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "d530c434b43785c3"
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "6ddf107b0ab305ec"
    },
    "result_sha256_16": "0f944d1fa01d3e65",
    "needs_rerun": false
@@ -227,9 +237,9 @@
     "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "d530c434b43785c3"
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "6ddf107b0ab305ec"
    },
-   "result_sha256_16": "acf2ac1754413521",
+   "result_sha256_16": "e7d17e93e5970e1c",
    "needs_rerun": false
   },
   "validate_s2s_null.json": {
@@ -372,6 +382,16 @@
    "result_sha256_16": "826b2cb77be39f7a",
    "needs_rerun": false
   },
+  "event_difference_bounds.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/event_difference_bounds.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/event_difference_bounds.py": "cb5bc4d846f0e984"
+   },
+   "result_sha256_16": "0d8e09f6d6b1f6a7",
+   "needs_rerun": false
+  },
   "granger_direction.json": {
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/granger_direction.py"
@@ -420,6 +440,16 @@
     "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py": "fbf4b52a0be7c41d"
    },
    "result_sha256_16": "3332f54b9a379f78",
+   "needs_rerun": false
+  },
+  "forecast_value_robustness.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/forecast_value_robustness.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/forecast_value_robustness.py": "07ca2e685a7ca95c"
+   },
+   "result_sha256_16": "50cd3e03a69c3615",
    "needs_rerun": false
   },
   "forecast_value_test.json": {
@@ -472,6 +502,16 @@
    "result_sha256_16": "abba7bfed0915433",
    "needs_rerun": false
   },
+  "s2s_baseline_test.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_baseline_test.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_baseline_test.py": "f63096a7a2bdf095"
+   },
+   "result_sha256_16": "e70e2c1c95e59684",
+   "needs_rerun": false
+  },
   "s2s_forecast_test.json": {
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/s2s_forecast_test.py"
@@ -482,13 +522,23 @@
    "result_sha256_16": "5b0673656e8b327a",
    "needs_rerun": false
   },
+  "s2s_multimodel_robustness.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_robustness.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_robustness.py": "ea91467a5ed43145"
+   },
+   "result_sha256_16": "9dd6575c7ef47d01",
+   "needs_rerun": false
+  },
   "s2s_multimodel_test.json": {
    "producers": [
     "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py",
     "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_test.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "d530c434b43785c3",
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "6ddf107b0ab305ec",
     "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_test.py": "4f974e1a74330b3a"
    },
    "result_sha256_16": "68ded2f4ef0fa1e6",
@@ -582,6 +632,16 @@
     "ssw-design-analysis/07_physical_decomposition/snapsi_causal_effect.py": "5b199ee3cef72813"
    },
    "result_sha256_16": "2ff1510ebe8e56ce",
+   "needs_rerun": false
+  },
+  "snapsi_contrast_diagnosis.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_diagnosis.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_diagnosis.py": "6c70cea142af8d22"
+   },
+   "result_sha256_16": "a759e9d616e1129a",
    "needs_rerun": false
   },
   "snapsi_distribution_test.json": {

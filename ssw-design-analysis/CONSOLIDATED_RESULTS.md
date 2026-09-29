@@ -845,14 +845,88 @@ registered as primary before the data were analysed):**
 
 Holm over the four regions: NEURASIA 0.054. Over NEURASIA all ten systems lie below
 their event-free value. Discrimination D is not interpretable here: its calibration
-rejected 12% under equal skill (below). Anomalies are against climatologies that
+rejected 10% under equal skill (below). Anomalies are against climatologies that
 include the SSW years (not shifts).
 **Calibration** (`validate_s2s_multimodel.py --var t2m`, 100 datasets per case, real
 t2m layouts and ERA5 NEURASIA outcome, noise scaled to the pressure case): equal
-skill — D 0.12 (liberal), H1 0.02, H2 0.02, H1c 0.02; no information — D 0.05, H1
-1.00; damped 0.6× — H1 0.23 (low power), H2 0.02; skill only before SSWs — D 1.00.
+skill — D 0.10 (liberal), H1 0.03, H2 0.02, H1c 0.01; no information — D 0.05, H1
+1.00; damped 0.6× — H1 0.32 (low power), H2 0.03 (noise scaled by the anomaly-s.d.
+ratio after the 2026-09-29 review; the raw-s.d. scaling had given 0.23); skill only before SSWs — D 1.00.
 - The operational systems under-forecast the northern-Eurasian cold after SSWs as
   they under-forecast the polar-cap shift (P′), with a test of low power.
+
+### S — revision robustness, 2026-09-29 (referee concerns; plan approved 2026-09-29)
+
+All post hoc unless marked; every script's design is in its docstring, and the
+two marked "registered" were committed (57019f6) before their data existed.
+
+**Operational rank deficit (`s2s_baseline_test.py`, `s2s_multimodel_robustness.py`;
+nine confirmatory systems, 17 events):**
+
+| check | polar-cap NAM | N-Eurasian T |
+|---|---|---|
+| mean rank after SSWs, 95% event bootstrap | 0.40 [0.29, 0.52] | 0.39 [0.29, 0.50] |
+| all-winter baseline (SSW winters in, SSW windows out): null mean, p | 0.53, p 0.012 | 0.51, p 0.028 |
+| vortex-state regression (NCEP 60-90N u10): slope per m/s; SSW residual, p | 0.0006; −0.10, p 0.028 | 0.0006; −0.09, p 0.057 |
+| mixed model, (1 given date) + system: SSW coefficient [95%] | −0.14 [−0.25, −0.04], p 0.009 | −0.13 [−0.25, −0.01], p 0.031 |
+| events covered by ≥5 systems (15): rank vs null, p | 0.41 vs 0.54, p 0.012 | 0.41 vs 0.53, p 0.039 |
+| P(outcome<0), forecast vs observed after SSWs | 0.57 vs 0.82 (reliability 0.079) | 0.53 vs 0.59 (0.019) |
+| same on event-free dates | 0.41 vs 0.29 (0.014) | 0.41 vs 0.42 (0.003) |
+| discrimination Δr [95%]; MDE (α 0.05, power 0.8); power at Δr 0.2/0.3 | −0.29 [−0.76, +0.22]; 0.43; 0.42/0.63 | −0.17 [−0.82, +0.30]; 0.33; 0.53/0.76 |
+
+The deficit is SSW-specific: rank barely depends on vortex state across winter
+dates and SSWs fall below that relation. The absolute test against 0.5 is marginal
+(interval reaches 0.52); the systems sit slightly above 0.5 on ordinary dates.
+
+**SNAPSI contrast shortfall explained (`snapsi_contrast_diagnosis.py`, 25 NH pairs):**
+Gaussian-expectation residual +0.195 [0.108, 0.304] (as L); condition 1 only +0.090
+[0.047, 0.145]; EMPIRICAL shifted-control null (control members shifted by the
+imposed effect, full criterion) +0.040 [−0.026, +0.097] (23 pairs); skewness
+difference +0.02 [−0.12, +0.16]; s.d. ratio 0.98 [0.94, 1.03]. One shifted
+population reproduces the nudged contrast. **SH variance ratio 1.74 [1.41, 2.15]**
+(8 ensembles, 402+402 members): the austral minor warming widens the distribution
+as well as shifting it — an exception to the NH translation.
+
+**Event differences bounded (`event_difference_bounds.py`, from I):** CMIP6 forced
+between-event sd 0.137 (upper 0.269) in member units, shift −0.48, noise sd 0.67:
+forced P(negative outcome) across events 0.62–0.87 (0.47–0.93 at the upper bound);
+share of a single event's label variance due to forced differences **2.2% (≤7.8%)**.
+
+**Observed cold anchor (`era5_regional_test.py`, added):** cold northern-Eurasian
+fortnight after 39 SSWs **0.26 [0.13, 0.41]** vs 0.10 event-free (HI_EUROPE same;
+MID_EASIA 0.21 [0.08, 0.33]; MID_NAMER 0.08 [0.00, 0.18]).
+
+**Vortex geometry (`vortex_geometry_test.py`, registered 57019f6; area weights and
+validation period corrected to Seviour et al. 2013 before the first complete run):**
+NCEP Z10 moments; the paper's event rule gives 17 displaced / 13 split events in
+their 52 winters (paper, ERA: 17 / 18 — NCEP's 2.5° grid smooths splits).
+Catalogued SSWs, registered any-day rule: 27 split, 10 displaced (skewed to split);
+7-day rule: 9 / 10. Split minus displaced, ERA5 NAM1000 days 8–25: −0.25σ [−0.61,
++0.13], p 0.28 (7-day: −0.40, p 0.12); days 8–52: −0.02, p 0.92; N-Eurasian T
+−0.42 K, p 0.70; DW rate 0.78 vs 0.60, Fisher p 0.41 (7-day 0.89 vs 0.50, p 0.14).
+Same direction as the literature (splits stronger early), not significant at 37
+events.
+
+**CMIP6 forecast value, robustness (`forecast_value_robustness.py`; 1,514 events
+scored in every variant after the precursor-coverage fix; 200 draws per null):**
+
+| set / tier | CRPSS after SSWs [95%] | balanced | no CanESM5 | ordinary dates (p) | weak-vortex dates (p) |
+|---|---|---|---|---|---|
+| base P1 | +0.65% [−0.33, 1.34] | 0.44% | 0.49% | 3.26% (1.0) | 1.13% (0.82) |
+| base P2 | +0.76% [−0.24, 1.38] | 0.36% | 0.62% | 3.91% (1.0) | 1.62% (0.94) |
+| base P3 (post-onset) | 17.2% [10.8, 21.4] | 14.7% | 16.8% | 20.7% (1.0) | 18.9% (0.92) |
+| plus P1 | +0.62% | 0.51% | 0.95% | 4.38% (1.0) | 2.41% (0.99) |
+| plus P2 | +0.76% [−0.26, 1.92] | 0.52% | 1.14% | 4.83% (1.0) | 2.93% (1.0) |
+| plus P3 | 17.6% | 15.2% | 16.0% | 21.2% (0.99) | 19.1% (0.87) |
+
+"plus" = base + wind tendencies (10/50/100 hPa, 60N and cap), 10-100 hPa shear,
+75N-45N geometry and the pre-onset surface annular mode. Predictor s.d. at SSWs /
+nulls: 1.02 (ordinary), 1.03 (weak). Event information is worth less after SSWs
+than on ordinary or weak-vortex days in every variant; richer predictors help the
+comparison days, not SSWs.
+
+Pending at the time of writing: `s2s_postonset_test.py` (registered; matched-null
+correction before first run; awaits the ECDS chain).
 
 ## 4. Prior art — verified from source, all must be cited
 

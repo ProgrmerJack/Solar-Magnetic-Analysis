@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-fig1_shift.py -- Figure 1: an SSW shifts the surface distribution; it does not
+figED1_shift.py -- Extended Data Figure 1: an SSW shifts the surface distribution; it does not
 split it.
 
 Reads results/current/8_experiment/snapsi_causal_effect.json (result K) and
@@ -103,7 +103,7 @@ def main():
     bx.set_ylim(0, 0.64)
     bx.legend(loc="lower left", bbox_to_anchor=(0, 1.0), fontsize=5.3)
     S.panel_label(bx, "b", x=-0.14, y=1.12)
-    S.save(fig, "fig1_shift")
+    S.save(fig, "figED1_shift")
 
 
 if __name__ == "__main__":

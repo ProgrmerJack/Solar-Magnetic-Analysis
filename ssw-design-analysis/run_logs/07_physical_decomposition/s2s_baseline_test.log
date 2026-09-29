@@ -1,0 +1,4 @@
+psl       n=17 rank 0.3979 [0.2913, 0.5182] | all-winter null 0.5288 p=0.0124 | slope 0.00056/(m/s) predicted at event u10 0.4995 residual -0.1016 p=0.0284
+NEURASIA  n=17 rank 0.3896 [0.2904, 0.4977] | all-winter null 0.5137 p=0.0275 | slope 0.00058/(m/s) predicted at event u10 0.4831 residual -0.0935 p=0.0572
+Saved -> s2s_baseline_test.json
+exit=0 secs=304

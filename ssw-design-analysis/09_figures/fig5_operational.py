@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-fig4_operational.py -- Figure 4: operational reforecasts after SSWs.
+fig5_operational.py -- Figure 5: operational reforecasts after SSWs.
 
 Reads results/current/6_predictability/s2s_forecast_test.json (result P, ECMWF)
 and s2s_multimodel_test.json (result A, all systems). Recomputes nothing.
@@ -62,8 +62,10 @@ def main():
             q = v.get(qkey)
             if q:
                 bx.plot(q, [yy, yy], color="0.75", lw=3, solid_capstyle="butt")
+            few = (not mm) and v["n_events"] < 6            # e.g. CPTEC, 4 events: shown open
             bx.scatter([v[key]], [yy], s=14 if mm else 9, marker="D" if mm else "o",
-                       color=S.C["black"] if mm else S.C["vermillion"], zorder=3)
+                       facecolors="none" if few else (S.C["black"] if mm else S.C["vermillion"]),
+                       edgecolors=S.C["black"] if mm else S.C["vermillion"], zorder=3)
             bx.text(1.02, yy, f"{v['n_events']}", transform=bx.get_yaxis_transform(),
                     va="center", fontsize=5, color="0.4")
         if ref is not None:
@@ -74,7 +76,7 @@ def main():
         bx.set_title(tt, fontsize=6, pad=8)
         bx.text(1.02, 1.0, "n", transform=bx.transAxes, va="bottom", fontsize=5, color="0.4")
         S.panel_label(bx, panel, x=-0.45 if panel == "b" else -0.16, y=1.06)
-    S.save(fig, "fig4_operational")
+    S.save(fig, "fig5_operational")
 
 
 if __name__ == "__main__":

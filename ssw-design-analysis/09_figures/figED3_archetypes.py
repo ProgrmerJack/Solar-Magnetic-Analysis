@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-figED2_archetypes.py -- Extended Data Fig. 2: the field's two archetypes are two draws.
+figED3_archetypes.py -- Extended Data Fig. 3: the field's two archetypes are two draws.
 
 Reads results/current/8_experiment/snapsi_archetype_test.json (result O) and
 snapsi_causal_effect.json (result K). Recomputes nothing.
@@ -127,7 +127,7 @@ def main():
     cx.set_xlim(-1.35, 0.6)
     cx.set_title("Jan-2019 is NDW in 1 of 4 variants", fontsize=6.5)
     S.panel_label(cx, "c", x=-0.33)
-    S.save(fig, "figED2_archetypes")
+    S.save(fig, "figED3_archetypes")
 
 
 if __name__ == "__main__":

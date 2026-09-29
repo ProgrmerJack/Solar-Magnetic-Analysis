@@ -1,0 +1,10 @@
+psl       R1 after SSWs: mean p 0.5678 obs 0.8235 Brier 0.2 rel 0.0791 | event-free: mean p 0.4072 obs 0.2915 Brier 0.1855 rel 0.0143
+          R2 {'r_ssw': 0.2262, 'r_ssw_ci95_event_bootstrap': [-0.2472, 0.7286], 'null_cond_mean': 0.5121, 'null_cond_sd': 0.197, 'n_null_cond': 4683, 'delta_r': -0.2859, 'delta_r_ci95': [-0.7593, 0.2164], 'mde_alpha05_power80': 0.4307, 'power_at_delta_0.2': 0.424, 'power_at_delta_0.3': 0.629}
+          R3 {'n_rows': 6378, 'n_event_dates': 17, 'n_free_dates': 971, 'ssw_coef': -0.1446, 'ssw_ci95': [-0.2538, -0.0355], 'ssw_p': 0.00938}
+          R4 {'min_systems': 5, 'n_events': 15, 'mean_rank': 0.4093, 'null_mean': 0.5438, 'p': 0.0118}
+NEURASIA  R1 after SSWs: mean p 0.533 obs 0.5882 Brier 0.2153 rel 0.0194 | event-free: mean p 0.4144 obs 0.4154 Brier 0.1674 rel 0.0028
+          R2 {'r_ssw': 0.4479, 'r_ssw_ci95_event_bootstrap': [-0.2009, 0.918], 'null_cond_mean': 0.6222, 'null_cond_sd': 0.1438, 'n_null_cond': 5649, 'delta_r': -0.1743, 'delta_r_ci95': [-0.8232, 0.2958], 'mde_alpha05_power80': 0.3274, 'power_at_delta_0.2': 0.529, 'power_at_delta_0.3': 0.761}
+          R3 {'n_rows': 7549, 'n_event_dates': 17, 'n_free_dates': 1495, 'ssw_coef': -0.129, 'ssw_ci95': [-0.2462, -0.0119], 'ssw_p': 0.03081}
+          R4 {'min_systems': 5, 'n_events': 15, 'mean_rank': 0.4055, 'null_mean': 0.5262, 'p': 0.039}
+Saved -> s2s_multimodel_robustness.json
+exit=0 secs=227

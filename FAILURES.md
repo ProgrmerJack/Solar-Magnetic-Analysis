@@ -182,3 +182,18 @@ Rule: a harness that writes per-run temp files deletes them as soon as they are 
 Tried: whole-file SNAPSI tas downloads, one connection per file, 12 workers (as psl had run at ~15 MB/s in total).
 Failed: 0.3 GB took 19 min; reduction took 0.5 s per file, so transfer was the whole cost, and the CEDA token had 8 h left for 107 GB.
 Rule: measure per-connection speed first; CEDA honours byte ranges (206), and 24 ranges x 16 files gave ~22 MB/s (acquire_snapsi_tas.ranged).
+
+## 2026-09-29 — Noise scaled by a raw s.d. that included the seasonal cycle
+Tried: scaling synthetic temperature-forecast noise by the ratio of raw winter s.d. (temperature vs pressure) in validate_s2s_multimodel.py --var t2m.
+Failed: raw temperature s.d. (5.5 K) includes the December-March seasonal cycle (anomaly s.d. 3.75 K); the synthetic forecasts were ~1.5x noisier than intended, understating power. Found by code review.
+Rule: scale by the s.d. of day-of-year anomalies, never of raw values, whenever variables with different seasonal cycles are compared.
+
+## 2026-09-29 — A subset statistic tested against the full-sample null
+Tried: s2s_postonset_test.py compared the mean rank over "hit" (or "miss") starts, a subset of events, systems and starts, with the null built for all events and all starts.
+Failed: the subset mean is noisier, so the full-sample null is too narrow and p too liberal (emulated: 0.0095 vs 0.029 with a matched null). Caught before the first run.
+Rule: a null must be drawn for the same events, systems and number of averaged units as the statistic it is compared with.
+
+## 2026-09-29 — Season-restricted series silently dropped pre-onset predictors
+Tried: building a pre-onset surface-NAM precursor (days -45..-31) from the November-April series in forecast_value_robustness.py.
+Failed: onsets before early December had windows in October, NaN precursors, and 204 of 1,517 events were dropped from one predictor set while the JSON still said 1,517; the base-vs-plus comparison was not like for like. Found by code review.
+Rule: build lagged predictors from the full-year series, and record the number of events actually scored per model variant.

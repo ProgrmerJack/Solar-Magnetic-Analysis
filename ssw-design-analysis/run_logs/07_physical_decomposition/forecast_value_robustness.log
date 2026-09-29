@@ -1,0 +1,10 @@
+1517 events, 20 members; base 38 / plus 90 columns
+base P1 pre-onset                   SSW +0.0065 [-0.0033, 0.0134] bal +0.0044 noCan +0.0049 | ordinary +0.0326 p=1.0 | weak +0.0113 p=0.815
+base P2 at-onset                    SSW +0.0076 [-0.0024, 0.0138] bal +0.0036 noCan +0.0062 | ordinary +0.0391 p=1.0 | weak +0.0162 p=0.935
+base P3 + post-onset stratosphere   SSW +0.1717 [0.1076, 0.2135] bal +0.1473 noCan +0.1676 | ordinary +0.2068 p=1.0 | weak +0.1886 p=0.915
+plus P1 pre-onset                   SSW +0.0062 [-0.0007, 0.0133] bal +0.0051 noCan +0.0095 | ordinary +0.0438 p=1.0 | weak +0.0241 p=0.985
+plus P2 at-onset                    SSW +0.0076 [-0.0026, 0.0192] bal +0.0052 noCan +0.0114 | ordinary +0.0483 p=1.0 | weak +0.0293 p=1.0
+plus P3 + post-onset stratosphere   SSW +0.1756 [0.1182, 0.2132] bal +0.1520 noCan +0.1601 | ordinary +0.2119 p=0.99 | weak +0.1905 p=0.865
+predictor sd ratio SSW/null (median, P2 base): {'ordinary': 1.0213, 'weak': 1.0281}
+Saved -> forecast_value_robustness.json
+exit=0 secs=1938
