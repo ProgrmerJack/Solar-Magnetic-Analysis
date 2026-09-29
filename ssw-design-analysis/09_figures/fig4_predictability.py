@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-fig3_predictability.py -- Figure 3: knowing the event adds no forecast
+fig4_predictability.py -- Figure 4: knowing the event adds no forecast
 information after an SSW.
 
 Reads results/current/6_predictability/forecast_value_test.json (Fig. 3a) and
@@ -75,7 +75,7 @@ def main():
         S.panel_label(bx, "bc"[i], x=-0.12, y=1.08)
     # colours mean the same in all panels (vermilion: SSWs; grey: no SSW), so
     # panel a's legend serves b and c and nothing covers the histograms
-    S.save(fig, "fig3_predictability")
+    S.save(fig, "fig4_predictability")
 
 
 if __name__ == "__main__":

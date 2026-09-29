@@ -73,7 +73,7 @@ def main():
     bx.set_xlim(-0.5, 1.6)
     bx.set_ylim(0, 1.05)
     bx.set_ylabel("fraction of members classified DW")
-    bx.set_title("the RATE separates the arms; the contrast does not", fontsize=6.5)
+    bx.set_title("the downward rate separates the arms; the contrast does not", fontsize=6.5)
     S.panel_label(bx, "b", x=-0.2, y=1.08)
     S.save(fig, "fig2_selection")
 

@@ -3,6 +3,10 @@ NEURASIA   S_T -1.00 K  R -0.33 K (-0.12 sd) p 0.381  explained 0.675  label -0.
 HI_EUROPE  S_T -1.04 K  R -0.42 K (-0.16 sd) p 0.268  explained 0.594  label +0.29 [-1.3784, 1.9086]  cold obs 0.26 pred 0.17
 MID_EASIA  S_T -0.19 K  R +0.15 K (+0.10 sd) p 0.534  explained 1.799  label -0.72 [-1.9076, 0.3523]  cold obs 0.21 pred 0.15
 MID_NAMER  S_T +0.04 K  R +0.55 K (+0.27 sd) p 0.093  explained -12.579  label +0.28 [-1.0583, 1.5445]  cold obs 0.08 pred 0.13
+NEURASIA   observed cold-fortnight frequency 0.256 [0.1282, 0.4103] (event-free 0.10)
+HI_EUROPE  observed cold-fortnight frequency 0.256 [0.1282, 0.4103] (event-free 0.10)
+MID_EASIA  observed cold-fortnight frequency 0.205 [0.0769, 0.3333] (event-free 0.10)
+MID_NAMER  observed cold-fortnight frequency 0.077 [0.0, 0.1795] (event-free 0.10)
 falsifier met: False
 Saved -> era5_regional_test.json
-exit=0 secs=11
+exit=0

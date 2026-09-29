@@ -26,6 +26,13 @@ and the regional test; calendar-window null with the same start offsets)
      over systems), each against the P' null of all pre-onset starts; and the
      hit-minus-miss difference with a 95% interval from 10,000 bootstrap resamples
      of events (events having both classes).
+     CORRECTION BEFORE THE FIRST RUN (2026-09-29, code review): the hit and miss
+     statistics are compared with a MATCHED null -- each draw moves each event of
+     the class to a calendar-window pseudo-onset and, in every system that had
+     class starts, averages a random subset of that pseudo-onset's pre-onset starts
+     of the SAME size -- not with the all-starts null, which is narrower than the
+     subset statistic and made p too liberal (emulated on leads 10+: misses
+     p 0.0095 with the all-starts null vs 0.029 matched).
   Reading, fixed in advance:
     T1 and T2-hit low     -> a deficit in the response GIVEN the SSW (coupling or
                              amplitude): a new result, stated as such;
@@ -161,13 +168,36 @@ def run(outcome):
                       "null_q025_q975": [round(float(q), 4) for q in np.quantile(null, [0.025, 0.975])],
                       "p": round(float(np.mean(null <= obs)), 4)}
         if label == "pre_onset_all":
-            pre_null = null
             for cls, nm in ((True, "T2_hits"), (False, "T2_misses")):
                 evc = [o for o in ev if ev_rank(o, kr, cls) is not None]
-                v = float(np.mean([ev_rank(o, kr, cls) for o in evc])) if evc else np.nan
+                if not evc:
+                    out[nm] = {"n_events": 0, "mean_rank": None, "p_matched_null": None}
+                    continue
+                v = float(np.mean([ev_rank(o, kr, cls) for o in evc]))
+                # class starts per (event, system): the size each null draw must match
+                size = {o: {c: sum(1 for x in S[c].starts(o, kr) if x["hit"] is cls) for c in sysn} for o in evc}
+                mnull = []
+                for _ in range(N_NULL):
+                    vals_e = []
+                    for o in evc:
+                        pp = pools[o][rng.integers(len(pools[o]))]
+                        vs = []
+                        for c, n in size[o].items():
+                            if n == 0:
+                                continue
+                            st = S[c].starts(pp, kr)
+                            if st:
+                                pick = rng.choice(len(st), min(n, len(st)), replace=False)
+                                vs.append(np.mean([st[i]["pit"] for i in pick]))
+                        if vs:
+                            vals_e.append(np.mean(vs))
+                    mnull.append(np.mean(vals_e))
+                mnull = np.array(mnull)
                 out[nm] = {"n_events": len(evc), "mean_rank": round(v, 4),
-                           "p_vs_all_start_null": round(float(np.mean(pre_null <= v)), 4) if evc else None,
-                           "n_starts": int(sum(1 for c in sysn for o in evc for s in S[c].starts(o, kr) if s["hit"] is cls))}
+                           "matched_null_mean": round(float(mnull.mean()), 4),
+                           "matched_null_q025_q975": [round(float(q), 4) for q in np.quantile(mnull, [0.025, 0.975])],
+                           "p_matched_null": round(float(np.mean(mnull <= v)), 4),
+                           "n_starts": int(sum(n for o in evc for n in size[o].values()))}
             both = [o for o in ev if ev_rank(o, kr, True) is not None and ev_rank(o, kr, False) is not None]
             d = np.array([ev_rank(o, kr, True) - ev_rank(o, kr, False) for o in both])
             if len(d) > 2:
@@ -178,7 +208,8 @@ def run(outcome):
 
 
 def main():
-    res = {"plan_approved": "2026-09-29", "n_null": N_NULL, "n_boot": N_BOOT, "post_k": list(POST),
+    res = {"plan_approved": "2026-09-29", "n_null": N_NULL, "n_boot": N_BOOT,
+           "seed_rule": "crc32(NAME|outcome)", "post_k": list(POST),
            "pre_k": list(PRE), "hit_rule": f">=50% of members u10(60N)<0 within +-{HIT_TOL} d of onset",
            "outcomes": {}}
     for oc in ("psl", "NEURASIA"):

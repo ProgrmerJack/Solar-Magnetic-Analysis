@@ -35,6 +35,13 @@ era5_regional_test.py; the downward label by conditions 1-2 on NAM 1000 hPa days
   Reading: a significant G1 (splits more negative) is a real, non-zonal event
   difference that SNAPSI cannot test; it is reported as such.
 
+CORRECTIONS BEFORE THE FIRST RUN (2026-09-29, code review; the test had not been
+run on the complete record): (i) area weights are PLANAR on the stereographic
+plane, as the paper's eq. (1) integrates dx dy (the draft used spherical cos-lat
+weights); (ii) the validation period is the paper's 52 winters, January 1958 to
+March 2009 (the draft covered 51); (iii) the script refuses an incomplete Z10
+cache (every year 1958-2024 must be present).
+
 Output: results/current/2_event_study/vortex_geometry_test.json
 """
 import json
@@ -64,6 +71,9 @@ WIN = (-10, 10)
 
 
 def load_z():
+    have = sorted(int(f.stem.split("_")[1]) for f in CACHE.glob("z10_*.npz"))
+    if have != list(range(1958, 2025)):
+        raise SystemExit(f"Z10 cache incomplete: {len(have)} of 67 years")
     zs, ts = [], []
     for f in sorted(CACHE.glob("z10_*.npz")):
         with np.load(f) as d:
@@ -78,7 +88,9 @@ def moments(z, t, lat, lon, edge):
     colat = np.deg2rad(90.0 - LAT)
     r = np.tan(colat / 2.0)                                 # stereographic radius (unit sphere / 2)
     x, y = r * np.cos(np.deg2rad(LON)), r * np.sin(np.deg2rad(LON))
-    dA = np.cos(np.deg2rad(LAT))                            # spherical area weight (regular grid)
+    # planar area on the stereographic plane (the paper integrates dx dy):
+    # dA_plane / dA_sphere = 1 / (4 cos^4(colat/2)) for r = tan(colat/2)
+    dA = np.cos(np.deg2rad(LAT)) / (4.0 * np.cos(colat / 2.0) ** 4)
     cl, ar = np.full(len(t), np.nan), np.full(len(t), np.nan)
     for k in range(len(t)):
         q = (edge - z[k]) * dA
@@ -103,7 +115,7 @@ def seviour_events(cl, ar, years):
         for i in range(len(c) - PERSIST + 1):
             if c[i] and (i == 0 or not c[i - 1]) and c[i:i + PERSIST].all():
                 d = cond.index[i]
-                if d.year in years or (d.month == 12 and d.year + 1 in years):
+                if (d.month <= 3 and d.year in years) or (d.month == 12 and d.year + 1 in years):
                     if last is None or (d - last).days >= SEP:
                         out[kind].append(d); last = d
     return out
@@ -116,7 +128,7 @@ def main():
     djfm = t.month.isin([12, 1, 2, 3])
     edge = float(z[djfm][:, i60, :].mean())
     cl, ar = moments(z, t, lat, lon, edge)
-    val = seviour_events(cl, ar, range(1959, 2010))
+    val = seviour_events(cl, ar, range(1958, 2010))       # Jan 1958 .. Mar 2009: 52 winters
     res = {"plan_approved": "2026-09-29", "seed": SEED, "n": N, "edge_m": round(edge, 1),
            "validation_1958_2009": {k: len(v) for k, v in val.items()},
            "validation_reference_seviour2013": {"displaced": 17, "split": 18, "winters": 52}}

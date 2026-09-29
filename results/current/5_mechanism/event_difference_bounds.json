@@ -1,0 +1,41 @@
+{
+  "source": "results/current/6_predictability/forced_variance_ceiling.json",
+  "seed": 963217881,
+  "n_mc": 1000000,
+  "mean_shift": -0.4795,
+  "noise_sd": 0.6689,
+  "sigma_f2_point": 0.01885,
+  "sigma_f2_CI95": [
+    -0.03318,
+    0.07225
+  ],
+  "cases": {
+    "zero": {
+      "sigma_f": 0.0,
+      "P_mean": 0.7633,
+      "P_range95": [
+        0.763,
+        0.763
+      ],
+      "label_variance_share_forced": 0.0
+    },
+    "point": {
+      "sigma_f": 0.1373,
+      "P_mean": 0.7587,
+      "P_range95": [
+        0.624,
+        0.868
+      ],
+      "label_variance_share_forced": 0.0217
+    },
+    "upper95": {
+      "sigma_f": 0.2688,
+      "P_mean": 0.747,
+      "P_range95": [
+        0.472,
+        0.934
+      ],
+      "label_variance_share_forced": 0.0776
+    }
+  }
+}

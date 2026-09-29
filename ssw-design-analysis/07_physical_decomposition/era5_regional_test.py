@@ -38,6 +38,12 @@ TESTS
   COLD  observed share of events with T below the SSW-free 10th percentile, and
         the share the relation predicts (Gaussian, mean a + b N, residual s.d.).
 
+ADDED 2026-09-29, after the result (referee: the abstract's cold-risk number needs an
+observed anchor): the observed cold-fortnight frequency after the events with a 95%
+interval from 10,000 bootstrap resamples of events ("cold_obs_ci95"), beside the
+event-free rate (0.10 by construction). Drawn after the null draws, so earlier
+numbers are unchanged.
+
 Output: results/current/2_event_study/era5_regional_test.json
 """
 import json
@@ -116,6 +122,7 @@ def main():
         dd = np.abs(doy_ps - e.dayofyear)
         dd = np.minimum(dd, 365 - dd)
         cand[e] = np.where(dd <= CAL_WIN)[0]
+    cold_ci_pending = []
     for r in REGIONS:
         b, a = np.polyfit(ps["N"], ps[r], 1)
         res_ps = ps[r] - (a + b * ps["N"])
@@ -148,10 +155,17 @@ def main():
                "cold_pred": round(float(np.mean(norm.cdf((q10 - (a + b * ev["N"])) / s_res))), 4),
                "cold_event_free": round(float((ps[r] < q10).mean()), 4)}
         res["regions"][r] = out
+        cold_ev = (ev[r] < q10).values.astype(float)
+        cold_ci_pending.append((r, cold_ev))
         print(f"{r:10s} S_T {out['S_T_mean']:+.2f} K  R {R:+.2f} K ({out['R_in_sd_units']:+.2f} sd) "
               f"p {p:.3f}  explained {out['share_of_S_T_explained']}  label {coef:+.2f} "
               f"{out['label_coef_ci95']}  cold obs {out['cold_obs']:.2f} pred {out['cold_pred']:.2f}",
               flush=True)
+    for r, cold_ev in cold_ci_pending:              # after all earlier draws
+        bs = [rng.choice(cold_ev, len(cold_ev)).mean() for _ in range(N_BOOT)]
+        res["regions"][r]["cold_obs_ci95"] = [round(float(q), 4) for q in np.quantile(bs, [0.025, 0.975])]
+        print(f"{r:10s} observed cold-fortnight frequency {cold_ev.mean():.3f} "
+              f"{res['regions'][r]['cold_obs_ci95']} (event-free 0.10)", flush=True)
     pr = res["regions"][PRIMARY]
     res["falsifier_primary"] = {"rule": "p_R < 0.05 AND |R| > 0.2 sd in NEURASIA",
                                 "met": bool(pr["p_R_two_sided"] < 0.05 and abs(pr["R_in_sd_units"]) > 0.2)}

@@ -65,8 +65,12 @@ _G = {}
 
 
 def _winter_sd(series):
-    m = pd.DatetimeIndex(series.index).month
-    return float(series[np.isin(m, (12, 1, 2, 3))].std())
+    """Winter s.d. of DAILY ANOMALIES (day-of-year mean removed). Raw s.d. included
+    temperature's seasonal cycle (5.5 K raw vs 3.75 K anomaly) and made synthetic
+    temperature forecasts ~1.5x noisier than intended (review 2026-09-29)."""
+    idx = pd.DatetimeIndex(series.index)
+    anom = series - series.groupby(idx.dayofyear).transform("mean")
+    return float(anom[np.isin(idx.month, (12, 1, 2, 3))].std())
 
 
 def _setup():

@@ -4,7 +4,7 @@ number_citations.py -- replace ^{key}^ citation keys in main.md with numbers in
 Nature order (main text, then figure legends, then Methods) and write the
 reference list. Every entry below was checked against Crossref or the publisher
 page on 2026-09-25 (kretschmer18, huang21, kolstad20, garfinkel25 and dai25 on
-2026-09-26). Run once the text is final; it rewrites main.md in place.
+2026-09-26; domeisenbutler20, coughlin09, maury16 and seviour13 on 2026-09-29). Run once the text is final; it rewrites main.md in place.
 """
 import re
 import sys
@@ -38,6 +38,10 @@ REFS = {
     "kolstad20": "Kolstad, E. W., Wulff, C. O., Domeisen, D. I. V. & Woollings, T. Tracing North Atlantic Oscillation forecast errors to stratospheric origins. *J. Clim.* **33**, 9145–9157 (2020).",
     "garfinkel25": "Garfinkel, C. I. et al. A process-based evaluation of biases in extratropical stratosphere–troposphere coupling in subseasonal forecast systems. *Weather Clim. Dynam.* **6**, 171–195 (2025).",
     "dai25": "Dai, Y., Hitchcock, P., Butler, A. H., Garfinkel, C. I. & Seviour, W. J. M. Assessing stratospheric contributions to subseasonal predictions of precipitation after the 2018 sudden stratospheric warming from the Stratospheric Nudging And Predictable Surface Impacts (SNAPSI) project. *Weather Clim. Dynam.* **6**, 841–862 (2025).",
+    "domeisenbutler20": "Domeisen, D. I. V. & Butler, A. H. Stratospheric drivers of extreme events at the Earth's surface. *Commun. Earth Environ.* **1**, 59 (2020).",
+    "coughlin09": "Coughlin, K. & Gray, L. J. A continuum of sudden stratospheric warmings. *J. Atmos. Sci.* **66**, 531–540 (2009).",
+    "maury16": "Maury, P., Claud, C., Manzini, E., Hauchecorne, A. & Keckhut, P. Characteristics of stratospheric warming events during Northern winter. *J. Geophys. Res. Atmos.* **121**, 5368–5380 (2016).",
+    "seviour13": "Seviour, W. J. M., Mitchell, D. M. & Gray, L. J. A practical method to identify displaced and split stratospheric polar vortex events. *Geophys. Res. Lett.* **40**, 5268–5273 (2013).",
     "charlton07": "Charlton, A. J. & Polvani, L. M. A new look at stratospheric sudden warmings. Part I: climatology and modeling benchmarks. *J. Clim.* **20**, 449–469 (2007).",
 }
 KEY = re.compile(r"\^\{([A-Za-z0-9,]+)\}\^")

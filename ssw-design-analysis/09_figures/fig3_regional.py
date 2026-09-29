@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-fig5_regional.py -- Figure 5: regional cold risk after an imposed SSW is the
+fig3_regional.py -- Figure 3: regional cold risk after an imposed SSW is the
 circulation shift acting through the ordinary relation.
 
 Reads results/current/8_experiment/snapsi_regional_test.json (result R, SNAPSI),
@@ -15,7 +15,7 @@ Recomputes nothing.
      control (0.10 by construction), with the SSW imposed, and as predicted from
      the circulation shift alone
   c  ERA5, 39 observed SSWs: the same split in K; whisker on the residual, the
-     95% range of the residual on event-free dates of the same calendar period
+     95% range of the MEAN residual over sets of event-free dates of the same calendar period
   d  ten S2S systems, 17 SSWs: mean rank of the observed regional temperature in
      the forecast ensembles (multi-model mean of the nine confirmatory systems,
      diamond; each system, dots) against the central 95% of event-free dates
@@ -116,7 +116,7 @@ def main():
     dx.legend(fontsize=5, loc="upper center", ncol=3, bbox_to_anchor=(0.5, -0.32))
     dx.set_title("Ten operational systems, 17 SSWs: colder than forecast?", fontsize=6)
     S.panel_label(dx, "d", x=-0.13, y=1.04)
-    S.save(fig, "fig5_regional")
+    S.save(fig, "fig3_regional")
 
 
 if __name__ == "__main__":
