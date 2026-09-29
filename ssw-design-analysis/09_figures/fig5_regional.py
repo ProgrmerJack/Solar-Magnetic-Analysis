@@ -22,6 +22,7 @@ Recomputes nothing.
 """
 import json
 import sys
+from decimal import ROUND_HALF_UP, Decimal
 from pathlib import Path
 
 import numpy as np
@@ -103,7 +104,9 @@ def main():
                    label="each system" if i == 0 else None)
         dx.scatter([mm["H1_mean_pit"]], [i], s=22, marker="D", color="k", zorder=3,
                    label="nine-system mean" if i == 0 else None)
-        dx.text(0.72, i, f"p = {mm['H1_p']:.3f}", va="center", fontsize=5.5)
+        # round half up, as in the text (0.0135 -> 0.014; float formatting gave 0.013)
+        pv = Decimal(str(mm["H1_p"])).quantize(Decimal("0.001"), rounding=ROUND_HALF_UP)
+        dx.text(0.72, i, f"p = {pv}", va="center", fontsize=5.5)
     dx.axvline(0.5, color="k", lw=0.4, ls=":")
     dx.set_yticks(range(len(REG))); dx.set_yticklabels([l.replace("\n", " ") for _, l in REG])
     dx.set_ylim(len(REG) - 0.4, -0.6)

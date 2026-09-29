@@ -1,6 +1,6 @@
 # Sudden stratospheric warmings shift rather than split the surface response
 
-*Draft for Nature Geoscience (Analysis). Every number is taken from
+*Draft for Nature Geoscience (Article). Every number is taken from
 `ssw-design-analysis/CONSOLIDATED_RESULTS.md` or the result JSONs it indexes; display items are built by
 `09_figures/fig*.py` from `results/current/`.*
 
@@ -17,16 +17,16 @@ skill beyond a shifted distribution. In a multi-model experiment imposing one
 observed SSW on every member, the contrast between downward and non-downward
 members (−1.62σ) is no larger than in paired ensembles with no SSW (−1.59σ;
 difference −0.03σ [−0.12, 0.05]), where it is what a threshold on one Gaussian
-gives. The SSW triples the chance of a cold fortnight over northern Eurasia, and
-the circulation shift predicts it. In 1,517 simulated SSWs, stratospheric
-information up to onset adds 0.8% [−0.3, 1.4] to probabilistic skill beyond the
-shift, less than on ordinary days (3.7%). Ten operational systems predict
-differences between events not significantly better than on ordinary days and
-under-forecast the shift and its northern-Eurasian cold. After an SSW, forecasts
-should issue the shifted distribution; the label records where a threshold cuts
-it.
+gives. The SSW raises the chance of a cold fortnight over northern Eurasia from
+0.10 to 0.26–0.32, and the circulation shift predicts it. In 1,517 simulated
+SSWs, stratospheric information up to onset adds 0.8% [−0.3, 1.4] to
+probabilistic skill beyond the shift, less than on ordinary days (3.7%). Ten
+operational systems predict differences between events not significantly better
+than on ordinary days, and their mean under-forecasts the shift and its
+northern-Eurasian cold. After an SSW, forecasts should issue the shifted
+distribution; the label records where a threshold cuts it.
 
-*(194 words by `wc`; limit 200.)*
+*(200 words by `wc`; limit 200.)*
 
 ---
 
@@ -68,7 +68,7 @@ Impacts (SNAPSI) experiment^{hitchcock22}^, in 1,517 SSWs in 20 CMIP6 members of
 10 models, in 43 observed events, and in operational reforecasts, for the
 polar-cap circulation and for regional temperature.
 
-### An imposed SSW shifts the surface distribution without splitting it
+### An SSW shifts one population, and the downward label is a threshold on it
 
 In SNAPSI's `nudged` ensembles the zonal-mean stratosphere of every member is
 relaxed to the observed evolution of an SSW above 50 hPa, with no nudging below
@@ -91,8 +91,6 @@ these sample sizes. Once the variance already present before onset is removed,
 the forced between-event standard deviation in CMIP6 is at most 0.27σ (upper
 95% bound). This concerns the polar-cap mean; regional forecast spread can still
 change after weak-vortex states^{spaeth24}^.
-
-### The downward label is a threshold on one population
 
 We apply the surface conditions of the Karpechko criterion^{karpechko17}^ to
 every member over days 8–25 and split each ensemble into downward (DW) and
@@ -120,7 +118,23 @@ events meeting the surface conditions, 69.2%, is reproduced by event-free dates
 displaced by the measured shift (75.4% [61.5, 87.2]): "about two thirds" is what
 one shifted population produces.
 
-### Knowing the event adds no detectable forecast skill
+Events do differ, and the lower stratosphere after onset tracks how much: across
+18 ensembles of distinct events the week-2 100 hPa anomaly correlates with the
+later surface response at r = 0.85^{loeffel26}^. Two findings place that relation.
+Between members of one SNAPSI ensemble, where the zonal-mean forcing is shared,
+the same week-2 relation is weak and is equally present with no SSW (r = 0.11
+against 0.09; difference in Fisher z +0.02 [−0.04, +0.09], 36 matched ensembles;
+Extended Data Fig. 1). And in CMIP6 the post-onset stratosphere predicts the
+surface as well on ordinary winter days as after SSWs (next section). The relation is a
+general property of stratosphere–troposphere coupling, measurable continuously
+after onset, not a feature that sorts SSWs into kinds. Consistently, the field's
+archetype pair, February 2018 and January 2019, received comparable forced
+shifts and similar forced probabilities of a downward outcome (0.78 and 0.71 in
+eight models excluding ECCC, at the primary initialisations), and at those
+initialisations the observed outcomes lie within the central 95% of the model
+distributions in 17 of 18 cases of nine models and two events (Extended Data Fig. 2).
+
+### Knowing the event adds no detectable skill, and forecasts under-predict the shift
 
 If downward coupling were a property of events, knowing the event should improve
 a forecast of how strongly it couples. We compare two probabilistic forecasts of
@@ -144,30 +158,6 @@ event adds −0.006 [−0.033, +0.020] (95% from the event-free null; [−0.061,
 stratosphere, R² rises to 0.38 at SSWs and to 0.37 on event-free dates: 96% of
 that diagnostic skill is present without an SSW, and the event adds +0.015
 [−0.028, +0.059] ([−0.061, +0.095]; Fig. 3c).
-
-### Regional cold follows the shift
-
-The same holds for the weather an SSW is feared for. Over northern Eurasia
-(50–65° N, 10–130° E), where cold extremes become about twice as frequent after
-weak-vortex states^{kretschmer18}^, the imposed SSW lowers the days 8–24
-temperature by 0.85σ [0.49, 1.40] and raises the chance of a fortnight colder
-than the control's 10th percentile from 0.10 to 0.32 (Fig. 5a,b). The shift of
-the polar-cap circulation, acting through the relation between that circulation
-and regional temperature that holds without any SSW, predicts 0.31: it accounts
-for 88% of the cooling and leaves −0.10σ [−0.36, +0.06] (+0.02σ [−0.02, +0.07]
-without ECCC). Within the SSW ensembles the downward label adds nothing to a
-member's regional temperature beyond its circulation (−0.04σ [−0.19, +0.09]). In
-39 observed SSWs the same relation accounts for two thirds of the 1.0 K
-northern-Eurasian cooling, and the remainder (−0.33 K) lies within the range of
-event-free dates (p = 0.38; Fig. 5c). The polar-cap index is not the whole of the
-regional response: high-latitude Europe cools by a further 0.19–0.27σ, and
-mid-latitude North America warms (+0.49σ) where the circulation relation implies
-cooling, with the same sign of residual in observations (+0.55 K, p = 0.09) and
-in line with the mixed North American signal after weak-vortex
-states^{kretschmer18,huang21}^. What an SSW changes regionally is therefore also a
-distribution, of the regional variable itself, and the label adds nothing to it.
-
-### Operational forecasts miss the size of the shift, not the class of event
 
 Operational forecasts give the same answer. In seven subseasonal systems, the
 skill with which the 500 hPa polar-cap response after 13 SSWs was predicted
@@ -212,8 +202,37 @@ itself, which would also explain the fall to 26% at longer lead. What it
 establishes is the forecast consequence: before onset, operational ensembles place
 too little probability on the shifted state, whatever the cause.
 
-The same holds for the regional cold. Registered before the data were analysed,
-the primary regional test asks whether observed northern-Eurasian temperature
+### Regional cold follows the shift and is under-forecast
+
+The same holds for the weather an SSW is feared for. Over northern Eurasia
+(50–65° N, 10–130° E), where cold extremes become about twice as frequent during
+weak-vortex states^{kretschmer18}^, the imposed SSW lowers the days 8–24
+temperature by 0.85σ [0.49, 1.40] and raises the chance of a fortnight colder
+than the control's 10th percentile from 0.10 to 0.32 (Fig. 5a,b). The shift of
+the polar-cap circulation, acting through the relation between that circulation
+and regional temperature that holds without any SSW, predicts 0.31: it accounts
+for 88% of the cooling and leaves −0.10σ [−0.36, +0.06]. Without ECCC, the
+outlier of Fig. 1a, the cooling is 0.60σ [0.44, 0.71] and the cold-fortnight
+probability 0.26 against 0.27 predicted, with a residual of +0.02σ [−0.02, +0.07]. Within the SSW ensembles the downward label adds nothing to a
+member's regional temperature beyond its circulation (−0.04σ [−0.19, +0.09]). In
+39 observed SSWs the same relation accounts for two thirds of the 1.0 K
+northern-Eurasian cooling, and the remainder (−0.33 K) lies within the range of
+event-free dates (p = 0.38; Fig. 5c). The polar-cap index is not the whole of the
+regional response: high-latitude Europe cools by a further 0.19–0.27σ (its
+cold-fortnight probability rises to 0.32 against 0.26 predicted from the shift),
+mid-latitude East Asia cools by 0.51σ, of which the circulation accounts for 60%
+(0.27 against 0.20 predicted; residual −0.21σ [−0.50, +0.03]), and
+mid-latitude North America warms (+0.49σ) where the circulation relation implies
+cooling, with the same sign of residual in observations (+0.55 K, p = 0.09) and
+in line with the mixed North American signal during weak-vortex
+states^{kretschmer18,huang21}^. What an SSW changes regionally is therefore also a
+distribution, of the regional variable itself. Over northern Eurasia the label
+adds nothing to it; in mid-latitude North America, where the polar-cap index does
+not describe the response, downward members are warmer than their circulation
+implies (+0.29σ [+0.06, +0.53]).
+
+Operational forecasts make the same error in the regional cold. Registered before the
+data were analysed, the primary regional test asks whether observed northern-Eurasian temperature
 after SSWs lies on the cold side of the forecast ensembles more than on
 event-free dates. It does: mean rank 0.39 against 0.53 across the nine further
 systems (p = 0.014; 0.021 with each system's own rank level removed; at most
@@ -221,30 +240,12 @@ systems (p = 0.014; 0.021 with each system's own rank level removed; at most
 systems (Fig. 5d). The ensemble-mean anomaly after these SSWs is −0.3 K where
 the observed is −1.3 K. High-latitude Europe points the same way (0.43 against
 0.53, p = 0.07); mid-latitude East Asia and North America, where the imposed SSW
-cools less or warms, show no such error. On synthetic forecasts this test is
-conservative (2% false positives) and weak (it detected a 40% under-prediction of
+cools less or warms, show no such error. On synthetic forecasts this test rejected
+2% of datasets with no error (consistent with the nominal 5%) and is weak (it detected a 40% under-prediction of
 every anomaly in 23% of trials), so the absence of a signal elsewhere is not
 evidence of calibration.
 
-### Event differences follow a general stratosphere–surface relation
-
-Events do differ, and the lower stratosphere after onset tracks how much: across
-18 ensembles of distinct events the week-2 100 hPa anomaly correlates with the
-later surface response at r = 0.85^{loeffel26}^. Two findings place that relation.
-Between members of one SNAPSI ensemble, where the zonal-mean forcing is shared,
-the same week-2 relation is weak and is equally present with no SSW (r = 0.11
-against 0.09; difference in Fisher z +0.02 [−0.04, +0.09], 36 matched ensembles;
-Extended Data Fig. 1). And in CMIP6 the post-onset stratosphere predicts the
-surface as well on ordinary winter days as after SSWs (above). The relation is a
-general property of stratosphere–troposphere coupling, measurable continuously
-after onset, not a feature that sorts SSWs into kinds. Consistently, the field's
-archetype pair, February 2018 and January 2019, received comparable forced
-shifts and similar forced probabilities of a downward outcome (0.78 and 0.71 in
-eight models excluding ECCC, at the primary initialisations), and at those
-initialisations the observed outcomes lie within the central 95% of the model
-distributions in 17 of 18 cases of nine models and two events (Extended Data Fig. 2).
-
-### Discussion
+### Implications for forecasting and research
 
 The downward label measures where a threshold cuts a shifted distribution. Under
 an imposed SSW, members fall into both classes in proportions set by the shift,
@@ -260,12 +261,26 @@ negative state — rather than a categorical prediction of whether this event wi
 propagate — and, for regional weather, the shifted distribution of the regional
 variable itself, which the polar-cap index does not fully carry; the quantity to
 verify and correct is the size of that shift,
-which operational systems under-predict, not the class of the event, which none
-predicts significantly better than it predicts ordinary winter days. For
+which operational systems under-predict, not the event-to-event differences the
+class is meant to summarise, which none predicts significantly better than it
+predicts differences between ordinary winter days. For
 research, wherever "downward-propagating SSW" is used to stratify impacts, the
 rate at which events meet the criterion, set against a matched null, is an
 honest quantity; the contrast between the classes is not, because the threshold
 manufactures most of it (97% in ERA5; see also ref.^{white19}^).
+
+The results also say what should be verified. A system's value after an SSW is
+not whether it named the class of the event, a class fixed in large part by the
+outcome it is scored against, but whether its ensemble placed the right
+probability on the shifted state. That can be checked routinely with the test
+used here: rank the outcomes after SSWs within the ensembles and compare the
+ranks with those on event-free dates of the same season and lead. Across ten current
+systems the ensembles started before onset are, over the following weeks, not
+negative enough in the annular mode (in their multi-model mean and in nine of the
+ten individually) and too warm over northern Eurasia (in all ten), while the
+discrimination between events that the label is meant to capture is not
+significantly better than on ordinary days. The room for improvement after SSWs lies in the size and
+the regional expression of the shift.
 
 Five limits bound these conclusions. First, the decisive evidence is from models;
 with 42 usable observed events the observational out-of-sample tests are
@@ -362,7 +377,7 @@ CRPS(shift) with a 2,000-replicate bootstrap over models. The identical pipeline
 is applied to 200 size-matched sets of pseudo-onsets (same members, onset counts
 and calendar days).
 
-**Predictability (Fig. 3b).** Ridge regression, five-fold cross-validation grouped
+**Predictability (Fig. 3b,c).** Ridge regression, five-fold cross-validation grouped
 by member, all variables standardised within member, R² on pooled out-of-fold
 predictions; null from 1,000 size-matched pseudo-onset sets; a 1,000-replicate
 member-cluster bootstrap gives the second interval. In 1,022 of 20,000
@@ -378,8 +393,9 @@ HMCR (2025; 11; 1991–2020), KMA (2026; 7; 1993–2016), CNRM (1 June 2025; 11;
 1999–2024), JMA (30 September 2022; 5; 1991–2020), CNR-ISAC (16 October 2023; 8;
 2001–2020), NCEP (1 March 2011; 4; 1999–2010) and CPTEC (4 January 2023; 11;
 1999–2018). Starts from December to March (KMA January to March), leads to 34
-days (ECMWF 42). BoM (whose only version is from 2014), UKMO and IAP-CAS (no
-sea-level pressure) were not used. Polar-cap sea-level pressure at 00 UTC
+days (ECMWF 42). BoM was excluded when the design was fixed, before the confirmatory data were
+retrieved, and
+UKMO and IAP-CAS provide no sea-level pressure. Polar-cap sea-level pressure at 00 UTC
 (instantaneous), reduced as for ERA5. Forecast anomalies are departures from the
 mean of the other hindcast years at the same start date and lead; observed
 anomalies are departures from the mean of the other years at the same calendar
@@ -413,13 +429,13 @@ result). For ECMWF alone (40 datasets per case) the corresponding power of D was
 0.88–0.90. Two null designs were replaced on
 synthetic data before the real forecasts were analysed: moving each event to
 another year (too few event-free winters to be calibrated), and requiring all of
-an event's systems at each pseudo-onset (no candidates for four events). Two
-sensitivities were added after the primary result. Because a null draw averages
+an event's systems at each pseudo-onset (no candidates for four events). Three sensitivities were added after the primary result. Because a null draw averages
 only the systems with starts at that pseudo-onset, a system's overall rank level
 can enter events and null unequally; removing each system's mean rank over its
 pseudo-onsets before averaging gives H1 p = 0.012 (rejection rate 0.02 under
 equal skill). CPTEC's forecast climatology rests on one to three other years per
-start date; without CPTEC, H1 p = 0.005 and D p = 0.90.
+start date; without CPTEC, H1 p = 0.005 and D p = 0.90. Leaving out each
+event in turn, H1 p is at most 0.022.
 
 **Regional temperature (Fig. 5).** Regions from the literature: northern
 Eurasia 50–65° N, 10–130° E (primary)^{kretschmer18}^, high-latitude Europe
@@ -454,7 +470,9 @@ as for the polar-cap tests, with the outcome the mean over days +8..+24 and the
 sign chosen so that a low rank means colder than forecast. The primary test (rank
 in northern Eurasia, multi-model mean of the nine confirmatory systems) was
 registered before the regional data were analysed; the other regions are
-secondary (Holm-adjusted p for northern Eurasia over the four regions, 0.054).
+secondary (Holm-adjusted p for northern Eurasia over the four regions, 0.054);
+the system-centred and leave-one-event-out variants were added after the
+primary result.
 On 100 synthetic datasets per case with the real temperature layouts and
 outcome, rejection rates for the rank test were 0.02 for equally skilful
 forecasts, 1.00 for forecasts without information and 0.23 for forecasts that
