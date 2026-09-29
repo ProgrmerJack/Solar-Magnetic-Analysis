@@ -925,8 +925,25 @@ nulls: 1.02 (ordinary), 1.03 (weak). Event information is worth less after SSWs
 than on ordinary or weak-vortex days in every variant; richer predictors help the
 comparison days, not SSWs.
 
-Pending at the time of writing: `s2s_postonset_test.py` (registered; matched-null
-correction before first run; awaits the ECDS chain).
+**Missed warming or weak response? (`s2s_postonset_test.py`; registered 57019f6;
+the matched null (a201458) was adopted AFTER a code review had emulated the
+polar-cap hit/miss test with the all-starts null on leads 10+ (misses p 0.0095);
+the change raised p; nine systems):**
+
+| starts | polar-cap NAM rank vs null, p | N-Eurasian T rank vs null, p |
+|---|---|---|
+| 2-9 d before onset, all (17 events) | 0.40 vs 0.55, p 0.004 | 0.39 vs 0.52, p 0.022 |
+| — HITS: >=50% of members reverse u10(60N) within +-3 d of onset (125 starts, 17 events) | 0.41 vs 0.55 (matched), p 0.014 | 0.40 vs 0.52, p 0.059 |
+| — MISSES (43 starts, 15 events) | 0.41 vs 0.55, p 0.029 | 0.41 vs 0.53, p 0.11 |
+| — hit minus miss (15 events) | +0.003 [−0.047, +0.053] | −0.002 [−0.121, +0.109] |
+| 0-7 d AFTER onset (observed SSW in initial state; 17 events) | 0.50 vs 0.56, p 0.14 | 0.46 vs 0.52, p 0.18 |
+
+Not a missed warming: forecasts that predict the reversal are as far off as those
+that miss it. With the observed SSW in the initial state the deficit shrinks and is
+not significant (cf. Dai et al. 2025). The reversal criterion does not measure the
+strength or persistence of the predicted warming, so "forecast warming too weak"
+and "coupling too weak" cannot be separated here. Neither pre-stated reading
+matched exactly (T2-hit low but T1 not significant); reported as found.
 
 ## 4. Prior art — verified from source, all must be cited
 

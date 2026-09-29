@@ -1,10 +1,10 @@
 {
- "generated": "2026-09-29T12:15:52+00:00",
+ "generated": "2026-09-29T15:42:55+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
   "scripts": 146,
-  "results": 72
+  "results": 73
  },
  "scripts": [
   {
@@ -1337,13 +1337,12 @@
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
    "title": "fig3_regional.py -- Figure 3: regional cold risk after an imposed SSW is the circulation shift acting through the ordinary relation.",
-   "loc": 124,
-   "modified": "2026-09-29 06:54",
-   "sha256_16": "280705faca885c17",
+   "loc": 96,
+   "modified": "2026-09-29 15:41",
+   "sha256_16": "fd78a231c78e6dfc",
    "flags": [],
    "filenames_mentioned": [
     "era5_regional_test.json",
-    "s2s_regional_test.json",
     "snapsi_regional_test.json"
    ],
    "filename_prefixes": []
@@ -1368,13 +1367,14 @@
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
    "title": "fig5_operational.py -- Figure 5: operational reforecasts after SSWs.",
-   "loc": 84,
-   "modified": "2026-09-29 06:37",
-   "sha256_16": "1d20198ee42a88cf",
+   "loc": 114,
+   "modified": "2026-09-29 15:41",
+   "sha256_16": "2a73fff34794dca1",
    "flags": [],
    "filenames_mentioned": [
     "s2s_forecast_test.json",
-    "s2s_multimodel_test.json"
+    "s2s_multimodel_test.json",
+    "s2s_regional_test.json"
    ],
    "filename_prefixes": []
   },
@@ -1394,31 +1394,31 @@
    "filename_prefixes": []
   },
   {
-   "path": "ssw-design-analysis/09_figures/figED2_loeffel.py",
+   "path": "ssw-design-analysis/09_figures/figED2_archetypes.py",
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
-   "title": "figED2_loeffel.py -- Extended Data Fig. 2: the lower-stratospheric precursor couples to the surface just as strongly with no SSW.",
-   "loc": 88,
-   "modified": "2026-09-29 06:38",
-   "sha256_16": "ff3a10ac3412241e",
-   "flags": [],
-   "filenames_mentioned": [
-    "snapsi_loeffel_test.json"
-   ],
-   "filename_prefixes": []
-  },
-  {
-   "path": "ssw-design-analysis/09_figures/figED3_archetypes.py",
-   "tree": "ssw-design-analysis",
-   "stage": "09_figures",
-   "title": "figED3_archetypes.py -- Extended Data Fig. 3: the field's two archetypes are two draws.",
+   "title": "figED2_archetypes.py -- Extended Data Fig. 2: the field's two archetypes are two draws.",
    "loc": 135,
-   "modified": "2026-09-29 06:38",
-   "sha256_16": "32d6c26e9be2d126",
+   "modified": "2026-09-29 15:40",
+   "sha256_16": "c53e0929358d44d8",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_archetype_test.json",
     "snapsi_causal_effect.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/figED3_loeffel.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "figED3_loeffel.py -- Extended Data Fig. 3: the lower-stratospheric precursor couples to the surface just as strongly with no SSW.",
+   "loc": 88,
+   "modified": "2026-09-29 15:40",
+   "sha256_16": "82fcb554f0bbd383",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_loeffel_test.json"
    ],
    "filename_prefixes": []
   },
@@ -1439,9 +1439,9 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 120,
-   "modified": "2026-09-29 11:03",
-   "sha256_16": "31272f06d8ab8de0",
+   "loc": 145,
+   "modified": "2026-09-29 15:40",
+   "sha256_16": "32ffdcbba53872ca",
    "flags": [],
    "filenames_mentioned": [
     "era5_regional_test.json",
@@ -1453,12 +1453,16 @@
     "s2s_multimodel_test.json",
     "s2s_postonset_test.json",
     "s2s_regional_test.json",
+    "snapsi_archetype_test.json",
     "snapsi_causal_effect.json",
     "snapsi_contrast_diagnosis.json",
+    "snapsi_distribution_test.json",
+    "snapsi_loeffel_test.json",
     "snapsi_regional_test.json",
     "snapsi_selection_test.json",
     "tableED1_tests.csv",
-    "vortex_geometry_test.json"
+    "vortex_geometry_test.json",
+    "within_model_check.json"
    ],
    "filename_prefixes": []
   },
@@ -2264,7 +2268,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-09-29 05:46",
+   "modified": "2026-09-29 15:42",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -4317,6 +4321,47 @@
     "centres",
     "multimodel",
     "pit_level_by_system"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/s2s_postonset_test.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 2473,
+   "modified": "2026-09-29 15:26",
+   "sha256_16": "be0088055b5d62da",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_postonset_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_postonset_test.py": "4410b456213719c0"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_null": [
+     10000
+    ],
+    "n_boot": [
+     10000
+    ],
+    "n_events": [
+     15,
+     17
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "n_null",
+    "n_boot",
+    "seed_rule",
+    "post_k",
+    "pre_k",
+    "hit_rule",
+    "outcomes"
    ]
   },
   {

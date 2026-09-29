@@ -4,8 +4,7 @@ fig3_regional.py -- Figure 3: regional cold risk after an imposed SSW is the
 circulation shift acting through the ordinary relation.
 
 Reads results/current/8_experiment/snapsi_regional_test.json (result R, SNAPSI),
-results/current/2_event_study/era5_regional_test.json (result R, ERA5) and
-results/current/6_predictability/s2s_regional_test.json (result R, operational).
+results/current/2_event_study/era5_regional_test.json (result R, ERA5).
 Recomputes nothing.
 
   a  SNAPSI: the SSW's effect on regional temperature (days +8..+24, sigma of the
@@ -16,9 +15,6 @@ Recomputes nothing.
      the circulation shift alone
   c  ERA5, 39 observed SSWs: the same split in K; whisker on the residual, the
      95% range of the MEAN residual over sets of event-free dates of the same calendar period
-  d  ten S2S systems, 17 SSWs: mean rank of the observed regional temperature in
-     the forecast ensembles (multi-model mean of the nine confirmatory systems,
-     diamond; each system, dots) against the central 95% of event-free dates
 """
 import json
 import sys
@@ -39,9 +35,8 @@ def main():
     S.apply()
     sn = json.loads((S.RESULTS / "8_experiment" / "snapsi_regional_test.json").read_text())["results"]
     er = json.loads((S.RESULTS / "2_event_study" / "era5_regional_test.json").read_text())["regions"]
-    op = json.loads((S.RESULTS / "6_predictability" / "s2s_regional_test.json").read_text())["regions"]
-    fig = plt.figure(figsize=(S.DOUBLE, 118 * S.MM))
-    gs = fig.add_gridspec(2, 3, wspace=0.42, hspace=0.62)
+    fig = plt.figure(figsize=(S.DOUBLE, 62 * S.MM))
+    gs = fig.add_gridspec(1, 3, wspace=0.42)
     x = np.arange(len(REG))
     grey, verm = "0.72", S.C["vermillion"]
 
@@ -93,29 +88,6 @@ def main():
     n = json.loads((S.RESULTS / "2_event_study" / "era5_regional_test.json").read_text())["n_events"]
     cx.set_title(f"ERA5: {n} observed SSWs", fontsize=6)
     S.panel_label(cx, "c", x=-0.25, y=1.04)
-    dx = fig.add_subplot(gs[1, 0:2])
-    for i, (k, _) in enumerate(REG):
-        mm = op[k]["multimodel"]["confirmatory"]
-        lo, hi = mm["H1_null_pit_q025_q975"]
-        dx.plot([lo, hi], [i, i], color="0.78", lw=4, solid_capstyle="butt",
-                label="event-free dates (95%)" if i == 0 else None)
-        pits = [v["H1_mean_pit"] for v in op[k]["centres"].values() if "H1_mean_pit" in v]
-        dx.scatter(pits, [i + 0.22] * len(pits), s=5, color=S.C["vermillion"], alpha=0.7,
-                   label="each system" if i == 0 else None)
-        dx.scatter([mm["H1_mean_pit"]], [i], s=22, marker="D", color="k", zorder=3,
-                   label="nine-system mean" if i == 0 else None)
-        # round half up, as in the text (0.0135 -> 0.014; float formatting gave 0.013)
-        pv = Decimal(str(mm["H1_p"])).quantize(Decimal("0.001"), rounding=ROUND_HALF_UP)
-        dx.text(0.72, i, f"p = {pv}", va="center", fontsize=5.5)
-    dx.axvline(0.5, color="k", lw=0.4, ls=":")
-    dx.set_yticks(range(len(REG))); dx.set_yticklabels([l.replace("\n", " ") for _, l in REG])
-    dx.set_ylim(len(REG) - 0.4, -0.6)
-    allp = [v["H1_mean_pit"] for k, _ in REG for v in op[k]["centres"].values() if "H1_mean_pit" in v]
-    dx.set_xlim(min(0.3, min(allp) - 0.03), 0.8)
-    dx.set_xlabel("mean rank of the observed temperature in the forecast ensembles (0.5 = calibrated)")
-    dx.legend(fontsize=5, loc="upper center", ncol=3, bbox_to_anchor=(0.5, -0.32))
-    dx.set_title("Ten operational systems, 17 SSWs: colder than forecast?", fontsize=6)
-    S.panel_label(dx, "d", x=-0.13, y=1.04)
     S.save(fig, "fig3_regional")
 
 
