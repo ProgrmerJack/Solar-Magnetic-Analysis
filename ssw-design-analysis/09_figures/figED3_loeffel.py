@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-figED2_loeffel.py -- Extended Data Fig. 2: the lower-stratospheric precursor
+figED3_loeffel.py -- Extended Data Fig. 3: the lower-stratospheric precursor
 couples to the surface just as strongly with no SSW.
 
 Reads results/current/8_experiment/snapsi_loeffel_test.json (result N).
@@ -80,7 +80,7 @@ def main():
     bx.legend(loc="lower right", fontsize=5.3)
     bx.set_title("Loeffel et al. 2026, across 18 events: r = 0.85", fontsize=6, color="0.35")
     S.panel_label(bx, "b", x=-0.3, y=1.04)
-    S.save(fig, "figED2_loeffel")
+    S.save(fig, "figED3_loeffel")
 
 
 if __name__ == "__main__":

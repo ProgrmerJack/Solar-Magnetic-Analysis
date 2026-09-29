@@ -11,9 +11,13 @@ and s2s_multimodel_test.json (result A, all systems). Recomputes nothing.
      the conditional calendar-window null (event-free dates, matched variance)
   c  mean PIT of the observed outcome per system, against the 95% range of the
      same null; 0.5 is a calibrated forecast
+  d  regional 2 m temperature (s2s_regional_test.json): mean rank of the observed
+     temperature in the ensembles, per region, nine-system mean (diamond) and each
+     system (dots), against the central 95% of event-free dates
 """
 import json
 import sys
+from decimal import ROUND_HALF_UP, Decimal
 from pathlib import Path
 
 import numpy as np
@@ -22,6 +26,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import nature_style as S  # noqa: E402
 import matplotlib.pyplot as plt  # noqa: E402
 
+REG = [("NEURASIA", "N Eurasia"), ("HI_EUROPE", "high-lat.\nEurope"),
+       ("MID_EASIA", "mid-lat.\nE Asia"), ("MID_NAMER", "mid-lat.\nN America")]
 LABEL = {"ecmwf": "ECMWF", "eccc": "ECCC", "cma": "CMA", "hmcr": "HMCR", "kma": "KMA",
          "cnrm": "CNRM", "jma": "JMA", "cnr_isac": "CNR-ISAC", "ncep": "NCEP",
          "cptec": "CPTEC"}
@@ -31,8 +37,9 @@ def main():
     S.apply()
     p = json.loads((S.RESULTS / "6_predictability" / "s2s_forecast_test.json").read_text())
     m = json.loads((S.RESULTS / "6_predictability" / "s2s_multimodel_test.json").read_text())
-    fig = plt.figure(figsize=(S.DOUBLE, 64 * S.MM))
-    gs = fig.add_gridspec(1, 3, width_ratios=[1, 1.1, 1.1], wspace=0.55)
+    op = json.loads((S.RESULTS / "6_predictability" / "s2s_regional_test.json").read_text())["regions"]
+    fig = plt.figure(figsize=(S.DOUBLE, 128 * S.MM))
+    gs = fig.add_gridspec(2, 3, width_ratios=[1, 1.1, 1.1], wspace=0.55, hspace=0.75)
 
     ax = fig.add_subplot(gs[0, 0])
     ev = p["bins"]["short"]["events"]
@@ -76,6 +83,29 @@ def main():
         bx.set_title(tt, fontsize=6, pad=8)
         bx.text(1.02, 1.0, "n", transform=bx.transAxes, va="bottom", fontsize=5, color="0.4")
         S.panel_label(bx, panel, x=-0.45 if panel == "b" else -0.16, y=1.06)
+    dx = fig.add_subplot(gs[1, 0:3])
+    for i, (k, _) in enumerate(REG):
+        mm = op[k]["multimodel"]["confirmatory"]
+        lo, hi = mm["H1_null_pit_q025_q975"]
+        dx.plot([lo, hi], [i, i], color="0.78", lw=4, solid_capstyle="butt",
+                label="event-free dates (95%)" if i == 0 else None)
+        pits = [v["H1_mean_pit"] for v in op[k]["centres"].values() if "H1_mean_pit" in v]
+        dx.scatter(pits, [i + 0.22] * len(pits), s=5, color=S.C["vermillion"], alpha=0.7,
+                   label="each system" if i == 0 else None)
+        dx.scatter([mm["H1_mean_pit"]], [i], s=22, marker="D", color="k", zorder=3,
+                   label="nine-system mean" if i == 0 else None)
+        # round half up, as in the text (0.0135 -> 0.014; float formatting gave 0.013)
+        pv = Decimal(str(mm["H1_p"])).quantize(Decimal("0.001"), rounding=ROUND_HALF_UP)
+        dx.text(0.72, i, f"p = {pv}", va="center", fontsize=5.5)
+    dx.axvline(0.5, color="k", lw=0.4, ls=":")
+    dx.set_yticks(range(len(REG))); dx.set_yticklabels([l.replace("\n", " ") for _, l in REG])
+    dx.set_ylim(len(REG) - 0.4, -0.6)
+    allp = [v["H1_mean_pit"] for k, _ in REG for v in op[k]["centres"].values() if "H1_mean_pit" in v]
+    dx.set_xlim(min(0.3, min(allp) - 0.03), 0.8)
+    dx.set_xlabel("mean rank of the observed temperature in the forecast ensembles (0.5 = calibrated)")
+    dx.legend(fontsize=5, loc="upper center", ncol=3, bbox_to_anchor=(0.5, -0.32))
+    dx.set_title("Ten operational systems, 17 SSWs: colder than forecast?", fontsize=6)
+    S.panel_label(dx, "d", x=-0.13, y=1.04)
     S.save(fig, "fig5_operational")
 
 

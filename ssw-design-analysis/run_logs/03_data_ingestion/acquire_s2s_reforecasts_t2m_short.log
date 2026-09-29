@@ -34,12 +34,6 @@ Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
 Retrying in 120 seconds
 Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
 Retrying in 120 seconds
-Recovering from connection error [('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))], attempt 1 of 500
-Retrying in 120 seconds
-Recovering from connection error [('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))], attempt 1 of 500
-Retrying in 120 seconds
-Recovering from connection error [('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))], attempt 1 of 500
-Retrying in 120 seconds
 Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
 Retrying in 120 seconds
 Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
@@ -57,12 +51,6 @@ Retrying in 120 seconds
 Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
 Retrying in 120 seconds
 Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
-Retrying in 120 seconds
-Recovering from HTTP error [502 Bad Gateway], attempt 2 of 500
-Retrying in 120 seconds
-Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
-Retrying in 120 seconds
-Recovering from HTTP error [502 Bad Gateway], attempt 2 of 500
 Retrying in 120 seconds
 Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
 Retrying in 120 seconds
@@ -75,25 +63,19 @@ Retrying in 120 seconds
 39 packed requests for ['ecmwf', 'eccc', 'cma', 'hmcr', 'kma', 'cnrm', 'jma', 'cnr_isac', 'ncep', 'cptec']
   ecmwf 9 starts: 2022-12-01 .. 2022-12-29 fetched
   ecmwf 9 starts: 2022-03-03 .. 2022-03-31 fetched
-  ecmwf 9 starts: 2022-01-03 .. 2022-01-31 fetched
   ecmwf 8 starts: 2022-02-03 .. 2022-02-28 fetched
+  ecmwf 9 starts: 2022-01-03 .. 2022-01-31 fetched
   eccc 9 starts: 2025-01-02_h01-02 .. 2025-01-30_h01-30 fetched
   eccc 8 starts: 2025-02-03_h02-03 .. 2025-02-27_h02-27 fetched
+  eccc 9 starts: 2025-03-03_h03-03 .. 2025-03-31_h03-31 fetched
   eccc 9 starts: 2025-12-01_h12-01 .. 2025-12-29_h12-29 fetched
   cma 9 starts: 2022-01-03_h01-03 .. 2022-01-31_h01-31 fetched
   cma 8 starts: 2022-02-03_h02-03 .. 2022-02-28_h02-28 fetched
-  eccc 9 starts: 2025-03-03_h03-03 .. 2025-03-31_h03-31 fetched
   cma 9 starts: 2022-03-03_h03-03 .. 2022-03-31_h03-31 fetched
   cma 9 starts: 2022-12-01_h12-01 .. 2022-12-29_h12-29 fetched
   hmcr 5 starts: 2025-01-02_h01-02 .. 2025-01-30_h01-30 fetched
-  hmcr 4 starts: 2025-02-06_h02-06 .. 2025-02-27_h02-27 fetched
-Recovering from connection error [HTTPSConnectionPool(host='ecds.ecmwf.int', port=443): Read timed out. (read timeout=60)], attempt 1 of 500
-Retrying in 120 seconds
-Recovering from connection error [HTTPSConnectionPool(host='ecds.ecmwf.int', port=443): Read timed out. (read timeout=60)], attempt 1 of 500
-Retrying in 120 seconds
-Recovering from connection error [HTTPSConnectionPool(host='ecds.ecmwf.int', port=443): Read timed out. (read timeout=60)], attempt 1 of 500
-Retrying in 120 seconds
   hmcr 4 starts: 2025-03-06_h03-06 .. 2025-03-27_h03-27 fetched
+  hmcr 4 starts: 2025-02-06_h02-06 .. 2025-02-27_h02-27 fetched
   hmcr 4 starts: 2025-12-04_h12-04 .. 2025-12-25_h12-25 fetched
   kma 4 starts: 2026-01-01_h01-01 .. 2026-01-25_h01-25 fetched
   kma 4 starts: 2026-02-01_h02-01 .. 2026-02-25_h02-25 fetched
@@ -108,19 +90,19 @@ Retrying in 120 seconds
   jma 2 starts: 2022-09-30_h12-12 .. 2022-09-30_h12-27 fetched
   cnr_isac 7 starts: 2023-10-16_h01-01 .. 2023-10-16_h01-31 fetched
   cnr_isac 5 starts: 2023-10-16_h02-05 .. 2023-10-16_h02-25 fetched
-  ncep 11 starts: 2011-03-01_h01-01 .. 2011-03-01_h01-31 fetched
   cnr_isac 6 starts: 2023-10-16_h03-02 .. 2023-10-16_h03-27 fetched
-  ncep 10 starts: 2011-03-01_h02-01 .. 2011-03-01_h02-28 fetched
+  ncep 11 starts: 2011-03-01_h01-01 .. 2011-03-01_h01-31 fetched
   cnr_isac 6 starts: 2023-10-16_h12-02 .. 2023-10-16_h12-27 fetched
+  ncep 10 starts: 2011-03-01_h02-01 .. 2011-03-01_h02-28 fetched
   ncep 11 starts: 2011-03-01_h03-01 .. 2011-03-01_h03-31 fetched
   ncep 11 starts: 2011-03-01_h12-01 .. 2011-03-01_h12-31 fetched
   cptec 11 starts: 2023-01-04_h01-01 .. 2023-01-04_h01-31 fetched
-  cptec 10 starts: 2023-01-04_h02-01 .. 2023-01-04_h02-28 fetched
   cptec 11 starts: 2023-01-04_h03-01 .. 2023-01-04_h03-31 fetched
   cptec 11 starts: 2023-01-04_h12-01 .. 2023-01-04_h12-31 fetched
+  cptec 10 starts: 2023-01-04_h02-01 .. 2023-01-04_h02-28 fetched
 packed done; 0 packs failed
 packed exit=0
-69,300 rows, 700 starts -> s2s_ecmf_psl_cap_short.parquet
+69,300 rows, 700 starts -> s2s_ecmf_t2m_regions_short.parquet
 ecmwf assemble exit=0
 Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
 Retrying in 120 seconds
@@ -128,45 +110,37 @@ Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
 Retrying in 120 seconds
 Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
 Retrying in 120 seconds
-25,200 rows, 700 starts -> s2s_eccc_psl_cap_short.parquet
+25,200 rows, 700 starts -> s2s_eccc_t2m_regions_short.parquet
 eccc assemble exit=0
 Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
 Retrying in 120 seconds
 Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
 Retrying in 120 seconds
-Recovering from connection error [HTTPSConnectionPool(host='ecds.ecmwf.int', port=443): Read timed out. (read timeout=60)], attempt 1 of 500
-Retrying in 120 seconds
-Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
-Retrying in 120 seconds
-Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
-Retrying in 120 seconds
-Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
-Retrying in 120 seconds
-Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
-Retrying in 120 seconds
-18,900 rows, 525 starts -> s2s_cma_psl_cap_short.parquet
+18,900 rows, 525 starts -> s2s_cma_t2m_regions_short.parquet
 cma assemble exit=0
-Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
-Retrying in 120 seconds
-Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
-Retrying in 120 seconds
-Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
-Retrying in 120 seconds
-50,490 rows, 510 starts -> s2s_hmcr_psl_cap_short.parquet
+50,490 rows, 510 starts -> s2s_hmcr_t2m_regions_short.parquet
 hmcr assemble exit=0
 Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
 Retrying in 120 seconds
-18,144 rows, 288 starts -> s2s_kma_psl_cap_short.parquet
+18,144 rows, 288 starts -> s2s_kma_t2m_regions_short.parquet
 kma assemble exit=0
-41,184 rows, 416 starts -> s2s_cnrm_psl_cap_short.parquet
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+41,184 rows, 416 starts -> s2s_cnrm_t2m_regions_short.parquet
 cnrm assemble exit=0
-10,800 rows, 240 starts -> s2s_jma_psl_cap_short.parquet
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+10,800 rows, 240 starts -> s2s_jma_t2m_regions_short.parquet
 jma assemble exit=0
-34,560 rows, 480 starts -> s2s_cnr_isac_psl_cap_short.parquet
+34,560 rows, 480 starts -> s2s_cnr_isac_t2m_regions_short.parquet
 cnr_isac assemble exit=0
 Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
 Retrying in 120 seconds
-18,576 rows, 516 starts -> s2s_ncep_psl_cap_short.parquet
+18,576 rows, 516 starts -> s2s_ncep_t2m_regions_short.parquet
 ncep assemble exit=0
-12,177 rows, 123 starts -> s2s_cptec_psl_cap_short.parquet
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+12,177 rows, 123 starts -> s2s_cptec_t2m_regions_short.parquet
 cptec assemble exit=0

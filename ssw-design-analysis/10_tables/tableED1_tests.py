@@ -56,9 +56,26 @@ def main():
     BL, RB = J("s2s_baseline_test.json"), J("s2s_multimodel_robustness.json")
     PO, VG = J("s2s_postonset_test.json"), J("vortex_geometry_test.json")
     CD, FR = J("snapsi_contrast_diagnosis.json"), J("forecast_value_robustness.json")
+    M, N = J("snapsi_distribution_test.json"), J("snapsi_loeffel_test.json")
+    WJ, AR = J("within_model_check.json"), J("snapsi_archetype_test.json")
     mm = g(MMt, "multimodel", "confirmatory"); nr = g(SRt, "regions", "NEURASIA", "multimodel", "confirmatory")
     rows = [
         # (id, test, role, registration, commit, statistic, p)
+        ("M-var", "variance ratio nudged/control, re-centred (SNAPSI NH)", "secondary", "in script, run same day", "0b6886d",
+         f"{g(M,'pooled_all','variance_ratio')} {g(M,'pooled_all','variance_ratio_CI95')}", None),
+        ("M-KS", "pure translation, Kolmogorov-Smirnov (SNAPSI NH)", "secondary", "in script, run same day", "0b6886d",
+         "KS", g(M, "pooled_all", "pure_translation_KS_p")),
+        ("N", "week-2 100 hPa coupling between members, nudged minus control (Fisher z)", "secondary",
+         "in script with a design gate", "07324a4",
+         f"dz {g(N,'primary','arm_contrast','delta_z_nudged_minus_control')}", g(N, "primary", "arm_contrast", "delta_p_two_sided")),
+        ("J-P1", "within-model out-of-sample R2 added by the SSW, before onset (CMIP6)", "secondary", "in script, run same day", "0b6886d",
+         f"{g(WJ,'P1 pre-onset','size_matched','event_specific')}", g(WJ, "P1 pre-onset", "size_matched", "p_null_ge_real")),
+        ("J-P3", "within-model R2 added by the SSW, with post-onset stratosphere", "secondary", "in script, run same day", "0b6886d",
+         f"{g(WJ,'P3 + post-onset stratosphere','size_matched','event_specific')}",
+         g(WJ, "P3 + post-onset stratosphere", "size_matched", "p_null_ge_real")),
+        ("O", "archetype pair: observed 2018-2019 difference within model pairings", "secondary", "in script, run same day", "79007c2",
+         f"median percentile {g(AR,'pair_test','primary','median_obs_diff_pct')}; outside 95%: "
+         f"{g(AR,'pair_test','primary','centres_outside_central_95')} of {g(AR,'pair_test','primary','n_centres')}", None),
         ("L", "paired DW-NDW contrast, nudged minus control (SNAPSI)", "primary", "in script, run same day", "0eda6d9",
          f"{g(L,'paired_NH','paired_difference')} {g(L,'paired_NH','paired_difference_CI95_centre_bootstrap')}", None),
         ("L-d", "nudged contrast vs empirical shifted-control null", "diagnostic", "post hoc", "this revision",
@@ -89,14 +106,22 @@ def main():
         ("T1", "rank deficit, starts after onset", "primary (revision)", "committed before data", "57019f6",
          f"{g(PO,'outcomes','psl','T1_post_onset','mean_rank')}" if PO else "pending",
          g(PO, "outcomes", "psl", "T1_post_onset", "p")),
-        ("T2", "rank deficit, pre-onset starts that caught the SSW", "primary (revision)", "committed before data", "57019f6",
+        ("T2", "rank deficit, pre-onset starts that caught the SSW", "primary (revision)",
+         "committed before data; matched null adopted after a review had emulated the polar-cap test (it raised p)", "57019f6, a201458",
          f"{g(PO,'outcomes','psl','T2_hits','mean_rank')}" if PO else "pending",
          g(PO, "outcomes", "psl", "T2_hits", "p_matched_null")),
+        ("T2-miss", "rank deficit, pre-onset starts that missed the SSW", "secondary (revision)",
+         "as T2", "57019f6, a201458",
+         f"{g(PO,'outcomes','psl','T2_misses','mean_rank')}" if PO else "pending",
+         g(PO, "outcomes", "psl", "T2_misses", "p_matched_null")),
+        ("T2-d", "hit minus miss rank (polar cap)", "secondary (revision)", "as T2", "57019f6, a201458",
+         f"{g(PO,'outcomes','psl','T2_hit_minus_miss','mean')} {g(PO,'outcomes','psl','T2_hit_minus_miss','ci95')}" if PO else "pending", None),
         ("G1", "split minus displaced surface response (ERA5)", "secondary (revision)", "committed before data", "57019f6",
          f"{g(VG,'tests','cls|nam_8_25','diff_split_minus_displaced')}" if VG else "pending",
          g(VG, "tests", "cls|nam_8_25", "p_perm_two_sided")),
-        ("Q-P3", "SSW-specific CRPS skill with post-onset stratosphere", "sensitivity", "post hoc", "this revision",
-         f"{g(FR,'results','base | P3 + post-onset stratosphere','CRPSS_ssw')}" if FR else "pending",
+        ("Q-P3", "CRPS skill with post-onset stratosphere: after SSWs vs ordinary days", "sensitivity", "post hoc", "this revision",
+         f"{g(FR,'results','base | P3 + post-onset stratosphere','CRPSS_ssw')} vs "
+         f"{g(FR,'results','base | P3 + post-onset stratosphere','null_ordinary_pooled','mean')}" if FR else "pending",
          g(FR, "results", "base | P3 + post-onset stratosphere", "null_ordinary_pooled", "p_null_ge_ssw")),
     ]
     fam = [i for i, r in enumerate(rows) if r[2].startswith("primary") and isinstance(r[6], (int, float))]

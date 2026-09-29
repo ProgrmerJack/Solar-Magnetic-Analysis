@@ -10,20 +10,21 @@ display items are built by `09_figures/fig*.py` and `10_tables/table*.py` from
 ## Abstract
 
 Sudden stratospheric warmings (SSWs) raise the risk of cold, blocked winter
-weather for weeks, and research and forecasting sort them into the roughly two
-thirds whose influence propagates downward to the surface and the rest. Here we
-show that this label is a threshold on one shifted distribution, and that what
+weather, and research and forecasting sort them into the roughly two thirds
+whose influence propagates downward to the surface and the rest. Here we show
+that this label is a threshold on one shifted distribution, and that what
 forecasts miss after SSWs is the size of the shift. Imposing one observed SSW on
 every member of multi-model ensembles raises the share of downward outcomes from
-45% to 84% without changing the spread of outcomes; forced differences between
-events account for a few per cent of any event's label. Over northern Eurasia
-the chance of a cold fortnight rises from 10% to about 30% in the experiment and
-to 26% after 39 observed SSWs, as the circulation shift alone predicts. In 1,517
-simulated SSWs, knowing the event adds no detectable probabilistic skill beyond
-the shift. In ten operational forecast systems, outcomes after SSWs fall on the
-cold, negative-annular-mode side of the ensembles more often than on ordinary
-winter dates [[PENDING-ABSTRACT-POSTONSET]]. After an SSW, forecasts should
-issue, verify and correct the shifted distribution rather than a class.
+45% to 84% without changing the spread of Northern Hemisphere outcomes; forced
+differences between events account for a few per cent of any event's label. Over
+northern Eurasia the chance of a cold fortnight rises from 10% to about 30% in
+the experiment, as the circulation shift alone predicts, and to 26% after 39
+observed SSWs. In 1,517 simulated SSWs, knowing the event adds no detectable
+probabilistic skill beyond the shift. In ten operational forecast systems,
+outcomes after SSWs fall on the negative-annular-mode side of the ensembles more
+often than on ordinary winter dates, as much when forecasts predicted the
+warming as when they missed it. After an SSW, forecasts should issue, verify and
+correct the shifted distribution, not a class.
 
 ---
 
@@ -69,7 +70,8 @@ after SSWs. We answer these with an experiment that imposes the same observed
 SSW on every ensemble member in nine models (SNAPSI^{hitchcock22}^), 1,517 SSWs
 in 20 CMIP6 simulations of 10 models, 43 observed events, and reforecasts of ten
 operational systems, for the polar-cap circulation and for regional temperature.
-Every test was checked on synthetic data; tests fixed before their data were
+The reforecast tests and the regional mediation test were checked on synthetic
+data; tests fixed before their data were
 analysed, and those added afterwards, are listed in Extended Data Table 1.
 
 ### One shifted population, cut by a threshold
@@ -95,10 +97,14 @@ the imposed warming also widens the distribution (variance ratio 1.74 [1.41,
 2.15]).
 
 Applying the surface conditions of the Karpechko criterion to every member
-splits each ensemble into downward (DW) and non-downward (NDW) members. What the
-SSW changes is the rate: 84% of members are DW with the SSW imposed against 45%
-without it (79% against 41% in the Southern Hemisphere; Fig. 1a). The
-contrast between the classes does not change. With the SSW imposed, the DW minus
+splits each ensemble into downward (DW) and non-downward (NDW) members. What the SSW changes is the rate: 84% of members are DW with the SSW imposed
+against 45% without it (Fig. 1a; 82% against 45% without ECCC, and 79% against
+41% in the Southern Hemisphere minor warming). The same holds in observations:
+the share of the 39 observed events with ERA5 outcomes that meet the surface
+conditions, 69%, is reproduced by event-free dates displaced by the measured
+shift (75% [61, 87]; Fig. 1b), so "about two thirds" is what one shifted
+population produces. In the Northern Hemisphere the contrast between the classes
+does not change. With the SSW imposed, the DW minus
 NDW contrast is −1.62σ; in the same models and initialisations without it,
 −1.59σ, and on the 25 centre–initialisation pairs where both arms can form a
 contrast the paired difference is −0.03σ [−0.12, +0.05] (centre-cluster
@@ -110,11 +116,12 @@ belongs to the Gaussian shortcut, not to the ensembles: half of it comes from th
 criterion's second condition (a fraction of days negative), and when the
 members without an SSW are shifted by the imposed effect and classified with the
 full criterion, they reproduce the contrast of the members with it (difference
-+0.04σ [−0.03, +0.10]). The same holds in observations: applying the published
-criterion to ERA5, 97% of the resulting DW–NDW contrast is reproduced by
-event-free dates, and the share of events that meet the surface conditions,
-69%, is reproduced by event-free dates displaced by the measured shift (75%
-[61, 87]; Fig. 1b). "About two thirds" is what one shifted population produces.
++0.04σ [−0.03, +0.10]). In ERA5, likewise, 97% of the DW–NDW contrast that the
+published criterion produces is reproduced by event-free dates. In the Southern
+Hemisphere minor warming, where the imposed warming also widens the
+distribution, the raw contrast is larger (−1.96σ against −1.58σ without it), and
+against the threshold expectation for each ensemble's own mean and spread it is
+again smaller (by 0.20σ, in six of seven ensembles).
 
 Events do differ, but by little, and not in kind. In CMIP6 the forced variance
 between events, after removing the variance already present before onset, is
@@ -126,7 +133,7 @@ field's archetype pair shows it (Fig. 1c): February 2018 and January 2019
 received comparable forced shifts and similar forced probabilities of a downward
 outcome (0.80 and 0.75 across nine models; 0.78 and 0.71 without ECCC), and at
 the primary initialisations the observed outcomes lie within the central 95% of
-the model distributions in 17 of 18 model–event cases (Extended Data Fig. 3), although they
+the model distributions in 17 of 18 model–event cases (Extended Data Fig. 2), although they
 are conventionally taken as opposite kinds. The lower stratosphere after onset does
 track how much events differ: across 18 ensembles of distinct events the week-2
 100 hPa anomaly correlates with the later surface response at
@@ -134,7 +141,7 @@ r = 0.85^{loeffel26}^, a relation that survives a control for window overlap
 (p = 0.0005), although overlap alone yields r = 0.49 [0.11, 0.77]. Between
 members of one SNAPSI ensemble, where the forcing is shared, the same relation
 is weak and is equally present with no SSW (r = 0.11 against 0.09; difference in
-Fisher z +0.02 [−0.04, +0.09]; Extended Data Fig. 2), and in CMIP6 the
+Fisher z +0.02 [−0.04, +0.09]; Extended Data Fig. 3), and in CMIP6 the
 post-onset stratosphere predicts the surface as well on ordinary winter days as
 after SSWs (next section): the relation is a general property of
 stratosphere–troposphere coupling, measurable after onset, not a feature that
@@ -167,9 +174,9 @@ northern-Eurasian cooling, and the remainder (−0.33 K) lies within the range o
 event-free dates (p = 0.38; Fig. 3c).
 
 The polar-cap index is not the whole of the regional response. High-latitude
-Europe cools by a further 0.19–0.27σ (its cold-fortnight probability rises to
-0.32 against 0.26 predicted from the shift), mid-latitude East Asia cools by
-0.51σ, of which the circulation accounts for 60% (0.27 against 0.20 predicted;
+Europe cools by a further 0.19–0.27σ (its cold-fortnight probability rises to 0.32 against 0.26 predicted from the shift;
+0.29 against 0.23 without ECCC), mid-latitude East Asia cools by 0.51σ, of which the circulation accounts for 60%
+(0.41σ and 79% without ECCC) (0.27 against 0.20 predicted;
 residual −0.21σ [−0.50, +0.03]), and mid-latitude North America warms (+0.49σ)
 where the circulation relation implies cooling, with the same sign of residual in
 observations (+0.55 K, p = 0.09), in line with the mixed North American signal
@@ -190,7 +197,8 @@ onset. Scored with the continuous ranked probability score on events of held-out
 models, the event-aware forecast improves on the shift by 0.8% [−0.3, 1.4]
 (Fig. 4a). The same information improves forecasts on size-matched ordinary
 winter days by 3.7% [2.3, 5.3], and in none of 200 such samples was it worth as
-little as after SSWs. The result holds with the post-onset stratosphere among the predictors (17.2% after SSWs against 20.7% on ordinary days), against weak-vortex days that are not SSWs (0.8% against 1.6%, p = 0.94), with models weighted equally or CanESM5 excluded, and when wave-driving proxies and the pre-onset surface annular mode are added: the richer predictors raise the skill to 4.8% on ordinary days and 2.9% on weak-vortex days but leave it at 0.8% after SSWs. The predictors span the same range after SSWs as on the comparison days (s.d. ratios 1.02 and 1.03), so the gap is not an artefact of a restricted range. The label itself cannot be a
+little as after SSWs. The result holds with the post-onset stratosphere among the predictors (17.2% after SSWs against 20.7% on ordinary days), against weak-vortex days that are not SSWs (0.8% against 1.6%, p = 0.94), with models weighted equally (0.4% after SSWs) or CanESM5 excluded (0.6%; the
+null was not recomputed without it), and when wave-driving proxies and the pre-onset surface annular mode are added: the richer predictors raise the skill to 4.8% on ordinary days and 2.9% on weak-vortex days but leave it at 0.8% after SSWs. The predictors span the same range after SSWs as on the comparison days (s.d. ratios 1.02 and 1.03), so the gap is not an artefact of a restricted range. The label itself cannot be a
 predictor, since it is defined from the outcome, so the test is of the event
 information the label is meant to summarise. Point prediction agrees. Before
 onset, the out-of-sample R² of the surface response within a model is 0.054 at
@@ -212,16 +220,14 @@ the mean of the nine further systems correlates with the observed response at
 r = 0.23, against 0.52 on event-free dates (p = 0.91), and no single system does
 significantly better than on event-free dates (Fig. 5b). These tests rule out
 large event-specific skill, not small: with 17 events the smallest gain in
-correlation detectable with 80% power is 0.43 (0.33 for northern-Eurasian
-temperature), and the interval for the nine-system gain is −0.29 [−0.76, +0.22].
+correlation detectable with 80% power is 0.43, and the interval for the nine-system gain is −0.29 [−0.76, +0.22].
 
 What the forecasts get wrong is the size of the shift. If they missed a second
 population of outcomes, the observed values would scatter into both tails of the
 ensembles; in ECMWF they do not (4% in the two outer rank bins against 17%
 expected). They fall on the negative-NAM side, and so they do in the nine further
 systems, as registered before the confirmatory test was run: mean rank 0.40
-against 0.54 on event-free dates (p = 0.005; Holm-adjusted over the registered
-primary tests, 0.02), lower than the event-free value in nine of ten systems
+against 0.54 on event-free dates (p = 0.005; Holm-adjusted over all primary tests, 0.03), lower than the event-free value in nine of ten systems
 (Fig. 5c). The deficit is specific to SSWs. It holds against event-free dates
 drawn from all winters rather than from winters without SSWs (0.53, p = 0.012),
 it is not a general error that grows as the vortex weakens (the rank barely
@@ -243,9 +249,9 @@ The same error reaches the regional cold. Registered before its data were
 assembled, the primary regional test asks whether observed northern-Eurasian
 temperature after SSWs lies on the cold side of the ensembles more than on
 event-free dates. It does: mean rank 0.39 against 0.53 across the nine further
-systems (p = 0.014; Holm-adjusted 0.041; mixed model −0.13 [−0.25, −0.01]; at most
-0.036 with any one event left out), below the event-free value in all ten systems
-(Fig. 3d). The ensemble-mean anomaly after these SSWs is −0.3 K where the
+systems (p = 0.014; Holm-adjusted over all primary tests 0.07, so not significant after
+correction; mixed model −0.13 [−0.25, −0.01]; at most
+0.036 with any one event left out), below the event-free value in all ten systems (Fig. 5d). The ensemble-mean anomaly after these SSWs is −0.3 K where the
 observed is −1.3 K. High-latitude Europe points the same way (0.43 against 0.53,
 p = 0.07); mid-latitude East Asia and North America, where the imposed SSW cools
 less or warms, show no such error. On synthetic forecasts this test rejected 3% of datasets with no error and
@@ -259,7 +265,22 @@ states^{kolstad20}^; subseasonal systems couple too strongly from the lower
 stratosphere to the surface at short lags^{garfinkel25}^; and nudged forecasts of
 the 2018 event reproduce the predictable part of its observed
 response^{dai25}^. The fall from 64% to 26% with lead suggests that part of the
-error is a missed warming. [[PENDING-POSTONSET]]
+error might simply be a missed warming. It is not. Registered before the data
+were retrieved, the test splits the starts 2–9 days before onset into those
+whose ensemble reversed the 10 hPa, 60° N wind within three days of the observed
+onset (125 starts, all 17 events) and those that did not (43 starts, 15 events).
+Outcomes lie as low in the ensembles that caught the warming as in those that
+missed it: mean rank 0.41 against 0.55 on matched event-free draws (p = 0.014; Holm-adjusted 0.07) and 0.41 against
+0.55 (p = 0.029), a difference of +0.003 [−0.05, +0.05]; for
+northern-Eurasian temperature 0.40 (p = 0.06) and 0.41 (p = 0.11). Forecasts
+started 0–7 days after onset, with the observed warming in their initial state,
+are closer to calibrated (0.50 against 0.56, p = 0.14; temperature 0.46 against
+0.52, p = 0.18), consistent with nudged forecasts that reproduce the predictable
+response once the observed stratosphere is imposed^{dai25}^. Before onset, then,
+forecasts that predict an SSW still under-predict its surface consequence; our
+reversal criterion does not measure how strong or persistent the predicted
+warming is, so a warming forecast too weak and too weak a coupling to it cannot
+be told apart here.
 
 ### Implications for forecasting and research
 
@@ -279,9 +300,8 @@ for regional weather, the shifted distribution of the regional variable itself,
 which the polar-cap index does not fully carry — rather than a categorical
 prediction of whether this event will propagate. The quantity to verify and
 correct is the size of that shift, which operational systems under-predict, not
-the event-to-event differences the class is meant to summarise, which none
-predicts significantly better than it predicts differences between ordinary
-winter days. For research, wherever "downward-propagating SSW" is used to
+the event-to-event differences the class is meant to summarise, which, for the polar-cap circulation, none predicts significantly better than it
+predicts differences between ordinary winter days. For research, wherever "downward-propagating SSW" is used to
 stratify impacts, the rate at which events meet the criterion, set against a
 matched null, is an honest quantity; the contrast between the classes is not,
 because the threshold manufactures most of it (97% in ERA5; see also
@@ -292,10 +312,11 @@ not whether it named the class of the event, a class fixed in large part by the
 outcome it is scored against, but whether its ensemble placed the right
 probability on the shifted state. That can be checked routinely with the test
 used here: rank the outcomes after SSWs within the ensembles and compare the
-ranks with those on event-free dates of the same season and lead. Across ten
-current systems the ensembles are, over the weeks after SSWs, not negative
-enough in the annular mode (in their multi-model mean and in nine of the ten
-individually) and too warm over northern Eurasia (in all ten).
+ranks with those on event-free dates of the same season and lead. Across ten current systems the ensembles started before onset are, over the
+weeks after SSWs, not negative enough in the annular mode (significantly in their multi-model
+mean, and as point estimates in nine of the ten systems) and too warm over
+northern Eurasia (as point estimates in all ten, not significantly after
+correction for multiple tests).
 
 Five limits bound these conclusions. First, the decisive evidence is from models;
 with 42 usable observed events the observational out-of-sample tests are
@@ -308,8 +329,8 @@ our CMIP6 fields are zonal means, so non-zonal vortex geometry, which is
 associated with stronger responses^{nebel24}^ and differs between nudged
 members^{feng25}^, is neither held fixed nor among our model predictors; we test
 it only in reanalysis. Fourth, "not detectable" is bounded, not zero: after SSWs
-the event-aware forecast's gain is at most 1.4% of the probabilistic score (upper
-95% bound), and operational gains in correlation below about 0.4 could not be
+the event-aware forecast's gain is at most 1.4% of the probabilistic score (1.9%
+with the extended predictors; upper 95% bounds), and operational gains in correlation below about 0.4 could not be
 detected. Fifth, the regional analysis covers mean temperature in four
 literature-defined boxes, not precipitation, wind or local extremes, and observed
 regional samples of 39 events can exclude only residuals larger than about a
@@ -331,7 +352,7 @@ over 60–90° N (60–90° S for the SH case), including the 60° row. NAM indi
 1000, 850 and 150 hPa: cos-latitude-weighted geopotential height over the rows
 poleward of 65° N (66–90° N on this grid) from the 00 UTC field of each day, as
 an anomaly from its day-of-year mean, negated and standardised by day of year;
-with true daily means the one label that depends on it (Extended Data Fig. 3c)
+with true daily means the one label that depends on it (Extended Data Fig. 2c)
 is unchanged.
 
 **SNAPSI.** Nudged and control ensembles for CCCma, CNR-ISAC, ECCC, ECMWF, KMA,
@@ -497,14 +518,14 @@ under-predict every anomaly by 40% (noise scaled by the ratio of the anomaly s.d
 of temperature and pressure); the discrimination test rejected 10% of
 equally skilful datasets, so it is not interpreted for temperature.
 
-**Precursor coupling (Extended Data Fig. 2).** Week-2 (days 8–14) 100 hPa
+**Precursor coupling (Extended Data Fig. 3).** Week-2 (days 8–14) 100 hPa
 polar-cap geopotential height against days 15–25 polar-cap sea-level pressure,
 correlated across members within each ensemble; Fisher-z pooling weighted by
 n − 3; nudged-minus-control difference on matched ensembles with a normal-theory
 interval. A pre-specified gate required the nudged/control spread ratio at
 100 hPa to exceed 0.5 (median 0.96).
 
-**Archetypes (Extended Data Fig. 3).** ERA5 polar-cap sea-level pressure at exactly
+**Archetypes (Extended Data Fig. 2).** ERA5 polar-cap sea-level pressure at exactly
 the members' forecast times, placed in each model's nudged distribution with the
 same control base and spread; the pair test compares the observed 2018-minus-2019
 difference with all member pairings of the same model.
@@ -518,8 +539,9 @@ evaluated for 1,000,000 simulated events at the point estimate and at the upper
 95% bound, and the share of a single event's label variance due to forced
 differences is Var(P)/[P̄(1 − P̄)].
 
-**Contrast diagnosis and Southern Hemisphere spread.** On the 25 paired Northern
-Hemisphere ensembles, the nudged contrast is compared with (i) the Gaussian
+**Contrast diagnosis and Southern Hemisphere spread.** On the paired Northern
+Hemisphere ensembles (24 for the condition-1 check and 23 for the empirical null,
+where both classes keep at least three members), the nudged contrast is compared with (i) the Gaussian
 expectation for condition 1 alone and (ii) an empirical null: the same pair's
 control members with every 6-hourly value shifted by the imposed effect,
 classified with conditions 1–2. Skewness and s.d. of member means are compared
@@ -540,7 +562,19 @@ window mean, averaged over starts and systems; Brier decomposition with bins of
 width 0.2. Discrimination power: the change in correlation relative to the mean
 of the conditional null, with an event bootstrap, and the minimum detectable
 change (95th percentile minus mean plus 0.84 s.d. of the conditional null).
-[[PENDING-METHODS-POSTONSET]]
+Post-onset and SSW-hit tests: forecast leads 1–9 days were retrieved for
+polar-cap sea-level pressure and 2 m temperature and joined to the leads used
+above (same starts and members), and the zonal-mean zonal wind at 10 hPa, 60° N
+for leads 1–15. Starts 0–7 days after a catalogued onset are compared with the
+same calendar-window null. A start 2–9 days before onset is a hit if at least
+half of its members have a negative 10 hPa, 60° N wind on some lead within ±3
+days of the observed onset. Hits and misses are compared with a matched null
+(the same events and systems, and in each system a random subset of the
+pseudo-onset's starts of the same size), and with each other by an event
+bootstrap. The matched null replaced a comparison with the all-starts null, which was too
+liberal; the change was made after a code review had emulated the polar-cap
+version of the test with the all-starts null (misses p = 0.0095 then, 0.029
+now), so it is not independent of that result, and it raised the p values.
 
 **CMIP6 robustness.** The forecast-value pipeline repeated with (i) the post-onset
 stratosphere (days 0–30); (ii) a weak-vortex null, zone-free dates whose member
@@ -562,8 +596,10 @@ apart) gives 17 displaced and 13 split events over their 52 winters, against 17
 and 18 with ERA-40/ERA-Interim; the coarser NCEP grid likely smooths splits. Each
 catalogued SSW is classified in a window of ±10 days around its central date:
 split if the aspect ratio exceeds 2.4 on any day, otherwise displaced if the
-centroid falls below 66° N on any day (registered rule; 27 split, 10 displaced),
-and, as a sensitivity, with the 7-day persistence (9 and 10). Outcomes from ERA5:
+centroid falls below 66° N on any day (registered rule: of the 43 events, 30 split, 11 displaced and 2 unclassified;
+27 and 10 of those with ERA5 outcomes are compared),
+and, as a sensitivity, with the 7-day persistence (9 split, 13 displaced, 21 unclassified; 9 and 10
+compared). Outcomes from ERA5:
 the 1000 hPa NAM over days +8..+25 and +8..+52, the northern-Eurasian
 temperature anomaly over days +8..+24 and the downward label; split minus
 displaced with within-class bootstrap intervals and two-sided permutation p
@@ -621,7 +657,7 @@ contrast; the dashed line is equality and the dotted lines mark the value a cut 
 zero gives on a unit Gaussian, −2√(2/π). **b**, Fraction of members classified DW,
 all 36 Northern Hemisphere ensembles per arm.
 
-**Fig. 3 | Northern-Eurasian cold follows the circulation shift, and operational forecasts are too warm.** **a**,
+**Fig. 3 | Northern-Eurasian cold follows the circulation shift.** **a**,
 SNAPSI: effect of the imposed SSW on days 8–24 temperature in four regions
 (blue; 95% centre-bootstrap interval), the part implied by each member's
 polar-cap circulation through the relation that holds without an SSW (grey), and
@@ -630,12 +666,7 @@ the residual (vermilion, with interval), in units of the control spread.
 (0.10 by construction), SSW imposed, and predicted from the circulation shift
 alone (hatched). **c**, ERA5, 39 observed SSWs: the same decomposition in kelvin;
 whiskers, the central 95% of the mean residual over sets of event-free dates
-(one per event, same calendar period). **d**, Ten S2S reforecast systems, 17 SSWs: mean rank
-(probability integral transform) of the observed days 8–24 regional temperature
-within the forecast ensembles, for the mean of the nine confirmatory systems
-(diamonds) and each system (dots), against the central 95% of event-free dates
-of the same calendar period and lead (grey); p, the registered one-sided test
-that outcomes are colder than forecast more often than on event-free dates.
+(one per event, same calendar period).
 
 **Fig. 4 | Knowing the event adds no detectable forecast skill after an SSW.** **a**,
 Continuous ranked probability skill of the event-aware forecast over the shifted
@@ -658,7 +689,12 @@ outcome (grey bars); numbers, events per system; open symbols, systems with fewe
 than six events (CPTEC, 4), whose values are not informative. **c**, Mean rank (probability
 integral transform) of the observed outcome within the ensemble, against the
 central 95% of the same event-free dates without the spread restriction; 0.5, a
-calibrated forecast.
+calibrated forecast. **d**, Regional 2 m temperature: mean rank
+(probability integral transform) of the observed days 8–24 regional temperature
+within the forecast ensembles, for the mean of the nine confirmatory systems
+(diamonds) and each system (dots), against the central 95% of event-free dates
+of the same calendar period and lead (grey); p, the registered one-sided test
+that outcomes are colder than forecast more often than on event-free dates.
 
 **Extended Data Fig. 1 | An imposed SSW shifts the surface distribution without splitting it.**
 **a**, Causal polar-cap NAM shift (nudged minus control, days +8 to +25) for nine
@@ -670,16 +706,7 @@ mean shift) and the control translated by the same shift (dashed), in units of
 each ensemble's control spread; the shift here is the mean over all 36 ensembles
 including ECCC in these per-ensemble units, and so is larger than in **a**.
 
-**Extended Data Fig. 2 | The lower-stratospheric precursor couples to the surface
-as strongly with no SSW.** **a**, For each of 36 SNAPSI ensembles, the correlation
-across members between week-2 (days 8–14) 100 hPa polar-cap geopotential height
-and the days 15–25 polar-cap surface response, with the SSW imposed (nudged)
-against the same model and initialisation with no SSW (control); open squares,
-the initialisation that starts after onset. **b**, Fisher-pooled correlations with
-95% intervals and the nudged-minus-control difference, for all matched ensembles
-and excluding the short-lead initialisation.
-
-**Extended Data Fig. 3 | The field's two archetype events are two draws.** **a**,
+**Extended Data Fig. 2 | The field's two archetype events are two draws.** **a**,
 Nudged members of nine models for February 2018 (s20180125) and January 2019
 (s20181213) as the surface NAM proxy over days +8 to +25 (negative,
 downward-propagating); bars, interquartile range; filled diamonds, ERA5; open
@@ -691,6 +718,15 @@ Karpechko criterion^{karpechko17}^; the only NDW label is January 2019 at
 1000 hPa over days 8–52.
 
 ---
+
+**Extended Data Fig. 3 | The lower-stratospheric precursor couples to the surface
+as strongly with no SSW.** **a**, For each of 36 SNAPSI ensembles, the correlation
+across members between week-2 (days 8–14) 100 hPa polar-cap geopotential height
+and the days 15–25 polar-cap surface response, with the SSW imposed (nudged)
+against the same model and initialisation with no SSW (control); open squares,
+the initialisation that starts after onset. **b**, Fisher-pooled correlations with
+95% intervals and the nudged-minus-control difference, for all matched ensembles
+and excluding the short-lead initialisation.
 
 **Extended Data Table 1 | Test register.** Every test in the paper: its role
 (primary, secondary, discovery, sensitivity or diagnostic), how its design was

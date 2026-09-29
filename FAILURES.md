@@ -197,3 +197,8 @@ Rule: a null must be drawn for the same events, systems and number of averaged u
 Tried: building a pre-onset surface-NAM precursor (days -45..-31) from the November-April series in forecast_value_robustness.py.
 Failed: onsets before early December had windows in October, NaN precursors, and 204 of 1,517 events were dropped from one predictor set while the JSON still said 1,517; the base-vs-plus comparison was not like for like. Found by code review.
 Rule: build lagged predictors from the full-year series, and record the number of events actually scored per model variant.
+
+## 2026-09-29 — A reviewer ran a registered test before its planned run
+Tried: asking a code-review agent to check s2s_postonset_test.py while its registered design was still unrun.
+Failed: the reviewer emulated the polar-cap hit/miss comparison on real data (leads 10+) to show the null was too liberal; the corrected null was then adopted with that result known, so "corrected before the first run" was false.
+Rule: reviewers of registered-but-unrun tests use synthetic data only; any change after real-data exposure is reported as post hoc, with the earlier value.
