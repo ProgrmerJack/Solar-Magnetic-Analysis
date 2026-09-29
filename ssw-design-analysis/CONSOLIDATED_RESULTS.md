@@ -59,7 +59,7 @@ withdrawal now carries intervals.)*
 | P | operational forecasts show no significant event-specific skill at SSWs; they underestimate the common shift | ECMWF S2S reforecasts, 12 SSWs 2003–2021 | established for one system; conditional p 0.115 / 0.366, power 0.88–0.90 |
 | P′ | confirmed in 9 other systems: no event-specific discrimination (r +0.23 vs +0.52 event-free, p 0.91); outcomes on the downward side of the ensembles (mean PIT 0.40 vs 0.54, p 0.005); shift-size correction not significant (p 0.16, low power) | S2S reforecasts, 9 systems, 17 SSWs 1998–2021 | established (H1/H2 pre-registered; D, H1, H2 calibrated, D power 1.00 against strong skill) |
 | Q | knowing the event adds no probabilistic forecast skill beyond the shift (CRPSS +0.008 [−0.003, +0.014]), less than on ordinary days (+0.037) | CMIP6, 1,517 events, leave-one-model-out | established |
-| R | an imposed SSW triples the chance of a cold fortnight over northern Eurasia (0.10 → 0.32); the polar-cap shift through the ordinary relation predicts it (0.31), residual −0.10σ [−0.36, +0.06]; the label adds nothing. Europe has extra cooling, N America an unexplained warming | SNAPSI 36 pairs (9 centres); ERA5 39 events; 10 S2S systems, 17 events | established (preregistered); operational: N Eurasia colder than forecast, rank 0.39 vs 0.53, p 0.014 |
+| R | an imposed SSW raises the chance of a cold fortnight over northern Eurasia from 0.10 to 0.32 (0.26 without ECCC); the polar-cap shift through the ordinary relation predicts it (0.31; 0.27), residual −0.10σ [−0.36, +0.06]; the label adds nothing there (it does in mid-latitude N America, +0.29σ). Europe has extra cooling, N America an unexplained warming | SNAPSI 36 pairs (9 centres); ERA5 39 events; 10 S2S systems, 17 events | established (preregistered); operational: N Eurasia colder than forecast, rank 0.39 vs 0.53, p 0.014 |
 | L′ | paired label test: contrast identical with and without an SSW on the same pairs (−0.03σ [−0.12, +0.05]); threshold model exact in controls | SNAPSI, 25 pairs, 8 centres | established |
 
 **J is the headline.** It needs no correction of any kind, it answers the field's
@@ -806,7 +806,7 @@ centre-cluster bootstrap):**
 |---|---|---|---|---|---|
 | **NEURASIA** | **−0.85 [−1.40, −0.49]** | **−0.10 [−0.36, +0.06]** | 88% | 0.10 / 0.32 / 0.31 | −0.04 [−0.19, +0.09] |
 | HI_EUROPE | −0.87 [−1.22, −0.63] | −0.27 [−0.47, −0.14] | 69% | 0.10 / 0.32 / 0.26 | +0.14 [−0.03, +0.36] |
-| MID_EASIA | −0.52 [−0.80, −0.27] | −0.21 [−0.50, +0.03] | 60% | 0.10 / 0.27 / 0.20 | −0.10 [−0.23, +0.03] |
+| MID_EASIA | −0.51 [−0.80, −0.27] | −0.21 [−0.50, +0.03] | 60% | 0.10 / 0.27 / 0.20 | −0.10 [−0.23, +0.03] |
 | MID_NAMER | +0.49 [+0.37, +0.63] | +0.80 [+0.63, +1.04] | — | 0.10 / 0.08 / 0.18 | +0.29 [+0.06, +0.53] |
 
 Excluding ECCC (post-hoc, as in K): NEURASIA S_T −0.60, R +0.02 [−0.02, +0.07];
@@ -821,9 +821,12 @@ MID_EASIA −0.19 K, R +0.15 K, p 0.53; MID_NAMER +0.04 K, R +0.55 K (+0.27 sd),
 p 0.09. The null's 95% range is about ±0.7 K: residuals below ~0.27 sd are not
 detectable here. Label coefficients uninformative (intervals ±1.7 K).
 
-- Over northern Eurasia an imposed SSW triples the chance of a cold fortnight
-  (0.10 → 0.32), and the shift of the polar-cap circulation, acting through the
-  ordinary SSW-free relation, predicts it (0.31). The downward label adds nothing.
+- Over northern Eurasia an imposed SSW raises the chance of a cold fortnight
+  from 0.10 to 0.32 (0.26 without ECCC), and the shift of the polar-cap
+  circulation, acting through the ordinary SSW-free relation, predicts it (0.31;
+  0.27 without ECCC). The downward label adds nothing there; in mid-latitude
+  North America it does (+0.29σ [+0.06, +0.53]), where the polar-cap index does
+  not describe the response.
 - Regionally the polar-cap index is not the whole story: extra cooling over
   high-latitude Europe (−0.19 to −0.27σ) and a warming of mid-latitude North
   America that the NAM relation does not predict (+0.7 to +0.8σ; same sign in

@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-26T13:41:15+00:00",
+ "generated": "2026-09-29T05:46:17+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -1253,9 +1253,9 @@
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
    "title": "fig5_regional.py -- Figure 5: regional cold risk after an imposed SSW is the circulation shift acting through the ordinary relation.",
-   "loc": 121,
-   "modified": "2026-09-26 13:12",
-   "sha256_16": "6c7d34a4a4a917e3",
+   "loc": 124,
+   "modified": "2026-09-29 05:45",
+   "sha256_16": "6a86526237b3d598",
    "flags": [],
    "filenames_mentioned": [
     "era5_regional_test.json",
@@ -2107,7 +2107,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-09-26 10:22",
+   "modified": "2026-09-26 13:41",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
