@@ -43,6 +43,18 @@ SECOND VARIABLE: `--var t2m` (plan approved 2026-09-26, regional cold risk)
   or the mean of 00/06/12/18 UTC); anomalies are taken within each system.
   Retrieved by the packed path only, ECMWF included (hindcasts on the fly).
   Output: s2s_<origin>_t2m_regions.parquet (ECMWF: s2s_ecmf_t2m_regions.parquet)
+
+FURTHER VARIABLES (plan approved 2026-09-29: forecasts started AFTER onset, and
+pre-onset forecasts split by whether they predicted the SSW). Packed path only,
+all ten systems, ECMWF included; configuration in VARS:
+  --var msl_short   polar-cap msl at 00 UTC, lead days 1-9 (with the cached 10+,
+                    covers post-onset days +8..+25 for starts 0-7 d after onset)
+                    -> s2s_<tag>_psl_cap_short.parquet
+  --var t2m_short   daily-mean 2 m temperature, 24 h windows starting on lead days
+                    1-9, the four regions -> s2s_<tag>_t2m_regions_short.parquet
+  --var u10         zonal-mean zonal wind at 10 hPa on the 60N row (the
+                    Charlton-Polvani reversal index), 00 UTC, lead days 1-15
+                    -> s2s_<tag>_u10_60N.parquet
 """
 import hashlib
 import json
@@ -101,14 +113,19 @@ def model_dates():
 
 def request(md, origin="ecmwf", hm=None, hd=None, hyears=None, leads=None):
     hm, hd = hm or md.month, hd or md.day
-    if VAR == "t2m":
-        return {"origin": [origin], "year": [f"{md.year}"], "month": [f"{md.month:02d}"],
-                "day": [f"{md.day:02d}"], "time": ["00:00"], "hyear": hyears or HYEARS,
-                "hmonth": [f"{hm:02d}"], "hday": [f"{hd:02d}"],
-                "level_type": "single_level", "variable": ["2_m_temperature"],
-                "forecast_type": ["control_forecast", "perturbed_forecast"],
-                "leadtime_hour": [f"{24 * d}_{24 * (d + 1)}" for d in T2M_LEADS],
-                "data_format": "grib", "area": T2M_AREA}
+    if VAR != "msl":
+        c = VARS[VAR]
+        req = {"origin": [origin], "year": [f"{md.year}"], "month": [f"{md.month:02d}"],
+               "day": [f"{md.day:02d}"], "time": ["00:00"], "hyear": hyears or HYEARS,
+               "hmonth": [f"{hm:02d}"], "hday": [f"{hd:02d}"],
+               "level_type": c["level_type"], "variable": [c["variable"]],
+               "forecast_type": ["control_forecast", "perturbed_forecast"],
+               "leadtime_hour": ([f"{24 * d}_{24 * (d + 1)}" for d in c["leads"]] if c["window"]
+                                 else [str(24 * d) for d in c["leads"]]),
+               "data_format": "grib", "area": c["area"]}
+        if c["level"]:
+            req["level_value"] = [c["level"]]
+        return req
     return {"origin": [origin], "year": [f"{md.year}"], "month": [f"{md.month:02d}"],
             "day": [f"{md.day:02d}"], "time": ["00:00"], "hyear": hyears or HYEARS,
             "hmonth": [f"{hm:02d}"], "hday": [f"{hd:02d}"],
@@ -196,19 +213,44 @@ CENTRES = {
 }
 MULTI_LEAD_DAYS = list(range(10, 35))
 
+# Packed-path configuration per variable. "window": a 24 h-average field, requested
+# as "24k_24(k+1)", whose GRIB step is the window END (lead_day = step - 1).
+VARS = {
+    "msl": dict(variable="mean_sea_level_pressure", level_type="single_level", level=None,
+                leads=MULTI_LEAD_DAYS, window=False, area=AREA, reduce="cap",
+                cols=["psl_cap_N"], cache=CACHE, out="psl_cap", manifest="", lim=(95000, 106000)),
+    "t2m": dict(variable="2_m_temperature", level_type="single_level", level=None,
+                leads=T2M_LEADS, window=True, area=T2M_AREA, reduce="regions",
+                cols=list(T2M_REGIONS), cache=T2M_CACHE, out="t2m_regions", manifest="t2m_",
+                lim=(200, 310)),
+    "msl_short": dict(variable="mean_sea_level_pressure", level_type="single_level", level=None,
+                      leads=list(range(1, 10)), window=False, area=AREA, reduce="cap",
+                      cols=["psl_cap_N"], cache=HERE / "_s2s_reduced_short",
+                      out="psl_cap_short", manifest="short_", lim=(95000, 106000)),
+    "t2m_short": dict(variable="2_m_temperature", level_type="single_level", level=None,
+                      leads=list(range(1, 10)), window=True, area=T2M_AREA, reduce="regions",
+                      cols=list(T2M_REGIONS), cache=HERE / "_s2s_reduced_t2m_short",
+                      out="t2m_regions_short", manifest="t2m_short_", lim=(200, 310)),
+    "u10": dict(variable="u_component_of_wind", level_type="pressure", level="10_hpa",
+                leads=list(range(1, 16)), window=False, area=[60, -180, 60, 180], reduce="zonal",
+                cols=["u10_60N"], cache=HERE / "_s2s_reduced_u10", out="u10_60N",
+                manifest="u10_", lim=(-80, 120)),
+}
+
 
 def jobs(origin):
     """One job per (model date, hindcast month-day), all hindcast years, from the
     ECDS constraint service. For ECMWF this reproduces the original model dates."""
     p = client().get_process(DATASET)
     if origin == "ecmwf":
-        root = CACHE if VAR == "msl" else T2M_CACHE / "ecmwf"
+        root = CACHE if VAR == "msl" else VARS[VAR]["cache"] / "ecmwf"
         return [{"origin": "ecmwf", "md": md, "hm": md.month, "hd": md.day,
                  "hyears": HYEARS, "key": str(md.date()),
                  "cache": root / f"{md.date()}.parquet"} for md in model_dates()]
     cfg = CENTRES[origin]
-    q = {"origin": [origin], "year": [cfg["year"]],
-         "variable": ["mean_sea_level_pressure" if VAR == "msl" else "2_m_temperature"]}
+    q = {"origin": [origin], "year": [cfg["year"]], "variable": [VARS[VAR]["variable"]]}
+    if VARS[VAR]["level"]:
+        q.update(level_type=[VARS[VAR]["level_type"]], level_value=[VARS[VAR]["level"]])
     # constraint queries in parallel: one sequential query per (date, hindcast
     # date) took most of an hour when ECDS was returning 502s
     def days_of(m):
@@ -234,7 +276,7 @@ def jobs(origin):
         key = f"{cfg['year']}-{m}-{d}_h{hm}-{hd}"
         return {"origin": origin, "md": pd.Timestamp(f"{cfg['year']}-{m}-{d}"),
                 "hm": int(hm), "hd": int(hd), "hyears": sorted(hy), "key": key,
-                "cache": (CACHE if VAR == "msl" else T2M_CACHE) / origin / f"{key}.parquet"}
+                "cache": VARS[VAR]["cache"] / origin / f"{key}.parquet"}
 
     months = p.apply_constraints(q).get("month", [])
     with ThreadPoolExecutor(8) as ex:
@@ -328,15 +370,15 @@ def fetch(job):
 def main(origin="ecmwf"):
     CACHE.mkdir(exist_ok=True)
     js = jobs(origin)
-    if VAR == "t2m":
+    if VAR != "msl":
         missing = [j["key"] for j in js if not j["cache"].exists()]
         if missing:
-            print(f"{origin} t2m: {len(missing)} starts not cached; run --packed first")
+            print(f"{origin} {VAR}: {len(missing)} starts not cached; run --packed first")
             return 1
         tag = "ecmf" if origin == "ecmwf" else origin
         df = pd.concat([pd.read_parquet(j["cache"]) for j in js],
                        ignore_index=True).sort_values(["init", "member", "lead_day"])
-        out_path = HERE / f"s2s_{tag}_t2m_regions.parquet"
+        out_path = HERE / f"s2s_{tag}_{VARS[VAR]['out']}.parquet"
         df.to_parquet(out_path)
         print(f"{len(df):,} rows, {df['init'].nunique()} starts -> {out_path.name}")
         return 0
@@ -396,8 +438,9 @@ def packs(origin):
 
 def fetch_pack(item):
     origin, js = item
-    leads = MULTI_LEAD_DAYS if VAR == "msl" else T2M_LEADS
-    col = "psl_cap_N" if VAR == "msl" else list(T2M_REGIONS)
+    cfgv = VARS[VAR]
+    leads = cfgv["leads"]
+    col = "psl_cap_N" if VAR == "msl" else cfgv["cols"]
     req = request(js[0]["md"], origin, js[0]["hm"], js[0]["hd"],
                   sorted({h for j in js for h in j["hyears"]}), leads)
     req["day"] = sorted({f"{j['md'].day:02d}" for j in js})
@@ -424,25 +467,32 @@ def fetch_pack(item):
         for dtype, member_of in (("cf", None), ("pf", "number")):
             ds = xr.open_dataset(str(g), engine="cfgrib",
                                  backend_kwargs={"indexpath": "", "filter_by_keys": {"dataType": dtype}})
-            if VAR == "msl":
-                c = E.cap(ds[list(ds.data_vars)[0]], north=True)
-                df = c.to_dataframe(name="psl_cap_N").reset_index()
-            else:
-                df = regions_mean(ds[list(ds.data_vars)[0]]).to_dataframe().reset_index()
+            v = ds[list(ds.data_vars)[0]]
+            if cfgv["reduce"] == "cap":
+                df = E.cap(v, north=True).to_dataframe(name="psl_cap_N").reset_index()
+            elif cfgv["reduce"] == "regions":
+                df = regions_mean(v).to_dataframe().reset_index()
+            else:                                     # zonal mean on the 60N row
+                if not np.allclose(v["latitude"].values, 60.0):
+                    raise ValueError(f"{origin}: u10 latitudes {v['latitude'].values}")
+                df = v.mean([d for d in ("latitude", "longitude") if d in v.dims]).to_dataframe(
+                    name="u10_60N").reset_index()
             df["member"] = 0 if member_of is None else df["number"].astype(int)
             frames.append(df); ds.close()
     df = pd.concat(frames, ignore_index=True)
     df["init"] = pd.to_datetime(df["time"])
     df["lead_day"] = (pd.to_timedelta(df["step"]) / pd.Timedelta(days=1)).round().astype(int)
-    if VAR == "t2m":
-        # an averaged field carries the window END as its step: "240_264" -> 11 d.
-        # lead_day is the window START; the requested set must come back exactly
-        df["lead_day"] -= 1
-        if set(df["lead_day"]) != set(T2M_LEADS):
+    if VAR != "msl":
+        if cfgv["window"]:
+            # an averaged field carries the window END as its step: "240_264" -> 11 d.
+            # lead_day is the window START
+            df["lead_day"] -= 1
+        if set(df["lead_day"]) != set(leads):     # the requested set must come back exactly
             raise ValueError(f"{origin}: lead days {sorted(set(df['lead_day']))[:4]}... "
-                             f"!= requested windows {T2M_LEADS[0]}..{T2M_LEADS[-1]}")
-        if not df[col].stack().between(200, 310).all():
-            raise ValueError(f"{origin}: regional 2 m temperature outside 200-310 K")
+                             f"!= requested {leads[0]}..{leads[-1]}")
+        lo, hi = cfgv["lim"]
+        if not df[col].stack().between(lo, hi).all():
+            raise ValueError(f"{origin}: {VAR} outside {lo}-{hi}")
     df["valid"] = df["init"] + pd.to_timedelta(df["lead_day"], unit="D")
     if VAR == "msl" and not df["psl_cap_N"].between(95000, 106000).all():
         raise ValueError(f"{origin}: cap mean outside 950-1060 hPa")
@@ -475,8 +525,7 @@ def main_packed(origins):
             origin, js = futs[fu]
             try:
                 _, done, meta = fu.result()
-                mp_ = HERE / (f"s2s_manifest_{origin}.json" if VAR == "msl"
-                              else f"s2s_manifest_t2m_{origin}.json")
+                mp_ = HERE / f"s2s_manifest_{VARS[VAR]['manifest']}{origin}.json"
                 man = json.loads(mp_.read_text()) if mp_.exists() else {}
                 man["packed:" + "+".join(done)] = meta
                 mp_.write_text(json.dumps(man, indent=2, sort_keys=True), newline="\n")
@@ -493,7 +542,7 @@ if __name__ == "__main__":
         i = sys.argv.index("--var")
         VAR = sys.argv[i + 1]
         del sys.argv[i:i + 2]
-        assert VAR in ("msl", "t2m"), VAR
+        assert VAR in VARS, VAR
     if len(sys.argv) > 2 and sys.argv[1] == "--packed":
         sys.exit(main_packed(sys.argv[2:]))
     sys.exit(main(sys.argv[1] if len(sys.argv) > 1 else "ecmwf"))
