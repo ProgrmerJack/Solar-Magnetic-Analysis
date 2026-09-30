@@ -207,3 +207,23 @@ Rule: reviewers of registered-but-unrun tests use synthetic data only; any chang
 Tried: stating the forced-variance falsifier "even at the uncorrected upper bound", following the script's own label for that arm.
 Failed: in observations the placebo correction is noisy and its upper bound is WIDER (s_f 0.681 vs 0.596), so the observed contrast is 1.6x, not 1.8x, the widest ceiling. Found by fact-check.
 Rule: when two bounds exist, report against the wider one; never assume a correction narrows an interval.
+
+## 2026-09-30 — ECDS "cost limits exceeded" for large packed requests
+Tried: packing all odd-day starts of a month (16 dates x 20 hindcast years x 11 members x 25 leads = 88,000 fields) for ECMWF model year 2025.
+Failed: ECDS returned 403 "cost limits exceeded ... Your request is too large"; packs of about 47,000 fields had succeeded before.
+Rule: cap packed requests (MAX_PACK_DATES = 6 in acquire_s2s_reforecasts.py) and check the field count before submitting.
+
+## 2026-09-30 — Subsampling 43 events from a model with 53-152 events understates variability
+Tried: per-model compatibility of the observed statistics with 2,000 draws of 43 events without replacement from each CMIP6 model (obs_model_compatibility.py, as registered).
+Failed: with 53-100 events the draws overlap almost completely, so their spread is far narrower than a 43-event record's sampling spread and p values collapse toward 0 (combined p 0.0 for four models) as an artefact.
+Rule: resample from a population at least several times the sample size, or bootstrap the model's events; never read finite-population subsample spread as sampling spread.
+
+## 2026-09-30 — A KS test with an estimated shift has almost no size or power at n = 43
+Tried: reading the observed pure-shift KS p = 0.37 (43 events) as evidence for a pure translation.
+Failed: in the perfect-model check the same test, run on 43-event draws from each CMIP6 model, rejected in 0.0-0.1% of draws even where the full population's variance ratio is 1.27; estimating the shift from the data makes it conservative.
+Rule: at small n do not cite a non-rejecting KS as support for a distributional claim; rely on tests with demonstrated power (variance ratio, large-n KS).
+
+## 2026-09-30 — A shifted null whose shift is measured on the tested events cannot reject
+Tried: testing whether SSW downward rates match event-free dates displaced by the SSWs' measured shift, with the spread of shifted sets as reference (criterion_sweep S1/S2 as registered; the Fig. 1b interval).
+Failed: the events match the null's mean by construction while each reference set does not, so z is compressed (s.d. ~0.65) and the test never rejected in 200 null simulations. Found by code review.
+Rule: calibrate by replaying the whole procedure (shift re-estimated) on sets that play the events; report power against a planted alternative.

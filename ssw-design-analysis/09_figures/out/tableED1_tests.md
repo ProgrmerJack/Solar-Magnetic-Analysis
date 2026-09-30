@@ -25,3 +25,18 @@
 | T2-d | hit minus miss rank (polar cap) | secondary (revision) | as T2 | 57019f6, a201458 | 0.0028 [-0.0473, 0.0529] |  |  |
 | G1 | split minus displaced surface response (ERA5) | secondary (revision) | committed before data | 57019f6 | -0.245 | 0.2768 |  |
 | Q-P3 | CRPS skill with post-onset stratosphere: after SSWs vs ordinary days | sensitivity | post hoc | this revision | 0.1717 vs 0.2068 | 1.0 |  |
+| T-a1 | criterion sweep, 54 surface versions: max abs z of SSW rate vs shifted null | robustness (revision 2) | committed before run | 4c8b3f2 | max abs z 1.154 | 0.965 |  |
+| T-a2 | criterion sweep, 54 surface versions: systematic excess (mean z) | robustness (revision 2) | committed before run | 4c8b3f2 | mean z -0.036 | 0.4975 |  |
+| T-a1-cal | criterion sweep, surface versions: max abs z, calibrated reference | robustness (revision 2) | post hoc calibration of a registered test | this revision | max abs z 1.154 | 0.845 |  |
+| T-a2-cal | criterion sweep, surface versions: mean z, calibrated reference (two-sided) | robustness (revision 2) | post hoc calibration of a registered test | this revision | mean z -0.036 | 0.96 |  |
+| T-b | observed statistics within 43-event CMIP6 draws (min-p combination) | robustness (revision 2) | committed before run | 4c8b3f2 | min p 0.222 | 0.623 |  |
+| T-c | identification audit: contrast / ceiling at SNAPSI-bounded damping (obs; CMIP6) | robustness (revision 2) | committed before run | 4c8b3f2 | 1.381; 1.671 |  |  |
+| T-d | two regimes beat continuous model after SSWs vs ordinary days (CRPS) | robustness (revision 2) | committed before run | 4c8b3f2 | G 0.00124 vs -0.0023 | 0.01 |  |
+| T-d-PH | two regimes vs one skewed population, after SSWs vs ordinary days | sensitivity | post hoc | this revision | G 0.00109 | 0.02 |  |
+| T-d-PH2 | two regimes vs continuous, calibrated on no-regime synthetic data | sensitivity | post hoc | this revision | G 0.00124 | 0.02 |  |
+| T-d-PH4 | two-regime model skill over the shift: after SSWs vs ordinary days | sensitivity | post hoc | this revision | 0.0112 vs 0.0309 | 0.015 |  |
+| T-d-PH3 | two-regime components after SSWs: mean separation (ordinary days) | descriptive | post hoc | this revision | 0.4937 (0.7142) |  |  |
+| HO1 | held-out 2023-24 SSWs: polar-cap rank deficit | replication (revision 2) | committed before data | 4c8b3f2 | pending |  |  |
+| HO2 | held-out 2023-24 SSWs: N-Eurasian temperature rank deficit | replication (revision 2) | committed before data | 4c8b3f2 | pending |  |  |
+| L1 | 100 hPa polar-cap height rank after SSWs | diagnostic (revision 2) | committed before data | 4c8b3f2 | pending |  |  |
+| L2 | surface rank conditional on forecast 100 hPa anomaly | diagnostic (revision 2) | committed before data | 4c8b3f2 | pending |  |  |

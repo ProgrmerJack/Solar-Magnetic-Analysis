@@ -106,21 +106,50 @@ OUT_Z100 = HERE / "era5_z100_cap_00utc.parquet"
 
 
 def main_z100():
-    ds = xr.open_zarr(STORE, storage_options={"token": "anon"})
-    v = ds["geopotential"].sel(level=100)
+    """Chunk-aligned parallel reads (the store's chunks hold 8 time steps x 13
+    levels; a single sequential read stalled for over an hour, 2026-09-30), each
+    with a timeout and retries."""
+    import concurrent.futures as cf
+    ds = xr.open_zarr(STORE, chunks=None, storage_options={"token": "anon"})
+    v = ds["geopotential"]
     if v.attrs.get("units") != "m**2 s**-2":
         raise ValueError(f"unexpected units {v.attrs.get('units')!r}")
-    frames = []
+    li = int(np.flatnonzero(ds.level.values == 100)[0])
+    tt = pd.DatetimeIndex(ds.time.values)
+    want = np.zeros(len(tt), bool)
     for a, b in PERIODS[:-1]:                       # NH winters only
-        s = v.sel(time=slice(a, b))
-        s = s.sel(time=s.time.dt.hour == 0).load() / G0
-        frames.append(pd.DataFrame({"time": s.time.values, "z100_cap_N": cap(s, True).values}))
-        print(f"  {a} .. {b}: {len(s.time)} days", flush=True)
+        want |= (tt >= pd.Timestamp(a)) & (tt <= pd.Timestamp(b)) & (tt.hour == 0)
+    blocks = sorted(set(np.flatnonzero(want) // 8))
+
+    def read(k):
+        sub = v.isel(time=slice(8 * k, 8 * k + 8), level=li)
+        keep = want[8 * k: 8 * k + 8]
+        x = sub.isel(time=np.flatnonzero(keep)).load() / G0
+        return pd.DataFrame({"time": x.time.values, "z100_cap_N": cap(x, True).values})
+
+    frames, todo = [], list(blocks)
+    for attempt in range(5):
+        failed = []
+        with cf.ThreadPoolExecutor(16) as ex:
+            futs = {ex.submit(read, k): k for k in todo}
+            for f in cf.as_completed(futs):
+                try:
+                    frames.append(f.result(timeout=300))
+                except Exception:
+                    failed.append(futs[f])
+        print(f"  pass {attempt + 1}: {len(todo) - len(failed)} of {len(todo)} blocks", flush=True)
+        if not failed:
+            break
+        todo = failed
+    if failed:
+        raise IOError(f"{len(failed)} blocks failed")
     out = pd.concat(frames, ignore_index=True).sort_values("time", ignore_index=True)
     if out["time"].duplicated().any() or out["z100_cap_N"].isna().any():
         raise ValueError("duplicate or missing 100 hPa cap values")
     if not out["z100_cap_N"].between(14000, 18000).all():
         raise ValueError("100 hPa cap height outside 14-18 km")
+    if len(out) != int(want.sum()):
+        raise ValueError(f"{len(out)} rows for {int(want.sum())} wanted days")
     out.to_parquet(OUT_Z100)
     print(f"{len(out):,} rows -> {OUT_Z100.name}")
 

@@ -945,6 +945,94 @@ strength or persistence of the predicted warming, so "forecast warming too weak"
 and "coupling too weak" cannot be separated here. Neither pre-stated reading
 matched exactly (T2-hit low but T1 not significant); reported as found.
 
+### T — second revision round, 2026-09-30 (plans approved 2026-09-30; designs committed in `4c8b3f2` before runs/data)
+
+**T-a Criterion sweep (`criterion_sweep.py`, 9_literature).** 108 versions of the
+criterion in ERA5 (39 events; window end 25/35/52 d, 1000/850 hPa, mean below
+0/−0.25/−0.5σ, >50/60/70% of days negative, 150 hPa condition off/on) against
+event-free dates displaced by each version's own measured shift (400 sets).
+Conditions 1–2 (primary, 54 versions): max|z| 1.15, **p 0.965**; mean z −0.04,
+p(excess) 0.50; **no version outside its shifted-null 95% interval**; event-free
+dates reproduce **76–117%** of the class contrast (median 94%). With the 150 hPa
+condition (54): p 0.87 / 0.48; 89–154%. Published version: 53.8% observed against
+54.1% [38.5, 69.3] shifted (share of contrast reproduced 95.7% in this run's 400
+sets). CMIP6 (1,517 events, 27 versions, conditions 1–2, 20 sets): p 0.50 / 0.85.
+**Registered reference too lenient (code review):** the events' shift is measured
+on them, so under the null the test never rejects (0/200 simulated). **Calibrated
+(post hoc, 200 replays of the whole procedure): surface versions p 0.845 (max|z|),
+0.96 (mean z); with condition 3, 0.745 / 0.995. Power against a planted two-class
+structure (2/3 at −0.6σ, 1/3 at +1.2σ beyond the shift): 0.815 (max|z|), 0.51 (mean
+z); with condition 3, 0.37 / 0.10.** Per-version 95% intervals are uninformative
+(0.2% of versions outside under the null); the Fig. 1b interval has the same
+construction (a consistency check, not a sized test). CMIP6 arm not recalibrated.
+**No version of the criterion separates SSWs from one shifted population.**
+
+**T-b Observations vs CMIP6 (`obs_model_compatibility.py`, 6_predictability).**
+Observed statistics (43 events, CPC AO days 8–52): KS 0.133, variance ratio 0.96,
+shift −0.81 s.d., conditions-1–2 rate 0.72, contrast share 0.95. Against 10,000
+43-event draws from all CMIP6 events: two-sided p 0.22 (KS), 0.40 (variance
+ratio), 0.59 (shift), 1.00 (rate), 0.74 (share); **combined p 0.62: the observed
+record is a typical CMIP6 draw on every statistic** (compatibility, which is weaker
+than exchangeability). **Per-model draws are INVALID as registered** for models
+with 53–152 events: drawing 43 of 59 events without replacement leaves almost no
+spread, so p collapses toward 0 as an artefact (FAILURES 2026-09-30); only CanESM5
+(683 events: combined p 0.64) is interpretable. Model shifts genuinely differ
+(full-population −1.02 to +0.10 s.d.; NorESM2-LM, 53 events, is the one positive); the observed −0.81 is inside that range.
+**Perfect model** (each model as truth, 1,000 draws of 43): the pure-shift KS test
+rejects in **0.0–0.1%** of draws (nominal 5%) even where the model's full
+population has variance ratio 1.27 — **at n = 43 the KS test has almost no size or
+power; the observed KS p = 0.37 must not be cited as support.** The two-thirds
+test's error rate is 0.0–1.4% (conservative); the variance-ratio interval covers
+the model's value in 91–100% of draws. Registered pass rule failed in every model
+only through PM1/PM2 being below 1% (conservative, not liberal).
+
+**T-c Forced-variance identification audit (`forced_variance_ceiling.py` C4).**
+Earlier numbers reproduced exactly (separate seeded stream). C4a (1,000 synthetic
+data sets per cell, real pseudo-event pairs): with the assumption true, the
+placebo-corrected upper bound covers the true s_f in 0.945–0.975; the uncorrected
+bound in 0.956–0.973 (CMIP6) but **0.896–0.898 in observations, just under the
+pre-set 0.90** (slightly liberal; the falsifier uses the wider, corrected bound).
+Forcing tied to the pre-onset state (corr(pre, post) 0.07 obs, 0.12 CMIP6) barely
+matters; damping (λ² 0.873) and forcing anti-correlated with the concurrent
+internal anomaly destroy coverage, as expected. C4b, damping at the SNAPSI lower
+bound λ² = 0.873: s_f ≤ 0.78 (obs) / 0.42 (CMIP6); **contrast/ceiling 1.38 (obs),
+1.67 (CMIP6)** — still above 1; forced share of one label's variance **22% (obs),
+18% (CMIP6)** (below the pre-set 25%); forced P ranges 0.26–0.99 / 0.30–0.98.
+C4c tipping: through the pre-onset state unreachable (ρ* −4.1 obs, −3.2 CMIP6);
+**through the concurrent internal anomaly reachable at ρ* −0.30 (obs) / −0.40
+(CMIP6), −0.26 / −0.36 together with the SNAPSI-bounded damping** (the
+concurrent case and the combined case are not in the registered design; the
+combined case was added after review) — a dependence that neither observations nor these models can test
+(within a SNAPSI ensemble the forcing is identical, so it cannot vary). Reading:
+the falsifier survives the audit but is weaker than stated: forced differences can
+produce at most ~60–72% of the contrast, and up to ~20% of a label, under the worst
+damping SNAPSI allows; it fails only if forcing anti-correlates with concurrent
+internal variability at |ρ| ≥ 0.3.
+
+**T-d Shift vs continuous vs two regimes (`class_model_comparison.py`, 6_predictability).**
+CMIP6, 1,517 events, leave-one-model-out, predictors up to onset. CRPS: M0 shift
+0.4093, M1 continuous (mean and log-spread linear in predictors) 0.4059, **M2 two
+regimes with state-dependent membership 0.4047**, M2b state-blind two populations
+0.4092. **Registered test: M2 beats M1 after SSWs by more than on ordinary days —
+G = +0.0012 against 200 event-free sets' −0.0023 [−0.0053, +0.0003], p 0.01
+(ignorance p 0.01). By the pre-set reading this SUPPORTS more than a pure shift.**
+M2b vs M0: p 0.18 (no evidence of two populations irrespective of state). The
+registered test's own controls: planted regimes (2:1, 1 s.d. apart) detected in
+29–33%; **no-regime synthetic data exceed the event-free 95th percentile in 13–15%
+(miscalibrated)**. POST HOC (added after seeing the result, labelled): a skewed
+one-population model (M1 + constant skew-normal shape) barely improves on M1
+(0.00015) and M2 still beats it beyond ordinary days (p 0.02 CRPS, 0.005 ign);
+calibrated against the negative controls themselves, p 0.02 (CRPS) / 0.00 (ign).
+**What M2 finds after SSWs: components 0.49 s.d. apart in mean with spreads 0.58
+and 0.72 — CLOSER in mean than the same fit finds on ordinary days (0.71 [0.58,
+0.84]), different mainly in spread**; membership s.d. 0.32 (ordinary 0.26 [0.22,
+0.31]); response skew −0.25 (ordinary −0.16 [−0.26, −0.06]). Gain 0.3% of CRPS.
+Reading: the response after an SSW has a state-dependent SHAPE (spread) that a
+linear log-spread model misses; it is not a separation into two kinds of mean
+response, and its forecast value is negligible. SNAPSI arm: mixture gain lower
+with the SSW imposed (−0.029 [−0.043, −0.014]) but the planted-mixture positive
+control was detected in 0% — the arm has no power and is not evidence either way.
+
 ## 4. Prior art — verified from source, all must be cited
 
 1. **Karpechko et al. (2017)**, QJRMS 143, 1459, doi 10.1002/qj.3017 — the

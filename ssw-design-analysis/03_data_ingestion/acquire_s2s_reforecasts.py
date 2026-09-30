@@ -450,6 +450,11 @@ def main(origin="ecmwf"):
 # month; the result is split back into the per-start cache files above, and each
 # start is checked for completeness on its own.
 QUEUE_SLOTS = 4
+# ECDS refuses requests above a cost limit ("cost limits exceeded ... Your request
+# is too large", 2026-09-30: ECMWF model year 2025 packs of 16 odd-day starts x 20
+# hindcast years x 11 members x 25 leads). Packs are split to at most this many
+# start dates (6 x 20 x 11 x 25 = 33,000 fields, below the sizes that succeeded).
+MAX_PACK_DATES = 6
 
 
 def packs(origin):
@@ -460,7 +465,8 @@ def packs(origin):
         cfg = CENTRES.get(origin, {"kind": "otf"})         # ECMWF: on the fly
         k = (j["md"].month, j["hm"]) if cfg["kind"] == "otf" else (j["md"], j["hm"])
         out.setdefault(k, []).append(j)
-    return [(origin, v) for v in out.values()]
+    return [(origin, v[i:i + MAX_PACK_DATES]) for v in out.values()
+            for i in range(0, len(v), MAX_PACK_DATES)]
 
 
 def fetch_pack(item):

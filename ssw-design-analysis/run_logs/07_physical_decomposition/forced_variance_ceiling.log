@@ -1,5 +1,3 @@
-<frozen site>:101: RuntimeWarning: Unexpected value in sys.prefix, expected /home/xola/Solar-Magnetic-Analysis/.venv, got /home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/../.venv
-<frozen site>:101: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/xola/Solar-Magnetic-Analysis/.venv, got /home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/../.venv
 estimator agreement with selection_on_outcome.per_event: max|diff| = 4.44e-16 on 43 events
 
 ==========================================================================
@@ -54,4 +52,80 @@ loading CMIP6 ensemble ...
   Karpechko conditions 1-2, CMIP6 annular mode        0.70   1.154   0.567    2.0x  YES
   placebo-CORRECTED ceiling at q=0.5, upper 95% = 0.429 sigma
 
+==========================================================================
+=== C4 IDENTIFICATION AUDIT (SNAPSI lower variance ratio 0.8732) ===
+  observations: n=43, corr(pre,post) +0.074
+    C4a A_sf0.0                      raw +0.0002 cor -0.0035 (true 0.000) coverage raw 1.000 cor 1.000
+    C4a A_sf0.2                      raw +0.0297 cor +0.0205 (true 0.040) coverage raw 0.896 cor 0.954
+    C4a A_sf0.4                      raw +0.1493 cor +0.1480 (true 0.160) coverage raw 0.898 cor 0.945
+    C4a B_rho-0.50_sf0.0             raw -0.0017 cor -0.0082 (true 0.000) coverage raw 1.000 cor 1.000
+    C4a B_rho-0.50_sf0.2             raw +0.0237 cor +0.0300 (true 0.040) coverage raw 0.908 cor 0.965
+    C4a B_rho-0.50_sf0.4             raw +0.1361 cor +0.1378 (true 0.160) coverage raw 0.903 cor 0.947
+    C4a B_rho-0.25_sf0.0             raw -0.0076 cor -0.0056 (true 0.000) coverage raw 1.000 cor 1.000
+    C4a B_rho-0.25_sf0.2             raw +0.0470 cor +0.0504 (true 0.040) coverage raw 0.910 cor 0.953
+    C4a B_rho-0.25_sf0.4             raw +0.1491 cor +0.1539 (true 0.160) coverage raw 0.896 cor 0.948
+    C4a B_rho+0.25_sf0.0             raw -0.0137 cor -0.0099 (true 0.000) coverage raw 1.000 cor 1.000
+    C4a B_rho+0.25_sf0.2             raw +0.0397 cor +0.0440 (true 0.040) coverage raw 0.907 cor 0.958
+    C4a B_rho+0.25_sf0.4             raw +0.1714 cor +0.1737 (true 0.160) coverage raw 0.909 cor 0.954
+    C4a B_rho+0.50_sf0.0             raw -0.0114 cor -0.0115 (true 0.000) coverage raw 1.000 cor 1.000
+    C4a B_rho+0.50_sf0.2             raw +0.0829 cor +0.0886 (true 0.040) coverage raw 0.927 cor 0.972
+    C4a B_rho+0.50_sf0.4             raw +0.1893 cor +0.1833 (true 0.160) coverage raw 0.914 cor 0.944
+    C4a Bpost_rho-0.50_sf0.0         raw +0.0025 cor +0.0074 (true 0.000) coverage raw 1.000 cor 1.000
+    C4a Bpost_rho-0.50_sf0.2         raw -0.1748 cor -0.1586 (true 0.040) coverage raw 0.703 cor 0.858
+    C4a Bpost_rho-0.50_sf0.4         raw -0.2751 cor -0.2701 (true 0.160) coverage raw 0.352 cor 0.650
+    C4a Bpost_rho-0.25_sf0.0         raw +0.0097 cor +0.0149 (true 0.000) coverage raw 1.000 cor 1.000
+    C4a Bpost_rho-0.25_sf0.2         raw -0.0616 cor -0.0482 (true 0.040) coverage raw 0.846 cor 0.930
+    C4a Bpost_rho-0.25_sf0.4         raw -0.0387 cor -0.0315 (true 0.160) coverage raw 0.753 cor 0.886
+    C4a Bpost_rho+0.25_sf0.0         raw -0.0099 cor -0.0066 (true 0.000) coverage raw 1.000 cor 1.000
+    C4a Bpost_rho+0.25_sf0.2         raw +0.1417 cor +0.1445 (true 0.040) coverage raw 0.960 cor 0.980
+    C4a Bpost_rho+0.25_sf0.4         raw +0.3654 cor +0.3494 (true 0.160) coverage raw 0.971 cor 0.982
+    C4a Bpost_rho+0.50_sf0.0         raw -0.0011 cor -0.0031 (true 0.000) coverage raw 1.000 cor 1.000
+    C4a Bpost_rho+0.50_sf0.2         raw +0.2663 cor +0.2576 (true 0.040) coverage raw 0.981 cor 0.987
+    C4a Bpost_rho+0.50_sf0.4         raw +0.6020 cor +0.6020 (true 0.160) coverage raw 0.992 cor 0.995
+    C4a C_lambda2_0.873_sf0.0        raw -0.1612 cor -0.1630 (true 0.000) coverage raw 1.000 cor 1.000
+    C4a C_lambda2_0.873_sf0.2        raw -0.1016 cor -0.0978 (true 0.040) coverage raw 0.790 cor 0.914
+    C4a C_lambda2_0.873_sf0.4        raw +0.0173 cor +0.0232 (true 0.160) coverage raw 0.799 cor 0.895
+    C4a C_lambda2_0.95_sf0.0         raw -0.0761 cor -0.0735 (true 0.000) coverage raw 1.000 cor 1.000
+    C4a C_lambda2_0.95_sf0.2         raw -0.0103 cor -0.0187 (true 0.040) coverage raw 0.890 cor 0.936
+    C4a C_lambda2_0.95_sf0.4         raw +0.1123 cor +0.1116 (true 0.160) coverage raw 0.880 cor 0.942
+    C4b worst case: s_f 0.780, ceiling 1.290, contrast/ceiling 1.381, label share 0.223, P range [0.262, 0.992]
+    C4c tipping: {'s_f_needed': 1.0771, 'lambda2_damped_case': 0.8732, 'B_pre_state': {'r': 0.0737, 'rho_star': -4.106, 'reachable': False, 'rho_star_with_damping': -3.482, 'reachable_with_damping': False}, 'Bpost_concurrent': {'r': 1.0, 'rho_star': -0.303, 'reachable': True, 'rho_star_with_damping': -0.257, 'reachable_with_damping': True}}
+  cmip6: n=1517, corr(pre,post) +0.124
+    C4a A_sf0.0                      raw -0.0001 cor -0.0003 (true 0.000) coverage raw 1.000 cor 1.000
+    C4a A_sf0.2                      raw +0.0411 cor +0.0411 (true 0.040) coverage raw 0.973 cor 0.975
+    C4a A_sf0.4                      raw +0.1611 cor +0.1610 (true 0.160) coverage raw 0.956 cor 0.967
+    C4a B_rho-0.50_sf0.0             raw -0.0007 cor -0.0003 (true 0.000) coverage raw 1.000 cor 1.000
+    C4a B_rho-0.50_sf0.2             raw +0.0234 cor +0.0228 (true 0.040) coverage raw 0.810 cor 0.895
+    C4a B_rho-0.50_sf0.4             raw +0.1267 cor +0.1259 (true 0.160) coverage raw 0.625 cor 0.734
+    C4a B_rho-0.25_sf0.0             raw +0.0001 cor +0.0003 (true 0.000) coverage raw 1.000 cor 1.000
+    C4a B_rho-0.25_sf0.2             raw +0.0318 cor +0.0332 (true 0.040) coverage raw 0.901 cor 0.940
+    C4a B_rho-0.25_sf0.4             raw +0.1447 cor +0.1450 (true 0.160) coverage raw 0.871 cor 0.911
+    C4a B_rho+0.25_sf0.0             raw +0.0004 cor -0.0000 (true 0.000) coverage raw 1.000 cor 1.000
+    C4a B_rho+0.25_sf0.2             raw +0.0489 cor +0.0490 (true 0.040) coverage raw 0.991 cor 0.982
+    C4a B_rho+0.25_sf0.4             raw +0.1769 cor +0.1758 (true 0.160) coverage raw 0.996 cor 0.990
+    C4a B_rho+0.50_sf0.0             raw +0.0007 cor +0.0010 (true 0.000) coverage raw 1.000 cor 1.000
+    C4a B_rho+0.50_sf0.2             raw +0.0568 cor +0.0575 (true 0.040) coverage raw 0.997 cor 0.996
+    C4a B_rho+0.50_sf0.4             raw +0.1912 cor +0.1922 (true 0.160) coverage raw 0.999 cor 0.999
+    C4a Bpost_rho-0.50_sf0.0         raw +0.0000 cor +0.0006 (true 0.000) coverage raw 1.000 cor 1.000
+    C4a Bpost_rho-0.50_sf0.2         raw -0.0934 cor -0.0938 (true 0.040) coverage raw 0.000 cor 0.000
+    C4a Bpost_rho-0.50_sf0.4         raw -0.1074 cor -0.1064 (true 0.160) coverage raw 0.000 cor 0.000
+    C4a Bpost_rho-0.25_sf0.0         raw -0.0008 cor -0.0004 (true 0.000) coverage raw 1.000 cor 1.000
+    C4a Bpost_rho-0.25_sf0.2         raw -0.0275 cor -0.0274 (true 0.040) coverage raw 0.011 cor 0.160
+    C4a Bpost_rho-0.25_sf0.4         raw +0.0257 cor +0.0257 (true 0.160) coverage raw 0.000 cor 0.001
+    C4a Bpost_rho+0.25_sf0.0         raw -0.0003 cor +0.0002 (true 0.000) coverage raw 1.000 cor 1.000
+    C4a Bpost_rho+0.25_sf0.2         raw +0.1076 cor +0.1068 (true 0.040) coverage raw 1.000 cor 1.000
+    C4a Bpost_rho+0.25_sf0.4         raw +0.2958 cor +0.2959 (true 0.160) coverage raw 1.000 cor 1.000
+    C4a Bpost_rho+0.50_sf0.0         raw +0.0001 cor +0.0009 (true 0.000) coverage raw 1.000 cor 1.000
+    C4a Bpost_rho+0.50_sf0.2         raw +0.1725 cor +0.1720 (true 0.040) coverage raw 1.000 cor 1.000
+    C4a Bpost_rho+0.50_sf0.4         raw +0.4264 cor +0.4264 (true 0.160) coverage raw 1.000 cor 1.000
+    C4a C_lambda2_0.873_sf0.0        raw -0.0573 cor -0.0576 (true 0.000) coverage raw 1.000 cor 1.000
+    C4a C_lambda2_0.873_sf0.2        raw -0.0163 cor -0.0165 (true 0.040) coverage raw 0.059 cor 0.307
+    C4a C_lambda2_0.873_sf0.4        raw +0.1023 cor +0.1022 (true 0.160) coverage raw 0.178 cor 0.396
+    C4a C_lambda2_0.95_sf0.0         raw -0.0220 cor -0.0219 (true 0.000) coverage raw 1.000 cor 1.000
+    C4a C_lambda2_0.95_sf0.2         raw +0.0179 cor +0.0182 (true 0.040) coverage raw 0.712 cor 0.843
+    C4a C_lambda2_0.95_sf0.4         raw +0.1367 cor +0.1370 (true 0.160) coverage raw 0.754 cor 0.835
+    C4b worst case: s_f 0.416, ceiling 0.691, contrast/ceiling 1.671, label share 0.180, P range [0.295, 0.981]
+    C4c tipping: {'s_f_needed': 0.6958, 'lambda2_damped_case': 0.8732, 'B_pre_state': {'r': 0.1237, 'rho_star': -3.191, 'reachable': False, 'rho_star_with_damping': -2.888, 'reachable_with_damping': False}, 'Bpost_concurrent': {'r': 1.0, 'rho_star': -0.395, 'reachable': True, 'rho_star_with_damping': -0.357, 'reachable_with_damping': True}}
+
 Saved -> forced_variance_ceiling.json
+exit=0
