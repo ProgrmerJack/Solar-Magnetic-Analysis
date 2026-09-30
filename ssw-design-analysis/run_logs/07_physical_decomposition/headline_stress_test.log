@@ -1,0 +1,52 @@
+building real and PSEUDO event tables from CMIP6 ...
+real events 1,517 | pseudo-events 9,101
+
+============================================================================
+=== ATTACK 1: is the P3 gain mediation, or structural covariance? ===
+  If P3 scores ~0.42 on PSEUDO-events (no SSW, no mediation possible),
+  the skill is structural. If it collapses, it is real mediation.
+
+  tier                                  real    pseudo  reading
+  --------------------------------------------------------------------
+  P1 pre-onset                       +0.0839   +0.0626  structural
+  P2 at-onset                        +0.0917   +0.0743  structural
+  P3 + post-onset stratosphere       +0.4073   +0.3633  structural
+
+============================================================================
+=== ATTACK 2: does R^2 scale with a model's coupling strength? ===
+  If yes, 0.115 is a FLOOR and must be extrapolated to the real
+  atmosphere, which couples ~1.74x more strongly than CanESM5.
+
+  member                        coupling    CV R^2
+  --------------------------------------------------
+  CESM2-FV2_r1i1p1f1_zm           -0.655   -0.0582
+  CanESM5_r10i1p1f1_zm            -0.656   -0.0198
+  CanESM5_r10i1p2f1_zm            -0.816   -0.0260
+  CanESM5_r11i1p1f1_zm            -0.636   +0.0621
+  CanESM5_r12i1p1f1_zm            -0.519   -0.1028
+  CanESM5_r13i1p1f1_zm            -0.675   +0.0755
+  CanESM5_r15i1p1f1_zm            -0.495   -0.0283
+  CanESM5_r17i1p1f1_zm            -0.714   -0.1079
+  CanESM5_r18i1p1f1_zm            -0.555   +0.1975
+  GFDL-CM4_r1i1p1f1_zm            -0.258   -0.0435
+  INM-CM5-0_r1i1p1f1_zm           -0.387   -0.0484
+  IPSL-CM5A2-INCA_r1i1p1f1_zm     -0.645   -0.0123
+  MIROC6_r10i1p1f1_zm             -0.105   +0.0879
+  MIROC6_r1i1p1f1_zm              -0.137   -0.0732
+  MPI-ESM-1-2-HAM_r1i1p1f1_zm     -0.453   +0.0008
+  MPI-ESM1-2-LR_r1i1p1f1_zm       -0.347   -0.0669
+
+  regression of CV R^2 on |coupling|: slope +0.0062, r = +0.016
+  extrapolated to the observed coupling of 1.026: R^2 ~ -0.0069
+
+============================================================================
+=== ATTACK 3: in-sample vs out-of-sample, the like-for-like check ===
+  P1 pre-onset                     in-sample +0.1038   out-of-sample +0.0839   optimism +0.0199
+  P2 at-onset                      in-sample +0.1137   out-of-sample +0.0917   optimism +0.0219
+  P3 + post-onset stratosphere     in-sample +0.4488   out-of-sample +0.4073   optimism +0.0414
+
+  The published splits' implied R^2 of 0.63 is an UNVALIDATED,
+  outcome-based, in-sample quantity. Compare it against the in-sample
+  column, not the out-of-sample one.
+
+Saved -> headline_stress_test.json

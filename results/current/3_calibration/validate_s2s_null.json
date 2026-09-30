@@ -1,0 +1,150 @@
+{
+  "n_seeds": 40,
+  "n_null": 1000,
+  "forecast_layout": "ssw-design-analysis/03_data_ingestion/s2s_ecmf_psl_cap.parquet",
+  "synthetic": {
+    "noise": "N(0, 900 Pa) around 101300 Pa",
+    "equal_skill": "outcome + N(0, 2500) per member + N(0, 2500) shared by the members of each (start, lead)",
+    "ssw_skill": "as equal_skill at SSW starts; elsewhere the ERA5 outcome of another year at the same calendar dates, plus the same noise"
+  },
+  "workers": 16,
+  "cases": {
+    "calendar_window|noise": {
+      "short.p_r": {
+        "rate_below_0.05": 0.0,
+        "mean": 0.5
+      },
+      "short.p_r_conditional": {
+        "rate_below_0.05": 0.025,
+        "mean": 0.494
+      },
+      "short.p_BSS": {
+        "rate_below_0.05": 0.0,
+        "mean": 0.453
+      },
+      "short.p_BSS_conditional": {
+        "rate_below_0.05": 0.1,
+        "mean": 0.479
+      },
+      "mid.p_r": {
+        "rate_below_0.05": 0.025,
+        "mean": 0.484
+      },
+      "mid.p_r_conditional": {
+        "rate_below_0.05": 0.05,
+        "mean": 0.476
+      },
+      "mid.p_BSS": {
+        "rate_below_0.05": 0.0,
+        "mean": 0.416
+      },
+      "mid.p_BSS_conditional": {
+        "rate_below_0.05": 0.025,
+        "mean": 0.419
+      }
+    },
+    "calendar_window|equal_skill": {
+      "short.p_r": {
+        "rate_below_0.05": 0.05,
+        "mean": 0.61
+      },
+      "short.p_r_conditional": {
+        "rate_below_0.05": 0.05,
+        "mean": 0.54
+      },
+      "short.p_BSS": {
+        "rate_below_0.05": 0.0,
+        "mean": 0.677
+      },
+      "short.p_BSS_conditional": {
+        "rate_below_0.05": 0.075,
+        "mean": 0.59
+      },
+      "mid.p_r": {
+        "rate_below_0.05": 0.025,
+        "mean": 0.592
+      },
+      "mid.p_r_conditional": {
+        "rate_below_0.05": 0.05,
+        "mean": 0.5
+      },
+      "mid.p_BSS": {
+        "rate_below_0.05": 0.0,
+        "mean": 0.659
+      },
+      "mid.p_BSS_conditional": {
+        "rate_below_0.05": 0.05,
+        "mean": 0.531
+      }
+    },
+    "calendar_window|ssw_skill": {
+      "short.p_r": {
+        "rate_below_0.05": 0.875,
+        "mean": 0.034
+      },
+      "short.p_r_conditional": {
+        "rate_below_0.05": 0.875,
+        "mean": 0.037
+      },
+      "short.p_BSS": {
+        "rate_below_0.05": 0.3,
+        "mean": 0.159
+      },
+      "short.p_BSS_conditional": {
+        "rate_below_0.05": 0.275,
+        "mean": 0.219
+      },
+      "mid.p_r": {
+        "rate_below_0.05": 0.875,
+        "mean": 0.02
+      },
+      "mid.p_r_conditional": {
+        "rate_below_0.05": 0.9,
+        "mean": 0.021
+      },
+      "mid.p_BSS": {
+        "rate_below_0.05": 0.275,
+        "mean": 0.119
+      },
+      "mid.p_BSS_conditional": {
+        "rate_below_0.05": 0.15,
+        "mean": 0.136
+      }
+    },
+    "year_shift|noise": {
+      "short.p_r": {
+        "rate_below_0.05": 0.075,
+        "mean": 0.529
+      },
+      "short.p_r_conditional": {
+        "rate_below_0.05": 0.1,
+        "mean": 0.515
+      },
+      "short.p_BSS": {
+        "rate_below_0.05": 0.025,
+        "mean": 0.494
+      },
+      "short.p_BSS_conditional": {
+        "rate_below_0.05": 0.05,
+        "mean": 0.549
+      },
+      "mid.p_r": {
+        "rate_below_0.05": 0.05,
+        "mean": 0.579
+      },
+      "mid.p_r_conditional": {
+        "rate_below_0.05": 0.05,
+        "mean": 0.572
+      },
+      "mid.p_BSS": {
+        "rate_below_0.05": 0.0,
+        "mean": 0.532
+      },
+      "mid.p_BSS_conditional": {
+        "rate_below_0.05": 0.0,
+        "mean": 0.593
+      }
+    }
+  },
+  "binomial_se_at_0.05": 0.034
+}

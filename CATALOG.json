@@ -1,0 +1,5288 @@
+{
+ "generated": "2026-09-30T10:52:52+00:00",
+ "generator": "tools/catalog_repo.py",
+ "touch_tolerance_min": 15,
+ "counts": {
+  "scripts": 153,
+  "results": 76
+ },
+ "scripts": [
+  {
+   "path": "ssw-design-analysis/02_event_catalogues/build_catalogue.py",
+   "tree": "ssw-design-analysis",
+   "stage": "02_event_catalogues",
+   "title": "Builds the frozen event catalogue from source, exactly as specified in CATALOGUE_SPECIFICATION.md. Rebuilding from the raw compendium table must reproduce it byte-for-byte.",
+   "loc": 284,
+   "modified": "2026-09-17 11:36",
+   "sha256_16": "5a24a0ed9b645aa4",
+   "flags": [],
+   "filenames_mentioned": [
+    "catalogue_checksum.txt",
+    "catalogue_sets.json",
+    "event_catalogue.csv"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_cmip6_ensemble.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Acquires a large ensemble of daily stratosphere + surface data, to break the binding constraint on every open question in this project.",
+   "loc": 199,
+   "modified": "2026-09-17 11:42",
+   "sha256_16": "dca90132a1b49a93",
+   "flags": [],
+   "filenames_mentioned": [
+    "cmip6_ensemble_manifest.csv"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_enso.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Acquires the ONI (Oceanic Nino Index, 3-month running Nino3.4 SST anomaly) from NOAA PSL. Open, no authentication.",
+   "loc": 100,
+   "modified": "2026-07-30 17:32",
+   "sha256_16": "aff7ab8683295ab8",
+   "flags": [],
+   "filenames_mentioned": [
+    "enso_checksum.txt",
+    "enso_oni.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_era5_arco_extension.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "ERA5 observations for the held-out 2023-2024 SSWs (plan approved 2026-09-30; design in 07_physical_decomposition/s2s_heldout_test.py), which the WeatherBench 2 copy used everywhere else does not reach (it ends 2023-01-10; the polar-cap",
+   "loc": 131,
+   "modified": "2026-09-30 09:02",
+   "sha256_16": "5122341f181a734a",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_psl_cap_00utc_arco.parquet",
+    "era5_t2m_regions_daily_arco.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_era5_nam.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Builds the NAM indices in the SOURCE VARIABLES the published criterion is defined on, so the body count can be computed in the literature's own terms rather than in CPC index proxies.",
+   "loc": 106,
+   "modified": "2026-09-25 07:10",
+   "sha256_16": "8822834400fdc4b0",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_nam_daily.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_era5_psl_cap.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Observed polar-cap mean sea-level pressure, reduced EXACTLY as the SNAPSI members are, so the observed outcome of each SNAPSI event can be placed inside its own ensemble.",
+   "loc": 160,
+   "modified": "2026-09-30 10:33",
+   "sha256_16": "4c8bae668c3f2c57",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_psl_cap_6h.parquet",
+    "era5_z100_cap_00utc.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_era5_t2m_regions.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "ERA5 daily-mean 2 m temperature over the four regions of the regional cold-risk plan (approved 2026-09-26), the observation for the S2S regional test and the observed-event regional analysis.",
+   "loc": 67,
+   "modified": "2026-09-26 08:16",
+   "sha256_16": "9469b0c0094cf6cc",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_t2m_regions_daily.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_heatflux.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Acquires the gridded fields needed to compute the canonical SSW precursor diagnostic \u2014 the 100 hPa eddy heat flux \u2014 plus polar-cap height, for Gate 8 (physical decomposition: what predicts design sensitivity?).",
+   "loc": 150,
+   "modified": "2026-07-30 08:21",
+   "sha256_16": "717b19e31957907b",
+   "flags": [],
+   "filenames_mentioned": [
+    "heatflux_checksums.txt",
+    "heatflux_daily.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_indices.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Acquires the circulation indices needed for Gate 6 (\"the result is not driven by AO/NAO alone\") and records a checksum for every raw file, as the plan requires.",
+   "loc": 122,
+   "modified": "2026-07-28 19:32",
+   "sha256_16": "a81ce627c326fe5b",
+   "flags": [],
+   "filenames_mentioned": [
+    "daily_indices.parquet",
+    "index_checksums.txt"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_ncep_z10_fields.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Daily NCEP-NCAR reanalysis geopotential height at 10 hPa, 20-90N, every year 1958-2024, for the vortex-geometry (split/displacement) classification of vortex_geometry_test.py (plan approved 2026-09-29).",
+   "loc": 81,
+   "modified": "2026-09-29 06:23",
+   "sha256_16": "238f2e7ac268c76c",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_s2s_reforecasts.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "ECMWF S2S reforecasts of polar-cap mean sea-level pressure, reduced EXACTLY as the ERA5 observation is (`acquire_era5_psl_cap.cap`: cos-lat weighted 60-90N, the 60N row included), for the forecast-reliability test",
+   "loc": 582,
+   "modified": "2026-09-30 09:29",
+   "sha256_16": "2c9d85783a237c04",
+   "flags": [],
+   "filenames_mentioned": [
+    "s2s_ecmf_psl_cap.parquet",
+    "s2s_manifest.json"
+   ],
+   "filename_prefixes": [
+    "s2s_manifest_"
+   ]
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_snapsi.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Acquires SNAPSI nudged-ensemble data \u2014 the experimental ground truth that lets the pre-onset question be settled without relying on 43 observed events.",
+   "loc": 247,
+   "modified": "2026-09-17 11:42",
+   "sha256_16": "31928b45513d68a6",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_manifest.csv"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_snapsi_surface.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Downloads the SNAPSI surface field and reduces it to a polar-cap index on the fly, so the CAUSAL stratosphere-to-surface effect can be measured by experimental design rather than inferred from composites.",
+   "loc": 521,
+   "modified": "2026-09-25 07:00",
+   "sha256_16": "852b64c94c429c67",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_manifest.csv",
+    "snapsi_polarcap_psl.parquet",
+    "snapsi_time_origin.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_snapsi_tas.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "SNAPSI near-surface air temperature (tas, 6hrPt), reduced on the fly to DAILY MEANS on a common 2.5-degree grid north of 20N, for the regional cold-risk analysis (plan approved 2026-09-26).",
+   "loc": 216,
+   "modified": "2026-09-26 10:16",
+   "sha256_16": "bbcf2b9a48e30f68",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_snapsi_zg.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "SNAPSI geopotential height at 100 hPa, reduced to a polar-cap mean, fetched by OPeNDAP subsetting rather than by downloading whole files.",
+   "loc": 764,
+   "modified": "2026-09-25 03:24",
+   "sha256_16": "4fbd0567f1bd2e0e",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_manifest.csv",
+    "snapsi_polarcap_zg100.parquet",
+    "snapsi_zg_opendap_gate.json"
+   ],
+   "filename_prefixes": [
+    "zg100_"
+   ]
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_snotel_stations.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Acquires SNOTEL/COOP station metadata -- elevation, latitude, longitude -- for the 945 stations in the daily archive.",
+   "loc": 157,
+   "modified": "2026-09-17 11:42",
+   "sha256_16": "0998d819745fe97b",
+   "flags": [],
+   "filenames_mentioned": [
+    "snotel_stations.csv",
+    "snotel_stations.json",
+    "station_checksums.txt"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/extend_ncep_presatellite.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Extends the NCEP/NCAR stratospheric polar-cap record back from 1979 to 1958 to match the 100 hPa eddy heat flux record, taking the observational event count for every stratospheric stratifier from 29 to ~42.",
+   "loc": 250,
+   "modified": "2026-08-03 05:58",
+   "sha256_16": "e3c268c88ecca774",
+   "flags": [],
+   "filenames_mentioned": [
+    "ncep_presatellite_extension.parquet",
+    "ncep_stratosphere.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/05_corrected_estimators/canonical_event_study.py",
+   "tree": "ssw-design-analysis",
+   "stage": "05_corrected_estimators",
+   "title": "The canonical AO/NAO lead-lag profile, computed on the FROZEN catalogue and repeated across every frozen sensitivity set.",
+   "loc": 203,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "63de525060939d6c",
+   "flags": [],
+   "filenames_mentioned": [
+    "ao_daily_cpc.txt",
+    "canonical_event_study.json",
+    "nao_daily_cpc.txt"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/05_corrected_estimators/clean_subset.py",
+   "tree": "ssw-design-analysis",
+   "stage": "05_corrected_estimators",
+   "title": "The decisive estimate. Two INDEPENDENT design problems inflate the apparent pre-onset AO anomaly (Fisher P=0.49 for their association, so they are not the same confound wearing two hats): 1. PRE-SATELLITE RECORD  pre-onset -1.74 pre-1980 vs -0.47 from 1980 (era_split);",
+   "loc": 91,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "d7c6d32c6aa6264a",
+   "flags": [],
+   "filenames_mentioned": [
+    "clean_subset.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/05_corrected_estimators/common_period.py",
+   "tree": "ssw-design-analysis",
+   "stage": "05_corrected_estimators",
+   "title": "Separates the two things that were being conflated in \"catalogue choice moves the estimate 50x more than estimator choice\".",
+   "loc": 84,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "6bc45fe5fe837c6f",
+   "flags": [],
+   "filenames_mentioned": [
+    "common_period.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/05_corrected_estimators/enso_confound.py",
+   "tree": "ssw-design-analysis",
+   "stage": "05_corrected_estimators",
+   "title": "The AAO negative control fails and the estimator is not to blame: observed      -0.659 at +45..+60 d, bootstrap p=0.0147 seed-stable   significant on 60/60 fixed seeds at 6,000 replicates estimator OK  clean pseudo-onset null centred on zero (mean -0.018)",
+   "loc": 136,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "5fb6c6e06a81b483",
+   "flags": [],
+   "filenames_mentioned": [
+    "enso_confound.json",
+    "enso_oni.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/05_corrected_estimators/era_split.py",
+   "tree": "ssw-design-analysis",
+   "stage": "05_corrected_estimators",
+   "title": "common_period.py showed the pre-onset AO anomaly is -0.82 (p=0.005) on the full 1950-2026 record but -0.37 (p=0.31) on 1980-2019, in every catalogue. That is consistent with the \"precursor\" being a pre-satellite-era artefact, but two",
+   "loc": 129,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "6cfcc8fee3a2d6c9",
+   "flags": [],
+   "filenames_mentioned": [
+    "era_split.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/05_corrected_estimators/isolated_events.py",
+   "tree": "ssw-design-analysis",
+   "stage": "05_corrected_estimators",
+   "title": "Tests whether the pre-onset AO anomaly is a real precursor or leakage between neighbouring events.",
+   "loc": 97,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "0c2cc5cfa9098ca6",
+   "flags": [],
+   "filenames_mentioned": [
+    "isolated_events.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/05_corrected_estimators/isolation_interaction.py",
+   "tree": "ssw-design-analysis",
+   "stage": "05_corrected_estimators",
+   "title": "HONESTY CHECK on isolated_events.py.",
+   "loc": 122,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "193f2933ac8815eb",
+   "flags": [],
+   "filenames_mentioned": [
+    "isolation_interaction.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/05_corrected_estimators/multi_index_event_study.py",
+   "tree": "ssw-design-analysis",
+   "stage": "05_corrected_estimators",
+   "title": "GATE 6: is the response confined to AO/NAO, or does it appear across the hemisphere? And -- the sharper question -- does the estimator report a response where there cannot be one? OUTCOMES (frozen primary catalogue, 3 harmonics, 1,200 bootstrap replicates)",
+   "loc": 217,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "2f533f6cc36cd34a",
+   "flags": [],
+   "filenames_mentioned": [
+    "daily_indices.parquet",
+    "multi_index_event_study.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/05_corrected_estimators/negcontrol_stability.py",
+   "tree": "ssw-design-analysis",
+   "stage": "05_corrected_estimators",
+   "title": "The 43-event multi-index run reported the AAO negative control FAILING: -0.66 at +45..+60, surviving BH-FDR at q=0.036 across the 32-test family.",
+   "loc": 72,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "331eccfa4f180449",
+   "flags": [],
+   "filenames_mentioned": [
+    "negcontrol_stability.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/05_corrected_estimators/seed_stability.py",
+   "tree": "ssw-design-analysis",
+   "stage": "05_corrected_estimators",
+   "title": "canonical_event_study.py, multi_index_event_study.py and marginal_events.py all seeded the winter-block bootstrap with `hash(<python str>) % 10000`. Python randomises string hashing per process (PYTHONHASHSEED), so every run drew a",
+   "loc": 67,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "7110403a6f665243",
+   "flags": [],
+   "filenames_mentioned": [
+    "seed_stability.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/aao_null.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "The AAO negative control FAILS, and it is not seed noise: -0.659 at +45..+60 d, p=0.011..0.023 across 60 fixed seeds at 6,000 replicates (negcontrol_stability).",
+   "loc": 115,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "636da89e80351e2d",
+   "flags": [],
+   "filenames_mentioned": [
+    "aao_null.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/ao_null_perbin.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "ao_null_perbin.py  --  VOID. DO NOT CITE. Superseded by boot_calibration.py.",
+   "loc": 118,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "177c5430f3d992c8",
+   "flags": [
+    "DO NOT CITE",
+    "SUPERSEDED BY",
+    "VOID"
+   ],
+   "filenames_mentioned": [
+    "ao_null_perbin.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/boot_calibration.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "CORRECTS ao_null_perbin.py, which was confounded and must not be used.",
+   "loc": 115,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "87f2f8d8899a615e",
+   "flags": [],
+   "filenames_mentioned": [
+    "boot_calibration.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/bootres2.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "Decisive test: does coverage recover with more bootstrap replicates?",
+   "loc": 34,
+   "modified": "2026-07-28 14:03",
+   "sha256_16": "5ad2c602ef959fea",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/calibrate_seasonality.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "GO/NO-GO CONDITION 3. Everything downstream is blocked until this passes.",
+   "loc": 296,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "d0df387de0b919aa",
+   "flags": [],
+   "filenames_mentioned": [
+    "calibration_results.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/calibrate_spatial.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "GATE 3 for SPATIAL outcomes. Gate 3 was closed only for index-type series (AO, NAO). Gridded fields and station networks are a different problem, because seasonality differs by unit -- elevation, latitude, continentality -- so a single",
+   "loc": 270,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "eaf4b00675977e4e",
+   "flags": [],
+   "filenames_mentioned": [
+    "spatial_calibration.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/calibrate_station_level.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "GATE 3 for STATION-LEVEL outcomes -- the case the aggregated test could not speak to.",
+   "loc": 315,
+   "modified": "2026-09-25 03:15",
+   "sha256_16": "31e0be2037fe176a",
+   "flags": [],
+   "filenames_mentioned": [
+    "snotel_stations.csv",
+    "station_calibration.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/era_dependence_gate.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "THE GATE THAT DECIDES WHETHER THE PRE-SATELLITE EVENTS MAY BE USED AT ALL.",
+   "loc": 426,
+   "modified": "2026-09-25 10:06",
+   "sha256_16": "b7374806e8ebb188",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_nam_daily.parquet",
+    "era_dependence_gate.json",
+    "heatflux_daily.parquet",
+    "ncep_presatellite_extension.parquet",
+    "ncep_stratosphere.parquet",
+    "ncep_stratosphere_1958.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/finalise_gate3.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "FLAWED. DO NOT CITE. SUPERSEDED BY `gate3_clean_null.py`.",
+   "loc": 191,
+   "modified": "2026-09-17 11:53",
+   "sha256_16": "3e6d539abb3c48ed",
+   "flags": [
+    "DO NOT CITE",
+    "FLAWED",
+    "SUPERSEDED BY"
+   ],
+   "filenames_mentioned": [
+    "gate3_final.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/gate3_clean_null.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "Corrects a flaw found in the previous Gate 3 attempt.",
+   "loc": 272,
+   "modified": "2026-09-25 06:38",
+   "sha256_16": "bcce92d9cdc2aa66",
+   "flags": [],
+   "filenames_mentioned": [
+    "_gate3_clean_null_checkpoint.json",
+    "gate3_clean_null.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/obs_model_compatibility.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "IS THE OBSERVED RECORD A TYPICAL 43-EVENT DRAW FROM THE CMIP6 SSW POPULATION, AND DOES THE OBSERVATIONAL PIPELINE RECOVER THE TRUTH WHEN A MODEL PLAYS REALITY? Plan approved 2026-09-30. Written before it was run.",
+   "loc": 273,
+   "modified": "2026-09-30 09:24",
+   "sha256_16": "0e82486463d4464e",
+   "flags": [],
+   "filenames_mentioned": [
+    "obs_model_compatibility.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/selection_law_enso.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "GENERALITY TEST for the selection-bias projection law.",
+   "loc": 226,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "cbcc2f7452ac92b0",
+   "flags": [],
+   "filenames_mentioned": [
+    "enso_oni.parquet",
+    "selection_law_enso.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/selection_on_outcome.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "THE DESIGN CHOICE THAT ACTUALLY MATTERS.",
+   "loc": 227,
+   "modified": "2026-09-25 06:38",
+   "sha256_16": "458e4408dedc18d5",
+   "flags": [],
+   "filenames_mentioned": [
+    "ncep_stratosphere.parquet",
+    "selection_on_outcome.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/selection_projection_law.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "Turns the selection-bias observation into a quantitative, falsifiable law.",
+   "loc": 195,
+   "modified": "2026-09-25 10:06",
+   "sha256_16": "b361490d9f1b8669",
+   "flags": [],
+   "filenames_mentioned": [
+    "selection_projection_law.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/selection_snotel.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "Extends selection_on_outcome.py from circulation indices to a REAL surface impact variable.",
+   "loc": 172,
+   "modified": "2026-09-25 06:38",
+   "sha256_16": "663bc89774448ea9",
+   "flags": [],
+   "filenames_mentioned": [
+    "selection_snotel.json",
+    "snotel_daily.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/stratifier_bias_law.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "THE GENERALISATION, AND THE TEST THAT CAN KILL IT.",
+   "loc": 319,
+   "modified": "2026-09-25 10:06",
+   "sha256_16": "3eda32af7826c680",
+   "flags": [],
+   "filenames_mentioned": [
+    "heatflux_daily.parquet",
+    "ncep_stratosphere.parquet",
+    "ncep_stratosphere_1958.parquet"
+   ],
+   "filename_prefixes": [
+    "stratifier_bias_law"
+   ]
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/stratifier_inference.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "Proper inference on stratifier_bias_law.py, which produced point estimates and bootstrap intervals but no p-values, and one candidate positive result that has not been stress-tested.",
+   "loc": 286,
+   "modified": "2026-09-25 06:38",
+   "sha256_16": "488c5d43bd0a4e4a",
+   "flags": [],
+   "filenames_mentioned": [
+    "stratifier_inference.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/stratifier_law_cmip6.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "THE POWER THE OBSERVATIONS DO NOT HAVE.",
+   "loc": 291,
+   "modified": "2026-09-25 06:38",
+   "sha256_16": "8afd5fe3c301d0c6",
+   "flags": [],
+   "filenames_mentioned": [
+    "stratifier_law_cmip6.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/validate_R_diagnostic.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "Turns R from an assertion into a calibrated instrument.",
+   "loc": 249,
+   "modified": "2026-08-04 10:57",
+   "sha256_16": "35236d01a1c4ec7e",
+   "flags": [],
+   "filenames_mentioned": [
+    "validate_R_diagnostic.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "Known-truth calibration of s2s_multimodel_test.py on every centre's real layout (starts, members, leads) and the real ERA5 outcome.",
+   "loc": 183,
+   "modified": "2026-09-29 11:03",
+   "sha256_16": "6ddf107b0ab305ec",
+   "flags": [],
+   "filenames_mentioned": [
+    "s2s_multimodel_test.json",
+    "validate_s2s_multimodel.json",
+    "validate_s2s_multimodel_t2m.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/validate_s2s_null.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "Is the discrimination test in s2s_forecast_test.py calibrated, and how much power does it have? Known truth, on the real forecast layout and the real ERA5 outcomes.",
+   "loc": 150,
+   "modified": "2026-09-25 12:59",
+   "sha256_16": "1eaf64a058c7aef1",
+   "flags": [],
+   "filenames_mentioned": [
+    "validate_s2s_null.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/06_simulation_validation/validate_ssw_detector.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "Does `ensemble_precursor.detect_ssw`, the detector every CMIP6 analysis uses, reproduce the published Charlton & Polvani (2007) central dates when it is run on the reanalysis those dates were computed from?",
+   "loc": 117,
+   "modified": "2026-09-25 07:01",
+   "sha256_16": "619fe05ffb333c79",
+   "flags": [],
+   "filenames_mentioned": [
+    "validate_ssw_detector.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/R_gap_sensitivity.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "THE TEST THAT DECIDES RESULT A.",
+   "loc": 136,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "c2608c93d580e9d9",
+   "flags": [],
+   "filenames_mentioned": [
+    "R_gap_sensitivity.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/R_profile.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "R as a function of lag -- and the test that REFUTED the causal reading of R.",
+   "loc": 225,
+   "modified": "2026-09-25 06:38",
+   "sha256_16": "5396a98ef5f37fa7",
+   "flags": [],
+   "filenames_mentioned": [
+    "R_profile.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/causal_timescale_ratio.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "Turns this project's central NULL result into a causal diagnostic.",
+   "loc": 291,
+   "modified": "2026-09-25 06:38",
+   "sha256_16": "63e88597e9b254e5",
+   "flags": [],
+   "filenames_mentioned": [
+    "causal_timescale_ratio.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/class_model_comparison.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "ONE SHIFTED POPULATION, A CONTINUOUSLY STATE-DEPENDENT ONE, OR TWO REGIMES? Plan approved 2026-09-30. Written before any of these models was fitted.",
+   "loc": 560,
+   "modified": "2026-09-30 10:20",
+   "sha256_16": "f9692bbd47d1f68c",
+   "flags": [],
+   "filenames_mentioned": [
+    "class_model_comparison.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/consensus_monotonicity.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "Strengthens the marginal-event finding two ways: 1. REPLICATION on NAO as well as AO. One index is an observation; two make a pattern.",
+   "loc": 183,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "5238237b5ad1ce3a",
+   "flags": [],
+   "filenames_mentioned": [
+    "consensus_monotonicity.json",
+    "daily_indices.parquet",
+    "event_catalogue.csv",
+    "ncep_stratosphere.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/continuous_mediation.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "Abandons the event framing entirely, and asks the question the events were only ever a proxy for.",
+   "loc": 232,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "b674deff426b7c35",
+   "flags": [],
+   "filenames_mentioned": [
+    "continuous_mediation.json",
+    "heatflux_daily.parquet",
+    "ncep_stratosphere.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/design_sensitivity.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "GATE 8: is the difference between estimators predictable from dynamical conditions, or is it noise? This is the piece that turns a statistical correction into a physical result.",
+   "loc": 220,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "156475db4c34916b",
+   "flags": [],
+   "filenames_mentioned": [
+    "daily_indices.parquet",
+    "design_sensitivity.json",
+    "heatflux_daily.parquet",
+    "ncep_stratosphere.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/ensemble_precursor.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "Settles the question 43 observed events cannot: is the pre-onset surface anomaly before a sudden stratospheric warming REAL? THE OBSERVATIONAL DEAD END On the frozen 43-event catalogue the AO at -30..-16 d is -0.82 (p=0.015). It",
+   "loc": 357,
+   "modified": "2026-09-25 07:00",
+   "sha256_16": "5fa127cb56dfcde5",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": [
+    "ensemble_precursor_"
+   ]
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/era5_regional_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "OBSERVED SSWs: IS THE REGIONAL COLD AFTER AN SSW WHAT ITS NAM SHIFT IMPLIES? Plan approved 2026-09-26 (regional cold-risk plan). Written before the ERA5 regional temperature series was analysed. The observational counterpart of",
+   "loc": 179,
+   "modified": "2026-09-29 06:18",
+   "sha256_16": "395760ee71ea4a89",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_nam_daily.parquet",
+    "era5_regional_test.json",
+    "era5_t2m_regions_daily.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/event_difference_bounds.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "HOW MUCH CAN SSW EVENTS DIFFER IN THEIR FORCED ODDS OF A DOWNWARD OUTCOME, AND HOW MUCH OF A SINGLE EVENT'S LABEL CAN THAT EXPLAIN? Plan approved 2026-09-29 (referee concern: \"the label does not identify a kind",
+   "loc": 72,
+   "modified": "2026-09-29 06:17",
+   "sha256_16": "cb5bc4d846f0e984",
+   "flags": [],
+   "filenames_mentioned": [
+    "event_difference_bounds.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "THE POSITIVE CLAIM UNDERNEATH THE WHOLE PROJECT, AND A HARD CEILING ON EVERY CLASSIFIER IN THIS LITERATURE.",
+   "loc": 703,
+   "modified": "2026-09-30 10:44",
+   "sha256_16": "12beb6c1cfe1252b",
+   "flags": [],
+   "filenames_mentioned": [
+    "forced_variance_ceiling.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/forecast_value_robustness.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "DOES THE FORECAST-VALUE RESULT (Q) SURVIVE THE REFEREE'S OBJECTIONS? Plan approved 2026-09-29. Result Q (forecast_value_test.py) found that stratospheric information adds <1% CRPS skill beyond the shifted distribution after CMIP6 SSWs,",
+   "loc": 262,
+   "modified": "2026-09-29 10:31",
+   "sha256_16": "07ca2e685a7ca95c",
+   "flags": [],
+   "filenames_mentioned": [
+    "forecast_value_robustness.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/forecast_value_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "DOES KNOWING THE EVENT IMPROVE A PROBABILISTIC FORECAST BEYOND THE SHIFT? Plan approved 2026-09-25 (item C of the Nature Geoscience revision plan).",
+   "loc": 186,
+   "modified": "2026-09-25 16:49",
+   "sha256_16": "14fc77ebe7bb2916",
+   "flags": [],
+   "filenames_mentioned": [
+    "forecast_value_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/granger_direction.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "Tests the DIRECTION of stratosphere-surface coupling, which R cannot.",
+   "loc": 190,
+   "modified": "2026-09-17 11:43",
+   "sha256_16": "9ee3d7a2935d8958",
+   "flags": [],
+   "filenames_mentioned": [
+    "granger_direction.json",
+    "heatflux_daily.parquet",
+    "ncep_stratosphere.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/headline_stress_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "THE THREE ATTACKS THAT DECIDE WHETHER THE HEADLINE SURVIVES REVIEW.",
+   "loc": 261,
+   "modified": "2026-09-25 07:00",
+   "sha256_16": "9d448ae986026dca",
+   "flags": [],
+   "filenames_mentioned": [
+    "headline_stress_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/is_downward_propagation_a_class.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "THE PHYSICAL QUESTION UNDERNEATH THE METHODS RESULT.",
+   "loc": 313,
+   "modified": "2026-09-25 07:00",
+   "sha256_16": "529d687348381550",
+   "flags": [],
+   "filenames_mentioned": [
+    "is_downward_propagation_a_class.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/marginal_events.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "Localises the catalogue effect: WHICH events create the difference between the union and consensus catalogues, and what is different about them? BACKGROUND Catalogue choice moves the AO estimate 18-47x more than estimator choice.",
+   "loc": 222,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "33d183b910c2d49a",
+   "flags": [],
+   "filenames_mentioned": [
+    "daily_indices.parquet",
+    "event_catalogue.csv",
+    "heatflux_daily.parquet",
+    "marginal_events.json",
+    "ncep_stratosphere.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/mediation_disattenuated.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "Corrects the mediation estimate for measurement error in the mediator, and turns that correction into the actual finding.",
+   "loc": 200,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "e7162868d434bd53",
+   "flags": [],
+   "filenames_mentioned": [
+    "mediation_disattenuated.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/mediator_specification.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "STRESS TEST on continuous_mediation.py before any claim is made from it.",
+   "loc": 191,
+   "modified": "2026-08-04 05:30",
+   "sha256_16": "b9ca488b090cf635",
+   "flags": [],
+   "filenames_mentioned": [
+    "heatflux_daily.parquet",
+    "mediator_specification.json",
+    "ncep_stratosphere.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/multimodel_R.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "R across the CMIP6 archive, and the test that motivates it: DO MODELS THAT REPRODUCE THE OBSERVED SURFACE RESPONSE GET THE MECHANISM RIGHT? The field evaluates stratosphere-troposphere coupling with composites: does the",
+   "loc": 171,
+   "modified": "2026-09-25 06:38",
+   "sha256_16": "3fef8d98b77b89c9",
+   "flags": [],
+   "filenames_mentioned": [
+    "multimodel_R.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/predictability_ceiling.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "CAN ANYONE PREDICT WHICH SSWs COUPLE DOWNWARD? OUT OF SAMPLE, WITH NO CORRECTION.",
+   "loc": 370,
+   "modified": "2026-09-25 10:06",
+   "sha256_16": "7fdb5f3d824a39c2",
+   "flags": [],
+   "filenames_mentioned": [
+    "predictability_ceiling.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/predictability_wave_driving.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "CLOSES THE LAST GAP IN `predictability_ceiling.py`: NO WAVE-DRIVING PREDICTOR.",
+   "loc": 283,
+   "modified": "2026-09-25 07:16",
+   "sha256_16": "373e0e2e8a832dfb",
+   "flags": [],
+   "filenames_mentioned": [
+    "heatflux_daily.parquet",
+    "ncep_stratosphere_1958.parquet",
+    "predictability_wave_driving.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/s2s_baseline_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "IS THE POST-SSW RANK DEFICIT SPECIFIC TO SSWs, OR A GENERAL VORTEX-STATE ERROR? Plan approved 2026-09-29 (referee concern: the event-free baseline of P' is drawn from SSW-free winters, which are enriched in strong-vortex states, so a deficit of",
+   "loc": 155,
+   "modified": "2026-09-29 11:03",
+   "sha256_16": "f63096a7a2bdf095",
+   "flags": [],
+   "filenames_mentioned": [
+    "ncep_stratosphere_1958.parquet",
+    "s2s_baseline_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/s2s_forecast_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "DO OPERATIONAL FORECASTS STARTED BEFORE AN SSW KNOW WHICH EVENTS WILL COUPLE? Plan approved 2026-09-25 (before any data were downloaded).",
+   "loc": 373,
+   "modified": "2026-09-25 20:23",
+   "sha256_16": "fc726afb34e11d44",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_psl_cap_6h.parquet",
+    "s2s_ecmf_psl_cap.parquet",
+    "s2s_forecast_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/s2s_heldout_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "HELD-OUT EVALUATION: DO FORECASTS UNDER-PREDICT THE SHIFT AFTER THE 2023-2024 SSWs? Plan approved 2026-09-30. This design was committed BEFORE any forecast of model year 2025 (ECMWF, CMA) or any ERA5 value after 2023-01-10 was retrieved, and",
+   "loc": 262,
+   "modified": "2026-09-30 09:31",
+   "sha256_16": "d57639ff35f1972b",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_psl_cap_00utc_arco.parquet",
+    "era5_psl_cap_00utc_spliced.parquet",
+    "era5_psl_cap_6h.parquet",
+    "era5_t2m_regions_daily.parquet",
+    "era5_t2m_regions_daily_arco.parquet",
+    "era5_t2m_regions_daily_spliced.parquet",
+    "s2s_heldout_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/s2s_leadlag_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "WHERE IN THE FORECAST CHAIN IS THE SHIFT LOST: THE LOWER STRATOSPHERE, OR BELOW IT? Plan approved 2026-09-30. This design was committed BEFORE any forecast of 100 hPa geopotential height or of 10 hPa wind beyond lead 15 was retrieved.",
+   "loc": 246,
+   "modified": "2026-09-30 09:32",
+   "sha256_16": "41d09e91e28450f3",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_z100_cap_00utc.parquet",
+    "s2s_leadlag_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_robustness.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "VERIFICATION DETAILS A REFEREE WILL ASK FOR, ON THE P' DATA AND DESIGN.",
+   "loc": 191,
+   "modified": "2026-09-29 11:03",
+   "sha256_16": "ea91467a5ed43145",
+   "flags": [],
+   "filenames_mentioned": [
+    "s2s_multimodel_robustness.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "MULTI-MODEL S2S TEST: EVENT DISCRIMINATION (D) AND THE SIZE OF THE SHIFT (H1, H2) Plan approved 2026-09-25 (item A). Hypotheses H1 and H2 were written into this docstring before any non-ECMWF forecast was retrieved; ECMWF (result P) is the",
+   "loc": 301,
+   "modified": "2026-09-26 08:03",
+   "sha256_16": "4f974e1a74330b3a",
+   "flags": [],
+   "filenames_mentioned": [
+    "s2s_ecmf_psl_cap.parquet",
+    "s2s_multimodel_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/s2s_postonset_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "IS THE UNDER-FORECAST SHIFT A MISSED SSW, OR A COUPLING DEFICIT? Plan approved 2026-09-29. In P' (and the regional test) observed outcomes after SSWs lie low in ensembles started 2-9 days BEFORE onset. That mixes forecasts that",
+   "loc": 225,
+   "modified": "2026-09-29 11:03",
+   "sha256_16": "4410b456213719c0",
+   "flags": [],
+   "filenames_mentioned": [
+    "s2s_postonset_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/s2s_regional_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "DO OPERATIONAL FORECASTS UNDER-FORECAST REGIONAL COLD AFTER SSWs? Plan approved 2026-09-26 (regional cold-risk plan). Written before any regional forecast or observed temperature was analysed. The operational counterpart of",
+   "loc": 138,
+   "modified": "2026-09-26 10:21",
+   "sha256_16": "1ff822d226a3f6c0",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_t2m_regions_daily.parquet",
+    "s2s_ecmf_t2m_regions.parquet",
+    "s2s_regional_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/snapsi_archetype_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "WERE FEB-2018 AND JAN-2019 DIFFERENT EVENTS, OR TWO DRAWS FROM ONE DISTRIBUTION? THE ARCHETYPES The two NH SNAPSI events are the field's standard pair of opposites. Rao, Garfinkel & White (2020, JGR-Atmos 125, e2019JD031919) describe Feb-2018 as a",
+   "loc": 317,
+   "modified": "2026-09-25 06:53",
+   "sha256_16": "fb862211654960f2",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_psl_cap_6h.parquet",
+    "snapsi_archetype_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/snapsi_causal_effect.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "THE CAUSAL STRATOSPHERE-TO-SURFACE EFFECT, MEASURED BY EXPERIMENT RATHER THAN INFERRED FROM COMPOSITES -- AND THE NUMBER THE WHOLE LITERATURE IS TRYING TO ESTIMATE.",
+   "loc": 306,
+   "modified": "2026-09-25 07:00",
+   "sha256_16": "5b199ee3cef72813",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_causal_effect.json",
+    "snapsi_polarcap_psl.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_diagnosis.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "WHY IS THE NUDGED DW-NDW CONTRAST SMALLER THAN ONE SHIFTED GAUSSIAN PREDICTS, AND IS THE SOUTHERN HEMISPHERE CASE A TRANSLATION TOO? Plan approved 2026-09-29. In result L the nudged contrast falls 0.19 sigma",
+   "loc": 155,
+   "modified": "2026-09-29 06:17",
+   "sha256_16": "6c70cea142af8d22",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_contrast_diagnosis.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/snapsi_distribution_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "Does a sudden stratospheric warming SHIFT the surface distribution, or SPLIT it? WHY THIS IS THE TEST THAT MATTERS The project's central physical claim -- \"downward propagation\" is a threshold on ONE shifted population, not a class of event -- currently rests on CMIP6",
+   "loc": 270,
+   "modified": "2026-09-25 07:00",
+   "sha256_16": "f1808d11b4060b15",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_distribution_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/snapsi_loeffel_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "IS DOWNWARD COUPLING A PROPERTY OF THE EVENT, OR OF WHAT FOLLOWS IT? THE PAPER, IN ITS PUBLISHED FORM Loeffel, Rupp, Kiefer, Pinto, Birner, Garny (2026), \"Quantifying the tropospheric response to individual sudden stratospheric warmings revealed by",
+   "loc": 459,
+   "modified": "2026-09-25 07:00",
+   "sha256_16": "1d636117b6939a7c",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_loeffel_test.json",
+    "snapsi_polarcap_psl.parquet",
+    "snapsi_polarcap_zg100.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/snapsi_regional_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "REGIONAL COLD RISK UNDER AN IMPOSED SSW: IS IT THE CIRCULATION SHIFT, OR MORE? Plan approved 2026-09-26 (\"I approve the new plan\"). Everything below -- regions, window, metrics, tests, falsifiers -- was written before any regional",
+   "loc": 283,
+   "modified": "2026-09-26 10:21",
+   "sha256_16": "b26003e288e34231",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_regional_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "THE DECISIVE TEST: does the published \"downward-propagating SSW\" classification manufacture its own contrast even when the causal forcing is held EXACTLY fixed by experimental design? WHY THIS IS THE CLEAN EXPERIMENT",
+   "loc": 448,
+   "modified": "2026-09-25 16:06",
+   "sha256_16": "6626a155b09d3623",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_selection_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/vortex_geometry_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "DO SPLIT AND DISPLACEMENT SSWs DIFFER IN THEIR SURFACE RESPONSE (OBSERVATIONS)? Plan approved 2026-09-29 (referee: SNAPSI nudges only the zonal mean, so the most often proposed event difference -- vortex geometry -- is untested; test it in",
+   "loc": 207,
+   "modified": "2026-09-29 10:31",
+   "sha256_16": "9b653be72be2dfb8",
+   "flags": [],
+   "filenames_mentioned": [
+    "vortex_geometry_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/within_model_check.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "IS THE HEADLINE R^2 WITHIN-MODEL SKILL, OR BETWEEN-MODEL SIGNAL? THE PROBLEM, FOUND BY STRESS-TESTING RATHER THAN BY A REFEREE `headline_stress_test.py` computed CV R^2 separately inside each ensemble member and found it scattered around ZERO (-0.18 to +0.17 across 20 members),",
+   "loc": 385,
+   "modified": "2026-09-25 06:33",
+   "sha256_16": "dfb1ec4e8449fe45",
+   "flags": [],
+   "filenames_mentioned": [
+    "within_model_check.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/08_literature_audit/criterion_sweep.py",
+   "tree": "ssw-design-analysis",
+   "stage": "08_literature_audit",
+   "title": "DOES THE \"DOWNWARD\" RATE AND CONTRAST TRACK ONE SHIFTED POPULATION FOR EVERY REASONABLE VERSION OF THE CRITERION, OR ONLY FOR THE ONE WE CHOSE? Plan approved 2026-09-30. Written before the sweep was run.",
+   "loc": 362,
+   "modified": "2026-09-30 10:45",
+   "sha256_16": "55f22bbf3b71a86b",
+   "flags": [],
+   "filenames_mentioned": [
+    "criterion_sweep.json",
+    "era5_nam_daily.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/08_literature_audit/era5_nam_daily_mean_check.py",
+   "tree": "ssw-design-analysis",
+   "stage": "08_literature_audit",
+   "title": "Does the January 2019 Karpechko label at 1000 hPa survive a TRUE daily mean? `03_data_ingestion/era5_nam_daily.parquet` builds NAM_1000 from the 00 UTC field of each day. Under the Karpechko et al. (2017) criterion the January 2019 SSW",
+   "loc": 161,
+   "modified": "2026-09-25 07:11",
+   "sha256_16": "bc059f8b30142674",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_nam_daily.parquet",
+    "era5_nam_daily_mean_check.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/08_literature_audit/era5_recompute_and_two_thirds.py",
+   "tree": "ssw-design-analysis",
+   "stage": "08_literature_audit",
+   "title": "Two things the audit still needed, in the literature's own variables.",
+   "loc": 265,
+   "modified": "2026-09-25 10:06",
+   "sha256_16": "70e9a7f4e83c5427",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_nam_daily.parquet",
+    "era5_recompute_and_two_thirds.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/08_literature_audit/loeffel2025_missing_control.py",
+   "tree": "ssw-design-analysis",
+   "stage": "08_literature_audit",
+   "title": "THE CONTROL A LIVE 2025 PAPER DOES NOT RUN, RUN ON ITS OWN DIAGNOSTIC.",
+   "loc": 309,
+   "modified": "2026-09-25 10:06",
+   "sha256_16": "28cf5f46d1dc6fe1",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_cap60_z100_z1000.parquet",
+    "loeffel2025_missing_control.json",
+    "ncep_stratosphere.parquet",
+    "ncep_stratosphere_1958.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/08_literature_audit/recompute_published_criterion.py",
+   "tree": "ssw-design-analysis",
+   "stage": "08_literature_audit",
+   "title": "THE BODY COUNT. Applies the published classification exactly as specified and decomposes the number it produces.",
+   "loc": 251,
+   "modified": "2026-09-25 06:39",
+   "sha256_16": "76e76a07a2ff2fef",
+   "flags": [],
+   "filenames_mentioned": [
+    "recompute_published_criterion.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/fig1_summary.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "fig1_summary.py -- Figure 1: one shifted population, cut by a threshold.",
+   "loc": 135,
+   "modified": "2026-09-29 06:54",
+   "sha256_16": "51657a8dc2660084",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_recompute_and_two_thirds.json",
+    "era5_regional_test.json",
+    "snapsi_archetype_test.json",
+    "snapsi_distribution_test.json",
+    "snapsi_regional_test.json",
+    "snapsi_selection_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/fig2_selection.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "fig2_selection.py -- Figure 2: the downward label is a threshold on one population.",
+   "loc": 83,
+   "modified": "2026-09-29 06:31",
+   "sha256_16": "9a8b0c3975718433",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_selection_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/fig3_regional.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "fig3_regional.py -- Figure 3: regional cold risk after an imposed SSW is the circulation shift acting through the ordinary relation.",
+   "loc": 96,
+   "modified": "2026-09-29 15:41",
+   "sha256_16": "fd78a231c78e6dfc",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_regional_test.json",
+    "snapsi_regional_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/fig4_predictability.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "fig4_predictability.py -- Figure 4: knowing the event adds no forecast information after an SSW.",
+   "loc": 83,
+   "modified": "2026-09-29 06:37",
+   "sha256_16": "e64dcec42521dfb7",
+   "flags": [],
+   "filenames_mentioned": [
+    "forecast_value_test.json",
+    "within_model_check.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/fig5_operational.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "fig5_operational.py -- Figure 5: operational reforecasts after SSWs.",
+   "loc": 114,
+   "modified": "2026-09-29 15:41",
+   "sha256_16": "2a73fff34794dca1",
+   "flags": [],
+   "filenames_mentioned": [
+    "s2s_forecast_test.json",
+    "s2s_multimodel_test.json",
+    "s2s_regional_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/figED1_shift.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "figED1_shift.py -- Extended Data Figure 1: an SSW shifts the surface distribution; it does not split it.",
+   "loc": 111,
+   "modified": "2026-09-29 06:37",
+   "sha256_16": "2a7ddff7f87fc1fc",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_causal_effect.json",
+    "snapsi_distribution_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/figED2_archetypes.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "figED2_archetypes.py -- Extended Data Fig. 2: the field's two archetypes are two draws.",
+   "loc": 135,
+   "modified": "2026-09-29 15:40",
+   "sha256_16": "c53e0929358d44d8",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_archetype_test.json",
+    "snapsi_causal_effect.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/figED3_loeffel.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "figED3_loeffel.py -- Extended Data Fig. 3: the lower-stratospheric precursor couples to the surface just as strongly with no SSW.",
+   "loc": 88,
+   "modified": "2026-09-29 15:40",
+   "sha256_16": "82fcb554f0bbd383",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_loeffel_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/figED4_sweep.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "figED4_sweep.py -- Extended Data Fig. 4: every version of the criterion tracks one shifted population.",
+   "loc": 84,
+   "modified": "2026-09-30 10:51",
+   "sha256_16": "c8cebfb1e80ff06f",
+   "flags": [],
+   "filenames_mentioned": [
+    "criterion_sweep.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/nature_style.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "Shared look for every display item, so the figures agree with each other and with Nature Portfolio's artwork guide: sans-serif type at 5-7 pt, 89 mm single and 183 mm double column widths, vector PDF plus a 300-dpi PNG preview, and the",
+   "loc": 61,
+   "modified": "2026-09-24 18:19",
+   "sha256_16": "ced4a4928920e264",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/10_tables/tableED1_tests.py",
+   "tree": "ssw-design-analysis",
+   "stage": "10_tables",
+   "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
+   "loc": 205,
+   "modified": "2026-09-30 10:52",
+   "sha256_16": "01dbe82d1ee63127",
+   "flags": [],
+   "filenames_mentioned": [
+    "class_model_comparison.json",
+    "criterion_sweep.json",
+    "era5_regional_test.json",
+    "forced_variance_ceiling.json",
+    "forecast_value_robustness.json",
+    "forecast_value_test.json",
+    "obs_model_compatibility.json",
+    "s2s_baseline_test.json",
+    "s2s_forecast_test.json",
+    "s2s_heldout_test.json",
+    "s2s_leadlag_test.json",
+    "s2s_multimodel_robustness.json",
+    "s2s_multimodel_test.json",
+    "s2s_postonset_test.json",
+    "s2s_regional_test.json",
+    "snapsi_archetype_test.json",
+    "snapsi_causal_effect.json",
+    "snapsi_contrast_diagnosis.json",
+    "snapsi_distribution_test.json",
+    "snapsi_loeffel_test.json",
+    "snapsi_regional_test.json",
+    "snapsi_selection_test.json",
+    "tableED1_tests.csv",
+    "vortex_geometry_test.json",
+    "within_model_check.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/environment/check_environment.py",
+   "tree": "ssw-design-analysis",
+   "stage": "environment",
+   "title": "Verifies that this environment can actually do the project's work -- not that packages import, but that the four things every analysis here depends on really function.",
+   "loc": 182,
+   "modified": "2026-09-17 12:38",
+   "sha256_16": "8298bfa378aa34ef",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/manuscript/number_citations.py",
+   "tree": "ssw-design-analysis",
+   "stage": "manuscript",
+   "title": "number_citations.py -- replace ^{key}^ citation keys in main.md with numbers in Nature order (main text, then figure legends, then Methods) and write the reference list. Every entry below was checked against Crossref or the publisher",
+   "loc": 99,
+   "modified": "2026-09-30 08:49",
+   "sha256_16": "9a5004e9adaae19f",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/tests/smoke_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "tests",
+   "title": "The repository's standing checks. Every one of them exists because something here once went wrong in that exact way -- see FAILURES.md, which this file is the executable half of.",
+   "loc": 348,
+   "modified": "2026-09-25 03:24",
+   "sha256_16": "03c3ae137e9e0db9",
+   "flags": [],
+   "filenames_mentioned": [
+    "CATALOG.json",
+    "catalogue_checksum.txt",
+    "event_catalogue.csv",
+    "snapsi_polarcap_psl.parquet",
+    "snapsi_polarcap_zg100.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/acquisition/05_download_ssw_catalog.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "Script 05 \u2014 Stratospheric Sudden Warming (SSW) Catalog Downloads the Butler et al. (2015/2017) and Charlton & Polvani (2007) catalogs, plus SPARC and community-maintained SSW event lists.",
+   "loc": 112,
+   "modified": "2026-04-03 14:45",
+   "sha256_16": "673f11cc2b03fc9b",
+   "flags": [],
+   "filenames_mentioned": [
+    "butler_ssw_catalog.csv",
+    "metadata.json",
+    "noaa_cpc_strat_temps.json",
+    "noaa_swpc_geomag_storm.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/acquisition/06_download_caic_avalanche.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "Script 06 \u2014 CAIC Colorado Avalanche Information Center Downloads avalanche accident statistics from the Colorado Avalanche Information Center.",
+   "loc": 184,
+   "modified": "2026-04-03 14:45",
+   "sha256_16": "06ec8b491ee92cef",
+   "flags": [],
+   "filenames_mentioned": [
+    "aaa_accidents.json",
+    "aaa_stats.json",
+    "caic_accidents.csv",
+    "caic_accidents_v2.csv",
+    "caic_statistics.json",
+    "eaws_latest_bulletins.json",
+    "envidat_search_avalanche.json",
+    "envidat_slf_packages.json",
+    "nwac_accidents.json",
+    "uac_accidents_all.json",
+    "uac_avalanches.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/acquisition/07_download_snotel.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "Script 07 \u2014 NRCS SNOTEL Snowpack Telemetry Network Downloads snowpack data from the USDA NRCS SNOTEL network (900+ stations across the western United States, ~1980\u2013present).",
+   "loc": 155,
+   "modified": "2026-04-03 14:46",
+   "sha256_16": "dce349efe4021aa6",
+   "flags": [],
+   "filenames_mentioned": [
+    "snotel_station_details.json",
+    "snotel_stations.json"
+   ],
+   "filename_prefixes": [
+    "snotel_swe_season_"
+   ]
+  },
+  {
+   "path": "scripts/acquisition/10_setup_era5.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "Script 10 \u2014 ERA5 Reanalysis Setup Configures Copernicus CDS API access for ERA5 downloads.",
+   "loc": 172,
+   "modified": "2026-04-03 14:47",
+   "sha256_16": "9c65197cc3824bcd",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_colorado_rockies_surface_1959_2025.nc",
+    "era5_europe_trop_1979_2025.nc",
+    "era5_polar_strat_60N90N_1979_2025.nc",
+    "era5_swiss_alps_surface_1959_2025.nc"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/acquisition/11_setup_nasa_earthdata.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "Script 11 \u2014 NASA Earthdata Setup Sets up credentials and download scripts for NASA Earthdata-hosted datasets: \u2022 MERRA-2 reanalysis (NASA GMAO) \u2022 Aura/MLS stratospheric composition (NOx, O3, temperature)",
+   "loc": 327,
+   "modified": "2026-04-03 14:48",
+   "sha256_16": "abe62db82acea240",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/acquisition/14_download_norway_data.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "Script 14 \u2014 Norway NGI Avalanche Registry Contact + Public NVE Data The Norwegian Geotechnical Institute (NGI) maintains avalanche occurrence data.",
+   "loc": 174,
+   "modified": "2026-04-03 14:50",
+   "sha256_16": "4d6d33e9de50fb05",
+   "flags": [],
+   "filenames_mentioned": [
+    "nve_parameters.json",
+    "nve_snow_stations.json",
+    "nve_stations.json",
+    "regobs_api_info.json",
+    "regobs_avalanche_obs_all.json",
+    "regobs_snow_profiles.json",
+    "varsom_data_info.json",
+    "varsom_regions.json"
+   ],
+   "filename_prefixes": [
+    "region_"
+   ]
+  },
+  {
+   "path": "scripts/acquisition/16_download_norway_fixed.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "Norway Avalanche Data \u2014 Fixed API versions Uses correct Varsom v6 + Regobs v4 endpoints",
+   "loc": 176,
+   "modified": "2026-04-03 14:59",
+   "sha256_16": "e1ad5a1539128b7b",
+   "flags": [],
+   "filenames_mentioned": [
+    "nve_avalanche_events.json",
+    "nve_open_data_catalog.json",
+    "regions.json"
+   ],
+   "filename_prefixes": [
+    "regobs_avalanche_",
+    "warnings_region"
+   ]
+  },
+  {
+   "path": "scripts/acquisition/17_download_snotel_fixed.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "SNOTEL Bulk Download \u2014 Fixed version Uses station-by-station queries with correct NRCS AWDB REST API format.",
+   "loc": 126,
+   "modified": "2026-04-03 15:48",
+   "sha256_16": "4e2b1b1fc51653c1",
+   "flags": [],
+   "filenames_mentioned": [
+    "snotel_stations.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/acquisition/18_download_varsom_fixed.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "Varsom (NVE) Avalanche Warnings \u2014 Correct API v6.3.0 Uses Archive/Warning/All endpoint: all 46 regions, full detail, 2012-present.",
+   "loc": 94,
+   "modified": "2026-04-03 15:07",
+   "sha256_16": "6eb32ae2843a6dcc",
+   "flags": [],
+   "filenames_mentioned": [
+    "regions.json"
+   ],
+   "filename_prefixes": [
+    "region_",
+    "warnings_"
+   ]
+  },
+  {
+   "path": "scripts/acquisition/24_derive_storm_catalog.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "Derive geomagnetic storm catalog from Kyoto Dst CSV.",
+   "loc": 229,
+   "modified": "2026-04-03 15:37",
+   "sha256_16": "b6ea654ce3063ce3",
+   "flags": [],
+   "filenames_mentioned": [
+    "kyoto_dst_1957_present.csv",
+    "omni2_daily_summary.csv",
+    "sep_events.csv",
+    "storm_catalog.csv"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/acquisition/27_download_ncep_stratosphere.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "NCEP/NCAR Reanalysis \u2014 Stratospheric Polar Cap Data Downloads daily-mean temperature (air), zonal wind (uwnd), and geopotential height (hgt) at stratospheric pressure levels (10\u2013100 hPa) averaged over the",
+   "loc": 106,
+   "modified": "2026-04-03 15:55",
+   "sha256_16": "12d0dfe6eea58e75",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/acquisition/28_download_snotel_state_reports.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "SNOTEL State-Level SWE Reports \u2014 Corrected per-station approach Downloads individual SNOTEL station daily data via NRCS Report Generator CSV format (simpler flat CSV vs. AWDB JSON) for key high-elevation stations in avalanche terrain.",
+   "loc": 73,
+   "modified": "2026-04-03 16:07",
+   "sha256_16": "c732093d211ae996",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/acquisition/29_download_ncep_troposphere.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "NCEP/NCAR Reanalysis \u2014 Tropospheric Variables for Atmospheric Bridge Analysis Downloads daily-mean 500 hPa geopotential height and sea-level pressure (SLP) for the Northern Hemisphere mid-latitudes and polar cap (30\u201390 \u00b0N).",
+   "loc": 113,
+   "modified": "2026-04-03 16:15",
+   "sha256_16": "c8f210d63a277862",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/acquisition/30_download_senorge_swe.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "seNorge Norwegian Snow Water Equivalent (SWE) \u2014 Area-Averaged Time Series Downloads annual SWE from MET Norway's seNorge gridded product (1957\u20132025) via OPeNDAP. Extracts national and latitudinal zone means rather than full",
+   "loc": 127,
+   "modified": "2026-04-03 16:29",
+   "sha256_16": "422c8598237b64d6",
+   "flags": [],
+   "filenames_mentioned": [
+    "norway_swe_daily_1957_2025.csv"
+   ],
+   "filename_prefixes": [
+    "swe_norway_"
+   ]
+  },
+  {
+   "path": "scripts/acquisition/32_download_uac_avalanche.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "Utah Avalanche Center (UAC) Avalanche Incident Database All seasons from earliest available (~1980s) to present.",
+   "loc": 76,
+   "modified": "2026-04-03 16:46",
+   "sha256_16": "cebd4f6b5dffb5ca",
+   "flags": [],
+   "filenames_mentioned": [
+    "uac_avalanche_incidents_all.csv"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/acquisition/36_download_volcanic_aerosol.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "Download volcanic eruption catalog and stratospheric aerosol forcing data.",
+   "loc": 135,
+   "modified": "2026-04-03 17:07",
+   "sha256_16": "aa22921232b118d8",
+   "flags": [],
+   "filenames_mentioned": [
+    "giss_strat_aod_tau_1850_2012.csv",
+    "giss_strat_aod_tau_1850_2012.txt",
+    "gvp_eruption_list_holocene.csv",
+    "gvp_eruptions_vei4plus.csv",
+    "major_eruptions_catalog.csv"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/acquisition/37_download_climate_indices.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "Download remaining climate teleconnection indices from NOAA PSL/ESRL.",
+   "loc": 65,
+   "modified": "2026-04-03 17:13",
+   "sha256_16": "7454879b531c5664",
+   "flags": [],
+   "filenames_mentioned": [
+    "aao_monthly_cpc.txt",
+    "amo_monthly.txt",
+    "ao_monthly_cpc.txt",
+    "censo_monthly.txt",
+    "ep_monthly.txt",
+    "mei_v2_bimonthly.txt",
+    "noaa_solar_cycle_index.txt",
+    "pdo_monthly.txt",
+    "polar_vortex_index_monthly.txt",
+    "qbo_u10_monthly.txt",
+    "qbo_u30_monthly.txt",
+    "wp_monthly.txt"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/acquisition/38_download_era5.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "ERA5 Download \u2014 year-by-year, small domains only to stay within CDS cost limits.",
+   "loc": 135,
+   "modified": "2026-04-03 17:45",
+   "sha256_16": "fffda5e9b52c3d4b",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": [
+    "era5_colorado_",
+    "era5_europe_trop_monthly_",
+    "era5_norway_",
+    "era5_swiss_alps_"
+   ]
+  },
+  {
+   "path": "scripts/acquisition/39_download_nasa_earthdata.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "Aura/MLS + MERRA-2 + MODIS Snow download using NASA Earthdata credentials.",
+   "loc": 188,
+   "modified": "2026-04-04 06:05",
+   "sha256_16": "057ffb4ffb6aa005",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/acquisition/40_download_ims_snow.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "IMS (Interactive Multi-sensor Snow and Ice Mapping System) Daily Snow Cover Source: NSIDC \u2014 https://nsidc.org/data/g02156 Format: ASCII/NetCDF 4km and 1km daily grids \u2014 publicly accessible without auth.",
+   "loc": 171,
+   "modified": "2026-04-04 03:49",
+   "sha256_16": "d171181aa9698e82",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/acquisition/45_download_slf_envidat.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "Download public SLF/WSL avalanche datasets from EnviDat (Swiss Environmental Data) No authentication required \u2014 all datasets are CC-BY licensed.",
+   "loc": 52,
+   "modified": "2026-04-04 04:04",
+   "sha256_16": "262a84d86d4abf7c",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/acquisition/47_download_era5_polar_strat.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "ERA5 Polar Stratosphere Monthly Means (1979-2025) Downloads polar cap (60-90N) monthly mean pressure-level data for the stratospheric mediation test (EPP -> NOx -> polar vortex -> surface).",
+   "loc": 70,
+   "modified": "2026-04-04 05:54",
+   "sha256_16": "605aa5b19554d2d1",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": [
+    "era5_polar_strat_"
+   ]
+  },
+  {
+   "path": "scripts/acquisition/50_redownload_mls.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "Re-download Aura/MLS L3 Daily Zonal files for all 4 EPP-relevant products.",
+   "loc": 87,
+   "modified": "2026-04-05 15:39",
+   "sha256_16": "ee9727b632b516a9",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/acquisition/51_redownload_era5_alps.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "Re-download ERA5 Swiss Alps surface data for the analysis period (2004-2025).",
+   "loc": 62,
+   "modified": "2026-04-05 15:39",
+   "sha256_16": "0b8c27e42ff97aa7",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": [
+    "era5_swiss_alps_"
+   ]
+  },
+  {
+   "path": "scripts/acquisition/download_all.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "download_all.py \u2014 Master Download Orchestrator Solar-Magnetic-Analysis Research Project Runs all download scripts in sequence, logging progress.",
+   "loc": 122,
+   "modified": "2026-04-03 14:51",
+   "sha256_16": "47ca17ec8bcd8d58",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/acquisition/download_ssw_compendium_canonical.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "Build THE canonical major mid-winter SSW catalog used by every analysis in this project, from the authoritative published source rather than a local detector.",
+   "loc": 177,
+   "modified": "2026-07-26 20:04",
+   "sha256_16": "129e729723a03aa8",
+   "flags": [],
+   "filenames_mentioned": [
+    "ssw_canonical.csv"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/acquisition/save_butler_ssw.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "Save Butler SSW Compendium data as structured CSV.",
+   "loc": 49,
+   "modified": "2026-04-09 12:58",
+   "sha256_16": "8bde5b6bd8a186ef",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/acquisition/utils.py",
+   "tree": "scripts",
+   "stage": "acquisition",
+   "title": "Shared download utilities for the Solar-Magnetic-Analysis project.",
+   "loc": 72,
+   "modified": "2026-04-03 14:43",
+   "sha256_16": "bed39da3ecaae45e",
+   "flags": [],
+   "filenames_mentioned": [
+    "INSTRUCTIONS.txt"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/maintenance/fix_ncep_redownload.py",
+   "tree": "scripts",
+   "stage": "maintenance",
+   "title": "Re-downloads NCEP/NCAR Reanalysis I stratospheric polar-cap data from PSL THREDDS one year at a time and rebuilds ncep_stratosphere.parquet with correct values.",
+   "loc": 206,
+   "modified": "2026-04-05 19:28",
+   "sha256_16": "1bdcd6790d43e0d2",
+   "flags": [],
+   "filenames_mentioned": [
+    "hgt_500hPa_NH_1979_2024.csv",
+    "ncep_stratosphere.parquet",
+    "ncep_troposphere.parquet",
+    "slp_NH_1979_2024.csv",
+    "uwnd_850hPa_NH_1979_2024.csv"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/maintenance/inventory_datasets.py",
+   "tree": "scripts",
+   "stage": "maintenance",
+   "title": "Systematic inventory of EVERY dataset under data/: format, size, variables, temporal coverage, row counts, and (where derivable) what it physically measures.",
+   "loc": 271,
+   "modified": "2026-07-28 07:35",
+   "sha256_16": "0b82f61717030559",
+   "flags": [],
+   "filenames_mentioned": [
+    "data_inventory.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/maintenance/qc_check.py",
+   "tree": "scripts",
+   "stage": "maintenance",
+   "title": "Quality Control check for all processed datasets.",
+   "loc": 286,
+   "modified": "2026-04-05 22:33",
+   "sha256_16": "61731b917e8d82f8",
+   "flags": [],
+   "filenames_mentioned": [
+    "manifest.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/pipeline/00_run_pipeline.py",
+   "tree": "scripts",
+   "stage": "pipeline",
+   "title": "Master pipeline runner \u2014 processes all domains in order (largest \u2192 smallest).",
+   "loc": 62,
+   "modified": "2026-04-04 17:57",
+   "sha256_16": "0de485ab55fb6078",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/pipeline/01_process_geomagnetic.py",
+   "tree": "scripts",
+   "stage": "pipeline",
+   "title": "Process geomagnetic (Dst/AE/Kp) and atmospheric catalog data \u2192 Parquet.",
+   "loc": 399,
+   "modified": "2026-04-04 18:02",
+   "sha256_16": "762081e1f27cacc9",
+   "flags": [],
+   "filenames_mentioned": [
+    "boulder_k_1min.json",
+    "climate_indices.parquet",
+    "dst_index.parquet",
+    "kp_1min.json",
+    "kp_index.parquet",
+    "manifest.json",
+    "metadata.json",
+    "ssw_catalog.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/pipeline/02_process_solar_catalogs.py",
+   "tree": "scripts",
+   "stage": "pipeline",
+   "title": "Process solar event catalogs, SDO HMI SHARP, solar indices, and NCEP CSV \u2192 Parquet.",
+   "loc": 441,
+   "modified": "2026-04-05 18:00",
+   "sha256_16": "335a46f05ee3425a",
+   "flags": [],
+   "filenames_mentioned": [
+    "cme_catalog.parquet",
+    "donki_cme_1995_present.json",
+    "donki_flares_1995_present.json",
+    "flares.parquet",
+    "manifest.json",
+    "ncep_stratosphere.parquet",
+    "ncep_troposphere.parquet",
+    "sdo_hmi_sharp.parquet",
+    "solar_indices.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/pipeline/03_process_omni.py",
+   "tree": "scripts",
+   "stage": "pipeline",
+   "title": "Process OMNI solar wind fixed-width text files \u2192 Parquet.",
+   "loc": 307,
+   "modified": "2026-04-05 18:15",
+   "sha256_16": "1882f3fab3df65ad",
+   "flags": [],
+   "filenames_mentioned": [
+    "manifest.json",
+    "omni_1min.parquet",
+    "omni_hourly.parquet"
+   ],
+   "filename_prefixes": [
+    "omni_hourly_"
+   ]
+  },
+  {
+   "path": "scripts/pipeline/04_process_goes_xrs.py",
+   "tree": "scripts",
+   "stage": "pipeline",
+   "title": "Process GOES X-ray Sensor (XRS) NetCDF files \u2192 single Parquet.",
+   "loc": 257,
+   "modified": "2026-04-04 19:06",
+   "sha256_16": "6dc3a56981d3fb45",
+   "flags": [],
+   "filenames_mentioned": [
+    "goes_xrs.parquet",
+    "manifest.json"
+   ],
+   "filename_prefixes": [
+    "goes_xrs_"
+   ]
+  },
+  {
+   "path": "scripts/pipeline/05_process_goes_particle.py",
+   "tree": "scripts",
+   "stage": "pipeline",
+   "title": "Process GOES energetic particle data (legacy MAGED + GOES-R MPSH) \u2192 Parquet.",
+   "loc": 316,
+   "modified": "2026-04-04 18:06",
+   "sha256_16": "34eb7f82e8f41765",
+   "flags": [],
+   "filenames_mentioned": [
+    "goes_legacy_particle.parquet",
+    "goes_r_particle.parquet",
+    "manifest.json"
+   ],
+   "filename_prefixes": [
+    "goes_r_particle_"
+   ]
+  },
+  {
+   "path": "scripts/pipeline/06_process_poes.py",
+   "tree": "scripts",
+   "stage": "pipeline",
+   "title": "Process POES MEPED CDF files \u2192 Parquet using cdflib.",
+   "loc": 287,
+   "modified": "2026-04-05 01:08",
+   "sha256_16": "f106e39967692d7b",
+   "flags": [],
+   "filenames_mentioned": [
+    "manifest.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/pipeline/07_process_mls.py",
+   "tree": "scripts",
+   "stage": "pipeline",
+   "title": "Process Aura/MLS HDF5 files \u2192 polar-mean Parquet + gridded NetCDF4.",
+   "loc": 305,
+   "modified": "2026-04-05 16:02",
+   "sha256_16": "960e12d4c8e08576",
+   "flags": [],
+   "filenames_mentioned": [
+    "manifest.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/pipeline/08_process_era5.py",
+   "tree": "scripts",
+   "stage": "pipeline",
+   "title": "Process ERA5 NetCDF files \u2192 merged compressed NetCDF4 + polar Parquet.",
+   "loc": 351,
+   "modified": "2026-04-05 18:00",
+   "sha256_16": "569469daa3d2b388",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_polar_strat_gridded.nc",
+    "era5_polar_strat_means.parquet",
+    "era5_swiss_alps.nc",
+    "manifest.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/pipeline/09_process_modis.py",
+   "tree": "scripts",
+   "stage": "pipeline",
+   "title": "Process MODIS MOD10A1 HDF4 snow cover files \u2192 daily stats Parquet + monthly grid NetCDF4.",
+   "loc": 299,
+   "modified": "2026-04-05 05:02",
+   "sha256_16": "8c0ccb49c24b41a3",
+   "flags": [],
+   "filenames_mentioned": [
+    "manifest.json",
+    "modis_alps_monthly.nc",
+    "modis_alps_stats.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/pipeline/10_process_cryosphere.py",
+   "tree": "scripts",
+   "stage": "pipeline",
+   "title": "Process cryosphere tabular and spatial datasets \u2192 Parquet.",
+   "loc": 606,
+   "modified": "2026-04-05 05:05",
+   "sha256_16": "bec8d2791ed330bc",
+   "flags": [],
+   "filenames_mentioned": [
+    "caic_accidents.parquet",
+    "ims_snow_daily.parquet",
+    "manifest.json",
+    "norway_avalanche.parquet",
+    "norway_swe_daily_1957_2025.csv",
+    "snotel_daily.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/pipeline/11_process_psp_ace.py",
+   "tree": "scripts",
+   "stage": "pipeline",
+   "title": "Process Parker Solar Probe (PSP) CDF and ACE/DSCOVR compressed NetCDF \u2192 Parquet.",
+   "loc": 502,
+   "modified": "2026-04-05 14:29",
+   "sha256_16": "3d01e4cf1cc39b7e",
+   "flags": [],
+   "filenames_mentioned": [
+    "ace_dscovr.parquet",
+    "manifest.json",
+    "psp_mag.parquet"
+   ],
+   "filename_prefixes": [
+    "ace_dscovr_",
+    "psp_mag_"
+   ]
+  },
+  {
+   "path": "scripts/publishing/zenodo_resume_large.py",
+   "tree": "scripts",
+   "stage": "publishing",
+   "title": "Resume large-file uploads to Zenodo using curl.exe (avoids Windows TCP abort).",
+   "loc": 227,
+   "modified": "2026-04-11 03:27",
+   "sha256_16": "dfa1f8c61851d3be",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_polar_strat_gridded.nc",
+    "goes_legacy_particle.parquet",
+    "goes_r_particle.parquet",
+    "goes_r_particle_goes16.parquet",
+    "goes_r_particle_goes17.parquet",
+    "goes_r_particle_goes18.parquet",
+    "goes_xrs.parquet",
+    "omni_1min.parquet",
+    "psp_mag.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "scripts/publishing/zenodo_upload.py",
+   "tree": "scripts",
+   "stage": "publishing",
+   "title": "Zenodo Data Upload Script \u2014 Solar-Magnetic Avalanche Analysis Uploads ALL data (~55 GB) across two deposits: 1. Raw/Source Data   (~24.6 GB) \u2014 unprocessed files from original sources 2. Processed Data    (~33.2 GB) \u2014 analysis-ready datasets, results, figures",
+   "loc": 632,
+   "modified": "2026-04-10 08:12",
+   "sha256_16": "9372ab356393a489",
+   "flags": [],
+   "filenames_mentioned": [
+    "ZENODO_DEPOSITS.json",
+    "analysis_panel.parquet",
+    "analysis_panel_v2.parquet",
+    "era5_polar_strat_gridded.nc",
+    "era5_swiss_alps_daily.parquet",
+    "era5_swiss_alps_extended.parquet",
+    "goes_legacy_particle.parquet",
+    "goes_r_particle.parquet",
+    "goes_r_particle_goes16.parquet",
+    "goes_r_particle_goes17.parquet",
+    "goes_r_particle_goes18.parquet",
+    "goes_xrs.parquet",
+    "manifest.json",
+    "merra2_polar_strat.nc",
+    "mls_hno3_gridded.nc",
+    "mls_n2o_gridded.nc",
+    "mls_ozone_gridded.nc",
+    "mls_temperature_gridded.nc",
+    "omni_1min.parquet",
+    "preregistration.json",
+    "psp_mag.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "tools/catalog_repo.py",
+   "tree": "tools",
+   "stage": "",
+   "title": "The single cataloguing tool for this repository. Run it after any analysis and it rebuilds every index from the files themselves -- nothing here is maintained by hand, so nothing here can silently go stale.",
+   "loc": 475,
+   "modified": "2026-09-24 18:47",
+   "sha256_16": "a73c2ae85f906afc",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  }
+ ],
+ "results": [
+  {
+   "path": "results/current/1_catalogue/catalogue_sets.json",
+   "tree": "current",
+   "stage": "1_catalogue",
+   "readable": true,
+   "bytes": 6826,
+   "modified": "2026-09-30 09:05",
+   "sha256_16": "5cd0aff03201ca05",
+   "producers": [
+    "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/02_event_catalogues/build_catalogue.py": "5a24a0ed9b645aa4"
+   },
+   "verdicts": [],
+   "counts": {},
+   "top_level_keys": [
+    "primary",
+    "primary_compendium_only",
+    "consensus_strict",
+    "consensus_half",
+    "union",
+    "ncep_ncar",
+    "era40",
+    "era_interim",
+    "jra_55",
+    "merra2",
+    "era5"
+   ]
+  },
+  {
+   "path": "results/current/1_catalogue/validate_ssw_detector.json",
+   "tree": "current",
+   "stage": "1_catalogue",
+   "readable": true,
+   "bytes": 750,
+   "modified": "2026-09-25 07:01",
+   "sha256_16": "4683749efdc83b6f",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/validate_ssw_detector.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/validate_ssw_detector.py": "619fe05ffb333c79"
+   },
+   "verdicts": [],
+   "counts": {},
+   "top_level_keys": [
+    "question",
+    "passes",
+    "inputs",
+    "tolerance_days",
+    "coverage_end",
+    "n_published",
+    "n_matched",
+    "n_exact",
+    "missed",
+    "extra_in_coverage",
+    "after_coverage",
+    "offsets_days"
+   ]
+  },
+  {
+   "path": "results/current/2_event_study/canonical_event_study.json",
+   "tree": "current",
+   "stage": "2_event_study",
+   "readable": true,
+   "bytes": 31185,
+   "modified": "2026-09-25 03:15",
+   "sha256_16": "2ad84f01e8acd8fa",
+   "producers": [
+    "ssw-design-analysis/05_corrected_estimators/canonical_event_study.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/05_corrected_estimators/canonical_event_study.py": "63de525060939d6c"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_boot": [
+     1200
+    ],
+    "n_events": [
+     27,
+     36,
+     39,
+     41,
+     42,
+     43,
+     47
+    ],
+    "n_unique_winters": [
+     23,
+     31,
+     33,
+     35,
+     36,
+     38
+    ]
+   },
+   "top_level_keys": [
+    "seasonal_spec",
+    "bins",
+    "baseline_gap_days",
+    "n_boot",
+    "outcomes"
+   ]
+  },
+  {
+   "path": "results/current/2_event_study/clean_subset.json",
+   "tree": "current",
+   "stage": "2_event_study",
+   "readable": true,
+   "bytes": 5841,
+   "modified": "2026-09-25 03:15",
+   "sha256_16": "a50f9c5b476931af",
+   "producers": [
+    "ssw-design-analysis/05_corrected_estimators/clean_subset.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/05_corrected_estimators/clean_subset.py": "d7c6d32c6aa6264a"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_boot": [
+     8000
+    ],
+    "n_events": [
+     21,
+     29,
+     43
+    ],
+    "n_winters": [
+     21,
+     25,
+     29,
+     36
+    ]
+   },
+   "top_level_keys": [
+    "n_boot",
+    "isolation_days",
+    "split_year",
+    "profiles"
+   ]
+  },
+  {
+   "path": "results/current/2_event_study/common_period.json",
+   "tree": "current",
+   "stage": "2_event_study",
+   "readable": true,
+   "bytes": 3917,
+   "modified": "2026-09-25 03:14",
+   "sha256_16": "659d2bfb06b41cee",
+   "producers": [
+    "ssw-design-analysis/05_corrected_estimators/common_period.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/05_corrected_estimators/common_period.py": "6bc45fe5fe837c6f"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_boot": [
+     1200
+    ],
+    "n_events": [
+     24,
+     25,
+     26,
+     27,
+     36,
+     39,
+     41,
+     42,
+     43,
+     47
+    ]
+   },
+   "top_level_keys": [
+    "n_boot",
+    "windows"
+   ]
+  },
+  {
+   "path": "results/current/2_event_study/enso_confound.json",
+   "tree": "current",
+   "stage": "2_event_study",
+   "readable": true,
+   "bytes": 1191,
+   "modified": "2026-09-25 03:14",
+   "sha256_16": "8ad1af523108486b",
+   "producers": [
+    "ssw-design-analysis/05_corrected_estimators/enso_confound.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/05_corrected_estimators/enso_confound.py": "5fb6c6e06a81b483"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_boot": [
+     6000
+    ],
+    "n_events": [
+     30,
+     43
+    ]
+   },
+   "top_level_keys": [
+    "n_boot",
+    "series"
+   ]
+  },
+  {
+   "path": "results/current/2_event_study/era5_regional_test.json",
+   "tree": "current",
+   "stage": "2_event_study",
+   "readable": true,
+   "bytes": 3878,
+   "modified": "2026-09-29 06:18",
+   "sha256_16": "5f43b5caf139ab81",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/era5_regional_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/era5_regional_test.py": "395760ee71ea4a89"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_null": [
+     10000
+    ],
+    "n_boot": [
+     10000
+    ],
+    "n_events": [
+     39
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "seed",
+    "n_null",
+    "n_boot",
+    "primary",
+    "nam_window",
+    "t_window",
+    "inputs",
+    "events",
+    "n_events",
+    "n_pseudo",
+    "regions",
+    "falsifier_primary"
+   ]
+  },
+  {
+   "path": "results/current/2_event_study/era_split.json",
+   "tree": "current",
+   "stage": "2_event_study",
+   "readable": true,
+   "bytes": 1957,
+   "modified": "2026-09-25 03:13",
+   "sha256_16": "4d74894e8a933301",
+   "producers": [
+    "ssw-design-analysis/05_corrected_estimators/era_split.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/05_corrected_estimators/era_split.py": "6cfcc8fee3a2d6c9"
+   },
+   "verdicts": [
+    {
+     "key": "interpretation_note",
+     "text": "dating-error explanation requires the post-onset effect to be attenuated pre-1980 as well; a real change does not"
+    }
+   ],
+   "counts": {
+    "n_boot": [
+     4000
+    ]
+   },
+   "top_level_keys": [
+    "split_year",
+    "n_boot",
+    "n_events_early",
+    "n_events_late",
+    "bins",
+    "interpretation_note"
+   ]
+  },
+  {
+   "path": "results/current/2_event_study/isolated_events.json",
+   "tree": "current",
+   "stage": "2_event_study",
+   "readable": true,
+   "bytes": 4868,
+   "modified": "2026-09-25 03:13",
+   "sha256_16": "de1ea4e4dbf5bd2f",
+   "producers": [
+    "ssw-design-analysis/05_corrected_estimators/isolated_events.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/05_corrected_estimators/isolated_events.py": "0c2cc5cfa9098ca6"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_boot": [
+     1200
+    ],
+    "n_events": [
+     14,
+     29,
+     43
+    ]
+   },
+   "top_level_keys": [
+    "isolation_days",
+    "n_boot",
+    "n_isolated",
+    "n_clustered",
+    "nearest_gap_days",
+    "profiles"
+   ]
+  },
+  {
+   "path": "results/current/2_event_study/isolation_interaction.json",
+   "tree": "current",
+   "stage": "2_event_study",
+   "readable": true,
+   "bytes": 1801,
+   "modified": "2026-09-25 03:13",
+   "sha256_16": "4d6e3b558970d8d4",
+   "producers": [
+    "ssw-design-analysis/05_corrected_estimators/isolation_interaction.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/05_corrected_estimators/isolation_interaction.py": "193f2933ac8815eb"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_boot": [
+     4000
+    ]
+   },
+   "top_level_keys": [
+    "n_boot",
+    "isolation_days",
+    "bins"
+   ]
+  },
+  {
+   "path": "results/current/2_event_study/multi_index_event_study.json",
+   "tree": "current",
+   "stage": "2_event_study",
+   "readable": true,
+   "bytes": 7054,
+   "modified": "2026-09-25 03:13",
+   "sha256_16": "3f1c806a1570e153",
+   "producers": [
+    "ssw-design-analysis/05_corrected_estimators/multi_index_event_study.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/05_corrected_estimators/multi_index_event_study.py": "2f533f6cc36cd34a"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_boot": [
+     1200
+    ],
+    "n_events": [
+     30,
+     43
+    ],
+    "n_unique_winters": [
+     26,
+     36
+    ]
+   },
+   "top_level_keys": [
+    "catalogue",
+    "n_harm",
+    "n_boot",
+    "bins",
+    "outcomes",
+    "negative_control"
+   ]
+  },
+  {
+   "path": "results/current/2_event_study/negcontrol_stability.json",
+   "tree": "current",
+   "stage": "2_event_study",
+   "readable": true,
+   "bytes": 595,
+   "modified": "2026-09-25 04:21",
+   "sha256_16": "6751656d48bef99d",
+   "producers": [
+    "ssw-design-analysis/05_corrected_estimators/negcontrol_stability.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/05_corrected_estimators/negcontrol_stability.py": "331eccfa4f180449"
+   },
+   "verdicts": [
+    {
+     "key": "indices.aao.verdict",
+     "text": "STABLE"
+    },
+    {
+     "key": "indices.pna.verdict",
+     "text": "STABLE"
+    }
+   ],
+   "counts": {
+    "n_seeds": [
+     60
+    ],
+    "n_boot": [
+     6000
+    ],
+    "n_events": [
+     30,
+     43
+    ]
+   },
+   "top_level_keys": [
+    "n_seeds",
+    "n_boot",
+    "watch_bin",
+    "indices"
+   ]
+  },
+  {
+   "path": "results/current/2_event_study/seed_stability.json",
+   "tree": "current",
+   "stage": "2_event_study",
+   "readable": true,
+   "bytes": 1442,
+   "modified": "2026-09-25 03:34",
+   "sha256_16": "d69b7ac57c080e9e",
+   "producers": [
+    "ssw-design-analysis/05_corrected_estimators/seed_stability.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/05_corrected_estimators/seed_stability.py": "7110403a6f665243"
+   },
+   "verdicts": [
+    {
+     "key": "cases.AO|primary.-30..-16.verdict",
+     "text": "STABLE"
+    },
+    {
+     "key": "cases.AO|primary.+15..+29.verdict",
+     "text": "STABLE"
+    },
+    {
+     "key": "cases.AO|consensus_strict.-30..-16.verdict",
+     "text": "SEED-DEPENDENT"
+    },
+    {
+     "key": "cases.AO|consensus_strict.+15..+29.verdict",
+     "text": "STABLE"
+    },
+    {
+     "key": "cases.NAO|primary.-30..-16.verdict",
+     "text": "STABLE"
+    },
+    {
+     "key": "cases.NAO|primary.+15..+29.verdict",
+     "text": "STABLE"
+    }
+   ],
+   "counts": {
+    "n_seeds": [
+     40
+    ],
+    "n_boot": [
+     1200
+    ]
+   },
+   "top_level_keys": [
+    "n_seeds",
+    "n_boot",
+    "cases"
+   ]
+  },
+  {
+   "path": "results/current/2_event_study/vortex_geometry_test.json",
+   "tree": "current",
+   "stage": "2_event_study",
+   "readable": true,
+   "bytes": 5189,
+   "modified": "2026-09-29 10:31",
+   "sha256_16": "2ca9c790bfd038a1",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/vortex_geometry_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/vortex_geometry_test.py": "9b653be72be2dfb8"
+   },
+   "verdicts": [],
+   "counts": {},
+   "top_level_keys": [
+    "plan_approved",
+    "seed",
+    "n",
+    "edge_m",
+    "validation_1958_2009",
+    "validation_reference_seviour2013",
+    "classification",
+    "classification_7day",
+    "counts",
+    "counts_7day",
+    "tests"
+   ]
+  },
+  {
+   "path": "results/current/3_calibration/aao_null.json",
+   "tree": "current",
+   "stage": "3_calibration",
+   "readable": true,
+   "bytes": 431,
+   "modified": "2026-09-25 03:13",
+   "sha256_16": "e79f34277b3fd86b",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/aao_null.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/aao_null.py": "636da89e80351e2d"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_draw": [
+     2000
+    ]
+   },
+   "top_level_keys": [
+    "n_draw",
+    "watch_bin",
+    "observed_effect",
+    "null_mean",
+    "null_sd",
+    "null_pct2.5",
+    "null_pct97.5",
+    "p_observed_vs_null",
+    "per_bin_null_mean"
+   ]
+  },
+  {
+   "path": "results/current/3_calibration/ao_null_perbin.json",
+   "tree": "current",
+   "stage": "3_calibration",
+   "readable": true,
+   "bytes": 1868,
+   "modified": "2026-09-25 03:14",
+   "sha256_16": "bbd57d4a279ce3f2",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/ao_null_perbin.py"
+   ],
+   "state": "FLAGGED",
+   "detail": "producer declares itself DO NOT CITE, SUPERSEDED BY, VOID: ssw-design-analysis/06_simulation_validation/ao_null_perbin.py",
+   "flags": [
+    "DO NOT CITE",
+    "SUPERSEDED BY",
+    "VOID"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/ao_null_perbin.py": "177c5430f3d992c8"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_draw": [
+     2000
+    ],
+    "n_boot": [
+     6000
+    ]
+   },
+   "top_level_keys": [
+    "n_draw",
+    "n_boot",
+    "bins"
+   ]
+  },
+  {
+   "path": "results/current/3_calibration/boot_calibration.json",
+   "tree": "current",
+   "stage": "3_calibration",
+   "readable": true,
+   "bytes": 2535,
+   "modified": "2026-09-25 03:44",
+   "sha256_16": "a2f69dae0e21d78a",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/boot_calibration.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/boot_calibration.py": "87f2f8d8899a615e"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_draw": [
+     200
+    ],
+    "n_boot": [
+     1000
+    ]
+   },
+   "top_level_keys": [
+    "n_draw",
+    "n_boot",
+    "series"
+   ]
+  },
+  {
+   "path": "results/current/3_calibration/calibration_results.json",
+   "tree": "current",
+   "stage": "3_calibration",
+   "readable": true,
+   "bytes": 3636,
+   "modified": "2026-09-25 04:01",
+   "sha256_16": "88119e150d8bb44f",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/calibrate_seasonality.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/calibrate_seasonality.py": "d0df387de0b919aa"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_draws": [
+     400
+    ]
+   },
+   "top_level_keys": [
+    "n_draws",
+    "tested_bin",
+    "specs",
+    "passing_specs"
+   ]
+  },
+  {
+   "path": "results/current/3_calibration/gate3_clean_null.json",
+   "tree": "current",
+   "stage": "3_calibration",
+   "readable": true,
+   "bytes": 1372,
+   "modified": "2026-09-25 07:55",
+   "sha256_16": "71f92703e499279d",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/gate3_clean_null.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/gate3_clean_null.py": "bcce92d9cdc2aa66"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_draws": [
+     4000
+    ],
+    "n_boot": [
+     1000
+    ]
+   },
+   "top_level_keys": [
+    "n_mean_draws",
+    "n_cover_draws",
+    "influence_zone",
+    "n_days_total",
+    "n_days_clean",
+    "diagnosis",
+    "specs",
+    "n_boot",
+    "partial"
+   ]
+  },
+  {
+   "path": "results/current/3_calibration/spatial_calibration.json",
+   "tree": "current",
+   "stage": "3_calibration",
+   "readable": true,
+   "bytes": 814,
+   "modified": "2026-09-25 05:09",
+   "sha256_16": "0a87becf132d77da",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/calibrate_spatial.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/calibrate_spatial.py": "eaf4b00675977e4e"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_boot": [
+     1000
+    ],
+    "n_winters": [
+     47
+    ],
+    "n_events": [
+     29
+    ],
+    "n_draws": [
+     1500
+    ]
+   },
+   "top_level_keys": [
+    "n_mean_draws",
+    "n_cover_draws",
+    "n_boot",
+    "n_rows",
+    "n_units",
+    "n_winters",
+    "n_events",
+    "specs",
+    "coverage_spec"
+   ]
+  },
+  {
+   "path": "results/current/3_calibration/station_calibration.json",
+   "tree": "current",
+   "stage": "3_calibration",
+   "readable": true,
+   "bytes": 1074,
+   "modified": "2026-09-25 04:50",
+   "sha256_16": "7b00ddb8fd5165de",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/calibrate_station_level.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/calibrate_station_level.py": "31e0be2037fe176a"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_winters": [
+     44
+    ],
+    "n_events": [
+     28
+    ],
+    "n_boot": [
+     1000
+    ],
+    "n_draws": [
+     400
+    ]
+   },
+   "top_level_keys": [
+    "n_stations",
+    "n_rows",
+    "n_winters",
+    "n_events",
+    "heterogeneity",
+    "n_mean_draws",
+    "n_cover_draws",
+    "n_boot",
+    "specs",
+    "coverage_spec"
+   ]
+  },
+  {
+   "path": "results/current/3_calibration/validate_R_diagnostic.json",
+   "tree": "current",
+   "stage": "3_calibration",
+   "readable": true,
+   "bytes": 2800,
+   "modified": "2026-09-25 03:19",
+   "sha256_16": "98dd69eb09649328",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/validate_R_diagnostic.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/validate_R_diagnostic.py": "35236d01a1c4ec7e"
+   },
+   "verdicts": [
+    {
+     "key": "verdict.reading",
+     "text": "R returns the same value for an anomaly placed BEFORE onset as for one placed AFTER it. A pre-onset anomaly has causal fraction zero by construction, so R is NOT an estimator of the causal fraction; it measures how tightly the anomaly is concentrated around the onset date. The original validation simulated only the post-onset structure and therefore could not detect this."
+    }
+   ],
+   "counts": {
+    "n_winters": [
+     77
+    ],
+    "n_events": [
+     43
+    ],
+    "n_rep": [
+     300
+    ]
+   },
+   "top_level_keys": [
+    "phi",
+    "n_winters",
+    "n_events",
+    "n_rep",
+    "grid",
+    "arms",
+    "verdict"
+   ]
+  },
+  {
+   "path": "results/current/3_calibration/validate_s2s_multimodel.json",
+   "tree": "current",
+   "stage": "3_calibration",
+   "readable": true,
+   "bytes": 1941,
+   "modified": "2026-09-29 12:05",
+   "sha256_16": "0f944d1fa01d3e65",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "6ddf107b0ab305ec"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_seeds": [
+     100
+    ],
+    "n_null": [
+     1000
+    ]
+   },
+   "top_level_keys": [
+    "var",
+    "n_seeds",
+    "n_null",
+    "centres",
+    "binomial_se_at_0.05",
+    "cases"
+   ]
+  },
+  {
+   "path": "results/current/3_calibration/validate_s2s_multimodel_t2m.json",
+   "tree": "current",
+   "stage": "3_calibration",
+   "readable": true,
+   "bytes": 1947,
+   "modified": "2026-09-29 11:34",
+   "sha256_16": "e7d17e93e5970e1c",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "6ddf107b0ab305ec"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_seeds": [
+     100
+    ],
+    "n_null": [
+     1000
+    ]
+   },
+   "top_level_keys": [
+    "var",
+    "n_seeds",
+    "n_null",
+    "centres",
+    "binomial_se_at_0.05",
+    "cases"
+   ]
+  },
+  {
+   "path": "results/current/3_calibration/validate_s2s_null.json",
+   "tree": "current",
+   "stage": "3_calibration",
+   "readable": true,
+   "bytes": 3567,
+   "modified": "2026-09-25 13:03",
+   "sha256_16": "cd1ce7f92f7bfd70",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_null.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_null.py": "1eaf64a058c7aef1"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_seeds": [
+     40
+    ],
+    "n_null": [
+     1000
+    ]
+   },
+   "top_level_keys": [
+    "n_seeds",
+    "n_null",
+    "forecast_layout",
+    "synthetic",
+    "workers",
+    "cases",
+    "binomial_se_at_0.05"
+   ]
+  },
+  {
+   "path": "results/current/4_selection_bias/selection_law_enso.json",
+   "tree": "current",
+   "stage": "4_selection_bias",
+   "readable": true,
+   "bytes": 4582,
+   "modified": "2026-09-25 03:14",
+   "sha256_16": "49acbbea6ddc0b95",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/selection_law_enso.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/selection_law_enso.py": "cbcc2f7452ac92b0"
+   },
+   "verdicts": [
+    {
+     "key": "verdict",
+     "text": "LAW APPROXIMATE"
+    },
+    {
+     "key": "note",
+     "text": "at the natural 92% rate the selection is nearly no selection and the bias is ~0 for every outcome, which is itself the contrast with SSW at 70%: a more consistent teleconnection leaves less room for outcome-based selection to bias anything"
+    }
+   ],
+   "counts": {
+    "n_events": [
+     14
+    ],
+    "n_draw": [
+     1200
+    ]
+   },
+   "top_level_keys": [
+    "phenomenon",
+    "n_events",
+    "selection_variable",
+    "outcome_window_days",
+    "natural_selection_rate",
+    "rates_tested",
+    "n_draw",
+    "points",
+    "regression_measured_on_predicted",
+    "verdict",
+    "note"
+   ]
+  },
+  {
+   "path": "results/current/4_selection_bias/selection_on_outcome.json",
+   "tree": "current",
+   "stage": "4_selection_bias",
+   "readable": true,
+   "bytes": 1291,
+   "modified": "2026-09-25 06:57",
+   "sha256_16": "d2280066b0a8c819",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/selection_on_outcome.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/selection_on_outcome.py": "458e4408dedc18d5"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_draw": [
+     1500
+    ]
+   },
+   "top_level_keys": [
+    "window",
+    "n_draw",
+    "n_real",
+    "n_real_dSSW",
+    "rate_real",
+    "rate_null",
+    "rate_p_value",
+    "null_centres_on_zero",
+    "outcomes"
+   ]
+  },
+  {
+   "path": "results/current/4_selection_bias/selection_projection_law.json",
+   "tree": "current",
+   "stage": "4_selection_bias",
+   "readable": true,
+   "bytes": 977,
+   "modified": "2026-09-25 10:07",
+   "sha256_16": "66a5aef78194a6e1",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/selection_projection_law.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/selection_projection_law.py": "b361490d9f1b8669"
+   },
+   "verdicts": [
+    {
+     "key": "verdict",
+     "text": "LAW HOLDS"
+    }
+   ],
+   "counts": {
+    "n_events": [
+     29
+    ],
+    "n_draw": [
+     1200
+    ]
+   },
+   "top_level_keys": [
+    "n_events",
+    "n_draw",
+    "selection_rate",
+    "bias_of_selection_variable",
+    "outcomes",
+    "regression",
+    "verdict"
+   ]
+  },
+  {
+   "path": "results/current/4_selection_bias/selection_snotel.json",
+   "tree": "current",
+   "stage": "4_selection_bias",
+   "readable": true,
+   "bytes": 786,
+   "modified": "2026-09-25 06:56",
+   "sha256_16": "e9122456f80860ec",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/selection_snotel.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/selection_snotel.py": "663bc89774448ea9"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_draw": [
+     800
+    ],
+    "n_events": [
+     29
+    ]
+   },
+   "top_level_keys": [
+    "n_draw",
+    "n_events",
+    "rate_real",
+    "variables"
+   ]
+  },
+  {
+   "path": "results/current/4_selection_bias/stratifier_bias_law.json",
+   "tree": "current",
+   "stage": "4_selection_bias",
+   "readable": true,
+   "bytes": 5166,
+   "modified": "2026-09-25 10:07",
+   "sha256_16": "063de3a28dcbdb79",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/stratifier_bias_law.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/stratifier_bias_law.py": "3eda32af7826c680"
+   },
+   "verdicts": [
+    {
+     "key": "verdict",
+     "text": "LAW HOLDS on observations: every stratifier's null residual contains zero, so beta x dS accounts for the whole non-causal contrast and the residual is an unbiased differential effect."
+    }
+   ],
+   "counts": {
+    "n_events": [
+     29
+    ]
+   },
+   "top_level_keys": [
+    "n_events",
+    "outcome_window",
+    "all_event_composite",
+    "n_beta_pseudo",
+    "stratifiers",
+    "n_stratifiers_passing_null",
+    "n_stratifiers",
+    "verdict",
+    "stratosphere_record"
+   ]
+  },
+  {
+   "path": "results/current/4_selection_bias/stratifier_bias_law_1958.json",
+   "tree": "current",
+   "stage": "4_selection_bias",
+   "readable": true,
+   "bytes": 5175,
+   "modified": "2026-09-25 10:09",
+   "sha256_16": "41f549d838c50324",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/stratifier_bias_law.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/stratifier_bias_law.py": "3eda32af7826c680"
+   },
+   "verdicts": [
+    {
+     "key": "verdict",
+     "text": "LAW HOLDS on observations: every stratifier's null residual contains zero, so beta x dS accounts for the whole non-causal contrast and the residual is an unbiased differential effect."
+    }
+   ],
+   "counts": {
+    "n_events": [
+     42
+    ]
+   },
+   "top_level_keys": [
+    "n_events",
+    "outcome_window",
+    "all_event_composite",
+    "n_beta_pseudo",
+    "stratifiers",
+    "n_stratifiers_passing_null",
+    "n_stratifiers",
+    "verdict",
+    "stratosphere_record"
+   ]
+  },
+  {
+   "path": "results/current/4_selection_bias/stratifier_inference.json",
+   "tree": "current",
+   "stage": "4_selection_bias",
+   "readable": true,
+   "bytes": 4825,
+   "modified": "2026-09-25 06:55",
+   "sha256_16": "00fec485e682fe17",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/stratifier_inference.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/stratifier_inference.py": "488c5d43bd0a4e4a"
+   },
+   "verdicts": [
+    {
+     "key": "stratifiers.u10_post30.note",
+     "text": "post-onset stratospheric: residual is an UPPER BOUND on contamination, not a causal effect"
+    },
+    {
+     "key": "stratifiers.u10_post45.note",
+     "text": "post-onset stratospheric: residual is an UPPER BOUND on contamination, not a causal effect"
+    },
+    {
+     "key": "stratifiers.z100_post.note",
+     "text": "post-onset stratospheric: residual is an UPPER BOUND on contamination, not a causal effect"
+    },
+    {
+     "key": "u10_pre_verdict",
+     "text": "DOES NOT SURVIVE as a confirmed result: fails FDR. Report as exploratory only."
+    }
+   ],
+   "counts": {
+    "n_null": [
+     3000
+    ],
+    "n_events": [
+     29,
+     42,
+     43
+    ]
+   },
+   "top_level_keys": [
+    "n_beta",
+    "n_null",
+    "stratifiers",
+    "u10_pre_stress",
+    "u10_pre_verdict"
+   ]
+  },
+  {
+   "path": "results/current/4_selection_bias/stratifier_law_cmip6.json",
+   "tree": "current",
+   "stage": "4_selection_bias",
+   "readable": true,
+   "bytes": 2334,
+   "modified": "2026-09-25 06:55",
+   "sha256_16": "44ead71258074873",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/stratifier_law_cmip6.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/stratifier_law_cmip6.py": "8afd5fe3c301d0c6"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_events": [
+     1386,
+     1517
+    ]
+   },
+   "top_level_keys": [
+    "n_events",
+    "per_model",
+    "n_pseudo_per_member",
+    "outcome_window",
+    "stratifiers",
+    "law_across_stratifiers"
+   ]
+  },
+  {
+   "path": "results/current/5_mechanism/R_gap_sensitivity.json",
+   "tree": "current",
+   "stage": "5_mechanism",
+   "readable": true,
+   "bytes": 3638,
+   "modified": "2026-09-25 03:16",
+   "sha256_16": "9f9e6aaee228534c",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/R_gap_sensitivity.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/R_gap_sensitivity.py": "c2608c93d580e9d9"
+   },
+   "verdicts": [
+    {
+     "key": "verdict",
+     "text": "FLAT AT EVERY GAP -- R is concentration, Result A closes"
+    }
+   ],
+   "counts": {
+    "n_boot": [
+     1200
+    ]
+   },
+   "top_level_keys": [
+    "gaps",
+    "bins",
+    "n_boot",
+    "table",
+    "verdict",
+    "pre_R_by_gap",
+    "post_R_by_gap"
+   ]
+  },
+  {
+   "path": "results/current/5_mechanism/R_profile.json",
+   "tree": "current",
+   "stage": "5_mechanism",
+   "readable": true,
+   "bytes": 3698,
+   "modified": "2026-09-25 06:56",
+   "sha256_16": "7888a28a20848e4b",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/R_profile.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/R_profile.py": "5396a98ef5f37fa7"
+   },
+   "verdicts": [],
+   "counts": {},
+   "top_level_keys": [
+    "bins",
+    "min_denominator",
+    "datasets"
+   ]
+  },
+  {
+   "path": "results/current/5_mechanism/causal_timescale_ratio.json",
+   "tree": "current",
+   "stage": "5_mechanism",
+   "readable": true,
+   "bytes": 594,
+   "modified": "2026-09-25 06:55",
+   "sha256_16": "3e1ce4ce5d2fb76d",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/causal_timescale_ratio.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/causal_timescale_ratio.py": "63e88597e9b254e5"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_boot": [
+     1500
+    ],
+    "n_events": [
+     43,
+     150,
+     675
+    ]
+   },
+   "top_level_keys": [
+    "window",
+    "n_boot",
+    "datasets"
+   ]
+  },
+  {
+   "path": "results/current/5_mechanism/continuous_mediation.json",
+   "tree": "current",
+   "stage": "5_mechanism",
+   "readable": true,
+   "bytes": 793,
+   "modified": "2026-09-25 03:16",
+   "sha256_16": "cab93813578cb2ed",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/continuous_mediation.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/continuous_mediation.py": "b674deff426b7c35"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_winters": [
+     47
+    ],
+    "n_boot": [
+     2000
+    ]
+   },
+   "top_level_keys": [
+    "n_days",
+    "n_winters",
+    "X_lag",
+    "Y_lag",
+    "n_boot",
+    "corr",
+    "total_effect",
+    "direct_effect",
+    "indirect_effect",
+    "vortex_to_surface",
+    "mediated_share",
+    "mediated_share_CI95",
+    "continuous_SE",
+    "confounder_needed_product"
+   ]
+  },
+  {
+   "path": "results/current/5_mechanism/design_sensitivity.json",
+   "tree": "current",
+   "stage": "5_mechanism",
+   "readable": true,
+   "bytes": 14144,
+   "modified": "2026-09-25 03:16",
+   "sha256_16": "826b2cb77be39f7a",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/design_sensitivity.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/design_sensitivity.py": "156475db4c34916b"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_events": [
+     30
+    ],
+    "n_perm": [
+     5000
+    ]
+   },
+   "top_level_keys": [
+    "n_events",
+    "window",
+    "mean_conventional",
+    "mean_corrected",
+    "mean_design_sensitivity",
+    "r2",
+    "r2_permutation_p",
+    "n_perm",
+    "coefficients",
+    "per_event",
+    "correlations_with_design_sensitivity"
+   ]
+  },
+  {
+   "path": "results/current/5_mechanism/event_difference_bounds.json",
+   "tree": "current",
+   "stage": "5_mechanism",
+   "readable": true,
+   "bytes": 780,
+   "modified": "2026-09-29 06:17",
+   "sha256_16": "0d8e09f6d6b1f6a7",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/event_difference_bounds.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/event_difference_bounds.py": "cb5bc4d846f0e984"
+   },
+   "verdicts": [],
+   "counts": {},
+   "top_level_keys": [
+    "source",
+    "seed",
+    "n_mc",
+    "mean_shift",
+    "noise_sd",
+    "sigma_f2_point",
+    "sigma_f2_CI95",
+    "cases"
+   ]
+  },
+  {
+   "path": "results/current/5_mechanism/granger_direction.json",
+   "tree": "current",
+   "stage": "5_mechanism",
+   "readable": true,
+   "bytes": 1422,
+   "modified": "2026-09-25 03:23",
+   "sha256_16": "201bb23a57c50271",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/granger_direction.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/granger_direction.py": "9ee3d7a2935d8958"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_boot": [
+     2000
+    ]
+   },
+   "top_level_keys": [
+    "lags",
+    "n_boot",
+    "results"
+   ]
+  },
+  {
+   "path": "results/current/5_mechanism/mediation_disattenuated.json",
+   "tree": "current",
+   "stage": "5_mechanism",
+   "readable": true,
+   "bytes": 859,
+   "modified": "2026-09-25 03:19",
+   "sha256_16": "0df81256d52f6179",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/mediation_disattenuated.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/mediation_disattenuated.py": "e7162868d434bd53"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_winters": [
+     47
+    ],
+    "n_boot": [
+     2000
+    ]
+   },
+   "top_level_keys": [
+    "n_days",
+    "n_winters",
+    "mediator_window",
+    "n_boot",
+    "corr_M1_M2",
+    "total_effect",
+    "reliability_M1",
+    "latent_vortex_to_surface_IV",
+    "mediated_share_naive",
+    "mediated_share_disattenuated",
+    "single_day_mediator_share",
+    "assumption"
+   ]
+  },
+  {
+   "path": "results/current/5_mechanism/mediator_specification.json",
+   "tree": "current",
+   "stage": "5_mechanism",
+   "readable": true,
+   "bytes": 2507,
+   "modified": "2026-09-25 03:20",
+   "sha256_16": "ce8337220055af06",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/mediator_specification.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/mediator_specification.py": "b9ca488b090cf635"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_boot": [
+     1200
+    ]
+   },
+   "top_level_keys": [
+    "X_lag",
+    "Y_lag",
+    "n_boot",
+    "specs"
+   ]
+  },
+  {
+   "path": "results/current/5_mechanism/multimodel_R.json",
+   "tree": "current",
+   "stage": "5_mechanism",
+   "readable": true,
+   "bytes": 3365,
+   "modified": "2026-09-25 06:56",
+   "sha256_16": "2d4148e81f4124d7",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/multimodel_R.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/multimodel_R.py": "3fef8d98b77b89c9"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_events": [
+     43,
+     52,
+     58,
+     64,
+     75,
+     82,
+     97,
+     108,
+     140,
+     150,
+     675
+    ],
+    "n_members": [
+     1,
+     2,
+     10
+    ],
+    "n_winters": [
+     66,
+     166,
+     332,
+     1660
+    ]
+   },
+   "top_level_keys": [
+    "window",
+    "models",
+    "skipped",
+    "observations",
+    "headline"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/class_model_comparison.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 9723,
+   "modified": "2026-09-30 10:35",
+   "sha256_16": "ace0a5ba9dba782d",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/class_model_comparison.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/class_model_comparison.py": "f9692bbd47d1f68c"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_events": [
+     1517
+    ],
+    "n_members": [
+     20
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "seed",
+    "tier",
+    "n_events",
+    "n_members",
+    "k_pseudo",
+    "n_starts",
+    "cv",
+    "ssw",
+    "G_ci95_model_bootstrap",
+    "pseudo",
+    "controls",
+    "posthoc",
+    "snapsi"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/forced_variance_ceiling.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 21428,
+   "modified": "2026-09-30 10:45",
+   "sha256_16": "bc2abb1c3406c01e",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py": "12beb6c1cfe1252b"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_events": [
+     43,
+     1517
+    ]
+   },
+   "top_level_keys": [
+    "outcome_window",
+    "placebo_window",
+    "results",
+    "validation_known_truth",
+    "C4_identification_audit"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/forecast_value_robustness.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 5823,
+   "modified": "2026-09-29 11:03",
+   "sha256_16": "50cd3e03a69c3615",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/forecast_value_robustness.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/forecast_value_robustness.py": "07ca2e685a7ca95c"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_boot": [
+     2000
+    ],
+    "n_events": [
+     1517
+    ],
+    "n_members": [
+     20
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "seed",
+    "k_draws",
+    "n_boot",
+    "weak_quantile",
+    "n_events",
+    "n_members",
+    "columns",
+    "results",
+    "predictor_sd_ratio_ssw_over_null_median"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/forecast_value_test.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 1047,
+   "modified": "2026-09-25 16:54",
+   "sha256_16": "54b7c49433e8c052",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/forecast_value_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/forecast_value_test.py": "14fc77ebe7bb2916"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_events": [
+     1517
+    ],
+    "n_members": [
+     20
+    ],
+    "n_boot": [
+     2000
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "n_events",
+    "n_members",
+    "n_models",
+    "outcome_window_days",
+    "k_pseudo",
+    "n_boot",
+    "seed",
+    "cv",
+    "tiers"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/headline_stress_test.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 2782,
+   "modified": "2026-09-25 07:03",
+   "sha256_16": "2d3a3bc09ad62c55",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/headline_stress_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/headline_stress_test.py": "9d448ae986026dca"
+   },
+   "verdicts": [],
+   "counts": {},
+   "top_level_keys": [
+    "attack1_pseudo_event_skill",
+    "attack2",
+    "attack3_in_vs_out"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/is_downward_propagation_a_class.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 1432,
+   "modified": "2026-09-25 07:05",
+   "sha256_16": "be5ccf61c0837b85",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/is_downward_propagation_a_class.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/is_downward_propagation_a_class.py": "529d687348381550"
+   },
+   "verdicts": [
+    {
+     "key": "verdict",
+     "text": "NO CLASS in CMIP6_ensemble (n=1517): the per-event surface response is unimodal (dip p=0.8235), one Gaussian component suffices (BIC-gap p=0.9650), and the whole distribution is a pure SHIFT of -0.476 sigma of the ordinary winter distribution (KS p=0.3456). 'Downward propagation' is a threshold on a continuum, not a population."
+    }
+   ],
+   "counts": {},
+   "top_level_keys": [
+    "outcome_window",
+    "n_calibration",
+    "results",
+    "power_CMIP6",
+    "verdict"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/obs_model_compatibility.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 11921,
+   "modified": "2026-09-30 09:26",
+   "sha256_16": "5c3ef559688d3d1e",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/obs_model_compatibility.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/obs_model_compatibility.py": "0e82486463d4464e"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_draws": [
+     2000,
+     10000
+    ],
+    "n_events": [
+     53,
+     59,
+     64,
+     76,
+     83,
+     97,
+     109,
+     141,
+     152,
+     683
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "seed",
+    "k_events_per_draw",
+    "observations",
+    "cmip6_full_population",
+    "n_cmip6_events",
+    "compatibility",
+    "perfect_model"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/predictability_ceiling.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 1810,
+   "modified": "2026-09-25 10:08",
+   "sha256_16": "8e549fa002e6d3e6",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/predictability_ceiling.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/predictability_ceiling.py": "7fdb5f3d824a39c2"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_events": [
+     1516
+    ]
+   },
+   "top_level_keys": [
+    "outcome_window",
+    "results",
+    "power_CMIP6",
+    "implied"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/predictability_wave_driving.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 2110,
+   "modified": "2026-09-25 07:18",
+   "sha256_16": "abba7bfed0915433",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/predictability_wave_driving.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/predictability_wave_driving.py": "373e0e2e8a832dfb"
+   },
+   "verdicts": [],
+   "counts": {},
+   "top_level_keys": [
+    "cmip6",
+    "cmip6_previous_without_wave",
+    "observations",
+    "observations_wave_gain"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/s2s_baseline_test.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 1973,
+   "modified": "2026-09-29 12:11",
+   "sha256_16": "e70e2c1c95e59684",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_baseline_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_baseline_test.py": "f63096a7a2bdf095"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_null": [
+     10000
+    ],
+    "n_boot": [
+     10000
+    ],
+    "n_events": [
+     17
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "n_null",
+    "n_boot",
+    "seed_rule",
+    "sep_allwinter_days",
+    "vortex_index",
+    "inputs",
+    "outcomes"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/s2s_forecast_test.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 32709,
+   "modified": "2026-09-25 20:24",
+   "sha256_16": "5b0673656e8b327a",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_forecast_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_forecast_test.py": "fc726afb34e11d44"
+   },
+   "verdicts": [
+    {
+     "key": "bins.short.reliability.note",
+     "text": "starts of one event share an observed window, and control starts at neighbouring k share windows: tests treat starts as independent and are therefore liberal; the event, not the start, is the independent unit"
+    },
+    {
+     "key": "bins.mid.reliability.note",
+     "text": "starts of one event share an observed window, and control starts at neighbouring k share windows: tests treat starts as independent and are therefore liberal; the event, not the start, is the independent unit"
+    }
+   ],
+   "counts": {
+    "n_null": [
+     10000
+    ],
+    "n_events": [
+     12
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "model_year",
+    "origin",
+    "window_post_onset_days",
+    "lead_bins",
+    "n_null",
+    "seed",
+    "zone_sep_days",
+    "null_mode",
+    "null_window_days",
+    "inputs",
+    "n_starts_total",
+    "bins"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/s2s_multimodel_robustness.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 6988,
+   "modified": "2026-09-29 12:14",
+   "sha256_16": "9dd6575c7ef47d01",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_robustness.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_robustness.py": "ea91467a5ed43145"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_null": [
+     10000
+    ],
+    "n_boot": [
+     10000
+    ],
+    "n_events": [
+     15,
+     17
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "n_null",
+    "n_boot",
+    "n_mixed_dates",
+    "seed_base",
+    "outcomes"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/s2s_multimodel_test.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 24989,
+   "modified": "2026-09-26 08:06",
+   "sha256_16": "68ded2f4ef0fa1e6",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py",
+    "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "6ddf107b0ab305ec",
+    "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_test.py": "4f974e1a74330b3a"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_null": [
+     10000
+    ],
+    "n_members": [
+     4,
+     5,
+     7,
+     8,
+     11
+    ],
+    "n_events": [
+     4,
+     9,
+     11,
+     12,
+     14,
+     16,
+     17
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "k_short",
+    "n_null",
+    "seed",
+    "null_window_days",
+    "confirmatory",
+    "discovery",
+    "missing_centres",
+    "centres",
+    "multimodel",
+    "pit_level_by_system"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/s2s_postonset_test.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 2473,
+   "modified": "2026-09-29 15:26",
+   "sha256_16": "be0088055b5d62da",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_postonset_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_postonset_test.py": "4410b456213719c0"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_null": [
+     10000
+    ],
+    "n_boot": [
+     10000
+    ],
+    "n_events": [
+     15,
+     17
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "n_null",
+    "n_boot",
+    "seed_rule",
+    "post_k",
+    "pre_k",
+    "hit_rule",
+    "outcomes"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/s2s_regional_test.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 117104,
+   "modified": "2026-09-26 13:11",
+   "sha256_16": "e767050cf988daba",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_regional_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_regional_test.py": "1ff822d226a3f6c0"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_null": [
+     10000
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "primary",
+    "window_days",
+    "n_null",
+    "seed",
+    "inputs",
+    "regions",
+    "H1_holm_over_regions",
+    "falsifier_primary"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/within_model_check.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 106000,
+   "modified": "2026-09-25 07:14",
+   "sha256_16": "fcec8484529e0cba",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/within_model_check.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/within_model_check.py": "dfb1ec4e8449fe45"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_boot": [
+     1000
+    ],
+    "n_members": [
+     20
+    ]
+   },
+   "top_level_keys": [
+    "P1 pre-onset",
+    "P2 at-onset",
+    "P3 + post-onset stratosphere",
+    "_meta"
+   ]
+  },
+  {
+   "path": "results/current/7_ensemble/consensus_monotonicity.json",
+   "tree": "current",
+   "stage": "7_ensemble",
+   "readable": true,
+   "bytes": 14821,
+   "modified": "2026-09-25 03:16",
+   "sha256_16": "ab93e027154e73e9",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/consensus_monotonicity.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/consensus_monotonicity.py": "5238237b5ad1ce3a"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_events": [
+     45
+    ],
+    "n_perm": [
+     10000
+    ]
+   },
+   "top_level_keys": [
+    "n_events",
+    "pre_window",
+    "post_window",
+    "n_perm",
+    "indices"
+   ]
+  },
+  {
+   "path": "results/current/7_ensemble/ensemble_precursor_CanESM5.json",
+   "tree": "current",
+   "stage": "7_ensemble",
+   "readable": true,
+   "bytes": 1591,
+   "modified": "2026-09-25 07:08",
+   "sha256_16": "66c91d0f1abb4034",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/ensemble_precursor.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/ensemble_precursor.py": "5fa127cb56dfcde5"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_members": [
+     10
+    ],
+    "n_winters": [
+     1660
+    ],
+    "n_boot": [
+     1000
+    ],
+    "n_events": [
+     43
+    ]
+   },
+   "top_level_keys": [
+    "n_members",
+    "n_ssw",
+    "n_winters",
+    "n_days",
+    "n_boot",
+    "bins",
+    "profile",
+    "observed_pre_onset",
+    "subsample_test"
+   ]
+  },
+  {
+   "path": "results/current/7_ensemble/ensemble_precursor_MIROC6.json",
+   "tree": "current",
+   "stage": "7_ensemble",
+   "readable": true,
+   "bytes": 1563,
+   "modified": "2026-09-25 09:58",
+   "sha256_16": "3b22248612f675d2",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/ensemble_precursor.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/ensemble_precursor.py": "5fa127cb56dfcde5"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_members": [
+     2
+    ],
+    "n_winters": [
+     332
+    ],
+    "n_boot": [
+     1000
+    ],
+    "n_events": [
+     43
+    ]
+   },
+   "top_level_keys": [
+    "n_members",
+    "n_ssw",
+    "n_winters",
+    "n_days",
+    "n_boot",
+    "bins",
+    "profile",
+    "observed_pre_onset",
+    "subsample_test"
+   ]
+  },
+  {
+   "path": "results/current/7_ensemble/era_dependence_gate.json",
+   "tree": "current",
+   "stage": "7_ensemble",
+   "readable": true,
+   "bytes": 9469,
+   "modified": "2026-09-25 10:06",
+   "sha256_16": "ece0acc0a941f182",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/era_dependence_gate.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/era_dependence_gate.py": "b7374806e8ebb188"
+   },
+   "verdicts": [
+    {
+     "key": "verdict",
+     "text": "POOLING REFUSED. T1 passed, T2 3/7 betas agree. The observational arm stays at n=30 (1979 onward) and the pre-satellite extension is reported only as a sensitivity test, with the failing diagnostic stated."
+    },
+    {
+     "key": "headline_recommendation",
+     "text": "Pre-specified global rule REFUSES pooling, and that verdict stands as the headline: the observational arm is n=30. Per-stratifier, 6/7 survive both checks (vT_pre30, vT_pre15, u10_post30, u10_post45, z100_post, AO_post) and the n=42 record is reported for those as a pre-registered sensitivity test, never as the primary number."
+    }
+   ],
+   "counts": {},
+   "top_level_keys": [
+    "split",
+    "variance",
+    "independent_era5",
+    "n_events_total",
+    "n_events_pre",
+    "n_events_post",
+    "beta",
+    "residual",
+    "T1_pass",
+    "T2_pass",
+    "T2_n_betas_agreeing",
+    "pooling_allowed",
+    "verdict",
+    "per_stratifier",
+    "poolable_stratifiers",
+    "headline_recommendation"
+   ]
+  },
+  {
+   "path": "results/current/7_ensemble/marginal_events.json",
+   "tree": "current",
+   "stage": "7_ensemble",
+   "readable": true,
+   "bytes": 5597,
+   "modified": "2026-09-25 03:19",
+   "sha256_16": "8a1b3cb002cef128",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/marginal_events.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/marginal_events.py": "33d183b910c2d49a"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_events": [
+     8,
+     37,
+     45
+    ]
+   },
+   "top_level_keys": [
+    "n_strong",
+    "n_marginal",
+    "marginal_events",
+    "physical_contrast",
+    "profiles"
+   ]
+  },
+  {
+   "path": "results/current/8_experiment/snapsi_archetype_test.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 74806,
+   "modified": "2026-09-25 11:08",
+   "sha256_16": "f96669ba1c415de8",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_archetype_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_archetype_test.py": "fb862211654960f2"
+   },
+   "verdicts": [],
+   "counts": {},
+   "top_level_keys": [
+    "window_post_onset_days",
+    "pairs",
+    "centres",
+    "era5_input",
+    "per_ensemble",
+    "per_init",
+    "pair_test",
+    "observed_labels",
+    "member_A"
+   ]
+  },
+  {
+   "path": "results/current/8_experiment/snapsi_causal_effect.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 14119,
+   "modified": "2026-09-25 07:01",
+   "sha256_16": "2ff1510ebe8e56ce",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_causal_effect.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_causal_effect.py": "5b199ee3cef72813"
+   },
+   "verdicts": [],
+   "counts": {},
+   "top_level_keys": [
+    "window",
+    "onsets",
+    "per_case",
+    "reported",
+    "pooled_sigma_Pa",
+    "S_sigma_per_init",
+    "S_sigma_per_event",
+    "S_sigma_grand_mean",
+    "between_event_difference",
+    "between_model_sd",
+    "S_sigma_per_model",
+    "implied_NDW_sigma"
+   ]
+  },
+  {
+   "path": "results/current/8_experiment/snapsi_contrast_diagnosis.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 6737,
+   "modified": "2026-09-29 06:18",
+   "sha256_16": "a759e9d616e1129a",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_diagnosis.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_diagnosis.py": "6c70cea142af8d22"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_boot": [
+     10000
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "seed",
+    "n_boot",
+    "window",
+    "n_pairs",
+    "centres",
+    "resid_gaussian_full",
+    "D1_resid_cond1",
+    "D2_resid_empirical",
+    "D3_skew_diff",
+    "sd_ratio",
+    "D4_SH_variance_ratio",
+    "per_pair"
+   ]
+  },
+  {
+   "path": "results/current/8_experiment/snapsi_distribution_test.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 73082,
+   "modified": "2026-09-25 07:06",
+   "sha256_16": "81296c9279fade5d",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_distribution_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_distribution_test.py": "f1808d11b4060b15"
+   },
+   "verdicts": [],
+   "counts": {},
+   "top_level_keys": [
+    "window_post_onset_days",
+    "per_case",
+    "excluded",
+    "member_A",
+    "pooled_all",
+    "pooled_excluding_short_lead_init"
+   ]
+  },
+  {
+   "path": "results/current/8_experiment/snapsi_loeffel_test.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 51292,
+   "modified": "2026-09-25 07:01",
+   "sha256_16": "5843507bdcd23426",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_loeffel_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_loeffel_test.py": "1d636117b6939a7c"
+   },
+   "verdicts": [
+    {
+     "key": "power_within_ensemble.note",
+     "text": "Power to detect a WITHIN-ensemble correlation at n members. The 0.85 row is included only for scale: it is Loeffel's BETWEEN-EVENT value on ensemble means and is not the same estimand as anything measured here."
+    }
+   ],
+   "counts": {
+    "n_events": [
+     18
+    ],
+    "n_perm": [
+     5000
+    ]
+   },
+   "top_level_keys": [
+    "paper",
+    "windows",
+    "seed",
+    "n_perm",
+    "excluded_centres",
+    "design_gate",
+    "primary",
+    "fidelity",
+    "max_available",
+    "power_within_ensemble",
+    "between_ensemble_descriptive"
+   ]
+  },
+  {
+   "path": "results/current/8_experiment/snapsi_regional_test.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 65009,
+   "modified": "2026-09-26 10:21",
+   "sha256_16": "ba65b95a0e9571cf",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_regional_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_regional_test.py": "b26003e288e34231"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_boot": [
+     10000
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "seed",
+    "n_boot",
+    "regions",
+    "primary",
+    "tas_days",
+    "nam_window_days",
+    "cold_quantile",
+    "inputs",
+    "n_pairs",
+    "centres",
+    "results",
+    "sensitivity_excl_ECCC",
+    "pairs",
+    "falsifier_primary"
+   ]
+  },
+  {
+   "path": "results/current/8_experiment/snapsi_selection_test.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 55839,
+   "modified": "2026-09-25 16:07",
+   "sha256_16": "c26057a7c4a2e49e",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "6626a155b09d3623"
+   },
+   "verdicts": [
+    {
+     "key": "paired_NH.note",
+     "text": "residual = observed contrast minus the contrast a cut at zero gives on one Gaussian with the ensemble's own mean and sd; ~0 means one population suffices. Pairs exist only where BOTH arms have >=3 members per class, so the 11 nearly-all-DW nudged ensembles are absent from the paired test (they cannot form a contrast); the DW rate uses all ensembles."
+    }
+   ],
+   "counts": {
+    "n_members": [
+     50
+    ],
+    "n_boot": [
+     10000
+    ]
+   },
+   "top_level_keys": [
+    "window_post_onset_days",
+    "criterion",
+    "published_contrast_for_scale",
+    "excluded",
+    "per_case",
+    "all_ensembles",
+    "summary",
+    "paired_NH",
+    "southern_hemisphere",
+    "filter_caveat",
+    "units_caveat"
+   ]
+  },
+  {
+   "path": "results/current/9_literature/criterion_sweep.json",
+   "tree": "current",
+   "stage": "9_literature",
+   "readable": true,
+   "bytes": 60536,
+   "modified": "2026-09-30 10:50",
+   "sha256_16": "798d153b4755ec0f",
+   "producers": [
+    "ssw-design-analysis/08_literature_audit/criterion_sweep.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/08_literature_audit/criterion_sweep.py": "55f22bbf3b71a86b"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_events": [
+     39,
+     1516,
+     1517
+    ],
+    "n_members": [
+     20
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "seed",
+    "grid",
+    "window_start",
+    "inputs",
+    "era5",
+    "cmip6"
+   ]
+  },
+  {
+   "path": "results/current/9_literature/era5_nam_daily_mean_check.json",
+   "tree": "current",
+   "stage": "9_literature",
+   "readable": true,
+   "bytes": 981,
+   "modified": "2026-09-25 07:15",
+   "sha256_16": "37f7bfe8cf3eae61",
+   "producers": [
+    "ssw-design-analysis/08_literature_audit/era5_nam_daily_mean_check.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/08_literature_audit/era5_nam_daily_mean_check.py": "bc059f8b30142674"
+   },
+   "verdicts": [],
+   "counts": {},
+   "top_level_keys": [
+    "question",
+    "onset",
+    "window_days",
+    "level_hPa",
+    "n_days",
+    "inputs",
+    "check_00utc_rebuild_max_abs",
+    "nam_00utc",
+    "nam_daily_mean",
+    "window_mean_correction",
+    "day_to_day_spread_ratio_dm_over_00",
+    "label_unchanged"
+   ]
+  },
+  {
+   "path": "results/current/9_literature/era5_recompute_and_two_thirds.json",
+   "tree": "current",
+   "stage": "9_literature",
+   "readable": true,
+   "bytes": 2367,
+   "modified": "2026-09-25 10:08",
+   "sha256_16": "d5f9db3e47834314",
+   "producers": [
+    "ssw-design-analysis/08_literature_audit/era5_recompute_and_two_thirds.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/08_literature_audit/era5_recompute_and_two_thirds.py": "70e9a7f4e83c5427"
+   },
+   "verdicts": [
+    {
+     "key": "verdict",
+     "text": "In ERA5 the published criterion gives a DW-minus-NDW contrast of -0.682 of which 97% is the selection term. A pure surface shift of -0.636 sigma applied to event-free dates gives a 75% pass rate against 69% observed -- so 'about two thirds propagate downward' is what ONE shifted population produces, with no classes in it."
+    }
+   ],
+   "counts": {
+    "n_events": [
+     39
+    ]
+   },
+   "top_level_keys": [
+    "published",
+    "n_events",
+    "selection_window",
+    "outcome_window",
+    "variants",
+    "two_thirds_test",
+    "verdict"
+   ]
+  },
+  {
+   "path": "results/current/9_literature/loeffel2025_missing_control.json",
+   "tree": "current",
+   "stage": "9_literature",
+   "readable": true,
+   "bytes": 903,
+   "modified": "2026-09-25 10:11",
+   "sha256_16": "bb2f997d08dfd265",
+   "producers": [
+    "ssw-design-analysis/08_literature_audit/loeffel2025_missing_control.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/08_literature_audit/loeffel2025_missing_control.py": "28cf5f46d1dc6fe1"
+   },
+   "verdicts": [
+    {
+     "key": "test_B.interpretation",
+     "text": "UPPER BOUND on the structural share only; their r is between ensemble means, which suppresses the noise driving this bias."
+    }
+   ],
+   "counts": {},
+   "top_level_keys": [
+    "paper",
+    "n_events_observed",
+    "windows",
+    "test_A",
+    "test_B"
+   ]
+  },
+  {
+   "path": "results/current/9_literature/recompute_published_criterion.json",
+   "tree": "current",
+   "stage": "9_literature",
+   "readable": true,
+   "bytes": 1924,
+   "modified": "2026-09-25 06:55",
+   "sha256_16": "32b4532e4b022cdb",
+   "producers": [
+    "ssw-design-analysis/08_literature_audit/recompute_published_criterion.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/08_literature_audit/recompute_published_criterion.py": "76e76a07a2ff2fef"
+   },
+   "verdicts": [
+    {
+     "key": "verdict",
+     "text": "The published criterion produces a DW-minus-NDW NAO contrast of -0.543; 88% of it is the selection term beta x dS. Residual -0.067 (p=0.495). For scale, ACP 26, 3723 (2026) publishes -0.708 from the same criterion."
+    }
+   ],
+   "counts": {
+    "n_events": [
+     43
+    ]
+   },
+   "top_level_keys": [
+    "criterion",
+    "selection_window",
+    "outcome_window",
+    "n_events",
+    "n_DW",
+    "rate_DW",
+    "published_for_scale",
+    "outcomes",
+    "verdict"
+   ]
+  }
+ ]
+}

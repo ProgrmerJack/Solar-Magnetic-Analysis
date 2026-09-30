@@ -1,0 +1,55 @@
+{
+  "design_caveat": "This is a heterogeneity analysis CONDITIONAL on the occurrence of a persistent Z500 block. It does NOT estimate the unconditional causal effect of an SSW because blocks are themselves a downstream consequence of the stratospheric state (post-treatment). The question answered is: GIVEN that a block occurs, do its surface-hazard signatures differ when an SSW is present vs absent?",
+  "block_definition": {
+    "z500_threshold_sigma": 1.0,
+    "min_consecutive_days": 5,
+    "climatology": "Day-of-year mean and standard deviation of NH-mean Z500 from NCEP, computed across the 21-winter panel."
+  },
+  "sample": {
+    "total_episodes": 44,
+    "ssw_overlap_episodes": 3,
+    "ssw_free_episodes": 41,
+    "ssw_overlap_total_days": 19,
+    "ssw_free_total_days": 408
+  },
+  "rate_ratios_per_day": {
+    "natural_dry_slab_count_size_2plus": {
+      "rate_ratio": 0.2960317017357817,
+      "ci95": [
+        0.16043465608465612,
+        0.5727308267073579
+      ],
+      "n_episodes_ssw": 3,
+      "n_episodes_free": 41
+    },
+    "accident_count": {
+      "rate_ratio": 2.6294307196562836,
+      "ci95": [
+        1.7767826602101793,
+        3.947399406982737
+      ],
+      "n_episodes_ssw": 3,
+      "n_episodes_free": 41
+    },
+    "dry_natural_count_all_sizes": {
+      "rate_ratio": 0.27124653739612187,
+      "ci95": [
+        0.0,
+        0.6160233870967738
+      ],
+      "n_episodes_ssw": 3,
+      "n_episodes_free": 41
+    },
+    "wet_natural_count_all_sizes": {
+      "rate_ratio": 0.16065100406877542,
+      "ci95": [
+        0.0,
+        1.3427622377622361
+      ],
+      "n_episodes_ssw": 3,
+      "n_episodes_free": 41
+    }
+  },
+  "interpretation": "If RR < 1 for natural counts: SSW-coincident blocks have suppressed natural avalanching - consistent with the loaded-gun pattern in which the stratospheric event modifies the block character toward cold/dry/dynamic with reduced natural release. The accident-count direction reflects the consequence channel.",
+  "framing_note": "Reported as supportive heterogeneity within the blocking population. The unconditional event-catalog analysis (gmRR=0.32) and the continuous-vortex framework (R98) remain the primary identification strategies."
+}

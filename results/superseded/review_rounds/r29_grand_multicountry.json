@@ -1,0 +1,148 @@
+{
+  "albina_results": [
+    {
+      "ssw_event": "2023-02-16",
+      "region": "AT-07",
+      "region_name": "Tyrol (Austria)",
+      "ssw_mean": 2.282,
+      "ctrl_mean": 2.062,
+      "delta": 0.22,
+      "cohens_d": 0.298,
+      "mw_p": 1.0,
+      "n_ssw": 1116,
+      "n_ctrl": 1044,
+      "direction": "increase"
+    },
+    {
+      "ssw_event": "2023-02-16",
+      "region": "IT-32-BZ",
+      "region_name": "South Tyrol (Italy)",
+      "ssw_mean": 1.882,
+      "ctrl_mean": 2.109,
+      "delta": -0.227,
+      "cohens_d": -0.293,
+      "mw_p": 0.0,
+      "n_ssw": 899,
+      "n_ctrl": 870,
+      "direction": "decrease"
+    },
+    {
+      "ssw_event": "2023-02-16",
+      "region": "IT-32-TN",
+      "region_name": "Trentino (Italy)",
+      "ssw_mean": 1.631,
+      "ctrl_mean": 1.932,
+      "delta": -0.3,
+      "cohens_d": -0.413,
+      "mw_p": 0.0,
+      "n_ssw": 651,
+      "n_ctrl": 630,
+      "direction": "decrease"
+    },
+    {
+      "ssw_event": "2024-03-04",
+      "region": "AT-07",
+      "region_name": "Tyrol (Austria)",
+      "ssw_mean": 2.194,
+      "ctrl_mean": 1.679,
+      "delta": 0.516,
+      "cohens_d": 0.813,
+      "mw_p": 1.0,
+      "n_ssw": 1116,
+      "n_ctrl": 1080,
+      "direction": "increase"
+    },
+    {
+      "ssw_event": "2024-03-04",
+      "region": "IT-32-BZ",
+      "region_name": "South Tyrol (Italy)",
+      "ssw_mean": 2.266,
+      "ctrl_mean": 1.975,
+      "delta": 0.291,
+      "cohens_d": 0.375,
+      "mw_p": 1.0,
+      "n_ssw": 899,
+      "n_ctrl": 870,
+      "direction": "increase"
+    },
+    {
+      "ssw_event": "2024-03-04",
+      "region": "IT-32-TN",
+      "region_name": "Trentino (Italy)",
+      "ssw_mean": 2.49,
+      "ctrl_mean": 1.97,
+      "delta": 0.52,
+      "cohens_d": 0.673,
+      "mw_p": 1.0,
+      "n_ssw": 651,
+      "n_ctrl": 630,
+      "direction": "increase"
+    }
+  ],
+  "eaws_pairs": [
+    {
+      "country": "AT",
+      "ssw": "2012-01-11",
+      "direction": "increase"
+    },
+    {
+      "country": "CH",
+      "ssw": "2012-01-11",
+      "direction": "increase"
+    },
+    {
+      "country": "FR",
+      "ssw": "2012-01-11",
+      "direction": "decrease"
+    },
+    {
+      "country": "IT",
+      "ssw": "2012-01-11",
+      "direction": "decrease"
+    },
+    {
+      "country": "DE",
+      "ssw": "2012-01-11",
+      "direction": "increase"
+    },
+    {
+      "country": "AT",
+      "ssw": "2013-01-07",
+      "direction": "increase"
+    },
+    {
+      "country": "CH",
+      "ssw": "2013-01-07",
+      "direction": "decrease"
+    },
+    {
+      "country": "FR",
+      "ssw": "2013-01-07",
+      "direction": "decrease"
+    },
+    {
+      "country": "IT",
+      "ssw": "2013-01-07",
+      "direction": "decrease"
+    },
+    {
+      "country": "DE",
+      "ssw": "2013-01-07",
+      "direction": "increase"
+    }
+  ],
+  "grand_concordance": {
+    "total_pairs": 52,
+    "n_decrease": 39,
+    "pct_decrease": 75.0,
+    "sign_test_p": 0.0002047707268912902,
+    "effective_n": 31.0,
+    "effective_decrease": 24
+  },
+  "geographic_gradient": "Western/Southern Alps show consistent decrease; Eastern/Northern Alps show mixed/increase",
+  "measurement_types": {
+    "occurrence_counts": "Swiss SLF, Utah UAC",
+    "danger_levels": "Norway NVE, EAWS (5 countries), ALBINA (3 regions)",
+    "field_stability": "Swiss Rutschblock"
+  }
+}

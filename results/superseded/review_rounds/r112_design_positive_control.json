@@ -1,0 +1,765 @@
+{
+  "n_ssw_catalog": 47,
+  "series": {
+    "AO": {
+      "n_ssw": 47,
+      "windows": {
+        "placebo_pre": {
+          "within_winter": {
+            "effect": -0.0571,
+            "CI95": [
+              -0.4458,
+              0.3426
+            ],
+            "p_one_sided_negative": 0.3725,
+            "p_two_sided": 0.745,
+            "n_winters": 38,
+            "n_days": 6886,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": -0.6564,
+            "n_events": 47,
+            "events_negative": "33/47",
+            "t_p_two_sided": 0.0024915813457180402,
+            "sign_p_one_sided_neg": 0.003971363254741787
+          }
+        },
+        "onset": {
+          "within_winter": {
+            "effect": 0.0182,
+            "CI95": [
+              -0.3393,
+              0.38
+            ],
+            "p_one_sided_negative": 0.5455,
+            "p_two_sided": 0.909,
+            "n_winters": 38,
+            "n_days": 6886,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": -0.6612,
+            "n_events": 47,
+            "events_negative": "36/47",
+            "t_p_two_sided": 0.0013669833079846983,
+            "sign_p_one_sided_neg": 0.00017300057015745549
+          }
+        },
+        "early_post": {
+          "within_winter": {
+            "effect": -0.1201,
+            "CI95": [
+              -0.5209,
+              0.2847
+            ],
+            "p_one_sided_negative": 0.2745,
+            "p_two_sided": 0.549,
+            "n_winters": 38,
+            "n_days": 6886,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": -0.7967,
+            "n_events": 47,
+            "events_negative": "32/47",
+            "t_p_two_sided": 0.0011321490703257578,
+            "sign_p_one_sided_neg": 0.009311918307503216
+          }
+        },
+        "mid_post": {
+          "within_winter": {
+            "effect": -0.4424,
+            "CI95": [
+              -0.9046,
+              0.0144
+            ],
+            "p_one_sided_negative": 0.028,
+            "p_two_sided": 0.056,
+            "n_winters": 38,
+            "n_days": 6886,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": -1.005,
+            "n_events": 47,
+            "events_negative": "35/47",
+            "t_p_two_sided": 4.9293543970866416e-06,
+            "sign_p_one_sided_neg": 0.0005442691032371271
+          }
+        },
+        "late_post": {
+          "within_winter": {
+            "effect": -0.3419,
+            "CI95": [
+              -0.7706,
+              0.1122
+            ],
+            "p_one_sided_negative": 0.071,
+            "p_two_sided": 0.142,
+            "n_winters": 38,
+            "n_days": 6886,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": -0.8069,
+            "n_events": 47,
+            "events_negative": "34/47",
+            "t_p_two_sided": 0.0003636635042269785,
+            "sign_p_one_sided_neg": 0.0015438382307593197
+          }
+        },
+        "post_0_60": {
+          "within_winter": {
+            "effect": -0.6137,
+            "CI95": [
+              -1.0375,
+              -0.1788
+            ],
+            "p_one_sided_negative": 0.00325,
+            "p_two_sided": 0.0065,
+            "n_winters": 38,
+            "n_days": 6886,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": -0.8289,
+            "n_events": 47,
+            "events_negative": "36/47",
+            "t_p_two_sided": 1.663954603975415e-07,
+            "sign_p_one_sided_neg": 0.00017300057015745549
+          }
+        },
+        "post_15_44": {
+          "within_winter": {
+            "effect": -0.4764,
+            "CI95": [
+              -0.9295,
+              -0.0327
+            ],
+            "p_one_sided_negative": 0.017,
+            "p_two_sided": 0.034,
+            "n_winters": 38,
+            "n_days": 6886,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": -0.9066,
+            "n_events": 47,
+            "events_negative": "34/47",
+            "t_p_two_sided": 6.399008522756606e-06,
+            "sign_p_one_sided_neg": 0.0015438382307593197
+          }
+        }
+      }
+    },
+    "NAO": {
+      "n_ssw": 47,
+      "windows": {
+        "placebo_pre": {
+          "within_winter": {
+            "effect": 0.04,
+            "CI95": [
+              -0.1418,
+              0.2238
+            ],
+            "p_one_sided_negative": 0.658,
+            "p_two_sided": 0.684,
+            "n_winters": 38,
+            "n_days": 6886,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": -0.1804,
+            "n_events": 47,
+            "events_negative": "28/47",
+            "t_p_two_sided": 0.040601006993401745,
+            "sign_p_one_sided_neg": 0.12148010864166278
+          }
+        },
+        "onset": {
+          "within_winter": {
+            "effect": 0.0387,
+            "CI95": [
+              -0.0998,
+              0.1865
+            ],
+            "p_one_sided_negative": 0.7075,
+            "p_two_sided": 0.585,
+            "n_winters": 38,
+            "n_days": 6886,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": -0.2241,
+            "n_events": 47,
+            "events_negative": "29/47",
+            "t_p_two_sided": 0.002642523336577034,
+            "sign_p_one_sided_neg": 0.07193254422027448
+          }
+        },
+        "early_post": {
+          "within_winter": {
+            "effect": 0.0406,
+            "CI95": [
+              -0.1044,
+              0.1849
+            ],
+            "p_one_sided_negative": 0.709,
+            "p_two_sided": 0.582,
+            "n_winters": 38,
+            "n_days": 6886,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": -0.2339,
+            "n_events": 47,
+            "events_negative": "32/47",
+            "t_p_two_sided": 0.006259317534151605,
+            "sign_p_one_sided_neg": 0.009311918307503216
+          }
+        },
+        "mid_post": {
+          "within_winter": {
+            "effect": -0.0221,
+            "CI95": [
+              -0.2199,
+              0.1705
+            ],
+            "p_one_sided_negative": 0.414,
+            "p_two_sided": 0.828,
+            "n_winters": 38,
+            "n_days": 6886,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": -0.2808,
+            "n_events": 47,
+            "events_negative": "31/47",
+            "t_p_two_sided": 0.0016245108399441494,
+            "sign_p_one_sided_neg": 0.019993028413026075
+          }
+        },
+        "late_post": {
+          "within_winter": {
+            "effect": -0.2069,
+            "CI95": [
+              -0.3627,
+              -0.0583
+            ],
+            "p_one_sided_negative": 0.00175,
+            "p_two_sided": 0.0035,
+            "n_winters": 38,
+            "n_days": 6886,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": -0.3675,
+            "n_events": 47,
+            "events_negative": "33/47",
+            "t_p_two_sided": 0.00017087254777476042,
+            "sign_p_one_sided_neg": 0.003971363254741787
+          }
+        },
+        "post_0_60": {
+          "within_winter": {
+            "effect": -0.1429,
+            "CI95": [
+              -0.3007,
+              0.0174
+            ],
+            "p_one_sided_negative": 0.04,
+            "p_two_sided": 0.08,
+            "n_winters": 38,
+            "n_days": 6886,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": -0.2853,
+            "n_events": 47,
+            "events_negative": "35/47",
+            "t_p_two_sided": 7.607823862291966e-07,
+            "sign_p_one_sided_neg": 0.0005442691032371271
+          }
+        },
+        "post_15_44": {
+          "within_winter": {
+            "effect": -0.1371,
+            "CI95": [
+              -0.2987,
+              0.024
+            ],
+            "p_one_sided_negative": 0.0485,
+            "p_two_sided": 0.097,
+            "n_winters": 38,
+            "n_days": 6886,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": -0.3228,
+            "n_events": 47,
+            "events_negative": "35/47",
+            "t_p_two_sided": 4.409600388209889e-05,
+            "sign_p_one_sided_neg": 0.0005442691032371271
+          }
+        }
+      }
+    },
+    "Z500_NH": {
+      "n_ssw": 32,
+      "windows": {
+        "placebo_pre": {
+          "within_winter": {
+            "effect": -1.679,
+            "CI95": [
+              -4.1325,
+              0.7713
+            ],
+            "p_one_sided_negative": 0.09825,
+            "p_two_sided": 0.1965,
+            "n_winters": 26,
+            "n_days": 4652,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": 1.6629,
+            "n_events": 32,
+            "events_negative": "13/32",
+            "t_p_two_sided": 0.43545649168195133,
+            "sign_p_one_sided_neg": 0.8923364251386374
+          }
+        },
+        "onset": {
+          "within_winter": {
+            "effect": -0.6826,
+            "CI95": [
+              -2.8567,
+              1.4309
+            ],
+            "p_one_sided_negative": 0.27025,
+            "p_two_sided": 0.5405,
+            "n_winters": 26,
+            "n_days": 4652,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": 2.5649,
+            "n_events": 32,
+            "events_negative": "15/32",
+            "t_p_two_sided": 0.18493573496021395,
+            "sign_p_one_sided_neg": 0.7016925520729274
+          }
+        },
+        "early_post": {
+          "within_winter": {
+            "effect": -0.6631,
+            "CI95": [
+              -3.1125,
+              1.8803
+            ],
+            "p_one_sided_negative": 0.293,
+            "p_two_sided": 0.586,
+            "n_winters": 26,
+            "n_days": 4652,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": 2.4534,
+            "n_events": 32,
+            "events_negative": "13/32",
+            "t_p_two_sided": 0.2626865679730108,
+            "sign_p_one_sided_neg": 0.8923364251386374
+          }
+        },
+        "mid_post": {
+          "within_winter": {
+            "effect": 0.4061,
+            "CI95": [
+              -1.8535,
+              2.5604
+            ],
+            "p_one_sided_negative": 0.64425,
+            "p_two_sided": 0.7115,
+            "n_winters": 26,
+            "n_days": 4652,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": 3.4712,
+            "n_events": 32,
+            "events_negative": "13/32",
+            "t_p_two_sided": 0.06935067745570031,
+            "sign_p_one_sided_neg": 0.8923364251386374
+          }
+        },
+        "late_post": {
+          "within_winter": {
+            "effect": -0.4288,
+            "CI95": [
+              -4.3087,
+              3.666
+            ],
+            "p_one_sided_negative": 0.4165,
+            "p_two_sided": 0.833,
+            "n_winters": 26,
+            "n_days": 4652,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": 3.6103,
+            "n_events": 32,
+            "events_negative": "10/32",
+            "t_p_two_sided": 0.18415738436812157,
+            "sign_p_one_sided_neg": 0.9899691964965314
+          }
+        },
+        "post_0_60": {
+          "within_winter": {
+            "effect": 0.7972,
+            "CI95": [
+              -1.8486,
+              3.4443
+            ],
+            "p_one_sided_negative": 0.73675,
+            "p_two_sided": 0.5265,
+            "n_winters": 26,
+            "n_days": 4652,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": 3.7999,
+            "n_events": 32,
+            "events_negative": "11/32",
+            "t_p_two_sided": 0.039303122893548995,
+            "sign_p_one_sided_neg": 0.9749487701337785
+          }
+        },
+        "post_15_44": {
+          "within_winter": {
+            "effect": 0.0463,
+            "CI95": [
+              -2.4601,
+              2.5789
+            ],
+            "p_one_sided_negative": 0.52075,
+            "p_two_sided": 0.9585,
+            "n_winters": 26,
+            "n_days": 4652,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": 3.6101,
+            "n_events": 32,
+            "events_negative": "14/32",
+            "t_p_two_sided": 0.08391291879026268,
+            "sign_p_one_sided_neg": 0.8114572062622756
+          }
+        }
+      }
+    },
+    "SLP_NH": {
+      "n_ssw": 32,
+      "windows": {
+        "placebo_pre": {
+          "within_winter": {
+            "effect": -5.8431,
+            "CI95": [
+              -51.3997,
+              38.7274
+            ],
+            "p_one_sided_negative": 0.40075,
+            "p_two_sided": 0.8015,
+            "n_winters": 26,
+            "n_days": 4652,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": 21.2377,
+            "n_events": 32,
+            "events_negative": "15/32",
+            "t_p_two_sided": 0.2536949918510632,
+            "sign_p_one_sided_neg": 0.7016925520729274
+          }
+        },
+        "onset": {
+          "within_winter": {
+            "effect": -19.4785,
+            "CI95": [
+              -51.885,
+              14.5038
+            ],
+            "p_one_sided_negative": 0.1385,
+            "p_two_sided": 0.277,
+            "n_winters": 26,
+            "n_days": 4652,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": 28.2837,
+            "n_events": 32,
+            "events_negative": "13/32",
+            "t_p_two_sided": 0.13699326337635243,
+            "sign_p_one_sided_neg": 0.8923364251386374
+          }
+        },
+        "early_post": {
+          "within_winter": {
+            "effect": -26.7643,
+            "CI95": [
+              -67.7132,
+              16.9958
+            ],
+            "p_one_sided_negative": 0.121,
+            "p_two_sided": 0.242,
+            "n_winters": 26,
+            "n_days": 4652,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": 16.9358,
+            "n_events": 32,
+            "events_negative": "10/32",
+            "t_p_two_sided": 0.4841948333786892,
+            "sign_p_one_sided_neg": 0.9899691964965314
+          }
+        },
+        "mid_post": {
+          "within_winter": {
+            "effect": -15.3621,
+            "CI95": [
+              -57.4272,
+              23.7791
+            ],
+            "p_one_sided_negative": 0.2425,
+            "p_two_sided": 0.485,
+            "n_winters": 26,
+            "n_days": 4652,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": 32.2031,
+            "n_events": 32,
+            "events_negative": "13/32",
+            "t_p_two_sided": 0.11388559023825047,
+            "sign_p_one_sided_neg": 0.8923364251386374
+          }
+        },
+        "late_post": {
+          "within_winter": {
+            "effect": -5.0483,
+            "CI95": [
+              -58.1128,
+              50.8564
+            ],
+            "p_one_sided_negative": 0.4465,
+            "p_two_sided": 0.893,
+            "n_winters": 26,
+            "n_days": 4652,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": 46.4803,
+            "n_events": 32,
+            "events_negative": "13/32",
+            "t_p_two_sided": 0.06308896032983702,
+            "sign_p_one_sided_neg": 0.8923364251386374
+          }
+        },
+        "post_0_60": {
+          "within_winter": {
+            "effect": -6.7835,
+            "CI95": [
+              -40.2498,
+              29.5472
+            ],
+            "p_one_sided_negative": 0.3575,
+            "p_two_sided": 0.715,
+            "n_winters": 26,
+            "n_days": 4652,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": 39.6733,
+            "n_events": 32,
+            "events_negative": "10/32",
+            "t_p_two_sided": 0.002471189210768698,
+            "sign_p_one_sided_neg": 0.9899691964965314
+          }
+        },
+        "post_15_44": {
+          "within_winter": {
+            "effect": -11.5334,
+            "CI95": [
+              -44.8041,
+              25.3411
+            ],
+            "p_one_sided_negative": 0.25875,
+            "p_two_sided": 0.5175,
+            "n_winters": 26,
+            "n_days": 4652,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": 40.4128,
+            "n_events": 32,
+            "events_negative": "10/32",
+            "t_p_two_sided": 0.00884864824253164,
+            "sign_p_one_sided_neg": 0.9899691964965314
+          }
+        }
+      }
+    },
+    "U850_NH": {
+      "n_ssw": 32,
+      "windows": {
+        "placebo_pre": {
+          "within_winter": {
+            "effect": -0.0168,
+            "CI95": [
+              -0.193,
+              0.1668
+            ],
+            "p_one_sided_negative": 0.41225,
+            "p_two_sided": 0.8245,
+            "n_winters": 26,
+            "n_days": 4652,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": -0.0898,
+            "n_events": 32,
+            "events_negative": "17/32",
+            "t_p_two_sided": 0.24786154808585106,
+            "sign_p_one_sided_neg": 0.4300250329542905
+          }
+        },
+        "onset": {
+          "within_winter": {
+            "effect": 0.1135,
+            "CI95": [
+              -0.0182,
+              0.2527
+            ],
+            "p_one_sided_negative": 0.95625,
+            "p_two_sided": 0.0875,
+            "n_winters": 26,
+            "n_days": 4652,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": -0.0854,
+            "n_events": 32,
+            "events_negative": "19/32",
+            "t_p_two_sided": 0.21933765196222071,
+            "sign_p_one_sided_neg": 0.18854279373772442
+          }
+        },
+        "early_post": {
+          "within_winter": {
+            "effect": 0.0039,
+            "CI95": [
+              -0.1439,
+              0.1461
+            ],
+            "p_one_sided_negative": 0.50625,
+            "p_two_sided": 0.9875,
+            "n_winters": 26,
+            "n_days": 4652,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": -0.1784,
+            "n_events": 32,
+            "events_negative": "23/32",
+            "t_p_two_sided": 0.03533872540707074,
+            "sign_p_one_sided_neg": 0.010030803503468633
+          }
+        },
+        "mid_post": {
+          "within_winter": {
+            "effect": -0.1733,
+            "CI95": [
+              -0.3174,
+              -0.0462
+            ],
+            "p_one_sided_negative": 0.0035,
+            "p_two_sided": 0.007,
+            "n_winters": 26,
+            "n_days": 4652,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": -0.3467,
+            "n_events": 32,
+            "events_negative": "25/32",
+            "t_p_two_sided": 2.532915531847487e-05,
+            "sign_p_one_sided_neg": 0.0010512007866054773
+          }
+        },
+        "late_post": {
+          "within_winter": {
+            "effect": 0.0397,
+            "CI95": [
+              -0.175,
+              0.2286
+            ],
+            "p_one_sided_negative": 0.659,
+            "p_two_sided": 0.682,
+            "n_winters": 26,
+            "n_days": 4652,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": -0.1819,
+            "n_events": 32,
+            "events_negative": "19/32",
+            "t_p_two_sided": 0.05839665843929981,
+            "sign_p_one_sided_neg": 0.18854279373772442
+          }
+        },
+        "post_0_60": {
+          "within_winter": {
+            "effect": -0.1108,
+            "CI95": [
+              -0.253,
+              0.0371
+            ],
+            "p_one_sided_negative": 0.071,
+            "p_two_sided": 0.142,
+            "n_winters": 26,
+            "n_days": 4652,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": -0.2321,
+            "n_events": 32,
+            "events_negative": "27/32",
+            "t_p_two_sided": 2.900405872539206e-05,
+            "sign_p_one_sided_neg": 5.653710104525089e-05
+          }
+        },
+        "post_15_44": {
+          "within_winter": {
+            "effect": -0.0813,
+            "CI95": [
+              -0.2488,
+              0.0704
+            ],
+            "p_one_sided_negative": 0.15725,
+            "p_two_sided": 0.3145,
+            "n_winters": 26,
+            "n_days": 4652,
+            "n_boot": 4000
+          },
+          "between_winter": {
+            "effect": -0.2673,
+            "n_events": 32,
+            "events_negative": "26/32",
+            "t_p_two_sided": 0.00025611932653474024,
+            "sign_p_one_sided_neg": 0.0002675263676792383
+          }
+        }
+      }
+    }
+  }
+}

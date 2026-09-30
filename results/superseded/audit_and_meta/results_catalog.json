@@ -1,0 +1,2969 @@
+{
+ "scripts": {
+  "scripts/analysis/00_preregistration.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Defines ALL analysis parameters BEFORE any data is examined.",
+   "lines": 428,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/01_build_daily_panel.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Merges all data sources into a single daily panel for NDJFM winters.",
+   "lines": 399,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/02_define_events.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Outputs event catalog + summary statistics for the paper.",
+   "lines": 74,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/03_chemistry_response.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Tests whether geomagnetic disturbance events produce measurable",
+   "lines": 206,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/04_stratospheric_propagation.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Tests whether geomagnetic disturbances weaken the polar vortex.",
+   "lines": 155,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/05_enhanced_analysis.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Extends the primary result (RR=0.774, p=0.008 for 1-3d fast pathway)",
+   "lines": 547,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/06_primary_endpoint.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Tests the central hypothesis: are geomagnetic disturbance events",
+   "lines": 225,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/07_falsification.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Five pre-specified falsification tests that the primary result must survive.",
+   "lines": 305,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/08_figures.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "All figures for the Nature Geoscience manuscript.",
+   "lines": 327,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/09_synthesis.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Compiles all analysis results, applies corrections, generates final",
+   "lines": 441,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/10_publication_figures.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Generates 6 figures for the manuscript:",
+   "lines": 562,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/11_full_data_analysis.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Addresses the gap: 54/70 processed files were unused. This script",
+   "lines": 819,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/12_rebuild_enhanced_panel.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Extends the original 76-column panel with:",
+   "lines": 255,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/13_nature_tier_analysis.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Runs sequentially to avoid OOM. Each section cleans up memory.",
+   "lines": 1202,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/14_final_synthesis.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Integrates all analysis results into a coherent narrative with:",
+   "lines": 454,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/15_nature_figures.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Generates 6 figures for the manuscript:",
+   "lines": 487,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/16_robustness_resolution.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Implements reviewer-proof analysis hierarchy:",
+   "lines": 1167,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/17_honest_synthesis.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Integrates results from:",
+   "lines": 286,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/18_updated_figures.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Only shows results that survive design-based robustness testing.",
+   "lines": 354,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/19_tier2_upgrade.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Based on critic feedback:",
+   "lines": 843,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/20_final_synthesis.py": {
+   "flags": [],
+   "outputs": [
+    "final_synthesis.json"
+   ],
+   "doc": "Integrates results from:",
+   "lines": 370,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/21_final_figures.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Key new figure: Isolated events pre/post asymmetry at 10d strata",
+   "lines": 383,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/22_meteorological_mediation.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "1. Meteorological intermediate analysis: NAO + precipitation around SSW events",
+   "lines": 283,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/23_resolve_limitations.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Run parts sequentially: python 23_resolve_limitations.py --part N",
+   "lines": 841,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/24_fresh_analysis.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Run parts sequentially to avoid OOM:",
+   "lines": 1146,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/25_revision_analysis.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Run: python scripts/analysis/25_revision_analysis.py --part N",
+   "lines": 757,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/26_mechanism_analysis.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Weakness 1: Missing Physical Mechanism \u2192 ERA5 Alpine meteorological composites",
+   "lines": 1122,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/27_planetary_wave_analysis.py": {
+   "flags": [],
+   "outputs": [
+    "planetary_wave_analysis.json"
+   ],
+   "doc": "Addresses both reviewers' key demands:",
+   "lines": 421,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/28_mechanism_upgrade.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Uses FULL NCEP record (1979-2024, n=24 SSW events) to:",
+   "lines": 572,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/29_z500_influence_diagnostics.py": {
+   "flags": [],
+   "outputs": [
+    "event_level_dose_response.csv",
+    "z500_influence_diagnostics.json"
+   ],
+   "doc": "Z500 influence diagnostics for the event-level correlation (r=0.56, n=16).",
+   "lines": 190,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/30_temporal_heterogeneity_test.py": {
+   "flags": [],
+   "outputs": [
+    "event_level_dose_response.csv",
+    "temporal_heterogeneity.json"
+   ],
+   "doc": "Tests whether the SSW-avalanche effect size differs between early (1998-2005)",
+   "lines": 177,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/31_stratospheric_downward_propagation.py": {
+   "flags": [
+    "CATALOG_OLD"
+   ],
+   "outputs": [
+    "downward_propagation.json"
+   ],
+   "doc": "Computes per-event stratospheric metrics and tests whether SSWs with",
+   "lines": 557,
+   "status": "SUPERSEDED"
+  },
+  "scripts/analysis/32_extended_accident_ssw_response.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Extends the SSW\u2013avalanche association from the primary n=16 activity-based sample",
+   "lines": 298,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/33_ep_flux_wave_driving.py": {
+   "flags": [],
+   "outputs": [
+    "downward_propagation.json"
+   ],
+   "doc": "Computes Eliassen-Palm flux proxies from NCEP reanalysis to establish direct",
+   "lines": 306,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/34_merra2_cross_validation.py": {
+   "flags": [],
+   "outputs": [
+    "downward_propagation.json"
+   ],
+   "doc": "Cross-validates the ERA5/NCEP-based stratospheric analysis against MERRA2",
+   "lines": 213,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/35_prospective_2021_test.py": {
+   "flags": [],
+   "outputs": [
+    "downward_propagation.json"
+   ],
+   "doc": "True out-of-sample prospective test using the January 2021 SSW event,",
+   "lines": 282,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/36_dose_response_extended.py": {
+   "flags": [],
+   "outputs": [
+    "downward_propagation.json"
+   ],
+   "doc": "Extended dose-response analysis linking SSW intensity metrics to avalanche",
+   "lines": 277,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/37_z500_blocking_timeseries.py": {
+   "flags": [],
+   "outputs": [
+    "downward_propagation.json"
+   ],
+   "doc": "Constructs a 46-year daily Z500 blocking index timeseries (1979-2024) for the",
+   "lines": 345,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/38_covid_adjusted_2021.py": {
+   "flags": [],
+   "outputs": [
+    "38_covid_adjusted_2021.json"
+   ],
+   "doc": "Addresses reviewer concern that 2019/20 comparison is confounded by pandemic lockdowns.",
+   "lines": 148,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/39_bh_fdr_stratified.py": {
+   "flags": [],
+   "outputs": [
+    "39_bh_fdr_stratified.json"
+   ],
+   "doc": "Addresses reviewer concern that mixing daily-level (n~7500) and event-level (n=16)",
+   "lines": 173,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/40_ep_flux_window_sensitivity.py": {
+   "flags": [],
+   "outputs": [
+    "33_ep_flux_wave_driving.json",
+    "40_ep_flux_window_sensitivity.json"
+   ],
+   "doc": "Addresses reviewer concern that the 10-day pre-onset window was selected post-hoc.",
+   "lines": 223,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/41_accident_secular_trend.py": {
+   "flags": [],
+   "outputs": [
+    "41_accident_secular_trend.json"
+   ],
+   "doc": "Addresses reviewer concern about 55-year secular trends in backcountry recreation,",
+   "lines": 206,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/42_non_ssw_blocking_test.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "The decisive mechanistic test (identified by stratospheric dynamics reviewer):",
+   "lines": 160,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/43_accident_detrending.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Addresses R5's blocking weakness: the pre-2000 RR<1 confound.",
+   "lines": 206,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/44_z500_composite_figure.py": {
+   "flags": [],
+   "outputs": [
+    "z500_influence_diagnostics.json"
+   ],
+   "doc": "Creates Figure showing:",
+   "lines": 225,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/45_loaded_gun_divergence.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Shows the dual-metric signature:",
+   "lines": 220,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/46_formal_mediation.py": {
+   "flags": [],
+   "outputs": [
+    "46_formal_mediation.json"
+   ],
+   "doc": "Uses the potential-outcomes framework (Baron-Kenny + bootstrap) to quantify:",
+   "lines": 374,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/47_direct_ep_flux.py": {
+   "flags": [],
+   "outputs": [
+    "46_formal_mediation.json",
+    "47_direct_ep_flux.json"
+   ],
+   "doc": "Downloads temperature and meridional wind at 100hPa from NCEP-NCAR reanalysis",
+   "lines": 218,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/48_climate_ssw_projections.py": {
+   "flags": [],
+   "outputs": [
+    "48_climate_ssw_projections.json"
+   ],
+   "doc": "Computes:",
+   "lines": 150,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/49_mixed_effects_accident.py": {
+   "flags": [],
+   "outputs": [
+    "49_mixed_effects_accident.json"
+   ],
+   "doc": "R3 identified that CMH OR=1.77 (P<10^-12) treats individual accident records",
+   "lines": 165,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/50_count_rating_dissociation_fig.py": {
+   "flags": [],
+   "outputs": [
+    "32_extended_accident_ssw.json"
+   ],
+   "doc": "Creates the central \"loaded-gun\" visualization: simultaneous",
+   "lines": 146,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/51_cross_hazard_regime.py": {
+   "flags": [],
+   "outputs": [
+    "51_cross_hazard_regime.json"
+   ],
+   "doc": "Shows that SSW-driven regime redistribution simultaneously shifts multiple",
+   "lines": 300,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/52_geographic_effect_map.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Creates a geographic map showing the spatial pattern of SSW-avalanche",
+   "lines": 212,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/53_snowpack_trigger_joint.py": {
+   "flags": [],
+   "outputs": [
+    "53_snowpack_trigger_joint.json"
+   ],
+   "doc": "Resolves the apparent paradox: SNOWPACK sn38 DECREASES (more structural",
+   "lines": 228,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/54_multi_hazard_figure.py": {
+   "flags": [],
+   "outputs": [
+    "51_cross_hazard_regime.json"
+   ],
+   "doc": "Creates a publication-quality figure showing how SSW-driven regime",
+   "lines": 179,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/55_power_analysis.py": {
+   "flags": [],
+   "outputs": [
+    "55_power_analysis.json"
+   ],
+   "doc": "Shows what effect sizes are detectable at n=16, what P-values to expect",
+   "lines": 135,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/56_blocking_without_ssw.py": {
+   "flags": [],
+   "outputs": [
+    "56_blocking_without_ssw.json"
+   ],
+   "doc": "THE single most important analysis demanded by ALL 5 reviewers:",
+   "lines": 270,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/57_gee_accident_model.py": {
+   "flags": [],
+   "outputs": [
+    "57_gee_accident_model.json"
+   ],
+   "doc": "Fix the CMH pseudoreplication issue flagged by ALL reviewers.",
+   "lines": 297,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/58_precipitation_phase.py": {
+   "flags": [],
+   "outputs": [
+    "58_precipitation_phase.json"
+   ],
+   "doc": "Resolve the precipitation paradox flagged by R3:",
+   "lines": 229,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/59_cold_wave_mortality_risk.py": {
+   "flags": [],
+   "outputs": [
+    "59_cold_wave_mortality_risk.json"
+   ],
+   "doc": "Applies published cold-mortality dose-response curves (Gasparrini et al. 2015)",
+   "lines": 302,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/60_monte_carlo_specurve_placebo.py": {
+   "flags": [],
+   "outputs": [
+    "r55_specurve_placebo.json"
+   ],
+   "doc": "Nature Geoscience manuscript: SSW \u2192 avalanche hazard",
+   "lines": 445,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/61_incremental_value_power.py": {
+   "flags": [],
+   "outputs": [
+    "r55_incremental_power.json"
+   ],
+   "doc": "Nature Geoscience reviewer response: incremental value of SSW identification",
+   "lines": 570,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/62_cross_country_meta_typology.py": {
+   "flags": [],
+   "outputs": [
+    "r55_meta_typology.json"
+   ],
+   "doc": "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500",
+   "lines": 676,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/63_dispersion_correction.py": {
+   "flags": [],
+   "outputs": [
+    "r55_dispersion_correction.json"
+   ],
+   "doc": "Poisson overdispersion correction for daily avalanche count regressions.",
+   "lines": 152,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/67_regime_occupancy_decomposition.py": {
+   "flags": [
+    "CATALOG_OLD"
+   ],
+   "outputs": [
+    "r67_regime_occupancy_decomposition.json"
+   ],
+   "doc": "Quantifies per-event regime-occupancy shifts and decomposes the SSW-avalanche",
+   "lines": 265,
+   "status": "SUPERSEDED"
+  },
+  "scripts/analysis/68_comprehensive_stratification.py": {
+   "flags": [
+    "CATALOG_OLD"
+   ],
+   "outputs": [],
+   "doc": "1. Displacement vs Split stratification",
+   "lines": 273,
+   "status": "SUPERSEDED"
+  },
+  "scripts/analysis/68_mechanistic_deep_dive.py": {
+   "flags": [
+    "CATALOG_OLD"
+   ],
+   "outputs": [],
+   "doc": "Uses the 130-station SNOWPACK dataset to quantify:",
+   "lines": 257,
+   "status": "SUPERSEDED"
+  },
+  "scripts/analysis/_analysis_utils.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 38,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/bo_bootstrap_ci.py": {
+   "flags": [],
+   "outputs": [
+    "bo_bootstrap_cis.json"
+   ],
+   "doc": "Resamples the 16 SSW events (with replacement) 10,000 times and",
+   "lines": 199,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/r82_bulletin_validation.py": {
+   "flags": [
+    "CATALOG_OLD"
+   ],
+   "outputs": [
+    "r82_bulletin_validation.json",
+    "ssw_event_catalog.csv"
+   ],
+   "doc": "The Swiss Avalanche Bulletin danger level (dangerLevel) is a human-expert",
+   "lines": 202,
+   "status": "SUPERSEDED"
+  },
+  "scripts/analysis/r82_hierarchical_synthesis.py": {
+   "flags": [
+    "CATALOG_OLD"
+   ],
+   "outputs": [
+    "r39_french_bra_all_replication.json",
+    "r82_hierarchical_synthesis.json",
+    "ssw_event_catalog.csv"
+   ],
+   "doc": "Replaces pseudo-replication framing with proper event-clustered inference:",
+   "lines": 216,
+   "status": "SUPERSEDED"
+  },
+  "scripts/analysis/r82_problem_type_proxy.py": {
+   "flags": [
+    "CATALOG_OLD"
+   ],
+   "outputs": [
+    "r82_problem_type_proxy.json",
+    "ssw_event_catalog.csv"
+   ],
+   "doc": "Uses SNOWPACK stability metrics to infer the shift from storm-slab to",
+   "lines": 215,
+   "status": "SUPERSEDED"
+  },
+  "scripts/analysis/r82_pwl_depth_validation.py": {
+   "flags": [
+    "CATALOG_OLD"
+   ],
+   "outputs": [
+    "r82_pwl_depth_validation.json",
+    "ssw_event_catalog.csv"
+   ],
+   "doc": "Uses SNOWPACK Pen_depth (penetration depth of most critical weak layer, cm)",
+   "lines": 261,
+   "status": "SUPERSEDED"
+  },
+  "scripts/analysis/r83_fix_all_consensus.py": {
+   "flags": [
+    "CATALOG_OLD"
+   ],
+   "outputs": [
+    "r20_definitive_analysis.json",
+    "r83_consensus_fixes.json",
+    "ssw_event_catalog.csv"
+   ],
+   "doc": "1. Table 70 inconsistency \u2014 recompute with correct DOY-matched RRs",
+   "lines": 565,
+   "status": "SUPERSEDED"
+  },
+  "scripts/analysis/r84_n16_resolution.py": {
+   "flags": [],
+   "outputs": [
+    "r84_n16_resolution.json"
+   ],
+   "doc": "Produces:",
+   "lines": 178,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/r86_browns_method.py": {
+   "flags": [],
+   "outputs": [
+    "r86_browns_method.json"
+   ],
+   "doc": "Addresses reviewer concern that standard Fisher combination assumes independence",
+   "lines": 138,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/r86_directional_skill.py": {
+   "flags": [],
+   "outputs": [
+    "r86_directional_skill.json"
+   ],
+   "doc": "Computes Heidke Skill Score and directional Brier Skill Score to properly",
+   "lines": 130,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/r87_joint_compound_test.py": {
+   "flags": [],
+   "outputs": [
+    "r87_joint_compound_test.json"
+   ],
+   "doc": "at the event level to verify the opposing-direction compound operates jointly.",
+   "lines": 159,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/r88_formal_joint_copula_test.py": {
+   "flags": [],
+   "outputs": [
+    "r88_formal_joint_copula_test.json"
+   ],
+   "doc": "Addresses R88 compound-events reviewer requirement:",
+   "lines": 339,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/r88_pre_onset_stratification.py": {
+   "flags": [],
+   "outputs": [
+    "r57_pre_post_decomposition.json",
+    "r88_pre_onset_stratification.json"
+   ],
+   "doc": "R88 compound-events reviewer critique: \"Resolution requires process-attribution",
+   "lines": 182,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/r89_compound_irreducibility.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Tests whether the two arms of the compound (suppression + structural instability)",
+   "lines": 163,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/r92_mls_satellite_validation.py": {
+   "flags": [],
+   "outputs": [
+    "r57_epflux_diagnostics.json",
+    "r92_mls_satellite_validation.json"
+   ],
+   "doc": "Uses NASA Aura Microwave Limb Sounder (MLS) Level-3 daily zonal-mean",
+   "lines": 294,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis/size_threshold_sensitivity.py": {
+   "flags": [
+    "CATALOG_OLD"
+   ],
+   "outputs": [],
+   "doc": "Addresses reviewer concern that size-1 events may include inconsistently reported small sloughs.",
+   "lines": 119,
+   "status": "SUPERSEDED"
+  },
+  "scripts/analysis/window_sensitivity_events.py": {
+   "flags": [],
+   "outputs": [
+    "window_sensitivity_events.json"
+   ],
+   "doc": "Identifies which specific SSW events change sign (RR crosses 1.0)",
+   "lines": 134,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/analyze_us_danger.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 69,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/condpois.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Used by the SSW/avalanche case-crossover analyses (r107+).",
+   "lines": 135,
+   "status": "CURRENT"
+  },
+  "scripts/analysis_extra/era5_mechanism.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 87,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/era5_rutschblock_link.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 69,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/era5_wind_mechanism.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 115,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/lagged_temp_aval.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Tests: does warmth on day N predict fewer avalanches on day N+2 to N+5?",
+   "lines": 102,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/mechanism_analysis.py": {
+   "flags": [],
+   "outputs": [
+    "mechanism_analysis.json"
+   ],
+   "doc": "Tests whether temperature anomaly predicts avalanche rate ratio,",
+   "lines": 197,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/mediation_analysis.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 124,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/norway_phase_analysis.py": {
+   "flags": [],
+   "outputs": [
+    "norway_phase_analysis.json"
+   ],
+   "doc": "Analyze pre-SSW vs post-SSW danger level patterns.",
+   "lines": 125,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/norway_ssw_analysis.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Efficient: downloads only needed windows, analyzes immediately.",
+   "lines": 246,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/planetary_wave_timing.py": {
+   "flags": [],
+   "outputs": [
+    "planetary_wave_timing.json"
+   ],
+   "doc": "This addresses the critical reviewer concern: \"effect precedes cause.\"",
+   "lines": 182,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/pre_ssw_temperature.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 74,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/predictive_model.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 118,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/propagation_analysis.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 77,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/r100_oos_post2019.py": {
+   "flags": [],
+   "outputs": [
+    "r100_oos_post2019.json"
+   ],
+   "doc": "Referee fix M3 - frozen-pipeline out-of-sample (OOS) test on post-2019 SSW events.",
+   "lines": 269,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/r101_irreducibility_power.py": {
+   "flags": [],
+   "outputs": [
+    "r101_irreducibility_power.json"
+   ],
+   "doc": "Referee fix M1 - convert the underpowered irreducibility \"p-values\" into an",
+   "lines": 125,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/r102_snotel_extended_dissociation.py": {
+   "flags": [
+    "DETECTOR"
+   ],
+   "outputs": [
+    "r102_snotel_extended_dissociation.json"
+   ],
+   "doc": "BREAKTHROUGH analysis: test the loaded-gun MECHANISM (loading maintained while",
+   "lines": 212,
+   "status": "SUPERSEDED"
+  },
+  "scripts/analysis_extra/r103_monitoring_blindspot.py": {
+   "flags": [
+    "CATALOG_OLD"
+   ],
+   "outputs": [
+    "r103_monitoring_blindspot.json",
+    "ssw_event_catalog.csv"
+   ],
+   "doc": "Addresses the two NG \"killers\" by relocating the decisive + novel claim away from",
+   "lines": 177,
+   "status": "SUPERSEDED"
+  },
+  "scripts/analysis_extra/r104_accident_case_crossover.py": {
+   "flags": [
+    "DETECTOR",
+    "SINGLE_WINDOW"
+   ],
+   "outputs": [
+    "r104_accident_case_crossover.json"
+   ],
+   "doc": "Breaks the n=16 ceiling on the paper's HUMAN-TRIGGER arm.",
+   "lines": 276,
+   "status": "SUPERSEDED"
+  },
+  "scripts/analysis_extra/r105_multiregion_meta.py": {
+   "flags": [
+    "DETECTOR",
+    "SINGLE_WINDOW"
+   ],
+   "outputs": [
+    "r105_multiregion_meta.json"
+   ],
+   "doc": "The venue-deciding test: is the post-SSW avalanche-activity suppression",
+   "lines": 278,
+   "status": "SUPERSEDED"
+  },
+  "scripts/analysis_extra/r106_canonical_catalog_headline.py": {
+   "flags": [
+    "CATALOG_OLD",
+    "SINGLE_WINDOW",
+    "uses_canonical_catalog"
+   ],
+   "outputs": [
+    "r106_canonical_catalog_headline.json",
+    "ssw_event_catalog.csv"
+   ],
+   "doc": "Re-test the manuscript's HEADLINE result against the canonical SSW catalog.",
+   "lines": 207,
+   "status": "SUPERSEDED"
+  },
+  "scripts/analysis_extra/r107_pooled_within_winter.py": {
+   "flags": [
+    "SINGLE_WINDOW",
+    "uses_canonical_catalog"
+   ],
+   "outputs": [
+    "r107_pooled_within_winter.json"
+   ],
+   "doc": "THE definitive test: is post-SSW avalanche suppression real, once every known",
+   "lines": 281,
+   "status": "SUPERSEDED"
+  },
+  "scripts/analysis_extra/r108_pwl_seasonal_control.py": {
+   "flags": [
+    "SINGLE_WINDOW",
+    "uses_canonical_catalog"
+   ],
+   "outputs": [
+    "r108_pwl_seasonal_control.json"
+   ],
+   "doc": "Re-test the manuscript's SECOND decisive claim -- that persistent weak layers",
+   "lines": 290,
+   "status": "SUPERSEDED"
+  },
+  "scripts/analysis_extra/r109_norway_problem_mechanism.py": {
+   "flags": [
+    "SINGLE_WINDOW",
+    "uses_canonical_catalog"
+   ],
+   "outputs": [
+    "r109_norway_problem_mechanism.json"
+   ],
+   "doc": "NEW PILLAR CANDIDATE: test the manuscript's mechanism directly, in an",
+   "lines": 230,
+   "status": "SUPERSEDED"
+  },
+  "scripts/analysis_extra/r110_albina_alpine_problems.py": {
+   "flags": [
+    "SINGLE_WINDOW",
+    "uses_canonical_catalog"
+   ],
+   "outputs": [
+    "r110_albina_alpine_problems.json"
+   ],
+   "doc": "Alpine replication of R109: does the manuscript's mechanism appear in",
+   "lines": 204,
+   "status": "SUPERSEDED"
+  },
+  "scripts/analysis_extra/r111_kinetic_growth_instrumental.py": {
+   "flags": [
+    "SINGLE_WINDOW",
+    "uses_canonical_catalog"
+   ],
+   "outputs": [
+    "r111_kinetic_growth_instrumental.json"
+   ],
+   "doc": "A HUMAN-FREE test of the manuscript's structural mechanism.",
+   "lines": 240,
+   "status": "SUPERSEDED"
+  },
+  "scripts/analysis_extra/r112_design_positive_control.py": {
+   "flags": [
+    "SINGLE_WINDOW",
+    "uses_canonical_catalog"
+   ],
+   "outputs": [
+    "r112_design_positive_control.json"
+   ],
+   "doc": "POSITIVE CONTROL for the within-winter design used throughout R106-R111.",
+   "lines": 243,
+   "status": "SUPERSEDED"
+  },
+  "scripts/analysis_extra/r113_event_study.py": {
+   "flags": [
+    "uses_canonical_catalog"
+   ],
+   "outputs": [
+    "r113_event_study.json"
+   ],
+   "doc": "Rebuild of R112 as a PROPER EVENT STUDY, after peer review identified a genuine",
+   "lines": 273,
+   "status": "CURRENT"
+  },
+  "scripts/analysis_extra/r114_avalanche_event_study.py": {
+   "flags": [
+    "uses_canonical_catalog"
+   ],
+   "outputs": [
+    "r114_avalanche_event_study.json"
+   ],
+   "doc": "Recompute the avalanche results (R106-R111) in EVENT-STUDY form.",
+   "lines": 235,
+   "status": "CURRENT"
+  },
+  "scripts/analysis_extra/r98_continuous_vortex_framework.py": {
+   "flags": [],
+   "outputs": [
+    "r98_continuous_vortex_framework.json"
+   ],
+   "doc": "Complements the discrete n=16 SSW event-catalog analysis with a distributed-lag",
+   "lines": 324,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/r98_continuous_vortex_framework_v2.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Revision over v1: the 21-lag unconstrained distributed lag was dominated by",
+   "lines": 391,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/r98b_blocking_modifier.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Per the rubber-duck critique, conditioning on the presence of a 500 hPa",
+   "lines": 171,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/r99_blocking_ssw_interaction.py": {
+   "flags": [],
+   "outputs": [
+    "r99_blocking_ssw_interaction.json"
+   ],
+   "doc": "Referee fix M2 \u2014 \"Is there avalanche suppression beyond ordinary Alpine blocking?\"",
+   "lines": 310,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/sintering_dose_response.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "This tests whether SSW events that produce more surface warming (and thus more sintering)",
+   "lines": 115,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/sintering_timescale.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Estimates how +0.81 K warming affects sintering rate using",
+   "lines": 79,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/ssw_subtype.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 69,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/swiss_daily_lag.py": {
+   "flags": [],
+   "outputs": [
+    "swiss_daily_lag.json"
+   ],
+   "doc": "Compare with Norwegian pattern to show cross-country consistency.",
+   "lines": 129,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/threshold_vs_continuous.py": {
+   "flags": [],
+   "outputs": [
+    "threshold_vs_continuous.json"
+   ],
+   "doc": "Compares: (1) continuous vortex metric, (2) binary SSW indicator, (3) threshold model.",
+   "lines": 297,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/timing_autocorrelation_correction.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "R10-A flagged that 5-day rolling windows create ~6-8 effective df, not 29.",
+   "lines": 177,
+   "status": "UNREVIEWED"
+  },
+  "scripts/analysis_extra/window_phase_avalanche.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "can be explained by the ERA5 phase decomposition.",
+   "lines": 69,
+   "status": "UNREVIEWED"
+  },
+  "scripts/config.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 8,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/01_download_solar_indices.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Downloads:",
+   "lines": 85,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/02_download_omni.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Downloads the NASA GSFC OMNIWeb datasets from SPDF:",
+   "lines": 78,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/03_download_goes_xrs.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Downloads GOES-R series (GOES-16 + GOES-18) XRS 1-minute averages",
+   "lines": 97,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/04_download_flare_catalog.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Downloads the complete NOAA/SWPC Solar & Geophysical Event Reports (1975\u2013present).",
+   "lines": 136,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/05_download_ssw_catalog.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Downloads the Butler et al. (2015/2017) and Charlton & Polvani (2007) catalogs,",
+   "lines": 112,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/06_download_caic_avalanche.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Downloads avalanche accident statistics from the Colorado Avalanche Information Center.",
+   "lines": 184,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/07_download_snotel.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Downloads snowpack data from the USDA NRCS SNOTEL network",
+   "lines": 155,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/08_download_dscovr_ace.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Downloads real-time and archived solar wind data from DSCOVR (2016-present)",
+   "lines": 143,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/09_download_poes_meped.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Downloads NOAA POES (Polar Orbiting Environmental Satellites) particle data.",
+   "lines": 137,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/10_setup_era5.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Configures Copernicus CDS API access for ERA5 downloads.",
+   "lines": 172,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/11_setup_nasa_earthdata.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Sets up credentials and download scripts for NASA Earthdata-hosted datasets:",
+   "lines": 327,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/12_setup_geomagnetic.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Sets up access for 500+ ground magnetometer station networks.",
+   "lines": 206,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/13_setup_psp_sdo.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Sets up access to the flagship solar physics datasets.",
+   "lines": 224,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/14_download_norway_data.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "The Norwegian Geotechnical Institute (NGI) maintains avalanche occurrence data.",
+   "lines": 174,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/15_download_kyoto_dst.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "WDC Kyoto provides Dst via monthly HTML pages; this script parses them.",
+   "lines": 105,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/16_download_norway_fixed.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Uses correct Varsom v6 + Regobs v4 endpoints",
+   "lines": 176,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/17_download_snotel_fixed.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Uses station-by-station queries with correct NRCS AWDB REST API format.",
+   "lines": 126,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/18_download_varsom_fixed.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Uses Archive/Warning/All endpoint: all 46 regions, full detail, 2012-present.",
+   "lines": 94,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/19_download_donki_catalog.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Uses the DONKI REST API: https://kauai.ccmc.gsfc.nasa.gov/DONKI/WS/get/FLR",
+   "lines": 131,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/20_download_goes_xrs_fixed.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Downloads GOES-8 through GOES-18 1-minute XRS data (1986\u2013present).",
+   "lines": 161,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/21_download_poes_fixed.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Downloads hemispheric power index + MEPED particle flux (NOAA-15 through -19).",
+   "lines": 165,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/22_download_goes_xrs_v2.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Downloads annual 1-min avg NetCDF + flare summary NetCDF for GOES-8 through GOES-15.",
+   "lines": 97,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/23_download_psp_mag.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "for SOC analysis of solar coronal magnetic field fluctuations.",
+   "lines": 71,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/24_derive_storm_catalog.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Applies standard thresholds: moderate (Dst < -50 nT) and intense (Dst < -100 nT).",
+   "lines": 229,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/25_download_kyoto_ae.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Mirrors the working approach used for Dst (script 15).",
+   "lines": 202,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/26_download_goes_r_xrs.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "This extends the GOES 8-15 archive (script 22) to cover Solar Cycle 25 (2017\u2013present).",
+   "lines": 99,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/27_download_ncep_stratosphere.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Downloads daily-mean temperature (air), zonal wind (uwnd), and geopotential",
+   "lines": 106,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/28_download_snotel_state_reports.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Downloads individual SNOTEL station daily data via NRCS Report Generator CSV format",
+   "lines": 73,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/29_download_ncep_troposphere.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Downloads daily-mean 500 hPa geopotential height and sea-level pressure (SLP)",
+   "lines": 113,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/30_download_senorge_swe.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Downloads annual SWE from MET Norway's seNorge gridded product (1957\u20132025)",
+   "lines": 127,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/31_download_gsfc_flare_catalog.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "All flare classes A/B/C/M/X \u2014 from NASA Goddard Space Flight Center",
+   "lines": 108,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/32_download_uac_avalanche.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "All seasons from earliest available (~1980s) to present.",
+   "lines": 76,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/33_download_tsi.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Datasets:",
+   "lines": 197,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/34_download_solar_spectral_proxies.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Datasets:",
+   "lines": 136,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/35_download_bremen_mgii.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "This is the canonical solar chromospheric UV proxy used in EPP-atmosphere studies.",
+   "lines": 89,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/36_download_volcanic_aerosol.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Datasets:",
+   "lines": 135,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/37_download_climate_indices.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "PDO, AMO, MEI are critical confounds for long-period avalanche/snowpack analysis.",
+   "lines": 65,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/38_download_era5.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Scope (reduced to pass CDS free-tier quotas):",
+   "lines": 135,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/39_download_nasa_earthdata.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Priority datasets:",
+   "lines": 188,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/40_download_ims_snow.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Source: NSIDC \u2014 https://nsidc.org/data/g02156",
+   "lines": 171,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/41_download_dscovr_ace_cdaweb.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "No authentication required \u2014 publicly accessible.",
+   "lines": 92,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/42_download_hmi_sharp.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "No registration required \u2014 SHARP summary parameters are publicly accessible.",
+   "lines": 176,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/43_download_goes_particle.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Downloads GOES MAGED (Magnetospheric Electron Detector) and EPEAD electron flux",
+   "lines": 145,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/44_download_poes_hapi_historical.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Downloads older NOAA satellites (NOAA-05 through NOAA-14) 1-minute MEPED",
+   "lines": 119,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/45_download_slf_envidat.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "No authentication required \u2014 all datasets are CC-BY licensed.",
+   "lines": 52,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/46_download_supermag.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "SuperMAG provides:",
+   "lines": 203,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/47_download_era5_polar_strat.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Downloads polar cap (60-90N) monthly mean pressure-level data for the",
+   "lines": 70,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/48_download_goes_r_particle.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "(Magnetospheric Particle Sensor - High Energy), L2 1-minute science data.",
+   "lines": 100,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/50_redownload_mls.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Saves to data/atmospheric/aura_mls/{product}/ sub-directories.",
+   "lines": 87,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/51_redownload_era5_alps.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Uses CDS API. Downloads year-by-year to data/atmospheric/era5/swiss_alps/.",
+   "lines": 62,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/52_download_omni_dst.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Source: https://spdf.gsfc.nasa.gov/pub/data/omni/low_res_omni/omni2_YYYY.dat",
+   "lines": 78,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/53_update_dst_processed.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 38,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/download_all.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Solar-Magnetic-Analysis Research Project",
+   "lines": 122,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download/utils.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 72,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/download_albina.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Covers: Tyrol (AT-07), South Tyrol (IT-32-BZ), Trentino (IT-32-TN)",
+   "lines": 128,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/download_albina_caaml_problems.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Download the full ALBINA (Tyrol / South Tyrol / Trentino) avalanche-bulletin",
+   "lines": 171,
+   "status": "CURRENT"
+  },
+  "scripts/download_extra/download_albina_obs.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 125,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/download_austrian.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 101,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/download_eaws_comprehensive.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Downloads Austrian, French, Italian, Swiss, German, Slovenian data for SSW events.",
+   "lines": 154,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/download_eaws_focused.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "then download systematically for post-2018 SSW events only.",
+   "lines": 130,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/download_eaws_pyavacore.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Focus on SSW event windows and matched controls.",
+   "lines": 127,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/download_eaws_recent.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "The EAWS/ALBINA system was launched around 2017-2018.",
+   "lines": 110,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/download_envidat.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "1. Re-analyzed Swiss danger levels (2001-2023) \u2014 22 seasons!",
+   "lines": 66,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/download_envidat2.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 78,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/download_era5_extended.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Needed: 1998-2003 and 2018-2019 to complement existing 2004-2013 data.",
+   "lines": 66,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/download_era5_radiation.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Variables: surface net solar radiation, surface net thermal radiation,",
+   "lines": 79,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/download_french.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 48,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/download_french_bra.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Try multiple public endpoints to get daily danger levels for Alpine massifs.",
+   "lines": 255,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/download_international.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 121,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/download_lawis_full.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Download the COMPLETE LAWIS avalanche-incident record (all countries, all",
+   "lines": 157,
+   "status": "CURRENT"
+  },
+  "scripts/download_extra/download_norway_avalanche.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Mainland Norway mountain regions, winters 2012/13 - 2024/25.",
+   "lines": 83,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/download_norway_targeted.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Focus on key mountain regions for SSW analysis windows.",
+   "lines": 121,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/download_ssw_compendium_canonical.py": {
+   "flags": [
+    "CATALOG_OLD",
+    "uses_canonical_catalog"
+   ],
+   "outputs": [
+    "ssw_event_catalog.csv"
+   ],
+   "doc": "Build THE canonical major mid-winter SSW catalog used by every analysis in this",
+   "lines": 177,
+   "status": "CURRENT"
+  },
+  "scripts/download_extra/download_swpc_data.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Also downloads SuperMAG indices if API key available.",
+   "lines": 131,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/download_us_danger.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Covers ALL US avalanche centers: CAIC, NWAC, SAC, UAC, etc.",
+   "lines": 58,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/r34_download_albina_extended.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Also downloads control winters for comparison.",
+   "lines": 139,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/r36_download_extra.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "1. Canadian Avalanche Centre (Avalanche Canada)",
+   "lines": 134,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/r36_download_indices.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Also try downloading Japanese avalanche data and NOAA blocking patterns.",
+   "lines": 122,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/r38_albina_download.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Public data from avalanche.report/albina_files/ (available 2018-12-04 onwards)",
+   "lines": 163,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/r38_download_extra.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "1. MeteoSwiss/IDAWEB station data (open data portal)",
+   "lines": 93,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/r39_albina_extended.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 90,
+   "status": "UNREVIEWED"
+  },
+  "scripts/download_extra/supermag-api.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "; ================",
+   "lines": 496,
+   "status": "UNREVIEWED"
+  },
+  "scripts/figures/dose_response_mediation.py": {
+   "flags": [],
+   "outputs": [
+    "event_level_dose_response.csv"
+   ],
+   "doc": "of event-level avalanche response.",
+   "lines": 158,
+   "status": "UNREVIEWED"
+  },
+  "scripts/figures/eaws_geographic_map.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "SSW-window danger-level anomalies.",
+   "lines": 118,
+   "status": "UNREVIEWED"
+  },
+  "scripts/figures/forest_plot_cross_regional.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Generates a forest plot showing country-level effect sizes with 95% CIs,",
+   "lines": 53,
+   "status": "UNREVIEWED"
+  },
+  "scripts/figures/ng_fig_design_artifact.py": {
+   "flags": [],
+   "outputs": [
+    "r106_canonical_catalog_headline.json",
+    "r107_pooled_within_winter.json",
+    "r108_pwl_seasonal_control.json",
+    "r111_kinetic_growth_instrumental.json",
+    "r112_design_positive_control.json"
+   ],
+   "doc": "The three display items for `paper/ng_manuscript.tex`, built directly from the",
+   "lines": 220,
+   "status": "CURRENT"
+  },
+  "scripts/figures/r55_z500_composite_maps.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Publication-quality Z500 composite anomaly maps for Nature Geoscience",
+   "lines": 705,
+   "status": "UNREVIEWED"
+  },
+  "scripts/process/00_run_pipeline.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 62,
+   "status": "UNREVIEWED"
+  },
+  "scripts/process/01_process_geomagnetic.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Process geomagnetic (Dst/AE/Kp) and atmospheric catalog data \u2192 Parquet.",
+   "lines": 399,
+   "status": "UNREVIEWED"
+  },
+  "scripts/process/02_process_solar_catalogs.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Process solar event catalogs, SDO HMI SHARP, solar indices, and NCEP CSV \u2192 Parquet.",
+   "lines": 441,
+   "status": "UNREVIEWED"
+  },
+  "scripts/process/03_process_omni.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Process OMNI solar wind fixed-width text files \u2192 Parquet.",
+   "lines": 307,
+   "status": "UNREVIEWED"
+  },
+  "scripts/process/04_process_goes_xrs.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Process GOES X-ray Sensor (XRS) NetCDF files \u2192 single Parquet.",
+   "lines": 257,
+   "status": "UNREVIEWED"
+  },
+  "scripts/process/05_process_goes_particle.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Process GOES energetic particle data (legacy MAGED + GOES-R MPSH) \u2192 Parquet.",
+   "lines": 316,
+   "status": "UNREVIEWED"
+  },
+  "scripts/process/06_process_poes.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Process POES MEPED CDF files \u2192 Parquet using cdflib.",
+   "lines": 287,
+   "status": "UNREVIEWED"
+  },
+  "scripts/process/07_process_mls.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Process Aura/MLS HDF5 files \u2192 polar-mean Parquet + gridded NetCDF4.",
+   "lines": 305,
+   "status": "UNREVIEWED"
+  },
+  "scripts/process/08_process_era5.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Process ERA5 NetCDF files \u2192 merged compressed NetCDF4 + polar Parquet.",
+   "lines": 351,
+   "status": "UNREVIEWED"
+  },
+  "scripts/process/09_process_modis.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Process MODIS MOD10A1 HDF4 snow cover files \u2192 daily stats Parquet + monthly grid NetCDF4.",
+   "lines": 299,
+   "status": "UNREVIEWED"
+  },
+  "scripts/process/10_process_cryosphere.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Process cryosphere tabular and spatial datasets \u2192 Parquet.",
+   "lines": 606,
+   "status": "UNREVIEWED"
+  },
+  "scripts/process/11_process_psp_ace.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Process Parker Solar Probe (PSP) CDF and ACE/DSCOVR compressed NetCDF \u2192 Parquet.",
+   "lines": 502,
+   "status": "UNREVIEWED"
+  },
+  "scripts/process/_utils.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 180,
+   "status": "UNREVIEWED"
+  },
+  "scripts/process_extra/fix_nc_units.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "and fix ERA5 polar strat time units attr.",
+   "lines": 101,
+   "status": "UNREVIEWED"
+  },
+  "scripts/process_extra/fix_ncep_redownload.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Re-downloads NCEP/NCAR Reanalysis I stratospheric polar-cap data from PSL THREDDS",
+   "lines": 206,
+   "status": "UNREVIEWED"
+  },
+  "scripts/process_extra/fix_qc_fails.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "1. Two SLF 1999-2017 NaT index files \u2014 assign proper UTC DatetimeIndex (Jan 1 of season end year)",
+   "lines": 191,
+   "status": "UNREVIEWED"
+  },
+  "scripts/process_extra/fix_qc_issues.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Issues to fix:",
+   "lines": 403,
+   "status": "UNREVIEWED"
+  },
+  "scripts/process_extra/fix_warnings.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "1. MERRA2: set proper MultiIndex(time, lat, pressure_hPa, variable)",
+   "lines": 298,
+   "status": "UNREVIEWED"
+  },
+  "scripts/process_extra/process_extended_era5.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "daily parquet (2004-2013) to create unified ERA5 dataset covering 1998-2019.",
+   "lines": 268,
+   "status": "UNREVIEWED"
+  },
+  "scripts/process_extra/snowpack_sintering_model.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Physics:",
+   "lines": 265,
+   "status": "UNREVIEWED"
+  },
+  "scripts/r56_zip_doy_resolution.py": {
+   "flags": [],
+   "outputs": [
+    "r56_zip_doy_resolution.json"
+   ],
+   "doc": "Resolves the 3x discrepancy between DOY-matched gmRR=0.32 and ZIP net ratio ~0.94.",
+   "lines": 193,
+   "status": "UNREVIEWED"
+  },
+  "scripts/r57_epflux_diagnostics.py": {
+   "flags": [],
+   "outputs": [
+    "r57_epflux_diagnostics.json"
+   ],
+   "doc": "Addresses reviewer criticism: \"No EP-flux vectors/divergence/wave decomposition",
+   "lines": 596,
+   "status": "UNREVIEWED"
+  },
+  "scripts/r57_nb_models.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Fits Poisson, NB, ZIP, ZINB regressions on dry natural avalanche counts,",
+   "lines": 400,
+   "status": "UNREVIEWED"
+  },
+  "scripts/r57_pre_post_decomposition.py": {
+   "flags": [],
+   "outputs": [
+    "r57_pre_post_decomposition.json"
+   ],
+   "doc": "Analyses",
+   "lines": 285,
+   "status": "UNREVIEWED"
+  },
+  "scripts/r57_wind_transport_resolution.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "SSW windows show increased wind speed yet natural avalanche activity",
+   "lines": 631,
+   "status": "UNREVIEWED"
+  },
+  "scripts/r77_height_time_composite.py": {
+   "flags": [],
+   "outputs": [
+    "r57_epflux_diagnostics.json",
+    "r77_height_time_composite.json"
+   ],
+   "doc": "Creates a Hovm\u00f6ller-style composite showing zonal wind tendency (du/dt)",
+   "lines": 124,
+   "status": "UNREVIEWED"
+  },
+  "scripts/r77_observer_effort_table.py": {
+   "flags": [],
+   "outputs": [
+    "r31b_trigger_suppression.json",
+    "r77_observer_effort_summary.json"
+   ],
+   "doc": "Compiles evidence that the suppression signal is NOT an observation artifact,",
+   "lines": 109,
+   "status": "UNREVIEWED"
+  },
+  "scripts/r78_sign_randomisation.py": {
+   "flags": [],
+   "outputs": [
+    "r78_sign_randomisation.json"
+   ],
+   "doc": "For each of 100,000 iterations, randomly flips the sign of each event-level",
+   "lines": 83,
+   "status": "UNREVIEWED"
+  },
+  "scripts/r79_epflux_height_time_figure.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Creates a 2-panel figure:",
+   "lines": 147,
+   "status": "UNREVIEWED"
+  },
+  "scripts/r81_structural_ceiling_breakers.py": {
+   "flags": [],
+   "outputs": [
+    "34_merra2_cross_validation.json",
+    "56_blocking_without_ssw.json",
+    "r81_ceiling_breakers.json"
+   ],
+   "doc": "Comprehensive analyses to address ALL structural review concerns:",
+   "lines": 790,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/_avcan_flexible_utils.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 166,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r11_mechanism_upgrade.py": {
+   "flags": [
+    "CATALOG_OLD"
+   ],
+   "outputs": [
+    "r11_mechanism_upgrade.json",
+    "sintering_extended.json",
+    "ssw_event_catalog.csv"
+   ],
+   "doc": "Addresses all four R11 reviewer requests:",
+   "lines": 810,
+   "status": "SUPERSEDED"
+  },
+  "scripts/review_rounds/r11_mechanism_upgrade_p2.py": {
+   "flags": [
+    "CATALOG_OLD"
+   ],
+   "outputs": [
+    "r11_mechanism_upgrade_p2.json",
+    "sintering_extended.json",
+    "ssw_event_catalog.csv"
+   ],
+   "doc": "High-power daily-level tests and phase-resolved mechanism chain.",
+   "lines": 398,
+   "status": "SUPERSEDED"
+  },
+  "scripts/review_rounds/r14_fdr_17tests.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Norway MW P<10^-6 was removed from the primary FDR family because it",
+   "lines": 73,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r14_mechanism_breakthrough.py": {
+   "flags": [],
+   "outputs": [
+    "r14_mechanism_breakthrough.json"
+   ],
+   "doc": "Addresses ALL reviewer concerns about mechanism void:",
+   "lines": 671,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r14_mediation_doy.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 286,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r15_analysis_v2.py": {
+   "flags": [],
+   "outputs": [
+    "r15_comprehensive_v2.json"
+   ],
+   "doc": "",
+   "lines": 729,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r15_comprehensive_analysis.py": {
+   "flags": [],
+   "outputs": [
+    "r15_comprehensive_analysis.json"
+   ],
+   "doc": "Addresses all 4 reviewer blockers:",
+   "lines": 762,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r16_snowpack_mechanism.py": {
+   "flags": [],
+   "outputs": [
+    "r16_snowpack_mechanism.json"
+   ],
+   "doc": "Analyzes SNOWPACK-simulated stability indices around SSW events",
+   "lines": 564,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r17_bridging_mechanism.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Addresses two key reviewer weaknesses:",
+   "lines": 534,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r20_comprehensive_analysis.py": {
+   "flags": [],
+   "outputs": [
+    "r20_comprehensive_multicountry.json",
+    "r20_wai_reanalysis.json"
+   ],
+   "doc": "Three-country analysis: Switzerland (15 SSW), Norway (4 SSW), US 25 centers (5 SSW)",
+   "lines": 673,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r20_definitive_analysis.py": {
+   "flags": [],
+   "outputs": [
+    "r20_definitive_analysis.json"
+   ],
+   "doc": "Using natural dry slab variable (correct signal isolation).",
+   "lines": 439,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r20_multicenter_analysis.py": {
+   "flags": [],
+   "outputs": [
+    "r20_multicenter_replication.json"
+   ],
+   "doc": "Analyzes 69,871 US danger ratings across 25 centers around SSW events.",
+   "lines": 333,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r20_wai_reanalysis.py": {
+   "flags": [],
+   "outputs": [
+    "r20_wai_reanalysis.json"
+   ],
+   "doc": "Planetary wave forcing as the primary predictor of dry slab avalanche suppression.",
+   "lines": 348,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r21_paper_analysis.py": {
+   "flags": [],
+   "outputs": [
+    "r21_paper_analysis.json"
+   ],
+   "doc": "Produces all verified statistics referenced in the paper.",
+   "lines": 916,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r22_reviewer_upgrades.py": {
+   "flags": [],
+   "outputs": [
+    "r22_reviewer_upgrades.json"
+   ],
+   "doc": "1. SSW-type stratification (displacement vs split)",
+   "lines": 682,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r23_reviewer_upgrades.py": {
+   "flags": [],
+   "outputs": [
+    "r23_reviewer_upgrades.json"
+   ],
+   "doc": "Sections:",
+   "lines": 630,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r25_mechanism_analysis.py": {
+   "flags": [],
+   "outputs": [
+    "r25_mechanism_deep_dive.json"
+   ],
+   "doc": "",
+   "lines": 236,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r25_mechanism_v2.py": {
+   "flags": [],
+   "outputs": [
+    "r25_mechanism_deep_dive.json"
+   ],
+   "doc": "",
+   "lines": 287,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r25_mechanism_v3.py": {
+   "flags": [],
+   "outputs": [
+    "r25_mechanism_deep_dive.json"
+   ],
+   "doc": "",
+   "lines": 285,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r28_mechanism.py": {
+   "flags": [],
+   "outputs": [
+    "r28_mechanism_strengthening.json"
+   ],
+   "doc": "",
+   "lines": 267,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r28_mediation.py": {
+   "flags": [],
+   "outputs": [
+    "r28_mediation_analysis.json"
+   ],
+   "doc": "",
+   "lines": 166,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r29_grand_analysis.py": {
+   "flags": [],
+   "outputs": [
+    "r29_grand_multicountry.json"
+   ],
+   "doc": "Combines:",
+   "lines": 313,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r29_multicountry_eaws.py": {
+   "flags": [],
+   "outputs": [
+    "r29_eaws_multicountry.json"
+   ],
+   "doc": "Analyzes danger levels across Austria, France, Italy, Germany, Switzerland",
+   "lines": 327,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r30_envidat_swiss_danger.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Analyzes SSW impact on re-analyzed danger levels across 146 Swiss warning sectors.",
+   "lines": 559,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r31_snowpack_stability.py": {
+   "flags": [],
+   "outputs": [
+    "r31_snowpack_stability.json"
+   ],
+   "doc": "Uses the EnviDat weather_snowpack_danger.csv which contains SNOWPACK model output",
+   "lines": 505,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r31b_trigger_suppression.py": {
+   "flags": [],
+   "outputs": [
+    "r31b_trigger_suppression.json"
+   ],
+   "doc": "Key finding from R31: SNOWPACK shows stability DECREASES and loading INCREASES during SSW,",
+   "lines": 394,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r31c_albina_gradient.py": {
+   "flags": [],
+   "outputs": [
+    "r31c_albina_gradient.json"
+   ],
+   "doc": "Uses ALBINA data (Austria/Italy) from 2 SSW events (2023, 2024) to test the",
+   "lines": 180,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r32_mediation_analysis.py": {
+   "flags": [],
+   "outputs": [
+    "r32_mediation.json"
+   ],
+   "doc": "Closes the quantitative gap: regime shift \u2192 trigger suppression \u2192 avalanche reduction.",
+   "lines": 310,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r34_check_data.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 38,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r34_multicountry_analysis.py": {
+   "flags": [],
+   "outputs": [
+    "r34_multicountry.json"
+   ],
+   "doc": "Parse EAWS 142K-row dataset properly and expand analysis:",
+   "lines": 290,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r34_wave_flux_bayesian.py": {
+   "flags": [],
+   "outputs": [
+    "r34_wave_bayesian.json"
+   ],
+   "doc": "Addresses key reviewer concerns:",
+   "lines": 569,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r35_moisture_flux_roc_bayes.py": {
+   "flags": [],
+   "outputs": [
+    "r15_comprehensive_analysis.json",
+    "r35_upgrade.json"
+   ],
+   "doc": "1. ERA5 Integrated Vapor Transport (IVT) composites during SSW vs control",
+   "lines": 474,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r35_precip_wind.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 61,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r36_moisture_mediation.py": {
+   "flags": [],
+   "outputs": [
+    "r36_moisture_mediation.json"
+   ],
+   "doc": "Goal: Address reviewer requests for IVT analysis and formal mediation",
+   "lines": 258,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r36_power_analysis.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Shows: (1) What n is needed for 80% power to detect Swiss effect size",
+   "lines": 108,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r36_teleconnection.py": {
+   "flags": [],
+   "outputs": [
+    "r36_teleconnection.json"
+   ],
+   "doc": "Uses freshly downloaded daily teleconnection indices to quantify",
+   "lines": 207,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r37_eaws_gradient.py": {
+   "flags": [],
+   "outputs": [
+    "r37_eaws_gradient.json"
+   ],
+   "doc": "Tests whether avalanche danger reduction during SSW varies by geography.",
+   "lines": 203,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r37_mediation.py": {
+   "flags": [],
+   "outputs": [
+    "r37_mediation.json"
+   ],
+   "doc": "effect flows through each identified pathway.",
+   "lines": 283,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r37_spec_curve.py": {
+   "flags": [],
+   "outputs": [
+    "r37_spec_curve.json"
+   ],
+   "doc": "Tests all combinations of analytical choices to show the result holds across",
+   "lines": 198,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r37_split_sample.py": {
+   "flags": [],
+   "outputs": [
+    "r37_split_sample.json"
+   ],
+   "doc": "training (first 8: 1998-2006) and validation (last 8: 2007-2019).",
+   "lines": 137,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r38_albina_check.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "from public files at avalanche.report/albina_files/",
+   "lines": 54,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r38_norway_analysis.py": {
+   "flags": [],
+   "outputs": [
+    "r38_norway_expanded.json"
+   ],
+   "doc": "Proper statistical testing: Mann-Whitney, permutation, event-level concordance.",
+   "lines": 325,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r38_norway_expanded.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "and ALL available winters to expand multi-country replication.",
+   "lines": 97,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r38_norway_simple.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Simple endpoint is faster - just need DangerLevel by date/region.",
+   "lines": 138,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r38_norway_targeted.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Use shorter timeout, fewer regions, focused on SSW event dates.",
+   "lines": 82,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r39_french_bra_replication.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "French avalanche danger forecasts show an independent suppression signal.",
+   "lines": 566,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r40_french_bra_gradient.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "This script reuses the all-massif French BRA panel produced by",
+   "lines": 451,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r41_avcan_flexible_validation.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Canadian forecast danger is suppressed during recent SSW windows.",
+   "lines": 464,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r42_avcan_owner_heterogeneity.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "The national area-weighted summary in r41 is useful as a stress test, but it can",
+   "lines": 267,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r43_threshold_loo_cv.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "for the multi-trigger threshold amplification model.",
+   "lines": 318,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r44_era5_composites.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Creates SLP and T2m composite anomaly maps for the Swiss Alpine domain",
+   "lines": 364,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r44_winter_blocked_bootstrap.py": {
+   "flags": [],
+   "outputs": [
+    "r44_winter_blocked_bootstrap.json"
+   ],
+   "doc": "Reviewer concern: standard bootstrap ignores within-winter temporal",
+   "lines": 169,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r45_correlated_channels.py": {
+   "flags": [],
+   "outputs": [
+    "r45_correlated_channels.json"
+   ],
+   "doc": "Tests how inter-channel correlation (rho) affects:",
+   "lines": 136,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r45_multi_country_figure.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Creates a publication-quality figure showing SSW-avalanche response across all datasets.",
+   "lines": 104,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r46_study_area_map.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Shows all data sources and their geographic coverage across the Alps and beyond.",
+   "lines": 244,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r52_pre_event_snowpack.py": {
+   "flags": [],
+   "outputs": [
+    "r52_pre_event_snowpack.json"
+   ],
+   "doc": "Tests whether antecedent snowpack conditions (snow depth, SWE, PWL prevalence,",
+   "lines": 213,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r60_blocking_differentiation.py": {
+   "flags": [],
+   "outputs": [
+    "r60_blocking_differentiation.json"
+   ],
+   "doc": "Test whether SSW events identify a special subset of blocking episodes that",
+   "lines": 426,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r60_gee_power_simulation.py": {
+   "flags": [],
+   "outputs": [
+    "r60_gee_power_simulation.json"
+   ],
+   "doc": "Estimates the statistical power of GEE with winter-level exchangeable",
+   "lines": 80,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r60_mixed_effects_nb.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "This script fits:",
+   "lines": 418,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r60_mixed_effects_swiss.py": {
+   "flags": [],
+   "outputs": [
+    "r60_mixed_effects_swiss.json"
+   ],
+   "doc": "Fits GEE NB2 with winter-level exchangeable correlation and covariates.",
+   "lines": 119,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r60_multi_predictor_loo.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Analysis at EVENT LEVEL (n=16 SSW events):",
+   "lines": 459,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r61_comprehensive_stats.py": {
+   "flags": [],
+   "outputs": [
+    "r61_comprehensive_stats.json"
+   ],
+   "doc": "Targets: StatRigour (4.8\u21929+), Robustness (5.0\u21929+), MechDepth (6.0\u21929+)",
+   "lines": 515,
+   "status": "UNREVIEWED"
+  },
+  "scripts/review_rounds/r61_comprehensive_stats_v2.py": {
+   "flags": [
+    "CATALOG_OLD"
+   ],
+   "outputs": [
+    "r61_comprehensive_stats.json",
+    "ssw_event_catalog.csv"
+   ],
+   "doc": "Uses event catalog's 16 RR values directly for event-level inference.",
+   "lines": 539,
+   "status": "SUPERSEDED"
+  },
+  "scripts/review_rounds/r61_falsification.py": {
+   "flags": [
+    "CATALOG_OLD"
+   ],
+   "outputs": [
+    "r61_falsification.json",
+    "ssw_event_catalog.csv"
+   ],
+   "doc": "Highest-value analyses per rubber-duck critique:",
+   "lines": 397,
+   "status": "SUPERSEDED"
+  },
+  "scripts/utilities/_inspect_qc.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 35,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/audit_data_usage.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 96,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/catalog_results.py": {
+   "flags": [
+    "CATALOG_OLD",
+    "DETECTOR",
+    "uses_canonical_catalog"
+   ],
+   "outputs": [
+    "results_catalog.json",
+    "ssw_event_catalog.csv"
+   ],
+   "doc": "Audit every analysis script and every result file, and classify each by whether",
+   "lines": 181,
+   "status": "CURRENT"
+  },
+  "scripts/utilities/check_eaws.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 17,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/check_era5_gap.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 24,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/check_nc_status.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 15,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/condense_paper.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 78,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/find_french_data.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 84,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/find_more_data.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 160,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/inspect_european_alps.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 29,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/inspect_qc_fails.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 32,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/inventory_datasets.py": {
+   "flags": [],
+   "outputs": [
+    "data_inventory.json"
+   ],
+   "doc": "Systematic inventory of EVERY dataset under data/: format, size, variables,",
+   "lines": 271,
+   "status": "CURRENT"
+  },
+  "scripts/utilities/norway_robust_download.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "for 5 key mountain regions with 60s timeout and 5 retries.",
+   "lines": 145,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/qc_check.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Validates Parquet and NetCDF4 files against scientific community standards.",
+   "lines": 286,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/reviewer_fixes.py": {
+   "flags": [],
+   "outputs": [
+    "reviewer_fixes.json"
+   ],
+   "doc": "1. Zero-inflated Poisson (ZIP) vs standard Poisson",
+   "lines": 268,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/save_butler_ssw.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Source: https://csl.noaa.gov/groups/csl8/sswcompendium/majorevents.html",
+   "lines": 49,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/save_results.py": {
+   "flags": [],
+   "outputs": [
+    "comprehensive_upgrade_v2.json"
+   ],
+   "doc": "",
+   "lines": 94,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/search_french_data.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 31,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/search_more_data.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 38,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/test_nc_write.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 29,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/test_nve.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 23,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/test_nve2.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 17,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/test_pyavacore.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "Test with a single recent date to understand the data structure.",
+   "lines": 63,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/verify_nh_circulation.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "",
+   "lines": 97,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/verify_propagation.py": {
+   "flags": [],
+   "outputs": [
+    "r14_mechanism_breakthrough.json"
+   ],
+   "doc": "",
+   "lines": 50,
+   "status": "UNREVIEWED"
+  },
+  "scripts/utilities/verify_r14_results.py": {
+   "flags": [],
+   "outputs": [
+    "r14_mechanism_breakthrough.json",
+    "sintering_extended.json"
+   ],
+   "doc": "",
+   "lines": 116,
+   "status": "UNREVIEWED"
+  },
+  "scripts/verification/reproducibility_check.py": {
+   "flags": [],
+   "outputs": [],
+   "doc": "statistics from the archived analysis results.",
+   "lines": 154,
+   "status": "UNREVIEWED"
+  }
+ },
+ "result_status": {
+  "32_extended_accident_ssw.json": "UNREVIEWED",
+  "33_ep_flux_wave_driving.json": "UNREVIEWED",
+  "34_merra2_cross_validation.json": "UNREVIEWED",
+  "35_prospective_2021_test.json": "ORPHAN",
+  "36_dose_response_extended.json": "ORPHAN",
+  "37_z500_blocking_timeseries.json": "ORPHAN",
+  "38_covid_adjusted_2021.json": "UNREVIEWED",
+  "39_bh_fdr_stratified.json": "UNREVIEWED",
+  "40_ep_flux_window_sensitivity.json": "UNREVIEWED",
+  "41_accident_secular_trend.json": "UNREVIEWED",
+  "42_non_ssw_blocking_test.json": "ORPHAN",
+  "43_accident_detrending.json": "ORPHAN",
+  "46_formal_mediation.json": "UNREVIEWED",
+  "47_direct_ep_flux.json": "UNREVIEWED",
+  "48_climate_ssw_projections.json": "UNREVIEWED",
+  "49_mixed_effects_accident.json": "UNREVIEWED",
+  "51_cross_hazard_regime.json": "UNREVIEWED",
+  "53_snowpack_trigger_joint.json": "UNREVIEWED",
+  "55_power_analysis.json": "UNREVIEWED",
+  "56_blocking_without_ssw.json": "UNREVIEWED",
+  "57_gee_accident_model.json": "UNREVIEWED",
+  "58_precipitation_phase.json": "UNREVIEWED",
+  "59_cold_wave_mortality_risk.json": "UNREVIEWED",
+  "bo_bootstrap_cis.json": "UNREVIEWED",
+  "chemistry_response.json": "ORPHAN",
+  "comprehensive_upgrade_v2.json": "UNREVIEWED",
+  "cross_regional_meta.json": "ORPHAN",
+  "data_inventory.json": "CURRENT",
+  "downward_propagation.json": "SUPERSEDED",
+  "enhanced_analysis.json": "ORPHAN",
+  "event_catalog.parquet": "ORPHAN",
+  "event_level_dose_response.csv": "UNREVIEWED",
+  "falsification.json": "ORPHAN",
+  "final_synthesis.json": "UNREVIEWED",
+  "fresh_part1_ssw_primary.json": "ORPHAN",
+  "fresh_part2_type_specificity.json": "ORPHAN",
+  "fresh_part3_temporal.json": "ORPHAN",
+  "fresh_part4_met_chain.json": "ORPHAN",
+  "fresh_part5_secondary.json": "ORPHAN",
+  "fresh_part6_robustness.json": "ORPHAN",
+  "full_data_analysis.json": "ORPHAN",
+  "honest_synthesis.json": "ORPHAN",
+  "lim_part1_prepost.json": "ORPHAN",
+  "lim_part2_eventlag.json": "ORPHAN",
+  "lim_part3_metchain.json": "ORPHAN",
+  "lim_part4_norway.json": "ORPHAN",
+  "lim_part5_snotel.json": "ORPHAN",
+  "lim_part6_prediction.json": "ORPHAN",
+  "lim_u850_chain.json": "ORPHAN",
+  "mechanism_analysis.json": "UNREVIEWED",
+  "mechanism_part1_era5_composites.json": "ORPHAN",
+  "mechanism_part2_propagation.json": "ORPHAN",
+  "mechanism_part3_event_study.json": "ORPHAN",
+  "mechanism_part4_permutation.json": "ORPHAN",
+  "mechanism_part5_dose_geographic.json": "ORPHAN",
+  "mechanism_upgrade.json": "ORPHAN",
+  "met_mediation.json": "ORPHAN",
+  "nature_tier_analysis.json": "ORPHAN",
+  "paper_r39.txt": "ORPHAN",
+  "planetary_wave_analysis.json": "UNREVIEWED",
+  "planetary_wave_timing.json": "UNREVIEWED",
+  "primary_endpoint.json": "ORPHAN",
+  "r100_oos_post2019.json": "UNREVIEWED",
+  "r101_irreducibility_power.json": "UNREVIEWED",
+  "r102_snotel_extended_dissociation.json": "SUPERSEDED",
+  "r103_monitoring_blindspot.json": "SUPERSEDED",
+  "r104_accident_case_crossover.json": "SUPERSEDED",
+  "r105_multiregion_meta.json": "SUPERSEDED",
+  "r106_canonical_catalog_headline.json": "CURRENT",
+  "r107_pooled_within_winter.json": "CURRENT",
+  "r108_pwl_seasonal_control.json": "CURRENT",
+  "r109_norway_problem_mechanism.json": "SUPERSEDED",
+  "r110_albina_alpine_problems.json": "SUPERSEDED",
+  "r111_kinetic_growth_instrumental.json": "CURRENT",
+  "r112_design_positive_control.json": "CURRENT",
+  "r113_event_study.json": "CURRENT",
+  "r114_avalanche_event_study.json": "CURRENT",
+  "r11_mechanism_upgrade.json": "SUPERSEDED",
+  "r11_mechanism_upgrade_p2.json": "SUPERSEDED",
+  "r14_mechanism_breakthrough.json": "UNREVIEWED",
+  "r15_comprehensive_analysis.json": "UNREVIEWED",
+  "r16_snowpack_mechanism.json": "UNREVIEWED",
+  "r17_bridging_mechanism.json": "ORPHAN",
+  "r19_sensitivity.json": "ORPHAN",
+  "r20_comprehensive_multicountry.json": "UNREVIEWED",
+  "r20_definitive_analysis.json": "SUPERSEDED",
+  "r20_multicenter_replication.json": "UNREVIEWED",
+  "r20_supplementary.json": "ORPHAN",
+  "r21_paper_analysis.json": "UNREVIEWED",
+  "r22_reviewer_upgrades.json": "UNREVIEWED",
+  "r23_reviewer_upgrades.json": "UNREVIEWED",
+  "r25_mechanism_deep_dive.json": "UNREVIEWED",
+  "r27_warm_dry_analysis.json": "ORPHAN",
+  "r28_mechanism_strengthening.json": "UNREVIEWED",
+  "r28_mediation_analysis.json": "UNREVIEWED",
+  "r29_eaws_multicountry.json": "UNREVIEWED",
+  "r29_grand_multicountry.json": "UNREVIEWED",
+  "r30_envidat_analysis.json": "ORPHAN",
+  "r31_snowpack_stability.json": "UNREVIEWED",
+  "r31b_trigger_suppression.json": "UNREVIEWED",
+  "r31c_albina_gradient.json": "UNREVIEWED",
+  "r32_mediation.json": "UNREVIEWED",
+  "r34_multicountry.json": "UNREVIEWED",
+  "r35_upgrade.json": "UNREVIEWED",
+  "r36_moisture_mediation.json": "UNREVIEWED",
+  "r36_teleconnection.json": "UNREVIEWED",
+  "r37_eaws_gradient.json": "UNREVIEWED",
+  "r37_mediation.json": "UNREVIEWED",
+  "r37_spec_curve.json": "UNREVIEWED",
+  "r37_split_sample.json": "UNREVIEWED",
+  "r38_norway_expanded.json": "UNREVIEWED",
+  "r39_albina_expanded.json": "ORPHAN",
+  "r39_french_bra_all_replication.json": "SUPERSEDED",
+  "r39_french_bra_north_replication.json": "ORPHAN",
+  "r40_french_bra_gradient.json": "ORPHAN",
+  "r40b_event_mechanism.json": "ORPHAN",
+  "r41_avcan_flexible_validation.json": "ORPHAN",
+  "r42_avcan_owner_heterogeneity.json": "ORPHAN",
+  "r44_winter_blocked_bootstrap.json": "UNREVIEWED",
+  "r45_correlated_channels.json": "UNREVIEWED",
+  "r52_pre_event_snowpack.json": "UNREVIEWED",
+  "r53_era5_audit.json": "ORPHAN",
+  "r55_dispersion_correction.json": "UNREVIEWED",
+  "r55_incremental_power.json": "UNREVIEWED",
+  "r55_meta_typology.json": "UNREVIEWED",
+  "r55_specurve_placebo.json": "UNREVIEWED",
+  "r56_mechanism_composites.json": "ORPHAN",
+  "r56_zip_doy_resolution.json": "UNREVIEWED",
+  "r57_epflux_diagnostics.json": "UNREVIEWED",
+  "r57_nb_models.json": "ORPHAN",
+  "r57_pre_post_decomposition.json": "UNREVIEWED",
+  "r57_wind_transport_resolution.json": "ORPHAN",
+  "r60_blocking_differentiation.json": "UNREVIEWED",
+  "r60_gee_power_simulation.json": "UNREVIEWED",
+  "r60_mixed_effects_nb.json": "ORPHAN",
+  "r60_mixed_effects_swiss.json": "UNREVIEWED",
+  "r60_multi_predictor_loo.json": "ORPHAN",
+  "r61_comprehensive_stats.json": "SUPERSEDED",
+  "r61_falsification.json": "SUPERSEDED",
+  "r67_regime_occupancy_decomposition.json": "SUPERSEDED",
+  "r68_comprehensive_analysis.json": "ORPHAN",
+  "r68_mechanistic_analysis.json": "ORPHAN",
+  "r77_height_time_composite.json": "UNREVIEWED",
+  "r77_observer_effort_summary.json": "UNREVIEWED",
+  "r78_sign_randomization.json": "ORPHAN",
+  "r81_ceiling_breakers.json": "UNREVIEWED",
+  "r82_bulletin_validation.json": "SUPERSEDED",
+  "r82_hierarchical_synthesis.json": "SUPERSEDED",
+  "r82_manuscript_body.txt": "ORPHAN",
+  "r82_problem_type_proxy.json": "SUPERSEDED",
+  "r82_pwl_depth_validation.json": "SUPERSEDED",
+  "r83_consensus_fixes.json": "SUPERSEDED",
+  "r84_n16_resolution.json": "UNREVIEWED",
+  "r86_browns_method.json": "UNREVIEWED",
+  "r86_directional_skill.json": "UNREVIEWED",
+  "r87_joint_compound_test.json": "UNREVIEWED",
+  "r88_formal_joint_copula_test.json": "UNREVIEWED",
+  "r88_pre_onset_stratification.json": "UNREVIEWED",
+  "r89_compound_irreducibility.json": "ORPHAN",
+  "r92_mls_satellite_validation.json": "UNREVIEWED",
+  "r98_continuous_vortex_framework.json": "UNREVIEWED",
+  "r98b_blocking_modifier.json": "ORPHAN",
+  "r99_blocking_ssw_interaction.json": "UNREVIEWED",
+  "results_catalog.json": "CURRENT",
+  "reviewer_fixes.json": "UNREVIEWED",
+  "revision_part1_mh_calibration.json": "ORPHAN",
+  "revision_part2_isolated_grid.json": "ORPHAN",
+  "revision_part3_swiss_quality.json": "ORPHAN",
+  "revision_part4_confounding.json": "ORPHAN",
+  "robustness_resolution.json": "ORPHAN",
+  "ros_sensitivity.json": "ORPHAN",
+  "sintering_dose_response.json": "ORPHAN",
+  "sintering_extended.json": "SUPERSEDED",
+  "size_threshold_sensitivity.json": "ORPHAN",
+  "snowpack_sintering_model.csv": "ORPHAN",
+  "ssw_catalog_sensitivity.json": "ORPHAN",
+  "ssw_event_catalog.csv": "CURRENT",
+  "stratospheric_propagation.json": "ORPHAN",
+  "synthesis.json": "ORPHAN",
+  "temporal_heterogeneity.json": "UNREVIEWED",
+  "threshold_amplification_model.json": "ORPHAN",
+  "threshold_vs_continuous.json": "UNREVIEWED",
+  "tier2_upgrade.json": "ORPHAN",
+  "timing_autocorrelation_correction.json": "ORPHAN",
+  "utah_replication.json": "ORPHAN",
+  "warm_dry_exclusion.json": "ORPHAN",
+  "window_sensitivity_events.json": "UNREVIEWED",
+  "z500_influence_diagnostics.json": "UNREVIEWED"
+ },
+ "orphan_results": [
+  "35_prospective_2021_test.json",
+  "36_dose_response_extended.json",
+  "37_z500_blocking_timeseries.json",
+  "42_non_ssw_blocking_test.json",
+  "43_accident_detrending.json",
+  "chemistry_response.json",
+  "cross_regional_meta.json",
+  "enhanced_analysis.json",
+  "event_catalog.parquet",
+  "falsification.json",
+  "fresh_part1_ssw_primary.json",
+  "fresh_part2_type_specificity.json",
+  "fresh_part3_temporal.json",
+  "fresh_part4_met_chain.json",
+  "fresh_part5_secondary.json",
+  "fresh_part6_robustness.json",
+  "full_data_analysis.json",
+  "honest_synthesis.json",
+  "lim_part1_prepost.json",
+  "lim_part2_eventlag.json",
+  "lim_part3_metchain.json",
+  "lim_part4_norway.json",
+  "lim_part5_snotel.json",
+  "lim_part6_prediction.json",
+  "lim_u850_chain.json",
+  "mechanism_part1_era5_composites.json",
+  "mechanism_part2_propagation.json",
+  "mechanism_part3_event_study.json",
+  "mechanism_part4_permutation.json",
+  "mechanism_part5_dose_geographic.json",
+  "mechanism_upgrade.json",
+  "met_mediation.json",
+  "nature_tier_analysis.json",
+  "paper_r39.txt",
+  "primary_endpoint.json",
+  "r17_bridging_mechanism.json",
+  "r19_sensitivity.json",
+  "r20_supplementary.json",
+  "r27_warm_dry_analysis.json",
+  "r30_envidat_analysis.json",
+  "r39_albina_expanded.json",
+  "r39_french_bra_north_replication.json",
+  "r40_french_bra_gradient.json",
+  "r40b_event_mechanism.json",
+  "r41_avcan_flexible_validation.json",
+  "r42_avcan_owner_heterogeneity.json",
+  "r53_era5_audit.json",
+  "r56_mechanism_composites.json",
+  "r57_nb_models.json",
+  "r57_wind_transport_resolution.json",
+  "r60_mixed_effects_nb.json",
+  "r60_multi_predictor_loo.json",
+  "r68_comprehensive_analysis.json",
+  "r68_mechanistic_analysis.json",
+  "r78_sign_randomization.json",
+  "r82_manuscript_body.txt",
+  "r89_compound_irreducibility.json",
+  "r98b_blocking_modifier.json",
+  "revision_part1_mh_calibration.json",
+  "revision_part2_isolated_grid.json",
+  "revision_part3_swiss_quality.json",
+  "revision_part4_confounding.json",
+  "robustness_resolution.json",
+  "ros_sensitivity.json",
+  "sintering_dose_response.json",
+  "size_threshold_sensitivity.json",
+  "snowpack_sintering_model.csv",
+  "ssw_catalog_sensitivity.json",
+  "stratospheric_propagation.json",
+  "synthesis.json",
+  "threshold_amplification_model.json",
+  "tier2_upgrade.json",
+  "timing_autocorrelation_correction.json",
+  "utah_replication.json",
+  "warm_dry_exclusion.json"
+ ]
+}

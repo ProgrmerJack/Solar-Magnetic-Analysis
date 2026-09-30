@@ -1,0 +1,8 @@
+NCEP R1 u10 60N: 1958-01-01 .. 2024-12-31, 24,472 days, 0 gaps
+published NCEP-NCAR dates: 39  (compendium through the 2023 season)
+matched within +-1 d: 39  (exact: 39)
+missed: []
+extra detections inside coverage: []
+detections after coverage (not scored): ['2024-01-17', '2024-03-04']
+PASS
+Saved -> validate_ssw_detector.json

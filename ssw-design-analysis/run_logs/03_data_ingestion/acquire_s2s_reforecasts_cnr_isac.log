@@ -1,0 +1,37 @@
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+cnr_isac: 24 requests; hindcast years 2001-2020
+  2023-10-16_h03-02 cached
+  2023-10-16_h02-20 cached
+  2023-10-16_h02-15 cached
+  2023-10-16_h01-31 cached
+  2023-10-16_h03-12 cached
+  2023-10-16_h01-01 cached
+  2023-10-16_h01-21 cached
+  2023-10-16_h02-25 cached
+  2023-10-16_h01-11 cached
+  2023-10-16_h01-06 cached
+  2023-10-16_h01-16 cached
+  2023-10-16_h01-26 cached
+  2023-10-16_h02-10 cached
+  2023-10-16_h03-07 cached
+  2023-10-16_h12-02 cached
+  2023-10-16_h12-12 cached
+  2023-10-16_h12-17 cached
+  2023-10-16_h12-22 cached
+  2023-10-16_h03-27 cached
+  2023-10-16_h12-27 cached
+  2023-10-16_h12-07 cached
+  2023-10-16_h02-05 cached
+  2023-10-16_h03-22 cached
+  2023-10-16_h03-17 cached
+
+96,000 rows, 480 starts (2001-01-01 .. 2020-12-27), members [0, 1, 2, 3, 4, 5, 6, 7]
+Saved -> s2s_cnr_isac_psl_cap.parquet
+cnr_isac exit=0

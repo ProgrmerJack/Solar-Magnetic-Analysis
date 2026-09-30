@@ -1,0 +1,768 @@
+{
+ "generated": "2026-09-30T10:52:52+00:00",
+ "note": "Known-good baseline: each result was produced by the script at the recorded sha256. catalog_repo.py flags STALE when a producer's hash no longer matches. Re-record with --record only AFTER re-running the analysis.",
+ "results": {
+  "catalogue_sets.json": {
+   "producers": [
+    "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/02_event_catalogues/build_catalogue.py": "5a24a0ed9b645aa4"
+   },
+   "result_sha256_16": "5cd0aff03201ca05",
+   "needs_rerun": false
+  },
+  "validate_ssw_detector.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/validate_ssw_detector.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/validate_ssw_detector.py": "619fe05ffb333c79"
+   },
+   "result_sha256_16": "4683749efdc83b6f",
+   "needs_rerun": false
+  },
+  "canonical_event_study.json": {
+   "producers": [
+    "ssw-design-analysis/05_corrected_estimators/canonical_event_study.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/05_corrected_estimators/canonical_event_study.py": "63de525060939d6c"
+   },
+   "result_sha256_16": "2ad84f01e8acd8fa",
+   "needs_rerun": false
+  },
+  "clean_subset.json": {
+   "producers": [
+    "ssw-design-analysis/05_corrected_estimators/clean_subset.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/05_corrected_estimators/clean_subset.py": "d7c6d32c6aa6264a"
+   },
+   "result_sha256_16": "a50f9c5b476931af",
+   "needs_rerun": false
+  },
+  "common_period.json": {
+   "producers": [
+    "ssw-design-analysis/05_corrected_estimators/common_period.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/05_corrected_estimators/common_period.py": "6bc45fe5fe837c6f"
+   },
+   "result_sha256_16": "659d2bfb06b41cee",
+   "needs_rerun": false
+  },
+  "enso_confound.json": {
+   "producers": [
+    "ssw-design-analysis/05_corrected_estimators/enso_confound.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/05_corrected_estimators/enso_confound.py": "5fb6c6e06a81b483"
+   },
+   "result_sha256_16": "8ad1af523108486b",
+   "needs_rerun": false
+  },
+  "era5_regional_test.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/era5_regional_test.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/era5_regional_test.py": "395760ee71ea4a89"
+   },
+   "result_sha256_16": "5f43b5caf139ab81",
+   "needs_rerun": false
+  },
+  "era_split.json": {
+   "producers": [
+    "ssw-design-analysis/05_corrected_estimators/era_split.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/05_corrected_estimators/era_split.py": "6cfcc8fee3a2d6c9"
+   },
+   "result_sha256_16": "4d74894e8a933301",
+   "needs_rerun": false
+  },
+  "isolated_events.json": {
+   "producers": [
+    "ssw-design-analysis/05_corrected_estimators/isolated_events.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/05_corrected_estimators/isolated_events.py": "0c2cc5cfa9098ca6"
+   },
+   "result_sha256_16": "de1ea4e4dbf5bd2f",
+   "needs_rerun": false
+  },
+  "isolation_interaction.json": {
+   "producers": [
+    "ssw-design-analysis/05_corrected_estimators/isolation_interaction.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/05_corrected_estimators/isolation_interaction.py": "193f2933ac8815eb"
+   },
+   "result_sha256_16": "4d6e3b558970d8d4",
+   "needs_rerun": false
+  },
+  "multi_index_event_study.json": {
+   "producers": [
+    "ssw-design-analysis/05_corrected_estimators/multi_index_event_study.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/05_corrected_estimators/multi_index_event_study.py": "2f533f6cc36cd34a"
+   },
+   "result_sha256_16": "3f1c806a1570e153",
+   "needs_rerun": false
+  },
+  "negcontrol_stability.json": {
+   "producers": [
+    "ssw-design-analysis/05_corrected_estimators/negcontrol_stability.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/05_corrected_estimators/negcontrol_stability.py": "331eccfa4f180449"
+   },
+   "result_sha256_16": "6751656d48bef99d",
+   "needs_rerun": false
+  },
+  "seed_stability.json": {
+   "producers": [
+    "ssw-design-analysis/05_corrected_estimators/seed_stability.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/05_corrected_estimators/seed_stability.py": "7110403a6f665243"
+   },
+   "result_sha256_16": "d69b7ac57c080e9e",
+   "needs_rerun": false
+  },
+  "vortex_geometry_test.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/vortex_geometry_test.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/vortex_geometry_test.py": "9b653be72be2dfb8"
+   },
+   "result_sha256_16": "2ca9c790bfd038a1",
+   "needs_rerun": false
+  },
+  "aao_null.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/aao_null.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/aao_null.py": "636da89e80351e2d"
+   },
+   "result_sha256_16": "e79f34277b3fd86b",
+   "needs_rerun": false
+  },
+  "ao_null_perbin.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/ao_null_perbin.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/ao_null_perbin.py": "177c5430f3d992c8"
+   },
+   "result_sha256_16": "bbd57d4a279ce3f2",
+   "needs_rerun": false
+  },
+  "boot_calibration.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/boot_calibration.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/boot_calibration.py": "87f2f8d8899a615e"
+   },
+   "result_sha256_16": "a2f69dae0e21d78a",
+   "needs_rerun": false
+  },
+  "calibration_results.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/calibrate_seasonality.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/calibrate_seasonality.py": "d0df387de0b919aa"
+   },
+   "result_sha256_16": "88119e150d8bb44f",
+   "needs_rerun": false
+  },
+  "gate3_clean_null.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/gate3_clean_null.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/gate3_clean_null.py": "bcce92d9cdc2aa66"
+   },
+   "result_sha256_16": "71f92703e499279d",
+   "needs_rerun": false
+  },
+  "spatial_calibration.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/calibrate_spatial.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/calibrate_spatial.py": "eaf4b00675977e4e"
+   },
+   "result_sha256_16": "0a87becf132d77da",
+   "needs_rerun": false
+  },
+  "station_calibration.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/calibrate_station_level.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/calibrate_station_level.py": "31e0be2037fe176a"
+   },
+   "result_sha256_16": "7b00ddb8fd5165de",
+   "needs_rerun": false
+  },
+  "validate_R_diagnostic.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/validate_R_diagnostic.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/validate_R_diagnostic.py": "35236d01a1c4ec7e"
+   },
+   "result_sha256_16": "98dd69eb09649328",
+   "needs_rerun": false
+  },
+  "validate_s2s_multimodel.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "6ddf107b0ab305ec"
+   },
+   "result_sha256_16": "0f944d1fa01d3e65",
+   "needs_rerun": false
+  },
+  "validate_s2s_multimodel_t2m.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "6ddf107b0ab305ec"
+   },
+   "result_sha256_16": "e7d17e93e5970e1c",
+   "needs_rerun": false
+  },
+  "validate_s2s_null.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_null.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_null.py": "1eaf64a058c7aef1"
+   },
+   "result_sha256_16": "cd1ce7f92f7bfd70",
+   "needs_rerun": false
+  },
+  "selection_law_enso.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/selection_law_enso.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/selection_law_enso.py": "cbcc2f7452ac92b0"
+   },
+   "result_sha256_16": "49acbbea6ddc0b95",
+   "needs_rerun": false
+  },
+  "selection_on_outcome.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/selection_on_outcome.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/selection_on_outcome.py": "458e4408dedc18d5"
+   },
+   "result_sha256_16": "d2280066b0a8c819",
+   "needs_rerun": false
+  },
+  "selection_projection_law.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/selection_projection_law.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/selection_projection_law.py": "b361490d9f1b8669"
+   },
+   "result_sha256_16": "66a5aef78194a6e1",
+   "needs_rerun": false
+  },
+  "selection_snotel.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/selection_snotel.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/selection_snotel.py": "663bc89774448ea9"
+   },
+   "result_sha256_16": "e9122456f80860ec",
+   "needs_rerun": false
+  },
+  "stratifier_bias_law.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/stratifier_bias_law.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/stratifier_bias_law.py": "3eda32af7826c680"
+   },
+   "result_sha256_16": "063de3a28dcbdb79",
+   "needs_rerun": false
+  },
+  "stratifier_bias_law_1958.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/stratifier_bias_law.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/stratifier_bias_law.py": "3eda32af7826c680"
+   },
+   "result_sha256_16": "41f549d838c50324",
+   "needs_rerun": false
+  },
+  "stratifier_inference.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/stratifier_inference.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/stratifier_inference.py": "488c5d43bd0a4e4a"
+   },
+   "result_sha256_16": "00fec485e682fe17",
+   "needs_rerun": false
+  },
+  "stratifier_law_cmip6.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/stratifier_law_cmip6.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/stratifier_law_cmip6.py": "8afd5fe3c301d0c6"
+   },
+   "result_sha256_16": "44ead71258074873",
+   "needs_rerun": false
+  },
+  "R_gap_sensitivity.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/R_gap_sensitivity.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/R_gap_sensitivity.py": "c2608c93d580e9d9"
+   },
+   "result_sha256_16": "9f9e6aaee228534c",
+   "needs_rerun": false
+  },
+  "R_profile.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/R_profile.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/R_profile.py": "5396a98ef5f37fa7"
+   },
+   "result_sha256_16": "7888a28a20848e4b",
+   "needs_rerun": false
+  },
+  "causal_timescale_ratio.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/causal_timescale_ratio.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/causal_timescale_ratio.py": "63e88597e9b254e5"
+   },
+   "result_sha256_16": "3e1ce4ce5d2fb76d",
+   "needs_rerun": false
+  },
+  "continuous_mediation.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/continuous_mediation.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/continuous_mediation.py": "b674deff426b7c35"
+   },
+   "result_sha256_16": "cab93813578cb2ed",
+   "needs_rerun": false
+  },
+  "design_sensitivity.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/design_sensitivity.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/design_sensitivity.py": "156475db4c34916b"
+   },
+   "result_sha256_16": "826b2cb77be39f7a",
+   "needs_rerun": false
+  },
+  "event_difference_bounds.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/event_difference_bounds.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/event_difference_bounds.py": "cb5bc4d846f0e984"
+   },
+   "result_sha256_16": "0d8e09f6d6b1f6a7",
+   "needs_rerun": false
+  },
+  "granger_direction.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/granger_direction.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/granger_direction.py": "9ee3d7a2935d8958"
+   },
+   "result_sha256_16": "201bb23a57c50271",
+   "needs_rerun": false
+  },
+  "mediation_disattenuated.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/mediation_disattenuated.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/mediation_disattenuated.py": "e7162868d434bd53"
+   },
+   "result_sha256_16": "0df81256d52f6179",
+   "needs_rerun": false
+  },
+  "mediator_specification.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/mediator_specification.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/mediator_specification.py": "b9ca488b090cf635"
+   },
+   "result_sha256_16": "ce8337220055af06",
+   "needs_rerun": false
+  },
+  "multimodel_R.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/multimodel_R.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/multimodel_R.py": "3fef8d98b77b89c9"
+   },
+   "result_sha256_16": "2d4148e81f4124d7",
+   "needs_rerun": false
+  },
+  "class_model_comparison.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/class_model_comparison.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/class_model_comparison.py": "f9692bbd47d1f68c"
+   },
+   "result_sha256_16": "ace0a5ba9dba782d",
+   "needs_rerun": false
+  },
+  "forced_variance_ceiling.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py": "12beb6c1cfe1252b"
+   },
+   "result_sha256_16": "bc2abb1c3406c01e",
+   "needs_rerun": false
+  },
+  "forecast_value_robustness.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/forecast_value_robustness.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/forecast_value_robustness.py": "07ca2e685a7ca95c"
+   },
+   "result_sha256_16": "50cd3e03a69c3615",
+   "needs_rerun": false
+  },
+  "forecast_value_test.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/forecast_value_test.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/forecast_value_test.py": "14fc77ebe7bb2916"
+   },
+   "result_sha256_16": "54b7c49433e8c052",
+   "needs_rerun": false
+  },
+  "headline_stress_test.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/headline_stress_test.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/headline_stress_test.py": "9d448ae986026dca"
+   },
+   "result_sha256_16": "2d3a3bc09ad62c55",
+   "needs_rerun": false
+  },
+  "is_downward_propagation_a_class.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/is_downward_propagation_a_class.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/is_downward_propagation_a_class.py": "529d687348381550"
+   },
+   "result_sha256_16": "be5ccf61c0837b85",
+   "needs_rerun": false
+  },
+  "obs_model_compatibility.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/obs_model_compatibility.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/obs_model_compatibility.py": "0e82486463d4464e"
+   },
+   "result_sha256_16": "5c3ef559688d3d1e",
+   "needs_rerun": false
+  },
+  "predictability_ceiling.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/predictability_ceiling.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/predictability_ceiling.py": "7fdb5f3d824a39c2"
+   },
+   "result_sha256_16": "8e549fa002e6d3e6",
+   "needs_rerun": false
+  },
+  "predictability_wave_driving.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/predictability_wave_driving.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/predictability_wave_driving.py": "373e0e2e8a832dfb"
+   },
+   "result_sha256_16": "abba7bfed0915433",
+   "needs_rerun": false
+  },
+  "s2s_baseline_test.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_baseline_test.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_baseline_test.py": "f63096a7a2bdf095"
+   },
+   "result_sha256_16": "e70e2c1c95e59684",
+   "needs_rerun": false
+  },
+  "s2s_forecast_test.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_forecast_test.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_forecast_test.py": "fc726afb34e11d44"
+   },
+   "result_sha256_16": "5b0673656e8b327a",
+   "needs_rerun": false
+  },
+  "s2s_multimodel_robustness.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_robustness.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_robustness.py": "ea91467a5ed43145"
+   },
+   "result_sha256_16": "9dd6575c7ef47d01",
+   "needs_rerun": false
+  },
+  "s2s_multimodel_test.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py",
+    "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_test.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "6ddf107b0ab305ec",
+    "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_test.py": "4f974e1a74330b3a"
+   },
+   "result_sha256_16": "68ded2f4ef0fa1e6",
+   "needs_rerun": false
+  },
+  "s2s_postonset_test.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_postonset_test.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_postonset_test.py": "4410b456213719c0"
+   },
+   "result_sha256_16": "be0088055b5d62da",
+   "needs_rerun": false
+  },
+  "s2s_regional_test.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_regional_test.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_regional_test.py": "1ff822d226a3f6c0"
+   },
+   "result_sha256_16": "e767050cf988daba",
+   "needs_rerun": false
+  },
+  "within_model_check.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/within_model_check.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/within_model_check.py": "dfb1ec4e8449fe45"
+   },
+   "result_sha256_16": "fcec8484529e0cba",
+   "needs_rerun": false
+  },
+  "consensus_monotonicity.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/consensus_monotonicity.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/consensus_monotonicity.py": "5238237b5ad1ce3a"
+   },
+   "result_sha256_16": "ab93e027154e73e9",
+   "needs_rerun": false
+  },
+  "ensemble_precursor_CanESM5.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/ensemble_precursor.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/ensemble_precursor.py": "5fa127cb56dfcde5"
+   },
+   "result_sha256_16": "66c91d0f1abb4034",
+   "needs_rerun": false
+  },
+  "ensemble_precursor_MIROC6.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/ensemble_precursor.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/ensemble_precursor.py": "5fa127cb56dfcde5"
+   },
+   "result_sha256_16": "3b22248612f675d2",
+   "needs_rerun": false
+  },
+  "era_dependence_gate.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/era_dependence_gate.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/era_dependence_gate.py": "b7374806e8ebb188"
+   },
+   "result_sha256_16": "ece0acc0a941f182",
+   "needs_rerun": false
+  },
+  "marginal_events.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/marginal_events.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/marginal_events.py": "33d183b910c2d49a"
+   },
+   "result_sha256_16": "8a1b3cb002cef128",
+   "needs_rerun": false
+  },
+  "snapsi_archetype_test.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_archetype_test.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_archetype_test.py": "fb862211654960f2"
+   },
+   "result_sha256_16": "f96669ba1c415de8",
+   "needs_rerun": false
+  },
+  "snapsi_causal_effect.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_causal_effect.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_causal_effect.py": "5b199ee3cef72813"
+   },
+   "result_sha256_16": "2ff1510ebe8e56ce",
+   "needs_rerun": false
+  },
+  "snapsi_contrast_diagnosis.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_diagnosis.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_diagnosis.py": "6c70cea142af8d22"
+   },
+   "result_sha256_16": "a759e9d616e1129a",
+   "needs_rerun": false
+  },
+  "snapsi_distribution_test.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_distribution_test.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_distribution_test.py": "f1808d11b4060b15"
+   },
+   "result_sha256_16": "81296c9279fade5d",
+   "needs_rerun": false
+  },
+  "snapsi_loeffel_test.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_loeffel_test.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_loeffel_test.py": "1d636117b6939a7c"
+   },
+   "result_sha256_16": "5843507bdcd23426",
+   "needs_rerun": false
+  },
+  "snapsi_regional_test.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_regional_test.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_regional_test.py": "b26003e288e34231"
+   },
+   "result_sha256_16": "ba65b95a0e9571cf",
+   "needs_rerun": false
+  },
+  "snapsi_selection_test.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "6626a155b09d3623"
+   },
+   "result_sha256_16": "c26057a7c4a2e49e",
+   "needs_rerun": false
+  },
+  "criterion_sweep.json": {
+   "producers": [
+    "ssw-design-analysis/08_literature_audit/criterion_sweep.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/08_literature_audit/criterion_sweep.py": "55f22bbf3b71a86b"
+   },
+   "result_sha256_16": "798d153b4755ec0f",
+   "needs_rerun": false
+  },
+  "era5_nam_daily_mean_check.json": {
+   "producers": [
+    "ssw-design-analysis/08_literature_audit/era5_nam_daily_mean_check.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/08_literature_audit/era5_nam_daily_mean_check.py": "bc059f8b30142674"
+   },
+   "result_sha256_16": "37f7bfe8cf3eae61",
+   "needs_rerun": false
+  },
+  "era5_recompute_and_two_thirds.json": {
+   "producers": [
+    "ssw-design-analysis/08_literature_audit/era5_recompute_and_two_thirds.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/08_literature_audit/era5_recompute_and_two_thirds.py": "70e9a7f4e83c5427"
+   },
+   "result_sha256_16": "d5f9db3e47834314",
+   "needs_rerun": false
+  },
+  "loeffel2025_missing_control.json": {
+   "producers": [
+    "ssw-design-analysis/08_literature_audit/loeffel2025_missing_control.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/08_literature_audit/loeffel2025_missing_control.py": "28cf5f46d1dc6fe1"
+   },
+   "result_sha256_16": "bb2f997d08dfd265",
+   "needs_rerun": false
+  },
+  "recompute_published_criterion.json": {
+   "producers": [
+    "ssw-design-analysis/08_literature_audit/recompute_published_criterion.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/08_literature_audit/recompute_published_criterion.py": "76e76a07a2ff2fef"
+   },
+   "result_sha256_16": "32b4532e4b022cdb",
+   "needs_rerun": false
+  }
+ }
+}

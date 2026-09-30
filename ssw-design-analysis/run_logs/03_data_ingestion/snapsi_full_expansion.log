@@ -1,0 +1,391 @@
+centres    ['CCCma', 'CNR-ISAC', 'ECCC', 'ECMWF', 'KMA', 'Meteo-France', 'NCAR', 'NRL', 'SNU', 'UKMO']
+inits      ['s20180125', 's20180208', 's20181213', 's20190108', 's20190829', 's20191001']
+matched    6,171 files, 149.0 GB total
+cached     2,297 files (no transfer)
+to fetch   3,874 files, 126.2 GB
+CEDA token valid, 71.2 h remaining (user mikhail001)
+  100/6171  0.0 min  (19429 files/min)
+  200/6171  0.0 min  (23161 files/min)
+  300/6171  0.0 min  (24325 files/min)
+  400/6171  0.0 min  (27038 files/min)
+  500/6171  0.0 min  (27814 files/min)
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i11p1f1.parquet  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i10p1f1.parquet
+
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i12p1f1.parquet  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i13p1f1.parquet
+
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i14p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i18p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i1p1f1.parquet  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i16p1f1.parquet
+
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i19p1f1.parquet  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i17p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i20p1f1.parquet  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i15p1f1.parquet
+
+
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i21p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i22p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i23p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i24p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i25p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i26p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i27p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i28p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i29p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i2p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i30p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i31p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i32p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i33p1f1.parquet
+  600/6171  0.8 min  (798 files/min)
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i34p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i35p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i36p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i37p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i38p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i39p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i3p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i40p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i41p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i42p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i43p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i44p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i45p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i46p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i47p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i48p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i49p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i4p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i50p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i5p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i6p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i7p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i8p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20190829_r1i9p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20191001_r1i10p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20191001_r1i11p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20191001_r1i12p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20191001_r1i13p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20191001_r1i14p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20191001_r1i15p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20191001_r1i16p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20191001_r1i17p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20191001_r1i18p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20191001_r1i1p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20191001_r1i21p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20191001_r1i22p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20191001_r1i24p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20191001_r1i25p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20191001_r1i26p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20191001_r1i27p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20191001_r1i28p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20191001_r1i29p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20191001_r1i2p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20191001_r1i32p1f1.parquet
+  cache REJECTED, refetching: CNR-ISAC_control_s20191001_r1i33p1f1.parquet
+  700/6171  5.8 min  (121 files/min)
+  800/6171  10.6 min  (75 files/min)
+  retrying CNR-ISAC/s20190108/r1i47p1f1: HTTPError: HTTP Error 404: Not Found
+  retrying CNR-ISAC/s20190108/r1i48p1f1: HTTPError: HTTP Error 404: Not Found
+  retrying CNR-ISAC/s20190108/r1i49p1f1: HTTPError: HTTP Error 404: Not Found
+  retrying CNR-ISAC/s20190108/r1i4p1f1: HTTPError: HTTP Error 404: Not Found
+  retrying CNR-ISAC/s20190108/r1i50p1f1: HTTPError: HTTP Error 404: Not Found
+  retrying CNR-ISAC/s20190108/r1i5p1f1: HTTPError: HTTP Error 404: Not Found
+  FAILED CNR-ISAC/nudged/s20190108/r1i47p1f1: HTTP Error 404: Not Found
+  retrying CNR-ISAC/s20190108/r1i6p1f1: HTTPError: HTTP Error 404: Not Found
+  retrying CNR-ISAC/s20190108/r1i7p1f1: HTTPError: HTTP Error 404: Not Found
+  FAILED CNR-ISAC/nudged/s20190108/r1i48p1f1: HTTP Error 404: Not Found
+  retrying CNR-ISAC/s20190108/r1i8p1f1: HTTPError: HTTP Error 404: Not Found
+  retrying CNR-ISAC/s20190108/r1i9p1f1: HTTPError: HTTP Error 404: Not Found
+  FAILED CNR-ISAC/nudged/s20190108/r1i49p1f1: HTTP Error 404: Not Found
+  FAILED CNR-ISAC/nudged/s20190108/r1i4p1f1: HTTP Error 404: Not Found
+  FAILED CNR-ISAC/nudged/s20190108/r1i50p1f1: HTTP Error 404: Not Found
+  FAILED CNR-ISAC/nudged/s20190108/r1i5p1f1: HTTP Error 404: Not Found
+  FAILED CNR-ISAC/nudged/s20190108/r1i6p1f1: HTTP Error 404: Not Found
+  FAILED CNR-ISAC/nudged/s20190108/r1i7p1f1: HTTP Error 404: Not Found
+  FAILED CNR-ISAC/nudged/s20190108/r1i8p1f1: HTTP Error 404: Not Found
+  FAILED CNR-ISAC/nudged/s20190108/r1i9p1f1: HTTP Error 404: Not Found
+  900/6171  17.2 min  (52 files/min)
+  retrying CNR-ISAC/s20191001/r1i6p1f1: IncompleteRead: IncompleteRead(7200810 bytes read, 26939520 more expected)
+  1000/6171  22.2 min  (45 files/min)
+  retrying ECCC/s20181213/r1i18p1f1: IncompleteRead: IncompleteRead(11201886 bytes read, 20423270 more expected)
+  retrying ECCC/s20180208/r1i8p1f1: IncompleteRead: IncompleteRead(23240958 bytes read, 8660284 more expected)
+  1100/6171  27.3 min  (40 files/min)
+  retrying ECCC/s20181213/r1i2p1f1: IncompleteRead: IncompleteRead(5429544 bytes read, 26222733 more expected)
+  retrying ECCC/s20190108/r1i30p1f1: IncompleteRead: IncompleteRead(11833074 bytes read, 19973904 more expected)
+  1200/6171  33.1 min  (36 files/min)
+  1300/6171  36.9 min  (35 files/min)
+  1400/6171  39.9 min  (35 files/min)
+  1500/6171  43.2 min  (35 files/min)
+  1600/6171  48.3 min  (33 files/min)
+  1700/6171  51.7 min  (33 files/min)
+  1800/6171  55.2 min  (33 files/min)
+  1900/6171  58.1 min  (33 files/min)
+  2000/6171  61.0 min  (33 files/min)
+  2100/6171  64.1 min  (33 files/min)
+  2200/6171  67.0 min  (33 files/min)
+  2300/6171  67.0 min  (34 files/min)
+  2400/6171  67.0 min  (36 files/min)
+  2500/6171  67.0 min  (37 files/min)
+  2600/6171  67.0 min  (39 files/min)
+  2700/6171  67.0 min  (40 files/min)
+  2800/6171  67.3 min  (42 files/min)
+  2900/6171  73.9 min  (39 files/min)
+  3000/6171  81.4 min  (37 files/min)
+  3100/6171  85.3 min  (36 files/min)
+  3200/6171  90.5 min  (35 files/min)
+  3300/6171  96.3 min  (34 files/min)
+  3400/6171  101.2 min  (34 files/min)
+  3500/6171  104.0 min  (34 files/min)
+  3600/6171  107.3 min  (34 files/min)
+  retrying NCAR/s20190829/r17i1p1f1: IncompleteRead: IncompleteRead(15516078 bytes read, 5978324 more expected)
+  3700/6171  111.2 min  (33 files/min)
+  3800/6171  114.0 min  (33 files/min)
+  3900/6171  116.5 min  (33 files/min)
+  4000/6171  119.1 min  (34 files/min)
+  4100/6171  119.1 min  (34 files/min)
+  4200/6171  119.1 min  (35 files/min)
+  4300/6171  119.1 min  (36 files/min)
+  4400/6171  119.6 min  (37 files/min)
+  4500/6171  119.8 min  (38 files/min)
+  4600/6171  119.8 min  (38 files/min)
+  4700/6171  119.8 min  (39 files/min)
+  4800/6171  119.8 min  (40 files/min)
+  4900/6171  120.1 min  (41 files/min)
+  5000/6171  120.2 min  (42 files/min)
+  5100/6171  120.2 min  (42 files/min)
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p10f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p11f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p12f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p13f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p14f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p15f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p16f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p17f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p18f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p19f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p1f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p20f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p21f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p22f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p23f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p24f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p25f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p26f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p27f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p28f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p29f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p2f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p30f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p31f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p32f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p33f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p34f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p35f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p36f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p37f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p38f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p39f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p3f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p40f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p41f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p42f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p43f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p44f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p45f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p46f1.parquet
+  5200/6171  120.6 min  (43 files/min)
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p47f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p48f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p49f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p4f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p50f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p5f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p6f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p7f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p8f1.parquet
+  cache REJECTED, refetching: SNU_control_s20190829_r1i1p9f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p10f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p11f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p12f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p13f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p14f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p15f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p16f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p17f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p18f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p19f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p1f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p20f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p21f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p22f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p23f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p24f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p25f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p26f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p27f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p28f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p29f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p2f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p30f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p31f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p32f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p33f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p34f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p35f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p36f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p37f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p38f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p39f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p3f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p40f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p41f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p42f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p43f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p44f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p45f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p46f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p47f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p48f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p49f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p4f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p50f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p5f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p6f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p7f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p8f1.parquet
+  cache REJECTED, refetching: SNU_control_s20191001_r1i1p9f1.parquet
+  5300/6171  121.6 min  (44 files/min)
+  5400/6171  121.6 min  (44 files/min)
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p10f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p11f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p12f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p13f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p14f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p15f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p16f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p17f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p18f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p19f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p1f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p20f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p21f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p22f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p23f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p24f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p25f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p26f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p27f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p28f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p29f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p2f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p30f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p31f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p32f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p33f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p34f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p35f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p36f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p37f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p38f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p39f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p3f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p40f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p41f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p42f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p43f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p44f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p45f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p46f1.parquet
+  5500/6171  122.2 min  (45 files/min)
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p47f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p48f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p49f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p4f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p50f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p5f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p6f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p7f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p8f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20190829_r1i1p9f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p10f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p11f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p12f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p13f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p14f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p15f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p16f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p17f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p18f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p19f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p1f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p20f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p21f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p22f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p23f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p24f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p25f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p26f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p27f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p28f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p29f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p2f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p30f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p31f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p32f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p33f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p34f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p35f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p36f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p37f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p38f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p39f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p3f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p40f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p41f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p42f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p43f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p44f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p45f1.parquet
+  retrying SNU/s20190829/r1i1p50f1: RemoteDisconnected: Remote end closed connection without response
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p46f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p47f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p48f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p49f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p4f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p50f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p5f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p6f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p7f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p8f1.parquet
+  cache REJECTED, refetching: SNU_nudged_s20191001_r1i1p9f1.parquet
+  5600/6171  125.8 min  (45 files/min)
+  retrying UKMO/s20180208/r27i1p1f1: IncompleteRead: IncompleteRead(5139870 bytes read, 65339777 more expected)
+  5700/6171  133.0 min  (43 files/min)
+  5800/6171  141.8 min  (41 files/min)
+  5900/6171  148.6 min  (40 files/min)
+  6000/6171  157.3 min  (38 files/min)
+  6100/6171  167.9 min  (36 files/min)
+excluded 422 cached member(s) that failed validation (re-run to refetch them)
+
+1,170,084 rows from 6,583 cached members -> snapsi_polarcap_psl.parquet  (10 files failed this run)
+init                     s20180125  s20180208  s20181213  s20190108  s20190829  s20191001
+centre       experiment                                                                  
+CCCma        control            50         50         50         47          0          0
+             nudged             50         50         50         38          0          0
+CNR-ISAC     control            50         50         50         50         50         50
+             nudged             50         50         50         40         50         50
+ECCC         control            50         50         50         50         50         50
+             nudged             50         50         50         50         50         50
+ECMWF        control            51         51         51         51         51         51
+             nudged             51         51         51         51         51         51
+KMA          control            50         50         50         50         50         50
+             nudged             50         50         52         50         50         50
+Meteo-France control            50         50         50         50         50         50
+             nudged             50         50         50         50         50         50
+NCAR         control            51         51         51         51         51         51
+             nudged             51         51         51         51         51         51
+NRL          control            80         80         80         80         80         80
+             nudged             80         80         80         80         80         80
+SNU          control            50         50         50         50         50         50
+             nudged             50         50         50         50         50         50
+UKMO         control            50         50         50         50         50         50
+             nudged             50         50         50         50         50         50

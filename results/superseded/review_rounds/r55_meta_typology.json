@@ -1,0 +1,343 @@
+{
+  "analysis": "62_cross_country_meta_typology",
+  "description": "Cross-country meta-analysis, compound-event typology, and Bayesian synthesis for Nature Geoscience SSW–avalanche manuscript",
+  "meta_analysis": {
+    "pooled_log_OR": 1.3458,
+    "pooled_SE": 0.451,
+    "pooled_z": 2.98,
+    "pooled_P": 0.002847,
+    "pooled_CI_95": [
+      0.4618,
+      2.2298
+    ],
+    "I_squared": 0.0,
+    "tau_squared": 0.0,
+    "Q_stat": 4.94,
+    "Q_df": 5,
+    "Q_P": 0.4228,
+    "n_countries": 6,
+    "forest_plot_data": [
+      {
+        "country": "Switzerland",
+        "region": "European Alps",
+        "n_suppressed": 14,
+        "n_total": 16,
+        "pct_suppressed": 87.5,
+        "log_OR": 1.7579,
+        "SE": 0.6848,
+        "z": 2.57,
+        "P": 0.01026,
+        "CI_95": [
+          0.4156,
+          3.1001
+        ],
+        "direction": "suppression"
+      },
+      {
+        "country": "Norway",
+        "region": "Scandinavia",
+        "n_suppressed": 4,
+        "n_total": 4,
+        "pct_suppressed": 100.0,
+        "log_OR": 2.1972,
+        "SE": 1.4907,
+        "z": 1.47,
+        "P": 0.140497,
+        "CI_95": [
+          -0.7246,
+          5.119
+        ],
+        "direction": "suppression"
+      },
+      {
+        "country": "Utah (USA)",
+        "region": "Intermountain West",
+        "n_suppressed": 4,
+        "n_total": 4,
+        "pct_suppressed": 100.0,
+        "log_OR": 2.1972,
+        "SE": 1.4907,
+        "z": 1.47,
+        "P": 0.140497,
+        "CI_95": [
+          -0.7246,
+          5.119
+        ],
+        "direction": "suppression"
+      },
+      {
+        "country": "France",
+        "region": "European Alps",
+        "n_suppressed": 3,
+        "n_total": 4,
+        "pct_suppressed": 75.0,
+        "log_OR": 0.8473,
+        "SE": 0.9759,
+        "z": 0.87,
+        "P": 0.385273,
+        "CI_95": [
+          -1.0655,
+          2.7601
+        ],
+        "direction": "suppression"
+      },
+      {
+        "country": "Quebec (Canada)",
+        "region": "Continental East",
+        "n_suppressed": 2,
+        "n_total": 2,
+        "pct_suppressed": 100.0,
+        "log_OR": 1.6094,
+        "SE": 1.5492,
+        "z": 1.04,
+        "P": 0.298857,
+        "CI_95": [
+          -1.427,
+          4.6459
+        ],
+        "direction": "suppression"
+      },
+      {
+        "country": "W. Canada",
+        "region": "Maritime/Continental West",
+        "n_suppressed": 0,
+        "n_total": 2,
+        "pct_suppressed": 0.0,
+        "log_OR": -1.6094,
+        "SE": 1.5492,
+        "z": -1.04,
+        "P": 0.298857,
+        "CI_95": [
+          -4.6459,
+          1.427
+        ],
+        "direction": "amplification"
+      }
+    ],
+    "binomial_suppression_expected": {
+      "n_suppressed": 27,
+      "n_total": 30,
+      "pct": 90.0,
+      "P_greater_than_50pct": 4e-06,
+      "wilson_CI_95": [
+        0.7745,
+        1.0
+      ]
+    },
+    "binomial_all_regions": {
+      "n_suppressed": 27,
+      "n_total": 32,
+      "P": 5.7e-05
+    },
+    "sensitivity": {
+      "excluding_western_canada": {
+        "pooled_log_OR": 1.6195,
+        "pooled_P": 0.000592,
+        "I_squared": 0.0
+      },
+      "core_three_CH_NO_UT": {
+        "pooled_log_OR": 1.8883,
+        "pooled_P": 0.001008,
+        "I_squared": 0.0
+      }
+    }
+  },
+  "bayesian_synthesis": {
+    "prior": {
+      "mean": 0.0,
+      "SD": 2.0,
+      "distribution": "Normal(0, 4)"
+    },
+    "evidence_sources": [
+      {
+        "country": "Switzerland",
+        "logRR": -1.1394,
+        "SE": 0.1817
+      },
+      {
+        "country": "Norway",
+        "logRR": -1.0498,
+        "SE": 0.5
+      },
+      {
+        "country": "Utah",
+        "logRR": -0.7814,
+        "SE": 0.35
+      },
+      {
+        "country": "France",
+        "logRR": -0.0336,
+        "SE": 0.0816
+      },
+      {
+        "country": "Quebec",
+        "logRR": -0.5461,
+        "SE": 0.0776
+      }
+    ],
+    "sequential_updates": [
+      {
+        "country": "Switzerland",
+        "data_logRR": -1.1394,
+        "data_SE": 0.1817,
+        "posterior_mean": -1.1301,
+        "posterior_SD": 0.1809,
+        "posterior_95CrI": [
+          -1.4847,
+          -0.7755
+        ]
+      },
+      {
+        "country": "Norway",
+        "data_logRR": -1.0498,
+        "data_SE": 0.5,
+        "posterior_mean": -1.1208,
+        "posterior_SD": 0.1701,
+        "posterior_95CrI": [
+          -1.4543,
+          -0.7873
+        ]
+      },
+      {
+        "country": "Utah",
+        "data_logRR": -0.7814,
+        "data_SE": 0.35,
+        "posterior_mean": -1.0559,
+        "posterior_SD": 0.153,
+        "posterior_95CrI": [
+          -1.3558,
+          -0.756
+        ]
+      },
+      {
+        "country": "France",
+        "data_logRR": -0.0336,
+        "data_SE": 0.0816,
+        "posterior_mean": -0.26,
+        "posterior_SD": 0.072,
+        "posterior_95CrI": [
+          -0.4011,
+          -0.1188
+        ]
+      },
+      {
+        "country": "Quebec",
+        "data_logRR": -0.5461,
+        "data_SE": 0.0776,
+        "posterior_mean": -0.3924,
+        "posterior_SD": 0.0528,
+        "posterior_95CrI": [
+          -0.4958,
+          -0.2889
+        ]
+      }
+    ],
+    "posterior_mean_logRR": -0.3924,
+    "posterior_SD": 0.0528,
+    "posterior_95CrI": [
+      -0.4958,
+      -0.2889
+    ],
+    "posterior_RR": 0.6754,
+    "posterior_RR_95CrI": [
+      0.6091,
+      0.7491
+    ],
+    "posterior_prob_RR_lt_1": 1.0,
+    "synthesis_BF": 26636442790.4,
+    "BF_interpretation": "Decisive evidence",
+    "savage_dickey_details": {
+      "prior_density_at_0": 0.199471,
+      "posterior_density_at_0": 0.0
+    }
+  },
+  "compound_event_typology": {
+    "loaded_gun_definition": {
+      "name": "Loaded-gun compound event",
+      "formal_definition": "A compound hazard in which a slow preconditioning process (the 'loading') builds latent potential for a fast-onset hazard, while the same large-scale driver that causes the loading simultaneously suppresses the normal trigger mechanism, producing a non-linear delay–release pattern in realized risk.",
+      "necessary_criteria": [
+        "C1: A slow 'loading' process that monotonically increases stored hazard potential over days to weeks",
+        "C2: A fast 'trigger' process whose frequency is modulated by the same large-scale driver",
+        "C3: Anticorrelation between loading rate and trigger frequency during the forcing period",
+        "C4: Elevated hazard potential that persists after the forcing ends, creating a latent-risk window",
+        "C5: A rebound or catch-up in trigger frequency after forcing cessation"
+      ],
+      "distinguishing_feature": "Unlike standard preconditioned events, the trigger is actively suppressed during loading — not merely delayed by chance. This creates a characteristic 'divergence signature' where hazard potential and realized risk move in opposite directions during the forcing period.",
+      "prototype_system": {
+        "system": "SSW → avalanche hazard",
+        "loading": "Stratospheric warming → surface cold/dry → snowpack faceting and depth-hoar growth",
+        "trigger_suppression": "Same cold/dry regime suppresses precipitation and wind-loading events",
+        "latent_risk_window": "Post-SSW period with weakened persistent-layer buried under new snow",
+        "release": "Return of normal precipitation loads a structurally weakened snowpack"
+      }
+    },
+    "comparison_table": [
+      {
+        "type": "Preconditioned event",
+        "zscheischler_definition": "A weather-driven hazard whose impact is amplified by antecedent conditions",
+        "dependence_structure": "Sequential: condition → event",
+        "temporal_structure": "Condition precedes hazard by days–months",
+        "physical_mechanism": "Prior state modifies vulnerability or magnitude of subsequent event",
+        "impact_pathway": "Amplified damage because system was already stressed",
+        "how_loaded_gun_relates": "The loaded-gun IS a preconditioned event (snowpack weakening preconditions avalanche), but adds a crucial element: the same forcing that preconditions the hazard also suppresses the trigger, creating anticorrelated loading and release.",
+        "falsifiable_prediction": "Standard preconditioned events show INCREASED realized risk during preconditioning (e.g., drought + heatwave). Loaded-gun events show DECREASED realized risk during preconditioning despite rising potential. Test: during SSW forcing, avalanche counts should decrease even as danger ratings for persistent-slab problems increase."
+      },
+      {
+        "type": "Multivariate event",
+        "zscheischler_definition": "Co-occurring hazards in same location whose joint impact exceeds individual impacts",
+        "dependence_structure": "Concurrent: hazard A + hazard B simultaneously",
+        "temporal_structure": "Simultaneous or overlapping within same event window",
+        "physical_mechanism": "Shared large-scale driver produces multiple hazards at once",
+        "impact_pathway": "Compound impact from interaction of concurrent hazards",
+        "how_loaded_gun_relates": "The loaded-gun involves multiple processes (snowpack weakening + trigger suppression) but they are anticorrelated, not concurrent. The hazard potential and trigger operate in opposite phases during forcing.",
+        "falsifiable_prediction": "Multivariate events show positive correlation between co-occurring hazards. Loaded-gun events show negative correlation between potential (danger level) and realization (avalanche occurrence) during the SSW window. Test: correlation between persistent-slab danger and natural avalanche activity should be negative during SSW."
+      },
+      {
+        "type": "Temporally compounding event",
+        "zscheischler_definition": "A sequence of hazard events in rapid succession that prevents recovery",
+        "dependence_structure": "Serial: event → event → event (clustering)",
+        "temporal_structure": "Multiple events within a recovery timescale",
+        "physical_mechanism": "Each event degrades resilience; clustering overwhelms recovery capacity",
+        "impact_pathway": "Cumulative damage exceeds sum of individual events due to incomplete recovery",
+        "how_loaded_gun_relates": "The loaded-gun involves temporal sequencing but is fundamentally different: the 'loading' phase is a SINGLE sustained process, not repeated discrete events. The release is also a single phase, not a cluster.",
+        "falsifiable_prediction": "Temporally compounding events show repeated impacts during the sequence. Loaded-gun events show a QUIET period (suppressed triggers) followed by a SINGLE burst of elevated risk. Test: post-SSW avalanche activity should show one peak, not a repeated cluster of events."
+      },
+      {
+        "type": "Spatially compounding event",
+        "zscheischler_definition": "Same hazard occurring simultaneously across multiple locations",
+        "dependence_structure": "Concurrent across space: same hazard at locations A, B, C",
+        "temporal_structure": "Synchronous or near-synchronous across regions",
+        "physical_mechanism": "Large-scale driver (e.g., blocking) forces coherent response over wide area",
+        "impact_pathway": "Simultaneous impacts overwhelm distributed response/insurance capacity",
+        "how_loaded_gun_relates": "SSW events DO produce spatially coherent avalanche responses (cross-country consistency), but the spatial compounding is a secondary feature. The primary novelty is the anticorrelated loading–trigger mechanism, not the spatial synchrony.",
+        "falsifiable_prediction": "Spatially compounding events show high spatial correlation in REALIZED impacts. Loaded-gun events show high spatial correlation in LATENT POTENTIAL but initially LOW correlation in realized impacts (because triggers are local). Test: during SSW, danger-rating spatial correlation should exceed avalanche-occurrence spatial correlation."
+      }
+    ],
+    "other_loaded_gun_systems": [
+      {
+        "system": "Permafrost-thaw landslides",
+        "loading_process": "Sustained warm period degrades permafrost, reducing slope cohesion (weeks–months of thawing increases pore pressure and weakens ice-cemented soil)",
+        "trigger_suppression": "Warm, dry anticyclonic conditions that drive thawing also suppress rainfall — the main trigger for slope failure",
+        "latent_risk_window": "Period after thaw front advances but before rainfall returns",
+        "release_mechanism": "Return of precipitation (even moderate) triggers landslides on pre-weakened slopes",
+        "testable_prediction": "Landslide rates DECREASE during peak thaw periods (dry), then SPIKE with first substantial post-thaw rainfall, producing delay–release signature"
+      },
+      {
+        "system": "Ice-jam flooding",
+        "loading_process": "Extended cold spell builds thick, competent river ice (loading = ice thickness growth over weeks of sustained freezing)",
+        "trigger_suppression": "The same cold that builds ice also suppresses snowmelt and rainfall, keeping river discharge low and preventing breakup",
+        "latent_risk_window": "Late-winter period with thick ice dam but low flow",
+        "release_mechanism": "Rapid warming or rain-on-snow event produces discharge surge that breaks ice catastrophically, releasing stored flood potential",
+        "testable_prediction": "Flood risk is LOWEST during peak ice-growth phase despite maximal ice thickness; flood frequency should show delay–release pattern correlated with cold-spell duration"
+      },
+      {
+        "system": "Wildfire–debris flow sequences",
+        "loading_process": "Prolonged drought desiccates vegetation and creates hydrophobic soil layers, increasing both wildfire severity and post-fire erosion susceptibility",
+        "trigger_suppression": "The drought that preconditions severe fire also suppresses rainfall, the trigger for post-fire debris flows",
+        "latent_risk_window": "Post-fire period before first significant rainfall (can be months)",
+        "release_mechanism": "First post-drought rainfall on fire-scarred, hydrophobic slopes triggers debris flows at rainfall thresholds far below normal",
+        "testable_prediction": "Debris-flow frequency shows suppression during drought (no rain trigger), then dramatic spike at first post-fire rainfall; the delay between fire and debris flow should correlate with drought duration"
+      }
+    ]
+  }
+}

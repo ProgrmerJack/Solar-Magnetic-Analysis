@@ -1,0 +1,466 @@
+{
+ "CCCma|control|s20180125": {
+  "first_time": "2018-01-25 00:00:00",
+  "offset_hours": 0.0
+ },
+ "CCCma|control|s20180208": {
+  "first_time": "2018-02-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "CCCma|control|s20181213": {
+  "first_time": "2018-12-13 00:00:00",
+  "offset_hours": 0.0
+ },
+ "CCCma|control|s20190108": {
+  "first_time": "2019-01-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "CCCma|nudged|s20180125": {
+  "first_time": "2018-01-25 00:00:00",
+  "offset_hours": 0.0
+ },
+ "CCCma|nudged|s20180208": {
+  "first_time": "2018-02-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "CCCma|nudged|s20181213": {
+  "first_time": "2018-12-13 00:00:00",
+  "offset_hours": 0.0
+ },
+ "CCCma|nudged|s20190108": {
+  "first_time": "2019-01-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "CNR-ISAC|control|s20180125": {
+  "first_time": "2018-01-25 00:00:00",
+  "offset_hours": 0.0
+ },
+ "CNR-ISAC|control|s20180208": {
+  "first_time": "2018-02-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "CNR-ISAC|control|s20181213": {
+  "first_time": "2018-12-13 00:00:00",
+  "offset_hours": 0.0
+ },
+ "CNR-ISAC|control|s20190108": {
+  "first_time": "2019-01-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "CNR-ISAC|control|s20190829": {
+  "first_time": "2019-08-29 00:00:00",
+  "offset_hours": 0.0
+ },
+ "CNR-ISAC|control|s20191001": {
+  "first_time": "2019-10-01 00:00:00",
+  "offset_hours": 0.0
+ },
+ "CNR-ISAC|nudged|s20180125": {
+  "first_time": "2018-01-25 00:00:00",
+  "offset_hours": 0.0
+ },
+ "CNR-ISAC|nudged|s20180208": {
+  "first_time": "2018-02-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "CNR-ISAC|nudged|s20181213": {
+  "first_time": "2018-12-13 00:00:00",
+  "offset_hours": 0.0
+ },
+ "CNR-ISAC|nudged|s20190108": {
+  "first_time": "2019-01-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "CNR-ISAC|nudged|s20190829": {
+  "first_time": "2019-08-29 00:00:00",
+  "offset_hours": 0.0
+ },
+ "CNR-ISAC|nudged|s20191001": {
+  "first_time": "2019-10-01 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECCC|control|s20180125": {
+  "first_time": "2018-01-25 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECCC|control|s20180208": {
+  "first_time": "2018-02-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECCC|control|s20181213": {
+  "first_time": "2018-12-13 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECCC|control|s20190108": {
+  "first_time": "2019-01-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECCC|control|s20190829": {
+  "first_time": "2019-08-29 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECCC|control|s20191001": {
+  "first_time": "2019-10-01 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECCC|nudged|s20180125": {
+  "first_time": "2018-01-25 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECCC|nudged|s20180208": {
+  "first_time": "2018-02-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECCC|nudged|s20181213": {
+  "first_time": "2018-12-13 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECCC|nudged|s20190108": {
+  "first_time": "2019-01-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECCC|nudged|s20190829": {
+  "first_time": "2019-08-29 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECCC|nudged|s20191001": {
+  "first_time": "2019-10-01 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECMWF|control|s20180125": {
+  "first_time": "2018-01-25 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECMWF|control|s20180208": {
+  "first_time": "2018-02-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECMWF|control|s20181213": {
+  "first_time": "2018-12-13 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECMWF|control|s20190108": {
+  "first_time": "2019-01-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECMWF|control|s20190829": {
+  "first_time": "2019-08-29 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECMWF|control|s20191001": {
+  "first_time": "2019-10-01 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECMWF|nudged|s20180125": {
+  "first_time": "2018-01-25 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECMWF|nudged|s20180208": {
+  "first_time": "2018-02-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECMWF|nudged|s20181213": {
+  "first_time": "2018-12-13 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECMWF|nudged|s20190108": {
+  "first_time": "2019-01-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECMWF|nudged|s20190829": {
+  "first_time": "2019-08-29 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECMWF|nudged|s20191001": {
+  "first_time": "2019-10-01 00:00:00",
+  "offset_hours": 0.0
+ },
+ "KMA|control|s20180125": {
+  "first_time": "2018-01-25 00:00:00",
+  "offset_hours": 0.0
+ },
+ "KMA|control|s20180208": {
+  "first_time": "2018-02-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "KMA|control|s20181213": {
+  "first_time": "2018-12-13 00:00:00",
+  "offset_hours": 0.0
+ },
+ "KMA|control|s20190108": {
+  "first_time": "2019-01-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "KMA|control|s20190829": {
+  "first_time": "2019-08-29 00:00:00",
+  "offset_hours": 0.0
+ },
+ "KMA|control|s20191001": {
+  "first_time": "2019-10-01 00:00:00",
+  "offset_hours": 0.0
+ },
+ "KMA|nudged|s20180125": {
+  "first_time": "2018-01-25 00:00:00",
+  "offset_hours": 0.0
+ },
+ "KMA|nudged|s20180208": {
+  "first_time": "2018-02-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "KMA|nudged|s20181213": {
+  "first_time": "2018-12-13 00:00:00",
+  "offset_hours": 0.0
+ },
+ "KMA|nudged|s20190108": {
+  "first_time": "2019-01-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "KMA|nudged|s20190829": {
+  "first_time": "2019-08-29 00:00:00",
+  "offset_hours": 0.0
+ },
+ "KMA|nudged|s20191001": {
+  "first_time": "2019-10-01 00:00:00",
+  "offset_hours": 0.0
+ },
+ "Meteo-France|control|s20180125": {
+  "first_time": "2018-01-25 06:00:00",
+  "offset_hours": 6.0
+ },
+ "Meteo-France|control|s20180208": {
+  "first_time": "2018-02-08 06:00:00",
+  "offset_hours": 6.0
+ },
+ "Meteo-France|control|s20181213": {
+  "first_time": "2018-12-13 06:00:00",
+  "offset_hours": 6.0
+ },
+ "Meteo-France|control|s20190108": {
+  "first_time": "2019-01-08 06:00:00",
+  "offset_hours": 6.0
+ },
+ "Meteo-France|control|s20190829": {
+  "first_time": "2019-08-29 06:00:00",
+  "offset_hours": 6.0
+ },
+ "Meteo-France|control|s20191001": {
+  "first_time": "2019-10-01 06:00:00",
+  "offset_hours": 6.0
+ },
+ "Meteo-France|nudged|s20180125": {
+  "first_time": "2018-01-25 06:00:00",
+  "offset_hours": 6.0
+ },
+ "Meteo-France|nudged|s20180208": {
+  "first_time": "2018-02-08 06:00:00",
+  "offset_hours": 6.0
+ },
+ "Meteo-France|nudged|s20181213": {
+  "first_time": "2018-12-13 06:00:00",
+  "offset_hours": 6.0
+ },
+ "Meteo-France|nudged|s20190108": {
+  "first_time": "2019-01-08 06:00:00",
+  "offset_hours": 6.0
+ },
+ "Meteo-France|nudged|s20190829": {
+  "first_time": "2019-08-29 06:00:00",
+  "offset_hours": 6.0
+ },
+ "Meteo-France|nudged|s20191001": {
+  "first_time": "2019-10-01 06:00:00",
+  "offset_hours": 6.0
+ },
+ "NCAR|control|s20180125": {
+  "first_time": "2018-01-25 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NCAR|control|s20180208": {
+  "first_time": "2018-02-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NCAR|control|s20181213": {
+  "first_time": "2018-12-13 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NCAR|control|s20190108": {
+  "first_time": "2019-01-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NCAR|control|s20190829": {
+  "first_time": "2019-08-29 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NCAR|control|s20191001": {
+  "first_time": "2019-10-01 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NCAR|nudged|s20180125": {
+  "first_time": "2018-01-25 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NCAR|nudged|s20180208": {
+  "first_time": "2018-02-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NCAR|nudged|s20181213": {
+  "first_time": "2018-12-13 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NCAR|nudged|s20190108": {
+  "first_time": "2019-01-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NCAR|nudged|s20190829": {
+  "first_time": "2019-08-29 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NCAR|nudged|s20191001": {
+  "first_time": "2019-10-01 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NRL|control|s20180125": {
+  "first_time": "2018-01-25 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NRL|control|s20180208": {
+  "first_time": "2018-02-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NRL|control|s20181213": {
+  "first_time": "2018-12-13 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NRL|control|s20190108": {
+  "first_time": "2019-01-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NRL|control|s20190829": {
+  "first_time": "2019-08-29 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NRL|control|s20191001": {
+  "first_time": "2019-10-01 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NRL|nudged|s20180125": {
+  "first_time": "2018-01-25 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NRL|nudged|s20180208": {
+  "first_time": "2018-02-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NRL|nudged|s20181213": {
+  "first_time": "2018-12-13 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NRL|nudged|s20190108": {
+  "first_time": "2019-01-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NRL|nudged|s20190829": {
+  "first_time": "2019-08-29 00:00:00",
+  "offset_hours": 0.0
+ },
+ "NRL|nudged|s20191001": {
+  "first_time": "2019-10-01 00:00:00",
+  "offset_hours": 0.0
+ },
+ "SNU|control|s20180125": {
+  "first_time": "2018-01-25 00:00:00",
+  "offset_hours": 0.0
+ },
+ "SNU|control|s20180208": {
+  "first_time": "2018-02-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "SNU|control|s20181213": {
+  "first_time": "2018-12-13 00:00:00",
+  "offset_hours": 0.0
+ },
+ "SNU|control|s20190108": {
+  "first_time": "2019-01-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "SNU|control|s20190829": {
+  "first_time": "2019-08-29 00:00:00",
+  "offset_hours": 0.0
+ },
+ "SNU|control|s20191001": {
+  "first_time": "2019-10-01 00:00:00",
+  "offset_hours": 0.0
+ },
+ "SNU|nudged|s20180125": {
+  "first_time": "2018-01-25 00:00:00",
+  "offset_hours": 0.0
+ },
+ "SNU|nudged|s20180208": {
+  "first_time": "2018-02-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "SNU|nudged|s20181213": {
+  "first_time": "2018-12-13 00:00:00",
+  "offset_hours": 0.0
+ },
+ "SNU|nudged|s20190108": {
+  "first_time": "2019-01-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "SNU|nudged|s20190829": {
+  "first_time": "2019-08-29 00:00:00",
+  "offset_hours": 0.0
+ },
+ "SNU|nudged|s20191001": {
+  "first_time": "2019-10-01 00:00:00",
+  "offset_hours": 0.0
+ },
+ "UKMO|control|s20180125": {
+  "first_time": "2018-01-25 06:00:00",
+  "offset_hours": 6.0
+ },
+ "UKMO|control|s20180208": {
+  "first_time": "2018-02-08 06:00:00",
+  "offset_hours": 6.0
+ },
+ "UKMO|control|s20181213": {
+  "first_time": "2018-12-13 06:00:00",
+  "offset_hours": 6.0
+ },
+ "UKMO|control|s20190108": {
+  "first_time": "2019-01-08 06:00:00",
+  "offset_hours": 6.0
+ },
+ "UKMO|control|s20190829": {
+  "first_time": "2019-08-29 06:00:00",
+  "offset_hours": 6.0
+ },
+ "UKMO|control|s20191001": {
+  "first_time": "2019-10-01 06:00:00",
+  "offset_hours": 6.0
+ },
+ "UKMO|nudged|s20180125": {
+  "first_time": "2018-01-25 06:00:00",
+  "offset_hours": 6.0
+ },
+ "UKMO|nudged|s20180208": {
+  "first_time": "2018-02-08 06:00:00",
+  "offset_hours": 6.0
+ },
+ "UKMO|nudged|s20181213": {
+  "first_time": "2018-12-13 06:00:00",
+  "offset_hours": 6.0
+ },
+ "UKMO|nudged|s20190108": {
+  "first_time": "2019-01-08 06:00:00",
+  "offset_hours": 6.0
+ },
+ "UKMO|nudged|s20190829": {
+  "first_time": "2019-08-29 06:00:00",
+  "offset_hours": 6.0
+ },
+ "UKMO|nudged|s20191001": {
+  "first_time": "2019-10-01 06:00:00",
+  "offset_hours": 6.0
+ }
+}

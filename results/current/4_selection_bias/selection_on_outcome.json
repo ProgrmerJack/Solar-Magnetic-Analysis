@@ -1,0 +1,54 @@
+{
+  "window": [
+    8,
+    52
+  ],
+  "n_draw": 1500,
+  "n_real": 43,
+  "n_real_dSSW": 30,
+  "rate_real": 0.698,
+  "rate_null": 0.392,
+  "rate_p_value": 0.0,
+  "null_centres_on_zero": -0.0171,
+  "outcomes": {
+    "ao": {
+      "real_all_events": -0.8946,
+      "real_dSSW_only": -1.4334,
+      "null_all_events": -0.0171,
+      "null_same_criterion": -1.0378,
+      "null_rate_matched": -0.5461,
+      "null_rate_matched_CI95": [
+        -0.8929,
+        -0.2129
+      ],
+      "pct_of_real_reproduced_by_selection": 38.1,
+      "p_real_vs_matched_null": 0.0
+    },
+    "nao": {
+      "real_all_events": -0.3004,
+      "real_dSSW_only": -0.4644,
+      "null_all_events": -0.006,
+      "null_same_criterion": -0.2922,
+      "null_rate_matched": -0.1458,
+      "null_rate_matched_CI95": [
+        -0.2913,
+        0.0004
+      ],
+      "pct_of_real_reproduced_by_selection": 31.4,
+      "p_real_vs_matched_null": 0.0
+    },
+    "pna": {
+      "real_all_events": 0.1192,
+      "real_dSSW_only": 0.1862,
+      "null_all_events": 0.0229,
+      "null_same_criterion": 0.1085,
+      "null_rate_matched": 0.0846,
+      "null_rate_matched_CI95": [
+        -0.0785,
+        0.238
+      ],
+      "pct_of_real_reproduced_by_selection": 45.4,
+      "p_real_vs_matched_null": 0.8973333333333333
+    }
+  }
+}

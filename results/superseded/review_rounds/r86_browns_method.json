@@ -1,0 +1,69 @@
+{
+  "method": "Brown's method for dependent p-value combination",
+  "reference": "Brown (1975) Biometrics 31:987-992; Poole et al. (2016) Bioinformatics 32:i430-i436",
+  "streams": {
+    "Swiss SLF sign-randomisation": {
+      "p_value": 0.0006,
+      "type": "output_suppression"
+    },
+    "US SNOTEL SWE loading": {
+      "p_value": 2.5e-07,
+      "type": "input_loading"
+    },
+    "French S2M/Crocus danger": {
+      "p_value": 0.011,
+      "type": "output_suppression"
+    }
+  },
+  "fisher_independent": {
+    "T": 54.260491656032116,
+    "df": 6,
+    "p_value": 6.536563525343085e-10,
+    "note": "Assumes full independence; likely too liberal"
+  },
+  "browns_conservative": {
+    "correlations": {
+      "Swiss-French": 0.5,
+      "Swiss-US": 0.2,
+      "French-US": 0.2
+    },
+    "justification": "European streams share blocking; cross-Atlantic correlation is weak",
+    "T": 54.260491656032116,
+    "variance": 18.345,
+    "effective_df": 3.9247751430907605,
+    "scale_factor": 1.5287499999999998,
+    "p_value": 3.345367471003716e-07
+  },
+  "browns_ultra_conservative": {
+    "correlations": {
+      "Swiss-French": 0.7,
+      "Swiss-US": 0.4,
+      "French-US": 0.4
+    },
+    "justification": "Extreme dependence well beyond published SSW teleconnection correlations",
+    "T": 54.260491656032116,
+    "variance": 22.965,
+    "effective_df": 3.1352057478772046,
+    "scale_factor": 1.91375,
+    "p_value": 3.6637216428979148e-06
+  },
+  "two_stream_conservative": {
+    "streams": "Swiss + French only (same direction: suppression)",
+    "correlation": 0.5,
+    "T": 23.856881817863787,
+    "variance": 11.625,
+    "effective_df": 2.752688172043011,
+    "scale_factor": 1.453125,
+    "p_value": 0.0007054577825416802
+  },
+  "two_stream_ultra_conservative": {
+    "streams": "Swiss + French only (same direction: suppression)",
+    "correlation": 0.7,
+    "T": 23.856881817863787,
+    "variance": 13.285,
+    "effective_df": 2.408731652239368,
+    "scale_factor": 1.660625,
+    "p_value": 0.0012709722158035465
+  },
+  "conclusion": "Even under ultra-conservative dependence (rho=0.7 European, 0.4 cross-Atlantic), the null hypothesis of no systematic snow/avalanche response to SSW weather is rejected at P = 3.66e-06. The two-stream same-direction sensitivity (Swiss + French only, rho=0.7) gives P = 1.27e-03."
+}

@@ -1,0 +1,40 @@
+CanESM5: 10 members on disk
+  r10i1p1f1: 66 SSWs in 166 winters (0.40/winter)
+  r10i1p2f1: 67 SSWs in 166 winters (0.40/winter)
+  r11i1p1f1: 68 SSWs in 166 winters (0.41/winter)
+  r12i1p1f1: 80 SSWs in 166 winters (0.48/winter)
+  r13i1p1f1: 75 SSWs in 166 winters (0.45/winter)
+  r14i1p1f1: 57 SSWs in 166 winters (0.34/winter)
+  r15i1p1f1: 86 SSWs in 166 winters (0.52/winter)
+  r16i1p1f1: 57 SSWs in 166 winters (0.34/winter)
+  r17i1p1f1: 63 SSWs in 166 winters (0.38/winter)
+  r18i1p1f1: 64 SSWs in 166 winters (0.39/winter)
+
+POOLED: 683 SSWs, 1,660 winters, 287,619 days
+  observations for comparison: 43 SSWs, 36 winters
+  -> 16x the events, 46x the winters
+
+bin           effect                 95% CI         p
+------------------------------------------------------
+-60..-46      -0.156 [  -0.251,  -0.065]    0.0040  *
+-45..-31      -0.287 [  -0.382,  -0.201]    0.0000  *
+-30..-16      -0.372 [  -0.466,  -0.275]    0.0000  *
+-15..-1       -0.283 [  -0.373,  -0.195]    0.0000  *
++0..+14       -0.524 [  -0.617,  -0.431]    0.0000  *
++15..+29      -0.569 [  -0.662,  -0.485]    0.0000  *
++30..+44      -0.516 [  -0.599,  -0.435]    0.0000  *
++45..+60      -0.427 [  -0.508,  -0.348]    0.0000  *
+
+=== THE PRE-ONSET QUESTION ===
+  observed (43 events):  -0.820  CI [-1.413, -0.202]  p=0.015
+  ensemble (683 events): -0.372  CI [-0.466, -0.275]  p=0.0000
+  interval width: 0.191 vs 1.211 observed -> 6.3x tighter
+  the observed -0.820 is NOT consistent with the ensemble
+
+=== IS THE OBSERVED -0.820 JUST 43-EVENT SAMPLING NOISE? ===
+  36-winter subsamples of the ensemble: mean -0.299, sd 0.197
+  5th-95th pct: [-0.616, +0.004]
+  P(estimate <= -0.820 | truth = -0.372) = 0.008
+  -> the observed value is extreme even allowing for 43-event noise
+
+Saved -> ensemble_precursor_CanESM5.json

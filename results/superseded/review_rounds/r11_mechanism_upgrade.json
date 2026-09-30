@@ -1,0 +1,362 @@
+{
+  "ssw_type_stratification": {
+    "n_displacement": 10,
+    "n_split": 6,
+    "displacement_mean_rr": 1.5463,
+    "split_mean_rr": 0.2982,
+    "displacement_decrease_fraction": "6/10",
+    "split_decrease_fraction": "6/6",
+    "displacement_mean_surface_t": 0.825,
+    "split_mean_surface_t": -1.058,
+    "type_comparison_p": 0.1471,
+    "n_warming": 9,
+    "n_cooling": 7,
+    "warming_mean_rr": 0.9496,
+    "cooling_mean_rr": 1.2437,
+    "warming_decrease_fraction": "6/9",
+    "cooling_decrease_fraction": "6/7",
+    "warming_vs_cooling_p": 0.6065,
+    "event_catalog": [
+      {
+        "date": "1998-12-15",
+        "published_type": "D",
+        "surface_t_anom_K": 1.132,
+        "pre_surface_t_anom_K": -2.668,
+        "strat_t10_anom_K": 18.031,
+        "wave_decel_ms_day": 0.1303,
+        "vortex_disruption_ms": 47.34,
+        "z500_anom_m": -2.62,
+        "u850_anom_ms": 0.165,
+        "surface_warming": "True",
+        "ssw_rate": 0.1887,
+        "ctrl_rate": 0.7207,
+        "rr": 0.2618
+      },
+      {
+        "date": "1999-02-26",
+        "published_type": "D",
+        "surface_t_anom_K": 1.235,
+        "pre_surface_t_anom_K": -2.982,
+        "strat_t10_anom_K": 13.786,
+        "wave_decel_ms_day": 0.9808,
+        "vortex_disruption_ms": 55.16,
+        "z500_anom_m": 3.87,
+        "u850_anom_ms": -1.135,
+        "surface_warming": "True",
+        "ssw_rate": 2.0935,
+        "ctrl_rate": 0.5293,
+        "rr": 3.9553
+      },
+      {
+        "date": "2001-02-11",
+        "published_type": "D",
+        "surface_t_anom_K": 1.738,
+        "pre_surface_t_anom_K": 1.466,
+        "strat_t10_anom_K": 8.095,
+        "wave_decel_ms_day": 2.844,
+        "vortex_disruption_ms": 56.68,
+        "z500_anom_m": -12.34,
+        "u850_anom_ms": -0.16,
+        "surface_warming": "True",
+        "ssw_rate": 0.6281,
+        "ctrl_rate": 1.1505,
+        "rr": 0.5459
+      },
+      {
+        "date": "2001-12-30",
+        "published_type": "S",
+        "surface_t_anom_K": -2.766,
+        "pre_surface_t_anom_K": -3.332,
+        "strat_t10_anom_K": 11.007,
+        "wave_decel_ms_day": 1.1315,
+        "vortex_disruption_ms": 40.79,
+        "z500_anom_m": -17.93,
+        "u850_anom_ms": 0.939,
+        "surface_warming": "False",
+        "ssw_rate": 0.2914,
+        "ctrl_rate": 0.828,
+        "rr": 0.3519
+      },
+      {
+        "date": "2002-02-17",
+        "published_type": "S",
+        "surface_t_anom_K": 0.542,
+        "pre_surface_t_anom_K": 3.961,
+        "strat_t10_anom_K": 12.44,
+        "wave_decel_ms_day": 0.5864,
+        "vortex_disruption_ms": 37.34,
+        "z500_anom_m": 3.99,
+        "u850_anom_ms": 0.292,
+        "surface_warming": "True",
+        "ssw_rate": 0.1449,
+        "ctrl_rate": 1.14,
+        "rr": 0.1271
+      },
+      {
+        "date": "2003-01-18",
+        "published_type": "S",
+        "surface_t_anom_K": -0.494,
+        "pre_surface_t_anom_K": -3.199,
+        "strat_t10_anom_K": 7.201,
+        "wave_decel_ms_day": -0.3544,
+        "vortex_disruption_ms": 47.96,
+        "z500_anom_m": -1.9,
+        "u850_anom_ms": 0.013,
+        "surface_warming": "False",
+        "ssw_rate": 0.13,
+        "ctrl_rate": 1.2877,
+        "rr": 0.101
+      },
+      {
+        "date": "2004-01-05",
+        "published_type": "D",
+        "surface_t_anom_K": 1.26,
+        "pre_surface_t_anom_K": -1.982,
+        "strat_t10_anom_K": 10.408,
+        "wave_decel_ms_day": 1.3775,
+        "vortex_disruption_ms": 50.91,
+        "z500_anom_m": -7.31,
+        "u850_anom_ms": -0.787,
+        "surface_warming": "True",
+        "ssw_rate": 0.4072,
+        "ctrl_rate": 1.3694,
+        "rr": 0.2974
+      },
+      {
+        "date": "2006-01-21",
+        "published_type": "D",
+        "surface_t_anom_K": -1.139,
+        "pre_surface_t_anom_K": -3.144,
+        "strat_t10_anom_K": 10.929,
+        "wave_decel_ms_day": 2.2576,
+        "vortex_disruption_ms": 57.81,
+        "z500_anom_m": 3.51,
+        "u850_anom_ms": -0.09,
+        "surface_warming": "False",
+        "ssw_rate": 0.7517,
+        "ctrl_rate": 2.366,
+        "rr": 0.3177
+      },
+      {
+        "date": "2007-02-24",
+        "published_type": "D",
+        "surface_t_anom_K": 3.069,
+        "pre_surface_t_anom_K": 3.076,
+        "strat_t10_anom_K": 8.808,
+        "wave_decel_ms_day": -0.5473,
+        "vortex_disruption_ms": 65.32,
+        "z500_anom_m": 6.37,
+        "u850_anom_ms": -0.064,
+        "surface_warming": "True",
+        "ssw_rate": 0.8831,
+        "ctrl_rate": 0.5673,
+        "rr": 1.5567
+      },
+      {
+        "date": "2008-02-22",
+        "published_type": "D",
+        "surface_t_anom_K": 2.649,
+        "pre_surface_t_anom_K": 0.095,
+        "strat_t10_anom_K": 10.905,
+        "wave_decel_ms_day": 1.7378,
+        "vortex_disruption_ms": 61.32,
+        "z500_anom_m": -7.47,
+        "u850_anom_ms": 0.78,
+        "surface_warming": "True",
+        "ssw_rate": 0.0327,
+        "ctrl_rate": 0.7869,
+        "rr": 0.0416
+      },
+      {
+        "date": "2009-01-24",
+        "published_type": "S",
+        "surface_t_anom_K": 0.483,
+        "pre_surface_t_anom_K": -1.77,
+        "strat_t10_anom_K": 16.705,
+        "wave_decel_ms_day": 0.2524,
+        "vortex_disruption_ms": 70.19,
+        "z500_anom_m": 6.55,
+        "u850_anom_ms": -0.102,
+        "surface_warming": "True",
+        "ssw_rate": 0.337,
+        "ctrl_rate": 1.9425,
+        "rr": 0.1735
+      },
+      {
+        "date": "2010-02-09",
+        "published_type": "D",
+        "surface_t_anom_K": -1.799,
+        "pre_surface_t_anom_K": -1.749,
+        "strat_t10_anom_K": 5.043,
+        "wave_decel_ms_day": 1.7364,
+        "vortex_disruption_ms": 55.02,
+        "z500_anom_m": -9.02,
+        "u850_anom_ms": -0.941,
+        "surface_warming": "False",
+        "ssw_rate": 1.8059,
+        "ctrl_rate": 1.8452,
+        "rr": 0.9787
+      },
+      {
+        "date": "2012-01-11",
+        "published_type": "D",
+        "surface_t_anom_K": 0.326,
+        "pre_surface_t_anom_K": 1.698,
+        "strat_t10_anom_K": 14.326,
+        "wave_decel_ms_day": -0.0885,
+        "vortex_disruption_ms": 35.41,
+        "z500_anom_m": 1.91,
+        "u850_anom_ms": -0.83,
+        "surface_warming": "True",
+        "ssw_rate": 2.5845,
+        "ctrl_rate": 1.6281,
+        "rr": 1.5874
+      },
+      {
+        "date": "2013-01-07",
+        "published_type": "S",
+        "surface_t_anom_K": -0.881,
+        "pre_surface_t_anom_K": 3.128,
+        "strat_t10_anom_K": 15.217,
+        "wave_decel_ms_day": -0.4168,
+        "vortex_disruption_ms": 54.1,
+        "z500_anom_m": 3.2,
+        "u850_anom_ms": -0.486,
+        "surface_warming": "False",
+        "ssw_rate": 0.9882,
+        "ctrl_rate": 1.4013,
+        "rr": 0.7052
+      },
+      {
+        "date": "2018-02-12",
+        "published_type": "S",
+        "surface_t_anom_K": -3.23,
+        "pre_surface_t_anom_K": 0.772,
+        "strat_t10_anom_K": 18.908,
+        "wave_decel_ms_day": -0.3361,
+        "vortex_disruption_ms": 70.1,
+        "z500_anom_m": 18.99,
+        "u850_anom_ms": -0.513,
+        "surface_warming": "False",
+        "ssw_rate": 0.3425,
+        "ctrl_rate": 1.0357,
+        "rr": 0.3306
+      },
+      {
+        "date": "2019-01-01",
+        "published_type": "D",
+        "surface_t_anom_K": -0.223,
+        "pre_surface_t_anom_K": 1.955,
+        "strat_t10_anom_K": 13.988,
+        "wave_decel_ms_day": 0.8415,
+        "vortex_disruption_ms": 46.93,
+        "z500_anom_m": -3.76,
+        "u850_anom_ms": -0.112,
+        "surface_warming": "False",
+        "ssw_rate": 7.8841,
+        "ctrl_rate": 1.3316,
+        "rr": 5.9207
+      }
+    ]
+  },
+  "atmospheric_chain": {
+    "chain_correlations": {
+      "Wave forcing -> Strat T10 anom": {
+        "r": -0.409,
+        "p": 0.1159,
+        "n": 16
+      },
+      "Strat T10 anom -> Z500 anom": {
+        "r": 0.503,
+        "p": 0.0471,
+        "n": 16
+      },
+      "Z500 anom -> U850 anom": {
+        "r": -0.132,
+        "p": 0.6251,
+        "n": 16
+      },
+      "U850 anom -> Surface T anom": {
+        "r": 0.106,
+        "p": 0.6963,
+        "n": 16
+      },
+      "Surface T anom -> Avalanche RR": {
+        "r": -0.097,
+        "p": 0.7207,
+        "n": 16
+      }
+    },
+    "propagation": {
+      "10 hPa": {
+        "peak_lag": 0,
+        "peak_anom_K": 15.72,
+        "height_km": 31
+      },
+      "20 hPa": {
+        "peak_lag": 2,
+        "peak_anom_K": 12.75,
+        "height_km": 26
+      },
+      "30 hPa": {
+        "peak_lag": 3,
+        "peak_anom_K": 10.44,
+        "height_km": 24
+      },
+      "50 hPa": {
+        "peak_lag": 7,
+        "peak_anom_K": 7.74,
+        "height_km": 21
+      },
+      "70 hPa": {
+        "peak_lag": 9,
+        "peak_anom_K": 6.21,
+        "height_km": 18
+      },
+      "100 hPa": {
+        "peak_lag": 10,
+        "peak_anom_K": 4.73,
+        "height_km": 16
+      },
+      "Surface (2m)": {
+        "peak_lag": 0,
+        "peak_anom_K": 1.27,
+        "height_km": 0
+      }
+    },
+    "strat_to_surface_r": -0.238,
+    "strat_to_surface_p": 0.3743,
+    "surface_to_avalanche_r": -0.097,
+    "surface_to_avalanche_p": 0.7207,
+    "strat_to_avalanche_r": 0.065,
+    "strat_to_avalanche_p": 0.8118
+  },
+  "standardized_effects": {
+    "swiss_daily_cohen_d": 0.063,
+    "swiss_daily_cohen_d_ci": [
+      -0.037,
+      0.163
+    ],
+    "swiss_glass_delta": 0.066,
+    "event_level_cohen_d": 0.048,
+    "surface_t_cohen_d": 0.066,
+    "cold_reversal_cohen_d": -0.247,
+    "cold_reversal_p": 0.006094,
+    "cold_aval_cohen_d": -0.04,
+    "cold_aval_p": 0.9713
+  },
+  "cold_phase_falsification": {
+    "n_increase": 5,
+    "n_total": 16,
+    "mean_cold_rr": 0.948,
+    "sign_test_p": 0.2101,
+    "warm_cold_diff": -0.13,
+    "permutation_p": 0.5912
+  },
+  "nao_rejection": {
+    "post_ssw_nao_mean": 0.407,
+    "clim_nao_mean": 0.35,
+    "nao_shift_p": 0.7752,
+    "nao_shift_d": 0.061
+  }
+}

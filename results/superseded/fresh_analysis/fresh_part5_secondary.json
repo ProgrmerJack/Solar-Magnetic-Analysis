@@ -1,0 +1,71 @@
+{
+  "part": 5,
+  "description": "Norwegian cold-regime, SNOTEL, prediction model",
+  "norway_cold": {
+    "ssw_mean": 2.7764,
+    "non_ssw_mean": 9.2488,
+    "difference": -6.4724,
+    "ttest_p": 0.0,
+    "mannwhitney_p": 0.0,
+    "n_ssw_days": 161,
+    "n_non_ssw_days": 1427
+  },
+  "norway_warm": {
+    "ssw_mean": 3.8224,
+    "non_ssw_mean": 6.3474,
+    "difference": -2.525,
+    "ttest_p": 2e-06,
+    "mannwhitney_p": 9e-06,
+    "n_ssw_days": 304,
+    "n_non_ssw_days": 1284
+  },
+  "snotel_dSWE/dt": {
+    "ssw_mean": 3.1707,
+    "non_ssw_mean": -0.3426,
+    "difference": 3.5133,
+    "ttest_p": 0.055327
+  },
+  "snotel_Temperature": {
+    "ssw_mean": -5.2312,
+    "non_ssw_mean": -3.67,
+    "difference": -1.5612,
+    "ttest_p": 0.0
+  },
+  "prediction": {
+    "rmse_base": 4.1826,
+    "rmse_enhanced": 4.1923,
+    "rmse_paired_t_p": 0.7813,
+    "ll_base": -130.2,
+    "ll_enhanced": -129.9,
+    "ll_paired_t_p": 0.9836,
+    "n_folds": 21,
+    "n_improved_rmse": 14,
+    "n_improved_ll": 15
+  },
+  "insample_coefs": {
+    "const": {
+      "beta": -11.9012,
+      "p": 0.0
+    },
+    "day_of_season": {
+      "beta": 0.0832,
+      "p": 0.0
+    },
+    "day_of_season_sq": {
+      "beta": -0.0005,
+      "p": 0.0
+    },
+    "ssw_within_15d": {
+      "beta": -1.1979,
+      "p": 0.0
+    },
+    "ncep_t_10hpa": {
+      "beta": 0.0419,
+      "p": 0.0
+    },
+    "post_event_1_3d": {
+      "beta": -0.3241,
+      "p": 1e-06
+    }
+  }
+}

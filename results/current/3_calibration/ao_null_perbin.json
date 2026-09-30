@@ -1,0 +1,78 @@
+{
+  "n_draw": 2000,
+  "n_boot": 6000,
+  "bins": {
+    "-60..-46": {
+      "effect": -0.1686,
+      "bootstrap_SE": 0.3338,
+      "null_SD": 0.339,
+      "null_mean": 0.0746,
+      "SE_ratio": 0.985,
+      "bootstrap_p": 0.63,
+      "randomisation_p": 0.473
+    },
+    "-45..-31": {
+      "effect": -0.2869,
+      "bootstrap_SE": 0.3218,
+      "null_SD": 0.3531,
+      "null_mean": 0.0187,
+      "SE_ratio": 0.911,
+      "bootstrap_p": 0.37066666666666664,
+      "randomisation_p": 0.383
+    },
+    "-30..-16": {
+      "effect": -0.8195,
+      "bootstrap_SE": 0.3072,
+      "null_SD": 0.375,
+      "null_mean": -0.017,
+      "SE_ratio": 0.819,
+      "bootstrap_p": 0.014333333333333333,
+      "randomisation_p": 0.027
+    },
+    "-15..-1": {
+      "effect": -0.5917,
+      "bootstrap_SE": 0.2508,
+      "null_SD": 0.3887,
+      "null_mean": 0.0177,
+      "SE_ratio": 0.645,
+      "bootstrap_p": 0.021,
+      "randomisation_p": 0.113
+    },
+    "+0..+14": {
+      "effect": -0.7895,
+      "bootstrap_SE": 0.2997,
+      "null_SD": 0.3863,
+      "null_mean": 0.015,
+      "SE_ratio": 0.776,
+      "bootstrap_p": 0.009666666666666667,
+      "randomisation_p": 0.034
+    },
+    "+15..+29": {
+      "effect": -1.0261,
+      "bootstrap_SE": 0.3036,
+      "null_SD": 0.3624,
+      "null_mean": -0.015,
+      "SE_ratio": 0.838,
+      "bootstrap_p": 0.0016666666666666668,
+      "randomisation_p": 0.007
+    },
+    "+30..+44": {
+      "effect": -0.8671,
+      "bootstrap_SE": 0.2675,
+      "null_SD": 0.3427,
+      "null_mean": -0.0095,
+      "SE_ratio": 0.781,
+      "bootstrap_p": 0.0026666666666666666,
+      "randomisation_p": 0.012
+    },
+    "+45..+60": {
+      "effect": -0.7425,
+      "bootstrap_SE": 0.2544,
+      "null_SD": 0.3417,
+      "null_mean": 0.0018,
+      "SE_ratio": 0.744,
+      "bootstrap_p": 0.0036666666666666666,
+      "randomisation_p": 0.03
+    }
+  }
+}

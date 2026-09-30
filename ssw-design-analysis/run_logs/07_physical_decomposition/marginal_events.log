@@ -1,0 +1,21 @@
+strong (>=4/6 reanalyses): 37 events
+marginal (1-3/6):          8 events
+
+marginal events:
+event_name primary_central_date  n_detect
+  NOV 1958           1958-11-30       1.0
+  JAN 1963           1963-01-28       3.0
+  MAR 1965           1965-03-23       1.0
+  JAN 1968           1968-01-07       3.0
+  MAR 1969           1969-03-13       3.0
+  JAN 1977           1977-01-09       3.0
+  FEB 1981           1981-02-06       1.0
+  FEB 2002           2002-02-17       3.0
+
+vortex wind at onset  strong -0.62 vs marginal 8.09 m/s  (P=0.166)
+precursor v'T'        strong 19.61 vs marginal 18.22 K m/s  (P=0.456)
+  strong_only    n=37  -0.07 -0.24 -0.58 -0.40 -0.52 -0.99 -0.88 -0.76   .....***
+  marginal_only  n= 8  -1.02 +0.05 -1.38 -0.53 -1.28 -0.89 -1.04 -0.31   *.*.....
+  union_all      n=45  -0.29 -0.40 -0.96 -0.62 -0.86 -1.13 -1.09 -0.91   ..******
+
+Saved -> /home/xola/Solar-Magnetic-Analysis/results/current/7_ensemble/marginal_events.json

@@ -1,0 +1,22 @@
+common period 1980-01-01..2026-04-02, 29 events
+dSSW 18/29 (62%)
+
+  300/1200 draws
+  600/1200 draws
+  900/1200 draws
+  1200/1200 draws
+
+outcome     corr w/ AO   predicted   measured     error
+--------------------------------------------------------
+ao              +1.000      -0.660     -0.660    +0.000
+nao             +0.593      -0.391     -0.133    +0.258
+pna             -0.163      +0.107     +0.126    +0.019
+tavg_c          +0.014      -0.009     +0.009    +0.018
+snwd_mm         +0.041      -0.027     -0.056    -0.029
+
+  regression of measured bias on correlation:
+    slope -0.585 (bias at corr=1 should equal bias_AO = -0.660)
+    intercept +0.031 (should be ~0)   r = -0.932   R2 = 0.868   P = 0.0212
+    -> LAW APPROXIMATE
+
+Saved -> selection_projection_law.json

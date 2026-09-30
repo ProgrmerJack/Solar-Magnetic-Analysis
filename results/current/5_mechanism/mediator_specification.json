@@ -1,0 +1,118 @@
+{
+  "X_lag": [
+    -15,
+    -1
+  ],
+  "Y_lag": [
+    15,
+    45
+  ],
+  "n_boot": 1200,
+  "specs": {
+    "u10_day": {
+      "total": -0.1518,
+      "direct": -0.1303,
+      "indirect": -0.0215,
+      "mediator_coef": 0.0409,
+      "mediated_share": 0.1419,
+      "share_CI95": [
+        -0.3485,
+        0.5991
+      ],
+      "n": 6958,
+      "corr_M_Y": 0.1854,
+      "corr_X_M": -0.4374,
+      "mediator_window_overlaps_outcome": false
+    },
+    "u10_0_10": {
+      "total": -0.1515,
+      "direct": -0.0831,
+      "indirect": -0.0685,
+      "mediator_coef": 0.1415,
+      "mediated_share": 0.4519,
+      "share_CI95": [
+        0.0797,
+        0.8836
+      ],
+      "n": 6954,
+      "corr_M_Y": 0.2215,
+      "corr_X_M": -0.4119,
+      "mediator_window_overlaps_outcome": false
+    },
+    "u10_0_20": {
+      "total": -0.1513,
+      "direct": -0.0387,
+      "indirect": -0.1126,
+      "mediator_coef": 0.2509,
+      "mediated_share": 0.7441,
+      "share_CI95": [
+        0.4206,
+        1.2451
+      ],
+      "n": 6949,
+      "corr_M_Y": 0.2502,
+      "corr_X_M": -0.3891,
+      "mediator_window_overlaps_outcome": true
+    },
+    "u10_0_30": {
+      "total": -0.1512,
+      "direct": -0.0155,
+      "indirect": -0.1357,
+      "mediator_coef": 0.3376,
+      "mediated_share": 0.8974,
+      "share_CI95": [
+        0.591,
+        1.4272
+      ],
+      "n": 6944,
+      "corr_M_Y": 0.2612,
+      "corr_X_M": -0.3595,
+      "mediator_window_overlaps_outcome": true
+    },
+    "z100_0_20": {
+      "total": -0.1513,
+      "direct": -0.035,
+      "indirect": -0.1163,
+      "mediator_coef": 0.3943,
+      "mediated_share": 0.7689,
+      "share_CI95": [
+        0.4071,
+        1.5092
+      ],
+      "n": 6949,
+      "corr_M_Y": 0.2781,
+      "corr_X_M": -0.0936,
+      "mediator_window_overlaps_outcome": true
+    },
+    "z10_0_20": {
+      "total": -0.1513,
+      "direct": 0.0057,
+      "indirect": -0.157,
+      "mediator_coef": 0.351,
+      "mediated_share": 1.0376,
+      "share_CI95": [
+        0.6767,
+        1.5912
+      ],
+      "n": 6949,
+      "corr_M_Y": 0.1481,
+      "corr_X_M": -0.3667,
+      "mediator_window_overlaps_outcome": true
+    },
+    "nam_composite": {
+      "total": -0.1513,
+      "direct": -0.0175,
+      "indirect": -0.1337,
+      "mediator_coef": 0.3385,
+      "mediated_share": 0.884,
+      "share_CI95": [
+        0.5145,
+        1.5706
+      ],
+      "n": 6949,
+      "corr_M_Y": 0.2806,
+      "corr_X_M": -0.2564,
+      "mediator_window_overlaps_outcome": true
+    }
+  }
+}

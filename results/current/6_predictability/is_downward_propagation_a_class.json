@@ -1,0 +1,52 @@
+{
+  "outcome_window": [
+    8,
+    52
+  ],
+  "n_calibration": 2000,
+  "results": {
+    "observations": {
+      "n": 43,
+      "dip": 0.10011,
+      "dip_p": 0.959,
+      "bic_gap": -5.483,
+      "bic_gap_pseudo_median": -9.363,
+      "bic_gap_p": 0.16,
+      "shift": -0.8654,
+      "ks": 0.1356,
+      "ks_p": 0.3742324856014909,
+      "mean": -0.8946,
+      "sd": 1.0444,
+      "skew": 0.2743,
+      "excess_kurtosis": -0.6908,
+      "bimodal": false,
+      "pure_shift_sufficient": true
+    },
+    "CMIP6_ensemble": {
+      "n": 1517,
+      "dip": 0.24136,
+      "dip_p": 0.8235,
+      "bic_gap": -14.378,
+      "bic_gap_pseudo_median": -10.192,
+      "bic_gap_p": 0.965,
+      "shift": -0.4764,
+      "ks": 0.0245,
+      "ks_p": 0.34564634348627676,
+      "mean": -0.4694,
+      "sd": 0.7249,
+      "skew": -0.2478,
+      "excess_kurtosis": 0.0533,
+      "bimodal": false,
+      "pure_shift_sufficient": true
+    }
+  },
+  "power_CMIP6": {
+    "d=0.25": 0.0,
+    "d=0.5": 0.0,
+    "d=0.75": 0.005,
+    "d=1.0": 0.85,
+    "d=1.5": 1.0,
+    "min_detectable_separation_80pct": 1.0
+  },
+  "verdict": "NO CLASS in CMIP6_ensemble (n=1517): the per-event surface response is unimodal (dip p=0.8235), one Gaussian component suffices (BIC-gap p=0.9650), and the whole distribution is a pure SHIFT of -0.476 sigma of the ordinary winter distribution (KS p=0.3456). 'Downward propagation' is a threshold on a continuum, not a population."
+}

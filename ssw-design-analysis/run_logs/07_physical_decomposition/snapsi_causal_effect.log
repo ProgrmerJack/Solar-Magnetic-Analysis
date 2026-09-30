@@ -1,0 +1,186 @@
+onset-minus-init offsets (days): {'s20180125': 18, 's20180208': 4, 's20181213': 20, 's20190108': -6}
+1,171,894 rows | centres ['CCCma', 'CNR-ISAC', 'ECCC', 'ECMWF', 'KMA', 'Meteo-France', 'NCAR', 'NRL', 'SNU', 'UKMO']
+init                     s20180125  s20180208  s20181213  s20190108  s20190829  s20191001
+centre       experiment                                                                  
+CCCma        control            50         50         50         47          0          0
+             nudged             50         50         50         38          0          0
+CNR-ISAC     control            50         50         50         50         50         50
+             nudged             50         50         50         50         50         50
+ECCC         control            50         50         50         50         50         50
+             nudged             50         50         50         50         50         50
+ECMWF        control            51         51         51         51         51         51
+             nudged             51         51         51         51         51         51
+KMA          control            50         50         50         50         50         50
+             nudged             50         50         52         50         50         50
+Meteo-France control            50         50         50         50         50         50
+             nudged             50         50         50         50         50         50
+NCAR         control            51         51         51         51         51         51
+             nudged             51         51         51         51         51         51
+NRL          control            80         80         80         80         80         80
+             nudged             80         80         80         80         80         80
+SNU          control            50         50         50         50         50         50
+             nudged             50         50         50         50         50         50
+UKMO         control            50         50         50         50         50         50
+             nudged             50         50         50         50         50         50
+
+=== DUPLICATE GUARD: paired |nudged - control| vs ensemble spread ===
+centre    mean|diff|  within-ens sd    ratio  verdict
+--------------------------------------------------------
+CCCma         502.68         448.91    1.120  ok
+CNR-ISAC      436.40         365.21    1.195  ok
+ECCC          999.10         399.41    2.501  ok
+ECMWF         535.42         409.05    1.309  ok
+KMA           540.93         391.33    1.382  ok
+Meteo-France      544.78         365.71    1.490  ok
+NCAR          529.83         456.56    1.160  ok
+NRL             0.52         128.16    0.004  DUPLICATE -> EXCLUDED
+SNU           485.35         385.71    1.258  ok
+UKMO          582.26         426.96    1.364  ok
+
+centres retained: ['CCCma', 'CNR-ISAC', 'ECCC', 'ECMWF', 'KMA', 'Meteo-France', 'NCAR', 'SNU', 'UKMO']   excluded as duplicates: ['NRL']
+
+post-onset coverage per init (days): {'s20180125': 47.8, 's20180208': 56.0, 's20181213': 40.0, 's20190108': 66.0, 's20190829': nan, 's20191001': nan}
+primary common window: +8..+25 days after onset
+
+========================================================================================
+centre    event     init          nudged  control    S (Pa)   sd_ctl   S/sigma   n_N/n_C
+----------------------------------------------------------------------------------------
+CCCma     Feb-2018  s20180125   102037.5 101712.6    +325.0    466.0    +0.697   50/50  
+CCCma     Feb-2018  s20180208   102248.5 102026.2    +222.3    270.3    +0.822   50/50  
+CCCma     Jan-2019  s20181213   101814.4 101582.5    +231.9    464.8    +0.499   50/50  
+CCCma     Jan-2019  s20190108   101543.9 101410.1    +133.9    205.8    +0.650   38/47  
+CNR-ISAC  Feb-2018  s20180125   102270.7 101936.4    +334.3    378.5    +0.883   50/50  
+CNR-ISAC  Feb-2018  s20180208   102102.5 101837.3    +265.2    318.4    +0.833   50/50  
+CNR-ISAC  Jan-2019  s20181213   101617.6 101589.5     +28.1    293.0    +0.096   50/50  
+CNR-ISAC  Jan-2019  s20190108   101810.2 101466.2    +344.0    117.5    +2.927   50/50  
+ECCC      Feb-2018  s20180125   100947.9 100069.3    +878.5    403.0    +2.180   50/50  
+ECCC      Feb-2018  s20180208   101277.6 100092.1   +1185.4    336.8    +3.520   50/50  
+ECCC      Jan-2019  s20181213   100857.9  99302.7   +1555.2    361.4    +4.303   50/50  
+ECCC      Jan-2019  s20190108   100584.1  99643.9    +940.2    219.2    +4.289   50/50  
+ECMWF     Feb-2018  s20180125   101952.1 101628.8    +323.2    336.1    +0.962   51/51  
+ECMWF     Feb-2018  s20180208   102007.4 101499.9    +507.5    293.4    +1.730   51/51  
+ECMWF     Jan-2019  s20181213   101591.1 101186.8    +404.3    340.3    +1.188   51/51  
+ECMWF     Jan-2019  s20190108   101727.0 101220.8    +506.2    206.4    +2.453   51/51  
+KMA       Feb-2018  s20180125   102157.6 101742.6    +415.0    354.8    +1.170   50/50  
+KMA       Feb-2018  s20180208   102083.3 101649.2    +434.1    318.8    +1.361   50/50  
+KMA       Jan-2019  s20181213   101747.9 101419.3    +328.6    428.7    +0.767   52/50  
+KMA       Jan-2019  s20190108   101733.6 101260.7    +472.9    138.0    +3.428   50/50  
+Meteo-France Feb-2018  s20180125   101514.0 101266.3    +247.7    413.9    +0.599   50/50  
+Meteo-France Feb-2018  s20180208   101686.0 100909.6    +776.4    357.2    +2.173   50/50  
+Meteo-France Jan-2019  s20181213   101240.1 100938.6    +301.4    370.3    +0.814   50/50  
+Meteo-France Jan-2019  s20190108   101189.2 100865.5    +323.7    119.2    +2.715   50/50  
+NCAR      Feb-2018  s20180125   101735.2 101319.6    +415.6    444.8    +0.934   51/51  
+NCAR      Feb-2018  s20180208   102049.7 101462.3    +587.3    335.9    +1.749   51/51  
+NCAR      Jan-2019  s20181213   101723.9 101208.7    +515.2    408.9    +1.260   51/51  
+NCAR      Jan-2019  s20190108   101774.9 101413.5    +361.4    296.4    +1.219   51/51  
+SNU       Feb-2018  s20180125   102092.5 101765.6    +326.9    339.4    +0.963   50/50  
+SNU       Feb-2018  s20180208   101974.1 101596.6    +377.4    320.3    +1.178   50/50  
+SNU       Jan-2019  s20181213   101581.2 101363.5    +217.7    377.0    +0.577   50/50  
+SNU       Jan-2019  s20190108   101689.0 101339.9    +349.2    137.6    +2.537   50/50  
+UKMO      Feb-2018  s20180125   102183.9 101904.5    +279.3    374.7    +0.745   50/50  
+UKMO      Feb-2018  s20180208   102059.9 101694.4    +365.6    417.3    +0.876   50/50  
+UKMO      Jan-2019  s20181213   101872.1 101377.1    +495.0    380.7    +1.300   50/50  
+UKMO      Jan-2019  s20190108   101784.6 101329.6    +455.1    206.9    +2.200   50/50  
+
+pooled within-centre control sigma (Pa): {'CCCma': 369.5, 'CNR-ISAC': 291.2, 'ECCC': 334.5, 'ECMWF': 296.7, 'KMA': 325.5, 'Meteo-France': 333.0, 'NCAR': 373.3, 'SNU': 305.4, 'UKMO': 351.7}
+centre   init         S/sd_init  S/sd_pooled
+--------------------------------------------
+CCCma    s20180125       +0.697       +0.880
+CCCma    s20180208       +0.822       +0.602
+CCCma    s20181213       +0.499       +0.628
+CCCma    s20190108       +0.650       +0.362
+CNR-ISAC s20180125       +0.883       +1.148
+CNR-ISAC s20180208       +0.833       +0.911
+CNR-ISAC s20181213       +0.096       +0.096
+CNR-ISAC s20190108       +2.927       +1.181
+ECCC     s20180125       +2.180       +2.626
+ECCC     s20180208       +3.520       +3.544
+ECCC     s20181213       +4.303       +4.649
+ECCC     s20190108       +4.289       +2.810
+ECMWF    s20180125       +0.962       +1.089
+ECMWF    s20180208       +1.730       +1.710
+ECMWF    s20181213       +1.188       +1.363
+ECMWF    s20190108       +2.453       +1.706
+KMA      s20180125       +1.170       +1.275
+KMA      s20180208       +1.361       +1.334
+KMA      s20181213       +0.767       +1.010
+KMA      s20190108       +3.428       +1.453
+Meteo-France s20180125       +0.599       +0.744
+Meteo-France s20180208       +2.173       +2.332
+Meteo-France s20181213       +0.814       +0.905
+Meteo-France s20190108       +2.715       +0.972
+NCAR     s20180125       +0.934       +1.114
+NCAR     s20180208       +1.749       +1.573
+NCAR     s20181213       +1.260       +1.380
+NCAR     s20190108       +1.219       +0.968
+SNU      s20180125       +0.963       +1.070
+SNU      s20180208       +1.178       +1.236
+SNU      s20181213       +0.577       +0.713
+SNU      s20190108       +2.537       +1.143
+UKMO     s20180125       +0.745       +0.794
+UKMO     s20180208       +0.876       +1.039
+UKMO     s20181213       +1.300       +1.408
+UKMO     s20190108       +2.200       +1.294
+
+========================================================================================
+=== THE CAUSAL EFFECT ===
+
+(per-init-normalised sensitivity, grand mean +1.572 sigma)
+
+per initialisation (mean over 9 models):
+  Feb-2018  s20180125   S/sigma = +1.193
+  Feb-2018  s20180208   S/sigma = +1.587
+  Jan-2019  s20181213   S/sigma = +1.350
+  Jan-2019  s20190108   S/sigma = +1.321
+
+per event (mean over its two initialisations):
+  Feb-2018  S/sigma = +1.390
+  Jan-2019  S/sigma = +1.336
+
+GRAND MEAN causal effect S = +1.363 sigma
+between-EVENT difference (n=2, indicative only) = +0.054 sigma
+
+between-MODEL spread of S/sigma: +0.618 .. +3.407 (sd 0.808)
+  CCCma          +0.618
+  CNR-ISAC       +0.834
+  ECCC           +3.407
+  ECMWF          +1.467
+  KMA            +1.268
+  Meteo-France   +1.238
+  NCAR           +1.259
+  SNU            +1.041
+  UKMO           +1.134
+
+========================================================================================
+=== WHAT EACH PUBLISHED CONTRAST IMPLIES, GIVEN THE MEASURED S ===
+  A DW-minus-NDW contrast is bounded by BETWEEN-EVENT variation, not by S,
+  so 'contrast vs S' is the wrong comparison and an earlier draft of this
+  script made it. The right question: with a mean causal effect S and a DW
+  fraction q, a contrast C forces the two subgroups to be
+      DW  =  S + (1-q)*C        NDW  =  S - q*C
+  and it is the implied NDW value that is testable.
+
+reported quantity                                     C     q      DW     NDW
+------------------------------------------------------------------------------
+Karpechko-criterion AO contrast, observations     1.782  0.70  +1.897  +0.115
+CMIP6 ensemble DW-NDW contrast                    1.143  0.50  +1.934  +0.791
+ACP 26, 3723 (2026) published NAO contrast        0.708  0.64  +1.621  +0.913
+ERA5 1000 hPa NAM contrast, Karpechko criterion   0.684  0.54  +1.678  +0.994
+ERA5 850 hPa NAM contrast, ACP criterion          0.639  0.59  +1.625  +0.986
+
+  READ HONESTLY, S = +1.363 sigma:
+   - 1 of 5 contrasts force NDW to zero or REVERSED sign:
+       Karpechko-criterion AO contrast, observations  ->  NDW = +0.115
+   - the other 4 imply NDW responses of +0.79 to +0.99 sigma, i.e. events labelled
+     'non-propagating' would STILL carry a large real surface response.
+     That is a CONTINUUM, not two populations, and it is exactly what a
+     threshold cut through one shifted distribution looks like.
+
+  So SNAPSI does NOT show the published contrasts exceed what the
+  stratosphere can cause -- an earlier draft of this script claimed that and
+  it was wrong. What it shows is that a large mean effect (S = +1.36
+  sigma, measured causally) plus a threshold split reproduces most of those
+  contrasts WITHOUT any second population; only the most extreme reported
+  contrast demands one, and it demands a physically odd one.
+
+Saved -> snapsi_causal_effect.json

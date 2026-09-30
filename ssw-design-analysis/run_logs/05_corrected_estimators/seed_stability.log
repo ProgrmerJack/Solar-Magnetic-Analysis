@@ -1,0 +1,14 @@
+
+=== AO / primary  (n=43, 40 seeds x 1200 reps) ===
+  -30..-16  effect -0.820   p range 0.0050..0.0167 (median 0.0092)   significant in 40/40 seeds   STABLE
+  +15..+29  effect -1.026   p range 0.0000..0.0067 (median 0.0000)   significant in 40/40 seeds   STABLE
+
+=== AO / consensus_strict  (n=36, 40 seeds x 1200 reps) ===
+  -30..-16  effect -0.670   p range 0.0317..0.0617 (median 0.0450)   significant in 32/40 seeds   SEED-DEPENDENT
+  +15..+29  effect -1.046   p range 0.0000..0.0033 (median 0.0000)   significant in 40/40 seeds   STABLE
+
+=== NAO / primary  (n=43, 40 seeds x 1200 reps) ===
+  -30..-16  effect -0.329   p range 0.0067..0.0217 (median 0.0133)   significant in 40/40 seeds   STABLE
+  +15..+29  effect -0.309   p range 0.0100..0.0333 (median 0.0183)   significant in 40/40 seeds   STABLE
+
+Saved -> seed_stability.json

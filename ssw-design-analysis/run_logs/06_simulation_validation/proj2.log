@@ -1,0 +1,24 @@
+common period 1980-01-01..2026-04-02, 29 events
+dSSW 18/29 (62%)
+
+  300/1200 draws
+  600/1200 draws
+  900/1200 draws
+  1200/1200 draws
+
+window-level correlations from 34,800 clean pseudo-event windows
+
+outcome     corr w/ AO   predicted   measured     error
+--------------------------------------------------------
+ao              +1.000      -0.660     -0.660    +0.000
+nao             +0.625      -0.412     -0.133    +0.279
+pna             -0.460      +0.304     +0.126    -0.178
+tavg_c          -0.109      +0.072     +0.009    -0.063
+snwd_mm         +0.075      -0.049     -0.056    -0.007
+
+  regression of measured bias on correlation:
+    slope -0.473 (bias at corr=1 should equal bias_AO = -0.660)
+    intercept -0.036 (should be ~0)   r = -0.907   R2 = 0.823   P = 0.0334
+    -> LAW APPROXIMATE
+
+Saved -> selection_projection_law.json

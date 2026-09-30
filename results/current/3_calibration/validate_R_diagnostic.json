@@ -1,0 +1,135 @@
+{
+  "phi": 0.943,
+  "n_winters": 77,
+  "n_events": 43,
+  "n_rep": 300,
+  "grid": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "arms": {
+    "post_onset": {
+      "0.0": {
+        "mean_R": -0.0324,
+        "bias": -0.0324,
+        "sd": 0.2983,
+        "pct5_95": [
+          -0.552,
+          0.372
+        ],
+        "coverage": 0.843,
+        "n_ok": 300
+      },
+      "0.25": {
+        "mean_R": 0.2032,
+        "bias": -0.0468,
+        "sd": 0.2754,
+        "pct5_95": [
+          -0.292,
+          0.593
+        ],
+        "coverage": 0.847,
+        "n_ok": 300
+      },
+      "0.5": {
+        "mean_R": 0.4806,
+        "bias": -0.0194,
+        "sd": 0.2221,
+        "pct5_95": [
+          0.098,
+          0.824
+        ],
+        "coverage": 0.9,
+        "n_ok": 300
+      },
+      "0.75": {
+        "mean_R": 0.7034,
+        "bias": -0.0466,
+        "sd": 0.1993,
+        "pct5_95": [
+          0.364,
+          1.005
+        ],
+        "coverage": 0.857,
+        "n_ok": 300
+      },
+      "1.0": {
+        "mean_R": 0.9589,
+        "bias": -0.0411,
+        "sd": 0.2029,
+        "pct5_95": [
+          0.607,
+          1.264
+        ],
+        "coverage": 0.827,
+        "n_ok": 300
+      }
+    },
+    "pre_onset": {
+      "0.0": {
+        "mean_R": -0.0618,
+        "bias": -0.0618,
+        "sd": 0.3485,
+        "pct5_95": [
+          -0.697,
+          0.362
+        ],
+        "coverage": 0.853,
+        "n_ok": 300
+      },
+      "0.25": {
+        "mean_R": 0.2143,
+        "bias": -0.0357,
+        "sd": 0.2779,
+        "pct5_95": [
+          -0.351,
+          0.576
+        ],
+        "coverage": 0.867,
+        "n_ok": 300
+      },
+      "0.5": {
+        "mean_R": 0.4785,
+        "bias": -0.0215,
+        "sd": 0.2338,
+        "pct5_95": [
+          0.058,
+          0.79
+        ],
+        "coverage": 0.873,
+        "n_ok": 300
+      },
+      "0.75": {
+        "mean_R": 0.7494,
+        "bias": -0.0006,
+        "sd": 0.1992,
+        "pct5_95": [
+          0.427,
+          1.051
+        ],
+        "coverage": 0.853,
+        "n_ok": 300
+      },
+      "1.0": {
+        "mean_R": 1.0119,
+        "bias": 0.0119,
+        "sd": 0.2095,
+        "pct5_95": [
+          0.694,
+          1.372
+        ],
+        "coverage": 0.84,
+        "n_ok": 300
+      }
+    }
+  },
+  "verdict": {
+    "R_post_onset_at_f1": 0.9589,
+    "R_pre_onset_at_f1": 1.0119,
+    "difference": 0.053,
+    "reading": "R returns the same value for an anomaly placed BEFORE onset as for one placed AFTER it. A pre-onset anomaly has causal fraction zero by construction, so R is NOT an estimator of the causal fraction; it measures how tightly the anomaly is concentrated around the onset date. The original validation simulated only the post-onset structure and therefore could not detect this."
+  }
+}

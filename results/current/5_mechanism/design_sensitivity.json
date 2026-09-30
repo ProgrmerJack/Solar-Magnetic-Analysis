@@ -1,0 +1,580 @@
+{
+  "n_events": 30,
+  "window": [
+    15,
+    29
+  ],
+  "mean_conventional": -0.9536,
+  "mean_corrected": -0.9518,
+  "mean_design_sensitivity": -0.0018,
+  "r2": 0.2167,
+  "r2_permutation_p": 0.2808,
+  "n_perm": 5000,
+  "coefficients": {
+    "precursor_vT": {
+      "beta_standardised": -0.0851,
+      "robust_se": 0.2595,
+      "permutation_p": 0.6638
+    },
+    "vortex_u10": {
+      "beta_standardised": -0.0405,
+      "robust_se": 0.2112,
+      "permutation_p": 0.8214
+    },
+    "polarcap_z100": {
+      "beta_standardised": -0.2653,
+      "robust_se": 0.201,
+      "permutation_p": 0.1806
+    },
+    "onset_doy": {
+      "beta_standardised": -0.2457,
+      "robust_se": 0.1794,
+      "permutation_p": 0.2186
+    },
+    "winter_AO_anom": {
+      "beta_standardised": 0.2614,
+      "robust_se": 0.1993,
+      "permutation_p": 0.1264
+    }
+  },
+  "per_event": [
+    {
+      "onset": "1958-01-30",
+      "winter": 1958,
+      "conventional": -2.5781,
+      "corrected": -2.2649,
+      "design_sensitivity": -0.3132,
+      "precursor_vT": 25.843,
+      "vortex_u10": NaN,
+      "polarcap_z100": NaN,
+      "onset_doy": 30,
+      "winter_AO_anom": -0.9948
+    },
+    {
+      "onset": "1960-01-17",
+      "winter": 1960,
+      "conventional": -1.4452,
+      "corrected": -1.1078,
+      "design_sensitivity": -0.3375,
+      "precursor_vT": 17.503,
+      "vortex_u10": NaN,
+      "polarcap_z100": NaN,
+      "onset_doy": 17,
+      "winter_AO_anom": -1.1602
+    },
+    {
+      "onset": "1963-01-28",
+      "winter": 1963,
+      "conventional": -0.6707,
+      "corrected": 0.0365,
+      "design_sensitivity": -0.7072,
+      "precursor_vT": 22.297,
+      "vortex_u10": NaN,
+      "polarcap_z100": NaN,
+      "onset_doy": 28,
+      "winter_AO_anom": -0.9018
+    },
+    {
+      "onset": "1965-12-16",
+      "winter": 1966,
+      "conventional": -1.872,
+      "corrected": -0.2904,
+      "design_sensitivity": -1.5816,
+      "precursor_vT": 16.23,
+      "vortex_u10": NaN,
+      "polarcap_z100": NaN,
+      "onset_doy": 350,
+      "winter_AO_anom": -1.2468
+    },
+    {
+      "onset": "1966-02-23",
+      "winter": 1966,
+      "conventional": -1.3692,
+      "corrected": -0.2806,
+      "design_sensitivity": -1.0886,
+      "precursor_vT": 14.959,
+      "vortex_u10": NaN,
+      "polarcap_z100": NaN,
+      "onset_doy": 54,
+      "winter_AO_anom": -1.2468
+    },
+    {
+      "onset": "1968-01-07",
+      "winter": 1968,
+      "conventional": -0.5517,
+      "corrected": -1.0042,
+      "design_sensitivity": 0.4525,
+      "precursor_vT": 21.712,
+      "vortex_u10": NaN,
+      "polarcap_z100": NaN,
+      "onset_doy": 7,
+      "winter_AO_anom": 0.0692
+    },
+    {
+      "onset": "1968-11-28",
+      "winter": 1969,
+      "conventional": -1.2103,
+      "corrected": 0.2364,
+      "design_sensitivity": -1.4467,
+      "precursor_vT": 13.798,
+      "vortex_u10": NaN,
+      "polarcap_z100": NaN,
+      "onset_doy": 333,
+      "winter_AO_anom": -1.4911
+    },
+    {
+      "onset": "1969-03-13",
+      "winter": 1969,
+      "conventional": 0.9248,
+      "corrected": 2.2087,
+      "design_sensitivity": -1.2839,
+      "precursor_vT": 15.254,
+      "vortex_u10": NaN,
+      "polarcap_z100": NaN,
+      "onset_doy": 72,
+      "winter_AO_anom": -1.4911
+    },
+    {
+      "onset": "1970-01-02",
+      "winter": 1970,
+      "conventional": -0.9722,
+      "corrected": -1.0521,
+      "design_sensitivity": 0.0798,
+      "precursor_vT": 21.533,
+      "vortex_u10": NaN,
+      "polarcap_z100": NaN,
+      "onset_doy": 2,
+      "winter_AO_anom": -1.0135
+    },
+    {
+      "onset": "1971-01-18",
+      "winter": 1971,
+      "conventional": -0.5581,
+      "corrected": -0.0234,
+      "design_sensitivity": -0.5347,
+      "precursor_vT": 21.594,
+      "vortex_u10": NaN,
+      "polarcap_z100": NaN,
+      "onset_doy": 18,
+      "winter_AO_anom": -0.3101
+    },
+    {
+      "onset": "1971-03-20",
+      "winter": 1971,
+      "conventional": -0.415,
+      "corrected": -0.2911,
+      "design_sensitivity": -0.1239,
+      "precursor_vT": 13.196,
+      "vortex_u10": NaN,
+      "polarcap_z100": NaN,
+      "onset_doy": 79,
+      "winter_AO_anom": -0.3101
+    },
+    {
+      "onset": "1973-01-31",
+      "winter": 1973,
+      "conventional": -0.197,
+      "corrected": 1.1591,
+      "design_sensitivity": -1.3561,
+      "precursor_vT": 22.233,
+      "vortex_u10": NaN,
+      "polarcap_z100": NaN,
+      "onset_doy": 31,
+      "winter_AO_anom": 0.5063
+    },
+    {
+      "onset": "1977-01-09",
+      "winter": 1977,
+      "conventional": -3.1399,
+      "corrected": -3.9585,
+      "design_sensitivity": 0.8186,
+      "precursor_vT": 20.755,
+      "vortex_u10": NaN,
+      "polarcap_z100": NaN,
+      "onset_doy": 9,
+      "winter_AO_anom": -0.8764
+    },
+    {
+      "onset": "1979-02-22",
+      "winter": 1979,
+      "conventional": -2.1089,
+      "corrected": -3.8161,
+      "design_sensitivity": 1.7072,
+      "precursor_vT": 22.794,
+      "vortex_u10": 0.214,
+      "polarcap_z100": 15613.71,
+      "onset_doy": 53,
+      "winter_AO_anom": -0.4262
+    },
+    {
+      "onset": "1980-02-29",
+      "winter": 1980,
+      "conventional": -2.986,
+      "corrected": -4.1919,
+      "design_sensitivity": 1.2059,
+      "precursor_vT": 20.942,
+      "vortex_u10": 2.606,
+      "polarcap_z100": 15633.34,
+      "onset_doy": 60,
+      "winter_AO_anom": -0.3635
+    },
+    {
+      "onset": "1981-03-04",
+      "winter": 1981,
+      "conventional": -0.6167,
+      "corrected": 0.3645,
+      "design_sensitivity": -0.9812,
+      "precursor_vT": 22.763,
+      "vortex_u10": -1.395,
+      "polarcap_z100": 15687.45,
+      "onset_doy": 63,
+      "winter_AO_anom": -0.3654
+    },
+    {
+      "onset": "1981-12-04",
+      "winter": 1982,
+      "conventional": -2.0537,
+      "corrected": -2.9696,
+      "design_sensitivity": 0.9159,
+      "precursor_vT": 14.118,
+      "vortex_u10": 6.01,
+      "polarcap_z100": 15475.21,
+      "onset_doy": 338,
+      "winter_AO_anom": 0.3115
+    },
+    {
+      "onset": "1984-02-24",
+      "winter": 1984,
+      "conventional": -3.2397,
+      "corrected": -2.5059,
+      "design_sensitivity": -0.7338,
+      "precursor_vT": 20.689,
+      "vortex_u10": -3.986,
+      "polarcap_z100": 15700.3,
+      "onset_doy": 55,
+      "winter_AO_anom": -0.2805
+    },
+    {
+      "onset": "1985-01-01",
+      "winter": 1985,
+      "conventional": -3.0753,
+      "corrected": -3.1404,
+      "design_sensitivity": 0.065,
+      "precursor_vT": 21.584,
+      "vortex_u10": 1.166,
+      "polarcap_z100": 15617.09,
+      "onset_doy": 1,
+      "winter_AO_anom": -0.4305
+    },
+    {
+      "onset": "1987-01-23",
+      "winter": 1987,
+      "conventional": -1.9547,
+      "corrected": -3.0359,
+      "design_sensitivity": 1.0812,
+      "precursor_vT": 17.462,
+      "vortex_u10": -5.032,
+      "polarcap_z100": 15643.58,
+      "onset_doy": 23,
+      "winter_AO_anom": -0.345
+    },
+    {
+      "onset": "1987-12-08",
+      "winter": 1988,
+      "conventional": 0.429,
+      "corrected": 1.2115,
+      "design_sensitivity": -0.7825,
+      "precursor_vT": 17.418,
+      "vortex_u10": -7.613,
+      "polarcap_z100": 15578.64,
+      "onset_doy": 342,
+      "winter_AO_anom": -0.2816
+    },
+    {
+      "onset": "1988-03-14",
+      "winter": 1988,
+      "conventional": -0.9611,
+      "corrected": -0.385,
+      "design_sensitivity": -0.576,
+      "precursor_vT": 19.957,
+      "vortex_u10": 6.729,
+      "polarcap_z100": 15650.67,
+      "onset_doy": 74,
+      "winter_AO_anom": -0.2816
+    },
+    {
+      "onset": "1989-02-21",
+      "winter": 1989,
+      "conventional": 1.3585,
+      "corrected": 1.075,
+      "design_sensitivity": 0.2835,
+      "precursor_vT": 22.735,
+      "vortex_u10": 3.005,
+      "polarcap_z100": 15605.88,
+      "onset_doy": 52,
+      "winter_AO_anom": 1.62
+    },
+    {
+      "onset": "1998-12-15",
+      "winter": 1999,
+      "conventional": -0.704,
+      "corrected": 0.1303,
+      "design_sensitivity": -0.8343,
+      "precursor_vT": 17.904,
+      "vortex_u10": 1.705,
+      "polarcap_z100": 15527.87,
+      "onset_doy": 349,
+      "winter_AO_anom": 0.0142
+    },
+    {
+      "onset": "1999-02-26",
+      "winter": 1999,
+      "conventional": -1.4657,
+      "corrected": -0.7682,
+      "design_sensitivity": -0.6975,
+      "precursor_vT": 18.346,
+      "vortex_u10": -3.179,
+      "polarcap_z100": 15724.18,
+      "onset_doy": 57,
+      "winter_AO_anom": 0.0142
+    },
+    {
+      "onset": "2000-03-20",
+      "winter": 2000,
+      "conventional": -0.3686,
+      "corrected": -1.1911,
+      "design_sensitivity": 0.8226,
+      "precursor_vT": 14.502,
+      "vortex_u10": 8.079,
+      "polarcap_z100": 15707.13,
+      "onset_doy": 80,
+      "winter_AO_anom": 0.6572
+    },
+    {
+      "onset": "2001-02-11",
+      "winter": 2001,
+      "conventional": -2.3389,
+      "corrected": -1.0654,
+      "design_sensitivity": -1.2735,
+      "precursor_vT": 19.798,
+      "vortex_u10": -10.644,
+      "polarcap_z100": 15679.35,
+      "onset_doy": 42,
+      "winter_AO_anom": -0.8935
+    },
+    {
+      "onset": "2001-12-30",
+      "winter": 2002,
+      "conventional": 1.3642,
+      "corrected": 1.1445,
+      "design_sensitivity": 0.2197,
+      "precursor_vT": 21.508,
+      "vortex_u10": 1.248,
+      "polarcap_z100": 15485.7,
+      "onset_doy": 364,
+      "winter_AO_anom": 0.7369
+    },
+    {
+      "onset": "2003-01-18",
+      "winter": 2003,
+      "conventional": 0.7026,
+      "corrected": 1.2634,
+      "design_sensitivity": -0.5608,
+      "precursor_vT": 19.971,
+      "vortex_u10": 13.07,
+      "polarcap_z100": 15488.86,
+      "onset_doy": 18,
+      "winter_AO_anom": -0.2968
+    },
+    {
+      "onset": "2004-01-05",
+      "winter": 2004,
+      "conventional": -1.527,
+      "corrected": -0.8343,
+      "design_sensitivity": -0.6927,
+      "precursor_vT": 21.692,
+      "vortex_u10": -5.79,
+      "polarcap_z100": 15615.54,
+      "onset_doy": 5,
+      "winter_AO_anom": -0.2458
+    },
+    {
+      "onset": "2006-01-21",
+      "winter": 2006,
+      "conventional": 0.472,
+      "corrected": -0.2352,
+      "design_sensitivity": 0.7072,
+      "precursor_vT": 19.809,
+      "vortex_u10": -8.382,
+      "polarcap_z100": 15624.26,
+      "onset_doy": 21,
+      "winter_AO_anom": -0.4754
+    },
+    {
+      "onset": "2007-02-24",
+      "winter": 2007,
+      "conventional": 1.2673,
+      "corrected": 0.5039,
+      "design_sensitivity": 0.7634,
+      "precursor_vT": 20.128,
+      "vortex_u10": 1.828,
+      "polarcap_z100": 15558.44,
+      "onset_doy": 55,
+      "winter_AO_anom": 1.0184
+    },
+    {
+      "onset": "2008-02-22",
+      "winter": 2008,
+      "conventional": 0.0336,
+      "corrected": 0.3765,
+      "design_sensitivity": -0.3429,
+      "precursor_vT": 21.527,
+      "vortex_u10": -2.455,
+      "polarcap_z100": 15555.24,
+      "onset_doy": 53,
+      "winter_AO_anom": 0.4917
+    },
+    {
+      "onset": "2009-01-24",
+      "winter": 2009,
+      "conventional": -0.7851,
+      "corrected": -1.467,
+      "design_sensitivity": 0.6819,
+      "precursor_vT": 20.351,
+      "vortex_u10": 2.888,
+      "polarcap_z100": 15701.47,
+      "onset_doy": 24,
+      "winter_AO_anom": 0.4731
+    },
+    {
+      "onset": "2010-02-09",
+      "winter": 2010,
+      "conventional": -1.7391,
+      "corrected": -2.2524,
+      "design_sensitivity": 0.5133,
+      "precursor_vT": 21.756,
+      "vortex_u10": -10.232,
+      "polarcap_z100": 15645.0,
+      "onset_doy": 40,
+      "winter_AO_anom": -1.5413
+    },
+    {
+      "onset": "2010-03-24",
+      "winter": 2010,
+      "conventional": -0.5581,
+      "corrected": 1.2965,
+      "design_sensitivity": -1.8546,
+      "precursor_vT": 14.921,
+      "vortex_u10": -3.698,
+      "polarcap_z100": 15830.75,
+      "onset_doy": 83,
+      "winter_AO_anom": -1.5413
+    },
+    {
+      "onset": "2013-01-06",
+      "winter": 2013,
+      "conventional": 0.1545,
+      "corrected": 0.8326,
+      "design_sensitivity": -0.6781,
+      "precursor_vT": 19.722,
+      "vortex_u10": 8.132,
+      "polarcap_z100": 15605.1,
+      "onset_doy": 6,
+      "winter_AO_anom": -0.9225
+    },
+    {
+      "onset": "2018-02-12",
+      "winter": 2018,
+      "conventional": -2.8979,
+      "corrected": -3.0244,
+      "design_sensitivity": 0.1265,
+      "precursor_vT": 20.893,
+      "vortex_u10": -1.059,
+      "polarcap_z100": 15633.05,
+      "onset_doy": 43,
+      "winter_AO_anom": -0.0046
+    },
+    {
+      "onset": "2019-01-02",
+      "winter": 2019,
+      "conventional": -0.886,
+      "corrected": -1.1745,
+      "design_sensitivity": 0.2885,
+      "precursor_vT": 22.165,
+      "vortex_u10": -6.908,
+      "polarcap_z100": 15560.75,
+      "onset_doy": 2,
+      "winter_AO_anom": 0.3386
+    },
+    {
+      "onset": "2021-01-05",
+      "winter": 2021,
+      "conventional": -2.5538,
+      "corrected": -2.9516,
+      "design_sensitivity": 0.3978,
+      "precursor_vT": 20.62,
+      "vortex_u10": -1.737,
+      "polarcap_z100": 15579.85,
+      "onset_doy": 5,
+      "winter_AO_anom": -0.0911
+    },
+    {
+      "onset": "2023-02-16",
+      "winter": 2023,
+      "conventional": -0.8978,
+      "corrected": -1.0626,
+      "design_sensitivity": 0.1647,
+      "precursor_vT": 22.601,
+      "vortex_u10": -1.844,
+      "polarcap_z100": 15605.56,
+      "onset_doy": 47,
+      "winter_AO_anom": -0.2437
+    },
+    {
+      "onset": "2024-01-16",
+      "winter": 2024,
+      "conventional": 0.1192,
+      "corrected": -0.1301,
+      "design_sensitivity": 0.2493,
+      "precursor_vT": 21.418,
+      "vortex_u10": 3.006,
+      "polarcap_z100": 15468.51,
+      "onset_doy": 16,
+      "winter_AO_anom": 0.1277
+    },
+    {
+      "onset": "2024-03-04",
+      "winter": 2024,
+      "conventional": -0.7912,
+      "corrected": -0.5522,
+      "design_sensitivity": -0.239,
+      "precursor_vT": 18.49,
+      "vortex_u10": -1.348,
+      "polarcap_z100": 15804.88,
+      "onset_doy": 64,
+      "winter_AO_anom": 0.1277
+    }
+  ],
+  "correlations_with_design_sensitivity": {
+    "precursor_vT": [
+      0.134,
+      0.48
+    ],
+    "vortex_u10": [
+      0.157,
+      0.4068
+    ],
+    "polarcap_z100": [
+      -0.296,
+      0.1116
+    ],
+    "onset_doy": [
+      -0.087,
+      0.6467
+    ],
+    "winter_AO_anom": [
+      0.353,
+      0.0557
+    ]
+  }
+}

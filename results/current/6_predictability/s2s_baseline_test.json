@@ -1,0 +1,95 @@
+{
+  "plan_approved": "2026-09-29",
+  "n_null": 10000,
+  "n_boot": 10000,
+  "seed_rule": "crc32(NAME|outcome), recorded per outcome",
+  "sep_allwinter_days": 30,
+  "vortex_index": "NCEP 60-90N mean u, 10 hPa",
+  "inputs": [
+    "data/processed/atmospheric/ncep_stratosphere_1958.parquet"
+  ],
+  "outcomes": {
+    "psl": {
+      "seed": 1208936741,
+      "n_events": 17,
+      "n_allwinter_dates": 1906,
+      "systems": [
+        "eccc",
+        "cma",
+        "hmcr",
+        "kma",
+        "cnrm",
+        "jma",
+        "cnr_isac",
+        "ncep",
+        "cptec"
+      ],
+      "B0_mean_rank": 0.3979,
+      "B0_ci95": [
+        0.2913,
+        0.5182
+      ],
+      "B1_null_mean": 0.5288,
+      "B1_null_q025_q975": [
+        0.4144,
+        0.6451
+      ],
+      "B1_p": 0.0124,
+      "B2_slope_per_ms": 0.00056,
+      "B2_intercept": 0.5038,
+      "B2_u10_mean_events": -7.76,
+      "B2_u10_range_allwinter": [
+        -27.2,
+        55.4
+      ],
+      "B2_residual_events": -0.1016,
+      "B2_null_q025_q975": [
+        -0.1055,
+        0.1253
+      ],
+      "B2_p": 0.0284,
+      "B2_rank_predicted_at_event_u10": 0.4995
+    },
+    "NEURASIA": {
+      "seed": 19562702,
+      "n_events": 17,
+      "n_allwinter_dates": 2822,
+      "systems": [
+        "eccc",
+        "cma",
+        "hmcr",
+        "kma",
+        "cnrm",
+        "jma",
+        "cnr_isac",
+        "ncep",
+        "cptec"
+      ],
+      "B0_mean_rank": 0.3896,
+      "B0_ci95": [
+        0.2904,
+        0.4977
+      ],
+      "B1_null_mean": 0.5137,
+      "B1_null_q025_q975": [
+        0.3878,
+        0.6427
+      ],
+      "B1_p": 0.0275,
+      "B2_slope_per_ms": 0.00058,
+      "B2_intercept": 0.4876,
+      "B2_u10_mean_events": -7.76,
+      "B2_u10_range_allwinter": [
+        -27.2,
+        55.4
+      ],
+      "B2_residual_events": -0.0935,
+      "B2_null_q025_q975": [
+        -0.116,
+        0.139
+      ],
+      "B2_p": 0.0572,
+      "B2_rank_predicted_at_event_u10": 0.4831
+    }
+  }
+}

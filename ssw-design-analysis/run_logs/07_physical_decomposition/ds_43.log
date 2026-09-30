@@ -1,0 +1,20 @@
+events usable: 30 of 43
+conventional mean -0.954, corrected mean -0.952, design sensitivity mean -0.002
+
+R2 = 0.217  (permutation P = 0.2808, 5000 shuffles)
+predictor            beta  robust SE   perm p
+------------------------------------------------
+precursor_vT      -0.0851     0.2595   0.6638
+vortex_u10        -0.0405     0.2112   0.8214
+polarcap_z100     -0.2653     0.2010   0.1806
+onset_doy         -0.2457     0.1794   0.2186
+winter_AO_anom    +0.2614     0.1993   0.1264
+
+pairwise correlations with design sensitivity:
+  precursor_vT     r=+0.134  p=0.4800
+  vortex_u10       r=+0.157  p=0.4068
+  polarcap_z100    r=-0.296  p=0.1116
+  onset_doy        r=-0.087  p=0.6467
+  winter_AO_anom   r=+0.353  p=0.0557
+
+Saved -> C:\Users\Jack0\Solar-Magnetic-Analysis\ssw-design-analysis\07_physical_decomposition\design_sensitivity.json

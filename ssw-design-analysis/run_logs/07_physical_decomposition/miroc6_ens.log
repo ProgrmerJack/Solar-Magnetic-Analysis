@@ -1,0 +1,32 @@
+MIROC6: 2 members on disk
+  r10i1p1f1: 97 SSWs in 166 winters (0.58/winter)
+  r1i1p1f1: 95 SSWs in 166 winters (0.57/winter)
+
+POOLED: 192 SSWs, 332 winters, 57,227 days
+  observations for comparison: 43 SSWs, 36 winters
+  -> 4x the events, 9x the winters
+
+bin           effect                 95% CI         p
+------------------------------------------------------
+-60..-46      +0.136 [  -0.059,  +0.347]    0.1920
+-45..-31      +0.218 [  +0.037,  +0.401]    0.0240  *
+-30..-16      +0.366 [  +0.194,  +0.557]    0.0000  *
+-15..-1       +0.455 [  +0.290,  +0.634]    0.0000  *
++0..+14       -0.171 [  -0.351,  +0.021]    0.0760
++15..+29      +0.003 [  -0.177,  +0.193]    0.9600
++30..+44      -0.077 [  -0.250,  +0.094]    0.3880
++45..+60      -0.013 [  -0.197,  +0.177]    0.8960
+
+=== THE PRE-ONSET QUESTION ===
+  observed (43 events):  -0.820  CI [-1.413, -0.202]  p=0.015
+  ensemble (192 events): +0.365  CI [+0.194, +0.557]  p=0.0000
+  interval width: 0.363 vs 1.211 observed -> 3.3x tighter
+  the observed -0.820 is NOT consistent with the ensemble
+
+=== IS THE OBSERVED -0.820 JUST 43-EVENT SAMPLING NOISE? ===
+  36-winter subsamples of the ensemble: mean +0.335, sd 0.201
+  5th-95th pct: [+0.021, +0.683]
+  P(estimate <= -0.820 | truth = +0.365) = 0.000
+  -> the observed value is extreme even allowing for 43-event noise
+
+Saved -> ensemble_precursor.json

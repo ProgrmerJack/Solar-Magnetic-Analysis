@@ -1,0 +1,338 @@
+{
+  "part": 1,
+  "description": "Primary SSW matched comparison",
+  "swiss_dry_slab": {
+    "n_events": 15,
+    "n_negative": 14,
+    "mean_diff": -1.5038,
+    "median_diff": -2.0744,
+    "bootstrap_ci_lo": -2.2096,
+    "bootstrap_ci_hi": -0.6373,
+    "ttest_p": 0.002977,
+    "sign_p": 0.000977,
+    "wilcoxon_p": 0.008362,
+    "perm_p": 0.004761,
+    "cohens_d": -0.9261,
+    "events": [
+      {
+        "date": "1998-12-15",
+        "event_mean": 0.333,
+        "control_mean": 0.707,
+        "difference": -0.374
+      },
+      {
+        "date": "1999-02-26",
+        "event_mean": 0.2,
+        "control_mean": 2.321,
+        "difference": -2.121
+      },
+      {
+        "date": "2001-02-11",
+        "event_mean": 0.267,
+        "control_mean": 0.815,
+        "difference": -0.549
+      },
+      {
+        "date": "2001-12-30",
+        "event_mean": 0.133,
+        "control_mean": 2.208,
+        "difference": -2.074
+      },
+      {
+        "date": "2002-02-17",
+        "event_mean": 0.4,
+        "control_mean": 1.185,
+        "difference": -0.785
+      },
+      {
+        "date": "2003-01-18",
+        "event_mean": 0.533,
+        "control_mean": 3.679,
+        "difference": -3.145
+      },
+      {
+        "date": "2004-01-05",
+        "event_mean": 0.133,
+        "control_mean": 2.994,
+        "difference": -2.861
+      },
+      {
+        "date": "2006-01-21",
+        "event_mean": 0.2,
+        "control_mean": 3.196,
+        "difference": -2.996
+      },
+      {
+        "date": "2007-02-24",
+        "event_mean": 0.533,
+        "control_mean": 2.399,
+        "difference": -1.865
+      },
+      {
+        "date": "2008-02-22",
+        "event_mean": 0.0,
+        "control_mean": 2.47,
+        "difference": -2.47
+      },
+      {
+        "date": "2009-01-24",
+        "event_mean": 0.4,
+        "control_mean": 2.952,
+        "difference": -2.552
+      },
+      {
+        "date": "2010-02-09",
+        "event_mean": 0.4,
+        "control_mean": 0.958,
+        "difference": -0.558
+      },
+      {
+        "date": "2012-01-11",
+        "event_mean": 1.667,
+        "control_mean": 2.542,
+        "difference": -0.875
+      },
+      {
+        "date": "2013-01-07",
+        "event_mean": 0.4,
+        "control_mean": 2.94,
+        "difference": -2.54
+      },
+      {
+        "date": "2019-01-01",
+        "event_mean": 5.867,
+        "control_mean": 2.657,
+        "difference": 3.209
+      }
+    ],
+    "leave_one_out": [
+      {
+        "dropped": "1998-12-15",
+        "p": 0.003324
+      },
+      {
+        "dropped": "1999-02-26",
+        "p": 0.006218
+      },
+      {
+        "dropped": "2001-02-11",
+        "p": 0.003642
+      },
+      {
+        "dropped": "2001-12-30",
+        "p": 0.006161
+      },
+      {
+        "dropped": "2002-02-17",
+        "p": 0.004073
+      },
+      {
+        "dropped": "2003-01-18",
+        "p": 0.00688
+      },
+      {
+        "dropped": "2004-01-05",
+        "p": 0.006825
+      },
+      {
+        "dropped": "2006-01-21",
+        "p": 0.006866
+      },
+      {
+        "dropped": "2007-02-24",
+        "p": 0.005884
+      },
+      {
+        "dropped": "2008-02-22",
+        "p": 0.00658
+      },
+      {
+        "dropped": "2009-01-24",
+        "p": 0.006646
+      },
+      {
+        "dropped": "2010-02-09",
+        "p": 0.00366
+      },
+      {
+        "dropped": "2012-01-11",
+        "p": 0.004238
+      },
+      {
+        "dropped": "2013-01-07",
+        "p": 0.006637
+      },
+      {
+        "dropped": "2019-01-01",
+        "p": 1.2e-05
+      }
+    ]
+  },
+  "norway_total": {
+    "n_events": 15,
+    "n_negative": 14,
+    "mean_diff": -12.5496,
+    "median_diff": -14.0357,
+    "bootstrap_ci_lo": -14.0679,
+    "bootstrap_ci_hi": -9.6271,
+    "ttest_p": 0.0,
+    "sign_p": 0.000977,
+    "wilcoxon_p": 0.000122,
+    "perm_p": 0.000122,
+    "cohens_d": -2.2602,
+    "events": [
+      {
+        "date": "1998-12-15",
+        "event_mean": 2.0,
+        "control_mean": 15.893,
+        "difference": -13.893
+      },
+      {
+        "date": "1999-02-26",
+        "event_mean": 2.0,
+        "control_mean": 15.994,
+        "difference": -13.994
+      },
+      {
+        "date": "2001-02-11",
+        "event_mean": 2.0,
+        "control_mean": 16.083,
+        "difference": -14.083
+      },
+      {
+        "date": "2001-12-30",
+        "event_mean": 2.0,
+        "control_mean": 16.131,
+        "difference": -14.131
+      },
+      {
+        "date": "2002-02-17",
+        "event_mean": 2.0,
+        "control_mean": 16.036,
+        "difference": -14.036
+      },
+      {
+        "date": "2003-01-18",
+        "event_mean": 2.0,
+        "control_mean": 16.006,
+        "difference": -14.006
+      },
+      {
+        "date": "2004-01-05",
+        "event_mean": 2.0,
+        "control_mean": 16.083,
+        "difference": -14.083
+      },
+      {
+        "date": "2006-01-21",
+        "event_mean": 2.0,
+        "control_mean": 16.113,
+        "difference": -14.113
+      },
+      {
+        "date": "2007-02-24",
+        "event_mean": 2.0,
+        "control_mean": 16.018,
+        "difference": -14.018
+      },
+      {
+        "date": "2008-02-22",
+        "event_mean": 2.0,
+        "control_mean": 15.952,
+        "difference": -13.952
+      },
+      {
+        "date": "2009-01-24",
+        "event_mean": 2.0,
+        "control_mean": 16.06,
+        "difference": -14.06
+      },
+      {
+        "date": "2010-02-09",
+        "event_mean": 2.0,
+        "control_mean": 16.149,
+        "difference": -14.149
+      },
+      {
+        "date": "2012-01-11",
+        "event_mean": 2.0,
+        "control_mean": 16.155,
+        "difference": -14.155
+      },
+      {
+        "date": "2013-01-07",
+        "event_mean": 3.067,
+        "control_mean": 16.137,
+        "difference": -13.07
+      },
+      {
+        "date": "2019-01-01",
+        "event_mean": 23.6,
+        "control_mean": 16.101,
+        "difference": 7.499
+      }
+    ],
+    "leave_one_out": [
+      {
+        "dropped": "1998-12-15",
+        "p": 2e-06
+      },
+      {
+        "dropped": "1999-02-26",
+        "p": 2e-06
+      },
+      {
+        "dropped": "2001-02-11",
+        "p": 2e-06
+      },
+      {
+        "dropped": "2001-12-30",
+        "p": 2e-06
+      },
+      {
+        "dropped": "2002-02-17",
+        "p": 2e-06
+      },
+      {
+        "dropped": "2003-01-18",
+        "p": 2e-06
+      },
+      {
+        "dropped": "2004-01-05",
+        "p": 2e-06
+      },
+      {
+        "dropped": "2006-01-21",
+        "p": 2e-06
+      },
+      {
+        "dropped": "2007-02-24",
+        "p": 2e-06
+      },
+      {
+        "dropped": "2008-02-22",
+        "p": 2e-06
+      },
+      {
+        "dropped": "2009-01-24",
+        "p": 2e-06
+      },
+      {
+        "dropped": "2010-02-09",
+        "p": 2e-06
+      },
+      {
+        "dropped": "2012-01-11",
+        "p": 2e-06
+      },
+      {
+        "dropped": "2013-01-07",
+        "p": 2e-06
+      },
+      {
+        "dropped": "2019-01-01",
+        "p": 0.0
+      }
+    ]
+  }
+}

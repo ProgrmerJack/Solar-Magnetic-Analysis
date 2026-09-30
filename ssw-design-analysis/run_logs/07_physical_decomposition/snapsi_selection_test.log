@@ -1,0 +1,112 @@
+  EXCLUDED NRL: S identically zero (max |S| = 0.00781 Pa)
+  usable centres: ['CCCma', 'CNR-ISAC', 'ECCC', 'ECMWF', 'KMA', 'Meteo-France', 'NCAR', 'SNU', 'UKMO']
+
+centre   init        arm         n   DW  NDW   rate       DW      NDW  contrast
+----------------------------------------------------------------------------------
+CCCma    s20180125   nudged     50   37   13   0.74   -1.073   +0.370    -1.443
+CCCma    s20180125   control    50   23   27   0.46   -0.848   +0.722    -1.571
+CCCma    s20180208   nudged     50   38   12   0.76   -1.264   +0.575    -1.839
+CCCma    s20180208   control    50   24   26   0.48   -0.866   +0.800    -1.666
+CCCma    s20181213   nudged     50   36   14   0.72   -0.802   +0.281    -1.083
+CCCma    s20181213   control    50   21   29   0.42   -0.824   +0.597    -1.421
+CCCma    s20190108   nudged     38   29    9   0.76   -0.975   +0.394    -1.369
+CCCma    s20190108   control    47   22   25   0.47   -0.859   +0.756    -1.615
+CNR-ISAC s20180125   nudged     50   38   12   0.76   -1.264   +0.323    -1.587
+CNR-ISAC s20180125   control    50   22   28   0.44   -0.987   +0.775    -1.762
+CNR-ISAC s20180208   nudged     50   39   11   0.78   -1.147   +0.283    -1.431
+CNR-ISAC s20180208   control    50   19   31   0.38   -0.998   +0.612    -1.610
+CNR-ISAC s20181213   nudged     50   24   26   0.48   -1.125   +0.854    -1.979
+CNR-ISAC s20181213   control    50   23   27   0.46   -0.849   +0.723    -1.572
+CNR-ISAC s20190108   control    50   24   26   0.48   -0.804   +0.742    -1.546
+CNR-ISAC s20190829   nudged     50   40   10   0.80   -1.063   +0.613    -1.676
+CNR-ISAC s20190829   control    50   19   31   0.38   -1.004   +0.615    -1.619
+ECCC     s20180125   control    50   24   26   0.48   -0.858   +0.792    -1.649
+ECCC     s20180208   control    50   22   28   0.44   -0.882   +0.693    -1.575
+ECCC     s20181213   control    50   21   29   0.42   -0.981   +0.710    -1.691
+ECCC     s20190108   control    50   17   33   0.34   -1.045   +0.538    -1.583
+ECCC     s20190829   control    50   17   33   0.34   -1.041   +0.536    -1.577
+ECMWF    s20180125   nudged     51   43    8   0.84   -1.211   +0.380    -1.591
+ECMWF    s20180125   control    51   24   27   0.47   -0.819   +0.728    -1.546
+ECMWF    s20180208   nudged     51   47    4   0.92   -1.892   +0.175    -2.067
+ECMWF    s20180208   control    51   23   28   0.45   -0.909   +0.747    -1.656
+ECMWF    s20181213   nudged     51   40   11   0.78   -1.610   +0.346    -1.956
+ECMWF    s20181213   control    51   24   27   0.47   -0.821   +0.730    -1.551
+ECMWF    s20190108   control    51   23   28   0.45   -0.894   +0.734    -1.628
+ECMWF    s20190829   nudged     51   41   10   0.80   -1.873   +0.363    -2.236
+ECMWF    s20190829   control    51   24   27   0.47   -0.783   +0.696    -1.479
+KMA      s20180125   nudged     50   41    9   0.82   -1.487   +0.274    -1.761
+KMA      s20180125   control    50   24   26   0.48   -0.807   +0.745    -1.552
+KMA      s20180208   nudged     50   45    5   0.90   -1.549   +0.324    -1.873
+KMA      s20180208   control    50   22   28   0.44   -0.940   +0.738    -1.678
+KMA      s20181213   nudged     52   39   13   0.75   -1.101   +0.238    -1.339
+KMA      s20181213   control    50   23   27   0.46   -0.802   +0.683    -1.486
+KMA      s20190108   control    50   17   33   0.34   -1.035   +0.533    -1.568
+KMA      s20190829   nudged     50   42    8   0.84   -1.927   +0.369    -2.296
+KMA      s20190829   control    50   21   29   0.42   -0.940   +0.680    -1.620
+Meteo-France s20180125   nudged     50   33   17   0.66   -1.064   +0.306    -1.370
+Meteo-France s20180125   control    50   26   24   0.52   -0.727   +0.787    -1.514
+Meteo-France s20180208   nudged     50   44    6   0.88   -2.313   -1.149    -1.164
+Meteo-France s20180208   control    50   27   23   0.54   -0.764   +0.897    -1.661
+Meteo-France s20181213   nudged     50   32   18   0.64   -1.564   +0.520    -2.084
+Meteo-France s20181213   control    50   23   27   0.46   -0.837   +0.713    -1.550
+Meteo-France s20190108   control    50   23   27   0.46   -0.846   +0.721    -1.567
+Meteo-France s20190829   nudged     50   36   14   0.72   -1.303   +0.381    -1.683
+Meteo-France s20190829   control    50   23   27   0.46   -0.845   +0.720    -1.565
+NCAR     s20180125   nudged     51   43    8   0.84   -1.154   +0.248    -1.402
+NCAR     s20180125   control    51   20   31   0.39   -1.051   +0.678    -1.729
+NCAR     s20180208   control    51   27   24   0.53   -0.788   +0.886    -1.674
+NCAR     s20181213   nudged     51   41   10   0.80   -1.652   +0.347    -1.999
+NCAR     s20181213   control    51   25   26   0.49   -0.725   +0.697    -1.422
+NCAR     s20190108   nudged     51   41   10   0.80   -1.531   +0.057    -1.588
+NCAR     s20190108   control    51   24   27   0.47   -0.802   +0.713    -1.515
+NCAR     s20190829   nudged     51   32   19   0.63   -1.077   +0.645    -1.722
+NCAR     s20190829   control    51   21   30   0.41   -0.957   +0.670    -1.627
+SNU      s20180125   nudged     50   39   11   0.78   -1.384   +0.529    -1.913
+SNU      s20180125   control    50   23   27   0.46   -0.893   +0.760    -1.653
+SNU      s20180208   nudged     50   42    8   0.84   -1.400   -0.016    -1.384
+SNU      s20180208   control    50   18   32   0.36   -1.016   +0.572    -1.588
+SNU      s20181213   nudged     50   34   16   0.68   -0.965   +0.246    -1.211
+SNU      s20181213   control    50   22   28   0.44   -0.884   +0.694    -1.578
+SNU      s20190108   control    50   21   29   0.42   -0.769   +0.557    -1.326
+SNU      s20190829   nudged     50   35   15   0.70   -1.143   +0.409    -1.552
+SNU      s20190829   control    50   20   30   0.40   -0.920   +0.614    -1.534
+UKMO     s20180125   nudged     50   39   11   0.78   -1.117   +0.572    -1.689
+UKMO     s20180125   control    50   24   26   0.48   -0.879   +0.811    -1.690
+UKMO     s20180208   nudged     50   40   10   0.80   -1.172   +0.308    -1.479
+UKMO     s20180208   control    50   21   29   0.42   -0.976   +0.707    -1.682
+UKMO     s20181213   nudged     50   43    7   0.86   -1.574   +0.381    -1.955
+UKMO     s20181213   control    50   25   25   0.50   -0.791   +0.791    -1.581
+UKMO     s20190108   control    50   21   29   0.42   -0.909   +0.658    -1.567
+UKMO     s20190829   nudged     50   40   10   0.80   -2.051   +0.492    -2.542
+UKMO     s20190829   control    50   21   29   0.42   -0.958   +0.694    -1.652
+
+PAIRED (NH, 25 centre x init pairs, 8 centres): nudged -1.622 vs control -1.594; difference -0.028 [-0.1219, 0.0544]
+  residual from one-population threshold: nudged +0.195 [0.1074, 0.3024], control +0.002 [-0.0236, 0.0233]; paired +0.193 [0.1162, 0.2909]
+
+=== SOUTHERN HEMISPHERE (austral MINOR warming, reported separately) ===
+  nudged   contrast -1.958 sigma (n=7 of 8), DW rate unconditional 0.786, inits ['s20190829']
+  control  contrast -1.584 sigma (n=8 of 8), DW rate unconditional 0.413, inits ['s20190829']
+  The wind never reversed: this is a MINOR warming, not an SSW.
+
+=== RESULT ===
+
+  NUDGED   -- stratospheric forcing IDENTICAL by design
+     manufactured DW-NDW contrast : -1.622 sigma (sd 0.302, n=25)
+     DW rate, contrast subset     : 0.776  (25 of 36 ensembles)
+     DW rate, UNCONDITIONAL       : 0.842   [11 dropped, their rate 0.993]
+
+  CONTROL  -- NO SSW forcing at all (pure null)
+     manufactured DW-NDW contrast : -1.590 sigma (sd 0.089, n=36)
+     DW rate, contrast subset     : 0.450  (36 of 36 ensembles)
+     DW rate, UNCONDITIONAL       : 0.450
+
+  published contrast, same criterion: -0.708 sigma
+
+  In BOTH arms the classifier produces a large contrast. In the
+  nudged arm every member had the SAME stratosphere; in the control
+  arm there was no SSW at all. Neither contrast can reflect a
+  physical difference between groups -- both are entirely the cut.
+
+  Contrasts here are standardised by the CONTROL ensemble's member-to-member spread for a single event. The published -0.708 is standardised by the BETWEEN-EVENT spread in observations. These are different yardsticks, so ratio_to_published indicates scale and is not an exact like-for-like fraction.
+
+Saved -> results/current/8_experiment/snapsi_selection_test.json

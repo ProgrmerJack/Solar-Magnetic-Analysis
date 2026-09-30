@@ -1,0 +1,11 @@
+edge 30245 m; Seviour-rule events 1958-2009: {'displaced': 17, 'split': 13} (paper: 17 D, 18 S)
+cls|nam_8_25 {'n_split': 27, 'n_displaced': 10, 'mean_split': -0.505, 'mean_displaced': -0.261, 'diff_split_minus_displaced': -0.245, 'ci95': [-0.613, 0.128], 'p_perm_two_sided': 0.2768}
+cls|nam_8_52 {'n_split': 27, 'n_displaced': 10, 'mean_split': -0.422, 'mean_displaced': -0.402, 'diff_split_minus_displaced': -0.02, 'ci95': [-0.393, 0.367], 'p_perm_two_sided': 0.9216}
+cls|t_neur {'n_split': 27, 'n_displaced': 10, 'mean_split': -1.083, 'mean_displaced': -0.666, 'diff_split_minus_displaced': -0.417, 'ci95': [-2.406, 1.546], 'p_perm_two_sided': 0.6955}
+cls|dw_rate {'table_split_displaced_x_dw_ndw': [[21, 6], [6, 4]], 'dw_rate_split': 0.778, 'dw_rate_displaced': 0.6, 'fisher_p': 0.4073}
+cls7|nam_8_25 {'n_split': 9, 'n_displaced': 10, 'mean_split': -0.703, 'mean_displaced': -0.302, 'diff_split_minus_displaced': -0.401, 'ci95': [-0.85, 0.052], 'p_perm_two_sided': 0.122}
+cls7|nam_8_52 {'n_split': 9, 'n_displaced': 10, 'mean_split': -0.621, 'mean_displaced': -0.598, 'diff_split_minus_displaced': -0.023, 'ci95': [-0.413, 0.383], 'p_perm_two_sided': 0.9153}
+cls7|t_neur {'n_split': 9, 'n_displaced': 10, 'mean_split': -1.371, 'mean_displaced': -0.501, 'diff_split_minus_displaced': -0.87, 'ci95': [-3.179, 1.391], 'p_perm_two_sided': 0.4813}
+cls7|dw_rate {'table_split_displaced_x_dw_ndw': [[8, 1], [5, 5]], 'dw_rate_split': 0.889, 'dw_rate_displaced': 0.5, 'fisher_p': 0.1409}
+Saved -> vortex_geometry_test.json
+exit=0 secs=3

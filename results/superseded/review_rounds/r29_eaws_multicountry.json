@@ -1,0 +1,223 @@
+{
+  "country_results": {
+    "AT": {
+      "country": "Austria",
+      "ssw_mean": 2.383,
+      "ctrl_mean": 2.216,
+      "delta": 0.167,
+      "cohens_d": 0.222,
+      "mw_p": 1.0,
+      "n_ssw": 2788,
+      "n_ctrl": 18965,
+      "direction": "increase"
+    },
+    "CH": {
+      "country": "Switzerland",
+      "ssw_mean": 2.473,
+      "ctrl_mean": 2.386,
+      "delta": 0.087,
+      "cohens_d": 0.14,
+      "mw_p": 1.0,
+      "n_ssw": 7223,
+      "n_ctrl": 50872,
+      "direction": "increase"
+    },
+    "FR": {
+      "country": "France",
+      "ssw_mean": 2.562,
+      "ctrl_mean": 2.653,
+      "delta": -0.09,
+      "cohens_d": -0.125,
+      "mw_p": 4.13405331856282e-08,
+      "n_ssw": 1426,
+      "n_ctrl": 9957,
+      "direction": "decrease"
+    },
+    "IT": {
+      "country": "Italy",
+      "ssw_mean": 2.097,
+      "ctrl_mean": 2.386,
+      "delta": -0.289,
+      "cohens_d": -0.383,
+      "mw_p": 8.676444388563613e-151,
+      "n_ssw": 5743,
+      "n_ctrl": 40629,
+      "direction": "decrease"
+    },
+    "DE": {
+      "country": "Germany",
+      "ssw_mean": 2.79,
+      "ctrl_mean": 2.17,
+      "delta": 0.62,
+      "cohens_d": 0.893,
+      "mw_p": 1.0,
+      "n_ssw": 372,
+      "n_ctrl": 2526,
+      "direction": "increase"
+    }
+  },
+  "event_pairs": [
+    {
+      "ssw_date": "2012-01-11",
+      "country": "AT",
+      "ssw_mean": 2.548,
+      "ctrl_mean": 2.216,
+      "delta": 0.332,
+      "mw_p": 1.0,
+      "n_ssw": 1374,
+      "n_ctrl": 18965,
+      "direction": "increase"
+    },
+    {
+      "ssw_date": "2012-01-11",
+      "country": "CH",
+      "ssw_mean": 2.632,
+      "ctrl_mean": 2.386,
+      "delta": 0.247,
+      "mw_p": 1.0,
+      "n_ssw": 3597,
+      "n_ctrl": 50872,
+      "direction": "increase"
+    },
+    {
+      "ssw_date": "2012-01-11",
+      "country": "FR",
+      "ssw_mean": 2.518,
+      "ctrl_mean": 2.653,
+      "delta": -0.135,
+      "mw_p": 0.0,
+      "n_ssw": 713,
+      "n_ctrl": 9957,
+      "direction": "decrease"
+    },
+    {
+      "ssw_date": "2012-01-11",
+      "country": "IT",
+      "ssw_mean": 1.899,
+      "ctrl_mean": 2.386,
+      "delta": -0.487,
+      "mw_p": 0.0,
+      "n_ssw": 2860,
+      "n_ctrl": 40629,
+      "direction": "decrease"
+    },
+    {
+      "ssw_date": "2012-01-11",
+      "country": "DE",
+      "ssw_mean": 2.995,
+      "ctrl_mean": 2.17,
+      "delta": 0.824,
+      "mw_p": 1.0,
+      "n_ssw": 186,
+      "n_ctrl": 2526,
+      "direction": "increase"
+    },
+    {
+      "ssw_date": "2013-01-07",
+      "country": "AT",
+      "ssw_mean": 2.223,
+      "ctrl_mean": 2.216,
+      "delta": 0.007,
+      "mw_p": 0.768263,
+      "n_ssw": 1414,
+      "n_ctrl": 18965,
+      "direction": "increase"
+    },
+    {
+      "ssw_date": "2013-01-07",
+      "country": "CH",
+      "ssw_mean": 2.315,
+      "ctrl_mean": 2.386,
+      "delta": -0.07,
+      "mw_p": 0.0,
+      "n_ssw": 3626,
+      "n_ctrl": 50872,
+      "direction": "decrease"
+    },
+    {
+      "ssw_date": "2013-01-07",
+      "country": "FR",
+      "ssw_mean": 2.607,
+      "ctrl_mean": 2.653,
+      "delta": -0.046,
+      "mw_p": 0.004652,
+      "n_ssw": 713,
+      "n_ctrl": 9957,
+      "direction": "decrease"
+    },
+    {
+      "ssw_date": "2013-01-07",
+      "country": "IT",
+      "ssw_mean": 2.293,
+      "ctrl_mean": 2.386,
+      "delta": -0.093,
+      "mw_p": 0.0,
+      "n_ssw": 2883,
+      "n_ctrl": 40629,
+      "direction": "decrease"
+    },
+    {
+      "ssw_date": "2013-01-07",
+      "country": "DE",
+      "ssw_mean": 2.586,
+      "ctrl_mean": 2.17,
+      "delta": 0.416,
+      "mw_p": 1.0,
+      "n_ssw": 186,
+      "n_ctrl": 2526,
+      "direction": "increase"
+    }
+  ],
+  "region_results": [
+    {
+      "country": "AT",
+      "n_decrease": 13,
+      "n_total": 46,
+      "pct_decrease": 28.3,
+      "sign_test_p": 0.999179
+    },
+    {
+      "country": "CH",
+      "n_decrease": 25,
+      "n_total": 117,
+      "pct_decrease": 21.4,
+      "sign_test_p": 1.0
+    },
+    {
+      "country": "FR",
+      "n_decrease": 15,
+      "n_total": 23,
+      "pct_decrease": 65.2,
+      "sign_test_p": 0.10502
+    },
+    {
+      "country": "IT",
+      "n_decrease": 80,
+      "n_total": 93,
+      "pct_decrease": 86.0,
+      "sign_test_p": 0.0
+    },
+    {
+      "country": "DE",
+      "n_decrease": 0,
+      "n_total": 6,
+      "pct_decrease": 0.0,
+      "sign_test_p": 1.0
+    }
+  ],
+  "alpine_wide": {
+    "ssw_mean": 2.35,
+    "ctrl_mean": 2.377,
+    "delta": -0.027,
+    "cohens_d": -0.038,
+    "mw_p": 1.299954545121667e-06,
+    "n_ssw": 17552,
+    "n_ctrl": 122949
+  },
+  "concordance": {
+    "eaws_decrease": 5,
+    "eaws_total": 10,
+    "all_decrease": 37,
+    "all_total": 46
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "swiss_n": 16,
+  "swiss_n_decrease": 14,
+  "swiss_mean_diff": -0.36074999999999996,
+  "swiss_sign_p": 0.0020904541015625,
+  "utah_n": 4,
+  "utah_n_decrease": 4,
+  "utah_mean_diff": -0.9775,
+  "utah_paired_t_p": 0.040645599049423345,
+  "combined_n": 20,
+  "combined_n_decrease": 18,
+  "combined_sign_p": 0.00020122528076171875,
+  "combined_wilcoxon_p": 0.012079238891601562,
+  "meta_re_pooled": -0.75050630320227,
+  "meta_re_se": 0.2974428081398174,
+  "meta_re_p": 0.011629378566972957,
+  "meta_re_ci": [
+    -1.333494207156312,
+    -0.16751839924822787
+  ],
+  "meta_Q": 1.4628352267684326,
+  "meta_I2": 31.63960084492138,
+  "meta_tau2": 0.06017544583333335
+}

@@ -1,0 +1,219 @@
+{
+  "plan_approved": "2026-09-29",
+  "seed": 1115515796,
+  "n": 10000,
+  "edge_m": 30245.5,
+  "validation_1958_2009": {
+    "displaced": 17,
+    "split": 13
+  },
+  "validation_reference_seviour2013": {
+    "displaced": 17,
+    "split": 18,
+    "winters": 52
+  },
+  "classification": {
+    "1958-01-30": "split",
+    "1960-01-17": "split",
+    "1963-01-28": "split",
+    "1965-12-16": "split",
+    "1966-02-23": "displaced",
+    "1968-01-07": "split",
+    "1968-11-28": "displaced",
+    "1969-03-13": "unclassified",
+    "1970-01-02": "split",
+    "1971-01-18": "split",
+    "1971-03-20": "displaced",
+    "1973-01-31": "split",
+    "1977-01-09": "split",
+    "1979-02-22": "split",
+    "1980-02-29": "displaced",
+    "1981-03-04": "split",
+    "1981-12-04": "unclassified",
+    "1984-02-24": "split",
+    "1985-01-01": "split",
+    "1987-01-23": "displaced",
+    "1987-12-08": "split",
+    "1988-03-14": "split",
+    "1989-02-21": "split",
+    "1998-12-15": "split",
+    "1999-02-26": "split",
+    "2000-03-20": "displaced",
+    "2001-02-11": "split",
+    "2001-12-30": "split",
+    "2003-01-18": "split",
+    "2004-01-05": "displaced",
+    "2006-01-21": "split",
+    "2007-02-24": "displaced",
+    "2008-02-22": "displaced",
+    "2009-01-24": "split",
+    "2010-02-09": "split",
+    "2010-03-24": "displaced",
+    "2013-01-06": "split",
+    "2018-02-12": "split",
+    "2019-01-02": "split",
+    "2021-01-05": "split",
+    "2023-02-16": "displaced",
+    "2024-01-16": "split",
+    "2024-03-04": "split"
+  },
+  "classification_7day": {
+    "1958-01-30": "displaced",
+    "1960-01-17": "unclassified",
+    "1963-01-28": "unclassified",
+    "1965-12-16": "displaced",
+    "1966-02-23": "displaced",
+    "1968-01-07": "unclassified",
+    "1968-11-28": "displaced",
+    "1969-03-13": "unclassified",
+    "1970-01-02": "unclassified",
+    "1971-01-18": "split",
+    "1971-03-20": "unclassified",
+    "1973-01-31": "unclassified",
+    "1977-01-09": "unclassified",
+    "1979-02-22": "split",
+    "1980-02-29": "unclassified",
+    "1981-03-04": "unclassified",
+    "1981-12-04": "unclassified",
+    "1984-02-24": "displaced",
+    "1985-01-01": "split",
+    "1987-01-23": "displaced",
+    "1987-12-08": "split",
+    "1988-03-14": "unclassified",
+    "1989-02-21": "unclassified",
+    "1998-12-15": "unclassified",
+    "1999-02-26": "split",
+    "2000-03-20": "unclassified",
+    "2001-02-11": "split",
+    "2001-12-30": "unclassified",
+    "2003-01-18": "split",
+    "2004-01-05": "displaced",
+    "2006-01-21": "displaced",
+    "2007-02-24": "unclassified",
+    "2008-02-22": "displaced",
+    "2009-01-24": "split",
+    "2010-02-09": "unclassified",
+    "2010-03-24": "unclassified",
+    "2013-01-06": "split",
+    "2018-02-12": "displaced",
+    "2019-01-02": "displaced",
+    "2021-01-05": "unclassified",
+    "2023-02-16": "displaced",
+    "2024-01-16": "unclassified",
+    "2024-03-04": "displaced"
+  },
+  "counts": {
+    "split": 30,
+    "displaced": 11,
+    "unclassified": 2
+  },
+  "counts_7day": {
+    "unclassified": 21,
+    "displaced": 13,
+    "split": 9
+  },
+  "tests": {
+    "cls|nam_8_25": {
+      "n_split": 27,
+      "n_displaced": 10,
+      "mean_split": -0.505,
+      "mean_displaced": -0.261,
+      "diff_split_minus_displaced": -0.245,
+      "ci95": [
+        -0.613,
+        0.128
+      ],
+      "p_perm_two_sided": 0.2768
+    },
+    "cls|nam_8_52": {
+      "n_split": 27,
+      "n_displaced": 10,
+      "mean_split": -0.422,
+      "mean_displaced": -0.402,
+      "diff_split_minus_displaced": -0.02,
+      "ci95": [
+        -0.393,
+        0.367
+      ],
+      "p_perm_two_sided": 0.9216
+    },
+    "cls|t_neur": {
+      "n_split": 27,
+      "n_displaced": 10,
+      "mean_split": -1.083,
+      "mean_displaced": -0.666,
+      "diff_split_minus_displaced": -0.417,
+      "ci95": [
+        -2.406,
+        1.546
+      ],
+      "p_perm_two_sided": 0.6955
+    },
+    "cls|dw_rate": {
+      "table_split_displaced_x_dw_ndw": [
+        [
+          21,
+          6
+        ],
+        [
+          6,
+          4
+        ]
+      ],
+      "dw_rate_split": 0.778,
+      "dw_rate_displaced": 0.6,
+      "fisher_p": 0.4073
+    },
+    "cls7|nam_8_25": {
+      "n_split": 9,
+      "n_displaced": 10,
+      "mean_split": -0.703,
+      "mean_displaced": -0.302,
+      "diff_split_minus_displaced": -0.401,
+      "ci95": [
+        -0.85,
+        0.052
+      ],
+      "p_perm_two_sided": 0.122
+    },
+    "cls7|nam_8_52": {
+      "n_split": 9,
+      "n_displaced": 10,
+      "mean_split": -0.621,
+      "mean_displaced": -0.598,
+      "diff_split_minus_displaced": -0.023,
+      "ci95": [
+        -0.413,
+        0.383
+      ],
+      "p_perm_two_sided": 0.9153
+    },
+    "cls7|t_neur": {
+      "n_split": 9,
+      "n_displaced": 10,
+      "mean_split": -1.371,
+      "mean_displaced": -0.501,
+      "diff_split_minus_displaced": -0.87,
+      "ci95": [
+        -3.179,
+        1.391
+      ],
+      "p_perm_two_sided": 0.4813
+    },
+    "cls7|dw_rate": {
+      "table_split_displaced_x_dw_ndw": [
+        [
+          8,
+          1
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "dw_rate_split": 0.889,
+      "dw_rate_displaced": 0.5,
+      "fisher_p": 0.1409
+    }
+  }
+}

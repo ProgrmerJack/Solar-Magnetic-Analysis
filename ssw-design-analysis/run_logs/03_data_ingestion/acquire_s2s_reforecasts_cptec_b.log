@@ -1,0 +1,31 @@
+cptec: 43 requests; hindcast years 1999-2018
+  2023-01-04_h01-13 fetched
+  2023-01-04_h01-07 fetched
+  2023-01-04_h01-10 fetched
+  2023-01-04_h01-01 fetched
+  2023-01-04_h01-16 fetched
+  2023-01-04_h01-04 fetched
+  2023-01-04_h01-19 fetched
+  2023-01-04_h01-22 fetched
+  2023-01-04_h02-01 FAILED: ECDS request 953bf2a8-849e-49b3-93e0-5f4f8f960301 ended successful
+  2023-01-04_h01-25 fetched
+  2023-01-04_h01-28 fetched
+  2023-01-04_h01-31 fetched
+  2023-01-04_h02-04 fetched
+  2023-01-04_h02-07 fetched
+  2023-01-04_h02-10 fetched
+  2023-01-04_h02-13 fetched
+  2023-01-04_h02-16 fetched
+  2023-01-04_h02-19 fetched
+Recovering from connection error [HTTPSConnectionPool(host='ecds.ecmwf.int', port=443): Read timed out. (read timeout=60)], attempt 1 of 500
+Retrying in 120 seconds
+  2023-01-04_h02-28 fetched
+  2023-01-04_h02-22 fetched
+  2023-01-04_h03-01 fetched
+  2023-01-04_h03-04 fetched
+  2023-01-04_h03-07 fetched
+  2023-01-04_h02-25 fetched
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+  2023-01-04_h03-10 fetched
+  2023-01-04_h03-13 fetched

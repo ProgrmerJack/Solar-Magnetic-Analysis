@@ -1,0 +1,590 @@
+{
+  "part": 2,
+  "description": "Isolated events sensitivity grid",
+  "grid": [
+    {
+      "separation": 7,
+      "stratum_width": 7,
+      "direction": "pre",
+      "n_events": 333,
+      "rr": 0.6601,
+      "ci_lo": 0.3726,
+      "ci_hi": 1.1693,
+      "p": 0.154456
+    },
+    {
+      "separation": 7,
+      "stratum_width": 7,
+      "direction": "post",
+      "n_events": 333,
+      "rr": 0.7773,
+      "ci_lo": 0.6744,
+      "ci_hi": 0.8959,
+      "p": 0.000506
+    },
+    {
+      "separation": 7,
+      "stratum_width": 10,
+      "direction": "pre",
+      "n_events": 333,
+      "rr": 0.719,
+      "ci_lo": 0.1036,
+      "ci_hi": 4.987,
+      "p": 0.738447
+    },
+    {
+      "separation": 7,
+      "stratum_width": 10,
+      "direction": "post",
+      "n_events": 333,
+      "rr": 1.5798,
+      "ci_lo": 1.3311,
+      "ci_hi": 1.875,
+      "p": 0.0
+    },
+    {
+      "separation": 7,
+      "stratum_width": 14,
+      "direction": "pre",
+      "n_events": 333,
+      "rr": 1.068,
+      "ci_lo": 1.0104,
+      "ci_hi": 1.1289,
+      "p": 0.019951
+    },
+    {
+      "separation": 7,
+      "stratum_width": 14,
+      "direction": "post",
+      "n_events": 333,
+      "rr": 1.3404,
+      "ci_lo": 1.2348,
+      "ci_hi": 1.4552,
+      "p": 0.0
+    },
+    {
+      "separation": 7,
+      "stratum_width": 21,
+      "direction": "pre",
+      "n_events": 333,
+      "rr": 0.7047,
+      "ci_lo": 0.5854,
+      "ci_hi": 0.8482,
+      "p": 0.000215
+    },
+    {
+      "separation": 7,
+      "stratum_width": 21,
+      "direction": "post",
+      "n_events": 333,
+      "rr": 0.5388,
+      "ci_lo": 0.396,
+      "ci_hi": 0.733,
+      "p": 8.2e-05
+    },
+    {
+      "separation": 10,
+      "stratum_width": 7,
+      "direction": "pre",
+      "n_events": 232,
+      "rr": 0.6816,
+      "ci_lo": 0.0,
+      "ci_hi": 554556756649.4841,
+      "p": 0.978144
+    },
+    {
+      "separation": 10,
+      "stratum_width": 7,
+      "direction": "post",
+      "n_events": 232,
+      "rr": 0.9667,
+      "ci_lo": 0.9381,
+      "ci_hi": 0.9961,
+      "p": 0.026587
+    },
+    {
+      "separation": 10,
+      "stratum_width": 10,
+      "direction": "pre",
+      "n_events": 232,
+      "rr": 0.7256,
+      "ci_lo": 0.4664,
+      "ci_hi": 1.1288,
+      "p": 0.154878
+    },
+    {
+      "separation": 10,
+      "stratum_width": 10,
+      "direction": "post",
+      "n_events": 232,
+      "rr": 1.8217,
+      "ci_lo": 1.4641,
+      "ci_hi": 2.2667,
+      "p": 0.0
+    },
+    {
+      "separation": 10,
+      "stratum_width": 14,
+      "direction": "pre",
+      "n_events": 232,
+      "rr": 0.7797,
+      "ci_lo": 0.5621,
+      "ci_hi": 1.0816,
+      "p": 0.136224
+    },
+    {
+      "separation": 10,
+      "stratum_width": 14,
+      "direction": "post",
+      "n_events": 232,
+      "rr": 1.3345,
+      "ci_lo": 1.2254,
+      "ci_hi": 1.4532,
+      "p": 0.0
+    },
+    {
+      "separation": 10,
+      "stratum_width": 21,
+      "direction": "pre",
+      "n_events": 232,
+      "rr": 0.778,
+      "ci_lo": 0.6897,
+      "ci_hi": 0.8777,
+      "p": 4.5e-05
+    },
+    {
+      "separation": 10,
+      "stratum_width": 21,
+      "direction": "post",
+      "n_events": 232,
+      "rr": 0.9163,
+      "ci_lo": 0.7696,
+      "ci_hi": 1.091,
+      "p": 0.326307
+    },
+    {
+      "separation": 14,
+      "stratum_width": 7,
+      "direction": "pre",
+      "n_events": 126,
+      "rr": 0.5211,
+      "ci_lo": 0.3831,
+      "ci_hi": 0.709,
+      "p": 3.3e-05
+    },
+    {
+      "separation": 14,
+      "stratum_width": 7,
+      "direction": "post",
+      "n_events": 126,
+      "rr": 0.4982,
+      "ci_lo": 0.2127,
+      "ci_hi": 1.1668,
+      "p": 0.108551
+    },
+    {
+      "separation": 14,
+      "stratum_width": 10,
+      "direction": "pre",
+      "n_events": 126,
+      "rr": 0.996,
+      "ci_lo": 0.9925,
+      "ci_hi": 0.9995,
+      "p": 0.023734
+    },
+    {
+      "separation": 14,
+      "stratum_width": 10,
+      "direction": "post",
+      "n_events": 126,
+      "rr": 1.5034,
+      "ci_lo": 0.9914,
+      "ci_hi": 2.28,
+      "p": 0.054952
+    },
+    {
+      "separation": 14,
+      "stratum_width": 14,
+      "direction": "pre",
+      "n_events": 126,
+      "rr": 1.0989,
+      "ci_lo": 1.0062,
+      "ci_hi": 1.2002,
+      "p": 0.035967
+    },
+    {
+      "separation": 14,
+      "stratum_width": 14,
+      "direction": "post",
+      "n_events": 126,
+      "rr": 1.8084,
+      "ci_lo": 1.6181,
+      "ci_hi": 2.0211,
+      "p": 0.0
+    },
+    {
+      "separation": 14,
+      "stratum_width": 21,
+      "direction": "pre",
+      "n_events": 126,
+      "rr": 1.0539,
+      "ci_lo": 0.967,
+      "ci_hi": 1.1486,
+      "p": 0.231693
+    },
+    {
+      "separation": 14,
+      "stratum_width": 21,
+      "direction": "post",
+      "n_events": 126,
+      "rr": 0.9422,
+      "ci_lo": 0.725,
+      "ci_hi": 1.2244,
+      "p": 0.656116
+    },
+    {
+      "separation": 21,
+      "stratum_width": 7,
+      "direction": "pre",
+      "n_events": 55,
+      "rr": 0.2134,
+      "ci_lo": 0.1232,
+      "ci_hi": 0.3697,
+      "p": 0.0
+    },
+    {
+      "separation": 21,
+      "stratum_width": 7,
+      "direction": "post",
+      "n_events": 55,
+      "rr": 0.9539,
+      "ci_lo": 0.7473,
+      "ci_hi": 1.2175,
+      "p": 0.704317
+    },
+    {
+      "separation": 21,
+      "stratum_width": 10,
+      "direction": "pre",
+      "n_events": 55,
+      "rr": 0.9896,
+      "ci_lo": 0.9798,
+      "ci_hi": 0.9994,
+      "p": 0.036746
+    },
+    {
+      "separation": 21,
+      "stratum_width": 10,
+      "direction": "post",
+      "n_events": 55,
+      "rr": 2.2819,
+      "ci_lo": 1.6447,
+      "ci_hi": 3.1661,
+      "p": 1e-06
+    },
+    {
+      "separation": 21,
+      "stratum_width": 14,
+      "direction": "pre",
+      "n_events": 55,
+      "rr": 0.6026,
+      "ci_lo": 0.4919,
+      "ci_hi": 0.7383,
+      "p": 1e-06
+    },
+    {
+      "separation": 21,
+      "stratum_width": 14,
+      "direction": "post",
+      "n_events": 55,
+      "rr": 1.2501,
+      "ci_lo": 1.1365,
+      "ci_hi": 1.375,
+      "p": 4e-06
+    },
+    {
+      "separation": 21,
+      "stratum_width": 21,
+      "direction": "pre",
+      "n_events": 55,
+      "rr": 2.1175,
+      "ci_lo": 1.6206,
+      "ci_hi": 2.7667,
+      "p": 0.0
+    },
+    {
+      "separation": 21,
+      "stratum_width": 21,
+      "direction": "post",
+      "n_events": 55,
+      "rr": 0.5674,
+      "ci_lo": 0.4904,
+      "ci_hi": 0.6564,
+      "p": 0.0
+    },
+    {
+      "separation": 30,
+      "stratum_width": 7,
+      "direction": "pre",
+      "n_events": 12,
+      "rr": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.0,
+      "p": 0.0
+    },
+    {
+      "separation": 30,
+      "stratum_width": 7,
+      "direction": "post",
+      "n_events": 12,
+      "rr": 0.2667,
+      "ci_lo": 0.0003,
+      "ci_hi": 268.6379,
+      "p": 0.707932
+    },
+    {
+      "separation": 30,
+      "stratum_width": 10,
+      "direction": "pre",
+      "n_events": 12,
+      "rr": 0.54,
+      "ci_lo": 0.2655,
+      "ci_hi": 1.0981,
+      "p": 0.088846
+    },
+    {
+      "separation": 30,
+      "stratum_width": 10,
+      "direction": "post",
+      "n_events": 12,
+      "rr": 0.6923,
+      "ci_lo": 0.4707,
+      "ci_hi": 1.0181,
+      "p": 0.061675
+    },
+    {
+      "separation": 30,
+      "stratum_width": 14,
+      "direction": "pre",
+      "n_events": 12,
+      "rr": 1.4286,
+      "ci_lo": 0.5578,
+      "ci_hi": 3.6589,
+      "p": 0.457293
+    },
+    {
+      "separation": 30,
+      "stratum_width": 14,
+      "direction": "post",
+      "n_events": 12,
+      "rr": 1.8857,
+      "ci_lo": 0.9617,
+      "ci_hi": 3.6976,
+      "p": 0.064856
+    },
+    {
+      "separation": 30,
+      "stratum_width": 21,
+      "direction": "pre",
+      "n_events": 12,
+      "rr": 0.6336,
+      "ci_lo": 0.0781,
+      "ci_hi": 5.1392,
+      "p": 0.669184
+    },
+    {
+      "separation": 30,
+      "stratum_width": 21,
+      "direction": "post",
+      "n_events": 12,
+      "rr": 3.2118,
+      "ci_lo": 0.0418,
+      "ci_hi": 246.5477,
+      "p": 0.598289
+    }
+  ],
+  "contrasts": [
+    {
+      "separation": 7,
+      "stratum_width": 7,
+      "rr_post": 0.7773,
+      "rr_pre": 0.6601,
+      "post_sig": "True",
+      "pre_sig": "False",
+      "asymmetric": "True"
+    },
+    {
+      "separation": 7,
+      "stratum_width": 10,
+      "rr_post": 1.5798,
+      "rr_pre": 0.719,
+      "post_sig": "True",
+      "pre_sig": "False",
+      "asymmetric": "True"
+    },
+    {
+      "separation": 7,
+      "stratum_width": 14,
+      "rr_post": 1.3404,
+      "rr_pre": 1.068,
+      "post_sig": "True",
+      "pre_sig": "True",
+      "asymmetric": "False"
+    },
+    {
+      "separation": 7,
+      "stratum_width": 21,
+      "rr_post": 0.5388,
+      "rr_pre": 0.7047,
+      "post_sig": "True",
+      "pre_sig": "True",
+      "asymmetric": "False"
+    },
+    {
+      "separation": 10,
+      "stratum_width": 7,
+      "rr_post": 0.9667,
+      "rr_pre": 0.6816,
+      "post_sig": "True",
+      "pre_sig": "False",
+      "asymmetric": "True"
+    },
+    {
+      "separation": 10,
+      "stratum_width": 10,
+      "rr_post": 1.8217,
+      "rr_pre": 0.7256,
+      "post_sig": "True",
+      "pre_sig": "False",
+      "asymmetric": "True"
+    },
+    {
+      "separation": 10,
+      "stratum_width": 14,
+      "rr_post": 1.3345,
+      "rr_pre": 0.7797,
+      "post_sig": "True",
+      "pre_sig": "False",
+      "asymmetric": "True"
+    },
+    {
+      "separation": 10,
+      "stratum_width": 21,
+      "rr_post": 0.9163,
+      "rr_pre": 0.778,
+      "post_sig": "False",
+      "pre_sig": "True",
+      "asymmetric": "False"
+    },
+    {
+      "separation": 14,
+      "stratum_width": 7,
+      "rr_post": 0.4982,
+      "rr_pre": 0.5211,
+      "post_sig": "False",
+      "pre_sig": "True",
+      "asymmetric": "False"
+    },
+    {
+      "separation": 14,
+      "stratum_width": 10,
+      "rr_post": 1.5034,
+      "rr_pre": 0.996,
+      "post_sig": "False",
+      "pre_sig": "True",
+      "asymmetric": "False"
+    },
+    {
+      "separation": 14,
+      "stratum_width": 14,
+      "rr_post": 1.8084,
+      "rr_pre": 1.0989,
+      "post_sig": "True",
+      "pre_sig": "True",
+      "asymmetric": "False"
+    },
+    {
+      "separation": 14,
+      "stratum_width": 21,
+      "rr_post": 0.9422,
+      "rr_pre": 1.0539,
+      "post_sig": "False",
+      "pre_sig": "False",
+      "asymmetric": "False"
+    },
+    {
+      "separation": 21,
+      "stratum_width": 7,
+      "rr_post": 0.9539,
+      "rr_pre": 0.2134,
+      "post_sig": "False",
+      "pre_sig": "True",
+      "asymmetric": "False"
+    },
+    {
+      "separation": 21,
+      "stratum_width": 10,
+      "rr_post": 2.2819,
+      "rr_pre": 0.9896,
+      "post_sig": "True",
+      "pre_sig": "True",
+      "asymmetric": "False"
+    },
+    {
+      "separation": 21,
+      "stratum_width": 14,
+      "rr_post": 1.2501,
+      "rr_pre": 0.6026,
+      "post_sig": "True",
+      "pre_sig": "True",
+      "asymmetric": "False"
+    },
+    {
+      "separation": 21,
+      "stratum_width": 21,
+      "rr_post": 0.5674,
+      "rr_pre": 2.1175,
+      "post_sig": "True",
+      "pre_sig": "True",
+      "asymmetric": "False"
+    },
+    {
+      "separation": 30,
+      "stratum_width": 7,
+      "rr_post": 0.2667,
+      "rr_pre": 0.0,
+      "post_sig": "False",
+      "pre_sig": "True",
+      "asymmetric": "False"
+    },
+    {
+      "separation": 30,
+      "stratum_width": 10,
+      "rr_post": 0.6923,
+      "rr_pre": 0.54,
+      "post_sig": "False",
+      "pre_sig": "False",
+      "asymmetric": "False"
+    },
+    {
+      "separation": 30,
+      "stratum_width": 14,
+      "rr_post": 1.8857,
+      "rr_pre": 1.4286,
+      "post_sig": "False",
+      "pre_sig": "False",
+      "asymmetric": "False"
+    },
+    {
+      "separation": 30,
+      "stratum_width": 21,
+      "rr_post": 3.2118,
+      "rr_pre": 0.6336,
+      "post_sig": "False",
+      "pre_sig": "False",
+      "asymmetric": "False"
+    }
+  ],
+  "n_asymmetric": 5,
+  "n_total_contrasts": 20
+}

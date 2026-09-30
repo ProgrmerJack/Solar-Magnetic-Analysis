@@ -1,0 +1,108 @@
+{
+  "var": "t2m",
+  "n_seeds": 100,
+  "n_null": 1000,
+  "centres": [
+    "ecmwf",
+    "eccc",
+    "cma",
+    "hmcr",
+    "kma",
+    "cnrm",
+    "jma",
+    "cnr_isac",
+    "ncep",
+    "cptec"
+  ],
+  "binomial_se_at_0.05": 0.022,
+  "cases": {
+    "equal_skill": {
+      "D_p_conditional": {
+        "rate_below_0.05": 0.1,
+        "mean": 0.351,
+        "n": 100
+      },
+      "H1_p": {
+        "rate_below_0.05": 0.03,
+        "mean": 0.462,
+        "n": 100
+      },
+      "H2_p": {
+        "rate_below_0.05": 0.02,
+        "mean": 0.398,
+        "n": 100
+      },
+      "H1c_p": {
+        "rate_below_0.05": 0.01,
+        "mean": 0.467,
+        "n": 100
+      }
+    },
+    "noise": {
+      "D_p_conditional": {
+        "rate_below_0.05": 0.05,
+        "mean": 0.486,
+        "n": 100
+      },
+      "H1_p": {
+        "rate_below_0.05": 1.0,
+        "mean": 0.007,
+        "n": 100
+      },
+      "H2_p": {
+        "rate_below_0.05": 0.0,
+        "mean": 0.376,
+        "n": 100
+      },
+      "H1c_p": {
+        "rate_below_0.05": 1.0,
+        "mean": 0.017,
+        "n": 100
+      }
+    },
+    "damped": {
+      "D_p_conditional": {
+        "rate_below_0.05": 0.1,
+        "mean": 0.389,
+        "n": 100
+      },
+      "H1_p": {
+        "rate_below_0.05": 0.32,
+        "mean": 0.162,
+        "n": 100
+      },
+      "H2_p": {
+        "rate_below_0.05": 0.03,
+        "mean": 0.419,
+        "n": 100
+      },
+      "H1c_p": {
+        "rate_below_0.05": 0.29,
+        "mean": 0.183,
+        "n": 100
+      }
+    },
+    "ssw_skill": {
+      "D_p_conditional": {
+        "rate_below_0.05": 1.0,
+        "mean": 0.0,
+        "n": 100
+      },
+      "H1_p": {
+        "rate_below_0.05": 0.19,
+        "mean": 0.125,
+        "n": 100
+      },
+      "H2_p": {
+        "rate_below_0.05": 0.0,
+        "mean": 0.382,
+        "n": 100
+      },
+      "H1c_p": {
+        "rate_below_0.05": 0.19,
+        "mean": 0.134,
+        "n": 100
+      }
+    }
+  }
+}

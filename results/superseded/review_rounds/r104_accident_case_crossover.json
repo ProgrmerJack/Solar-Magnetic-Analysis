@@ -1,0 +1,1176 @@
+{
+  "n_ssw": 40,
+  "window_days": 30,
+  "ssw_dates": [
+    "1979-02-21",
+    "1980-02-29",
+    "1981-02-15",
+    "1981-12-03",
+    "1984-02-22",
+    "1984-12-30",
+    "1987-01-22",
+    "1987-12-07",
+    "1988-03-12",
+    "1989-02-20",
+    "1991-02-04",
+    "1993-03-05",
+    "1995-01-23",
+    "1998-01-06",
+    "1998-12-15",
+    "1999-02-25",
+    "2000-11-24",
+    "2001-02-02",
+    "2001-12-29",
+    "2002-02-16",
+    "2002-03-28",
+    "2003-01-17",
+    "2003-02-17",
+    "2004-01-02",
+    "2006-01-14",
+    "2007-02-23",
+    "2008-02-22",
+    "2009-01-24",
+    "2010-01-24",
+    "2010-03-21",
+    "2013-01-07",
+    "2016-11-24",
+    "2017-02-01",
+    "2017-02-25",
+    "2018-02-12",
+    "2018-12-31",
+    "2021-01-04",
+    "2023-02-15",
+    "2024-01-15",
+    "2024-02-16"
+  ],
+  "arms": {
+    "CAIC_all_US": {
+      "dataset": "CAIC all US",
+      "n_accidents_total": 802,
+      "n_winters_informative": 30,
+      "n_ssw_events_tested": 40,
+      "n_accidents_in_ssw_windows": 175,
+      "nb_alpha": 1.713,
+      "IRR_ssw_window": 1.0949,
+      "IRR_model_CI95": [
+        0.874,
+        1.3715
+      ],
+      "p_model_two_sided": 0.4303405825988995,
+      "IRR_bootstrap_CI95": [
+        0.8068,
+        1.4616
+      ],
+      "p_bootstrap_one_sided_up": 0.2835,
+      "n_boot_ok": 2000,
+      "observed_vs_expected": {
+        "total_observed": 175.0,
+        "total_expected": 169.0,
+        "ratio": 1.0356,
+        "poisson_exact_p_one_sided": 0.3317374550115781,
+        "events_above_expectation": "21/40",
+        "sign_test_p_one_sided": 0.43731465619021037
+      },
+      "per_event": [
+        {
+          "onset": "1979-02-21",
+          "winter": 1979,
+          "observed": 1.0,
+          "expected": 2.11,
+          "oe_ratio": 0.473
+        },
+        {
+          "onset": "1980-02-29",
+          "winter": 1980,
+          "observed": 1.0,
+          "expected": 1.22,
+          "oe_ratio": 0.82
+        },
+        {
+          "onset": "1981-02-15",
+          "winter": 1981,
+          "observed": 5.0,
+          "expected": 3.02,
+          "oe_ratio": 1.654
+        },
+        {
+          "onset": "1981-12-03",
+          "winter": 1982,
+          "observed": 1.0,
+          "expected": 1.9,
+          "oe_ratio": 0.527
+        },
+        {
+          "onset": "1984-02-22",
+          "winter": 1984,
+          "observed": 2.0,
+          "expected": 2.39,
+          "oe_ratio": 0.836
+        },
+        {
+          "onset": "1984-12-30",
+          "winter": 1985,
+          "observed": 1.0,
+          "expected": 2.96,
+          "oe_ratio": 0.338
+        },
+        {
+          "onset": "1987-01-22",
+          "winter": 1987,
+          "observed": 5.0,
+          "expected": 2.39,
+          "oe_ratio": 2.09
+        },
+        {
+          "onset": "1987-12-07",
+          "winter": 1988,
+          "observed": 1.0,
+          "expected": 0.55,
+          "oe_ratio": 1.821
+        },
+        {
+          "onset": "1988-03-12",
+          "winter": 1988,
+          "observed": 0.0,
+          "expected": 0.49,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "1989-02-20",
+          "winter": 1989,
+          "observed": 1.0,
+          "expected": 1.49,
+          "oe_ratio": 0.669
+        },
+        {
+          "onset": "1991-02-04",
+          "winter": 1991,
+          "observed": 4.0,
+          "expected": 2.61,
+          "oe_ratio": 1.532
+        },
+        {
+          "onset": "1993-03-05",
+          "winter": 1993,
+          "observed": 3.0,
+          "expected": 4.45,
+          "oe_ratio": 0.674
+        },
+        {
+          "onset": "1995-01-23",
+          "winter": 1995,
+          "observed": 6.0,
+          "expected": 5.37,
+          "oe_ratio": 1.118
+        },
+        {
+          "onset": "1998-01-06",
+          "winter": 1998,
+          "observed": 8.0,
+          "expected": 5.2,
+          "oe_ratio": 1.538
+        },
+        {
+          "onset": "1998-12-15",
+          "winter": 1999,
+          "observed": 3.0,
+          "expected": 5.04,
+          "oe_ratio": 0.595
+        },
+        {
+          "onset": "1999-02-25",
+          "winter": 1999,
+          "observed": 1.0,
+          "expected": 5.14,
+          "oe_ratio": 0.195
+        },
+        {
+          "onset": "2000-11-24",
+          "winter": 2001,
+          "observed": 5.0,
+          "expected": 2.8,
+          "oe_ratio": 1.787
+        },
+        {
+          "onset": "2001-02-02",
+          "winter": 2001,
+          "observed": 8.0,
+          "expected": 7.7,
+          "oe_ratio": 1.04
+        },
+        {
+          "onset": "2001-12-29",
+          "winter": 2002,
+          "observed": 3.0,
+          "expected": 6.23,
+          "oe_ratio": 0.482
+        },
+        {
+          "onset": "2002-02-16",
+          "winter": 2002,
+          "observed": 10.0,
+          "expected": 6.82,
+          "oe_ratio": 1.466
+        },
+        {
+          "onset": "2002-03-28",
+          "winter": 2002,
+          "observed": 1.0,
+          "expected": 3.04,
+          "oe_ratio": 0.328
+        },
+        {
+          "onset": "2003-01-17",
+          "winter": 2003,
+          "observed": 8.0,
+          "expected": 7.06,
+          "oe_ratio": 1.133
+        },
+        {
+          "onset": "2003-02-17",
+          "winter": 2003,
+          "observed": 8.0,
+          "expected": 7.5,
+          "oe_ratio": 1.067
+        },
+        {
+          "onset": "2004-01-02",
+          "winter": 2004,
+          "observed": 3.0,
+          "expected": 4.35,
+          "oe_ratio": 0.69
+        },
+        {
+          "onset": "2006-01-14",
+          "winter": 2006,
+          "observed": 3.0,
+          "expected": 5.38,
+          "oe_ratio": 0.558
+        },
+        {
+          "onset": "2007-02-23",
+          "winter": 2007,
+          "observed": 6.0,
+          "expected": 4.45,
+          "oe_ratio": 1.349
+        },
+        {
+          "onset": "2008-02-22",
+          "winter": 2008,
+          "observed": 2.0,
+          "expected": 6.7,
+          "oe_ratio": 0.298
+        },
+        {
+          "onset": "2009-01-24",
+          "winter": 2009,
+          "observed": 1.0,
+          "expected": 6.43,
+          "oe_ratio": 0.156
+        },
+        {
+          "onset": "2010-01-24",
+          "winter": 2010,
+          "observed": 11.0,
+          "expected": 7.84,
+          "oe_ratio": 1.403
+        },
+        {
+          "onset": "2010-03-21",
+          "winter": 2010,
+          "observed": 7.0,
+          "expected": 4.03,
+          "oe_ratio": 1.739
+        },
+        {
+          "onset": "2013-01-07",
+          "winter": 2013,
+          "observed": 5.0,
+          "expected": 4.44,
+          "oe_ratio": 1.126
+        },
+        {
+          "onset": "2016-11-24",
+          "winter": 2017,
+          "observed": 3.0,
+          "expected": 1.24,
+          "oe_ratio": 2.412
+        },
+        {
+          "onset": "2017-02-01",
+          "winter": 2017,
+          "observed": 2.0,
+          "expected": 3.4,
+          "oe_ratio": 0.589
+        },
+        {
+          "onset": "2017-02-25",
+          "winter": 2017,
+          "observed": 1.0,
+          "expected": 2.66,
+          "oe_ratio": 0.376
+        },
+        {
+          "onset": "2018-02-12",
+          "winter": 2018,
+          "observed": 10.0,
+          "expected": 5.73,
+          "oe_ratio": 1.746
+        },
+        {
+          "onset": "2018-12-31",
+          "winter": 2019,
+          "observed": 9.0,
+          "expected": 5.67,
+          "oe_ratio": 1.588
+        },
+        {
+          "onset": "2021-01-04",
+          "winter": 2021,
+          "observed": 6.0,
+          "expected": 6.62,
+          "oe_ratio": 0.907
+        },
+        {
+          "onset": "2023-02-15",
+          "winter": 2023,
+          "observed": 11.0,
+          "expected": 5.82,
+          "oe_ratio": 1.889
+        },
+        {
+          "onset": "2024-01-15",
+          "winter": 2024,
+          "observed": 5.0,
+          "expected": 3.2,
+          "oe_ratio": 1.56
+        },
+        {
+          "onset": "2024-02-16",
+          "winter": 2024,
+          "observed": 4.0,
+          "expected": 3.54,
+          "oe_ratio": 1.13
+        }
+      ]
+    },
+    "CAIC_continental": {
+      "dataset": "CAIC continental",
+      "n_accidents_total": 577,
+      "n_winters_informative": 30,
+      "n_ssw_events_tested": 40,
+      "n_accidents_in_ssw_windows": 130,
+      "nb_alpha": 1.8923,
+      "IRR_ssw_window": 1.1241,
+      "IRR_model_CI95": [
+        0.8669,
+        1.4577
+      ],
+      "p_model_two_sided": 0.37742958166758667,
+      "IRR_bootstrap_CI95": [
+        0.7769,
+        1.5289
+      ],
+      "p_bootstrap_one_sided_up": 0.2575,
+      "n_boot_ok": 2000,
+      "observed_vs_expected": {
+        "total_observed": 130.0,
+        "total_expected": 123.0,
+        "ratio": 1.0571,
+        "poisson_exact_p_one_sided": 0.27499816254515674,
+        "events_above_expectation": "23/40",
+        "sign_test_p_one_sided": 0.21479525392169307
+      },
+      "per_event": [
+        {
+          "onset": "1979-02-21",
+          "winter": 1979,
+          "observed": 0.0,
+          "expected": 1.47,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "1980-02-29",
+          "winter": 1980,
+          "observed": 0.0,
+          "expected": 0.77,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "1981-02-15",
+          "winter": 1981,
+          "observed": 4.0,
+          "expected": 2.45,
+          "oe_ratio": 1.635
+        },
+        {
+          "onset": "1981-12-03",
+          "winter": 1982,
+          "observed": 1.0,
+          "expected": 0.84,
+          "oe_ratio": 1.195
+        },
+        {
+          "onset": "1984-02-22",
+          "winter": 1984,
+          "observed": 2.0,
+          "expected": 1.86,
+          "oe_ratio": 1.075
+        },
+        {
+          "onset": "1984-12-30",
+          "winter": 1985,
+          "observed": 1.0,
+          "expected": 2.47,
+          "oe_ratio": 0.405
+        },
+        {
+          "onset": "1987-01-22",
+          "winter": 1987,
+          "observed": 5.0,
+          "expected": 2.52,
+          "oe_ratio": 1.988
+        },
+        {
+          "onset": "1987-12-07",
+          "winter": 1988,
+          "observed": 1.0,
+          "expected": 0.4,
+          "oe_ratio": 2.514
+        },
+        {
+          "onset": "1988-03-12",
+          "winter": 1988,
+          "observed": 0.0,
+          "expected": 0.29,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "1989-02-20",
+          "winter": 1989,
+          "observed": 1.0,
+          "expected": 0.97,
+          "oe_ratio": 1.026
+        },
+        {
+          "onset": "1991-02-04",
+          "winter": 1991,
+          "observed": 3.0,
+          "expected": 2.05,
+          "oe_ratio": 1.462
+        },
+        {
+          "onset": "1993-03-05",
+          "winter": 1993,
+          "observed": 0.0,
+          "expected": 2.97,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "1995-01-23",
+          "winter": 1995,
+          "observed": 4.0,
+          "expected": 3.95,
+          "oe_ratio": 1.012
+        },
+        {
+          "onset": "1998-01-06",
+          "winter": 1998,
+          "observed": 7.0,
+          "expected": 4.41,
+          "oe_ratio": 1.588
+        },
+        {
+          "onset": "1998-12-15",
+          "winter": 1999,
+          "observed": 3.0,
+          "expected": 3.17,
+          "oe_ratio": 0.945
+        },
+        {
+          "onset": "1999-02-25",
+          "winter": 1999,
+          "observed": 0.0,
+          "expected": 2.78,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "2000-11-24",
+          "winter": 2001,
+          "observed": 4.0,
+          "expected": 2.06,
+          "oe_ratio": 1.941
+        },
+        {
+          "onset": "2001-02-02",
+          "winter": 2001,
+          "observed": 5.0,
+          "expected": 5.79,
+          "oe_ratio": 0.863
+        },
+        {
+          "onset": "2001-12-29",
+          "winter": 2002,
+          "observed": 2.0,
+          "expected": 5.0,
+          "oe_ratio": 0.4
+        },
+        {
+          "onset": "2002-02-16",
+          "winter": 2002,
+          "observed": 9.0,
+          "expected": 4.87,
+          "oe_ratio": 1.85
+        },
+        {
+          "onset": "2002-03-28",
+          "winter": 2002,
+          "observed": 0.0,
+          "expected": 1.71,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "2003-01-17",
+          "winter": 2003,
+          "observed": 7.0,
+          "expected": 5.87,
+          "oe_ratio": 1.192
+        },
+        {
+          "onset": "2003-02-17",
+          "winter": 2003,
+          "observed": 8.0,
+          "expected": 5.83,
+          "oe_ratio": 1.373
+        },
+        {
+          "onset": "2004-01-02",
+          "winter": 2004,
+          "observed": 2.0,
+          "expected": 2.41,
+          "oe_ratio": 0.829
+        },
+        {
+          "onset": "2006-01-14",
+          "winter": 2006,
+          "observed": 1.0,
+          "expected": 3.93,
+          "oe_ratio": 0.255
+        },
+        {
+          "onset": "2007-02-23",
+          "winter": 2007,
+          "observed": 5.0,
+          "expected": 4.07,
+          "oe_ratio": 1.229
+        },
+        {
+          "onset": "2008-02-22",
+          "winter": 2008,
+          "observed": 1.0,
+          "expected": 3.26,
+          "oe_ratio": 0.307
+        },
+        {
+          "onset": "2009-01-24",
+          "winter": 2009,
+          "observed": 0.0,
+          "expected": 4.22,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "2010-01-24",
+          "winter": 2010,
+          "observed": 9.0,
+          "expected": 7.39,
+          "oe_ratio": 1.219
+        },
+        {
+          "onset": "2010-03-21",
+          "winter": 2010,
+          "observed": 7.0,
+          "expected": 2.95,
+          "oe_ratio": 2.369
+        },
+        {
+          "onset": "2013-01-07",
+          "winter": 2013,
+          "observed": 5.0,
+          "expected": 3.32,
+          "oe_ratio": 1.506
+        },
+        {
+          "onset": "2016-11-24",
+          "winter": 2017,
+          "observed": 3.0,
+          "expected": 0.62,
+          "oe_ratio": 4.853
+        },
+        {
+          "onset": "2017-02-01",
+          "winter": 2017,
+          "observed": 2.0,
+          "expected": 1.73,
+          "oe_ratio": 1.155
+        },
+        {
+          "onset": "2017-02-25",
+          "winter": 2017,
+          "observed": 0.0,
+          "expected": 1.27,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "2018-02-12",
+          "winter": 2018,
+          "observed": 3.0,
+          "expected": 3.41,
+          "oe_ratio": 0.88
+        },
+        {
+          "onset": "2018-12-31",
+          "winter": 2019,
+          "observed": 9.0,
+          "expected": 5.49,
+          "oe_ratio": 1.64
+        },
+        {
+          "onset": "2021-01-04",
+          "winter": 2021,
+          "observed": 3.0,
+          "expected": 5.73,
+          "oe_ratio": 0.523
+        },
+        {
+          "onset": "2023-02-15",
+          "winter": 2023,
+          "observed": 8.0,
+          "expected": 4.95,
+          "oe_ratio": 1.618
+        },
+        {
+          "onset": "2024-01-15",
+          "winter": 2024,
+          "observed": 3.0,
+          "expected": 1.84,
+          "oe_ratio": 1.631
+        },
+        {
+          "onset": "2024-02-16",
+          "winter": 2024,
+          "observed": 2.0,
+          "expected": 1.89,
+          "oe_ratio": 1.058
+        }
+      ]
+    },
+    "CAIC_maritime": {
+      "dataset": "CAIC maritime",
+      "n_accidents_total": 210,
+      "n_winters_informative": 29,
+      "n_ssw_events_tested": 39,
+      "n_accidents_in_ssw_windows": 42,
+      "nb_alpha": 3.779,
+      "IRR_ssw_window": 1.0112,
+      "IRR_model_CI95": [
+        0.654,
+        1.5634
+      ],
+      "p_model_two_sided": 0.960110277101451,
+      "IRR_bootstrap_CI95": [
+        0.5962,
+        1.8274
+      ],
+      "p_bootstrap_one_sided_up": 0.4945,
+      "n_boot_ok": 2000,
+      "observed_vs_expected": {
+        "total_observed": 42.0,
+        "total_expected": 42.6,
+        "ratio": 0.9852,
+        "poisson_exact_p_one_sided": 0.5588795326066816,
+        "events_above_expectation": "16/39",
+        "sign_test_p_one_sided": 0.9002045665401965
+      },
+      "per_event": [
+        {
+          "onset": "1979-02-21",
+          "winter": 1979,
+          "observed": 1.0,
+          "expected": 0.65,
+          "oe_ratio": 1.547
+        },
+        {
+          "onset": "1980-02-29",
+          "winter": 1980,
+          "observed": 1.0,
+          "expected": 0.47,
+          "oe_ratio": 2.136
+        },
+        {
+          "onset": "1981-02-15",
+          "winter": 1981,
+          "observed": 1.0,
+          "expected": 0.56,
+          "oe_ratio": 1.786
+        },
+        {
+          "onset": "1981-12-03",
+          "winter": 1982,
+          "observed": 0.0,
+          "expected": 0.84,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "1984-02-22",
+          "winter": 1984,
+          "observed": 0.0,
+          "expected": 0.26,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "1984-12-30",
+          "winter": 1985,
+          "observed": 0.0,
+          "expected": 0.5,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "1987-12-07",
+          "winter": 1988,
+          "observed": 0.0,
+          "expected": 0.15,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "1988-03-12",
+          "winter": 1988,
+          "observed": 0.0,
+          "expected": 0.21,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "1989-02-20",
+          "winter": 1989,
+          "observed": 0.0,
+          "expected": 0.53,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "1991-02-04",
+          "winter": 1991,
+          "observed": 0.0,
+          "expected": 0.27,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "1993-03-05",
+          "winter": 1993,
+          "observed": 2.0,
+          "expected": 1.31,
+          "oe_ratio": 1.527
+        },
+        {
+          "onset": "1995-01-23",
+          "winter": 1995,
+          "observed": 2.0,
+          "expected": 1.32,
+          "oe_ratio": 1.51
+        },
+        {
+          "onset": "1998-01-06",
+          "winter": 1998,
+          "observed": 1.0,
+          "expected": 0.85,
+          "oe_ratio": 1.176
+        },
+        {
+          "onset": "1998-12-15",
+          "winter": 1999,
+          "observed": 0.0,
+          "expected": 1.54,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "1999-02-25",
+          "winter": 1999,
+          "observed": 1.0,
+          "expected": 2.51,
+          "oe_ratio": 0.399
+        },
+        {
+          "onset": "2000-11-24",
+          "winter": 2001,
+          "observed": 1.0,
+          "expected": 0.76,
+          "oe_ratio": 1.311
+        },
+        {
+          "onset": "2001-02-02",
+          "winter": 2001,
+          "observed": 3.0,
+          "expected": 1.84,
+          "oe_ratio": 1.629
+        },
+        {
+          "onset": "2001-12-29",
+          "winter": 2002,
+          "observed": 1.0,
+          "expected": 1.18,
+          "oe_ratio": 0.848
+        },
+        {
+          "onset": "2002-02-16",
+          "winter": 2002,
+          "observed": 1.0,
+          "expected": 1.94,
+          "oe_ratio": 0.515
+        },
+        {
+          "onset": "2002-03-28",
+          "winter": 2002,
+          "observed": 1.0,
+          "expected": 1.39,
+          "oe_ratio": 0.719
+        },
+        {
+          "onset": "2003-01-17",
+          "winter": 2003,
+          "observed": 1.0,
+          "expected": 1.03,
+          "oe_ratio": 0.974
+        },
+        {
+          "onset": "2003-02-17",
+          "winter": 2003,
+          "observed": 0.0,
+          "expected": 1.37,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "2004-01-02",
+          "winter": 2004,
+          "observed": 1.0,
+          "expected": 1.48,
+          "oe_ratio": 0.677
+        },
+        {
+          "onset": "2006-01-14",
+          "winter": 2006,
+          "observed": 2.0,
+          "expected": 1.35,
+          "oe_ratio": 1.48
+        },
+        {
+          "onset": "2007-02-23",
+          "winter": 2007,
+          "observed": 1.0,
+          "expected": 0.26,
+          "oe_ratio": 3.91
+        },
+        {
+          "onset": "2008-02-22",
+          "winter": 2008,
+          "observed": 1.0,
+          "expected": 3.08,
+          "oe_ratio": 0.324
+        },
+        {
+          "onset": "2009-01-24",
+          "winter": 2009,
+          "observed": 1.0,
+          "expected": 1.99,
+          "oe_ratio": 0.502
+        },
+        {
+          "onset": "2010-01-24",
+          "winter": 2010,
+          "observed": 2.0,
+          "expected": 0.67,
+          "oe_ratio": 2.993
+        },
+        {
+          "onset": "2010-03-21",
+          "winter": 2010,
+          "observed": 0.0,
+          "expected": 0.63,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "2013-01-07",
+          "winter": 2013,
+          "observed": 0.0,
+          "expected": 0.85,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "2016-11-24",
+          "winter": 2017,
+          "observed": 0.0,
+          "expected": 0.65,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "2017-02-01",
+          "winter": 2017,
+          "observed": 0.0,
+          "expected": 1.55,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "2017-02-25",
+          "winter": 2017,
+          "observed": 1.0,
+          "expected": 1.49,
+          "oe_ratio": 0.67
+        },
+        {
+          "onset": "2018-02-12",
+          "winter": 2018,
+          "observed": 7.0,
+          "expected": 2.3,
+          "oe_ratio": 3.037
+        },
+        {
+          "onset": "2018-12-31",
+          "winter": 2019,
+          "observed": 0.0,
+          "expected": 0.33,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "2021-01-04",
+          "winter": 2021,
+          "observed": 2.0,
+          "expected": 0.83,
+          "oe_ratio": 2.411
+        },
+        {
+          "onset": "2023-02-15",
+          "winter": 2023,
+          "observed": 3.0,
+          "expected": 0.85,
+          "oe_ratio": 3.548
+        },
+        {
+          "onset": "2024-01-15",
+          "winter": 2024,
+          "observed": 2.0,
+          "expected": 1.18,
+          "oe_ratio": 1.695
+        },
+        {
+          "onset": "2024-02-16",
+          "winter": 2024,
+          "observed": 2.0,
+          "expected": 1.66,
+          "oe_ratio": 1.206
+        }
+      ]
+    },
+    "LAWIS_Tirol": {
+      "dataset": "LAWIS Tirol",
+      "n_accidents_total": 2189,
+      "n_winters_informative": 18,
+      "n_ssw_events_tested": 25,
+      "n_accidents_in_ssw_windows": 392,
+      "nb_alpha": 1.5863,
+      "IRR_ssw_window": 0.8651,
+      "IRR_model_CI95": [
+        0.7121,
+        1.0509
+      ],
+      "p_model_two_sided": 0.14436671972538664,
+      "IRR_bootstrap_CI95": [
+        0.6582,
+        1.1875
+      ],
+      "p_bootstrap_one_sided_up": 0.7085,
+      "n_boot_ok": 2000,
+      "observed_vs_expected": {
+        "total_observed": 392.0,
+        "total_expected": 429.3,
+        "ratio": 0.9131,
+        "poisson_exact_p_one_sided": 0.9674084092642414,
+        "events_above_expectation": "10/25",
+        "sign_test_p_one_sided": 0.885238528251648
+      },
+      "per_event": [
+        {
+          "onset": "1993-03-05",
+          "winter": 1993,
+          "observed": 10.0,
+          "expected": 5.32,
+          "oe_ratio": 1.88
+        },
+        {
+          "onset": "1995-01-23",
+          "winter": 1995,
+          "observed": 5.0,
+          "expected": 6.38,
+          "oe_ratio": 0.784
+        },
+        {
+          "onset": "1998-01-06",
+          "winter": 1998,
+          "observed": 0.0,
+          "expected": 4.73,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "1998-12-15",
+          "winter": 1999,
+          "observed": 4.0,
+          "expected": 14.17,
+          "oe_ratio": 0.282
+        },
+        {
+          "onset": "1999-02-25",
+          "winter": 1999,
+          "observed": 13.0,
+          "expected": 21.23,
+          "oe_ratio": 0.612
+        },
+        {
+          "onset": "2000-11-24",
+          "winter": 2001,
+          "observed": 0.0,
+          "expected": 5.74,
+          "oe_ratio": 0.0
+        },
+        {
+          "onset": "2001-02-02",
+          "winter": 2001,
+          "observed": 28.0,
+          "expected": 23.62,
+          "oe_ratio": 1.186
+        },
+        {
+          "onset": "2001-12-29",
+          "winter": 2002,
+          "observed": 13.0,
+          "expected": 12.78,
+          "oe_ratio": 1.017
+        },
+        {
+          "onset": "2002-02-16",
+          "winter": 2002,
+          "observed": 18.0,
+          "expected": 19.37,
+          "oe_ratio": 0.929
+        },
+        {
+          "onset": "2002-03-28",
+          "winter": 2002,
+          "observed": 5.0,
+          "expected": 6.95,
+          "oe_ratio": 0.719
+        },
+        {
+          "onset": "2003-01-17",
+          "winter": 2003,
+          "observed": 26.0,
+          "expected": 19.22,
+          "oe_ratio": 1.353
+        },
+        {
+          "onset": "2003-02-17",
+          "winter": 2003,
+          "observed": 7.0,
+          "expected": 22.59,
+          "oe_ratio": 0.31
+        },
+        {
+          "onset": "2004-01-02",
+          "winter": 2004,
+          "observed": 16.0,
+          "expected": 13.46,
+          "oe_ratio": 1.189
+        },
+        {
+          "onset": "2006-01-14",
+          "winter": 2006,
+          "observed": 17.0,
+          "expected": 23.27,
+          "oe_ratio": 0.73
+        },
+        {
+          "onset": "2007-02-23",
+          "winter": 2007,
+          "observed": 11.0,
+          "expected": 13.66,
+          "oe_ratio": 0.805
+        },
+        {
+          "onset": "2008-02-22",
+          "winter": 2008,
+          "observed": 28.0,
+          "expected": 32.48,
+          "oe_ratio": 0.862
+        },
+        {
+          "onset": "2009-01-24",
+          "winter": 2009,
+          "observed": 56.0,
+          "expected": 58.25,
+          "oe_ratio": 0.961
+        },
+        {
+          "onset": "2010-01-24",
+          "winter": 2010,
+          "observed": 69.0,
+          "expected": 52.64,
+          "oe_ratio": 1.311
+        },
+        {
+          "onset": "2010-03-21",
+          "winter": 2010,
+          "observed": 28.0,
+          "expected": 24.67,
+          "oe_ratio": 1.135
+        },
+        {
+          "onset": "2013-01-07",
+          "winter": 2013,
+          "observed": 27.0,
+          "expected": 36.17,
+          "oe_ratio": 0.746
+        },
+        {
+          "onset": "2018-02-12",
+          "winter": 2018,
+          "observed": 2.0,
+          "expected": 0.66,
+          "oe_ratio": 3.053
+        },
+        {
+          "onset": "2021-01-04",
+          "winter": 2021,
+          "observed": 4.0,
+          "expected": 2.42,
+          "oe_ratio": 1.65
+        },
+        {
+          "onset": "2023-02-15",
+          "winter": 2023,
+          "observed": 1.0,
+          "expected": 6.09,
+          "oe_ratio": 0.164
+        },
+        {
+          "onset": "2024-01-15",
+          "winter": 2024,
+          "observed": 3.0,
+          "expected": 1.53,
+          "oe_ratio": 1.957
+        },
+        {
+          "onset": "2024-02-16",
+          "winter": 2024,
+          "observed": 1.0,
+          "expected": 1.9,
+          "oe_ratio": 0.525
+        }
+      ]
+    }
+  }
+}

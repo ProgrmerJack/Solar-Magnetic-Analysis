@@ -1,0 +1,56 @@
+======================================================================
+ARM 1 -- anomaly AFTER onset (the only structure ever simulated)
+======================================================================
+  [measuring R at lag window (15, 29)]
+AR(1) phi=0.943, 77 winters, 43 events in 36 winters -- the observed configuration
+300 replicates per point
+
+ true f   mean R     bias      sd           5-95 pct  coverage
+--------------------------------------------------------------
+   0.00   -0.032   -0.032   0.298 [  -0.55,  +0.37]     0.843
+   0.25    0.203   -0.047   0.275 [  -0.29,  +0.59]     0.847
+   0.50    0.481   -0.019   0.222 [  +0.10,  +0.82]     0.900
+   0.75    0.703   -0.047   0.199 [  +0.36,  +1.00]     0.857
+   1.00    0.959   -0.041   0.203 [  +0.61,  +1.26]     0.827
+
+  max |bias| across the grid: 0.047
+  coverage range: 0.827..0.900  (nominal 0.95)
+  -> R is NOT adequately calibrated -- weaken the claim
+
+  separation at n=43: f=0 gives R=-0.03 (5-95 [-0.552, 0.372]), f=1 gives R=+0.96 (5-95 [0.607, 1.264])
+  overlap: NO -- the diagnostic separates them
+
+======================================================================
+ARM 2 -- anomaly BEFORE onset: a PRECURSOR, true causal fraction 0
+======================================================================
+A precursor cannot be caused by the event that follows it. If R were
+a causal fraction it would return ~0 here for every f. If R measures
+temporal CONCENTRATION it will return the same ~0.8 as arm 1.
+
+  [measuring R at lag window (-30, -16)]
+AR(1) phi=0.943, 77 winters, 43 events in 36 winters -- the observed configuration
+300 replicates per point
+
+ true f   mean R     bias      sd           5-95 pct  coverage
+--------------------------------------------------------------
+   0.00   -0.062   -0.062   0.348 [  -0.70,  +0.36]     0.853
+   0.25    0.214   -0.036   0.278 [  -0.35,  +0.58]     0.867
+   0.50    0.479   -0.021   0.234 [  +0.06,  +0.79]     0.873
+   0.75    0.749   -0.001   0.199 [  +0.43,  +1.05]     0.853
+   1.00    1.012   +0.012   0.209 [  +0.69,  +1.37]     0.840
+
+  max |bias| across the grid: 0.062
+  coverage range: 0.840..0.873  (nominal 0.95)
+  -> R is NOT adequately calibrated -- weaken the claim
+
+  separation at n=43: f=0 gives R=-0.06 (5-95 [-0.697, 0.362]), f=1 gives R=+1.01 (5-95 [0.694, 1.372])
+  overlap: NO -- the diagnostic separates them
+
+======================================================================
+  R at f=1, anomaly AFTER  onset : +0.959
+  R at f=1, anomaly BEFORE onset : +1.012
+  difference                     : +0.053
+======================================================================
+  R returns the same value for an anomaly placed BEFORE onset as for one placed AFTER it. A pre-onset anomaly has causal fraction zero by construction, so R is NOT an estimator of the causal fraction; it measures how tightly the anomaly is concentrated around the onset date. The original validation simulated only the post-onset structure and therefore could not detect this.
+
+Saved -> validate_R_diagnostic.json

@@ -1,0 +1,18 @@
+43 primary events; nearest-neighbour gap: min 43 d, median 322 d
+  ISOLATED  (>120 d from any other event): 29
+  CLUSTERED (<=120 d):                     14
+  clustered gaps: [43, 43, 48, 48, 61, 61, 69, 69, 73, 73, 97, 97, 105, 105]
+
+  isolated   n=29  -30..-16 -0.548(p=0.112)  -15..-1 -0.599(p=0.045)  +0..+14 -0.903(p=0.010)  +15..+29 -1.226(p=0.000)
+
+  clustered  n=14  -30..-16 -2.751(p=0.152)  -15..-1 -1.892(p=0.330)  +0..+14 -1.881(p=0.420)  +15..+29 -1.931(p=0.325)
+
+  all        n=43  -30..-16 -0.820(p=0.007)  -15..-1 -0.592(p=0.017)  +0..+14 -0.789(p=0.008)  +15..+29 -1.026(p=0.000)
+
+=== verdict ===
+  -30..-16  isolated -0.548 (p=0.112)   clustered -2.751 (p=0.152)
+  -15..-1   isolated -0.599 (p=0.045)   clustered -1.892 (p=0.330)
+  +0..+14   isolated -0.903 (p=0.010)   clustered -1.881 (p=0.420)
+  +15..+29  isolated -1.226 (p=0.000)   clustered -1.931 (p=0.325)
+
+Saved -> isolated_events.json

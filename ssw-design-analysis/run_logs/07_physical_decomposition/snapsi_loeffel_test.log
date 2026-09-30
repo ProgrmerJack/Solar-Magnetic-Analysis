@@ -1,0 +1,289 @@
+EXCLUDED by duplicate guard (corrupt submission): ['NRL']
+
+post-onset coverage per centre x initialisation (days), from the data:
+      centre      init   min  max  covers_15_49
+       CCCma s20180125 -18.0 47.8         False
+       CCCma s20180208  -4.0 47.8         False
+       CCCma s20181213 -20.0 29.8         False
+       CCCma s20190108   6.0 57.8          True
+    CNR-ISAC s20180125 -18.0 27.0         False
+    CNR-ISAC s20180208  -4.0 41.0         False
+    CNR-ISAC s20181213 -20.0 25.0         False
+    CNR-ISAC s20190108   6.0 51.0          True
+        ECCC s20180125 -18.0 28.0         False
+        ECCC s20180208  -4.0 42.0         False
+        ECCC s20181213 -20.0 26.0         False
+        ECCC s20190108   6.0 52.0          True
+       ECMWF s20180125 -18.0 28.0         False
+       ECMWF s20180208  -4.0 42.0         False
+       ECMWF s20181213 -20.0 26.0         False
+       ECMWF s20190108   6.0 52.0          True
+         KMA s20180125 -18.0 27.0         False
+         KMA s20180208  -4.0 41.0         False
+         KMA s20181213 -20.0 25.0         False
+         KMA s20190108   6.0 51.0          True
+Meteo-France s20180125 -17.8 27.0         False
+Meteo-France s20180208  -3.8 41.0         False
+Meteo-France s20181213 -19.8 25.0         False
+Meteo-France s20190108   6.2 51.0          True
+        NCAR s20180125 -18.0 27.0         False
+        NCAR s20180208  -4.0 41.0         False
+        NCAR s20181213 -20.0 25.0         False
+        NCAR s20190108   6.0 51.0          True
+         SNU s20180125 -18.0 27.0         False
+         SNU s20180208  -4.0 41.0         False
+         SNU s20181213 -20.0 25.0         False
+         SNU s20190108   6.0 51.0          True
+        UKMO s20180125 -17.8 42.0         False
+        UKMO s20180208  -3.8 56.0          True
+        UKMO s20181213 -19.8 40.0         False
+        UKMO s20190108   6.2 66.0          True
+  ensembles covering Loeffel's exact weeks 3-7 window: 10 of 36
+
+centres with zg: ['CCCma', 'CNR-ISAC', 'ECCC', 'ECMWF', 'KMA', 'Meteo-France', 'NCAR', 'SNU', 'UKMO']
+centres with psl: ['CCCma', 'CNR-ISAC', 'ECCC', 'ECMWF', 'KMA', 'Meteo-France', 'NCAR', 'SNU', 'UKMO']
+
+=== DESIGN GATE: is 100 hPa free enough for the test to mean anything? ===
+  CCCma        s20180125   sd nudged   37.01 m   control   38.41 m   ratio 0.964
+  CCCma        s20180208   sd nudged   33.26 m   control   26.22 m   ratio 1.268
+  CCCma        s20181213   sd nudged   29.46 m   control   32.83 m   ratio 0.897
+  CCCma        s20190108   sd nudged    4.98 m   control    5.24 m   ratio 0.951
+  CNR-ISAC     s20180125   sd nudged   28.31 m   control   35.85 m   ratio 0.79
+  CNR-ISAC     s20180208   sd nudged   15.73 m   control   25.25 m   ratio 0.623
+  CNR-ISAC     s20181213   sd nudged   30.16 m   control   35.21 m   ratio 0.857
+  CNR-ISAC     s20190108   sd nudged    8.80 m   control    8.29 m   ratio 1.062
+  ECCC         s20180125   sd nudged   63.17 m   control   42.24 m   ratio 1.495
+  ECCC         s20180208   sd nudged   30.82 m   control   42.56 m   ratio 0.724
+  ECCC         s20181213   sd nudged   51.16 m   control   34.65 m   ratio 1.476
+  ECCC         s20190108   sd nudged    9.67 m   control   11.36 m   ratio 0.851
+  ECMWF        s20180125   sd nudged   37.47 m   control   28.22 m   ratio 1.328
+  ECMWF        s20180208   sd nudged   30.85 m   control   30.31 m   ratio 1.018
+  ECMWF        s20181213   sd nudged   31.35 m   control   36.75 m   ratio 0.853
+  ECMWF        s20190108   sd nudged    5.12 m   control    5.59 m   ratio 0.915
+  KMA          s20180125   sd nudged   53.80 m   control   38.07 m   ratio 1.413
+  KMA          s20180208   sd nudged   33.96 m   control   38.63 m   ratio 0.879
+  KMA          s20181213   sd nudged   48.63 m   control   51.70 m   ratio 0.941
+  KMA          s20190108   sd nudged    2.34 m   control    2.63 m   ratio 0.888
+  Meteo-France s20180125   sd nudged   40.53 m   control   41.99 m   ratio 0.965
+  Meteo-France s20180208   sd nudged   17.45 m   control   22.12 m   ratio 0.789
+  Meteo-France s20181213   sd nudged   43.23 m   control   43.28 m   ratio 0.999
+  Meteo-France s20190108   sd nudged    0.45 m   control    0.49 m   ratio 0.912
+  NCAR         s20180125   sd nudged   46.97 m   control   36.88 m   ratio 1.274
+  NCAR         s20180208   sd nudged   36.51 m   control   24.40 m   ratio 1.496
+  NCAR         s20181213   sd nudged   39.05 m   control   32.24 m   ratio 1.211
+  NCAR         s20190108   sd nudged   14.89 m   control   17.42 m   ratio 0.855
+  SNU          s20180125   sd nudged   52.84 m   control   42.46 m   ratio 1.245
+  SNU          s20180208   sd nudged   37.59 m   control   42.09 m   ratio 0.893
+  SNU          s20181213   sd nudged   42.73 m   control   53.10 m   ratio 0.805
+  SNU          s20190108   sd nudged    3.69 m   control    3.74 m   ratio 0.988
+  UKMO         s20180125   sd nudged   51.16 m   control   44.54 m   ratio 1.148
+  UKMO         s20180208   sd nudged   36.65 m   control   37.94 m   ratio 0.966
+  UKMO         s20181213   sd nudged   45.91 m   control   41.58 m   ratio 1.104
+  UKMO         s20190108   sd nudged    2.80 m   control    2.91 m   ratio 0.963
+  median ratio 0.964 vs threshold 0.5 -> PASS
+
+=== PRIMARY response window: post-onset days 15-25 ===
+  arm_contrast: 36 matched ensembles, r nudged +0.111 vs control +0.088; dz = +0.023 [-0.044, +0.090] p=0.504; heterogeneity Q p: nudged 0.0092, control 0.0247
+  arm_contrast_excl_short_lead: 27 matched ensembles, r nudged +0.109 vs control +0.108; dz = +0.002 [-0.076, +0.079] p=0.970; heterogeneity Q p: nudged 0.0362, control 0.052
+  nudged   pooled r = +0.111 [+0.063, +0.158]  (36 ensembles, 1797 members)
+           excl s20190108: r = +0.109 [+0.055, +0.163]  (27 ensembles, 1358 members)
+      CCCma        s20180125   Feb-2018  n=50  r=+0.371  perm p=0.0086
+      CCCma        s20180208   Feb-2018  n=50  r=+0.087  perm p=0.5513
+      CCCma        s20181213   Jan-2019  n=50  r=+0.250  perm p=0.0754
+      CCCma        s20190108   Jan-2019  n=38  r=-0.218  perm p=0.1790
+      CNR-ISAC     s20180125   Feb-2018  n=50  r=+0.008  perm p=0.9572
+      CNR-ISAC     s20180208   Feb-2018  n=50  r=-0.017  perm p=0.9122
+      CNR-ISAC     s20181213   Jan-2019  n=50  r=+0.218  perm p=0.1360
+      CNR-ISAC     s20190108   Jan-2019  n=49  r=+0.293  perm p=0.0392
+      ECCC         s20180125   Feb-2018  n=50  r=+0.300  perm p=0.0368
+      ECCC         s20180208   Feb-2018  n=50  r=+0.182  perm p=0.2198
+      ECCC         s20181213   Jan-2019  n=50  r=-0.163  perm p=0.2545
+      ECCC         s20190108   Jan-2019  n=50  r=+0.046  perm p=0.7497
+      ECMWF        s20180125   Feb-2018  n=51  r=-0.095  perm p=0.5009
+      ECMWF        s20180208   Feb-2018  n=51  r=-0.133  perm p=0.3419
+      ECMWF        s20181213   Jan-2019  n=51  r=+0.330  perm p=0.0184
+      ECMWF        s20190108   Jan-2019  n=51  r=+0.218  perm p=0.1270
+      KMA          s20180125   Feb-2018  n=50  r=+0.062  perm p=0.6761
+      KMA          s20180208   Feb-2018  n=50  r=+0.123  perm p=0.3985
+      KMA          s20181213   Jan-2019  n=52  r=+0.091  perm p=0.5175
+      KMA          s20190108   Jan-2019  n=50  r=-0.054  perm p=0.7031
+      Meteo-France s20180125   Feb-2018  n=50  r=-0.010  perm p=0.9424
+      Meteo-France s20180208   Feb-2018  n=50  r=-0.053  perm p=0.7183
+      Meteo-France s20181213   Jan-2019  n=50  r=+0.388  perm p=0.0042
+      Meteo-France s20190108   Jan-2019  n=50  r=+0.251  perm p=0.0842
+      NCAR         s20180125   Feb-2018  n=51  r=+0.106  perm p=0.4691
+      NCAR         s20180208   Feb-2018  n=51  r=-0.167  perm p=0.2399
+      NCAR         s20181213   Jan-2019  n=51  r=+0.381  perm p=0.0054
+      NCAR         s20190108   Jan-2019  n=51  r=+0.441  perm p=0.0012
+      SNU          s20180125   Feb-2018  n=50  r=+0.173  perm p=0.2263
+      SNU          s20180208   Feb-2018  n=50  r=+0.122  perm p=0.4055
+      SNU          s20181213   Jan-2019  n=50  r=-0.204  perm p=0.1588
+      SNU          s20190108   Jan-2019  n=50  r=-0.100  perm p=0.4651
+      UKMO         s20180125   Feb-2018  n=50  r=+0.054  perm p=0.7185
+      UKMO         s20180208   Feb-2018  n=50  r=+0.229  perm p=0.1164
+      UKMO         s20181213   Jan-2019  n=50  r=+0.235  perm p=0.1006
+      UKMO         s20190108   Jan-2019  n=50  r=+0.029  perm p=0.8442
+  control  pooled r = +0.088 [+0.041, +0.135]  (36 ensembles, 1805 members)
+           excl s20190108: r = +0.108 [+0.053, +0.162]  (27 ensembles, 1356 members)
+      CCCma        s20180125   Feb-2018  n=50  r=+0.094  perm p=0.5123
+      CCCma        s20180208   Feb-2018  n=50  r=-0.310  perm p=0.0284
+      CCCma        s20181213   Jan-2019  n=50  r=+0.141  perm p=0.3243
+      CCCma        s20190108   Jan-2019  n=47  r=+0.086  perm p=0.5643
+      CNR-ISAC     s20180125   Feb-2018  n=50  r=-0.044  perm p=0.7589
+      CNR-ISAC     s20180208   Feb-2018  n=50  r=+0.030  perm p=0.8406
+      CNR-ISAC     s20181213   Jan-2019  n=50  r=+0.109  perm p=0.4453
+      CNR-ISAC     s20190108   Jan-2019  n=50  r=-0.163  perm p=0.2627
+      ECCC         s20180125   Feb-2018  n=50  r=-0.012  perm p=0.9382
+      ECCC         s20180208   Feb-2018  n=50  r=+0.110  perm p=0.4547
+      ECCC         s20181213   Jan-2019  n=50  r=-0.266  perm p=0.0612
+      ECCC         s20190108   Jan-2019  n=50  r=-0.273  perm p=0.0490
+      ECMWF        s20180125   Feb-2018  n=51  r=+0.218  perm p=0.1250
+      ECMWF        s20180208   Feb-2018  n=51  r=+0.066  perm p=0.6513
+      ECMWF        s20181213   Jan-2019  n=51  r=+0.211  perm p=0.1388
+      ECMWF        s20190108   Jan-2019  n=51  r=+0.070  perm p=0.6255
+      KMA          s20180125   Feb-2018  n=50  r=+0.344  perm p=0.0152
+      KMA          s20180208   Feb-2018  n=50  r=-0.149  perm p=0.2959
+      KMA          s20181213   Jan-2019  n=50  r=+0.322  perm p=0.0230
+      KMA          s20190108   Jan-2019  n=50  r=+0.026  perm p=0.8534
+      Meteo-France s20180125   Feb-2018  n=50  r=+0.319  perm p=0.0248
+      Meteo-France s20180208   Feb-2018  n=50  r=+0.116  perm p=0.4219
+      Meteo-France s20181213   Jan-2019  n=50  r=+0.093  perm p=0.5363
+      Meteo-France s20190108   Jan-2019  n=50  r=+0.273  perm p=0.0568
+      NCAR         s20180125   Feb-2018  n=51  r=+0.218  perm p=0.1202
+      NCAR         s20180208   Feb-2018  n=51  r=-0.078  perm p=0.5899
+      NCAR         s20181213   Jan-2019  n=51  r=+0.107  perm p=0.4567
+      NCAR         s20190108   Jan-2019  n=51  r=+0.232  perm p=0.1022
+      SNU          s20180125   Feb-2018  n=50  r=+0.145  perm p=0.3255
+      SNU          s20180208   Feb-2018  n=50  r=+0.366  perm p=0.0096
+      SNU          s20181213   Jan-2019  n=50  r=+0.024  perm p=0.8732
+      SNU          s20190108   Jan-2019  n=50  r=+0.097  perm p=0.4827
+      UKMO         s20180125   Feb-2018  n=50  r=+0.301  perm p=0.0368
+      UKMO         s20180208   Feb-2018  n=50  r=+0.139  perm p=0.3327
+      UKMO         s20181213   Jan-2019  n=50  r=+0.236  perm p=0.1006
+      UKMO         s20190108   Jan-2019  n=50  r=-0.101  perm p=0.4933
+
+=== FIDELITY response window: post-onset days 15-49 ===
+  arm_contrast: 10 matched ensembles, r nudged +0.020 vs control +0.070; dz = -0.049 [-0.178, +0.079] p=0.452; heterogeneity Q p: nudged 0.0494, control 0.7147
+  arm_contrast_excl_short_lead: 1 matched ensembles, r nudged +0.245 vs control +0.135; dz = +0.114 [-0.291, +0.518] p=0.582; heterogeneity Q p: nudged None, control None
+  nudged   pooled r = +0.020 [-0.071, +0.111]  (10 ensembles, 489 members)
+           excl s20190108: r = +0.245 [-0.036, +0.490]  (1 ensembles, 50 members)
+      CCCma        s20190108   Jan-2019  n=38  r=+0.190  perm p=0.2574
+      CNR-ISAC     s20190108   Jan-2019  n=49  r=+0.209  perm p=0.1544
+      ECCC         s20190108   Jan-2019  n=50  r=-0.071  perm p=0.6081
+      ECMWF        s20190108   Jan-2019  n=51  r=-0.056  perm p=0.7041
+      KMA          s20190108   Jan-2019  n=50  r=-0.151  perm p=0.2913
+      Meteo-France s20190108   Jan-2019  n=50  r=-0.122  perm p=0.4063
+      NCAR         s20190108   Jan-2019  n=51  r=+0.215  perm p=0.1416
+      SNU          s20190108   Jan-2019  n=50  r=-0.334  perm p=0.0198
+      UKMO         s20180208   Feb-2018  n=50  r=+0.245  perm p=0.0894
+      UKMO         s20190108   Jan-2019  n=50  r=+0.122  perm p=0.3957
+  control  pooled r = +0.070 [-0.021, +0.159]  (10 ensembles, 499 members)
+           excl s20190108: r = +0.135 [-0.149, +0.399]  (1 ensembles, 50 members)
+      CCCma        s20190108   Jan-2019  n=47  r=+0.095  perm p=0.5321
+      CNR-ISAC     s20190108   Jan-2019  n=50  r=+0.286  perm p=0.0430
+      ECCC         s20190108   Jan-2019  n=50  r=-0.076  perm p=0.6017
+      ECMWF        s20190108   Jan-2019  n=51  r=+0.179  perm p=0.2122
+      KMA          s20190108   Jan-2019  n=50  r=-0.013  perm p=0.9286
+      Meteo-France s20190108   Jan-2019  n=50  r=+0.109  perm p=0.4493
+      NCAR         s20190108   Jan-2019  n=51  r=-0.043  perm p=0.7634
+      SNU          s20190108   Jan-2019  n=50  r=-0.077  perm p=0.6261
+      UKMO         s20180208   Feb-2018  n=50  r=+0.135  perm p=0.3465
+      UKMO         s20190108   Jan-2019  n=50  r=+0.090  perm p=0.5375
+
+(max_available response window resolved to days 15-25 from the shortest member)
+
+=== MAX_AVAILABLE response window: post-onset days 15-25 ===
+  arm_contrast: 36 matched ensembles, r nudged +0.111 vs control +0.088; dz = +0.023 [-0.044, +0.090] p=0.504; heterogeneity Q p: nudged 0.0092, control 0.0247
+  arm_contrast_excl_short_lead: 27 matched ensembles, r nudged +0.109 vs control +0.108; dz = +0.002 [-0.076, +0.079] p=0.970; heterogeneity Q p: nudged 0.0362, control 0.052
+  nudged   pooled r = +0.111 [+0.063, +0.158]  (36 ensembles, 1797 members)
+           excl s20190108: r = +0.109 [+0.055, +0.163]  (27 ensembles, 1358 members)
+      CCCma        s20180125   Feb-2018  n=50  r=+0.371  perm p=0.0100
+      CCCma        s20180208   Feb-2018  n=50  r=+0.087  perm p=0.5473
+      CCCma        s20181213   Jan-2019  n=50  r=+0.250  perm p=0.0762
+      CCCma        s20190108   Jan-2019  n=38  r=-0.218  perm p=0.1940
+      CNR-ISAC     s20180125   Feb-2018  n=50  r=+0.008  perm p=0.9536
+      CNR-ISAC     s20180208   Feb-2018  n=50  r=-0.017  perm p=0.9148
+      CNR-ISAC     s20181213   Jan-2019  n=50  r=+0.218  perm p=0.1230
+      CNR-ISAC     s20190108   Jan-2019  n=49  r=+0.293  perm p=0.0354
+      ECCC         s20180125   Feb-2018  n=50  r=+0.300  perm p=0.0326
+      ECCC         s20180208   Feb-2018  n=50  r=+0.182  perm p=0.2150
+      ECCC         s20181213   Jan-2019  n=50  r=-0.163  perm p=0.2541
+      ECCC         s20190108   Jan-2019  n=50  r=+0.046  perm p=0.7577
+      ECMWF        s20180125   Feb-2018  n=51  r=-0.095  perm p=0.4997
+      ECMWF        s20180208   Feb-2018  n=51  r=-0.133  perm p=0.3399
+      ECMWF        s20181213   Jan-2019  n=51  r=+0.330  perm p=0.0186
+      ECMWF        s20190108   Jan-2019  n=51  r=+0.218  perm p=0.1206
+      KMA          s20180125   Feb-2018  n=50  r=+0.062  perm p=0.6613
+      KMA          s20180208   Feb-2018  n=50  r=+0.123  perm p=0.3875
+      KMA          s20181213   Jan-2019  n=52  r=+0.091  perm p=0.5243
+      KMA          s20190108   Jan-2019  n=50  r=-0.054  perm p=0.7165
+      Meteo-France s20180125   Feb-2018  n=50  r=-0.010  perm p=0.9442
+      Meteo-France s20180208   Feb-2018  n=50  r=-0.053  perm p=0.7075
+      Meteo-France s20181213   Jan-2019  n=50  r=+0.388  perm p=0.0052
+      Meteo-France s20190108   Jan-2019  n=50  r=+0.251  perm p=0.0850
+      NCAR         s20180125   Feb-2018  n=51  r=+0.106  perm p=0.4501
+      NCAR         s20180208   Feb-2018  n=51  r=-0.167  perm p=0.2422
+      NCAR         s20181213   Jan-2019  n=51  r=+0.381  perm p=0.0044
+      NCAR         s20190108   Jan-2019  n=51  r=+0.441  perm p=0.0014
+      SNU          s20180125   Feb-2018  n=50  r=+0.173  perm p=0.2150
+      SNU          s20180208   Feb-2018  n=50  r=+0.122  perm p=0.3875
+      SNU          s20181213   Jan-2019  n=50  r=-0.204  perm p=0.1568
+      SNU          s20190108   Jan-2019  n=50  r=-0.100  perm p=0.4629
+      UKMO         s20180125   Feb-2018  n=50  r=+0.054  perm p=0.7063
+      UKMO         s20180208   Feb-2018  n=50  r=+0.229  perm p=0.1102
+      UKMO         s20181213   Jan-2019  n=50  r=+0.235  perm p=0.1006
+      UKMO         s20190108   Jan-2019  n=50  r=+0.029  perm p=0.8482
+  control  pooled r = +0.088 [+0.041, +0.135]  (36 ensembles, 1805 members)
+           excl s20190108: r = +0.108 [+0.053, +0.162]  (27 ensembles, 1356 members)
+      CCCma        s20180125   Feb-2018  n=50  r=+0.094  perm p=0.5205
+      CCCma        s20180208   Feb-2018  n=50  r=-0.310  perm p=0.0270
+      CCCma        s20181213   Jan-2019  n=50  r=+0.141  perm p=0.3369
+      CCCma        s20190108   Jan-2019  n=47  r=+0.086  perm p=0.5647
+      CNR-ISAC     s20180125   Feb-2018  n=50  r=-0.044  perm p=0.7572
+      CNR-ISAC     s20180208   Feb-2018  n=50  r=+0.030  perm p=0.8340
+      CNR-ISAC     s20181213   Jan-2019  n=50  r=+0.109  perm p=0.4509
+      CNR-ISAC     s20190108   Jan-2019  n=50  r=-0.163  perm p=0.2531
+      ECCC         s20180125   Feb-2018  n=50  r=-0.012  perm p=0.9376
+      ECCC         s20180208   Feb-2018  n=50  r=+0.110  perm p=0.4471
+      ECCC         s20181213   Jan-2019  n=50  r=-0.266  perm p=0.0642
+      ECCC         s20190108   Jan-2019  n=50  r=-0.273  perm p=0.0530
+      ECMWF        s20180125   Feb-2018  n=51  r=+0.218  perm p=0.1248
+      ECMWF        s20180208   Feb-2018  n=51  r=+0.066  perm p=0.6359
+      ECMWF        s20181213   Jan-2019  n=51  r=+0.211  perm p=0.1348
+      ECMWF        s20190108   Jan-2019  n=51  r=+0.070  perm p=0.6255
+      KMA          s20180125   Feb-2018  n=50  r=+0.344  perm p=0.0132
+      KMA          s20180208   Feb-2018  n=50  r=-0.149  perm p=0.3015
+      KMA          s20181213   Jan-2019  n=50  r=+0.322  perm p=0.0232
+      KMA          s20190108   Jan-2019  n=50  r=+0.026  perm p=0.8528
+      Meteo-France s20180125   Feb-2018  n=50  r=+0.319  perm p=0.0278
+      Meteo-France s20180208   Feb-2018  n=50  r=+0.116  perm p=0.4129
+      Meteo-France s20181213   Jan-2019  n=50  r=+0.093  perm p=0.4981
+      Meteo-France s20190108   Jan-2019  n=50  r=+0.273  perm p=0.0510
+      NCAR         s20180125   Feb-2018  n=51  r=+0.218  perm p=0.1278
+      NCAR         s20180208   Feb-2018  n=51  r=-0.078  perm p=0.5859
+      NCAR         s20181213   Jan-2019  n=51  r=+0.107  perm p=0.4431
+      NCAR         s20190108   Jan-2019  n=51  r=+0.232  perm p=0.0986
+      SNU          s20180125   Feb-2018  n=50  r=+0.145  perm p=0.3081
+      SNU          s20180208   Feb-2018  n=50  r=+0.366  perm p=0.0096
+      SNU          s20181213   Jan-2019  n=50  r=+0.024  perm p=0.8652
+      SNU          s20190108   Jan-2019  n=50  r=+0.097  perm p=0.4693
+      UKMO         s20180125   Feb-2018  n=50  r=+0.301  perm p=0.0332
+      UKMO         s20180208   Feb-2018  n=50  r=+0.139  perm p=0.3351
+      UKMO         s20181213   Jan-2019  n=50  r=+0.236  perm p=0.1034
+      UKMO         s20190108   Jan-2019  n=50  r=-0.101  perm p=0.4837
+
+=== POWER (within-ensemble, n=50, two-sided alpha=0.05) ===
+  true r = 0.1   detected with probability 0.106
+  true r = 0.2   detected with probability 0.285
+  true r = 0.3   detected with probability 0.564
+  true r = 0.4   detected with probability 0.828
+  true r = 0.5   detected with probability 0.965
+  true r = 0.85  detected with probability 1.000
+
+between-ensemble (DESCRIPTIVE, nudged): r = +0.641 over 36 ensembles spanning only 2 distinct event(s)
+  Not a test of Loeffel: the spread is between MODELS, not events.
+
+between-ensemble (DESCRIPTIVE, control): r = +0.834 over 36 ensembles spanning only 2 distinct event(s)
+  Not a test of Loeffel: the spread is between MODELS, not events.
+
+Saved -> snapsi_loeffel_test.json

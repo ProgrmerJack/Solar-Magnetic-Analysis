@@ -1,0 +1,157 @@
+{
+  "overall": {
+    "n_events": 4,
+    "n_massifs": 14,
+    "n_panel_rows": 6839,
+    "n_ssw_rows": 1733,
+    "n_event_massif_pairs": 56,
+    "coverage_fraction": 1.0,
+    "obs_mean_danger": 2.3277553375649163,
+    "exp_mean_danger": 2.4816503173687248,
+    "mean_diff": -0.1538949798038085,
+    "mean_pct_change": -0.06201316064826659,
+    "obs_high_danger_rate": 0.4270051933064051,
+    "exp_high_danger_rate": 0.47732256203115986,
+    "high_danger_rr": 0.8945841392649903,
+    "negative_pair_fraction": 0.6607142857142857,
+    "sign_test_p": 0.011120694736430053,
+    "wilcoxon_statistic": 544.0,
+    "wilcoxon_p": 0.019137007952880647,
+    "bootstrap_mean_diff_ci": [
+      -0.30012347075927154,
+      -0.009037195523370773
+    ],
+    "bootstrap_high_rr_ci": [
+      0.7112099302225814,
+      1.086996366432232
+    ]
+  },
+  "by_event": [
+    {
+      "ssw_event": "2018-02-12",
+      "n_massifs": 14,
+      "obs_mean": 2.4354838709677415,
+      "exp_mean": 2.57073732718894,
+      "diff": -0.13525345622119866,
+      "obs_high": 0.45161290322580644,
+      "exp_high": 0.5337941628264209,
+      "high_rr": 0.8460431654676259,
+      "negative_pairs": 11
+    },
+    {
+      "ssw_event": "2019-01-01",
+      "n_massifs": 14,
+      "obs_mean": 2.2433344305464122,
+      "exp_mean": 2.383629580864604,
+      "diff": -0.14029515031819173,
+      "obs_high": 0.4087393021724819,
+      "exp_high": 0.419922646477946,
+      "high_rr": 0.9733680848145172,
+      "negative_pairs": 12
+    },
+    {
+      "ssw_event": "2021-01-05",
+      "n_massifs": 14,
+      "obs_mean": 3.032258064516129,
+      "exp_mean": 2.4131336405529953,
+      "diff": 0.6191244239631337,
+      "obs_high": 0.8410138248847926,
+      "exp_high": 0.4271889400921659,
+      "high_rr": 1.9687162891046386,
+      "negative_pairs": 0
+    },
+    {
+      "ssw_event": "2023-02-16",
+      "n_massifs": 14,
+      "obs_mean": 1.6013824884792627,
+      "exp_mean": 2.5599846390168968,
+      "diff": -0.9586021505376341,
+      "obs_high": 0.006912442396313364,
+      "exp_high": 0.5284178187403994,
+      "high_rr": 0.013081395348837208,
+      "negative_pairs": 14
+    }
+  ],
+  "massif_summary_top_negative": [
+    {
+      "massif": "MONT-BLANC",
+      "n_events": 4,
+      "obs_mean": 2.448444700460829,
+      "exp_mean": 2.6803379416282644,
+      "diff": -0.23189324116743526,
+      "negative_events": 3
+    },
+    {
+      "massif": "VERCORS",
+      "n_events": 4,
+      "obs_mean": 1.8790322580645162,
+      "exp_mean": 2.08494623655914,
+      "diff": -0.20591397849462356,
+      "negative_events": 2
+    },
+    {
+      "massif": "BAUGES",
+      "n_events": 4,
+      "obs_mean": 1.9435483870967742,
+      "exp_mean": 2.1370967741935485,
+      "diff": -0.19354838709677424,
+      "negative_events": 3
+    },
+    {
+      "massif": "CHARTREUSE",
+      "n_events": 4,
+      "obs_mean": 1.8870967741935485,
+      "exp_mean": 2.0766129032258065,
+      "diff": -0.189516129032258,
+      "negative_events": 2
+    },
+    {
+      "massif": "ARAVIS",
+      "n_events": 4,
+      "obs_mean": 2.338709677419355,
+      "exp_mean": 2.5126344086021506,
+      "diff": -0.1739247311827956,
+      "negative_events": 2
+    },
+    {
+      "massif": "VANOISE",
+      "n_events": 4,
+      "obs_mean": 2.435483870967742,
+      "exp_mean": 2.602956989247312,
+      "diff": -0.1674731182795699,
+      "negative_events": 3
+    },
+    {
+      "massif": "BEAUFORTAIN",
+      "n_events": 4,
+      "obs_mean": 2.411290322580645,
+      "exp_mean": 2.571774193548387,
+      "diff": -0.16048387096774208,
+      "negative_events": 3
+    },
+    {
+      "massif": "CHABLAIS",
+      "n_events": 4,
+      "obs_mean": 2.379032258064516,
+      "exp_mean": 2.528225806451613,
+      "diff": -0.14919354838709697,
+      "negative_events": 2
+    },
+    {
+      "massif": "HAUTE-TARENTAISE",
+      "n_events": 4,
+      "obs_mean": 2.5,
+      "exp_mean": 2.6462365591397847,
+      "diff": -0.14623655913978473,
+      "negative_events": 3
+    },
+    {
+      "massif": "HAUTE-MAURIENNE",
+      "n_events": 4,
+      "obs_mean": 2.524193548387097,
+      "exp_mean": 2.6524193548387096,
+      "diff": -0.12822580645161263,
+      "negative_events": 3
+    }
+  ]
+}
