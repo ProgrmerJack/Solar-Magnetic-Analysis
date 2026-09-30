@@ -1,9 +1,9 @@
 {
- "generated": "2026-09-30T08:52:19+00:00",
+ "generated": "2026-09-30T09:05:36+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 146,
+  "scripts": 152,
   "results": 73
  },
  "scripts": [
@@ -53,6 +53,21 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_era5_arco_extension.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "ERA5 observations for the held-out 2023-2024 SSWs (plan approved 2026-09-30; design in 07_physical_decomposition/s2s_heldout_test.py), which the WeatherBench 2 copy used everywhere else does not reach (it ends 2023-01-10; the polar-cap",
+   "loc": 131,
+   "modified": "2026-09-30 09:02",
+   "sha256_16": "5122341f181a734a",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_psl_cap_00utc_arco.parquet",
+    "era5_t2m_regions_daily_arco.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/03_data_ingestion/acquire_era5_nam.py",
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
@@ -71,12 +86,13 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "Observed polar-cap mean sea-level pressure, reduced EXACTLY as the SNAPSI members are, so the observed outcome of each SNAPSI event can be placed inside its own ensemble.",
-   "loc": 102,
-   "modified": "2026-09-25 10:59",
-   "sha256_16": "45fdc9c527436628",
+   "loc": 131,
+   "modified": "2026-09-30 09:01",
+   "sha256_16": "0cf22bb54e4fb26d",
    "flags": [],
    "filenames_mentioned": [
-    "era5_psl_cap_6h.parquet"
+    "era5_psl_cap_6h.parquet",
+    "era5_z100_cap_00utc.parquet"
    ],
    "filename_prefixes": []
   },
@@ -141,9 +157,9 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "ECMWF S2S reforecasts of polar-cap mean sea-level pressure, reduced EXACTLY as the ERA5 observation is (`acquire_era5_psl_cap.cap`: cos-lat weighted 60-90N, the 60N row included), for the forecast-reliability test",
-   "loc": 549,
-   "modified": "2026-09-29 06:10",
-   "sha256_16": "6a6ff866814cb6a8",
+   "loc": 576,
+   "modified": "2026-09-30 09:01",
+   "sha256_16": "ea9be9bd30c7bb96",
    "flags": [],
    "filenames_mentioned": [
     "s2s_ecmf_psl_cap.parquet",
@@ -542,6 +558,18 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/06_simulation_validation/obs_model_compatibility.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "IS THE OBSERVED RECORD A TYPICAL 43-EVENT DRAW FROM THE CMIP6 SSW POPULATION, AND DOES THE OBSERVATIONAL PIPELINE RECOVER THE TRUTH WHEN A MODEL PLAYS REALITY? Plan approved 2026-09-30. Written before it was run.",
+   "loc": 48,
+   "modified": "2026-09-30 09:05",
+   "sha256_16": "f3e492edffc0b656",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/06_simulation_validation/selection_law_enso.py",
    "tree": "ssw-design-analysis",
    "stage": "06_simulation_validation",
@@ -747,6 +775,18 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/07_physical_decomposition/class_model_comparison.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "ONE SHIFTED POPULATION, A CONTINUOUSLY STATE-DEPENDENT ONE, OR TWO REGIMES? Plan approved 2026-09-30. Written before any of these models was fitted.",
+   "loc": 63,
+   "modified": "2026-09-30 09:04",
+   "sha256_16": "ae6b0c448420e7c9",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/07_physical_decomposition/consensus_monotonicity.py",
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
@@ -845,9 +885,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "THE POSITIVE CLAIM UNDERNEATH THE WHOLE PROJECT, AND A HARD CEILING ON EVERY CLASSIFIER IN THIS LITERATURE.",
-   "loc": 527,
-   "modified": "2026-09-30 08:50",
-   "sha256_16": "7e5dba06339b89b0",
+   "loc": 561,
+   "modified": "2026-09-30 09:04",
+   "sha256_16": "08381225ceb58f8d",
    "flags": [],
    "filenames_mentioned": [
     "forced_variance_ceiling.json"
@@ -1050,6 +1090,30 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/07_physical_decomposition/s2s_heldout_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "HELD-OUT EVALUATION: DO FORECASTS UNDER-PREDICT THE SHIFT AFTER THE 2023-2024 SSWs? Plan approved 2026-09-30. This design was committed BEFORE any forecast of model year 2025 (ECMWF, CMA) or any ERA5 value after 2023-01-10 was retrieved, and",
+   "loc": 70,
+   "modified": "2026-09-30 09:04",
+   "sha256_16": "6f6e5d442d2bb0bd",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/s2s_leadlag_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "WHERE IN THE FORECAST CHAIN IS THE SHIFT LOST: THE LOWER STRATOSPHERE, OR BELOW IT? Plan approved 2026-09-30. This design was committed BEFORE any forecast of 100 hPa geopotential height or of 10 hPa wind beyond lead 15 was retrieved.",
+   "loc": 53,
+   "modified": "2026-09-30 09:04",
+   "sha256_16": "d3445c6c327ab310",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_robustness.py",
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
@@ -1236,6 +1300,18 @@
    "filenames_mentioned": [
     "within_model_check.json"
    ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/08_literature_audit/criterion_sweep.py",
+   "tree": "ssw-design-analysis",
+   "stage": "08_literature_audit",
+   "title": "DOES THE \"DOWNWARD\" RATE AND CONTRAST TRACK ONE SHIFTED POPULATION FOR EVERY REASONABLE VERSION OF THE CRITERION, OR ONLY FOR THE ONE WE CHOSE? Plan approved 2026-09-30. Written before the sweep was run.",
+   "loc": 60,
+   "modified": "2026-09-30 09:05",
+   "sha256_16": "ba78b75a57d8c1bf",
+   "flags": [],
+   "filenames_mentioned": [],
    "filename_prefixes": []
   },
   {
@@ -2268,7 +2344,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-09-30 08:52",
+   "modified": "2026-09-30 09:05",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -3921,11 +3997,11 @@
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py"
    ],
-   "state": "current",
-   "detail": "",
+   "state": "STALE",
+   "detail": "producer changed: ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py": "7e5dba06339b89b0"
+    "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py": "08381225ceb58f8d"
    },
    "verdicts": [],
    "counts": {

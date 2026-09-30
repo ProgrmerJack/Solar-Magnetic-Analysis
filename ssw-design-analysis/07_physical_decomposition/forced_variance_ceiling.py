@@ -81,6 +81,40 @@ THREE CONTROLS, BECAUSE (*) HAS ASSUMPTIONS
      an SSW changes tropospheric variance itself, that assumption fails. Tested by
      comparing pre-onset variance between the two sets.
 
+C4 IDENTIFICATION AUDIT (plan approved 2026-09-30; written before it was run)
+  (*) identifies s_f^2 only if Cov(f, eps) = 0: in general
+      Var(Y | SSW) - Var(Y | pseudo) = s_f^2 + 2 Cov(f, eps) + (lambda^2 - 1) s_e^2,
+  where lambda^2 is any change of the internal variance at events. Two ways the
+  bound could be too tight are audited.
+  C4a SIMULATION. Synthetic datasets built from the real pseudo-event (pre, post)
+      window pairs of this script (so persistence and noise are the data's own),
+      with a known s_f in {0, 0.2, 0.4} and n in {1,517 (CMIP6), 43 (observations)}:
+        A  f independent of eps (the assumption);
+        B  f = rho * s_f * z_pre + sqrt(1 - rho^2) * s_f * eta, where z_pre is the
+           event's standardised pre-onset anomaly (state-dependent forcing, which
+           correlates f with eps through persistence), rho in {-0.5, -0.25, 0.25, 0.5};
+        C  eps scaled by lambda at events, lambda^2 in {0.873, 0.95} (damping).
+      1,000 datasets per cell; the raw and placebo-corrected estimators exactly as
+      below; reported: mean estimate, and coverage of the true s_f by each upper
+      95% bound. Failure criterion: coverage below 0.90 in scenario A (the
+      estimator itself is wrong).
+  C4b EMPIRICAL WORST CASE. Damping is bounded by experiment: in SNAPSI, where the
+      forcing is identical across members, the within-ensemble variance ratio
+      nudged/control is 0.955 [0.873, 1.051] (snapsi_distribution_test.json,
+      pooled_all). With lambda^2 = 0.873, s_f^2 <= upper + (1 - 0.873) Var(Y|pseudo);
+      the ceiling ratio (published contrast / ceiling at its own q) and the
+      label-variance share (event_difference_bounds.py method: Gaussian forced
+      probabilities, Var(P)/[mean P (1 - mean P)], 10^6 simulated events) are
+      recomputed at that bound, taking the wider of the raw and corrected upper
+      bounds. The transfer of a SNAPSI days +8..+25 polar-cap ratio to CMIP6 and
+      observed days +8..+52 annular-mode outcomes is an assumption, stated.
+  C4c TIPPING POINT. The negative rho in scenario B at which the ceiling ratio at
+      the upper bound would fall to 1 (the published contrast within reach of
+      forced event differences), found on a grid of rho.
+  Reading, fixed now: if the C4b ratio is below 1 in CMIP6 or in observations, or
+  the C4b label share exceeds 25%, the falsifier sentence of the manuscript is
+  withdrawn and the bound is described as assumption-dependent.
+
 Output: forced_variance_ceiling.json
 """
 import json
