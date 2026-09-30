@@ -45,6 +45,8 @@
           "n_events": 43,
           "ceiling_upper95_at_q": 0.9851,
           "over_upper_bound_ratio": 1.81,
+          "ceiling_wider_bound_at_q": 1.1265,
+          "over_wider_bound_ratio": 1.58,
           "matched_system": true
         }
       }
@@ -87,6 +89,8 @@
           "n_events": 1516,
           "ceiling_upper95_at_q": 0.5667,
           "over_upper_bound_ratio": 2.04,
+          "ceiling_wider_bound_at_q": 0.5667,
+          "over_wider_bound_ratio": 2.04,
           "matched_system": true
         }
       }

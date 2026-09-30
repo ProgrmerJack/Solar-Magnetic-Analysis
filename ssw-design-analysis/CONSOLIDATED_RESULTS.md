@@ -255,7 +255,7 @@ indistinguishable from zero and bounded near 0.27 σ.
 **Ceiling against the published criterion, matched.** The DW−NDW contrast the
 Karpechko criterion produces on the same outcome is 1.8× the largest contrast
 the uncorrected σ_f bound allows in observations (|C| 1.782 at q 0.70, ceiling
-0.985) and 2.0× in CMIP6 (conditions 1–2, |C| 1.154 at q 0.70, ceiling 0.567).
+0.985) and 2.0× in CMIP6 (conditions 1–2, |C| 1.154 at q 0.70, ceiling 0.567). The uncorrected bound is NOT always the wider one: in observations the placebo-corrected upper bound is larger (σ_f 0.681 against 0.596), and against it the observed contrast is **1.6×** the ceiling (1.127); in CMIP6 the uncorrected bound is the wider, so 2.0× stands (`over_wider_bound_ratio`, added 2026-09-30).
 
 ### J — predictability: an SSW adds nothing (`within_model_check.py`, `predictability_ceiling.py`, `headline_stress_test.py`, `predictability_wave_driving.py`)
 

@@ -202,3 +202,8 @@ Rule: build lagged predictors from the full-year series, and record the number o
 Tried: asking a code-review agent to check s2s_postonset_test.py while its registered design was still unrun.
 Failed: the reviewer emulated the polar-cap hit/miss comparison on real data (leads 10+) to show the null was too liberal; the corrected null was then adopted with that result known, so "corrected before the first run" was false.
 Rule: reviewers of registered-but-unrun tests use synthetic data only; any change after real-data exposure is reported as post hoc, with the earlier value.
+
+## 2026-09-30 — "Uncorrected bound is conservative" was false for observations
+Tried: stating the forced-variance falsifier "even at the uncorrected upper bound", following the script's own label for that arm.
+Failed: in observations the placebo correction is noisy and its upper bound is WIDER (s_f 0.681 vs 0.596), so the observed contrast is 1.6x, not 1.8x, the widest ceiling. Found by fact-check.
+Rule: when two bounds exist, report against the wider one; never assume a correction narrows an interval.

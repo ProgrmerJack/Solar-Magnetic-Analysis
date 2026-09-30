@@ -4,7 +4,10 @@ number_citations.py -- replace ^{key}^ citation keys in main.md with numbers in
 Nature order (main text, then figure legends, then Methods) and write the
 reference list. Every entry below was checked against Crossref or the publisher
 page on 2026-09-25 (kretschmer18, huang21, kolstad20, garfinkel25 and dai25 on
-2026-09-26; domeisenbutler20, coughlin09, maury16 and seviour13 on 2026-09-29). Run once the text is final; it rewrites main.md in place.
+2026-09-26; domeisenbutler20, coughlin09, maury16 and seviour13 on 2026-09-29;
+lehtonen16, maycock15, runde16, afargan24, kolstad22, domeisen20, hall23, hall22,
+kodera16 and seviour26 on 2026-09-30, maycock15's pages via Semantic Scholar as
+Crossref lists none). Run once the text is final; it rewrites main.md in place.
 """
 import re
 import sys
@@ -42,7 +45,17 @@ REFS = {
     "coughlin09": "Coughlin, K. & Gray, L. J. A continuum of sudden stratospheric warmings. *J. Atmos. Sci.* **66**, 531–540 (2009).",
     "maury16": "Maury, P., Claud, C., Manzini, E., Hauchecorne, A. & Keckhut, P. Characteristics of stratospheric warming events during Northern winter. *J. Geophys. Res. Atmos.* **121**, 5368–5380 (2016).",
     "seviour13": "Seviour, W. J. M., Mitchell, D. M. & Gray, L. J. A practical method to identify displaced and split stratospheric polar vortex events. *Geophys. Res. Lett.* **40**, 5268–5273 (2013).",
-    "charlton07": "Charlton, A. J. & Polvani, L. M. A new look at stratospheric sudden warmings. Part I: climatology and modeling benchmarks. *J. Clim.* **20**, 449–469 (2007).",
+    "lehtonen16": "Lehtonen, I. & Karpechko, A. Y. Observed and modeled tropospheric cold anomalies associated with sudden stratospheric warmings. *J. Geophys. Res. Atmos.* **121**, 1591–1610 (2016).",
+    "maycock15": "Maycock, A. C. & Hitchcock, P. Do split and displacement sudden stratospheric warmings have different annular mode signatures? *Geophys. Res. Lett.* **42**, 10943–10951 (2015).",
+    "runde16": "Runde, T., Dameris, M., Garny, H. & Kinnison, D. E. Classification of stratospheric extreme events according to their downward propagation to the troposphere. *Geophys. Res. Lett.* **43**, 6665–6672 (2016).",
+    "afargan24": "Afargan-Gerstman, H., Büeler, D., Wulff, C. O., Sprenger, M. & Domeisen, D. I. V. Stratospheric influence on the winter North Atlantic storm track in subseasonal reforecasts. *Weather Clim. Dynam.* **5**, 231–249 (2024).",
+    "kolstad22": "Kolstad, E. W., Lee, S. H., Butler, A. H., Domeisen, D. I. V. & Wulff, C. O. Diverse surface signatures of stratospheric polar vortex anomalies. *J. Geophys. Res. Atmos.* **127**, e2022JD037422 (2022).",
+    "domeisen20": "Domeisen, D. I. V., Grams, C. M. & Papritz, L. The role of North Atlantic–European weather regimes in the surface impact of sudden stratospheric warming events. *Weather Clim. Dynam.* **1**, 373–388 (2020).",
+    "hall23": "Hall, R. J., Mitchell, D. M., Seviour, W. J. M. & Wright, C. J. Surface hazards in North-west Europe following sudden stratospheric warming events. *Environ. Res. Lett.* **18**, 064002 (2023).",
+    "hall22": "Hall, R. J., Mitchell, D. M., Seviour, W. J. M. & Wright, C. J. How well are sudden stratospheric warming surface impacts captured in CMIP6 climate models? *J. Geophys. Res. Atmos.* **127**, e2021JD035725 (2022).",
+    "kodera16": "Kodera, K., Mukougawa, H., Maury, P., Ueda, M. & Claud, C. Absorbing and reflecting sudden stratospheric warming events and their relationship with tropospheric circulation. *J. Geophys. Res. Atmos.* **121**, 80–94 (2016).",
+    "seviour26": "Seviour, W. J. M. et al. Forecast-based attribution of the role of stratospheric variability in weather extremes. *Weather Clim. Dynam.* **7**, 1405–1423 (2026).",
+    "charlton07":"Charlton, A. J. & Polvani, L. M. A new look at stratospheric sudden warmings. Part I: climatology and modeling benchmarks. *J. Clim.* **20**, 449–469 (2007).",
 }
 KEY = re.compile(r"\^\{([A-Za-z0-9,]+)\}\^")
 

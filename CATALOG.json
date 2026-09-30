@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-29T15:42:55+00:00",
+ "generated": "2026-09-30T08:52:19+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -845,9 +845,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "THE POSITIVE CLAIM UNDERNEATH THE WHOLE PROJECT, AND A HARD CEILING ON EVERY CLASSIFIER IN THIS LITERATURE.",
-   "loc": 519,
-   "modified": "2026-09-25 06:58",
-   "sha256_16": "fbf4b52a0be7c41d",
+   "loc": 527,
+   "modified": "2026-09-30 08:50",
+   "sha256_16": "7e5dba06339b89b0",
    "flags": [],
    "filenames_mentioned": [
     "forced_variance_ceiling.json"
@@ -1483,9 +1483,9 @@
    "tree": "ssw-design-analysis",
    "stage": "manuscript",
    "title": "number_citations.py -- replace ^{key}^ citation keys in main.md with numbers in Nature order (main text, then figure legends, then Methods) and write the reference list. Every entry below was checked against Crossref or the publisher",
-   "loc": 86,
-   "modified": "2026-09-29 06:39",
-   "sha256_16": "6643039d4ab3395a",
+   "loc": 99,
+   "modified": "2026-09-30 08:49",
+   "sha256_16": "9a5004e9adaae19f",
    "flags": [],
    "filenames_mentioned": [],
    "filename_prefixes": []
@@ -2268,7 +2268,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-09-29 15:42",
+   "modified": "2026-09-30 08:52",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -3915,9 +3915,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 2830,
-   "modified": "2026-09-25 06:59",
-   "sha256_16": "3332f54b9a379f78",
+   "bytes": 3006,
+   "modified": "2026-09-30 08:51",
+   "sha256_16": "08983326c581b318",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py"
    ],
@@ -3925,7 +3925,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py": "fbf4b52a0be7c41d"
+    "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py": "7e5dba06339b89b0"
    },
    "verdicts": [],
    "counts": {

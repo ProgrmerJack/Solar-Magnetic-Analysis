@@ -1,3 +1,5 @@
+<frozen site>:101: RuntimeWarning: Unexpected value in sys.prefix, expected /home/xola/Solar-Magnetic-Analysis/.venv, got /home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/../.venv
+<frozen site>:101: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/xola/Solar-Magnetic-Analysis/.venv, got /home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/../.venv
 estimator agreement with selection_on_outcome.per_event: max|diff| = 4.44e-16 on 43 events
 
 ==========================================================================
@@ -15,7 +17,7 @@ estimator agreement with selection_on_outcome.per_event: max|diff| = 4.44e-16 on
      placebo-CORRECTED s_f^2 = -0.3169 [-1.1577, +0.4638]  -> s_f = 0.000 (upper 95% 0.681)
   C3 NOISE EQUALITY, pre-onset variance ratio events/pseudo = 1.247  -> ok
 
-  === CEILING ON ANY CLASSIFIER (uncorrected s_f, the conservative arm) ===
+  === CEILING ON ANY CLASSIFIER (uncorrected s_f; NOT always the wider bound -- see over_wider_bound_ratio) ===
   reported contrast                                      q   |obs|  ceil95   ratio  match
   ------------------------------------------------------------------------------------
   Karpechko criterion, CPC AO, days 8-52              0.70   1.782   0.985    1.8x  YES
@@ -46,7 +48,7 @@ loading CMIP6 ensemble ...
      76% of the raw excess variance is already present BEFORE onset
   C3 pre-onset variance ratio = 1.122
 
-  === CEILING (uncorrected s_f, at each study's own split q) ===
+  === CEILING (uncorrected s_f, at each study's own split q; wider-bound ratio in the JSON) ===
   reported contrast                                      q   |obs|  ceil95   ratio  match
   ------------------------------------------------------------------------------------
   Karpechko conditions 1-2, CMIP6 annular mode        0.70   1.154   0.567    2.0x  YES
