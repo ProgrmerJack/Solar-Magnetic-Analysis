@@ -80,9 +80,8 @@ extremes^{seviour26}^; our subject is the classification. We use an experiment t
 SSW on every ensemble member in nine models (SNAPSI^{hitchcock22}^), 1,517 SSWs
 in 20 CMIP6 simulations of 10 models, 43 observed events, and reforecasts of ten
 operational systems, for the polar-cap circulation and for regional temperature.
-The reforecast tests and the regional reconstruction test were checked on synthetic
-data; tests fixed before their data were
-analysed, and those added afterwards, are listed in Extended Data Table 1.
+Extended Data Table 1 lists every test and whether it was fixed before its
+data; the reforecast and reconstruction tests were checked on synthetic data.
 
 ### One shifted population, cut by a threshold
 
@@ -109,8 +108,7 @@ regional spread can change, and subseasonal ensemble spread over Scandinavia
 shrinks by up to 20% after weak-vortex states^{spaeth24}^. The Southern Hemisphere minor warming is the
 exception: there the imposed warming also widens the distribution (variance
 ratio 1.74 [1.41, 2.15]) within ensembles, in an event whose tropospheric
-response arrived more than a month after onset and was underestimated even with
-the stratosphere nudged^{feng25}^.
+response arrived more than a month after onset, underestimated even with nudging^{feng25}^.
 
 Applying the surface conditions of the Karpechko criterion to every member
 splits each ensemble into downward (DW) and non-downward (NDW) members. This adapts the published criterion to the length of the runs (Methods); in
@@ -226,7 +224,7 @@ during weak-vortex states^{kretschmer18,huang21}^; there, downward members are
 warmer than their circulation implies (+0.29σ [+0.06, +0.53]). What an SSW
 changes regionally is therefore a distribution of the regional variable itself.
 
-### Knowing the event adds little skill; forecasts have under-predicted the shift
+### Knowing the event adds little skill; forecasts under-predicted the shift in 1998–2021
 
 If downward coupling were a property of events, knowing the event should improve
 a forecast of how strongly it couples. We compare two probabilistic forecasts of
@@ -261,7 +259,7 @@ and no single system does significantly better than on event-free dates
 large event-specific skill, not small: with 17 events the smallest gain in
 correlation detectable with 80% power is 0.43, and the interval for the nine-system gain is −0.29 [−0.76, +0.22].
 
-What the forecasts get wrong is the size of the shift. If they missed a second
+Over 1998–2021, what the forecasts got wrong was the size of the shift. If they missed a second
 population of outcomes, the observed values would scatter into both tails of the
 ensembles; in ECMWF they do not (4% in the two outer rank bins against 17%
 expected). They fall on the negative-NAM side, and so they do in the nine further
@@ -284,12 +282,13 @@ forecast distribution is displaced. Correcting the size of the shift by its
 leave-one-event-out mean error did not improve the probabilistic scores
 significantly (p = 0.16), a test with little power at 17 events. The deficit did
 not recur after the three SSWs of 2023 and 2024, held out and registered before
-their forecasts were retrieved (CNRM and the 2025 versions of ECMWF and CMA): the
-observed polar-cap outcome lay on the upward side of the ensembles in every event
-and system (mean rank 0.72 against 0.53, p = 0.93; northern-Eurasian temperature
-0.57 against 0.51). The under-forecast is thus a property of 1998–2021 that three
-later events did not repeat; pooled over all 20 events it remains (0.45 against
-0.54, p = 0.03).
+they were scored (CNRM, whose files held those winters, and the 2025 versions of
+ECMWF and CMA, retrieved afterwards): the observed polar-cap outcome lay on the
+upward side of the ensembles in every event and system (mean rank 0.72 against
+0.53, p = 0.93; secondary, northern-Eurasian temperature 0.57 against 0.51).
+Three later events, two of them forecast by newer model versions, thus did not
+repeat the under-forecast of 1998–2021; pooled over all 20 events (a secondary
+test) it remains (0.45 against 0.54, p = 0.03).
 
 Regional temperature points the same way, as the circulation reconstruction
 predicts, but the evidence is weaker. Registered before its data were
@@ -299,7 +298,8 @@ event-free dates. It does: mean rank 0.39 against 0.53 across the nine further
 systems (p = 0.014; Holm-adjusted over all primary tests 0.07, so not significant after
 correction; mixed model −0.13 [−0.25, −0.01]), below the event-free value in all ten systems (Fig. 5d). The ensemble-mean anomaly after these SSWs is −0.3 K where the
 observed is −1.3 K. High-latitude Europe points the same way (0.43 against 0.53,
-p = 0.07); East Asia and North America show no such error, which, given the
+p = 0.07); East Asia, which cools less, and North America, which warms, show no
+such error, which, given the
 test's modest power (Methods), is not evidence of calibration.
 
 Whether models under-represent the surface response to SSWs is disputed: one
@@ -323,7 +323,8 @@ started 0–7 days after onset, with the observed warming in their initial state
 are closer to calibrated (0.50 against 0.56, p = 0.14; temperature in Methods),
 consistent with nudged forecasts that reproduce the predictable
 response once the observed stratosphere is imposed^{dai25}^. Before onset, then,
-forecasts that predict an SSW still under-predict its surface consequence; our
+forecasts of 1998–2021 that predicted an SSW still under-predicted its surface
+consequence; our
 reversal criterion does not measure how strong or persistent the predicted
 warming is, so a warming forecast too weak and too weak a coupling to it cannot
 be told apart here.
@@ -359,10 +360,11 @@ a contrast in that outcome.
 
 What should be verified is whether an ensemble placed the right probability on
 the shifted state, not whether it named a class fixed largely by the outcome it
-is scored against; the rank test used here can check this routinely. By it, current systems were not negative enough in
+is scored against; the rank test used here can check this routinely. By it, the systems tested were not negative enough in
 the annular mode after the SSWs of 1998–2021 (significantly in the mean of nine
 confirmatory systems, and as point estimates in nine of ten) and too warm over
-northern Eurasia (in all ten, not significantly after correction), but not after
+northern Eurasia (as point estimates in all ten, not significantly after
+correction), but not after
 the three held-out SSWs of 2023–24.
 
 Five limits bound these conclusions. First, the causal evidence and the bound on
@@ -380,10 +382,9 @@ contains two Northern Hemisphere events, so statements about how events differ
 rest on n = 2 there and on the CMIP6 bound; the result that the class contrast is
 what one shifted population produces does not depend on n, because it is measured
 within each ensemble. Third, SNAPSI nudges only the zonal-mean stratosphere and
-our CMIP6 fields are zonal means, so non-zonal vortex geometry, which is
-associated with stronger responses^{nebel24}^ and differs between nudged
-members^{feng25}^, is neither held fixed nor among our model predictors; we test
-it only in reanalysis. Fourth, event information after SSWs is worth little, not
+our CMIP6 fields are zonal means, so non-zonal vortex geometry, associated with
+stronger responses^{nebel24}^ and varying between nudged members^{feng25}^, is
+tested only in reanalysis. Fourth, event information after SSWs is worth little, not
 nothing: the event-aware forecast's gain is at most 1.4% of the probabilistic
 score (1.9% with the extended predictors, 2.0% with two regimes; upper 95%
 bounds), and operational gains in correlation below about 0.4 could not be
@@ -681,12 +682,16 @@ confirmatory version, whose files hold these winters but had not been scored at
 these dates), ECMWF model year 2025 (hindcast years 2005–2024, 11 members) and
 CMA model year 2025 (2010–2024, 4 members, January–March starts); each covers
 every event with one to four starts 2–9 days before onset. Observations after the
-WeatherBench 2 series are ARCO-ERA5 averaged onto the same 1.5° grid and reduced
+end of our WeatherBench 2 extractions (April 2022 for the polar cap, January 2023
+for temperature) are ARCO-ERA5 averaged onto the same 1.5° grid and reduced
 identically; over the overlapping winters the daily polar-cap and regional series
 agree with correlation ≥ 0.9998 and mean differences ≤ 0.04 K (0.01 Pa), which
 are removed. Statistics, null and quorum rule as for the polar-cap and regional
 tests; the registered reading treats a non-significant result as uninformative
-unless the mean rank lies above the null mean, which it does for both outcomes.
+unless the mean rank lies above the null mean, which it does for the primary
+polar-cap outcome (and for the secondary temperature outcome). CNRM, whose model
+version is unchanged, also placed every held-out outcome above the ensemble median
+(ranks 0.79, 0.71, 0.63).
 Per event (polar cap): 0.68, 0.83 and 0.64. Pooling the 17 earlier events (nine
 confirmatory systems, with the spliced observations, whose climatology now
 includes 2022–2024) and the three held-out events, each against its own systems'
@@ -841,8 +846,8 @@ p = 0.015).
 secondary or a sensitivity, whether its design was committed to the repository
 before its data existed, before its run, or with its result, the commit, and the
 raw and Holm-adjusted p values (over the registered primary tests with p values).
-Tests added in the second revision (robustness checks, the held-out replication
-and the lead–lag diagnostic) each carry their own registered reading; they are not
+Tests added in the second revision (robustness checks and the held-out
+replication) each carry their own registered reading; they are not
 added to that family, which would change the adjusted p values of tests
 registered earlier.
 
@@ -998,6 +1003,9 @@ original S2S database is hosted at ECMWF as an extension of the TIGGE database.
 
 - SNAPSI: CEDA archive, `https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/`
   (free registration for download).
+- ERA5 after 2022 (held-out events): ARCO-ERA5,
+  `gs://gcp-public-data-arco-era5/ar/full_37-1h-0p25deg-chunk-1.zarr-v3`
+  (anonymous access).
 - ERA5: WeatherBench 2 public copy,
   `gs://weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr`
   (anonymous access).
