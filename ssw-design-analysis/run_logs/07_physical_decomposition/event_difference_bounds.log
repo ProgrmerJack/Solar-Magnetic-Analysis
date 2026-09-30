@@ -1,0 +1,5 @@
+sigma_f zero     0.000: mean P 0.763, 95% of events [0.763, 0.763], share of label variance forced 0.000
+sigma_f point    0.137: mean P 0.759, 95% of events [0.624, 0.868], share of label variance forced 0.022
+sigma_f upper95  0.269: mean P 0.747, 95% of events [0.472, 0.934], share of label variance forced 0.078
+Saved -> event_difference_bounds.json
+exit=0

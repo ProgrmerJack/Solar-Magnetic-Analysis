@@ -1,0 +1,15 @@
+{
+  "n_specifications": 180,
+  "n_rr_below_1": 180,
+  "pct_rr_below_1": 100.0,
+  "n_sign_sig": 124,
+  "pct_sign_sig": 68.88888888888889,
+  "n_t_sig": 127,
+  "pct_t_sig": 70.55555555555556,
+  "median_rr": 0.41773380039638514,
+  "range_rr": [
+    0.2697176238029782,
+    0.8183111930120552
+  ],
+  "permutation_p": 0.0
+}

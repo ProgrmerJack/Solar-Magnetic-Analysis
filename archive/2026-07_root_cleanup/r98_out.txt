@@ -1,0 +1,119 @@
+{
+  "sample": {
+    "n_winter_days": 3325,
+    "n_winters": 21,
+    "zero_share_natural_size_234": 0.7413533834586467,
+    "u10_lag1_autocorr": 0.9798206519510054
+  },
+  "primary_negbin": {
+    "alpha": 10.0,
+    "n_obs": 3324,
+    "cumulative_log_IRR_5_15d": 0.14107886795448132,
+    "IRR_5_15d": 1.1515154620725836,
+    "bootstrap_winter_block": {
+      "log_IRR_mean": 0.2557065564350908,
+      "log_IRR_ci95": [
+        -3.0869481350608563,
+        3.0753541196242913
+      ],
+      "IRR_ci95": [
+        0.045641032339521964,
+        21.65754991717602
+      ],
+      "n_bootstraps": 500
+    },
+    "per_lag_log_IRR": {
+      "lag0": -0.13305843995883068,
+      "lag1": 0.6101640030517621,
+      "lag2": -1.0419832132185758,
+      "lag3": 1.8413118379625277,
+      "lag4": -1.9061907854175288,
+      "lag5": -0.10073702988898459,
+      "lag6": 1.359677492384746,
+      "lag7": -0.7132186418900239,
+      "lag8": -1.2937337166171585,
+      "lag9": 4.3300972214429345,
+      "lag10": -6.840183721058881,
+      "lag11": 5.793884083080867,
+      "lag12": -1.5211729102694838,
+      "lag13": -1.547134982059044,
+      "lag14": 1.2963751834169437,
+      "lag15": -0.6227741105874341,
+      "lag16": 0.018234570165519215,
+      "lag17": 0.9505518602473846,
+      "lag18": -2.06955331699264,
+      "lag19": 2.39038300962613,
+      "lag20": -1.0361986323081507
+    }
+  },
+  "falsification_leads": {
+    "description": "Sum of coefficients on lead days 1-10 (days BEFORE the vortex anomaly). Should be indistinguishable from zero if the effect is causal.",
+    "cumulative_log_IRR_lead": -0.017445597382035327,
+    "bootstrap_winter_block": {
+      "log_IRR_mean": 0.04192281202975535,
+      "log_IRR_ci95": [
+        -0.23717347930325525,
+        0.3527665112735084
+      ],
+      "n_bootstraps": 500
+    }
+  },
+  "sensitivity_add_mediators": {
+    "note": "Adding Z500 anomaly and NAO_daily to the primary design. These are mediators on the pathway; the primary model deliberately excludes them.",
+    "cumulative_log_IRR_5_15d": 0.26723363433304415,
+    "IRR_5_15d": 1.3063456178671475,
+    "attenuation_ratio": 1.89421447880675
+  },
+  "tail_nonlinearity": {
+    "description": "Compare natural count in the highest decile of 15-d cumulative weak-vortex exposure vs the middle two deciles (deciles 5-6).",
+    "n_tail": 379,
+    "n_mid": 587,
+    "RR_tail_vs_mid": 0.747378493840111,
+    "RR_ci95": [
+      0.405187451942782,
+      1.3814518538607925
+    ]
+  },
+  "spearman_cumexp_count": {
+    "rho": 0.016769343241208354,
+    "p": 0.3337080860135272,
+    "n": 3325
+  },
+  "meta": {
+    "lags_days": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "cumulative_window_days": [
+      5,
+      15
+    ],
+    "lead_window_days": [
+      -10,
+      -1
+    ],
+    "outcome": "natural_size_234 (Swiss dry-slab natural counts, SLF)",
+    "vortex_proxy": "NCEP 10 hPa polar-cap (60-90N) zonal-mean wind; deseasonalised, standardised; sign-flipped so positive = weak vortex",
+    "inference": "NegBin2 GLM, winter-block bootstrap B=500, winter fixed effects, day-of-winter quartic spline.",
+    "framing_note": "Complementary to the event-catalog gmRR=0.32; not a replacement. Daily obs are serially correlated (u10 lag-1 autocorr ~0.98), so effective sample size is far below 3,500 winter days; winter-block bootstrap captures this."
+  }
+}

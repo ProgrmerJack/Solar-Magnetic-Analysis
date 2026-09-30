@@ -1,0 +1,24 @@
+SNOTEL tavg_c: 8,430 winter days 1980-01-01..2026-04-02
+SNOTEL snwd_mm: 8,430 winter days 1980-01-01..2026-04-02
+events inside SNOTEL period: 29 of 43
+  dSSW 18/29 (62%)
+
+variable     ALL events    dSSW only
+------------------------------------
+tavg_c           -0.151       -0.131
+snwd_mm          +0.245       +0.050
+  200/800 null draws
+  400/800 null draws
+  600/800 null draws
+  800/800 null draws
+
+variable     real dSSW   null all  null matched  reproduced
+------------------------------------------------------------
+tavg_c          -0.131     +0.009        +0.020        -15%
+snwd_mm         +0.050     -0.026        -0.075       -149%
+
+  additive check (dSSW - bias should recover all-events):
+    tavg_c     implied -0.151  vs all-events -0.151  residual +0.000
+    snwd_mm    implied +0.125  vs all-events +0.245  residual -0.120
+
+Saved -> selection_snotel.json

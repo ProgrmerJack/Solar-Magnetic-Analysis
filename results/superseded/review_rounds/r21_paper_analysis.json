@@ -1,0 +1,420 @@
+{
+  "swiss": {
+    "n_events": 16,
+    "n_decrease": 14,
+    "sign_p": 0.00209,
+    "t_p": 0.000698,
+    "wilcoxon_p": 0.000656,
+    "perm_p": 0.0005,
+    "geom_rr": 0.3231,
+    "median_rr": 0.3308,
+    "ci_95": [
+      0.198,
+      0.539
+    ],
+    "cohen_d": -1.063,
+    "pct_reduction": 67.7,
+    "bf10": 0.0
+  },
+  "phases": {
+    "Pre (-15:-6d)": {
+      "n_decrease": 13,
+      "n_total": 16,
+      "sign_p": 0.010635,
+      "median_rr": 0.1606
+    },
+    "Onset (-5:+5d)": {
+      "n_decrease": 14,
+      "n_total": 16,
+      "sign_p": 0.00209,
+      "median_rr": 0.3735
+    },
+    "Post (+6:+15d)": {
+      "n_decrease": 12,
+      "n_total": 16,
+      "sign_p": 0.038406,
+      "median_rr": 0.2168
+    },
+    "Late (+16:+30d)": {
+      "n_decrease": 12,
+      "n_total": 16,
+      "sign_p": 0.038406,
+      "median_rr": 0.2941
+    }
+  },
+  "loocv": [
+    {
+      "excluded": "1998-12-15",
+      "excluded_rr": 0.8654,
+      "remaining_decrease": 13,
+      "remaining_n": 15,
+      "remaining_sign_p": 0.003693,
+      "remaining_geom_rr": 0.3026
+    },
+    {
+      "excluded": "1999-02-26",
+      "excluded_rr": 0.4721,
+      "remaining_decrease": 13,
+      "remaining_n": 15,
+      "remaining_sign_p": 0.003693,
+      "remaining_geom_rr": 0.3151
+    },
+    {
+      "excluded": "2001-02-11",
+      "excluded_rr": 0.1966,
+      "remaining_decrease": 13,
+      "remaining_n": 15,
+      "remaining_sign_p": 0.003693,
+      "remaining_geom_rr": 0.334
+    },
+    {
+      "excluded": "2001-12-30",
+      "excluded_rr": 0.1108,
+      "remaining_decrease": 13,
+      "remaining_n": 15,
+      "remaining_sign_p": 0.003693,
+      "remaining_geom_rr": 0.347
+    },
+    {
+      "excluded": "2002-02-17",
+      "excluded_rr": 0.3421,
+      "remaining_decrease": 13,
+      "remaining_n": 15,
+      "remaining_sign_p": 0.003693,
+      "remaining_geom_rr": 0.3219
+    },
+    {
+      "excluded": "2003-01-18",
+      "excluded_rr": 0.1599,
+      "remaining_decrease": 13,
+      "remaining_n": 15,
+      "remaining_sign_p": 0.003693,
+      "remaining_geom_rr": 0.3386
+    },
+    {
+      "excluded": "2004-01-05",
+      "excluded_rr": 0.1106,
+      "remaining_decrease": 13,
+      "remaining_n": 15,
+      "remaining_sign_p": 0.003693,
+      "remaining_geom_rr": 0.3471
+    },
+    {
+      "excluded": "2006-01-21",
+      "excluded_rr": 0.1795,
+      "remaining_decrease": 13,
+      "remaining_n": 15,
+      "remaining_sign_p": 0.003693,
+      "remaining_geom_rr": 0.336
+    },
+    {
+      "excluded": "2007-02-24",
+      "excluded_rr": 0.3552,
+      "remaining_decrease": 13,
+      "remaining_n": 15,
+      "remaining_sign_p": 0.003693,
+      "remaining_geom_rr": 0.3211
+    },
+    {
+      "excluded": "2008-02-22",
+      "excluded_rr": 0.0651,
+      "remaining_decrease": 13,
+      "remaining_n": 15,
+      "remaining_sign_p": 0.003693,
+      "remaining_geom_rr": 0.3596
+    },
+    {
+      "excluded": "2009-01-24",
+      "excluded_rr": 0.0966,
+      "remaining_decrease": 13,
+      "remaining_n": 15,
+      "remaining_sign_p": 0.003693,
+      "remaining_geom_rr": 0.3502
+    },
+    {
+      "excluded": "2010-02-09",
+      "excluded_rr": 0.6845,
+      "remaining_decrease": 13,
+      "remaining_n": 15,
+      "remaining_sign_p": 0.003693,
+      "remaining_geom_rr": 0.3074
+    },
+    {
+      "excluded": "2012-01-11",
+      "excluded_rr": 0.7941,
+      "remaining_decrease": 13,
+      "remaining_n": 15,
+      "remaining_sign_p": 0.003693,
+      "remaining_geom_rr": 0.3043
+    },
+    {
+      "excluded": "2013-01-07",
+      "excluded_rr": 0.3194,
+      "remaining_decrease": 13,
+      "remaining_n": 15,
+      "remaining_sign_p": 0.003693,
+      "remaining_geom_rr": 0.3234
+    },
+    {
+      "excluded": "2018-02-12",
+      "excluded_rr": 1.1191,
+      "remaining_decrease": 14,
+      "remaining_n": 15,
+      "remaining_sign_p": 0.000488,
+      "remaining_geom_rr": 0.2974
+    },
+    {
+      "excluded": "2019-01-01",
+      "excluded_rr": 3.3715,
+      "remaining_decrease": 14,
+      "remaining_n": 15,
+      "remaining_sign_p": 0.000488,
+      "remaining_geom_rr": 0.2764
+    }
+  ],
+  "specificity": {
+    "dry": {
+      "n_decrease": 14,
+      "n_total": 16,
+      "sign_p": 0.00209,
+      "geom_rr": 0.3231
+    },
+    "wet": {
+      "var": "wet_natural_size_1234",
+      "n_decrease": 12,
+      "n_total": 16,
+      "sign_p": 0.038406,
+      "geom_rr": 1.6176
+    }
+  },
+  "norway": {
+    "n_ssw_days": 1460,
+    "n_ctrl_days": 1085,
+    "ssw_mean_danger": 2.221,
+    "ctrl_mean_danger": 2.449,
+    "diff": -0.228,
+    "mw_p": "2.35e-16",
+    "cohen_d": -0.352,
+    "n_events": 4,
+    "n_events_decrease": 4,
+    "n_pairs": 16,
+    "n_pairs_decrease": 14,
+    "pairs_sign_p": 0.00209,
+    "regions": [
+      "Lyngen",
+      "Trollheimen",
+      "Jotunheimen",
+      "Hardanger"
+    ]
+  },
+  "utah": {
+    "n_events": 4,
+    "n_decrease": 4,
+    "sign_p": 0.0625,
+    "geom_rr": 0.3354,
+    "pct_reduction": 66.5,
+    "events": [
+      {
+        "onset": "2013-01-07",
+        "observed": "9",
+        "expected": 57.43,
+        "rr": 0.1567
+      },
+      {
+        "onset": "2018-02-12",
+        "observed": "23",
+        "expected": 49.96,
+        "rr": 0.4604
+      },
+      {
+        "onset": "2019-01-01",
+        "observed": "33",
+        "expected": 55.48,
+        "rr": 0.5948
+      },
+      {
+        "onset": "2021-01-05",
+        "observed": "17",
+        "expected": 57.63,
+        "rr": 0.295
+      }
+    ]
+  },
+  "rutschblock": {
+    "n_ssw": 0,
+    "n_non_ssw": 4433,
+    "ssw_mean": NaN,
+    "non_ssw_mean": 1.922,
+    "mw_p": NaN,
+    "cohen_d": 0,
+    "ssw_pct_class1": 0,
+    "non_ssw_pct_class1": 39.6,
+    "ssw_pct_class4": 0,
+    "non_ssw_pct_class4": 9.3
+  },
+  "era5_mechanism": {
+    "n_events": 16,
+    "t2m_mean_anom_K": -0.444,
+    "t2m_p": 0.32,
+    "sf_mean_anom_mm": -0.0,
+    "sf_p": 0.9957,
+    "regression_r2": 0.0242,
+    "pct_explained": 2.4
+  },
+  "ao_nao": {
+    "AO": {
+      "n": 16,
+      "r": -0.072,
+      "p": 0.7905,
+      "r2": 0.0052
+    },
+    "NAO": {
+      "n": 16,
+      "r": 0.026,
+      "p": 0.9234,
+      "r2": 0.0007
+    }
+  },
+  "sintering": {
+    "n_events": 16,
+    "n_positive": "8",
+    "mean_enhancement_pct": 1.11,
+    "t_p": 0.8641,
+    "Ea_eV": 0.6,
+    "events": [
+      {
+        "onset": "1998-12-15",
+        "T_ssw": 274.06,
+        "T_ctrl": 271.61,
+        "enhancement_pct": 25.78,
+        "positive": "True"
+      },
+      {
+        "onset": "1999-02-26",
+        "T_ssw": 277.78,
+        "T_ctrl": 277.55,
+        "enhancement_pct": 2.15,
+        "positive": "True"
+      },
+      {
+        "onset": "2001-02-11",
+        "T_ssw": 274.74,
+        "T_ctrl": 274.03,
+        "enhancement_pct": 6.77,
+        "positive": "True"
+      },
+      {
+        "onset": "2001-12-30",
+        "T_ssw": 270.22,
+        "T_ctrl": 271.9,
+        "enhancement_pct": -14.68,
+        "positive": "False"
+      },
+      {
+        "onset": "2002-02-17",
+        "T_ssw": 276.24,
+        "T_ctrl": 274.41,
+        "enhancement_pct": 18.33,
+        "positive": "True"
+      },
+      {
+        "onset": "2003-01-18",
+        "T_ssw": 271.29,
+        "T_ctrl": 273.19,
+        "enhancement_pct": -16.29,
+        "positive": "False"
+      },
+      {
+        "onset": "2004-01-05",
+        "T_ssw": 273.42,
+        "T_ctrl": 271.34,
+        "enhancement_pct": 21.63,
+        "positive": "True"
+      },
+      {
+        "onset": "2006-01-21",
+        "T_ssw": 271.26,
+        "T_ctrl": 272.83,
+        "enhancement_pct": -13.71,
+        "positive": "False"
+      },
+      {
+        "onset": "2007-02-24",
+        "T_ssw": 278.85,
+        "T_ctrl": 274.35,
+        "enhancement_pct": 50.65,
+        "positive": "True"
+      },
+      {
+        "onset": "2008-02-22",
+        "T_ssw": 277.89,
+        "T_ctrl": 275.13,
+        "enhancement_pct": 28.59,
+        "positive": "True"
+      },
+      {
+        "onset": "2009-01-24",
+        "T_ssw": 272.7,
+        "T_ctrl": 272.82,
+        "enhancement_pct": -1.13,
+        "positive": "False"
+      },
+      {
+        "onset": "2010-02-09",
+        "T_ssw": 273.16,
+        "T_ctrl": 273.7,
+        "enhancement_pct": -4.94,
+        "positive": "False"
+      },
+      {
+        "onset": "2012-01-11",
+        "T_ssw": 272.59,
+        "T_ctrl": 271.51,
+        "enhancement_pct": 10.69,
+        "positive": "True"
+      },
+      {
+        "onset": "2013-01-07",
+        "T_ssw": 271.5,
+        "T_ctrl": 273.48,
+        "enhancement_pct": -16.93,
+        "positive": "False"
+      },
+      {
+        "onset": "2018-02-12",
+        "T_ssw": 270.72,
+        "T_ctrl": 280.2,
+        "enhancement_pct": -58.12,
+        "positive": "False"
+      },
+      {
+        "onset": "2019-01-01",
+        "T_ssw": 272.25,
+        "T_ctrl": 274.78,
+        "enhancement_pct": -20.99,
+        "positive": "False"
+      }
+    ]
+  },
+  "us_centers": {
+    "n_centers": 19,
+    "n_decrease": 3,
+    "sign_p": 0.999636,
+    "n_ssw_events": 5
+  },
+  "phase_concordance": {
+    "spearman_r": -0.4,
+    "spearman_p": 0.6,
+    "n_phases": 4
+  },
+  "meta": {
+    "total_pairs": 36,
+    "total_decrease": 32,
+    "sign_p": "9.71e-07",
+    "breakdown": {
+      "switzerland": "14/16",
+      "norway_pairs": "14/16",
+      "utah": "4/4"
+    }
+  }
+}

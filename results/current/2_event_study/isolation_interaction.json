@@ -1,0 +1,86 @@
+{
+  "n_boot": 4000,
+  "isolation_days": 120,
+  "bins": {
+    "-60..-46": {
+      "effect_isolated": 0.0338,
+      "effect_clustered": -2.9201,
+      "difference": 2.9538,
+      "difference_CI95": [
+        -0.7769,
+        4.7463
+      ],
+      "difference_p": 0.2635
+    },
+    "-45..-31": {
+      "effect_isolated": -0.0501,
+      "effect_clustered": -2.5643,
+      "difference": 2.5142,
+      "difference_CI95": [
+        -1.087,
+        3.7426
+      ],
+      "difference_p": 0.3015
+    },
+    "-30..-16": {
+      "effect_isolated": -0.5642,
+      "effect_clustered": -2.9395,
+      "difference": 2.3754,
+      "difference_CI95": [
+        -1.1089,
+        3.2414
+      ],
+      "difference_p": 0.234
+    },
+    "-15..-1": {
+      "effect_isolated": -0.6181,
+      "effect_clustered": -2.0959,
+      "difference": 1.4778,
+      "difference_CI95": [
+        -2.0346,
+        2.1694
+      ],
+      "difference_p": 0.5125
+    },
+    "+0..+14": {
+      "effect_isolated": -0.921,
+      "effect_clustered": -2.0841,
+      "difference": 1.1631,
+      "difference_CI95": [
+        -2.6013,
+        2.1123
+      ],
+      "difference_p": 0.6965
+    },
+    "+15..+29": {
+      "effect_isolated": -1.2406,
+      "effect_clustered": -2.1251,
+      "difference": 0.8845,
+      "difference_CI95": [
+        -2.6411,
+        1.6745
+      ],
+      "difference_p": 0.72
+    },
+    "+30..+44": {
+      "effect_isolated": -0.9533,
+      "effect_clustered": -2.156,
+      "difference": 1.2027,
+      "difference_CI95": [
+        -2.5613,
+        2.1964
+      ],
+      "difference_p": 0.609
+    },
+    "+45..+60": {
+      "effect_isolated": -0.6242,
+      "effect_clustered": -3.034,
+      "difference": 2.4098,
+      "difference_CI95": [
+        -1.1213,
+        3.2583
+      ],
+      "difference_p": 0.286
+    }
+  }
+}

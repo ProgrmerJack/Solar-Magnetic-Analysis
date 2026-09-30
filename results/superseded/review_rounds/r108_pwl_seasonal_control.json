@@ -1,0 +1,538 @@
+{
+  "n_ssw": 17,
+  "n_station_days": 285157,
+  "metrics": {
+    "Pen_depth": {
+      "expected": "deeper during SSW",
+      "uncontrolled": {
+        "ssw_mean": 19.775,
+        "ctrl_mean": 18.094,
+        "diff": 1.682,
+        "mw_p_PSEUDOREPLICATED": 0.0,
+        "n_ssw_days": 38603,
+        "n_ctrl_days": 235711,
+        "note": "no season/winter/station control; p-value treats station-days as independent"
+      },
+      "controlled": {
+        "effect_controlled": -0.1106,
+        "CI95": [
+          -1.4894,
+          1.1886
+        ],
+        "p_two_sided": 0.8026666666666666,
+        "n_station_days": 156918,
+        "n_boot": 1500
+      },
+      "event_level": {
+        "n_events": 17,
+        "events_positive": "8/17",
+        "mean_diff": 0.1028,
+        "sign_p_two_sided": 1.0,
+        "wilcoxon_p": 0.8899688720703125,
+        "per_event": [
+          {
+            "onset": "1998-12-15",
+            "observed": 20.717,
+            "expected_same_winter_doy_matched": 15.729,
+            "diff": 4.988
+          },
+          {
+            "onset": "1999-02-26",
+            "observed": 27.4,
+            "expected_same_winter_doy_matched": 25.277,
+            "diff": 2.123
+          },
+          {
+            "onset": "2000-03-20",
+            "observed": 17.253,
+            "expected_same_winter_doy_matched": 21.678,
+            "diff": -4.425
+          },
+          {
+            "onset": "2001-02-11",
+            "observed": 19.978,
+            "expected_same_winter_doy_matched": 22.087,
+            "diff": -2.109
+          },
+          {
+            "onset": "2001-12-30",
+            "observed": 18.067,
+            "expected_same_winter_doy_matched": 12.997,
+            "diff": 5.07
+          },
+          {
+            "onset": "2002-02-17",
+            "observed": 21.407,
+            "expected_same_winter_doy_matched": 15.709,
+            "diff": 5.698
+          },
+          {
+            "onset": "2003-01-18",
+            "observed": 20.492,
+            "expected_same_winter_doy_matched": 21.663,
+            "diff": -1.171
+          },
+          {
+            "onset": "2004-01-05",
+            "observed": 23.178,
+            "expected_same_winter_doy_matched": 18.896,
+            "diff": 4.282
+          },
+          {
+            "onset": "2006-01-21",
+            "observed": 18.744,
+            "expected_same_winter_doy_matched": 21.265,
+            "diff": -2.52
+          },
+          {
+            "onset": "2007-02-24",
+            "observed": 19.485,
+            "expected_same_winter_doy_matched": 17.954,
+            "diff": 1.53
+          },
+          {
+            "onset": "2008-02-22",
+            "observed": 15.48,
+            "expected_same_winter_doy_matched": 20.22,
+            "diff": -4.739
+          },
+          {
+            "onset": "2009-01-24",
+            "observed": 20.193,
+            "expected_same_winter_doy_matched": 22.873,
+            "diff": -2.68
+          },
+          {
+            "onset": "2010-02-09",
+            "observed": 20.991,
+            "expected_same_winter_doy_matched": 19.547,
+            "diff": 1.444
+          },
+          {
+            "onset": "2010-03-24",
+            "observed": 18.102,
+            "expected_same_winter_doy_matched": 15.197,
+            "diff": 2.905
+          },
+          {
+            "onset": "2013-01-06",
+            "observed": 18.937,
+            "expected_same_winter_doy_matched": 23.984,
+            "diff": -5.047
+          },
+          {
+            "onset": "2018-02-12",
+            "observed": 18.58,
+            "expected_same_winter_doy_matched": 22.027,
+            "diff": -3.447
+          },
+          {
+            "onset": "2019-01-01",
+            "observed": 21.368,
+            "expected_same_winter_doy_matched": 21.523,
+            "diff": -0.155
+          }
+        ]
+      }
+    },
+    "min_ccl_pen": {
+      "expected": "lower during SSW (easier propagation)",
+      "uncontrolled": {
+        "ssw_mean": 0.454,
+        "ctrl_mean": 0.665,
+        "diff": -0.211,
+        "mw_p_PSEUDOREPLICATED": 0.0,
+        "n_ssw_days": 38639,
+        "n_ctrl_days": 235992,
+        "note": "no season/winter/station control; p-value treats station-days as independent"
+      },
+      "controlled": {
+        "effect_controlled": -0.0084,
+        "CI95": [
+          -0.0462,
+          0.0328
+        ],
+        "p_two_sided": 0.7453333333333333,
+        "n_station_days": 157048,
+        "n_boot": 1500
+      },
+      "event_level": {
+        "n_events": 17,
+        "events_positive": "9/17",
+        "mean_diff": -0.0261,
+        "sign_p_two_sided": 1.0,
+        "wilcoxon_p": 0.6358940323029705,
+        "per_event": [
+          {
+            "onset": "1998-12-15",
+            "observed": 0.434,
+            "expected_same_winter_doy_matched": 0.487,
+            "diff": -0.054
+          },
+          {
+            "onset": "1999-02-26",
+            "observed": 0.316,
+            "expected_same_winter_doy_matched": 0.464,
+            "diff": -0.148
+          },
+          {
+            "onset": "2000-03-20",
+            "observed": 0.543,
+            "expected_same_winter_doy_matched": 0.303,
+            "diff": 0.239
+          },
+          {
+            "onset": "2001-02-11",
+            "observed": 0.372,
+            "expected_same_winter_doy_matched": 0.318,
+            "diff": 0.054
+          },
+          {
+            "onset": "2001-12-30",
+            "observed": 0.969,
+            "expected_same_winter_doy_matched": 1.263,
+            "diff": -0.294
+          },
+          {
+            "onset": "2002-02-17",
+            "observed": 0.426,
+            "expected_same_winter_doy_matched": 0.783,
+            "diff": -0.356
+          },
+          {
+            "onset": "2003-01-18",
+            "observed": 0.369,
+            "expected_same_winter_doy_matched": 0.405,
+            "diff": -0.036
+          },
+          {
+            "onset": "2004-01-05",
+            "observed": 0.349,
+            "expected_same_winter_doy_matched": 0.482,
+            "diff": -0.133
+          },
+          {
+            "onset": "2006-01-21",
+            "observed": 0.487,
+            "expected_same_winter_doy_matched": 0.441,
+            "diff": 0.045
+          },
+          {
+            "onset": "2007-02-24",
+            "observed": 0.431,
+            "expected_same_winter_doy_matched": 0.423,
+            "diff": 0.007
+          },
+          {
+            "onset": "2008-02-22",
+            "observed": 0.562,
+            "expected_same_winter_doy_matched": 0.459,
+            "diff": 0.103
+          },
+          {
+            "onset": "2009-01-24",
+            "observed": 0.404,
+            "expected_same_winter_doy_matched": 0.279,
+            "diff": 0.125
+          },
+          {
+            "onset": "2010-02-09",
+            "observed": 0.335,
+            "expected_same_winter_doy_matched": 0.415,
+            "diff": -0.081
+          },
+          {
+            "onset": "2010-03-24",
+            "observed": 0.456,
+            "expected_same_winter_doy_matched": 0.626,
+            "diff": -0.171
+          },
+          {
+            "onset": "2013-01-06",
+            "observed": 0.48,
+            "expected_same_winter_doy_matched": 0.334,
+            "diff": 0.146
+          },
+          {
+            "onset": "2018-02-12",
+            "observed": 0.413,
+            "expected_same_winter_doy_matched": 0.33,
+            "diff": 0.084
+          },
+          {
+            "onset": "2019-01-01",
+            "observed": 0.402,
+            "expected_same_winter_doy_matched": 0.376,
+            "diff": 0.026
+          }
+        ]
+      }
+    },
+    "sk38_pwl": {
+      "expected": "lower during SSW (less stable)",
+      "uncontrolled": {
+        "ssw_mean": 2.147,
+        "ctrl_mean": 2.927,
+        "diff": -0.781,
+        "mw_p_PSEUDOREPLICATED": 0.0,
+        "n_ssw_days": 38673,
+        "n_ctrl_days": 236558,
+        "note": "no season/winter/station control; p-value treats station-days as independent"
+      },
+      "controlled": {
+        "effect_controlled": -0.1207,
+        "CI95": [
+          -0.3548,
+          0.0768
+        ],
+        "p_two_sided": 0.2906666666666667,
+        "n_station_days": 157288,
+        "n_boot": 1500
+      },
+      "event_level": {
+        "n_events": 17,
+        "events_positive": "8/17",
+        "mean_diff": -0.0306,
+        "sign_p_two_sided": 1.0,
+        "wilcoxon_p": 0.7763579405343053,
+        "per_event": [
+          {
+            "onset": "1998-12-15",
+            "observed": 2.864,
+            "expected_same_winter_doy_matched": 2.61,
+            "diff": 0.254
+          },
+          {
+            "onset": "1999-02-26",
+            "observed": 2.216,
+            "expected_same_winter_doy_matched": 1.955,
+            "diff": 0.261
+          },
+          {
+            "onset": "2000-03-20",
+            "observed": 2.101,
+            "expected_same_winter_doy_matched": 1.626,
+            "diff": 0.475
+          },
+          {
+            "onset": "2001-02-11",
+            "observed": 1.554,
+            "expected_same_winter_doy_matched": 1.299,
+            "diff": 0.255
+          },
+          {
+            "onset": "2001-12-30",
+            "observed": 2.881,
+            "expected_same_winter_doy_matched": 2.946,
+            "diff": -0.066
+          },
+          {
+            "onset": "2002-02-17",
+            "observed": 1.748,
+            "expected_same_winter_doy_matched": 1.994,
+            "diff": -0.245
+          },
+          {
+            "onset": "2003-01-18",
+            "observed": 2.154,
+            "expected_same_winter_doy_matched": 2.229,
+            "diff": -0.075
+          },
+          {
+            "onset": "2004-01-05",
+            "observed": 2.153,
+            "expected_same_winter_doy_matched": 2.932,
+            "diff": -0.779
+          },
+          {
+            "onset": "2006-01-21",
+            "observed": 1.371,
+            "expected_same_winter_doy_matched": 1.397,
+            "diff": -0.026
+          },
+          {
+            "onset": "2007-02-24",
+            "observed": 1.836,
+            "expected_same_winter_doy_matched": 2.172,
+            "diff": -0.336
+          },
+          {
+            "onset": "2008-02-22",
+            "observed": 2.014,
+            "expected_same_winter_doy_matched": 1.741,
+            "diff": 0.272
+          },
+          {
+            "onset": "2009-01-24",
+            "observed": 2.047,
+            "expected_same_winter_doy_matched": 2.443,
+            "diff": -0.396
+          },
+          {
+            "onset": "2010-02-09",
+            "observed": 1.521,
+            "expected_same_winter_doy_matched": 1.481,
+            "diff": 0.04
+          },
+          {
+            "onset": "2010-03-24",
+            "observed": 2.321,
+            "expected_same_winter_doy_matched": 2.623,
+            "diff": -0.303
+          },
+          {
+            "onset": "2013-01-06",
+            "observed": 3.084,
+            "expected_same_winter_doy_matched": 3.08,
+            "diff": 0.004
+          },
+          {
+            "onset": "2018-02-12",
+            "observed": 2.441,
+            "expected_same_winter_doy_matched": 2.445,
+            "diff": -0.004
+          },
+          {
+            "onset": "2019-01-01",
+            "observed": 2.793,
+            "expected_same_winter_doy_matched": 2.645,
+            "diff": 0.148
+          }
+        ]
+      }
+    },
+    "HS_mod": {
+      "expected": "snow depth - CONFOUND CHECK",
+      "uncontrolled": {
+        "ssw_mean": 141.709,
+        "ctrl_mean": 137.32,
+        "diff": 4.389,
+        "mw_p_PSEUDOREPLICATED": 1.6390325373807882e-53,
+        "n_ssw_days": 39846,
+        "n_ctrl_days": 245311,
+        "note": "no season/winter/station control; p-value treats station-days as independent"
+      },
+      "controlled": {
+        "effect_controlled": -4.1232,
+        "CI95": [
+          -10.7775,
+          3.7361
+        ],
+        "p_two_sided": 0.30933333333333335,
+        "n_station_days": 163242,
+        "n_boot": 1500
+      },
+      "event_level": {
+        "n_events": 17,
+        "events_positive": "7/17",
+        "mean_diff": 0.0102,
+        "sign_p_two_sided": 0.629058837890625,
+        "wilcoxon_p": 0.54766845703125,
+        "per_event": [
+          {
+            "onset": "1998-12-15",
+            "observed": 81.393,
+            "expected_same_winter_doy_matched": 42.704,
+            "diff": 38.689
+          },
+          {
+            "onset": "1999-02-26",
+            "observed": 247.103,
+            "expected_same_winter_doy_matched": 207.729,
+            "diff": 39.374
+          },
+          {
+            "onset": "2000-03-20",
+            "observed": 191.961,
+            "expected_same_winter_doy_matched": 207.911,
+            "diff": -15.951
+          },
+          {
+            "onset": "2001-02-11",
+            "observed": 164.746,
+            "expected_same_winter_doy_matched": 164.667,
+            "diff": 0.078
+          },
+          {
+            "onset": "2001-12-30",
+            "observed": 66.594,
+            "expected_same_winter_doy_matched": 49.161,
+            "diff": 17.433
+          },
+          {
+            "onset": "2002-02-17",
+            "observed": 113.923,
+            "expected_same_winter_doy_matched": 104.547,
+            "diff": 9.376
+          },
+          {
+            "onset": "2003-01-18",
+            "observed": 178.065,
+            "expected_same_winter_doy_matched": 197.678,
+            "diff": -19.613
+          },
+          {
+            "onset": "2004-01-05",
+            "observed": 122.018,
+            "expected_same_winter_doy_matched": 133.324,
+            "diff": -11.306
+          },
+          {
+            "onset": "2006-01-21",
+            "observed": 78.771,
+            "expected_same_winter_doy_matched": 82.571,
+            "diff": -3.8
+          },
+          {
+            "onset": "2007-02-24",
+            "observed": 122.844,
+            "expected_same_winter_doy_matched": 127.922,
+            "diff": -5.078
+          },
+          {
+            "onset": "2008-02-22",
+            "observed": 130.815,
+            "expected_same_winter_doy_matched": 145.25,
+            "diff": -14.435
+          },
+          {
+            "onset": "2009-01-24",
+            "observed": 144.564,
+            "expected_same_winter_doy_matched": 166.246,
+            "diff": -21.682
+          },
+          {
+            "onset": "2010-02-09",
+            "observed": 134.342,
+            "expected_same_winter_doy_matched": 127.419,
+            "diff": 6.923
+          },
+          {
+            "onset": "2010-03-24",
+            "observed": 156.211,
+            "expected_same_winter_doy_matched": 158.397,
+            "diff": -2.186
+          },
+          {
+            "onset": "2013-01-06",
+            "observed": 138.131,
+            "expected_same_winter_doy_matched": 147.182,
+            "diff": -9.051
+          },
+          {
+            "onset": "2018-02-12",
+            "observed": 232.06,
+            "expected_same_winter_doy_matched": 241.609,
+            "diff": -9.549
+          },
+          {
+            "onset": "2019-01-01",
+            "observed": 145.462,
+            "expected_same_winter_doy_matched": 144.511,
+            "diff": 0.951
+          }
+        ]
+      }
+    }
+  }
+}

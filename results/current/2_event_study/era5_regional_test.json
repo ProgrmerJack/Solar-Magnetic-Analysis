@@ -1,0 +1,184 @@
+{
+  "plan_approved": "2026-09-26",
+  "seed": 608483129,
+  "n_null": 10000,
+  "n_boot": 10000,
+  "primary": "NEURASIA",
+  "nam_window": [
+    8,
+    25
+  ],
+  "t_window": [
+    8,
+    24
+  ],
+  "inputs": [
+    "ssw-design-analysis/03_data_ingestion/era5_nam_daily.parquet",
+    "ssw-design-analysis/03_data_ingestion/era5_t2m_regions_daily.parquet"
+  ],
+  "events": [
+    "1960-01-17",
+    "1963-01-28",
+    "1965-12-16",
+    "1966-02-23",
+    "1968-01-07",
+    "1968-11-28",
+    "1969-03-13",
+    "1970-01-02",
+    "1971-01-18",
+    "1971-03-20",
+    "1973-01-31",
+    "1977-01-09",
+    "1979-02-22",
+    "1980-02-29",
+    "1981-03-04",
+    "1981-12-04",
+    "1984-02-24",
+    "1985-01-01",
+    "1987-01-23",
+    "1987-12-08",
+    "1988-03-14",
+    "1989-02-21",
+    "1998-12-15",
+    "1999-02-26",
+    "2000-03-20",
+    "2001-02-11",
+    "2001-12-30",
+    "2003-01-18",
+    "2004-01-05",
+    "2006-01-21",
+    "2007-02-24",
+    "2008-02-22",
+    "2009-01-24",
+    "2010-02-09",
+    "2010-03-24",
+    "2013-01-06",
+    "2018-02-12",
+    "2019-01-02",
+    "2021-01-05"
+  ],
+  "n_events": 39,
+  "n_pseudo": 4633,
+  "regions": {
+    "NEURASIA": {
+      "slope_T_on_N": 1.9234,
+      "intercept": 0.1251,
+      "sd_T_event_free": 2.6383,
+      "sd_residual": 2.2841,
+      "S_T_mean": -1.0005,
+      "N_mean_events": -0.416,
+      "R_mean": -0.3255,
+      "R_in_sd_units": -0.1234,
+      "R_null_q025_q975": [
+        -0.7297,
+        0.7018
+      ],
+      "p_R_two_sided": 0.3814,
+      "share_of_S_T_explained": 0.675,
+      "label_coef": -0.0306,
+      "label_coef_ci95": [
+        -1.7927,
+        1.8501
+      ],
+      "n_DW": 28,
+      "cold_obs": 0.2564,
+      "cold_pred": 0.1898,
+      "cold_event_free": 0.1002,
+      "cold_obs_ci95": [
+        0.1282,
+        0.4103
+      ]
+    },
+    "HI_EUROPE": {
+      "slope_T_on_N": 1.7539,
+      "intercept": 0.1092,
+      "sd_T_event_free": 2.5862,
+      "sd_residual": 2.2889,
+      "S_T_mean": -1.0438,
+      "N_mean_events": -0.416,
+      "R_mean": -0.4233,
+      "R_in_sd_units": -0.1637,
+      "R_null_q025_q975": [
+        -0.661,
+        0.791
+      ],
+      "p_R_two_sided": 0.2679,
+      "share_of_S_T_explained": 0.594,
+      "label_coef": 0.2869,
+      "label_coef_ci95": [
+        -1.3784,
+        1.9086
+      ],
+      "n_DW": 28,
+      "cold_obs": 0.2564,
+      "cold_pred": 0.1657,
+      "cold_event_free": 0.1002,
+      "cold_obs_ci95": [
+        0.1282,
+        0.4103
+      ]
+    },
+    "MID_EASIA": {
+      "slope_T_on_N": 0.7604,
+      "intercept": -0.0167,
+      "sd_T_event_free": 1.5364,
+      "sd_residual": 1.4452,
+      "S_T_mean": -0.1851,
+      "N_mean_events": -0.416,
+      "R_mean": 0.148,
+      "R_in_sd_units": 0.0963,
+      "R_null_q025_q975": [
+        -0.5108,
+        0.3841
+      ],
+      "p_R_two_sided": 0.5341,
+      "share_of_S_T_explained": 1.799,
+      "label_coef": -0.7242,
+      "label_coef_ci95": [
+        -1.9076,
+        0.3523
+      ],
+      "n_DW": 28,
+      "cold_obs": 0.2051,
+      "cold_pred": 0.1484,
+      "cold_event_free": 0.1002,
+      "cold_obs_ci95": [
+        0.0769,
+        0.3333
+      ]
+    },
+    "MID_NAMER": {
+      "slope_T_on_N": 0.6436,
+      "intercept": -0.2428,
+      "sd_T_event_free": 2.0324,
+      "sd_residual": 1.9839,
+      "S_T_mean": 0.0406,
+      "N_mean_events": -0.416,
+      "R_mean": 0.5512,
+      "R_in_sd_units": 0.2712,
+      "R_null_q025_q975": [
+        -0.6154,
+        0.6584
+      ],
+      "p_R_two_sided": 0.0933,
+      "share_of_S_T_explained": -12.579,
+      "label_coef": 0.2827,
+      "label_coef_ci95": [
+        -1.0583,
+        1.5445
+      ],
+      "n_DW": 28,
+      "cold_obs": 0.0769,
+      "cold_pred": 0.1281,
+      "cold_event_free": 0.1002,
+      "cold_obs_ci95": [
+        0.0,
+        0.1795
+      ]
+    }
+  },
+  "falsifier_primary": {
+    "rule": "p_R < 0.05 AND |R| > 0.2 sd in NEURASIA",
+    "met": false
+  }
+}

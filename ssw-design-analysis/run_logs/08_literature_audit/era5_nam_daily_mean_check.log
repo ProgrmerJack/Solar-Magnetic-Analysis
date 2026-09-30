@@ -1,0 +1,22 @@
+00 UTC NAM_1000 rebuilt from its own heights: max|diff| = 0.0e+00
+  2019: 45 days, mean d = -1.077 m, 00 UTC agreement 0.0e+00 m
+  2009: 45 days, mean d = -0.140 m, 00 UTC agreement 0.0e+00 m
+  2010: 45 days, mean d = +0.175 m, 00 UTC agreement 0.0e+00 m
+  2011: 45 days, mean d = -2.137 m, 00 UTC agreement 0.0e+00 m
+  2012: 45 days, mean d = -0.380 m, 00 UTC agreement 0.0e+00 m
+  2013: 45 days, mean d = -0.296 m, 00 UTC agreement 0.0e+00 m
+  2014: 45 days, mean d = -0.619 m, 00 UTC agreement 0.0e+00 m
+  2015: 45 days, mean d = -0.505 m, 00 UTC agreement 0.0e+00 m
+  2016: 45 days, mean d = -0.839 m, 00 UTC agreement 0.0e+00 m
+  2017: 45 days, mean d = -0.454 m, 00 UTC agreement 0.0e+00 m
+  2018: 45 days, mean d = -0.564 m, 00 UTC agreement 0.0e+00 m
+  2020: 45 days, mean d = -0.957 m, 00 UTC agreement 0.0e+00 m
+  2021: 45 days, mean d = -0.795 m, 00 UTC agreement 0.0e+00 m
+  2022: 45 days, mean d = -1.272 m, 00 UTC agreement 0.0e+00 m
+
+January 2019, NAM_1000, days +8..+52 (45 days):
+  00 UTC      mean +0.0187 sigma, fraction negative 0.622 -> NDW
+  daily mean  mean +0.0253 sigma (+-0.0032 from the climatology estimate), fraction negative 0.578 -> NDW
+  spread ratio daily-mean / 00 UTC day-to-day change: 0.946 (range 0.917-0.985)
+label UNCHANGED
+Saved -> era5_nam_daily_mean_check.json

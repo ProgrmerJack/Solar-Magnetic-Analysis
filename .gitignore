@@ -10,4 +10,60 @@ data/raw
 data/atmospheric
 logs/
 paper/
+# the old manuscript, moved 2026-09-25; its build outputs stay untracked
+archive/superseded_paper/
 nature_geoscience_paper.md
+
+# python
+__pycache__/
+*.pyc
+.mypy_cache/
+
+# ssw-design-analysis: downloaded and intermediate DATA, never code.
+# Everything here is re-acquirable by 03_data_ingestion/acquire_*.py and is far
+# too large for git (raw/cmip6 3.4 GB, _ncep_cache 1.4 GB).
+ssw-design-analysis/03_data_ingestion/raw/cmip6/
+ssw-design-analysis/03_data_ingestion/raw/ncep_heatflux/
+ssw-design-analysis/03_data_ingestion/_ncep_cache/
+ssw-design-analysis/03_data_ingestion/_ncep_reduced/
+ssw-design-analysis/03_data_ingestion/_snapsi_reduced/
+ssw-design-analysis/03_data_ingestion/_snapsi_zg100/
+ssw-design-analysis/03_data_ingestion/_gate_download/
+ssw-design-analysis/**/*.nc
+ssw-design-analysis/**/*.parquet
+# ...but keep the small text indices and the station cache, which ARE provenance
+!ssw-design-analysis/03_data_ingestion/raw/*.txt
+!ssw-design-analysis/03_data_ingestion/raw/snotel_stations.json
+
+# build artefacts (paper/ is already ignored wholesale above; kept explicit
+# so the rules still bite if that line is ever narrowed)
+paper/*.aux
+paper/*.log
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.out
+paper/*.toc
+
+# project-local environment (recreate from ssw-design-analysis/environment/requirements.lock.txt)
+.venv/
+# KDE folder metadata
+.directory
+
+# secrets -- NEVER commit. This repo is public.
+# .env holds the CEDA JWT, a Zenodo API token and third-party API keys.
+.env
+.env.*
+!.env.example
+*.pem
+*_token.txt
+credentials.json
+
+# third-party papers (copyrighted; public repo) -- never commit
+*.pdf
+!ssw-design-analysis/09_figures/out/*.pdf
+
+# reduced SNAPSI near-surface temperature (daily 2.5-degree fields, ~3.5 GB), rebuilt by acquire_snapsi_tas.py
+ssw-design-analysis/03_data_ingestion/_snapsi_tas/
+
+# NCEP 10 hPa height fields for the vortex-geometry classification
+ssw-design-analysis/03_data_ingestion/_ncep_z10/

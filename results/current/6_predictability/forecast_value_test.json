@@ -1,0 +1,50 @@
+{
+  "plan_approved": "2026-09-25",
+  "n_events": 1517,
+  "n_members": 20,
+  "n_models": 10,
+  "outcome_window_days": [
+    8,
+    52
+  ],
+  "k_pseudo": 200,
+  "n_boot": 2000,
+  "seed": 3586372888,
+  "cv": "leave one model out",
+  "tiers": {
+    "P2 at-onset": {
+      "n_features": 24,
+      "CRPS_shift": 0.40929,
+      "CRPS_event_aware": 0.40617,
+      "CRPSS_ssw": 0.0076,
+      "CRPSS_ssw_CI95_model_bootstrap": [
+        -0.0028,
+        0.0142
+      ],
+      "CRPSS_pseudo_mean": 0.0374,
+      "CRPSS_pseudo_q025_q975": [
+        0.0234,
+        0.053
+      ],
+      "ssw_specific_CRPSS": -0.0298,
+      "p_pseudo_ge_ssw": 1.0
+    },
+    "P1 pre-onset": {
+      "n_features": 18,
+      "CRPS_shift": 0.40929,
+      "CRPS_event_aware": 0.40664,
+      "CRPSS_ssw": 0.0065,
+      "CRPSS_ssw_CI95_model_bootstrap": [
+        -0.0028,
+        0.0139
+      ],
+      "CRPSS_pseudo_mean": 0.0314,
+      "CRPSS_pseudo_q025_q975": [
+        0.0185,
+        0.0437
+      ],
+      "ssw_specific_CRPSS": -0.0249,
+      "p_pseudo_ge_ssw": 1.0
+    }
+  }
+}

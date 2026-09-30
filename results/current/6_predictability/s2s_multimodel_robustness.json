@@ -1,0 +1,319 @@
+{
+  "plan_approved": "2026-09-29",
+  "n_null": 10000,
+  "n_boot": 10000,
+  "n_mixed_dates": 2000,
+  "seed_base": "s2s_multimodel_robustness",
+  "outcomes": {
+    "psl": {
+      "n_events": 17,
+      "systems": [
+        "eccc",
+        "cma",
+        "hmcr",
+        "kma",
+        "cnrm",
+        "jma",
+        "cnr_isac",
+        "ncep",
+        "cptec"
+      ],
+      "R1_reliability": {
+        "after_SSWs": {
+          "n": 17,
+          "brier": 0.2,
+          "reliability": 0.0791,
+          "resolution": 0.0165,
+          "uncertainty": 0.1453,
+          "mean_p": 0.5678,
+          "obs_freq": 0.8235,
+          "bins": [
+            {
+              "bin": [
+                0.2,
+                0.4
+              ],
+              "n": 2,
+              "mean_p": 0.272,
+              "obs_freq": 0.5
+            },
+            {
+              "bin": [
+                0.4,
+                0.6
+              ],
+              "n": 7,
+              "mean_p": 0.465,
+              "obs_freq": 0.857
+            },
+            {
+              "bin": [
+                0.6,
+                0.8
+              ],
+              "n": 6,
+              "mean_p": 0.688,
+              "obs_freq": 0.833
+            },
+            {
+              "bin": [
+                0.8,
+                1.0
+              ],
+              "n": 2,
+              "mean_p": 0.862,
+              "obs_freq": 1.0
+            }
+          ]
+        },
+        "event_free_dates": {
+          "n": 971,
+          "brier": 0.1855,
+          "reliability": 0.0143,
+          "resolution": 0.0328,
+          "uncertainty": 0.2065,
+          "mean_p": 0.4072,
+          "obs_freq": 0.2915,
+          "bins": [
+            {
+              "bin": [
+                0.0,
+                0.2
+              ],
+              "n": 164,
+              "mean_p": 0.13,
+              "obs_freq": 0.073
+            },
+            {
+              "bin": [
+                0.2,
+                0.4
+              ],
+              "n": 335,
+              "mean_p": 0.305,
+              "obs_freq": 0.167
+            },
+            {
+              "bin": [
+                0.4,
+                0.6
+              ],
+              "n": 295,
+              "mean_p": 0.496,
+              "obs_freq": 0.369
+            },
+            {
+              "bin": [
+                0.6,
+                0.8
+              ],
+              "n": 153,
+              "mean_p": 0.685,
+              "obs_freq": 0.582
+            },
+            {
+              "bin": [
+                0.8,
+                1.0
+              ],
+              "n": 24,
+              "mean_p": 0.865,
+              "obs_freq": 0.708
+            }
+          ]
+        }
+      },
+      "R2_discrimination": {
+        "r_ssw": 0.2262,
+        "r_ssw_ci95_event_bootstrap": [
+          -0.2472,
+          0.7286
+        ],
+        "null_cond_mean": 0.5121,
+        "null_cond_sd": 0.197,
+        "n_null_cond": 4683,
+        "delta_r": -0.2859,
+        "delta_r_ci95": [
+          -0.7593,
+          0.2164
+        ],
+        "mde_alpha05_power80": 0.4307,
+        "power_at_delta_0.2": 0.424,
+        "power_at_delta_0.3": 0.629
+      },
+      "R3_mixed_model": {
+        "n_rows": 6378,
+        "n_event_dates": 17,
+        "n_free_dates": 971,
+        "ssw_coef": -0.1446,
+        "ssw_ci95": [
+          -0.2538,
+          -0.0355
+        ],
+        "ssw_p": 0.00938
+      },
+      "R4_well_covered": {
+        "min_systems": 5,
+        "n_events": 15,
+        "mean_rank": 0.4093,
+        "null_mean": 0.5438,
+        "p": 0.0118
+      }
+    },
+    "NEURASIA": {
+      "n_events": 17,
+      "systems": [
+        "eccc",
+        "cma",
+        "hmcr",
+        "kma",
+        "cnrm",
+        "jma",
+        "cnr_isac",
+        "ncep",
+        "cptec"
+      ],
+      "R1_reliability": {
+        "after_SSWs": {
+          "n": 17,
+          "brier": 0.2153,
+          "reliability": 0.0194,
+          "resolution": 0.0257,
+          "uncertainty": 0.2422,
+          "mean_p": 0.533,
+          "obs_freq": 0.5882,
+          "bins": [
+            {
+              "bin": [
+                0.0,
+                0.2
+              ],
+              "n": 2,
+              "mean_p": 0.114,
+              "obs_freq": 0.5
+            },
+            {
+              "bin": [
+                0.2,
+                0.4
+              ],
+              "n": 3,
+              "mean_p": 0.311,
+              "obs_freq": 0.333
+            },
+            {
+              "bin": [
+                0.4,
+                0.6
+              ],
+              "n": 7,
+              "mean_p": 0.521,
+              "obs_freq": 0.571
+            },
+            {
+              "bin": [
+                0.8,
+                1.0
+              ],
+              "n": 5,
+              "mean_p": 0.85,
+              "obs_freq": 0.8
+            }
+          ]
+        },
+        "event_free_dates": {
+          "n": 1495,
+          "brier": 0.1674,
+          "reliability": 0.0028,
+          "resolution": 0.0766,
+          "uncertainty": 0.2428,
+          "mean_p": 0.4144,
+          "obs_freq": 0.4154,
+          "bins": [
+            {
+              "bin": [
+                0.0,
+                0.2
+              ],
+              "n": 319,
+              "mean_p": 0.121,
+              "obs_freq": 0.122
+            },
+            {
+              "bin": [
+                0.2,
+                0.4
+              ],
+              "n": 491,
+              "mean_p": 0.294,
+              "obs_freq": 0.234
+            },
+            {
+              "bin": [
+                0.4,
+                0.6
+              ],
+              "n": 294,
+              "mean_p": 0.492,
+              "obs_freq": 0.493
+            },
+            {
+              "bin": [
+                0.6,
+                0.8
+              ],
+              "n": 269,
+              "mean_p": 0.689,
+              "obs_freq": 0.755
+            },
+            {
+              "bin": [
+                0.8,
+                1.0
+              ],
+              "n": 122,
+              "mean_p": 0.873,
+              "obs_freq": 0.975
+            }
+          ]
+        }
+      },
+      "R2_discrimination": {
+        "r_ssw": 0.4479,
+        "r_ssw_ci95_event_bootstrap": [
+          -0.2009,
+          0.918
+        ],
+        "null_cond_mean": 0.6222,
+        "null_cond_sd": 0.1438,
+        "n_null_cond": 5649,
+        "delta_r": -0.1743,
+        "delta_r_ci95": [
+          -0.8232,
+          0.2958
+        ],
+        "mde_alpha05_power80": 0.3274,
+        "power_at_delta_0.2": 0.529,
+        "power_at_delta_0.3": 0.761
+      },
+      "R3_mixed_model": {
+        "n_rows": 7549,
+        "n_event_dates": 17,
+        "n_free_dates": 1495,
+        "ssw_coef": -0.129,
+        "ssw_ci95": [
+          -0.2462,
+          -0.0119
+        ],
+        "ssw_p": 0.03081
+      },
+      "R4_well_covered": {
+        "min_systems": 5,
+        "n_events": 15,
+        "mean_rank": 0.4055,
+        "null_mean": 0.5262,
+        "p": 0.039
+      }
+    }
+  }
+}

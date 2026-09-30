@@ -1,0 +1,18 @@
+centres    ['KMA', 'SNU']
+inits      ['s20190829', 's20191001']
+matched    400 files, 4.3 GB total
+cached     0 files (no transfer)
+to fetch   400 files, 4.3 GB
+CEDA token valid, 71.7 h remaining (user mikhail001)
+  100/400  2.7 min  (37 files/min)
+  200/400  4.9 min  (41 files/min)
+  300/400  7.4 min  (41 files/min)
+  400/400  9.5 min  (42 files/min)
+
+72,400 rows -> snapsi_polarcap_psl.parquet  (0 files failed)
+init               s20190829  s20191001
+centre experiment                      
+KMA    control            50         50
+       nudged             50         50
+SNU    control            50         50
+       nudged             50         50

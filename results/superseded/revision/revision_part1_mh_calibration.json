@@ -1,0 +1,28 @@
+{
+  "part": 1,
+  "description": "MH recalibration with season-preserving permutation (post_event_1_3d exposure)",
+  "observed_mh": {
+    "rate_ratio": 0.59,
+    "ci_lo": 0.5046,
+    "ci_hi": 0.69,
+    "z_stat": -6.606,
+    "p_value": 0.0,
+    "n_strata": 83,
+    "rate_exposed": 0.9888,
+    "rate_unexposed": 1.6759
+  },
+  "circular_shift_permutation": {
+    "n_permutations": 500,
+    "empirical_p": 0.09,
+    "null_median_rr": 1.0611,
+    "null_5th": 0.501,
+    "null_95th": 1.8921,
+    "null_mean_rr": 1.1041
+  },
+  "matched_month_placebo": {
+    "n_permutations": 500,
+    "empirical_p": 0.112,
+    "frac_rr_below_1": 0.524,
+    "null_median_rr": 0.9719
+  }
+}

@@ -1,0 +1,444 @@
+{
+  "description": "Leave-one-out cross-validation and model comparison for the multi-trigger threshold amplification model",
+  "fit_criterion": "Joint minimisation of normalised RR and d_hazard residuals",
+  "fit_profile": [
+    {
+      "k": 1,
+      "theta": 0.8083,
+      "RR_pred": 0.32,
+      "d_hazard": 0.69,
+      "amplification": 1.0,
+      "loss": 0.121841,
+      "P_control": 0.2095,
+      "P_SSW": 0.067
+    },
+    {
+      "k": 2,
+      "theta": 0.8984,
+      "RR_pred": 0.3256,
+      "d_hazard": 0.805,
+      "amplification": 1.17,
+      "loss": 0.058048,
+      "P_control": 0.3349,
+      "P_SSW": 0.1091
+    },
+    {
+      "k": 3,
+      "theta": 0.9842,
+      "RR_pred": 0.3262,
+      "d_hazard": 0.884,
+      "amplification": 1.28,
+      "loss": 0.027944,
+      "P_control": 0.4126,
+      "P_SSW": 0.1346
+    },
+    {
+      "k": 4,
+      "theta": 1.0581,
+      "RR_pred": 0.3253,
+      "d_hazard": 0.944,
+      "amplification": 1.37,
+      "loss": 0.012253,
+      "P_control": 0.4656,
+      "P_SSW": 0.1514
+    },
+    {
+      "k": 5,
+      "theta": 1.1218,
+      "RR_pred": 0.3236,
+      "d_hazard": 0.992,
+      "amplification": 1.44,
+      "loss": 0.004206,
+      "P_control": 0.5044,
+      "P_SSW": 0.1632
+    },
+    {
+      "k": 6,
+      "theta": 1.1774,
+      "RR_pred": 0.3216,
+      "d_hazard": 1.033,
+      "amplification": 1.5,
+      "loss": 0.00069,
+      "P_control": 0.5341,
+      "P_SSW": 0.1718
+    },
+    {
+      "k": 7,
+      "theta": 1.2266,
+      "RR_pred": 0.3195,
+      "d_hazard": 1.067,
+      "amplification": 1.55,
+      "loss": 5e-05,
+      "P_control": 0.5576,
+      "P_SSW": 0.1782
+    },
+    {
+      "k": 8,
+      "theta": 1.2707,
+      "RR_pred": 0.3174,
+      "d_hazard": 1.098,
+      "amplification": 1.59,
+      "loss": 0.001321,
+      "P_control": 0.5768,
+      "P_SSW": 0.1831
+    },
+    {
+      "k": 9,
+      "theta": 1.3106,
+      "RR_pred": 0.3152,
+      "d_hazard": 1.124,
+      "amplification": 1.63,
+      "loss": 0.003903,
+      "P_control": 0.5928,
+      "P_SSW": 0.1868
+    },
+    {
+      "k": 10,
+      "theta": 1.347,
+      "RR_pred": 0.3131,
+      "d_hazard": 1.148,
+      "amplification": 1.66,
+      "loss": 0.007403,
+      "P_control": 0.6063,
+      "P_SSW": 0.1898
+    },
+    {
+      "k": 11,
+      "theta": 1.3804,
+      "RR_pred": 0.3109,
+      "d_hazard": 1.17,
+      "amplification": 1.7,
+      "loss": 0.011555,
+      "P_control": 0.6178,
+      "P_SSW": 0.1921
+    },
+    {
+      "k": 12,
+      "theta": 1.4114,
+      "RR_pred": 0.3089,
+      "d_hazard": 1.19,
+      "amplification": 1.72,
+      "loss": 0.016172,
+      "P_control": 0.6278,
+      "P_SSW": 0.1939
+    },
+    {
+      "k": 13,
+      "theta": 1.4402,
+      "RR_pred": 0.3068,
+      "d_hazard": 1.208,
+      "amplification": 1.75,
+      "loss": 0.021122,
+      "P_control": 0.6366,
+      "P_SSW": 0.1953
+    },
+    {
+      "k": 14,
+      "theta": 1.4672,
+      "RR_pred": 0.3048,
+      "d_hazard": 1.224,
+      "amplification": 1.77,
+      "loss": 0.026307,
+      "P_control": 0.6443,
+      "P_SSW": 0.1964
+    },
+    {
+      "k": 15,
+      "theta": 1.4925,
+      "RR_pred": 0.3029,
+      "d_hazard": 1.24,
+      "amplification": 1.8,
+      "loss": 0.031655,
+      "P_control": 0.6511,
+      "P_SSW": 0.1972
+    }
+  ],
+  "best_k": 7,
+  "best_theta": 1.2266,
+  "acceptable_k_range": [
+    6,
+    8
+  ],
+  "loo_results": [
+    {
+      "event": "Event_01",
+      "RR_loo": 0.3188,
+      "d_loo": 1.077,
+      "k_opt": 7,
+      "theta": 1.2271,
+      "RR_pred": 0.3194,
+      "d_pred": 1.067
+    },
+    {
+      "event": "Event_02",
+      "RR_loo": 0.3306,
+      "d_loo": 1.051,
+      "k_opt": 6,
+      "theta": 1.1443,
+      "RR_pred": 0.3313,
+      "d_pred": 1.039
+    },
+    {
+      "event": "Event_03",
+      "RR_loo": 0.316,
+      "d_loo": 1.086,
+      "k_opt": 8,
+      "theta": 1.2772,
+      "RR_pred": 0.3154,
+      "d_pred": 1.096
+    },
+    {
+      "event": "Event_04",
+      "RR_loo": 0.3006,
+      "d_loo": 1.167,
+      "k_opt": 11,
+      "theta": 1.4112,
+      "RR_pred": 0.301,
+      "d_pred": 1.161
+    },
+    {
+      "event": "Event_05",
+      "RR_loo": 0.3324,
+      "d_loo": 1.049,
+      "k_opt": 6,
+      "theta": 1.1389,
+      "RR_pred": 0.333,
+      "d_pred": 1.04
+    },
+    {
+      "event": "Event_06",
+      "RR_loo": 0.3324,
+      "d_loo": 1.049,
+      "k_opt": 6,
+      "theta": 1.1389,
+      "RR_pred": 0.333,
+      "d_pred": 1.04
+    },
+    {
+      "event": "Event_07",
+      "RR_loo": 0.2996,
+      "d_loo": 1.174,
+      "k_opt": 12,
+      "theta": 1.4407,
+      "RR_pred": 0.2992,
+      "d_pred": 1.18
+    },
+    {
+      "event": "Event_08",
+      "RR_loo": 0.3139,
+      "d_loo": 1.094,
+      "k_opt": 8,
+      "theta": 1.2822,
+      "RR_pred": 0.3138,
+      "d_pred": 1.095
+    },
+    {
+      "event": "Event_09",
+      "RR_loo": 0.3369,
+      "d_loo": 1.046,
+      "k_opt": 6,
+      "theta": 1.1251,
+      "RR_pred": 0.3371,
+      "d_pred": 1.043
+    },
+    {
+      "event": "Event_10",
+      "RR_loo": 0.3179,
+      "d_loo": 1.079,
+      "k_opt": 7,
+      "theta": 1.2293,
+      "RR_pred": 0.3187,
+      "d_pred": 1.067
+    },
+    {
+      "event": "Event_11",
+      "RR_loo": 0.3368,
+      "d_loo": 1.046,
+      "k_opt": 6,
+      "theta": 1.1255,
+      "RR_pred": 0.337,
+      "d_pred": 1.043
+    },
+    {
+      "event": "Event_12",
+      "RR_loo": 0.3369,
+      "d_loo": 1.046,
+      "k_opt": 6,
+      "theta": 1.1254,
+      "RR_pred": 0.3371,
+      "d_pred": 1.043
+    },
+    {
+      "event": "Event_13",
+      "RR_loo": 0.3235,
+      "d_loo": 1.064,
+      "k_opt": 7,
+      "theta": 1.2149,
+      "RR_pred": 0.3231,
+      "d_pred": 1.07
+    },
+    {
+      "event": "Event_14",
+      "RR_loo": 0.366,
+      "d_loo": 1.111,
+      "k_opt": 7,
+      "theta": 1.0812,
+      "RR_pred": 0.3668,
+      "d_pred": 1.099
+    },
+    {
+      "event": "Feb_2018",
+      "RR_loo": 0.2956,
+      "d_loo": 1.206,
+      "k_opt": 14,
+      "theta": 1.4958,
+      "RR_pred": 0.2951,
+      "d_pred": 1.214
+    },
+    {
+      "event": "Jan_2019",
+      "RR_loo": 0.2732,
+      "d_loo": 1.552,
+      "k_opt": 15,
+      "theta": 1.547,
+      "RR_pred": 0.2846,
+      "d_pred": 1.22
+    }
+  ],
+  "loo_k_range": [
+    6,
+    15
+  ],
+  "loo_k_mean": 8.2,
+  "loo_k_std": 2.9,
+  "loo_k_median": 7,
+  "model_comparison": {
+    "linear": {
+      "RR": 0.32,
+      "d_hazard": 0.69,
+      "amplification": 1.0
+    },
+    "k1_single_channel": {
+      "RR": 0.32,
+      "d_hazard": 0.69,
+      "amplification": 1.0
+    },
+    "best_threshold": {
+      "k": 7,
+      "RR": 0.3195,
+      "d_hazard": 1.07,
+      "amplification": 1.55
+    },
+    "observed": {
+      "RR": 0.32,
+      "d_hazard": 1.06,
+      "amplification": 1.54
+    }
+  },
+  "sensitivity": [
+    {
+      "d_weather": 0.45,
+      "k_opt": 15,
+      "theta": 2.0069,
+      "RR_pred": 0.3477,
+      "d_hazard": 0.721,
+      "amplification": 1.6
+    },
+    {
+      "d_weather": 0.5,
+      "k_opt": 15,
+      "theta": 1.8541,
+      "RR_pred": 0.3393,
+      "d_hazard": 0.831,
+      "amplification": 1.66
+    },
+    {
+      "d_weather": 0.55,
+      "k_opt": 15,
+      "theta": 1.7333,
+      "RR_pred": 0.3305,
+      "d_hazard": 0.939,
+      "amplification": 1.71
+    },
+    {
+      "d_weather": 0.6,
+      "k_opt": 15,
+      "theta": 1.634,
+      "RR_pred": 0.3211,
+      "d_hazard": 1.047,
+      "amplification": 1.75
+    },
+    {
+      "d_weather": 0.65,
+      "k_opt": 10,
+      "theta": 1.4152,
+      "RR_pred": 0.3193,
+      "d_hazard": 1.069,
+      "amplification": 1.64
+    },
+    {
+      "d_weather": 0.7,
+      "k_opt": 6,
+      "theta": 1.1581,
+      "RR_pred": 0.3206,
+      "d_hazard": 1.05,
+      "amplification": 1.5
+    },
+    {
+      "d_weather": 0.75,
+      "k_opt": 4,
+      "theta": 0.9316,
+      "RR_pred": 0.3209,
+      "d_hazard": 1.04,
+      "amplification": 1.39
+    },
+    {
+      "d_weather": 0.8,
+      "k_opt": 3,
+      "theta": 0.7409,
+      "RR_pred": 0.3205,
+      "d_hazard": 1.045,
+      "amplification": 1.31
+    },
+    {
+      "d_weather": 0.85,
+      "k_opt": 2,
+      "theta": 0.512,
+      "RR_pred": 0.3211,
+      "d_hazard": 1.012,
+      "amplification": 1.19
+    },
+    {
+      "d_weather": 0.9,
+      "k_opt": 2,
+      "theta": 0.4124,
+      "RR_pred": 0.3196,
+      "d_hazard": 1.076,
+      "amplification": 1.2
+    },
+    {
+      "d_weather": 0.95,
+      "k_opt": 2,
+      "theta": 0.32,
+      "RR_pred": 0.3182,
+      "d_hazard": 1.14,
+      "amplification": 1.2
+    },
+    {
+      "d_weather": 1.0,
+      "k_opt": 1,
+      "theta": 0.01,
+      "RR_pred": 0.315,
+      "d_hazard": 1.0,
+      "amplification": 1.0
+    },
+    {
+      "d_weather": 1.05,
+      "k_opt": 1,
+      "theta": 0.01,
+      "RR_pred": 0.2915,
+      "d_hazard": 1.05,
+      "amplification": 1.0
+    }
+  ]
+}

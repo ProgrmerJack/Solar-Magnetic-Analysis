@@ -1,0 +1,4 @@
+C:\Users\Jack0\Solar-Magnetic-Analysis\ssw-design-analysis\08_literature_audit\loeffel2025_missing_control.py:99: UserWarning: The specified chunks separate the stored chunks along dimension "time" starting at index 500. This could degrade performance. Instead, consider rechunking after loading.
+  ds = xr.open_zarr(STORE, storage_options={"token": "anon"}, chunks={"time": 500})
+opening WeatherBench2 ERA5 (anon) for [1000, 100] hPa over 60.0-90N ...
+  2,000/23,386

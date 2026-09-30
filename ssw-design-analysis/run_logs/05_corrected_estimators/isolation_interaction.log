@@ -1,0 +1,22 @@
+43 events: 29 isolated, 14 clustered
+retained days: 10197 nearest-isolated, 2943 nearest-clustered
+4000/4000 bootstrap fits converged
+
+bin            isolated    clustered               difference
+----------------------------------------------------------------
+-60..-46         +0.034       -2.920     +2.954 (p=0.264)
+-45..-31         -0.050       -2.564     +2.514 (p=0.301)
+-30..-16         -0.564       -2.940     +2.375 (p=0.234)
+-15..-1          -0.618       -2.096     +1.478 (p=0.512)
++0..+14          -0.921       -2.084     +1.163 (p=0.697)
++15..+29         -1.241       -2.125     +0.884 (p=0.720)
++30..+44         -0.953       -2.156     +1.203 (p=0.609)
++45..+60         -0.624       -3.034     +2.410 (p=0.286)
+
+=== verdict on the clustering explanation ===
+  pre-onset difference +2.375 95% CI [-1.109, +3.241] p=0.234
+  significant -> clustering demonstrably inflates the precursor
+  not significant -> the honest claim is only that the pre-onset
+                     anomaly is NOT ROBUST, with cause unproven
+
+Saved -> isolation_interaction.json

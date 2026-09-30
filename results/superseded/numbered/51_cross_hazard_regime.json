@@ -1,0 +1,189 @@
+{
+  "cold_wave": {
+    "hazard": "Cold-wave mortality",
+    "metric": "Mean T2m anomaly (K)",
+    "ssw_mean": 273.76,
+    "ctrl_mean": 273.93,
+    "difference_K": -0.17,
+    "p_value": 0.372919,
+    "extreme_cold_fraction_ssw": 0.0486,
+    "extreme_cold_fraction_ctrl": 0.0581,
+    "cold_extreme_RR": 0.84,
+    "direction": "INCREASED"
+  },
+  "precipitation": {
+    "hazard": "Drought / water resources",
+    "metric": "Daily precipitation (mm)",
+    "ssw_mean": 0.352,
+    "ctrl_mean": 0.238,
+    "ratio": 1.481,
+    "p_value": 3e-06,
+    "direction": "increased"
+  },
+  "rain_on_snow": {
+    "hazard": "Rain-on-snow flooding / landslides",
+    "metric": "Rainfall fraction of total precipitation",
+    "ssw_rain_fraction": 0.4501,
+    "ctrl_rain_fraction": 0.4649,
+    "ratio": 0.968,
+    "direction": "DECREASED"
+  },
+  "wind_hazard": {
+    "hazard": "Wind-driven infrastructure damage",
+    "metric": "Mean wind speed (m/s)",
+    "ssw_mean": 1.281,
+    "ctrl_mean": 1.228,
+    "change_pct": 4.4,
+    "p_value": 0.105419,
+    "extreme_wind_frac_ssw": 0.066,
+    "extreme_wind_frac_ctrl": 0.067,
+    "direction": "Variable (loading vs calm)"
+  },
+  "snow_loading": {
+    "hazard": "Spring snowmelt flooding",
+    "metric": "Snow depth (m)",
+    "ssw_mean": 0.0875,
+    "ctrl_mean": 0.0822,
+    "change_pct": 6.5,
+    "p_value": 0.002408,
+    "direction": "INCREASED"
+  },
+  "air_quality": {
+    "hazard": "Air quality (cold stagnation events)",
+    "metric": "Fraction of cold+calm days",
+    "ssw_fraction": 0.1285,
+    "ctrl_fraction": 0.1379,
+    "ratio": 0.93,
+    "direction": "decreased"
+  },
+  "multi_hazard_summary": {
+    "n_events": 16,
+    "n_colder_than_control": 10,
+    "n_drier_than_control": 8,
+    "cold_consistency": "10/16",
+    "dry_consistency": "8/16",
+    "mean_simultaneous_hazard_shifts": 2.12,
+    "fraction_multi_hazard": 0.688,
+    "event_details": [
+      {
+        "event_date": "1998-12-15",
+        "temp_anom_K": 0.19,
+        "precip_ratio": 0.493,
+        "wind_change_pct": -7.6,
+        "snow_depth_change_pct": -28.4
+      },
+      {
+        "event_date": "1999-02-26",
+        "temp_anom_K": 2.96,
+        "precip_ratio": 0.771,
+        "wind_change_pct": 14.1,
+        "snow_depth_change_pct": 76.0
+      },
+      {
+        "event_date": "2001-02-11",
+        "temp_anom_K": 2.12,
+        "precip_ratio": 0.634,
+        "wind_change_pct": 9.8,
+        "snow_depth_change_pct": 106.5
+      },
+      {
+        "event_date": "2001-12-30",
+        "temp_anom_K": -1.77,
+        "precip_ratio": 0.338,
+        "wind_change_pct": -20.2,
+        "snow_depth_change_pct": -33.4
+      },
+      {
+        "event_date": "2002-02-17",
+        "temp_anom_K": 3.81,
+        "precip_ratio": 0.604,
+        "wind_change_pct": 27.1,
+        "snow_depth_change_pct": 30.9
+      },
+      {
+        "event_date": "2003-01-18",
+        "temp_anom_K": -3.11,
+        "precip_ratio": 0.629,
+        "wind_change_pct": -6.4,
+        "snow_depth_change_pct": 43.0
+      },
+      {
+        "event_date": "2004-01-05",
+        "temp_anom_K": -1.24,
+        "precip_ratio": 2.759,
+        "wind_change_pct": 6.1,
+        "snow_depth_change_pct": 3.6
+      },
+      {
+        "event_date": "2006-01-21",
+        "temp_anom_K": -1.98,
+        "precip_ratio": 2.21,
+        "wind_change_pct": -5.5,
+        "snow_depth_change_pct": -28.5
+      },
+      {
+        "event_date": "2007-02-24",
+        "temp_anom_K": 3.71,
+        "precip_ratio": 2.368,
+        "wind_change_pct": 8.6,
+        "snow_depth_change_pct": -44.3
+      },
+      {
+        "event_date": "2008-02-22",
+        "temp_anom_K": 3.02,
+        "precip_ratio": 2.028,
+        "wind_change_pct": 14.9,
+        "snow_depth_change_pct": -24.4
+      },
+      {
+        "event_date": "2009-01-24",
+        "temp_anom_K": -1.6,
+        "precip_ratio": 2.893,
+        "wind_change_pct": -2.9,
+        "snow_depth_change_pct": 3.8
+      },
+      {
+        "event_date": "2010-02-09",
+        "temp_anom_K": -1.31,
+        "precip_ratio": 2.613,
+        "wind_change_pct": 14.5,
+        "snow_depth_change_pct": -18.8
+      },
+      {
+        "event_date": "2012-01-11",
+        "temp_anom_K": -3.63,
+        "precip_ratio": 1.729,
+        "wind_change_pct": 22.0,
+        "snow_depth_change_pct": -28.0
+      },
+      {
+        "event_date": "2013-01-07",
+        "temp_anom_K": -0.95,
+        "precip_ratio": 2.548,
+        "wind_change_pct": -9.2,
+        "snow_depth_change_pct": -38.7
+      },
+      {
+        "event_date": "2018-02-12",
+        "temp_anom_K": -1.08,
+        "precip_ratio": 0.642,
+        "wind_change_pct": 4.9,
+        "snow_depth_change_pct": 66.2
+      },
+      {
+        "event_date": "2019-01-01",
+        "temp_anom_K": -1.79,
+        "precip_ratio": 0.444,
+        "wind_change_pct": -0.5,
+        "snow_depth_change_pct": 19.0
+      }
+    ]
+  },
+  "z500_blocking": {
+    "hazard": "Hemispheric blocking (multi-hazard driver)",
+    "ssw_mean_gpm": 5410.9,
+    "ctrl_mean_gpm": 5405.2,
+    "difference_gpm": 5.7,
+    "p_value": 0.0
+  }
+}

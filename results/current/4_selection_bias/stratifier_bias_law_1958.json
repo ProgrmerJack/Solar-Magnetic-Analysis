@@ -1,0 +1,218 @@
+{
+  "n_events": 42,
+  "outcome_window": [
+    8,
+    52
+  ],
+  "all_event_composite": -0.8532,
+  "n_beta_pseudo": 3024,
+  "stratifiers": {
+    "vT_pre30": {
+      "class": "pre",
+      "variable": "vt",
+      "window": [
+        -30,
+        -1
+      ],
+      "description": "wave driving, 30 d before onset",
+      "dY_observed": 0.1643,
+      "dS": 0.4384,
+      "beta": -0.6531,
+      "predicted_bias": -0.2863,
+      "residual_causal": 0.4506,
+      "residual_CI95": [
+        -0.395,
+        1.089
+      ],
+      "frac_pct_of_dY_explained_by_stratifier": -174.3,
+      "support_fraction": 0.857,
+      "n": 42,
+      "null_dY": -0.4252,
+      "null_predicted": -0.3475,
+      "null_residual": -0.0778,
+      "null_residual_CI95": [
+        -0.788,
+        0.643
+      ],
+      "law_holds_under_null": true
+    },
+    "vT_pre15": {
+      "class": "pre",
+      "variable": "vt",
+      "window": [
+        -15,
+        -1
+      ],
+      "description": "wave driving, 15 d before onset",
+      "dY_observed": -0.0266,
+      "dS": 0.7868,
+      "beta": -0.3538,
+      "predicted_bias": -0.2784,
+      "residual_causal": 0.2518,
+      "residual_CI95": [
+        -0.556,
+        0.999
+      ],
+      "frac_pct_of_dY_explained_by_stratifier": 1045.2,
+      "support_fraction": 0.643,
+      "n": 42,
+      "null_dY": -0.3574,
+      "null_predicted": -0.275,
+      "null_residual": -0.0823,
+      "null_residual_CI95": [
+        -0.794,
+        0.67
+      ],
+      "law_holds_under_null": true
+    },
+    "u10_pre": {
+      "class": "pre",
+      "variable": "u10",
+      "window": [
+        -45,
+        -16
+      ],
+      "description": "vortex preconditioning",
+      "dY_observed": -0.0709,
+      "dS": 0.7506,
+      "beta": 0.0205,
+      "predicted_bias": 0.0154,
+      "residual_causal": -0.0863,
+      "residual_CI95": [
+        -0.756,
+        0.604
+      ],
+      "frac_pct_of_dY_explained_by_stratifier": -21.7,
+      "support_fraction": 1.0,
+      "n": 42,
+      "null_dY": 0.0828,
+      "null_predicted": 0.0205,
+      "null_residual": 0.0623,
+      "null_residual_CI95": [
+        -0.645,
+        0.835
+      ],
+      "law_holds_under_null": true
+    },
+    "u10_post30": {
+      "class": "strat",
+      "variable": "u10",
+      "window": [
+        0,
+        30
+      ],
+      "description": "reversal depth, 10 hPa",
+      "dY_observed": 0.2769,
+      "dS": 1.0938,
+      "beta": 0.481,
+      "predicted_bias": 0.5261,
+      "residual_causal": -0.2492,
+      "residual_CI95": [
+        -0.907,
+        0.427
+      ],
+      "frac_pct_of_dY_explained_by_stratifier": 190.0,
+      "support_fraction": 0.524,
+      "n": 42,
+      "null_dY": 0.5055,
+      "null_predicted": 0.5618,
+      "null_residual": -0.0562,
+      "null_residual_CI95": [
+        -0.803,
+        0.713
+      ],
+      "law_holds_under_null": true
+    },
+    "u10_post45": {
+      "class": "strat",
+      "variable": "u10",
+      "window": [
+        0,
+        45
+      ],
+      "description": "reversal persistence, 10 hPa",
+      "dY_observed": 0.1309,
+      "dS": 0.8745,
+      "beta": 0.4754,
+      "predicted_bias": 0.4158,
+      "residual_causal": -0.2849,
+      "residual_CI95": [
+        -0.927,
+        0.575
+      ],
+      "frac_pct_of_dY_explained_by_stratifier": 317.6,
+      "support_fraction": 0.667,
+      "n": 42,
+      "null_dY": 0.4996,
+      "null_predicted": 0.5365,
+      "null_residual": -0.0369,
+      "null_residual_CI95": [
+        -0.738,
+        0.661
+      ],
+      "law_holds_under_null": true
+    },
+    "z100_post": {
+      "class": "strat",
+      "variable": "z100",
+      "window": [
+        0,
+        30
+      ],
+      "description": "lower-stratospheric descent (PJO-like)",
+      "dY_observed": 0.715,
+      "dS": 0.9995,
+      "beta": 0.6286,
+      "predicted_bias": 0.6283,
+      "residual_causal": 0.0867,
+      "residual_CI95": [
+        -0.557,
+        0.66
+      ],
+      "frac_pct_of_dY_explained_by_stratifier": 87.9,
+      "support_fraction": 0.69,
+      "n": 42,
+      "null_dY": 0.8024,
+      "null_predicted": 0.7641,
+      "null_residual": 0.0383,
+      "null_residual_CI95": [
+        -0.654,
+        0.714
+      ],
+      "law_holds_under_null": true
+    },
+    "AO_post": {
+      "class": "outcome",
+      "variable": "ao",
+      "window": [
+        8,
+        52
+      ],
+      "description": "the published surface criterion",
+      "dY_observed": 1.7351,
+      "dS": 0.9038,
+      "beta": 1.8425,
+      "predicted_bias": 1.6651,
+      "residual_causal": 0.07,
+      "residual_CI95": [
+        -0.049,
+        0.147
+      ],
+      "frac_pct_of_dY_explained_by_stratifier": 96.0,
+      "support_fraction": 0.929,
+      "n": 42,
+      "null_dY": 1.6503,
+      "null_predicted": 1.6589,
+      "null_residual": -0.0086,
+      "null_residual_CI95": [
+        -0.074,
+        0.058
+      ],
+      "law_holds_under_null": true
+    }
+  },
+  "n_stratifiers_passing_null": 7,
+  "n_stratifiers": 7,
+  "verdict": "LAW HOLDS on observations: every stratifier's null residual contains zero, so beta x dS accounts for the whole non-causal contrast and the residual is an unbiased differential effect.",
+  "stratosphere_record": "ncep_stratosphere_1958.parquet"
+}

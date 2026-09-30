@@ -1,0 +1,26 @@
+  1998-11-01 .. 1999-04-30T18: 724 steps, N mean 101503 Pa, S mean 98769 Pa
+  1999-11-01 .. 2000-04-30T18: 728 steps, N mean 101252 Pa, S mean 98727 Pa
+  2000-11-01 .. 2001-04-30T18: 724 steps, N mean 101619 Pa, S mean 99265 Pa
+  2001-11-01 .. 2002-04-30T18: 724 steps, N mean 101238 Pa, S mean 98907 Pa
+  2002-11-01 .. 2003-04-30T18: 724 steps, N mean 101349 Pa, S mean 99156 Pa
+  2003-11-01 .. 2004-04-30T18: 728 steps, N mean 101465 Pa, S mean 99158 Pa
+  2004-11-01 .. 2005-04-30T18: 724 steps, N mean 101421 Pa, S mean 99042 Pa
+  2005-11-01 .. 2006-04-30T18: 724 steps, N mean 101628 Pa, S mean 99255 Pa
+  2006-11-01 .. 2007-04-30T18: 724 steps, N mean 101171 Pa, S mean 99088 Pa
+  2007-11-01 .. 2008-04-30T18: 728 steps, N mean 101302 Pa, S mean 98934 Pa
+  2008-11-01 .. 2009-04-30T18: 724 steps, N mean 101453 Pa, S mean 98858 Pa
+  2009-11-01 .. 2010-04-30T18: 724 steps, N mean 101708 Pa, S mean 99199 Pa
+  2010-11-01 .. 2011-04-30T18: 724 steps, N mean 101361 Pa, S mean 99128 Pa
+  2011-11-01 .. 2012-04-30T18: 728 steps, N mean 101303 Pa, S mean 98855 Pa
+  2012-11-01 .. 2013-04-30T18: 724 steps, N mean 101793 Pa, S mean 98933 Pa
+  2013-11-01 .. 2014-04-30T18: 724 steps, N mean 101193 Pa, S mean 99001 Pa
+  2014-11-01 .. 2015-04-30T18: 724 steps, N mean 101164 Pa, S mean 98724 Pa
+  2015-11-01 .. 2016-04-30T18: 728 steps, N mean 101279 Pa, S mean 98704 Pa
+  2016-11-01 .. 2017-04-30T18: 724 steps, N mean 101190 Pa, S mean 99248 Pa
+  2017-11-01 .. 2018-04-30T18: 724 steps, N mean 101499 Pa, S mean 98831 Pa
+  2018-11-01 .. 2019-04-30T18: 724 steps, N mean 101269 Pa, S mean 98808 Pa
+  2019-11-01 .. 2020-04-30T18: 728 steps, N mean 100990 Pa, S mean 99188 Pa
+  2020-11-01 .. 2021-04-30T18: 724 steps, N mean 101451 Pa, S mean 98594 Pa
+  2021-11-01 .. 2022-04-30T18: 724 steps, N mean 101329 Pa, S mean 98655 Pa
+  2019-08-01 .. 2019-11-30T18: 488 steps, N mean 101227 Pa, S mean 99018 Pa
+17,768 rows -> era5_psl_cap_6h.parquet

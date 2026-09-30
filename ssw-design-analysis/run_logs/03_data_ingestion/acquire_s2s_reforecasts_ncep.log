@@ -1,0 +1,54 @@
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+ncep: 43 requests; hindcast years 1999-2010
+  2011-03-01_h01-16 cached
+  2011-03-01_h02-07 cached
+  2011-03-01_h02-04 cached
+  2011-03-01_h01-13 cached
+  2011-03-01_h01-04 cached
+  2011-03-01_h01-28 cached
+  2011-03-01_h01-01 cached
+  2011-03-01_h01-25 cached
+  2011-03-01_h01-10 cached
+  2011-03-01_h01-07 cached
+  2011-03-01_h01-22 cached
+  2011-03-01_h02-01 cached
+  2011-03-01_h02-16 cached
+  2011-03-01_h02-22 cached
+  2011-03-01_h02-25 cached
+  2011-03-01_h02-28 cached
+  2011-03-01_h03-01 cached
+  2011-03-01_h03-04 cached
+  2011-03-01_h03-07 cached
+  2011-03-01_h03-10 cached
+  2011-03-01_h01-31 cached
+  2011-03-01_h02-13 cached
+  2011-03-01_h03-13 cached
+  2011-03-01_h03-22 cached
+  2011-03-01_h03-25 cached
+  2011-03-01_h01-19 cached
+  2011-03-01_h03-31 cached
+  2011-03-01_h12-01 cached
+  2011-03-01_h12-04 cached
+  2011-03-01_h12-07 cached
+  2011-03-01_h12-10 cached
+  2011-03-01_h12-13 cached
+  2011-03-01_h12-16 cached
+  2011-03-01_h12-19 cached
+  2011-03-01_h03-19 cached
+  2011-03-01_h12-25 cached
+  2011-03-01_h12-28 cached
+  2011-03-01_h03-28 cached
+  2011-03-01_h12-22 cached
+  2011-03-01_h12-31 cached
+  2011-03-01_h03-16 cached
+  2011-03-01_h02-19 cached
+  2011-03-01_h02-10 cached
+
+51,600 rows, 516 starts (1999-01-01 .. 2010-12-31), members [0, 1, 2, 3]
+Saved -> s2s_ncep_psl_cap.parquet
+ncep exit=0

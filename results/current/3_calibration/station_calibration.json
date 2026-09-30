@@ -1,0 +1,53 @@
+{
+  "n_stations": 103,
+  "n_rows": 320919,
+  "n_winters": 44,
+  "n_events": 28,
+  "heterogeneity": {
+    "n_stations": 103,
+    "seasonal_amplitude_degC": {
+      "min": 5.94,
+      "median": 11.77,
+      "max": 39.33
+    },
+    "corr_elevation_vs_amplitude": [
+      -0.28,
+      0.004171355157279403
+    ],
+    "corr_elevation_vs_mean_level": [
+      -0.003,
+      0.9750506691412859
+    ]
+  },
+  "n_mean_draws": 400,
+  "n_cover_draws": 40,
+  "n_boot": 1000,
+  "specs": {
+    "shared_harm3": {
+      "null_mean_degC": 0.2564,
+      "null_mean_in_sd_units": 0.0372,
+      "null_sd": 0.6727,
+      "n_draws": 400
+    },
+    "band_harm3": {
+      "null_mean_degC": 0.2558,
+      "null_mean_in_sd_units": 0.0371,
+      "null_sd": 0.672,
+      "n_draws": 400
+    },
+    "station_clim": {
+      "null_mean_degC": 0.0621,
+      "null_mean_in_sd_units": 0.009,
+      "null_sd": 0.6252,
+      "n_draws": 400,
+      "coverage": 0.95,
+      "coverage_CI95": [
+        0.831,
+        0.994
+      ],
+      "fpr": 0.05,
+      "n_cover": 40
+    }
+  },
+  "coverage_spec": "station_clim"
+}

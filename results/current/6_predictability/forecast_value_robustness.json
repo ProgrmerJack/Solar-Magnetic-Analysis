@@ -1,0 +1,271 @@
+{
+  "plan_approved": "2026-09-29",
+  "seed": 1049848562,
+  "k_draws": 200,
+  "n_boot": 2000,
+  "weak_quantile": 0.15,
+  "n_events": 1517,
+  "n_members": 20,
+  "columns": {
+    "base": 38,
+    "plus": 90
+  },
+  "results": {
+    "base | P1 pre-onset": {
+      "n_events_scored": 1514,
+      "CRPSS_ssw": 0.0065,
+      "CRPSS_ssw_CI95_model_bootstrap": [
+        -0.0033,
+        0.0134
+      ],
+      "CRPSS_ssw_model_balanced": 0.0044,
+      "CRPSS_ssw_without_CanESM5": 0.0049,
+      "null_ordinary_pooled": {
+        "mean": 0.0326,
+        "q025_q975": [
+          0.019,
+          0.0452
+        ],
+        "p_null_ge_ssw": 1.0
+      },
+      "null_ordinary_balanced": {
+        "mean": 0.0337,
+        "q025_q975": [
+          0.0188,
+          0.0514
+        ],
+        "p_null_ge_ssw": 1.0
+      },
+      "null_weak_pooled": {
+        "mean": 0.0113,
+        "q025_q975": [
+          0.0005,
+          0.0237
+        ],
+        "p_null_ge_ssw": 0.815
+      },
+      "null_weak_balanced": {
+        "mean": 0.0107,
+        "q025_q975": [
+          -0.0027,
+          0.0272
+        ],
+        "p_null_ge_ssw": 0.795
+      }
+    },
+    "base | P2 at-onset": {
+      "n_events_scored": 1514,
+      "CRPSS_ssw": 0.0076,
+      "CRPSS_ssw_CI95_model_bootstrap": [
+        -0.0024,
+        0.0138
+      ],
+      "CRPSS_ssw_model_balanced": 0.0036,
+      "CRPSS_ssw_without_CanESM5": 0.0062,
+      "null_ordinary_pooled": {
+        "mean": 0.0391,
+        "q025_q975": [
+          0.0256,
+          0.0527
+        ],
+        "p_null_ge_ssw": 1.0
+      },
+      "null_ordinary_balanced": {
+        "mean": 0.0396,
+        "q025_q975": [
+          0.0241,
+          0.0558
+        ],
+        "p_null_ge_ssw": 1.0
+      },
+      "null_weak_pooled": {
+        "mean": 0.0162,
+        "q025_q975": [
+          0.0041,
+          0.0289
+        ],
+        "p_null_ge_ssw": 0.935
+      },
+      "null_weak_balanced": {
+        "mean": 0.0142,
+        "q025_q975": [
+          -0.0001,
+          0.0301
+        ],
+        "p_null_ge_ssw": 0.93
+      }
+    },
+    "base | P3 + post-onset stratosphere": {
+      "n_events_scored": 1514,
+      "CRPSS_ssw": 0.1717,
+      "CRPSS_ssw_CI95_model_bootstrap": [
+        0.1076,
+        0.2135
+      ],
+      "CRPSS_ssw_model_balanced": 0.1473,
+      "CRPSS_ssw_without_CanESM5": 0.1676,
+      "null_ordinary_pooled": {
+        "mean": 0.2068,
+        "q025_q975": [
+          0.1833,
+          0.2329
+        ],
+        "p_null_ge_ssw": 1.0
+      },
+      "null_ordinary_balanced": {
+        "mean": 0.1848,
+        "q025_q975": [
+          0.1482,
+          0.2191
+        ],
+        "p_null_ge_ssw": 0.985
+      },
+      "null_weak_pooled": {
+        "mean": 0.1886,
+        "q025_q975": [
+          0.1602,
+          0.2147
+        ],
+        "p_null_ge_ssw": 0.915
+      },
+      "null_weak_balanced": {
+        "mean": 0.161,
+        "q025_q975": [
+          0.1208,
+          0.1988
+        ],
+        "p_null_ge_ssw": 0.765
+      }
+    },
+    "plus | P1 pre-onset": {
+      "n_events_scored": 1514,
+      "CRPSS_ssw": 0.0062,
+      "CRPSS_ssw_CI95_model_bootstrap": [
+        -0.0007,
+        0.0133
+      ],
+      "CRPSS_ssw_model_balanced": 0.0051,
+      "CRPSS_ssw_without_CanESM5": 0.0095,
+      "null_ordinary_pooled": {
+        "mean": 0.0438,
+        "q025_q975": [
+          0.0276,
+          0.0582
+        ],
+        "p_null_ge_ssw": 1.0
+      },
+      "null_ordinary_balanced": {
+        "mean": 0.0447,
+        "q025_q975": [
+          0.0257,
+          0.0597
+        ],
+        "p_null_ge_ssw": 1.0
+      },
+      "null_weak_pooled": {
+        "mean": 0.0241,
+        "q025_q975": [
+          0.0107,
+          0.0388
+        ],
+        "p_null_ge_ssw": 0.985
+      },
+      "null_weak_balanced": {
+        "mean": 0.0263,
+        "q025_q975": [
+          0.0093,
+          0.0484
+        ],
+        "p_null_ge_ssw": 0.995
+      }
+    },
+    "plus | P2 at-onset": {
+      "n_events_scored": 1514,
+      "CRPSS_ssw": 0.0076,
+      "CRPSS_ssw_CI95_model_bootstrap": [
+        -0.0026,
+        0.0192
+      ],
+      "CRPSS_ssw_model_balanced": 0.0052,
+      "CRPSS_ssw_without_CanESM5": 0.0114,
+      "null_ordinary_pooled": {
+        "mean": 0.0483,
+        "q025_q975": [
+          0.0316,
+          0.0638
+        ],
+        "p_null_ge_ssw": 1.0
+      },
+      "null_ordinary_balanced": {
+        "mean": 0.0492,
+        "q025_q975": [
+          0.0298,
+          0.0653
+        ],
+        "p_null_ge_ssw": 1.0
+      },
+      "null_weak_pooled": {
+        "mean": 0.0293,
+        "q025_q975": [
+          0.0154,
+          0.0443
+        ],
+        "p_null_ge_ssw": 1.0
+      },
+      "null_weak_balanced": {
+        "mean": 0.0306,
+        "q025_q975": [
+          0.0135,
+          0.0529
+        ],
+        "p_null_ge_ssw": 1.0
+      }
+    },
+    "plus | P3 + post-onset stratosphere": {
+      "n_events_scored": 1514,
+      "CRPSS_ssw": 0.1756,
+      "CRPSS_ssw_CI95_model_bootstrap": [
+        0.1182,
+        0.2132
+      ],
+      "CRPSS_ssw_model_balanced": 0.152,
+      "CRPSS_ssw_without_CanESM5": 0.1601,
+      "null_ordinary_pooled": {
+        "mean": 0.2119,
+        "q025_q975": [
+          0.1822,
+          0.238
+        ],
+        "p_null_ge_ssw": 0.99
+      },
+      "null_ordinary_balanced": {
+        "mean": 0.1939,
+        "q025_q975": [
+          0.158,
+          0.2297
+        ],
+        "p_null_ge_ssw": 0.985
+      },
+      "null_weak_pooled": {
+        "mean": 0.1905,
+        "q025_q975": [
+          0.159,
+          0.2213
+        ],
+        "p_null_ge_ssw": 0.865
+      },
+      "null_weak_balanced": {
+        "mean": 0.167,
+        "q025_q975": [
+          0.1288,
+          0.2023
+        ],
+        "p_null_ge_ssw": 0.765
+      }
+    }
+  },
+  "predictor_sd_ratio_ssw_over_null_median": {
+    "ordinary": 1.0213,
+    "weak": 1.0281
+  }
+}

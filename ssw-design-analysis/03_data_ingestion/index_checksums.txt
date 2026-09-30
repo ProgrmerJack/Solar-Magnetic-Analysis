@@ -1,0 +1,5 @@
+a1d44c8915ef72306df91fc5c397e958fe8e106a38b790a25ce2c4f293767b13  ao  https://ftp.cpc.ncep.noaa.gov/cwlinks/norm.daily.ao.index.b500101.current.ascii  retrieved 2026-07-28T19:32:35Z
+15d2c4f0e29c240e4b4419dc4a5ba29154f7f83fdbfaf7aeb187c81f12287c0e  nao  https://ftp.cpc.ncep.noaa.gov/cwlinks/norm.daily.nao.index.b500101.current.ascii  retrieved 2026-07-28T19:32:35Z
+d956740114bbf59c6d8351cc4d7a1ff45fd1070a40ee2abfa6e5f35d0d1e1241  pna  https://ftp.cpc.ncep.noaa.gov/cwlinks/norm.daily.pna.index.b500101.current.ascii  retrieved 2026-07-28T19:32:35Z
+68bffaac9cb9e5c7b2384a1e3203a3a033006daf749ea23b881bbbedd41b8147  aao  https://ftp.cpc.ncep.noaa.gov/cwlinks/norm.daily.aao.index.b790101.current.ascii  retrieved 2026-07-28T19:32:35Z
+9727247dca1f81a2ecbb36d0cc692ade7ffde825f86b9dd42693e71c6208f900  tele_index_nh  https://ftp.cpc.ncep.noaa.gov/wd52dg/data/indices/tele_index.nh  retrieved 2026-07-28T19:32:35Z

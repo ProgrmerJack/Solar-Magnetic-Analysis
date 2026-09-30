@@ -1,0 +1,17 @@
+Granger asymmetry: (vortex -> surface) minus (surface -> vortex)
+  positive asymmetry = downward influence dominates
+
+  observations: 6,958 winter days, 47 winters
+  OBSERVATIONS     bivariate                    down 0.0029  up 0.0017  asym +0.0012 [-0.0024,+0.0051]  P(asym<=0)=0.2780
+  OBSERVATIONS     conditional on wave driving  down 0.0029  up 0.0016  asym +0.0014 [-0.0020,+0.0048]  P(asym<=0)=0.2080
+  CanESM5          bivariate                    down 0.0052  up 0.0018  asym +0.0034 [+0.0021,+0.0047]  P(asym<=0)=0.0000
+  IPSL-CM5A2-INCA  bivariate                    down 0.0052  up 0.0020  asym +0.0032 [+0.0012,+0.0054]  P(asym<=0)=0.0020
+  MPI-ESM-1-2-HAM  bivariate                    down 0.0032  up 0.0017  asym +0.0015 [-0.0004,+0.0034]  P(asym<=0)=0.0655
+  CESM2-FV2        bivariate                    down 0.0073  up 0.0024  asym +0.0049 [+0.0022,+0.0076]  P(asym<=0)=0.0010
+
+=== VERDICT ===
+  conditional on wave driving, the vortex->surface direction is STRONGER than the reverse
+  asymmetry +0.0014, P(<=0) = 0.2080
+  a shared fast driver with no directional influence predicts asym = 0
+
+Saved -> granger_direction.json

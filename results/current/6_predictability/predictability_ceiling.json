@@ -1,0 +1,79 @@
+{
+  "outcome_window": [
+    8,
+    52
+  ],
+  "results": {
+    "CMIP6": {
+      "P1 pre-onset": {
+        "n_features": 20,
+        "ridge": {
+          "cv_r2": 0.0839,
+          "null_mean": -0.009,
+          "null_p95": 0.002,
+          "p_value": 0.0,
+          "significant": true
+        },
+        "gb": {
+          "cv_r2": 0.0259,
+          "null_mean": -0.0611,
+          "null_p95": -0.0374,
+          "p_value": 0.0,
+          "significant": true
+        }
+      },
+      "P2 at-onset": {
+        "n_features": 26,
+        "ridge": {
+          "cv_r2": 0.0917,
+          "null_mean": -0.0075,
+          "null_p95": 0.0023,
+          "p_value": 0.0,
+          "significant": true
+        },
+        "gb": {
+          "cv_r2": 0.0379,
+          "null_mean": -0.0607,
+          "null_p95": -0.0412,
+          "p_value": 0.0,
+          "significant": true
+        }
+      },
+      "P3 + post-onset stratosphere": {
+        "n_features": 38,
+        "ridge": {
+          "cv_r2": 0.4073,
+          "null_mean": -0.0062,
+          "null_p95": 0.005,
+          "p_value": 0.0,
+          "significant": true
+        },
+        "gb": {
+          "cv_r2": 0.3513,
+          "null_mean": -0.0527,
+          "null_p95": -0.0226,
+          "p_value": 0.0,
+          "significant": true
+        }
+      }
+    }
+  },
+  "power_CMIP6": {
+    "R2=0.02": 0.75,
+    "R2=0.05": 1.0,
+    "R2=0.1": 1.0,
+    "R2=0.2": 1.0
+  },
+  "implied": {
+    "CMIP6 Karpechko conditions 1-2": {
+      "implied_r2": 0.5275,
+      "rate_DW": 0.704,
+      "contrast": -1.1539,
+      "n_events": 1516,
+      "n_excluded_short_window": 1,
+      "var_outcome": 0.5255,
+      "criterion": "Karpechko 2017 conditions 1-2 on the daily annular-mode anomaly over days +8..+52; condition 3 not available",
+      "over_achievable": 6.29
+    }
+  }
+}

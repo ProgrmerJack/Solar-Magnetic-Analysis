@@ -1,0 +1,93 @@
+rebased 6171 psl cache file(s)
+centres    ['CCCma', 'CNR-ISAC', 'ECCC', 'ECMWF', 'KMA', 'Meteo-France', 'NCAR', 'NRL', 'SNU', 'UKMO']
+inits      ['s20180125', 's20180208', 's20181213', 's20190108', 's20190829', 's20191001']
+matched    6,171 files, 149.0 GB total
+cached     6,171 files (no transfer)
+to fetch   0 files, 0.0 GB
+nothing to fetch; rebuilding the parquet from cache
+CEDA token valid, 42.4 h remaining (user mikhail001)
+  100/6171  0.0 min  (22360 files/min)
+  200/6171  0.0 min  (26825 files/min)
+  300/6171  0.0 min  (28841 files/min)
+  400/6171  0.0 min  (29859 files/min)
+  500/6171  0.0 min  (30252 files/min)
+  600/6171  0.0 min  (30541 files/min)
+  700/6171  0.0 min  (31619 files/min)
+  800/6171  0.0 min  (32696 files/min)
+  900/6171  0.0 min  (32992 files/min)
+  1000/6171  0.0 min  (32777 files/min)
+  1100/6171  0.0 min  (32847 files/min)
+  1200/6171  0.0 min  (32852 files/min)
+  1300/6171  0.0 min  (32824 files/min)
+  1400/6171  0.0 min  (32867 files/min)
+  1500/6171  0.0 min  (33059 files/min)
+  1600/6171  0.0 min  (33099 files/min)
+  1700/6171  0.1 min  (32972 files/min)
+  1800/6171  0.1 min  (33128 files/min)
+  1900/6171  0.1 min  (33764 files/min)
+  2000/6171  0.1 min  (34190 files/min)
+  2100/6171  0.1 min  (34107 files/min)
+  2200/6171  0.1 min  (34086 files/min)
+  2300/6171  0.1 min  (34558 files/min)
+  2400/6171  0.1 min  (35068 files/min)
+  2500/6171  0.1 min  (34338 files/min)
+  2600/6171  0.1 min  (34200 files/min)
+  2700/6171  0.1 min  (34082 files/min)
+  2800/6171  0.1 min  (33968 files/min)
+  2900/6171  0.1 min  (33955 files/min)
+  3000/6171  0.1 min  (33901 files/min)
+  3100/6171  0.1 min  (34363 files/min)
+  3200/6171  0.1 min  (34347 files/min)
+  3300/6171  0.1 min  (34269 files/min)
+  3400/6171  0.1 min  (34155 files/min)
+  3500/6171  0.1 min  (34056 files/min)
+  3600/6171  0.1 min  (34012 files/min)
+  3700/6171  0.1 min  (33919 files/min)
+  3800/6171  0.1 min  (33843 files/min)
+  3900/6171  0.1 min  (33754 files/min)
+  4000/6171  0.1 min  (33723 files/min)
+  4100/6171  0.1 min  (33595 files/min)
+  4200/6171  0.1 min  (33808 files/min)
+  4300/6171  0.1 min  (33785 files/min)
+  4400/6171  0.1 min  (33740 files/min)
+  4500/6171  0.1 min  (33701 files/min)
+  4600/6171  0.1 min  (33627 files/min)
+  4700/6171  0.1 min  (33533 files/min)
+  4800/6171  0.1 min  (33528 files/min)
+  4900/6171  0.1 min  (33477 files/min)
+  5000/6171  0.1 min  (33467 files/min)
+  5100/6171  0.2 min  (33411 files/min)
+  5200/6171  0.2 min  (33156 files/min)
+  5300/6171  0.2 min  (33239 files/min)
+  5400/6171  0.2 min  (33174 files/min)
+  5500/6171  0.2 min  (33114 files/min)
+  5600/6171  0.2 min  (33102 files/min)
+  5700/6171  0.2 min  (33047 files/min)
+  5800/6171  0.2 min  (33027 files/min)
+  5900/6171  0.2 min  (32989 files/min)
+  6000/6171  0.2 min  (33005 files/min)
+  6100/6171  0.2 min  (32956 files/min)
+
+1,171,894 rows from 6,171 cached members -> snapsi_polarcap_psl.parquet  (0 files failed this run)
+init                     s20180125  s20180208  s20181213  s20190108  s20190829  s20191001
+centre       experiment                                                                  
+CCCma        control            50         50         50         47          0          0
+             nudged             50         50         50         38          0          0
+CNR-ISAC     control            50         50         50         50         50         50
+             nudged             50         50         50         50         50         50
+ECCC         control            50         50         50         50         50         50
+             nudged             50         50         50         50         50         50
+ECMWF        control            51         51         51         51         51         51
+             nudged             51         51         51         51         51         51
+KMA          control            50         50         50         50         50         50
+             nudged             50         50         52         50         50         50
+Meteo-France control            50         50         50         50         50         50
+             nudged             50         50         50         50         50         50
+NCAR         control            51         51         51         51         51         51
+             nudged             51         51         51         51         51         51
+NRL          control            80         80         80         80         80         80
+             nudged             80         80         80         80         80         80
+SNU          control            50         50         50         50         50         50
+             nudged             50         50         50         50         50         50
+UKMO         control            50         50         50         50         50         50
+             nudged             50         50         50         50         50         50

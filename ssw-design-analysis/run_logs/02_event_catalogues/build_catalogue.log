@@ -1,0 +1,23 @@
+catalogue built: 48 rows, 43 in primary
+  event period : 1958-01-30 .. 2024-03-04
+  N events     : 43
+  N unique winters: 36
+  winters with >1 event: 7 ([1966, 1969, 1971, 1988, 1999, 2010, 2024])
+
+  set sizes:
+    primary                  43
+    primary_compendium_only  41
+    consensus_strict         36
+    consensus_half           42
+    union                    47
+    ncep_ncar                39
+    era40                    29
+    era_interim              26
+    jra_55                   41
+    merra2                   27
+    era5                     42
+
+=== invariance tests (spec §9) ===
+  all passed
+
+wrote event_catalogue.csv, catalogue_sets.json, catalogue_checksum.txt

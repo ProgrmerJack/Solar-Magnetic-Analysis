@@ -1,0 +1,43 @@
+fitting beta on ~4000 event-free pseudo-onsets ...
+building null residual distribution, 3000 draws ...
+  1000/3000
+  2000/3000
+  3000/3000
+
+stratifier   class      n    resid       p  slope_res  p_slope
+----------------------------------------------------------------
+vT_pre30     pre       42   +0.435  0.2557     +0.742   0.1430
+vT_pre15     pre       42   +0.265  0.4843     +0.782   0.0353
+u10_pre      pre       29   -0.659  0.1753     -0.396   0.2485
+u10_post30   strat     29   -0.091  0.8499     -0.212   0.4713
+u10_post45   strat     29   +0.219  0.6455     +0.024   0.9456
+z100_post    strat     29   +0.283  0.5302     -0.079   0.7708
+AO_post      outcome   43   +0.077  0.0243     +0.030   0.5300
+
+BH-FDR over exactly these 7 stratifiers:
+  vT_pre30     q_resid=0.5966  q_slope=0.5005
+  vT_pre15     q_resid=0.7422  q_slope=0.2473
+  u10_pre      q_resid=0.5966  q_slope=0.5798
+  u10_post30   q_resid=0.8499  q_slope=0.7420
+  u10_post45   q_resid=0.7531  q_slope=0.9456
+  z100_post    q_resid=0.7422  q_slope=0.8993
+  AO_post      q_resid=0.1703  q_slope=0.7420
+
+=== u10_pre STRESS TEST (the only candidate positive result) ===
+  window sensitivity (contrast, residual):
+    (-45, -16)   n= 29  dY=-0.706  beta=+0.021  resid=-0.724
+    (-60, -31)   n= 29  dY=+0.178  beta=-0.029  resid=+0.207
+    (-30, -1)    n= 29  dY=-0.352  beta=+0.029  resid=-0.379
+    (-45, -1)    n= 29  dY=-0.234  beta=+0.000  resid=-0.234
+    (-60, -16)   n= 29  dY=-0.153  beta=-0.003  resid=-0.150
+  split rule sensitivity:
+    median     contrast = -0.656  (n_hi=15, n_lo=15)
+    terciles   contrast = -0.714  (n_hi=10, n_lo=10)
+    quartiles  contrast = -0.578  (n_hi=8, n_lo=8)
+  leave-one-winter-out jackknife on the continuous slope:
+    full slope -0.450; leave-one-winter-out range [-0.730, -0.329]; sign stable = True
+    seasonal-timing confound: mean onset day-of-year high-vortex +46.1 vs low-vortex +16.5 (difference +29.6 d)
+
+  -> DOES NOT SURVIVE as a confirmed result: fails FDR. Report as exploratory only.
+
+Saved -> stratifier_inference.json

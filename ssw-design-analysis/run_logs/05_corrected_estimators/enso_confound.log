@@ -1,0 +1,19 @@
+
+=== AAO  n=30 events, 8133 days, ONI sd 0.93 ===
+  without_ONI  +45..+60 = -0.659 [-1.177,-0.128] p=0.0147
+  with_ONI     +45..+60 = -0.661 [-1.157,-0.135] p=0.0137   ONI beta -0.3830
+  -> effect changes -0.659 -> -0.661 (-0% attenuation)
+
+=== AO  n=43 events, 13156 days, ONI sd 0.90 ===
+  without_ONI  +15..+29 = -1.027 [-1.618,-0.429] p=0.0013
+  with_ONI     +15..+29 = -1.023 [-1.623,-0.416] p=0.0013   ONI beta +0.2034
+  -> effect changes -1.027 -> -1.022 (0% attenuation)
+
+=== verdict ===
+  AAO attenuation -0%, AO attenuation 0%
+  AAO killed while AO survives -> ENSO is a common cause; the AAO is
+     NOT a valid negative control and Gate 6's premise is wrong
+  both killed -> the covariate absorbs signal; test uninformative
+  neither killed -> ENSO is not the mechanism; failure unexplained
+
+Saved -> enso_confound.json

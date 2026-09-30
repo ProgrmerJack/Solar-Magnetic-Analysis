@@ -1,0 +1,69 @@
+[
+ {
+  "file": "chemistry_response.json",
+  "size": 31686,
+  "sha": "860e5b0585301b1c",
+  "validity": "NO_INFERENCE",
+  "reason": "producer makes no statistical claim",
+  "producers": [
+   "scripts/analysis/03_chemistry_response.py"
+  ],
+  "n_claims": 28,
+  "claim_keys": [
+   "p_value",
+   "p_values"
+  ],
+  "duplicate_of": []
+ },
+ {
+  "file": "r113_event_study.json",
+  "size": 3982,
+  "sha": "236593ff29581327",
+  "validity": "CURRENT",
+  "reason": "produced by the corrected pipeline",
+  "producers": [
+   "scripts/analysis_extra/r113_event_study.py"
+  ],
+  "n_claims": 51,
+  "claim_keys": [
+   "CI95",
+   "baseline_gap_days",
+   "effect",
+   "p_one_sided",
+   "p_two_sided",
+   "recovery_ratio"
+  ],
+  "duplicate_of": []
+ },
+ {
+  "file": "r114_avalanche_event_study.json",
+  "size": 7353,
+  "sha": "45c2380a995d832c",
+  "validity": "CURRENT",
+  "reason": "produced by the corrected pipeline",
+  "producers": [
+   "scripts/analysis_extra/r114_avalanche_event_study.py"
+  ],
+  "n_claims": 109,
+  "claim_keys": [
+   "CI95",
+   "RR",
+   "baseline_gap_days",
+   "p_two_sided"
+  ],
+  "duplicate_of": []
+ },
+ {
+  "file": "r60_multi_predictor_loo.json",
+  "size": 1084,
+  "sha": "c8b2d67f77447502",
+  "validity": "NO_INFERENCE",
+  "reason": "producer makes no statistical claim",
+  "producers": [
+   "scripts/review_rounds/r60_multi_predictor_loo.py"
+  ],
+  "n_claims": 0,
+  "claim_keys": [],
+  "duplicate_of": []
+ }
+]

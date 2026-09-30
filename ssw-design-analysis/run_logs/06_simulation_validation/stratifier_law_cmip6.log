@@ -1,0 +1,43 @@
+21 members on disk
+
+  BCC-ESM1_r1i1p1f1_zm.nc                        59 events
+  CESM2-FV2_r1i1p1f1_zm.nc                       76 events
+  CanESM5_r10i1p1f1_zm.nc                        66 events
+  CanESM5_r10i1p2f1_zm.nc                        67 events
+  CanESM5_r11i1p1f1_zm.nc                        68 events
+  CanESM5_r12i1p1f1_zm.nc                        80 events
+  CanESM5_r13i1p1f1_zm.nc                        75 events
+  CanESM5_r14i1p1f1_zm.nc                        57 events
+  CanESM5_r15i1p1f1_zm.nc                        86 events
+  CanESM5_r16i1p1f1_zm.nc                        57 events
+  CanESM5_r17i1p1f1_zm.nc                        63 events
+  CanESM5_r18i1p1f1_zm.nc                        64 events
+  GFDL-CM4_r1i1p1f1_zm.nc                        64 events
+  INM-CM5-0_r1i1p1f1_zm.nc                       97 events
+  IPSL-CM5A2-INCA_r1i1p1f1_zm.nc                 83 events
+  MIROC-ES2L_r1i1p1f2_zm.nc: SKIP (7 events)
+  MIROC6_r10i1p1f1_zm.nc                         78 events
+  MIROC6_r1i1p1f1_zm.nc                          74 events
+  MPI-ESM-1-2-HAM_r1i1p1f1_zm.nc                109 events
+  MPI-ESM1-2-LR_r1i1p1f1_zm.nc                  141 events
+  NorESM2-LM_r1i1p1f1_zm.nc                      53 events
+
+TOTAL 1517 events across 10 models (observations: 29-43)
+
+stratifier   class      dY_obs      dS    beta  beta*dS  residual  null sd       p  %expl
+--------------------------------------------------------------------------------------------
+u10_pre      pre        +0.089  +1.168  +0.145   +0.170    -0.081    0.047  0.1167   191%
+u10_post30   strat      +0.399  +1.104  +0.222   +0.245    +0.154    0.034  0.0000    62%
+u10_post45   strat      +0.391  +0.970  +0.216   +0.209    +0.182    0.036  0.0000    54%
+AM_post      outcome    +1.140  +0.983  +1.112   +1.093    +0.047    0.004  0.0000    96%
+
+LAW ACROSS STRATIFIERS (null, 4 points): obs = 0.992 x pred +0.011, R^2 = 0.9999
+  (observations gave slope 0.961, intercept +0.002, R^2 = 0.9945)
+
+=== WHAT THE POWER BUYS ===
+  u10_pre      n=1386  residual zero to +/-0.092
+  u10_post30   n=1517  residual NONZERO   (upper bound only, mediation)
+  u10_post45   n=1517  residual NONZERO   (upper bound only, mediation)
+  AM_post      n=1517  residual NONZERO
+
+Saved -> stratifier_law_cmip6.json

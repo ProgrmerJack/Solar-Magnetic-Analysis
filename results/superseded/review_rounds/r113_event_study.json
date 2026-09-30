@@ -1,0 +1,194 @@
+{
+  "bins": [
+    "-60..-46",
+    "-45..-31",
+    "-30..-16",
+    "-15..-1",
+    "+0..+14",
+    "+15..+29",
+    "+30..+44",
+    "+45..+60"
+  ],
+  "baseline_gap_days": 75,
+  "n_onsets": 47,
+  "series": {
+    "AO": {
+      "n_events": 47,
+      "n_winters": 77,
+      "n_days": 13113,
+      "n_baseline_days": 8205,
+      "bins": {
+        "-60..-46": {
+          "effect": -0.2686,
+          "CI95": [
+            -0.913,
+            0.3736
+          ],
+          "p_two_sided": 0.436
+        },
+        "-45..-31": {
+          "effect": -0.4548,
+          "CI95": [
+            -1.0598,
+            0.1172
+          ],
+          "p_two_sided": 0.129
+        },
+        "-30..-16": {
+          "effect": -0.9551,
+          "CI95": [
+            -1.5161,
+            -0.3648
+          ],
+          "p_two_sided": 0.001
+        },
+        "-15..-1": {
+          "effect": -0.6032,
+          "CI95": [
+            -1.0862,
+            -0.121
+          ],
+          "p_two_sided": 0.018
+        },
+        "+0..+14": {
+          "effect": -0.8637,
+          "CI95": [
+            -1.414,
+            -0.3184
+          ],
+          "p_two_sided": 0.005
+        },
+        "+15..+29": {
+          "effect": -1.0886,
+          "CI95": [
+            -1.6913,
+            -0.5084
+          ],
+          "p_two_sided": 0.0
+        },
+        "+30..+44": {
+          "effect": -1.0461,
+          "CI95": [
+            -1.5673,
+            -0.5039
+          ],
+          "p_two_sided": 0.002
+        },
+        "+45..+60": {
+          "effect": -0.9194,
+          "CI95": [
+            -1.3765,
+            -0.4387
+          ],
+          "p_two_sided": 0.0
+        }
+      }
+    },
+    "NAO": {
+      "n_events": 47,
+      "n_winters": 77,
+      "n_days": 13113,
+      "n_baseline_days": 8206,
+      "bins": {
+        "-60..-46": {
+          "effect": -0.1894,
+          "CI95": [
+            -0.4624,
+            0.096
+          ],
+          "p_two_sided": 0.186
+        },
+        "-45..-31": {
+          "effect": -0.113,
+          "CI95": [
+            -0.3658,
+            0.1355
+          ],
+          "p_two_sided": 0.375
+        },
+        "-30..-16": {
+          "effect": -0.381,
+          "CI95": [
+            -0.6348,
+            -0.1309
+          ],
+          "p_two_sided": 0.003
+        },
+        "-15..-1": {
+          "effect": -0.2927,
+          "CI95": [
+            -0.537,
+            -0.0668
+          ],
+          "p_two_sided": 0.009
+        },
+        "+0..+14": {
+          "effect": -0.2828,
+          "CI95": [
+            -0.4758,
+            -0.1037
+          ],
+          "p_two_sided": 0.002
+        },
+        "+15..+29": {
+          "effect": -0.3038,
+          "CI95": [
+            -0.5545,
+            -0.0684
+          ],
+          "p_two_sided": 0.018
+        },
+        "+30..+44": {
+          "effect": -0.4901,
+          "CI95": [
+            -0.722,
+            -0.2764
+          ],
+          "p_two_sided": 0.0
+        },
+        "+45..+60": {
+          "effect": -0.3558,
+          "CI95": [
+            -0.5979,
+            -0.1315
+          ],
+          "p_two_sided": 0.002
+        }
+      }
+    }
+  },
+  "injection_test_AO": {
+    "injected_amplitude": -0.5,
+    "recovered_post_mean": -1.487,
+    "baseline_used": -0.9995,
+    "recovered_increment": -0.4875,
+    "recovery_fraction": 0.975,
+    "recovery_ratio_DEPRECATED": 2.974,
+    "note": "The deprecated recovery_ratio was computed on the LEVEL (-1.487 / -0.5 = 2.974), which reads as an estimator inflating 3x. The estimator is unbiased. Injection is added ON TOP of the observed post-onset effect (-0.9995), so the correct quantity is the INCREMENT: -0.4875 against -0.5 injected = 97.5% recovery. An earlier fix used the pseudo-onset null (-0.258) as the baseline and got 2.458, which is also wrong: that null is the estimator's offset under random onsets, not the level the injection was superposed on.",
+    "baseline_field": "pseudo_onset_AO.observed_post_mean"
+  },
+  "pseudo_onset_AO": {
+    "observed_post_mean": -0.9995,
+    "null_mean": -0.258,
+    "null_sd": 0.2212,
+    "p_one_sided": 0.001,
+    "n_draws": 1000
+  },
+  "baseline_gap_sensitivity_AO": {
+    "60": {
+      "pre_-45..-31": -0.3456,
+      "post_0..+14": -0.7744,
+      "post_+15..+29": -1.0004
+    },
+    "75": {
+      "pre_-45..-31": -0.4548,
+      "post_0..+14": -0.8637,
+      "post_+15..+29": -1.0886
+    },
+    "90": {
+      "pre_-45..-31": -0.5403,
+      "post_0..+14": -0.9134,
+      "post_+15..+29": -1.1379
+    }
+  }
+}

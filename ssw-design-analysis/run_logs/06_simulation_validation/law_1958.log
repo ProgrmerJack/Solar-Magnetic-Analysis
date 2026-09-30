@@ -1,0 +1,33 @@
+events with full predictor coverage: 42 (1960-01-17 .. 2024-03-04)
+all-event surface composite, AO (8, 52): -0.811
+
+fitting beta on 3000 event-free pseudo-onsets ...
+
+stratifier   class      dY_obs      dS    beta  beta*dS  residual             95% CI   supp
+------------------------------------------------------------------------------------------------
+vT_pre30     pre        +0.169  +0.438  -0.909   -0.399    +0.568 [ -0.28, +1.20]  0.93
+vT_pre15     pre        -0.024  +0.787  -0.523   -0.411    +0.387 [ -0.44, +1.15]  0.79  <- weak support, extrapolated
+u10_pre      pre        -0.056  +0.751  +0.009   +0.006    -0.063 [ -0.74, +0.63]  1.00
+u10_post30   strat      +0.274  +1.094  +0.600   +0.656    -0.382 [ -1.03, +0.30]  0.52  <- weak support, extrapolated
+u10_post45   strat      +0.125  +0.874  +0.593   +0.519    -0.394 [ -1.03, +0.46]  0.64  <- weak support, extrapolated
+z100_post    strat      +0.710  +1.000  +0.742   +0.741    -0.032 [ -0.67, +0.54]  0.93
+AO_post      outcome    +1.733  +0.904  +1.838   +1.662    +0.072 [ -0.04, +0.15]  0.98
+
+=== FALSIFICATION: on pseudo-onsets the residual MUST be zero ===
+stratifier     dY_null   beta*dS  residual             95% CI  verdict
+------------------------------------------------------------------------------
+  500/1500 null draws
+  1000/1500 null draws
+  1500/1500 null draws
+vT_pre30        -0.491    -0.494    +0.002 [-0.724,+0.737]  PASS
+vT_pre15        -0.407    -0.407    +0.000 [-0.787,+0.739]  PASS
+u10_pre         +0.104    +0.009    +0.095 [-0.643,+0.868]  PASS
+u10_post30      +0.612    +0.699    -0.087 [-0.843,+0.720]  PASS
+u10_post45      +0.576    +0.665    -0.088 [-0.827,+0.616]  PASS
+z100_post       +0.905    +0.917    -0.012 [-0.680,+0.657]  PASS
+AO_post         +1.714    +1.715    -0.002 [-0.066,+0.062]  PASS
+
+=== VERDICT ===
+  LAW HOLDS on observations: every stratifier's null residual contains zero, so beta x dS accounts for the whole non-causal contrast and the residual is an unbiased differential effect.
+
+Saved -> stratifier_bias_law_1958.json

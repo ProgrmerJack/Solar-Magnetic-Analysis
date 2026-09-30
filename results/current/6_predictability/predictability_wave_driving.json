@@ -1,0 +1,97 @@
+{
+  "cmip6": {
+    "P1 pre-onset": {
+      "n_features": 44,
+      "ridge": {
+        "cv_r2": 0.0971,
+        "null_mean": -0.0099,
+        "null_p95": 0.0021,
+        "p_value": 0.0,
+        "significant": true
+      },
+      "gb": {
+        "cv_r2": 0.0421,
+        "null_mean": -0.0568,
+        "null_p95": -0.0278,
+        "p_value": 0.0,
+        "significant": true
+      }
+    },
+    "P2 at-onset": {
+      "n_features": 58,
+      "ridge": {
+        "cv_r2": 0.0927,
+        "null_mean": -0.0128,
+        "null_p95": 0.0039,
+        "p_value": 0.0,
+        "significant": true
+      },
+      "gb": {
+        "cv_r2": 0.033,
+        "null_mean": -0.0518,
+        "null_p95": -0.021,
+        "p_value": 0.0,
+        "significant": true
+      }
+    },
+    "P3 + post-onset stratosphere": {
+      "n_features": 86,
+      "ridge": {
+        "cv_r2": 0.3916,
+        "null_mean": -0.0065,
+        "null_p95": 0.0064,
+        "p_value": 0.0,
+        "significant": true
+      },
+      "gb": {
+        "cv_r2": 0.3531,
+        "null_mean": -0.0531,
+        "null_p95": -0.0217,
+        "p_value": 0.0,
+        "significant": true
+      }
+    }
+  },
+  "cmip6_previous_without_wave": {
+    "P1 pre-onset": 0.0839,
+    "P2 at-onset": 0.0917,
+    "P3 + post-onset stratosphere": 0.4073
+  },
+  "observations": {
+    "vortex only (u10, z100)": {
+      "n_features": 6,
+      "cv_r2": -0.1264,
+      "null_p95": -0.118,
+      "p_value": 0.2325,
+      "significant": false,
+      "fold_assignment_spread": {
+        "n": 200,
+        "median": -0.1099,
+        "p05_p95": [
+          -0.2101,
+          -0.0366
+        ],
+        "max": -0.0021,
+        "fraction_positive": 0.0
+      }
+    },
+    "vortex + WAVE (v'T', du/dt)": {
+      "n_features": 12,
+      "cv_r2": -0.1116,
+      "null_p95": -0.1146,
+      "p_value": 0.005,
+      "significant": false,
+      "fold_assignment_spread": {
+        "n": 200,
+        "median": -0.1335,
+        "p05_p95": [
+          -0.3553,
+          -0.0287
+        ],
+        "max": 0.0168,
+        "fraction_positive": 0.025
+      }
+    }
+  },
+  "observations_wave_gain": 0.0148
+}

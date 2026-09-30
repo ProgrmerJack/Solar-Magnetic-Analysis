@@ -1,0 +1,225 @@
+{
+ "CCCma": {
+  "centre": "CCCma",
+  "file": "zg_6hrPt_CanESM5_control_s20180125-r10i1p2f1_gn_201801250000-201803311800.nc",
+  "full_MB": 204.68,
+  "full_seconds": 154.3,
+  "subset_MB": 1.352,
+  "subset_seconds": 8.7,
+  "saving_x": 151.4,
+  "all_zero": false,
+  "any_nan": false,
+  "max_abs_diff": 0.0,
+  "correlation": 1.0,
+  "truth_mean": 15450.964516622369,
+  "subset_mean": 15450.964516622369,
+  "plausible": true,
+  "passes": true
+ },
+ "CNR-ISAC": {
+  "centre": "CNR-ISAC",
+  "file": "zg_6hrPt_GLOBO_control_s20180125-r1i10p1f1_gr_20180125-20180310.nc",
+  "full_MB": 1128.16,
+  "full_seconds": 960.0,
+  "subset_MB": 8.08,
+  "subset_seconds": 73.8,
+  "saving_x": 139.6,
+  "all_zero": false,
+  "any_nan": false,
+  "max_abs_diff": 0.0,
+  "correlation": 1.0,
+  "truth_mean": 15305.895208745915,
+  "subset_mean": 15305.895208745915,
+  "plausible": true,
+  "passes": true
+ },
+ "ECCC": {
+  "centre": "ECCC",
+  "file": "zg_6hrPt_GEM-NEMO_control_s20180125-r1i10p1f1_gr_20180125-20180311.nc",
+  "full_MB": 1080.33,
+  "full_seconds": 1536.5,
+  "subset_MB": 8.258,
+  "subset_seconds": 13.7,
+  "saving_x": 130.8,
+  "all_zero": false,
+  "any_nan": false,
+  "max_abs_diff": 0.0,
+  "correlation": 1.0,
+  "truth_mean": 14786.005361495569,
+  "subset_mean": 14786.005361495569,
+  "plausible": true,
+  "passes": true
+ },
+ "ECMWF": {
+  "centre": "ECMWF",
+  "file": "zg_6hrPt_IFS_control_s20180125-r10i1p1f1_gr_201801250000-201803120000.nc",
+  "full_MB": 691.44,
+  "full_seconds": 769.8,
+  "subset_MB": 8.258,
+  "subset_seconds": 31.4,
+  "saving_x": 83.7,
+  "all_zero": false,
+  "any_nan": false,
+  "max_abs_diff": 0.0,
+  "correlation": 1.0,
+  "truth_mean": 15407.329543370235,
+  "subset_mean": 15407.329543370235,
+  "plausible": true,
+  "passes": true
+ },
+ "KMA": {
+  "centre": "KMA",
+  "file": "zg_6hrPt_GloSea6-GC32_control_s20180125-r1i1p10f1_gr_20180125-20180311.nc",
+  "full_MB": 363.94,
+  "full_seconds": 402.3,
+  "subset_MB": 3.649,
+  "subset_seconds": 11.0,
+  "saving_x": 99.7,
+  "all_zero": false,
+  "any_nan": false,
+  "max_abs_diff": 0.0,
+  "correlation": 1.0,
+  "truth_mean": 15404.30306120935,
+  "subset_mean": 15404.30306120935,
+  "plausible": true,
+  "passes": true
+ },
+ "NCAR": {
+  "centre": "NCAR",
+  "file": "zg_6hrPt_CESM2-CAM6_control_s20180125-r10i1p1f1_gn_20180125-20180311.nc",
+  "full_MB": 541.48,
+  "full_seconds": 803.9,
+  "subset_MB": 6.672,
+  "subset_seconds": 27.7,
+  "saving_x": 81.2,
+  "all_zero": false,
+  "any_nan": false,
+  "max_abs_diff": 0.0,
+  "correlation": 1.0,
+  "truth_mean": 15318.789232390434,
+  "subset_mean": 15318.789232390434,
+  "plausible": true,
+  "passes": true
+ },
+ "SNU": {
+  "centre": "SNU",
+  "file": "zg_6hrPt_GRIMs_control_s20180125-r1i1p10f1_gr_20180125-20180311.nc",
+  "full_MB": 364.2,
+  "full_seconds": 369.7,
+  "subset_MB": 3.649,
+  "subset_seconds": 10.8,
+  "saving_x": 99.8,
+  "all_zero": false,
+  "any_nan": false,
+  "max_abs_diff": 0.0,
+  "correlation": 1.0,
+  "truth_mean": 15353.01562816657,
+  "subset_mean": 15353.01562816657,
+  "plausible": true,
+  "passes": true
+ },
+ "Meteo-France": {
+  "centre": "Meteo-France",
+  "transport": "byte_range",
+  "file": "zg_6hrPt_CNRM-CM61_control_s20180125-r10i1p1f1_gr_20180125-20180310.nc",
+  "full_MB": 1604.08,
+  "full_seconds": 3393.9,
+  "subset_MB": 8.035,
+  "subset_seconds": 26.7,
+  "saving_x": 199.6,
+  "all_zero": false,
+  "any_nan": false,
+  "max_abs_diff": 0.0,
+  "nan_pattern_equal": true,
+  "correlation": 1.0,
+  "truth_mean": 15329.156899761654,
+  "subset_mean": 15329.156899761654,
+  "plausible": true,
+  "passes": true
+ },
+ "UKMO": {
+  "centre": "UKMO",
+  "file": "zg_6hrPt_GloSea6_control_s20180125-r10i1p1f1_gn_201801250600-201803260000.nc",
+  "full_MB": 2169.83,
+  "full_seconds": 855.4,
+  "subset_MB": 22.81,
+  "subset_seconds": 22.2,
+  "saving_x": 95.1,
+  "all_zero": false,
+  "any_nan": false,
+  "max_abs_diff": 0.0,
+  "correlation": 1.0,
+  "truth_mean": 15428.953053272046,
+  "subset_mean": 15428.953053272046,
+  "plausible": true,
+  "passes": true
+ },
+ "ECCC|byte_range": {
+  "centre": "ECCC",
+  "transport": "byte_range",
+  "checked": [
+   {
+    "member": "control/s20180125/r1i10p1f1",
+    "max_diff_N": 0.0,
+    "max_diff_S": 0.0,
+    "n_steps": [
+     185,
+     185
+    ]
+   },
+   {
+    "member": "nudged/s20180125/r1i48p1f1",
+    "max_diff_N": 0.0,
+    "max_diff_S": 0.0,
+    "n_steps": [
+     185,
+     185
+    ]
+   },
+   {
+    "member": "nudged/s20191001/r1i9p1f1",
+    "max_diff_N": 0.0,
+    "max_diff_S": 0.0,
+    "n_steps": [
+     185,
+     185
+    ]
+   }
+  ],
+  "passes": true
+ },
+ "Meteo-France|byte_range": {
+  "centre": "Meteo-France",
+  "transport": "byte_range",
+  "checked": [
+   {
+    "member": "control/s20180125/r10i1p1f1",
+    "max_diff_N": 0.0,
+    "max_diff_S": 0.0,
+    "n_steps": [
+     180,
+     180
+    ]
+   },
+   {
+    "member": "control/s20180208/r10i1p1f1",
+    "max_diff_N": 0.0,
+    "max_diff_S": 0.0,
+    "n_steps": [
+     180,
+     180
+    ]
+   },
+   {
+    "member": "control/s20181213/r11i1p1f1",
+    "max_diff_N": 0.0,
+    "max_diff_S": 0.0,
+    "n_steps": [
+     180,
+     180
+    ]
+   }
+  ],
+  "passes": true
+ }
+}

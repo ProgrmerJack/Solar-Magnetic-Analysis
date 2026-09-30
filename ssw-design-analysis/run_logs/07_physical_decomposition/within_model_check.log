@@ -1,0 +1,25 @@
+rebuilding CMIP6 real and pseudo tables ...
+generating 1000 matched draws x 20 members on 20 processes ...
+real 1,517 | pseudo 9,101 | 20 members
+
+==================================================================================
+=== POOLED (as published) vs WITHIN-MODEL STANDARDISED ===
+tier                                pooled    within  retained  pseudo-w
+----------------------------------------------------------------------------
+P1 pre-onset                       +0.0839   +0.0544      0.65   +0.0739
+P2 at-onset                        +0.0917   +0.0583      0.63   +0.0857
+P3 + post-onset stratosphere       +0.4073   +0.3815      0.94   +0.3857
+
+  event-specific within-model share, 6-draw pooled pseudo arm (original):
+    P1 pre-onset                     -0.0194
+    P2 at-onset                      -0.0274
+    P3 + post-onset stratosphere     -0.0042
+
+=== SIZE-MATCHED NULL: 1000 draws, each the size of the real set ===
+  draws with fewer usable outcomes than the real set (NaN outcome window): 1022 of 20000 member-draws
+null: 1000 draws; bootstrap: 1000 replicates; 20 processes ...
+  P1 pre-onset                   real +0.0544 | null +0.0601 (sd 0.0138) | event-specific -0.0057 [-0.0334, +0.0201] p=0.6444 | boot [-0.0613, +0.0470] | 6-draw size bias +0.0138
+  P2 at-onset                    real +0.0583 | null +0.0720 (sd 0.0144) | event-specific -0.0137 [-0.0433, +0.0132] p=0.8212 | boot [-0.0764, +0.0445] | 6-draw size bias +0.0137
+  P3 + post-onset stratosphere   real +0.3815 | null +0.3663 (sd 0.0222) | event-specific +0.0151 [-0.0281, +0.0585] p=0.2517 | boot [-0.0613, +0.0948] | 6-draw size bias +0.0194
+
+Saved -> within_model_check.json

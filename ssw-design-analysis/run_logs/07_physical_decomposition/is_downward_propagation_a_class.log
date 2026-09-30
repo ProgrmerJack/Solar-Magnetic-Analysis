@@ -1,0 +1,32 @@
+
+=== observations  (n = 43) ===
+  Hartigan dip    = 0.1001   P(unimodal null >= observed) = 0.9590   -> no evidence against unimodal
+  BIC(1)-BIC(2)   = -5.48   pseudo-event calibration: median -9.36, P(pseudo >= observed) = 0.1600
+                    -> one component suffices
+  pure-shift test : shift -0.865 sigma, KS = 0.1356, p = 0.3742
+                    -> a pure SHIFT of the ordinary distribution suffices
+  shape           : mean -0.895, sd 1.044, skew +0.274, excess kurtosis -0.691
+
+loading CMIP6 ensemble ...
+
+=== CMIP6_ensemble  (n = 1517) ===
+  Hartigan dip    = 0.2414   P(unimodal null >= observed) = 0.8235   -> no evidence against unimodal
+  BIC(1)-BIC(2)   = -14.38   pseudo-event calibration: median -10.19, P(pseudo >= observed) = 0.9650
+                    -> one component suffices
+  pure-shift test : shift -0.476 sigma, KS = 0.0245, p = 0.3456
+                    -> a pure SHIFT of the ordinary distribution suffices
+  shape           : mean -0.469, sd 0.725, skew -0.248, excess kurtosis +0.053
+
+  power analysis at n=1517: BIC-gap 95th-percentile critical value = -9.06
+   separation d  component sd    power
+           0.25         0.715     0.00
+           0.50         0.686     0.00
+           0.75         0.633     0.01
+           1.00         0.551     0.85
+           1.50         0.160     1.00
+
+========================================================================
+=== IS 'DOWNWARD PROPAGATION' A CLASS? ===
+  NO CLASS in CMIP6_ensemble (n=1517): the per-event surface response is unimodal (dip p=0.8235), one Gaussian component suffices (BIC-gap p=0.9650), and the whole distribution is a pure SHIFT of -0.476 sigma of the ordinary winter distribution (KS p=0.3456). 'Downward propagation' is a threshold on a continuum, not a population.
+
+Saved -> is_downward_propagation_a_class.json

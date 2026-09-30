@@ -1,0 +1,179 @@
+{
+  "wind_wind_trans24": {
+    "ssw_mean": 7.935,
+    "pre_mean": 8.966,
+    "ctrl_mean": 5.474,
+    "cohen_d": 0.173,
+    "pct_change": 45.0
+  },
+  "wind_VW": {
+    "ssw_mean": 2.217,
+    "pre_mean": 2.178,
+    "ctrl_mean": 2.048,
+    "cohen_d": 0.116,
+    "pct_change": 8.2
+  },
+  "wind_VW_drift": {
+    "ssw_mean": 4.299,
+    "pre_mean": 4.368,
+    "ctrl_mean": 3.932,
+    "cohen_d": 0.151,
+    "pct_change": 9.3
+  },
+  "pwl_pwl_100": {
+    "ssw_mean": 0.7843,
+    "ctrl_mean": 0.6264,
+    "cohen_d": 0.334,
+    "pct_change": 25.2
+  },
+  "pwl_ssi_pwl": {
+    "ssw_mean": 2.6721,
+    "ctrl_mean": 3.4912,
+    "cohen_d": -0.369,
+    "pct_change": -23.5
+  },
+  "pwl_sk38_pwl": {
+    "ssw_mean": 2.0297,
+    "ctrl_mean": 3.016,
+    "cohen_d": -0.379,
+    "pct_change": -32.7
+  },
+  "pwl_hoar_size": {
+    "ssw_mean": 0.3362,
+    "ctrl_mean": 0.2867,
+    "cohen_d": 0.053,
+    "pct_change": 17.3
+  },
+  "temp_TA": {
+    "ssw_mean": -6.89,
+    "ctrl_mean": -3.9,
+    "delta": -2.99,
+    "cohen_d": -0.577
+  },
+  "temp_TS0": {
+    "ssw_mean": -1.69,
+    "ctrl_mean": -1.69,
+    "delta": -0.01,
+    "cohen_d": -0.003
+  },
+  "temp_TS1": {
+    "ssw_mean": -2.83,
+    "ctrl_mean": -2.73,
+    "delta": -0.1,
+    "cohen_d": -0.035
+  },
+  "temp_TS2": {
+    "ssw_mean": -4.86,
+    "ctrl_mean": -3.97,
+    "delta": -0.89,
+    "cohen_d": -0.24
+  },
+  "temp_gradient": {
+    "ssw": 3.34,
+    "ctrl": 2.71,
+    "cohen_d": 0.222
+  },
+  "snow_SWE": {
+    "ssw_mean": 530.852,
+    "ctrl_mean": 473.191,
+    "pct_change": 12.2,
+    "cohen_d": 0.173
+  },
+  "snow_HN24": {
+    "ssw_mean": 5.579,
+    "ctrl_mean": 4.777,
+    "pct_change": 16.8,
+    "cohen_d": 0.083
+  },
+  "snow_MS_Snow": {
+    "ssw_mean": 0.245,
+    "ctrl_mean": 0.211,
+    "pct_change": 16.0,
+    "cohen_d": 0.062
+  },
+  "snow_MS_Rain": {
+    "ssw_mean": 0.006,
+    "ctrl_mean": 0.015,
+    "pct_change": -58.9,
+    "cohen_d": -0.015
+  },
+  "stability_Sclass2": {
+    "ssw_mean": 2.31,
+    "ctrl_mean": 2.193,
+    "cohen_d": 0.069
+  },
+  "stability_Sd": {
+    "ssw_mean": 0.759,
+    "ctrl_mean": 0.81,
+    "cohen_d": -0.043
+  },
+  "stability_zSd_mean": {
+    "ssw_mean": 34.03,
+    "ctrl_mean": 55.661,
+    "cohen_d": -0.355
+  },
+  "stability_dangerLevel": {
+    "ssw_mean": 2.464,
+    "ctrl_mean": 2.121,
+    "cohen_d": 0.438
+  },
+  "stability_min_ccl_pen": {
+    "ssw_mean": 0.429,
+    "ctrl_mean": 0.704,
+    "cohen_d": -0.352
+  },
+  "temporal_wind_trans24": {
+    "pre_ssw": 8.96,
+    "onset_0_15": 7.953,
+    "late_15_30": 8.013
+  },
+  "temporal_TA": {
+    "pre_ssw": -5.865,
+    "onset_0_15": -6.452,
+    "late_15_30": -7.612
+  },
+  "temporal_HN24": {
+    "pre_ssw": 5.836,
+    "onset_0_15": 5.84,
+    "late_15_30": 5.449
+  },
+  "temporal_pwl_100": {
+    "pre_ssw": 0.737,
+    "onset_0_15": 0.789,
+    "late_15_30": 0.777
+  },
+  "temporal_MS_Rain": {
+    "pre_ssw": 0.008,
+    "onset_0_15": 0.006,
+    "late_15_30": 0.006
+  },
+  "temporal_dangerLevel": {
+    "pre_ssw": 2.351,
+    "onset_0_15": 2.464,
+    "late_15_30": 2.501
+  },
+  "temporal_peaks": {
+    "peak_pwl_day": 4,
+    "min_rain_day": 26
+  },
+  "elev_<1500m": {
+    "n_stations": 1,
+    "swe_pct_change": -22.4,
+    "pwl_pct_change": -1.2
+  },
+  "elev_1500-2000m": {
+    "n_stations": 21,
+    "swe_pct_change": 22.4,
+    "pwl_pct_change": 64.9
+  },
+  "elev_2000-2500m": {
+    "n_stations": 80,
+    "swe_pct_change": 10.9,
+    "pwl_pct_change": 24.8
+  },
+  "elev_>2500m": {
+    "n_stations": 28,
+    "swe_pct_change": 11.4,
+    "pwl_pct_change": 18.8
+  }
+}

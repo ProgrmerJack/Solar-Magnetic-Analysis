@@ -1,0 +1,124 @@
+{
+  "attack1_pseudo_event_skill": {
+    "P1 pre-onset": {
+      "real_cv_r2": 0.0839,
+      "pseudo_cv_r2": 0.0626,
+      "retained_fraction": 0.746
+    },
+    "P2 at-onset": {
+      "real_cv_r2": 0.0917,
+      "pseudo_cv_r2": 0.0743,
+      "retained_fraction": 0.81
+    },
+    "P3 + post-onset stratosphere": {
+      "real_cv_r2": 0.4073,
+      "pseudo_cv_r2": 0.3633,
+      "retained_fraction": 0.892
+    }
+  },
+  "attack2": {
+    "slope": 0.00624,
+    "r": 0.0162,
+    "intercept": -0.01335,
+    "extrapolated_to_observed": -0.0069,
+    "per_member": [
+      {
+        "member": "CESM2-FV2_r1i1p1f1_zm",
+        "coupling": -0.6548,
+        "cv_r2": -0.0582
+      },
+      {
+        "member": "CanESM5_r10i1p1f1_zm",
+        "coupling": -0.6558,
+        "cv_r2": -0.0198
+      },
+      {
+        "member": "CanESM5_r10i1p2f1_zm",
+        "coupling": -0.8163,
+        "cv_r2": -0.026
+      },
+      {
+        "member": "CanESM5_r11i1p1f1_zm",
+        "coupling": -0.6359,
+        "cv_r2": 0.0621
+      },
+      {
+        "member": "CanESM5_r12i1p1f1_zm",
+        "coupling": -0.5193,
+        "cv_r2": -0.1028
+      },
+      {
+        "member": "CanESM5_r13i1p1f1_zm",
+        "coupling": -0.6749,
+        "cv_r2": 0.0755
+      },
+      {
+        "member": "CanESM5_r15i1p1f1_zm",
+        "coupling": -0.4951,
+        "cv_r2": -0.0283
+      },
+      {
+        "member": "CanESM5_r17i1p1f1_zm",
+        "coupling": -0.7139,
+        "cv_r2": -0.1079
+      },
+      {
+        "member": "CanESM5_r18i1p1f1_zm",
+        "coupling": -0.5551,
+        "cv_r2": 0.1975
+      },
+      {
+        "member": "GFDL-CM4_r1i1p1f1_zm",
+        "coupling": -0.2577,
+        "cv_r2": -0.0435
+      },
+      {
+        "member": "INM-CM5-0_r1i1p1f1_zm",
+        "coupling": -0.387,
+        "cv_r2": -0.0484
+      },
+      {
+        "member": "IPSL-CM5A2-INCA_r1i1p1f1_zm",
+        "coupling": -0.645,
+        "cv_r2": -0.0123
+      },
+      {
+        "member": "MIROC6_r10i1p1f1_zm",
+        "coupling": -0.1048,
+        "cv_r2": 0.0879
+      },
+      {
+        "member": "MIROC6_r1i1p1f1_zm",
+        "coupling": -0.1369,
+        "cv_r2": -0.0732
+      },
+      {
+        "member": "MPI-ESM-1-2-HAM_r1i1p1f1_zm",
+        "coupling": -0.4525,
+        "cv_r2": 0.0008
+      },
+      {
+        "member": "MPI-ESM1-2-LR_r1i1p1f1_zm",
+        "coupling": -0.3471,
+        "cv_r2": -0.0669
+      }
+    ]
+  },
+  "attack3_in_vs_out": {
+    "P1 pre-onset": {
+      "in_sample_r2": 0.1038,
+      "out_of_sample_r2": 0.0839,
+      "optimism": 0.0199
+    },
+    "P2 at-onset": {
+      "in_sample_r2": 0.1137,
+      "out_of_sample_r2": 0.0917,
+      "optimism": 0.0219
+    },
+    "P3 + post-onset stratosphere": {
+      "in_sample_r2": 0.4488,
+      "out_of_sample_r2": 0.4073,
+      "optimism": 0.0414
+    }
+  }
+}

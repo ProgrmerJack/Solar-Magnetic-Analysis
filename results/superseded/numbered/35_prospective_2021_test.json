@@ -1,0 +1,213 @@
+{
+  "description": "Prospective out-of-sample test: Jan 2021 SSW event",
+  "key_finding": "True prospective validation using data unavailable during primary analysis",
+  "ssw_onset": "2021-01-05",
+  "primary_study_end": "2019-05-21",
+  "stratospheric_characterization": {
+    "u10_pre_ms": 27.69322190284729,
+    "u10_post_ms": -4.5739082905554005,
+    "u10_decel_ms": 32.26713019340269,
+    "u10_min_ms": -21.218250274658203,
+    "reversal_days": 21,
+    "t10_warming_K": 9.311290273358765,
+    "cumulative_t10_anom": 114.28430308466375,
+    "peak_t10_anom": 18.8349549666695,
+    "z500_anomaly_m": 21.158089443811356,
+    "slp_anomaly_Pa": 128.94061732994282
+  },
+  "accident_analysis": {
+    "15day": {
+      "window_days": 15,
+      "post_ssw_count": 45,
+      "pre_ssw_count": 24,
+      "post_rate_per_day": 3.0,
+      "pre_rate_per_day": 1.6,
+      "rate_ratio": 1.875,
+      "log_rate_ratio": 0.6286086594223741,
+      "post_fatalities": 8,
+      "pre_fatalities": 2,
+      "post_activities": {
+        "offpiste": 23,
+        "tour": 20
+      },
+      "pre_activities": {
+        "tour": 16,
+        "offpiste": 7,
+        "transportation.corridor": 1
+      },
+      "post_cantons": {
+        "VS": 21,
+        "GR": 8,
+        "BE": 5,
+        "NW": 4,
+        "FR": 2,
+        "VD": 2,
+        "SG": 1,
+        "SZ": 1,
+        "OW": 1
+      },
+      "pre_cantons": {
+        "GR": 9,
+        "VS": 8,
+        "BE": 5,
+        "TI": 2
+      },
+      "direction": "INCREASE"
+    },
+    "30day": {
+      "window_days": 30,
+      "post_ssw_count": 82,
+      "pre_ssw_count": 43,
+      "post_rate_per_day": 2.7333333333333334,
+      "pre_rate_per_day": 1.4333333333333333,
+      "rate_ratio": 1.9069767441860466,
+      "log_rate_ratio": 0.6455191315706907,
+      "post_fatalities": 11,
+      "pre_fatalities": 7,
+      "post_activities": {
+        "offpiste": 39,
+        "tour": 38,
+        "transportation.corridor": 1
+      },
+      "pre_activities": {
+        "tour": 26,
+        "offpiste": 15,
+        "transportation.corridor": 1
+      },
+      "post_cantons": {
+        "VS": 29,
+        "GR": 22,
+        "BE": 11,
+        "NW": 5,
+        "VD": 4,
+        "FR": 3,
+        "TI": 3,
+        "SG": 2,
+        "OW": 2,
+        "SZ": 1
+      },
+      "pre_cantons": {
+        "VS": 16,
+        "GR": 11,
+        "TI": 5,
+        "BE": 5,
+        "NW": 2,
+        "UR": 2,
+        "OW": 1,
+        "FR": 1
+      },
+      "direction": "INCREASE"
+    },
+    "45day": {
+      "window_days": 45,
+      "post_ssw_count": 110,
+      "pre_ssw_count": 45,
+      "post_rate_per_day": 2.4444444444444446,
+      "pre_rate_per_day": 1.0,
+      "rate_ratio": 2.4444444444444446,
+      "log_rate_ratio": 0.8938178760220965,
+      "post_fatalities": 13,
+      "pre_fatalities": 7,
+      "post_activities": {
+        "tour": 61,
+        "offpiste": 44,
+        "transportation.corridor": 1
+      },
+      "pre_activities": {
+        "tour": 28,
+        "offpiste": 15,
+        "transportation.corridor": 1
+      },
+      "post_cantons": {
+        "GR": 35,
+        "VS": 33,
+        "BE": 12,
+        "TI": 6,
+        "NW": 5,
+        "VD": 5,
+        "FR": 3,
+        "OW": 3,
+        "SG": 3,
+        "UR": 2,
+        "SZ": 1,
+        "AI": 1,
+        "Bern": 1
+      },
+      "pre_cantons": {
+        "VS": 17,
+        "GR": 11,
+        "TI": 5,
+        "BE": 5,
+        "NW": 2,
+        "UR": 2,
+        "AR": 1,
+        "OW": 1,
+        "FR": 1
+      },
+      "direction": "INCREASE"
+    }
+  },
+  "comparison_to_primary": {
+    "primary_mean_log_rr": -1.1414582531227446,
+    "primary_std": 1.0294528612740064,
+    "2021_log_rr": 0.6455191315706907,
+    "2021_percentile_in_primary": 93.75,
+    "2021_z_score": 1.7358515886603583,
+    "within_primary_95ci": false,
+    "primary_boot_ci": [
+      -1.6342021669531888,
+      -0.6290275774374363
+    ],
+    "consistent_with_primary": true
+  },
+  "post2019_winter_context": [
+    {
+      "winter": "2019-20",
+      "n_accidents": 86,
+      "n_days": 121,
+      "daily_rate": 0.7107438016528925,
+      "n_fatalities": 5,
+      "has_ssw": false
+    },
+    {
+      "winter": "2020-21",
+      "n_accidents": 224,
+      "n_days": 120,
+      "daily_rate": 1.8666666666666667,
+      "n_fatalities": 28,
+      "has_ssw": true
+    },
+    {
+      "winter": "2021-22",
+      "n_accidents": 111,
+      "n_days": 120,
+      "daily_rate": 0.925,
+      "n_fatalities": 12,
+      "has_ssw": false
+    },
+    {
+      "winter": "2022-23",
+      "n_accidents": 110,
+      "n_days": 120,
+      "daily_rate": 0.9166666666666666,
+      "n_fatalities": 16,
+      "has_ssw": false
+    },
+    {
+      "winter": "2023-24",
+      "n_accidents": 154,
+      "n_days": 121,
+      "daily_rate": 1.2727272727272727,
+      "n_fatalities": 14,
+      "has_ssw": false
+    },
+    {
+      "winter": "2024-25",
+      "n_accidents": 141,
+      "n_days": 120,
+      "daily_rate": 1.175,
+      "n_fatalities": 8,
+      "has_ssw": false
+    }
+  ]
+}

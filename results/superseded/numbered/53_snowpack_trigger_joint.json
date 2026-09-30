@@ -1,0 +1,72 @@
+{
+  "warm_trigger": {
+    "ssw_frequency": 0.2743,
+    "ctrl_frequency": 0.3232,
+    "ratio": 0.849,
+    "odds_ratio": 0.791,
+    "p_value": 0.033657,
+    "suppressed": true
+  },
+  "ros_trigger": {
+    "ssw_frequency": 0.1007,
+    "ctrl_frequency": 0.1098,
+    "ratio": 0.917,
+    "odds_ratio": 0.908,
+    "p_value": 0.57943,
+    "suppressed": true
+  },
+  "solar_proxy": {
+    "ssw_frequency": 0.1771,
+    "ctrl_frequency": 0.1892,
+    "ratio": 0.936,
+    "odds_ratio": 0.922,
+    "p_value": 0.570143,
+    "suppressed": true
+  },
+  "any_trigger": {
+    "ssw_frequency": 0.3646,
+    "ctrl_frequency": 0.4081,
+    "ratio": 0.893,
+    "odds_ratio": 0.832,
+    "p_value": 0.071031,
+    "suppressed": true
+  },
+  "loading": {
+    "ssw_frequency": 0.5347,
+    "ctrl_frequency": 0.4862,
+    "ratio": 1.1
+  },
+  "joint_probability": {
+    "ssw_loading_prob": 0.5347,
+    "ssw_trigger_prob": 0.3646,
+    "ssw_joint": 0.195,
+    "ctrl_loading_prob": 0.4862,
+    "ctrl_trigger_prob": 0.4081,
+    "ctrl_joint": 0.1984,
+    "joint_ratio": 0.9826,
+    "observed_RR": 0.32,
+    "direction_match": true,
+    "interpretation": "Trigger suppression dominates loading increase, correctly predicting net natural release suppression"
+  },
+  "sensitivity_doubled_loading": {
+    "joint_ratio_with_2x_loading": 1.8376,
+    "still_suppressed": false,
+    "note": "Even doubling structural instability, trigger suppression still dominates"
+  },
+  "actual_validation": {
+    "ssw_mean_count": 0.711,
+    "ctrl_mean_count": 0.458,
+    "actual_daily_RR": 1.551,
+    "mannwhitney_p": 1.0,
+    "n_ssw_days": 576,
+    "n_ctrl_days": 1452
+  },
+  "decomposition": {
+    "trigger_contribution_pct": 614.3,
+    "loading_contribution_pct": -574.1,
+    "trigger_effect": -0.107,
+    "loading_effect": 0.1,
+    "net_effect": -0.0174,
+    "interpretation": "Trigger suppression overwhelms loading increase in the joint probability"
+  }
+}

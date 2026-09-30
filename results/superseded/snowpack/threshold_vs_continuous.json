@@ -1,0 +1,73 @@
+{
+  "model_comparison": {
+    "n_days": 3325,
+    "null": {
+      "LL": -9924.269510867864,
+      "AIC": 19850.539021735727,
+      "BIC": 19856.648246688816
+    },
+    "continuous_vortex": {
+      "LL": -3307.856029273252,
+      "AIC": 6619.712058546504,
+      "BIC": 6631.930508452683
+    },
+    "binary_ssw": {
+      "LL": -3305.745703536607,
+      "AIC": 6615.491407073214,
+      "BIC": 6627.709856979393,
+      "IRR": 0.8218403249961456
+    },
+    "ssw_plus_interaction": {
+      "LL": -3277.9397591630686,
+      "AIC": 6563.879518326137,
+      "BIC": 6588.316418138497
+    },
+    "vortex_quintiles": {
+      "LL": -3228.1251762170295,
+      "AIC": 6466.250352434059,
+      "BIC": 6496.796477199508
+    },
+    "lrt_ssw_vs_null": {
+      "chi2": 13237.047614662513,
+      "P": 0.0
+    },
+    "lrt_cont_vs_null": {
+      "chi2": 13232.826963189224,
+      "P": 0.0
+    },
+    "aic_ssw_minus_cont": -4.220651473289763,
+    "bic_ssw_minus_cont": -4.220651473289763,
+    "winner": "binary_ssw"
+  },
+  "precursor_timing": {
+    "mean_lag_days": 33.375,
+    "median_lag_days": 46.5,
+    "range": [
+      0,
+      60
+    ],
+    "individual_lags": [
+      60,
+      60,
+      60,
+      7,
+      56,
+      1,
+      60,
+      57,
+      1,
+      0,
+      1,
+      60,
+      0,
+      37,
+      60,
+      14
+    ],
+    "pre_onset_anomaly": NaN,
+    "post_onset_anomaly": NaN,
+    "pre_onset_P": NaN,
+    "post_onset_P": NaN,
+    "pre_vs_post_P": NaN
+  }
+}

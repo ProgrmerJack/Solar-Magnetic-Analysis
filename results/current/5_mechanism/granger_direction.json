@@ -1,0 +1,72 @@
+{
+  "lags": 10,
+  "n_boot": 2000,
+  "results": {
+    "observations_bivariate": {
+      "down": 0.00295,
+      "up": 0.00173,
+      "asymmetry": 0.00122,
+      "asym_CI95": [
+        -0.00244,
+        0.00511
+      ],
+      "p_asym_le_0": 0.278,
+      "conditional": false
+    },
+    "observations_conditional": {
+      "down": 0.00293,
+      "up": 0.00158,
+      "asymmetry": 0.00135,
+      "asym_CI95": [
+        -0.002,
+        0.00477
+      ],
+      "p_asym_le_0": 0.208,
+      "conditional": true
+    },
+    "CanESM5_bivariate": {
+      "down": 0.00517,
+      "up": 0.00182,
+      "asymmetry": 0.00335,
+      "asym_CI95": [
+        0.0021,
+        0.00465
+      ],
+      "p_asym_le_0": 0.0,
+      "conditional": false
+    },
+    "IPSL-CM5A2-INCA_bivariate": {
+      "down": 0.00517,
+      "up": 0.00202,
+      "asymmetry": 0.00315,
+      "asym_CI95": [
+        0.00117,
+        0.0054
+      ],
+      "p_asym_le_0": 0.002,
+      "conditional": false
+    },
+    "MPI-ESM-1-2-HAM_bivariate": {
+      "down": 0.0032,
+      "up": 0.00169,
+      "asymmetry": 0.00151,
+      "asym_CI95": [
+        -0.0004,
+        0.00336
+      ],
+      "p_asym_le_0": 0.0655,
+      "conditional": false
+    },
+    "CESM2-FV2_bivariate": {
+      "down": 0.00733,
+      "up": 0.00244,
+      "asymmetry": 0.00489,
+      "asym_CI95": [
+        0.00221,
+        0.00761
+      ],
+      "p_asym_le_0": 0.001,
+      "conditional": false
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "n_boot": 6000,
+  "series": {
+    "aao": {
+      "n_events": 30,
+      "watch_bin": "+45..+60",
+      "variants": {
+        "without_ONI": {
+          "effect": -0.6591,
+          "CI95": [
+            -1.1768,
+            -0.1279
+          ],
+          "p_two_sided": 0.014666666666666666,
+          "oni_coefficient": null
+        },
+        "with_ONI": {
+          "effect": -0.6609,
+          "CI95": [
+            -1.1571,
+            -0.1346
+          ],
+          "p_two_sided": 0.013666666666666667,
+          "oni_coefficient": -0.383
+        }
+      },
+      "attenuation_fraction": -0.003
+    },
+    "ao": {
+      "n_events": 43,
+      "watch_bin": "+15..+29",
+      "variants": {
+        "without_ONI": {
+          "effect": -1.0274,
+          "CI95": [
+            -1.6178,
+            -0.4287
+          ],
+          "p_two_sided": 0.0013333333333333333,
+          "oni_coefficient": null
+        },
+        "with_ONI": {
+          "effect": -1.0225,
+          "CI95": [
+            -1.623,
+            -0.4161
+          ],
+          "p_two_sided": 0.0013333333333333333,
+          "oni_coefficient": 0.2034
+        }
+      },
+      "attenuation_fraction": 0.005
+    }
+  }
+}
