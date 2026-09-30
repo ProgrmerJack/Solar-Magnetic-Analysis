@@ -310,7 +310,7 @@ def analyse(name, ao_like, onsets, clim, clean_idx, doys, per_event, rng,
           f"  -> {'ok' if 0.7 <= vr <= 1.4 else 'ASSUMPTION SUSPECT'}")
 
     # the ceiling, evaluated at each study's OWN split fraction
-    print(f"\n  === CEILING ON ANY CLASSIFIER (uncorrected s_f, the conservative arm) ===")
+    print(f"\n  === CEILING ON ANY CLASSIFIER (uncorrected s_f; NOT always the wider bound -- see over_wider_bound_ratio) ===")
     print(f"  {'reported contrast':<50s} {'q':>5s} {'|obs|':>7s} {'ceil95':>7s} "
           f"{'ratio':>7s}  match")
     print("  " + "-" * 84)
@@ -319,11 +319,16 @@ def analyse(name, ao_like, onsets, clim, clean_idx, doys, per_event, rng,
         v = abs(v)
         c_hi_q = ceiling(ci[1], q)
         ratio = v / c_hi_q if c_hi_q > 0 else np.inf
+        # the placebo-corrected bound can be the WIDER one (observations: the
+        # correction is noisy), so the ratio is also given against the wider bound
+        c_w = ceiling(max(ci[1], ci_c[1]), q)
         comp[lab] = {"contrast_abs": round(v, 4), "split_fraction": round(q, 3),
                      "n_events": n,
                      "ceiling_upper95_at_q": round(float(c_hi_q), 4),
                      "over_upper_bound_ratio":
                          None if not np.isfinite(ratio) else round(float(ratio), 2),
+                     "ceiling_wider_bound_at_q": round(float(c_w), 4),
+                     "over_wider_bound_ratio": round(float(v / c_w), 2) if c_w > 0 else None,
                      "matched_system": True}
         rs = "inf" if not np.isfinite(ratio) else f"{ratio:.1f}x"
         print(f"  {lab:<50s} {q:5.2f} {v:7.3f} {c_hi_q:7.3f} {rs:>7s}  YES")
@@ -465,7 +470,7 @@ def main():
         print(f"     {100 * s2p / s2 if s2 else float('nan'):.0f}% of the raw excess "
               f"variance is already present BEFORE onset")
         print(f"  C3 pre-onset variance ratio = {vr:.3f}")
-        print(f"\n  === CEILING (uncorrected s_f, at each study's own split q) ===")
+        print(f"\n  === CEILING (uncorrected s_f, at each study's own split q; wider-bound ratio in the JSON) ===")
         print(f"  {'reported contrast':<50s} {'q':>5s} {'|obs|':>7s} {'ceil95':>7s} "
               f"{'ratio':>7s}  match")
         print("  " + "-" * 84)
@@ -475,11 +480,14 @@ def main():
             v = abs(v)
             ch = ceiling(ci[1], q)
             ratio = v / ch if ch > 0 else np.inf
+            c_w = ceiling(max(ci[1], cic[1]), q)
             comp[lab] = {"contrast_abs": round(v, 4), "split_fraction": round(q, 3),
                          "n_events": n,
                          "ceiling_upper95_at_q": round(float(ch), 4),
                          "over_upper_bound_ratio":
                              None if not np.isfinite(ratio) else round(float(ratio), 2),
+                         "ceiling_wider_bound_at_q": round(float(c_w), 4),
+                         "over_wider_bound_ratio": round(float(v / c_w), 2) if c_w > 0 else None,
                          "matched_system": True}
             print(f"  {lab:<50s} {q:5.2f} {v:7.3f} {ch:7.3f} "
                   f"{('inf' if not np.isfinite(ratio) else f'{ratio:.1f}x'):>7s}  YES")
