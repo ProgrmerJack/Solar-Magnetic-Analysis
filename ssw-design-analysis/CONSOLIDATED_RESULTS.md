@@ -1033,6 +1033,25 @@ response, and its forecast value is negligible. SNAPSI arm: mixture gain lower
 with the SSW imposed (−0.029 [−0.043, −0.014]) but the planted-mixture positive
 control was detected in 0% — the arm has no power and is not evidence either way.
 
+**T-f Held-out 2023–24 SSWs (`s2s_heldout_test.py`, 6_predictability; registered in
+`4c8b3f2` before any of these forecasts or post-Jan-2023 ERA5 were retrieved).**
+Events 2023-02-16, 2024-01-16, 2024-03-04 (primary catalogue); systems CNRM (on disk,
+never scored at these dates), ECMWF model year 2025 (2005–2024), CMA model year 2025
+(2010–2024), all three covering every event. ERA5 extended with ARCO-ERA5 (overlap
+correlation 1.000, offset −0.01 Pa / ≤0.04 K). **HO1 polar cap: mean rank 0.72
+against null 0.53 [0.29, 0.77], p 0.93 — ABOVE the null mean: by the registered
+reading a FAILURE TO REPLICATE** (per event 0.68, 0.83, 0.64; every system above 0.5
+in every event; observed outcomes on the upward, positive-NAM side: A_obs +166,
++446, −35 Pa). **HO2 N-Eurasian T: 0.57 vs 0.51, p 0.64** (observed warmer than
+forecast in 2023 and Jan 2024). HO3 pooled (secondary, 20 events): polar cap 0.445
+vs 0.541, p 0.032; N-Eurasia 0.414 vs 0.525, p 0.031; the 17 P' events alone with
+the spliced observations 0.397 (p 0.004) and 0.387 (p 0.013). Reading: the
+registered under-forecast is not seen in the three later events (different model
+versions for ECMWF/CMA; Lee et al. 2025 describe the 2024 events as non-canonical
+and weakly coupled; March 2024 was mildly downward); with 3
+events power is low, but the direction is the opposite, so the operational claim
+must be stated as holding for 1998–2021 and weakened overall.
+
 ## 4. Prior art — verified from source, all must be cited
 
 1. **Karpechko et al. (2017)**, QJRMS 143, 1459, doi 10.1002/qj.3017 — the

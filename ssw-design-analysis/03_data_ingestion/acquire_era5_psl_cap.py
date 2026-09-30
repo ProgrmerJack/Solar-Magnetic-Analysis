@@ -110,7 +110,12 @@ def main_z100():
     levels; a single sequential read stalled for over an hour, 2026-09-30), each
     with a timeout and retries."""
     import concurrent.futures as cf
-    ds = xr.open_zarr(STORE, chunks=None, storage_options={"token": "anon"})
+    import aiohttp
+    # the same public store over plain HTTPS with socket timeouts: through gcsfs a
+    # stalled request hung the whole read twice (2026-09-30)
+    url = STORE.replace("gs://", "https://storage.googleapis.com/")
+    ds = xr.open_zarr(url, chunks=None, storage_options={
+        "client_kwargs": {"timeout": aiohttp.ClientTimeout(total=180, sock_read=90)}})
     v = ds["geopotential"]
     if v.attrs.get("units") != "m**2 s**-2":
         raise ValueError(f"unexpected units {v.attrs.get('units')!r}")
