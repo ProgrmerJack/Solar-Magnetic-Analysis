@@ -28,6 +28,10 @@ PERIODS
   be asked of the wrong hemisphere.
 
 Output: era5_psl_cap_6h.parquet  time, psl_cap_N, psl_cap_S  (Pa)
+
+--z100 (plan approved 2026-09-30, operational lead-lag diagnosis): geopotential
+height at 100 hPa (geopotential / 9.80665, gpm), 00 UTC, the same NH cap and the
+same winters -> era5_z100_cap_00utc.parquet  time, z100_cap_N (gpm)
 """
 from pathlib import Path
 
@@ -97,5 +101,30 @@ def main():
     print(f"{len(out):,} rows -> {OUT.name}")
 
 
+G0 = 9.80665
+OUT_Z100 = HERE / "era5_z100_cap_00utc.parquet"
+
+
+def main_z100():
+    ds = xr.open_zarr(STORE, storage_options={"token": "anon"})
+    v = ds["geopotential"].sel(level=100)
+    if v.attrs.get("units") != "m**2 s**-2":
+        raise ValueError(f"unexpected units {v.attrs.get('units')!r}")
+    frames = []
+    for a, b in PERIODS[:-1]:                       # NH winters only
+        s = v.sel(time=slice(a, b))
+        s = s.sel(time=s.time.dt.hour == 0).load() / G0
+        frames.append(pd.DataFrame({"time": s.time.values, "z100_cap_N": cap(s, True).values}))
+        print(f"  {a} .. {b}: {len(s.time)} days", flush=True)
+    out = pd.concat(frames, ignore_index=True).sort_values("time", ignore_index=True)
+    if out["time"].duplicated().any() or out["z100_cap_N"].isna().any():
+        raise ValueError("duplicate or missing 100 hPa cap values")
+    if not out["z100_cap_N"].between(14000, 18000).all():
+        raise ValueError("100 hPa cap height outside 14-18 km")
+    out.to_parquet(OUT_Z100)
+    print(f"{len(out):,} rows -> {OUT_Z100.name}")
+
+
 if __name__ == "__main__":
-    main()
+    import sys
+    main_z100() if "--z100" in sys.argv else main()

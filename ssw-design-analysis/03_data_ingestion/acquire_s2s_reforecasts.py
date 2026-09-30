@@ -55,6 +55,17 @@ all ten systems, ECMWF included; configuration in VARS:
   --var u10         zonal-mean zonal wind at 10 hPa on the 60N row (the
                     Charlton-Polvani reversal index), 00 UTC, lead days 1-15
                     -> s2s_<tag>_u10_60N.parquet
+
+HELD-OUT EVENTS AND LEAD-LAG DIAGNOSIS (plans approved 2026-09-30; designs in
+07_physical_decomposition/s2s_heldout_test.py and s2s_leadlag_test.py, committed
+before these retrievals):
+  origins ecmwf2025, cma2025  model year 2025 of ECMWF (hindcast years 2005-2024,
+                    odd-day starts) and CMA (2010-2024, Jan-Mar starts), the versions
+                    whose hindcasts reach the 2023 and 2024 SSWs; requested from ECDS
+                    as origins "ecmwf" and "cma" (CENTRES "api"). msl and t2m as above.
+  --var gh100       geopotential height at 100 hPa, 00 UTC, lead days 1-34, polar-cap
+                    mean (60-90N, the cap reduction of the msl) -> s2s_<tag>_z100_cap.parquet
+  --var u10_long    as u10, lead days 16-34 -> s2s_<tag>_u10_60N_long.parquet
 """
 import hashlib
 import json
@@ -210,6 +221,9 @@ CENTRES = {
     "cnr_isac": {"year": "2023", "kind": "fixed", "thin": 1},
     "ncep":     {"year": "2011", "kind": "fixed", "thin": 3},
     "cptec":    {"year": "2023", "kind": "fixed", "thin": 3},
+    # held-out events (2023-2024): later model versions, retrieved under their own tags
+    "ecmwf2025": {"year": "2025", "kind": "otf", "thin": 1, "api": "ecmwf"},
+    "cma2025":   {"year": "2025", "kind": "otf", "thin": 1, "api": "cma"},
 }
 MULTI_LEAD_DAYS = list(range(10, 35))
 
@@ -235,7 +249,20 @@ VARS = {
                 leads=list(range(1, 16)), window=False, area=[60, -180, 60, 180], reduce="zonal",
                 cols=["u10_60N"], cache=HERE / "_s2s_reduced_u10", out="u10_60N",
                 manifest="u10_", lim=(-80, 120)),
+    "gh100": dict(variable="geopotential_height", level_type="pressure", level="100_hpa",
+                  leads=list(range(1, 35)), window=False, area=AREA, reduce="cap",
+                  cols=["z100_cap_N"], cache=HERE / "_s2s_reduced_gh100", out="z100_cap",
+                  manifest="gh100_", lim=(14000, 18000)),
+    "u10_long": dict(variable="u_component_of_wind", level_type="pressure", level="10_hpa",
+                     leads=list(range(16, 35)), window=False, area=[60, -180, 60, 180],
+                     reduce="zonal", cols=["u10_60N"], cache=HERE / "_s2s_reduced_u10_long",
+                     out="u10_60N_long", manifest="u10_long_", lim=(-80, 120)),
 }
+
+
+def api(origin):
+    """The ECDS origin name for a centre tag (ecmwf2025 -> ecmwf)."""
+    return CENTRES.get(origin, {}).get("api", origin)
 
 
 def jobs(origin):
@@ -248,7 +275,7 @@ def jobs(origin):
                  "hyears": HYEARS, "key": str(md.date()),
                  "cache": root / f"{md.date()}.parquet"} for md in model_dates()]
     cfg = CENTRES[origin]
-    q = {"origin": [origin], "year": [cfg["year"]], "variable": [VARS[VAR]["variable"]]}
+    q = {"origin": [api(origin)], "year": [cfg["year"]], "variable": [VARS[VAR]["variable"]]}
     if VARS[VAR]["level"]:
         q.update(level_type=[VARS[VAR]["level_type"]], level_value=[VARS[VAR]["level"]])
     # constraint queries in parallel: one sequential query per (date, hindcast
@@ -344,7 +371,7 @@ def fetch(job):
         # requests for this dataset is temporarily limited"): a rejection is
         # retried with back-off, never treated as data failure.
         for attempt in range(40):
-            remote = client().submit(DATASET, request(job["md"], job["origin"], job["hm"], job["hd"],
+            remote = client().submit(DATASET, request(job["md"], api(job["origin"]), job["hm"], job["hd"],
                                                       job["hyears"], leads))
             # read the status ONCE per poll: every access re-queries ECDS, and
             # checking it three times raced ("FAILED ... ended successful")
@@ -441,7 +468,7 @@ def fetch_pack(item):
     cfgv = VARS[VAR]
     leads = cfgv["leads"]
     col = "psl_cap_N" if VAR == "msl" else cfgv["cols"]
-    req = request(js[0]["md"], origin, js[0]["hm"], js[0]["hd"],
+    req = request(js[0]["md"], api(origin), js[0]["hm"], js[0]["hd"],
                   sorted({h for j in js for h in j["hyears"]}), leads)
     req["day"] = sorted({f"{j['md'].day:02d}" for j in js})
     req["hday"] = sorted({f"{j['hd']:02d}" for j in js})
@@ -469,7 +496,7 @@ def fetch_pack(item):
                                  backend_kwargs={"indexpath": "", "filter_by_keys": {"dataType": dtype}})
             v = ds[list(ds.data_vars)[0]]
             if cfgv["reduce"] == "cap":
-                df = E.cap(v, north=True).to_dataframe(name="psl_cap_N").reset_index()
+                df = E.cap(v, north=True).to_dataframe(name=cfgv["cols"][0]).reset_index()
             elif cfgv["reduce"] == "regions":
                 df = regions_mean(v).to_dataframe().reset_index()
             else:                                     # zonal mean on the 60N row
