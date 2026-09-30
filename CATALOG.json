@@ -1,10 +1,10 @@
 {
- "generated": "2026-09-30T10:52:52+00:00",
+ "generated": "2026-09-30T13:37:19+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
   "scripts": 153,
-  "results": 76
+  "results": 77
  },
  "scripts": [
   {
@@ -86,9 +86,9 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "Observed polar-cap mean sea-level pressure, reduced EXACTLY as the SNAPSI members are, so the observed outcome of each SNAPSI event can be placed inside its own ensemble.",
-   "loc": 160,
-   "modified": "2026-09-30 10:33",
-   "sha256_16": "4c8bae668c3f2c57",
+   "loc": 165,
+   "modified": "2026-09-30 10:55",
+   "sha256_16": "6228a9d03b7da3ed",
    "flags": [],
    "filenames_mentioned": [
     "era5_psl_cap_6h.parquet",
@@ -2382,7 +2382,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-09-30 09:05",
+   "modified": "2026-09-30 10:53",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -4432,6 +4432,57 @@
     "inputs",
     "n_starts_total",
     "bins"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/s2s_heldout_test.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 5621,
+   "modified": "2026-09-30 13:34",
+   "sha256_16": "287dd5c39227c004",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_heldout_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_heldout_test.py": "d57639ff35f1972b"
+   },
+   "verdicts": [
+    {
+     "key": "HO3_polar_cap_pooled.note",
+     "text": "P' events re-evaluated with the spliced observation series, whose leave-one-year-out observed climatology now includes 2022-2024"
+    },
+    {
+     "key": "HO3_NEURASIA_pooled.note",
+     "text": "P' events re-evaluated with the spliced observation series, whose leave-one-year-out observed climatology now includes 2022-2024"
+    }
+   ],
+   "counts": {
+    "n_null": [
+     10000
+    ],
+    "n_events": [
+     3,
+     17,
+     20
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "registered_commit",
+    "n_null",
+    "seed_rule",
+    "systems",
+    "heldout_events",
+    "splice",
+    "HO1_polar_cap",
+    "HO3_polar_cap_pooled",
+    "HO2_NEURASIA",
+    "HO3_NEURASIA_pooled"
    ]
   },
   {

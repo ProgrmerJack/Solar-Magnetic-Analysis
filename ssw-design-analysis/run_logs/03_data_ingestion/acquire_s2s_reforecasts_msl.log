@@ -1,0 +1,182 @@
+=== Wed Sep 30 02:06:19 PM +05 2026 packed msl ecmwf2025 cma2025
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from connection error [HTTPSConnectionPool(host='ecds.ecmwf.int', port=443): Read timed out. (read timeout=60)], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+7 packed requests for ['ecmwf2025', 'cma2025']
+  ecmwf2025 pack 2025-03-01_h03-01 FAILED: 403 Client Error: Forbidden for url: https://ecds.ecmwf.int/api/retrieve/v1/processes/s2s-reforecasts/execution
+cost limits exceeded
+Your request is too large, please reduce your selection.
+  ecmwf2025 pack 2025-02-01_h02-01 FAILED: 403 Client Error: Forbidden for url: https://ecds.ecmwf.int/api/retrieve/v1/processes/s2s-reforecasts/execution
+cost limits exceeded
+Your request is too large, please reduce your selection.
+  ecmwf2025 pack 2025-01-01_h01-01 FAILED: 403 Client Error: Forbidden for url: https://ecds.ecmwf.int/api/retrieve/v1/processes/s2s-reforecasts/execution
+cost limits exceeded
+Your request is too large, please reduce your selection.
+  ecmwf2025 pack 2025-12-01_h12-01 FAILED: 403 Client Error: Forbidden for url: https://ecds.ecmwf.int/api/retrieve/v1/processes/s2s-reforecasts/execution
+cost limits exceeded
+Your request is too large, please reduce your selection.
+  cma2025 9 starts: 2025-01-02_h01-02 .. 2025-01-30_h01-30 fetched
+  cma2025 8 starts: 2025-02-03_h02-03 .. 2025-02-27_h02-27 fetched
+  cma2025 9 starts: 2025-03-03_h03-03 .. 2025-03-31_h03-31 fetched
+packed done; 4 packs failed
+=== Wed Sep 30 02:32:05 PM +05 2026 packed msl ecmwf2025 cma2025
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+12 packed requests for ['ecmwf2025', 'cma2025']
+  ecmwf2025 6 starts: 2025-01-01_h01-01 .. 2025-01-11_h01-11 fetched
+  ecmwf2025 6 starts: 2025-01-13_h01-13 .. 2025-01-23_h01-23 fetched
+  ecmwf2025 4 starts: 2025-01-25_h01-25 .. 2025-01-31_h01-31 fetched
+  ecmwf2025 6 starts: 2025-02-01_h02-01 .. 2025-02-11_h02-11 fetched
+  ecmwf2025 2 starts: 2025-02-25_h02-25 .. 2025-02-27_h02-27 fetched
+  ecmwf2025 6 starts: 2025-02-13_h02-13 .. 2025-02-23_h02-23 fetched
+  ecmwf2025 6 starts: 2025-03-13_h03-13 .. 2025-03-23_h03-23 fetched
+  ecmwf2025 6 starts: 2025-03-01_h03-01 .. 2025-03-11_h03-11 fetched
+  ecmwf2025 4 starts: 2025-03-25_h03-25 .. 2025-03-31_h03-31 fetched
+  ecmwf2025 6 starts: 2025-12-01_h12-01 .. 2025-12-11_h12-11 fetched
+  ecmwf2025 6 starts: 2025-12-13_h12-13 .. 2025-12-23_h12-23 fetched
+  ecmwf2025 4 starts: 2025-12-25_h12-25 .. 2025-12-31_h12-31 fetched
+packed done; 0 packs failed
+packed exit=0
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+ecmwf2025: 62 requests; hindcast years 2005-2024
+  2025-01-19_h01-19 cached
+  2025-01-13_h01-13 cached
+  2025-01-01_h01-01 cached
+  2025-01-29_h01-29 cached
+  2025-01-27_h01-27 cached
+  2025-01-21_h01-21 cached
+  2025-02-07_h02-07 cached
+  2025-01-03_h01-03 cached
+  2025-01-25_h01-25 cached
+  2025-01-05_h01-05 cached
+  2025-01-07_h01-07 cached
+  2025-01-11_h01-11 cached
+  2025-01-09_h01-09 cached
+  2025-01-17_h01-17 cached
+  2025-01-23_h01-23 cached
+  2025-01-15_h01-15 cached
+  2025-02-03_h02-03 cached
+  2025-02-13_h02-13 cached
+  2025-02-09_h02-09 cached
+  2025-02-17_h02-17 cached
+  2025-02-19_h02-19 cached
+  2025-02-21_h02-21 cached
+  2025-02-23_h02-23 cached
+  2025-02-25_h02-25 cached
+  2025-02-05_h02-05 cached
+  2025-03-01_h03-01 cached
+  2025-03-03_h03-03 cached
+  2025-02-27_h02-27 cached
+  2025-03-07_h03-07 cached
+  2025-03-09_h03-09 cached
+  2025-03-11_h03-11 cached
+  2025-03-13_h03-13 cached
+  2025-03-15_h03-15 cached
+  2025-03-17_h03-17 cached
+  2025-03-19_h03-19 cached
+  2025-03-21_h03-21 cached
+  2025-03-23_h03-23 cached
+  2025-03-25_h03-25 cached
+  2025-03-27_h03-27 cached
+  2025-03-29_h03-29 cached
+  2025-03-31_h03-31 cached
+  2025-12-01_h12-01 cached
+  2025-12-03_h12-03 cached
+  2025-12-05_h12-05 cached
+  2025-12-07_h12-07 cached
+  2025-01-31_h01-31 cached
+  2025-12-11_h12-11 cached
+  2025-12-13_h12-13 cached
+  2025-12-09_h12-09 cached
+  2025-12-17_h12-17 cached
+  2025-12-15_h12-15 cached
+  2025-02-15_h02-15 cached
+  2025-12-23_h12-23 cached
+  2025-12-25_h12-25 cached
+  2025-12-19_h12-19 cached
+  2025-12-29_h12-29 cached
+  2025-12-31_h12-31 cached
+  2025-12-21_h12-21 cached
+  2025-03-05_h03-05 cached
+  2025-12-27_h12-27 cached
+  2025-02-11_h02-11 cached
+  2025-02-01_h02-01 cached
+
+341,000 rows, 1240 starts (2005-01-01 .. 2024-12-31), members [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Saved -> s2s_ecmwf2025_psl_cap.parquet
+ecmwf2025 assemble exit=0
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+cma2025: 26 requests; hindcast years 2010-2024
+  2025-01-02_h01-02 cached
+  2025-01-30_h01-30 cached
+  2025-01-06_h01-06 cached
+  2025-01-27_h01-27 cached
+  2025-01-23_h01-23 cached
+  2025-01-20_h01-20 cached
+  2025-01-13_h01-13 cached
+  2025-02-13_h02-13 cached
+  2025-02-17_h02-17 cached
+  2025-02-06_h02-06 cached
+  2025-02-03_h02-03 cached
+  2025-01-16_h01-16 cached
+  2025-01-09_h01-09 cached
+  2025-02-10_h02-10 cached
+  2025-02-20_h02-20 cached
+  2025-03-13_h03-13 cached
+  2025-03-17_h03-17 cached
+  2025-03-20_h03-20 cached
+  2025-03-24_h03-24 cached
+  2025-03-27_h03-27 cached
+  2025-03-31_h03-31 cached
+  2025-03-06_h03-06 cached
+  2025-02-27_h02-27 cached
+  2025-02-24_h02-24 cached
+  2025-03-03_h03-03 cached
+  2025-03-10_h03-10 cached
+
+39,000 rows, 390 starts (2010-01-02 .. 2024-03-31), members [0, 1, 2, 3]
+Saved -> s2s_cma2025_psl_cap.parquet
+cma2025 assemble exit=0

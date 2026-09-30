@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-30T10:52:52+00:00",
+ "generated": "2026-09-30T13:37:19+00:00",
  "generator": "tools/catalog_repo.py",
  "note": "Every ssw-design-analysis result in one file. The per-script JSONs remain on disk as write-side provenance; this is the read path. Regenerate with tools/catalog_repo.py.",
  "results": {
@@ -10956,6 +10956,272 @@
       "spread_error_ratio_control": 1.102,
       "note": "starts of one event share an observed window, and control starts at neighbouring k share windows: tests treat starts as independent and are therefore liberal; the event, not the start, is the independent unit"
      }
+    }
+   }
+  },
+  "s2s_heldout_test.json": {
+   "plan_approved": "2026-09-30",
+   "registered_commit": "4c8b3f2",
+   "n_null": 10000,
+   "seed_rule": "crc32(NAME|outcome|set)",
+   "systems": [
+    "cnrm",
+    "ecmwf2025",
+    "cma2025"
+   ],
+   "heldout_events": [
+    "2023-02-16",
+    "2024-01-16",
+    "2024-03-04"
+   ],
+   "splice": {
+    "psl_cap_N": {
+     "n_overlap": 362,
+     "offset": -0.01,
+     "rms_diff": 0.026,
+     "corr": 1.0
+    },
+    "NEURASIA": {
+     "n_overlap": 433,
+     "offset": 0.0001,
+     "rms_diff": 0.0001,
+     "corr": 1.0
+    },
+    "HI_EUROPE": {
+     "n_overlap": 433,
+     "offset": 0.0,
+     "rms_diff": 0.0001,
+     "corr": 1.0
+    },
+    "MID_EASIA": {
+     "n_overlap": 433,
+     "offset": 0.0001,
+     "rms_diff": 0.0001,
+     "corr": 1.0
+    },
+    "MID_NAMER": {
+     "n_overlap": 433,
+     "offset": 0.0414,
+     "rms_diff": 0.1059,
+     "corr": 0.999866
+    }
+   },
+   "HO1_polar_cap": {
+    "systems_found": [
+     "cnrm",
+     "ecmwf2025",
+     "cma2025"
+    ],
+    "n_events": 3,
+    "events": {
+     "2023-02-16": {
+      "systems": [
+       "cnrm",
+       "ecmwf2025",
+       "cma2025"
+      ],
+      "mean_rank": 0.6778,
+      "n_starts": {
+       "cnrm": 1,
+       "ecmwf2025": 4,
+       "cma2025": 2
+      },
+      "per_system_rank": {
+       "cnrm": 0.7917,
+       "ecmwf2025": 0.5417,
+       "cma2025": 0.7
+      },
+      "A_ens": {
+       "cnrm": -209.043,
+       "ecmwf2025": 54.232,
+       "cma2025": -275.785
+      },
+      "A_obs": 165.805,
+      "n_pseudo_candidates": 387
+     },
+     "2024-01-16": {
+      "systems": [
+       "cnrm",
+       "ecmwf2025",
+       "cma2025"
+      ],
+      "mean_rank": 0.8278,
+      "n_starts": {
+       "cnrm": 1,
+       "ecmwf2025": 4,
+       "cma2025": 2
+      },
+      "per_system_rank": {
+       "cnrm": 0.7083,
+       "ecmwf2025": 0.875,
+       "cma2025": 0.9
+      },
+      "A_ens": {
+       "cnrm": 166.577,
+       "ecmwf2025": -29.15,
+       "cma2025": -405.04
+      },
+      "A_obs": 446.351,
+      "n_pseudo_candidates": 379
+     },
+     "2024-03-04": {
+      "systems": [
+       "cnrm",
+       "ecmwf2025",
+       "cma2025"
+      ],
+      "mean_rank": 0.6444,
+      "n_starts": {
+       "cnrm": 2,
+       "ecmwf2025": 3,
+       "cma2025": 2
+      },
+      "per_system_rank": {
+       "cnrm": 0.625,
+       "ecmwf2025": 0.7083,
+       "cma2025": 0.6
+      },
+      "A_ens": {
+       "cnrm": -223.973,
+       "ecmwf2025": -281.895,
+       "cma2025": -353.039
+      },
+      "A_obs": -34.847,
+      "n_pseudo_candidates": 387
+     }
+    },
+    "mean_rank": 0.7167,
+    "null_mean": 0.532,
+    "null_q025_q975": [
+     0.2944,
+     0.7709
+    ],
+    "p": 0.9308
+   },
+   "HO3_polar_cap_pooled": {
+    "n_events": 20,
+    "mean_rank": 0.4452,
+    "null_mean": 0.5411,
+    "null_q025_q975": [
+     0.4393,
+     0.6433
+    ],
+    "p": 0.0321,
+    "note": "P' events re-evaluated with the spliced observation series, whose leave-one-year-out observed climatology now includes 2022-2024",
+    "P_events_alone": {
+     "n_events": 17,
+     "mean_rank": 0.3973,
+     "null_mean": 0.5427,
+     "p": 0.0037
+    }
+   },
+   "HO2_NEURASIA": {
+    "systems_found": [
+     "cnrm",
+     "ecmwf2025",
+     "cma2025"
+    ],
+    "n_events": 3,
+    "events": {
+     "2023-02-16": {
+      "systems": [
+       "cnrm",
+       "ecmwf2025",
+       "cma2025"
+      ],
+      "mean_rank": 0.4569,
+      "n_starts": {
+       "cnrm": 1,
+       "ecmwf2025": 4,
+       "cma2025": 2
+      },
+      "per_system_rank": {
+       "cnrm": 0.2083,
+       "ecmwf2025": 0.5625,
+       "cma2025": 0.6
+      },
+      "A_ens": {
+       "cnrm": 3.652,
+       "ecmwf2025": 2.374,
+       "cma2025": 2.16
+      },
+      "A_obs": 2.738,
+      "n_pseudo_candidates": 387
+     },
+     "2024-01-16": {
+      "systems": [
+       "cnrm",
+       "ecmwf2025",
+       "cma2025"
+      ],
+      "mean_rank": 0.7542,
+      "n_starts": {
+       "cnrm": 1,
+       "ecmwf2025": 4,
+       "cma2025": 2
+      },
+      "per_system_rank": {
+       "cnrm": 0.7083,
+       "ecmwf2025": 0.8542,
+       "cma2025": 0.7
+      },
+      "A_ens": {
+       "cnrm": 1.544,
+       "ecmwf2025": 0.656,
+       "cma2025": -1.624
+      },
+      "A_obs": 3.353,
+      "n_pseudo_candidates": 379
+     },
+     "2024-03-04": {
+      "systems": [
+       "cnrm",
+       "ecmwf2025",
+       "cma2025"
+      ],
+      "mean_rank": 0.5,
+      "n_starts": {
+       "cnrm": 2,
+       "ecmwf2025": 3,
+       "cma2025": 2
+      },
+      "per_system_rank": {
+       "cnrm": 0.375,
+       "ecmwf2025": 0.625,
+       "cma2025": 0.5
+      },
+      "A_ens": {
+       "cnrm": 1.23,
+       "ecmwf2025": 0.042,
+       "cma2025": 0.482
+      },
+      "A_obs": 0.945,
+      "n_pseudo_candidates": 387
+     }
+    },
+    "mean_rank": 0.5704,
+    "null_mean": 0.5144,
+    "null_q025_q975": [
+     0.2287,
+     0.7877
+    ],
+    "p": 0.6383
+   },
+   "HO3_NEURASIA_pooled": {
+    "n_events": 20,
+    "mean_rank": 0.4143,
+    "null_mean": 0.5252,
+    "null_q025_q975": [
+     0.4075,
+     0.6376
+    ],
+    "p": 0.0312,
+    "note": "P' events re-evaluated with the spliced observation series, whose leave-one-year-out observed climatology now includes 2022-2024",
+    "P_events_alone": {
+     "n_events": 17,
+     "mean_rank": 0.3868,
+     "null_mean": 0.526,
+     "p": 0.0132
     }
    }
   },
