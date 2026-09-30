@@ -1,10 +1,10 @@
 {
- "generated": "2026-09-30T09:05:36+00:00",
+ "generated": "2026-09-30T10:52:52+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 152,
-  "results": 73
+  "scripts": 153,
+  "results": 76
  },
  "scripts": [
   {
@@ -86,9 +86,9 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "Observed polar-cap mean sea-level pressure, reduced EXACTLY as the SNAPSI members are, so the observed outcome of each SNAPSI event can be placed inside its own ensemble.",
-   "loc": 131,
-   "modified": "2026-09-30 09:01",
-   "sha256_16": "0cf22bb54e4fb26d",
+   "loc": 160,
+   "modified": "2026-09-30 10:33",
+   "sha256_16": "4c8bae668c3f2c57",
    "flags": [],
    "filenames_mentioned": [
     "era5_psl_cap_6h.parquet",
@@ -157,9 +157,9 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "ECMWF S2S reforecasts of polar-cap mean sea-level pressure, reduced EXACTLY as the ERA5 observation is (`acquire_era5_psl_cap.cap`: cos-lat weighted 60-90N, the 60N row included), for the forecast-reliability test",
-   "loc": 576,
-   "modified": "2026-09-30 09:01",
-   "sha256_16": "ea9be9bd30c7bb96",
+   "loc": 582,
+   "modified": "2026-09-30 09:29",
+   "sha256_16": "2c9d85783a237c04",
    "flags": [],
    "filenames_mentioned": [
     "s2s_ecmf_psl_cap.parquet",
@@ -562,11 +562,13 @@
    "tree": "ssw-design-analysis",
    "stage": "06_simulation_validation",
    "title": "IS THE OBSERVED RECORD A TYPICAL 43-EVENT DRAW FROM THE CMIP6 SSW POPULATION, AND DOES THE OBSERVATIONAL PIPELINE RECOVER THE TRUTH WHEN A MODEL PLAYS REALITY? Plan approved 2026-09-30. Written before it was run.",
-   "loc": 48,
-   "modified": "2026-09-30 09:05",
-   "sha256_16": "f3e492edffc0b656",
+   "loc": 273,
+   "modified": "2026-09-30 09:24",
+   "sha256_16": "0e82486463d4464e",
    "flags": [],
-   "filenames_mentioned": [],
+   "filenames_mentioned": [
+    "obs_model_compatibility.json"
+   ],
    "filename_prefixes": []
   },
   {
@@ -779,11 +781,13 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "ONE SHIFTED POPULATION, A CONTINUOUSLY STATE-DEPENDENT ONE, OR TWO REGIMES? Plan approved 2026-09-30. Written before any of these models was fitted.",
-   "loc": 63,
-   "modified": "2026-09-30 09:04",
-   "sha256_16": "ae6b0c448420e7c9",
+   "loc": 560,
+   "modified": "2026-09-30 10:20",
+   "sha256_16": "f9692bbd47d1f68c",
    "flags": [],
-   "filenames_mentioned": [],
+   "filenames_mentioned": [
+    "class_model_comparison.json"
+   ],
    "filename_prefixes": []
   },
   {
@@ -885,9 +889,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "THE POSITIVE CLAIM UNDERNEATH THE WHOLE PROJECT, AND A HARD CEILING ON EVERY CLASSIFIER IN THIS LITERATURE.",
-   "loc": 561,
-   "modified": "2026-09-30 09:04",
-   "sha256_16": "08381225ceb58f8d",
+   "loc": 703,
+   "modified": "2026-09-30 10:44",
+   "sha256_16": "12beb6c1cfe1252b",
    "flags": [],
    "filenames_mentioned": [
     "forced_variance_ceiling.json"
@@ -1094,11 +1098,19 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "HELD-OUT EVALUATION: DO FORECASTS UNDER-PREDICT THE SHIFT AFTER THE 2023-2024 SSWs? Plan approved 2026-09-30. This design was committed BEFORE any forecast of model year 2025 (ECMWF, CMA) or any ERA5 value after 2023-01-10 was retrieved, and",
-   "loc": 70,
-   "modified": "2026-09-30 09:04",
-   "sha256_16": "6f6e5d442d2bb0bd",
+   "loc": 262,
+   "modified": "2026-09-30 09:31",
+   "sha256_16": "d57639ff35f1972b",
    "flags": [],
-   "filenames_mentioned": [],
+   "filenames_mentioned": [
+    "era5_psl_cap_00utc_arco.parquet",
+    "era5_psl_cap_00utc_spliced.parquet",
+    "era5_psl_cap_6h.parquet",
+    "era5_t2m_regions_daily.parquet",
+    "era5_t2m_regions_daily_arco.parquet",
+    "era5_t2m_regions_daily_spliced.parquet",
+    "s2s_heldout_test.json"
+   ],
    "filename_prefixes": []
   },
   {
@@ -1106,11 +1118,14 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "WHERE IN THE FORECAST CHAIN IS THE SHIFT LOST: THE LOWER STRATOSPHERE, OR BELOW IT? Plan approved 2026-09-30. This design was committed BEFORE any forecast of 100 hPa geopotential height or of 10 hPa wind beyond lead 15 was retrieved.",
-   "loc": 53,
-   "modified": "2026-09-30 09:04",
-   "sha256_16": "d3445c6c327ab310",
+   "loc": 246,
+   "modified": "2026-09-30 09:32",
+   "sha256_16": "41d09e91e28450f3",
    "flags": [],
-   "filenames_mentioned": [],
+   "filenames_mentioned": [
+    "era5_z100_cap_00utc.parquet",
+    "s2s_leadlag_test.json"
+   ],
    "filename_prefixes": []
   },
   {
@@ -1307,11 +1322,14 @@
    "tree": "ssw-design-analysis",
    "stage": "08_literature_audit",
    "title": "DOES THE \"DOWNWARD\" RATE AND CONTRAST TRACK ONE SHIFTED POPULATION FOR EVERY REASONABLE VERSION OF THE CRITERION, OR ONLY FOR THE ONE WE CHOSE? Plan approved 2026-09-30. Written before the sweep was run.",
-   "loc": 60,
-   "modified": "2026-09-30 09:05",
-   "sha256_16": "ba78b75a57d8c1bf",
+   "loc": 362,
+   "modified": "2026-09-30 10:45",
+   "sha256_16": "55f22bbf3b71a86b",
    "flags": [],
-   "filenames_mentioned": [],
+   "filenames_mentioned": [
+    "criterion_sweep.json",
+    "era5_nam_daily.parquet"
+   ],
    "filename_prefixes": []
   },
   {
@@ -1499,6 +1517,20 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/09_figures/figED4_sweep.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "figED4_sweep.py -- Extended Data Fig. 4: every version of the criterion tracks one shifted population.",
+   "loc": 84,
+   "modified": "2026-09-30 10:51",
+   "sha256_16": "c8cebfb1e80ff06f",
+   "flags": [],
+   "filenames_mentioned": [
+    "criterion_sweep.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/09_figures/nature_style.py",
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
@@ -1515,16 +1547,22 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 145,
-   "modified": "2026-09-29 15:40",
-   "sha256_16": "32ffdcbba53872ca",
+   "loc": 205,
+   "modified": "2026-09-30 10:52",
+   "sha256_16": "01dbe82d1ee63127",
    "flags": [],
    "filenames_mentioned": [
+    "class_model_comparison.json",
+    "criterion_sweep.json",
     "era5_regional_test.json",
+    "forced_variance_ceiling.json",
     "forecast_value_robustness.json",
     "forecast_value_test.json",
+    "obs_model_compatibility.json",
     "s2s_baseline_test.json",
     "s2s_forecast_test.json",
+    "s2s_heldout_test.json",
+    "s2s_leadlag_test.json",
     "s2s_multimodel_robustness.json",
     "s2s_multimodel_test.json",
     "s2s_postonset_test.json",
@@ -3987,21 +4025,64 @@
    ]
   },
   {
+   "path": "results/current/6_predictability/class_model_comparison.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 9723,
+   "modified": "2026-09-30 10:35",
+   "sha256_16": "ace0a5ba9dba782d",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/class_model_comparison.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/class_model_comparison.py": "f9692bbd47d1f68c"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_events": [
+     1517
+    ],
+    "n_members": [
+     20
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "seed",
+    "tier",
+    "n_events",
+    "n_members",
+    "k_pseudo",
+    "n_starts",
+    "cv",
+    "ssw",
+    "G_ci95_model_bootstrap",
+    "pseudo",
+    "controls",
+    "posthoc",
+    "snapsi"
+   ]
+  },
+  {
    "path": "results/current/6_predictability/forced_variance_ceiling.json",
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 3006,
-   "modified": "2026-09-30 08:51",
-   "sha256_16": "08983326c581b318",
+   "bytes": 21428,
+   "modified": "2026-09-30 10:45",
+   "sha256_16": "bc2abb1c3406c01e",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py"
    ],
-   "state": "STALE",
-   "detail": "producer changed: ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py",
+   "state": "current",
+   "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py": "08381225ceb58f8d"
+    "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py": "12beb6c1cfe1252b"
    },
    "verdicts": [],
    "counts": {
@@ -4014,7 +4095,8 @@
     "outcome_window",
     "placebo_window",
     "results",
-    "validation_known_truth"
+    "validation_known_truth",
+    "C4_identification_audit"
    ]
   },
   {
@@ -4156,6 +4238,53 @@
     "results",
     "power_CMIP6",
     "verdict"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/obs_model_compatibility.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 11921,
+   "modified": "2026-09-30 09:26",
+   "sha256_16": "5c3ef559688d3d1e",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/obs_model_compatibility.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/obs_model_compatibility.py": "0e82486463d4464e"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_draws": [
+     2000,
+     10000
+    ],
+    "n_events": [
+     53,
+     59,
+     64,
+     76,
+     83,
+     97,
+     109,
+     141,
+     152,
+     683
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "seed",
+    "k_events_per_draw",
+    "observations",
+    "cmip6_full_population",
+    "n_cmip6_events",
+    "compatibility",
+    "perfect_model"
    ]
   },
   {
@@ -4971,6 +5100,44 @@
     "southern_hemisphere",
     "filter_caveat",
     "units_caveat"
+   ]
+  },
+  {
+   "path": "results/current/9_literature/criterion_sweep.json",
+   "tree": "current",
+   "stage": "9_literature",
+   "readable": true,
+   "bytes": 60536,
+   "modified": "2026-09-30 10:50",
+   "sha256_16": "798d153b4755ec0f",
+   "producers": [
+    "ssw-design-analysis/08_literature_audit/criterion_sweep.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/08_literature_audit/criterion_sweep.py": "55f22bbf3b71a86b"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_events": [
+     39,
+     1516,
+     1517
+    ],
+    "n_members": [
+     20
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "seed",
+    "grid",
+    "window_start",
+    "inputs",
+    "era5",
+    "cmip6"
    ]
   },
   {

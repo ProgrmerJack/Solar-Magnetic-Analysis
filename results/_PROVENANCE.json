@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-30T08:52:19+00:00",
+ "generated": "2026-09-30T10:52:52+00:00",
  "note": "Known-good baseline: each result was produced by the script at the recorded sha256. catalog_repo.py flags STALE when a producer's hash no longer matches. Re-record with --record only AFTER re-running the analysis.",
  "results": {
   "catalogue_sets.json": {
@@ -432,14 +432,24 @@
    "result_sha256_16": "2d4148e81f4124d7",
    "needs_rerun": false
   },
+  "class_model_comparison.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/class_model_comparison.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/class_model_comparison.py": "f9692bbd47d1f68c"
+   },
+   "result_sha256_16": "ace0a5ba9dba782d",
+   "needs_rerun": false
+  },
   "forced_variance_ceiling.json": {
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py": "7e5dba06339b89b0"
+    "ssw-design-analysis/07_physical_decomposition/forced_variance_ceiling.py": "12beb6c1cfe1252b"
    },
-   "result_sha256_16": "08983326c581b318",
+   "result_sha256_16": "bc2abb1c3406c01e",
    "needs_rerun": false
   },
   "forecast_value_robustness.json": {
@@ -480,6 +490,16 @@
     "ssw-design-analysis/07_physical_decomposition/is_downward_propagation_a_class.py": "529d687348381550"
    },
    "result_sha256_16": "be5ccf61c0837b85",
+   "needs_rerun": false
+  },
+  "obs_model_compatibility.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/obs_model_compatibility.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/obs_model_compatibility.py": "0e82486463d4464e"
+   },
+   "result_sha256_16": "5c3ef559688d3d1e",
    "needs_rerun": false
   },
   "predictability_ceiling.json": {
@@ -692,6 +712,16 @@
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "6626a155b09d3623"
    },
    "result_sha256_16": "c26057a7c4a2e49e",
+   "needs_rerun": false
+  },
+  "criterion_sweep.json": {
+   "producers": [
+    "ssw-design-analysis/08_literature_audit/criterion_sweep.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/08_literature_audit/criterion_sweep.py": "55f22bbf3b71a86b"
+   },
+   "result_sha256_16": "798d153b4755ec0f",
    "needs_rerun": false
   },
   "era5_nam_daily_mean_check.json": {

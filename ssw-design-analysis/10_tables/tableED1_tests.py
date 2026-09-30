@@ -58,6 +58,10 @@ def main():
     CD, FR = J("snapsi_contrast_diagnosis.json"), J("forecast_value_robustness.json")
     M, N = J("snapsi_distribution_test.json"), J("snapsi_loeffel_test.json")
     WJ, AR = J("within_model_check.json"), J("snapsi_archetype_test.json")
+    CS, OC = J("criterion_sweep.json"), J("obs_model_compatibility.json")
+    FV, CM = J("forced_variance_ceiling.json"), J("class_model_comparison.json")
+    HO, LL = J("s2s_heldout_test.json"), J("s2s_leadlag_test.json")
+    R2 = ("robustness (revision 2)", "committed before run", "4c8b3f2")
     mm = g(MMt, "multimodel", "confirmatory"); nr = g(SRt, "regions", "NEURASIA", "multimodel", "confirmatory")
     rows = [
         # (id, test, role, registration, commit, statistic, p)
@@ -123,6 +127,62 @@ def main():
          f"{g(FR,'results','base | P3 + post-onset stratosphere','CRPSS_ssw')} vs "
          f"{g(FR,'results','base | P3 + post-onset stratosphere','null_ordinary_pooled','mean')}" if FR else "pending",
          g(FR, "results", "base | P3 + post-onset stratosphere", "null_ordinary_pooled", "p_null_ge_ssw")),
+        # second revision (2026-09-30): robustness checks, each with its own registered
+        # reading; not added to the primary Holm family
+        ("T-a1", "criterion sweep, 54 surface versions: max abs z of SSW rate vs shifted null", *R2,
+         f"max abs z {g(CS,'era5','S1_S2_conditions_1_2','max_abs_z')}" if CS else "pending",
+         g(CS, "era5", "S1_S2_conditions_1_2", "p_max_abs_z")),
+        ("T-a2", "criterion sweep, 54 surface versions: systematic excess (mean z)", *R2,
+         f"mean z {g(CS,'era5','S1_S2_conditions_1_2','mean_z')}" if CS else "pending",
+         g(CS, "era5", "S1_S2_conditions_1_2", "p_mean_z_excess")),
+        ("T-a1-cal", "criterion sweep, surface versions: max abs z, calibrated reference", "robustness (revision 2)",
+         "post hoc calibration of a registered test", "this revision",
+         f"max abs z {g(CS,'era5','S1_S2_conditions_1_2','max_abs_z')}" if CS else "pending",
+         g(CS, "era5", "calibration_posthoc", "c12", "p_max_abs_z_calibrated")),
+        ("T-a2-cal", "criterion sweep, surface versions: mean z, calibrated reference (two-sided)", "robustness (revision 2)",
+         "post hoc calibration of a registered test", "this revision",
+         f"mean z {g(CS,'era5','S1_S2_conditions_1_2','mean_z')}" if CS else "pending",
+         g(CS, "era5", "calibration_posthoc", "c12", "p_mean_z_calibrated_two_sided")),
+        ("T-b", "observed statistics within 43-event CMIP6 draws (min-p combination)", *R2,
+         f"min p {g(OC,'compatibility','pooled','min_p')}" if OC else "pending",
+         g(OC, "compatibility", "pooled", "p_combined")),
+        ("T-c", "identification audit: contrast / ceiling at SNAPSI-bounded damping (obs; CMIP6)", *R2,
+         (f"{g(FV,'C4_identification_audit','datasets','observations','C4b_worst_case','ratio_contrast_over_ceiling')}; "
+          f"{g(FV,'C4_identification_audit','datasets','cmip6','C4b_worst_case','ratio_contrast_over_ceiling')}") if FV else "pending",
+         None),
+        ("T-d", "two regimes beat continuous model after SSWs vs ordinary days (CRPS)", *R2,
+         f"G {g(CM,'ssw','crps','G_M1_minus_M2')} vs {g(CM,'pseudo','crps','G_mean')}" if CM else "pending",
+         g(CM, "pseudo", "crps", "p_pseudo_ge_ssw")),
+        ("T-d-PH", "two regimes vs one skewed population, after SSWs vs ordinary days", "sensitivity", "post hoc",
+         "this revision", f"G {g(CM,'posthoc','crps','PH1_G_M1s_minus_M2_ssw')}" if CM else "pending",
+         g(CM, "posthoc", "crps", "PH1_p_pseudo_ge_ssw")),
+        ("T-d-PH2", "two regimes vs continuous, calibrated on no-regime synthetic data", "sensitivity",
+         "post hoc", "this revision", f"G {g(CM,'ssw','crps','G_M1_minus_M2')}" if CM else "pending",
+         g(CM, "posthoc", "crps", "PH2_p_vs_negative_control")),
+        ("T-d-PH4", "two-regime model skill over the shift: after SSWs vs ordinary days", "sensitivity",
+         "post hoc", "this revision",
+         (f"{g(CM,'posthoc','PH4_skill_vs_M0_crps','M2','ssw')} vs "
+          f"{g(CM,'posthoc','PH4_skill_vs_M0_crps','M2','pseudo_mean')}") if CM else "pending",
+         g(CM, "posthoc", "PH4_skill_vs_M0_crps", "M2", "p_pseudo_le_ssw")),
+        ("T-d-PH3", "two-regime components after SSWs: mean separation (ordinary days)", "descriptive",
+         "post hoc", "this revision",
+         (f"{g(CM,'posthoc','PH3_ssw','separation')} ({g(CM,'posthoc','PH3_pseudo_mean_50sets','separation')})") if CM else "pending",
+         None),
+        ("HO1", "held-out 2023-24 SSWs: polar-cap rank deficit", "replication (revision 2)",
+         "committed before data", "4c8b3f2",
+         f"{g(HO,'HO1_polar_cap','mean_rank')} vs {g(HO,'HO1_polar_cap','null_mean')}" if g(HO, "HO1_polar_cap", "mean_rank") else "pending",
+         g(HO, "HO1_polar_cap", "p")),
+        ("HO2", "held-out 2023-24 SSWs: N-Eurasian temperature rank deficit", "replication (revision 2)",
+         "committed before data", "4c8b3f2",
+         f"{g(HO,'HO2_NEURASIA','mean_rank')} vs {g(HO,'HO2_NEURASIA','null_mean')}" if g(HO, "HO2_NEURASIA", "mean_rank") else "pending",
+         g(HO, "HO2_NEURASIA", "p")),
+        ("L1", "100 hPa polar-cap height rank after SSWs", "diagnostic (revision 2)", "committed before data", "4c8b3f2",
+         f"{g(LL,'tests','confirmatory','L1_z100_rank','mean_rank')} vs {g(LL,'tests','confirmatory','L1_z100_rank','null_mean')}" if LL else "pending",
+         g(LL, "tests", "confirmatory", "L1_z100_rank", "p")),
+        ("L2", "surface rank conditional on forecast 100 hPa anomaly", "diagnostic (revision 2)", "committed before data", "4c8b3f2",
+         f"{g(LL,'tests','confirmatory','L2_conditional_surface_rank','mean_rank')} vs "
+         f"{g(LL,'tests','confirmatory','L2_conditional_surface_rank','null_mean')}" if LL else "pending",
+         g(LL, "tests", "confirmatory", "L2_conditional_surface_rank", "p")),
     ]
     fam = [i for i, r in enumerate(rows) if r[2].startswith("primary") and isinstance(r[6], (int, float))]
     adj = holm([rows[i][6] for i in fam])

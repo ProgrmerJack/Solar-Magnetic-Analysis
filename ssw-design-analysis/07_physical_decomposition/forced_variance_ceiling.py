@@ -286,6 +286,108 @@ def validate_known_truth(pool, n_ev, rng, n_rep=400):
     return out
 
 
+# ---------------------------------------------------------------- C4 audit
+LAMBDA2_SNAPSI = None      # read from snapsi_distribution_test.json in main()
+C4_SF = (0.0, 0.2, 0.4)
+C4_RHO = (-0.5, -0.25, 0.25, 0.5)
+C4_LAMBDA2 = (0.873, 0.95)
+C4_REPS = 1000
+C4_BOOT = 200
+
+
+def _pairs(post, pre):
+    ok = np.isfinite(post) & np.isfinite(pre)
+    return post[ok], pre[ok]
+
+
+def c4a_simulate(post, pre, n, rng):
+    """C4a: coverage of the true s_f by the raw and placebo-corrected upper 95%
+    bounds when the identifying assumption holds (A) and when it does not (B:
+    forcing tied to the pre-onset state; Bpost: tied to the concurrent internal
+    anomaly -- added before the run, not in the registered design; C: damping).
+    Synthetic events draw real pseudo-event (pre, post) pairs; the pseudo pool's
+    variance is taken as known (its sampling error is small beside the events':
+    the pool is 20-400 times larger), and events are resampled iid, as they were
+    generated."""
+    vpost, vpre = np.var(post, ddof=1), np.var(pre, ddof=1)
+    zpre = (pre - pre.mean()) / pre.std()
+    zpost = (post - post.mean()) / post.std()
+    cells = [("A", None, None)] + [("B", r, None) for r in C4_RHO] \
+        + [("Bpost", r, None) for r in C4_RHO] + [("C", None, l) for l in C4_LAMBDA2]
+    out = {}
+    for kind, rho, lam2 in cells:
+        for sf in C4_SF:
+            raw_e, cor_e, cov_r, cov_c = [], [], 0, 0
+            for _ in range(C4_REPS):
+                i = rng.integers(0, len(post), n)
+                e_post, e_pre = post[i] - post.mean(), pre[i]
+                eta = rng.standard_normal(n)
+                if kind == "A" or kind == "C":
+                    f = sf * eta
+                else:
+                    z = zpre[i] if kind == "B" else zpost[i]
+                    f = rho * sf * z + np.sqrt(1 - rho ** 2) * sf * eta
+                lam = np.sqrt(lam2) if kind == "C" else 1.0
+                y = f + lam * e_post
+                raw = np.var(y, ddof=1) - vpost
+                cor = raw - (np.var(e_pre, ddof=1) - vpre)
+                b = rng.integers(0, n, (C4_BOOT, n))
+                rb = np.var(y[b], axis=1, ddof=1) - vpost
+                cb = rb - (np.var(e_pre[b], axis=1, ddof=1) - vpre)
+                up_r, up_c = np.percentile(rb, 97.5), np.percentile(cb, 97.5)
+                raw_e.append(raw); cor_e.append(cor)
+                cov_r += np.sqrt(max(up_r, 0)) >= sf
+                cov_c += np.sqrt(max(up_c, 0)) >= sf
+            key = f"{kind}{'' if rho is None else f'_rho{rho:+.2f}'}{'' if lam2 is None else f'_lambda2_{lam2}'}_sf{sf}"
+            out[key] = {"mean_raw_s2": round(float(np.mean(raw_e)), 4),
+                        "mean_corrected_s2": round(float(np.mean(cor_e)), 4),
+                        "true_s2": round(sf ** 2, 4),
+                        "coverage_raw_upper95": round(cov_r / C4_REPS, 3),
+                        "coverage_corrected_upper95": round(cov_c / C4_REPS, 3)}
+    return out
+
+
+def c4b_worst_case(up_raw_s2, up_cor_s2, var_pseudo, mean_shift, contrast, q, lam2, rng):
+    """C4b: the bound under the damping SNAPSI still allows, and what it implies."""
+    from scipy.stats import norm
+    s2 = max(up_raw_s2, up_cor_s2, 0.0) + (1 - lam2) * var_pseudo
+    sf = float(np.sqrt(s2))
+    c = ceiling(s2, q)
+    z = rng.standard_normal(1_000_000)
+    pe = norm.cdf(-(mean_shift + sf * z) / np.sqrt(lam2 * var_pseudo))
+    pbar = float(pe.mean())
+    return {"lambda2": lam2, "sigma_f2_worst": round(s2, 4), "sigma_f_worst": round(sf, 4),
+            "ceiling_at_q": round(float(c), 4), "contrast": round(float(contrast), 4),
+            "split_fraction": round(float(q), 3),
+            "ratio_contrast_over_ceiling": round(float(contrast / c), 3) if c > 0 else None,
+            "P_mean": round(pbar, 4),
+            "P_range95": [round(float(x), 3) for x in np.quantile(pe, [0.025, 0.975])],
+            "label_variance_share_forced": round(float(pe.var() / (pbar * (1 - pbar))), 4)}
+
+
+def c4c_tipping(up_s2, contrast, q, r_pre_post, sd_e, lam2=1.0):
+    """C4c: the correlation between forcing and internal noise at which the
+    upper-bound forced spread would reach the published contrast. With
+    Cov(f, eps) = rho * r * s_f * sd_e, the excess U = s_f^2 + 2 rho r s_f sd_e;
+    the ceiling equals the contrast at s_f* = contrast / split_factor(q), so
+    rho* = (U - s_f*^2) / (2 r s_f* sd_e); |rho*| > 1 is unreachable.
+    With damping lambda^2 as well (added 2026-09-30 after review, post hoc: the two
+    act together), U = s_f^2 + 2 rho r s_f lambda sd_e - (1 - lambda^2) sd_e^2, so
+    rho* = (U + (1 - lambda^2) sd_e^2 - s_f*^2) / (2 r s_f* lambda sd_e)."""
+    sfs = contrast / split_factor(q)
+    out = {"s_f_needed": round(float(sfs), 4), "lambda2_damped_case": lam2}
+    lam = np.sqrt(lam2)
+    for lab, r in (("B_pre_state", r_pre_post), ("Bpost_concurrent", 1.0)):
+        rho = (up_s2 - sfs ** 2) / (2 * r * sfs * sd_e) if r != 0 else float("-inf")
+        rho_d = ((up_s2 + (1 - lam2) * sd_e ** 2 - sfs ** 2) / (2 * r * sfs * lam * sd_e)
+                 if r != 0 else float("-inf"))
+        out[lab] = {"r": round(float(r), 4), "rho_star": round(float(rho), 3),
+                    "reachable": bool(abs(rho) <= 1),
+                    "rho_star_with_damping": round(float(rho_d), 3),
+                    "reachable_with_damping": bool(abs(rho_d) <= 1)}
+    return out
+
+
 def analyse(name, ao_like, onsets, clim, clean_idx, doys, per_event, rng,
             draw, n_pseudo=N_PSEUDO, reported=()):
     print("\n" + "=" * 74)
@@ -387,7 +489,7 @@ def analyse(name, ao_like, onsets, clim, clean_idx, doys, per_event, rng,
             "noise_equality_ok": bool(0.7 <= vr <= 1.4),
             "ceiling_point": round(float(c_pt), 4),
             "ceiling_upper95": round(float(c_hi), 4),
-            "reported_vs_ceiling": comp}, pool_out
+            "reported_vs_ceiling": comp}, (pool_out, pool_pre)
 
 
 def main():
@@ -433,7 +535,7 @@ def main():
     lab_obs = RPC.classify(real, ao, RPC.strat_nam_150()).astype(float)
     rep_obs = [("Karpechko criterion, CPC AO, days 8-52",
                 *matched_contrast(mine, lab_obs))]
-    r_obs, pool_obs = analyse("OBSERVATIONS (CPC AO, 43 events)", ao, real, clim,
+    r_obs, (pool_obs, pool_obs_pre) = analyse("OBSERVATIONS (CPC AO, 43 events)", ao, real, clim,
                               clean_idx, doys, _win_anom, rng, G.draw_clean,
                               reported=rep_obs)
     res["results"]["observations"] = r_obs
@@ -550,6 +652,46 @@ def main():
             "ceiling_point": round(float(c_pt), 4),
             "ceiling_upper95": round(float(c_hi), 4),
             "reported_vs_ceiling": comp}
+
+    # ------------------------------------------------ C4 identification audit
+    # its own seeded stream, AFTER every registered computation above, so the
+    # earlier results are reproduced exactly
+    import zlib
+    rng4 = np.random.default_rng(zlib.crc32(b"forced_variance_ceiling|C4"))
+    snap = json.loads(next((ROOT / "results" / "current").glob(
+        "*/snapsi_distribution_test.json")).read_text())["pooled_all"]
+    lam2 = float(snap["variance_ratio_CI95"][0])
+    print("\n" + "=" * 74)
+    print(f"=== C4 IDENTIFICATION AUDIT (SNAPSI lower variance ratio {lam2}) ===")
+    c4 = {"lambda2_snapsi_lower95": lam2, "reps": C4_REPS, "boot": C4_BOOT,
+          "seed_rule": "crc32('forced_variance_ceiling|C4')", "datasets": {}}
+    sets = [("observations", pool_obs, pool_obs_pre, res["results"]["observations"])]
+    if "cmip6" in res["results"]:
+        sets.append(("cmip6", pool, pool_pre, res["results"]["cmip6"]))
+    for nm, po, pr, r in sets:
+        post, pre = _pairs(po, pr)
+        (lab, rv), = r["reported_vs_ceiling"].items()
+        up_raw, up_cor = r["sigma_f2_CI95"][1], r["corrected_CI95"][1]
+        vp = r["var_pseudo"]
+        rpp = float(np.corrcoef(pre, post)[0, 1])
+        d = {"criterion": lab, "pseudo_pairs": int(len(post)), "corr_pre_post": round(rpp, 4),
+             "C4a_simulation": c4a_simulate(post, pre, r["n_events"], rng4),
+             "C4b_worst_case": c4b_worst_case(up_raw, up_cor, vp, r["mean_shift"],
+                                              rv["contrast_abs"], rv["split_fraction"], lam2, rng4),
+             "C4c_tipping": c4c_tipping(max(up_raw, up_cor, 0.0), rv["contrast_abs"],
+                                        rv["split_fraction"], rpp, float(np.sqrt(vp)), lam2)}
+        c4["datasets"][nm] = d
+        w = d["C4b_worst_case"]
+        print(f"  {nm}: n={r['n_events']}, corr(pre,post) {rpp:+.3f}")
+        for k, v in d["C4a_simulation"].items():
+            print(f"    C4a {k:28s} raw {v['mean_raw_s2']:+.4f} cor {v['mean_corrected_s2']:+.4f} "
+                  f"(true {v['true_s2']:.3f}) coverage raw {v['coverage_raw_upper95']:.3f} "
+                  f"cor {v['coverage_corrected_upper95']:.3f}", flush=True)
+        print(f"    C4b worst case: s_f {w['sigma_f_worst']:.3f}, ceiling {w['ceiling_at_q']:.3f}, "
+              f"contrast/ceiling {w['ratio_contrast_over_ceiling']}, label share "
+              f"{w['label_variance_share_forced']:.3f}, P range {w['P_range95']}")
+        print(f"    C4c tipping: {d['C4c_tipping']}")
+    res["C4_identification_audit"] = c4
 
     (RESULTS / "forced_variance_ceiling.json").write_text(
         json.dumps(res, indent=2), encoding="utf8")

@@ -1,0 +1,548 @@
+{
+  "plan_approved": "2026-09-30",
+  "seed": 292989493,
+  "k_events_per_draw": 43,
+  "observations": {
+    "T1_ks": 0.13348837209302322,
+    "T2_var_ratio": 0.9640283176655141,
+    "T3_shift": -0.811502140377554,
+    "T4_rate_c12": 0.7209302325581395,
+    "T5_share_reproduced": 0.9462850240197591
+  },
+  "cmip6_full_population": {
+    "T1_ks": 0.024124669874918014,
+    "T2_var_ratio": 1.186456203963166,
+    "T3_shift": -0.7225192471106142,
+    "T4_rate_c12": 0.718989280245023,
+    "T5_share_reproduced": 0.9026343578245822
+  },
+  "n_cmip6_events": 1517,
+  "compatibility": {
+    "pooled": {
+      "n_draws": 10000,
+      "p_two_sided": {
+        "T1_ks": 0.222,
+        "T2_var_ratio": 0.3974,
+        "T3_shift": 0.5896,
+        "T4_rate_c12": 0.9972,
+        "T5_share_reproduced": 0.7417
+      },
+      "draw_q025_q975": {
+        "T1_ks": [
+          0.0623,
+          0.1582
+        ],
+        "T2_var_ratio": [
+          0.7316,
+          1.7428
+        ],
+        "T3_shift": [
+          -1.049,
+          -0.4137
+        ],
+        "T4_rate_c12": [
+          0.5714,
+          0.8529
+        ],
+        "T5_share_reproduced": [
+          0.7142,
+          1.2111
+        ]
+      },
+      "min_p": 0.222,
+      "p_combined": 0.623
+    },
+    "BCC-ESM1": {
+      "n_events": 59,
+      "n_draws": 2000,
+      "p_two_sided": {
+        "T1_ks": 0.427,
+        "T2_var_ratio": 0.916,
+        "T3_shift": 0.0,
+        "T4_rate_c12": 0.879,
+        "T5_share_reproduced": 0.359
+      },
+      "draw_q025_q975": {
+        "T1_ks": [
+          0.0804,
+          0.1624
+        ],
+        "T2_var_ratio": [
+          0.6531,
+          1.1489
+        ],
+        "T3_shift": [
+          -0.6539,
+          -0.3678
+        ],
+        "T4_rate_c12": [
+          0.6333,
+          0.8065
+        ],
+        "T5_share_reproduced": [
+          0.8803,
+          1.2341
+        ]
+      },
+      "min_p": 0.0,
+      "p_combined": 0.0
+    },
+    "CESM2-FV2": {
+      "n_events": 76,
+      "n_draws": 2000,
+      "p_two_sided": {
+        "T1_ks": 0.17,
+        "T2_var_ratio": 0.075,
+        "T3_shift": 0.014,
+        "T4_rate_c12": 0.0,
+        "T5_share_reproduced": 0.866
+      },
+      "draw_q025_q975": {
+        "T1_ks": [
+          0.0628,
+          0.1495
+        ],
+        "T2_var_ratio": [
+          0.582,
+          0.9824
+        ],
+        "T3_shift": [
+          -1.1939,
+          -0.8494
+        ],
+        "T4_rate_c12": [
+          0.7804,
+          0.9231
+        ],
+        "T5_share_reproduced": [
+          0.8247,
+          1.1413
+        ]
+      },
+      "min_p": 0.0,
+      "p_combined": 0.015
+    },
+    "CanESM5": {
+      "n_events": 683,
+      "n_draws": 2000,
+      "p_two_sided": {
+        "T1_ks": 0.218,
+        "T2_var_ratio": 0.334,
+        "T3_shift": 0.581,
+        "T4_rate_c12": 0.4,
+        "T5_share_reproduced": 0.5736
+      },
+      "draw_q025_q975": {
+        "T1_ks": [
+          0.0626,
+          0.1548
+        ],
+        "T2_var_ratio": [
+          0.7451,
+          1.7719
+        ],
+        "T3_shift": [
+          -1.2212,
+          -0.5988
+        ],
+        "T4_rate_c12": [
+          0.6471,
+          0.8974
+        ],
+        "T5_share_reproduced": [
+          0.6945,
+          1.1735
+        ]
+      },
+      "min_p": 0.218,
+      "p_combined": 0.637
+    },
+    "GFDL-CM4": {
+      "n_events": 64,
+      "n_draws": 2000,
+      "p_two_sided": {
+        "T1_ks": 0.369,
+        "T2_var_ratio": 0.147,
+        "T3_shift": 0.0,
+        "T4_rate_c12": 0.314,
+        "T5_share_reproduced": 0.338
+      },
+      "draw_q025_q975": {
+        "T1_ks": [
+          0.0753,
+          0.1601
+        ],
+        "T2_var_ratio": [
+          0.6293,
+          0.9999
+        ],
+        "T3_shift": [
+          -0.6222,
+          -0.3194
+        ],
+        "T4_rate_c12": [
+          0.56,
+          0.7727
+        ],
+        "T5_share_reproduced": [
+          0.8666,
+          1.3114
+        ]
+      },
+      "min_p": 0.0,
+      "p_combined": 0.0
+    },
+    "INM-CM5-0": {
+      "n_events": 97,
+      "n_draws": 2000,
+      "p_two_sided": {
+        "T1_ks": 0.131,
+        "T2_var_ratio": 0.632,
+        "T3_shift": 0.061,
+        "T4_rate_c12": 0.524,
+        "T5_share_reproduced": 0.105
+      },
+      "draw_q025_q975": {
+        "T1_ks": [
+          0.061,
+          0.1427
+        ],
+        "T2_var_ratio": [
+          0.587,
+          1.2129
+        ],
+        "T3_shift": [
+          -0.8237,
+          -0.4133
+        ],
+        "T4_rate_c12": [
+          0.575,
+          0.7949
+        ],
+        "T5_share_reproduced": [
+          0.9148,
+          1.4292
+        ]
+      },
+      "min_p": 0.061,
+      "p_combined": 0.22
+    },
+    "IPSL-CM5A2-INCA": {
+      "n_events": 83,
+      "n_draws": 2000,
+      "p_two_sided": {
+        "T1_ks": 0.151,
+        "T2_var_ratio": 0.986,
+        "T3_shift": 0.221,
+        "T4_rate_c12": 0.055,
+        "T5_share_reproduced": 0.959
+      },
+      "draw_q025_q975": {
+        "T1_ks": [
+          0.0657,
+          0.1475
+        ],
+        "T2_var_ratio": [
+          0.6909,
+          1.2698
+        ],
+        "T3_shift": [
+          -1.1566,
+          -0.7354
+        ],
+        "T4_rate_c12": [
+          0.7179,
+          0.8974
+        ],
+        "T5_share_reproduced": [
+          0.7891,
+          1.1801
+        ]
+      },
+      "min_p": 0.055,
+      "p_combined": 0.2125
+    },
+    "MIROC6": {
+      "n_events": 152,
+      "n_draws": 2000,
+      "p_two_sided": {
+        "T1_ks": 0.19,
+        "T2_var_ratio": 0.656,
+        "T3_shift": 0.0,
+        "T4_rate_c12": 0.002,
+        "T5_share_reproduced": 0.256
+      },
+      "draw_q025_q975": {
+        "T1_ks": [
+          0.0615,
+          0.15
+        ],
+        "T2_var_ratio": [
+          0.6238,
+          1.2017
+        ],
+        "T3_shift": [
+          -0.452,
+          0.0114
+        ],
+        "T4_rate_c12": [
+          0.4054,
+          0.6667
+        ],
+        "T5_share_reproduced": [
+          0.8801,
+          1.3391
+        ]
+      },
+      "min_p": 0.0,
+      "p_combined": 0.0
+    },
+    "MPI-ESM-1-2-HAM": {
+      "n_events": 109,
+      "n_draws": 2000,
+      "p_two_sided": {
+        "T1_ks": 0.11,
+        "T2_var_ratio": 0.094,
+        "T3_shift": 0.38,
+        "T4_rate_c12": 0.837,
+        "T5_share_reproduced": 0.447
+      },
+      "draw_q025_q975": {
+        "T1_ks": [
+          0.0602,
+          0.1431
+        ],
+        "T2_var_ratio": [
+          0.9023,
+          1.6345
+        ],
+        "T3_shift": [
+          -0.948,
+          -0.4375
+        ],
+        "T4_rate_c12": [
+          0.5897,
+          0.8158
+        ],
+        "T5_share_reproduced": [
+          0.7211,
+          1.086
+        ]
+      },
+      "min_p": 0.094,
+      "p_combined": 0.3335
+    },
+    "MPI-ESM1-2-LR": {
+      "n_events": 141,
+      "n_draws": 2000,
+      "p_two_sided": {
+        "T1_ks": 0.316,
+        "T2_var_ratio": 0.097,
+        "T3_shift": 0.142,
+        "T4_rate_c12": 0.323,
+        "T5_share_reproduced": 0.251
+      },
+      "draw_q025_q975": {
+        "T1_ks": [
+          0.0636,
+          0.1606
+        ],
+        "T2_var_ratio": [
+          0.9052,
+          1.6472
+        ],
+        "T3_shift": [
+          -0.8741,
+          -0.3163
+        ],
+        "T4_rate_c12": [
+          0.5277,
+          0.7751
+        ],
+        "T5_share_reproduced": [
+          0.7154,
+          1.031
+        ]
+      },
+      "min_p": 0.097,
+      "p_combined": 0.319
+    },
+    "NorESM2-LM": {
+      "n_events": 53,
+      "n_draws": 2000,
+      "p_two_sided": {
+        "T1_ks": 0.001,
+        "T2_var_ratio": 0.513,
+        "T3_shift": 0.0,
+        "T4_rate_c12": 0.0,
+        "T5_share_reproduced": 0.032
+      },
+      "draw_q025_q975": {
+        "T1_ks": [
+          0.0579,
+          0.1101
+        ],
+        "T2_var_ratio": [
+          0.8387,
+          1.1575
+        ],
+        "T3_shift": [
+          -0.0228,
+          0.231
+        ],
+        "T4_rate_c12": [
+          0.3429,
+          0.4722
+        ],
+        "T5_share_reproduced": [
+          0.9545,
+          1.1999
+        ]
+      },
+      "min_p": 0.0,
+      "p_combined": 0.0
+    }
+  },
+  "perfect_model": {
+    "BCC-ESM1": {
+      "n_events": 59,
+      "full_population": {
+        "T1_ks": 0.1119,
+        "T2_var_ratio": 0.9343,
+        "T3_shift": -0.5089,
+        "T4_rate_c12": 0.7143,
+        "T5_share_reproduced": 1.022
+      },
+      "PM1_ks_rejection_rate": 0.0,
+      "PM2_two_thirds_error_rate": 0.004,
+      "PM3_var_ratio_coverage": 0.977,
+      "pass": false
+    },
+    "CESM2-FV2": {
+      "n_events": 76,
+      "full_population": {
+        "T1_ks": 0.0868,
+        "T2_var_ratio": 0.7775,
+        "T3_shift": -1.0184,
+        "T4_rate_c12": 0.8507,
+        "T5_share_reproduced": 0.9586
+      },
+      "PM1_ks_rejection_rate": 0.0,
+      "PM2_two_thirds_error_rate": 0.009,
+      "PM3_var_ratio_coverage": 0.985,
+      "pass": false
+    },
+    "CanESM5": {
+      "n_events": 683,
+      "full_population": {
+        "T1_ks": 0.0319,
+        "T2_var_ratio": 1.2163,
+        "T3_shift": -0.9095,
+        "T4_rate_c12": 0.7793,
+        "T5_share_reproduced": 0.8774
+      },
+      "PM1_ks_rejection_rate": 0.001,
+      "PM2_two_thirds_error_rate": 0.014,
+      "PM3_var_ratio_coverage": 0.914,
+      "pass": false
+    },
+    "GFDL-CM4": {
+      "n_events": 64,
+      "full_population": {
+        "T1_ks": 0.1141,
+        "T2_var_ratio": 0.8227,
+        "T3_shift": -0.4775,
+        "T4_rate_c12": 0.6667,
+        "T5_share_reproduced": 1.0468
+      },
+      "PM1_ks_rejection_rate": 0.0,
+      "PM2_two_thirds_error_rate": 0.007,
+      "PM3_var_ratio_coverage": 0.984,
+      "pass": false
+    },
+    "INM-CM5-0": {
+      "n_events": 97,
+      "full_population": {
+        "T1_ks": 0.0784,
+        "T2_var_ratio": 0.8884,
+        "T3_shift": -0.6147,
+        "T4_rate_c12": 0.686,
+        "T5_share_reproduced": 1.1234
+      },
+      "PM1_ks_rejection_rate": 0.0,
+      "PM2_two_thirds_error_rate": 0.002,
+      "PM3_var_ratio_coverage": 0.953,
+      "pass": false
+    },
+    "IPSL-CM5A2-INCA": {
+      "n_events": 83,
+      "full_population": {
+        "T1_ks": 0.0721,
+        "T2_var_ratio": 0.9759,
+        "T3_shift": -0.9555,
+        "T4_rate_c12": 0.8108,
+        "T5_share_reproduced": 0.9465
+      },
+      "PM1_ks_rejection_rate": 0.0,
+      "PM2_two_thirds_error_rate": 0.003,
+      "PM3_var_ratio_coverage": 0.974,
+      "pass": false
+    },
+    "MIROC6": {
+      "n_events": 152,
+      "full_population": {
+        "T1_ks": 0.0547,
+        "T2_var_ratio": 0.9055,
+        "T3_shift": -0.2188,
+        "T4_rate_c12": 0.5373,
+        "T5_share_reproduced": 1.0585
+      },
+      "PM1_ks_rejection_rate": 0.001,
+      "PM2_two_thirds_error_rate": 0.006,
+      "PM3_var_ratio_coverage": 0.947,
+      "pass": false
+    },
+    "MPI-ESM-1-2-HAM": {
+      "n_events": 109,
+      "full_population": {
+        "T1_ks": 0.0627,
+        "T2_var_ratio": 1.2691,
+        "T3_shift": -0.6837,
+        "T4_rate_c12": 0.7053,
+        "T5_share_reproduced": 0.867
+      },
+      "PM1_ks_rejection_rate": 0.0,
+      "PM2_two_thirds_error_rate": 0.003,
+      "PM3_var_ratio_coverage": 0.967,
+      "pass": false
+    },
+    "MPI-ESM1-2-LR": {
+      "n_events": 141,
+      "full_population": {
+        "T1_ks": 0.0762,
+        "T2_var_ratio": 1.2693,
+        "T3_shift": -0.5955,
+        "T4_rate_c12": 0.6615,
+        "T5_share_reproduced": 0.8434
+      },
+      "PM1_ks_rejection_rate": 0.0,
+      "PM2_two_thirds_error_rate": 0.001,
+      "PM3_var_ratio_coverage": 0.96,
+      "pass": false
+    },
+    "NorESM2-LM": {
+      "n_events": 53,
+      "full_population": {
+        "T1_ks": 0.0698,
+        "T2_var_ratio": 1.0165,
+        "T3_shift": 0.1,
+        "T4_rate_c12": 0.4091,
+        "T5_share_reproduced": 1.0541
+      },
+      "PM1_ks_rejection_rate": 0.0,
+      "PM2_two_thirds_error_rate": 0.0,
+      "PM3_var_ratio_coverage": 0.998,
+      "pass": false
+    }
+  }
+}
