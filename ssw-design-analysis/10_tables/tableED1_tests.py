@@ -253,6 +253,15 @@ def main():
          "committed before outcomes", "add7ba9",
          f"10/39 vs {g(SRF,'revision3','R5_second_predictor','p_rule2','0.1')}" if SRF and SRF.get("revision3") else "pending",
          g(SRF, "revision3", "R5_second_predictor", "verification", "0.1", "binom_p_under_rule")),
+        ("V-R6", "shift rule OUT OF SAMPLE: 12 ERA5 SSWs 1941-58, N Eurasia q 0.10 (rule rejected)", "revision-3 primary",
+         "committed before outcomes", "add7ba9",
+         (f"{g(SRF,'revision3','R6_out_of_sample_1940_1958','primary','0.1','count')}/"
+          f"{g(SRF,'revision3','R6_out_of_sample_1940_1958','primary','0.1','n')} vs 0.3243") if SRF and SRF.get("revision3", {}).get("R6_out_of_sample_1940_1958", {}).get("primary") else "pending",
+         g(SRF, "revision3", "R6_out_of_sample_1940_1958", "primary", "0.1", "binom_p_under_rule")),
+        ("U-ERA5", "AO step at reversal, ERA5 winds 1940-2025 (Holm over 4 outcomes)", "revision-3 secondary",
+         "committed before data", "add7ba9",
+         f"{g(VT,'era5_1940_2025','all','Y1_AO','E1_E2','jump')} {g(VT,'era5_1940_2025','all','Y1_AO','E1_E2','jump_ci95')}" if VT and VT.get("era5_1940_2025") else "pending",
+         g(VT, "era5_1940_2025", "all", "E2_holm", "Y1_AO")),
         ("S-dose", "two regimes vs continuous with the realised 100 hPa dose (G, p vs ordinary days); inconclusive", "revision-3 primary",
          "committed before run", "7d8ed6f",
          (f"G {g(RSD,'S1_P2_plus_dose','crps','G_ssw')} vs {g(RSD,'S1_P2_plus_dose','crps','G_pseudo_mean')}; "

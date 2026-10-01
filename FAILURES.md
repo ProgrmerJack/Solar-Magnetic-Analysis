@@ -237,3 +237,8 @@ Rule: event-based verification claims need out-of-sample events and an effective
 Tried: reusing class_model_comparison's positive/negative controls (outcome = calendar mean + noise, regimes planted or not) for the same test with the post-onset 100 hPa dose added as predictor (response_shape_dose S1).
 Failed: real outcomes depend strongly on the dose, synthetic ones not at all, so synthetic G sat far above the real event-free reference: positive AND negative control rates both 1.0, measuring nothing.
 Rule: build controls from the real predictor-outcome relation (fitted mean + residual noise) and compare positive with negative synthetic sets, not with the real reference.
+
+## 2026-10-02 — A per-SSW cold-risk probability verified on one set of events failed on another
+Tried: verifying a single SNAPSI-derived probability of a cold northern-Eurasian fortnight after an SSW on 39 events (consistent), then on 12 held-out ERA5 SSWs of 1941-1958 (shift_rule_forecast R6).
+Failed: 0 of 12 below the 10th percentile against 0.32 (p 0.012); the early events were weaker reversals and older data, but neither explains it.
+Rule: a probability that rests on two imposed events is not a general per-SSW rate; scale it with the disturbance and verify it out of sample before calling it a forecast.

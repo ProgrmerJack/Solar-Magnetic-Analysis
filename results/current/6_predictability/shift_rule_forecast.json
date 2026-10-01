@@ -5282,7 +5282,385 @@
       }
     },
     "R6_out_of_sample_1940_1958": {
-      "status": "pending: ERA5 u(10 hPa) series not yet retrieved"
+      "era5_onsets_1940_1958": [
+        "1941-02-07",
+        "1942-03-21",
+        "1945-03-19",
+        "1946-02-19",
+        "1946-03-19",
+        "1950-03-05",
+        "1952-02-22",
+        "1952-11-19",
+        "1954-12-18",
+        "1955-01-26",
+        "1957-02-04",
+        "1958-02-01"
+      ],
+      "detector_vs_catalogue": {
+        "n_catalogue": 43,
+        "matched_within_3d": 43,
+        "era5_onsets_1958_2024_not_in_catalogue": [
+          "2002-02-17"
+        ]
+      },
+      "primary": {
+        "n_free_windows": 1256,
+        "0.05": {
+          "set": "R6",
+          "n": 12,
+          "count": 0,
+          "f": 0.0,
+          "f_wilson95": [
+            0.0,
+            0.2425
+          ],
+          "p_rule": 0.2409,
+          "q": 0.05,
+          "binom_p_under_rule": 0.0827,
+          "binom_p_under_climatology": 1.0,
+          "brier_rule": 0.058,
+          "brier_climatology": 0.0025,
+          "bss_vs_climatology": -22.2131,
+          "risk_ratio_observed": 0.0,
+          "risk_ratio_rule": 4.818,
+          "rev_at": {
+            "0.05": {
+              "rev": null,
+              "ci95": null
+            },
+            "0.1": {
+              "rev": null,
+              "ci95": null
+            }
+          },
+          "events": [
+            "1941-02-07",
+            "1942-03-21",
+            "1945-03-19",
+            "1946-02-19",
+            "1946-03-19",
+            "1950-03-05",
+            "1952-02-22",
+            "1952-11-19",
+            "1954-12-18",
+            "1955-01-26",
+            "1957-02-04",
+            "1958-02-01"
+          ],
+          "threshold_K": -4.802
+        },
+        "0.1": {
+          "set": "R6",
+          "n": 12,
+          "count": 0,
+          "f": 0.0,
+          "f_wilson95": [
+            0.0,
+            0.2425
+          ],
+          "p_rule": 0.3243,
+          "q": 0.1,
+          "binom_p_under_rule": 0.0122,
+          "binom_p_under_climatology": 0.6234,
+          "brier_rule": 0.1052,
+          "brier_climatology": 0.01,
+          "bss_vs_climatology": -9.517,
+          "risk_ratio_observed": 0.0,
+          "risk_ratio_rule": 3.243,
+          "rev_at": {
+            "0.1": {
+              "rev": null,
+              "ci95": null
+            },
+            "0.2": {
+              "rev": null,
+              "ci95": null
+            }
+          },
+          "events": [
+            "1941-02-07",
+            "1942-03-21",
+            "1945-03-19",
+            "1946-02-19",
+            "1946-03-19",
+            "1950-03-05",
+            "1952-02-22",
+            "1952-11-19",
+            "1954-12-18",
+            "1955-01-26",
+            "1957-02-04",
+            "1958-02-01"
+          ],
+          "threshold_K": -3.7
+        },
+        "0.2": {
+          "set": "R6",
+          "n": 12,
+          "count": 2,
+          "f": 0.1667,
+          "f_wilson95": [
+            0.047,
+            0.448
+          ],
+          "p_rule": 0.4541,
+          "q": 0.2,
+          "binom_p_under_rule": 0.0776,
+          "binom_p_under_climatology": 1.0,
+          "brier_rule": 0.2215,
+          "brier_climatology": 0.14,
+          "bss_vs_climatology": -0.5822,
+          "risk_ratio_observed": 0.833,
+          "risk_ratio_rule": 2.27,
+          "rev_at": {
+            "0.2": {
+              "rev": -0.25,
+              "ci95": [
+                -1.75,
+                0.65
+              ]
+            },
+            "0.4": {
+              "rev": -2.3333,
+              "ci95": [
+                -6.3333,
+                0.0667
+              ]
+            }
+          },
+          "events": [
+            "1941-02-07",
+            "1942-03-21",
+            "1945-03-19",
+            "1946-02-19",
+            "1946-03-19",
+            "1950-03-05",
+            "1952-02-22",
+            "1952-11-19",
+            "1954-12-18",
+            "1955-01-26",
+            "1957-02-04",
+            "1958-02-01"
+          ],
+          "threshold_K": -2.303
+        }
+      },
+      "from_1946": {
+        "n_free_windows": 1256,
+        "0.05": {
+          "set": "R6-1946",
+          "n": 9,
+          "count": 0,
+          "f": 0.0,
+          "f_wilson95": [
+            0.0,
+            0.2992
+          ],
+          "p_rule": 0.2409,
+          "q": 0.05,
+          "binom_p_under_rule": 0.1259,
+          "binom_p_under_climatology": 1.0,
+          "brier_rule": 0.058,
+          "brier_climatology": 0.0025,
+          "bss_vs_climatology": -22.2131,
+          "risk_ratio_observed": 0.0,
+          "risk_ratio_rule": 4.818,
+          "rev_at": {
+            "0.05": {
+              "rev": null,
+              "ci95": null
+            },
+            "0.1": {
+              "rev": null,
+              "ci95": null
+            }
+          },
+          "events": [
+            "1946-02-19",
+            "1946-03-19",
+            "1950-03-05",
+            "1952-02-22",
+            "1952-11-19",
+            "1954-12-18",
+            "1955-01-26",
+            "1957-02-04",
+            "1958-02-01"
+          ],
+          "threshold_K": -4.802
+        },
+        "0.1": {
+          "set": "R6-1946",
+          "n": 9,
+          "count": 0,
+          "f": 0.0,
+          "f_wilson95": [
+            0.0,
+            0.2992
+          ],
+          "p_rule": 0.3243,
+          "q": 0.1,
+          "binom_p_under_rule": 0.0363,
+          "binom_p_under_climatology": 1.0,
+          "brier_rule": 0.1052,
+          "brier_climatology": 0.01,
+          "bss_vs_climatology": -9.517,
+          "risk_ratio_observed": 0.0,
+          "risk_ratio_rule": 3.243,
+          "rev_at": {
+            "0.1": {
+              "rev": null,
+              "ci95": null
+            },
+            "0.2": {
+              "rev": null,
+              "ci95": null
+            }
+          },
+          "events": [
+            "1946-02-19",
+            "1946-03-19",
+            "1950-03-05",
+            "1952-02-22",
+            "1952-11-19",
+            "1954-12-18",
+            "1955-01-26",
+            "1957-02-04",
+            "1958-02-01"
+          ],
+          "threshold_K": -3.7
+        },
+        "0.2": {
+          "set": "R6-1946",
+          "n": 9,
+          "count": 2,
+          "f": 0.2222,
+          "f_wilson95": [
+            0.0632,
+            0.5474
+          ],
+          "p_rule": 0.4541,
+          "q": 0.2,
+          "binom_p_under_rule": 0.1962,
+          "binom_p_under_climatology": 1.0,
+          "brier_rule": 0.2266,
+          "brier_climatology": 0.1733,
+          "bss_vs_climatology": -0.3073,
+          "risk_ratio_observed": 1.111,
+          "risk_ratio_rule": 2.27,
+          "rev_at": {
+            "0.2": {
+              "rev": 0.125,
+              "ci95": [
+                -1.0,
+                0.8
+              ]
+            },
+            "0.4": {
+              "rev": -1.3333,
+              "ci95": [
+                -4.3333,
+                0.4667
+              ]
+            }
+          },
+          "events": [
+            "1946-02-19",
+            "1946-03-19",
+            "1950-03-05",
+            "1952-02-22",
+            "1952-11-19",
+            "1954-12-18",
+            "1955-01-26",
+            "1957-02-04",
+            "1958-02-01"
+          ],
+          "threshold_K": -2.303
+        }
+      },
+      "pooled_with_V1": {
+        "0.05": {
+          "count": 8,
+          "n": 51,
+          "f": 0.1569,
+          "f_wilson95": [
+            0.0817,
+            0.2801
+          ],
+          "binom_p_under_rule": 0.1909,
+          "binom_p_under_climatology": 0.0036
+        },
+        "0.1": {
+          "count": 10,
+          "n": 51,
+          "f": 0.1961,
+          "f_wilson95": [
+            0.1102,
+            0.3246
+          ],
+          "binom_p_under_rule": 0.0522,
+          "binom_p_under_climatology": 0.0325
+        },
+        "0.2": {
+          "count": 17,
+          "n": 51,
+          "f": 0.3333,
+          "f_wilson95": [
+            0.2197,
+            0.4703
+          ],
+          "binom_p_under_rule": 0.092,
+          "binom_p_under_climatology": 0.0225
+        }
+      },
+      "secondary_negative_nam": {
+        "set": "R6-NAM",
+        "n": 12,
+        "count": 7,
+        "f": 0.5833,
+        "f_wilson95": [
+          0.3195,
+          0.8067
+        ],
+        "p_rule": 0.7436,
+        "q": 0.4234527687296417,
+        "binom_p_under_rule": 0.1997,
+        "binom_p_under_climatology": 0.3817,
+        "brier_rule": 0.2687,
+        "brier_climatology": 0.2686,
+        "bss_vs_climatology": -0.0005,
+        "risk_ratio_observed": 1.378,
+        "risk_ratio_rule": 1.756,
+        "rev_at": {
+          "0.42": {
+            "rev": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "0.85": {
+            "rev": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "events": [
+          "1941-02-07",
+          "1942-03-21",
+          "1945-03-19",
+          "1946-02-19",
+          "1946-03-19",
+          "1950-03-05",
+          "1952-02-22",
+          "1952-11-19",
+          "1954-12-18",
+          "1955-01-26",
+          "1957-02-04",
+          "1958-02-01"
+        ],
+        "climatological_base_rate": 0.4235
+      }
     }
   }
 }
