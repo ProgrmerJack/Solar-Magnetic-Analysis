@@ -20,6 +20,12 @@ WHAT HAD BEEN SEEN
   test (s2s_heldout_test.py) had failed to replicate; this design was written after
   that result and its exploratory diagnosis were known.
 
+DISCLOSURE ADDED 2026-10-01 (after registration, before any test was run): while
+  checking the date range of data/processed/atmospheric/ao_daily_cpc.txt, its last
+  two lines were displayed: the CPC daily AO for 30 and 31 March 2026 (+2.53 and
+  +1.96), i.e. days 26-27 after the 4 March onset, inside the outcome window. No
+  other surface observation for 2026 has been examined. The design is unchanged.
+
 FORECASTS (ECDS dataset s2s-forecasts, real time; starts 2-9 days before onset,
 i.e. 23 February - 2 March 2026, each start used only if a reforecast of the same
 system and model version exists for the same start month-day)
