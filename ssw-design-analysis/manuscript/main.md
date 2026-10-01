@@ -9,22 +9,23 @@ display items are built by `09_figures/fig*.py` and `10_tables/table*.py` from
 
 ## Abstract
 
-Extreme events in the Earth system are often understood by sorting them into
-kinds. Sudden stratospheric warmings (SSWs), which raise the risk of cold winter
-weather, are sorted into the roughly two thirds whose influence propagates to
-the surface and the rest, by a label defined from the outcome it is then used to
-explain. Here we show that the label is a threshold on one shifted distribution.
-Imposing observed SSWs on nine forecast models raises the share of downward
-outcomes from 45% to 84% without widening the northern annular mode; event-free
-dates, once shifted, reproduce the observed two thirds; and in 1,517 simulated
-SSWs event information adds about 1% to probabilistic skill. The warming is
-itself a threshold: across 114 observed vortex weakenings, the surface response
-grows smoothly with how far the wind falls, with no step where it reverses.
-Cold-risk probabilities taken from the models alone verify on 39 observed SSWs,
-after which a cold northern-Eurasian fortnight was 2.6 times as frequent as on
-other dates. Operational forecasts under-predicted the shift after SSWs of
-1998–2021, losing it in the lower stratosphere, but not after four later ones.
-Forecasts should issue the shifted distribution, not a class.
+Earth-system extremes are often understood by sorting them into kinds. Sudden
+stratospheric warmings (SSWs), which raise the risk of cold winter weather, are
+sorted into the two thirds whose influence propagates to the surface and the
+rest, by a label defined from the outcome it is then used to explain. Here we
+show that the label is a threshold on one shifted distribution. Imposing
+observed SSWs on nine models raises the share of downward outcomes from 45% to
+84% without widening the northern annular mode; event-free dates, once shifted,
+reproduce the observed two thirds; and in 1,517 simulated SSWs event information
+adds about 1% to probabilistic skill. The warming is itself a threshold: across
+114 observed vortex weakenings, the surface response grows smoothly with how far
+the wind falls, with no step where it reverses. Cold-risk probabilities taken
+from the models alone match 39 SSWs of 1959–2022, after which cold
+northern-Eurasian fortnights were 2.6 times as frequent as otherwise, but
+over-predict after twelve earlier SSWs held out. Operational forecasts
+under-predicted the shift after SSWs of 1998–2021, losing it in the lower
+stratosphere, but not after four later ones. Forecasts should issue the shifted
+distribution, not a class.
 
 ---
 
@@ -162,7 +163,13 @@ episodes this excludes only steps about as large as the whole SSW effect, and
 local discontinuity estimates fail their placebo checks (Methods). In CMIP6 the
 same rule yields 5,726 episodes and a step of +0.05σ [−0.02, +0.13], whose upper
 90% limit is 15% of the 0.8σ shift observed after SSWs, against a dose of 0.17σ
-per 10 m s⁻¹. "SSW", like "downward", is a threshold on a continuum.
+per 10 m s⁻¹. With ERA5 winds for 1940–2025 instead (144 weakenings, 54 of them
+reversals), which place five NCEP episodes on the other side of zero, the dose
+replicates (Arctic Oscillation 0.29 [0.15, 0.43] per 10 m s⁻¹; northern Eurasia
+0.38 K) and no outcome shows a step after correction for the four tested; the
+largest, on the Arctic Oscillation, is −0.73 [−1.51, −0.06] (Holm-adjusted p =
+0.11), and reversals there also follow larger decelerations (Supplementary Note
+6). "SSW", like "downward", is a threshold on a continuum.
 
 Events do differ, but by little. In CMIP6 the forced variance between events,
 after removing the variance already present before onset, is 0.019σ² [−0.033,
@@ -255,9 +262,17 @@ observed rise is not distinguishable from climatology with 39 events, and over
 North America neither models nor observations show raised cold risk; and in
 weeks 3–4, where SNAPSI rests mainly on the later initialisations of its two
 events, northern-Eurasian cold was rarer than predicted (0.15 against 0.27) and
-not distinguishable from climatology (Supplementary Table 2). After the 4 March
-2026 SSW, northern Eurasia was 4.7 K warmer than normal over days 8–24, an
-outcome the models gave probability 0.55–0.76; one event does not test the rule.
+not distinguishable from climatology (Supplementary Table 2). Out of sample the
+rule did not verify: after twelve SSWs of 1941–1958 in ERA5, whose surface
+outcomes no one had examined, no northern-Eurasian fortnight fell below the
+event-free 10th percentile, against 32% predicted (p = 0.012), and cold risk did
+not rise detectably above that period's climatology (Supplementary Table 4).
+These reversals were weaker (an exploratory check; median minimum wind −3.8
+against −8.5 m s⁻¹ in 1959–2022), but by the dose response that explains only
+about a quarter of their smaller mean cooling (0.2 against 1.0 K), and 1940s
+stratospheric winds are weakly constrained; a single probability per SSW
+therefore holds for the events it was verified on and over-predicted for this
+earlier, weaker set.
 
 The polar-cap index is not the whole of the regional response: high-latitude
 Europe and East Asia cool more than the circulation implies, and mid-latitude
@@ -348,21 +363,21 @@ already say that a major warming "loads the dice"^{butler24}^.
 For forecasting, the product after an SSW is the shifted distribution (for the
 polar-cap NAM, the probability of a negative state; for regional weather, the
 regional variable itself, which the polar-cap index does not fully carry), not a
-categorical prediction of whether this event will propagate; we show that such a
-product, taken from models alone, verifies on observed events and has value for
-decisions. What should be verified is whether an ensemble placed the right
-probability on the shifted state, not whether it named a class fixed largely by
-the outcome it is scored against. Two of the three 2023–24 events fail the
-criterion's surface conditions and would count as non-downward outcomes, the
-kind framed as potential forecast busts^{nebel24}^, yet the forecasts had given
-those outcomes 36% and 45% probability (an exploratory check), as a shifted
-distribution should. The quantity to verify, and with more events to correct,
-is the size of the shift and its persistence in the lower stratosphere. For
-research, wherever "downward-propagating SSW" stratifies impacts, the rate at
-which events meet the criterion, set against a matched null, is an honest
-quantity; the contrast between the classes is not, because the threshold
-manufactures most of it (97% of the surface contrast in ERA5; see also
-ref.^{white19}^).
+categorical prediction of whether this event will propagate; such a product,
+taken from models alone, matched 39 events and had value for decisions but
+over-predicted on twelve held out, so it must be verified as events accrue. What
+should be verified is whether an ensemble placed the right probability on the
+shifted state, not whether it named a class fixed largely by the outcome it is
+scored against. Two of the three 2023–24 events fail the criterion's surface
+conditions and would count as non-downward outcomes, the kind framed as
+potential forecast busts^{nebel24}^, yet the forecasts had given those outcomes
+36% and 45% probability (an exploratory check), as a shifted distribution
+should. The quantity to verify, and with more events to correct, is the size of
+the shift and its persistence in the lower stratosphere. For research, wherever
+"downward-propagating SSW" stratifies impacts, the rate at which events meet the
+criterion, set against a matched null, is an honest quantity; the contrast
+between the classes is not, because the threshold manufactures most of it (97%
+of the surface contrast in ERA5; see also ref.^{white19}^).
 
 Five limits bound these conclusions. First, the causal evidence and the bound on
 event differences come from models, which may share biases; observations are
@@ -1064,6 +1079,51 @@ northern-Eurasian counts (3, 6, 11) are below the rule (p = 0.07–0.11) and
 consistent with climatology; over days 29–42 they are consistent with the rule,
 and over high-latitude Europe they reject climatology (p = 0.004–0.045).
 
+**Out-of-sample SSWs, 1941–1958 (Supplementary Table 4).** Registered with the
+tests above, before any ERA5 surface value before 1959 was retrieved. SSWs are
+detected with the project's CP07 detector on the ERA5 zonal-mean wind at 10 hPa,
+60° N (daily mean of four synoptic hours, Copernicus Climate Data Store); on
+1958–2024 it recovers all 43 catalogued onsets within three days, with one
+addition (17 February 2002). Twelve onsets fall between November 1940 and March
+1958; the last coincides with the catalogue's first event, whose outcome had not
+been examined. Outcomes are ARCO-ERA5 northern-Eurasian 2 m temperature reduced
+as above; because of the warming trend, anomalies are taken from the 1941–1958
+smoothed day-of-year mean and thresholds from that period's event-free dates.
+Counts below the 5th, 10th and 20th percentiles are 0, 0 and 2 of 12 against
+0.24, 0.32 and 0.45 (binomial p = 0.08, 0.012, 0.08) and are consistent with the
+period's climatology (p ≥ 0.62); from 1946, when ERA5's upper-air record
+improves, 0, 0 and 2 of 9 (p = 0.13, 0.036, 0.20). A negative polar-cap annular
+mode over days 8–52 followed 7 of 12 (CMIP6 0.74, p = 0.20; climatology 0.42, p
+= 0.38). Pooled with the 39 later events, 8, 10 and 17 of 51 (p under the rule
+0.19, 0.052, 0.092; under climatology 0.004, 0.03, 0.02). Added afterwards and
+exploratory: the early reversals are weaker (median minimum wind −3.8 against
+−8.5 m s⁻¹; 58% against 26% above −4 m s⁻¹), their mean northern-Eurasian
+anomaly is −0.2 K against −1.0 K, and their polar-cap shift −0.36σ; the dose
+slope of the continuity test accounts for about 0.2 K of that difference.
+
+**Continuity with ERA5 winds (Supplementary Note 6).** Registered with the tests
+above. The episode rule, outcome windows, estimators, Holm family and
+falsification rule are those of the NCEP test, applied to the ERA5 wind for
+minima from November 1940 to March 2025, with a linear year term among the
+covariates. Outcomes: a polar-cap annular-mode proxy (ERA5 polar-cap mean
+sea-level pressure at 00 UTC, WeatherBench 2 from 1959 and ARCO-ERA5 otherwise,
+anomaly from the smoothed day-of-year mean, sign reversed, in units of its
+November–March daily s.d.), the CPC Arctic Oscillation (from 1950),
+northern-Eurasian temperature with a linear trend (0.38 K per decade) removed,
+and the downward label on the proxy. Because the CPC index begins in 1950, the
+pre-deceleration covariate and placebo outcome use the proxy (an implementation
+note written before the first run). 144 episodes, 54 reversals, 111 with
+outcomes; NCEP and ERA5 minima agree with r = 0.98 on 96 common episodes, and
+five lie on opposite sides of zero (December 1958, January 1968, January 1977,
+March 1981, February 2002). Dose per 10 m s⁻¹: proxy 0.16σ [0.10, 0.22], Arctic
+Oscillation 0.29 [0.15, 0.43], temperature 0.38 K [0.14, 0.62], downward label
+−0.12 [−0.16, −0.06]. Global steps: −0.28 [−0.67, +0.11], −0.73 [−1.51, −0.06],
+−0.66 K [−2.15, +0.77] and +0.26 [−0.06, +0.59]; Holm-adjusted p 0.34, 0.11,
+0.39 and 0.34. The local estimates are null (Arctic Oscillation −0.02 [−1.40,
++1.58]) but five placebo cutoffs give p < 0.05, so they are not interpretable,
+and deceleration size is unbalanced at zero (p = 0.002): reversals follow larger
+falls in the wind. Results from 1946 are the same.
+
 **Test register.** Extended Data Table 1 lists every test, whether it is primary,
 secondary or a sensitivity, whether its design was committed to the repository
 before its data existed, before its run, or with its result, the commit, and the
@@ -1279,6 +1339,8 @@ original S2S database is hosted at ECMWF as an extension of the TIGGE database.
 - S2S real-time forecasts (the 2026 event): ECMWF Data Store, dataset
   `s2s-forecasts`, under the same terms.
 - Daily Arctic Oscillation index: NOAA Climate Prediction Center.
+- ERA5 zonal wind at 10 hPa, 60° N, 1940–2026: Copernicus Climate Data Store,
+  `reanalysis-era5-pressure-levels` (licence CC BY 4.0).
 
 ## Code availability
 

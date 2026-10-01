@@ -56,4 +56,6 @@ V-R2,"shift rule, 2.5th percentile, N Eurasia: binomial under rule",revision-3 s
 V-R3,"shift rule, 2.5th percentile, high-latitude Europe: binomial under rule (rule rejected)",revision-3 secondary,committed before outcomes,add7ba9,0/39 vs 0.201,0.0002,
 V-R4,"shift rule, days 15-28, N Eurasia, q 0.10: binomial under rule",revision-3 secondary,committed before outcomes,add7ba9,6/39 vs 0.2724,0.107,
 V-R5,"second rule (CMIP6 x ERA5 event-free), N Eurasia q 0.10: binomial under rule",revision-3 secondary,committed before outcomes,add7ba9,10/39 vs 0.1944,0.3144,
+V-R6,"shift rule OUT OF SAMPLE: 12 ERA5 SSWs 1941-58, N Eurasia q 0.10 (rule rejected)",revision-3 primary,committed before outcomes,add7ba9,0/12 vs 0.3243,0.0122,
+U-ERA5,"AO step at reversal, ERA5 winds 1940-2025 (Holm over 4 outcomes)",revision-3 secondary,committed before data,add7ba9,"-0.7342 [-1.5063, -0.0599]",0.1136,
 S-dose,"two regimes vs continuous with the realised 100 hPa dose (G, p vs ordinary days); inconclusive",revision-3 primary,committed before run,7d8ed6f,G -0.0146 vs -0.01094; power vs planted regimes 0.08 (post hoc): underpowered,0.92,

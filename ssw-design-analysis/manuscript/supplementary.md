@@ -80,3 +80,45 @@ the surface response to SSWs is disputed^{sigmond13,kolstad20,afargan24,dai25}^;
 our results bound such a bias as one of the size of the shift, of uncertain
 persistence, rather than of event-to-event differences.
 
+
+## Supplementary Note 6 | Continuity at the wind reversal with ERA5 winds, 1940–2025
+
+The NCEP test of the main text uses 114 weakening episodes of 1958–2025. Its local
+regression-discontinuity estimates were unstable (four of 16 placebo cutoffs with p < 0.05).
+Several NCEP episodes just above zero are reversals in other reanalyses, so measurement error sits
+exactly at the cutoff. The ERA5 version (registered before the ERA5 data were retrieved) uses the
+ERA5 10 hPa, 60° N wind from 1940. Its minima agree with NCEP's (r = 0.98 on 96 shared episodes),
+but five lie on the other side of zero: December 1958 (NCEP −5.8, ERA5 +6.4 m s⁻¹), January 1968
+(+1.1, −4.7), January 1977 (0.0, −2.6), March 1981 (+0.9, −0.7) and February 2002 (+1.8, −0.4).
+The dose response replicates for all four outcomes. No outcome shows a step after correction. The
+largest step, −0.73 on the Arctic Oscillation (raw p = 0.03; Holm 0.11), is the strongest hint of a
+step at reversal anywhere in this work. In CMIP6, 5,726 episodes bound the step at +0.05σ
+[−0.02, +0.13]. In ERA5, reversals follow larger decelerations (balance p = 0.002), so a step
+estimated at zero partly reflects how much faster the wind fell. The local estimates again fail their
+placebo cutoffs, so the observational conclusion rests on the global estimates, as registered.
+All numbers are in Methods and in `results/current/5_mechanism/vortex_threshold_continuity.json`
+(key `era5_1940_2025`).
+
+## Supplementary Note 7 | The shift rule out of sample
+
+The 39 events of 1959–2022 verify the SNAPSI probabilities, but only the predictor was out of sample.
+Twelve SSWs of 1941–1958 in ERA5 provided a test whose outcomes had not been seen. The rule failed
+it at the registered 10th-percentile threshold (0 of 12 against 0.32; p = 0.012).
+
+The early events differ in three ways:
+- **They are weaker reversals.** The median minimum wind is −3.8 m s⁻¹, against −8.5 m s⁻¹ in
+  1959–2022.
+- **The data are older.** ERA5's stratosphere in the 1940s rests on few soundings reaching 10 hPa.
+- **There are only twelve of them.**
+
+None of these explains the failure on its own. The dose response accounts for about a quarter of
+the smaller cooling, and the failure persists from 1946, when the upper-air record improves.
+
+Two readings follow, and with twelve events they cannot be separated:
+- the single SNAPSI probability, which rests on two strong imposed events, overstates the risk
+  after weak reversals;
+- the 1941–1958 sample was unusually mild.
+
+Either way, a per-SSW probability verified on one set of events did not transfer to another. The
+forecast product should therefore scale with the size of the disturbance and be verified
+prospectively. Full counts are in Supplementary Table 4.

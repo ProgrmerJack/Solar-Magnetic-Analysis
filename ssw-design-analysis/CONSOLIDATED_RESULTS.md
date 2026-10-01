@@ -1159,8 +1159,34 @@ initialisations of the two events): N-Eurasia observed 0.08/0.15/0.28 vs rule
 pairs): consistent with the rule; HI_EUROPE beats climatology (p 0.004–0.045).
 R5 second predictor (CMIP6 days 8–24 NAM, mean −0.49σ, through the ERA5 event-free
 T–NAM regression, 2.0 K per σ): p 0.11/0.19/0.33; observed 0.21/0.26/0.38 lies
-BETWEEN the two independent model routes (p under R5 0.07/0.31/0.50). R6 (1940–58)
-pending the CDS wind series.
+BETWEEN the two independent model routes (p under R5 0.07/0.31/0.50). **R6 OUT OF SAMPLE (1940–58, outcomes never examined): FAILED AT q 0.10.**
+ERA5 (CDS) detector finds 12 onsets 1941-02-07 … 1958-02-01 (the last = the catalogue's
+1958-01-30, outcome not examined before); on 1958–2024 it recovers all 43 catalogued onsets
+within 3 d (+1 extra, 2002-02-17). N-Eurasia days 8–24 below the period's event-free
+q-quantile: 0/12 (q 0.05; rule 0.24, p 0.08), 0/12 (q 0.10; rule 0.32, p 0.012 —
+REJECTED), 2/12 (q 0.20; rule 0.45, p 0.08); vs climatology p ≥ 0.62 (no detectable
+rise). From 1946: 0/9, 0/9 (p 0.036), 2/9. Negative NAM proxy days 8–52: 7/12 (0.58) vs
+CMIP6 0.74 (p 0.20) and period climatology 0.42 (p 0.38). Pooled with V1 (51): 8, 10, 17 —
+p under rule 0.19 / 0.052 / 0.092; vs climatology 0.004 / 0.03 / 0.02.
+Exploratory (post hoc): the early reversals are weaker (median minimum u −3.8 vs −8.5 m/s
+for 1959–2022; 58% vs 26% above −4 m/s); mean N-Eurasian anomaly −0.2 K vs −1.0 K, NAM
+proxy shift −0.36σ; but the dose slope (~0.37 K per 10 m/s) explains only ~0.2 K of the
+0.8 K gap — weak events do NOT explain the failure. Early ERA5 stratosphere weakly
+constrained (few radiosondes reached 10 hPa); 12 events. Report as an out-of-sample
+failure of a single per-SSW probability.
+
+**U revision 3 — ERA5 running variable 1940–2025** (`--era5`, JSON key `era5_1940_2025`;
+registered `add7ba9`): 144 episodes (54 reversals), 111 with outcomes; NCEP vs ERA5 u_min
+r 0.98 on 96 common units, 5 switch side of 0 (1958-12-04, 1968-01-07, 1977-01-11,
+1981-03-04, 2002-02-17). Dose per 10 m/s: NAM proxy 0.16σ [0.10, 0.22], AO 0.29 [0.15,
+0.43] (from 1950), T 0.38 K [0.14, 0.62], downward label −0.12 [−0.16, −0.06] (all p <
+0.003). Global step: NAM proxy −0.28 [−0.67, +0.11], AO −0.73 [−1.51, −0.06] (raw p 0.028),
+T −0.66 K [−2.15, +0.77], label +0.26 [−0.06, +0.59]; **Holm 0.34 / 0.11 / 0.39 / 0.34 →
+no step by the registered rule**; local RD null (AO −0.02 [−1.40, +1.58]) but 5 placebo
+cutoffs p < 0.05 → local estimates uninterpretable again; balance on deceleration size
+FAILS (p 0.002: reversals have bigger drops). From 1946: the same. The AO global step is
+the largest hint of a step anywhere in the project; CMIP6 (5,726 episodes) bounds it at
++0.05 [−0.02, +0.13]σ.
 
 ### X — the state-dependent shape is a continuous dose (`response_shape_dose.py`, 6_predictability; registered `7d8ed6f`)
 

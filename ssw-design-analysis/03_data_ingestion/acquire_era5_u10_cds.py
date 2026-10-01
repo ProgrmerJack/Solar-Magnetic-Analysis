@@ -18,7 +18,8 @@ SOURCE
   Copernicus Climate Data Store, reanalysis-era5-pressure-levels (0.25 deg),
   u_component_of_wind, 10 hPa, area [60, -180, 60, 180]; the CDS personal token
   is read from ~/.cdsapirc (same ECMWF account as the S2S retrievals) and never
-  printed. One request per five calendar years.
+  printed (CDSAPI_KEY from the environment or the git-ignored .env takes
+  precedence). One request per five calendar years.
 
 REDUCTION
   Zonal mean over the 1440 distinct longitudes of the 60 N row (the duplicate
@@ -44,9 +45,22 @@ WORKERS = 4
 
 
 def client():
+    """CDS client: CDSAPI_URL/CDSAPI_KEY from the environment or the repository's
+    git-ignored .env, else ~/.cdsapirc. The key is never printed."""
+    import os
     from ecmwf.datastores import Client
-    key = Path("~/.cdsapirc").expanduser().read_text().split("key:")[1].split()[0]
-    return Client(url="https://cds.climate.copernicus.eu/api", key=key)
+    env = {}
+    f = HERE.parents[1] / ".env"
+    if f.exists():
+        for ln in f.read_text().splitlines():
+            if "=" in ln and not ln.lstrip().startswith("#"):
+                k, v = ln.split("=", 1)
+                env[k.strip()] = v.strip().strip('"').strip("'")
+    key = None if os.environ.get("CDS_KEYSOURCE") == "rc" else (os.environ.get("CDSAPI_KEY") or env.get("CDSAPI_KEY"))
+    url = os.environ.get("CDSAPI_URL") or env.get("CDSAPI_URL") or "https://cds.climate.copernicus.eu/api"
+    if not key:
+        key = Path("~/.cdsapirc").expanduser().read_text().split("key:")[1].split()[0]
+    return Client(url=url, key=key)
 
 
 def fetch(block):
@@ -54,6 +68,16 @@ def fetch(block):
     f = RAW / f"u10_60N_{a}_{b}.nc"
     if f.exists() and f.stat().st_size > 0:
         return f
+    import os
+    claim = f.with_suffix(".claim")
+    try:                                         # a second process (other account) may own it
+        os.close(os.open(claim, os.O_CREAT | os.O_EXCL | os.O_WRONLY))
+    except FileExistsError:
+        for _ in range(720):
+            if f.exists() and f.stat().st_size > 0:
+                return f
+            time.sleep(30)
+        raise RuntimeError(f"block {a}-{b} claimed elsewhere and never finished")
     c = client()
     req = {"product_type": ["reanalysis"], "variable": ["u_component_of_wind"],
            "pressure_level": ["10"], "year": [str(y) for y in range(a, b + 1)],
@@ -98,8 +122,17 @@ def reduce(f):
 
 def main():
     RAW.mkdir(parents=True, exist_ok=True)
+    import os
+    order = BLOCKS[::-1] if os.environ.get("CDS_REVERSE") else BLOCKS
+    if os.environ.get("CDS_FROM"):                # a helper process: fetch only, from this year
+        order = [blk for blk in order if blk[0] >= int(os.environ["CDS_FROM"])]
+        with ThreadPoolExecutor(WORKERS) as ex:
+            list(ex.map(fetch, order))
+        print("helper done", flush=True)
+        return
     with ThreadPoolExecutor(WORKERS) as ex:
-        files = list(ex.map(fetch, BLOCKS))
+        files = list(ex.map(fetch, order))
+    files = sorted(files)
     s = pd.concat([reduce(f) for f in files]).sort_index()
     s = s[~s.index.duplicated()]
     s = s[(s.index >= "1940-01-01") & (s.index <= "2026-04-30")]

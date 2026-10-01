@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-01T13:31:27+00:00",
+ "generated": "2026-10-01T21:34:36+00:00",
  "note": "Known-good baseline: each result was produced by the script at the recorded sha256. catalog_repo.py flags STALE when a producer's hash no longer matches. Re-record with --record only AFTER re-running the analysis.",
  "results": {
   "catalogue_sets.json": {
@@ -439,7 +439,7 @@
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/vortex_threshold_continuity.py": "6de754de115dc126"
    },
-   "result_sha256_16": "f94ffb643c3bceaf",
+   "result_sha256_16": "733c15819a4b6e5a",
    "needs_rerun": false
   },
   "class_model_comparison.json": {
@@ -655,7 +655,7 @@
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "49cf7c32029acf7f"
    },
-   "result_sha256_16": "4eced64ba73e6898",
+   "result_sha256_16": "b7c36f4575384115",
    "needs_rerun": false
   },
   "within_model_check.json": {

@@ -68,4 +68,23 @@ days 29–42: SNAPSI 12 pairs, 9 centres.
 
 Second predictor: ERA5 event-free slope 1.9985 K per s.d. of the NAM (residual s.d. 2.3629 K, 3912 windows); CMIP6 mean days 8–24 NAM after 1517 SSWs -0.4859.
 
-**Supplementary Table 4 | Out of sample, 1940–1958:** pending: ERA5 u(10 hPa) series not yet retrieved.
+**Supplementary Table 4 | Out of sample: ERA5 SSWs of 1940–1958 (outcomes not examined before registration).**
+
+Onsets: 1941-02-07, 1942-03-21, 1945-03-19, 1946-02-19, 1946-03-19, 1950-03-05, 1952-02-22, 1952-11-19, 1954-12-18, 1955-01-26, 1957-02-04, 1958-02-01. Detector against the catalogue: 43 of 43 catalogued onsets matched within 3 days.
+
+| region | window | q | rule p | observed | f [95%] | p (rule) | p (clim.) | RR obs | RR rule |
+|---|---|---|---|---|---|---|---|---|---|
+| NEURASIA 1940–58 | 8–24 | 0.05 | 0.2409 | 0/12 | 0.0 [0.0, 0.2425] | 0.0827 | 1.0 | 0.0 | 4.818 |
+| NEURASIA 1940–58 | 8–24 | 0.1 | 0.3243 | 0/12 | 0.0 [0.0, 0.2425] | 0.0122 | 0.6234 | 0.0 | 3.243 |
+| NEURASIA 1940–58 | 8–24 | 0.2 | 0.4541 | 2/12 | 0.1667 [0.047, 0.448] | 0.0776 | 1.0 | 0.833 | 2.27 |
+| NEURASIA 1946–58 | 8–24 | 0.05 | 0.2409 | 0/9 | 0.0 [0.0, 0.2992] | 0.1259 | 1.0 | 0.0 | 4.818 |
+| NEURASIA 1946–58 | 8–24 | 0.1 | 0.3243 | 0/9 | 0.0 [0.0, 0.2992] | 0.0363 | 1.0 | 0.0 | 3.243 |
+| NEURASIA 1946–58 | 8–24 | 0.2 | 0.4541 | 2/9 | 0.2222 [0.0632, 0.5474] | 0.1962 | 1.0 | 1.111 | 2.27 |
+
+| pooled with V1 | q | observed | f [95%] | p (rule) | p (clim.) |
+|---|---|---|---|---|---|
+| NEURASIA | 0.05 | 8/51 | 0.1569 [0.0817, 0.2801] | 0.1909 | 0.0036 |
+| NEURASIA | 0.1 | 10/51 | 0.1961 [0.1102, 0.3246] | 0.0522 | 0.0325 |
+| NEURASIA | 0.2 | 17/51 | 0.3333 [0.2197, 0.4703] | 0.092 | 0.0225 |
+
+Negative polar-cap NAM proxy, days 8–52: 7/12 against the CMIP6 0.74 (p 0.1997) and the period's climatological 0.4235 (p 0.3817).
