@@ -65,6 +65,30 @@ CMIP6 CALIBRATION (minimally model-dependent)
   power of the observational E2 from 1,000 random draws of 68 consecutive winters
   (power for a planted jump equal to the observed whole-SSW shift, -0.8 s.d.).
 
+REVISION-3 ADDENDUM: ERA5 RUNNING VARIABLE, 1940-2025 (approved 2026-10-01;
+committed BEFORE the ERA5 wind series and any ERA5 surface value before 1959 were
+retrieved). Written to the same JSON under "era5_1940_2025"; the registered NCEP
+numbers above are not changed and are reproduced first.
+  Why: several NCEP units just above 0 (e.g. January 1977, February 1963, January
+  1968, February/March 1981, February 2002) are reversals in other reanalyses
+  (Butler et al. 2017 compendium), so measurement error in the running variable
+  sits exactly at the cutoff; and ERA5 adds 1940-1957.
+  Units: the identical episode rule on the ERA5 u(10 hPa, 60N) daily mean
+  (acquire_era5_u10_cds.py), minima 1 November 1940 - 31 March 2025.
+  Outcomes, days +8..+52: Y2E the polar-cap NAM proxy, -(ERA5 polar-cap mean
+  sea-level pressure at 00 UTC minus its 31-day-smoothed day-of-year mean)
+  divided by its November-March daily s.d. (WeatherBench 2 1959-April 2022,
+  ARCO-ERA5 otherwise with the overlap offset of s2s_heldout_test.splice; the
+  primary outcome, available for all years); Y1 CPC AO (from 1950); Y3
+  northern-Eurasian 2 m temperature, anomaly from the smoothed day-of-year mean
+  with a linear trend over 1940-2025 removed; Y4 the downward label on Y2E.
+  Covariates as before plus a linear year term (trend). Estimates E1-E4, Holm over
+  the outcomes, placebo cutoffs, donut, balance, exactly as registered; the
+  falsification rule for the local estimates is unchanged.
+  Also reported: the NCEP-ERA5 agreement of u_min for units in both, and how many
+  units change side of 0. Sensitivity: minima from 1946 only. CMIP6 calibration is
+  not repeated (it does not depend on the reanalysis).
+
 Output: results/current/5_mechanism/vortex_threshold_continuity.json
 """
 import json
