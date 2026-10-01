@@ -88,6 +88,11 @@ numbers above are not changed and are reproduced first.
   Also reported: the NCEP-ERA5 agreement of u_min for units in both, and how many
   units change side of 0. Sensitivity: minima from 1946 only. CMIP6 calibration is
   not repeated (it does not depend on the reanalysis).
+  IMPLEMENTATION NOTE (written before the first ERA5 run): the pre-deceleration
+  covariate and placebo outcome ("plac") use Y2E, not the CPC AO, because the AO
+  begins in 1950 and would drop every 1940s unit; the year term enters design()
+  through YEAR_TERM. The registered NCEP run (above) is unchanged and was
+  reproduced on 2026-10-01 (parsed comparison, identical).
 
 Output: results/current/5_mechanism/vortex_threshold_continuity.json
 """
@@ -120,6 +125,7 @@ NAM = ING / "era5_nam_daily.parquet"
 T2M = ING / "era5_t2m_regions_daily_spliced.parquet"
 RAW = ING / "raw" / "cmip6"
 END = pd.Timestamp("2025-04-30")
+YEAR_TERM = False
 
 
 def episodes(u):
@@ -170,7 +176,8 @@ def design(df, y):
     doy = d["date"].dt.dayofyear.values
     X = np.column_stack([np.ones(len(d)), d["X"].values, d["plac"].values,
                          np.sin(2 * np.pi * doy / 365.25), np.cos(2 * np.pi * doy / 365.25),
-                         (d["winter"] >= 1979).astype(float)])
+                         (d["winter"] >= 1979).astype(float)]
+                        + ([(d["winter"].values - 1980.0) / 10.0] if YEAR_TERM else []))
     return d, X
 
 
@@ -192,13 +199,13 @@ def dose_and_jump(df, y, rng, n_boot=N_BOOT):
         i = np.concatenate([np.flatnonzero(win == w) for w in pick])
         if len(np.unique(D[i])) < 2:
             continue
-        bd.append(ols(X[i], yv[i])[1]); bj.append(ols(Xj[i], yv[i])[6])
+        bd.append(ols(X[i], yv[i])[1]); bj.append(ols(Xj[i], yv[i])[X.shape[1]])
     bd, bj = np.array(bd), np.array(bj)
     return {"n": int(len(d)), "n_below": int(D.sum()),
             "dose_slope_per_10ms": round(float(10 * b_dose[1]), 4),
             "dose_ci95": [round(float(10 * q), 4) for q in np.percentile(bd, [2.5, 97.5])],
             "dose_p_two_sided": round(float(min(1, 2 * min(np.mean(bd <= 0), np.mean(bd >= 0)))), 4),
-            "jump": round(float(b_jump[6]), 4),
+            "jump": round(float(b_jump[X.shape[1]]), 4),
             "jump_ci95": [round(float(q), 4) for q in np.percentile(bj, [2.5, 97.5])],
             "jump_ci90": [round(float(q), 4) for q in np.percentile(bj, [5, 95])],
             "jump_p_two_sided": round(float(min(1, 2 * min(np.mean(bj <= 0), np.mean(bj >= 0)))), 4)}
@@ -371,5 +378,110 @@ def main():
     print("Saved -> vortex_threshold_continuity.json")
 
 
+def _smooth_doy(x, base):
+    b = x[(x.index.year >= base[0]) & (x.index.year <= base[1])]
+    c = b.groupby(b.index.dayofyear).mean().reindex(range(1, 367))
+    c = pd.concat([c.iloc[-15:], c, c.iloc[:15]]).rolling(31, center=True, min_periods=15).mean().iloc[15:-15]
+    c.index = range(1, 367)
+    return x - c.reindex(x.index.dayofyear).values
+
+
+def era5_outcomes():
+    """Y2E (polar-cap NAM proxy), Y3 (N-Eurasian T, detrended), Y1 (CPC AO) daily series 1940-2026."""
+    import s2s_heldout_test as H
+    stats_, _ = H.splice()
+    off_p = stats_["psl_cap_N"]["offset"]
+    def psl(f, col="time"):
+        d = pd.read_parquet(ING / f); t = pd.to_datetime(d[col])
+        d = d[t.dt.hour == 0]
+        return pd.Series(d["psl_cap_N"].values, index=pd.to_datetime(d[col]).dt.floor("D"))
+    wb = psl("era5_psl_cap_6h_full.parquet")
+    arco = pd.concat([psl("era5_psl_cap_00utc_arco.parquet"), psl("era5_psl_cap_00utc_arco_late.parquet")]) - off_p
+    early = psl("era5_psl_cap_00utc_arco_early.parquet") - off_p
+    p = pd.concat([early[early.index < wb.index.min()], wb, arco[arco.index > wb.index.max()]]).sort_index()
+    p = p[~p.index.duplicated()]
+    pa = _smooth_doy(p, (1940, 2025))
+    sd = float(pa[pa.index.month.isin([11, 12, 1, 2, 3])].std())
+    y2 = -pa / sd
+    def t2(f):
+        d = pd.read_parquet(ING / f)
+        return pd.Series(d["NEURASIA"].values, index=pd.to_datetime(d["date"]))
+    tw = t2("era5_t2m_regions_daily_full.parquet")
+    toff = stats_["NEURASIA"]["offset"]
+    tsp = t2("era5_t2m_regions_daily_spliced.parquet"); tl = t2("era5_t2m_regions_daily_arco_late.parquet") - toff
+    te = t2("era5_t2m_regions_daily_arco_early.parquet") - toff
+    t = pd.concat([te[te.index < tw.index.min()], tw, tsp[tsp.index > tw.index.max()], tl[tl.index > tsp.index.max()]]).sort_index()
+    t = t[~t.index.duplicated()]
+    ta = _smooth_doy(t, (1940, 2025))
+    yr = (ta.index - pd.Timestamp("1980-01-01")).days.values / 3652.5
+    ok = np.isfinite(ta.values)
+    b = np.polyfit(yr[ok], ta.values[ok], 1)
+    y3 = ta - np.polyval(b, yr)
+    import re
+    recs = [re.match(r"\s*(\d{4})\s+(\d+)\s+(\d+)\s*(-?\d+\.\d+)", ln) for ln in AO.read_text().splitlines()]
+    recs = [m.groups() for m in recs if m]
+    ao = pd.Series([float(v) for *_, v in recs], index=pd.to_datetime([f"{y}-{m}-{d}" for y, m, d, _ in recs]))
+    return y2, y3, ao.where(ao > -90), {"psl_offset_Pa": off_p, "t_offset_K": toff,
+                                        "t_trend_K_per_decade": round(float(b[0]), 4), "nam_proxy_sd_Pa": round(sd, 2)}
+
+
+def era5_section():
+    global YEAR_TERM
+    rng = np.random.default_rng(zlib.crc32(f"{NAME}|era5".encode()))
+    res = json.loads((RESULTS / "vortex_threshold_continuity.json").read_text())
+    u = pd.read_parquet(ING / "era5_u10_60N_daily_cds.parquet")
+    u = pd.Series(u["u10_60N"].values, index=pd.to_datetime(u["date"]))
+    u = u[u.index <= END]
+    E = episodes(u)
+    E = E[(E["date"] >= pd.Timestamp("1940-11-01")) & (E["winter"] <= 2025)].reset_index(drop=True)
+    y2, y3, ao, meta = era5_outcomes()
+    E["Y2E_NAMproxy"] = [window_mean(y2, t, *WIN) for t in E["date"]]
+    E["Y1_AO"] = [window_mean(ao, t, *WIN) for t in E["date"]]
+    E["Y3_T_NEURASIA"] = [window_mean(y3, t, *WIN) for t in E["date"]]
+    E["Y4_downward"] = [label(y2, t) for t in E["date"]]
+    E["plac"] = [window_mean(y2, tm, -30, -1) for tm in E["t_max"]]
+    out = {"label": "revision-3 addendum (commit add7ba9): ERA5 running variable", "meta": meta,
+           "units": {"n": int(len(E)), "below_0": int((E.X < 0).sum()),
+                     "years": [int(E.winter.min()), int(E.winter.max())]}}
+    # NCEP vs ERA5 u_min on common units (+-5 d)
+    nc = pd.DataFrame(res["unit_table"]); nc["date"] = pd.to_datetime(nc["date"])
+    pairs = []
+    for r in nc.itertuples():
+        d = np.abs((E["date"] - r.date).dt.days)
+        if len(d) and d.min() <= 5:
+            pairs.append((r.X, float(E.loc[d.idxmin(), "X"]), str(r.date.date())))
+    pr = np.array([(a, b) for a, b, _ in pairs])
+    out["ncep_vs_era5"] = {"n_common": len(pairs), "corr": round(float(np.corrcoef(pr[:, 0], pr[:, 1])[0, 1]), 4),
+                           "mean_era5_minus_ncep": round(float(np.mean(pr[:, 1] - pr[:, 0])), 3),
+                           "switch_side": [{"date": d, "ncep": round(a, 2), "era5": round(b, 2)}
+                                           for a, b, d in pairs if (a < 0) != (b < 0)]}
+    YEAR_TERM = True
+    try:
+        ys = ["Y2E_NAMproxy", "Y1_AO", "Y3_T_NEURASIA", "Y4_downward"]
+        for nm, sub in (("all", E), ("from_1946", E[E["date"] >= pd.Timestamp("1946-01-01")].reset_index(drop=True))):
+            o = {}
+            for y in ys:
+                o[y] = {"E1_E2": dose_and_jump(sub, y, rng), "E3_mse": rd_local(sub, y),
+                        "E4": [local_randomisation(sub, y, w, rng) for w in (2.5, 5.0)],
+                        "donut": {str(dn): rd_local(sub, y, sub=sub[np.abs(sub.X) >= dn]) for dn in (1.0, 2.0)},
+                        "placebo_cutoffs": {str(c): rd_local(sub, y, cutoff=c, sub=sub[(sub.X < 0) if c < 0 else (sub.X >= 0)])
+                                            for c in (-10.0, -5.0, 5.0, 10.0)}}
+                print(nm, y, json.dumps(o[y]["E1_E2"]), "| E3", o[y]["E3_mse"], flush=True)
+            o["E2_holm"] = dict(zip(ys, [round(p, 4) for p in holm([o[y]["E1_E2"]["jump_p_two_sided"] for y in ys])]))
+            o["placebo_cutoffs_p_lt_0.05"] = int(sum(1 for y in ys for v in o[y]["placebo_cutoffs"].values()
+                                                     if isinstance(v, dict) and v.get("rbc_p", 1) < 0.05))
+            o["falsification"] = {"placebo_outcome_pre": rd_local(sub.assign(pl=sub["plac"]), "pl"),
+                                  "balance_drop": rd_local(sub.assign(dr=sub["drop"]), "dr")}
+            out[nm] = o
+    finally:
+        YEAR_TERM = False
+    out["unit_table"] = [{"date": str(r.date.date()), "X": round(float(r.X), 3),
+                          **{k: (None if not np.isfinite(getattr(r, k)) else round(float(getattr(r, k)), 4)) for k in ys}}
+                         for r in E.itertuples()]
+    res["era5_1940_2025"] = out
+    (RESULTS / "vortex_threshold_continuity.json").write_text(json.dumps(res, indent=2), encoding="utf8", newline="\n")
+    print("ncep_vs_era5", out["ncep_vs_era5"]); print("Saved -> vortex_threshold_continuity.json (era5_1940_2025)")
+
+
 if __name__ == "__main__":
-    main()
+    era5_section() if "--era5" in sys.argv else main()

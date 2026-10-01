@@ -52,4 +52,9 @@
 | U-cmip6 | CMIP6 step at wind reversal (sigma), 5,726 episodes | revision-3 secondary | committed before outcomes | 2a0c40b | 0.0512 [-0.02, 0.1278] | 0.157 |  |
 | V-0.10 | shift rule (SNAPSI) vs observed cold fortnights below 10th pct., 39 SSWs: binomial under rule | revision-3 primary | committed before run | bf453bd | 10/39 vs p_rule 0.3243 | 0.3986 |  |
 | V-clim | observed cold fortnights below 10th pct. vs climatology | revision-3 primary | committed before run | bf453bd | 10/39 vs 0.10 | 0.0042 |  |
+| V-R1 | shift rule, strict independence (37 events, no SNAPSI events), q 0.10: binomial under rule | revision-3 secondary | committed before outcomes | add7ba9 | 9/37 | 0.3801 |  |
+| V-R2 | shift rule, 2.5th percentile, N Eurasia: binomial under rule | revision-3 secondary | committed before outcomes | add7ba9 | 4/39 vs 0.1786 | 0.295 |  |
+| V-R3 | shift rule, 2.5th percentile, high-latitude Europe: binomial under rule (rule rejected) | revision-3 secondary | committed before outcomes | add7ba9 | 0/39 vs 0.201 | 0.0002 |  |
+| V-R4 | shift rule, days 15-28, N Eurasia, q 0.10: binomial under rule | revision-3 secondary | committed before outcomes | add7ba9 | 6/39 vs 0.2724 | 0.107 |  |
+| V-R5 | second rule (CMIP6 x ERA5 event-free), N Eurasia q 0.10: binomial under rule | revision-3 secondary | committed before outcomes | add7ba9 | 10/39 vs 0.1944 | 0.3144 |  |
 | S-dose | two regimes vs continuous with the realised 100 hPa dose (G, p vs ordinary days); inconclusive | revision-3 primary | committed before run | 7d8ed6f | G -0.0146 vs -0.01094; power vs planted regimes 0.08 (post hoc): underpowered | 0.92 |  |

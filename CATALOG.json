@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-01T10:00:50+00:00",
+ "generated": "2026-10-01T13:31:27+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 161,
+  "scripts": 163,
   "results": 83
  },
  "scripts": [
@@ -57,14 +57,16 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "ERA5 observations for the held-out 2023-2024 SSWs (plan approved 2026-09-30; design in 07_physical_decomposition/s2s_heldout_test.py), which the WeatherBench 2 copy used everywhere else does not reach (it ends 2023-01-10; the polar-cap",
-   "loc": 139,
-   "modified": "2026-09-30 18:51",
-   "sha256_16": "2da2034a6a602ba1",
+   "loc": 158,
+   "modified": "2026-10-01 10:40",
+   "sha256_16": "258573a8928c0e16",
    "flags": [],
    "filenames_mentioned": [
     "era5_psl_cap_00utc_arco.parquet",
+    "era5_psl_cap_00utc_arco_early.parquet",
     "era5_psl_cap_00utc_arco_late.parquet",
     "era5_t2m_regions_daily_arco.parquet",
+    "era5_t2m_regions_daily_arco_early.parquet",
     "era5_t2m_regions_daily_arco_late.parquet"
    ],
    "filename_prefixes": []
@@ -88,12 +90,13 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "Observed polar-cap mean sea-level pressure, reduced EXACTLY as the SNAPSI members are, so the observed outcome of each SNAPSI event can be placed inside its own ensemble.",
-   "loc": 165,
-   "modified": "2026-09-30 10:55",
-   "sha256_16": "6228a9d03b7da3ed",
+   "loc": 172,
+   "modified": "2026-10-01 10:24",
+   "sha256_16": "e072f27e7d81d9c9",
    "flags": [],
    "filenames_mentioned": [
     "era5_psl_cap_6h.parquet",
+    "era5_psl_cap_6h_full.parquet",
     "era5_z100_cap_00utc.parquet"
    ],
    "filename_prefixes": []
@@ -103,14 +106,31 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "ERA5 daily-mean 2 m temperature over the four regions of the regional cold-risk plan (approved 2026-09-26), the observation for the S2S regional test and the observed-event regional analysis.",
-   "loc": 67,
-   "modified": "2026-09-26 08:16",
-   "sha256_16": "9469b0c0094cf6cc",
+   "loc": 72,
+   "modified": "2026-10-01 10:24",
+   "sha256_16": "34ecba91b4087ba8",
    "flags": [],
    "filenames_mentioned": [
-    "era5_t2m_regions_daily.parquet"
+    "era5_t2m_regions_daily.parquet",
+    "era5_t2m_regions_daily_full.parquet"
    ],
    "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_era5_u10_cds.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "ERA5 zonal-mean zonal wind at 10 hPa, 60 N, daily mean of 00/06/12/18 UTC, 1 January 1940 - 30 April 2026: the running variable of the ERA5 continuity test and the series for detecting SSWs before 1958 (vortex_threshold_continuity.py,",
+   "loc": 116,
+   "modified": "2026-10-01 10:21",
+   "sha256_16": "94e11785447ba92f",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_u10_60N_daily_cds.parquet"
+   ],
+   "filename_prefixes": [
+    "u10_60N_"
+   ]
   },
   {
    "path": "ssw-design-analysis/03_data_ingestion/acquire_heatflux.py",
@@ -1243,14 +1263,19 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "A COLD-RISK FORECAST FROM THE SHIFT ALONE: DOES A MODEL-DERIVED PROBABILITY VERIFY AGAINST OBSERVED SSWs, AND WHAT IS IT WORTH TO A DECISION-MAKER? Plan approved 2026-10-01. Written before the verification below was run.",
-   "loc": 265,
-   "modified": "2026-10-01 04:44",
-   "sha256_16": "341029360c645e23",
+   "loc": 519,
+   "modified": "2026-10-01 13:26",
+   "sha256_16": "49cf7c32029acf7f",
    "flags": [],
    "filenames_mentioned": [
+    "era5_nam_daily.parquet",
+    "era5_psl_cap_00utc_arco_early.parquet",
     "era5_t2m_regions_daily.parquet",
+    "era5_t2m_regions_daily_arco_early.parquet",
     "era5_t2m_regions_daily_arco_late.parquet",
+    "era5_t2m_regions_daily_full.parquet",
     "era5_t2m_regions_daily_spliced.parquet",
+    "era5_u10_60N_daily_cds.parquet",
     "s2s_heldout_test.json",
     "shift_rule_forecast.json"
    ],
@@ -1377,14 +1402,22 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "IS AN SSW ITSELF A THRESHOLD ON A CONTINUUM? A MODEL-FREE TEST AT THE REVERSAL.",
-   "loc": 352,
-   "modified": "2026-10-01 04:58",
-   "sha256_16": "d1020602d1c67bf8",
+   "loc": 488,
+   "modified": "2026-10-01 10:30",
+   "sha256_16": "6de754de115dc126",
    "flags": [],
    "filenames_mentioned": [
     "ao_daily_cpc.txt",
     "era5_nam_daily.parquet",
+    "era5_psl_cap_00utc_arco.parquet",
+    "era5_psl_cap_00utc_arco_early.parquet",
+    "era5_psl_cap_00utc_arco_late.parquet",
+    "era5_psl_cap_6h_full.parquet",
+    "era5_t2m_regions_daily_arco_early.parquet",
+    "era5_t2m_regions_daily_arco_late.parquet",
+    "era5_t2m_regions_daily_full.parquet",
     "era5_t2m_regions_daily_spliced.parquet",
+    "era5_u10_60N_daily_cds.parquet",
     "vortex_threshold_continuity.json"
    ],
    "filename_prefixes": []
@@ -1649,9 +1682,9 @@
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
    "title": "figED7_shiftrule.py -- Extended Data Fig. 7: the shift rule as a forecast.",
-   "loc": 69,
-   "modified": "2026-10-01 04:59",
-   "sha256_16": "e35156f96e570dc9",
+   "loc": 91,
+   "modified": "2026-10-01 13:31",
+   "sha256_16": "0c19ab936012b545",
    "flags": [],
    "filenames_mentioned": [
     "shift_rule_forecast.json"
@@ -1675,9 +1708,9 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 260,
-   "modified": "2026-10-01 09:46",
-   "sha256_16": "8064d1cf52bec2d2",
+   "loc": 280,
+   "modified": "2026-10-01 13:31",
+   "sha256_16": "dd3d87139b3c123b",
    "flags": [],
    "filenames_mentioned": [
     "class_model_comparison.json",
@@ -1714,6 +1747,20 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/10_tables/tableS1_shiftrule.py",
+   "tree": "ssw-design-analysis",
+   "stage": "10_tables",
+   "title": "tableS1_shiftrule.py -- Supplementary Tables 1-4: the shift rule in full.",
+   "loc": 94,
+   "modified": "2026-10-01 13:31",
+   "sha256_16": "2a318a5b95b1cfd0",
+   "flags": [],
+   "filenames_mentioned": [
+    "shift_rule_forecast.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/environment/check_environment.py",
    "tree": "ssw-design-analysis",
    "stage": "environment",
@@ -1730,9 +1777,9 @@
    "tree": "ssw-design-analysis",
    "stage": "manuscript",
    "title": "number_citations.py -- replace ^{key}^ citation keys in main.md with numbers in Nature order (main text, then figure legends, then Methods) and write the reference list. Every entry below was checked against Crossref or the publisher",
-   "loc": 105,
-   "modified": "2026-10-01 09:48",
-   "sha256_16": "5caeec2269868e30",
+   "loc": 109,
+   "modified": "2026-10-01 10:27",
+   "sha256_16": "9b3ae6edce8b186f",
    "flags": [],
    "filenames_mentioned": [],
    "filename_prefixes": []
@@ -2515,7 +2562,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-01 09:48",
+   "modified": "2026-10-01 10:01",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -4172,7 +4219,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/vortex_threshold_continuity.py": "d1020602d1c67bf8"
+    "ssw-design-analysis/07_physical_decomposition/vortex_threshold_continuity.py": "6de754de115dc126"
    },
    "verdicts": [],
    "counts": {
@@ -4777,7 +4824,7 @@
    "flags": [],
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/s2s_heldout_test.py": "d57639ff35f1972b",
-    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "341029360c645e23"
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "49cf7c32029acf7f"
    },
    "verdicts": [
     {
@@ -5031,9 +5078,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 21530,
-   "modified": "2026-10-01 04:57",
-   "sha256_16": "306ce8122d37917c",
+   "bytes": 132534,
+   "modified": "2026-10-01 13:28",
+   "sha256_16": "4eced64ba73e6898",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py"
    ],
@@ -5041,9 +5088,14 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "341029360c645e23"
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "49cf7c32029acf7f"
    },
-   "verdicts": [],
+   "verdicts": [
+    {
+     "key": "revision3.R6_out_of_sample_1940_1958.status",
+     "text": "pending: ERA5 u(10 hPa) series not yet retrieved"
+    }
+   ],
    "counts": {
     "n_boot": [
      10000
@@ -5063,7 +5115,8 @@
     "model_probabilities_snapsi",
     "model_p_negative_am_cmip6",
     "verification",
-    "prospective_2026"
+    "prospective_2026",
+    "revision3"
    ]
   },
   {

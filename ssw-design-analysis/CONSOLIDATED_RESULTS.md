@@ -1143,6 +1143,25 @@ the 1998–2021 events, whose surface under-forecast did not replicate in 2023�
 (T-f); L2 not rejecting is absence of evidence for a coupling deficit, not proof of
 calibration.
 
+**V revision 3 (registered `add7ba9`; `shift_rule_forecast.py --revision3`, JSON key `revision3`):**
+R1 strict independence (37 events, without 2018-02-12 and 2019-01-02): 7, 9, 14 cold
+fortnights; p under rule 0.57/0.38/0.41, under climatology 0.002/0.009/0.012 — HOLDS.
+R2 severity N-Eurasia: q 0.025/0.05/0.10/0.20/0.33 → observed 0.10/0.21/0.26/0.38/0.51
+vs SNAPSI 0.18/0.24/0.32/0.45/0.60 (p rule 0.30–0.71; p clim 0.016/0.0006/0.004/0.008/
+0.025); RR observed 4.1/4.1/2.6/1.9/1.55. The rule is ABOVE the observed frequency at
+every q (slight over-prediction). R3 regions: HI_EUROPE moderate cold consistent and
+beats climatology (q 0.10–0.33, p clim ≤ 0.004) but EXTREMES over-predicted (q 0.025:
+0/39 vs 0.20, p < 0.001; q 0.05: 3/39 vs 0.24, p 0.014); MID_EASIA consistent with
+rule, not with a detectable change vs climatology; MID_NAMER rule ≈ climatology, observed
+consistent with both. R4 weeks: days 15–28 (SNAPSI 22 pairs, 9 centres, only the later
+initialisations of the two events): N-Eurasia observed 0.08/0.15/0.28 vs rule
+0.20/0.27/0.42 (p 0.07–0.11), NOT distinguishable from climatology; days 29–42 (12
+pairs): consistent with the rule; HI_EUROPE beats climatology (p 0.004–0.045).
+R5 second predictor (CMIP6 days 8–24 NAM, mean −0.49σ, through the ERA5 event-free
+T–NAM regression, 2.0 K per σ): p 0.11/0.19/0.33; observed 0.21/0.26/0.38 lies
+BETWEEN the two independent model routes (p under R5 0.07/0.31/0.50). R6 (1940–58)
+pending the CDS wind series.
+
 ### X — the state-dependent shape is a continuous dose (`response_shape_dose.py`, 6_predictability; registered `7d8ed6f`)
 
 S3 fitted M2 (P2, all SSWs): component means −0.66 / −0.16, sd 0.72 / 0.58 — the

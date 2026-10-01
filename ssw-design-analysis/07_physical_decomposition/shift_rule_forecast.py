@@ -308,5 +308,211 @@ def main():
     print("Saved -> shift_rule_forecast.json")
 
 
+# ------------------------------------------------------------------ revision 3
+R3_QS = (0.025, 0.05, 0.10, 0.20, 0.33)
+R4_WINS = ((15, 28), (29, 42))
+REGIONS = ("NEURASIA", "HI_EUROPE", "MID_EASIA", "MID_NAMER")
+SNAPSI_EVENTS = (pd.Timestamp("2018-02-12"), pd.Timestamp("2019-01-02"))
+EARLY = (pd.Timestamp("1940-11-01"), pd.Timestamp("1958-03-31"))
+
+
+def snapsi_probs_gen(rng, win, qs, min_centres=4):
+    """SNAPSI p(q) per region for a post-onset window (full-coverage pairs only)."""
+    old = SRT.TAS_DAYS
+    SRT.TAS_DAYS = win
+    try:
+        centres = sorted({p.name.split("_")[0] for p in SRT.TAS.glob("*.npz")})
+        rows = []
+        for c in centres:
+            bad, _ = SRT.L.corruption_guard(c)
+            if bad:
+                continue
+            for init in SRT.L.ONSET:
+                tn, tc = SRT.region_series(c, "nudged", init), SRT.region_series(c, "control", init)
+                if len(tn) < 10 or len(tc) < 10:
+                    continue
+                row = {"centre": c, "init": init}
+                for r in REGIONS:
+                    for q in qs:
+                        row[f"{r}|{q}"] = float(np.mean(tn[r] < np.quantile(tc[r], q)))
+                rows.append(row)
+    finally:
+        SRT.TAS_DAYS = old
+    df = pd.DataFrame(rows)
+    out = {"n_pairs": int(len(df)), "n_centres": int(df["centre"].nunique()) if len(df) else 0,
+           "pairs": sorted(f"{c}/{i}" for c, i in zip(df.get("centre", []), df.get("init", []))), "p": {}}
+    if out["n_centres"] < min_centres:
+        out["status"] = f"fewer than {min_centres} centres cover the window"
+        return out
+    cs = df["centre"].unique()
+    for r in REGIONS:
+        out["p"][r] = {}
+        for q in qs:
+            col = f"{r}|{q}"
+            by = {c: df.loc[df.centre == c, col].values for c in cs}
+            bs = [np.mean(np.concatenate([by[c] for c in rng.choice(cs, len(cs))])) for _ in range(N_BOOT)]
+            out["p"][r][str(q)] = {"p": round(float(df[col].mean()), 4),
+                                   "ci95": [round(float(x), 4) for x in np.quantile(bs, [0.025, 0.975])]}
+    return out
+
+
+def t_anom_region(path, region, base=(1959, 2022)):
+    t = pd.read_parquet(path).set_index("date")[[region]]
+    t.index = pd.to_datetime(t.index)
+    b = t[(t.index.year >= base[0]) & (t.index.year <= base[1])]
+    doy = b.groupby(b.index.dayofyear).mean().reindex(range(1, 367))
+    doy = pd.concat([doy.iloc[-15:], doy, doy.iloc[:15]]).rolling(31, center=True, min_periods=15).mean().iloc[15:-15]
+    doy.index = range(1, 367)
+    return (t - doy.reindex(t.index.dayofyear).values)[region]
+
+
+def obs_verify(ta, events, onsets_all, free_years, win, p_by_q, rng, label):
+    free_days = [d for d in pd.date_range(f"{free_years[0]}-01-01", f"{free_years[1]}-12-31")
+                 if d.month in (11, 12, 1, 2, 3) and np.all(np.abs((onsets_all - d).days) > ZONE_SEP)]
+    free = np.array([window(ta, d, win) for d in free_days]); free = free[np.isfinite(free)]
+    vals = np.array([window(ta, o, win) for o in events]); ok = np.isfinite(vals)
+    ev = [e for e, k in zip(events, ok) if k]; vals = vals[ok]
+    out = {"n_free_windows": int(len(free))}
+    for q, pr in p_by_q.items():
+        thr = float(np.quantile(free, float(q)))
+        r = verify(ev, vals < thr, pr, float(q), rng, label)
+        r.pop("rev_curve"); r["threshold_K"] = round(thr, 3)
+        out[str(q)] = r
+    return out
+
+
+def detect_era5():
+    import ensemble_precursor as EP
+    u = pd.read_parquet(ING / "era5_u10_60N_daily_cds.parquet")
+    u = pd.Series(u["u10_60N"].values, index=pd.to_datetime(u["date"]))
+    on = pd.DatetimeIndex(EP.detect_ssw(u.values, u.index))
+    return u, on
+
+
+def revision3():
+    rng = np.random.default_rng(zlib.crc32(f"{NAME}|revision3".encode()))
+    res = json.loads((RESULTS / "shift_rule_forecast.json").read_text())
+    r3 = {"label": "revision-3 addendum, registered in commit add7ba9 before these outcomes were retrieved"}
+    cat = load_catalogue("primary")
+    wb2 = ING / "era5_t2m_regions_daily.parquet"
+    full = ING / "era5_t2m_regions_daily_full.parquet"
+    v1_ev = [o for o in cat if o <= pd.Timestamp("2023-01-10") - pd.Timedelta(days=T_WIN[1])]
+    # SNAPSI p for every region, days 8-24, all q
+    sp = snapsi_probs_gen(rng, T_WIN, R3_QS)
+    r3["snapsi_days8_24"] = sp
+    # R1 strict independence (NEURASIA, registered q)
+    indep = [o for o in v1_ev if np.all(np.abs((pd.DatetimeIndex(SNAPSI_EVENTS) - o).days) > 3)]
+    ta = t_anom_region(wb2, REG)
+    r3["R1_strict_independence"] = obs_verify(ta, indep, cat, (1959, 2022), T_WIN,
+                                              {str(q): sp["p"][REG][str(q)]["p"] for q in QS}, rng, "R1")
+    r3["R1_strict_independence"]["dropped"] = [str(o.date()) for o in v1_ev if o not in indep]
+    # R2/R3 severity x regions, days 8-24
+    r3["R2_R3_days8_24"] = {}
+    for r in REGIONS:
+        tr = t_anom_region(wb2, r)
+        r3["R2_R3_days8_24"][r] = obs_verify(tr, v1_ev, cat, (1959, 2022), T_WIN,
+                                             {str(q): sp["p"][r][str(q)]["p"] for q in R3_QS}, rng, f"R2R3-{r}")
+    # R4 weeks 3-6
+    r3["R4_weeks"] = {}
+    for w in R4_WINS:
+        spw = snapsi_probs_gen(rng, w, QS)
+        k = f"days{w[0]}_{w[1]}"
+        r3["R4_weeks"][k] = {"snapsi": spw}
+        if spw.get("status"):
+            continue
+        for r in REGIONS:
+            tr = t_anom_region(full, r)
+            r3["R4_weeks"][k][r] = obs_verify(tr, v1_ev, cat, (1959, 2022), w,
+                                              {str(q): spw["p"][r][str(q)]["p"] for q in QS}, rng, f"R4-{k}-{r}")
+    # R5 second predictor: CMIP6 annular-mode shift through the ERA5 event-free relation
+    from scipy.stats import norm as _norm
+    nam = pd.read_parquet(ING / "era5_nam_daily.parquet")
+    nam.index = pd.to_datetime(nam.index)
+    if np.corrcoef(nam["nam_1000"], nam["z1000_m"])[0, 1] > 0:
+        raise ValueError("nam_1000 is not in the NAM sign (positive = low polar height)")
+    free_days = [d for d in pd.date_range("1959-01-01", "2022-12-31")
+                 if d.month in (11, 12, 1, 2, 3) and np.all(np.abs((cat - d).days) > ZONE_SEP)]
+    fd = pd.DatetimeIndex(free_days)
+    sd_free = float(nam.loc[nam.index.isin(fd), "nam_1000"].std())
+    nb = nam["nam_1000"] / sd_free
+    clim = nb[nb.index.isin(fd)].groupby(nb[nb.index.isin(fd)].index.dayofyear).mean()
+    nanom = nb - clim.reindex(nb.index.dayofyear).values
+    X = np.array([window(nanom, d, T_WIN) for d in free_days]); Y = np.array([window(ta, d, T_WIN) for d in free_days])
+    ok = np.isfinite(X) & np.isfinite(Y)
+    b, a_ = np.polyfit(X[ok], Y[ok], 1); se = float(np.std(Y[ok] - (a_ + b * X[ok]), ddof=2))
+    Ni = []
+    for f in sorted(W.RAW.glob("*_zm.nc")):
+        c = W.prepare_member(f)
+        if c is None:
+            continue
+        Ni.append(W.C6.anom(c["am"], c["on"], c["cl"], T_WIN))
+    Ni = np.concatenate(Ni); Ni = Ni[np.isfinite(Ni)]
+    p2 = {}
+    for q in QS:
+        thr = float(np.quantile(Y[ok], q))
+        p2[str(q)] = round(float(np.mean(_norm.cdf((thr - a_ - b * Ni) / se))), 4)
+    r3["R5_second_predictor"] = {"era5_free_regression": {"slope_K_per_sd": round(float(b), 4), "intercept": round(float(a_), 4),
+                                                         "resid_sd": round(se, 4), "n_free": int(ok.sum())},
+                                 "cmip6_n_events": int(len(Ni)), "cmip6_mean_nam_days8_24": round(float(Ni.mean()), 4),
+                                 "p_rule2": p2,
+                                 "verification": obs_verify(ta, v1_ev, cat, (1959, 2022), T_WIN, p2, rng, "R5")}
+    # R6 out of sample 1940-1958 (needs the ERA5 wind series)
+    if not (ING / "era5_u10_60N_daily_cds.parquet").exists():
+        r3["R6_out_of_sample_1940_1958"] = {"status": "pending: ERA5 u(10 hPa) series not yet retrieved"}
+        res["revision3"] = r3
+        (RESULTS / "shift_rule_forecast.json").write_text(json.dumps(res, indent=2), encoding="utf8", newline="\n")
+        print(json.dumps({k: v for k, v in r3.items() if k != "snapsi_days8_24"}, default=str)[:8000])
+        print("Saved -> shift_rule_forecast.json (revision3, R6 pending)")
+        return
+    u, on = detect_era5()
+    early_on = on[(on >= EARLY[0]) & (on <= EARLY[1])]
+    cat_match = {str(o.date()): (int(np.min(np.abs((on - o).days))) if len(on) else None) for o in cat}
+    r6 = {"era5_onsets_1940_1958": [str(o.date()) for o in early_on],
+          "detector_vs_catalogue": {"n_catalogue": int(len(cat)),
+                                    "matched_within_3d": int(sum(v is not None and v <= 3 for v in cat_match.values())),
+                                    "era5_onsets_1958_2024_not_in_catalogue": [str(o.date()) for o in on
+                                        if pd.Timestamp("1958-01-01") <= o <= pd.Timestamp("2024-04-30")
+                                        and np.min(np.abs((cat - o).days)) > 3]}}
+    ea = ING / "era5_t2m_regions_daily_arco_early.parquet"
+    te = t_anom_region(ea, REG, base=(1941, 1958))
+    early_free_on = on[on <= pd.Timestamp("1959-06-01")]
+    pr = {str(q): sp["p"][REG][str(q)]["p"] for q in QS}
+    r6["primary"] = obs_verify(te, list(early_on), early_free_on, (1941, 1958), T_WIN, pr, rng, "R6")
+    r6["from_1946"] = obs_verify(te, [o for o in early_on if o >= pd.Timestamp("1946-01-01")], early_free_on,
+                                 (1941, 1958), T_WIN, pr, rng, "R6-1946")
+    # pooled with V1 (counts and binomial under the rule / climatology)
+    r6["pooled_with_V1"] = {}
+    for q in QS:
+        a1, b1 = res["verification"]["V1"][str(q)], r6["primary"][str(q)]
+        k, n = a1["count"] + b1["count"], a1["n"] + b1["n"]
+        r6["pooled_with_V1"][str(q)] = {"count": k, "n": n, "f": round(k / n, 4), "f_wilson95": wilson(k, n),
+                                        "binom_p_under_rule": round(float(stats.binomtest(k, n, pr[str(q)]).pvalue), 4),
+                                        "binom_p_under_climatology": round(float(stats.binomtest(k, n, q).pvalue), 4)}
+    # secondary: negative polar-cap NAM proxy days 8-52
+    pe = pd.read_parquet(ING / "era5_psl_cap_00utc_arco_early.parquet")
+    ps = pd.Series(pe["psl_cap_N"].values, index=pd.to_datetime(pe["time"]).dt.floor("D"))
+    b_ = ps[(ps.index.year >= 1941) & (ps.index.year <= 1958)]
+    dclim = b_.groupby(b_.index.dayofyear).mean().reindex(range(1, 367))
+    dclim = pd.concat([dclim.iloc[-15:], dclim, dclim.iloc[:15]]).rolling(31, center=True, min_periods=15).mean().iloc[15:-15]
+    dclim.index = range(1, 367)
+    pan = ps - dclim.reindex(ps.index.dayofyear).values          # > 0 = negative NAM
+    yv = np.array([window(pan, o, AO_WIN) for o in early_on]); okk = np.isfinite(yv)
+    fdays = [d for d in pd.date_range("1941-01-01", "1958-12-31")
+             if d.month in (11, 12, 1, 2, 3) and np.all(np.abs((early_free_on - d).days) > ZONE_SEP)]
+    fr = np.array([window(pan, d, AO_WIN) for d in fdays]); fr = fr[np.isfinite(fr)]
+    base = float(np.mean(fr > 0))
+    r6["secondary_negative_nam"] = verify([o for o, k in zip(early_on, okk) if k], yv[okk] > 0,
+                                          res["model_p_negative_am_cmip6"]["p_negative"], base, rng, "R6-NAM")
+    r6["secondary_negative_nam"].pop("rev_curve"); r6["secondary_negative_nam"]["climatological_base_rate"] = round(base, 4)
+    r3["R6_out_of_sample_1940_1958"] = r6
+    res["revision3"] = r3
+    (RESULTS / "shift_rule_forecast.json").write_text(json.dumps(res, indent=2), encoding="utf8", newline="\n")
+    print(json.dumps({k: v for k, v in r3.items() if k != "snapsi_days8_24"}, default=str)[:6000])
+    print("Saved -> shift_rule_forecast.json (revision3)")
+
+
 if __name__ == "__main__":
-    main()
+    if "--revision3" in sys.argv:
+        revision3()
+    else:
+        main()
