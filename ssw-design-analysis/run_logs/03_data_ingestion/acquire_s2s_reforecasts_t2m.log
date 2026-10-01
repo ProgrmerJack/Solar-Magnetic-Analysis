@@ -126,3 +126,99 @@ Retrying in 120 seconds
   cptec 11 starts: 2023-01-04_h12-01 .. 2023-01-04_h12-31 fetched
 packed done; 0 packs failed
 exit=0 secs=13384
+=== Wed Sep 30 04:09:05 PM +05 2026 packed t2m ecmwf2025 cma2025
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+18 packed requests for ['ecmwf2025', 'cma2025']
+  ecmwf2025 6 starts: 2025-01-01_h01-01 .. 2025-01-11_h01-11 fetched
+  ecmwf2025 4 starts: 2025-01-25_h01-25 .. 2025-01-31_h01-31 fetched
+  ecmwf2025 6 starts: 2025-02-01_h02-01 .. 2025-02-11_h02-11 fetched
+  ecmwf2025 6 starts: 2025-01-13_h01-13 .. 2025-01-23_h01-23 fetched
+  ecmwf2025 6 starts: 2025-02-13_h02-13 .. 2025-02-23_h02-23 fetched
+  ecmwf2025 2 starts: 2025-02-25_h02-25 .. 2025-02-27_h02-27 fetched
+  ecmwf2025 6 starts: 2025-03-01_h03-01 .. 2025-03-11_h03-11 fetched
+  ecmwf2025 6 starts: 2025-03-13_h03-13 .. 2025-03-23_h03-23 fetched
+Recovering from connection error [HTTPSConnectionPool(host='ecds.ecmwf.int', port=443): Read timed out. (read timeout=60)], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from connection error [HTTPSConnectionPool(host='ecds.ecmwf.int', port=443): Read timed out. (read timeout=60)], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from connection error [HTTPSConnectionPool(host='ecds.ecmwf.int', port=443): Read timed out. (read timeout=60)], attempt 1 of 500
+Retrying in 120 seconds
+  ecmwf2025 4 starts: 2025-03-25_h03-25 .. 2025-03-31_h03-31 fetched
+  ecmwf2025 6 starts: 2025-12-01_h12-01 .. 2025-12-11_h12-11 fetched
+  ecmwf2025 4 starts: 2025-12-25_h12-25 .. 2025-12-31_h12-31 fetched
+Recovering from connection error [HTTPSConnectionPool(host='ecds.ecmwf.int', port=443): Read timed out. (read timeout=60)], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from connection error [HTTPSConnectionPool(host='ecds.ecmwf.int', port=443): Read timed out. (read timeout=60)], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from connection error [HTTPSConnectionPool(host='ecds.ecmwf.int', port=443): Read timed out. (read timeout=60)], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from connection error [HTTPSConnectionPool(host='ecds.ecmwf.int', port=443): Read timed out. (read timeout=60)], attempt 1 of 500
+Retrying in 120 seconds
+  cma2025 3 starts: 2025-01-23_h01-23 .. 2025-01-30_h01-30 fetched
+  cma2025 6 starts: 2025-01-02_h01-02 .. 2025-01-20_h01-20 fetched
+  cma2025 2 starts: 2025-02-24_h02-24 .. 2025-02-27_h02-27 fetched
+  cma2025 6 starts: 2025-02-03_h02-03 .. 2025-02-20_h02-20 fetched
+  ecmwf2025 6 starts: 2025-12-13_h12-13 .. 2025-12-23_h12-23 fetched
+  cma2025 6 starts: 2025-03-03_h03-03 .. 2025-03-20_h03-20 fetched
+  cma2025 3 starts: 2025-03-24_h03-24 .. 2025-03-31_h03-31 fetched
+packed done; 0 packs failed
+packed exit=0
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+327,360 rows, 1240 starts -> s2s_ecmwf2025_t2m_regions.parquet
+ecmwf2025 assemble exit=0
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+37,440 rows, 390 starts -> s2s_cma2025_t2m_regions.parquet
+cma2025 assemble exit=0

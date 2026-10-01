@@ -1,0 +1,230 @@
+=== Wed Sep 30 11:51:52 PM +05 2026 2026 retrievals
+real-time ecmwf msl: 8 starts, 101 members -> s2s_rt_ecmwf_psl_cap.parquet
+real-time eccc msl: 3 starts, 21 members -> s2s_rt_eccc_psl_cap.parquet
+real-time hmcr FAILED: ECDS real-time hmcr 2026-3: failed
+real-time kma msl: 8 starts, 8 members -> s2s_rt_kma_psl_cap.parquet
+real-time ncep msl: 8 starts, 16 members -> s2s_rt_ncep_psl_cap.parquet
+real-time cma msl: 3 starts, 4 members -> s2s_rt_cma_psl_cap.parquet
+real-time cnrm FAILED: ECDS real-time cnrm 2026-3: failed
+real-time jma msl: 8 starts, 5 members -> s2s_rt_jma_psl_cap.parquet
+real-time cnr_isac FAILED: ECDS real-time cnr_isac 2026-3: failed
+rt msl exit=1
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from connection error [HTTPSConnectionPool(host='ecds.ecmwf.int', port=443): Read timed out. (read timeout=60)], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+12 packed requests for ['ecmwf2026', 'eccc2026', 'hmcr2026']
+  ecmwf2026 2 starts: 2026-02-25_h02-25 .. 2026-02-27_h02-27 fetched
+  ecmwf2026 6 starts: 2026-03-01_h03-01 .. 2026-03-11_h03-11 fetched
+  ecmwf2026 6 starts: 2026-02-13_h02-13 .. 2026-02-23_h02-23 fetched
+  real-time hmcr 2026-03: failed (no starts that month?); skipped
+real-time hmcr msl: 1 starts, 41 members -> s2s_rt_hmcr_psl_cap.parquet
+Recovering from HTTP error [500 Internal Server Error], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [500 Internal Server Error], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from connection error [('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from connection error [('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))], attempt 1 of 500
+Retrying in 120 seconds
+  ecmwf2026 6 starts: 2026-02-01_h02-01 .. 2026-02-11_h02-11 fetched
+  real-time cnrm 2026-03: failed (no starts that month?); skipped
+real-time cnrm msl: 1 starts, 25 members -> s2s_rt_cnrm_psl_cap.parquet
+  ecmwf2026 6 starts: 2026-03-13_h03-13 .. 2026-03-23_h03-23 fetched
+  ecmwf2026 4 starts: 2026-03-25_h03-25 .. 2026-03-31_h03-31 fetched
+  eccc2026 6 starts: 2026-02-02_h02-02 .. 2026-02-19_h02-19 fetched
+  eccc2026 2 starts: 2026-02-23_h02-23 .. 2026-02-26_h02-26 fetched
+  eccc2026 3 starts: 2026-03-23_h03-23 .. 2026-03-30_h03-30 fetched
+  real-time cnr_isac 2026-03: failed (no starts that month?); skipped
+real-time cnr_isac msl: 1 starts, 41 members -> s2s_rt_cnr_isac_psl_cap.parquet
+rt msl retry exit=0
+  eccc2026 6 starts: 2026-03-02_h03-02 .. 2026-03-19_h03-19 fetched
+  hmcr2026 4 starts: 2026-02-05_h02-05 .. 2026-02-26_h02-26 fetched
+  hmcr2026 4 starts: 2026-03-05_h03-05 .. 2026-03-26_h03-26 fetched
+packed done; 0 packs failed
+rf msl packed exit=0
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+ecmwf2026: 30 requests; hindcast years 2006-2025
+  2026-02-07_h02-07 cached
+  2026-02-13_h02-13 cached
+  2026-02-01_h02-01 cached
+  2026-03-01_h03-01 cached
+  2026-02-27_h02-27 cached
+  2026-02-23_h02-23 cached
+  2026-03-05_h03-05 cached
+  2026-02-11_h02-11 cached
+  2026-02-03_h02-03 cached
+  2026-02-19_h02-19 cached
+  2026-02-15_h02-15 cached
+  2026-02-09_h02-09 cached
+  2026-02-21_h02-21 cached
+  2026-02-25_h02-25 cached
+  2026-02-05_h02-05 cached
+  2026-02-17_h02-17 cached
+  2026-03-13_h03-13 cached
+  2026-03-03_h03-03 cached
+  2026-03-17_h03-17 cached
+  2026-03-21_h03-21 cached
+  2026-03-23_h03-23 cached
+  2026-03-11_h03-11 cached
+  2026-03-27_h03-27 cached
+  2026-03-29_h03-29 cached
+  2026-03-31_h03-31 cached
+  2026-03-09_h03-09 cached
+  2026-03-07_h03-07 cached
+  2026-03-15_h03-15 cached
+  2026-03-19_h03-19 cached
+  2026-03-25_h03-25 cached
+
+165,000 rows, 600 starts (2006-02-01 .. 2025-03-31), members [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Saved -> s2s_ecmwf2026_psl_cap.parquet
+ecmwf2026 msl assemble exit=0
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+eccc2026: 17 requests; hindcast years 2001-2020
+  2026-03-12_h03-12 cached
+  2026-02-02_h02-02 cached
+  2026-03-16_h03-16 cached
+  2026-03-05_h03-05 cached
+  2026-02-23_h02-23 cached
+  2026-03-02_h03-02 cached
+  2026-02-19_h02-19 cached
+  2026-02-26_h02-26 cached
+  2026-02-05_h02-05 cached
+  2026-02-09_h02-09 cached
+  2026-02-16_h02-16 cached
+  2026-03-09_h03-09 cached
+  2026-03-23_h03-23 cached
+  2026-03-19_h03-19 cached
+  2026-03-26_h03-26 cached
+  2026-02-12_h02-12 cached
+  2026-03-30_h03-30 cached
+
+34,000 rows, 340 starts (2001-02-02 .. 2020-03-30), members [0, 1, 2, 3]
+Saved -> s2s_eccc2026_psl_cap.parquet
+eccc2026 msl assemble exit=0
+hmcr2026: 8 requests; hindcast years 1991-2020
+  2026-03-12_h03-12 cached
+  2026-02-12_h02-12 cached
+  2026-02-19_h02-19 cached
+  2026-02-26_h02-26 cached
+  2026-02-05_h02-05 cached
+  2026-03-26_h03-26 cached
+  2026-03-19_h03-19 cached
+  2026-03-05_h03-05 cached
+
+66,000 rows, 240 starts (1991-02-05 .. 2020-03-26), members [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Saved -> s2s_hmcr2026_psl_cap.parquet
+hmcr2026 msl assemble exit=0
+real-time ecmwf t2m: 8 starts, 101 members -> s2s_rt_ecmwf_t2m_regions.parquet
+real-time eccc t2m: 3 starts, 21 members -> s2s_rt_eccc_t2m_regions.parquet
+  real-time hmcr 2026-03: failed (no starts that month?); skipped
+real-time hmcr t2m: 1 starts, 41 members -> s2s_rt_hmcr_t2m_regions.parquet
+real-time kma t2m: 8 starts, 8 members -> s2s_rt_kma_t2m_regions.parquet
+real-time ncep t2m: 8 starts, 16 members -> s2s_rt_ncep_t2m_regions.parquet
+real-time cma t2m: 3 starts, 4 members -> s2s_rt_cma_t2m_regions.parquet
+  real-time cnrm 2026-03: failed (no starts that month?); skipped
+real-time cnrm t2m: 1 starts, 25 members -> s2s_rt_cnrm_t2m_regions.parquet
+real-time jma t2m: 8 starts, 5 members -> s2s_rt_jma_t2m_regions.parquet
+  real-time cnr_isac 2026-03: failed (no starts that month?); skipped
+real-time cnr_isac t2m: 1 starts, 41 members -> s2s_rt_cnr_isac_t2m_regions.parquet
+rt t2m exit=0
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+12 packed requests for ['ecmwf2026', 'eccc2026', 'hmcr2026']
+  ecmwf2026 6 starts: 2026-03-01_h03-01 .. 2026-03-11_h03-11 fetched
+  ecmwf2026 2 starts: 2026-02-25_h02-25 .. 2026-02-27_h02-27 fetched
+  ecmwf2026 6 starts: 2026-02-13_h02-13 .. 2026-02-23_h02-23 fetched
+  ecmwf2026 6 starts: 2026-02-01_h02-01 .. 2026-02-11_h02-11 fetched
+  ecmwf2026 6 starts: 2026-03-13_h03-13 .. 2026-03-23_h03-23 fetched
+  ecmwf2026 4 starts: 2026-03-25_h03-25 .. 2026-03-31_h03-31 fetched
+  eccc2026 6 starts: 2026-02-02_h02-02 .. 2026-02-19_h02-19 fetched
+  eccc2026 2 starts: 2026-02-23_h02-23 .. 2026-02-26_h02-26 fetched
+  eccc2026 6 starts: 2026-03-02_h03-02 .. 2026-03-19_h03-19 fetched
+  eccc2026 3 starts: 2026-03-23_h03-23 .. 2026-03-30_h03-30 fetched
+  hmcr2026 4 starts: 2026-02-05_h02-05 .. 2026-02-26_h02-26 fetched
+  hmcr2026 4 starts: 2026-03-05_h03-05 .. 2026-03-26_h03-26 fetched
+packed done; 0 packs failed
+rf t2m packed exit=0
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+158,400 rows, 600 starts -> s2s_ecmwf2026_t2m_regions.parquet
+ecmwf2026 t2m assemble exit=0
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+32,640 rows, 340 starts -> s2s_eccc2026_t2m_regions.parquet
+eccc2026 t2m assemble exit=0
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+63,360 rows, 240 starts -> s2s_hmcr2026_t2m_regions.parquet
+hmcr2026 t2m assemble exit=0
+=== 2026 done Thu Oct  1 10:13:49 AM +05 2026

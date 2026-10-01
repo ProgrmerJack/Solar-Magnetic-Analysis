@@ -63,6 +63,19 @@ READING (fixed now)
   This is a mechanism check, not a forecast: the dose is observed after onset and
   overlaps the outcome window, on the SSWs and on the ordinary days alike.
 
+POST-HOC POWER CHECK (--power; added 2026-10-01 AFTER the result above was seen,
+labelled post hoc in the JSON). The registered controls draw outcomes as noise
+around the calendar mean, with no relation to the dose; with the dose among the
+predictors their G is not comparable to the real pseudo-onset G (both control
+rates came out 1.0), so they do not measure power here. Instead: synthetic outcomes
+= the in-sample ridge mean of the real SSW responses on the same predictors and
+calendar + Gaussian noise with the residual s.d.; negative, nothing else;
+positive, regimes planted exactly as in the registered control (two thirds / one
+third, means 1 residual s.d. apart, membership logistic in the first predictor).
+Power = share of positive datasets whose G exceeds the 95th percentile of the
+negative datasets' G (100 each). Written into the existing JSON under
+"posthoc_power"; registered numbers untouched.
+
 Output: results/current/6_predictability/response_shape_dose.json
 """
 import json
@@ -223,9 +236,76 @@ def main():
     res["reading"] = ("accounted for by the dose" if (s1["p_pseudo_ge_ssw"] > 0.05 and half) else
                       "shape beyond the dose remains" if s1["p_pseudo_ge_ssw"] <= 0.05 else "inconclusive")
     print("READING:", res["reading"], flush=True)
-    (RESULTS / f"{NAME}.json").write_text(json.dumps(res, indent=2), encoding="utf8", newline="\n")
+    (RESULTS / "response_shape_dose.json").write_text(json.dumps(res, indent=2), encoding="utf8", newline="\n")
     print(f"Saved -> {NAME}.json")
 
 
+_P = {}
+
+
+def _power_task(args):
+    j, planted = args
+    Z, cal, g, mdl, mu, sd = _P["d"]
+    rng = np.random.default_rng(zlib.crc32(f"{NAME}|power|{planted}|{j}".encode()))
+    y = mu + rng.normal(0, sd, len(mu))
+    if planted:
+        z1 = (Z[:, 0] - Z[:, 0].mean()) / Z[:, 0].std()
+        lo, hi = -10.0, 10.0
+        for _ in range(60):
+            c = 0.5 * (lo + hi)
+            lo, hi = (c, hi) if np.mean(1 / (1 + np.exp(-(c + z1)))) < 2 / 3 else (lo, c)
+        k = rng.uniform(size=len(y)) < 1 / (1 + np.exp(-(c + z1)))
+        y = y + np.where(k, -1.0 / 3, 2.0 / 3) * sd
+    S, _ = CMC.evaluate(Z, cal, y, g, mdl, zlib.crc32(f"{NAME}|power-eval|{planted}|{j}".encode()) % (2 ** 31))
+    return CMC.summary(S)["crps"]["G_M1_minus_M2"]
+
+
+def power():
+    from sklearn.linear_model import RidgeCV
+    from sklearn.pipeline import make_pipeline
+    from sklearn.preprocessing import StandardScaler
+    out_p = RESULTS / "response_shape_dose.json"
+    res = json.loads(out_p.read_text())
+    files = sorted(W.RAW.glob("*_zm.nc"))
+    Xs, ys, gs, cols = [], [], [], None
+    for f in files:
+        c = W.prepare_member(f)
+        if c is None:
+            continue
+        F = W.H.features_for(c["u"], c["plev"], c["lat"], c["idx"], c["on"])
+        Xs.append(F.values); ys.append(W.C6.anom(c["am"], c["on"], c["cl"], W.OUT_WIN))
+        gs.append(np.full(len(ys[-1]), f.stem)); cols = list(F.columns)
+    X = np.concatenate(Xs); y = np.concatenate(ys); g = np.concatenate(gs)
+    mdl = np.array([s_.split("_")[0] for s_ in g])
+    cal_ci = [cols.index("doy_sin"), cols.index("doy_cos")]
+    ci = [cols.index(c) for c in W.P.tier_cols(cols, FV.TIERS[CMC.TIER])] + [cols.index(c) for c in DOSE]
+    Z = FV.std_within(X[:, ci], g)
+    ok = np.isfinite(y) & np.isfinite(Z).all(1) & np.isfinite(X[:, cal_ci]).all(1)
+    Z, cal, y, g, mdl = Z[ok], X[ok][:, cal_ci], y[ok], g[ok], mdl[ok]
+    XA = np.column_stack([Z, cal])
+    m = make_pipeline(StandardScaler(), RidgeCV(alphas=np.logspace(-2, 4, 25))).fit(XA, y)
+    mu = m.predict(XA); sd = float(np.std(y - mu, ddof=1))
+    _P["d"] = (Z, cal, g, mdl, mu, sd)
+    with ProcessPoolExecutor(CMC.WORKERS, mp_context=mp.get_context("fork")) as ex:
+        G = list(ex.map(_power_task, [(j, p) for p in (1, 0) for j in range(CMC.N_CONTROL)]))
+    pos, neg = np.array(G[:CMC.N_CONTROL]), np.array(G[CMC.N_CONTROL:])
+    q95 = float(np.percentile(neg, 95))
+    real = res["S1_P2_plus_dose"]["crps"]["G_ssw"]
+    res["posthoc_power"] = {
+        "label": "post hoc, added after the S1 result was seen",
+        "residual_sd": round(sd, 4), "in_sample_r2": round(float(1 - np.var(y - mu) / np.var(y)), 4),
+        "G_negative_mean": round(float(neg.mean()), 5), "G_negative_q95": round(q95, 5),
+        "G_positive_mean": round(float(pos.mean()), 5),
+        "power_planted_1sd_regimes": round(float(np.mean(pos > q95)), 3),
+        "real_G_ssw": real, "real_G_percentile_in_negative": round(float(np.mean(neg <= real)), 3)}
+    pw = res["posthoc_power"]["power_planted_1sd_regimes"]
+    res["verdict"] = (f"INCONCLUSIVE: the registered criterion is met but the test is underpowered "
+                      f"(post-hoc power {pw} against planted regimes, below the registered 0.2)") if pw < 0.2 else \
+        f"registered reading stands (post-hoc power {pw})"
+    res = {"verdict": res.pop("verdict"), **res}    # first, so the catalogue shows it
+    print("POWER", res["posthoc_power"], res["verdict"], flush=True)
+    out_p.write_text(json.dumps(res, indent=2), encoding="utf8", newline="\n")
+
+
 if __name__ == "__main__":
-    main()
+    power() if "--power" in sys.argv else main()

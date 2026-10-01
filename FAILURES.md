@@ -227,3 +227,13 @@ Rule: at small n do not cite a non-rejecting KS as support for a distributional 
 Tried: testing whether SSW downward rates match event-free dates displaced by the SSWs' measured shift, with the spread of shifted sets as reference (criterion_sweep S1/S2 as registered; the Fig. 1b interval).
 Failed: the events match the null's mean by construction while each reference set does not, so z is compressed (s.d. ~0.65) and the test never rejected in 200 null simulations. Found by code review.
 Rule: calibrate by replaying the whole procedure (shift re-estimated) on sets that play the events; report power against a planted alternative.
+
+## 2026-09-30 — A 17-event operational rank deficit did not generalise
+Tried: treating the 1998-2021 post-SSW rank deficit (17 events, p 0.005) as a property of operational forecast systems.
+Failed: three held-out SSWs (2023-24) went the other way (rank 0.72); diagnosis: ranks follow the realised outcome sign, 1998-2021 happened to be 76% downward, forecast errors are shared within winters (effective n ~ winters); model versions were not the cause.
+Rule: event-based verification claims need out-of-sample events and an effective-sample-size estimate before being stated as system properties; report the winner's-curse shrinkage.
+
+## 2026-10-01 — Noise-only synthetic controls are invalid once predictors carry real signal
+Tried: reusing class_model_comparison's positive/negative controls (outcome = calendar mean + noise, regimes planted or not) for the same test with the post-onset 100 hPa dose added as predictor (response_shape_dose S1).
+Failed: real outcomes depend strongly on the dose, synthetic ones not at all, so synthetic G sat far above the real event-free reference: positive AND negative control rates both 1.0, measuring nothing.
+Rule: build controls from the real predictor-outcome relation (fitted mean + residual noise) and compare positive with negative synthetic sets, not with the real reference.

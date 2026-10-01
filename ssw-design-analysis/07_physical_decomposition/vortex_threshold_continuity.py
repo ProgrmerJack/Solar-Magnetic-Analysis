@@ -232,9 +232,14 @@ def observations(rng):
     u = u[u.index <= END]
     E = episodes(u)
     E = E[E["winter"] <= 2025].reset_index(drop=True)
-    ao = pd.read_csv(AO, sep=r"\s+", header=None, names=["y", "m", "d", "ao"])
-    ao = pd.Series(ao["ao"].values, index=pd.to_datetime(ao[["y", "m", "d"]].rename(
-        columns={"y": "year", "m": "month", "d": "day"})))
+    # fixed-width CPC file; one line (2003-04-30) fuses the day with the missing
+    # code ("30-99.000"), so parse by regular expression and treat -99 as missing
+    import re
+    recs = [re.match(r"\s*(\d{4})\s+(\d+)\s+(\d+)\s*(-?\d+\.\d+)", ln) for ln in AO.read_text().splitlines()]
+    recs = [m.groups() for m in recs if m]
+    ao = pd.Series([float(v) for *_, v in recs],
+                   index=pd.to_datetime([f"{y}-{m}-{d}" for y, m, d, _ in recs]))
+    ao = ao.where(ao > -90)
     nam = pd.read_parquet(NAM)["nam_1000"]
     t2 = pd.read_parquet(T2M).set_index("date")["NEURASIA"]
     t2.index = pd.to_datetime(t2.index)
@@ -282,6 +287,12 @@ def main():
     res["units"] = {"n": int(len(E)), "below_0": int((E.X < 0).sum()), "above_0": int((E.X >= 0).sum()),
                     "years": [int(E.winter.min()), int(E.winter.max())]}
     print("units", res["units"], flush=True)
+    # per-unit values, for the figure (09_figures reads, never computes)
+    res["unit_table"] = [{"date": str(pd.Timestamp(r.date).date()), "winter": int(r.winter),
+                          "X": round(float(r.X), 3),
+                          **{k: (None if not np.isfinite(getattr(r, k)) else round(float(getattr(r, k)), 4))
+                             for k in ("Y1_AO", "Y2_NAM1000", "Y3_T_NEURASIA", "Y4_downward")}}
+                         for r in E.itertuples()]
     ys = ["Y1_AO", "Y2_NAM1000", "Y3_T_NEURASIA", "Y4_downward"]
     res["observations"] = {}
     for y in ys:

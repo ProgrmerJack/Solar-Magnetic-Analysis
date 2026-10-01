@@ -1052,6 +1052,112 @@ and weakly coupled; March 2024 was mildly downward); with 3
 events power is low, but the direction is the opposite, so the operational claim
 must be stated as holding for 1998–2021 and weakened overall.
 
+**T-f diagnosis (`s2s_heldout_diagnosis.py`; EXPLORATORY, POST HOC, requested
+2026-09-30).** D1 no defect: the held-out code path reproduces CNRM's P' rank
+exactly (0.4271). **D2 not the model versions: the 2025 versions also under-forecast
+the 1998–2021 events** — ECMWF 2025 0.416 vs null 0.526 (10 events, p 0.08; ECMWF
+2022 on the same events 0.397); CMA 2025 0.24 vs 0.54 (5 events, p 0.002); the
+four 2025–26 versions already in P' (ECCC, HMCR, KMA, CNRM) were all below their
+null. D2b paired: ECMWF CY49R1 minus CY47R3 on the same 10 events +0.019 [−0.055,
++0.076]. "Model year" is the archive's production label: ECMWF changed cycle
+(CY47R3 → CY49R1), CMA's configuration matches the same BCC-CPS-S2Sv2 in both sets
+(research notes, model_versions.md; version date not retained in our files). **D4 the rank follows the realised outcome:** events with negative-NAM
+outcomes average rank 0.31 (n 14), positive 0.75 (n 6), in both periods; 76% of the
+1998–2021 outcomes were negative, 1 of 3 held-out; three events drawn from the
+earlier 17 average ≥ 0.72 with probability 0.007 (the earlier sample was
+outcome-lucky relative to later events). **D5 all three held-out events lie inside
+the 95% prediction interval of the 1998–2021 relation** between observed and
+ensemble-mean response (slope 0.38 [−0.57, 1.49]; residual s.d. 395 Pa). **D3 winter
+effect:** ranks on ordinary dates move together across systems from winter to winter
+(~0.2 in 2013 to ~0.7; winter-mean correlations between systems 0.55–0.87);
+2022/23 was low (0.25–0.54) and 2023/24 high on only 14 ordinary dates, so a
+2023/24 winter-level error is not established. D4b: given the outcome sign the
+periods agree — upward outcomes rank 0.76 (4 events, 1998–2021) and 0.75 (2 held
+out); downward 0.29 (13) and 0.64 (1). **D6 (added
+after D1–D5):** the forecasts gave the held-out negative outcomes 0.64, 0.55, 0.85;
+only the third (March 2024) was negative; the three signs are 3.8 times
+likelier under the forecasts as issued than under the 1998–2021 bias (logit shift
++1.02) — moderate evidence that the earlier bias was overestimated. Reading: the
+failure is chiefly outcome sampling (a different mix of upward and downward
+outcomes), not a model change; the under-forecast claim must be reported as uncertain in size and
+persistence. ED Fig. 5.
+
+**T-g — the 4 March 2026 SSW (`s2s_heldout2026_test.py`; registered `a511fbc`, AO disclosure `a04a4a8`).** Real-time ECDS forecasts, starts 23 Feb–2 Mar with a same-month-day reforecast: ECMWF 4 starts × 101 members, ECCC 3 × 21, HMCR 1 × 41, KMA 2 × 8, NCEP 3 × 16 (primary); JMA 1 × 5 (secondary); CMA, CNRM, CNR-ISAC have no matching reforecast month-day and are not used. Observed outcome upward: polar-cap A_obs +156 Pa (positive NAM), N-Eurasia +3.0 K against the ECMWF hindcast mean. **Primary polar cap: mean rank 0.67 vs null 0.61 [0.28, 0.93], p 0.60 — above the null mean: by the registered reading not consistent with the 1998–2021 under-forecast; one event, reported as one more event.** Per system 0.62/0.66/0.32/0.78/0.95. With JMA 0.65, p 0.60. **Four held-out events pooled: 0.70 vs 0.55 [0.35, 0.75], p 0.93** (2023 0.68, Jan 2024 0.83, Mar 2024 0.64, 2026 0.67). **Secondary N-Eurasian temperature: 0.93 vs 0.56 [0.15, 0.91], p 0.98** (every system 0.89–0.98: much warmer than forecast); with JMA 0.93, p 0.98; four events pooled 0.66 vs 0.53, p 0.86. Reading: like the 2023–24 events, an upward outcome with a high rank (D4: upward outcomes ranked 0.76 in 1998–2021 too); the operational under-forecast is a 1998–2021 property not seen in any of four later events.
+
+### U — the SSW itself is a threshold on a continuum (`vortex_threshold_continuity.py`, 5_mechanism; registered `2a0c40b` before any outcome was related to the wind)
+
+Units: 114 NCEP vortex-weakening episodes 1958–2025 (42 reversals; rule reproduces all
+39 NCEP compendium onsets), running variable = minimum u(10 hPa, 60N), cutoff 0.
+**Dose (primary for size): the surface response scales smoothly with how far the
+wind falls** — per 10 m/s weaker minimum: AO −0.36 [−0.51, −0.21] (sign: slope +0.36
+in X), NAM1000 0.22 [0.15, 0.30], N-Eurasian T 0.36 K [0.07, 0.66] colder, and the
+probability of a "downward" outcome +0.076 [0.009, 0.142] higher. **Global jump at
+reversal (continuity): none** — AO −0.28 [−0.99, +0.47] (90%: [−0.87, +0.35]), NAM1000
+−0.18 [−0.55, +0.18], T +0.09 [−1.87, +2.01], downward label +0.12 [−0.21, +0.43]; Holm
+1.0 for all. Local-linear RD (rdrobust) and local randomisation at 0 also null
+(AO +0.29 [−0.77, +1.76]; permutation p 0.65/0.62), BUT the local fits are unstable:
+4 of 16 placebo-cutoff tests have p < 0.05 (largest jumps 3–6 units at ±5–10 m/s),
+so by the pre-set falsification rule the LOCAL RD is uninterpretable; conclusions rest
+on the global estimates. Placebo outcome (pre-deceleration AO) and balance (day of
+year, era) pass; deceleration size borderline (p 0.07). **CMIP6 (5,726 episodes, 1,483
+reversals): slope 0.173 [0.159, 0.187] σ per 10 m/s; jump +0.05 [−0.02, +0.13] σ
+(90% upper 0.12)** — the reversal adds at most a small fraction of the SSW effect.
+Calibration: the observational global-jump test rejects 2.5% of 68-winter model blocks
+(no planted jump) and detects a planted −0.8σ jump (the whole-SSW shift) in 78%.
+**Reading: "SSW" is itself a threshold on a continuum of vortex weakenings, as the
+downward label is a threshold on a continuum of outcomes; shown in observations
+without a model, and in CMIP6 with power.**
+
+### V — the shift rule as a forecast (`shift_rule_forecast.py`, 6_predictability; registered `bf453bd`)
+
+Model probabilities only (SNAPSI, 36 pairs): P(N-Eurasian days 8–24 below the no-SSW
+q-quantile) = 0.24 [0.15, 0.37] (q 0.05), 0.32 [0.22, 0.47] (0.10), 0.45 [0.37, 0.57]
+(0.20); CMIP6 P(negative annular mode, days 8–52) 0.74. **Verified untuned on 39
+observed SSWs: 0.21 (8), 0.26 (10), 0.38 (15) — consistent with the rule at every
+threshold (binomial p 0.71, 0.40, 0.42) and rejecting climatology (p 0.0006, 0.004,
+0.008)**; Brier skill vs climatology +0.12, +0.09, +0.11; relative economic value
+at cost/loss = q: 0.75 [0.23, 0.87], 0.68 [0.24, 0.84], 0.60 [0.17, 0.79]. **The value is positive only for cost/loss ratios between q and the observed frequency; between the observed frequency and the rule probability it is negative (the rule slightly over-states the risk, e.g. q 0.10: −0.36 at 0.32); zero elsewhere** (ED Fig. 7b). Do not quote 0.60–0.75 without that range. Risk
+ratios rise with severity as a shift implies (rule ×4.8/3.2/2.3; observed
+×4.1/2.6/1.9). With the 2023–24 events (42): same. Negative AO: rule 0.74, observed
+0.70 (30/43), climatology 0.42; p 0.49 vs rule, 0.0003 vs climatology; BSS +0.26.
+Only the predictor is out of sample (observed frequencies at q 0.10 had been seen).
+**Prospective 2026 (run after T-g): N-Eurasian days 8–24 +4.7 K, not cold at any q** (rule gave 0.24/0.32/0.45, so 'not cold' had probability 0.76/0.68/0.55); one event, uninformative; CPC AO window not complete in the file (ends 31 March 2026). Retrospective V1/V2/AO numbers identical on re-run (parsed comparison).
+
+### W — where the forecasts lose the shift (`s2s_leadlag_test.py`, 6_predictability; registered `4c8b3f2` before any 100 hPa forecast was retrieved)
+
+17 P' events (1998–2021), starts 2–9 d before onset, eight confirmatory systems
+(CNRM excluded: its ECDS "100 hPa" fields are 10.8–11.5 km, not 16 km — deviation
+recorded before the first run), days +8..+25, P' calendar-window null. **L1 the
+lower-stratospheric anomaly is under-forecast: observed 100 hPa polar-cap height
+ranks 0.446 in the ensembles against null 0.595 [0.485, 0.701], p 0.005 (Holm
+0.01).** **L2 given the forecast 100 hPa state the surface is not detectably
+under-forecast: 0.447 vs 0.477 [0.371, 0.586], p 0.30.** L4 (secondary) the 10 hPa
+wind is not under-forecast: 0.505 vs 0.435, p 0.89. ECMWF (discovery, 12 events)
+the same: L1 0.420 vs 0.582 p 0.008; L2 p 0.30; L4 p 0.89. L3 (descriptive) mean
+surface error −131 Pa [−312, +59], of which −67 [−167, +34] through the 100 hPa
+error and −64 [−202, +82] remainder (within-ensemble slope 3.5 Pa/gpm) — roughly
+half, intervals wide. **Reading by the pre-set rule (L1 low, L2 ~ null): the shift
+is lost in the lower stratosphere — a persistence deficit below a correctly forecast
+10 hPa warming (cf. Garfinkel et al. 2025), not a surface-coupling deficit.** Scope:
+the 1998–2021 events, whose surface under-forecast did not replicate in 2023–24
+(T-f); L2 not rejecting is absence of evidence for a coupling deficit, not proof of
+calibration.
+
+### X — the state-dependent shape is a continuous dose (`response_shape_dose.py`, 6_predictability; registered `7d8ed6f`)
+
+S3 fitted M2 (P2, all SSWs): component means −0.66 / −0.16, sd 0.72 / 0.58 — the
+DOWNWARD component is the WIDER one (weight 0.62); one mode at every weight
+(Stephenson et al. 2004: "unimodal but not multinormal" = single regime). S4
+quantile shift SSW minus event-free: −0.40 to −0.63σ across q 0.05–0.95; demeaned,
+lower tail stretched (−0.15σ [−0.18, −0.015] at q 0.05), rest within intervals.
+**S1 (primary) with the realised 100 hPa wind days 0–30 as predictor: G −0.0146
+vs event-free −0.0109 [−0.0160, −0.0062], p 0.92 (ign 0.78); S2 all post-onset
+levels p 0.84. The pre-set rule's criterion "accounted for by the dose" is met,
+BUT the test has NO POWER (below) → reported as INCONCLUSIVE (underpowered).** Continuous-model skill 13.8% after SSWs / 16.1% event-free; M2 10.3% /
+13.2%. S5 the dose itself is unimodal (ΔBIC +25 for two components; fitted
+mixture one mode). Registered controls INVALID here (both rates 1.0: noise
+outcomes lack the dose relation); post-hoc power check (synthetic y = real in-sample ridge mean incl. dose, R² 0.32, + noise s.d. 0.60; planted 2:1 regimes 1σ apart): detection **0.08** vs 0.05 nominal → underpowered by the registered <0.2 rule; real G at the 7th percentile of the no-regime synthetic sets. Do NOT claim the dose explains the shape; claim only unimodality, wider downward component, unimodal dose.
+
 ## 4. Prior art — verified from source, all must be cited
 
 1. **Karpechko et al. (2017)**, QJRMS 143, 1459, doi 10.1002/qj.3017 — the

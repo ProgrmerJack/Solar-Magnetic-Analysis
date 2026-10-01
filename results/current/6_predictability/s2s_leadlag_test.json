@@ -1,0 +1,138 @@
+{
+  "plan_approved": "2026-09-30",
+  "registered_commit": "4c8b3f2",
+  "n_null": 10000,
+  "n_boot": 10000,
+  "seed": 163428476,
+  "window": [
+    8,
+    25
+  ],
+  "systems": [
+    "ecmwf",
+    "eccc",
+    "cma",
+    "hmcr",
+    "kma",
+    "jma",
+    "cnr_isac",
+    "ncep",
+    "cptec"
+  ],
+  "tests": {
+    "confirmatory": {
+      "n_events": 17,
+      "L1_z100_rank": {
+        "mean_rank": 0.4458,
+        "null_mean": 0.5945,
+        "null_q025_q975": [
+          0.4853,
+          0.7009
+        ],
+        "p": 0.005
+      },
+      "L2_conditional_surface_rank": {
+        "mean_rank": 0.4473,
+        "null_mean": 0.4765,
+        "null_q025_q975": [
+          0.3709,
+          0.586
+        ],
+        "p": 0.2999
+      },
+      "L4_u10_rank": {
+        "mean_rank": 0.5045,
+        "null_mean": 0.4354,
+        "null_q025_q975": [
+          0.3252,
+          0.55
+        ],
+        "p": 0.885
+      },
+      "L3_decomposition_Pa": {
+        "surface_error": {
+          "mean": -130.74,
+          "ci95": [
+            -312.39,
+            59.28
+          ]
+        },
+        "via_100hPa": {
+          "mean": -66.8,
+          "ci95": [
+            -167.31,
+            33.69
+          ]
+        },
+        "remainder": {
+          "mean": -63.72,
+          "ci95": [
+            -201.95,
+            81.58
+          ]
+        }
+      },
+      "L3_n_events": 17,
+      "mean_within_ensemble_slope_Pa_per_gpm": 3.4767,
+      "holm_L1_L2": {
+        "L1": 0.01,
+        "L2": 0.2999
+      }
+    },
+    "ecmwf_discovery": {
+      "n_events": 12,
+      "L1_z100_rank": {
+        "mean_rank": 0.4201,
+        "null_mean": 0.5816,
+        "null_q025_q975": [
+          0.4502,
+          0.7107
+        ],
+        "p": 0.008
+      },
+      "L2_conditional_surface_rank": {
+        "mean_rank": 0.4398,
+        "null_mean": 0.4802,
+        "null_q025_q975": [
+          0.3368,
+          0.6227
+        ],
+        "p": 0.3002
+      },
+      "L4_u10_rank": {
+        "mean_rank": 0.5046,
+        "null_mean": 0.4204,
+        "null_q025_q975": [
+          0.2928,
+          0.5591
+        ],
+        "p": 0.8879
+      },
+      "L3_decomposition_Pa": {
+        "surface_error": {
+          "mean": -102.75,
+          "ci95": [
+            -225.93,
+            24.44
+          ]
+        },
+        "via_100hPa": {
+          "mean": -18.11,
+          "ci95": [
+            -133.8,
+            141.04
+          ]
+        },
+        "remainder": {
+          "mean": -84.64,
+          "ci95": [
+            -226.39,
+            54.91
+          ]
+        }
+      },
+      "L3_n_events": 12,
+      "mean_within_ensemble_slope_Pa_per_gpm": 3.9889
+    }
+  }
+}

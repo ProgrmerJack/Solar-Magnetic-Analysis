@@ -1,0 +1,266 @@
+=== Wed Sep 30 06:11:43 PM +05 2026 packed gh100 ecmwf eccc cma hmcr kma cnrm jma cnr_isac ncep cptec
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from connection error [HTTPSConnectionPool(host='ecds.ecmwf.int', port=443): Read timed out. (read timeout=60)], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 2 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+60 packed requests for ['ecmwf', 'eccc', 'cma', 'hmcr', 'kma', 'cnrm', 'jma', 'cnr_isac', 'ncep', 'cptec']
+  ecmwf 6 starts: 2022-01-03 .. 2022-01-20 fetched
+  ecmwf 6 starts: 2022-02-03 .. 2022-02-21 fetched
+  ecmwf 2 starts: 2022-02-24 .. 2022-02-28 fetched
+  ecmwf 3 starts: 2022-01-24 .. 2022-01-31 fetched
+  ecmwf 3 starts: 2022-03-24 .. 2022-03-31 fetched
+  ecmwf 6 starts: 2022-03-03 .. 2022-03-21 fetched
+  eccc 6 starts: 2025-01-02_h01-02 .. 2025-01-20_h01-20 fetched
+  ecmwf 6 starts: 2022-12-01 .. 2022-12-19 fetched
+  ecmwf 3 starts: 2022-12-22 .. 2022-12-29 fetched
+  eccc 3 starts: 2025-01-23_h01-23 .. 2025-01-30_h01-30 fetched
+  eccc 6 starts: 2025-02-03_h02-03 .. 2025-02-20_h02-20 fetched
+=== Wed Sep 30 08:14:51 PM +05 2026 packed gh100 (field-budget packs)
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 2 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from connection error [('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 2 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+34 packed requests for ['ecmwf', 'eccc', 'cma', 'hmcr', 'kma', 'cnrm', 'jma', 'cnr_isac', 'ncep', 'cptec']
+  eccc 9 starts: 2025-12-01_h12-01 .. 2025-12-29_h12-29 fetched
+  cma 9 starts: 2022-01-03_h01-03 .. 2022-01-31_h01-31 fetched
+  eccc 2 starts: 2025-02-24_h02-24 .. 2025-02-27_h02-27 fetched
+  eccc 9 starts: 2025-03-03_h03-03 .. 2025-03-31_h03-31 fetched
+  cma 9 starts: 2022-03-03_h03-03 .. 2022-03-31_h03-31 fetched
+  cma 8 starts: 2022-02-03_h02-03 .. 2022-02-28_h02-28 fetched
+  cma 9 starts: 2022-12-01_h12-01 .. 2022-12-29_h12-29 fetched
+  hmcr 4 starts: 2025-02-06_h02-06 .. 2025-02-27_h02-27 fetched
+  hmcr 4 starts: 2025-03-06_h03-06 .. 2025-03-27_h03-27 fetched
+  hmcr 4 starts: 2025-12-04_h12-04 .. 2025-12-25_h12-25 fetched
+  hmcr 5 starts: 2025-01-02_h01-02 .. 2025-01-30_h01-30 fetched
+  kma 4 starts: 2026-01-01_h01-01 .. 2026-01-25_h01-25 fetched
+  kma 4 starts: 2026-03-01_h03-01 .. 2026-03-25_h03-25 fetched
+  cnrm pack 2025-06-01_h01-01 FAILED: cnrm: gh100 outside 14000-18000
+  kma 4 starts: 2026-02-01_h02-01 .. 2026-02-25_h02-25 fetched
+  cnrm pack 2025-06-01_h02-01 FAILED: cnrm: gh100 outside 14000-18000
+  cnrm pack 2025-06-01_h03-01 FAILED: cnrm: gh100 outside 14000-18000
+  jma 2 starts: 2022-09-30_h01-16 .. 2022-09-30_h01-31 fetched
+  jma 2 starts: 2022-09-30_h02-10 .. 2022-09-30_h02-25 fetched
+  jma 2 starts: 2022-09-30_h12-12 .. 2022-09-30_h12-27 fetched
+  cnrm pack 2025-06-01_h12-01 FAILED: cnrm: gh100 outside 14000-18000
+  jma 2 starts: 2022-09-30_h03-12 .. 2022-09-30_h03-27 fetched
+  cnr_isac 7 starts: 2023-10-16_h01-01 .. 2023-10-16_h01-31 fetched
+  cnr_isac 6 starts: 2023-10-16_h03-02 .. 2023-10-16_h03-27 fetched
+  cnr_isac 5 starts: 2023-10-16_h02-05 .. 2023-10-16_h02-25 fetched
+  cnr_isac 6 starts: 2023-10-16_h12-02 .. 2023-10-16_h12-27 fetched
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+  ncep 11 starts: 2011-03-01_h03-01 .. 2011-03-01_h03-31 fetched
+  ncep 11 starts: 2011-03-01_h12-01 .. 2011-03-01_h12-31 fetched
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+  ncep 10 starts: 2011-03-01_h02-01 .. 2011-03-01_h02-28 fetched
+  cptec 11 starts: 2023-01-04_h01-01 .. 2023-01-04_h01-31 fetched
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+  ncep 11 starts: 2011-03-01_h01-01 .. 2011-03-01_h01-31 fetched
+  cptec 10 starts: 2023-01-04_h02-01 .. 2023-01-04_h02-28 fetched
+  cptec 11 starts: 2023-01-04_h03-01 .. 2023-01-04_h03-31 fetched
+  cptec 11 starts: 2023-01-04_h12-01 .. 2023-01-04_h12-31 fetched
+packed done; 4 packs failed
+packed exit=1
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+261,800 rows, 700 starts -> s2s_ecmf_z100_cap.parquet
+ecmwf assemble exit=0
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+80,800 rows, 700 starts -> s2s_eccc_z100_cap.parquet
+eccc assemble exit=0
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+52,500 rows, 525 starts -> s2s_cma_z100_cap.parquet
+cma assemble exit=0
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+140,250 rows, 510 starts -> s2s_hmcr_z100_cap.parquet
+hmcr assemble exit=0
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+50,400 rows, 288 starts -> s2s_kma_z100_cap.parquet
+kma assemble exit=0
+cnrm gh100: 16 starts not cached; run --packed first
+cnrm assemble exit=1
+30,000 rows, 240 starts -> s2s_jma_z100_cap.parquet
+jma assemble exit=0
+96,000 rows, 480 starts -> s2s_cnr_isac_z100_cap.parquet
+cnr_isac assemble exit=0
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+51,600 rows, 516 starts -> s2s_ncep_z100_cap.parquet
+ncep assemble exit=0
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+33,825 rows, 123 starts -> s2s_cptec_z100_cap.parquet
+cptec assemble exit=0
+=== Thu Oct  1 04:49:22 AM +05 2026 cnrm retry with unit check
+Recovering from HTTP error [502 Bad Gateway], attempt 1 of 500
+Retrying in 120 seconds
+4 packed requests for ['cnrm']
+  cnrm pack 2025-06-01_h02-01 FAILED: cnrm: gh100 outside 14000-18000 (min 10875.4, max 11410.2)
+  cnrm pack 2025-06-01_h12-01 FAILED: cnrm: gh100 outside 14000-18000 (min 10810.1, max 11418.7)
+  cnrm pack 2025-06-01_h03-01 FAILED: cnrm: gh100 outside 14000-18000 (min 10907.9, max 11554.4)
+  cnrm pack 2025-06-01_h01-01 FAILED: cnrm: gh100 outside 14000-18000 (min 10795.6, max 11483.5)
+packed done; 4 packs failed
+cnrm gh100: 16 starts not cached; run --packed first
+cnrm retry assemble exit=1

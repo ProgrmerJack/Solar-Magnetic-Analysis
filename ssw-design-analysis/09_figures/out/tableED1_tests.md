@@ -38,5 +38,18 @@
 | T-d-PH3 | two-regime components after SSWs: mean separation (ordinary days) | descriptive | post hoc | this revision | 0.4937 (0.7142) |  |  |
 | HO1 | held-out 2023-24 SSWs: polar-cap rank deficit | replication (revision 2) | committed before data | 4c8b3f2 | 0.7167 vs 0.532 | 0.9308 |  |
 | HO2 | held-out 2023-24 SSWs: N-Eurasian temperature rank deficit | replication (revision 2) | committed before data | 4c8b3f2 | 0.5704 vs 0.5144 | 0.6383 |  |
-| L1 | 100 hPa polar-cap height rank after SSWs | diagnostic (revision 2) | committed before data | 4c8b3f2 | pending |  |  |
-| L2 | surface rank conditional on forecast 100 hPa anomaly | diagnostic (revision 2) | committed before data | 4c8b3f2 | pending |  |  |
+| HD-2a | ECMWF CY49R1 (model year 2025) on the 1998-2021 SSWs: rank deficit | diagnostic | post hoc (exploratory) | this revision | 0.4162 vs 0.5259 | 0.0813 |  |
+| HD-2b | ECMWF CY49R1 minus CY47R3 rank, same 10 events | diagnostic | post hoc (exploratory) | this revision | 0.019 [-0.055, 0.0762] |  |  |
+| HD-2c | CMA model year 2025 on the 1998-2021 SSWs: rank deficit | diagnostic | post hoc (exploratory) | this revision | 0.24 vs 0.5376 | 0.002 |  |
+| HD-6 | held-out signs: likelihood ratio, forecasts as issued vs 1998-2021 bias | diagnostic | post hoc (exploratory) | this revision | 3.83 |  |  |
+| L1 | 100 hPa polar-cap height rank after SSWs | diagnostic (revision 2) | committed before data | 4c8b3f2 | 0.4458 vs 0.5945 | 0.005 |  |
+| L2 | surface rank conditional on forecast 100 hPa anomaly | diagnostic (revision 2) | committed before data | 4c8b3f2 | 0.4473 vs 0.4765 | 0.2999 |  |
+| HO2026 | held-out 4 March 2026 SSW, real-time forecasts: polar-cap rank deficit | replication (revision 3) | committed before data | a511fbc | 0.6664 vs 0.6057 | 0.598 |  |
+| HO2026-T | held-out 4 March 2026 SSW: N-Eurasian temperature rank deficit | replication (revision 3) | committed before data | a511fbc | 0.9323 vs 0.5644 | 0.9815 |  |
+| HO-4 | four held-out SSWs (2023-2026) pooled: polar-cap rank deficit | replication (revision 3) | committed before data | a511fbc | 0.7041 vs 0.5503 | 0.9268 |  |
+| U-dose | AO days 8-52 per 10 m/s of minimum 10 hPa wind, 114 observed episodes | revision-3 primary | committed before outcomes | 2a0c40b | 0.3582 [0.213, 0.5104] |  |  |
+| U-jump | AO step at wind reversal, 114 observed episodes (Holm over 4 outcomes: 1.0) | revision-3 primary | committed before outcomes | 2a0c40b | -0.2755 [-0.9867, 0.465] | 0.4598 |  |
+| U-cmip6 | CMIP6 step at wind reversal (sigma), 5,726 episodes | revision-3 secondary | committed before outcomes | 2a0c40b | 0.0512 [-0.02, 0.1278] | 0.157 |  |
+| V-0.10 | shift rule (SNAPSI) vs observed cold fortnights below 10th pct., 39 SSWs: binomial under rule | revision-3 primary | committed before run | bf453bd | 10/39 vs p_rule 0.3243 | 0.3986 |  |
+| V-clim | observed cold fortnights below 10th pct. vs climatology | revision-3 primary | committed before run | bf453bd | 10/39 vs 0.10 | 0.0042 |  |
+| S-dose | two regimes vs continuous with the realised 100 hPa dose (G, p vs ordinary days); inconclusive | revision-3 primary | committed before run | 7d8ed6f | G -0.0146 vs -0.01094; power vs planted regimes 0.08 (post hoc): underpowered | 0.92 |  |

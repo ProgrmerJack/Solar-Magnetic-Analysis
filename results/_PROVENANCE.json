@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-30T13:37:19+00:00",
+ "generated": "2026-10-01T10:00:50+00:00",
  "note": "Known-good baseline: each result was produced by the script at the recorded sha256. catalog_repo.py flags STALE when a producer's hash no longer matches. Re-record with --record only AFTER re-running the analysis.",
  "results": {
   "catalogue_sets.json": {
@@ -432,6 +432,16 @@
    "result_sha256_16": "2d4148e81f4124d7",
    "needs_rerun": false
   },
+  "vortex_threshold_continuity.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/vortex_threshold_continuity.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/vortex_threshold_continuity.py": "d1020602d1c67bf8"
+   },
+   "result_sha256_16": "f94ffb643c3bceaf",
+   "needs_rerun": false
+  },
   "class_model_comparison.json": {
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/class_model_comparison.py"
@@ -522,6 +532,16 @@
    "result_sha256_16": "abba7bfed0915433",
    "needs_rerun": false
   },
+  "response_shape_dose.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/response_shape_dose.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/response_shape_dose.py": "4acfd7a1895e89d2"
+   },
+   "result_sha256_16": "e22521e764a51cf6",
+   "needs_rerun": false
+  },
   "s2s_baseline_test.json": {
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/s2s_baseline_test.py"
@@ -542,14 +562,46 @@
    "result_sha256_16": "5b0673656e8b327a",
    "needs_rerun": false
   },
-  "s2s_heldout_test.json": {
+  "s2s_heldout2026_test.json": {
    "producers": [
-    "ssw-design-analysis/07_physical_decomposition/s2s_heldout_test.py"
+    "ssw-design-analysis/07_physical_decomposition/s2s_heldout2026_test.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/s2s_heldout_test.py": "d57639ff35f1972b"
+    "ssw-design-analysis/07_physical_decomposition/s2s_heldout2026_test.py": "6e79ef33e9830203"
+   },
+   "result_sha256_16": "da04432a9de6db02",
+   "needs_rerun": false
+  },
+  "s2s_heldout_diagnosis.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_heldout_diagnosis.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_heldout_diagnosis.py": "33bc8ad624c85c6c"
+   },
+   "result_sha256_16": "714de78497899aad",
+   "needs_rerun": false
+  },
+  "s2s_heldout_test.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_heldout_test.py",
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_heldout_test.py": "d57639ff35f1972b",
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "341029360c645e23"
    },
    "result_sha256_16": "287dd5c39227c004",
+   "needs_rerun": false
+  },
+  "s2s_leadlag_test.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_leadlag_test.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_leadlag_test.py": "67d26fd63e25ce85"
+   },
+   "result_sha256_16": "bcd594327264dac0",
    "needs_rerun": false
   },
   "s2s_multimodel_robustness.json": {
@@ -565,10 +617,12 @@
   "s2s_multimodel_test.json": {
    "producers": [
     "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py",
+    "ssw-design-analysis/07_physical_decomposition/s2s_heldout_diagnosis.py",
     "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_test.py"
    ],
    "producer_sha256": {
     "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "6ddf107b0ab305ec",
+    "ssw-design-analysis/07_physical_decomposition/s2s_heldout_diagnosis.py": "33bc8ad624c85c6c",
     "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_test.py": "4f974e1a74330b3a"
    },
    "result_sha256_16": "68ded2f4ef0fa1e6",
@@ -592,6 +646,16 @@
     "ssw-design-analysis/07_physical_decomposition/s2s_regional_test.py": "1ff822d226a3f6c0"
    },
    "result_sha256_16": "e767050cf988daba",
+   "needs_rerun": false
+  },
+  "shift_rule_forecast.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "341029360c645e23"
+   },
+   "result_sha256_16": "306ce8122d37917c",
    "needs_rerun": false
   },
   "within_model_check.json": {
