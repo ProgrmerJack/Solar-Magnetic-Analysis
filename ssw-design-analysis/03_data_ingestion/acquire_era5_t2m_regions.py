@@ -63,4 +63,9 @@ def main():
 
 
 if __name__ == "__main__":
+    # --full: November-May (adds May) 1959-2022, for the revision-3 ERA5 continuity
+    # test and weeks 3-6 (commit add7ba9); a separate file
+    if "--full" in sys.argv:
+        PERIODS = [(f"{y}-11-01", f"{y + 1}-05-31T18") for y in range(1958, 2023)]
+        OUT = HERE / "era5_t2m_regions_daily_full.parquet"
     main()

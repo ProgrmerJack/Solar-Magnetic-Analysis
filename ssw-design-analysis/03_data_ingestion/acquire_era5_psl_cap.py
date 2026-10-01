@@ -161,4 +161,11 @@ def main_z100():
 
 if __name__ == "__main__":
     import sys
+    # --full: every November-May 1958/59-2022/23 (the WB2 span), for the revision-3
+    # ERA5 continuity test (vortex_threshold_continuity.py, commit add7ba9); a
+    # separate file, so the registered inputs above are untouched
+    if "--full" in sys.argv:
+        PERIODS = [(f"{y}-11-01", f"{y + 1}-05-31T18") for y in range(1958, 2022)] + [("2022-11-01", "2023-01-10T18")]
+        PERIODS = [("1959-01-01", "1959-05-31T18")] + PERIODS[1:]
+        OUT = HERE / "era5_psl_cap_6h_full.parquet"
     main_z100() if "--z100" in sys.argv else main()

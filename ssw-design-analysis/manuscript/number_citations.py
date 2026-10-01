@@ -61,6 +61,10 @@ REFS = {
     "neukom19": "Neukom, R., Steiger, N., Gómez-Navarro, J. J., Wang, J. & Werner, J. P. No evidence for globally coherent warm and cold periods over the preindustrial Common Era. *Nature* **571**, 550–554 (2019).",
     "thual23": "Thual, S. & Dewitte, B. ENSO complexity controlled by zonal shifts in the Walker circulation. *Nat. Geosci.* **16**, 328–332 (2023).",
     "charltonperez21": "Charlton-Perez, A. J., Huang, W. T. K. & Lee, S. H. Impact of sudden stratospheric warmings on United Kingdom mortality. *Atmos. Sci. Lett.* **22**, e1013 (2021).",
+    "ferc21": "FERC, NERC & Regional Entity Staff. *The February 2021 Cold Weather Outages in Texas and the South Central United States* (Federal Energy Regulatory Commission & North American Electric Reliability Corporation, 2021).",
+    "cohen21": "Cohen, J., Agel, L., Barlow, M., Garfinkel, C. I. & White, I. Linking Arctic variability and change with extreme winter weather in the United States. *Science* **373**, 1116–1121 (2021).",
+    "davis22": "Davis, N. A., Richter, J. H., Glanville, A. A., Edwards, J. & LaJoie, E. Limited surface impacts of the January 2021 sudden stratospheric warming. *Nat. Commun.* **13**, 1136 (2022).",
+    "butler24": "Butler, A. & Ciasto, L. But what does a polar vortex breakdown look like down here? *NOAA Climate.gov Polar Vortex Blog* (29 February 2024).",
     "charlton07":"Charlton, A. J. & Polvani, L. M. A new look at stratospheric sudden warmings. Part I: climatology and modeling benchmarks. *J. Clim.* **20**, 449–469 (2007).",
 }
 KEY = re.compile(r"\^\{([A-Za-z0-9,]+)\}\^")
