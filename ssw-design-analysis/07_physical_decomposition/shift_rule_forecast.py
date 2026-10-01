@@ -46,6 +46,54 @@ READING (fixed now): the rule is calibrated if the binomial p under it is > 0.05
   curve. Only the predictor is out of sample: the observed frequencies at q = 0.10
   had been computed before (era5_regional_test).
 
+REVISION-3 ADDENDUM (approved 2026-10-01: "Do all!"; committed BEFORE any ERA5
+surface value before 1959 was retrieved, before any observed outcome over days
+15-42 after an SSW or in the three other regions was computed in this script, and
+before any SNAPSI probability other than northern Eurasia days 8-24 was computed).
+Written to the same JSON under "revision3"; the registered numbers above are not
+changed.
+  R1 STRICT INDEPENDENCE: V1 without the two observed SSWs that SNAPSI imposes
+     (12 February 2018, 2 January 2019): 37 events.
+  R2 SEVERITY: q = 0.025, 0.05, 0.10, 0.20, 0.33 (SNAPSI p, observed count, Wilson
+     interval, binomial p under the rule and under climatology, risk ratios); the
+     shift reading predicts risk ratios that rise as q falls.
+  R3 REGIONS: R2 for HI_EUROPE, MID_EASIA and MID_NAMER as well. Reading fixed now:
+     the regional test found residuals beyond the circulation in all three (most in
+     North America), so the rule may fail there; a rejection under the rule is
+     reported as a regional failure of the circulation shift, not hidden.
+  R4 WEEKS 3-6: windows days 15-28 and 29-42 after onset (q = 0.05, 0.10, 0.20,
+     northern Eurasia primary, all regions secondary). SNAPSI p from every pair whose
+     members cover the window (region_series' full-coverage rule; weeks 3-4: both
+     later initialisations at all nine centres; weeks 5-6: mainly 8 January 2019),
+     with the number of pairs and centres; computed only with at least four
+     centres. Observed: the same windows after the V1 events, quantiles from
+     event-free dates with the same window.
+  R5 A SECOND, INDEPENDENT PREDICTOR (CMIP6 x ERA5 event-free): p2(q) = mean over
+     the CMIP6 events of Phi((thr_q - a - b N_i) / s_e), where N_i is each CMIP6
+     event's days 8-24 annular-mode anomaly (ensemble_precursor index, daily-s.d.
+     units) and a, b, s_e the ERA5 regression of northern-Eurasian days 8-24
+     temperature anomaly on the days 8-24 NAM (era5_nam_daily nam_1000, divided by
+     its event-free November-March daily s.d.) over EVENT-FREE dates only. No
+     post-SSW observation enters. Verified on V1 as for the SNAPSI rule.
+  R6 OUT OF SAMPLE, 1940-1958: SSWs detected by the project's detector
+     (ensemble_precursor.detect_ssw, the CP07 rule validated on NCEP) on the ERA5
+     u(10 hPa, 60N) daily mean from the CDS (acquire_era5_u10_cds.py), onsets
+     1 November 1940 - 31 March 1958 (before the catalogue begins; none of their
+     surface outcomes has been examined). Outcome: ERA5 (ARCO-ERA5, reduced to the
+     WeatherBench 2 grid and regions as acquire_era5_arco_extension.py) daily-mean
+     2 m temperature. Because of the warming trend, anomalies and thresholds are
+     taken within the period: anomaly from the 31-day-smoothed 1941-1958
+     day-of-year mean; q-quantiles from that period's event-free November-March
+     dates (> 135 d from every detected onset). Primary: northern Eurasia days
+     8-24, q = 0.05, 0.10, 0.20, SNAPSI rule; counts with Wilson intervals,
+     binomial p under the rule and under climatology; also pooled with V1.
+     Secondary: negative polar-cap NAM proxy (ERA5 polar-cap mean sea-level
+     pressure, 00 UTC, NAM sign) days 8-52 against the CMIP6 0.74. Sensitivity:
+     onsets from 1946 only (ERA5's stratosphere has a cold bias and sparse
+     upper-air data before 1946; Soci et al. 2024). Reading fixed now: with about
+     ten events the test can only reject gross miscalibration; consistency with the
+     rule and the direction against climatology are reported as such.
+
 Output: results/current/6_predictability/shift_rule_forecast.json
 """
 import json
