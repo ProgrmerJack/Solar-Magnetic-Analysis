@@ -56,6 +56,13 @@ IMPLEMENTATION NOTES (fixed before any 100 hPa forecast was read)
   (extend_ncep_presatellite cache, as validate_ssw_detector.py), against 00 UTC
   forecasts; forecasts join the cached leads 1-15 with leads 16-34.
 
+DEVIATION (2026-10-01, before the first run): CNRM's ECDS "100 hPa geopotential
+  height" fields hold 10.8-11.5 km polar-cap values, i.e. not 100 hPa (about 16 km);
+  they fail the plausibility check and CNRM is excluded from all four tests, since a
+  system enters only with its 100 hPa file (eight
+  confirmatory systems). Leads 10-34 were retrieved for most systems (all the tests
+  use); a few early packs hold leads 1-34.
+
 Output: results/current/6_predictability/s2s_leadlag_test.json
 """
 import json
@@ -115,14 +122,19 @@ class Sys:
     def __init__(self, c, psl_ob, z_ob, u_ob):
         a = anom(pd.read_parquet(MM.FILES[c]), "psl_cap_N")
         b = anom(pd.read_parquet(ING / f"s2s_{tag(c)}_z100_cap.parquet"), "z100_cap_N")
-        u = pd.concat([pd.read_parquet(ING / f"s2s_{tag(c)}_u10_60N.parquet"),
-                       pd.read_parquet(ING / f"s2s_{tag(c)}_u10_60N_long.parquet")], ignore_index=True)
-        u = anom(u, "u10_60N")
+        # L4 (secondary) needs leads 16-34; without them it is reported as not run
+        ul = ING / f"s2s_{tag(c)}_u10_60N_long.parquet"
+        if ul.exists():
+            u = anom(pd.concat([pd.read_parquet(ING / f"s2s_{tag(c)}_u10_60N.parquet"),
+                                pd.read_parquet(ul)], ignore_index=True), "u10_60N")
+        else:
+            u = None
         self.hyears = sorted(int(y) for y in a["hyear"].unique())
         self.min_other = max(8, int(0.75 * (len(self.hyears) - 1)))
         self.A = {pd.Timestamp(i): g.pivot(index="member", columns="lead_day", values="anom") for i, g in a.groupby("init")}
         self.B = {pd.Timestamp(i): g.pivot(index="member", columns="lead_day", values="anom") for i, g in b.groupby("init")}
-        self.U = {pd.Timestamp(i): g.pivot(index="member", columns="lead_day", values="anom") for i, g in u.groupby("init")}
+        self.U = ({} if u is None else
+                  {pd.Timestamp(i): g.pivot(index="member", columns="lead_day", values="anom") for i, g in u.groupby("init")})
         self.inits = sorted(set(self.A) & set(self.B))
         self.ob = {"A": psl_ob, "B": z_ob, "U": u_ob}
         self._c = {}
@@ -215,6 +227,9 @@ def main():
         out = {"n_events": len(ev)}
         for key, nm in (("pit_B", "L1_z100_rank"), ("pit_cond", "L2_conditional_surface_rank"),
                         ("pit_U", "L4_u10_rank")):
+            if not any(cen[c].U for c in group) and key == "pit_U":
+                out[nm] = {"status": "not run: leads 16-34 of u(10 hPa) not retrieved"}
+                continue
             obs = np.nanmean([mm(o, cover[o], key) for o in ev])
             null = np.array([np.nanmean([mm(pools[o][rng.integers(len(pools[o]))], cover[o], key) for o in ev])
                              for _ in range(N_NULL)])

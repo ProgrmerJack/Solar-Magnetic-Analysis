@@ -61,6 +61,9 @@ def main():
     CS, OC = J("criterion_sweep.json"), J("obs_model_compatibility.json")
     FV, CM = J("forced_variance_ceiling.json"), J("class_model_comparison.json")
     HO, LL = J("s2s_heldout_test.json"), J("s2s_leadlag_test.json")
+    HD = J("s2s_heldout_diagnosis.json")
+    H26, VT = J("s2s_heldout2026_test.json"), J("vortex_threshold_continuity.json")
+    SRF, RSD = J("shift_rule_forecast.json"), J("response_shape_dose.json")
     R2 = ("robustness (revision 2)", "committed before run", "4c8b3f2")
     mm = g(MMt, "multimodel", "confirmatory"); nr = g(SRt, "regions", "NEURASIA", "multimodel", "confirmatory")
     rows = [
@@ -176,6 +179,21 @@ def main():
          "committed before data", "4c8b3f2",
          f"{g(HO,'HO2_NEURASIA','mean_rank')} vs {g(HO,'HO2_NEURASIA','null_mean')}" if g(HO, "HO2_NEURASIA", "mean_rank") else "pending",
          g(HO, "HO2_NEURASIA", "p")),
+        ("HD-2a", "ECMWF CY49R1 (model year 2025) on the 1998-2021 SSWs: rank deficit", "diagnostic",
+         "post hoc (exploratory)", "this revision",
+         f"{g(HD,'D2','ecmwf2025','mean_rank')} vs {g(HD,'D2','ecmwf2025','null_mean')}" if HD else "pending",
+         g(HD, "D2", "ecmwf2025", "p")),
+        ("HD-2b", "ECMWF CY49R1 minus CY47R3 rank, same 10 events", "diagnostic", "post hoc (exploratory)",
+         "this revision",
+         (f"{g(HD,'D2','ecmwf_same_events','diff_2025_minus_2022','mean')} "
+          f"{g(HD,'D2','ecmwf_same_events','diff_2025_minus_2022','ci95')}") if HD else "pending", None),
+        ("HD-2c", "CMA model year 2025 on the 1998-2021 SSWs: rank deficit", "diagnostic", "post hoc (exploratory)",
+         "this revision",
+         f"{g(HD,'D2','cma2025','mean_rank')} vs {g(HD,'D2','cma2025','null_mean')}" if HD else "pending",
+         g(HD, "D2", "cma2025", "p")),
+        ("HD-6", "held-out signs: likelihood ratio, forecasts as issued vs 1998-2021 bias", "diagnostic",
+         "post hoc (exploratory)", "this revision",
+         f"{g(HD,'D6','ratio_issued_over_recalibrated')}" if HD else "pending", None),
         ("L1", "100 hPa polar-cap height rank after SSWs", "diagnostic (revision 2)", "committed before data", "4c8b3f2",
          f"{g(LL,'tests','confirmatory','L1_z100_rank','mean_rank')} vs {g(LL,'tests','confirmatory','L1_z100_rank','null_mean')}" if LL else "pending",
          g(LL, "tests", "confirmatory", "L1_z100_rank", "p")),
@@ -183,6 +201,43 @@ def main():
          f"{g(LL,'tests','confirmatory','L2_conditional_surface_rank','mean_rank')} vs "
          f"{g(LL,'tests','confirmatory','L2_conditional_surface_rank','null_mean')}" if LL else "pending",
          g(LL, "tests", "confirmatory", "L2_conditional_surface_rank", "p")),
+        ("HO2026", "held-out 4 March 2026 SSW, real-time forecasts: polar-cap rank deficit", "replication (revision 3)",
+         "committed before data", "a511fbc",
+         f"{g(H26,'HO2026_polar_cap','mean_rank')} vs {g(H26,'HO2026_polar_cap','null_mean')}" if H26 else "pending",
+         g(H26, "HO2026_polar_cap", "p")),
+        ("HO2026-T", "held-out 4 March 2026 SSW: N-Eurasian temperature rank deficit", "replication (revision 3)",
+         "committed before data", "a511fbc",
+         f"{g(H26,'HO2026_secondary_NEURASIA','mean_rank')} vs {g(H26,'HO2026_secondary_NEURASIA','null_mean')}" if H26 else "pending",
+         g(H26, "HO2026_secondary_NEURASIA", "p")),
+        ("HO-4", "four held-out SSWs (2023-2026) pooled: polar-cap rank deficit", "replication (revision 3)",
+         "committed before data", "a511fbc",
+         f"{g(H26,'four_events_polar_cap','mean_rank')} vs {g(H26,'four_events_polar_cap','null_mean')}" if H26 else "pending",
+         g(H26, "four_events_polar_cap", "p")),
+        ("U-dose", "AO days 8-52 per 10 m/s of minimum 10 hPa wind, 114 observed episodes", "revision-3 primary",
+         "committed before outcomes", "2a0c40b",
+         f"{g(VT,'observations','Y1_AO','E1_E2','dose_slope_per_10ms')} {g(VT,'observations','Y1_AO','E1_E2','dose_ci95')}" if VT else "pending",
+         None),
+        ("U-jump", "AO step at wind reversal, 114 observed episodes (Holm over 4 outcomes: 1.0)", "revision-3 primary",
+         "committed before outcomes", "2a0c40b",
+         f"{g(VT,'observations','Y1_AO','E1_E2','jump')} {g(VT,'observations','Y1_AO','E1_E2','jump_ci95')}" if VT else "pending",
+         g(VT, "observations", "Y1_AO", "E1_E2", "jump_p_two_sided")),
+        ("U-cmip6", "CMIP6 step at wind reversal (sigma), 5,726 episodes", "revision-3 secondary",
+         "committed before outcomes", "2a0c40b",
+         f"{g(VT,'cmip6','E1_E2','jump')} {g(VT,'cmip6','E1_E2','jump_ci95')}" if VT else "pending",
+         g(VT, "cmip6", "E1_E2", "jump_p_two_sided")),
+        ("V-0.10", "shift rule (SNAPSI) vs observed cold fortnights below 10th pct., 39 SSWs: binomial under rule", "revision-3 primary",
+         "committed before run", "bf453bd",
+         f"{g(SRF,'verification','V1','0.1','count')}/{g(SRF,'verification','V1','0.1','n')} vs p_rule {g(SRF,'verification','V1','0.1','p_rule')}" if SRF else "pending",
+         g(SRF, "verification", "V1", "0.1", "binom_p_under_rule")),
+        ("V-clim", "observed cold fortnights below 10th pct. vs climatology", "revision-3 primary",
+         "committed before run", "bf453bd",
+         f"{g(SRF,'verification','V1','0.1','count')}/{g(SRF,'verification','V1','0.1','n')} vs 0.10" if SRF else "pending",
+         g(SRF, "verification", "V1", "0.1", "binom_p_under_climatology")),
+        ("S-dose", "two regimes vs continuous with the realised 100 hPa dose (G, p vs ordinary days); inconclusive", "revision-3 primary",
+         "committed before run", "7d8ed6f",
+         (f"G {g(RSD,'S1_P2_plus_dose','crps','G_ssw')} vs {g(RSD,'S1_P2_plus_dose','crps','G_pseudo_mean')}; "
+          f"power vs planted regimes {g(RSD,'posthoc_power','power_planted_1sd_regimes')} (post hoc): underpowered") if RSD else "pending",
+         g(RSD, "S1_P2_plus_dose", "crps", "p_pseudo_ge_ssw")),
     ]
     fam = [i for i, r in enumerate(rows) if r[2].startswith("primary") and isinstance(r[6], (int, float))]
     adj = holm([rows[i][6] for i in fam])

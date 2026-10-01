@@ -224,6 +224,11 @@ CENTRES = {
     # held-out events (2023-2024): later model versions, retrieved under their own tags
     "ecmwf2025": {"year": "2025", "kind": "otf", "thin": 1, "api": "ecmwf"},
     "cma2025":   {"year": "2025", "kind": "otf", "thin": 1, "api": "cma"},
+    # climatology for the 2026 real-time forecasts (s2s_heldout2026_test.py): the
+    # model-year-2026 reforecasts, February-March starts only
+    "ecmwf2026": {"year": "2026", "kind": "otf", "thin": 1, "api": "ecmwf", "months": ("02", "03")},
+    "eccc2026":  {"year": "2026", "kind": "otf", "thin": 1, "api": "eccc", "months": ("02", "03")},
+    "hmcr2026":  {"year": "2026", "kind": "otf", "thin": 1, "api": "hmcr", "months": ("02", "03")},
 }
 MULTI_LEAD_DAYS = list(range(10, 35))
 
@@ -249,8 +254,10 @@ VARS = {
                 leads=list(range(1, 16)), window=False, area=[60, -180, 60, 180], reduce="zonal",
                 cols=["u10_60N"], cache=HERE / "_s2s_reduced_u10", out="u10_60N",
                 manifest="u10_", lim=(-80, 120)),
+    # leads 10-34 are all the lead-lag test uses (starts 2-9 d before onset, days
+    # +8..+25); packs fetched before 2026-09-30 20:30 hold leads 1-34
     "gh100": dict(variable="geopotential_height", level_type="pressure", level="100_hpa",
-                  leads=list(range(1, 35)), window=False, area=AREA, reduce="cap",
+                  leads=list(range(10, 35)), window=False, area=AREA, reduce="cap",
                   cols=["z100_cap_N"], cache=HERE / "_s2s_reduced_gh100", out="z100_cap",
                   manifest="gh100_", lim=(14000, 18000)),
     "u10_long": dict(variable="u_component_of_wind", level_type="pressure", level="10_hpa",
@@ -288,7 +295,7 @@ def jobs(origin):
         q2 = {**q, "month": [m], "day": [d]}
         out_ = []
         for hm in p.apply_constraints(q2).get("hmonth", []):
-            if hm not in MONTHS or (cfg["kind"] == "otf" and hm != m):
+            if hm not in cfg.get("months", MONTHS) or (cfg["kind"] == "otf" and hm != m):
                 continue
             for hd in p.apply_constraints({**q2, "hmonth": [hm]}).get("hday", []):
                 if (cfg["kind"] == "otf" and hd != d) or (int(hd) - 1) % cfg["thin"]:
@@ -455,6 +462,14 @@ QUEUE_SLOTS = 4
 # hindcast years x 11 members x 25 leads). Packs are split to at most this many
 # start dates (6 x 20 x 11 x 25 = 33,000 fields, below the sizes that succeeded).
 MAX_PACK_DATES = 6
+# Measured 2026-09-30: packs complete every ~10-20 min whatever their size (a
+# 2-date and a 6-date pack finished 14 s apart), so wall-clock time is set by the
+# NUMBER of requests. Packs are therefore sized to a field budget below the cost
+# limit (45,000 fields succeeded, 88,000 failed) using each system's members and
+# hindcast years, instead of a fixed date cap.
+MAX_PACK_FIELDS = 45000
+MEMBERS = {"ecmwf": 11, "ecmwf2025": 11, "ecmwf2026": 11, "eccc2026": 4, "hmcr2026": 11, "eccc": 4, "cma": 4, "cma2025": 4, "hmcr": 11,
+           "kma": 7, "cnrm": 11, "jma": 5, "cnr_isac": 8, "ncep": 4, "cptec": 11}
 
 
 def packs(origin):
@@ -465,8 +480,12 @@ def packs(origin):
         cfg = CENTRES.get(origin, {"kind": "otf"})         # ECMWF: on the fly
         k = (j["md"].month, j["hm"]) if cfg["kind"] == "otf" else (j["md"], j["hm"])
         out.setdefault(k, []).append(j)
-    return [(origin, v[i:i + MAX_PACK_DATES]) for v in out.values()
-            for i in range(0, len(v), MAX_PACK_DATES)]
+    if VAR in ("msl", "t2m"):                              # sizes already proven for these
+        cap = lambda v: MAX_PACK_DATES
+    else:
+        cap = lambda v: max(1, MAX_PACK_FIELDS // (max(len(j["hyears"]) for j in v)
+                                                   * MEMBERS.get(origin, 11) * len(VARS[VAR]["leads"])))
+    return [(origin, v[i:i + cap(v)]) for v in out.values() for i in range(0, len(v), cap(v))]
 
 
 def fetch_pack(item):
@@ -524,8 +543,15 @@ def fetch_pack(item):
             raise ValueError(f"{origin}: lead days {sorted(set(df['lead_day']))[:4]}... "
                              f"!= requested {leads[0]}..{leads[-1]}")
         lo, hi = cfgv["lim"]
-        if not df[col].stack().between(lo, hi).all():
-            raise ValueError(f"{origin}: {VAR} outside {lo}-{hi}")
+        vals = df[col].stack()
+        # some centres archive geopotential (m2 s-2) under the height parameter: a
+        # whole pack inside the geopotential range is converted to metres (/g)
+        if VAR == "gh100" and vals.between(130000, 180000).all():
+            df[col] = df[col] / 9.80665
+            print(f"  {origin}: gh100 delivered as geopotential; divided by g", flush=True)
+            vals = df[col].stack()
+        if not vals.between(lo, hi).all():
+            raise ValueError(f"{origin}: {VAR} outside {lo}-{hi} (min {vals.min():.1f}, max {vals.max():.1f})")
     df["valid"] = df["init"] + pd.to_timedelta(df["lead_day"], unit="D")
     if VAR == "msl" and not df["psl_cap_N"].between(95000, 106000).all():
         raise ValueError(f"{origin}: cap mean outside 950-1060 hPa")
@@ -570,7 +596,87 @@ def main_packed(origins):
     return 1 if failed else 0
 
 
+# ---------------------------------------------------------------------------
+# REAL-TIME forecasts (dataset s2s-forecasts; s2s_heldout2026_test.py): one request
+# per origin and month for the listed start days, reduced exactly as the packed
+# reforecasts, saved as s2s_rt_<origin>_<out>.parquet.
+def fetch_realtime(origin, starts):
+    cfgv = VARS[VAR]
+    leads = cfgv["leads"]
+    frames = []
+    for m in sorted({d.month for d in starts}):
+        days = sorted({f"{d.day:02d}" for d in starts if d.month == m})
+        y = str(starts[0].year)
+        req = {"origin": [origin], "year": [y], "month": [f"{m:02d}"], "day": days, "time": ["00:00"],
+               "level_type": cfgv["level_type"] if VAR != "msl" else "single_level",
+               "variable": [cfgv["variable"]],
+               "forecast_type": ["control_forecast", "perturbed_forecast"],
+               "leadtime_hour": ([f"{24 * d}_{24 * (d + 1)}" for d in leads] if cfgv["window"]
+                                 else [str(24 * d) for d in leads]),
+               "data_format": "grib", "area": cfgv["area"]}
+        if cfgv["level"]:
+            req["level_value"] = [cfgv["level"]]
+        with tempfile.TemporaryDirectory() as td:
+            g = Path(td) / "rt.grib"
+            for attempt in range(60):
+                remote = client().submit("s2s-forecasts", req)
+                while True:
+                    st = remote.status
+                    if st in ("successful", "failed", "rejected", "dismissed", "deleted"):
+                        break
+                    time.sleep(10)
+                if st != "rejected":
+                    break
+                time.sleep(60)
+            if st != "successful":
+                # a month with none of the listed start days fails at ECDS; skip it
+                print(f"  real-time {origin} {y}-{m:02d}: {st} (no starts that month?); skipped", flush=True)
+                continue
+            res = remote.get_results()
+            ranged_download(res.location, int(res.content_length), g)
+            for dtype, member_of in (("cf", None), ("pf", "number")):
+                ds = xr.open_dataset(str(g), engine="cfgrib",
+                                     backend_kwargs={"indexpath": "", "filter_by_keys": {"dataType": dtype}})
+                v = ds[list(ds.data_vars)[0]]
+                if cfgv["reduce"] == "cap":
+                    df = E.cap(v, north=True).to_dataframe(name=cfgv["cols"][0]).reset_index()
+                else:
+                    df = regions_mean(v).to_dataframe().reset_index()
+                df["member"] = 0 if member_of is None else df["number"].astype(int)
+                frames.append(df); ds.close()
+    if not frames:
+        raise IOError(f"real-time {origin}: no month returned data")
+    df = pd.concat(frames, ignore_index=True)
+    df["init"] = pd.to_datetime(df["time"])
+    df["lead_day"] = (pd.to_timedelta(df["step"]) / pd.Timedelta(days=1)).round().astype(int)
+    if cfgv["window"]:
+        df["lead_day"] -= 1
+    df["valid"] = df["init"] + pd.to_timedelta(df["lead_day"], unit="D")
+    df["model_date"] = pd.to_datetime(dict(year=2000, month=df["init"].dt.month, day=df["init"].dt.day))
+    cols = cfgv["cols"]
+    df = df[["model_date", "init", "member", "lead_day", "valid", *cols]]
+    lo, hi = cfgv["lim"]
+    if df[cols].isna().any().any() or not df[cols].stack().between(lo, hi).all():
+        raise ValueError(f"real-time {origin}: missing or implausible values")
+    out = HERE / f"s2s_rt_{origin}_{cfgv['out']}.parquet"
+    df.to_parquet(out)
+    print(f"real-time {origin} {VAR}: {df['init'].nunique()} starts, {df['member'].nunique()} members -> {out.name}", flush=True)
+
+
 if __name__ == "__main__":
+    if "--realtime" in sys.argv:
+        i = sys.argv.index("--realtime")
+        if "--var" in sys.argv:
+            j = sys.argv.index("--var"); VAR = sys.argv[j + 1]
+        starts = [d for d in pd.date_range("2026-02-23", "2026-03-02")]
+        fails = 0
+        for o in [a for a in sys.argv[i + 1:] if a not in ("--var", VAR)]:
+            try:
+                fetch_realtime(o, starts)
+            except Exception as ex_:
+                fails += 1
+                print(f"real-time {o} FAILED: {str(ex_)[:200]}", flush=True)
+        sys.exit(1 if fails else 0)
     if "--var" in sys.argv:
         i = sys.argv.index("--var")
         VAR = sys.argv[i + 1]

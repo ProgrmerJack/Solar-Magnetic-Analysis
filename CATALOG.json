@@ -1,10 +1,10 @@
 {
- "generated": "2026-09-30T13:37:19+00:00",
+ "generated": "2026-10-01T10:00:50+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 153,
-  "results": 77
+  "scripts": 161,
+  "results": 83
  },
  "scripts": [
   {
@@ -57,13 +57,15 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "ERA5 observations for the held-out 2023-2024 SSWs (plan approved 2026-09-30; design in 07_physical_decomposition/s2s_heldout_test.py), which the WeatherBench 2 copy used everywhere else does not reach (it ends 2023-01-10; the polar-cap",
-   "loc": 131,
-   "modified": "2026-09-30 09:02",
-   "sha256_16": "5122341f181a734a",
+   "loc": 139,
+   "modified": "2026-09-30 18:51",
+   "sha256_16": "2da2034a6a602ba1",
    "flags": [],
    "filenames_mentioned": [
     "era5_psl_cap_00utc_arco.parquet",
-    "era5_t2m_regions_daily_arco.parquet"
+    "era5_psl_cap_00utc_arco_late.parquet",
+    "era5_t2m_regions_daily_arco.parquet",
+    "era5_t2m_regions_daily_arco_late.parquet"
    ],
    "filename_prefixes": []
   },
@@ -157,9 +159,9 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "ECMWF S2S reforecasts of polar-cap mean sea-level pressure, reduced EXACTLY as the ERA5 observation is (`acquire_era5_psl_cap.cap`: cos-lat weighted 60-90N, the 60N row included), for the forecast-reliability test",
-   "loc": 582,
-   "modified": "2026-09-30 09:29",
-   "sha256_16": "2c9d85783a237c04",
+   "loc": 688,
+   "modified": "2026-09-30 23:49",
+   "sha256_16": "099ff5e12c53a9ad",
    "flags": [],
    "filenames_mentioned": [
     "s2s_ecmf_psl_cap.parquet",
@@ -1063,6 +1065,20 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/07_physical_decomposition/response_shape_dose.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "IS THE STATE-DEPENDENT SHAPE AFTER SSWs A SECOND POPULATION, OR ONE POPULATION WHOSE FORCED DOSE VARIES? Plan approved 2026-10-01 (user: \"I do approve any new kind of analyses\"); design from research_notes/SSW paper Nature Geo strengthening/D_state_dependent_shape.md",
+   "loc": 312,
+   "modified": "2026-10-01 09:57",
+   "sha256_16": "4acfd7a1895e89d2",
+   "flags": [],
+   "filenames_mentioned": [
+    "response_shape_dose.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/07_physical_decomposition/s2s_baseline_test.py",
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
@@ -1094,6 +1110,41 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/07_physical_decomposition/s2s_heldout2026_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "A FOURTH OUT-OF-SAMPLE SSW: 4 MARCH 2026, SCORED WITH REAL-TIME FORECASTS Plan approved 2026-09-30. This design was committed BEFORE any forecast for 2026, any 2026 reforecast of ECCC/HMCR or model year 2026 of ECMWF, and any surface",
+   "loc": 278,
+   "modified": "2026-10-01 09:50",
+   "sha256_16": "6e79ef33e9830203",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_psl_cap_00utc_arco_late.parquet",
+    "era5_psl_cap_00utc_spliced_late.parquet",
+    "era5_t2m_regions_daily_arco_late.parquet",
+    "era5_t2m_regions_daily_spliced_late.parquet",
+    "s2s_heldout2026_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/s2s_heldout_diagnosis.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "WHY DID THE HELD-OUT REPLICATION FAIL? (exploratory diagnosis, post hoc) Requested 2026-09-30 after s2s_heldout_test.py (registered in 4c8b3f2) found the three SSWs of 2023-24 on the upward side of the ensembles (mean rank 0.72 against",
+   "loc": 248,
+   "modified": "2026-09-30 14:37",
+   "sha256_16": "33bc8ad624c85c6c",
+   "flags": [],
+   "filenames_mentioned": [
+    "s2s_cma2025_psl_cap.parquet",
+    "s2s_ecmwf2025_psl_cap.parquet",
+    "s2s_heldout_diagnosis.json",
+    "s2s_multimodel_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/07_physical_decomposition/s2s_heldout_test.py",
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
@@ -1118,9 +1169,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "WHERE IN THE FORECAST CHAIN IS THE SHIFT LOST: THE LOWER STRATOSPHERE, OR BELOW IT? Plan approved 2026-09-30. This design was committed BEFORE any forecast of 100 hPa geopotential height or of 10 hPa wind beyond lead 15 was retrieved.",
-   "loc": 246,
-   "modified": "2026-09-30 09:32",
-   "sha256_16": "41d09e91e28450f3",
+   "loc": 261,
+   "modified": "2026-10-01 04:49",
+   "sha256_16": "67d26fd63e25ce85",
    "flags": [],
    "filenames_mentioned": [
     "era5_z100_cap_00utc.parquet",
@@ -1184,6 +1235,24 @@
     "era5_t2m_regions_daily.parquet",
     "s2s_ecmf_t2m_regions.parquet",
     "s2s_regional_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "A COLD-RISK FORECAST FROM THE SHIFT ALONE: DOES A MODEL-DERIVED PROBABILITY VERIFY AGAINST OBSERVED SSWs, AND WHAT IS IT WORTH TO A DECISION-MAKER? Plan approved 2026-10-01. Written before the verification below was run.",
+   "loc": 265,
+   "modified": "2026-10-01 04:44",
+   "sha256_16": "341029360c645e23",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_t2m_regions_daily.parquet",
+    "era5_t2m_regions_daily_arco_late.parquet",
+    "era5_t2m_regions_daily_spliced.parquet",
+    "s2s_heldout_test.json",
+    "shift_rule_forecast.json"
    ],
    "filename_prefixes": []
   },
@@ -1300,6 +1369,23 @@
    "flags": [],
    "filenames_mentioned": [
     "vortex_geometry_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/vortex_threshold_continuity.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "IS AN SSW ITSELF A THRESHOLD ON A CONTINUUM? A MODEL-FREE TEST AT THE REVERSAL.",
+   "loc": 352,
+   "modified": "2026-10-01 04:58",
+   "sha256_16": "d1020602d1c67bf8",
+   "flags": [],
+   "filenames_mentioned": [
+    "ao_daily_cpc.txt",
+    "era5_nam_daily.parquet",
+    "era5_t2m_regions_daily_spliced.parquet",
+    "vortex_threshold_continuity.json"
    ],
    "filename_prefixes": []
   },
@@ -1531,6 +1617,48 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/09_figures/figED5_heldout.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "figED5_heldout.py -- Extended Data Fig. 5: why the held-out replication failed.",
+   "loc": 77,
+   "modified": "2026-09-30 13:54",
+   "sha256_16": "2dcde70c11df9dcd",
+   "flags": [],
+   "filenames_mentioned": [
+    "s2s_heldout_diagnosis.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/figED6_continuity.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "figED6_continuity.py -- Extended Data Fig. 6: the SSW is itself a threshold on a continuum of vortex weakenings.",
+   "loc": 86,
+   "modified": "2026-10-01 05:00",
+   "sha256_16": "70d8893452aed6c2",
+   "flags": [],
+   "filenames_mentioned": [
+    "vortex_threshold_continuity.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/figED7_shiftrule.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "figED7_shiftrule.py -- Extended Data Fig. 7: the shift rule as a forecast.",
+   "loc": 69,
+   "modified": "2026-10-01 04:59",
+   "sha256_16": "e35156f96e570dc9",
+   "flags": [],
+   "filenames_mentioned": [
+    "shift_rule_forecast.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/09_figures/nature_style.py",
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
@@ -1547,9 +1675,9 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 205,
-   "modified": "2026-09-30 10:52",
-   "sha256_16": "01dbe82d1ee63127",
+   "loc": 260,
+   "modified": "2026-10-01 09:46",
+   "sha256_16": "8064d1cf52bec2d2",
    "flags": [],
    "filenames_mentioned": [
     "class_model_comparison.json",
@@ -1559,14 +1687,18 @@
     "forecast_value_robustness.json",
     "forecast_value_test.json",
     "obs_model_compatibility.json",
+    "response_shape_dose.json",
     "s2s_baseline_test.json",
     "s2s_forecast_test.json",
+    "s2s_heldout2026_test.json",
+    "s2s_heldout_diagnosis.json",
     "s2s_heldout_test.json",
     "s2s_leadlag_test.json",
     "s2s_multimodel_robustness.json",
     "s2s_multimodel_test.json",
     "s2s_postonset_test.json",
     "s2s_regional_test.json",
+    "shift_rule_forecast.json",
     "snapsi_archetype_test.json",
     "snapsi_causal_effect.json",
     "snapsi_contrast_diagnosis.json",
@@ -1576,6 +1708,7 @@
     "snapsi_selection_test.json",
     "tableED1_tests.csv",
     "vortex_geometry_test.json",
+    "vortex_threshold_continuity.json",
     "within_model_check.json"
    ],
    "filename_prefixes": []
@@ -1586,8 +1719,8 @@
    "stage": "environment",
    "title": "Verifies that this environment can actually do the project's work -- not that packages import, but that the four things every analysis here depends on really function.",
    "loc": 182,
-   "modified": "2026-09-17 12:38",
-   "sha256_16": "8298bfa378aa34ef",
+   "modified": "2026-10-01 05:13",
+   "sha256_16": "d28cc4064b0cb7fb",
    "flags": [],
    "filenames_mentioned": [],
    "filename_prefixes": []
@@ -1597,9 +1730,9 @@
    "tree": "ssw-design-analysis",
    "stage": "manuscript",
    "title": "number_citations.py -- replace ^{key}^ citation keys in main.md with numbers in Nature order (main text, then figure legends, then Methods) and write the reference list. Every entry below was checked against Crossref or the publisher",
-   "loc": 99,
-   "modified": "2026-09-30 08:49",
-   "sha256_16": "9a5004e9adaae19f",
+   "loc": 105,
+   "modified": "2026-10-01 09:48",
+   "sha256_16": "5caeec2269868e30",
    "flags": [],
    "filenames_mentioned": [],
    "filename_prefixes": []
@@ -2382,7 +2515,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-09-30 10:53",
+   "modified": "2026-10-01 09:48",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -4025,6 +4158,48 @@
    ]
   },
   {
+   "path": "results/current/5_mechanism/vortex_threshold_continuity.json",
+   "tree": "current",
+   "stage": "5_mechanism",
+   "readable": true,
+   "bytes": 40360,
+   "modified": "2026-10-01 04:59",
+   "sha256_16": "f94ffb643c3bceaf",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/vortex_threshold_continuity.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/vortex_threshold_continuity.py": "d1020602d1c67bf8"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_boot": [
+     10000
+    ],
+    "n_perm": [
+     10000
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "seed",
+    "n_boot",
+    "n_perm",
+    "episode_rule",
+    "outcome_window",
+    "inputs",
+    "units",
+    "unit_table",
+    "observations",
+    "E2_holm",
+    "falsification",
+    "cmip6"
+   ]
+  },
+  {
    "path": "results/current/6_predictability/class_model_comparison.json",
    "tree": "current",
    "stage": "6_predictability",
@@ -4344,6 +4519,64 @@
    ]
   },
   {
+   "path": "results/current/6_predictability/response_shape_dose.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 7508,
+   "modified": "2026-10-01 10:00",
+   "sha256_16": "e22521e764a51cf6",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/response_shape_dose.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/response_shape_dose.py": "4acfd7a1895e89d2"
+   },
+   "verdicts": [
+    {
+     "key": "verdict",
+     "text": "INCONCLUSIVE: the registered criterion is met but the test is underpowered (post-hoc power 0.08 against planted regimes, below the registered 0.2)"
+    },
+    {
+     "key": "reading",
+     "text": "accounted for by the dose"
+    }
+   ],
+   "counts": {
+    "n_boot": [
+     2000
+    ],
+    "n_events": [
+     1517
+    ],
+    "n_members": [
+     20
+    ]
+   },
+   "top_level_keys": [
+    "verdict",
+    "plan_approved",
+    "seed",
+    "n_boot",
+    "n_events",
+    "n_members",
+    "k_pseudo",
+    "n_control",
+    "registered_reference",
+    "dose_columns",
+    "S3_components_P2",
+    "S4_quantile_shift",
+    "S5_dose_unimodality",
+    "S1_P2_plus_dose",
+    "S2_tier3",
+    "reading",
+    "posthoc_power"
+   ]
+  },
+  {
    "path": "results/current/6_predictability/s2s_baseline_test.json",
    "tree": "current",
    "stage": "6_predictability",
@@ -4435,6 +4668,99 @@
    ]
   },
   {
+   "path": "results/current/6_predictability/s2s_heldout2026_test.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 9243,
+   "modified": "2026-10-01 09:56",
+   "sha256_16": "da04432a9de6db02",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_heldout2026_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_heldout2026_test.py": "6e79ef33e9830203"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_null": [
+     10000
+    ],
+    "n_events": [
+     4
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "registered_commit",
+    "disclosure_commit",
+    "n_null",
+    "seed_rule",
+    "event",
+    "primary",
+    "secondary",
+    "reforecasts",
+    "splice",
+    "HO2026_polar_cap",
+    "with_secondary_polar_cap",
+    "four_events_polar_cap",
+    "HO2026_secondary_NEURASIA",
+    "with_secondary_NEURASIA",
+    "four_events_NEURASIA"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/s2s_heldout_diagnosis.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 14828,
+   "modified": "2026-09-30 14:39",
+   "sha256_16": "714de78497899aad",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_heldout_diagnosis.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_heldout_diagnosis.py": "33bc8ad624c85c6c"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_draw": [
+     10000
+    ],
+    "n_events": [
+     4,
+     5,
+     9,
+     10,
+     11,
+     12,
+     14,
+     16
+    ],
+    "n_winters": [
+     14,
+     20
+    ]
+   },
+   "top_level_keys": [
+    "label",
+    "n_draw",
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6"
+   ]
+  },
+  {
    "path": "results/current/6_predictability/s2s_heldout_test.json",
    "tree": "current",
    "stage": "6_predictability",
@@ -4443,13 +4769,15 @@
    "modified": "2026-09-30 13:34",
    "sha256_16": "287dd5c39227c004",
    "producers": [
-    "ssw-design-analysis/07_physical_decomposition/s2s_heldout_test.py"
+    "ssw-design-analysis/07_physical_decomposition/s2s_heldout_test.py",
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py"
    ],
    "state": "current",
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/s2s_heldout_test.py": "d57639ff35f1972b"
+    "ssw-design-analysis/07_physical_decomposition/s2s_heldout_test.py": "d57639ff35f1972b",
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "341029360c645e23"
    },
    "verdicts": [
     {
@@ -4483,6 +4811,47 @@
     "HO3_polar_cap_pooled",
     "HO2_NEURASIA",
     "HO3_NEURASIA_pooled"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/s2s_leadlag_test.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 2650,
+   "modified": "2026-10-01 04:46",
+   "sha256_16": "bcd594327264dac0",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_leadlag_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_leadlag_test.py": "67d26fd63e25ce85"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_null": [
+     10000
+    ],
+    "n_boot": [
+     10000
+    ],
+    "n_events": [
+     12,
+     17
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "registered_commit",
+    "n_null",
+    "n_boot",
+    "seed",
+    "window",
+    "systems",
+    "tests"
    ]
   },
   {
@@ -4534,6 +4903,7 @@
    "sha256_16": "68ded2f4ef0fa1e6",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py",
+    "ssw-design-analysis/07_physical_decomposition/s2s_heldout_diagnosis.py",
     "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_test.py"
    ],
    "state": "current",
@@ -4541,6 +4911,7 @@
    "flags": [],
    "producer_sha256": {
     "ssw-design-analysis/06_simulation_validation/validate_s2s_multimodel.py": "6ddf107b0ab305ec",
+    "ssw-design-analysis/07_physical_decomposition/s2s_heldout_diagnosis.py": "33bc8ad624c85c6c",
     "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_test.py": "4f974e1a74330b3a"
    },
    "verdicts": [],
@@ -4653,6 +5024,46 @@
     "regions",
     "H1_holm_over_regions",
     "falsifier_primary"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/shift_rule_forecast.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 21530,
+   "modified": "2026-10-01 04:57",
+   "sha256_16": "306ce8122d37917c",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "341029360c645e23"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_boot": [
+     10000
+    ],
+    "n_events": [
+     1517
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "seed",
+    "n_boot",
+    "qs",
+    "region",
+    "t_window",
+    "ao_window",
+    "model_probabilities_snapsi",
+    "model_p_negative_am_cmip6",
+    "verification",
+    "prospective_2026"
    ]
   },
   {

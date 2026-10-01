@@ -1,0 +1,2 @@
+POWER {'label': 'post hoc, added after the S1 result was seen', 'residual_sd': 0.5976, 'in_sample_r2': 0.3216, 'G_negative_mean': -0.01104, 'G_negative_q95': -0.00702, 'G_positive_mean': -0.01009, 'power_planted_1sd_regimes': 0.08, 'real_G_ssw': -0.0146, 'real_G_percentile_in_negative': 0.07} INCONCLUSIVE: the registered criterion is met but the test is underpowered (post-hoc power 0.08 against planted regimes, below the registered 0.2)
+exit=0

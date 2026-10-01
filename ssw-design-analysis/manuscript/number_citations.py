@@ -55,6 +55,12 @@ REFS = {
     "hall22": "Hall, R. J., Mitchell, D. M., Seviour, W. J. M. & Wright, C. J. How well are sudden stratospheric warming surface impacts captured in CMIP6 climate models? *J. Geophys. Res. Atmos.* **127**, e2021JD035725 (2022).",
     "kodera16": "Kodera, K., Mukougawa, H., Maury, P., Ueda, M. & Claud, C. Absorbing and reflecting sudden stratospheric warming events and their relationship with tropospheric circulation. *J. Geophys. Res. Atmos.* **121**, 80–94 (2016).",
     "seviour26": "Seviour, W. J. M. et al. Forecast-based attribution of the role of stratospheric variability in weather extremes. *Weather Clim. Dynam.* **7**, 1405–1423 (2026).",
+    "calonico14": "Calonico, S., Cattaneo, M. D. & Titiunik, R. Robust nonparametric confidence intervals for regression-discontinuity designs. *Econometrica* **82**, 2295–2326 (2014).",
+    "altman06": "Altman, D. G. & Royston, P. The cost of dichotomising continuous variables. *BMJ* **332**, 1080 (2006).",
+    "stephenson04": "Stephenson, D. B., Hannachi, A. & O'Neill, A. On the existence of multiple climate regimes. *Q. J. R. Meteorol. Soc.* **130**, 583–605 (2004).",
+    "neukom19": "Neukom, R., Steiger, N., Gómez-Navarro, J. J., Wang, J. & Werner, J. P. No evidence for globally coherent warm and cold periods over the preindustrial Common Era. *Nature* **571**, 550–554 (2019).",
+    "thual23": "Thual, S. & Dewitte, B. ENSO complexity controlled by zonal shifts in the Walker circulation. *Nat. Geosci.* **16**, 328–332 (2023).",
+    "charltonperez21": "Charlton-Perez, A. J., Huang, W. T. K. & Lee, S. H. Impact of sudden stratospheric warmings on United Kingdom mortality. *Atmos. Sci. Lett.* **22**, e1013 (2021).",
     "charlton07":"Charlton, A. J. & Polvani, L. M. A new look at stratospheric sudden warmings. Part I: climatology and modeling benchmarks. *J. Clim.* **20**, 449–469 (2007).",
 }
 KEY = re.compile(r"\^\{([A-Za-z0-9,]+)\}\^")

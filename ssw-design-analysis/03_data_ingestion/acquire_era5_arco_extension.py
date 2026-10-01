@@ -88,6 +88,7 @@ def to_da(a, t):
 
 
 def main():
+    global WINTERS, OUT_PSL, OUT_T2M
     ds = xr.open_zarr(STORE, chunks=None, storage_options={"token": "anon"})
     lat, lon = ds.latitude.values, ds.longitude.values
     rg = regridder(lat, lon)
@@ -127,4 +128,11 @@ def main():
 
 
 if __name__ == "__main__":
+    # --late: winters 2024/25 and 2025/26 for the 2026 held-out event
+    # (s2s_heldout2026_test.py), written to separate files so the inputs of the
+    # registered 2023-24 test are untouched
+    if "--late" in sys.argv:
+        WINTERS = [("2024-11-01", "2025-04-30"), ("2025-11-01", "2026-04-30")]
+        OUT_PSL = HERE / "era5_psl_cap_00utc_arco_late.parquet"
+        OUT_T2M = HERE / "era5_t2m_regions_daily_arco_late.parquet"
     main()

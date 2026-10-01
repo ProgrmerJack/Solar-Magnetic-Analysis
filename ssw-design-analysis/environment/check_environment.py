@@ -36,7 +36,7 @@ ROOT = Path(__file__).resolve().parents[2]
 REQUIRED = [
     "numpy", "pandas", "scipy", "xarray", "netCDF4", "h5netcdf", "h5py",
     "cftime", "pyarrow", "sklearn", "statsmodels", "matplotlib",
-    "requests", "zarr", "gcsfs", "dask", "lxml",
+    "requests", "zarr", "gcsfs", "dask", "lxml", "rdrobust",
 ]
 
 # Real files, committed or re-acquirable, that the analyses actually read.

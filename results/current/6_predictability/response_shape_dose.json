@@ -1,0 +1,352 @@
+{
+  "verdict": "INCONCLUSIVE: the registered criterion is met but the test is underpowered (post-hoc power 0.08 against planted regimes, below the registered 0.2)",
+  "plan_approved": "2026-10-01",
+  "seed": 383870951,
+  "n_boot": 2000,
+  "n_events": 1517,
+  "n_members": 20,
+  "k_pseudo": 200,
+  "n_control": 100,
+  "registered_reference": {
+    "G_ssw_minus_pseudo_crps": 0.00354,
+    "p": 0.01
+  },
+  "dose_columns": [
+    "u100_60N_p00_15",
+    "u100_60N_p15_30",
+    "u100_cap_p00_15",
+    "u100_cap_p15_30"
+  ],
+  "S3_components_P2": {
+    "mean_1": -0.6565,
+    "sd_1": 0.7231,
+    "mean_2": -0.1629,
+    "sd_2": 0.5787,
+    "mean_weight_1": 0.6208,
+    "lower_mean_component": 1,
+    "lower_component_sd": 0.7231,
+    "max_modes_over_weights": 1
+  },
+  "S4_quantile_shift": {
+    "q": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "raw": {
+      "estimate": [
+        -0.6275,
+        -0.5514,
+        -0.5262,
+        -0.4898,
+        -0.4976,
+        -0.4888,
+        -0.4829,
+        -0.4854,
+        -0.4644,
+        -0.4585,
+        -0.4554,
+        -0.4541,
+        -0.4525,
+        -0.4635,
+        -0.4583,
+        -0.4388,
+        -0.418,
+        -0.4129,
+        -0.4003
+      ],
+      "ci95_lo": [
+        -0.7316,
+        -0.6448,
+        -0.6195,
+        -0.6018,
+        -0.5853,
+        -0.5921,
+        -0.6041,
+        -0.5834,
+        -0.5864,
+        -0.5663,
+        -0.5507,
+        -0.556,
+        -0.5513,
+        -0.5474,
+        -0.5674,
+        -0.5558,
+        -0.5374,
+        -0.5199,
+        -0.4983
+      ],
+      "ci95_hi": [
+        -0.3263,
+        -0.3087,
+        -0.2808,
+        -0.2764,
+        -0.2651,
+        -0.2602,
+        -0.2423,
+        -0.2512,
+        -0.2418,
+        -0.2515,
+        -0.2513,
+        -0.266,
+        -0.2807,
+        -0.2628,
+        -0.2846,
+        -0.2368,
+        -0.2412,
+        -0.2255,
+        -0.2912
+      ]
+    },
+    "demeaned": {
+      "estimate": [
+        -0.1485,
+        -0.0725,
+        -0.0473,
+        -0.0109,
+        -0.0186,
+        -0.0099,
+        -0.004,
+        -0.0065,
+        0.0146,
+        0.0205,
+        0.0236,
+        0.0249,
+        0.0265,
+        0.0155,
+        0.0207,
+        0.0401,
+        0.061,
+        0.0661,
+        0.0787
+      ],
+      "ci95_lo": [
+        -0.1805,
+        -0.1103,
+        -0.0799,
+        -0.0532,
+        -0.0444,
+        -0.0387,
+        -0.0299,
+        -0.0211,
+        -0.0228,
+        -0.0141,
+        -0.0176,
+        -0.0269,
+        -0.0266,
+        -0.0261,
+        -0.0278,
+        -0.0395,
+        -0.0188,
+        -0.0155,
+        -0.0335
+      ],
+      "ci95_hi": [
+        -0.015,
+        0.015,
+        0.0547,
+        0.0395,
+        0.0264,
+        0.0337,
+        0.0404,
+        0.0395,
+        0.0393,
+        0.04,
+        0.0414,
+        0.0452,
+        0.0405,
+        0.036,
+        0.0511,
+        0.0782,
+        0.0937,
+        0.12,
+        0.1144
+      ]
+    }
+  },
+  "S5_dose_unimodality": {
+    "n": 1517,
+    "bic_1": 3905.37,
+    "bic_2": 3930.22,
+    "delta_bic_2_minus_1": 24.85,
+    "two_comp_means": [
+      0.606,
+      -0.51
+    ],
+    "two_comp_sds": [
+      0.673,
+      0.671
+    ],
+    "two_comp_weights": [
+      0.457,
+      0.543
+    ],
+    "modes_of_fitted_two_comp": 1
+  },
+  "S1_P2_plus_dose": {
+    "n_predictors": 28,
+    "ssw": {
+      "crps": {
+        "mean": {
+          "M0": 0.40929,
+          "M1": 0.35274,
+          "M2": 0.36734,
+          "M2b": 0.40919,
+          "M1s": 0.35268
+        },
+        "G_M1_minus_M2": -0.0146,
+        "G_M0_minus_M2b": 0.0001,
+        "PH1_G_M1s_minus_M2": -0.01466,
+        "PH1_G_M1_minus_M1s": 7e-05,
+        "skill_M1_vs_M0": 0.1382,
+        "skill_M2_vs_M0": 0.1025,
+        "skill_M1s_vs_M0": 0.1383
+      },
+      "ign": {
+        "mean": {
+          "M0": 1.10764,
+          "M1": 0.96023,
+          "M2": 1.01124,
+          "M2b": 1.10602,
+          "M1s": 0.95859
+        },
+        "G_M1_minus_M2": -0.05101,
+        "G_M0_minus_M2b": 0.00163,
+        "PH1_G_M1s_minus_M2": -0.05265,
+        "PH1_G_M1_minus_M1s": 0.00164,
+        "skill_M1_vs_M0": 0.14741,
+        "skill_M2_vs_M0": 0.0964,
+        "skill_M1s_vs_M0": 0.14905
+      }
+    },
+    "crps": {
+      "G_ssw": -0.0146,
+      "G_pseudo_mean": -0.01094,
+      "G_pseudo_q025_q975": [
+        -0.01599,
+        -0.00621
+      ],
+      "G_ssw_minus_pseudo": -0.00366,
+      "p_pseudo_ge_ssw": 0.92,
+      "positive_detection_rate": 1.0,
+      "negative_false_rate": 1.0,
+      "skill_M1_vs_M0_ssw": 0.1382,
+      "skill_M2_vs_M0_ssw": 0.1025,
+      "skill_M1_vs_M0_pseudo_mean": 0.1611,
+      "skill_M2_vs_M0_pseudo_mean": 0.1322
+    },
+    "ign": {
+      "G_ssw": -0.05101,
+      "G_pseudo_mean": -0.04285,
+      "G_pseudo_q025_q975": [
+        -0.06459,
+        -0.02104
+      ],
+      "G_ssw_minus_pseudo": -0.00816,
+      "p_pseudo_ge_ssw": 0.78,
+      "positive_detection_rate": 1.0,
+      "negative_false_rate": 1.0,
+      "skill_M1_vs_M0_ssw": 0.14741,
+      "skill_M2_vs_M0_ssw": 0.0964,
+      "skill_M1_vs_M0_pseudo_mean": 0.1682,
+      "skill_M2_vs_M0_pseudo_mean": 0.1254
+    }
+  },
+  "S2_tier3": {
+    "n_predictors": 36,
+    "ssw": {
+      "crps": {
+        "mean": {
+          "M0": 0.40929,
+          "M1": 0.33855,
+          "M2": 0.35786,
+          "M2b": 0.40919,
+          "M1s": 0.33822
+        },
+        "G_M1_minus_M2": -0.01931,
+        "G_M0_minus_M2b": 0.0001,
+        "PH1_G_M1s_minus_M2": -0.01964,
+        "PH1_G_M1_minus_M1s": 0.00033,
+        "skill_M1_vs_M0": 0.1728,
+        "skill_M2_vs_M0": 0.1257,
+        "skill_M1s_vs_M0": 0.1736
+      },
+      "ign": {
+        "mean": {
+          "M0": 1.10764,
+          "M1": 0.92085,
+          "M2": 0.99615,
+          "M2b": 1.10602,
+          "M1s": 0.92243
+        },
+        "G_M1_minus_M2": -0.0753,
+        "G_M0_minus_M2b": 0.00163,
+        "PH1_G_M1s_minus_M2": -0.07371,
+        "PH1_G_M1_minus_M1s": -0.00158,
+        "skill_M1_vs_M0": 0.18679,
+        "skill_M2_vs_M0": 0.1115,
+        "skill_M1s_vs_M0": 0.18521
+      }
+    },
+    "crps": {
+      "G_ssw": -0.01931,
+      "G_pseudo_mean": -0.01607,
+      "G_pseudo_q025_q975": [
+        -0.02207,
+        -0.01041
+      ],
+      "G_ssw_minus_pseudo": -0.00324,
+      "p_pseudo_ge_ssw": 0.84,
+      "positive_detection_rate": 1.0,
+      "negative_false_rate": 1.0,
+      "skill_M1_vs_M0_ssw": 0.1728,
+      "skill_M2_vs_M0_ssw": 0.1257,
+      "skill_M1_vs_M0_pseudo_mean": 0.2085,
+      "skill_M2_vs_M0_pseudo_mean": 0.166
+    },
+    "ign": {
+      "G_ssw": -0.0753,
+      "G_pseudo_mean": -0.06741,
+      "G_pseudo_q025_q975": [
+        -0.09605,
+        -0.04355
+      ],
+      "G_ssw_minus_pseudo": -0.00789,
+      "p_pseudo_ge_ssw": 0.74,
+      "positive_detection_rate": 1.0,
+      "negative_false_rate": 1.0,
+      "skill_M1_vs_M0_ssw": 0.18679,
+      "skill_M2_vs_M0_ssw": 0.1115,
+      "skill_M1_vs_M0_pseudo_mean": 0.2241,
+      "skill_M2_vs_M0_pseudo_mean": 0.1567
+    }
+  },
+  "reading": "accounted for by the dose",
+  "posthoc_power": {
+    "label": "post hoc, added after the S1 result was seen",
+    "residual_sd": 0.5976,
+    "in_sample_r2": 0.3216,
+    "G_negative_mean": -0.01104,
+    "G_negative_q95": -0.00702,
+    "G_positive_mean": -0.01009,
+    "power_planted_1sd_regimes": 0.08,
+    "real_G_ssw": -0.0146,
+    "real_G_percentile_in_negative": 0.07
+  }
+}
