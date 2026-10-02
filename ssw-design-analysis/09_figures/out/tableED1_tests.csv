@@ -70,4 +70,5 @@ SF-F1,"state forecast vs fixed SNAPSI rule, CRPS skill",revision-3 primary,commi
 SF-SSW,"SSW indicator beyond the continuous state, CRPS skill",revision-3 primary,committed before run,4f5c53a,"-0.0081 [-0.0184, 0.0028]",,
 SF-ops,"calibrated operational ensembles vs state forecast, 17 events, CRPS skill",revision-3 secondary,committed before run,4f5c53a,"state vs calibrated -0.4601 [-0.836, -0.0756]",,
 ICON,"ICON event ensembles (18, each started at onset or the day before): between-event variance of mean responses, days 8-25 (bounds)",revision-3 secondary,committed before values read,6ad6e8a,0.4145-0.4277,,
+RC,"N-Eurasian DW-NDW temperature contrast (days 8-24) vs matched shifted null, winter CV (power 0.30)",revision-4 primary,committed before run,8c324ed,obs -2.2049 K vs null -2.2524 K,0.9389,
 S-dose,"two regimes vs continuous with the realised 100 hPa dose (G, p vs ordinary days); inconclusive",revision-3 primary,committed before run,7d8ed6f,G -0.0146 vs -0.01094; power vs planted regimes 0.08 (post hoc): underpowered,0.92,

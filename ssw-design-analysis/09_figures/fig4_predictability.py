@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-fig4_predictability.py -- Figure 4: knowing the event adds no forecast
+fig4_predictability.py -- Extended Data Fig. (event information, formerly Fig. 4): knowing the event adds no forecast
 information after an SSW.
 
 Reads results/current/6_predictability/forecast_value_test.json (Fig. 3a) and

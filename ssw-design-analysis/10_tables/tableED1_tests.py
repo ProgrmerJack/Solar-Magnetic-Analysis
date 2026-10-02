@@ -67,6 +67,7 @@ def main():
     NX = J("s2s_member_experiment.json")
     RQ, TCV = J("snapsi_residual_quantiles.json"), J("criterion_transport_cv.json")
     SF, IC = J("state_forecast.json"), J("icon_event_heterogeneity.json")
+    RCC = J("criterion_regional_contrast.json")
     R2 = ("robustness (revision 2)", "committed before run", "4c8b3f2")
     mm = g(MMt, "multimodel", "confirmatory"); nr = g(SRt, "regions", "NEURASIA", "multimodel", "confirmatory")
     rows = [
@@ -302,6 +303,11 @@ def main():
          "revision-3 secondary", "committed before values read", "6ad6e8a",
          (f"{g(IC,'primary_registered','M2_between_event_variance','lower_bound_noise_sd_equals_daily_sd')}-"
           f"{g(IC,'primary_registered','M2_between_event_variance','upper_bound_noise_zero')}") if IC else "pending", None),
+        ("RC", "N-Eurasian DW-NDW temperature contrast (days 8-24) vs matched shifted null, winter CV (power 0.30)",
+         "revision-4 primary", "committed before run", "8c324ed",
+         (f"obs {g(RCC,'primary_surface','cv','NEURASIA_d8_24','C_obs_K')} K vs null "
+          f"{g(RCC,'primary_surface','cv','NEURASIA_d8_24','C_null_mean_K')} K") if RCC else "pending",
+         g(RCC, 'primary_surface', 'cv', 'NEURASIA_d8_24', 'p_two_sided') if RCC else None),
         ("S-dose", "two regimes vs continuous with the realised 100 hPa dose (G, p vs ordinary days); inconclusive", "revision-3 primary",
          "committed before run", "7d8ed6f",
          (f"G {g(RSD,'S1_P2_plus_dose','crps','G_ssw')} vs {g(RSD,'S1_P2_plus_dose','crps','G_pseudo_mean')}; "

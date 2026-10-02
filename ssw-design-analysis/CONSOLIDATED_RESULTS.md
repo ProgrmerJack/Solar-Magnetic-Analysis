@@ -1231,6 +1231,21 @@ expected 5.7/18.1/12.2/11.9. E2 (17 events, starts 0–7 d after onset): raw ens
 State model and climatology are REISSUED at each start date (ERA5 state to that date), same valid
 window; every one of the 198 starts is scored by all four methods (checked 2026-10-02, `n_scored_per_method`).
 
+### Z5 — regional class contrast vs matched null (`criterion_regional_contrast.py`, 9_literature; registered `8c324ed` before run; RETROSPECTIVE)
+Question: is the DW–NDW difference in a variable NOT used to classify (N-Eurasian 2 m T, days 8–24) reproduced by
+event-free dates displaced by the SSW shift (shift from other winters) and classified identically? 39 events (27 DW, 12 NDW).
+Observed −2.20 K [−3.93, −0.47]; null −2.25 K [−4.11, −0.31]; p 0.94; share reproduced 1.02 (all-winter shift p 0.95).
+With 150 hPa condition −1.86 vs −1.45 (p 0.64); days 8–52 −2.46 vs −2.23 (p 0.74); other regions 82–152%, p 0.47–0.94.
+POWER: planted extra DW cooling of 0.5 s.d. (1.32 K) detected 30% → registered reading INCONCLUSIVE (not equivalence).
+Report as: reproduced in point estimate, cannot exclude a further ~1.3 K class-specific difference.
+
+### Revision 4 structure (2026-10-02)
+Main text re-centred on: intervention changes the rate (45→84%, all 36 pairs) not the contrast (−0.03σ, 25 of 36 pairs;
+11 pairs 96–100% DW, no contrast possible) → observational null + held-out winters (CRPS +0.19) + Z5 → limits
+(translation pooled only, ICON/CMIP6 heterogeneity, continuity) → regional/forecast application. Old Figs 4 and 5 are now
+Extended Data; Table 1 (uses of the classification) added; title "Stratospheric warmings change the odds of downward
+outcomes, not the downward–non-downward contrast". Moved text in SI Note 19.
+
 ### CODE-REVIEW CORRECTIONS (2026-10-02; fresh-context review of the revision-3 scripts; all re-run)
 - **Y/N4** (`s2s_member_experiment.py`): fixed effects were keyed on start DATE across systems
   (1,450 "starts"); keyed on (system, start) = 2,526 groups → dose **+0.12σ/10 m/s [−0.02, +0.27]**
