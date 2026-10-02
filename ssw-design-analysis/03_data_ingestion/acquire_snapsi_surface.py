@@ -191,13 +191,17 @@ def measure_time_origin(tok, sample=3):
 
     with ThreadPoolExecutor(8) as ex:
         got = list(ex.map(first_retry, list(rows.itertuples())))
-    table = {}
+    # Merge into the existing table: measuring one set of experiments (e.g. --full)
+    # must not drop the origins already measured for the others.
+    table = json.loads(TIME_ORIGIN.read_text()) if TIME_ORIGIN.exists() else {}
+    fresh = set()
     for key, hrs, t0 in got:
         k = "|".join(key)
-        if k in table and table[k]["offset_hours"] != hrs:
+        if k in fresh and table[k]["offset_hours"] != hrs:
             raise ValueError(f"{k}: members start at different times "
                              f"({table[k]['first_time']} vs {t0})")
         table[k] = {"offset_hours": hrs, "first_time": t0}
+        fresh.add(k)
     TIME_ORIGIN.write_text(json.dumps(table, indent=1, sort_keys=True),
                            encoding="utf8", newline="\n")
     return table
@@ -397,11 +401,22 @@ def main():
       acquire_snapsi_surface.py --dry-run            print the budget, transfer nothing
       acquire_snapsi_surface.py --measure-time-origin  record each ensemble's lead-0 time
       acquire_snapsi_surface.py --rebase             rebase cached leads, then continue
+      acquire_snapsi_surface.py --full --centres ECMWF,UKMO,Meteo-France --inits nh
+                                                     the nudged-full / control-full arms, into
+                                                     their OWN cache (_snapsi_reduced_full) and
+                                                     output (snapsi_polarcap_psl_full.parquet),
+                                                     so no consumer of the zonal-nudging cache
+                                                     can pick them up (FAILURES 2026-09-17)
 
     Already-reduced members are served from _snapsi_reduced/ and cost no
     transfer, so re-running to widen the scope only fetches what is new.
     """
     argv = sys.argv[1:]
+    if "--full" in argv:
+        global EXPERIMENTS, CACHE, OUT
+        EXPERIMENTS = ["nudged-full", "control-full"]
+        CACHE = HERE / "_snapsi_reduced_full"
+        OUT = HERE / "snapsi_polarcap_psl_full.parquet"
 
     def opt(name, default=None):
         if name in argv:

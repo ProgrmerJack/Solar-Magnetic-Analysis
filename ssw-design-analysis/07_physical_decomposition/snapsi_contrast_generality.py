@@ -104,12 +104,22 @@ NH_INITS = list(L.ONSET)
 SH_INIT = "s20190829"
 FULL = {"ECMWF": NH_INITS, "UKMO": NH_INITS, "Meteo-France": ["s20190108"]}
 REG = "NEURASIA"
+# nudged-full / control-full live in their own cache (acquire_snapsi_surface.py --full);
+# location only, set before G5 was run -- the registered design is unchanged
+FULL_RED = HERE.parents[0] / "03_data_ingestion" / "_snapsi_reduced_full"
+
+
+def load(centre, arm, init):
+    if arm.endswith("-full"):
+        fs = sorted(FULL_RED.glob(f"{centre}_{arm}_{init}_*.parquet"))
+        return pd.concat([pd.read_parquet(f) for f in fs]) if fs else None
+    return L.load(centre, arm, init)
 
 
 # ---------------------------------------------------------------- member data
 def member_nam(centre, init, arms=("nudged", "control"), ref="control"):
     """{arm: {member: standardised 6-hourly NAM proxy over the window}}."""
-    r = L.load(centre, ref, init)
+    r = load(centre, ref, init)
     if r is None or not L.spans_window(r, init):
         return None
     rm = L.window_means(r, init)
@@ -118,7 +128,7 @@ def member_nam(centre, init, arms=("nudged", "control"), ref="control"):
     lo, hi = L.WINDOW[0] + off, L.WINDOW[1] + off
     out = {}
     for arm in arms:
-        d = L.load(centre, arm, init)
+        d = load(centre, arm, init)
         if d is None or not L.spans_window(d, init):
             return None
         w = d[(d["lead_days"] >= lo) & (d["lead_days"] <= hi)]
