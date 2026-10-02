@@ -22,12 +22,19 @@ WHAT IS PREDICTED, AND WHY IT IS FIXED NOW
 EVENTS
   Every major Northern Hemisphere SSW with onset from 1 November 2026 to 31 March
   2036 (amended 2026-10-02, before any onset, from 31 March 2030: at 43 SSWs in
-  66 winters, five events -- where the reading becomes decisive -- would be reached
-  by 2030 with probability of only about 0.12, and by 2036 with about 0.77):
+  67 winters, five events -- where the reading becomes decisive -- would be reached
+  by 2030 with probability of only about 0.12, and by 2036 about 0.77 -- computed
+  by odds() into the result file):
   the project's Charlton-Polvani detector (ensemble_precursor.detect_ssw,
   validated on the NOAA compendium) on ERA5T daily-mean zonal-mean u(10 hPa, 60N)
   from the CDS (acquire_era5_realtime_cds.py), continued from
-  era5_u10_60N_daily_cds.parquet. An onset is scored only once the detector's
+  era5_u10_60N_daily_cds.parquet. CLARIFIED 2026-10-02, before any onset (a
+  borderline day such as 28 Nov 2025, ERA5 -0.02 m/s but positive in NCEP and
+  MERRA-2, must not be an analyst's choice): easterly means the ERA5T daily mean of
+  00/06/12/18 UTC < 0 m/s exactly as computed, with no tolerance and no other
+  reanalysis consulted; values are frozen as first retrieved (raw files kept in
+  03_data_ingestion/raw/era5_realtime_cds) and later ERA5 revisions are not used
+  for detection or scoring. An onset is scored only once the detector's
   final-warming test can be applied (data to 30 April) and passes; candidates that
   turn out to be final warmings are listed and not scored. Southern Hemisphere
   events are not covered (the downward criterion is defined for the NH).
@@ -64,6 +71,16 @@ READING, fixed now (cumulative, reported after every scored event; decisive only
   excludes zero -- positive: "prospectively supported"; negative: "prospectively
   refuted: one shifted population does not describe new SSW outcomes" --
   otherwise "not yet decided". The same reading is applied to S3 as a secondary.
+
+AMENDMENTS AFTER THE FRESH-CONTEXT REVIEW (2026-10-02, before any onset; the
+  committed forecasts for the 2026-27 reference winter are unchanged)
+  - forecasts are keyed by month-day: an onset takes the candidates of its month-day
+    in the 2026-27 reference winter (29 February takes 28 February's), so leap-year
+    onsets match the committed table; temperature is still moved to its own winter;
+  - the scorer recomputes and compares every committed quantity (both label
+    probabilities, NAM and temperature quantiles) and the input checksums, and a
+    mismatch leaves that event unscored with the reason rather than stopping;
+  - real-time temperature is corrected by the bias the consistency gate measured.
 
 USAGE
   prospective_next_ssw.py                     build and save the prediction table
@@ -150,9 +167,21 @@ def frozen_model():
             "shift": shift, "rate": rate, "beta_T_per_year": beta, "n_events": int(len(real))}
 
 
+def ref_date(onset):
+    """The onset's month-day in the 2026-27 reference winter, whose day of year sets
+    the candidates (amended 2026-10-02 before any onset, after review: keying by the
+    actual day of year shifted every Mar/Nov/Dec onset of a leap year by one day
+    against the committed table). 29 February takes 28 February's forecast."""
+    t = pd.Timestamp(onset)
+    if t.month == 2 and t.day == 29:
+        t = t - pd.Timedelta(days=1)
+    return pd.Timestamp(year=2026 if t.month >= 7 else 2027, month=t.month, day=t.day)
+
+
 def ensemble(m, onset):
-    """Shifted and climatological ensembles for an onset date."""
-    d = pd.Timestamp(onset).dayofyear
+    """Shifted and climatological ensembles for an onset date (candidates from its
+    reference-winter day of year; temperature moved to the onset's own winter)."""
+    d = ref_date(onset).dayofyear
     dd = np.abs(m["dc"] - d); dd = np.minimum(dd, 366 - dd)
     cand = np.flatnonzero(dd <= HALFWIN)
     sh = m["shift"]
@@ -167,6 +196,38 @@ def ensemble(m, onset):
 
 def q(x):
     return [round(float(v), 3) for v in np.quantile(x, [0.1, 0.5, 0.9])]
+
+
+def integrity(m, committed, inputs, en, onset):
+    """Every committed quantity recomputed: inputs' checksums, both label
+    probabilities, both NAM and both temperature quantile sets (temperature moved
+    back to the 2026-27 winter of the table). Returns the mismatches."""
+    bad = [k for k, v in inputs.items() if sha(CS.ROOT / k) != v]
+    row = committed[ref_date(onset).strftime("%m-%d")]
+    dT = m["beta_T_per_year"] * (winter(pd.Timestamp(onset)) - 2027)
+    now = {"p_dw_shifted": round(en["p_dw_shifted"], 4), "p_dw_clim": round(en["p_dw_clim"], 4),
+           "nam_shifted_q10_50_90": q(en["nam_shifted"]), "nam_clim_q10_50_90": q(en["nam_clim"]),
+           "T_shifted_q10_50_90_K_winter2027": q(en["T_shifted"] - dT),
+           "T_clim_q10_50_90_K_winter2027": q(en["T_clim"] - dT)}
+    for k, v in now.items():
+        ref = row[k]
+        if (np.max(np.abs(np.subtract(v, ref))) if isinstance(v, list) else abs(v - ref)) > 1.5e-3:
+            bad.append(k)
+    return bad
+
+
+def odds():
+    """P(at least five SSWs) by the end of the window, Poisson at the catalogue rate."""
+    from scipy.stats import poisson
+    ev = load_catalogue("primary")
+    w = sorted({winter(t) for t in ev})
+    n_w = w[-1] - w[0] + 1
+    rate = len(ev) / n_w
+    out = {"n_events": int(len(ev)), "n_winters": int(n_w), "rate_per_winter": round(rate, 4)}
+    for last in (2030, 2036):
+        k = last - 2026                                  # winters 2026-27 .. last-1/last
+        out[f"P_ge5_by_{last}"] = round(float(1 - poisson.cdf(4, rate * k)), 3)
+    return out
 
 
 def table(m):
@@ -235,7 +296,7 @@ def onsets():
     return out, str(last.date())
 
 
-def score(m, committed):
+def score(m, committed, inputs, gate_res):
     rt = pd.read_parquet(RT_FILE)
     nam = standardise(rt, m["e"])
     base = pd.read_parquet(RC.T_FILE).set_index("date")[["NEURASIA"]]; base.index = pd.to_datetime(base.index)
@@ -243,17 +304,20 @@ def score(m, committed):
     doy = b.groupby(b.index.dayofyear).mean().reindex(range(1, 367))
     doy = pd.concat([doy.iloc[-15:], doy, doy.iloc[:15]]).rolling(31, center=True, min_periods=15).mean().iloc[15:-15]
     doy.index = range(1, 367)
-    tan_rt = rt[["NEURASIA"]] - doy.reindex(rt.index.dayofyear).values
+    # the real-time temperature is corrected by the bias the consistency gate measured
+    # (CDS minus training series; amended 2026-10-02 before any onset, after review)
+    tan_rt = rt[["NEURASIA"]] - doy.reindex(rt.index.dayofyear).values - gate_res["NEURASIA"]["bias_K"]
     ev, _ = onsets()
     scored = []
     for o in ev:
         if not o["final_warming_test_applicable"]:
             continue
         t0 = pd.Timestamp(o["onset"])
-        key = t0.strftime("%m-%d")
         en = ensemble(m, t0)
-        if committed and committed[key]["p_dw_shifted"] != round(en["p_dw_shifted"], 4):
-            sys.exit(f"recomputed prediction for {key} differs from the committed table -- refusing to score")
+        bad = integrity(m, committed, inputs, en, t0)
+        if bad:
+            scored.append({"onset": o["onset"], "status": f"not scored: recomputed forecast differs from the committed table in {bad}"})
+            continue
         win = pd.date_range(t0 + pd.Timedelta(days=CS.LO), t0 + pd.Timedelta(days=52))
         y = nam.reindex(win)
         tw = tan_rt["NEURASIA"].reindex(pd.date_range(t0 + pd.Timedelta(days=T_DAYS[0]), t0 + pd.Timedelta(days=T_DAYS[1])))
@@ -301,7 +365,7 @@ def main():
         g = prev.get("consistency_gate") or gate(m)
         if not g.get("passed"):
             sys.exit(f"consistency gate not passed: {g}")
-        prev["scores"] = score(m, prev.get("predictions"))
+        prev["scores"] = score(m, prev["predictions"], prev["inputs"], g)
         print(json.dumps(prev["scores"], indent=1))
     else:
         prev = {"registered": "2026-10-02; prediction table committed before any scored onset",
@@ -312,7 +376,8 @@ def main():
                 "n_training_events": m["n_events"],
                 "shift": {k: round(v, 4) for k, v in m["shift"].items()},
                 "constant_rate": round(m["rate"], 4), "beta_T_K_per_year": round(m["beta_T_per_year"], 5),
-                "predictions": table(m)}
+                "predictions": table(m),
+                "odds_five_events": odds()}
         p = prev["predictions"]
         for k in ("11-15", "12-15", "01-15", "02-15", "03-15"):
             print(k, p[k])

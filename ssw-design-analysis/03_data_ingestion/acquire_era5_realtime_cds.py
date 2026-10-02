@@ -153,7 +153,9 @@ def main():
     d = acquire(a, b)
     if OUT.exists():
         old = pd.read_parquet(OUT)
-        d = pd.concat([old[~old.index.isin(d.index)], d]).sort_index()
+        # values are frozen as first retrieved (prospective_next_ssw registration):
+        # a day already in the file keeps its earlier value; only new days are added
+        d = pd.concat([old, d[~d.index.isin(old.index)]]).sort_index()
     if not d["u10_60N"].dropna().between(-60, 100).all():
         raise ValueError("implausible u(10 hPa, 60N)")
     d.to_parquet(OUT)
