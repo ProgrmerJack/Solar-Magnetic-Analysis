@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-02T08:13:23+00:00",
+ "generated": "2026-10-02T08:39:19+00:00",
  "note": "Known-good baseline: each result was produced by the script at the recorded sha256. catalog_repo.py flags STALE when a producer's hash no longer matches. Re-record with --record only AFTER re-running the analysis.",
  "results": {
   "catalogue_sets.json": {
@@ -407,9 +407,9 @@
     "ssw-design-analysis/07_physical_decomposition/icon_event_heterogeneity.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/icon_event_heterogeneity.py": "1d86da8c9b873d2d"
+    "ssw-design-analysis/07_physical_decomposition/icon_event_heterogeneity.py": "edf76cd0869ceeb9"
    },
-   "result_sha256_16": "125ca6bd0cd871b4",
+   "result_sha256_16": "d935dffc2be96295",
    "needs_rerun": false
   },
   "mediation_disattenuated.json": {
@@ -447,9 +447,9 @@
     "ssw-design-analysis/07_physical_decomposition/s2s_member_experiment.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/s2s_member_experiment.py": "35c063e6e2b5fcb3"
+    "ssw-design-analysis/07_physical_decomposition/s2s_member_experiment.py": "bc168e1bd7ba5af6"
    },
-   "result_sha256_16": "a1b981b87c08e992",
+   "result_sha256_16": "ee4b2ed6c7281fae",
    "needs_rerun": false
   },
   "vortex_threshold_continuity.json": {
@@ -458,10 +458,10 @@
     "ssw-design-analysis/07_physical_decomposition/vortex_threshold_continuity.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "4255941179faf5b9",
-    "ssw-design-analysis/07_physical_decomposition/vortex_threshold_continuity.py": "6de754de115dc126"
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "0347a686764afd50",
+    "ssw-design-analysis/07_physical_decomposition/vortex_threshold_continuity.py": "715551ce3b7ec6bb"
    },
-   "result_sha256_16": "733c15819a4b6e5a",
+   "result_sha256_16": "7557e877d0fb2645",
    "needs_rerun": false
   },
   "class_model_comparison.json": {
@@ -611,7 +611,7 @@
    ],
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/s2s_heldout_test.py": "d57639ff35f1972b",
-    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "4255941179faf5b9"
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "0347a686764afd50"
    },
    "result_sha256_16": "287dd5c39227c004",
    "needs_rerun": false
@@ -675,9 +675,9 @@
     "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "4255941179faf5b9"
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "0347a686764afd50"
    },
-   "result_sha256_16": "b96a30299a8f98c8",
+   "result_sha256_16": "654eb427d5a20560",
    "needs_rerun": false
   },
   "state_forecast.json": {
@@ -685,9 +685,9 @@
     "ssw-design-analysis/07_physical_decomposition/state_forecast.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/state_forecast.py": "5a1d81b5c10c8e43"
+    "ssw-design-analysis/07_physical_decomposition/state_forecast.py": "623ec5e227bc64af"
    },
-   "result_sha256_16": "6ffab990cab73924",
+   "result_sha256_16": "f74018a5a8914fbf",
    "needs_rerun": false
   },
   "within_model_check.json": {
@@ -815,9 +815,9 @@
     "ssw-design-analysis/07_physical_decomposition/snapsi_residual_quantiles.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_residual_quantiles.py": "2577d04fe994596d"
+    "ssw-design-analysis/07_physical_decomposition/snapsi_residual_quantiles.py": "0f480469891f2c1f"
    },
-   "result_sha256_16": "3b9d31ad34ee70fe",
+   "result_sha256_16": "e504c6ed5a177e4a",
    "needs_rerun": false
   },
   "snapsi_selection_test.json": {
@@ -845,9 +845,9 @@
     "ssw-design-analysis/08_literature_audit/criterion_transport_cv.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/08_literature_audit/criterion_transport_cv.py": "5c4075d19a83a3eb"
+    "ssw-design-analysis/08_literature_audit/criterion_transport_cv.py": "803cba21ec2099c3"
    },
-   "result_sha256_16": "02b99ca1e80c6ef0",
+   "result_sha256_16": "e2524cb708b89a55",
    "needs_rerun": false
   },
   "era5_nam_daily_mean_check.json": {

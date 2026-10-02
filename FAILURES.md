@@ -242,3 +242,13 @@ Rule: build controls from the real predictor-outcome relation (fitted mean + res
 Tried: verifying a single SNAPSI-derived probability of a cold northern-Eurasian fortnight after an SSW on 39 events (consistent), then on 12 held-out ERA5 SSWs of 1941-1958 (shift_rule_forecast R6).
 Failed: 0 of 12 below the 10th percentile against 0.32 (p 0.012); the early events were weaker reversals and older data, but neither explains it.
 Rule: a probability that rests on two imposed events is not a general per-SSW rate; scale it with the disturbance and verify it out of sample before calling it a forecast.
+
+## 2026-10-02 — Grouping keys and standardisation units silently mixed across sources
+Tried: start fixed effects keyed on start date alone across ten S2S systems (s2s_member_experiment N4); CMIP6 annular-mode values (all-year s.d. units) fed into an ERA5 regression fitted in Nov-Mar s.d. units (shift_rule R5, state_forecast F2).
+Failed: different systems sharing a date were pooled into one "start" (dose flipped sign, -0.05 -> +0.12); CMIP6 inputs were ~15% too large (one registered reading moved to the p = 0.05 boundary). Found by fresh-context code review.
+Rule: key every group on all identifying fields (system, start); state and check the standardising s.d. (period, months, event-free) of every quantity before combining sources.
+
+## 2026-10-02 — Coverage gaps in a covariate silently shrink the sample
+Tried: ERA5 continuity with a pre-deceleration covariate from a Nov-May pressure series; ICON onset as "first negative ensemble-mean wind".
+Failed: early-winter maxima need September-October data, so design() dropped 32 of 144 units without warning; 6 of 18 ICON ensembles were already reversed at t = 0, so "onset" was the start of the run.
+Rule: report n per estimate next to the registered n and fail loudly on unexpected drops; define onsets as sign changes, never as first-below-threshold.

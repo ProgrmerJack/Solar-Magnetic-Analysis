@@ -1,6 +1,6 @@
-primary_published_surface {"n": 39, "observed_dw": 27, "expected_dw": 29.21, "p_calibration": 0.5156, "brier_shifted": 0.2271, "brier_constant_rate": 0.2243, "brier_rate_minus_shifted": -0.0027, "ci95": [-0.0238, 0.0153], "mean_predicted": 0.749, "constant_rate_mean": 0.6911}
-secondary_with_150hPa {"n": 39, "observed_dw": 21, "expected_dw": 21.26, "p_calibration": 1.0, "brier_shifted": 0.2848, "brier_constant_rate": 0.2634, "brier_rate_minus_shifted": -0.0214, "ci95": [-0.0482, 0.0048], "mean_predicted": 0.5452, "constant_rate_mean": 0.5388}
+primary_published_surface {"n": 39, "observed_dw": 27, "expected_dw": 29.21, "p_calibration": 0.5156, "brier_shifted": 0.2271, "brier_constant_rate": 0.2243, "brier_rate_minus_shifted": -0.0027, "ci95": [-0.0238, 0.0153], "mean_predicted": 0.749, "constant_rate_mean": 0.6911, "brier_climatology_unshifted": 0.3719, "brier_climatology_minus_shifted": 0.1449, "ci95_climatology_minus_shifted": [0.001, 0.2731]}
+secondary_with_150hPa {"n": 39, "observed_dw": 21, "expected_dw": 21.26, "p_calibration": 1.0, "brier_shifted": 0.2848, "brier_constant_rate": 0.2634, "brier_rate_minus_shifted": -0.0214, "ci95": [-0.0478, 0.0047], "mean_predicted": 0.5452, "constant_rate_mean": 0.5388, "brier_climatology_unshifted": 0.4361, "brier_climatology_minus_shifted": 0.1513, "ci95_climatology_minus_shifted": [0.014, 0.2959]}
 all_108_versions {"n_versions": 108, "share_p_calibration_lt_0.05": 0.0, "median_expected_minus_observed": 0.16}
-crps_window_mean_days8_52 {"n": 39, "crps_shifted": 0.3217, "crps_climatology": 0.5084, "climatology_minus_shifted": 0.1867, "ci95": [0.0745, 0.3024], "mean_pit": 0.4964, "share_pit_outer_deciles": 0.2564}
+crps_window_mean_days8_52 {"n": 39, "crps_shifted": 0.3217, "crps_climatology": 0.5084, "climatology_minus_shifted": 0.1867, "ci95": [0.0705, 0.3009], "mean_pit": 0.4964, "share_pit_outer_deciles": 0.2564}
 Saved -> criterion_transport_cv.json
 exit=0

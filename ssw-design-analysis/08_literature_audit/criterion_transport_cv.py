@@ -87,6 +87,7 @@ def main():
     folds = sorted(set(wr))
     pred = {s: np.full(len(real), np.nan) for s in specs}
     rate = {s: np.full(len(real), np.nan) for s in specs}
+    unsh = {s: np.full(len(real), np.nan) for s in specs}
     obs = {s: np.full(len(real), np.nan) for s in specs}
     crps_s = np.full(len(real), np.nan); crps_c = np.full(len(real), np.nan); pit = np.full(len(real), np.nan)
     for w in folds:
@@ -111,7 +112,9 @@ def main():
                 lab_c, ok_c = CS.classify(Mc[L][cand], Mc["nam_150"][cand], W, tau, f, c3,
                                           shift[(W, L)], shift[(W, "nam_150")] if c3 else 0.0)
                 lt, okt = CS.classify(Mr[L][tr], Mr["nam_150"][tr], W, tau, f, c3)
+                lab_u, ok_u = CS.classify(Mc[L][cand], Mc["nam_150"][cand], W, tau, f, c3)
                 pred[s][i] = lab_c[ok_c].mean(); rate[s][i] = lt[okt].mean(); obs[s][i] = float(lab_r[0])
+                unsh[s][i] = lab_u[ok_u].mean()
             y = CS.wmean(Mr["nam_1000"][[i]], 52)[0]
             ens = CS.wmean(Mc["nam_1000"][cand], 52)
             if np.isfinite(y):
@@ -123,7 +126,7 @@ def main():
 
     def evaluate(s):
         ok = np.isfinite(obs[s]) & np.isfinite(pred[s])
-        p, r_, y, wv = pred[s][ok], rate[s][ok], obs[s][ok], wr[ok]
+        p, r_, y, wv, uc = pred[s][ok], rate[s][ok], obs[s][ok], wr[ok], unsh[s][ok]
         sim = (rng.random((N_SIM, len(p))) < p).sum(1)
         k = int(y.sum())
         pcal = float(min(1, 2 * min(np.mean(sim <= k), np.mean(sim >= k))))
@@ -135,10 +138,17 @@ def main():
             idx = np.concatenate([np.flatnonzero(wv == u) for u in rng.choice(uw, len(uw))])
             a, c = sc(idx); b.append(c - a)
         bs, br = sc(np.arange(len(y)))
+        # registered but omitted in the first run (added 2026-10-02 after the code review):
+        # Brier score of the shifted null against unshifted climatology
+        bu = float(np.mean((uc - y) ** 2))
+        bb = [np.mean((uc[ix] - y[ix]) ** 2) - np.mean((p[ix] - y[ix]) ** 2)
+              for ix in (np.concatenate([np.flatnonzero(wv == u_) for u_ in rng.choice(uw, len(uw))]) for _ in range(N_BOOT))]
         return {"n": int(ok.sum()), "observed_dw": k, "expected_dw": round(float(p.sum()), 2),
                 "p_calibration": round(pcal, 4), "brier_shifted": round(float(bs), 4), "brier_constant_rate": round(float(br), 4),
                 "brier_rate_minus_shifted": round(float(br - bs), 4), "ci95": [round(float(x), 4) for x in np.percentile(b, [2.5, 97.5])],
-                "mean_predicted": round(float(p.mean()), 4), "constant_rate_mean": round(float(r_.mean()), 4)}
+                "mean_predicted": round(float(p.mean()), 4), "constant_rate_mean": round(float(r_.mean()), 4),
+                "brier_climatology_unshifted": round(bu, 4), "brier_climatology_minus_shifted": round(float(bu - bs), 4),
+                "ci95_climatology_minus_shifted": [round(float(x), 4) for x in np.percentile(bb, [2.5, 97.5])]}
 
     res["primary_published_surface"] = evaluate(PRIMARY)
     res["secondary_with_150hPa"] = evaluate(SECONDARY)

@@ -119,22 +119,22 @@
   "N4_step_initial_state_fixed": {
     "n_members": 11481,
     "n_below": 1046,
-    "n_starts": 1450,
-    "dose_per_10ms_sigma": -0.0504,
+    "n_starts": 2526,
+    "dose_per_10ms_sigma": 0.1225,
     "dose_ci95": [
-      -0.1043,
-      0.0096
+      -0.0199,
+      0.2666
     ],
-    "step_sigma": -0.0534,
+    "step_sigma": 0.0439,
     "step_ci95": [
-      -0.1921,
-      0.1008
+      -0.1631,
+      0.2994
     ],
     "step_ci90": [
-      -0.1699,
-      0.0731
+      -0.1296,
+      0.2518
     ],
-    "step_p_two_sided": 0.486
+    "step_p_two_sided": 0.652
   },
   "N5_balance_pre_onset_sigma": {
     "est": -0.014,

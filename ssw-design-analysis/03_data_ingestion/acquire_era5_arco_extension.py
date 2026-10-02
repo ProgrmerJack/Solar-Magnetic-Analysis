@@ -108,6 +108,9 @@ def main():
     PARTS.mkdir(parents=True, exist_ok=True)
     for a, b in WINTERS:
         fp, ft = PARTS / f"psl_{a}_{b}.parquet", PARTS / f"t2m_{a}_{b}.parquet"
+        if OUT_T2M is None and fp.exists():
+            ps += [tuple(r) for r in pd.read_parquet(fp)[["time", "psl_cap_N"]].itertuples(index=False)]
+            continue
         if fp.exists() and ft.exists():                # resume: a winter already reduced
             ps += [tuple(r) for r in pd.read_parquet(fp)[["time", "psl_cap_N"]].itertuples(index=False)]
             ts.append(pd.read_parquet(ft).set_index("date"))
@@ -116,6 +119,11 @@ def main():
         days = pd.date_range(a, b, freq="D")
         with ThreadPoolExecutor(WORKERS) as ex:
             p = list(ex.map(psl_at, days))
+            if OUT_T2M is None:                     # pressure only
+                ps += p
+                pd.DataFrame(p, columns=["time", "psl_cap_N"]).to_parquet(fp)
+                print(f"  {a}: {len(p)} days (pressure only)", flush=True)
+                continue
             steps = [d + pd.Timedelta(hours=h) for d in days for h in (0, 6, 12, 18)]
             t = list(ex.map(t2m_at, steps))
         ps += p
@@ -128,6 +136,12 @@ def main():
         tw.reset_index().to_parquet(ft)
         print(f"  {a[:4]}/{b[:4]}: {len(p)} days", flush=True)
     psl = pd.DataFrame(ps, columns=["time", "psl_cap_N"])
+    if OUT_T2M is None:
+        if not psl["psl_cap_N"].between(95000, 106000).all():
+            raise ValueError("ARCO polar cap outside 950-1060 hPa")
+        psl.to_parquet(OUT_PSL)
+        print(f"{len(psl)} days -> {OUT_PSL.name}")
+        return
     t2 = pd.concat(ts).reset_index()
     if not psl["psl_cap_N"].between(95000, 106000).all():
         raise ValueError("ARCO polar cap outside 950-1060 hPa")
@@ -145,6 +159,12 @@ if __name__ == "__main__":
     # --early: 1940-1958 (November-May, and January-May 1940) for the revision-3
     # out-of-sample SSWs and the ERA5 continuity test (designs registered in
     # shift_rule_forecast.py and vortex_threshold_continuity.py, commit add7ba9)
+    # --autumn: September-October polar-cap pressure only, 1940-1958 and 2023-2025
+    # (pre-deceleration covariate of the ERA5 continuity test; fix 2026-10-02)
+    if "--autumn" in sys.argv:
+        WINTERS = [(f"{y}-09-01", f"{y}-10-31") for y in list(range(1940, 1959)) + [2023, 2024, 2025]]
+        OUT_PSL = HERE / "era5_psl_cap_00utc_arco_autumn.parquet"
+        OUT_T2M = None
     if "--early" in sys.argv:
         WINTERS = ([("1940-01-01", "1940-05-31")] + [(f"{y}-11-01", f"{y + 1}-05-31") for y in range(1940, 1958)]
                    + [("1958-11-01", "1958-12-31")])

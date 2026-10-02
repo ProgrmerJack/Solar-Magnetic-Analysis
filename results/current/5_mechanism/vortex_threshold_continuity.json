@@ -1946,7 +1946,7 @@
       "psl_offset_Pa": -0.01,
       "t_offset_K": 0.0001,
       "t_trend_K_per_decade": 0.3755,
-      "nam_proxy_sd_Pa": 552.2
+      "nam_proxy_sd_Pa": 552.02
     },
     "units": {
       "n": 144,
@@ -1991,30 +1991,30 @@
     "all": {
       "Y2E_NAMproxy": {
         "E1_E2": {
-          "n": 111,
-          "n_below": 46,
-          "dose_slope_per_10ms": 0.1627,
+          "n": 143,
+          "n_below": 53,
+          "dose_slope_per_10ms": 0.1609,
           "dose_ci95": [
-            0.1035,
-            0.2246
+            0.1057,
+            0.2193
           ],
           "dose_p_two_sided": 0.0,
-          "jump": -0.2789,
+          "jump": -0.165,
           "jump_ci95": [
-            -0.6733,
-            0.1111
+            -0.4845,
+            0.15
           ],
           "jump_ci90": [
-            -0.6067,
-            0.0515
+            -0.4358,
+            0.1016
           ],
-          "jump_p_two_sided": 0.1608
+          "jump_p_two_sided": 0.2984
         },
         "E3_mse": {
           "jump_left_minus_right": 0.0122,
           "rbc_ci95_left_minus_right": [
-            -0.6742,
-            0.6762
+            -0.6744,
+            0.6764
           ],
           "rbc_p": 0.9978,
           "h": 9.61,
@@ -2023,6 +2023,74 @@
             32
           ]
         },
+        "E3_fixed": {
+          "5.0": {
+            "jump_left_minus_right": 0.0684,
+            "rbc_ci95_left_minus_right": [
+              -0.6544,
+              1.1982
+            ],
+            "rbc_p": 0.5651,
+            "h": 5.0,
+            "n_eff": [
+              19,
+              16
+            ]
+          },
+          "7.5": {
+            "jump_left_minus_right": -0.0367,
+            "rbc_ci95_left_minus_right": [
+              -0.7704,
+              1.0576
+            ],
+            "rbc_p": 0.7581,
+            "h": 7.5,
+            "n_eff": [
+              23,
+              26
+            ]
+          },
+          "10.0": {
+            "jump_left_minus_right": 0.0134,
+            "rbc_ci95_left_minus_right": [
+              -0.9051,
+              0.8267
+            ],
+            "rbc_p": 0.9293,
+            "h": 10.0,
+            "n_eff": [
+              30,
+              33
+            ]
+          },
+          "15.0": {
+            "jump_left_minus_right": 0.0148,
+            "rbc_ci95_left_minus_right": [
+              -0.6762,
+              0.6649
+            ],
+            "rbc_p": 0.9869,
+            "h": 15.0,
+            "n_eff": [
+              40,
+              49
+            ]
+          },
+          "20.0": {
+            "jump_left_minus_right": -0.009,
+            "rbc_ci95_left_minus_right": [
+              -0.5338,
+              0.6303
+            ],
+            "rbc_p": 0.8709,
+            "h": 20.0,
+            "n_eff": [
+              44,
+              55
+            ]
+          }
+        },
+        "n_with_outcome_and_covariate": 143,
         "E4": [
           {
             "w": 2.5,
@@ -2031,7 +2099,7 @@
               12
             ],
             "diff_below_minus_above": 0.0347,
-            "perm_p_two_sided": 0.875
+            "perm_p_two_sided": 0.874
           },
           {
             "w": 5.0,
@@ -2040,15 +2108,15 @@
               16
             ],
             "diff_below_minus_above": -0.1328,
-            "perm_p_two_sided": 0.443
+            "perm_p_two_sided": 0.4445
           }
         ],
         "donut": {
           "1.0": {
-            "jump_left_minus_right": 0.0551,
+            "jump_left_minus_right": 0.0552,
             "rbc_ci95_left_minus_right": [
-              -1.0521,
-              0.9823
+              -1.0524,
+              0.9826
             ],
             "rbc_p": 0.9464,
             "h": 6.15,
@@ -2058,10 +2126,10 @@
             ]
           },
           "2.0": {
-            "jump_left_minus_right": 0.4183,
+            "jump_left_minus_right": 0.4184,
             "rbc_ci95_left_minus_right": [
-              -1.4042,
-              2.4952
+              -1.4047,
+              2.496
             ],
             "rbc_p": 0.5834,
             "h": 7.06,
@@ -2073,10 +2141,10 @@
         },
         "placebo_cutoffs": {
           "-10.0": {
-            "jump_left_minus_right": 0.5739,
+            "jump_left_minus_right": 0.5741,
             "rbc_ci95_left_minus_right": [
               -0.0465,
-              1.4816
+              1.4821
             ],
             "rbc_p": 0.0657,
             "h": 4.18,
@@ -2086,9 +2154,9 @@
             ]
           },
           "-5.0": {
-            "jump_left_minus_right": -0.7392,
+            "jump_left_minus_right": -0.7394,
             "rbc_ci95_left_minus_right": [
-              -1.8244,
+              -1.825,
               0.0889
             ],
             "rbc_p": 0.0754,
@@ -2099,10 +2167,10 @@
             ]
           },
           "5.0": {
-            "jump_left_minus_right": 0.6822,
+            "jump_left_minus_right": 0.6824,
             "rbc_ci95_left_minus_right": [
-              -1.1044,
-              3.4821
+              -1.1047,
+              3.4831
             ],
             "rbc_p": 0.3096,
             "h": 3.49,
@@ -2112,10 +2180,10 @@
             ]
           },
           "10.0": {
-            "jump_left_minus_right": -0.647,
+            "jump_left_minus_right": -0.6472,
             "rbc_ci95_left_minus_right": [
-              -2.0679,
-              0.5915
+              -2.0686,
+              0.5917
             ],
             "rbc_p": 0.2766,
             "h": 2.48,
@@ -2128,24 +2196,24 @@
       },
       "Y1_AO": {
         "E1_E2": {
-          "n": 97,
-          "n_below": 43,
-          "dose_slope_per_10ms": 0.2938,
+          "n": 124,
+          "n_below": 50,
+          "dose_slope_per_10ms": 0.3061,
           "dose_ci95": [
-            0.1535,
-            0.4285
+            0.1781,
+            0.4309
           ],
           "dose_p_two_sided": 0.0,
-          "jump": -0.7342,
+          "jump": -0.5364,
           "jump_ci95": [
-            -1.5063,
-            -0.0599
+            -1.2269,
+            0.093
           ],
           "jump_ci90": [
-            -1.3701,
-            -0.1591
+            -1.1084,
+            0.0001
           ],
-          "jump_p_two_sided": 0.0284
+          "jump_p_two_sided": 0.1002
         },
         "E3_mse": {
           "jump_left_minus_right": -0.0186,
@@ -2160,6 +2228,74 @@
             30
           ]
         },
+        "E3_fixed": {
+          "5.0": {
+            "jump_left_minus_right": 0.0022,
+            "rbc_ci95_left_minus_right": [
+              -2.181,
+              2.0253
+            ],
+            "rbc_p": 0.9422,
+            "h": 5.0,
+            "n_eff": [
+              16,
+              13
+            ]
+          },
+          "7.5": {
+            "jump_left_minus_right": 0.0599,
+            "rbc_ci95_left_minus_right": [
+              -2.0254,
+              1.9591
+            ],
+            "rbc_p": 0.974,
+            "h": 7.5,
+            "n_eff": [
+              20,
+              22
+            ]
+          },
+          "10.0": {
+            "jump_left_minus_right": 0.0185,
+            "rbc_ci95_left_minus_right": [
+              -1.8021,
+              1.8503
+            ],
+            "rbc_p": 0.9794,
+            "h": 10.0,
+            "n_eff": [
+              27,
+              29
+            ]
+          },
+          "15.0": {
+            "jump_left_minus_right": -0.1155,
+            "rbc_ci95_left_minus_right": [
+              -1.3976,
+              1.5915
+            ],
+            "rbc_p": 0.8988,
+            "h": 15.0,
+            "n_eff": [
+              37,
+              42
+            ]
+          },
+          "20.0": {
+            "jump_left_minus_right": -0.2139,
+            "rbc_ci95_left_minus_right": [
+              -1.2786,
+              1.4474
+            ],
+            "rbc_p": 0.9034,
+            "h": 20.0,
+            "n_eff": [
+              41,
+              46
+            ]
+          }
+        },
+        "n_with_outcome_and_covariate": 124,
         "E4": [
           {
             "w": 2.5,
@@ -2168,7 +2304,7 @@
               10
             ],
             "diff_below_minus_above": 0.1806,
-            "perm_p_two_sided": 0.7265
+            "perm_p_two_sided": 0.7264
           },
           {
             "w": 5.0,
@@ -2177,7 +2313,7 @@
               13
             ],
             "diff_below_minus_above": -0.3229,
-            "perm_p_two_sided": 0.4465
+            "perm_p_two_sided": 0.45
           }
         ],
         "donut": {
@@ -2265,24 +2401,24 @@
       },
       "Y3_T_NEURASIA": {
         "E1_E2": {
-          "n": 111,
-          "n_below": 46,
-          "dose_slope_per_10ms": 0.378,
+          "n": 143,
+          "n_below": 53,
+          "dose_slope_per_10ms": 0.3739,
           "dose_ci95": [
-            0.1445,
-            0.6214
+            0.1592,
+            0.5943
           ],
-          "dose_p_two_sided": 0.0022,
-          "jump": -0.6586,
+          "dose_p_two_sided": 0.0002,
+          "jump": -0.4381,
           "jump_ci95": [
-            -2.1498,
-            0.7732
+            -1.7281,
+            0.9009
           ],
           "jump_ci90": [
-            -1.9062,
-            0.5449
+            -1.5367,
+            0.6969
           ],
-          "jump_p_two_sided": 0.391
+          "jump_p_two_sided": 0.5224
         },
         "E3_mse": {
           "jump_left_minus_right": -0.8323,
@@ -2297,6 +2433,74 @@
             32
           ]
         },
+        "E3_fixed": {
+          "5.0": {
+            "jump_left_minus_right": -1.5421,
+            "rbc_ci95_left_minus_right": [
+              -5.1281,
+              0.9011
+            ],
+            "rbc_p": 0.1694,
+            "h": 5.0,
+            "n_eff": [
+              19,
+              16
+            ]
+          },
+          "7.5": {
+            "jump_left_minus_right": -1.1532,
+            "rbc_ci95_left_minus_right": [
+              -4.8399,
+              1.0007
+            ],
+            "rbc_p": 0.1976,
+            "h": 7.5,
+            "n_eff": [
+              23,
+              26
+            ]
+          },
+          "10.0": {
+            "jump_left_minus_right": -0.8314,
+            "rbc_ci95_left_minus_right": [
+              -4.3915,
+              1.0929
+            ],
+            "rbc_p": 0.2385,
+            "h": 10.0,
+            "n_eff": [
+              30,
+              33
+            ]
+          },
+          "15.0": {
+            "jump_left_minus_right": -0.8775,
+            "rbc_ci95_left_minus_right": [
+              -3.4576,
+              1.5509
+            ],
+            "rbc_p": 0.4556,
+            "h": 15.0,
+            "n_eff": [
+              40,
+              49
+            ]
+          },
+          "20.0": {
+            "jump_left_minus_right": -0.7849,
+            "rbc_ci95_left_minus_right": [
+              -3.3951,
+              1.3001
+            ],
+            "rbc_p": 0.3818,
+            "h": 20.0,
+            "n_eff": [
+              44,
+              55
+            ]
+          }
+        },
+        "n_with_outcome_and_covariate": 143,
         "E4": [
           {
             "w": 2.5,
@@ -2305,7 +2509,7 @@
               12
             ],
             "diff_below_minus_above": -0.259,
-            "perm_p_two_sided": 0.7775
+            "perm_p_two_sided": 0.7755
           },
           {
             "w": 5.0,
@@ -2314,7 +2518,7 @@
               16
             ],
             "diff_below_minus_above": -0.7438,
-            "perm_p_two_sided": 0.2369
+            "perm_p_two_sided": 0.2338
           }
         ],
         "donut": {
@@ -2402,24 +2606,24 @@
       },
       "Y4_downward": {
         "E1_E2": {
-          "n": 111,
-          "n_below": 46,
-          "dose_slope_per_10ms": -0.1171,
+          "n": 143,
+          "n_below": 53,
+          "dose_slope_per_10ms": -0.1179,
           "dose_ci95": [
-            -0.1648,
-            -0.0634
+            -0.1641,
+            -0.0704
           ],
           "dose_p_two_sided": 0.0,
-          "jump": 0.2638,
+          "jump": 0.1597,
           "jump_ci95": [
-            -0.0636,
-            0.5941
+            -0.1086,
+            0.4205
           ],
           "jump_ci90": [
-            -0.01,
-            0.5384
+            -0.064,
+            0.3778
           ],
-          "jump_p_two_sided": 0.1138
+          "jump_p_two_sided": 0.2572
         },
         "E3_mse": {
           "jump_left_minus_right": 0.1046,
@@ -2434,6 +2638,74 @@
             40
           ]
         },
+        "E3_fixed": {
+          "5.0": {
+            "jump_left_minus_right": 0.1215,
+            "rbc_ci95_left_minus_right": [
+              -0.9714,
+              0.9533
+            ],
+            "rbc_p": 0.9853,
+            "h": 5.0,
+            "n_eff": [
+              19,
+              16
+            ]
+          },
+          "7.5": {
+            "jump_left_minus_right": 0.1394,
+            "rbc_ci95_left_minus_right": [
+              -0.7864,
+              1.0046
+            ],
+            "rbc_p": 0.8113,
+            "h": 7.5,
+            "n_eff": [
+              23,
+              26
+            ]
+          },
+          "10.0": {
+            "jump_left_minus_right": 0.1,
+            "rbc_ci95_left_minus_right": [
+              -0.6409,
+              0.9532
+            ],
+            "rbc_p": 0.7011,
+            "h": 10.0,
+            "n_eff": [
+              30,
+              33
+            ]
+          },
+          "15.0": {
+            "jump_left_minus_right": 0.0949,
+            "rbc_ci95_left_minus_right": [
+              -0.4912,
+              0.7234
+            ],
+            "rbc_p": 0.7079,
+            "h": 15.0,
+            "n_eff": [
+              40,
+              49
+            ]
+          },
+          "20.0": {
+            "jump_left_minus_right": 0.1167,
+            "rbc_ci95_left_minus_right": [
+              -0.4558,
+              0.6006
+            ],
+            "rbc_p": 0.7881,
+            "h": 20.0,
+            "n_eff": [
+              44,
+              55
+            ]
+          }
+        },
+        "n_with_outcome_and_covariate": 143,
         "E4": [
           {
             "w": 2.5,
@@ -2442,7 +2714,7 @@
               12
             ],
             "diff_below_minus_above": 0.125,
-            "perm_p_two_sided": 0.6459
+            "perm_p_two_sided": 0.6451
           },
           {
             "w": 5.0,
@@ -2451,7 +2723,7 @@
               16
             ],
             "diff_below_minus_above": 0.1513,
-            "perm_p_two_sided": 0.5064
+            "perm_p_two_sided": 0.5038
           }
         ],
         "donut": {
@@ -2538,24 +2810,24 @@
         }
       },
       "E2_holm": {
-        "Y2E_NAMproxy": 0.3414,
-        "Y1_AO": 0.1136,
-        "Y3_T_NEURASIA": 0.391,
-        "Y4_downward": 0.3414
+        "Y2E_NAMproxy": 0.7716,
+        "Y1_AO": 0.4008,
+        "Y3_T_NEURASIA": 0.7716,
+        "Y4_downward": 0.7716
       },
       "placebo_cutoffs_p_lt_0.05": 5,
       "falsification": {
         "placebo_outcome_pre": {
-          "jump_left_minus_right": -0.0274,
+          "jump_left_minus_right": -0.0159,
           "rbc_ci95_left_minus_right": [
-            -1.049,
-            1.2191
+            -0.997,
+            1.0426
           ],
-          "rbc_p": 0.8832,
-          "h": 10.82,
+          "rbc_p": 0.9651,
+          "h": 10.09,
           "n_eff": [
-            27,
-            25
+            30,
+            33
           ]
         },
         "balance_drop": {
@@ -2570,36 +2842,62 @@
             23,
             26
           ]
+        },
+        "balance_doy_sin": {
+          "jump_left_minus_right": -0.168,
+          "rbc_ci95_left_minus_right": [
+            -0.8979,
+            0.3475
+          ],
+          "rbc_p": 0.3864,
+          "h": 9.21,
+          "n_eff": [
+            28,
+            32
+          ]
+        },
+        "balance_era": {
+          "jump_left_minus_right": -0.0432,
+          "rbc_ci95_left_minus_right": [
+            -0.6447,
+            0.7192
+          ],
+          "rbc_p": 0.9148,
+          "h": 8.96,
+          "n_eff": [
+            28,
+            31
+          ]
         }
       }
     },
     "from_1946": {
       "Y2E_NAMproxy": {
         "E1_E2": {
-          "n": 104,
-          "n_below": 44,
-          "dose_slope_per_10ms": 0.1679,
+          "n": 133,
+          "n_below": 51,
+          "dose_slope_per_10ms": 0.1646,
           "dose_ci95": [
-            0.1056,
-            0.2316
+            0.1073,
+            0.2261
           ],
           "dose_p_two_sided": 0.0,
-          "jump": -0.2713,
+          "jump": -0.1583,
           "jump_ci95": [
-            -0.6817,
-            0.13
+            -0.4843,
+            0.1677
           ],
           "jump_ci90": [
-            -0.6138,
-            0.0636
+            -0.4318,
+            0.1162
           ],
-          "jump_p_two_sided": 0.195
+          "jump_p_two_sided": 0.3556
         },
         "E3_mse": {
           "jump_left_minus_right": 0.0136,
           "rbc_ci95_left_minus_right": [
-            -0.6764,
-            0.6917
+            -0.6766,
+            0.6919
           ],
           "rbc_p": 0.9825,
           "h": 9.88,
@@ -2608,6 +2906,74 @@
             32
           ]
         },
+        "E3_fixed": {
+          "5.0": {
+            "jump_left_minus_right": 0.0772,
+            "rbc_ci95_left_minus_right": [
+              -0.6484,
+              1.2034
+            ],
+            "rbc_p": 0.5569,
+            "h": 5.0,
+            "n_eff": [
+              18,
+              15
+            ]
+          },
+          "7.5": {
+            "jump_left_minus_right": -0.0272,
+            "rbc_ci95_left_minus_right": [
+              -0.7662,
+              1.0776
+            ],
+            "rbc_p": 0.7406,
+            "h": 7.5,
+            "n_eff": [
+              22,
+              25
+            ]
+          },
+          "10.0": {
+            "jump_left_minus_right": 0.0133,
+            "rbc_ci95_left_minus_right": [
+              -0.8978,
+              0.8488
+            ],
+            "rbc_p": 0.9561,
+            "h": 10.0,
+            "n_eff": [
+              29,
+              32
+            ]
+          },
+          "15.0": {
+            "jump_left_minus_right": 0.0142,
+            "rbc_ci95_left_minus_right": [
+              -0.6839,
+              0.6821
+            ],
+            "rbc_p": 0.9979,
+            "h": 15.0,
+            "n_eff": [
+              39,
+              47
+            ]
+          },
+          "20.0": {
+            "jump_left_minus_right": -0.0102,
+            "rbc_ci95_left_minus_right": [
+              -0.5502,
+              0.6501
+            ],
+            "rbc_p": 0.8705,
+            "h": 20.0,
+            "n_eff": [
+              43,
+              52
+            ]
+          }
+        },
+        "n_with_outcome_and_covariate": 133,
         "E4": [
           {
             "w": 2.5,
@@ -2616,7 +2982,7 @@
               11
             ],
             "diff_below_minus_above": 0.0301,
-            "perm_p_two_sided": 0.8994
+            "perm_p_two_sided": 0.8938
           },
           {
             "w": 5.0,
@@ -2625,15 +2991,15 @@
               15
             ],
             "diff_below_minus_above": -0.1395,
-            "perm_p_two_sided": 0.4462
+            "perm_p_two_sided": 0.4508
           }
         ],
         "donut": {
           "1.0": {
             "jump_left_minus_right": 0.0614,
             "rbc_ci95_left_minus_right": [
-              -1.0333,
-              1.029
+              -1.0336,
+              1.0293
             ],
             "rbc_p": 0.9967,
             "h": 6.28,
@@ -2643,10 +3009,10 @@
             ]
           },
           "2.0": {
-            "jump_left_minus_right": 0.434,
+            "jump_left_minus_right": 0.4342,
             "rbc_ci95_left_minus_right": [
-              -1.3557,
-              2.4779
+              -1.3561,
+              2.4787
             ],
             "rbc_p": 0.5662,
             "h": 7.24,
@@ -2658,10 +3024,10 @@
         },
         "placebo_cutoffs": {
           "-10.0": {
-            "jump_left_minus_right": 0.5924,
+            "jump_left_minus_right": 0.5925,
             "rbc_ci95_left_minus_right": [
               -0.0242,
-              1.4956
+              1.496
             ],
             "rbc_p": 0.0577,
             "h": 4.09,
@@ -2671,9 +3037,9 @@
             ]
           },
           "-5.0": {
-            "jump_left_minus_right": -0.7098,
+            "jump_left_minus_right": -0.71,
             "rbc_ci95_left_minus_right": [
-              -1.781,
+              -1.7815,
               0.0571
             ],
             "rbc_p": 0.066,
@@ -2684,10 +3050,10 @@
             ]
           },
           "5.0": {
-            "jump_left_minus_right": 0.5858,
+            "jump_left_minus_right": 0.586,
             "rbc_ci95_left_minus_right": [
-              -1.2339,
-              3.289
+              -1.2343,
+              3.29
             ],
             "rbc_p": 0.3732,
             "h": 3.71,
@@ -2697,10 +3063,10 @@
             ]
           },
           "10.0": {
-            "jump_left_minus_right": -0.6688,
+            "jump_left_minus_right": -0.669,
             "rbc_ci95_left_minus_right": [
-              -2.0847,
-              0.5651
+              -2.0853,
+              0.5653
             ],
             "rbc_p": 0.261,
             "h": 2.58,
@@ -2713,24 +3079,24 @@
       },
       "Y1_AO": {
         "E1_E2": {
-          "n": 97,
-          "n_below": 43,
-          "dose_slope_per_10ms": 0.2938,
+          "n": 124,
+          "n_below": 50,
+          "dose_slope_per_10ms": 0.3061,
           "dose_ci95": [
-            0.1503,
-            0.4263
+            0.1786,
+            0.4326
           ],
-          "dose_p_two_sided": 0.0002,
-          "jump": -0.7342,
+          "dose_p_two_sided": 0.0,
+          "jump": -0.5364,
           "jump_ci95": [
-            -1.4928,
-            -0.0645
+            -1.2047,
+            0.0894
           ],
           "jump_ci90": [
-            -1.3688,
-            -0.1597
+            -1.1034,
+            -0.0095
           ],
-          "jump_p_two_sided": 0.0318
+          "jump_p_two_sided": 0.093
         },
         "E3_mse": {
           "jump_left_minus_right": -0.0186,
@@ -2745,6 +3111,74 @@
             30
           ]
         },
+        "E3_fixed": {
+          "5.0": {
+            "jump_left_minus_right": 0.0022,
+            "rbc_ci95_left_minus_right": [
+              -2.181,
+              2.0253
+            ],
+            "rbc_p": 0.9422,
+            "h": 5.0,
+            "n_eff": [
+              16,
+              13
+            ]
+          },
+          "7.5": {
+            "jump_left_minus_right": 0.0599,
+            "rbc_ci95_left_minus_right": [
+              -2.0254,
+              1.9591
+            ],
+            "rbc_p": 0.974,
+            "h": 7.5,
+            "n_eff": [
+              20,
+              22
+            ]
+          },
+          "10.0": {
+            "jump_left_minus_right": 0.0185,
+            "rbc_ci95_left_minus_right": [
+              -1.8021,
+              1.8503
+            ],
+            "rbc_p": 0.9794,
+            "h": 10.0,
+            "n_eff": [
+              27,
+              29
+            ]
+          },
+          "15.0": {
+            "jump_left_minus_right": -0.1155,
+            "rbc_ci95_left_minus_right": [
+              -1.3976,
+              1.5915
+            ],
+            "rbc_p": 0.8988,
+            "h": 15.0,
+            "n_eff": [
+              37,
+              42
+            ]
+          },
+          "20.0": {
+            "jump_left_minus_right": -0.2139,
+            "rbc_ci95_left_minus_right": [
+              -1.2786,
+              1.4474
+            ],
+            "rbc_p": 0.9034,
+            "h": 20.0,
+            "n_eff": [
+              41,
+              46
+            ]
+          }
+        },
+        "n_with_outcome_and_covariate": 124,
         "E4": [
           {
             "w": 2.5,
@@ -2753,7 +3187,7 @@
               10
             ],
             "diff_below_minus_above": 0.1806,
-            "perm_p_two_sided": 0.7184
+            "perm_p_two_sided": 0.7201
           },
           {
             "w": 5.0,
@@ -2762,7 +3196,7 @@
               13
             ],
             "diff_below_minus_above": -0.3229,
-            "perm_p_two_sided": 0.4469
+            "perm_p_two_sided": 0.4446
           }
         ],
         "donut": {
@@ -2850,24 +3284,24 @@
       },
       "Y3_T_NEURASIA": {
         "E1_E2": {
-          "n": 104,
-          "n_below": 44,
-          "dose_slope_per_10ms": 0.3599,
+          "n": 133,
+          "n_below": 51,
+          "dose_slope_per_10ms": 0.3523,
           "dose_ci95": [
-            0.1201,
-            0.6057
+            0.1336,
+            0.5754
           ],
-          "dose_p_two_sided": 0.0036,
-          "jump": -0.6989,
+          "dose_p_two_sided": 0.0024,
+          "jump": -0.4305,
           "jump_ci95": [
-            -2.1494,
-            0.8127
+            -1.7319,
+            0.9052
           ],
           "jump_ci90": [
-            -1.9352,
-            0.5609
+            -1.5325,
+            0.6931
           ],
-          "jump_p_two_sided": 0.3742
+          "jump_p_two_sided": 0.5226
         },
         "E3_mse": {
           "jump_left_minus_right": -0.9104,
@@ -2882,6 +3316,74 @@
             31
           ]
         },
+        "E3_fixed": {
+          "5.0": {
+            "jump_left_minus_right": -1.5489,
+            "rbc_ci95_left_minus_right": [
+              -5.0717,
+              0.9649
+            ],
+            "rbc_p": 0.1824,
+            "h": 5.0,
+            "n_eff": [
+              18,
+              15
+            ]
+          },
+          "7.5": {
+            "jump_left_minus_right": -1.2085,
+            "rbc_ci95_left_minus_right": [
+              -4.8149,
+              1.0291
+            ],
+            "rbc_p": 0.2042,
+            "h": 7.5,
+            "n_eff": [
+              22,
+              25
+            ]
+          },
+          "10.0": {
+            "jump_left_minus_right": -0.9118,
+            "rbc_ci95_left_minus_right": [
+              -4.3991,
+              1.0898
+            ],
+            "rbc_p": 0.2373,
+            "h": 10.0,
+            "n_eff": [
+              29,
+              32
+            ]
+          },
+          "15.0": {
+            "jump_left_minus_right": -0.9415,
+            "rbc_ci95_left_minus_right": [
+              -3.5416,
+              1.4961
+            ],
+            "rbc_p": 0.4261,
+            "h": 15.0,
+            "n_eff": [
+              39,
+              47
+            ]
+          },
+          "20.0": {
+            "jump_left_minus_right": -0.8403,
+            "rbc_ci95_left_minus_right": [
+              -3.4917,
+              1.2665
+            ],
+            "rbc_p": 0.3593,
+            "h": 20.0,
+            "n_eff": [
+              43,
+              52
+            ]
+          }
+        },
+        "n_with_outcome_and_covariate": 133,
         "E4": [
           {
             "w": 2.5,
@@ -2890,7 +3392,7 @@
               11
             ],
             "diff_below_minus_above": -0.386,
-            "perm_p_two_sided": 0.6878
+            "perm_p_two_sided": 0.6846
           },
           {
             "w": 5.0,
@@ -2899,7 +3401,7 @@
               15
             ],
             "diff_below_minus_above": -0.813,
-            "perm_p_two_sided": 0.2238
+            "perm_p_two_sided": 0.2236
           }
         ],
         "donut": {
@@ -2987,24 +3489,24 @@
       },
       "Y4_downward": {
         "E1_E2": {
-          "n": 104,
-          "n_below": 44,
-          "dose_slope_per_10ms": -0.1247,
+          "n": 133,
+          "n_below": 51,
+          "dose_slope_per_10ms": -0.1236,
           "dose_ci95": [
-            -0.1753,
-            -0.0706
+            -0.1712,
+            -0.0736
           ],
           "dose_p_two_sided": 0.0,
-          "jump": 0.2678,
+          "jump": 0.1647,
           "jump_ci95": [
-            -0.0699,
-            0.5952
+            -0.1147,
+            0.4287
           ],
           "jump_ci90": [
-            -0.0181,
-            0.5457
+            -0.0666,
+            0.383
           ],
-          "jump_p_two_sided": 0.1262
+          "jump_p_two_sided": 0.2462
         },
         "E3_mse": {
           "jump_left_minus_right": 0.0913,
@@ -3019,6 +3521,74 @@
             40
           ]
         },
+        "E3_fixed": {
+          "5.0": {
+            "jump_left_minus_right": 0.1019,
+            "rbc_ci95_left_minus_right": [
+              -0.952,
+              0.9917
+            ],
+            "rbc_p": 0.9681,
+            "h": 5.0,
+            "n_eff": [
+              18,
+              15
+            ]
+          },
+          "7.5": {
+            "jump_left_minus_right": 0.1091,
+            "rbc_ci95_left_minus_right": [
+              -0.8148,
+              1.0066
+            ],
+            "rbc_p": 0.8364,
+            "h": 7.5,
+            "n_eff": [
+              22,
+              25
+            ]
+          },
+          "10.0": {
+            "jump_left_minus_right": 0.0853,
+            "rbc_ci95_left_minus_right": [
+              -0.6793,
+              0.9311
+            ],
+            "rbc_p": 0.7592,
+            "h": 10.0,
+            "n_eff": [
+              29,
+              32
+            ]
+          },
+          "15.0": {
+            "jump_left_minus_right": 0.085,
+            "rbc_ci95_left_minus_right": [
+              -0.5197,
+              0.7098
+            ],
+            "rbc_p": 0.7618,
+            "h": 15.0,
+            "n_eff": [
+              39,
+              47
+            ]
+          },
+          "20.0": {
+            "jump_left_minus_right": 0.1118,
+            "rbc_ci95_left_minus_right": [
+              -0.4862,
+              0.5909
+            ],
+            "rbc_p": 0.8489,
+            "h": 20.0,
+            "n_eff": [
+              43,
+              52
+            ]
+          }
+        },
+        "n_with_outcome_and_covariate": 133,
         "E4": [
           {
             "w": 2.5,
@@ -3036,7 +3606,7 @@
               15
             ],
             "diff_below_minus_above": 0.1556,
-            "perm_p_two_sided": 0.486
+            "perm_p_two_sided": 0.4829
           }
         ],
         "donut": {
@@ -3123,24 +3693,24 @@
         }
       },
       "E2_holm": {
-        "Y2E_NAMproxy": 0.39,
-        "Y1_AO": 0.1272,
-        "Y3_T_NEURASIA": 0.39,
-        "Y4_downward": 0.3786
+        "Y2E_NAMproxy": 0.7386,
+        "Y1_AO": 0.372,
+        "Y3_T_NEURASIA": 0.7386,
+        "Y4_downward": 0.7386
       },
       "placebo_cutoffs_p_lt_0.05": 5,
       "falsification": {
         "placebo_outcome_pre": {
-          "jump_left_minus_right": -0.0459,
+          "jump_left_minus_right": -0.0405,
           "rbc_ci95_left_minus_right": [
-            -1.0453,
-            1.1758
+            -0.9875,
+            1.0038
           ],
-          "rbc_p": 0.9083,
-          "h": 11.64,
+          "rbc_p": 0.9872,
+          "h": 10.88,
           "n_eff": [
-            27,
-            28
+            30,
+            35
           ]
         },
         "balance_drop": {
@@ -3155,6 +3725,32 @@
             22,
             26
           ]
+        },
+        "balance_doy_sin": {
+          "jump_left_minus_right": -0.1205,
+          "rbc_ci95_left_minus_right": [
+            -0.8086,
+            0.3695
+          ],
+          "rbc_p": 0.4651,
+          "h": 10.18,
+          "n_eff": [
+            29,
+            32
+          ]
+        },
+        "balance_era": {
+          "jump_left_minus_right": -0.1167,
+          "rbc_ci95_left_minus_right": [
+            -0.7062,
+            0.6164
+          ],
+          "rbc_p": 0.8941,
+          "h": 9.78,
+          "n_eff": [
+            29,
+            31
+          ]
         }
       }
     },
@@ -3162,7 +3758,7 @@
       {
         "date": "1941-02-22",
         "X": -22.64,
-        "Y2E_NAMproxy": -0.5769,
+        "Y2E_NAMproxy": -0.5771,
         "Y1_AO": null,
         "Y3_T_NEURASIA": -1.0676,
         "Y4_downward": 1.0
@@ -3170,7 +3766,7 @@
       {
         "date": "1941-11-25",
         "X": 22.231,
-        "Y2E_NAMproxy": 0.2051,
+        "Y2E_NAMproxy": 0.2052,
         "Y1_AO": null,
         "Y3_T_NEURASIA": -1.4634,
         "Y4_downward": 0.0
@@ -3178,7 +3774,7 @@
       {
         "date": "1941-12-27",
         "X": 25.818,
-        "Y2E_NAMproxy": -0.4894,
+        "Y2E_NAMproxy": -0.4895,
         "Y1_AO": null,
         "Y3_T_NEURASIA": -2.247,
         "Y4_downward": 1.0
@@ -3202,7 +3798,7 @@
       {
         "date": "1943-02-03",
         "X": 21.794,
-        "Y2E_NAMproxy": 0.5795,
+        "Y2E_NAMproxy": 0.5797,
         "Y1_AO": null,
         "Y3_T_NEURASIA": 3.6779,
         "Y4_downward": 0.0
@@ -3210,7 +3806,7 @@
       {
         "date": "1943-11-24",
         "X": 19.786,
-        "Y2E_NAMproxy": 0.2992,
+        "Y2E_NAMproxy": 0.2993,
         "Y1_AO": null,
         "Y3_T_NEURASIA": 3.1691,
         "Y4_downward": 0.0
@@ -3218,7 +3814,7 @@
       {
         "date": "1944-02-21",
         "X": 23.325,
-        "Y2E_NAMproxy": -0.5135,
+        "Y2E_NAMproxy": -0.5137,
         "Y1_AO": null,
         "Y3_T_NEURASIA": 2.1139,
         "Y4_downward": 1.0
@@ -3234,7 +3830,7 @@
       {
         "date": "1945-12-09",
         "X": 28.18,
-        "Y2E_NAMproxy": -0.4491,
+        "Y2E_NAMproxy": -0.4492,
         "Y1_AO": null,
         "Y3_T_NEURASIA": -0.2276,
         "Y4_downward": 1.0
@@ -3242,7 +3838,7 @@
       {
         "date": "1946-01-09",
         "X": 18.743,
-        "Y2E_NAMproxy": -0.3186,
+        "Y2E_NAMproxy": -0.3187,
         "Y1_AO": null,
         "Y3_T_NEURASIA": 1.2661,
         "Y4_downward": 1.0
@@ -3258,7 +3854,7 @@
       {
         "date": "1946-03-21",
         "X": -3.763,
-        "Y2E_NAMproxy": 0.3678,
+        "Y2E_NAMproxy": 0.3679,
         "Y1_AO": null,
         "Y3_T_NEURASIA": 0.3705,
         "Y4_downward": 0.0
@@ -3266,7 +3862,7 @@
       {
         "date": "1947-01-13",
         "X": 5.91,
-        "Y2E_NAMproxy": -2.4079,
+        "Y2E_NAMproxy": -2.4087,
         "Y1_AO": null,
         "Y3_T_NEURASIA": -2.9987,
         "Y4_downward": 1.0
@@ -3274,7 +3870,7 @@
       {
         "date": "1947-02-26",
         "X": 21.96,
-        "Y2E_NAMproxy": 0.0925,
+        "Y2E_NAMproxy": 0.0926,
         "Y1_AO": null,
         "Y3_T_NEURASIA": 1.1605,
         "Y4_downward": 0.0
@@ -3282,7 +3878,7 @@
       {
         "date": "1947-11-17",
         "X": 4.112,
-        "Y2E_NAMproxy": -0.5696,
+        "Y2E_NAMproxy": -0.5698,
         "Y1_AO": null,
         "Y3_T_NEURASIA": 0.3504,
         "Y4_downward": 1.0
@@ -3290,7 +3886,7 @@
       {
         "date": "1947-12-27",
         "X": 1.586,
-        "Y2E_NAMproxy": 0.462,
+        "Y2E_NAMproxy": 0.4621,
         "Y1_AO": null,
         "Y3_T_NEURASIA": 2.1165,
         "Y4_downward": 0.0
@@ -3298,7 +3894,7 @@
       {
         "date": "1948-03-06",
         "X": 13.101,
-        "Y2E_NAMproxy": 0.8304,
+        "Y2E_NAMproxy": 0.8306,
         "Y1_AO": null,
         "Y3_T_NEURASIA": 1.1185,
         "Y4_downward": 0.0
@@ -3306,7 +3902,7 @@
       {
         "date": "1948-12-29",
         "X": 29.458,
-        "Y2E_NAMproxy": 0.9635,
+        "Y2E_NAMproxy": 0.9638,
         "Y1_AO": null,
         "Y3_T_NEURASIA": 4.8585,
         "Y4_downward": 0.0
@@ -3314,7 +3910,7 @@
       {
         "date": "1949-11-22",
         "X": 10.452,
-        "Y2E_NAMproxy": -0.5226,
+        "Y2E_NAMproxy": -0.5227,
         "Y1_AO": null,
         "Y3_T_NEURASIA": -3.276,
         "Y4_downward": 1.0
@@ -3322,7 +3918,7 @@
       {
         "date": "1949-12-23",
         "X": 8.834,
-        "Y2E_NAMproxy": -0.4659,
+        "Y2E_NAMproxy": -0.466,
         "Y1_AO": 0.1593,
         "Y3_T_NEURASIA": -3.1553,
         "Y4_downward": 1.0
@@ -3346,7 +3942,7 @@
       {
         "date": "1951-02-15",
         "X": 0.057,
-        "Y2E_NAMproxy": -1.0478,
+        "Y2E_NAMproxy": -1.0481,
         "Y1_AO": -1.4264,
         "Y3_T_NEURASIA": -0.1648,
         "Y4_downward": 1.0
@@ -3354,7 +3950,7 @@
       {
         "date": "1951-11-30",
         "X": 6.812,
-        "Y2E_NAMproxy": 0.6827,
+        "Y2E_NAMproxy": 0.6829,
         "Y1_AO": 1.6865,
         "Y3_T_NEURASIA": 4.2704,
         "Y4_downward": 0.0
@@ -3362,7 +3958,7 @@
       {
         "date": "1952-02-26",
         "X": -21.933,
-        "Y2E_NAMproxy": -0.4803,
+        "Y2E_NAMproxy": -0.4804,
         "Y1_AO": -0.8465,
         "Y3_T_NEURASIA": -3.1304,
         "Y4_downward": 1.0
@@ -3370,7 +3966,7 @@
       {
         "date": "1952-11-19",
         "X": -0.122,
-        "Y2E_NAMproxy": -0.533,
+        "Y2E_NAMproxy": -0.5332,
         "Y1_AO": -1.8668,
         "Y3_T_NEURASIA": -2.7298,
         "Y4_downward": 1.0
@@ -3378,7 +3974,7 @@
       {
         "date": "1953-01-10",
         "X": 1.037,
-        "Y2E_NAMproxy": 0.0524,
+        "Y2E_NAMproxy": 0.0525,
         "Y1_AO": -0.186,
         "Y3_T_NEURASIA": 0.4558,
         "Y4_downward": 0.0
@@ -3394,7 +3990,7 @@
       {
         "date": "1954-02-04",
         "X": 9.039,
-        "Y2E_NAMproxy": 0.3125,
+        "Y2E_NAMproxy": 0.3126,
         "Y1_AO": 0.2851,
         "Y3_T_NEURASIA": -2.793,
         "Y4_downward": 0.0
@@ -3410,7 +4006,7 @@
       {
         "date": "1955-01-28",
         "X": -3.119,
-        "Y2E_NAMproxy": -1.0583,
+        "Y2E_NAMproxy": -1.0586,
         "Y1_AO": -1.3768,
         "Y3_T_NEURASIA": -3.0691,
         "Y4_downward": 1.0
@@ -3418,7 +4014,7 @@
       {
         "date": "1956-01-27",
         "X": 30.965,
-        "Y2E_NAMproxy": -0.4504,
+        "Y2E_NAMproxy": -0.4505,
         "Y1_AO": -0.6971,
         "Y3_T_NEURASIA": -2.904,
         "Y4_downward": 1.0
@@ -3426,7 +4022,7 @@
       {
         "date": "1957-02-09",
         "X": -24.348,
-        "Y2E_NAMproxy": -1.051,
+        "Y2E_NAMproxy": -1.0513,
         "Y1_AO": -2.338,
         "Y3_T_NEURASIA": -1.6967,
         "Y4_downward": 1.0
@@ -3434,7 +4030,7 @@
       {
         "date": "1958-02-11",
         "X": -3.287,
-        "Y2E_NAMproxy": -0.9213,
+        "Y2E_NAMproxy": -0.9216,
         "Y1_AO": -2.3523,
         "Y3_T_NEURASIA": -2.6757,
         "Y4_downward": 1.0
@@ -3442,7 +4038,7 @@
       {
         "date": "1958-12-04",
         "X": 6.347,
-        "Y2E_NAMproxy": -0.8803,
+        "Y2E_NAMproxy": -0.8806,
         "Y1_AO": -2.1329,
         "Y3_T_NEURASIA": -0.5389,
         "Y4_downward": 1.0
@@ -3450,7 +4046,7 @@
       {
         "date": "1960-01-18",
         "X": -4.001,
-        "Y2E_NAMproxy": -0.6218,
+        "Y2E_NAMproxy": -0.622,
         "Y1_AO": -2.1787,
         "Y3_T_NEURASIA": -0.9623,
         "Y4_downward": 1.0
@@ -3458,7 +4054,7 @@
       {
         "date": "1962-02-19",
         "X": 15.496,
-        "Y2E_NAMproxy": -0.7076,
+        "Y2E_NAMproxy": -0.7079,
         "Y1_AO": -1.5575,
         "Y3_T_NEURASIA": 0.7614,
         "Y4_downward": 1.0
@@ -3466,7 +4062,7 @@
       {
         "date": "1963-02-01",
         "X": -5.922,
-        "Y2E_NAMproxy": 0.3587,
+        "Y2E_NAMproxy": 0.3588,
         "Y1_AO": 0.111,
         "Y3_T_NEURASIA": 0.0839,
         "Y4_downward": 0.0
@@ -3474,7 +4070,7 @@
       {
         "date": "1964-01-11",
         "X": 33.67,
-        "Y2E_NAMproxy": 0.2788,
+        "Y2E_NAMproxy": 0.2789,
         "Y1_AO": -0.3601,
         "Y3_T_NEURASIA": -1.0734,
         "Y4_downward": 0.0
@@ -3490,7 +4086,7 @@
       {
         "date": "1965-12-19",
         "X": -6.269,
-        "Y2E_NAMproxy": -0.8122,
+        "Y2E_NAMproxy": -0.8124,
         "Y1_AO": -2.4379,
         "Y3_T_NEURASIA": -2.4553,
         "Y4_downward": 1.0
@@ -3498,7 +4094,7 @@
       {
         "date": "1966-02-26",
         "X": -7.852,
-        "Y2E_NAMproxy": -1.2673,
+        "Y2E_NAMproxy": -1.2676,
         "Y1_AO": -1.9411,
         "Y3_T_NEURASIA": -0.9474,
         "Y4_downward": 1.0
@@ -3506,7 +4102,7 @@
       {
         "date": "1966-11-19",
         "X": 9.832,
-        "Y2E_NAMproxy": -0.604,
+        "Y2E_NAMproxy": -0.6042,
         "Y1_AO": -1.1633,
         "Y3_T_NEURASIA": -3.4299,
         "Y4_downward": 1.0
@@ -3514,7 +4110,7 @@
       {
         "date": "1967-02-03",
         "X": 32.381,
-        "Y2E_NAMproxy": 1.0663,
+        "Y2E_NAMproxy": 1.0666,
         "Y1_AO": 2.0138,
         "Y3_T_NEURASIA": 2.055,
         "Y4_downward": 0.0
@@ -3522,7 +4118,7 @@
       {
         "date": "1967-03-12",
         "X": 26.217,
-        "Y2E_NAMproxy": 0.5282,
+        "Y2E_NAMproxy": 0.5284,
         "Y1_AO": 1.3904,
         "Y3_T_NEURASIA": 2.1924,
         "Y4_downward": 0.0
@@ -3530,7 +4126,7 @@
       {
         "date": "1968-01-08",
         "X": -4.744,
-        "Y2E_NAMproxy": -0.563,
+        "Y2E_NAMproxy": -0.5632,
         "Y1_AO": -1.3816,
         "Y3_T_NEURASIA": -1.2273,
         "Y4_downward": 1.0
@@ -3538,7 +4134,7 @@
       {
         "date": "1968-11-29",
         "X": -5.013,
-        "Y2E_NAMproxy": -1.2771,
+        "Y2E_NAMproxy": -1.2775,
         "Y1_AO": -2.3013,
         "Y3_T_NEURASIA": -4.337,
         "Y4_downward": 1.0
@@ -3554,7 +4150,7 @@
       {
         "date": "1970-01-04",
         "X": -9.697,
-        "Y2E_NAMproxy": -0.4362,
+        "Y2E_NAMproxy": -0.4364,
         "Y1_AO": -1.4489,
         "Y3_T_NEURASIA": -1.1589,
         "Y4_downward": 1.0
@@ -3562,7 +4158,7 @@
       {
         "date": "1970-01-29",
         "X": -13.812,
-        "Y2E_NAMproxy": -1.0246,
+        "Y2E_NAMproxy": -1.0249,
         "Y1_AO": -2.1532,
         "Y3_T_NEURASIA": -1.5391,
         "Y4_downward": 1.0
@@ -3570,7 +4166,7 @@
       {
         "date": "1971-01-19",
         "X": -7.673,
-        "Y2E_NAMproxy": -0.8703,
+        "Y2E_NAMproxy": -0.8705,
         "Y1_AO": -0.9748,
         "Y3_T_NEURASIA": -3.3591,
         "Y4_downward": 1.0
@@ -3586,7 +4182,7 @@
       {
         "date": "1971-11-28",
         "X": 21.733,
-        "Y2E_NAMproxy": 0.0688,
+        "Y2E_NAMproxy": 0.0689,
         "Y1_AO": 0.612,
         "Y3_T_NEURASIA": -1.3164,
         "Y4_downward": 0.0
@@ -3610,7 +4206,7 @@
       {
         "date": "1973-02-03",
         "X": -26.334,
-        "Y2E_NAMproxy": 0.2677,
+        "Y2E_NAMproxy": 0.2678,
         "Y1_AO": 0.3034,
         "Y3_T_NEURASIA": 1.446,
         "Y4_downward": 0.0
@@ -3618,7 +4214,7 @@
       {
         "date": "1974-01-03",
         "X": 20.321,
-        "Y2E_NAMproxy": -0.4397,
+        "Y2E_NAMproxy": -0.4398,
         "Y1_AO": -0.3858,
         "Y3_T_NEURASIA": -2.8208,
         "Y4_downward": 1.0
@@ -3626,7 +4222,7 @@
       {
         "date": "1975-02-06",
         "X": 11.624,
-        "Y2E_NAMproxy": 0.5588,
+        "Y2E_NAMproxy": 0.559,
         "Y1_AO": 0.3769,
         "Y3_T_NEURASIA": 2.3046,
         "Y4_downward": 0.0
@@ -3634,7 +4230,7 @@
       {
         "date": "1975-11-27",
         "X": 25.54,
-        "Y2E_NAMproxy": 0.8353,
+        "Y2E_NAMproxy": 0.8356,
         "Y1_AO": 1.0163,
         "Y3_T_NEURASIA": 1.7015,
         "Y4_downward": 0.0
@@ -3642,7 +4238,7 @@
       {
         "date": "1976-11-23",
         "X": 3.697,
-        "Y2E_NAMproxy": -0.8507,
+        "Y2E_NAMproxy": -0.8509,
         "Y1_AO": -2.2777,
         "Y3_T_NEURASIA": -1.6591,
         "Y4_downward": 1.0
@@ -3650,7 +4246,7 @@
       {
         "date": "1977-01-10",
         "X": -2.549,
-        "Y2E_NAMproxy": -0.8582,
+        "Y2E_NAMproxy": -0.8585,
         "Y1_AO": -2.3581,
         "Y3_T_NEURASIA": -4.4664,
         "Y4_downward": 1.0
@@ -3658,7 +4254,7 @@
       {
         "date": "1978-02-02",
         "X": 8.204,
-        "Y2E_NAMproxy": 0.3083,
+        "Y2E_NAMproxy": 0.3084,
         "Y1_AO": -0.6251,
         "Y3_T_NEURASIA": 0.5185,
         "Y4_downward": 0.0
@@ -3666,7 +4262,7 @@
       {
         "date": "1978-12-08",
         "X": 12.561,
-        "Y2E_NAMproxy": -0.585,
+        "Y2E_NAMproxy": -0.5852,
         "Y1_AO": -2.0408,
         "Y3_T_NEURASIA": -4.6058,
         "Y4_downward": 1.0
@@ -3674,7 +4270,7 @@
       {
         "date": "1979-01-26",
         "X": 8.492,
-        "Y2E_NAMproxy": -0.3146,
+        "Y2E_NAMproxy": -0.3147,
         "Y1_AO": -0.6632,
         "Y3_T_NEURASIA": -1.0087,
         "Y4_downward": 1.0
@@ -3682,7 +4278,7 @@
       {
         "date": "1979-02-27",
         "X": -12.771,
-        "Y2E_NAMproxy": -1.1419,
+        "Y2E_NAMproxy": -1.1423,
         "Y1_AO": -1.6507,
         "Y3_T_NEURASIA": -2.1866,
         "Y4_downward": 1.0
@@ -3698,7 +4294,7 @@
       {
         "date": "1980-03-01",
         "X": -7.961,
-        "Y2E_NAMproxy": -0.5717,
+        "Y2E_NAMproxy": -0.5719,
         "Y1_AO": -1.0889,
         "Y3_T_NEURASIA": -3.4571,
         "Y4_downward": 1.0
@@ -3706,7 +4302,7 @@
       {
         "date": "1981-02-06",
         "X": 0.448,
-        "Y2E_NAMproxy": -0.3511,
+        "Y2E_NAMproxy": -0.3512,
         "Y1_AO": -1.6533,
         "Y3_T_NEURASIA": -1.5785,
         "Y4_downward": 1.0
@@ -3714,7 +4310,7 @@
       {
         "date": "1981-03-04",
         "X": -0.65,
-        "Y2E_NAMproxy": 0.1563,
+        "Y2E_NAMproxy": 0.1564,
         "Y1_AO": -0.2142,
         "Y3_T_NEURASIA": 0.3584,
         "Y4_downward": 0.0
@@ -3722,7 +4318,7 @@
       {
         "date": "1981-12-04",
         "X": -2.229,
-        "Y2E_NAMproxy": -0.4196,
+        "Y2E_NAMproxy": -0.4197,
         "Y1_AO": -1.3246,
         "Y3_T_NEURASIA": -1.0983,
         "Y4_downward": 1.0
@@ -3730,7 +4326,7 @@
       {
         "date": "1982-01-26",
         "X": 6.993,
-        "Y2E_NAMproxy": 0.3249,
+        "Y2E_NAMproxy": 0.325,
         "Y1_AO": 1.0038,
         "Y3_T_NEURASIA": -0.4535,
         "Y4_downward": 0.0
@@ -3738,7 +4334,7 @@
       {
         "date": "1982-02-22",
         "X": 19.16,
-        "Y2E_NAMproxy": 0.274,
+        "Y2E_NAMproxy": 0.2741,
         "Y1_AO": 0.9967,
         "Y3_T_NEURASIA": -0.7138,
         "Y4_downward": 0.0
@@ -3746,7 +4342,7 @@
       {
         "date": "1982-12-29",
         "X": 37.035,
-        "Y2E_NAMproxy": 0.3039,
+        "Y2E_NAMproxy": 0.304,
         "Y1_AO": -0.3682,
         "Y3_T_NEURASIA": 3.3937,
         "Y4_downward": 0.0
@@ -3762,7 +4358,7 @@
       {
         "date": "1984-01-14",
         "X": 35.33,
-        "Y2E_NAMproxy": -0.3494,
+        "Y2E_NAMproxy": -0.3495,
         "Y1_AO": -0.5189,
         "Y3_T_NEURASIA": -1.139,
         "Y4_downward": 1.0
@@ -3770,7 +4366,7 @@
       {
         "date": "1984-02-26",
         "X": -11.412,
-        "Y2E_NAMproxy": -0.8235,
+        "Y2E_NAMproxy": -0.8237,
         "Y1_AO": -1.7851,
         "Y3_T_NEURASIA": -1.7638,
         "Y4_downward": 1.0
@@ -3778,7 +4374,7 @@
       {
         "date": "1985-01-02",
         "X": -15.472,
-        "Y2E_NAMproxy": -1.2248,
+        "Y2E_NAMproxy": -1.2252,
         "Y1_AO": -2.244,
         "Y3_T_NEURASIA": -4.7427,
         "Y4_downward": 1.0
@@ -3786,7 +4382,7 @@
       {
         "date": "1986-02-17",
         "X": 12.551,
-        "Y2E_NAMproxy": 0.7493,
+        "Y2E_NAMproxy": 0.7495,
         "Y1_AO": 0.9705,
         "Y3_T_NEURASIA": 0.424,
         "Y4_downward": 0.0
@@ -3794,7 +4390,7 @@
       {
         "date": "1987-02-09",
         "X": -20.429,
-        "Y2E_NAMproxy": -0.8678,
+        "Y2E_NAMproxy": -0.8681,
         "Y1_AO": -1.6955,
         "Y3_T_NEURASIA": -2.3149,
         "Y4_downward": 1.0
@@ -3802,7 +4398,7 @@
       {
         "date": "1987-12-12",
         "X": -17.638,
-        "Y2E_NAMproxy": 0.4397,
+        "Y2E_NAMproxy": 0.4399,
         "Y1_AO": 0.234,
         "Y3_T_NEURASIA": -0.2117,
         "Y4_downward": 0.0
@@ -3818,7 +4414,7 @@
       {
         "date": "1988-12-05",
         "X": 22.26,
-        "Y2E_NAMproxy": 1.2407,
+        "Y2E_NAMproxy": 1.2411,
         "Y1_AO": 2.2937,
         "Y3_T_NEURASIA": 1.8122,
         "Y4_downward": 0.0
@@ -3826,7 +4422,7 @@
       {
         "date": "1989-02-25",
         "X": -13.746,
-        "Y2E_NAMproxy": 0.5687,
+        "Y2E_NAMproxy": 0.5689,
         "Y1_AO": 1.2724,
         "Y3_T_NEURASIA": 1.724,
         "Y4_downward": 0.0
@@ -3834,7 +4430,7 @@
       {
         "date": "1990-02-12",
         "X": 7.544,
-        "Y2E_NAMproxy": 1.6184,
+        "Y2E_NAMproxy": 1.6189,
         "Y1_AO": 3.0095,
         "Y3_T_NEURASIA": 4.5172,
         "Y4_downward": 0.0
@@ -3842,7 +4438,7 @@
       {
         "date": "1990-12-16",
         "X": 23.972,
-        "Y2E_NAMproxy": 0.2213,
+        "Y2E_NAMproxy": 0.2214,
         "Y1_AO": 0.8305,
         "Y3_T_NEURASIA": 0.7537,
         "Y4_downward": 0.0
@@ -3850,7 +4446,7 @@
       {
         "date": "1991-02-14",
         "X": 4.262,
-        "Y2E_NAMproxy": 0.2134,
+        "Y2E_NAMproxy": 0.2135,
         "Y1_AO": 0.0769,
         "Y3_T_NEURASIA": -0.909,
         "Y4_downward": 0.0
@@ -3858,7 +4454,7 @@
       {
         "date": "1992-01-19",
         "X": 8.612,
-        "Y2E_NAMproxy": 0.805,
+        "Y2E_NAMproxy": 0.8052,
         "Y1_AO": 1.0636,
         "Y3_T_NEURASIA": 2.2336,
         "Y4_downward": 0.0
@@ -3866,7 +4462,7 @@
       {
         "date": "1992-02-11",
         "X": 10.581,
-        "Y2E_NAMproxy": 0.4735,
+        "Y2E_NAMproxy": 0.4737,
         "Y1_AO": 0.8326,
         "Y3_T_NEURASIA": 0.1212,
         "Y4_downward": 0.0
@@ -3874,7 +4470,7 @@
       {
         "date": "1993-03-09",
         "X": 1.594,
-        "Y2E_NAMproxy": 0.2445,
+        "Y2E_NAMproxy": 0.2446,
         "Y1_AO": 0.11,
         "Y3_T_NEURASIA": 0.1523,
         "Y4_downward": 0.0
@@ -3882,7 +4478,7 @@
       {
         "date": "1994-01-02",
         "X": 2.546,
-        "Y2E_NAMproxy": -0.3052,
+        "Y2E_NAMproxy": -0.3053,
         "Y1_AO": -0.0246,
         "Y3_T_NEURASIA": -1.9221,
         "Y4_downward": 1.0
@@ -3914,7 +4510,7 @@
       {
         "date": "1996-11-21",
         "X": 2.307,
-        "Y2E_NAMproxy": -0.5668,
+        "Y2E_NAMproxy": -0.567,
         "Y1_AO": -1.6895,
         "Y3_T_NEURASIA": -1.8434,
         "Y4_downward": 1.0
@@ -3922,7 +4518,7 @@
       {
         "date": "1997-01-16",
         "X": 29.56,
-        "Y2E_NAMproxy": 1.0551,
+        "Y2E_NAMproxy": 1.0554,
         "Y1_AO": 1.741,
         "Y3_T_NEURASIA": 1.6344,
         "Y4_downward": 0.0
@@ -3930,7 +4526,7 @@
       {
         "date": "1998-01-08",
         "X": 1.893,
-        "Y2E_NAMproxy": 0.225,
+        "Y2E_NAMproxy": 0.2251,
         "Y1_AO": -0.9265,
         "Y3_T_NEURASIA": 0.4263,
         "Y4_downward": 0.0
@@ -3938,7 +4534,7 @@
       {
         "date": "1998-02-22",
         "X": 10.78,
-        "Y2E_NAMproxy": 0.1223,
+        "Y2E_NAMproxy": 0.1224,
         "Y1_AO": -0.1724,
         "Y3_T_NEURASIA": -0.5383,
         "Y4_downward": 0.0
@@ -3954,7 +4550,7 @@
       {
         "date": "1999-03-07",
         "X": -17.499,
-        "Y2E_NAMproxy": -0.1594,
+        "Y2E_NAMproxy": -0.1595,
         "Y1_AO": -0.0315,
         "Y3_T_NEURASIA": -1.6088,
         "Y4_downward": 1.0
@@ -3978,7 +4574,7 @@
       {
         "date": "2000-11-29",
         "X": 5.752,
-        "Y2E_NAMproxy": -0.7431,
+        "Y2E_NAMproxy": -0.7433,
         "Y1_AO": -2.0368,
         "Y3_T_NEURASIA": -2.1403,
         "Y4_downward": 1.0
@@ -3986,7 +4582,7 @@
       {
         "date": "2001-02-18",
         "X": -12.298,
-        "Y2E_NAMproxy": -0.3996,
+        "Y2E_NAMproxy": -0.3997,
         "Y1_AO": -1.086,
         "Y3_T_NEURASIA": -0.2868,
         "Y4_downward": 1.0
@@ -3994,7 +4590,7 @@
       {
         "date": "2001-11-24",
         "X": 20.243,
-        "Y2E_NAMproxy": 0.2178,
+        "Y2E_NAMproxy": 0.2179,
         "Y1_AO": -0.4892,
         "Y3_T_NEURASIA": -1.2392,
         "Y4_downward": 0.0
@@ -4002,7 +4598,7 @@
       {
         "date": "2002-01-02",
         "X": -2.235,
-        "Y2E_NAMproxy": 0.8573,
+        "Y2E_NAMproxy": 0.8576,
         "Y1_AO": 1.4732,
         "Y3_T_NEURASIA": 5.2662,
         "Y4_downward": 0.0
@@ -4010,7 +4606,7 @@
       {
         "date": "2002-02-17",
         "X": -0.399,
-        "Y2E_NAMproxy": -0.1199,
+        "Y2E_NAMproxy": -0.12,
         "Y1_AO": 0.4509,
         "Y3_T_NEURASIA": 1.7322,
         "Y4_downward": 1.0
@@ -4026,7 +4622,7 @@
       {
         "date": "2003-03-07",
         "X": 1.906,
-        "Y2E_NAMproxy": 0.3972,
+        "Y2E_NAMproxy": 0.3973,
         "Y1_AO": 0.4533,
         "Y3_T_NEURASIA": -0.075,
         "Y4_downward": 0.0
@@ -4034,7 +4630,7 @@
       {
         "date": "2004-01-09",
         "X": -14.693,
-        "Y2E_NAMproxy": -0.5123,
+        "Y2E_NAMproxy": -0.5125,
         "Y1_AO": -1.7408,
         "Y3_T_NEURASIA": 0.9182,
         "Y4_downward": 1.0
@@ -4042,7 +4638,7 @@
       {
         "date": "2005-01-04",
         "X": 37.742,
-        "Y2E_NAMproxy": -0.4694,
+        "Y2E_NAMproxy": -0.4696,
         "Y1_AO": -1.0911,
         "Y3_T_NEURASIA": -1.1843,
         "Y4_downward": 1.0
@@ -4050,7 +4646,7 @@
       {
         "date": "2005-11-27",
         "X": 11.848,
-        "Y2E_NAMproxy": -0.3487,
+        "Y2E_NAMproxy": -0.3488,
         "Y1_AO": -1.1572,
         "Y3_T_NEURASIA": -1.8741,
         "Y4_downward": 1.0
@@ -4058,7 +4654,7 @@
       {
         "date": "2006-01-26",
         "X": -25.29,
-        "Y2E_NAMproxy": -0.2072,
+        "Y2E_NAMproxy": -0.2073,
         "Y1_AO": -0.5012,
         "Y3_T_NEURASIA": -1.7637,
         "Y4_downward": 1.0
@@ -4066,7 +4662,7 @@
       {
         "date": "2006-12-26",
         "X": 26.083,
-        "Y2E_NAMproxy": 0.6136,
+        "Y2E_NAMproxy": 0.6138,
         "Y1_AO": 0.6494,
         "Y3_T_NEURASIA": 4.0651,
         "Y4_downward": 0.0
@@ -4074,7 +4670,7 @@
       {
         "date": "2007-02-26",
         "X": -8.528,
-        "Y2E_NAMproxy": 0.3294,
+        "Y2E_NAMproxy": 0.3295,
         "Y1_AO": 0.958,
         "Y3_T_NEURASIA": 1.5428,
         "Y4_downward": 0.0
@@ -4090,7 +4686,7 @@
       {
         "date": "2008-12-03",
         "X": 20.426,
-        "Y2E_NAMproxy": 0.2965,
+        "Y2E_NAMproxy": 0.2966,
         "Y1_AO": 0.8454,
         "Y3_T_NEURASIA": 0.474,
         "Y4_downward": 0.0
@@ -4098,7 +4694,7 @@
       {
         "date": "2009-01-28",
         "X": -28.932,
-        "Y2E_NAMproxy": -0.4308,
+        "Y2E_NAMproxy": -0.4309,
         "Y1_AO": -0.0091,
         "Y3_T_NEURASIA": -1.9869,
         "Y4_downward": 1.0
@@ -4106,7 +4702,7 @@
       {
         "date": "2009-11-17",
         "X": 6.503,
-        "Y2E_NAMproxy": -1.3905,
+        "Y2E_NAMproxy": -1.3909,
         "Y1_AO": -3.1117,
         "Y3_T_NEURASIA": -4.6484,
         "Y4_downward": 1.0
@@ -4114,7 +4710,7 @@
       {
         "date": "2010-02-10",
         "X": -7.149,
-        "Y2E_NAMproxy": -0.223,
+        "Y2E_NAMproxy": -0.2231,
         "Y1_AO": -1.3096,
         "Y3_T_NEURASIA": -2.802,
         "Y4_downward": 1.0
@@ -4122,7 +4718,7 @@
       {
         "date": "2010-03-25",
         "X": -2.972,
-        "Y2E_NAMproxy": -0.377,
+        "Y2E_NAMproxy": -0.3771,
         "Y1_AO": -0.4602,
         "Y3_T_NEURASIA": 0.0024,
         "Y4_downward": 1.0
@@ -4130,7 +4726,7 @@
       {
         "date": "2011-01-09",
         "X": 26.255,
-        "Y2E_NAMproxy": 0.5162,
+        "Y2E_NAMproxy": 0.5164,
         "Y1_AO": 0.7773,
         "Y3_T_NEURASIA": -2.5091,
         "Y4_downward": 0.0
@@ -4138,7 +4734,7 @@
       {
         "date": "2011-02-03",
         "X": 23.992,
-        "Y2E_NAMproxy": 0.6632,
+        "Y2E_NAMproxy": 0.6634,
         "Y1_AO": 1.1539,
         "Y3_T_NEURASIA": -1.843,
         "Y4_downward": 0.0
@@ -4146,7 +4742,7 @@
       {
         "date": "2012-01-23",
         "X": 5.544,
-        "Y2E_NAMproxy": 0.11,
+        "Y2E_NAMproxy": 0.1101,
         "Y1_AO": 0.465,
         "Y3_T_NEURASIA": -2.8667,
         "Y4_downward": 0.0
@@ -4154,7 +4750,7 @@
       {
         "date": "2012-12-06",
         "X": 13.632,
-        "Y2E_NAMproxy": -0.4961,
+        "Y2E_NAMproxy": -0.4963,
         "Y1_AO": -1.0456,
         "Y3_T_NEURASIA": -3.9782,
         "Y4_downward": 1.0
@@ -4162,7 +4758,7 @@
       {
         "date": "2013-01-18",
         "X": -12.905,
-        "Y2E_NAMproxy": -0.4003,
+        "Y2E_NAMproxy": -0.4004,
         "Y1_AO": -1.327,
         "Y3_T_NEURASIA": -0.9231,
         "Y4_downward": 1.0
@@ -4170,7 +4766,7 @@
       {
         "date": "2014-02-08",
         "X": 17.879,
-        "Y2E_NAMproxy": 0.4712,
+        "Y2E_NAMproxy": 0.4713,
         "Y1_AO": 0.6957,
         "Y3_T_NEURASIA": 1.9391,
         "Y4_downward": 0.0
@@ -4178,7 +4774,7 @@
       {
         "date": "2015-01-03",
         "X": 13.581,
-        "Y2E_NAMproxy": 0.5979,
+        "Y2E_NAMproxy": 0.5981,
         "Y1_AO": 0.6424,
         "Y3_T_NEURASIA": 2.4557,
         "Y4_downward": 0.0
@@ -4186,7 +4782,7 @@
       {
         "date": "2015-01-28",
         "X": 10.973,
-        "Y2E_NAMproxy": 0.7473,
+        "Y2E_NAMproxy": 0.7476,
         "Y1_AO": 1.6341,
         "Y3_T_NEURASIA": 2.6758,
         "Y4_downward": 0.0
@@ -4194,7 +4790,7 @@
       {
         "date": "2016-02-09",
         "X": 11.535,
-        "Y2E_NAMproxy": 0.3495,
+        "Y2E_NAMproxy": 0.3497,
         "Y1_AO": 0.2129,
         "Y3_T_NEURASIA": 2.0522,
         "Y4_downward": 0.0
@@ -4202,7 +4798,7 @@
       {
         "date": "2017-02-01",
         "X": 1.097,
-        "Y2E_NAMproxy": 0.619,
+        "Y2E_NAMproxy": 0.6192,
         "Y1_AO": 1.0697,
         "Y3_T_NEURASIA": 2.4035,
         "Y4_downward": 0.0
@@ -4210,7 +4806,7 @@
       {
         "date": "2017-02-26",
         "X": 0.557,
-        "Y2E_NAMproxy": 0.5808,
+        "Y2E_NAMproxy": 0.581,
         "Y1_AO": 0.8708,
         "Y3_T_NEURASIA": 1.5771,
         "Y4_downward": 0.0
@@ -4226,7 +4822,7 @@
       {
         "date": "2018-01-19",
         "X": 24.745,
-        "Y2E_NAMproxy": -0.4491,
+        "Y2E_NAMproxy": -0.4492,
         "Y1_AO": -0.6123,
         "Y3_T_NEURASIA": -2.3693,
         "Y4_downward": 1.0
@@ -4234,7 +4830,7 @@
       {
         "date": "2018-02-14",
         "X": -23.885,
-        "Y2E_NAMproxy": -0.4949,
+        "Y2E_NAMproxy": -0.495,
         "Y1_AO": -1.1516,
         "Y3_T_NEURASIA": -3.101,
         "Y4_downward": 1.0
@@ -4242,7 +4838,7 @@
       {
         "date": "2019-01-10",
         "X": -10.196,
-        "Y2E_NAMproxy": 0.3549,
+        "Y2E_NAMproxy": 0.355,
         "Y1_AO": 0.5167,
         "Y3_T_NEURASIA": 0.784,
         "Y4_downward": 0.0
@@ -4250,7 +4846,7 @@
       {
         "date": "2019-12-02",
         "X": 14.855,
-        "Y2E_NAMproxy": 0.9049,
+        "Y2E_NAMproxy": 0.9051,
         "Y1_AO": 1.3795,
         "Y3_T_NEURASIA": 3.8217,
         "Y4_downward": 0.0
@@ -4258,7 +4854,7 @@
       {
         "date": "2020-02-05",
         "X": 24.553,
-        "Y2E_NAMproxy": 1.4398,
+        "Y2E_NAMproxy": 1.4403,
         "Y1_AO": 3.0424,
         "Y3_T_NEURASIA": 4.1788,
         "Y4_downward": 0.0
@@ -4266,7 +4862,7 @@
       {
         "date": "2020-03-23",
         "X": 10.98,
-        "Y2E_NAMproxy": 0.2243,
+        "Y2E_NAMproxy": 0.2244,
         "Y1_AO": 0.5542,
         "Y3_T_NEURASIA": 1.3309,
         "Y4_downward": 0.0
@@ -4274,7 +4870,7 @@
       {
         "date": "2021-01-15",
         "X": -9.437,
-        "Y2E_NAMproxy": -0.7962,
+        "Y2E_NAMproxy": -0.7965,
         "Y1_AO": -1.2409,
         "Y3_T_NEURASIA": -3.1557,
         "Y4_downward": 1.0
@@ -4290,7 +4886,7 @@
       {
         "date": "2024-01-16",
         "X": -1.062,
-        "Y2E_NAMproxy": 0.5915,
+        "Y2E_NAMproxy": 0.5916,
         "Y1_AO": 0.6736,
         "Y3_T_NEURASIA": 0.2893,
         "Y4_downward": 0.0
