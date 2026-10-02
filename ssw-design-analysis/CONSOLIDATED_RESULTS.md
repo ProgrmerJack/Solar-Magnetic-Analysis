@@ -1245,12 +1245,14 @@ Report as: reproduced in point estimate, cannot exclude a further ~1.3 K class-s
 G1 PRIMARY, the 11 NH pairs with < 3 NDW nudged members (7 are s20190108, which starts after the Jan 2019 onset;
 4 are ECCC): nudged members back-shifted by the pair's imposed effect, classified identically, contrast minus control
 contrast +0.173 [+0.040, +0.330] → registered reading INCONCLUSIVE (tolerance ±0.25σ). Sign: SMALLER in magnitude,
-the opposite of a forcing-built separation; these ensembles are narrower (variance ratio 0.86 [0.74, 1.01]).
+the opposite of a forcing-built separation; per-pair s.d. ratio 0.91 [0.80, 0.98] (pooled variance ratio 0.86 [0.74, 1.01]
+includes 1). Registered sensitivity: added forced variance 0.25σ² → +0.009 [−0.13, +0.18], 0.5σ² → −0.15 [−0.30, +0.04]:
+NOT detected in the 11 pairs, so G1 has no demonstrated power there.
 POST HOC (added after the run, labelled so): the back-shift difference tracks the spread change, r 0.95 with
 C_control·(k−1); net of it +0.030 [−0.027, +0.064] (11 pairs), +0.022 [−0.013, +0.055] (36).
 Other 25 pairs +0.052 [−0.035, +0.123]. Sensitivity: forced variance 0.5σ² shifts the 11-pair value to −0.15.
 G2 slope on imposed shift −0.031 [−0.205, +0.040] per σ (36 pairs): no dose-response.
-G3 SH s20190829 (8 centres): contrast −1.96 vs −1.58; shift-only null residual −0.136 [−0.222, −0.033];
+G3 SH s20190829 (8 centres; nudged contrast in 7, shift-only null in 5): contrast −1.96 vs −1.58; shift-only residual −0.136 [−0.222, −0.033];
 location–scale null −0.037 [−0.138, +0.079] → registered reading "the SH contrast change is the widening of one
 population" (caveat: location–scale matches two moments by construction).
 G4 PRIMARY N-Eurasian T days 8–24 (σ of control; mean control s.d. 1.73 K): nudged DW−NDW −0.865 vs matched
@@ -1263,7 +1265,10 @@ G5 nudged-full (ECMWF, UKMO ×4 NH inits; Météo-France s20190108): registered,
 Prediction table for every onset day 1 Nov–31 Mar committed; shift nam_1000 −0.635, nam_150 −0.945, N-Eurasian T days
 8–24 −1.54 K; constant rate 0.692; T trend 0.037 K/yr. P(DW) shifted 0.71–0.84 vs climatology 0.24–0.44.
 CDS ERA5T consistency gate PASSED (Dec 2021–Mar 2022: NAM r 1.000, RMS ≤ 0.002σ; N-Eurasian T r 0.999, RMS 0.087 s.d.,
-bias +0.26 K). Primary CRPS of days 8–52 NAM; decisive from 5 events (P ≈ 0.77 by 2036). No onsets scored yet.
+bias +0.26 K, removed from real-time T). Primary CRPS of days 8–52 NAM; decisive from 5 events (P 0.118 by 2030,
+0.767 by 2036 at 43/67 per winter, computed by odds()). Amended b2416e0 before any onset (review): month-day keying for
+leap years, full integrity check with skip-not-exit, bias correction, easterly tie rule (< 0 m/s, first-retrieved ERA5T).
+No onsets scored yet. NOT externally timestamped until pushed / archived (Zenodo, Software Heritage, OSF).
 To run each winter: `03_data_ingestion/acquire_era5_realtime_cds.py --start <last+1> --end <today−6>`, then
 `prospective_next_ssw.py --detect`, and `--score` once day 52 + latency has passed.
 
