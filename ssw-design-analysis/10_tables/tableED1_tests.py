@@ -66,6 +66,7 @@ def main():
     SRF, RSD = J("shift_rule_forecast.json"), J("response_shape_dose.json")
     NX = J("s2s_member_experiment.json")
     RQ, TCV = J("snapsi_residual_quantiles.json"), J("criterion_transport_cv.json")
+    SF, IC = J("state_forecast.json"), J("icon_event_heterogeneity.json")
     R2 = ("robustness (revision 2)", "committed before run", "4c8b3f2")
     mm = g(MMt, "multimodel", "confirmatory"); nr = g(SRt, "regions", "NEURASIA", "multimodel", "confirmatory")
     rows = [
@@ -285,6 +286,22 @@ def main():
          "committed before run", "bbfeb9c",
          f"{g(TCV,'primary_published_surface','observed_dw')} vs {g(TCV,'primary_published_surface','expected_dw')}" if TCV else "pending",
          g(TCV, "primary_published_surface", "p_calibration")),
+        ("SF-F0", "state forecast vs climatology, 57 ERA5 SSWs, CRPS skill (retrospective CV)", "revision-3 primary",
+         "committed before run", "4f5c53a",
+         f"{g(SF,'E1_crps_skill','F3_vs_F0','all','skill')} {g(SF,'E1_crps_skill','F3_vs_F0','all','ci95')}" if SF else "pending", None),
+        ("SF-F1", "state forecast vs fixed SNAPSI rule, CRPS skill", "revision-3 primary",
+         "committed before run", "4f5c53a",
+         f"{g(SF,'E1_crps_skill','F3_vs_F1','all','skill')} {g(SF,'E1_crps_skill','F3_vs_F1','all','ci95')}" if SF else "pending", None),
+        ("SF-SSW", "SSW indicator beyond the continuous state, CRPS skill", "revision-3 primary",
+         "committed before run", "4f5c53a",
+         f"{g(SF,'E1_crps_skill','F4_vs_F3','all','skill')} {g(SF,'E1_crps_skill','F4_vs_F3','all','ci95')}" if SF else "pending", None),
+        ("SF-ops", "calibrated operational ensembles vs state forecast, 17 events, CRPS skill", "revision-3 secondary",
+         "committed before run", "4f5c53a",
+         f"state vs calibrated {g(SF,'E2','F3_vs_cal','skill')} {g(SF,'E2','F3_vs_cal','ci95')}" if SF else "pending", None),
+        ("ICON", "18 ICON event ensembles: between-event variance of mean responses, days 8-25 (bounds)", "revision-3 secondary",
+         "committed before values read", "6ad6e8a",
+         (f"{g(IC,'M2_between_event_variance','lower_bound_noise_sd_equals_daily_sd')}-"
+          f"{g(IC,'M2_between_event_variance','upper_bound_noise_zero')}") if IC else "pending", None),
         ("S-dose", "two regimes vs continuous with the realised 100 hPa dose (G, p vs ordinary days); inconclusive", "revision-3 primary",
          "committed before run", "7d8ed6f",
          (f"G {g(RSD,'S1_P2_plus_dose','crps','G_ssw')} vs {g(RSD,'S1_P2_plus_dose','crps','G_pseudo_mean')}; "

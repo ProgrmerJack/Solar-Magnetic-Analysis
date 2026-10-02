@@ -286,25 +286,34 @@ within the range of event-free dates (p = 0.38; Fig. 3c).
 
 The shift provides a fixed, model-derived probabilistic benchmark, and its
 transfer is the test. In a test registered before it was run, the probability of
-a cold northern-Eurasian period after an SSW, taken from the nudged
-experiment alone (0.24, 0.32 and 0.45 for periods below the event-free 5th,
-10th and 20th percentiles), matches the 39 observed SSWs of 1959–2022 (0.21,
-0.26 and 0.38; p = 0.40–0.71) and not climatology (p = 0.0006–0.008), at every
-threshold from the 33rd to the 2.5th percentile and without the two events
-SNAPSI imposes; an independent rule built from the CMIP6 circulation shift and
-the ERA5 event-free relation between circulation and temperature brackets the
-observations from below (0.11, 0.19 and 0.33; Extended Data Fig. 7;
-Supplementary Tables 1 and 3). Only the predictor is out of sample there, and
-the product has limits that it must carry: it overstates extreme cold over
-high-latitude Europe, is not confirmed over East Asia, carries no cold-risk
-signal over North America (nor do observations), and in weeks 3–4
-northern-Eurasian cold was rarer than predicted (Supplementary Table 2). Out of
+a cold northern-Eurasian period after an SSW, taken from the nudged experiment
+alone (0.24, 0.32 and 0.45 for periods below the event-free 5th, 10th and 20th
+percentiles), matches the 39 observed SSWs of 1959–2022 (0.21, 0.26 and 0.38; p
+= 0.40–0.71) and not climatology (p = 0.0006–0.008), at every threshold from the
+33rd to the 2.5th percentile and without the two events SNAPSI imposes; an
+independent rule built from the CMIP6 circulation shift and the ERA5 event-free
+relation between circulation and temperature brackets the observations from
+below (0.11, 0.19 and 0.33; Extended Data Fig. 7; Supplementary Tables 1 and 3).
+Only the predictor is out of sample there, and the rule overstates extreme cold
+over high-latitude Europe, is not confirmed over East Asia or in weeks 3–4, and
+carries no signal over North America (Supplementary Tables 1 and 2). Out of
 sample it failed: after twelve SSWs of 1941–1958 in ERA5, whose surface outcomes
-no one had examined, no northern-Eurasian period fell below the 10th
-percentile, against 32% predicted (p = 0.012; Supplementary Table 4). Those
-reversals were weaker and their data older, but neither explains the failure
-(Supplementary Note 7); a single probability per SSW held on the events it was
-checked on and did not transfer.
+no one had examined, no northern-Eurasian period fell below the 10th percentile,
+against 32% predicted (p = 0.012; Supplementary Table 4). Those reversals were
+weaker and their data older, but neither explains the failure (Supplementary
+Note 7); a single probability per SSW held on the events it was checked on and
+did not transfer.
+
+A forecast that uses only the continuous state known at issue time, trained on
+all winter days and told nothing about SSWs, does better but not decisively:
+over all 57 ERA5 SSWs of 1940–2026, in whole-winter cross-validation
+(registered; retrospective), it improved on climatology and on the fixed SNAPSI
+rule by about 10% of the continuous ranked probability score in both eras,
+within intervals including zero, so forecasting remains a limitation by the
+pre-set rule. Telling it that the state was an SSW did not help. Dynamical
+ensembles started 0–7 days after onset were far better than any statistical
+forecast (Supplementary Note 17): after an observed SSW, the product is the
+calibrated dynamical ensemble, verified as a distribution.
 
 The polar-cap index is not the whole of the regional response: high-latitude
 Europe and East Asia cool more than the circulation implies, and mid-latitude
@@ -352,23 +361,25 @@ major warming "loads the dice"^{butler24}^.
 For forecasting, the product after an SSW is the shifted distribution (for the
 polar-cap NAM, the probability of a negative state; for regional weather, the
 regional variable itself, which the polar-cap index does not fully carry), not a
-categorical prediction of whether this event will propagate; such a product,
-taken from models alone, matched 39 events and had value for decisions but
-over-predicted on twelve held out, so it must be verified as events accrue. What
-should be verified is whether an ensemble placed the right probability on the
-shifted state, not whether it named a class fixed largely by the outcome it is
-scored against. Two of the three 2023–24 events fail the criterion's surface
-conditions and would count as non-downward outcomes, the kind framed as
-potential forecast busts^{nebel24}^, yet the forecasts had given those outcomes
-36% and 45% probability (an exploratory check), as a shifted distribution
-should. The quantity to verify, and with more events to correct, is the size of
-the shift and its persistence in the lower stratosphere. For research, wherever
-"downward-propagating SSW" stratifies impacts, the rate at which events meet the
-criterion, set against a matched null, is an honest quantity; the contrast
-between the classes is not, because matched event-free dates reproduce 97% of
-the selected surface composite contrast under the same procedure in ERA5 (see
-also ref.^{white19}^); that is a property of the composite, not a measure of how
-much causal influence is artefactual.
+categorical prediction of whether this event will propagate; a fixed
+model-derived probability matched 39 events but over-predicted on twelve held
+out, a state-conditioned statistical forecast improved on it only modestly, and
+calibrated dynamical ensembles did best, so the product is a calibrated
+distribution, verified as events accrue. What should be verified is whether an
+ensemble placed the right probability on the shifted state, not whether it named
+a class fixed largely by the outcome it is scored against. Two of the three
+2023–24 events fail the criterion's surface conditions and would count as
+non-downward outcomes, the kind framed as potential forecast busts^{nebel24}^,
+yet the forecasts had given those outcomes 36% and 45% probability (an
+exploratory check), as a shifted distribution should. The quantity to verify,
+and with more events to correct, is the size of the shift and its persistence in
+the lower stratosphere. For research, wherever "downward-propagating SSW"
+stratifies impacts, the rate at which events meet the criterion, set against a
+matched null, is an honest quantity; the contrast between the classes is not,
+because matched event-free dates reproduce 97% of the selected surface composite
+contrast under the same procedure in ERA5 (see also ref.^{white19}^); that is a
+property of the composite, not a measure of how much causal influence is
+artefactual.
 
 Five limits bound these conclusions. First, the causal evidence and the bound on
 event differences come from models, which may share biases; observations are
@@ -1119,6 +1130,49 @@ of the 108 has p < 0.05. Brier score, constant class rate minus shifted null,
 −0.003 [−0.024, +0.015] (winter resamples). CRPS of the days 8–52 NAM,
 climatology minus shifted null, +0.19 [+0.07, +0.30]; mean PIT 0.50, 26% in the
 outer deciles.
+
+**Event-conditioned ensembles (Supplementary Note 16).** Registered before any
+value was read. The public archive of ref.^{loeffel26}^ gives, for 18 SSWs of an
+ICON simulation re-run as 40-member ensembles, the 6-hourly ensemble mean and
+spread of the standardised polar-cap geopotential anomaly and of u(10 hPa, 60°
+N); member data are not public. Onset: the first time the ensemble-mean wind is
+negative. Outcome: the NAM-sign anomaly nearest 1000 hPa, mean over onset+8 to
++25 days. Between-event variance of the ensemble means net of finite-ensemble
+noise, Var(means) − mean(s_w²)/40, with the window-mean spread s_w bounded by
+zero and the mean daily spread: 0.41–0.43 (bootstrap over events, lower bound
+[0.17, 0.67]), 79–81% of the within-ensemble daily variance; onset+26 to +42
+days: 0.10–0.12. Correlation of the event means with the week-2 100 hPa anomaly:
+0.80 [0.63, 0.91]. These are event-conditioned responses of selected events,
+including each event's initial tropospheric state, not stratospheric effects.
+
+**Issue-time forecasts (Supplementary Note 17).** Registered before it was run;
+retrospective, because the outcomes had been examined. Target: northern-Eurasian
+temperature anomaly, days 8–24 after issue (continuous ranked probability score;
+secondary, Brier score below the event-free 10th percentile). Cases: all 57 SSW
+onsets detected in the ERA5 wind, November 1940 to March 2026, issued on the
+onset day; folds are whole winters, and the day-of-year climatology, linear
+trend, thresholds and every regression are fitted on training winters only.
+Forecasts: climatology (training-winter event-free days within ±15 days); the
+fixed SNAPSI rule (climatology displaced by −0.826 of its s.d., the Gaussian
+shift giving 0.324 below the 10th percentile); the constant CMIP6 × ERA5 rule; a
+Gaussian state model, mean linear in u(10 hPa, 60° N), its 10-day change and
+10-day minimum, the polar-cap NAM proxy and regional temperature over the five
+days to issue, and the season, trained on all training-winter days; the same
+with an SSW indicator; and, separately, an oracle adding the realised minimum
+wind over the next 20 days. Mean scores: 1.65, 1.66, 1.55, 1.49 and 1.51 K;
+Brier 0.192, 0.185, 0.178, 0.174 and 0.177; 13 cold periods observed against
+5.7, 18.1, 13.6, 11.9 and 11.4 expected. Skill of the state model over
+climatology 0.0942 [-0.0328, 0.2092] (before 1979 0.0985, from 1979 0.0913; with
+one winter left out 0.0639–0.1142); over the SNAPSI rule 0.103 [-0.0157,
+0.2117]; SSW indicator -0.0081 [-0.0184, 0.0028]; oracle 0.001 [-0.0017, 0.0035]
+(winter resamples). Operational comparison: the catalogued SSWs of 1998–2021
+with reforecast starts 0–7 days after onset (17 events, ten systems); members'
+window-mean anomalies against each system's leave-one-year-out climatology;
+calibration by the training-winter mean bias and spread factor of the same
+system and lead window; mean scores raw 1.1841, calibrated 1.0855, state model
+1.5849, climatology 1.8336; calibrated over raw 0.0833 [0.0514, 0.1089]. The
+ERA5 set includes a one-day reversal on 28 November 2025 (−0.1 m s⁻¹) that
+NCEP–NCAR does not show; it was not part of the registered held-out tests.
 
 **Within-start ensemble comparison (Supplementary Note 8).** Registered before
 any member split was computed. In every December–March reforecast start of the

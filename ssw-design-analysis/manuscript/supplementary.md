@@ -373,3 +373,34 @@ substantially and in proportion to the lower-stratospheric anomaly. How much of 
 forces is not settled by these summaries or by the assumption-dependent CMIP6 bound.
 
 Values are in `results/current/5_mechanism/icon_event_heterogeneity.json`.
+
+## Supplementary Note 17 | Forecasting with the continuous state, and against operational ensembles
+
+The paper's fixed SSW rules give one probability per event. The alternative tested here, registered before it
+was run, is a forecast that uses only what is known on the issue day and is told nothing about SSWs. It is a
+Gaussian whose mean depends on:
+- the 10 hPa wind, its 10-day change and its 10-day minimum;
+- the surface annular mode and regional temperature over the previous five days;
+- the season.
+
+It was trained on every winter day of the training winters. Everything was fitted inside whole-winter folds and
+evaluated on all 57 SSWs that ERA5 records since 1940. Because those outcomes had been examined before, this is
+retrospective cross-validation.
+
+Results:
+- **The state model scores best of the statistical forecasts.** It improves on climatology and on the fixed
+  SNAPSI rule by about 10%, in both eras and with any winter left out. The intervals include zero, so by the
+  registered rule this is not a forecasting result.
+- **The SSW label adds nothing.** Adding an indicator that the state is an SSW does not help. Neither does knowing
+  how far the wind would fall over the next 20 days (the oracle). For this regional target, what an SSW adds is
+  carried by the continuous state already present on the issue day.
+- **The fixed SNAPSI rule over-predicts cold over the whole record**: 18.1 cold periods expected against 13
+  observed.
+- **Dynamical ensembles started within a week after onset beat every statistical forecast decisively.** Routine
+  bias and spread calibration improves them further, by 8% (5–11%).
+
+The forecasting conclusion is therefore modest: after an observed SSW, the useful product is the calibrated
+dynamical ensemble. The statistical results add one conceptual point: being an SSW carries no extra information
+once the continuous state is known.
+
+Values per event are in `results/current/6_predictability/state_forecast.json`.

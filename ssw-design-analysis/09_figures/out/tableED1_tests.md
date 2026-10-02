@@ -66,4 +66,9 @@
 | RQ-A | SNAPSI residual quantiles, polar-cap NAM, pooled: inside declared tolerance (+-0.25 sigma, +-0.05)? | revision-3 primary | committed before run | 113c7d3 | approximate translation |  |  |
 | RQ-T | SNAPSI residual quantiles, N-Eurasian temperature, pooled | revision-3 secondary | committed before run | 113c7d3 | unresolved |  |  |
 | TCV | shifted null, whole-winter cross-validation: observed vs expected downward count (retrospective) | revision-3 primary | committed before run | bbfeb9c | 27 vs 29.21 | 0.5156 |  |
+| SF-F0 | state forecast vs climatology, 57 ERA5 SSWs, CRPS skill (retrospective CV) | revision-3 primary | committed before run | 4f5c53a | 0.0942 [-0.0328, 0.2092] |  |  |
+| SF-F1 | state forecast vs fixed SNAPSI rule, CRPS skill | revision-3 primary | committed before run | 4f5c53a | 0.103 [-0.0157, 0.2117] |  |  |
+| SF-SSW | SSW indicator beyond the continuous state, CRPS skill | revision-3 primary | committed before run | 4f5c53a | -0.0081 [-0.0184, 0.0028] |  |  |
+| SF-ops | calibrated operational ensembles vs state forecast, 17 events, CRPS skill | revision-3 secondary | committed before run | 4f5c53a | state vs calibrated -0.4601 [-0.836, -0.0756] |  |  |
+| ICON | 18 ICON event ensembles: between-event variance of mean responses, days 8-25 (bounds) | revision-3 secondary | committed before values read | 6ad6e8a | 0.4145-0.4277 |  |  |
 | S-dose | two regimes vs continuous with the realised 100 hPa dose (G, p vs ordinary days); inconclusive | revision-3 primary | committed before run | 7d8ed6f | G -0.0146 vs -0.01094; power vs planted regimes 0.08 (post hoc): underpowered | 0.92 |  |

@@ -28,6 +28,8 @@ the Earth system has never been tested directly.
   surface response grows steadily with how far the wind falls, with no step where it reverses.
 - **Little gain from knowing the event.** In 1,517 simulated SSWs, event information adds about 1% to
   probabilistic skill beyond the shift, less than on ordinary winter days.
+- **No SSW-specific information in observations.** Across 57 observed SSWs since 1940, a forecast using only
+  the continuous state at issue time gains nothing from being told the state is an SSW.
 
 **Why it matters beyond the stratosphere.** A class defined on the outcome it is meant to predict always shows
 a contrast in that outcome. That is a general trap (Altman & Royston, BMJ 2006), and it also shapes attribution
@@ -54,8 +56,10 @@ reports them as limits, not as footnotes:
   recur after four later events.
 - **Model-derived cold-risk probabilities.** They match 39 observed SSWs but over-predicted after twelve held-out
   SSWs of 1941–1958.
-- **Event-to-event variation.** It includes a small state-dependent change of shape, though still within one
-  unimodal population.
+- **Event-to-event variation.** Event-conditioned responses differ substantially (in 18 independent model
+  ensembles). How much of that the stratosphere forces is not settled, and we state so.
+- **Statistical forecasts.** A forecast conditioned on the continuous state improves on the fixed SSW rule only
+  modestly; calibrated dynamical ensembles do best.
 
 **Suggested reviewers.** [[AUTHORS: names to be chosen]] We suggest:
 - a stratosphere–troposphere dynamicist outside the SNAPSI consortium;

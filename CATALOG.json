@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-02T05:53:58+00:00",
+ "generated": "2026-10-02T06:02:52+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 167,
-  "results": 87
+  "scripts": 168,
+  "results": 88
  },
  "scripts": [
   {
@@ -1426,6 +1426,29 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/07_physical_decomposition/state_forecast.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "AN ISSUE-TIME FORECAST CONDITIONED ON THE CONTINUOUS STATE, EVALUATED AGAINST CLIMATOLOGY, THE FIXED SSW RULES AND OPERATIONAL ENSEMBLES.",
+   "loc": 373,
+   "modified": "2026-10-02 05:56",
+   "sha256_16": "5a1d81b5c10c8e43",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_psl_cap_00utc_arco.parquet",
+    "era5_psl_cap_00utc_arco_early.parquet",
+    "era5_psl_cap_00utc_arco_late.parquet",
+    "era5_psl_cap_6h_full.parquet",
+    "era5_t2m_regions_daily_arco_early.parquet",
+    "era5_t2m_regions_daily_arco_late.parquet",
+    "era5_t2m_regions_daily_full.parquet",
+    "era5_t2m_regions_daily_spliced.parquet",
+    "era5_u10_60N_daily_cds.parquet",
+    "state_forecast.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/07_physical_decomposition/vortex_geometry_test.py",
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
@@ -1764,9 +1787,9 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 312,
-   "modified": "2026-10-02 05:48",
-   "sha256_16": "24dbc2111362e0bb",
+   "loc": 329,
+   "modified": "2026-10-02 06:02",
+   "sha256_16": "8bec9f38a4a43b24",
    "flags": [],
    "filenames_mentioned": [
     "class_model_comparison.json",
@@ -1776,6 +1799,7 @@
     "forced_variance_ceiling.json",
     "forecast_value_robustness.json",
     "forecast_value_test.json",
+    "icon_event_heterogeneity.json",
     "obs_model_compatibility.json",
     "response_shape_dose.json",
     "s2s_baseline_test.json",
@@ -1798,6 +1822,7 @@
     "snapsi_regional_test.json",
     "snapsi_residual_quantiles.json",
     "snapsi_selection_test.json",
+    "state_forecast.json",
     "tableED1_tests.csv",
     "vortex_geometry_test.json",
     "vortex_threshold_continuity.json",
@@ -5264,6 +5289,59 @@
     "verification",
     "prospective_2026",
     "revision3"
+   ]
+  },
+  {
+   "path": "results/current/6_predictability/state_forecast.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 29548,
+   "modified": "2026-10-02 05:59",
+   "sha256_16": "6ffab990cab73924",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/state_forecast.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/state_forecast.py": "5a1d81b5c10c8e43"
+   },
+   "verdicts": [
+    {
+     "key": "coef_note",
+     "text": "per fold; see events"
+    }
+   ],
+   "counts": {
+    "n_boot": [
+     2000
+    ],
+    "n_events": [
+     17,
+     57
+    ],
+    "n_winters": [
+     46
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "seed",
+    "n_boot",
+    "label",
+    "n_events",
+    "n_winters",
+    "coef_note",
+    "events",
+    "E1_crps_skill",
+    "E1_mean_crps",
+    "E1_brier",
+    "E1_cold_count",
+    "decision",
+    "ssw_adds_beyond_state",
+    "E2"
    ]
   },
   {
