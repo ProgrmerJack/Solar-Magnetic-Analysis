@@ -17,8 +17,9 @@ REDUCTION
            60.785N on this grid), all longitudes (m)
   regions  2 m temperature cos-lat means over acquire_s2s_reforecasts.T2M_REGIONS (K)
   Time stamps are used as given (daily, 00 UTC, the first equal to the initial
-  time; the files do not say whether a value is an instantaneous field or a daily
-  mean, a one-day ambiguity that an 18-day window mean barely feels).
+  time). Values are daily means (cell_methods 'time: mean'); the files do not say
+  whether a stamp opens or closes its averaging day, a one-day ambiguity that an
+  18-day window mean barely feels.
 Raw files are kept under raw/davis2022 (read-only once written).
 Output: davis2022_reduced.parquet  arm, init, member, time, zcap60, NEURASIA, ...
 """

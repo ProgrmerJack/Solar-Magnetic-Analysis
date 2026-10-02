@@ -1268,7 +1268,8 @@ Polar-cap Z1000 (>= 60.785N) NAM proxy, days 8–25 after 5 Jan onset (after ini
 01feb: s +0.46, DW 33% vs 57%, Δ_b +0.20 [−0.41, +0.92]. 08feb: s +0.48, DW 14% vs 48%, Δ_b +0.53 [−0.11, +1.23].
 Pooled Δ_b +0.08 [−0.34, +0.52]; T −0.04 [−0.94, +0.70]. All "not rejected; low power" (one-population half-width 0.78σ
 per pair; pre-run synthetic bias −0.075, s.d. 0.43). POST HOC: Δ_b vs C_noSSW·(k−1): −0.47/−0.53, +0.20/+0.28, +0.53/+0.58.
-Rate moves 10–33 points in either direction; contrast change not detected. Caveat: Cohen et al. 2023 Matters Arising.
+Primary (04jan) rate change NOT resolved (12 vs 10 of 21, Fisher p 0.76; s CI [−1.07, +0.30]); only 08feb p 0.043.
+Report as: too small to decide; primary Δ_b −0.47 is nearly twice the tolerance but imprecise. Caveat: Cohen et al. 2023.
 
 ### Z7 — prospective test (`prospective_next_ssw.py`, 9_literature; registered `d2b54a8`, window amended to 2036 before any onset)
 Prediction table for every onset day 1 Nov–31 Mar committed; shift nam_1000 −0.635, nam_150 −0.945, N-Eurasian T days

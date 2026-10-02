@@ -316,7 +316,7 @@ def main():
          (f"{g(GEN,'G1_strongly_forced','strong_11','Delta_b','mean')} {g(GEN,'G1_strongly_forced','strong_11','Delta_b','ci95')}; "
           f"net of the spread change {g(GEN,'G1x_post_hoc_spread','strong_11','Delta_b_net_spread','mean')} "
           f"{g(GEN,'G1x_post_hoc_spread','strong_11','Delta_b_net_spread','ci95')} (post hoc); "
-          f"forced variance of half the control variance added: {g(GEN,'G1_strongly_forced','strong_11','Delta_b_k1.5','mean')} "
+          f"deviations inflated by sqrt(1.5), about 0.4 of the control variance added: {g(GEN,'G1_strongly_forced','strong_11','Delta_b_k1.5','mean')} "
           f"{g(GEN,'G1_strongly_forced','strong_11','Delta_b_k1.5','ci95')} (not detected)") if GEN else "pending", None),
         ("GEN-2", "dose-response: back-shift difference on imposed shift, 36 pairs (slope per sigma)", "revision-5 secondary",
          "committed before run", "892377c",
@@ -329,10 +329,12 @@ def main():
          "committed before run", "892377c",
          (f"{g(GEN,'G4_regional_temperature','resid','mean')} {g(GEN,'G4_regional_temperature','resid','ci95')}; "
           f"planted 0.5 sigma {g(GEN,'G4_regional_temperature','resid_plant_0.5sigma','mean')}") if GEN else "pending", None),
-        ("DAV", "January 2021, CESM2(WACCM6) SSW vs scrambled-stratosphere ensembles (21 members): back-shift contrast difference, pooled over 3 initialisations; low power",
+        ("DAV", "January 2021, CESM2(WACCM6) SSW vs scrambled-stratosphere ensembles (21 members), 4 Jan initialisation: back-shift contrast difference; not rejected, low power",
          "revision-5 primary", "committed before data", "738a422",
-         (f"{g(DAV,'R4_pooled_mean_of_pairs','Delta_b','mean')} {g(DAV,'R4_pooled_mean_of_pairs','Delta_b','ci95')}; "
-          f"4 Jan {g(DAV,'pairs','04jan','Delta_b')} {g(DAV,'pairs','04jan','ci95','Delta_b')}") if DAV else "pending", None),
+         f"{g(DAV,'pairs','04jan','Delta_b')} {g(DAV,'pairs','04jan','ci95','Delta_b')}" if DAV else "pending", None),
+        ("DAV-pool", "the same, pooled over the 4 Jan, 1 Feb and 8 Feb initialisations", "revision-5 secondary",
+         "committed before data", "738a422",
+         f"{g(DAV,'R4_pooled_mean_of_pairs','Delta_b','mean')} {g(DAV,'R4_pooled_mean_of_pairs','Delta_b','ci95')}" if DAV else "pending", None),
         ("PRO", "prospective: shifted null on every NH SSW with onset Nov 2026 - Mar 2036 (CRPS, days 8-52 NAM)", "prospective primary",
          "predictions committed before any onset", "d2b54a8 (amended before any onset: 4cfba00, b2416e0)",
          (f"{g(PRO,'scores','cumulative','n_scored') or 0} events scored") if PRO else "pending", None),

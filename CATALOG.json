@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-02T22:00:24+00:00",
+ "generated": "2026-10-02T22:13:14+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -42,9 +42,9 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "CESM2(WACCM6) forecasts of the January 2021 SSW with and without the SSW in the initial stratosphere (Davis et al. 2022, Nat. Commun. 13, 1136), reduced for 07_physical_decomposition/davis2021_intervention_test.py (registered 738a422,",
-   "loc": 127,
-   "modified": "2026-10-02 21:02",
-   "sha256_16": "99ab55b3cdc06c3c",
+   "loc": 128,
+   "modified": "2026-10-02 22:12",
+   "sha256_16": "f8f85d10a8ac8101",
    "flags": [],
    "filenames_mentioned": [
     "davis2022_reduced.parquet"
@@ -882,9 +882,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "A THIRD INDEPENDENT INTERVENTION: DOES REMOVING THE JANUARY 2021 SSW FROM THE INITIAL STRATOSPHERE CHANGE THE DW-NDW CONTRAST, OR ONLY THE DW RATE? Registered 2026-10-02, committed BEFORE any member of these ensembles was",
-   "loc": 225,
-   "modified": "2026-10-02 21:58",
-   "sha256_16": "9302d511683c3550",
+   "loc": 244,
+   "modified": "2026-10-02 22:12",
+   "sha256_16": "e7baa584fd111036",
    "flags": [],
    "filenames_mentioned": [
     "davis2022_reduced.parquet"
@@ -1938,9 +1938,9 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 363,
-   "modified": "2026-10-02 22:00",
-   "sha256_16": "5877d331cf4cf15a",
+   "loc": 365,
+   "modified": "2026-10-02 22:12",
+   "sha256_16": "9cb5552f00e49783",
    "flags": [],
    "filenames_mentioned": [
     "class_model_comparison.json",
@@ -2825,7 +2825,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-02 14:27",
+   "modified": "2026-10-02 22:00",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -5764,7 +5764,7 @@
    "stage": "8_experiment",
    "readable": true,
    "bytes": 3780,
-   "modified": "2026-10-02 21:58",
+   "modified": "2026-10-02 22:13",
    "sha256_16": "22d568fa412c5704",
    "producers": [],
    "state": "ORPHAN",
