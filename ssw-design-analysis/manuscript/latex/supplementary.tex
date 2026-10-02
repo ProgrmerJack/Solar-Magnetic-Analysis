@@ -204,7 +204,7 @@ The main text keeps its limits short; these qualifications apply as well.
   \item The northern-Eurasian class contrast is matched by the null in point estimate, but the test is inconclusive by its registered reading: with 39 events a further class-specific cooling of 1.3\,K would be detected only 30\% of the time (Methods, Regional class contrast).
   \item The test of whether the realised lower-stratospheric dose accounts for the state-dependent shape had no useful power (Methods, Response shape and dose).
   \item Translation is established for the polar-cap annular mode pooled over ensembles; for single events and regional temperature the residual-quantile intervals are wider than the tolerance (Supplementary Note~\ref{note:14}).
-  \item The forecast comparisons and the transport test of the shifted null are retrospective cross-validations of outcomes that had been examined before; only the twelve SSWs of 1941–1958 and the March 2026 event were scored without prior inspection.
+  \item The forecast comparisons and the transport test of the shifted null are retrospective cross-validations of outcomes that had been examined before; only the twelve SSWs of 1941–1958 and the March 2026 event were scored without prior inspection. A prospective test on future events is registered (Supplementary Note~\ref{note:20}).
   \item The CMIP6 bound on forced differences assumes that an event's forced response is uncorrelated with the internal variability it adds to; it fails only if forcing anti-correlates with concurrent internal variability (Supplementary Note~\ref{note:1}).
   \item Local regression-discontinuity estimates at the wind reversal fail their placebo checks in both reanalyses, so the continuity result rests on the global estimates, which exclude only steps about as large as the whole SSW effect.
 \end{itemize}
@@ -233,4 +233,32 @@ The main text was reorganised around the intervention, the observational null an
 \clearpage
 \bibliographystyle{unsrt}
 \bibliography{refs}
+
+\suppnote{A registered prospective test}\label{note:20}
+
+Every observed outcome used in the main text had been examined before the analysis, so all observational evaluations are retrospective. The prospective test (\nolinkurl{08_literature_audit/prospective_next_ssw.py}; design in Methods) removes that limitation for future events. Because the shifted-null forecast depends only on the onset day, the forecast for every possible onset day from 1 November to 31 March was computed and committed before the winter of 2026--27; the scorer recomputes it from the same frozen inputs (whose checksums are recorded) and refuses to score if it differs. Supplementary Table~\ref{tab:pro} lists the committed forecasts for selected onset days. The consistency gate on December 2021--March 2022 gave correlations of 1.000 and 1.000 for the 1000 and 150\,hPa NAM (RMS 0.0013 and 0.0022\,s.d.) and 0.9992 for northern-Eurasian temperature (RMS 0.087\,s.d., bias $+0.26$\,K). The test is decisive in either direction only from five events. At the observed rate of 43 SSWs in 66 winters, five events would be reached by March 2030 with a probability of only about 0.12, so the window, first registered to March 2030, was extended to March 2036 (probability about 0.77) before any onset; the forecasts are unchanged. The record in the repository is timestamped by its commit; an external, independently timestamped copy of the registration is recommended before the first onset.
+
+\begin{table}[h]
+\centering
+\caption{\textbf{Committed prospective forecasts for selected onset days.} $n$, event-free candidate dates (1959--2022, $\pm10$ days of the onset's day of year). $P_\mathrm{DW}$, probability of a downward label (published surface conditions, days 8--52), shifted null and unshifted climatology. NAM, days 8--52 mean 1000\,hPa NAM, median [10th, 90th percentile]. $T$, northern-Eurasian 2\,m temperature anomaly over days 8--24 (K, winter 2026--27, trend-adjusted). Every onset day from 1 November to 31 March is in the result file.}\label{tab:pro}
+{\small\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}lrrrlrlr@{}}
+\toprule
+Onset & $n$ & $P_\mathrm{DW}$ shifted & $P_\mathrm{DW}$ clim. & NAM shifted & NAM clim. & $T$ shifted & $T$ clim. \\
+\midrule
+1 Nov & 645 & 0.84 & 0.37 & $-0.50$ [$-1.03$, $+0.06$] & $+0.13$ & $+0.36$ [$-3.50$, $+3.88$] & $+1.91$ \\
+15 Nov & 631 & 0.79 & 0.34 & $-0.48$ [$-1.12$, $+0.13$] & $+0.15$ & $-0.11$ [$-3.45$, $+3.12$] & $+1.43$ \\
+1 Dec & 630 & 0.78 & 0.27 & $-0.46$ [$-1.11$, $+0.14$] & $+0.17$ & $+0.10$ [$-3.22$, $+3.30$] & $+1.64$ \\
+15 Dec & 630 & 0.75 & 0.29 & $-0.44$ [$-1.05$, $+0.22$] & $+0.20$ & $+0.61$ [$-2.69$, $+3.85$] & $+2.15$ \\
+1 Jan & 617 & 0.76 & 0.31 & $-0.37$ [$-1.04$, $+0.19$] & $+0.26$ & $+0.69$ [$-3.13$, $+4.79$] & $+2.23$ \\
+15 Jan & 651 & 0.71 & 0.30 & $-0.39$ [$-1.06$, $+0.24$] & $+0.25$ & $+0.45$ [$-4.10$, $+4.17$] & $+1.99$ \\
+1 Feb & 651 & 0.74 & 0.22 & $-0.41$ [$-1.10$, $+0.38$] & $+0.22$ & $+0.20$ [$-3.28$, $+3.76$] & $+1.74$ \\
+15 Feb & 651 & 0.71 & 0.24 & $-0.44$ [$-0.96$, $+0.42$] & $+0.20$ & $+0.37$ [$-2.52$, $+3.59$] & $+1.91$ \\
+1 Mar & 651 & 0.74 & 0.34 & $-0.53$ [$-0.94$, $+0.38$] & $+0.10$ & $+0.62$ [$-2.50$, $+3.14$] & $+2.17$ \\
+15 Mar & 651 & 0.82 & 0.44 & $-0.57$ [$-1.08$, $+0.31$] & $+0.06$ & $+0.66$ [$-1.95$, $+2.37$] & $+2.20$ \\
+31 Mar & 651 & 0.86 & 0.45 & $-0.62$ [$-1.22$, $+0.02$] & $+0.01$ & $+0.74$ [$-1.66$, $+2.23$] & $+2.28$ \\
+\bottomrule
+\end{tabular}\end{adjustbox}}
+\end{table}
+
 \end{document}

@@ -6,7 +6,7 @@
  "n_boot": 10000,
  "events_window": [
   "2026-11-01",
-  "2030-03-31"
+  "2036-03-31"
  ],
  "inputs": {
   "ssw-design-analysis/03_data_ingestion/era5_nam_daily.parquet": "87ddb0c2893ad04d",
