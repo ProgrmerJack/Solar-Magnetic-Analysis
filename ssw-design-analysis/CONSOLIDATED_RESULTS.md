@@ -1220,6 +1220,15 @@ initial-state memory and selected events → NOT comparable to the CMIP6 forced 
 (0.019, net of pre-onset); but RETRACT "events differ little": realised responses differ
 substantially. Shape/labels not assessable (no member data).
 
+### Z4 — issue-time state forecast (`state_forecast.py`, 6_predictability; registered `4f5c53a`; RETROSPECTIVE whole-winter CV)
+E1, 57 ERA5 SSWs 1940–2026 (incl. a one-day ERA5-only reversal 2025-11-28 not in NCEP): mean CRPS
+clim 1.65, SNAPSI rule 1.66, CMIP6 rule 1.55, STATE 1.49, STATE+SSW 1.51. State vs clim
+0.0942 [-0.0328, 0.2092]; vs SNAPSI rule 0.103 [-0.0157, 0.2117]; positive
+both eras & LOWO, but CI includes 0 → DECISION: forecasting = LIMITATION. SSW indicator adds
+nothing (-0.0081 [-0.0184, 0.0028]); oracle min-wind adds nothing. Cold periods 13 obs vs
+expected 5.7/18.1/13.6/11.9. E2 (17 events, starts 0–7 d after onset): raw ens 1.18, calibrated
+1.09, state 1.58, clim 1.83 — dynamical ensembles far better; calibration +8% [5, 11].
+
 ### X — the state-dependent shape is a continuous dose (`response_shape_dose.py`, 6_predictability; registered `7d8ed6f`)
 
 S3 fitted M2 (P2, all SSWs): component means −0.66 / −0.16, sd 0.72 / 0.58 — the
