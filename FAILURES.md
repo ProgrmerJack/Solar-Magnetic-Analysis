@@ -249,6 +249,11 @@ Failed: different systems sharing a date were pooled into one "start" (dose flip
 Rule: key every group on all identifying fields (system, start); state and check the standardising s.d. (period, months, event-free) of every quantity before combining sources.
 
 ## 2026-10-02 — Coverage gaps in a covariate silently shrink the sample
-Tried: ERA5 continuity with a pre-deceleration covariate from a Nov-May pressure series; ICON onset as "first negative ensemble-mean wind".
-Failed: early-winter maxima need September-October data, so design() dropped 32 of 144 units without warning; 6 of 18 ICON ensembles were already reversed at t = 0, so "onset" was the start of the run.
-Rule: report n per estimate next to the registered n and fail loudly on unexpected drops; define onsets as sign changes, never as first-below-threshold.
+Tried: ERA5 continuity with a pre-deceleration covariate from a Nov-May pressure series.
+Failed: early-winter maxima need September-October data, so design() dropped 32 of 144 units without warning.
+Rule: report n per estimate next to the registered n and fail loudly on unexpected drops.
+
+## 2026-10-02 — A code-review "fix" overrode the published design of external data
+Tried: re-anchoring ICON spin-off onsets to westerly-to-easterly crossings, dropping 6 of 18 ensembles easterly at t = 0 as "no onset in record".
+Failed: Loeffel et al. (2026) initialise every spin-off at onset or the day before, so t = 0 is the onset; the drop raised V_b from 0.41 to 0.59 and r from 0.80 to 0.92.
+Rule: before changing how external data are anchored or filtered, read the producing paper's design section; a reviewer's suspicion is a lead, not a defect.

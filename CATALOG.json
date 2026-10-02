@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-02T08:39:19+00:00",
+ "generated": "2026-10-02T09:34:29+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 171,
+  "scripts": 172,
   "results": 88
  },
  "scripts": [
@@ -985,9 +985,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "HOW MUCH DO EVENT-CONDITIONED MEAN RESPONSES DIFFER? A SUMMARY-LEVEL COMPARISON WITH THE 18 ICON SPIN-OFF ENSEMBLES OF LOEFFEL ET AL. (2026).",
-   "loc": 160,
-   "modified": "2026-10-02 08:15",
-   "sha256_16": "edf76cd0869ceeb9",
+   "loc": 164,
+   "modified": "2026-10-02 09:02",
+   "sha256_16": "ea4b61b7a3b383b9",
    "flags": [],
    "filenames_mentioned": [
     "icon_event_heterogeneity.json"
@@ -1433,9 +1433,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "AN ISSUE-TIME FORECAST CONDITIONED ON THE CONTINUOUS STATE, EVALUATED AGAINST CLIMATOLOGY, THE FIXED SSW RULES AND OPERATIONAL ENSEMBLES.",
-   "loc": 376,
-   "modified": "2026-10-02 08:15",
-   "sha256_16": "623ec5e227bc64af",
+   "loc": 379,
+   "modified": "2026-10-02 09:02",
+   "sha256_16": "ce3d02dc85434c67",
    "flags": [],
    "filenames_mentioned": [
     "era5_psl_cap_00utc_arco.parquet",
@@ -1822,8 +1822,8 @@
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
    "loc": 329,
-   "modified": "2026-10-02 08:35",
-   "sha256_16": "c5f9ded9b55eda49",
+   "modified": "2026-10-02 09:02",
+   "sha256_16": "947abdbadd74dc91",
    "flags": [],
    "filenames_mentioned": [
     "class_model_comparison.json",
@@ -1879,6 +1879,18 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/10_tables/tables_to_latex.py",
+   "tree": "ssw-design-analysis",
+   "stage": "10_tables",
+   "title": "tables_to_latex.py -- render the display tables for the LaTeX manuscript.",
+   "loc": 172,
+   "modified": "2026-10-02 09:14",
+   "sha256_16": "ea4bd24f37ae7916",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/environment/check_environment.py",
    "tree": "ssw-design-analysis",
    "stage": "environment",
@@ -1896,8 +1908,8 @@
    "stage": "manuscript",
    "title": "md_to_latex.py -- one-time conversion of main.md and supplementary.md to LaTeX.",
    "loc": 154,
-   "modified": "2026-10-02 06:12",
-   "sha256_16": "41a35374af854c51",
+   "modified": "2026-10-02 09:14",
+   "sha256_16": "44b24f0c7fc25735",
    "flags": [],
    "filenames_mentioned": [],
    "filename_prefixes": []
@@ -2692,7 +2704,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-02 08:37",
+   "modified": "2026-10-02 08:39",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -4216,9 +4228,9 @@
    "tree": "current",
    "stage": "5_mechanism",
    "readable": true,
-   "bytes": 11065,
-   "modified": "2026-10-02 08:15",
-   "sha256_16": "d935dffc2be96295",
+   "bytes": 11698,
+   "modified": "2026-10-02 09:02",
+   "sha256_16": "b1cd98e68965e90b",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/icon_event_heterogeneity.py"
    ],
@@ -4226,12 +4238,12 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/icon_event_heterogeneity.py": "edf76cd0869ceeb9"
+    "ssw-design-analysis/07_physical_decomposition/icon_event_heterogeneity.py": "ea4b61b7a3b383b9"
    },
    "verdicts": [
     {
      "key": "note",
-     "text": "the registered rule 'first time the ensemble-mean wind is negative' returns the start of the run for ensembles already reversed at t = 0; corrected after the code review (2026-10-02) to the first westerly-to-easterly crossing, those ensembles reported as not anchored"
+     "text": "Loeffel et al. (2026, WCD 7, 895-913, Sect. 2) initialise every spin-off 'at the SSW onset or the day before', onset being the first day the daily-mean u(10 hPa, 60N) is negative. Six ensembles whose ensemble-mean wind is already negative at t = 0 therefore start on their onset day, and the registered rule (first negative ensemble-mean wind) anchors all 18 within 0-1.25 days: it is the primary estimate. A code review (2026-10-02) had read t = 0 as 'no onset in record' and kept only the 12 westerly-to-easterly crossings; that reading ignored the published design and was reverted the same day. The 12-event subset is kept as a sensitivity."
     }
    ],
    "counts": {
@@ -4244,8 +4256,8 @@
     ]
    },
    "top_level_keys": [
-    "corrected_onset",
-    "registered_literal",
+    "primary_registered",
+    "sensitivity_crossing_only",
     "note"
    ]
   },
@@ -5342,9 +5354,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 29542,
-   "modified": "2026-10-02 08:22",
-   "sha256_16": "f74018a5a8914fbf",
+   "bytes": 32408,
+   "modified": "2026-10-02 09:05",
+   "sha256_16": "3224750a0452b448",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/state_forecast.py"
    ],
@@ -5352,7 +5364,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/state_forecast.py": "623ec5e227bc64af"
+    "ssw-design-analysis/07_physical_decomposition/state_forecast.py": "ce3d02dc85434c67"
    },
    "verdicts": [
     {

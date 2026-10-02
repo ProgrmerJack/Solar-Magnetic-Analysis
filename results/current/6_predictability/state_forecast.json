@@ -1324,6 +1324,7 @@
   "decision": "forecasting reported as a limitation (decision rule not met)",
   "ssw_adds_beyond_state": false,
   "E2": {
+    "pairing": "each start scored by all four methods or none; F3 and F0 reissued at the start date, same valid window",
     "n_events": 17,
     "mean_crps": {
       "raw": 1.1841,
@@ -1339,7 +1340,14 @@
         "cal": 0.7633,
         "F3": 0.6404,
         "F0": 0.7321,
-        "n_forecasts": 1
+        "n_forecasts": 1,
+        "mean_issue_lag_days": 3.0,
+        "n_scored_per_method": {
+          "raw": 1,
+          "cal": 1,
+          "F3": 1,
+          "F0": 1
+        }
       },
       {
         "onset": "1999-02-26",
@@ -1348,7 +1356,14 @@
         "cal": 1.3574,
         "F3": 5.0766,
         "F0": 5.7769,
-        "n_forecasts": 6
+        "n_forecasts": 6,
+        "mean_issue_lag_days": 3.0,
+        "n_scored_per_method": {
+          "raw": 6,
+          "cal": 6,
+          "F3": 6,
+          "F0": 6
+        }
       },
       {
         "onset": "2000-03-20",
@@ -1357,7 +1372,14 @@
         "cal": 0.4218,
         "F3": 0.6157,
         "F0": 0.6065,
-        "n_forecasts": 8
+        "n_forecasts": 8,
+        "mean_issue_lag_days": 4.125,
+        "n_scored_per_method": {
+          "raw": 8,
+          "cal": 8,
+          "F3": 8,
+          "F0": 8
+        }
       },
       {
         "onset": "2001-02-11",
@@ -1366,7 +1388,14 @@
         "cal": 0.4962,
         "F3": 0.9254,
         "F0": 1.1082,
-        "n_forecasts": 8
+        "n_forecasts": 8,
+        "mean_issue_lag_days": 4.125,
+        "n_scored_per_method": {
+          "raw": 8,
+          "cal": 8,
+          "F3": 8,
+          "F0": 8
+        }
       },
       {
         "onset": "2001-12-30",
@@ -1375,7 +1404,14 @@
         "cal": 1.8032,
         "F3": 2.5377,
         "F0": 1.4828,
-        "n_forecasts": 12
+        "n_forecasts": 12,
+        "mean_issue_lag_days": 3.75,
+        "n_scored_per_method": {
+          "raw": 12,
+          "cal": 12,
+          "F3": 12,
+          "F0": 12
+        }
       },
       {
         "onset": "2003-01-18",
@@ -1384,7 +1420,14 @@
         "cal": 1.0741,
         "F3": 0.6186,
         "F0": 0.8617,
-        "n_forecasts": 12
+        "n_forecasts": 12,
+        "mean_issue_lag_days": 4.4167,
+        "n_scored_per_method": {
+          "raw": 12,
+          "cal": 12,
+          "F3": 12,
+          "F0": 12
+        }
       },
       {
         "onset": "2004-01-05",
@@ -1393,7 +1436,14 @@
         "cal": 1.4207,
         "F3": 1.6192,
         "F0": 0.8323,
-        "n_forecasts": 12
+        "n_forecasts": 12,
+        "mean_issue_lag_days": 3.25,
+        "n_scored_per_method": {
+          "raw": 12,
+          "cal": 12,
+          "F3": 12,
+          "F0": 12
+        }
       },
       {
         "onset": "2006-01-21",
@@ -1402,7 +1452,14 @@
         "cal": 1.6194,
         "F3": 0.8289,
         "F0": 2.9499,
-        "n_forecasts": 13
+        "n_forecasts": 13,
+        "mean_issue_lag_days": 3.6923,
+        "n_scored_per_method": {
+          "raw": 13,
+          "cal": 13,
+          "F3": 13,
+          "F0": 13
+        }
       },
       {
         "onset": "2007-02-24",
@@ -1411,7 +1468,14 @@
         "cal": 0.7644,
         "F3": 1.2081,
         "F0": 0.5547,
-        "n_forecasts": 21
+        "n_forecasts": 21,
+        "mean_issue_lag_days": 3.2857,
+        "n_scored_per_method": {
+          "raw": 21,
+          "cal": 21,
+          "F3": 21,
+          "F0": 21
+        }
       },
       {
         "onset": "2008-02-22",
@@ -1420,7 +1484,14 @@
         "cal": 0.5215,
         "F3": 1.4255,
         "F0": 1.8164,
-        "n_forecasts": 14
+        "n_forecasts": 14,
+        "mean_issue_lag_days": 3.5,
+        "n_scored_per_method": {
+          "raw": 14,
+          "cal": 14,
+          "F3": 14,
+          "F0": 14
+        }
       },
       {
         "onset": "2009-01-24",
@@ -1429,7 +1500,14 @@
         "cal": 1.2172,
         "F3": 1.8777,
         "F0": 2.0645,
-        "n_forecasts": 18
+        "n_forecasts": 18,
+        "mean_issue_lag_days": 3.8333,
+        "n_scored_per_method": {
+          "raw": 18,
+          "cal": 18,
+          "F3": 18,
+          "F0": 18
+        }
       },
       {
         "onset": "2010-02-09",
@@ -1438,7 +1516,14 @@
         "cal": 1.2961,
         "F3": 1.6661,
         "F0": 4.0301,
-        "n_forecasts": 16
+        "n_forecasts": 16,
+        "mean_issue_lag_days": 2.625,
+        "n_scored_per_method": {
+          "raw": 16,
+          "cal": 16,
+          "F3": 16,
+          "F0": 16
+        }
       },
       {
         "onset": "2010-03-24",
@@ -1447,7 +1532,14 @@
         "cal": 0.6,
         "F3": 0.8547,
         "F0": 1.6437,
-        "n_forecasts": 18
+        "n_forecasts": 18,
+        "mean_issue_lag_days": 3.4444,
+        "n_scored_per_method": {
+          "raw": 18,
+          "cal": 18,
+          "F3": 18,
+          "F0": 18
+        }
       },
       {
         "onset": "2013-01-06",
@@ -1456,7 +1548,14 @@
         "cal": 1.2698,
         "F3": 0.6689,
         "F0": 1.4775,
-        "n_forecasts": 14
+        "n_forecasts": 14,
+        "mean_issue_lag_days": 3.2857,
+        "n_scored_per_method": {
+          "raw": 14,
+          "cal": 14,
+          "F3": 14,
+          "F0": 14
+        }
       },
       {
         "onset": "2018-02-12",
@@ -1465,7 +1564,14 @@
         "cal": 2.1159,
         "F3": 3.9568,
         "F0": 4.1184,
-        "n_forecasts": 9
+        "n_forecasts": 9,
+        "mean_issue_lag_days": 3.2222,
+        "n_scored_per_method": {
+          "raw": 9,
+          "cal": 9,
+          "F3": 9,
+          "F0": 9
+        }
       },
       {
         "onset": "2019-01-02",
@@ -1474,7 +1580,14 @@
         "cal": 0.846,
         "F3": 1.0094,
         "F0": 0.8331,
-        "n_forecasts": 11
+        "n_forecasts": 11,
+        "mean_issue_lag_days": 3.5455,
+        "n_scored_per_method": {
+          "raw": 11,
+          "cal": 11,
+          "F3": 11,
+          "F0": 11
+        }
       },
       {
         "onset": "2021-01-05",
@@ -1483,7 +1596,14 @@
         "cal": 0.8656,
         "F3": 1.4141,
         "F0": 2.8341,
-        "n_forecasts": 5
+        "n_forecasts": 5,
+        "mean_issue_lag_days": 3.2,
+        "n_scored_per_method": {
+          "raw": 5,
+          "cal": 5,
+          "F3": 5,
+          "F0": 5
+        }
       }
     ],
     "F3_vs_raw": {
