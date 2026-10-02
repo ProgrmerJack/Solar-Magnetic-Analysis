@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-02T06:02:52+00:00",
+ "generated": "2026-10-02T08:13:23+00:00",
  "note": "Known-good baseline: each result was produced by the script at the recorded sha256. catalog_repo.py flags STALE when a producer's hash no longer matches. Re-record with --record only AFTER re-running the analysis.",
  "results": {
   "catalogue_sets.json": {
@@ -447,16 +447,18 @@
     "ssw-design-analysis/07_physical_decomposition/s2s_member_experiment.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/s2s_member_experiment.py": "e0fd3e01e058aa78"
+    "ssw-design-analysis/07_physical_decomposition/s2s_member_experiment.py": "35c063e6e2b5fcb3"
    },
-   "result_sha256_16": "63a8bfa429d7abb5",
+   "result_sha256_16": "a1b981b87c08e992",
    "needs_rerun": false
   },
   "vortex_threshold_continuity.json": {
    "producers": [
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py",
     "ssw-design-analysis/07_physical_decomposition/vortex_threshold_continuity.py"
    ],
    "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "4255941179faf5b9",
     "ssw-design-analysis/07_physical_decomposition/vortex_threshold_continuity.py": "6de754de115dc126"
    },
    "result_sha256_16": "733c15819a4b6e5a",
@@ -609,7 +611,7 @@
    ],
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/s2s_heldout_test.py": "d57639ff35f1972b",
-    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "49cf7c32029acf7f"
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "4255941179faf5b9"
    },
    "result_sha256_16": "287dd5c39227c004",
    "needs_rerun": false
@@ -673,9 +675,9 @@
     "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "49cf7c32029acf7f"
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "4255941179faf5b9"
    },
-   "result_sha256_16": "b7c36f4575384115",
+   "result_sha256_16": "b96a30299a8f98c8",
    "needs_rerun": false
   },
   "state_forecast.json": {

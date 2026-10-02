@@ -242,12 +242,13 @@ def main():
         s_, m_ = build(c)
         S += s_; M += m_
         per[c] = {"mixed_starts": len(s_), "mixed_starts_k_le_9": sum(1 for r in s_ if "A_rev" in r),
-                  "n4_members": len(m_)}
+                  "n4_members": len(m_), "n_starts": int(load(c)[0].index.get_level_values("init").nunique())}
         print(c, per[c], flush=True)
     S9 = [r for r in S if "A_rev" in r]
     S14 = [r for r in S if "A20_rev" in r]
     res = {"plan_approved": "2026-10-02", "registered_commit": "be804a7", "seed": SEED, "n_boot": N_BOOT,
            "systems": SYSTEMS, "per_system": per, "n_mixed_starts_k_le_9": len(S9),
+           "n_starts_total": int(sum(v["n_starts"] for v in per.values())), "n_mixed_starts": int(sum(v["mixed_starts"] for v in per.values())),
            "n_winters": int(len({r["winter"] for r in S9})),
            "n_members_rev": int(sum(r["n_rev"] for r in S9)), "n_members_non": int(sum(r["n_non"] for r in S9))}
     sh, vr = stats_starts(S9, "A")

@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-02T06:02:52+00:00",
+ "generated": "2026-10-02T08:13:23+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 168,
+  "scripts": 171,
   "results": 88
  },
  "scripts": [
@@ -1218,9 +1218,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "A NATURAL EXPERIMENT INSIDE OPERATIONAL ENSEMBLES: MEMBERS THAT DO AND DO NOT REVERSE THE VORTEX FROM THE SAME INITIAL STATE.",
-   "loc": 292,
-   "modified": "2026-10-02 03:17",
-   "sha256_16": "e0fd3e01e058aa78",
+   "loc": 293,
+   "modified": "2026-10-02 06:24",
+   "sha256_16": "35c063e6e2b5fcb3",
    "flags": [],
    "filenames_mentioned": [
     "s2s_member_experiment.json"
@@ -1291,9 +1291,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "A COLD-RISK FORECAST FROM THE SHIFT ALONE: DOES A MODEL-DERIVED PROBABILITY VERIFY AGAINST OBSERVED SSWs, AND WHAT IS IT WORTH TO A DECISION-MAKER? Plan approved 2026-10-01. Written before the verification below was run.",
-   "loc": 519,
-   "modified": "2026-10-01 13:26",
-   "sha256_16": "49cf7c32029acf7f",
+   "loc": 563,
+   "modified": "2026-10-02 06:24",
+   "sha256_16": "4255941179faf5b9",
    "flags": [],
    "filenames_mentioned": [
     "era5_nam_daily.parquet",
@@ -1305,7 +1305,8 @@
     "era5_t2m_regions_daily_spliced.parquet",
     "era5_u10_60N_daily_cds.parquet",
     "s2s_heldout_test.json",
-    "shift_rule_forecast.json"
+    "shift_rule_forecast.json",
+    "vortex_threshold_continuity.json"
    ],
    "filename_prefixes": []
   },
@@ -1732,12 +1733,13 @@
    "path": "ssw-design-analysis/09_figures/figED5_heldout.py",
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
-   "title": "figED5_heldout.py -- Extended Data Fig. 5: why the held-out replication failed.",
-   "loc": 77,
-   "modified": "2026-09-30 13:54",
-   "sha256_16": "2dcde70c11df9dcd",
+   "title": "figED5_heldout.py -- Extended Data Fig. 5: the held-out SSWs, 2023-2026.",
+   "loc": 83,
+   "modified": "2026-10-02 06:08",
+   "sha256_16": "9ac5381584b03895",
    "flags": [],
    "filenames_mentioned": [
+    "s2s_heldout2026_test.json",
     "s2s_heldout_diagnosis.json"
    ],
    "filename_prefixes": []
@@ -1767,6 +1769,34 @@
    "flags": [],
    "filenames_mentioned": [
     "shift_rule_forecast.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/figED8_translation.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "figED8_translation.py -- Extended Data Fig. 8: is the imposed SSW a translation? Reads results/current/8_experiment/snapsi_residual_quantiles.json. Recomputes nothing.",
+   "loc": 67,
+   "modified": "2026-10-02 06:08",
+   "sha256_16": "598b9163c7074460",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_residual_quantiles.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/figED9_forecasts.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "figED9_forecasts.py -- Extended Data Fig. 9: what transfers to forecasts.",
+   "loc": 74,
+   "modified": "2026-10-02 06:10",
+   "sha256_16": "85f0c3970ff44699",
+   "flags": [],
+   "filenames_mentioned": [
+    "state_forecast.json"
    ],
    "filename_prefixes": []
   },
@@ -1852,6 +1882,18 @@
    "loc": 182,
    "modified": "2026-10-01 05:13",
    "sha256_16": "d28cc4064b0cb7fb",
+   "flags": [],
+   "filenames_mentioned": [],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/manuscript/md_to_latex.py",
+   "tree": "ssw-design-analysis",
+   "stage": "manuscript",
+   "title": "md_to_latex.py -- one-time conversion of main.md and supplementary.md to LaTeX.",
+   "loc": 154,
+   "modified": "2026-10-02 06:12",
+   "sha256_16": "41a35374af854c51",
    "flags": [],
    "filenames_mentioned": [],
    "filename_prefixes": []
@@ -2646,7 +2688,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-02 05:48",
+   "modified": "2026-10-02 06:02",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -4335,9 +4377,9 @@
    "tree": "current",
    "stage": "5_mechanism",
    "readable": true,
-   "bytes": 3398,
-   "modified": "2026-10-02 03:17",
-   "sha256_16": "63a8bfa429d7abb5",
+   "bytes": 3679,
+   "modified": "2026-10-02 06:24",
+   "sha256_16": "a1b981b87c08e992",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/s2s_member_experiment.py"
    ],
@@ -4345,7 +4387,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/s2s_member_experiment.py": "e0fd3e01e058aa78"
+    "ssw-design-analysis/07_physical_decomposition/s2s_member_experiment.py": "35c063e6e2b5fcb3"
    },
    "verdicts": [],
    "counts": {
@@ -4367,6 +4409,8 @@
     "systems",
     "per_system",
     "n_mixed_starts_k_le_9",
+    "n_starts_total",
+    "n_mixed_starts",
     "n_winters",
     "n_members_rev",
     "n_members_non",
@@ -4389,12 +4433,14 @@
    "modified": "2026-10-01 21:31",
    "sha256_16": "733c15819a4b6e5a",
    "producers": [
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py",
     "ssw-design-analysis/07_physical_decomposition/vortex_threshold_continuity.py"
    ],
    "state": "current",
    "detail": "",
    "flags": [],
    "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "4255941179faf5b9",
     "ssw-design-analysis/07_physical_decomposition/vortex_threshold_continuity.py": "6de754de115dc126"
    },
    "verdicts": [],
@@ -5001,7 +5047,7 @@
    "flags": [],
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/s2s_heldout_test.py": "d57639ff35f1972b",
-    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "49cf7c32029acf7f"
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "4255941179faf5b9"
    },
    "verdicts": [
     {
@@ -5255,9 +5301,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 141660,
-   "modified": "2026-10-01 21:30",
-   "sha256_16": "b7c36f4575384115",
+   "bytes": 142239,
+   "modified": "2026-10-02 06:24",
+   "sha256_16": "b96a30299a8f98c8",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py"
    ],
@@ -5265,7 +5311,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "49cf7c32029acf7f"
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "4255941179faf5b9"
    },
    "verdicts": [],
    "counts": {

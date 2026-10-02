@@ -19,55 +19,67 @@
     "ecmwf": {
       "mixed_starts": 139,
       "mixed_starts_k_le_9": 12,
-      "n4_members": 2400
+      "n4_members": 2400,
+      "n_starts": 700
     },
     "eccc": {
       "mixed_starts": 45,
       "mixed_starts_k_le_9": 3,
-      "n4_members": 805
+      "n4_members": 805,
+      "n_starts": 700
     },
     "cma": {
       "mixed_starts": 12,
       "mixed_starts_k_le_9": 0,
-      "n4_members": 708
+      "n4_members": 708,
+      "n_starts": 525
     },
     "hmcr": {
       "mixed_starts": 79,
       "mixed_starts_k_le_9": 7,
-      "n4_members": 2023
+      "n4_members": 2023,
+      "n_starts": 510
     },
     "kma": {
       "mixed_starts": 28,
       "mixed_starts_k_le_9": 1,
-      "n4_members": 642
+      "n4_members": 642,
+      "n_starts": 288
     },
     "cnrm": {
       "mixed_starts": 43,
       "mixed_starts_k_le_9": 1,
-      "n4_members": 1621
+      "n4_members": 1621,
+      "n_starts": 416
     },
     "jma": {
       "mixed_starts": 21,
       "mixed_starts_k_le_9": 4,
-      "n4_members": 378
+      "n4_members": 378,
+      "n_starts": 240
     },
     "cnr_isac": {
       "mixed_starts": 41,
       "mixed_starts_k_le_9": 7,
-      "n4_members": 1955
+      "n4_members": 1955,
+      "n_starts": 480
     },
     "ncep": {
       "mixed_starts": 31,
       "mixed_starts_k_le_9": 3,
-      "n4_members": 541
+      "n4_members": 541,
+      "n_starts": 516
     },
     "cptec": {
       "mixed_starts": 22,
       "mixed_starts_k_le_9": 2,
-      "n4_members": 408
+      "n4_members": 408,
+      "n_starts": 123
     }
   },
   "n_mixed_starts_k_le_9": 40,
+  "n_starts_total": 4498,
+  "n_mixed_starts": 461,
   "n_winters": 17,
   "n_members_rev": 203,
   "n_members_non": 146,

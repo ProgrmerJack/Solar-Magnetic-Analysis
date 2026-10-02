@@ -1,13 +1,13 @@
-ecmwf {'mixed_starts': 139, 'mixed_starts_k_le_9': 12, 'n4_members': 2400}
-eccc {'mixed_starts': 45, 'mixed_starts_k_le_9': 3, 'n4_members': 805}
-cma {'mixed_starts': 12, 'mixed_starts_k_le_9': 0, 'n4_members': 708}
-hmcr {'mixed_starts': 79, 'mixed_starts_k_le_9': 7, 'n4_members': 2023}
-kma {'mixed_starts': 28, 'mixed_starts_k_le_9': 1, 'n4_members': 642}
-cnrm {'mixed_starts': 43, 'mixed_starts_k_le_9': 1, 'n4_members': 1621}
-jma {'mixed_starts': 21, 'mixed_starts_k_le_9': 4, 'n4_members': 378}
-cnr_isac {'mixed_starts': 41, 'mixed_starts_k_le_9': 7, 'n4_members': 1955}
-ncep {'mixed_starts': 31, 'mixed_starts_k_le_9': 3, 'n4_members': 541}
-cptec {'mixed_starts': 22, 'mixed_starts_k_le_9': 2, 'n4_members': 408}
+ecmwf {'mixed_starts': 139, 'mixed_starts_k_le_9': 12, 'n4_members': 2400, 'n_starts': 700}
+eccc {'mixed_starts': 45, 'mixed_starts_k_le_9': 3, 'n4_members': 805, 'n_starts': 700}
+cma {'mixed_starts': 12, 'mixed_starts_k_le_9': 0, 'n4_members': 708, 'n_starts': 525}
+hmcr {'mixed_starts': 79, 'mixed_starts_k_le_9': 7, 'n4_members': 2023, 'n_starts': 510}
+kma {'mixed_starts': 28, 'mixed_starts_k_le_9': 1, 'n4_members': 642, 'n_starts': 288}
+cnrm {'mixed_starts': 43, 'mixed_starts_k_le_9': 1, 'n4_members': 1621, 'n_starts': 416}
+jma {'mixed_starts': 21, 'mixed_starts_k_le_9': 4, 'n4_members': 378, 'n_starts': 240}
+cnr_isac {'mixed_starts': 41, 'mixed_starts_k_le_9': 7, 'n4_members': 1955, 'n_starts': 480}
+ncep {'mixed_starts': 31, 'mixed_starts_k_le_9': 3, 'n4_members': 541, 'n_starts': 516}
+cptec {'mixed_starts': 22, 'mixed_starts_k_le_9': 2, 'n4_members': 408, 'n_starts': 123}
 N1_shift_sigma {"est": -0.0535, "ci95": [-0.2864, 0.1671]}
 N2_variance_ratio {"est": 0.974, "ci95": [0.7317, 1.3602]}
 N3_threshold {"rate_rev": 0.5369, "rate_non": 0.4521, "contrast_rev": -0.8754, "contrast_non": -0.8718, "contrast_diff": -0.0036, "contrast_diff_ci95": [-0.3335, 0.2963], "rate_rev_ci95": [0.4372, 0.6553], "rate_non_ci95": [0.3395, 0.6123]}

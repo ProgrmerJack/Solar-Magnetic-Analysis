@@ -5660,6 +5660,20 @@
           "1958-02-01"
         ],
         "climatological_base_rate": 0.4235
+      },
+      "exploratory_diagnostics": {
+        "label": "exploratory, added after the R6 result was seen",
+        "median_umin_early": -3.76,
+        "median_umin_1959_2022": -8.53,
+        "share_umin_above_minus4_early": 0.583,
+        "share_umin_above_minus4_1959_2022": 0.256,
+        "mean_T_anomaly_early_K": -0.211,
+        "mean_T_anomaly_1959_2022_K": -1.001,
+        "nam_proxy_days8_25_early_minus_free_sd": -0.359,
+        "era5_dose_K_per_10ms": 0.378,
+        "cooling_difference_explained_by_dose_K": -0.18,
+        "n_early": 12,
+        "n_1959_2022": 39
       }
     }
   }

@@ -37,7 +37,7 @@ Exploratory checks added afterwards point to the events, not the systems: the ne
 
 \section*{Supplementary Note 6 | Continuity at the wind reversal with ERA5 winds, 1940–2025}
 
-The NCEP test of the main text uses 114 weakening episodes of 1958–2025. Its local regression-discontinuity estimates were unstable (four of 16 placebo cutoffs with p < 0.05). Several NCEP episodes just above zero are reversals in other reanalyses, so measurement error sits exactly at the cutoff. The ERA5 version (registered before the ERA5 data were retrieved) uses the ERA5 10 hPa, 60° N wind from 1940. Its minima agree with NCEP's (r = 0.98 on 96 shared episodes), but five lie on the other side of zero: December 1958 (NCEP −5.8, ERA5 +6.4 m s⁻¹), January 1968 (+1.1, −4.7), January 1977 (0.0, −2.6), March 1981 (+0.9, −0.7) and February 2002 (+1.8, −0.4). The dose response replicates for all four outcomes. No outcome shows a step after correction. The largest step, −0.73 on the Arctic Oscillation (raw p = 0.03; Holm 0.11), is the strongest hint of a step at reversal anywhere in this work. In CMIP6, 5,726 episodes bound the step at +0.05σ [−0.02, +0.13]. In ERA5, reversals follow larger decelerations (balance p = 0.002), so a step estimated at zero partly reflects how much faster the wind fell. The local estimates again fail their placebo cutoffs, so the observational conclusion rests on the global estimates, as registered. All numbers are in Methods and in \texttt{results/\allowbreak{}current/\allowbreak{}5\_mechanism/\allowbreak{}vortex\_threshold\_continuity.json} (key \texttt{era5\_1940\_2025}).
+The NCEP test of the main text uses 114 weakening episodes of 1958–2025. Its local regression-discontinuity estimates were unstable (four of the 14 placebo cutoffs that returned an estimate with p < 0.05). Several NCEP episodes just above zero are reversals in other reanalyses, so measurement error sits exactly at the cutoff. The ERA5 version (registered before the ERA5 data were retrieved) uses the ERA5 10 hPa, 60° N wind from 1940. Its minima agree with NCEP's (r = 0.98 on 96 shared episodes), but five lie on the other side of zero: December 1958 (NCEP −5.8, ERA5 +6.4 m s⁻¹), January 1968 (+1.1, −4.7), January 1977 (0.0, −2.6), March 1981 (+0.9, −0.7) and February 2002 (+1.8, −0.4). The dose response replicates for all four outcomes. No outcome shows a step after correction. The largest step, −0.73 on the Arctic Oscillation (raw p = 0.03; Holm 0.11), is the strongest hint of a step at reversal anywhere in this work. In CMIP6, 5,726 episodes bound the step at +0.05σ [−0.02, +0.13]. In ERA5, reversals follow larger decelerations (balance p = 0.002), so a step estimated at zero partly reflects how much faster the wind fell. The local estimates again fail their placebo cutoffs, so the observational conclusion rests on the global estimates, as registered. All numbers are in Methods and in \texttt{results/\allowbreak{}current/\allowbreak{}5\_mechanism/\allowbreak{}vortex\_threshold\_continuity.json} (key \texttt{era5\_1940\_2025}).
 
 \section*{Supplementary Note 7 | The shift rule out of sample}
 
@@ -71,7 +71,7 @@ Of 461 starts with at least two members of each kind, the onset comes early enou
 The signature of a threshold on one population appears:
 
 \begin{itemize}[leftmargin=*,itemsep=1pt]
-  \item \textbf{Rate:} members that reverse are more often downward.
+  \item \textbf{Rate:} the downward share of reversing members is higher as a point estimate (0.54 against 0.45), with overlapping intervals.
   \item \textbf{Contrast:} their class contrast is unchanged.
   \item \textbf{Spread:} they are no more spread out.
   \item \textbf{Shape:} their lower tail moves more than their upper. The quantile shift is −0.58σ at the 5th percentile against +0.12σ at the 95th, the asymmetry also seen in CMIP6.
@@ -135,7 +135,7 @@ Results:
 \begin{itemize}[leftmargin=*,itemsep=1pt]
   \item \textbf{Calibrated label rates out of fold:} 27 downward events observed against 29.2 expected; no version of the criterion is miscalibrated.
   \item \textbf{Better than climatology for the outcome itself} (CRPS).
-  \item \textbf{No better from a constant class rate:} the label carries no information beyond the shift, as one shifted population predicts.
+  \item \textbf{No better from a constant class rate:} the shifted null predicts the labels as well as the observed class rate does, as one shifted population predicts.
 \end{itemize}
 
 Values are in Methods and in \texttt{results/\allowbreak{}current/\allowbreak{}9\_literature/\allowbreak{}criterion\_transport\_cv.json}.
@@ -180,10 +180,10 @@ It was trained on every winter day of the training winters. Everything was fitte
 Results:
 
 \begin{itemize}[leftmargin=*,itemsep=1pt]
-  \item \textbf{The state model scores best of the statistical forecasts.} It improves on climatology and on the fixed SNAPSI rule by about 10\%, in both eras and with any winter left out. The intervals include zero, so by the registered rule this is not a forecasting result.
+  \item \textbf{The state model scores best of the statistical forecasts.} It improves on climatology by 9\% and on the fixed SNAPSI rule by 10\%, positive in both eras (7–12\%) and with any winter left out. The intervals include zero, so by the registered rule this is not a forecasting result.
   \item \textbf{The SSW label adds nothing.} Adding an indicator that the state is an SSW does not help. Neither does knowing how far the wind would fall over the next 20 days (the oracle). For this regional target, what an SSW adds is carried by the continuous state already present on the issue day.
   \item \textbf{The fixed SNAPSI rule over-predicts cold over the whole record}: 18.1 cold periods expected against 13 observed.
-  \item \textbf{Dynamical ensembles started within a week after onset beat every statistical forecast decisively.} Routine bias and spread calibration improves them further, by 8\% (5–11\%).
+  \item \textbf{Dynamical ensembles started within a week after onset score better than the state model and climatology}, the two statistical forecasts evaluated on those 17 events (against the raw ensembles the state model's deficit is $-0.34$ [$-0.67$, $-0.002$]). Routine bias and spread calibration improves them further, by 8\% (5–11\%).
 \end{itemize}
 
 The forecasting conclusion is therefore modest: after an observed SSW, the useful product is the calibrated dynamical ensemble. The statistical results add one conceptual point: being an SSW carries no extra information once the continuous state is known.
