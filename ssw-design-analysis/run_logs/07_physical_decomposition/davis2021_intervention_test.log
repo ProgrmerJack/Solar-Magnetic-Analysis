@@ -1,0 +1,7 @@
+04jan {'s': -0.3773, 'dw_rate_ssw': 0.5714, 'dw_rate_nossw': 0.4762, 'C_ssw': -2.146, 'C_nossw': -1.6109, 'Delta_b': -0.4743, 'paired_diff': -0.5352, 'resid_T': 0.6282, 'sd_ratio': 1.3262} [-1.3125, 0.3457] not rejected; low power | T [-0.4972, 1.4263] not rejected; low power
+01feb {'s': 0.4584, 'dw_rate_ssw': 0.3333, 'dw_rate_nossw': 0.5714, 'C_ssw': -1.5471, 'C_nossw': -1.6797, 'Delta_b': 0.1983, 'paired_diff': 0.1327, 'resid_T': -0.4251, 'sd_ratio': 0.8347} [-0.4146, 0.9232] not rejected; low power | T [-2.2351, 0.5267] not rejected; low power
+08feb {'s': 0.4841, 'dw_rate_ssw': 0.1429, 'dw_rate_nossw': 0.4762, 'C_ssw': -1.0522, 'C_nossw': -1.5149, 'Delta_b': 0.5269, 'paired_diff': 0.4627, 'resid_T': -0.3125, 'sd_ratio': 0.616} [-0.1084, 1.2294] not rejected; low power | T [-1.433, 1.0098] not rejected; low power
+pooled {'Delta_b': {'mean': 0.0836, 'ci95': [-0.3422, 0.5164], 'reading': 'not rejected; low power'}, 'resid_T': {'mean': -0.0365, 'ci95': [-0.9393, 0.6958], 'reading': 'not rejected; low power'}}
+post hoc spread: {'note': 'post hoc, after the registered run', '04jan': {'Delta_b': -0.4743, 'spread_pred': -0.5255}, '01feb': {'Delta_b': 0.1983, 'spread_pred': 0.2777}, '08feb': {'Delta_b': 0.5269, 'spread_pred': 0.5817}}
+expected half-width (one population, n = 21): 0.777
+Saved -> davis2021_intervention_test.json

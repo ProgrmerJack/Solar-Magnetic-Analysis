@@ -1,0 +1,234 @@
+  ssfcst_04jan m00: zcap60 mean 203.2 m
+  ssfcst_04jan m04: zcap60 mean 170.5 m
+  ssfcst_04jan m01: zcap60 mean 175.1 m
+  ssfcst_04jan m05: zcap60 mean 194.2 m
+  ssfcst_04jan m03: zcap60 mean 165.5 m
+  ssfcst_04jan m06: zcap60 mean 164.2 m
+  ssfcst_04jan m08: zcap60 mean 199.6 m
+  ssfcst_04jan m02: zcap60 mean 184.0 m
+  ssfcst_04jan m07: zcap60 mean 166.2 m
+  ssfcst_04jan m12: zcap60 mean 202.2 m
+  ssfcst_04jan m09: zcap60 mean 183.4 m
+  ssfcst_04jan m13: zcap60 mean 168.9 m
+  ssfcst_04jan m10: zcap60 mean 162.8 m
+  ssfcst_04jan m11: zcap60 mean 160.1 m
+  ssfcst_04jan m14: zcap60 mean 188.8 m
+  ssfcst_04jan m16: zcap60 mean 185.7 m
+  ssfcst_04jan m17: zcap60 mean 160.2 m
+  ssfcst_04jan m15: zcap60 mean 159.9 m
+  ssfcst_04jan m18: zcap60 mean 216.1 m
+  ssfcst_04jan m19: zcap60 mean 169.0 m
+  ssfcst_04jan m20: zcap60 mean 161.8 m
+  9to12kmRamp_04jan m02: zcap60 mean 160.4 m
+  9to12kmRamp_04jan m00: zcap60 mean 168.6 m
+  9to12kmRamp_04jan m01: zcap60 mean 178.6 m
+  9to12kmRamp_04jan m03: zcap60 mean 185.2 m
+  9to12kmRamp_04jan m05: zcap60 mean 177.6 m
+  9to12kmRamp_04jan m04: zcap60 mean 153.8 m
+  9to12kmRamp_04jan m07: zcap60 mean 188.2 m
+  9to12kmRamp_04jan m08: zcap60 mean 154.9 m
+  9to12kmRamp_04jan m06: zcap60 mean 178.1 m
+  9to12kmRamp_04jan m09: zcap60 mean 178.9 m
+  9to12kmRamp_04jan m10: zcap60 mean 165.4 m
+  9to12kmRamp_04jan m11: zcap60 mean 207.7 m
+  9to12kmRamp_04jan m12: zcap60 mean 154.5 m
+  9to12kmRamp_04jan m14: zcap60 mean 215.0 m
+  9to12kmRamp_04jan m13: zcap60 mean 145.9 m
+  9to12kmRamp_04jan m15: zcap60 mean 174.4 m
+  9to12kmRamp_04jan m16: zcap60 mean 156.6 m
+  9to12kmRamp_04jan m17: zcap60 mean 170.4 m
+  9to12kmRamp_04jan m19: zcap60 mean 166.6 m
+  9to12kmRamp_04jan m18: zcap60 mean 201.6 m
+  9to12kmRamp_04jan m20: zcap60 mean 165.5 m
+arm
+9to12kmRamp_04jan    21
+ssfcst_04jan         21
+Saved -> davis2022_reduced.parquet (1,932 rows)
+  ssfcst_01feb m00: zcap60 mean 186.3 m
+  ssfcst_01feb m02: zcap60 mean 184.2 m
+  ssfcst_01feb m03: zcap60 mean 191.5 m
+  ssfcst_01feb m04: zcap60 mean 234.7 m
+  ssfcst_01feb m01: zcap60 mean 195.9 m
+  ssfcst_01feb m05: zcap60 mean 160.4 m
+  ssfcst_01feb m09: zcap60 mean 172.0 m
+  ssfcst_01feb m08: zcap60 mean 177.4 m
+  ssfcst_01feb m06: zcap60 mean 208.5 m
+  ssfcst_01feb m07: zcap60 mean 210.1 m
+  ssfcst_01feb m10: zcap60 mean 176.4 m
+  ssfcst_01feb m11: zcap60 mean 187.1 m
+  ssfcst_01feb m14: zcap60 mean 194.1 m
+  ssfcst_01feb m13: zcap60 mean 190.9 m
+  ssfcst_01feb m16: zcap60 mean 196.0 m
+  ssfcst_01feb m12: zcap60 mean 211.9 m
+  ssfcst_01feb m15: zcap60 mean 173.4 m
+  ssfcst_01feb m17: zcap60 mean 185.0 m
+  ssfcst_01feb m19: zcap60 mean 181.1 m
+  9to12kmRamp_updated_01feb m00: zcap60 mean 228.8 m
+  ssfcst_01feb m20: zcap60 mean 204.2 m
+  ssfcst_01feb m18: zcap60 mean 184.8 m
+  9to12kmRamp_updated_01feb m01: zcap60 mean 195.5 m
+  9to12kmRamp_updated_01feb m04: zcap60 mean 228.9 m
+  9to12kmRamp_updated_01feb m03: zcap60 mean 194.9 m
+  9to12kmRamp_updated_01feb m02: zcap60 mean 208.6 m
+  9to12kmRamp_updated_01feb m05: zcap60 mean 194.7 m
+  9to12kmRamp_updated_01feb m06: zcap60 mean 199.1 m
+  9to12kmRamp_updated_01feb m07: zcap60 mean 195.6 m
+  9to12kmRamp_updated_01feb m09: zcap60 mean 217.7 m
+  9to12kmRamp_updated_01feb m08: zcap60 mean 163.5 m
+  9to12kmRamp_updated_01feb m10: zcap60 mean 197.7 m
+  9to12kmRamp_updated_01feb m11: zcap60 mean 220.8 m
+  9to12kmRamp_updated_01feb m12: zcap60 mean 201.4 m
+  9to12kmRamp_updated_01feb m13: zcap60 mean 203.7 m
+  9to12kmRamp_updated_01feb m17: zcap60 mean 183.1 m
+  9to12kmRamp_updated_01feb m15: zcap60 mean 186.4 m
+  9to12kmRamp_updated_01feb m14: zcap60 mean 177.0 m
+  9to12kmRamp_updated_01feb m18: zcap60 mean 197.7 m
+  9to12kmRamp_updated_01feb m20: zcap60 mean 175.5 m
+  9to12kmRamp_updated_01feb m16: zcap60 mean 194.0 m
+  9to12kmRamp_updated_01feb m19: zcap60 mean 180.6 m
+  ssfcst_08feb m01: zcap60 mean 191.2 m
+  ssfcst_08feb m03: zcap60 mean 222.7 m
+  ssfcst_08feb m02: zcap60 mean 185.7 m
+  ssfcst_08feb m00: zcap60 mean 189.8 m
+  ssfcst_08feb m05: zcap60 mean 185.4 m
+  ssfcst_01feb m01: zcap60 mean 195.9 m
+  ssfcst_01feb m05: zcap60 mean 160.4 m
+  ssfcst_01feb m04: zcap60 mean 234.7 m
+  ssfcst_01feb m00: zcap60 mean 186.3 m
+  ssfcst_01feb m02: zcap60 mean 184.2 m
+python exit 139
+  ssfcst_01feb m00: zcap60 mean 186.3 m
+  ssfcst_01feb m01: zcap60 mean 195.9 m
+  ssfcst_01feb m02: zcap60 mean 184.2 m
+  ssfcst_01feb m03: zcap60 mean 191.5 m
+  ssfcst_01feb m04: zcap60 mean 234.7 m
+  ssfcst_01feb m05: zcap60 mean 160.4 m
+  ssfcst_01feb m06: zcap60 mean 208.5 m
+  ssfcst_01feb m07: zcap60 mean 210.1 m
+  ssfcst_01feb m08: zcap60 mean 177.4 m
+  ssfcst_01feb m09: zcap60 mean 172.0 m
+  ssfcst_01feb m10: zcap60 mean 176.4 m
+  ssfcst_01feb m11: zcap60 mean 187.1 m
+  ssfcst_01feb m12: zcap60 mean 211.9 m
+  ssfcst_01feb m13: zcap60 mean 190.9 m
+  ssfcst_01feb m14: zcap60 mean 194.1 m
+  ssfcst_01feb m15: zcap60 mean 173.4 m
+  ssfcst_01feb m16: zcap60 mean 196.0 m
+  ssfcst_01feb m17: zcap60 mean 185.0 m
+  ssfcst_01feb m18: zcap60 mean 184.8 m
+  ssfcst_01feb m19: zcap60 mean 181.1 m
+  ssfcst_01feb m20: zcap60 mean 204.2 m
+  9to12kmRamp_updated_01feb m00: zcap60 mean 228.8 m
+  9to12kmRamp_updated_01feb m01: zcap60 mean 195.5 m
+  9to12kmRamp_updated_01feb m02: zcap60 mean 208.6 m
+  9to12kmRamp_updated_01feb m03: zcap60 mean 194.9 m
+  9to12kmRamp_updated_01feb m04: zcap60 mean 228.9 m
+  9to12kmRamp_updated_01feb m05: zcap60 mean 194.7 m
+  9to12kmRamp_updated_01feb m06: zcap60 mean 199.1 m
+  9to12kmRamp_updated_01feb m07: zcap60 mean 195.6 m
+  9to12kmRamp_updated_01feb m08: zcap60 mean 163.5 m
+  9to12kmRamp_updated_01feb m09: zcap60 mean 217.7 m
+  9to12kmRamp_updated_01feb m10: zcap60 mean 197.7 m
+  9to12kmRamp_updated_01feb m11: zcap60 mean 220.8 m
+  9to12kmRamp_updated_01feb m12: zcap60 mean 201.4 m
+  9to12kmRamp_updated_01feb m13: zcap60 mean 203.7 m
+  9to12kmRamp_updated_01feb m14: zcap60 mean 177.0 m
+  9to12kmRamp_updated_01feb m15: zcap60 mean 186.4 m
+  9to12kmRamp_updated_01feb m16: zcap60 mean 194.0 m
+  9to12kmRamp_updated_01feb m17: zcap60 mean 183.1 m
+  9to12kmRamp_updated_01feb m18: zcap60 mean 197.7 m
+  9to12kmRamp_updated_01feb m19: zcap60 mean 180.6 m
+  9to12kmRamp_updated_01feb m20: zcap60 mean 175.5 m
+  ssfcst_08feb m00: zcap60 mean 189.8 m
+  ssfcst_08feb m01: zcap60 mean 191.2 m
+  ssfcst_08feb m02: zcap60 mean 185.7 m
+  ssfcst_08feb m03: zcap60 mean 222.7 m
+  ssfcst_08feb m05: zcap60 mean 185.4 m
+  ssfcst_08feb m06: zcap60 mean 183.0 m
+  ssfcst_08feb m09: zcap60 mean 206.3 m
+  ssfcst_08feb m11: zcap60 mean 175.3 m
+  ssfcst_08feb_tas_2m_70Lwaccm6_08feb2021_00z_d01_d46_m08.nc attempt 1: ContentTooShortError: <urlopen error retrieval incomplete: got only 7199756 out of 7227631 bytes>
+  ssfcst_08feb m10: zcap60 mean 175.4 m
+  ssfcst_08feb m07: zcap60 mean 193.5 m
+  ssfcst_08feb m14: zcap60 mean 173.8 m
+  ssfcst_08feb_Z3_70Lwaccm6_08feb202100z_d01_d46_m12.nc attempt 1: TimeoutError: The read operation timed out
+  ssfcst_08feb_Z3_70Lwaccm6_08feb202100z_d01_d46_m13.nc attempt 1: TimeoutError: The read operation timed out
+  ssfcst_08feb_tas_2m_70Lwaccm6_08feb2021_00z_d01_d46_m08.nc attempt 2: TimeoutError: The read operation timed out
+  ssfcst_08feb_Z3_70Lwaccm6_08feb202100z_d01_d46_m04.nc attempt 1: TimeoutError: The read operation timed out
+  ssfcst_08feb_Z3_70Lwaccm6_08feb202100z_d01_d46_m15.nc attempt 1: ContentTooShortError: <urlopen error retrieval incomplete: got only 57978908 out of 116495210 bytes>
+  ssfcst_08feb m16: zcap60 mean 182.6 m
+  ssfcst_08feb m08: zcap60 mean 194.0 m
+  ssfcst_08feb_Z3_70Lwaccm6_08feb202100z_d01_d46_m17.nc attempt 1: ContentTooShortError: <urlopen error retrieval incomplete: got only 41249900 out of 116109923 bytes>
+  ssfcst_08feb_Z3_70Lwaccm6_08feb202100z_d01_d46_m15.nc attempt 2: ContentTooShortError: <urlopen error retrieval incomplete: got only 6323256 out of 116495210 bytes>
+  ssfcst_08feb m18: zcap60 mean 169.6 m
+  ssfcst_08feb m04: zcap60 mean 183.6 m
+  ssfcst_08feb m15: zcap60 mean 192.0 m
+  ssfcst_08feb_Z3_70Lwaccm6_08feb202100z_d01_d46_m20.nc attempt 1: TimeoutError: The read operation timed out
+  ssfcst_08feb_tas_2m_70Lwaccm6_08feb2021_00z_d01_d46_m13.nc attempt 1: TimeoutError: The read operation timed out
+  ssfcst_08feb_Z3_70Lwaccm6_08feb202100z_d01_d46_m19.nc attempt 1: TimeoutError: The read operation timed out
+  ssfcst_08feb_Z3_70Lwaccm6_08feb202100z_d01_d46_m17.nc attempt 2: TimeoutError: The read operation timed out
+  ssfcst_08feb_tas_2m_70Lwaccm6_08feb2021_00z_d01_d46_m12.nc attempt 1: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m00.nc attempt 1: TimeoutError: The read operation timed out
+  ssfcst_08feb m13: zcap60 mean 181.3 m
+  ssfcst_08feb m12: zcap60 mean 172.9 m
+  9to12kmRamp_updated_08feb m00: zcap60 mean 211.0 m
+  9to12kmRamp_updated_08feb m03: zcap60 mean 212.5 m
+  ssfcst_08feb m17: zcap60 mean 179.7 m
+  9to12kmRamp_updated_08feb m02: zcap60 mean 170.1 m
+  ssfcst_08feb m19: zcap60 mean 194.5 m
+  9to12kmRamp_updated_08feb m01: zcap60 mean 199.3 m
+  ssfcst_08feb m20: zcap60 mean 216.6 m
+  9to12kmRamp_updated_08feb m04: zcap60 mean 180.4 m
+  9to12kmRamp_updated_08feb m05: zcap60 mean 168.4 m
+  9to12kmRamp_updated_08feb m07: zcap60 mean 166.4 m
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m12.nc attempt 1: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m09.nc attempt 1: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m10.nc attempt 1: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m06.nc attempt 1: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_08feb m08: zcap60 mean 193.2 m
+  9to12kmRamp_updated_08feb m11: zcap60 mean 183.4 m
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m12.nc attempt 2: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m09.nc attempt 2: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m13.nc attempt 1: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m10.nc attempt 2: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m06.nc attempt 2: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_08feb m13: zcap60 mean 231.5 m
+  9to12kmRamp_updated_08feb m14: zcap60 mean 174.7 m
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m12.nc attempt 3: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m09.nc attempt 3: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m10.nc attempt 3: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m06.nc attempt 3: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_08feb m16: zcap60 mean 165.5 m
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m15.nc attempt 1: ContentTooShortError: <urlopen error retrieval incomplete: got only 115835188 out of 116236694 bytes>
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m12.nc attempt 4: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m09.nc attempt 4: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m06.nc attempt 4: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m17.nc attempt 1: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m10.nc attempt 4: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m12.nc attempt 5: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_tas_2m_70Lwaccm6_08feb2021_00z_d01_d46_m17.nc attempt 1: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m09.nc attempt 5: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m15.nc attempt 2: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m06.nc attempt 5: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m10.nc attempt 5: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_08feb m17: zcap60 mean 166.8 m
+  9to12kmRamp_updated_08feb m06: zcap60 mean 190.3 m
+  9to12kmRamp_updated_08feb m09: zcap60 mean 175.9 m
+  9to12kmRamp_updated_08feb m12: zcap60 mean 199.0 m
+  9to12kmRamp_updated_08feb m10: zcap60 mean 186.1 m
+  9to12kmRamp_updated_08feb m18: zcap60 mean 197.3 m
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m15.nc attempt 3: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m20.nc attempt 1: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_08feb m20: zcap60 mean 180.2 m
+  9to12kmRamp_updated_08feb m19: zcap60 mean 203.5 m
+  9to12kmRamp_updated_Z3_70Lwaccm6_08feb202100z_d01_d46_m15.nc attempt 4: TimeoutError: The read operation timed out
+  9to12kmRamp_updated_08feb m15: zcap60 mean 199.9 m
+arm
+9to12kmRamp_04jan            21
+9to12kmRamp_updated_01feb    21
+9to12kmRamp_updated_08feb    21
+ssfcst_01feb                 21
+ssfcst_04jan                 21
+ssfcst_08feb                 21
+Saved -> davis2022_reduced.parquet (5,796 rows)
+python exit 0

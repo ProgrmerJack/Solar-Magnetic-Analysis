@@ -70,6 +70,7 @@ def main():
     RCC = J("criterion_regional_contrast.json")
     GEN = J("snapsi_contrast_generality.json")
     PRO = J("prospective_next_ssw.json")
+    DAV = J("davis2021_intervention_test.json")
     R2 = ("robustness (revision 2)", "committed before run", "4c8b3f2")
     mm = g(MMt, "multimodel", "confirmatory"); nr = g(SRt, "regions", "NEURASIA", "multimodel", "confirmatory")
     rows = [
@@ -328,6 +329,10 @@ def main():
          "committed before run", "892377c",
          (f"{g(GEN,'G4_regional_temperature','resid','mean')} {g(GEN,'G4_regional_temperature','resid','ci95')}; "
           f"planted 0.5 sigma {g(GEN,'G4_regional_temperature','resid_plant_0.5sigma','mean')}") if GEN else "pending", None),
+        ("DAV", "January 2021, CESM2(WACCM6) SSW vs scrambled-stratosphere ensembles (21 members): back-shift contrast difference, pooled over 3 initialisations; low power",
+         "revision-5 primary", "committed before data", "738a422",
+         (f"{g(DAV,'R4_pooled_mean_of_pairs','Delta_b','mean')} {g(DAV,'R4_pooled_mean_of_pairs','Delta_b','ci95')}; "
+          f"4 Jan {g(DAV,'pairs','04jan','Delta_b')} {g(DAV,'pairs','04jan','ci95','Delta_b')}") if DAV else "pending", None),
         ("PRO", "prospective: shifted null on every NH SSW with onset Nov 2026 - Mar 2036 (CRPS, days 8-52 NAM)", "prospective primary",
          "predictions committed before any onset", "d2b54a8 (amended before any onset: 4cfba00, b2416e0)",
          (f"{g(PRO,'scores','cumulative','n_scored') or 0} events scored") if PRO else "pending", None),
