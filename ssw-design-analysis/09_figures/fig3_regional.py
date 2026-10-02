@@ -10,7 +10,7 @@ Recomputes nothing.
   a  SNAPSI: the SSW's effect on regional temperature (days +8..+24, sigma of the
      control), split into the part the member's polar-cap NAM implies through the
      SSW-free relation and the residual R (point, 95% centre-bootstrap interval)
-  b  SNAPSI: probability of a cold fortnight (below the control 10th percentile):
+  b  SNAPSI: probability of a cold 17-day period (below the control 10th percentile):
      control (0.10 by construction), with the SSW imposed, and as predicted from
      the circulation shift alone
   c  ERA5, 39 observed SSWs: the same split in K; whisker on the residual, the
@@ -67,7 +67,7 @@ def main():
         bx.bar(i + 0.25, pr, 0.24, color=grey, hatch="///", edgecolor="0.4", lw=0.3,
                label="predicted from shift" if i == 0 else None)
     bx.set_xticks(x); bx.set_xticklabels([l for _, l in REG], fontsize=5.3)
-    bx.set_ylabel("P(cold fortnight)")
+    bx.set_ylabel("P(cold 17-day period)")
     bx.legend(fontsize=5, loc="upper center", ncol=3, bbox_to_anchor=(0.5, -0.2))
     bx.set_title("SNAPSI: cold risk", fontsize=6)
     S.panel_label(bx, "b", x=-0.25, y=1.04)

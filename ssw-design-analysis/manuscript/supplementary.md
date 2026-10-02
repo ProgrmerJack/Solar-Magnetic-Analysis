@@ -4,7 +4,7 @@
 
 ## Supplementary Note 1 | Event differences: the bound, its assumption and its falsifier
 
-Events do differ, but by little. In CMIP6 the forced variance between events,
+How much the forced response differs between events can be estimated only under assumptions. In CMIP6 the forced variance between events,
 after removing the variance already present before onset, is 0.019σ²
 [−0.033, 0.072]: the forced probability of a negative outcome ranges across
 events from about 0.62 to 0.87 (0.47 to 0.93 at the upper bound), accounting for
@@ -13,8 +13,7 @@ therefore almost entirely the shift plus chance. The bound assumes that an
 event's forced response is uncorrelated with the internal variability it adds
 to. It also gives a falsifier: at its upper limit, forced differences could
 produce at most about half the class contrast of the criterion in CMIP6 and two
-thirds in observations, so latent classes producing those contrasts would have
-to exceed the measured bound. An audit finds the falsifier robust to the
+thirds in observations, so, under the latent-effect model tested, classes producing those full contrasts would have to exceed the measured, assumption-dependent bound; subtypes with smaller effects are not excluded. An audit finds the falsifier robust to the
 strongest damping of internal variability the experiment allows and to forcing
 that depends on the pre-onset state; it fails only if forcing anti-correlated
 with concurrent internal variability (ρ ≤ −0.26 to −0.40), which no available
@@ -80,7 +79,6 @@ the surface response to SSWs is disputed^{sigmond13,kolstad20,afargan24,dai25}^;
 our results bound such a bias as one of the size of the shift, of uncertain
 persistence, rather than of event-to-event differences.
 
-
 ## Supplementary Note 6 | Continuity at the wind reversal with ERA5 winds, 1940–2025
 
 The NCEP test of the main text uses 114 weakening episodes of 1958–2025. Its local
@@ -123,7 +121,31 @@ Either way, a per-SSW probability verified on one set of events did not transfer
 forecast product should therefore scale with the size of the disturbance and be verified
 prospectively. Full counts are in Supplementary Table 4.
 
-## Supplementary Note 9 | Full text: the label as a threshold (rates, contrasts, criterion sweep)
+## Supplementary Note 8 | Members that do and do not reverse the vortex from one initial state
+
+The ten S2S reforecast systems give a comparison with SNAPSI's design, in which every member shares one initial state
+and members either have an SSW or do not. Here the SSW is not imposed: some members reverse the 10 hPa wind on
+their own. The test was registered before any split was computed.
+
+Of 461 starts with at least two members of each kind, the onset comes early enough for the 8–25-day window in 40
+(162 for the 8–20-day window). Results are in Methods.
+
+The signature of a threshold on one population appears:
+- **Rate:** members that reverse are more often downward.
+- **Contrast:** their class contrast is unchanged.
+- **Spread:** they are no more spread out.
+- **Shape:** their lower tail moves more than their upper. The quantile shift is −0.58σ at the 5th percentile
+  against +0.12σ at the 95th, the asymmetry also seen in CMIP6.
+
+Two results are weaker than in SNAPSI:
+- **The mean shift is small** (−0.15σ over the shorter window).
+- **Within starts there is no dose relation and no step.** This matches SNAPSI's own finding that, between members
+  sharing one forcing, the post-onset stratosphere predicts the surface only weakly.
+
+Spontaneous reversals in these ensembles mostly come late in the forecast (only 40 of the 461 mixed starts have the median onset by lead 9). The comparison therefore adds
+evidence on the form of the change (translation, unchanged contrast), not on its size.
+
+## Supplementary Note 9 | Extended results: the label as a threshold (rates, contrasts, criterion sweep)
 
 Applying the surface conditions of the Karpechko criterion to every member
 splits each ensemble into downward (DW) and non-downward (NDW) members (adapted
@@ -167,7 +189,7 @@ simulations of 10 models, 43 observed SSWs and 114 observed vortex weakenings,
 and reforecasts and real-time forecasts of ten operational systems. Extended
 Data Table 1 lists every test and whether it was fixed before its data.
 
-## Supplementary Note 10 | Full text: continuity at the wind reversal
+## Supplementary Note 10 | Extended results: continuity at the wind reversal
 
 The same reasoning applies one step earlier, without a model. An SSW is defined
 by a threshold, the reversal of the zonal wind at 10 hPa, 60° N. If reversal
@@ -189,14 +211,14 @@ replicates (Arctic Oscillation 0.29 [0.15, 0.43] per 10 m s⁻¹; northern Euras
 0.38 K) and no outcome shows a step after correction for the four tested; the
 largest, on the Arctic Oscillation, is −0.73 [−1.51, −0.06] (Holm-adjusted p =
 0.11), and reversals there also follow larger decelerations (Supplementary Note
-6). "SSW", like "downward", is a threshold on a continuum.
+6). The tests resolve no surface-response discontinuity at reversal within these limits; "SSW" behaves here as a threshold on a continuum, which does not deny that reversal may matter dynamically.
 
-## Supplementary Note 11 | Full text: the shift rule as a forecast
+## Supplementary Note 11 | Extended results: the shift rule as a forecast
 
-The shift alone is therefore a forecast, and it verifies. In a test registered
-before it was run, the probability of a cold northern-Eurasian fortnight after
+The shift provides a fixed, model-derived probabilistic benchmark; on these 39 events it verifies. In a test registered
+before it was run, the probability of a cold northern-Eurasian period after
 an SSW was taken from the nudged experiment alone (0.24, 0.32 and 0.45 for
-fortnights below the event-free 5th, 10th and 20th percentiles) and verified,
+periods below the event-free 5th, 10th and 20th percentiles) and verified,
 untuned, on the 39 observed SSWs: the observed frequencies, 0.21, 0.26 and 0.38,
 are consistent with those probabilities (p = 0.40–0.71) and not with climatology
 (p = 0.0006–0.008), and the risk ratio rises with severity, as a shift implies
@@ -222,7 +244,7 @@ weeks 3–4, where SNAPSI rests mainly on the later initialisations of its two
 events, northern-Eurasian cold was rarer than predicted (0.15 against 0.27) and
 not distinguishable from climatology (Supplementary Table 2). Out of sample the
 rule did not verify: after twelve SSWs of 1941–1958 in ERA5, whose surface
-outcomes no one had examined, no northern-Eurasian fortnight fell below the
+outcomes no one had examined, no northern-Eurasian period fell below the
 event-free 10th percentile, against 32% predicted (p = 0.012), and cold risk did
 not rise detectably above that period's climatology (Supplementary Table 4).
 These reversals were weaker (an exploratory check; median minimum wind −3.8
@@ -232,10 +254,9 @@ stratospheric winds are weakly constrained; a single probability per SSW
 therefore holds for the events it was verified on and over-predicted for this
 earlier, weaker set.
 
-## Supplementary Note 12 | Full text: event information and operational skill
+## Supplementary Note 12 | Extended results: event information and operational skill
 
-If downward coupling were a property of events, knowing the event should improve
-a forecast of how strongly it couples. We compare two probabilistic forecasts of
+If the event information available at onset determined how strongly an event couples, adding it should improve a forecast of that coupling; limited gains with these predictors and methods do not bound physical predictability. We compare two probabilistic forecasts of
 each CMIP6 event's surface response (days 8–52): the shifted distribution alone
 (SSW responses in other models, by calendar date) and an event-aware forecast
 that adds the stratospheric state up to onset. Scored with the continuous ranked
@@ -245,9 +266,7 @@ improves forecasts on size-matched ordinary winter days by 3.7% [2.3, 5.3], and
 in none of 200 such samples was it worth as little as after SSWs; the
 two-component model gains 1.1% [0.4, 2.0], against 3.1% on ordinary days (a
 comparison added afterwards). The result holds in five robustness checks
-(Methods). The label itself cannot be a predictor, since it is defined from the
-outcome, so the test is of the event information the label is meant to
-summarise. Point prediction agrees: the event adds −0.006 [−0.033, +0.020] to
+(Methods). The realised label cannot be an issue-time predictor, because it is defined from the later outcome (a model can still predict its probability); the test is of the event information available at onset. Point prediction agrees: the event adds −0.006 [−0.033, +0.020] to
 the out-of-sample R² of the surface response before onset (Fig. 4b) and +0.015
 [−0.028, +0.059] with the post-onset stratosphere, when 96% of that diagnostic
 skill is present without an SSW (Fig. 4c; Methods).
@@ -258,17 +277,14 @@ track event-to-event differences in the surface response no better than on
 event-free dates of the same season and lead (Fig. 5a,b; Supplementary Note 4),
 which rules out large event-specific skill, not small.
 
-## Supplementary Note 13 | Full text: operational forecasts in 1998–2021 and after
+## Supplementary Note 13 | Extended results: operational forecasts in 1998–2021 and after
 
-Over 1998–2021, what the forecasts got wrong was the size of the shift. Had they
-missed a second population of outcomes, observed values would scatter into both
-tails of the ensembles; in ECMWF they do not (4% in the two outer rank bins
-against 17% expected). They fall on the negative-NAM side, as registered before
+Over 1998–2021, what the forecasts got wrong was the size of the shift. In ECMWF, 4% of observed outcomes fell in the two outer rank bins against 17% expected (a non-symmetric rank histogram does not by itself exclude omitted structure). They fall on the negative-NAM side, as registered before
 the confirmatory test was run: mean rank 0.40 against 0.54 on event-free dates
 (p = 0.005; Holm-adjusted over all primary tests, 0.03), lower than the
 event-free value in nine of ten systems (Fig. 5c), a deficit specific to SSWs
 that survives the further checks in Methods. The systems gave a negative-NAM
-fortnight after these SSWs a mean probability of 0.57, whereas it occurred 82%
+period after these SSWs a mean probability of 0.57, whereas it occurred 82%
 of the time, and ensemble-mean polar-cap responses were about half those
 observed (116 against 241 Pa). Observed northern-Eurasian temperature lay on the
 cold side in all ten systems, not significantly after correction (mean rank 0.39
@@ -295,26 +311,37 @@ the surface response to SSWs is disputed^{sigmond13,kolstad20,afargan24,dai25}^;
 our results bound such a bias as one of the size of the shift, of uncertain
 persistence, rather than of event-to-event differences.
 
-## Supplementary Note 8 | Members that do and do not reverse the vortex from one initial state
+## Supplementary Note 14 | Is the imposed SSW a translation? Residual quantiles against a declared tolerance
 
-The ten S2S reforecast systems give a comparison with SNAPSI's design, in which every member shares one initial state
-and members either have an SSW or do not. Here the SSW is not imposed: some members reverse the 10 hPa wind on
-their own. The test was registered before any split was computed.
+A pooled variance ratio near 1 and a non-rejected shape test do not show that a distribution is translated, so the
+translation was tested directly. In every nudged/control pair the nudged quantiles were compared with the control
+quantiles moved by the difference in means, against a tolerance fixed before the test: ±0.25σ in any quantile and
+±0.05 in a tail probability.
 
-Of 461 starts with at least two members of each kind, the onset comes early enough for the 8–25-day window in 40
-(162 for the 8–20-day window). Results are in Methods.
+Results:
+- **Polar-cap annular mode, all 36 ensembles pooled:** every interval falls inside the tolerance. This is a
+  positive equivalence result, not a failure to reject.
+- **Single events:** unresolved. In February 2018 the lower tail is compressed: the most negative states are less
+  extreme than a pure translation implies.
+- **Northern-Eurasian temperature:** unresolved. There is a small excess of extreme cold below the 5th
+  percentile, inside the tolerance, and lower-quantile intervals that cross it.
 
-The signature of a threshold on one population appears:
-- **Rate:** members that reverse are more often downward.
-- **Contrast:** their class contrast is unchanged.
-- **Spread:** they are no more spread out.
-- **Shape:** their lower tail moves more than their upper. The quantile shift is −0.58σ at the 5th percentile
-  against +0.12σ at the 95th, the asymmetry also seen in CMIP6.
+So translation is established for the circulation index at the resolution of these ensembles. For regional
+temperature it is neither established nor refuted. Figures are in Methods; values per pair are in
+`results/current/8_experiment/snapsi_residual_quantiles.json`.
 
-Two results are weaker than in SNAPSI:
-- **The mean shift is small** (−0.15σ over the shorter window).
-- **Within starts there is no dose relation and no step.** This matches SNAPSI's own finding that, between members
-  sharing one forcing, the post-onset stratosphere predicts the surface only weakly.
+## Supplementary Note 15 | Does the shifted null transport? Whole-winter cross-validation
 
-Spontaneous reversals in these ensembles mostly come late in the forecast (only 40 of the 461 mixed starts have the median onset by lead 9). The comparison therefore adds
-evidence on the form of the change (translation, unchanged contrast), not on its size.
+The shift used to build the null had been estimated on the same events it was compared with. Here it is
+estimated without each held-out winter; climatology and the constant class rate are also estimated without that
+winter. The test is retrospective, because the 39 outcomes had been seen, but nothing about a held-out winter
+enters its own prediction.
+
+Results:
+- **Calibrated label rates out of fold:** 27 downward events observed against 29.2 expected; no version of the
+  criterion is miscalibrated.
+- **Better than climatology for the outcome itself** (CRPS).
+- **No better from a constant class rate:** the label carries no information beyond the shift, as one shifted
+  population predicts.
+
+Values are in Methods and in `results/current/9_literature/criterion_transport_cv.json`.

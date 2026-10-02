@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-02T03:22:23+00:00",
+ "generated": "2026-10-02T05:48:05+00:00",
  "note": "Known-good baseline: each result was produced by the script at the recorded sha256. catalog_repo.py flags STALE when a producer's hash no longer matches. Re-record with --record only AFTER re-running the analysis.",
  "results": {
   "catalogue_sets.json": {
@@ -788,6 +788,16 @@
    "result_sha256_16": "ba65b95a0e9571cf",
    "needs_rerun": false
   },
+  "snapsi_residual_quantiles.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_residual_quantiles.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_residual_quantiles.py": "2577d04fe994596d"
+   },
+   "result_sha256_16": "3b9d31ad34ee70fe",
+   "needs_rerun": false
+  },
   "snapsi_selection_test.json": {
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py"
@@ -806,6 +816,16 @@
     "ssw-design-analysis/08_literature_audit/criterion_sweep.py": "55f22bbf3b71a86b"
    },
    "result_sha256_16": "798d153b4755ec0f",
+   "needs_rerun": false
+  },
+  "criterion_transport_cv.json": {
+   "producers": [
+    "ssw-design-analysis/08_literature_audit/criterion_transport_cv.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/08_literature_audit/criterion_transport_cv.py": "5c4075d19a83a3eb"
+   },
+   "result_sha256_16": "02b99ca1e80c6ef0",
    "needs_rerun": false
   },
   "era5_nam_daily_mean_check.json": {
