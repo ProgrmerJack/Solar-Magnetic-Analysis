@@ -374,6 +374,17 @@ def main():
                                   **{s: cboot(pd.DataFrame(v), s, rng) for s in ("paired_diff", "Delta_b", "s")}}
                               for k, v in g5.items()}
                              if g5 else "not run: nudged-full members not cached (CEDA token)")
+    # POST HOC (added 2026-10-02 after the registered run, not part of the registration):
+    # G1's per-pair Delta_b tracks the change in spread; a contrast proportional to
+    # the spread predicts Delta_b = C_control * (sd_ratio - 1). Residual after it:
+    df["spread_pred"] = df.C_control * (df.sd_ratio - 1)
+    df["Delta_b_net_spread"] = df.Delta_b - df.spread_pred
+    res["G1x_post_hoc_spread"] = {
+        "note": "post hoc, after the registered run",
+        **{lab: {"r_Delta_b_vs_spread_pred": round(float(np.corrcoef(d.Delta_b, d.spread_pred)[0, 1]), 4),
+                 "Delta_b_net_spread": cboot(d, "Delta_b_net_spread", rng)}
+           for lab, d in (("strong_11", df[df.strong]), ("other_25", df[~df.strong]), ("all_36", df))}}
+    print("G1x post hoc:", res["G1x_post_hoc_spread"])
     res["pairs_NH"] = df.round(4).to_dict(orient="records")
     res["pairs_regional"] = rg.round(4).to_dict(orient="records")
 

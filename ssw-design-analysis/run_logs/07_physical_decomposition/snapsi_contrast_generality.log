@@ -1,3 +1,4 @@
+G1x post hoc: {'note': 'post hoc, after the registered run', 'strong_11': {'r_Delta_b_vs_spread_pred': 0.9494, 'Delta_b_net_spread': {'mean': 0.0299, 'ci95': [-0.0268, 0.0635], 'n_pairs': 11, 'n_centres': 8}}, 'other_25': {'r_Delta_b_vs_spread_pred': 0.9545, 'Delta_b_net_spread': {'mean': 0.0183, 'ci95': [-0.0248, 0.0673], 'n_pairs': 25, 'n_centres': 8}}, 'all_36': {'r_Delta_b_vs_spread_pred': 0.9531, 'Delta_b_net_spread': {'mean': 0.0218, 'ci95': [-0.0125, 0.0549], 'n_pairs': 36, 'n_centres': 9}}}
 G1 strong_11 Delta_b +0.173 [0.0404, 0.3304]  k1.25 +0.009 [-0.1283, 0.1798]  k1.5 -0.148 [-0.2992, 0.0354]  s -2.94
 G1 other_25  Delta_b +0.052 [-0.0349, 0.123]  k1.25 -0.133 [-0.2311, -0.0537]  k1.5 -0.300 [-0.4069, -0.2151]  s -0.97
 G1 all_36    Delta_b +0.089 [0.0187, 0.1572]  k1.25 -0.090 [-0.1656, -0.0152]  k1.5 -0.254 [-0.3369, -0.1746]  s -1.57

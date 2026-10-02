@@ -1241,6 +1241,32 @@ The 97% contrast share (H) is for UNSHIFTED event-free dates, all three conditio
 POWER: planted extra DW cooling of 0.5 s.d. (1.32 K) detected 30% → registered reading INCONCLUSIVE (not equivalence).
 Report as: reproduced in point estimate, cannot exclude a further ~1.3 K class-specific difference.
 
+### Z6 — contrast generality in SNAPSI (`snapsi_contrast_generality.py`, 8_experiment; registered `892377c` before run)
+G1 PRIMARY, the 11 NH pairs with < 3 NDW nudged members (7 are s20190108, which starts after the Jan 2019 onset;
+4 are ECCC): nudged members back-shifted by the pair's imposed effect, classified identically, contrast minus control
+contrast +0.173 [+0.040, +0.330] → registered reading INCONCLUSIVE (tolerance ±0.25σ). Sign: SMALLER in magnitude,
+the opposite of a forcing-built separation; these ensembles are narrower (variance ratio 0.86 [0.74, 1.01]).
+POST HOC (added after the run, labelled so): the back-shift difference tracks the spread change, r 0.95 with
+C_control·(k−1); net of it +0.030 [−0.027, +0.064] (11 pairs), +0.022 [−0.013, +0.055] (36).
+Other 25 pairs +0.052 [−0.035, +0.123]. Sensitivity: forced variance 0.5σ² shifts the 11-pair value to −0.15.
+G2 slope on imposed shift −0.031 [−0.205, +0.040] per σ (36 pairs): no dose-response.
+G3 SH s20190829 (8 centres): contrast −1.96 vs −1.58; shift-only null residual −0.136 [−0.222, −0.033];
+location–scale null −0.037 [−0.138, +0.079] → registered reading "the SH contrast change is the widening of one
+population" (caveat: location–scale matches two moments by construction).
+G4 PRIMARY N-Eurasian T days 8–24 (σ of control; mean control s.d. 1.73 K): nudged DW−NDW −0.865 vs matched
+shifted control null −0.820; residual −0.086 [−0.240, +0.057] (≈ −0.15 K), 23 pairs → WITHIN TOLERANCE; planted
+0.5σ → −0.586 [−0.744, −0.447], planted 1.32 K → −0.79 (both detected). Forcing leaves the T contrast unchanged
+(paired −0.063 [−0.181, +0.046], 25 pairs). Other regions' residuals −0.10 to +0.04, all covering 0.
+G5 nudged-full (ECMWF, UKMO ×4 NH inits; Météo-France s20190108): registered, NOT RUN — needs a fresh CEDA token.
+
+### Z7 — prospective test (`prospective_next_ssw.py`, 9_literature; registered `d2b54a8`, window amended to 2036 before any onset)
+Prediction table for every onset day 1 Nov–31 Mar committed; shift nam_1000 −0.635, nam_150 −0.945, N-Eurasian T days
+8–24 −1.54 K; constant rate 0.692; T trend 0.037 K/yr. P(DW) shifted 0.71–0.84 vs climatology 0.24–0.44.
+CDS ERA5T consistency gate PASSED (Dec 2021–Mar 2022: NAM r 1.000, RMS ≤ 0.002σ; N-Eurasian T r 0.999, RMS 0.087 s.d.,
+bias +0.26 K). Primary CRPS of days 8–52 NAM; decisive from 5 events (P ≈ 0.77 by 2036). No onsets scored yet.
+To run each winter: `03_data_ingestion/acquire_era5_realtime_cds.py --start <last+1> --end <today−6>`, then
+`prospective_next_ssw.py --detect`, and `--score` once day 52 + latency has passed.
+
 ### Revision 4 structure (2026-10-02)
 Main text re-centred on: intervention changes the rate (45→84%, all 36 pairs) not the contrast (−0.03σ, 25 of 36 pairs;
 11 pairs 96–100% DW, no contrast possible) → observational null + held-out winters (CRPS +0.19) + Z5 → limits

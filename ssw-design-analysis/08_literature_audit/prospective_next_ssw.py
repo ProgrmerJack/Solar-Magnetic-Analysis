@@ -21,7 +21,10 @@ WHAT IS PREDICTED, AND WHY IT IS FIXED NOW
 
 EVENTS
   Every major Northern Hemisphere SSW with onset from 1 November 2026 to 31 March
-  2030: the project's Charlton-Polvani detector (ensemble_precursor.detect_ssw,
+  2036 (amended 2026-10-02, before any onset, from 31 March 2030: at 43 SSWs in
+  66 winters, five events -- where the reading becomes decisive -- would be reached
+  by 2030 with probability of only about 0.12, and by 2036 with about 0.77):
+  the project's Charlton-Polvani detector (ensemble_precursor.detect_ssw,
   validated on the NOAA compendium) on ERA5T daily-mean zonal-mean u(10 hPa, 60N)
   from the CDS (acquire_era5_realtime_cds.py), continued from
   era5_u10_60N_daily_cds.parquet. An onset is scored only once the detector's
@@ -98,7 +101,7 @@ RT_FILE = ING / "era5_realtime_cds.parquet"
 CHECK_FILE = ING / "era5_realtime_cds_check.parquet"
 U_HIST = ING / "era5_u10_60N_daily_cds.parquet"
 N_SHIFT_SETS, HALFWIN, N_BOOT = 200, 10, 10000
-FIRST, LAST = pd.Timestamp("2026-11-01"), pd.Timestamp("2030-03-31")
+FIRST, LAST = pd.Timestamp("2026-11-01"), pd.Timestamp("2036-03-31")
 REF_DAYS = pd.date_range("2026-11-01", "2027-03-31")         # one prediction per onset day
 GATE_R, GATE_RMS = 0.99, 0.10
 T_DAYS = (8, 24)
