@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-02T09:34:29+00:00",
+ "generated": "2026-10-02T09:56:28+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -1884,8 +1884,8 @@
    "stage": "10_tables",
    "title": "tables_to_latex.py -- render the display tables for the LaTeX manuscript.",
    "loc": 172,
-   "modified": "2026-10-02 09:14",
-   "sha256_16": "ea4bd24f37ae7916",
+   "modified": "2026-10-02 09:56",
+   "sha256_16": "60d776f71908ab32",
    "flags": [],
    "filenames_mentioned": [],
    "filename_prefixes": []
@@ -2704,7 +2704,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-02 08:39",
+   "modified": "2026-10-02 09:51",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
