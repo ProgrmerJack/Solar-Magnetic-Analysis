@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-fig5_operational.py -- Figure 5: operational reforecasts after SSWs.
+fig5_operational.py -- Extended Data Fig. (operational reforecasts, formerly Fig. 5): operational reforecasts after SSWs.
 
 Reads results/current/6_predictability/s2s_forecast_test.json (result P, ECMWF)
 and s2s_multimodel_test.json (result A, all systems). Recomputes nothing.

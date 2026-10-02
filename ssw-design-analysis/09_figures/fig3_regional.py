@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-fig3_regional.py -- Figure 3: regional cold risk after an imposed SSW is the
+fig3_regional.py -- Figure 4: regional cold risk after an imposed SSW is the
 circulation shift acting through the ordinary relation.
 
 Reads results/current/8_experiment/snapsi_regional_test.json (result R, SNAPSI),

@@ -1,0 +1,355 @@
+{
+  "plan_approved": "2026-10-02",
+  "seed": 282738206,
+  "n_rep": 4000,
+  "n_boot": 4000,
+  "n_plant": 1000,
+  "n_shift_sets": 200,
+  "halfwin_days": 10,
+  "min_per_class": 3,
+  "label": "retrospective (event outcomes and labels seen before; contrast not computed before)",
+  "inputs": [
+    "ssw-design-analysis/03_data_ingestion/era5_nam_daily.parquet",
+    "ssw-design-analysis/03_data_ingestion/era5_t2m_regions_daily.parquet"
+  ],
+  "n_events": 39,
+  "events": [
+    "1960-01-17",
+    "1963-01-28",
+    "1965-12-16",
+    "1966-02-23",
+    "1968-01-07",
+    "1968-11-28",
+    "1969-03-13",
+    "1970-01-02",
+    "1971-01-18",
+    "1971-03-20",
+    "1973-01-31",
+    "1977-01-09",
+    "1979-02-22",
+    "1980-02-29",
+    "1981-03-04",
+    "1981-12-04",
+    "1984-02-24",
+    "1985-01-01",
+    "1987-01-23",
+    "1987-12-08",
+    "1988-03-14",
+    "1989-02-21",
+    "1998-12-15",
+    "1999-02-26",
+    "2000-03-20",
+    "2001-02-11",
+    "2001-12-30",
+    "2003-01-18",
+    "2004-01-05",
+    "2006-01-21",
+    "2007-02-24",
+    "2008-02-22",
+    "2009-01-24",
+    "2010-02-09",
+    "2010-03-24",
+    "2013-01-06",
+    "2018-02-12",
+    "2019-01-02",
+    "2021-01-05"
+  ],
+  "shift_all_winters": {
+    "nam_1000": -0.6387,
+    "nam_150": -0.9413
+  },
+  "primary_surface": {
+    "n_dw": 27,
+    "n_ndw": 12,
+    "cv": {
+      "NEURASIA_d8_24": {
+        "C_obs_K": -2.2049,
+        "C_null_mean_K": -2.2524,
+        "C_null_ci95_K": [
+          -4.1052,
+          -0.3101
+        ],
+        "p_two_sided": 0.9389,
+        "share_reproduced": 1.0215,
+        "n_rep_used": 3996,
+        "n_rep_dropped_small_class": 4,
+        "event_free_sd_K": 2.6383,
+        "C_obs_ci95_K": [
+          -3.9309,
+          -0.4668
+        ],
+        "power_planted": {
+          "delta_K": 1.3192,
+          "detection_rate": 0.302
+        },
+        "reading": "inconclusive (not rejected, power below 0.5)"
+      },
+      "HI_EUROPE_d8_24": {
+        "C_obs_K": -1.3412,
+        "C_null_mean_K": -2.033,
+        "C_null_ci95_K": [
+          -3.9215,
+          0.0514
+        ],
+        "p_two_sided": 0.4735,
+        "share_reproduced": 1.5158,
+        "n_rep_used": 3996,
+        "n_rep_dropped_small_class": 4,
+        "event_free_sd_K": 2.5862
+      },
+      "MID_EASIA_d8_24": {
+        "C_obs_K": -1.1412,
+        "C_null_mean_K": -0.9318,
+        "C_null_ci95_K": [
+          -1.9579,
+          0.1708
+        ],
+        "p_two_sided": 0.7027,
+        "share_reproduced": 0.8165,
+        "n_rep_used": 3996,
+        "n_rep_dropped_small_class": 4,
+        "event_free_sd_K": 1.5364
+      },
+      "MID_NAMER_d8_24": {
+        "C_obs_K": -0.2477,
+        "C_null_mean_K": -0.2045,
+        "C_null_ci95_K": [
+          -1.6672,
+          1.2205
+        ],
+        "p_two_sided": 0.9414,
+        "share_reproduced": 0.8257,
+        "n_rep_used": 3996,
+        "n_rep_dropped_small_class": 4,
+        "event_free_sd_K": 2.0324
+      },
+      "NEURASIA_d8_52": {
+        "C_obs_K": -2.4622,
+        "C_null_mean_K": -2.2312,
+        "C_null_ci95_K": [
+          -3.5925,
+          -0.8371
+        ],
+        "p_two_sided": 0.7382,
+        "share_reproduced": 0.9062,
+        "n_rep_used": 3996,
+        "n_rep_dropped_small_class": 4,
+        "event_free_sd_K": 2.0463
+      }
+    },
+    "full": {
+      "NEURASIA_d8_24": {
+        "C_obs_K": -2.2049,
+        "C_null_mean_K": -2.253,
+        "C_null_ci95_K": [
+          -4.1472,
+          -0.307
+        ],
+        "p_two_sided": 0.953,
+        "share_reproduced": 1.0218,
+        "n_rep_used": 3996,
+        "n_rep_dropped_small_class": 4,
+        "event_free_sd_K": 2.6383
+      },
+      "HI_EUROPE_d8_24": {
+        "C_obs_K": -1.3412,
+        "C_null_mean_K": -2.0295,
+        "C_null_ci95_K": [
+          -3.9214,
+          0.1297
+        ],
+        "p_two_sided": 0.485,
+        "share_reproduced": 1.5132,
+        "n_rep_used": 3996,
+        "n_rep_dropped_small_class": 4,
+        "event_free_sd_K": 2.5862
+      },
+      "MID_EASIA_d8_24": {
+        "C_obs_K": -1.1412,
+        "C_null_mean_K": -0.9239,
+        "C_null_ci95_K": [
+          -1.9585,
+          0.1676
+        ],
+        "p_two_sided": 0.6892,
+        "share_reproduced": 0.8096,
+        "n_rep_used": 3996,
+        "n_rep_dropped_small_class": 4,
+        "event_free_sd_K": 1.5364
+      },
+      "MID_NAMER_d8_24": {
+        "C_obs_K": -0.2477,
+        "C_null_mean_K": -0.2267,
+        "C_null_ci95_K": [
+          -1.6322,
+          1.207
+        ],
+        "p_two_sided": 0.981,
+        "share_reproduced": 0.9154,
+        "n_rep_used": 3996,
+        "n_rep_dropped_small_class": 4,
+        "event_free_sd_K": 2.0324
+      },
+      "NEURASIA_d8_52": {
+        "C_obs_K": -2.4622,
+        "C_null_mean_K": -2.2262,
+        "C_null_ci95_K": [
+          -3.5872,
+          -0.8314
+        ],
+        "p_two_sided": 0.7297,
+        "share_reproduced": 0.9042,
+        "n_rep_used": 3996,
+        "n_rep_dropped_small_class": 4,
+        "event_free_sd_K": 2.0463
+      }
+    }
+  },
+  "secondary_with_150hPa": {
+    "n_dw": 21,
+    "n_ndw": 18,
+    "cv": {
+      "NEURASIA_d8_24": {
+        "C_obs_K": -1.8582,
+        "C_null_mean_K": -1.4457,
+        "C_null_ci95_K": [
+          -3.0669,
+          0.2505
+        ],
+        "p_two_sided": 0.6385,
+        "share_reproduced": 0.778,
+        "n_rep_used": 4000,
+        "n_rep_dropped_small_class": 0,
+        "event_free_sd_K": 2.6383,
+        "C_obs_ci95_K": [
+          -3.5122,
+          -0.1715
+        ],
+        "power_planted": {
+          "delta_K": 1.3192,
+          "detection_rate": 0.367
+        },
+        "reading": "inconclusive (not rejected, power below 0.5)"
+      },
+      "HI_EUROPE_d8_24": {
+        "C_obs_K": -0.6012,
+        "C_null_mean_K": -1.1037,
+        "C_null_ci95_K": [
+          -2.7349,
+          0.6265
+        ],
+        "p_two_sided": 0.55,
+        "share_reproduced": 1.836,
+        "n_rep_used": 4000,
+        "n_rep_dropped_small_class": 0,
+        "event_free_sd_K": 2.5862
+      },
+      "MID_EASIA_d8_24": {
+        "C_obs_K": -0.7547,
+        "C_null_mean_K": -0.5028,
+        "C_null_ci95_K": [
+          -1.4418,
+          0.4812
+        ],
+        "p_two_sided": 0.6175,
+        "share_reproduced": 0.6662,
+        "n_rep_used": 4000,
+        "n_rep_dropped_small_class": 0,
+        "event_free_sd_K": 1.5364
+      },
+      "MID_NAMER_d8_24": {
+        "C_obs_K": -0.4627,
+        "C_null_mean_K": 0.1841,
+        "C_null_ci95_K": [
+          -1.1022,
+          1.4712
+        ],
+        "p_two_sided": 0.333,
+        "share_reproduced": -0.3979,
+        "n_rep_used": 4000,
+        "n_rep_dropped_small_class": 0,
+        "event_free_sd_K": 2.0324
+      },
+      "NEURASIA_d8_52": {
+        "C_obs_K": -1.7786,
+        "C_null_mean_K": -1.2743,
+        "C_null_ci95_K": [
+          -2.5854,
+          -0.0195
+        ],
+        "p_two_sided": 0.4535,
+        "share_reproduced": 0.7165,
+        "n_rep_used": 4000,
+        "n_rep_dropped_small_class": 0,
+        "event_free_sd_K": 2.0463
+      }
+    },
+    "full": {
+      "NEURASIA_d8_24": {
+        "C_obs_K": -1.8582,
+        "C_null_mean_K": -1.4706,
+        "C_null_ci95_K": [
+          -3.1869,
+          0.2087
+        ],
+        "p_two_sided": 0.651,
+        "share_reproduced": 0.7914,
+        "n_rep_used": 4000,
+        "n_rep_dropped_small_class": 0,
+        "event_free_sd_K": 2.6383
+      },
+      "HI_EUROPE_d8_24": {
+        "C_obs_K": -0.6012,
+        "C_null_mean_K": -1.1427,
+        "C_null_ci95_K": [
+          -2.8195,
+          0.5965
+        ],
+        "p_two_sided": 0.516,
+        "share_reproduced": 1.9007,
+        "n_rep_used": 4000,
+        "n_rep_dropped_small_class": 0,
+        "event_free_sd_K": 2.5862
+      },
+      "MID_EASIA_d8_24": {
+        "C_obs_K": -0.7547,
+        "C_null_mean_K": -0.4972,
+        "C_null_ci95_K": [
+          -1.4636,
+          0.4579
+        ],
+        "p_two_sided": 0.604,
+        "share_reproduced": 0.6588,
+        "n_rep_used": 4000,
+        "n_rep_dropped_small_class": 0,
+        "event_free_sd_K": 1.5364
+      },
+      "MID_NAMER_d8_24": {
+        "C_obs_K": -0.4627,
+        "C_null_mean_K": 0.2391,
+        "C_null_ci95_K": [
+          -1.0641,
+          1.5428
+        ],
+        "p_two_sided": 0.2915,
+        "share_reproduced": -0.5169,
+        "n_rep_used": 4000,
+        "n_rep_dropped_small_class": 0,
+        "event_free_sd_K": 2.0324
+      },
+      "NEURASIA_d8_52": {
+        "C_obs_K": -1.7786,
+        "C_null_mean_K": -1.2872,
+        "C_null_ci95_K": [
+          -2.6322,
+          0.0146
+        ],
+        "p_two_sided": 0.473,
+        "share_reproduced": 0.7237,
+        "n_rep_used": 4000,
+        "n_rep_dropped_small_class": 0,
+        "event_free_sd_K": 2.0463
+      }
+    }
+  }
+}

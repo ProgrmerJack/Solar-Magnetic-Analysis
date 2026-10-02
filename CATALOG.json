@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-02T09:56:28+00:00",
+ "generated": "2026-10-02T10:14:11+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 172,
-  "results": 88
+  "scripts": 174,
+  "results": 89
  },
  "scripts": [
   {
@@ -1507,6 +1507,20 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/08_literature_audit/criterion_regional_contrast.py",
+   "tree": "ssw-design-analysis",
+   "stage": "08_literature_audit",
+   "title": "DOES THE MATCHED NULL REPRODUCE A CLASS DIFFERENCE IN A VARIABLE NOT USED TO DEFINE THE CLASSES? NORTHERN-EURASIAN TEMPERATURE UNDER THE NAM-BASED DW/NDW LABEL.",
+   "loc": 245,
+   "modified": "2026-10-02 10:00",
+   "sha256_16": "00fbec09de65abf2",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_t2m_regions_daily.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/08_literature_audit/criterion_sweep.py",
    "tree": "ssw-design-analysis",
    "stage": "08_literature_audit",
@@ -1600,17 +1614,14 @@
    "path": "ssw-design-analysis/09_figures/fig1_summary.py",
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
-   "title": "fig1_summary.py -- Figure 1: one shifted population, cut by a threshold.",
-   "loc": 135,
-   "modified": "2026-10-02 05:43",
-   "sha256_16": "63cd65f572c32ede",
+   "title": "fig1_summary.py -- Figure 1: an imposed SSW changes the outcome rate, not the class contrast.",
+   "loc": 143,
+   "modified": "2026-10-02 10:04",
+   "sha256_16": "1283de88570707d9",
    "flags": [],
    "filenames_mentioned": [
-    "era5_recompute_and_two_thirds.json",
-    "era5_regional_test.json",
-    "snapsi_archetype_test.json",
+    "snapsi_causal_effect.json",
     "snapsi_distribution_test.json",
-    "snapsi_regional_test.json",
     "snapsi_selection_test.json"
    ],
    "filename_prefixes": []
@@ -1619,13 +1630,15 @@
    "path": "ssw-design-analysis/09_figures/fig2_selection.py",
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
-   "title": "fig2_selection.py -- Figure 2: the downward label is a threshold on one population.",
-   "loc": 83,
-   "modified": "2026-09-29 06:31",
-   "sha256_16": "9a8b0c3975718433",
+   "title": "fig2_selection.py -- Figure 2: in observations, event-free dates displaced by the SSW shift reproduce the classes and predict held-out winters.",
+   "loc": 116,
+   "modified": "2026-10-02 10:05",
+   "sha256_16": "230893b0c75fa134",
    "flags": [],
    "filenames_mentioned": [
-    "snapsi_selection_test.json"
+    "criterion_regional_contrast.json",
+    "criterion_transport_cv.json",
+    "era5_recompute_and_two_thirds.json"
    ],
    "filename_prefixes": []
   },
@@ -1633,10 +1646,10 @@
    "path": "ssw-design-analysis/09_figures/fig3_regional.py",
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
-   "title": "fig3_regional.py -- Figure 3: regional cold risk after an imposed SSW is the circulation shift acting through the ordinary relation.",
+   "title": "fig3_regional.py -- Figure 4: regional cold risk after an imposed SSW is the circulation shift acting through the ordinary relation.",
    "loc": 96,
-   "modified": "2026-10-02 05:43",
-   "sha256_16": "2561b1b8eb85d097",
+   "modified": "2026-10-02 10:11",
+   "sha256_16": "654f8b4006b10830",
    "flags": [],
    "filenames_mentioned": [
     "era5_regional_test.json",
@@ -1645,13 +1658,29 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/09_figures/fig3_scope.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "fig3_scope.py -- Figure 3: what the result permits -- distributional departures and differences between events.",
+   "loc": 101,
+   "modified": "2026-10-02 10:05",
+   "sha256_16": "bb287ea42a098e63",
+   "flags": [],
+   "filenames_mentioned": [
+    "icon_event_heterogeneity.json",
+    "snapsi_archetype_test.json",
+    "snapsi_residual_quantiles.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/09_figures/fig4_predictability.py",
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
-   "title": "fig4_predictability.py -- Figure 4: knowing the event adds no forecast information after an SSW.",
+   "title": "fig4_predictability.py -- Extended Data Fig. (event information, formerly Fig. 4): knowing the event adds no forecast information after an SSW.",
    "loc": 83,
-   "modified": "2026-09-29 06:37",
-   "sha256_16": "e64dcec42521dfb7",
+   "modified": "2026-10-02 10:11",
+   "sha256_16": "e4d58ebd4a549da0",
    "flags": [],
    "filenames_mentioned": [
     "forecast_value_test.json",
@@ -1663,10 +1692,10 @@
    "path": "ssw-design-analysis/09_figures/fig5_operational.py",
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
-   "title": "fig5_operational.py -- Figure 5: operational reforecasts after SSWs.",
+   "title": "fig5_operational.py -- Extended Data Fig. (operational reforecasts, formerly Fig. 5): operational reforecasts after SSWs.",
    "loc": 114,
-   "modified": "2026-09-29 15:41",
-   "sha256_16": "2a73fff34794dca1",
+   "modified": "2026-10-02 10:11",
+   "sha256_16": "ce231942a02adee9",
    "flags": [],
    "filenames_mentioned": [
     "s2s_forecast_test.json",
@@ -1821,12 +1850,13 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 329,
-   "modified": "2026-10-02 09:02",
-   "sha256_16": "947abdbadd74dc91",
+   "loc": 335,
+   "modified": "2026-10-02 10:11",
+   "sha256_16": "35de9f89d59a25c4",
    "flags": [],
    "filenames_mentioned": [
     "class_model_comparison.json",
+    "criterion_regional_contrast.json",
     "criterion_sweep.json",
     "criterion_transport_cv.json",
     "era5_regional_test.json",
@@ -2704,7 +2734,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-02 09:51",
+   "modified": "2026-10-02 09:56",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -6030,6 +6060,58 @@
     "southern_hemisphere",
     "filter_caveat",
     "units_caveat"
+   ]
+  },
+  {
+   "path": "results/current/9_literature/criterion_regional_contrast.json",
+   "tree": "current",
+   "stage": "9_literature",
+   "readable": true,
+   "bytes": 8740,
+   "modified": "2026-10-02 10:00",
+   "sha256_16": "121189ec7b139a94",
+   "producers": [],
+   "state": "ORPHAN",
+   "detail": "no script writes this",
+   "flags": [],
+   "producer_sha256": {},
+   "verdicts": [
+    {
+     "key": "primary_surface.cv.NEURASIA_d8_24.reading",
+     "text": "inconclusive (not rejected, power below 0.5)"
+    },
+    {
+     "key": "secondary_with_150hPa.cv.NEURASIA_d8_24.reading",
+     "text": "inconclusive (not rejected, power below 0.5)"
+    }
+   ],
+   "counts": {
+    "n_rep": [
+     4000
+    ],
+    "n_boot": [
+     4000
+    ],
+    "n_events": [
+     39
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "seed",
+    "n_rep",
+    "n_boot",
+    "n_plant",
+    "n_shift_sets",
+    "halfwin_days",
+    "min_per_class",
+    "label",
+    "inputs",
+    "n_events",
+    "events",
+    "shift_all_winters",
+    "primary_surface",
+    "secondary_with_150hPa"
    ]
   },
   {
