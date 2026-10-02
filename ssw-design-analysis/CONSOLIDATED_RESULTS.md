@@ -1235,7 +1235,9 @@ window; every one of the 198 starts is scored by all four methods (checked 2026-
 Question: is the DW–NDW difference in a variable NOT used to classify (N-Eurasian 2 m T, days 8–24) reproduced by
 event-free dates displaced by the SSW shift (shift from other winters) and classified identically? 39 events (27 DW, 12 NDW).
 Observed −2.20 K [−3.93, −0.47]; null −2.25 K [−4.11, −0.31]; p 0.94; share reproduced 1.02 (all-winter shift p 0.95).
-With 150 hPa condition −1.86 vs −1.45 (p 0.64); days 8–52 −2.46 vs −2.23 (p 0.74); other regions 82–152%, p 0.47–0.94.
+With 150 hPa condition −1.86 vs −1.45 (p 0.64); days 8–52 −2.95 vs −2.34 (p 0.42; corrected after review: windows by
+date, the first run took rows by position and late-March windows ran into November); other regions 82–152%, p 0.47–0.94.
+The 97% contrast share (H) is for UNSHIFTED event-free dates, all three conditions; not a shifted-null figure.
 POWER: planted extra DW cooling of 0.5 s.d. (1.32 K) detected 30% → registered reading INCONCLUSIVE (not equivalence).
 Report as: reproduced in point estimate, cannot exclude a further ~1.3 K class-specific difference.
 

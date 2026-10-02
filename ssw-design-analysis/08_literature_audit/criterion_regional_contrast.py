@@ -107,14 +107,14 @@ def t_anomalies():
 
 
 def t_window(tan, dates, a, b):
-    """Mean of each region over days a..b after each date (NaN unless complete)."""
+    """Mean of each region over days a..b after each date (NaN unless complete).
+
+    Windows are taken BY DATE (fix 2026-10-02 after the fresh-context review): the
+    temperature file holds November-April only, so taking rows by position let windows
+    of onsets after about 9 March run into the next November (days 8-52 target)."""
     out = np.full((len(dates), len(REGIONS)), np.nan)
-    pos = tan.index.get_indexer(pd.DatetimeIndex(dates).normalize())
-    v = tan.values
-    for i, p in enumerate(pos):
-        if p < 0 or p + b >= len(v):
-            continue
-        seg = v[p + a:p + b + 1]
+    for i, d in enumerate(pd.DatetimeIndex(dates).normalize()):
+        seg = tan.reindex(pd.date_range(d + pd.Timedelta(days=a), d + pd.Timedelta(days=b))).values
         if np.isfinite(seg).all():
             out[i] = seg.mean(0)
     return out

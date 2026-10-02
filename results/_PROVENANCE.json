@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-02T10:14:11+00:00",
+ "generated": "2026-10-02T10:36:12+00:00",
  "note": "Known-good baseline: each result was produced by the script at the recorded sha256. catalog_repo.py flags STALE when a producer's hash no longer matches. Re-record with --record only AFTER re-running the analysis.",
  "results": {
   "catalogue_sets.json": {

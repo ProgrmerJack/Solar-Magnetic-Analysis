@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-02T10:14:11+00:00",
+ "generated": "2026-10-02T10:36:12+00:00",
  "generator": "tools/catalog_repo.py",
  "note": "Every ssw-design-analysis result in one file. The per-script JSONs remain on disk as write-side provenance; this is the read path. Regenerate with tools/catalog_repo.py.",
  "results": {
@@ -60806,17 +60806,17 @@
       "event_free_sd_K": 2.0324
      },
      "NEURASIA_d8_52": {
-      "C_obs_K": -2.4622,
-      "C_null_mean_K": -2.2312,
+      "C_obs_K": -2.9451,
+      "C_null_mean_K": -2.3383,
       "C_null_ci95_K": [
-       -3.5925,
-       -0.8371
+       -3.8157,
+       -0.8091
       ],
-      "p_two_sided": 0.7382,
-      "share_reproduced": 0.9062,
-      "n_rep_used": 3996,
-      "n_rep_dropped_small_class": 4,
-      "event_free_sd_K": 2.0463
+      "p_two_sided": 0.4152,
+      "share_reproduced": 0.794,
+      "n_rep_used": 3993,
+      "n_rep_dropped_small_class": 7,
+      "event_free_sd_K": 2.1197
      }
     },
     "full": {
@@ -60873,17 +60873,17 @@
       "event_free_sd_K": 2.0324
      },
      "NEURASIA_d8_52": {
-      "C_obs_K": -2.4622,
-      "C_null_mean_K": -2.2262,
+      "C_obs_K": -2.9451,
+      "C_null_mean_K": -2.3331,
       "C_null_ci95_K": [
-       -3.5872,
-       -0.8314
+       -3.7916,
+       -0.8336
       ],
-      "p_two_sided": 0.7297,
-      "share_reproduced": 0.9042,
-      "n_rep_used": 3996,
-      "n_rep_dropped_small_class": 4,
-      "event_free_sd_K": 2.0463
+      "p_two_sided": 0.4134,
+      "share_reproduced": 0.7922,
+      "n_rep_used": 3991,
+      "n_rep_dropped_small_class": 9,
+      "event_free_sd_K": 2.1197
      }
     }
    },
@@ -60953,17 +60953,17 @@
       "event_free_sd_K": 2.0324
      },
      "NEURASIA_d8_52": {
-      "C_obs_K": -1.7786,
-      "C_null_mean_K": -1.2743,
+      "C_obs_K": -2.1161,
+      "C_null_mean_K": -1.3621,
       "C_null_ci95_K": [
-       -2.5854,
-       -0.0195
+       -2.7833,
+       0.0119
       ],
-      "p_two_sided": 0.4535,
-      "share_reproduced": 0.7165,
+      "p_two_sided": 0.2945,
+      "share_reproduced": 0.6437,
       "n_rep_used": 4000,
       "n_rep_dropped_small_class": 0,
-      "event_free_sd_K": 2.0463
+      "event_free_sd_K": 2.1197
      }
     },
     "full": {
@@ -61020,17 +61020,17 @@
       "event_free_sd_K": 2.0324
      },
      "NEURASIA_d8_52": {
-      "C_obs_K": -1.7786,
-      "C_null_mean_K": -1.2872,
+      "C_obs_K": -2.1161,
+      "C_null_mean_K": -1.3781,
       "C_null_ci95_K": [
-       -2.6322,
-       0.0146
+       -2.8158,
+       0.0116
       ],
-      "p_two_sided": 0.473,
-      "share_reproduced": 0.7237,
+      "p_two_sided": 0.315,
+      "share_reproduced": 0.6513,
       "n_rep_used": 4000,
       "n_rep_dropped_small_class": 0,
-      "event_free_sd_K": 2.0463
+      "event_free_sd_K": 2.1197
      }
     }
    }

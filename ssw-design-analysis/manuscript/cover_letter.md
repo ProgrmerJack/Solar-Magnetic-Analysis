@@ -4,7 +4,7 @@
 
 Dear Editor,
 
-We submit "Stratospheric warmings change the odds of downward outcomes, not the downward–non-downward contrast" for
+We submit "Imposed stratospheric warmings change the odds of downward outcomes, not the downward–non-downward contrast" for
 consideration as an Article.
 
 **The question.** When does an apparent separation between climate-impact classes tell us about the forcing,
@@ -29,8 +29,10 @@ no event reproduces the contrast and predicts held-out events.
   between downward and non-downward members changes by −0.03 [−0.12, +0.05] standard deviations (25 pairs; in
   the other 11 the forcing leaves too few non-downward members to form a contrast, which we show).
 - **Observations follow without any model.** Event-free dates displaced by the SSW shift reproduce the observed
-  "two thirds", 97% of the class contrast, and the class difference in northern-Eurasian temperature, a variable
-  not used to classify (registered test; the 39 events cannot exclude a further 1.3 K difference).
+  "two thirds", and event-free dates reproduce 97% of the class contrast even without the shift. They also match
+  in point estimate the class difference in northern-Eurasian temperature, a variable not used to classify
+  (registered test; inconclusive by its own rule, because the 39 events detect a further 1.3 K difference only
+  30% of the time).
 - **The null is useful, not only consistent.** With the shift estimated from other winters, it predicts held-out
   events better than climatology (continuous ranked probability score gain 0.19 [0.07, 0.30]) and the label as
   well as the observed class rate.
@@ -52,11 +54,13 @@ groups of events responding differently to the same intervention.
 - **White et al. (2019).** They showed, in one model, that the two classes already differ before onset. We go
   further:
   - we test the class statistics with an intervention that changes the forcing;
-  - we reproduce the observed rate, the contrast and a regional class difference with one shifted population;
+  - we reproduce the observed rate with one shifted population and the contrast with event-free dates, and
+    match a regional class difference in point estimate;
   - we show that this null predicts held-out winters;
   - we show the result does not depend on how the criterion is set.
-- **Lu & Rao (2026)** document systematic contrasts between the classes without claiming their causes; we agree
-  that description is legitimate and test the separate inference from contrast to forcing.
+- **Lu & Rao (2026)** document systematic contrasts among subtypes of downward events without aiming to
+  establish their causes; we agree that such description is legitimate and test the separate inference from a
+  class contrast to a difference in forcing.
 
 **What we report against our own expectations.** Every test is listed with its registration status, and
 designs were committed before their data. Four results go against our expectations, and the manuscript
