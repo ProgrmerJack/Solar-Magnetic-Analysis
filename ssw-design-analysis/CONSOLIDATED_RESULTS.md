@@ -1188,6 +1188,18 @@ FAILS (p 0.002: reversals have bigger drops). From 1946: the same. The AO global
 the largest hint of a step anywhere in the project; CMIP6 (5,726 episodes) bounds it at
 +0.05 [−0.02, +0.13]σ.
 
+### Y — within-ensemble natural experiment (`s2s_member_experiment.py`, 5_mechanism; registered `be804a7`)
+
+10 S2S systems, ~4,500 starts; 461 mixed starts (≥2 reversing, ≥2 not); primary window
+(anchor+8..+25, k* ≤ 9) only 40 starts → N1 shift −0.05σ [−0.29, +0.17] (NOT significant);
+N2 variance ratio 0.97 [0.73, 1.36]; N3 DW rate 0.54 vs 0.45, contrast −0.875 vs −0.872
+(diff −0.004 [−0.33, +0.30]); secondary window (+8..+20, 162 starts): shift −0.15σ [−0.24,
+−0.03], variance ratio 0.96 [0.82, 1.18]. N4 (11,481 members, start fixed effects): dose
+−0.05σ/10 m/s [−0.10, +0.01], step −0.05σ [−0.19, +0.10] — NO within-ensemble dose or step
+(cf. SNAPSI between-member coupling weak). N5 balance −0.01σ (clean). N6 temperature shift
+−0.08σ [−0.34, +0.13]. Quantile shift lower tail −0.58σ vs upper +0.12σ. Reading: translation
+and unchanged contrast replicate in a third model set; the shift is small and imprecise.
+
 ### X — the state-dependent shape is a continuous dose (`response_shape_dose.py`, 6_predictability; registered `7d8ed6f`)
 
 S3 fitted M2 (P2, all SSWs): component means −0.66 / −0.16, sd 0.72 / 0.58 — the

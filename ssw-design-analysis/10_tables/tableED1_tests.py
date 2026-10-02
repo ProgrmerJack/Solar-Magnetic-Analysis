@@ -64,6 +64,7 @@ def main():
     HD = J("s2s_heldout_diagnosis.json")
     H26, VT = J("s2s_heldout2026_test.json"), J("vortex_threshold_continuity.json")
     SRF, RSD = J("shift_rule_forecast.json"), J("response_shape_dose.json")
+    NX = J("s2s_member_experiment.json")
     R2 = ("robustness (revision 2)", "committed before run", "4c8b3f2")
     mm = g(MMt, "multimodel", "confirmatory"); nr = g(SRt, "regions", "NEURASIA", "multimodel", "confirmatory")
     rows = [
@@ -262,6 +263,19 @@ def main():
          "committed before data", "add7ba9",
          f"{g(VT,'era5_1940_2025','all','Y1_AO','E1_E2','jump')} {g(VT,'era5_1940_2025','all','Y1_AO','E1_E2','jump_ci95')}" if VT and VT.get("era5_1940_2025") else "pending",
          g(VT, "era5_1940_2025", "all", "E2_holm", "Y1_AO")),
+        ("N-shift", "within-ensemble natural experiment: shift, reversing minus non-reversing members (8-25 d, 40 starts)", "revision-3 primary",
+         "committed before computation", "be804a7",
+         f"{g(NX,'N1_shift_sigma','est')} {g(NX,'N1_shift_sigma','ci95')}" if NX else "pending", None),
+        ("N-var", "within-ensemble natural experiment: variance ratio (no widening)", "revision-3 primary",
+         "committed before computation", "be804a7",
+         f"{g(NX,'N2_variance_ratio','est')} {g(NX,'N2_variance_ratio','ci95')}" if NX else "pending", None),
+        ("N-contrast", "within-ensemble natural experiment: class contrast difference", "revision-3 primary",
+         "committed before computation", "be804a7",
+         f"{g(NX,'N3_threshold','contrast_diff')} {g(NX,'N3_threshold','contrast_diff_ci95')}" if NX else "pending", None),
+        ("N-step", "within-ensemble step at reversal, initial state fixed (11,481 members)", "revision-3 primary",
+         "committed before computation", "be804a7",
+         f"{g(NX,'N4_step_initial_state_fixed','step_sigma')} {g(NX,'N4_step_initial_state_fixed','step_ci95')}" if NX else "pending",
+         g(NX, "N4_step_initial_state_fixed", "step_p_two_sided")),
         ("S-dose", "two regimes vs continuous with the realised 100 hPa dose (G, p vs ordinary days); inconclusive", "revision-3 primary",
          "committed before run", "7d8ed6f",
          (f"G {g(RSD,'S1_P2_plus_dose','crps','G_ssw')} vs {g(RSD,'S1_P2_plus_dose','crps','G_pseudo_mean')}; "

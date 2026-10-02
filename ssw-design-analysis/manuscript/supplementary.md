@@ -122,3 +122,199 @@ Two readings follow, and with twelve events they cannot be separated:
 Either way, a per-SSW probability verified on one set of events did not transfer to another. The
 forecast product should therefore scale with the size of the disturbance and be verified
 prospectively. Full counts are in Supplementary Table 4.
+
+## Supplementary Note 9 | Full text: the label as a threshold (rates, contrasts, criterion sweep)
+
+Applying the surface conditions of the Karpechko criterion to every member
+splits each ensemble into downward (DW) and non-downward (NDW) members (adapted
+to the length of the runs; in observations we also apply it as published;
+Methods). What the SSW changes is the rate: 84% of members are DW with the SSW
+imposed against 45% without it (Fig. 1a; 79% against 41% in the Southern
+Hemisphere). The same holds in observations: the share of the 39 observed events
+with ERA5 outcomes that meet the surface conditions, 69% (54% with all three
+published conditions), is reproduced by event-free dates displaced by the
+measured shift (75% [61, 87]; Fig. 1b), so "about two thirds" is what one
+shifted population produces. In the Northern Hemisphere the contrast between the
+classes does not change: −1.62σ with the SSW imposed and −1.59σ without it
+(paired difference −0.03σ [−0.12, +0.05] on 25 centre–initialisation pairs; Fig.
+2a), while the rate separates the arms in every model (Fig. 2b). Without an SSW
+the contrast is what a cut at zero gives on one Gaussian population; with it,
+members without an SSW that are shifted by the imposed effect and classified
+identically reproduce it (Methods). In ERA5, event-free dates reproduce 97% of
+the surface DW–NDW contrast of the published criterion (93% of that of an 850
+hPa variant^{lu26}^). Nor does this depend on how the criterion is set: across
+108 versions varying its window, level, thresholds and stratospheric condition,
+the observed downward rates are those of shifted event-free dates (calibrated
+joint test p = 0.85, and 0.75 with the stratospheric condition; two planted
+classes 1.8σ apart are detected with probability 0.82), and those dates
+reproduce 76–154% of the class contrast (Extended Data Fig. 4).
+
+What has not been tested directly is whether the label, or the warming itself,
+identifies a kind of event. Three questions are easily conflated: whether
+downward and non-downward outcomes are distinct kinds of response or one
+distribution cut by a threshold; how much events differ in the response they
+force; and whether knowing the event improves a forecast. Events can differ
+without forming classes. The downward label differs from the split–displacement
+typology in a way that matters for testing it: it is defined on the surface
+outcome itself, so its classes differ by construction, and a test needs an
+intervention that fixes the forcing and a null that does not depend on how the
+criterion is set. We also ask what the shift means for regional cold risk and
+what forecasts get wrong. Attribution studies in the same experiment quantified
+the stratosphere's role in individual extremes^{seviour26}^; our subject is the
+classification. We use an experiment that imposes the same observed SSW on every
+ensemble member in nine models (SNAPSI^{hitchcock22}^), 1,517 SSWs in 20 CMIP6
+simulations of 10 models, 43 observed SSWs and 114 observed vortex weakenings,
+and reforecasts and real-time forecasts of ten operational systems. Extended
+Data Table 1 lists every test and whether it was fixed before its data.
+
+## Supplementary Note 10 | Full text: continuity at the wind reversal
+
+The same reasoning applies one step earlier, without a model. An SSW is defined
+by a threshold, the reversal of the zonal wind at 10 hPa, 60° N. If reversal
+marked a distinct kind of event, surface outcomes would jump at zero among
+otherwise similar vortex disruptions. In a test registered before any outcome
+was related to the wind, across 114 vortex weakenings since 1958, 42 of them
+SSWs, the outcome instead grows smoothly with how far the wind falls (Extended
+Data Fig. 6): per 10 m s⁻¹ weaker minimum wind the Arctic Oscillation over days
+8–52 falls by 0.36 [0.21, 0.51], northern Eurasia cools by 0.36 K [0.07, 0.66]
+and a downward label becomes 0.08 [0.01, 0.14] more likely, with no step at
+reversal for any outcome (Arctic Oscillation −0.28 [−0.99, +0.47]). With 114
+episodes this excludes only steps about as large as the whole SSW effect, and
+local discontinuity estimates fail their placebo checks (Methods). In CMIP6 the
+same rule yields 5,726 episodes and a step of +0.05σ [−0.02, +0.13], whose upper
+90% limit is 15% of the 0.8σ shift observed after SSWs, against a dose of 0.17σ
+per 10 m s⁻¹. With ERA5 winds for 1940–2025 instead (144 weakenings, 54 of them
+reversals), which place five NCEP episodes on the other side of zero, the dose
+replicates (Arctic Oscillation 0.29 [0.15, 0.43] per 10 m s⁻¹; northern Eurasia
+0.38 K) and no outcome shows a step after correction for the four tested; the
+largest, on the Arctic Oscillation, is −0.73 [−1.51, −0.06] (Holm-adjusted p =
+0.11), and reversals there also follow larger decelerations (Supplementary Note
+6). "SSW", like "downward", is a threshold on a continuum.
+
+## Supplementary Note 11 | Full text: the shift rule as a forecast
+
+The shift alone is therefore a forecast, and it verifies. In a test registered
+before it was run, the probability of a cold northern-Eurasian fortnight after
+an SSW was taken from the nudged experiment alone (0.24, 0.32 and 0.45 for
+fortnights below the event-free 5th, 10th and 20th percentiles) and verified,
+untuned, on the 39 observed SSWs: the observed frequencies, 0.21, 0.26 and 0.38,
+are consistent with those probabilities (p = 0.40–0.71) and not with climatology
+(p = 0.0006–0.008), and the risk ratio rises with severity, as a shift implies
+(observed 1.9, 2.6 and 4.1 from the 20th to the 5th percentile; Extended Data
+Fig. 7). A negative annular mode, given 0.74 by the CMIP6 events, followed 30 of
+43 observed SSWs (climatology 0.42). A user who protects whenever the risk
+exceeds their cost/loss ratio recovers 60–75% of the value of a perfect forecast
+at ratios near the climatological rate, and loses value between the observed
+rate and the slightly higher model probability (Methods). Only the predictor is
+out of sample: the observed frequencies had been reported before. The
+verification holds without the two SSWs that SNAPSI imposes (37 events: p =
+0.38–0.57 under the rule, 0.002–0.012 under climatology) and at every threshold
+from the 33rd to the 2.5th percentile, and it is bracketed by a second rule
+built independently from the CMIP6 circulation shift and the ERA5 relation
+between circulation and temperature on event-free dates (0.11, 0.19 and 0.33),
+which under-predicts where SNAPSI slightly over-predicts (Supplementary Tables 1
+and 3). The product has limits that it must carry: over high-latitude Europe the
+models overstate the most extreme cold (none of 39 events below the event-free
+2.5th percentile, against 20% predicted); over mid-latitude East Asia the
+observed rise is not distinguishable from climatology with 39 events, and over
+North America neither models nor observations show raised cold risk; and in
+weeks 3–4, where SNAPSI rests mainly on the later initialisations of its two
+events, northern-Eurasian cold was rarer than predicted (0.15 against 0.27) and
+not distinguishable from climatology (Supplementary Table 2). Out of sample the
+rule did not verify: after twelve SSWs of 1941–1958 in ERA5, whose surface
+outcomes no one had examined, no northern-Eurasian fortnight fell below the
+event-free 10th percentile, against 32% predicted (p = 0.012), and cold risk did
+not rise detectably above that period's climatology (Supplementary Table 4).
+These reversals were weaker (an exploratory check; median minimum wind −3.8
+against −8.5 m s⁻¹ in 1959–2022), but by the dose response that explains only
+about a quarter of their smaller mean cooling (0.2 against 1.0 K), and 1940s
+stratospheric winds are weakly constrained; a single probability per SSW
+therefore holds for the events it was verified on and over-predicted for this
+earlier, weaker set.
+
+## Supplementary Note 12 | Full text: event information and operational skill
+
+If downward coupling were a property of events, knowing the event should improve
+a forecast of how strongly it couples. We compare two probabilistic forecasts of
+each CMIP6 event's surface response (days 8–52): the shifted distribution alone
+(SSW responses in other models, by calendar date) and an event-aware forecast
+that adds the stratospheric state up to onset. Scored with the continuous ranked
+probability score on events of held-out models, the event-aware forecast
+improves on the shift by 0.8% [−0.3, 1.4] (Fig. 4a). The same information
+improves forecasts on size-matched ordinary winter days by 3.7% [2.3, 5.3], and
+in none of 200 such samples was it worth as little as after SSWs; the
+two-component model gains 1.1% [0.4, 2.0], against 3.1% on ordinary days (a
+comparison added afterwards). The result holds in five robustness checks
+(Methods). The label itself cannot be a predictor, since it is defined from the
+outcome, so the test is of the event information the label is meant to
+summarise. Point prediction agrees: the event adds −0.006 [−0.033, +0.020] to
+the out-of-sample R² of the surface response before onset (Fig. 4b) and +0.015
+[−0.028, +0.059] with the post-onset stratosphere, when 96% of that diagnostic
+skill is present without an SSW (Fig. 4c; Methods).
+
+Operational forecasts agree on event differences^{nebel24}^: in ten systems of
+the S2S reforecast archive^{vitart17}^, forecasts started 2–9 days before onset
+track event-to-event differences in the surface response no better than on
+event-free dates of the same season and lead (Fig. 5a,b; Supplementary Note 4),
+which rules out large event-specific skill, not small.
+
+## Supplementary Note 13 | Full text: operational forecasts in 1998–2021 and after
+
+Over 1998–2021, what the forecasts got wrong was the size of the shift. Had they
+missed a second population of outcomes, observed values would scatter into both
+tails of the ensembles; in ECMWF they do not (4% in the two outer rank bins
+against 17% expected). They fall on the negative-NAM side, as registered before
+the confirmatory test was run: mean rank 0.40 against 0.54 on event-free dates
+(p = 0.005; Holm-adjusted over all primary tests, 0.03), lower than the
+event-free value in nine of ten systems (Fig. 5c), a deficit specific to SSWs
+that survives the further checks in Methods. The systems gave a negative-NAM
+fortnight after these SSWs a mean probability of 0.57, whereas it occurred 82%
+of the time, and ensemble-mean polar-cap responses were about half those
+observed (116 against 241 Pa). Observed northern-Eurasian temperature lay on the
+cold side in all ten systems, not significantly after correction (mean rank 0.39
+against 0.53, p = 0.014; Holm-adjusted 0.07; Fig. 5d). The error was not merely
+a missed warming: starts whose ensembles reversed the 10 hPa wind near the
+observed onset under-predicted as much as those that did not (difference +0.003
+[−0.05, +0.05]). A follow-up registered before the 100 hPa forecasts were
+retrieved places the loss in the lower stratosphere: the forecast 100 hPa
+anomaly was too weak (p = 0.005) while the 10 hPa wind was not, and given the
+forecast 100 hPa state the surface was not detectably under-predicted (p = 0.30;
+Methods) — the lower-stratospheric persistence deficit reported for nearly all
+systems^{garfinkel25}^, not a coupling deficit.
+
+The bias did not recur. After the three SSWs of 2023 and 2024, held out and
+registered before they were scored, and after the SSW of 4 March 2026, scored
+with real-time forecasts of five systems under a design registered before any
+2026 forecast was retrieved, each observed polar-cap outcome lay, on average
+over systems, on the upward side of the ensembles (four events: mean rank 0.70
+against 0.55, p = 0.93; Methods, Extended Data Fig. 5). Exploratory checks added
+afterwards point to the events, not the systems: given the kind of outcome, the
+periods agree, and what changed is the mix, 13 of 17 earlier outcomes downward
+against one of four since (Supplementary Note 5). Whether models under-represent
+the surface response to SSWs is disputed^{sigmond13,kolstad20,afargan24,dai25}^;
+our results bound such a bias as one of the size of the shift, of uncertain
+persistence, rather than of event-to-event differences.
+
+## Supplementary Note 8 | Members that do and do not reverse the vortex from one initial state
+
+The ten S2S reforecast systems give a comparison with SNAPSI's design, in which every member shares one initial state
+and members either have an SSW or do not. Here the SSW is not imposed: some members reverse the 10 hPa wind on
+their own. The test was registered before any split was computed.
+
+Of 461 starts with at least two members of each kind, the onset comes early enough for the 8–25-day window in 40
+(162 for the 8–20-day window). Results are in Methods.
+
+The signature of a threshold on one population appears:
+- **Rate:** members that reverse are more often downward.
+- **Contrast:** their class contrast is unchanged.
+- **Spread:** they are no more spread out.
+- **Shape:** their lower tail moves more than their upper. The quantile shift is −0.58σ at the 5th percentile
+  against +0.12σ at the 95th, the asymmetry also seen in CMIP6.
+
+Two results are weaker than in SNAPSI:
+- **The mean shift is small** (−0.15σ over the shorter window).
+- **Within starts there is no dose relation and no step.** This matches SNAPSI's own finding that, between members
+  sharing one forcing, the post-onset stratosphere predicts the surface only weakly.
+
+Spontaneous reversals in these ensembles mostly come late in the forecast (only 40 of the 461 mixed starts have the median onset by lead 9). The comparison therefore adds
+evidence on the form of the change (translation, unchanged contrast), not on its size.

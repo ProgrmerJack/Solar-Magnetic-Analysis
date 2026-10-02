@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-01T21:34:36+00:00",
+ "generated": "2026-10-02T03:22:23+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 163,
-  "results": 83
+  "scripts": 164,
+  "results": 84
  },
  "scripts": [
   {
@@ -1200,6 +1200,20 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/07_physical_decomposition/s2s_member_experiment.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "A NATURAL EXPERIMENT INSIDE OPERATIONAL ENSEMBLES: MEMBERS THAT DO AND DO NOT REVERSE THE VORTEX FROM THE SAME INITIAL STATE.",
+   "loc": 292,
+   "modified": "2026-10-02 03:17",
+   "sha256_16": "e0fd3e01e058aa78",
+   "flags": [],
+   "filenames_mentioned": [
+    "s2s_member_experiment.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/07_physical_decomposition/s2s_multimodel_robustness.py",
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
@@ -1708,9 +1722,9 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 289,
-   "modified": "2026-10-01 21:34",
-   "sha256_16": "64a95c4d738aa889",
+   "loc": 303,
+   "modified": "2026-10-02 03:21",
+   "sha256_16": "d19f40c75f09208b",
    "flags": [],
    "filenames_mentioned": [
     "class_model_comparison.json",
@@ -1727,6 +1741,7 @@
     "s2s_heldout_diagnosis.json",
     "s2s_heldout_test.json",
     "s2s_leadlag_test.json",
+    "s2s_member_experiment.json",
     "s2s_multimodel_robustness.json",
     "s2s_multimodel_test.json",
     "s2s_postonset_test.json",
@@ -2562,7 +2577,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-01 13:31",
+   "modified": "2026-10-01 21:34",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -4202,6 +4217,56 @@
     "skipped",
     "observations",
     "headline"
+   ]
+  },
+  {
+   "path": "results/current/5_mechanism/s2s_member_experiment.json",
+   "tree": "current",
+   "stage": "5_mechanism",
+   "readable": true,
+   "bytes": 3398,
+   "modified": "2026-10-02 03:17",
+   "sha256_16": "63a8bfa429d7abb5",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/s2s_member_experiment.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/s2s_member_experiment.py": "e0fd3e01e058aa78"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_boot": [
+     2000
+    ],
+    "n_winters": [
+     17
+    ],
+    "n_members": [
+     11481
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "registered_commit",
+    "seed",
+    "n_boot",
+    "systems",
+    "per_system",
+    "n_mixed_starts_k_le_9",
+    "n_winters",
+    "n_members_rev",
+    "n_members_non",
+    "N1_shift_sigma",
+    "N2_variance_ratio",
+    "N3_threshold",
+    "N4_step_initial_state_fixed",
+    "N5_balance_pre_onset_sigma",
+    "N6_temperature",
+    "secondary_window_8_20",
+    "descriptive"
    ]
   },
   {
