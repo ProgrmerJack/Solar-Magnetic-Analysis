@@ -1,0 +1,29 @@
+11-15 {'n': 631, 'p_dw_shifted': 0.7924, 'p_dw_clim': 0.336, 'nam_shifted_q10_50_90': [-1.124, -0.485, 0.129], 'nam_clim_q10_50_90': [-0.489, 0.15, 0.764], 'T_shifted_q10_50_90_K_winter2027': [-3.453, -0.113, 3.121], 'T_clim_q10_50_90_K_winter2027': [-1.909, 1.43, 4.665]}
+12-15 {'n': 630, 'p_dw_shifted': 0.7524, 'p_dw_clim': 0.2921, 'nam_shifted_q10_50_90': [-1.05, -0.436, 0.223], 'nam_clim_q10_50_90': [-0.415, 0.199, 0.858], 'T_shifted_q10_50_90_K_winter2027': [-2.69, 0.607, 3.853], 'T_clim_q10_50_90_K_winter2027': [-1.147, 2.151, 5.396]}
+01-15 {'n': 651, 'p_dw_shifted': 0.7066, 'p_dw_clim': 0.2965, 'nam_shifted_q10_50_90': [-1.056, -0.389, 0.244], 'nam_clim_q10_50_90': [-0.421, 0.246, 0.879], 'T_shifted_q10_50_90_K_winter2027': [-4.101, 0.449, 4.17], 'T_clim_q10_50_90_K_winter2027': [-2.558, 1.992, 5.713]}
+02-15 {'n': 651, 'p_dw_shifted': 0.7143, 'p_dw_clim': 0.2366, 'nam_shifted_q10_50_90': [-0.957, -0.439, 0.425], 'nam_clim_q10_50_90': [-0.323, 0.195, 1.06], 'T_shifted_q10_50_90_K_winter2027': [-2.525, 0.366, 3.589], 'T_clim_q10_50_90_K_winter2027': [-0.982, 1.909, 5.132]}
+03-15 {'n': 651, 'p_dw_shifted': 0.8187, 'p_dw_clim': 0.4439, 'nam_shifted_q10_50_90': [-1.085, -0.571, 0.313], 'nam_clim_q10_50_90': [-0.45, 0.064, 0.947], 'T_shifted_q10_50_90_K_winter2027': [-1.945, 0.655, 2.365], 'T_clim_q10_50_90_K_winter2027': [-0.402, 2.198, 3.908]}
+shift {'nam_1000': -0.6349, 'nam_150': -0.9454, 'T_NEURASIA_d8_24': -1.5431} rate 0.6923 beta 0.03696
+Saved -> prospective_next_ssw.json
+{
+ "nam_1000": {
+  "r": 1.0,
+  "rms_sd_units": 0.0013,
+  "n_days": 121
+ },
+ "nam_150": {
+  "r": 1.0,
+  "rms_sd_units": 0.0022,
+  "n_days": 121
+ },
+ "NEURASIA": {
+  "r": 0.9992,
+  "rms_sd_units": 0.0866,
+  "bias_K": 0.262,
+  "n_days": 121
+ },
+ "passed": true
+}
+Saved -> prospective_next_ssw.json
+{'through': '2026-04-30', 'onsets': []}
+Saved -> prospective_next_ssw.json
