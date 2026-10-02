@@ -1,0 +1,52 @@
+{
+ "plan_approved": "2026-10-02",
+ "seed": 2096377885,
+ "n_boot": 2000,
+ "n_members_per_ensemble": 40,
+ "n_events": 18,
+ "excluded": {},
+ "M1_between_event_sd_of_means": 0.654,
+ "M2_between_event_variance": {
+  "lower_bound_noise_sd_equals_daily_sd": 0.4145,
+  "upper_bound_noise_zero": 0.4277,
+  "ci95_lower_bound": [
+   0.1715,
+   0.6684
+  ],
+  "ci95_upper_bound": [
+   0.1839,
+   0.6799
+  ]
+ },
+ "M3_share_of_within_ensemble_variance": {
+  "within_daily_variance": 0.5278,
+  "share_lower": 0.7853,
+  "share_upper": 0.8103,
+  "cmip6_reference": {
+   "est": 0.019,
+   "ci95": [
+    -0.033,
+    0.072
+   ],
+   "window": "days 8-52",
+   "units": "member daily s.d."
+  }
+ },
+ "M4_corr_week2_100hPa_vs_outcome": {
+  "r": 0.7991,
+  "ci95": [
+   0.6275,
+   0.9141
+  ]
+ },
+ "mean_response_days8_25": -0.6208,
+ "secondary_days26_42": {
+  "n_events": 18,
+  "between_variance_lower": 0.0977,
+  "between_variance_upper": 0.117,
+  "share_lower": 0.1264,
+  "share_upper": 0.1514
+ }
+}
+Saved -> icon_event_heterogeneity.json
+exit=0

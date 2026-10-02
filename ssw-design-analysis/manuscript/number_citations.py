@@ -65,6 +65,7 @@ REFS = {
     "cohen21": "Cohen, J., Agel, L., Barlow, M., Garfinkel, C. I. & White, I. Linking Arctic variability and change with extreme winter weather in the United States. *Science* **373**, 1116–1121 (2021).",
     "davis22": "Davis, N. A., Richter, J. H., Glanville, A. A., Edwards, J. & LaJoie, E. Limited surface impacts of the January 2021 sudden stratospheric warming. *Nat. Commun.* **13**, 1136 (2022).",
     "butler24": "Butler, A. & Ciasto, L. But what does a polar vortex breakdown look like down here? *NOAA Climate.gov Polar Vortex Blog* (29 February 2024).",
+    "gallego26": "Gallego, D., Alvarez-Castro, M. C., Faranda, D., Portal-Galindo, M. & Peña-Ortiz, C. On the specificity of the tropospheric configurations related to stratospheric vortex decelerations. *Sci. Rep.* https://doi.org/10.1038/s41598-026-71950-z (2026).",
     "charlton07":"Charlton, A. J. & Polvani, L. M. A new look at stratospheric sudden warmings. Part I: climatology and modeling benchmarks. *J. Clim.* **20**, 449–469 (2007).",
 }
 KEY = re.compile(r"\^\{([A-Za-z0-9,]+)\}\^")

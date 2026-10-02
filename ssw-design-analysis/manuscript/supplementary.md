@@ -345,3 +345,31 @@ Results:
   population predicts.
 
 Values are in Methods and in `results/current/9_literature/criterion_transport_cv.json`.
+
+## Supplementary Note 16 | How much do event-conditioned responses differ? The 18 ICON ensembles
+
+Loeffel et al. (2026) re-ran 18 SSWs from a long ICON simulation as 40-member spin-off ensembles. Their public
+archive gives the ensemble mean and spread of the standardised polar-cap geopotential anomaly. It does not give
+member trajectories, so only the differences between the ensemble-mean responses can be assessed. Distribution
+shape and label rates cannot.
+
+The test was registered before any value was read. Onsets are where the ensemble-mean 10 hPa wind first turns
+negative. The variance of the ensemble means between events, net of finite-ensemble noise, is bounded by
+assuming the window-mean spread lies between zero and the daily spread.
+
+Results:
+- **Days 8–25:** between-event variance 0.41–0.43, about 80% of the within-ensemble variance.
+- **Days 26–42:** 0.10–0.12, about 13–15%.
+- **Link to the lower stratosphere:** the event means track the week-2 100 hPa anomaly (r = 0.80).
+
+These conditional means differ greatly from the CMIP6 forced-variance estimate (0.019) because they estimate
+different things:
+- **They keep each event's initial tropospheric state,** which persists into the first weeks. The fall from days
+  8–25 to days 26–42 is consistent with that. The CMIP6 estimate subtracts the differences present before onset.
+- **The 18 events were selected,** so their spread is not a population variance.
+
+What survives is the distinction the main text now draws: realised responses to different SSWs differ
+substantially and in proportion to the lower-stratospheric anomaly. How much of that the stratosphere itself
+forces is not settled by these summaries or by the assumption-dependent CMIP6 bound.
+
+Values are in `results/current/5_mechanism/icon_event_heterogeneity.json`.

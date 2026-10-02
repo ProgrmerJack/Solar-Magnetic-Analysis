@@ -80,11 +80,12 @@ non-downward events are partly built by the classification^{white19}^; in an
 idealised model the later tropospheric response is set linearly by the strength
 of the lower-stratospheric warming^{white20}^; large ensembles find little in
 the pre-onset state that separates one event's surface response from
-another's^{bett23}^; and operational systems predict before onset which events
-will propagate to 100 hPa but not which will reach the troposphere^{nebel24}^.
-Nudged experiments show that an imposed SSW drives a negative
-NAM^{hitchcock14,hong26}^ and that the contrasting 2018 and 2019 outcomes owed
-much to the tropics^{knight20}^.
+another's^{bett23}^; no distinct tropospheric configuration is systematically
+linked to vortex decelerations^{gallego26}^; and operational systems predict
+before onset which events will propagate to 100 hPa but not which will reach the
+troposphere^{nebel24}^. Nudged experiments show that an imposed SSW drives a
+negative NAM^{hitchcock14,hong26}^ and that the contrasting 2018 and 2019
+outcomes owed much to the tropics^{knight20}^.
 
 What has not been tested directly is whether the label, or the warming itself,
 identifies a kind of event. Three questions are easily conflated: whether
@@ -196,7 +197,17 @@ latent-effect model tested, classes that produced the criterion's full class
 contrast would have to exceed this assumption-dependent bound (subtypes with
 smaller effects are not excluded), and an audit finds that statement robust
 unless forcing is anti-correlated with concurrent internal variability (Methods;
-Supplementary Note 1).
+Supplementary Note 1). Event-conditioned responses differ much more. In 18 model
+SSWs re-run as 40-member ensembles^{loeffel26}^, the ensemble-mean polar-cap
+response over days 8–25 varies between events with a variance of 0.41–0.43 (in
+units of the daily climatological s.d., net of finite-ensemble noise), about 80%
+of the variance within an ensemble, falling to 0.10–0.12 over days 26–42, and it
+tracks the week-2 100 hPa anomaly (r = 0.80 [0.63, 0.91]; Supplementary Note
+16). Those means also carry each event's tropospheric state at onset, which the
+CMIP6 estimate removes, and the 18 events were selected, so the two numbers
+answer different questions: realised responses to different SSWs differ
+substantially, and how much of that difference the stratosphere forces is not
+settled by either.
 
 If the event information available at onset determined how strongly an event
 couples, adding it should improve a forecast of that coupling. Scored on events
@@ -236,16 +247,18 @@ The field's archetype pair shows the same (Fig. 1c): February 2018 and January
 downward outcome (0.80 and 0.75 across nine models), and at the primary
 initialisations the observed outcomes lie within the central 95% of the model
 distributions in 17 of 18 model–event cases (Extended Data Fig. 2), although
-they are conventionally taken as opposite kinds. The post-onset lower
-stratosphere tracks how much events differ^{loeffel26}^, but it predicts the
-surface as well on ordinary winter days, and between members sharing one forcing
-the relation is weak and equally present without an SSW (Extended Data Fig. 3):
-a general property of stratosphere–troposphere coupling, not a feature that
-sorts SSWs into kinds. Vortex splits, tested in reanalysis^{seviour13}^, tend
-towards a stronger early surface response than
-displacements^{lehtonen16,nebel24}^, but not significantly (−0.25σ [−0.61,
-+0.13]; 37 events), as expected when more than 50 events are needed to separate
-the two^{maycock15}^ (Supplementary Note 2).
+they are conventionally taken as opposite kinds. Across events, the post-onset
+lower stratosphere tracks the ensemble-mean response^{loeffel26}^; within one
+SNAPSI ensemble, where the forcing is shared, the member-to-member relation is
+weak and equally present without an SSW (Extended Data Fig. 3). These are
+different relations (averaging removes noise from the first; the second asks
+whether members differ by their own stratosphere), and in CMIP6 the post-onset
+stratosphere predicts the surface as well on ordinary winter days: a general
+property of stratosphere–troposphere coupling, not a feature that sorts SSWs
+into kinds. Vortex splits, tested in reanalysis^{seviour13}^, tend towards a
+stronger early surface response than displacements^{lehtonen16,nebel24}^, but
+not significantly (−0.25σ [−0.61, +0.13]; 37 events), as expected when more than
+50 events are needed to separate the two^{maycock15}^ (Supplementary Note 2).
 
 ### Consequences for cold risk and forecasts, and their limits
 
