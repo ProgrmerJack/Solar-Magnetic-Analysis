@@ -1,0 +1,44 @@
+% Shared preamble of main.tex and supplementary.tex (pdflatex).
+% Build:  pdflatex supplementary && pdflatex main && bibtex main && bibtex supplementary
+%         && pdflatex supplementary && pdflatex main && pdflatex supplementary && pdflatex main
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage[final]{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\graphicspath{{../../09_figures/out/}}
+\usepackage{booktabs,array,longtable,pdflscape,adjustbox}
+\usepackage{xurl}
+\usepackage[font=small,labelfont=bf,justification=justified,singlelinecheck=false,skip=6pt]{caption}
+\DeclareCaptionLabelSeparator{pipe}{\ $|$\ }
+\captionsetup{labelsep=pipe}
+\usepackage{newfloat}
+\DeclareFloatingEnvironment[fileext=loe,name={Extended Data Fig.},placement=p]{edfigure}
+\renewcommand{\figurename}{Fig.}
+\usepackage{enumitem}
+\setlist{leftmargin=*,itemsep=1pt,topsep=3pt}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage[super,sort&compress]{natbib}
+\renewcommand{\bibsection}{\section*{References}}
+\renewcommand{\bibfont}{\small}
+\setlength{\bibsep}{2pt}
+\usepackage{lineno}
+\usepackage{xcolor}
+\definecolor{linkblue}{HTML}{1F4E79}
+\usepackage{xr-hyper}
+\usepackage[colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue]{hyperref}
+\urlstyle{same}
+\setlength{\parskip}{3pt}
+\newcommand{\authors}[1]{\textcolor{red!70!black}{\textit{[#1]}}}
+\newcommand{\paperauthors}{%
+  Abduxoliq Ashuraliyev$^{1,*}$\\[6pt]
+  \small $^{1}$Independent Researcher, Tashkent, Uzbekistan\\
+  \small $^{*}$Correspondence: \href{mailto:Jack00040008@outlook.com}{Jack00040008@outlook.com}}
+\newcommand{\papertitle}{Stratospheric warmings shift winter cold risk; the downward-propagation label does not reveal two kinds of event}
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother

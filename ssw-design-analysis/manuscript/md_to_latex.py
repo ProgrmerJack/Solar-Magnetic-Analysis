@@ -6,7 +6,7 @@ After this conversion the .tex files in manuscript/latex/ are the manuscript sou
 Citations ^{key1,key2}^ become \cite{key1,key2}; refs.bib is written from
 number_citations.REFS (each entry's formatted text as its note), and natbib/unsrt
 number them as superscripts in order of first citation. Figures are included from 09_figures/out/ after the legends.
-Compile: cd manuscript/latex && xelatex main && bibtex main && xelatex main && xelatex main
+The .tex files were later restyled onto latex/preamble.tex (pdflatex); build with latex/build.sh.
 """
 import re
 import sys

@@ -1,62 +1,5 @@
 {
- "corrected_onset": {
-  "plan_approved": "2026-10-02",
-  "seed": 2096377885,
-  "n_boot": 2000,
-  "n_members_per_ensemble": 40,
-  "n_events": 12,
-  "excluded": {
-   "indices_n1m34": "ensemble-mean wind already negative at the start (-1.1 m/s): no onset in record",
-   "indices_n1m4": "ensemble-mean wind already negative at the start (-7.7 m/s): no onset in record",
-   "indices_n2m1": "ensemble-mean wind already negative at the start (-1.7 m/s): no onset in record",
-   "indices_n2m3": "ensemble-mean wind already negative at the start (-2.4 m/s): no onset in record",
-   "indices_n3m24": "ensemble-mean wind already negative at the start (-5.8 m/s): no onset in record",
-   "indices_n3m5": "ensemble-mean wind already negative at the start (-2.9 m/s): no onset in record"
-  },
-  "M1_between_event_sd_of_means": 0.7756,
-  "M2_between_event_variance": {
-   "lower_bound_noise_sd_equals_daily_sd": 0.5879,
-   "upper_bound_noise_zero": 0.6015,
-   "ci95_lower_bound": [
-    0.2127,
-    0.9603
-   ],
-   "ci95_upper_bound": [
-    0.2279,
-    0.9735
-   ]
-  },
-  "M3_share_of_within_ensemble_variance": {
-   "within_daily_variance": 0.544,
-   "share_lower": 1.0807,
-   "share_upper": 1.1057,
-   "cmip6_reference": {
-    "est": 0.019,
-    "ci95": [
-     -0.033,
-     0.072
-    ],
-    "window": "days 8-52",
-    "units": "member daily s.d."
-   }
-  },
-  "M4_corr_week2_100hPa_vs_outcome": {
-   "r": 0.9165,
-   "ci95": [
-    0.8682,
-    0.9747
-   ]
-  },
-  "mean_response_days8_25": -0.6232,
-  "secondary_days26_42": {
-   "n_events": 12,
-   "between_variance_lower": 0.1132,
-   "between_variance_upper": 0.132,
-   "share_lower": 0.1512,
-   "share_upper": 0.1762
-  }
- },
- "registered_literal": {
+ "primary_registered": {
   "plan_approved": "2026-10-02",
   "seed": 2096377885,
   "n_boot": 2000,
@@ -106,7 +49,63 @@
    "share_upper": 0.1514
   }
  },
- "note": "the registered rule 'first time the ensemble-mean wind is negative' returns the start of the run for ensembles already reversed at t = 0; corrected after the code review (2026-10-02) to the first westerly-to-easterly crossing, those ensembles reported as not anchored"
+ "sensitivity_crossing_only": {
+  "plan_approved": "2026-10-02",
+  "seed": 2096377885,
+  "n_boot": 2000,
+  "n_members_per_ensemble": 40,
+  "n_events": 12,
+  "excluded": {
+   "indices_n1m34": "ensemble-mean wind already negative at the start (-1.1 m/s): started on its onset day; excluded in this sensitivity only",
+   "indices_n1m4": "ensemble-mean wind already negative at the start (-7.7 m/s): started on its onset day; excluded in this sensitivity only",
+   "indices_n2m1": "ensemble-mean wind already negative at the start (-1.7 m/s): started on its onset day; excluded in this sensitivity only",
+   "indices_n2m3": "ensemble-mean wind already negative at the start (-2.4 m/s): started on its onset day; excluded in this sensitivity only",
+   "indices_n3m24": "ensemble-mean wind already negative at the start (-5.8 m/s): started on its onset day; excluded in this sensitivity only",
+   "indices_n3m5": "ensemble-mean wind already negative at the start (-2.9 m/s): started on its onset day; excluded in this sensitivity only"
+  },
+  "M1_between_event_sd_of_means": 0.7756,
+  "M2_between_event_variance": {
+   "lower_bound_noise_sd_equals_daily_sd": 0.5879,
+   "upper_bound_noise_zero": 0.6015,
+   "ci95_lower_bound": [
+    0.2127,
+    0.9603
+   ],
+   "ci95_upper_bound": [
+    0.2279,
+    0.9735
+   ]
+  },
+  "M3_share_of_within_ensemble_variance": {
+   "within_daily_variance": 0.544,
+   "share_lower": 1.0807,
+   "share_upper": 1.1057,
+   "cmip6_reference": {
+    "est": 0.019,
+    "ci95": [
+     -0.033,
+     0.072
+    ],
+    "window": "days 8-52",
+    "units": "member daily s.d."
+   }
+  },
+  "M4_corr_week2_100hPa_vs_outcome": {
+   "r": 0.9165,
+   "ci95": [
+    0.8682,
+    0.9747
+   ]
+  },
+  "mean_response_days8_25": -0.6232,
+  "secondary_days26_42": {
+   "n_events": 12,
+   "between_variance_lower": 0.1132,
+   "between_variance_upper": 0.132,
+   "share_lower": 0.1512,
+   "share_upper": 0.1762
+  }
+ },
+ "note": "Loeffel et al. (2026, WCD 7, 895-913, Sect. 2) initialise every spin-off 'at the SSW onset or the day before', onset being the first day the daily-mean u(10 hPa, 60N) is negative. Six ensembles whose ensemble-mean wind is already negative at t = 0 therefore start on their onset day, and the registered rule (first negative ensemble-mean wind) anchors all 18 within 0-1.25 days: it is the primary estimate. A code review (2026-10-02) had read t = 0 as 'no onset in record' and kept only the 12 westerly-to-easterly crossings; that reading ignored the published design and was reverted the same day. The 12-event subset is kept as a sensitivity."
 }
 Saved -> icon_event_heterogeneity.json
-exit=0

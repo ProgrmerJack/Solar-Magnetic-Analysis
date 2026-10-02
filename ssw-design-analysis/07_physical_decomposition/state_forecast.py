@@ -221,16 +221,16 @@ def e2(p, t, u, rng, skill, far):
             yo = rolling_mean(ta, 8, 24).loc[o]
             if not np.isfinite(yo):
                 continue
-            rec = {"onset": str(o.date()), "winter": w, "raw": [], "cal": [], "F3": [], "F0": []}
+            rec = {"onset": str(o.date()), "winter": w, "raw": [], "cal": [], "F3": [], "F0": [], "lag": []}
             for c, an in A.items():
                 inits = pd.to_datetime(an.index.get_level_values("init")).unique()
                 for s0 in [s_ for s_ in inits if 0 <= (s_ - o).days <= 7]:
                     k = (s0 - o).days; a_, b_ = 8 - k, 24 - k
                     mem = an.loc[s0].loc[:, a_:b_].mean(axis=1).values
                     mem = mem[np.isfinite(mem)]
-                    if len(mem) < 3:
-                        continue
-                    rec["raw"].append(ecrps(mem, yo))
+                    if len(mem) < 3 or not Xf[cols].loc[s0].notna().all():
+                        continue                               # paired: every method scored on this start or none
+                    rec["raw"].append(ecrps(mem, yo)); rec["lag"].append(k)
                     key = (c, a_, b_)
                     if key not in cache:                       # calibration on training-winter starts
                         ii = pd.to_datetime(an.index.get_level_values("init"))
@@ -252,18 +252,21 @@ def e2(p, t, u, rng, skill, far):
                         bk = np.linalg.lstsq(Ak, yk.values[trd], rcond=None)[0]
                         cache[kk] = (bk, float(np.std(yk.values[trd] - Ak @ bk, ddof=Ak.shape[1])), yk)
                     bk, sk, yk = cache[kk]
+                    # the state model is REISSUED at this start date s0 (ERA5 state up to s0) and verified on the
+                    # same window, days 8-24 after onset = days a_..b_ after s0: same issue date, valid time, case
                     xi = Xf[cols].loc[s0]
-                    if xi.notna().all():
-                        rec["F3"].append(gcrps(float(np.r_[1.0, xi.values] @ bk), sk, yo))
+                    rec["F3"].append(gcrps(float(np.r_[1.0, xi.values] @ bk), sk, yo))
                     dd = np.abs(u.index.dayofyear.values - s0.dayofyear); dd = np.minimum(dd, 366 - dd)
                     # event-free, as the design and E1 (fix 2026-10-02: the first run omitted far)
                     clim = yk.values[train.values & ndjfm & far & (dd <= 15) & yk.notna().values]
                     rec["F0"].append(ecrps(clim, yo))
             if rec["raw"]:
                 rows.append({"onset": rec["onset"], "winter": w, **{k: float(np.mean(rec[k])) for k in ("raw", "cal", "F3", "F0") if rec[k]},
-                             "n_forecasts": len(rec["raw"])})
+                             "n_forecasts": len(rec["raw"]), "mean_issue_lag_days": float(np.mean(rec["lag"])),
+                             "n_scored_per_method": {k: len(rec[k]) for k in ("raw", "cal", "F3", "F0")}})
     d = pd.DataFrame(rows)
-    out = {"n_events": int(len(d)), "mean_crps": {k: round(float(d[k].mean()), 4) for k in ("raw", "cal", "F3", "F0")},
+    out = {"pairing": "each start scored by all four methods or none; F3 and F0 reissued at the start date, same valid window",
+           "n_events": int(len(d)), "mean_crps": {k: round(float(d[k].mean()), 4) for k in ("raw", "cal", "F3", "F0")},
            "events": d.round(4).to_dict(orient="records")}
     for a_, b_ in (("F3", "raw"), ("F3", "cal"), ("cal", "raw"), ("F3", "F0"), ("cal", "F0")):
         out[f"{a_}_vs_{b_}"] = skill(a_, b_, d.dropna(subset=[a_, b_]))

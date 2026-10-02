@@ -77,10 +77,14 @@ def window(ds, var, lev, onset, a, b):
 
 
 def main():
-    res = {"corrected_onset": run("crossing"), "registered_literal": run("first_negative"),
-           "note": ("the registered rule 'first time the ensemble-mean wind is negative' returns the start of the run "
-                    "for ensembles already reversed at t = 0; corrected after the code review (2026-10-02) to the first "
-                    "westerly-to-easterly crossing, those ensembles reported as not anchored")}
+    res = {"primary_registered": run("first_negative"), "sensitivity_crossing_only": run("crossing"),
+           "note": ("Loeffel et al. (2026, WCD 7, 895-913, Sect. 2) initialise every spin-off 'at the SSW onset or the "
+                    "day before', onset being the first day the daily-mean u(10 hPa, 60N) is negative. Six ensembles "
+                    "whose ensemble-mean wind is already negative at t = 0 therefore start on their onset day, and the "
+                    "registered rule (first negative ensemble-mean wind) anchors all 18 within 0-1.25 days: it is the "
+                    "primary estimate. A code review (2026-10-02) had read t = 0 as 'no onset in record' and kept only "
+                    "the 12 westerly-to-easterly crossings; that reading ignored the published design and was reverted "
+                    "the same day. The 12-event subset is kept as a sensitivity.")}
     print(json.dumps({k: {kk: vv for kk, vv in v.items() if kk != "events"} if isinstance(v, dict) else v for k, v in res.items()}, indent=1))
     RESULTS.mkdir(parents=True, exist_ok=True)
     (RESULTS / "icon_event_heterogeneity.json").write_text(json.dumps(res, indent=2), encoding="utf8", newline="\n")
@@ -96,7 +100,7 @@ def run(rule):
         if rule == "crossing":
             cr = np.flatnonzero((u[1:] < 0) & (u[:-1] >= 0)) + 1
             if u[0] < 0:
-                excl[f.stem] = f"ensemble-mean wind already negative at the start ({u[0]:.1f} m/s): no onset in record"
+                excl[f.stem] = f"ensemble-mean wind already negative at the start ({u[0]:.1f} m/s): started on its onset day; excluded in this sensitivity only"
                 continue
             neg = cr
         else:

@@ -1226,17 +1226,19 @@ clim 1.65, SNAPSI rule 1.66, CMIP6 rule 1.55, STATE 1.49, STATE+SSW 1.51. State 
 0.0942 [-0.0328, 0.2092]; vs SNAPSI rule 0.103 [-0.0157, 0.2117]; positive
 both eras & LOWO, but CI includes 0 → DECISION: forecasting = LIMITATION. SSW indicator adds
 nothing (-0.0081 [-0.0184, 0.0028]); oracle min-wind adds nothing. Cold periods 13 obs vs
-expected 5.7/18.1/13.6/11.9. E2 (17 events, starts 0–7 d after onset): raw ens 1.18, calibrated
-1.09, state 1.58, clim 1.83 — dynamical ensembles far better; calibration +8% [5, 11].
+expected 5.7/18.1/12.2/11.9. E2 (17 events, starts 0–7 d after onset): raw ens 1.18, calibrated
+1.09, state 1.58, clim 1.98 (event-free) — dynamical ensembles far better; calibration +8% [5, 11].
+State model and climatology are REISSUED at each start date (ERA5 state to that date), same valid
+window; every one of the 198 starts is scored by all four methods (checked 2026-10-02, `n_scored_per_method`).
 
 ### CODE-REVIEW CORRECTIONS (2026-10-02; fresh-context review of the revision-3 scripts; all re-run)
 - **Y/N4** (`s2s_member_experiment.py`): fixed effects were keyed on start DATE across systems
   (1,450 "starts"); keyed on (system, start) = 2,526 groups → dose **+0.12σ/10 m/s [−0.02, +0.27]**
   (was −0.05), step **+0.04 [−0.16, +0.30]** (was −0.05). N1–N3, N5, N6 unchanged. 4,498 starts total.
-- **Z3 ICON** (`icon_event_heterogeneity.py`): 6/18 ensembles already easterly at t = 0 ("first
-  negative" = start of run). Corrected to westerly→easterly crossing, **12 events: V_b 0.59–0.60
-  (108–111% of within-ensemble), days 26–42 0.11–0.13, r 0.92 [0.87, 0.97]**; registered-literal
-  (18) kept in JSON: 0.41–0.43, r 0.80.
+- **Z3 ICON**: the review's "6/18 have no onset in the record" was WRONG and is reverted (same day):
+  Loeffel et al. 2026 (Sect. 2) start every spin-off at onset or the day before, so t = 0 is the onset
+  for the 6 already-easterly ensembles. Registered 18-event result stands (Z3 above); the 12-crossing
+  subset (V_b 0.59–0.60, r 0.92) is a sensitivity only (JSON key `sensitivity_crossing_only`).
 - **V-R5** (`shift_rule_forecast.py`): CMIP6 index in all-year s.d. units vs ERA5 Nov–Mar event-free;
   threshold from a subset of windows. Fixed: **p_rule2 0.099/0.184/0.323** (was 0.112/0.194/0.327),
   CMIP6 mean −0.42σ; q 0.05 binomial p **0.052** (borderline). Member Nov–Mar s.d. 1.03–1.27.
