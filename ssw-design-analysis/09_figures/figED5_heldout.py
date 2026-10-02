@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-figED5_heldout.py -- Extended Data Fig. 5: why the held-out replication failed.
+figED5_heldout.py -- Extended Data Fig. 5: the held-out SSWs, 2023-2026.
 
 Reads results/current/6_predictability/s2s_heldout_diagnosis.json (exploratory,
 post hoc) and s2s_heldout_test.json. Recomputes nothing.
 
-  a  every event (17 of 1998-2021, 3 held-out): multi-system mean rank of the
+  a  every event (17 of 1998-2021, 3 held-out in 2023-24, and 4 March 2026 scored
+     with real-time forecasts, s2s_heldout2026_test.json): multi-system mean rank of the
      observed polar-cap outcome against the observed response (negative = downward,
      negative NAM); the rank follows the realized outcome
   b  ECMWF model years 2022 and 2025 on the same ten 1998-2021 events
@@ -37,9 +38,14 @@ def main():
             off = {"2023-02": (4, 4), "2024-01": (4, 4), "2024-03": (-30, -9)}[r["event"][:7]]
             ax.annotate(r["event"][:7], (r["A_obs"], r["mean_rank"]), fontsize=5,
                         xytext=off, textcoords="offset points")
+    h26 = json.loads((S.RESULTS / "6_predictability" / "s2s_heldout2026_test.json").read_text())["HO2026_polar_cap"]
+    ax.scatter(h26["A_obs"], h26["mean_rank"], s=22, marker="D", facecolor="white", edgecolor=S.C["vermillion"],
+               linewidths=0.8, zorder=4)
+    ax.annotate("2026-03", (h26["A_obs"], h26["mean_rank"]), fontsize=5, xytext=(4, -9), textcoords="offset points")
     ax.axhline(0.5, color="k", lw=0.4); ax.axvline(0, color="0.7", lw=0.4)
     ax.scatter([], [], s=9, color=S.C["grey"], label="1998–2021 (17)")
-    ax.scatter([], [], s=14, color=S.C["vermillion"], label="held out (3)")
+    ax.scatter([], [], s=14, color=S.C["vermillion"], label="held out 2023–24 (3)")
+    ax.scatter([], [], s=22, marker="D", facecolor="white", edgecolor=S.C["vermillion"], label="2026, real time")
     ax.legend(loc="lower right", fontsize=5.2)
     ax.set_xlabel("observed response (Pa; negative = downward)")
     ax.set_ylabel("mean rank in the ensembles")
