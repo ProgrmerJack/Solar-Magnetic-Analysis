@@ -1,0 +1,11 @@
+G1 strong_11 Delta_b +0.173 [0.0404, 0.3304]  k1.25 +0.009 [-0.1283, 0.1798]  k1.5 -0.148 [-0.2992, 0.0354]  s -2.94
+G1 other_25  Delta_b +0.052 [-0.0349, 0.123]  k1.25 -0.133 [-0.2311, -0.0537]  k1.5 -0.300 [-0.4069, -0.2151]  s -0.97
+G1 all_36    Delta_b +0.089 [0.0187, 0.1572]  k1.25 -0.090 [-0.1656, -0.0152]  k1.5 -0.254 [-0.3369, -0.1746]  s -1.57
+G1 reading: inconclusive | var ratio strong: {'ratio': 0.8616, 'ci95': [0.7363, 1.0092], 'n_ensembles': 11}
+G2: {'Delta_b_on_s_36': {'slope': -0.0311, 'ci95': [-0.2048, 0.0399], 'intercept': 0.0405, 'n_pairs': 36}, 'paired_diff_on_s_25': {'slope': 0.0692, 'ci95': [-0.26, 0.7315], 'intercept': 0.039, 'n_pairs': 25}, 'mean_s_strong_11': -2.9363, 'mean_s_other_25': -0.972, 'paired_diff_fitted_at_strong_mean_s': -0.1642}
+G3 SH: {'C_nudged': (-1.9581, [-2.2254, -1.7104]), 'C_control': (-1.5841, [-1.6185, -1.545]), 'resid_shift': (-0.136, [-0.2216, -0.033]), 'resid_locscale': (-0.0365, [-0.1376, 0.0794]), 'Delta_b': (-0.4799, [-0.8095, -0.1555]), 's': (-1.7507, [-3.2773, -0.8082]), 'sd_ratio': (1.2858, [1.0907, 1.4948])} | SH contrast change is the widening of one population
+G3 NH: {'resid_shift': (0.0401, [-0.026, 0.0985]), 'resid_locscale': (0.0417, [-0.0259, 0.1222]), 'Delta_b': (0.0524, [-0.0357, 0.1228])}
+G4: {'resid': (-0.0861, [-0.2398, 0.057], 23), 'resid_plant_0.5sigma': (-0.5861, [-0.7437, -0.4469], 23), 'resid_plant_1.32K': (-0.7915, [-0.9422, -0.6302], 23), 'CT_nudged': (-0.8647, [-1.0117, -0.7085], 25), 'CT_null': (-0.8197, [-0.9519, -0.7083], 24), 'CT_control': (-0.7824, [-0.8658, -0.7006], 36), 'paired_diff': (-0.0627, [-0.1813, 0.0464], 25), 'Delta_b': (-0.0571, [-0.2646, 0.1088], 36), 'resid_HI_EUROPE': (0.037, [-0.1376, 0.2036], 23), 'resid_MID_EASIA': (-0.1036, [-0.2676, 0.0907], 23), 'resid_MID_NAMER': (-0.0018, [-0.312, 0.2965], 23), 'Delta_b_strong_11': (-0.1434, [-0.4863, 0.3527], 11)}
+G4 reading: within tolerance {'resid_plant_0.5sigma': True, 'resid_plant_1.32K': True} resid ~K -0.149
+G5: not run: nudged-full members not cached (CEDA token)
+Saved -> snapsi_contrast_generality.json
