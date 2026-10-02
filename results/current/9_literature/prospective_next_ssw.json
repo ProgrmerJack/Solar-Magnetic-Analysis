@@ -3797,6 +3797,13 @@
    ]
   }
  },
+ "odds_five_events": {
+  "n_events": 43,
+  "n_winters": 67,
+  "rate_per_winter": 0.6418,
+  "P_ge5_by_2030": 0.118,
+  "P_ge5_by_2036": 0.767
+ },
  "consistency_gate": {
   "nam_1000": {
    "r": 1.0,
@@ -3815,9 +3822,5 @@
    "n_days": 121
   },
   "passed": true
- },
- "detected": {
-  "through": "2026-04-30",
-  "onsets": []
  }
 }
