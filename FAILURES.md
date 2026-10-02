@@ -257,3 +257,8 @@ Rule: report n per estimate next to the registered n and fail loudly on unexpect
 Tried: re-anchoring ICON spin-off onsets to westerly-to-easterly crossings, dropping 6 of 18 ensembles easterly at t = 0 as "no onset in record".
 Failed: Loeffel et al. (2026) initialise every spin-off at onset or the day before, so t = 0 is the onset; the drop raised V_b from 0.41 to 0.59 and r from 0.80 to 0.92.
 Rule: before changing how external data are anchored or filtered, read the producing paper's design section; a reviewer's suspicion is a lead, not a defect.
+
+## 2026-10-02 — Windows taken by row position on a gapped daily series
+Tried: days 8-52 temperature windows by row offset in a November-April-only file (criterion_regional_contrast t_window).
+Failed: windows of onsets after ~9 March ran across the 30 April -> 1 November gap; five events and their null candidates were wrong (secondary target only).
+Rule: select windows by date (reindex a date range) and require completeness; never by row offset unless the index is verified contiguous.

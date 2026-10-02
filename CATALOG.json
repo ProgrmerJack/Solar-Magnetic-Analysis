@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-02T10:14:11+00:00",
+ "generated": "2026-10-02T10:36:12+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -1512,8 +1512,8 @@
    "stage": "08_literature_audit",
    "title": "DOES THE MATCHED NULL REPRODUCE A CLASS DIFFERENCE IN A VARIABLE NOT USED TO DEFINE THE CLASSES? NORTHERN-EURASIAN TEMPERATURE UNDER THE NAM-BASED DW/NDW LABEL.",
    "loc": 245,
-   "modified": "2026-10-02 10:00",
-   "sha256_16": "00fbec09de65abf2",
+   "modified": "2026-10-02 10:34",
+   "sha256_16": "91b77db46e150bea",
    "flags": [],
    "filenames_mentioned": [
     "era5_t2m_regions_daily.parquet"
@@ -1632,8 +1632,8 @@
    "stage": "09_figures",
    "title": "fig2_selection.py -- Figure 2: in observations, event-free dates displaced by the SSW shift reproduce the classes and predict held-out winters.",
    "loc": 116,
-   "modified": "2026-10-02 10:05",
-   "sha256_16": "230893b0c75fa134",
+   "modified": "2026-10-02 10:35",
+   "sha256_16": "85f443ee81c25307",
    "flags": [],
    "filenames_mentioned": [
     "criterion_regional_contrast.json",
@@ -2734,7 +2734,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-02 09:56",
+   "modified": "2026-10-02 10:14",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -6067,9 +6067,9 @@
    "tree": "current",
    "stage": "9_literature",
    "readable": true,
-   "bytes": 8740,
-   "modified": "2026-10-02 10:00",
-   "sha256_16": "121189ec7b139a94",
+   "bytes": 8738,
+   "modified": "2026-10-02 10:34",
+   "sha256_16": "57329a944e65a49f",
    "producers": [],
    "state": "ORPHAN",
    "detail": "no script writes this",

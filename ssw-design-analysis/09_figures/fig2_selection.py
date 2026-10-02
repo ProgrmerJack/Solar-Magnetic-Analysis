@@ -9,9 +9,9 @@ Reads (recomputes nothing):
   results/current/9_literature/criterion_transport_cv.json          held-out winters (Z2)
 
   a  share of the 39 observed SSWs meeting the published surface conditions, against
-     event-free dates as they are and displaced by the measured shift (95% range)
+     event-free dates as they are and displaced by the measured shift (95% range of 200 sets)
   b  DW - NDW contrast of the 1000 hPa NAM (published criterion, days 8-52):
-     observed against shifted event-free dates classified identically
+     observed against event-free dates (not shifted) classified identically
   c  DW - NDW contrast of 2 m temperature, days 8-24, in four regions -- a variable
      not used to define the classes: observed (95% event bootstrap for northern
      Eurasia, the registered target) against the matched null (mean, 95% range of
@@ -67,7 +67,7 @@ def main():
     for i, x in enumerate([v["null_contrast"], v["contrast"]]):
         bx.text(i, x - 0.04, M(f"{x:.2f}σ"), ha="center", va="top", fontsize=5.8)
     bx.axhline(0, color="k", lw=0.5)
-    bx.set_xticks([0, 1]); bx.set_xticklabels(["event-free dates\n+ measured shift", "observed SSWs"], fontsize=5.6)
+    bx.set_xticks([0, 1]); bx.set_xticklabels(["event-free dates\n(no shift)", "observed SSWs"], fontsize=5.6)
     bx.set_ylim(-0.95, 0.05); bx.set_ylabel("DW − NDW contrast, 1000 hPa NAM (σ)")
     bx.set_title(f"the contrast: {v['pct_reproduced_under_null']:.0f}% reproduced without SSWs", fontsize=6)
     S.panel_label(bx, "b", x=-0.22, y=1.04)
@@ -107,7 +107,7 @@ def main():
     dx.set_ylim(-0.6, len(rows) - 0.4); dx.invert_yaxis()
     dx.set_xlabel("score gain of the shifted null (positive = better)")
     dx.set_title(f"held-out winters: {pr['observed_dw']} downward observed, {pr['expected_dw']:.1f} expected", fontsize=6)
-    S.panel_label(dx, "d", x=-0.62, y=1.04)
+    S.panel_label(dx, "d", x=-0.5, y=1.12)
     S.save(fig, "fig2_selection")
 
 
