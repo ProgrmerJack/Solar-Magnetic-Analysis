@@ -43,7 +43,7 @@ def main():
 
     ax = fig.add_subplot(gs[0, 0])
     ax.axhspan(-tol, tol, color="0.92", zorder=0)
-    for st, col, lab in ((False, grey, "other 25 pairs"), (True, verm, "11 pairs without an NDW class")):
+    for st, col, lab in ((False, grey, "other 25 pairs"), (True, verm, "11 pairs with < 3 NDW members")):
         q = p[p.strong == st]
         ax.scatter(q.s, q.Delta_b, s=12, color=col, zorder=3, label=lab)
     g1 = d["G1_strongly_forced"]

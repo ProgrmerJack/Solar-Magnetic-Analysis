@@ -310,24 +310,26 @@ def main():
          (f"obs {g(RCC,'primary_surface','cv','NEURASIA_d8_24','C_obs_K')} K vs null "
           f"{g(RCC,'primary_surface','cv','NEURASIA_d8_24','C_null_mean_K')} K") if RCC else "pending",
          g(RCC, 'primary_surface', 'cv', 'NEURASIA_d8_24', 'p_two_sided') if RCC else None),
-        ("G1", "back-shifted SSW-imposed contrast vs control, the 11 pairs with < 3 NDW members (tolerance 0.25 sigma); inconclusive",
+        ("GEN-1", "back-shifted SSW-imposed contrast vs control, the 11 pairs with < 3 NDW members (tolerance 0.25 sigma); inconclusive",
          "revision-5 primary", "committed before run", "892377c",
          (f"{g(GEN,'G1_strongly_forced','strong_11','Delta_b','mean')} {g(GEN,'G1_strongly_forced','strong_11','Delta_b','ci95')}; "
           f"net of the spread change {g(GEN,'G1x_post_hoc_spread','strong_11','Delta_b_net_spread','mean')} "
-          f"{g(GEN,'G1x_post_hoc_spread','strong_11','Delta_b_net_spread','ci95')} (post hoc)") if GEN else "pending", None),
-        ("G2", "dose-response: back-shift difference on imposed shift, 36 pairs (slope per sigma)", "revision-5 secondary",
+          f"{g(GEN,'G1x_post_hoc_spread','strong_11','Delta_b_net_spread','ci95')} (post hoc); "
+          f"forced variance of half the control variance added: {g(GEN,'G1_strongly_forced','strong_11','Delta_b_k1.5','mean')} "
+          f"{g(GEN,'G1_strongly_forced','strong_11','Delta_b_k1.5','ci95')} (not detected)") if GEN else "pending", None),
+        ("GEN-2", "dose-response: back-shift difference on imposed shift, 36 pairs (slope per sigma)", "revision-5 secondary",
          "committed before run", "892377c",
          f"{g(GEN,'G2_dose_response','Delta_b_on_s_36','slope')} {g(GEN,'G2_dose_response','Delta_b_on_s_36','ci95')}" if GEN else "pending", None),
-        ("G3", "SH minor warming: nudged contrast vs location-scale null (and shift-only null)", "revision-5 primary",
+        ("GEN-3", "SH minor warming: nudged contrast vs location-scale null (and shift-only null)", "revision-5 primary",
          "committed before run", "892377c",
          (f"{g(GEN,'G3_third_event_SH','SH','resid_locscale','mean')} {g(GEN,'G3_third_event_SH','SH','resid_locscale','ci95')} "
           f"(shift only {g(GEN,'G3_third_event_SH','SH','resid_shift','mean')} {g(GEN,'G3_third_event_SH','SH','resid_shift','ci95')})") if GEN else "pending", None),
-        ("G4", "SNAPSI N-Eurasian DW-NDW temperature contrast vs matched shifted null (sigma; tolerance 0.25)", "revision-5 primary",
+        ("GEN-4", "SNAPSI N-Eurasian DW-NDW temperature contrast vs matched shifted null (sigma; tolerance 0.25)", "revision-5 primary",
          "committed before run", "892377c",
          (f"{g(GEN,'G4_regional_temperature','resid','mean')} {g(GEN,'G4_regional_temperature','resid','ci95')}; "
           f"planted 0.5 sigma {g(GEN,'G4_regional_temperature','resid_plant_0.5sigma','mean')}") if GEN else "pending", None),
         ("PRO", "prospective: shifted null on every NH SSW with onset Nov 2026 - Mar 2036 (CRPS, days 8-52 NAM)", "prospective primary",
-         "predictions committed before any onset", "d2b54a8",
+         "predictions committed before any onset", "d2b54a8 (amended before any onset: 4cfba00, b2416e0)",
          (f"{g(PRO,'scores','cumulative','n_scored') or 0} events scored") if PRO else "pending", None),
         ("S-dose", "two regimes vs continuous with the realised 100 hPa dose (G, p vs ordinary days); inconclusive", "revision-3 primary",
          "committed before run", "7d8ed6f",

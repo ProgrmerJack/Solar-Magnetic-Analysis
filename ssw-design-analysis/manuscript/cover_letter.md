@@ -26,12 +26,12 @@ model–initialisation pairs. The forcing changes the odds; the contrast is set 
 one population.
 
 **Why the result is general, not a special case.**
-- **Where the forcing is strongest.** In the 11 ensembles where the forcing leaves almost no non-downward
-  members, a registered test displaces the members back by the imposed effect. Their contrast differs from the
-  control's only as their narrower spread predicts (+0.03 [−0.03, +0.06] standard deviations net of spread), and
-  the contrast does not grow with the size of the forcing.
+- **Where the forcing saturates the class.** In the 11 ensembles where the forcing leaves almost no non-downward
+  members, a registered test displaces the members back by the imposed effect. It is inconclusive by its own
+  tolerance; an analysis added afterwards finds the departure to be what their narrower spread predicts (+0.03
+  [−0.03, +0.06] standard deviations net of spread). The contrast does not grow with the size of the forcing.
 - **A different hemisphere and event type.** In a Southern Hemisphere warming that also widened the distribution,
-  the contrast grew, by exactly what one widened population produces (registered test).
+  the contrast grew by what one widened population produces (registered test).
 - **A variable the label does not use.** The classes' difference in northern-Eurasian temperature is reproduced
   by a matched null: in the experiment, inside a tolerance fixed in advance. The residual is −0.15 K in point
   estimate, and the registered test would detect 0.5 standard deviations of temperature. In observations the null
