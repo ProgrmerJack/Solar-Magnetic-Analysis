@@ -18,7 +18,7 @@ Reads (recomputes nothing but a histogram):
      event-free dates as they are and displaced by the measured shift
   c  the archetype pair: forced probability of a downward outcome in each model
      (nudged members) for February 2018 and January 2019, primary initialisations
-  d  probability of a cold northern-Eurasian fortnight: SNAPSI without and with
+  d  probability of a cold northern-Eurasian 17-day period: SNAPSI without and with
      the imposed SSW and as predicted from the circulation shift; ERA5 on
      event-free dates and after 39 observed SSWs (95% interval)
 """
@@ -124,7 +124,7 @@ def main():
     lo, hi = e["cold_obs_ci95"]
     dx.errorbar(4, e["cold_obs"], yerr=[[e["cold_obs"] - lo], [hi - e["cold_obs"]]], color="k", lw=0.7, capsize=2)
     dx.set_xticks(range(len(bars))); dx.set_xticklabels([b[0] for b in bars], fontsize=5.4)
-    dx.set_ylabel("P(cold fortnight), northern Eurasia")
+    dx.set_ylabel("P(cold 17-day period), northern Eurasia")
     dx.set_title("regional cold risk follows the shift", fontsize=6)
     S.panel_label(dx, "d", x=-0.16, y=1.04)
     S.save(fig, "fig1_summary")

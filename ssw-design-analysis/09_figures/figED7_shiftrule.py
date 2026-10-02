@@ -6,7 +6,7 @@ Reads results/current/6_predictability/shift_rule_forecast.json (result V).
 Recomputes nothing.
 
   a  observed frequency after the observed SSWs (Wilson 95% interval) against the
-     probability taken from the models alone: cold northern-Eurasian fortnight
+     probability taken from the models alone: cold northern-Eurasian 17-day period
      below the event-free 5th, 10th, 20th percentile (SNAPSI, 39 events), and a
      negative annular mode, days 8-52 (CMIP6, CPC AO, 43 events); open symbols,
      climatology
@@ -14,7 +14,7 @@ Recomputes nothing.
      event-free percentile, with the SNAPSI rule, the independent CMIP6 x ERA5
      rule and climatology (revision-3 addendum)
   b  relative economic value of the rule against climatology, for users with
-     cost/loss ratio alpha, cold-fortnight thresholds: positive between the
+     cost/loss ratio alpha, cold-period thresholds: positive between the
      climatological rate and the observed rate after SSWs, negative between that
      and the rule probability (the rule slightly over-states the risk), zero
      elsewhere (rule and climatology make the same decision)
@@ -80,7 +80,7 @@ def main():
         cx.plot([0, 0.35], [0, 0.35], color="k", lw=0.5, ls=(0, (2, 2)), label="climatology")
         cx.set_xlim(0, 0.35); cx.set_ylim(0, 0.75)
         cx.set_xlabel("event-free percentile (threshold)")
-        cx.set_ylabel("frequency of a colder fortnight")
+        cx.set_ylabel("frequency of a colder 17-day period")
         cx.legend(loc="upper left", fontsize=4.8)
         S.panel_label(cx, "c", x=-0.3, y=1.04)
     S.save(fig, "figED7_shiftrule")

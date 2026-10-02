@@ -1188,7 +1188,7 @@ FAILS (p 0.002: reversals have bigger drops). From 1946: the same. The AO global
 the largest hint of a step anywhere in the project; CMIP6 (5,726 episodes) bounds it at
 +0.05 [−0.02, +0.13]σ.
 
-### Y — within-ensemble natural experiment (`s2s_member_experiment.py`, 5_mechanism; registered `be804a7`)
+### Y — within-start ensemble comparison (`s2s_member_experiment.py`, 5_mechanism; registered `be804a7`)
 
 10 S2S systems, ~4,500 starts; 461 mixed starts (≥2 reversing, ≥2 not); primary window
 (anchor+8..+25, k* ≤ 9) only 40 starts → N1 shift −0.05σ [−0.29, +0.17] (NOT significant);
@@ -1199,6 +1199,18 @@ N2 variance ratio 0.97 [0.73, 1.36]; N3 DW rate 0.54 vs 0.45, contrast −0.875 
 (cf. SNAPSI between-member coupling weak). N5 balance −0.01σ (clean). N6 temperature shift
 −0.08σ [−0.34, +0.13]. Quantile shift lower tail −0.58σ vs upper +0.12σ. Reading: translation
 and unchanged contrast replicate in a third model set; the shift is small and imprecise.
+
+### Z1 — SNAPSI residual quantiles (`snapsi_residual_quantiles.py`, 8_experiment; registered `113c7d3`, tolerance |R| ≤ 0.25σ, |E| ≤ 0.05 declared before run)
+Pooled NH NAM (36 pairs): ALL intervals inside tolerance → APPROXIMATE TRANSLATION (R from
++0.10 at q05 to −0.11 at q95; E within [−0.03, +0.02]). Feb-2018 unresolved (R(0.05) +0.24
+[+0.02, +0.38], compressed lower tail); Jan-2019 unresolved. N-Eurasian T (days 8–24):
+unresolved (R(0.05) −0.11 [−0.45, +0.13]; E(0.05) +0.018 [+0.002, +0.046]).
+
+### Z2 — transport cross-validation of the shifted null (`criterion_transport_cv.py`, 9_literature; registered `bbfeb9c`; RETROSPECTIVE)
+Whole-winter folds, 39 events: published surface DW 27 observed vs 29.2 expected (p 0.52);
+with 150 hPa 21 vs 21.3; 0/108 versions p < 0.05. Brier constant-rate minus shifted −0.003
+[−0.024, +0.015] (label adds nothing beyond the shift). CRPS days 8–52 NAM: climatology minus
+shifted +0.19 [+0.07, +0.30]; mean PIT 0.50; outer deciles 26%.
 
 ### X — the state-dependent shape is a continuous dose (`response_shape_dose.py`, 6_predictability; registered `7d8ed6f`)
 
