@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-02T05:48:05+00:00",
+ "generated": "2026-10-02T05:53:58+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 166,
-  "results": 86
+  "scripts": 167,
+  "results": 87
  },
  "scripts": [
   {
@@ -979,6 +979,20 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/07_physical_decomposition/icon_event_heterogeneity.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "HOW MUCH DO EVENT-CONDITIONED MEAN RESPONSES DIFFER? A SUMMARY-LEVEL COMPARISON WITH THE 18 ICON SPIN-OFF ENSEMBLES OF LOEFFEL ET AL. (2026).",
+   "loc": 145,
+   "modified": "2026-10-02 05:52",
+   "sha256_16": "1d86da8c9b873d2d",
+   "flags": [],
+   "filenames_mentioned": [
+    "icon_event_heterogeneity.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/07_physical_decomposition/is_downward_propagation_a_class.py",
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
@@ -1822,9 +1836,9 @@
    "tree": "ssw-design-analysis",
    "stage": "manuscript",
    "title": "number_citations.py -- replace ^{key}^ citation keys in main.md with numbers in Nature order (main text, then figure legends, then Methods) and write the reference list. Every entry below was checked against Crossref or the publisher",
-   "loc": 109,
-   "modified": "2026-10-01 10:27",
-   "sha256_16": "9b3ae6edce8b186f",
+   "loc": 110,
+   "modified": "2026-10-02 05:53",
+   "sha256_16": "361f52ce380b4bb5",
    "flags": [],
    "filenames_mentioned": [],
    "filename_prefixes": []
@@ -2607,7 +2621,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-02 03:22",
+   "modified": "2026-10-02 05:48",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -4124,6 +4138,48 @@
     "lags",
     "n_boot",
     "results"
+   ]
+  },
+  {
+   "path": "results/current/5_mechanism/icon_event_heterogeneity.json",
+   "tree": "current",
+   "stage": "5_mechanism",
+   "readable": true,
+   "bytes": 5392,
+   "modified": "2026-10-02 05:52",
+   "sha256_16": "125ca6bd0cd871b4",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/icon_event_heterogeneity.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/icon_event_heterogeneity.py": "1d86da8c9b873d2d"
+   },
+   "verdicts": [],
+   "counts": {
+    "n_boot": [
+     2000
+    ],
+    "n_events": [
+     18
+    ]
+   },
+   "top_level_keys": [
+    "plan_approved",
+    "seed",
+    "n_boot",
+    "n_members_per_ensemble",
+    "n_events",
+    "excluded",
+    "events",
+    "M1_between_event_sd_of_means",
+    "M2_between_event_variance",
+    "M3_share_of_within_ensemble_variance",
+    "M4_corr_week2_100hPa_vs_outcome",
+    "mean_response_days8_25",
+    "secondary_days26_42"
    ]
   },
   {

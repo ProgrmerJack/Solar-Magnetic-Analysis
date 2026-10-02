@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-02T05:48:05+00:00",
+ "generated": "2026-10-02T05:53:58+00:00",
  "note": "Known-good baseline: each result was produced by the script at the recorded sha256. catalog_repo.py flags STALE when a producer's hash no longer matches. Re-record with --record only AFTER re-running the analysis.",
  "results": {
   "catalogue_sets.json": {
@@ -400,6 +400,16 @@
     "ssw-design-analysis/07_physical_decomposition/granger_direction.py": "9ee3d7a2935d8958"
    },
    "result_sha256_16": "201bb23a57c50271",
+   "needs_rerun": false
+  },
+  "icon_event_heterogeneity.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/icon_event_heterogeneity.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/icon_event_heterogeneity.py": "1d86da8c9b873d2d"
+   },
+   "result_sha256_16": "125ca6bd0cd871b4",
    "needs_rerun": false
   },
   "mediation_disattenuated.json": {

@@ -1212,6 +1212,14 @@ with 150 hPa 21 vs 21.3; 0/108 versions p < 0.05. Brier constant-rate minus shif
 [−0.024, +0.015] (label adds nothing beyond the shift). CRPS days 8–52 NAM: climatology minus
 shifted +0.19 [+0.07, +0.30]; mean PIT 0.50; outer deciles 26%.
 
+### Z3 — ICON 18 spin-off ensembles, summary level (`icon_event_heterogeneity.py`; registered `6ad6e8a` before values read)
+Between-event variance of ensemble-mean polar-cap response (NAM sign, ~1000 hPa, daily-sd
+units), days 8–25: 0.41–0.43 (≈80% of within-ensemble daily variance); days 26–42: 0.10–0.12
+(13–15%). Corr with week-2 100 hPa anomaly r 0.80 [0.63, 0.91]. Includes tropospheric
+initial-state memory and selected events → NOT comparable to the CMIP6 forced variance
+(0.019, net of pre-onset); but RETRACT "events differ little": realised responses differ
+substantially. Shape/labels not assessable (no member data).
+
 ### X — the state-dependent shape is a continuous dose (`response_shape_dose.py`, 6_predictability; registered `7d8ed6f`)
 
 S3 fitted M2 (P2, all SSWs): component means −0.66 / −0.16, sd 0.72 / 0.58 — the
