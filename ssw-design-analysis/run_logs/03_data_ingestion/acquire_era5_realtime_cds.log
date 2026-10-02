@@ -1,0 +1,10 @@
+<frozen site>:101: RuntimeWarning: Unexpected value in sys.prefix, expected /home/xola/Solar-Magnetic-Analysis/.venv, got /home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/../../.venv
+<frozen site>:101: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/xola/Solar-Magnetic-Analysis/.venv, got /home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/../../.venv
+            z1000_m    z150_m  u10_60N  NEURASIA  HI_EUROPE  MID_EASIA  MID_NAMER
+date                                                                             
+2026-09-22    45.18  13369.94    13.64    283.11     284.64     286.94     287.97
+2026-09-23    39.45  13337.36    12.72    283.41     284.51     286.22     287.95
+2026-09-24    58.38  13326.47    12.22    283.48     284.98     285.81     288.57
+2026-09-25    59.67  13324.30    12.76    282.33     285.36     285.86     289.13
+2026-09-26    58.40  13318.26    12.57    281.65     285.01     285.83     289.00
+Saved -> era5_realtime_cds.parquet (2026-05-01 .. 2026-09-26)

@@ -3822,5 +3822,9 @@
    "n_days": 121
   },
   "passed": true
+ },
+ "detected": {
+  "through": "2026-09-26",
+  "onsets": []
  }
 }
