@@ -511,7 +511,51 @@ def revision3():
     print("Saved -> shift_rule_forecast.json (revision3)")
 
 
+def r6_diagnostics():
+    """EXPLORATORY, added after the R6 result was seen (labelled so in the JSON):
+    how the 1941-58 SSWs differ from those of 1959-2022."""
+    res = json.loads((RESULTS / "shift_rule_forecast.json").read_text())
+    u, on = detect_era5()
+    early = [o for o in on if EARLY[0] <= o <= EARLY[1]]
+    cat = load_catalogue("primary")
+    later = [o for o in cat if pd.Timestamp("1959-01-01") <= o <= pd.Timestamp("2022-12-15")]
+    umin = lambda o: float(u[o:o + pd.Timedelta(days=20)].min())
+    ue, ul = np.array([umin(o) for o in early]), np.array([umin(o) for o in later])
+    te = t_anom_region(ING / "era5_t2m_regions_daily_arco_early.parquet", REG, base=(1941, 1958))
+    tl = t_anom_region(ING / "era5_t2m_regions_daily.parquet", REG)
+    Te = np.array([window(te, o, T_WIN) for o in early]); Tl = np.array([window(tl, o, T_WIN) for o in later])
+    pe = pd.read_parquet(ING / "era5_psl_cap_00utc_arco_early.parquet")
+    ps = pd.Series(pe["psl_cap_N"].values, index=pd.to_datetime(pe["time"]).dt.floor("D"))
+    b_ = ps[(ps.index.year >= 1941) & (ps.index.year <= 1958)]
+    c = b_.groupby(b_.index.dayofyear).mean().reindex(range(1, 367))
+    c = pd.concat([c.iloc[-15:], c, c.iloc[:15]]).rolling(31, center=True, min_periods=15).mean().iloc[15:-15]; c.index = range(1, 367)
+    pan = ps - c.reindex(ps.index.dayofyear).values
+    sd = float(pan[pan.index.month.isin([11, 12, 1, 2, 3])].std())
+    nam_e = np.array([-window(pan, o, (8, 25)) / sd for o in early])
+    free = [d for d in pd.date_range("1941-01-01", "1958-12-31") if d.month in (11, 12, 1, 2, 3)
+            and np.all(np.abs((on[on <= pd.Timestamp("1959-06-01")] - d).days) > ZONE_SEP)]
+    nam_f = np.array([-window(pan, d, (8, 25)) / sd for d in free]); nam_f = nam_f[np.isfinite(nam_f)]
+    vt = json.loads((ROOT / "results" / "current" / "5_mechanism" / "vortex_threshold_continuity.json").read_text())
+    dose = vt["era5_1940_2025"]["all"]["Y3_T_NEURASIA"]["E1_E2"]["dose_slope_per_10ms"]
+    dmed = float(np.median(ue) - np.median(ul))
+    out = {"label": "exploratory, added after the R6 result was seen",
+           "median_umin_early": round(float(np.median(ue)), 2), "median_umin_1959_2022": round(float(np.median(ul)), 2),
+           "share_umin_above_minus4_early": round(float(np.mean(ue > -4)), 3),
+           "share_umin_above_minus4_1959_2022": round(float(np.mean(ul > -4)), 3),
+           "mean_T_anomaly_early_K": round(float(np.nanmean(Te)), 3), "mean_T_anomaly_1959_2022_K": round(float(np.nanmean(Tl)), 3),
+           "nam_proxy_days8_25_early_minus_free_sd": round(float(np.nanmean(nam_e) - nam_f.mean()), 3),
+           "era5_dose_K_per_10ms": dose,
+           "cooling_difference_explained_by_dose_K": round(float(-dose * dmed / 10.0), 3),
+           "n_early": len(early), "n_1959_2022": len(later)}
+    res["revision3"]["R6_out_of_sample_1940_1958"]["exploratory_diagnostics"] = out
+    (RESULTS / "shift_rule_forecast.json").write_text(json.dumps(res, indent=2), encoding="utf8", newline="\n")
+    print(json.dumps(out))
+
+
 if __name__ == "__main__":
+    if "--r6-diagnostics" in sys.argv:
+        r6_diagnostics()
+        sys.exit(0)
     if "--revision3" in sys.argv:
         revision3()
     else:
