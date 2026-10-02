@@ -17,7 +17,7 @@ CC BY 4.0): CESM2(WACCM6) 21-member forecasts, daily, 46 days.
   SECONDARY pairs, initialised after onset (1 and 8 Feb 2021): "ssfcst_01feb" vs
     "9to12kmRamp_updated" (01feb), "ssfcst_08feb" vs "9to12kmRamp_updated" (08feb);
     there the window is lead days 8-25 after initialisation (the imposed state is
-    the post-SSW stratosphere, as for SNAPSI s20190108).
+    the post-SSW stratosphere; SNAPSI windows, by contrast, are post-onset throughout).
   A different model, a different event and a different kind of intervention
   (initial-state replacement, not nudging) from SNAPSI.
 
@@ -45,9 +45,9 @@ READING, fixed now. With 21 members per arm the intervals will be wide; the
   class contrast in this event"; interval inside +-0.25 -> "unchanged within
   tolerance"; otherwise "not rejected; low power". The expected interval
   half-width for n = 21 under one Gaussian population is reported (simulation,
-  2,000 draws) so the reader can judge what could have been seen.
+  200 synthetic datasets of 200 resamples each) so the reader can judge what could have been seen.
 PRE-RUN CHECK on synthetic one-population arms (21 x 18 days, shift -0.7 sigma, 200
-  draws, before any data): mean Delta_b -0.075, s.d. 0.43; mean resid_T -0.045. So
+  draws, before any data; reproduced by --selftest, added after review): mean Delta_b -0.075, s.d. 0.43; mean resid_T -0.045. So
   this test can only refute changes larger than about 0.8 sigma, and carries a
   small negative finite-sample bias.
 CAVEATS stated now: one model; Cohen et al. (2023, Nat. Commun. 14, 3289) argue
@@ -171,7 +171,26 @@ def expected_halfwidth(rng, n=21, days=18):
     return round(float(np.median(hw)), 3)
 
 
+def selftest():
+    """The pre-run check: 200 synthetic pairs of one-population arms (seed 0)."""
+    rng = np.random.default_rng(0); out = []
+    for _ in range(200):
+        def arm(shift):
+            x = 5000 - 40 * (shift + rng.normal(0, 1, (21, 1)) + rng.normal(0, 1.5, (21, 18)))
+            return pd.DataFrame(x, index=[f"m{i:02d}" for i in range(21)])
+        Zs, Zc = arm(-0.7), arm(0.0)
+        T = lambda Z: pd.Series(-Z.mean(axis=1) / 40 * 0.5 + rng.normal(0, 1, 21), index=Z.index)  # noqa: E731
+        st, _ = pair_stats(Zs, Zc, T(Zs), T(Zc))
+        out.append((st["Delta_b"], st["resid_T"]))
+    o = np.array(out)
+    print(f"selftest: Delta_b mean {np.nanmean(o[:, 0]):+.3f} s.d. {np.nanstd(o[:, 0]):.2f}; "
+          f"resid_T mean {np.nanmean(o[:, 1]):+.3f}")
+    return 0
+
+
 def main():
+    if "--selftest" in sys.argv:
+        return selftest()
     if not DATA.exists():
         sys.exit("no reduced data: run 03_data_ingestion/acquire_davis2022.py")
     rng = np.random.default_rng(SEED)

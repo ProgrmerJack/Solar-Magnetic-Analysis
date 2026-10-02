@@ -30,9 +30,6 @@ one population.
   members, a registered test displaces the members back by the imposed effect. It is inconclusive by its own
   tolerance; an analysis added afterwards finds the departure to be what their narrower spread predicts (+0.03
   [−0.03, +0.06] standard deviations net of spread). The contrast does not grow with the size of the forcing.
-- **A third event, model and kind of intervention.** In public forecasts of the January 2021 SSW, removing the SSW
-  from the initial stratosphere changes the downward share by 10–33 percentage points. It leaves the contrast
-  without detectable change (registered; low power with 21 members per arm).
 - **A different hemisphere and event type.** In a Southern Hemisphere warming that also widened the distribution,
   the contrast grew by what one widened population produces (registered test).
 - **A variable the label does not use.** The classes' difference in northern-Eurasian temperature is reproduced
@@ -75,6 +72,8 @@ Data Table 1), and designs were committed before their runs. Results that went a
   stratosphere forces is not settled.
 - **Strongly forced ensembles.** The registered back-shift test there is inconclusive by its own tolerance; the
   spread analysis that explains it was added afterwards, and we say so.
+- **A third intervention.** The only public one (CESM2 forecasts of the January 2021 SSW, 21 members per arm) is
+  too small to decide; we report it as such.
 
 **Suggested reviewers.** [[AUTHORS: names to be chosen]] We suggest:
 - a stratosphere–troposphere dynamicist outside the SNAPSI consortium;
