@@ -206,6 +206,13 @@ def main():
             pt = float(np.nanmean([res["pairs"][p][k] for p in res["pairs"] if isinstance(res["pairs"][p], dict)]))
             res["R4_pooled_mean_of_pairs"][k] = {"mean": round(pt, 4), "ci95": ci(m), "reading": reading(ci(m), pt)}
         print("pooled", res["R4_pooled_mean_of_pairs"])
+    # POST HOC (added 2026-10-03 after the registered run, not part of the registration):
+    # does each pair's Delta_b follow its change in spread, C_noSSW * (sd_ratio - 1),
+    # as in snapsi_contrast_generality G1x?
+    res["post_hoc_spread"] = {"note": "post hoc, after the registered run", **{
+        p: {"Delta_b": v["Delta_b"], "spread_pred": round(v["C_nossw"] * (v["sd_ratio"] - 1), 4)}
+        for p, v in res["pairs"].items() if isinstance(v, dict)}}
+    print("post hoc spread:", res["post_hoc_spread"])
     res["expected_halfwidth_one_population_n21"] = expected_halfwidth(rng)
     print("expected half-width (one population, n = 21):", res["expected_halfwidth_one_population_n21"])
     (RESULTS / f"{NAME}.json").write_text(json.dumps(res, indent=2), encoding="utf8", newline="\n")

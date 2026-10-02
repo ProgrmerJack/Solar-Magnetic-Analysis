@@ -1,0 +1,189 @@
+{
+  "registered": "2026-10-02, committed before any member was downloaded",
+  "seed": 2005706143,
+  "n_boot": 10000,
+  "tolerance_sigma": 0.25,
+  "window_days": [
+    8,
+    25
+  ],
+  "t_window_days": [
+    8,
+    24
+  ],
+  "source": "Davis et al. 2022, Zenodo 10.5281/zenodo.5639805 (CC BY 4.0)",
+  "pairs": {
+    "04jan": {
+      "s": -0.3773,
+      "dw_rate_ssw": 0.5714,
+      "dw_rate_nossw": 0.4762,
+      "C_ssw": -2.146,
+      "C_nossw": -1.6109,
+      "C_backshift": -2.0852,
+      "CT_ssw": -0.7372,
+      "CT_null": -1.3655,
+      "sd_ratio": 1.3262,
+      "Delta_b": -0.4743,
+      "paired_diff": -0.5352,
+      "resid_T": 0.6282,
+      "n_members": [
+        21,
+        21
+      ],
+      "ci95": {
+        "Delta_b": [
+          -1.3125,
+          0.3457
+        ],
+        "paired_diff": [
+          -1.3505,
+          0.2453
+        ],
+        "resid_T": [
+          -0.4972,
+          1.4263
+        ],
+        "s": [
+          -1.0682,
+          0.3045
+        ],
+        "dw_rate_ssw": [
+          0.381,
+          0.7619
+        ],
+        "dw_rate_nossw": [
+          0.2857,
+          0.7143
+        ]
+      },
+      "reading_Delta_b": "not rejected; low power",
+      "reading_resid_T": "not rejected; low power"
+    },
+    "01feb": {
+      "s": 0.4584,
+      "dw_rate_ssw": 0.3333,
+      "dw_rate_nossw": 0.5714,
+      "C_ssw": -1.5471,
+      "C_nossw": -1.6797,
+      "C_backshift": -1.4814,
+      "CT_ssw": -1.6755,
+      "CT_null": -1.2505,
+      "sd_ratio": 0.8347,
+      "Delta_b": 0.1983,
+      "paired_diff": 0.1327,
+      "resid_T": -0.4251,
+      "n_members": [
+        21,
+        21
+      ],
+      "ci95": {
+        "Delta_b": [
+          -0.4146,
+          0.9232
+        ],
+        "paired_diff": [
+          -0.4849,
+          0.7384
+        ],
+        "resid_T": [
+          -2.2351,
+          0.5267
+        ],
+        "s": [
+          -0.101,
+          0.9898
+        ],
+        "dw_rate_ssw": [
+          0.1429,
+          0.5238
+        ],
+        "dw_rate_nossw": [
+          0.381,
+          0.7619
+        ]
+      },
+      "reading_Delta_b": "not rejected; low power",
+      "reading_resid_T": "not rejected; low power"
+    },
+    "08feb": {
+      "s": 0.4841,
+      "dw_rate_ssw": 0.1429,
+      "dw_rate_nossw": 0.4762,
+      "C_ssw": -1.0522,
+      "C_nossw": -1.5149,
+      "C_backshift": -0.988,
+      "CT_ssw": -1.3103,
+      "CT_null": -0.9979,
+      "sd_ratio": 0.616,
+      "Delta_b": 0.5269,
+      "paired_diff": 0.4627,
+      "resid_T": -0.3125,
+      "n_members": [
+        21,
+        21
+      ],
+      "ci95": {
+        "Delta_b": [
+          -0.1084,
+          1.2294
+        ],
+        "paired_diff": [
+          -0.16,
+          1.142
+        ],
+        "resid_T": [
+          -1.433,
+          1.0098
+        ],
+        "s": [
+          -0.01,
+          0.9889
+        ],
+        "dw_rate_ssw": [
+          0.0,
+          0.2857
+        ],
+        "dw_rate_nossw": [
+          0.2857,
+          0.7143
+        ]
+      },
+      "reading_Delta_b": "not rejected; low power",
+      "reading_resid_T": "not rejected; low power"
+    }
+  },
+  "R4_pooled_mean_of_pairs": {
+    "Delta_b": {
+      "mean": 0.0836,
+      "ci95": [
+        -0.3422,
+        0.5164
+      ],
+      "reading": "not rejected; low power"
+    },
+    "resid_T": {
+      "mean": -0.0365,
+      "ci95": [
+        -0.9393,
+        0.6958
+      ],
+      "reading": "not rejected; low power"
+    }
+  },
+  "post_hoc_spread": {
+    "note": "post hoc, after the registered run",
+    "04jan": {
+      "Delta_b": -0.4743,
+      "spread_pred": -0.5255
+    },
+    "01feb": {
+      "Delta_b": 0.1983,
+      "spread_pred": 0.2777
+    },
+    "08feb": {
+      "Delta_b": 0.5269,
+      "spread_pred": 0.5817
+    }
+  },
+  "expected_halfwidth_one_population_n21": 0.777
+}

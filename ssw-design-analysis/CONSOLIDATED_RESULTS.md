@@ -1261,6 +1261,15 @@ shifted control null −0.820; residual −0.086 [−0.240, +0.057] (≈ −0.15
 (paired −0.063 [−0.181, +0.046], 25 pairs). Other regions' residuals −0.10 to +0.04, all covering 0.
 G5 nudged-full (ECMWF, UKMO ×4 NH inits; Météo-France s20190108): registered, NOT RUN — needs a fresh CEDA token.
 
+### Z8 — third intervention, January 2021 (`davis2021_intervention_test.py`, 8_experiment; registered `738a422` before download)
+Davis et al. 2022 CESM2(WACCM6), 21 vs 21 members, standard vs scrambled-stratosphere initial state (Zenodo 5639805).
+Polar-cap Z1000 (>= 60.785N) NAM proxy, days 8–25 after 5 Jan onset (after init for Feb pairs), conditions 1–2.
+04jan (primary): s −0.38σ, DW 57% vs 48%, contrast −2.15 vs −1.61, Δ_b −0.47 [−1.31, +0.35]; T resid +0.63 [−0.50, +1.43].
+01feb: s +0.46, DW 33% vs 57%, Δ_b +0.20 [−0.41, +0.92]. 08feb: s +0.48, DW 14% vs 48%, Δ_b +0.53 [−0.11, +1.23].
+Pooled Δ_b +0.08 [−0.34, +0.52]; T −0.04 [−0.94, +0.70]. All "not rejected; low power" (one-population half-width 0.78σ
+per pair; pre-run synthetic bias −0.075, s.d. 0.43). POST HOC: Δ_b vs C_noSSW·(k−1): −0.47/−0.53, +0.20/+0.28, +0.53/+0.58.
+Rate moves 10–33 points in either direction; contrast change not detected. Caveat: Cohen et al. 2023 Matters Arising.
+
 ### Z7 — prospective test (`prospective_next_ssw.py`, 9_literature; registered `d2b54a8`, window amended to 2036 before any onset)
 Prediction table for every onset day 1 Nov–31 Mar committed; shift nam_1000 −0.635, nam_150 −0.945, N-Eurasian T days
 8–24 −1.54 K; constant rate 0.692; T trend 0.037 K/yr. P(DW) shifted 0.71–0.84 vs climatology 0.24–0.44.

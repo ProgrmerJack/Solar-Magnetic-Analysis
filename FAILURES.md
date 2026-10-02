@@ -262,3 +262,8 @@ Rule: before changing how external data are anchored or filtered, read the produ
 Tried: days 8-52 temperature windows by row offset in a November-April-only file (criterion_regional_contrast t_window).
 Failed: windows of onsets after ~9 March ran across the 30 April -> 1 November gap; five events and their null candidates were wrong (secondary target only).
 Rule: select windows by date (reindex a date range) and require completeness; never by row offset unless the index is verified contiguous.
+
+## 2026-10-03 — Parallel downloads with no network timeout, and NetCDF opened from threads
+Tried: acquire_davis2022.py with 6 threads, `urllib.request.urlretrieve` and `xr.open_dataset` inside each thread.
+Failed: six Zenodo transfers stalled at 20:27 and the process waited 5 h with no error (no socket timeout); after a restart it died with exit 139 (segfault) before reducing a member, because HDF5 is not thread-safe and the earlier "silent" stop was the same crash hidden behind `| grep` (exit 0 is grep's).
+Rule: set `socket.setdefaulttimeout` for every bulk download; open NetCDF/HDF5 under one lock (download in parallel, reduce serially); record the Python exit status explicitly when piping its output.

@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-02T14:27:43+00:00",
+ "generated": "2026-10-02T22:00:24+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 178,
-  "results": 91
+  "scripts": 180,
+  "results": 92
  },
  "scripts": [
   {
@@ -34,6 +34,20 @@
    "flags": [],
    "filenames_mentioned": [
     "cmip6_ensemble_manifest.csv"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_davis2022.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "CESM2(WACCM6) forecasts of the January 2021 SSW with and without the SSW in the initial stratosphere (Davis et al. 2022, Nat. Commun. 13, 1136), reduced for 07_physical_decomposition/davis2021_intervention_test.py (registered 738a422,",
+   "loc": 127,
+   "modified": "2026-10-02 21:02",
+   "sha256_16": "99ab55b3cdc06c3c",
+   "flags": [],
+   "filenames_mentioned": [
+    "davis2022_reduced.parquet"
    ],
    "filename_prefixes": []
   },
@@ -108,9 +122,9 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "ERA5 / ERA5T (about five days behind real time) from the Copernicus CDS, reduced to the series the prospective test needs (08_literature_audit/prospective_next_ssw.py): u10_60N      zonal-mean u at 10 hPa, 60N, mean of 00/06/12/18 UTC (m/s) -- onset",
-   "loc": 167,
-   "modified": "2026-10-02 12:03",
-   "sha256_16": "79a1434b26204291",
+   "loc": 169,
+   "modified": "2026-10-02 14:38",
+   "sha256_16": "77f2c5978fc76014",
    "flags": [],
    "filenames_mentioned": [
     "era5_realtime_cds.parquet",
@@ -227,13 +241,14 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "Downloads the SNAPSI surface field and reduces it to a polar-cap index on the fly, so the CAUSAL stratosphere-to-surface effect can be measured by experimental design rather than inferred from composites.",
-   "loc": 521,
-   "modified": "2026-09-25 07:00",
-   "sha256_16": "852b64c94c429c67",
+   "loc": 536,
+   "modified": "2026-10-02 14:30",
+   "sha256_16": "e14152431501099a",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_manifest.csv",
     "snapsi_polarcap_psl.parquet",
+    "snapsi_polarcap_psl_full.parquet",
     "snapsi_time_origin.json"
    ],
    "filename_prefixes": []
@@ -863,6 +878,20 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/07_physical_decomposition/davis2021_intervention_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "A THIRD INDEPENDENT INTERVENTION: DOES REMOVING THE JANUARY 2021 SSW FROM THE INITIAL STRATOSPHERE CHANGE THE DW-NDW CONTRAST, OR ONLY THE DW RATE? Registered 2026-10-02, committed BEFORE any member of these ensembles was",
+   "loc": 225,
+   "modified": "2026-10-02 21:58",
+   "sha256_16": "9302d511683c3550",
+   "flags": [],
+   "filenames_mentioned": [
+    "davis2022_reduced.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/07_physical_decomposition/design_sensitivity.py",
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
@@ -1376,9 +1405,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "DOES AN IMPOSED SSW LEAVE THE CLASS STRUCTURE UNCHANGED WHERE THE FORCING IS STRONGEST, IN A THIRD EVENT, AND FOR A VARIABLE NOT USED TO CLASSIFY? Registered 2026-10-02 (revision 5), committed before any of these quantities was",
-   "loc": 410,
-   "modified": "2026-10-02 14:22",
-   "sha256_16": "4085cb635b092c48",
+   "loc": 420,
+   "modified": "2026-10-02 14:30",
+   "sha256_16": "bed953febc8febff",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_selection_test.json"
@@ -1630,9 +1659,9 @@
    "tree": "ssw-design-analysis",
    "stage": "08_literature_audit",
    "title": "A REGISTERED PROSPECTIVE TEST OF THE SHIFTED NULL ON THE NEXT SSWs.",
-   "loc": 327,
-   "modified": "2026-10-02 14:26",
-   "sha256_16": "f2385f7cb8287fb9",
+   "loc": 392,
+   "modified": "2026-10-02 14:39",
+   "sha256_16": "3dfc9ed0151030fa",
    "flags": [],
    "filenames_mentioned": [
     "era5_realtime_cds.parquet",
@@ -1755,8 +1784,8 @@
    "stage": "09_figures",
    "title": "figED10_generality.py -- Extended Data Fig.: the class structure where the forcing is strongest, in the Southern Hemisphere warming, and for regional temperature.",
    "loc": 116,
-   "modified": "2026-10-02 14:24",
-   "sha256_16": "b08edda123dc95dd",
+   "modified": "2026-10-02 14:40",
+   "sha256_16": "9d981f423fffea89",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_contrast_generality.json"
@@ -1909,15 +1938,16 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 356,
-   "modified": "2026-10-02 14:27",
-   "sha256_16": "9f48ad9898d8f438",
+   "loc": 363,
+   "modified": "2026-10-02 22:00",
+   "sha256_16": "5877d331cf4cf15a",
    "flags": [],
    "filenames_mentioned": [
     "class_model_comparison.json",
     "criterion_regional_contrast.json",
     "criterion_sweep.json",
     "criterion_transport_cv.json",
+    "davis2021_intervention_test.json",
     "era5_regional_test.json",
     "forced_variance_ceiling.json",
     "forecast_value_robustness.json",
@@ -5729,6 +5759,76 @@
    ]
   },
   {
+   "path": "results/current/8_experiment/davis2021_intervention_test.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 3780,
+   "modified": "2026-10-02 21:58",
+   "sha256_16": "22d568fa412c5704",
+   "producers": [],
+   "state": "ORPHAN",
+   "detail": "no script writes this",
+   "flags": [],
+   "producer_sha256": {},
+   "verdicts": [
+    {
+     "key": "pairs.04jan.reading_Delta_b",
+     "text": "not rejected; low power"
+    },
+    {
+     "key": "pairs.04jan.reading_resid_T",
+     "text": "not rejected; low power"
+    },
+    {
+     "key": "pairs.01feb.reading_Delta_b",
+     "text": "not rejected; low power"
+    },
+    {
+     "key": "pairs.01feb.reading_resid_T",
+     "text": "not rejected; low power"
+    },
+    {
+     "key": "pairs.08feb.reading_Delta_b",
+     "text": "not rejected; low power"
+    },
+    {
+     "key": "pairs.08feb.reading_resid_T",
+     "text": "not rejected; low power"
+    },
+    {
+     "key": "R4_pooled_mean_of_pairs.Delta_b.reading",
+     "text": "not rejected; low power"
+    },
+    {
+     "key": "R4_pooled_mean_of_pairs.resid_T.reading",
+     "text": "not rejected; low power"
+    },
+    {
+     "key": "post_hoc_spread.note",
+     "text": "post hoc, after the registered run"
+    }
+   ],
+   "counts": {
+    "n_boot": [
+     10000
+    ]
+   },
+   "top_level_keys": [
+    "registered",
+    "seed",
+    "n_boot",
+    "tolerance_sigma",
+    "window_days",
+    "t_window_days",
+    "source",
+    "pairs",
+    "R4_pooled_mean_of_pairs",
+    "post_hoc_spread",
+    "expected_halfwidth_one_population_n21"
+   ]
+  },
+  {
    "path": "results/current/8_experiment/snapsi_archetype_test.json",
    "tree": "current",
    "stage": "8_experiment",
@@ -6149,7 +6249,7 @@
    "detail": "producer changed: ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "4085cb635b092c48",
+    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "bed953febc8febff",
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "6626a155b09d3623"
    },
    "verdicts": [
@@ -6422,9 +6522,9 @@
    "tree": "current",
    "stage": "9_literature",
    "readable": true,
-   "bytes": 57208,
-   "modified": "2026-10-02 14:26",
-   "sha256_16": "6e5d53b9f1cbb872",
+   "bytes": 57352,
+   "modified": "2026-10-02 14:52",
+   "sha256_16": "a8f50f851b1a0c35",
    "producers": [],
    "state": "ORPHAN",
    "detail": "no script writes this",
@@ -6434,6 +6534,12 @@
    "counts": {
     "n_boot": [
      10000
+    ],
+    "n_events": [
+     43
+    ],
+    "n_winters": [
+     67
     ]
    },
    "top_level_keys": [
@@ -6449,6 +6555,7 @@
     "constant_rate",
     "beta_T_K_per_year",
     "predictions",
+    "odds_five_events",
     "consistency_gate",
     "detected"
    ]
