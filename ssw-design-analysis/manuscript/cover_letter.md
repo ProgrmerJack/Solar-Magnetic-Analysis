@@ -55,7 +55,7 @@ absent; we show that the realised labels cannot identify them.
   - we reproduce the observed rate and contrast with one shifted population;
   - we bound how much events differ;
   - we show the result does not depend on how the criterion is set;
-  - we show the warming threshold itself is continuous in observations.
+  - we find no resolved step at the warming threshold in observations.
 
 **What we report against our own expectations.** Every test is listed with its registration status, and
 designs were committed before their data. Four results go against our expectations, and the manuscript

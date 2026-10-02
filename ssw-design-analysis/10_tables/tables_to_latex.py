@@ -73,7 +73,7 @@ def _plain(t):
     for k in sorted(SYM, key=len, reverse=True):
         t = t.replace(k, SYM[k])
     t = re.sub(r"(?<![\w\\$])([prnqzG]) (=|<|>|\$\\le\$|\$\\ge\$) (\$?[-+]?\d[\d.,]*\$?)",
-               lambda m: "$" + m.group(1) + " " + m.group(2).strip("$") + " " + m.group(3).strip("$") + "$", t)
+               lambda m: "$" + m.group(1) + " " + m.group(2).strip("$") + " " + m.group(3).strip("$").replace(",", "{,}") + "$", t)
     t = re.sub(r"(\d|\$) (hPa|K|Pa|km|gpm)\b", r"\1\\,\2", t)
     t = t.replace("$$", "")                                                       # adjacent inline math
     return t
