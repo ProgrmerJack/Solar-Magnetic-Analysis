@@ -203,7 +203,7 @@ def load_t(c):
     return an
 
 
-def e2(p, t, u, rng, skill):
+def e2(p, t, u, rng, skill, far):
     """Operational comparison: catalogued SSWs 1998-2021, starts 0-7 d after onset."""
     from build_catalogue import load_catalogue
     cat = load_catalogue("primary")
@@ -255,9 +255,9 @@ def e2(p, t, u, rng, skill):
                     xi = Xf[cols].loc[s0]
                     if xi.notna().all():
                         rec["F3"].append(gcrps(float(np.r_[1.0, xi.values] @ bk), sk, yo))
-                    far = np.ones(len(u), bool)
                     dd = np.abs(u.index.dayofyear.values - s0.dayofyear); dd = np.minimum(dd, 366 - dd)
-                    clim = yk.values[train.values & ndjfm & (dd <= 15) & yk.notna().values]
+                    # event-free, as the design and E1 (fix 2026-10-02: the first run omitted far)
+                    clim = yk.values[train.values & ndjfm & far & (dd <= 15) & yk.notna().values]
                     rec["F0"].append(ecrps(clim, yo))
             if rec["raw"]:
                 rows.append({"onset": rec["onset"], "winter": w, **{k: float(np.mean(rec[k])) for k in ("raw", "cal", "F3", "F0") if rec[k]},
@@ -288,7 +288,10 @@ def main():
     for f in sorted(Wm.RAW.glob("*_zm.nc")):
         c = Wm.prepare_member(f)
         if c is not None:
-            Ni.append(Wm.C6.anom(c["am"], c["on"], c["cl"], WIN))
+            # same units as the observed regressor (event-free Nov-Mar s.d.; fix 2026-10-02)
+            am = c["am"]; msk = Wm.C6.influence_mask(am.index, c["on"])
+            sdm = float(am[np.isin(am.index.month, (11, 12, 1, 2, 3)) & ~msk].std())
+            Ni.append(Wm.C6.anom(c["am"], c["on"], c["cl"], WIN) / sdm)
     Ni = np.concatenate(Ni); Ni = Ni[np.isfinite(Ni)]
     cols = ["u0", "du", "umin", "nam5", "t5", "s", "c"]
     rows = []
@@ -360,7 +363,7 @@ def main():
     res["decision"] = "forecasting headline kept" if ok else "forecasting reported as a limitation (decision rule not met)"
     f4 = res["E1_crps_skill"]["F4_vs_F3"]["all"]
     res["ssw_adds_beyond_state"] = bool(f4["ci95"][0] > 0)
-    res["E2"] = e2(p, t, u, rng, skill)
+    res["E2"] = e2(p, t, u, rng, skill, far)
     for k in ("E1_mean_crps", "E1_crps_skill", "E1_brier", "E1_cold_count", "decision", "ssw_adds_beyond_state", "E2"):
         print(k, json.dumps(res[k]), flush=True)
     RESULTS.mkdir(parents=True, exist_ok=True)

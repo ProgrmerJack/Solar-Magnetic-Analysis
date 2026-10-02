@@ -77,12 +77,30 @@ def window(ds, var, lev, onset, a, b):
 
 
 def main():
+    res = {"corrected_onset": run("crossing"), "registered_literal": run("first_negative"),
+           "note": ("the registered rule 'first time the ensemble-mean wind is negative' returns the start of the run "
+                    "for ensembles already reversed at t = 0; corrected after the code review (2026-10-02) to the first "
+                    "westerly-to-easterly crossing, those ensembles reported as not anchored")}
+    print(json.dumps({k: {kk: vv for kk, vv in v.items() if kk != "events"} if isinstance(v, dict) else v for k, v in res.items()}, indent=1))
+    RESULTS.mkdir(parents=True, exist_ok=True)
+    (RESULTS / "icon_event_heterogeneity.json").write_text(json.dumps(res, indent=2), encoding="utf8", newline="\n")
+    print("Saved -> icon_event_heterogeneity.json")
+
+
+def run(rule):
     rng = np.random.default_rng(SEED)
     rows, excl = [], {}
     for f in sorted(RAW.glob("indices_*.nc")):
         ds = xr.open_dataset(f)
         u = ds["u10_60_mean"].values; t = ds["time_6h"].values
-        neg = np.flatnonzero(u < 0)
+        if rule == "crossing":
+            cr = np.flatnonzero((u[1:] < 0) & (u[:-1] >= 0)) + 1
+            if u[0] < 0:
+                excl[f.stem] = f"ensemble-mean wind already negative at the start ({u[0]:.1f} m/s): no onset in record"
+                continue
+            neg = cr
+        else:
+            neg = np.flatnonzero(u < 0)
         if len(neg) == 0:
             excl[f.stem] = "ensemble-mean u(10 hPa, 60N) never negative"
             continue
@@ -134,10 +152,7 @@ def main():
                                       "between_variance_upper": round(float(v2), 4),
                                       "share_lower": round(float(l2 / np.mean(s2 ** 2)), 4),
                                       "share_upper": round(float(v2 / np.mean(s2 ** 2)), 4)}
-    print(json.dumps({k: v for k, v in res.items() if k != "events"}, indent=1), flush=True)
-    RESULTS.mkdir(parents=True, exist_ok=True)
-    (RESULTS / "icon_event_heterogeneity.json").write_text(json.dumps(res, indent=2), encoding="utf8", newline="\n")
-    print("Saved -> icon_event_heterogeneity.json")
+    return res
 
 
 if __name__ == "__main__":

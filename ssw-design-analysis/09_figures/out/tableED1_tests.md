@@ -56,13 +56,13 @@
 | V-R2 | shift rule, 2.5th percentile, N Eurasia: binomial under rule | revision-3 secondary | committed before outcomes | add7ba9 | 4/39 vs 0.1786 | 0.295 |  |
 | V-R3 | shift rule, 2.5th percentile, high-latitude Europe: binomial under rule (rule rejected) | revision-3 secondary | committed before outcomes | add7ba9 | 0/39 vs 0.201 | 0.0002 |  |
 | V-R4 | shift rule, days 15-28, N Eurasia, q 0.10: binomial under rule | revision-3 secondary | committed before outcomes | add7ba9 | 6/39 vs 0.2724 | 0.107 |  |
-| V-R5 | second rule (CMIP6 x ERA5 event-free), N Eurasia q 0.10: binomial under rule | revision-3 secondary | committed before outcomes | add7ba9 | 10/39 vs 0.1944 | 0.3144 |  |
+| V-R5 | second rule (CMIP6 x ERA5 event-free), N Eurasia q 0.10: binomial under rule | revision-3 secondary | committed before outcomes | add7ba9 | 10/39 vs 0.1843 | 0.2985 |  |
 | V-R6 | shift rule OUT OF SAMPLE: 12 ERA5 SSWs 1941-58, N Eurasia q 0.10 (rule rejected) | revision-3 primary | committed before outcomes | add7ba9 | 0/12 vs 0.3243 | 0.0122 |  |
-| U-ERA5 | AO step at reversal, ERA5 winds 1940-2025 (Holm over 4 outcomes) | revision-3 secondary | committed before data | add7ba9 | -0.7342 [-1.5063, -0.0599] | 0.1136 |  |
+| U-ERA5 | AO step at reversal, ERA5 winds 1940-2025 (Holm over 4 outcomes) | revision-3 secondary | committed before data | add7ba9 | -0.5364 [-1.2269, 0.093] | 0.4008 |  |
 | N-shift | within-start ensemble comparison: shift, reversing minus non-reversing members (8-25 d, 40 starts) | revision-3 primary | committed before computation | be804a7 | -0.0535 [-0.2864, 0.1671] |  |  |
 | N-var | within-start ensemble comparison: variance ratio (no widening) | revision-3 primary | committed before computation | be804a7 | 0.974 [0.7317, 1.3602] |  |  |
 | N-contrast | within-start ensemble comparison: class contrast difference | revision-3 primary | committed before computation | be804a7 | -0.0036 [-0.3335, 0.2963] |  |  |
-| N-step | within-ensemble step at reversal, initial state fixed (11,481 members) | revision-3 primary | committed before computation | be804a7 | -0.0534 [-0.1921, 0.1008] | 0.486 |  |
+| N-step | within-ensemble step at reversal, initial state fixed (11,481 members) | revision-3 primary | committed before computation | be804a7 | 0.0439 [-0.1631, 0.2994] | 0.652 |  |
 | RQ-A | SNAPSI residual quantiles, polar-cap NAM, pooled: inside declared tolerance (+-0.25 sigma, +-0.05)? | revision-3 primary | committed before run | 113c7d3 | approximate translation |  |  |
 | RQ-T | SNAPSI residual quantiles, N-Eurasian temperature, pooled | revision-3 secondary | committed before run | 113c7d3 | unresolved |  |  |
 | TCV | shifted null, whole-winter cross-validation: observed vs expected downward count (retrospective) | revision-3 primary | committed before run | bbfeb9c | 27 vs 29.21 | 0.5156 |  |
@@ -70,5 +70,5 @@
 | SF-F1 | state forecast vs fixed SNAPSI rule, CRPS skill | revision-3 primary | committed before run | 4f5c53a | 0.103 [-0.0157, 0.2117] |  |  |
 | SF-SSW | SSW indicator beyond the continuous state, CRPS skill | revision-3 primary | committed before run | 4f5c53a | -0.0081 [-0.0184, 0.0028] |  |  |
 | SF-ops | calibrated operational ensembles vs state forecast, 17 events, CRPS skill | revision-3 secondary | committed before run | 4f5c53a | state vs calibrated -0.4601 [-0.836, -0.0756] |  |  |
-| ICON | 18 ICON event ensembles: between-event variance of mean responses, days 8-25 (bounds) | revision-3 secondary | committed before values read | 6ad6e8a | 0.4145-0.4277 |  |  |
+| ICON | ICON event ensembles (12 of 18 with an onset in the run): between-event variance of mean responses, days 8-25 (bounds) | revision-3 secondary | committed before values read; onset rule corrected after code review | 6ad6e8a | 0.5879-0.6015 |  |  |
 | S-dose | two regimes vs continuous with the realised 100 hPa dose (G, p vs ordinary days); inconclusive | revision-3 primary | committed before run | 7d8ed6f | G -0.0146 vs -0.01094; power vs planted regimes 0.08 (post hoc): underpowered | 0.92 |  |

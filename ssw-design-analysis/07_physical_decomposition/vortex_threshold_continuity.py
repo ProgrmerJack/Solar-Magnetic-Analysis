@@ -399,6 +399,11 @@ def era5_outcomes():
     arco = pd.concat([psl("era5_psl_cap_00utc_arco.parquet"), psl("era5_psl_cap_00utc_arco_late.parquet")]) - off_p
     early = psl("era5_psl_cap_00utc_arco_early.parquet") - off_p
     p = pd.concat([early[early.index < wb.index.min()], wb, arco[arco.index > wb.index.max()]]).sort_index()
+    # September-October (fix 2026-10-02 after the code review: without them the
+    # pre-deceleration covariate was missing for early-winter maxima and 32 units were
+    # silently dropped)
+    aut = [psl("era5_psl_cap_6h_autumn.parquet"), psl("era5_psl_cap_00utc_arco_autumn.parquet") - off_p]
+    p = pd.concat([p] + aut).sort_index()
     p = p[~p.index.duplicated()]
     pa = _smooth_doy(p, (1940, 2025))
     sd = float(pa[pa.index.month.isin([11, 12, 1, 2, 3])].std())
@@ -462,6 +467,8 @@ def era5_section():
             o = {}
             for y in ys:
                 o[y] = {"E1_E2": dose_and_jump(sub, y, rng), "E3_mse": rd_local(sub, y),
+                        "E3_fixed": {str(h): rd_local(sub, y, h=h) for h in BWS},
+                        "n_with_outcome_and_covariate": int(sub.dropna(subset=[y, "plac"]).shape[0]),
                         "E4": [local_randomisation(sub, y, w, rng) for w in (2.5, 5.0)],
                         "donut": {str(dn): rd_local(sub, y, sub=sub[np.abs(sub.X) >= dn]) for dn in (1.0, 2.0)},
                         "placebo_cutoffs": {str(c): rd_local(sub, y, cutoff=c, sub=sub[(sub.X < 0) if c < 0 else (sub.X >= 0)])
@@ -470,8 +477,11 @@ def era5_section():
             o["E2_holm"] = dict(zip(ys, [round(p, 4) for p in holm([o[y]["E1_E2"]["jump_p_two_sided"] for y in ys])]))
             o["placebo_cutoffs_p_lt_0.05"] = int(sum(1 for y in ys for v in o[y]["placebo_cutoffs"].values()
                                                      if isinstance(v, dict) and v.get("rbc_p", 1) < 0.05))
+            doy = sub["date"].dt.dayofyear
             o["falsification"] = {"placebo_outcome_pre": rd_local(sub.assign(pl=sub["plac"]), "pl"),
-                                  "balance_drop": rd_local(sub.assign(dr=sub["drop"]), "dr")}
+                                  "balance_drop": rd_local(sub.assign(dr=sub["drop"]), "dr"),
+                                  "balance_doy_sin": rd_local(sub.assign(ds=np.sin(2 * np.pi * doy / 365.25)), "ds"),
+                                  "balance_era": rd_local(sub.assign(er=(sub["winter"] >= 1979).astype(float)), "er")}
             out[nm] = o
     finally:
         YEAR_TERM = False

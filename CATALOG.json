@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-02T08:13:23+00:00",
+ "generated": "2026-10-02T08:39:19+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -57,12 +57,13 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "ERA5 observations for the held-out 2023-2024 SSWs (plan approved 2026-09-30; design in 07_physical_decomposition/s2s_heldout_test.py), which the WeatherBench 2 copy used everywhere else does not reach (it ends 2023-01-10; the polar-cap",
-   "loc": 158,
-   "modified": "2026-10-01 10:40",
-   "sha256_16": "258573a8928c0e16",
+   "loc": 178,
+   "modified": "2026-10-02 08:19",
+   "sha256_16": "a468b5ddf9acd7d3",
    "flags": [],
    "filenames_mentioned": [
     "era5_psl_cap_00utc_arco.parquet",
+    "era5_psl_cap_00utc_arco_autumn.parquet",
     "era5_psl_cap_00utc_arco_early.parquet",
     "era5_psl_cap_00utc_arco_late.parquet",
     "era5_t2m_regions_daily_arco.parquet",
@@ -90,12 +91,13 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "Observed polar-cap mean sea-level pressure, reduced EXACTLY as the SNAPSI members are, so the observed outcome of each SNAPSI event can be placed inside its own ensemble.",
-   "loc": 172,
-   "modified": "2026-10-01 10:24",
-   "sha256_16": "e072f27e7d81d9c9",
+   "loc": 177,
+   "modified": "2026-10-02 08:19",
+   "sha256_16": "5d52d6c509fbda10",
    "flags": [],
    "filenames_mentioned": [
     "era5_psl_cap_6h.parquet",
+    "era5_psl_cap_6h_autumn.parquet",
     "era5_psl_cap_6h_full.parquet",
     "era5_z100_cap_00utc.parquet"
    ],
@@ -983,9 +985,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "HOW MUCH DO EVENT-CONDITIONED MEAN RESPONSES DIFFER? A SUMMARY-LEVEL COMPARISON WITH THE 18 ICON SPIN-OFF ENSEMBLES OF LOEFFEL ET AL. (2026).",
-   "loc": 145,
-   "modified": "2026-10-02 05:52",
-   "sha256_16": "1d86da8c9b873d2d",
+   "loc": 160,
+   "modified": "2026-10-02 08:15",
+   "sha256_16": "edf76cd0869ceeb9",
    "flags": [],
    "filenames_mentioned": [
     "icon_event_heterogeneity.json"
@@ -1218,9 +1220,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "A NATURAL EXPERIMENT INSIDE OPERATIONAL ENSEMBLES: MEMBERS THAT DO AND DO NOT REVERSE THE VORTEX FROM THE SAME INITIAL STATE.",
-   "loc": 293,
-   "modified": "2026-10-02 06:24",
-   "sha256_16": "35c063e6e2b5fcb3",
+   "loc": 296,
+   "modified": "2026-10-02 08:14",
+   "sha256_16": "bc168e1bd7ba5af6",
    "flags": [],
    "filenames_mentioned": [
     "s2s_member_experiment.json"
@@ -1291,9 +1293,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "A COLD-RISK FORECAST FROM THE SHIFT ALONE: DOES A MODEL-DERIVED PROBABILITY VERIFY AGAINST OBSERVED SSWs, AND WHAT IS IT WORTH TO A DECISION-MAKER? Plan approved 2026-10-01. Written before the verification below was run.",
-   "loc": 563,
-   "modified": "2026-10-02 06:24",
-   "sha256_16": "4255941179faf5b9",
+   "loc": 569,
+   "modified": "2026-10-02 08:14",
+   "sha256_16": "0347a686764afd50",
    "flags": [],
    "filenames_mentioned": [
     "era5_nam_daily.parquet",
@@ -1403,9 +1405,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "IS THE IMPOSED SSW A TRANSLATION? RESIDUAL QUANTILES OF NUDGED AGAINST A SHIFTED CONTROL, PER MODEL AND EVENT, AGAINST A DECLARED TOLERANCE.",
-   "loc": 183,
-   "modified": "2026-10-02 05:44",
-   "sha256_16": "2577d04fe994596d",
+   "loc": 186,
+   "modified": "2026-10-02 08:16",
+   "sha256_16": "0f480469891f2c1f",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_residual_quantiles.json"
@@ -1431,9 +1433,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "AN ISSUE-TIME FORECAST CONDITIONED ON THE CONTINUOUS STATE, EVALUATED AGAINST CLIMATOLOGY, THE FIXED SSW RULES AND OPERATIONAL ENSEMBLES.",
-   "loc": 373,
-   "modified": "2026-10-02 05:56",
-   "sha256_16": "5a1d81b5c10c8e43",
+   "loc": 376,
+   "modified": "2026-10-02 08:15",
+   "sha256_16": "623ec5e227bc64af",
    "flags": [],
    "filenames_mentioned": [
     "era5_psl_cap_00utc_arco.parquet",
@@ -1468,16 +1470,18 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "IS AN SSW ITSELF A THRESHOLD ON A CONTINUUM? A MODEL-FREE TEST AT THE REVERSAL.",
-   "loc": 488,
-   "modified": "2026-10-01 10:30",
-   "sha256_16": "6de754de115dc126",
+   "loc": 498,
+   "modified": "2026-10-02 08:19",
+   "sha256_16": "715551ce3b7ec6bb",
    "flags": [],
    "filenames_mentioned": [
     "ao_daily_cpc.txt",
     "era5_nam_daily.parquet",
     "era5_psl_cap_00utc_arco.parquet",
+    "era5_psl_cap_00utc_arco_autumn.parquet",
     "era5_psl_cap_00utc_arco_early.parquet",
     "era5_psl_cap_00utc_arco_late.parquet",
+    "era5_psl_cap_6h_autumn.parquet",
     "era5_psl_cap_6h_full.parquet",
     "era5_t2m_regions_daily_arco_early.parquet",
     "era5_t2m_regions_daily_arco_late.parquet",
@@ -1522,9 +1526,9 @@
    "tree": "ssw-design-analysis",
    "stage": "08_literature_audit",
    "title": "DOES A SHIFT ESTIMATED WITHOUT AN EVENT REPRODUCE THAT EVENT'S OUTCOME AND LABEL? WHOLE-WINTER CROSS-VALIDATION OF THE SHIFTED-EVENT-FREE NULL (ERA5).",
-   "loc": 165,
-   "modified": "2026-10-02 05:47",
-   "sha256_16": "5c4075d19a83a3eb",
+   "loc": 175,
+   "modified": "2026-10-02 08:15",
+   "sha256_16": "803cba21ec2099c3",
    "flags": [],
    "filenames_mentioned": [
     "criterion_transport_cv.json"
@@ -1818,8 +1822,8 @@
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
    "loc": 329,
-   "modified": "2026-10-02 06:02",
-   "sha256_16": "8bec9f38a4a43b24",
+   "modified": "2026-10-02 08:35",
+   "sha256_16": "c5f9ded9b55eda49",
    "flags": [],
    "filenames_mentioned": [
     "class_model_comparison.json",
@@ -2688,7 +2692,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-02 06:02",
+   "modified": "2026-10-02 08:37",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -4212,9 +4216,9 @@
    "tree": "current",
    "stage": "5_mechanism",
    "readable": true,
-   "bytes": 5392,
-   "modified": "2026-10-02 05:52",
-   "sha256_16": "125ca6bd0cd871b4",
+   "bytes": 11065,
+   "modified": "2026-10-02 08:15",
+   "sha256_16": "d935dffc2be96295",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/icon_event_heterogeneity.py"
    ],
@@ -4222,31 +4226,27 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/icon_event_heterogeneity.py": "1d86da8c9b873d2d"
+    "ssw-design-analysis/07_physical_decomposition/icon_event_heterogeneity.py": "edf76cd0869ceeb9"
    },
-   "verdicts": [],
+   "verdicts": [
+    {
+     "key": "note",
+     "text": "the registered rule 'first time the ensemble-mean wind is negative' returns the start of the run for ensembles already reversed at t = 0; corrected after the code review (2026-10-02) to the first westerly-to-easterly crossing, those ensembles reported as not anchored"
+    }
+   ],
    "counts": {
     "n_boot": [
      2000
     ],
     "n_events": [
+     12,
      18
     ]
    },
    "top_level_keys": [
-    "plan_approved",
-    "seed",
-    "n_boot",
-    "n_members_per_ensemble",
-    "n_events",
-    "excluded",
-    "events",
-    "M1_between_event_sd_of_means",
-    "M2_between_event_variance",
-    "M3_share_of_within_ensemble_variance",
-    "M4_corr_week2_100hPa_vs_outcome",
-    "mean_response_days8_25",
-    "secondary_days26_42"
+    "corrected_onset",
+    "registered_literal",
+    "note"
    ]
   },
   {
@@ -4377,9 +4377,9 @@
    "tree": "current",
    "stage": "5_mechanism",
    "readable": true,
-   "bytes": 3679,
-   "modified": "2026-10-02 06:24",
-   "sha256_16": "a1b981b87c08e992",
+   "bytes": 3677,
+   "modified": "2026-10-02 08:14",
+   "sha256_16": "ee4b2ed6c7281fae",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/s2s_member_experiment.py"
    ],
@@ -4387,7 +4387,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/s2s_member_experiment.py": "35c063e6e2b5fcb3"
+    "ssw-design-analysis/07_physical_decomposition/s2s_member_experiment.py": "bc168e1bd7ba5af6"
    },
    "verdicts": [],
    "counts": {
@@ -4429,9 +4429,9 @@
    "tree": "current",
    "stage": "5_mechanism",
    "readable": true,
-   "bytes": 94352,
-   "modified": "2026-10-01 21:31",
-   "sha256_16": "733c15819a4b6e5a",
+   "bytes": 108256,
+   "modified": "2026-10-02 08:35",
+   "sha256_16": "7557e877d0fb2645",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py",
     "ssw-design-analysis/07_physical_decomposition/vortex_threshold_continuity.py"
@@ -4440,8 +4440,8 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "4255941179faf5b9",
-    "ssw-design-analysis/07_physical_decomposition/vortex_threshold_continuity.py": "6de754de115dc126"
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "0347a686764afd50",
+    "ssw-design-analysis/07_physical_decomposition/vortex_threshold_continuity.py": "715551ce3b7ec6bb"
    },
    "verdicts": [],
    "counts": {
@@ -5047,7 +5047,7 @@
    "flags": [],
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/s2s_heldout_test.py": "d57639ff35f1972b",
-    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "4255941179faf5b9"
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "0347a686764afd50"
    },
    "verdicts": [
     {
@@ -5301,9 +5301,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 142239,
-   "modified": "2026-10-02 06:24",
-   "sha256_16": "b96a30299a8f98c8",
+   "bytes": 142309,
+   "modified": "2026-10-02 08:20",
+   "sha256_16": "654eb427d5a20560",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py"
    ],
@@ -5311,7 +5311,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "4255941179faf5b9"
+    "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "0347a686764afd50"
    },
    "verdicts": [],
    "counts": {
@@ -5342,9 +5342,9 @@
    "tree": "current",
    "stage": "6_predictability",
    "readable": true,
-   "bytes": 29548,
-   "modified": "2026-10-02 05:59",
-   "sha256_16": "6ffab990cab73924",
+   "bytes": 29542,
+   "modified": "2026-10-02 08:22",
+   "sha256_16": "f74018a5a8914fbf",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/state_forecast.py"
    ],
@@ -5352,7 +5352,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/state_forecast.py": "5a1d81b5c10c8e43"
+    "ssw-design-analysis/07_physical_decomposition/state_forecast.py": "623ec5e227bc64af"
    },
    "verdicts": [
     {
@@ -5848,9 +5848,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 30040,
-   "modified": "2026-10-02 05:45",
-   "sha256_16": "3b9d31ad34ee70fe",
+   "bytes": 49509,
+   "modified": "2026-10-02 08:17",
+   "sha256_16": "e504c6ed5a177e4a",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_residual_quantiles.py"
    ],
@@ -5858,7 +5858,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_residual_quantiles.py": "2577d04fe994596d"
+    "ssw-design-analysis/07_physical_decomposition/snapsi_residual_quantiles.py": "0f480469891f2c1f"
    },
    "verdicts": [
     {
@@ -5874,6 +5874,42 @@
      "text": "unresolved"
     },
     {
+     "key": "A_polar_cap_NAM_days8_25.per_centre.CCCma.reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "A_polar_cap_NAM_days8_25.per_centre.CNR-ISAC.reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "A_polar_cap_NAM_days8_25.per_centre.ECCC.reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "A_polar_cap_NAM_days8_25.per_centre.ECMWF.reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "A_polar_cap_NAM_days8_25.per_centre.KMA.reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "A_polar_cap_NAM_days8_25.per_centre.Meteo-France.reading",
+     "text": "departure"
+    },
+    {
+     "key": "A_polar_cap_NAM_days8_25.per_centre.NCAR.reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "A_polar_cap_NAM_days8_25.per_centre.SNU.reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "A_polar_cap_NAM_days8_25.per_centre.UKMO.reading",
+     "text": "unresolved"
+    },
+    {
      "key": "T_northern_Eurasia_days8_24.pooled.reading",
      "text": "unresolved"
     },
@@ -5883,6 +5919,42 @@
     },
     {
      "key": "T_northern_Eurasia_days8_24.Jan-2019.reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "T_northern_Eurasia_days8_24.per_centre.CCCma.reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "T_northern_Eurasia_days8_24.per_centre.CNR-ISAC.reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "T_northern_Eurasia_days8_24.per_centre.ECCC.reading",
+     "text": "departure"
+    },
+    {
+     "key": "T_northern_Eurasia_days8_24.per_centre.ECMWF.reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "T_northern_Eurasia_days8_24.per_centre.KMA.reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "T_northern_Eurasia_days8_24.per_centre.Meteo-France.reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "T_northern_Eurasia_days8_24.per_centre.NCAR.reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "T_northern_Eurasia_days8_24.per_centre.SNU.reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "T_northern_Eurasia_days8_24.per_centre.UKMO.reading",
      "text": "unresolved"
     }
    ],
@@ -5991,9 +6063,9 @@
    "tree": "current",
    "stage": "9_literature",
    "readable": true,
-   "bytes": 1282,
-   "modified": "2026-10-02 05:47",
-   "sha256_16": "02b99ca1e80c6ef0",
+   "bytes": 1608,
+   "modified": "2026-10-02 08:16",
+   "sha256_16": "e2524cb708b89a55",
    "producers": [
     "ssw-design-analysis/08_literature_audit/criterion_transport_cv.py"
    ],
@@ -6001,7 +6073,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/08_literature_audit/criterion_transport_cv.py": "5c4075d19a83a3eb"
+    "ssw-design-analysis/08_literature_audit/criterion_transport_cv.py": "803cba21ec2099c3"
    },
    "verdicts": [],
    "counts": {

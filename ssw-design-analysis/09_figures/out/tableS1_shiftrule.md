@@ -62,11 +62,11 @@ days 29–42: SNAPSI 12 pairs, 9 centres.
 | NEURASIA (no SNAPSI events) | 8–24 | 0.05 | 0.2409 | 7/37 | 0.1892 [0.0948, 0.3421] | 0.5664 | 0.0021 | 3.784 | 4.818 |
 | NEURASIA (no SNAPSI events) | 8–24 | 0.1 | 0.3243 | 9/37 | 0.2432 [0.1336, 0.4012] | 0.3801 | 0.0093 | 2.432 | 3.243 |
 | NEURASIA (no SNAPSI events) | 8–24 | 0.2 | 0.4541 | 14/37 | 0.3784 [0.2406, 0.539] | 0.4108 | 0.0119 | 1.892 | 2.27 |
-| NEURASIA (CMIP6 × ERA5 rule) | 8–24 | 0.05 | 0.1122 | 8/39 | 0.2051 [0.1078, 0.3553] | 0.0744 | 0.0006 | 4.103 | 2.244 |
-| NEURASIA (CMIP6 × ERA5 rule) | 8–24 | 0.1 | 0.1944 | 10/39 | 0.2564 [0.1457, 0.4108] | 0.3144 | 0.0042 | 2.564 | 1.944 |
-| NEURASIA (CMIP6 × ERA5 rule) | 8–24 | 0.2 | 0.3269 | 15/39 | 0.3846 [0.2489, 0.541] | 0.495 | 0.0078 | 1.923 | 1.635 |
+| NEURASIA (CMIP6 × ERA5 rule) | 8–24 | 0.05 | 0.0992 | 8/39 | 0.2051 [0.1078, 0.3553] | 0.0521 | 0.0006 | 4.103 | 1.984 |
+| NEURASIA (CMIP6 × ERA5 rule) | 8–24 | 0.1 | 0.1843 | 10/39 | 0.2564 [0.1457, 0.4108] | 0.2985 | 0.0042 | 2.564 | 1.843 |
+| NEURASIA (CMIP6 × ERA5 rule) | 8–24 | 0.2 | 0.3232 | 15/39 | 0.3846 [0.2489, 0.541] | 0.3977 | 0.0078 | 1.923 | 1.616 |
 
-Second predictor: ERA5 event-free slope 1.9985 K per s.d. of the NAM (residual s.d. 2.3629 K, 3912 windows); CMIP6 mean days 8–24 NAM after 1517 SSWs -0.4859.
+Second predictor: ERA5 event-free slope 1.9985 K per s.d. of the NAM (residual s.d. 2.3629 K, 3912 windows); CMIP6 mean days 8–24 NAM after 1517 SSWs -0.416.
 
 **Supplementary Table 4 | Out of sample: ERA5 SSWs of 1940–1958 (outcomes not examined before registration).**
 

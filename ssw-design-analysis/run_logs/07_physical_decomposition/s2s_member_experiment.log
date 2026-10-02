@@ -11,7 +11,7 @@ cptec {'mixed_starts': 22, 'mixed_starts_k_le_9': 2, 'n4_members': 408, 'n_start
 N1_shift_sigma {"est": -0.0535, "ci95": [-0.2864, 0.1671]}
 N2_variance_ratio {"est": 0.974, "ci95": [0.7317, 1.3602]}
 N3_threshold {"rate_rev": 0.5369, "rate_non": 0.4521, "contrast_rev": -0.8754, "contrast_non": -0.8718, "contrast_diff": -0.0036, "contrast_diff_ci95": [-0.3335, 0.2963], "rate_rev_ci95": [0.4372, 0.6553], "rate_non_ci95": [0.3395, 0.6123]}
-N4_step_initial_state_fixed {"n_members": 11481, "n_below": 1046, "n_starts": 1450, "dose_per_10ms_sigma": -0.0504, "dose_ci95": [-0.1043, 0.0096], "step_sigma": -0.0534, "step_ci95": [-0.1921, 0.1008], "step_ci90": [-0.1699, 0.0731], "step_p_two_sided": 0.486}
+N4_step_initial_state_fixed {"n_members": 11481, "n_below": 1046, "n_starts": 2526, "dose_per_10ms_sigma": 0.1225, "dose_ci95": [-0.0199, 0.2666], "step_sigma": 0.0439, "step_ci95": [-0.1631, 0.2994], "step_ci90": [-0.1296, 0.2518], "step_p_two_sided": 0.652}
 N5_balance_pre_onset_sigma {"est": -0.014, "ci95": [-0.0663, 0.0381], "N1_net_of_N5": -0.0395}
 N6_temperature {"shift_sigma": -0.0832, "shift_ci95": [-0.3445, 0.132], "variance_ratio": 1.2855, "variance_ratio_ci95": [0.7939, 2.6562]}
 secondary_window_8_20 {"n_starts": 162, "shift": -0.1459, "shift_ci95": [-0.2428, -0.0273], "variance_ratio": 0.9632, "variance_ratio_ci95": [0.8167, 1.1828]}

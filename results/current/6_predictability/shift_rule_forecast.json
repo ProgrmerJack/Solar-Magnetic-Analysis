@@ -5040,11 +5040,15 @@
         "n_free": 3912
       },
       "cmip6_n_events": 1517,
-      "cmip6_mean_nam_days8_24": -0.4859,
+      "cmip6_mean_nam_days8_24": -0.416,
+      "cmip6_member_ndjfm_sd_range": [
+        1.032,
+        1.271
+      ],
       "p_rule2": {
-        "0.05": 0.1122,
-        "0.1": 0.1944,
-        "0.2": 0.3269
+        "0.05": 0.0992,
+        "0.1": 0.1843,
+        "0.2": 0.3232
       },
       "verification": {
         "n_free_windows": 4633,
@@ -5057,15 +5061,15 @@
             0.1078,
             0.3553
           ],
-          "p_rule": 0.1122,
+          "p_rule": 0.0992,
           "q": 0.05,
-          "binom_p_under_rule": 0.0744,
+          "binom_p_under_rule": 0.0521,
           "binom_p_under_climatology": 0.0006,
-          "brier_rule": 0.1717,
+          "brier_rule": 0.1743,
           "brier_climatology": 0.1871,
-          "bss_vs_climatology": 0.0825,
+          "bss_vs_climatology": 0.0686,
           "risk_ratio_observed": 4.103,
-          "risk_ratio_rule": 2.244,
+          "risk_ratio_rule": 1.984,
           "rev_at": {
             "0.05": {
               "rev": 0.7527,
@@ -5075,10 +5079,10 @@
               ]
             },
             "0.1": {
-              "rev": 0.5694,
+              "rev": 0.0,
               "ci95": [
-                0.0278,
-                0.7778
+                0.0,
+                0.0
               ]
             }
           },
@@ -5134,15 +5138,15 @@
             0.1457,
             0.4108
           ],
-          "p_rule": 0.1944,
+          "p_rule": 0.1843,
           "q": 0.1,
-          "binom_p_under_rule": 0.3144,
+          "binom_p_under_rule": 0.2985,
           "binom_p_under_climatology": 0.0042,
-          "brier_rule": 0.1945,
+          "brier_rule": 0.1959,
           "brier_climatology": 0.2151,
-          "bss_vs_climatology": 0.0958,
+          "bss_vs_climatology": 0.0895,
           "risk_ratio_observed": 2.564,
-          "risk_ratio_rule": 1.944,
+          "risk_ratio_rule": 1.843,
           "rev_at": {
             "0.1": {
               "rev": 0.6778,
@@ -5211,15 +5215,15 @@
             0.2489,
             0.541
           ],
-          "p_rule": 0.3269,
+          "p_rule": 0.3232,
           "q": 0.2,
-          "binom_p_under_rule": 0.495,
+          "binom_p_under_rule": 0.3977,
           "binom_p_under_climatology": 0.0078,
-          "brier_rule": 0.24,
+          "brier_rule": 0.2405,
           "brier_climatology": 0.2708,
-          "bss_vs_climatology": 0.1136,
+          "bss_vs_climatology": 0.1119,
           "risk_ratio_observed": 1.923,
-          "risk_ratio_rule": 1.635,
+          "risk_ratio_rule": 1.616,
           "rev_at": {
             "0.2": {
               "rev": 0.6,

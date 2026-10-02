@@ -1229,6 +1229,30 @@ nothing (-0.0081 [-0.0184, 0.0028]); oracle min-wind adds nothing. Cold periods 
 expected 5.7/18.1/13.6/11.9. E2 (17 events, starts 0–7 d after onset): raw ens 1.18, calibrated
 1.09, state 1.58, clim 1.83 — dynamical ensembles far better; calibration +8% [5, 11].
 
+### CODE-REVIEW CORRECTIONS (2026-10-02; fresh-context review of the revision-3 scripts; all re-run)
+- **Y/N4** (`s2s_member_experiment.py`): fixed effects were keyed on start DATE across systems
+  (1,450 "starts"); keyed on (system, start) = 2,526 groups → dose **+0.12σ/10 m/s [−0.02, +0.27]**
+  (was −0.05), step **+0.04 [−0.16, +0.30]** (was −0.05). N1–N3, N5, N6 unchanged. 4,498 starts total.
+- **Z3 ICON** (`icon_event_heterogeneity.py`): 6/18 ensembles already easterly at t = 0 ("first
+  negative" = start of run). Corrected to westerly→easterly crossing, **12 events: V_b 0.59–0.60
+  (108–111% of within-ensemble), days 26–42 0.11–0.13, r 0.92 [0.87, 0.97]**; registered-literal
+  (18) kept in JSON: 0.41–0.43, r 0.80.
+- **V-R5** (`shift_rule_forecast.py`): CMIP6 index in all-year s.d. units vs ERA5 Nov–Mar event-free;
+  threshold from a subset of windows. Fixed: **p_rule2 0.099/0.184/0.323** (was 0.112/0.194/0.327),
+  CMIP6 mean −0.42σ; q 0.05 binomial p **0.052** (borderline). Member Nov–Mar s.d. 1.03–1.27.
+- **Z4** (`state_forecast.py`): E2 climatology not event-free → fixed: clim CRPS **1.98** (was 1.83),
+  state vs clim **0.20 [−0.02, 0.38]**, calibrated vs clim 0.45; F2 unit fix: F2 CRPS 1.546, cold
+  expected 12.2. Decision unchanged.
+- **U-ERA5** (`vortex_threshold_continuity.py`): covariate lacked Sep–Oct → 32/144 units dropped.
+  Autumn pressure added: n = 143 (AO 124). Dose replicates (AO 0.31 [0.18, 0.43]; T 0.37 K [0.16,
+  0.59]; label +0.12 [0.07, 0.16]); **AO step −0.54 [−1.23, +0.09], raw p 0.10, Holm 0.40 — the
+  earlier "hint of a step" (−0.73, p 0.03) was partly the dropped sample.** Added fixed-bandwidth E3
+  and doy/era balance (pass); drop balance still fails (p 0.002).
+- **Z2** transport: registered Brier vs unshifted climatology added: +0.145 [+0.001, +0.273]
+  (+0.151 [+0.014, +0.296] with 150 hPa).
+- **Z1** residual quantiles: per-centre summaries added: Meteo-France NAM upper tail compressed
+  (q95 −0.42σ [−0.75, −0.04]); ECCC temperature widened; others unresolved.
+
 ### X — the state-dependent shape is a continuous dose (`response_shape_dose.py`, 6_predictability; registered `7d8ed6f`)
 
 S3 fitted M2 (P2, all SSWs): component means −0.66 / −0.16, sd 0.72 / 0.58 — the

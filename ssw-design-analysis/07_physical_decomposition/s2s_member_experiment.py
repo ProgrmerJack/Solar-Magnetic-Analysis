@@ -216,18 +216,21 @@ def ci(a):
 def n4(M, rng):
     df = pd.DataFrame(M)
     df["D"] = (df["umin"] < 0).astype(float)
+    # a start is (system, start date): different systems sharing a date are different
+    # starts (bug fixed 2026-10-02 after the code review; the first run grouped by date)
+    df["start"] = df["sys"] + "|" + df["init"].astype(str)
     def fit(d):
-        g = d.groupby("init")
+        g = d.groupby("start")
         cols = ["y", "umin", "pre", "D"]
         dm = d[cols] - g[cols].transform("mean")
-        dm["Dx"] = (d["D"] * d["umin"]) - (d["D"] * d["umin"]).groupby(d["init"]).transform("mean")
+        dm["Dx"] = (d["D"] * d["umin"]) - (d["D"] * d["umin"]).groupby(d["start"]).transform("mean")
         X1 = dm[["umin", "pre"]].values; b1 = np.linalg.lstsq(X1, dm["y"].values, rcond=None)[0]
         X2 = dm[["umin", "pre", "D", "Dx"]].values; b2 = np.linalg.lstsq(X2, dm["y"].values, rcond=None)[0]
         return 10 * b1[0], b2[2]
     est = fit(df)
     uw = df["winter"].unique(); byw = {w: df[df.winter == w] for w in uw}
     bs = np.array([fit(pd.concat([byw[w] for w in rng.choice(uw, len(uw))])) for _ in range(N_BOOT)])
-    return {"n_members": int(len(df)), "n_below": int(df.D.sum()), "n_starts": int(df.init.nunique()),
+    return {"n_members": int(len(df)), "n_below": int(df.D.sum()), "n_starts": int(df.start.nunique()),
             "dose_per_10ms_sigma": round(float(est[0]), 4), "dose_ci95": ci(bs[:, 0]),
             "step_sigma": round(float(est[1]), 4), "step_ci95": ci(bs[:, 1]),
             "step_ci90": [round(float(x), 4) for x in np.nanpercentile(bs[:, 1], [5, 95])],

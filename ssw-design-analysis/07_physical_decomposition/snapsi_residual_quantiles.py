@@ -158,6 +158,9 @@ def summarise(cases, rng):
     out = {"pooled": block(cases)}
     for ev in ("Feb-2018", "Jan-2019"):
         out[ev] = block([k for k in cases if EVENT[k["init"]] == ev])
+    # registered but omitted in the first run (added 2026-10-02 after the code review)
+    out["per_centre"] = {c: {k: v for k, v in block([k_ for k_ in cases if k_["centre"] == c]).items()}
+                         for c in sorted({k["centre"] for k in cases})}
     out["per_pair"] = [{"centre": k["centre"], "init": k["init"], "nN": len(k["N"]), "nC": len(k["C"]),
                         "R": [round(float(x), 3) for x in stats(k["N"], k["C"])[0]],
                         "E": [round(float(x), 3) for x in stats(k["N"], k["C"])[1]]} for k in cases]

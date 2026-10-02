@@ -440,20 +440,26 @@ def revision3():
     X = np.array([window(nanom, d, T_WIN) for d in free_days]); Y = np.array([window(ta, d, T_WIN) for d in free_days])
     ok = np.isfinite(X) & np.isfinite(Y)
     b, a_ = np.polyfit(X[ok], Y[ok], 1); se = float(np.std(Y[ok] - (a_ + b * X[ok]), ddof=2))
-    Ni = []
+    Ni, sds = [], []
     for f in sorted(W.RAW.glob("*_zm.nc")):
         c = W.prepare_member(f)
         if c is None:
             continue
-        Ni.append(W.C6.anom(c["am"], c["on"], c["cl"], T_WIN))
+        # same units as the ERA5 regressor: the member's event-free November-March s.d.
+        # (the index is standardised by its all-year s.d.; unit fix 2026-10-02 after review)
+        am = c["am"]; msk = W.C6.influence_mask(am.index, c["on"])
+        sdm = float(am[np.isin(am.index.month, (11, 12, 1, 2, 3)) & ~msk].std())
+        Ni.append(W.C6.anom(c["am"], c["on"], c["cl"], T_WIN) / sdm); sds.append(sdm)
     Ni = np.concatenate(Ni); Ni = Ni[np.isfinite(Ni)]
+    Yall = Y[np.isfinite(Y)]                      # the windows obs_verify uses for its thresholds
     p2 = {}
     for q in QS:
-        thr = float(np.quantile(Y[ok], q))
+        thr = float(np.quantile(Yall, q))
         p2[str(q)] = round(float(np.mean(_norm.cdf((thr - a_ - b * Ni) / se))), 4)
     r3["R5_second_predictor"] = {"era5_free_regression": {"slope_K_per_sd": round(float(b), 4), "intercept": round(float(a_), 4),
                                                          "resid_sd": round(se, 4), "n_free": int(ok.sum())},
                                  "cmip6_n_events": int(len(Ni)), "cmip6_mean_nam_days8_24": round(float(Ni.mean()), 4),
+                                 "cmip6_member_ndjfm_sd_range": [round(min(sds), 3), round(max(sds), 3)],
                                  "p_rule2": p2,
                                  "verification": obs_verify(ta, v1_ev, cat, (1959, 2022), T_WIN, p2, rng, "R5")}
     # R6 out of sample 1940-1958 (needs the ERA5 wind series)
