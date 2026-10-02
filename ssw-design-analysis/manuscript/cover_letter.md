@@ -4,15 +4,17 @@
 
 Dear Editor,
 
-We submit "Imposed stratospheric warmings change the odds of downward outcomes, not the downward–non-downward contrast" for
+We submit "Imposed stratospheric warmings change the odds of surface impacts, not the class contrast" for
 consideration as an Article.
 
 **The question.** When does a contrast between classes of climate impacts reveal a difference in forcing?
 Geoscience routinely sorts extremes into classes (El Niño flavours, weather regimes, climatic epochs) and reads the
 contrast between them as a difference in what drives them. When the classes are cut from the outcome itself, the
-cut alone produces a contrast, whether or not the forcing differs. Nobody has measured how much of such a contrast
-survives a change in the forcing. We measure it by intervention for the most widely used impact
-classification in stratosphere–troposphere research.
+cut alone produces a contrast, whether or not the forcing differs. In seismology, an earthquake is a foreshock only
+once a larger one follows, and the apparently special properties of foreshocks turned out to arise from one
+triggering process acting on all earthquakes (Helmstetter & Sornette, JGR 2003). We ask the same question by
+intervention for the most widely used impact classification in stratosphere–troposphere research: does the class
+contrast move when the forcing does?
 
 **The answer in one unit (Fig. 1d).** Sudden stratospheric warmings (SSWs) precede weeks of cold weather over
 Europe and Asia; in the UK alone they have been linked to about 620 extra deaths per event. They are sorted into
@@ -77,9 +79,14 @@ Data Table 1), and designs were committed before their runs. Results that went a
 - a statistician working on event definition or selection bias.
 
 **Data and code.** All data are public. Every result is produced by one script in a public repository, with the
-test register, the prospective prediction table and a pinned environment.
+test register, the prospective prediction table and a pinned environment. [[AUTHORS: Zenodo DOI of the archived
+release that timestamps the registrations.]]
 
-This manuscript is not under consideration elsewhere. [[AUTHORS: competing interests, prior presentation]]
+**Disclosures.** This manuscript is not under consideration elsewhere, and there are no related manuscripts
+under consideration or in press. [[AUTHORS: confirm; state any prior contact with the editors, competing
+interests and prior presentation.]] An AI assistant was used to write and review analysis code, check literature
+metadata and draft text under the author's direction. Its use is described in the Methods, and every number was regenerated
+from the repository's scripts. [[AUTHORS: confirm wording.]]
 
 Sincerely,
 [[AUTHORS]]
