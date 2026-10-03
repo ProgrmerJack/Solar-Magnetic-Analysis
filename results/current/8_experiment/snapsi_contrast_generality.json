@@ -944,6 +944,37 @@
       }
     }
   },
+  "G5x_post_hoc": {
+    "note": "post hoc, after the registered run",
+    "control": {
+      "centre_means": {
+        "ECMWF": {
+          "paired_diff": -0.3411,
+          "Delta_b": -0.0922
+        },
+        "Meteo-France": {
+          "paired_diff": NaN,
+          "Delta_b": 0.3696
+        },
+        "UKMO": {
+          "paired_diff": -0.0056,
+          "Delta_b": 0.1695
+        }
+      },
+      "r_Delta_b_vs_spread_pred": 0.9883,
+      "Delta_b_net_spread_mean": 0.0176
+    },
+    "control-full": {
+      "centre_means": {
+        "UKMO": {
+          "paired_diff": -0.2977,
+          "Delta_b": -0.0101
+        }
+      },
+      "r_Delta_b_vs_spread_pred": 0.9934,
+      "Delta_b_net_spread_mean": 0.08
+    }
+  },
   "pairs_NH": [
     {
       "centre": "CCCma",

@@ -1261,7 +1261,9 @@ shifted control null −0.820; residual −0.086 [−0.240, +0.057] (≈ −0.15
 (paired −0.063 [−0.181, +0.046], 25 pairs). Other regions' residuals −0.10 to +0.04, all covering 0.
 G5 nudged-full (ECMWF, UKMO ×4 NH inits; Météo-France s20190108; 654 members, own cache _snapsi_reduced_full; own RNG
 stream so G1–G4 and G1x unchanged): DW 0.46 → 0.88 (0.62–1.00); paired contrast −0.17 [−0.34, −0.01] (6 pairs, 2 centres);
-Δ_b +0.08 [−0.09, +0.37] (9 pairs) → INCONCLUSIVE by G1's ±0.25 tolerance (no separate G5 reading was registered).
+Δ_b +0.08 [−0.09, +0.37] (9 pairs) → NOT DECISIVE by G1's ±0.25 tolerance (no separate G5 reading was registered).
+With 2–3 centres the 'intervals' are the extreme centre means (paired: ECMWF −0.34, UKMO −0.01; Δ_b: ECMWF −0.09,
+UKMO +0.17, Météo-France +0.37) — report centre means, not CIs. GFDL also ran nudged-full but has no control.
 UKMO vs control-full: paired −0.30 (3), Δ_b −0.01 (4). POST HOC spread: r 0.99, net +0.02 (vs control).
 
 ### Z8 — third intervention, January 2021 (`davis2021_intervention_test.py`, 8_experiment; registered `738a422` before download)

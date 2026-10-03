@@ -397,6 +397,21 @@ def main():
                  "Delta_b_net_spread": cboot(d, "Delta_b_net_spread", rng)}
            for lab, d in (("strong_11", df[df.strong]), ("other_25", df[~df.strong]), ("all_36", df))}}
     print("G1x post hoc:", res["G1x_post_hoc_spread"])
+    # POST HOC (added 2026-10-03 after G5 ran, not part of the registration): per-centre
+    # means (with 2-3 centres a centre bootstrap gives only the extreme centre means) and
+    # the spread check of G1x for the nudged-full pairs. No random numbers are drawn.
+    if g5:
+        g5x = {"note": "post hoc, after the registered run"}
+        for k, v in g5.items():
+            d5 = pd.DataFrame(v)
+            d5["spread_pred"] = d5.C_control * (d5.sd_ratio - 1)
+            g5x[k] = {"centre_means": {c: {m: round(float(g[m].mean()), 4) for m in ("paired_diff", "Delta_b")}
+                                       for c, g in d5.groupby("centre")},
+                      "r_Delta_b_vs_spread_pred": round(float(np.corrcoef(d5.Delta_b, d5.spread_pred)[0, 1]), 4)
+                      if len(d5) > 2 else None,
+                      "Delta_b_net_spread_mean": round(float((d5.Delta_b - d5.spread_pred).mean()), 4)}
+        res["G5x_post_hoc"] = g5x
+        print("G5x post hoc:", g5x)
     res["pairs_NH"] = df.round(4).to_dict(orient="records")
     res["pairs_regional"] = rg.round(4).to_dict(orient="records")
 

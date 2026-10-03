@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-03T07:47:24+00:00",
+ "generated": "2026-10-03T07:53:56+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -1405,9 +1405,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "DOES AN IMPOSED SSW LEAVE THE CLASS STRUCTURE UNCHANGED WHERE THE FORCING IS STRONGEST, IN A THIRD EVENT, AND FOR A VARIABLE NOT USED TO CLASSIFY? Registered 2026-10-02 (revision 5), committed before any of these quantities was",
-   "loc": 422,
-   "modified": "2026-10-03 07:45",
-   "sha256_16": "845a756b8a95c903",
+   "loc": 437,
+   "modified": "2026-10-03 07:52",
+   "sha256_16": "2276fc00a1f9699e",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_selection_test.json"
@@ -1938,9 +1938,9 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 369,
-   "modified": "2026-10-03 07:47",
-   "sha256_16": "1941fe6486ceb25e",
+   "loc": 372,
+   "modified": "2026-10-03 07:53",
+   "sha256_16": "8ac4dc5add52eecb",
    "flags": [],
    "filenames_mentioned": [
     "class_model_comparison.json",
@@ -2825,7 +2825,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-02 22:13",
+   "modified": "2026-10-03 07:47",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -5937,9 +5937,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 59391,
-   "modified": "2026-10-03 07:46",
-   "sha256_16": "3ebcca6b4061ee87",
+   "bytes": 60115,
+   "modified": "2026-10-03 07:52",
+   "sha256_16": "9cb5014b0303be91",
    "producers": [],
    "state": "ORPHAN",
    "detail": "no script writes this",
@@ -5960,6 +5960,10 @@
     },
     {
      "key": "G1x_post_hoc_spread.note",
+     "text": "post hoc, after the registered run"
+    },
+    {
+     "key": "G5x_post_hoc.note",
      "text": "post hoc, after the registered run"
     }
    ],
@@ -5983,6 +5987,7 @@
     "G4_regional_temperature",
     "G5_nudged_full",
     "G1x_post_hoc_spread",
+    "G5x_post_hoc",
     "pairs_NH",
     "pairs_regional"
    ]
@@ -6249,7 +6254,7 @@
    "detail": "producer changed: ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "845a756b8a95c903",
+    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "2276fc00a1f9699e",
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "6626a155b09d3623"
    },
    "verdicts": [
@@ -6523,7 +6528,7 @@
    "stage": "9_literature",
    "readable": true,
    "bytes": 57424,
-   "modified": "2026-10-03 05:09",
+   "modified": "2026-10-03 07:53",
    "sha256_16": "4e6e6f82e3eebdb3",
    "producers": [],
    "state": "ORPHAN",
