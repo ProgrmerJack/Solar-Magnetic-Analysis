@@ -272,3 +272,8 @@ Rule: set `socket.setdefaulttimeout` for every bulk download; open NetCDF/HDF5 u
 Tried: the centre-cluster bootstrap of result L applied to SNAPSI nudged-full, which only 2-3 centres submitted with a control (G5).
 Failed: the "95% interval" [-0.34, -0.01] was exactly the two centre means, and read as excluding zero; with one centre it had zero width. Found by review.
 Rule: report a cluster bootstrap interval only with enough clusters (say >= 6); otherwise report the cluster means and say no interval is available.
+
+## 2026-10-03 — HTTP byte-range read of a NERSC C20C/HAPPI tape tar
+Tried: `curl -r 0-1023` on the 553 GB HPSS tar `tas_Aday_CAM5-1-1degree_All-Hist_est1_v2-0_run001-run400.tar` at portal.nersc.gov/archive to fetch one member.
+Failed: the gateway ignored the Range header (HTTP 200, not 206) and streamed the whole tar (~9 MB/s; 3.9 GB pulled before it was killed); while it ran, the archive answered other listings with HTTP 500 and later "can't log in as wwwhpss".
+Rule: never range-read or open portal.nersc.gov/archive tars remotely; read the .idx (a few MB) to plan, fetch per-run tars only, or ask the data contact for a subset.
