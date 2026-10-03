@@ -267,3 +267,8 @@ Rule: select windows by date (reindex a date range) and require completeness; ne
 Tried: acquire_davis2022.py with 6 threads, `urllib.request.urlretrieve` and `xr.open_dataset` inside each thread.
 Failed: six Zenodo transfers stalled at 20:27 and the process waited 5 h with no error (no socket timeout); after a restart it died with exit 139 (segfault) before reducing a member, because HDF5 is not thread-safe and the earlier "silent" stop was the same crash hidden behind `| grep` (exit 0 is grep's).
 Rule: set `socket.setdefaulttimeout` for every bulk download; open NetCDF/HDF5 under one lock (download in parallel, reduce serially); record the Python exit status explicitly when piping its output.
+
+## 2026-10-03 — A cluster bootstrap over two or three clusters reported as a 95% interval
+Tried: the centre-cluster bootstrap of result L applied to SNAPSI nudged-full, which only 2-3 centres submitted with a control (G5).
+Failed: the "95% interval" [-0.34, -0.01] was exactly the two centre means, and read as excluding zero; with one centre it had zero width. Found by review.
+Rule: report a cluster bootstrap interval only with enough clusters (say >= 6); otherwise report the cluster means and say no interval is available.
