@@ -412,8 +412,12 @@ def main():
     transfer, so re-running to widen the scope only fetches what is new.
     """
     argv = sys.argv[1:]
+    global EXPERIMENTS, CACHE, OUT
+    if "--free" in argv:                 # SNAPSI free arm, own cache (natural experiment F)
+        EXPERIMENTS = ["free"]
+        CACHE = HERE / "_snapsi_reduced_free"
+        OUT = HERE / "snapsi_polarcap_psl_free.parquet"
     if "--full" in argv:
-        global EXPERIMENTS, CACHE, OUT
         EXPERIMENTS = ["nudged-full", "control-full"]
         CACHE = HERE / "_snapsi_reduced_full"
         OUT = HERE / "snapsi_polarcap_psl_full.parquet"
@@ -423,6 +427,10 @@ def main():
             return argv[argv.index(name) + 1]
         return default
 
+    if opt("--members-file"):            # restrict to listed centre,init,member rows (mixed ensembles)
+        keep = pd.read_csv(opt("--members-file"))
+    else:
+        keep = None
     centres = opt("--centres")
     centres = ([c.strip() for c in centres.split(",")] if centres
                else (PILOT_CENTRES if "--pilot" in argv else CENTRES))
@@ -442,6 +450,8 @@ def main():
           & (d.experiment.isin(EXPERIMENTS))
           & (d.start_date.astype(str).isin(inits))
           & (d.centre.isin(centres))].reset_index(drop=True)
+    if keep is not None:
+        q = q.merge(keep[["centre", "start_date", "member"]].astype(str), on=["centre", "start_date", "member"])
 
     # Separate what must be transferred from what is already reduced on disk,
     # so the printed budget is the real one rather than the notional total.

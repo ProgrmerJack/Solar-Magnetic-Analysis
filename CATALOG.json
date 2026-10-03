@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-03T07:53:56+00:00",
+ "generated": "2026-10-03T10:20:26+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 180,
+  "scripts": 182,
   "results": 92
  },
  "scripts": [
@@ -241,13 +241,14 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "Downloads the SNAPSI surface field and reduces it to a polar-cap index on the fly, so the CAUSAL stratosphere-to-surface effect can be measured by experimental design rather than inferred from composites.",
-   "loc": 536,
-   "modified": "2026-10-02 14:30",
-   "sha256_16": "e14152431501099a",
+   "loc": 546,
+   "modified": "2026-10-03 10:11",
+   "sha256_16": "46dc9ad2e4e32463",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_manifest.csv",
     "snapsi_polarcap_psl.parquet",
+    "snapsi_polarcap_psl_free.parquet",
     "snapsi_polarcap_psl_full.parquet",
     "snapsi_time_origin.json"
    ],
@@ -266,13 +267,28 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_snapsi_u10.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Zonal-mean zonal wind at 10 hPa on the grid row nearest 60N, for every member of SNAPSI's `free` arm at the four NH initialisations: the stratospheric variable that classifies members as developing the SSW or not (natural experiment F,",
+   "loc": 138,
+   "modified": "2026-10-03 10:12",
+   "sha256_16": "68aeb1004f7d5f97",
+   "flags": [],
+   "filenames_mentioned": [
+    "era5_u10_60N_daily_cds.parquet",
+    "snapsi_u10_free_gate.csv"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/03_data_ingestion/acquire_snapsi_zg.py",
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "SNAPSI geopotential height at 100 hPa, reduced to a polar-cap mean, fetched by OPeNDAP subsetting rather than by downloading whole files.",
-   "loc": 764,
-   "modified": "2026-09-25 03:24",
-   "sha256_16": "4fbd0567f1bd2e0e",
+   "loc": 769,
+   "modified": "2026-10-03 10:11",
+   "sha256_16": "aae7e2544ee2afc6",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_manifest.csv",
@@ -1405,9 +1421,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "DOES AN IMPOSED SSW LEAVE THE CLASS STRUCTURE UNCHANGED WHERE THE FORCING IS STRONGEST, IN A THIRD EVENT, AND FOR A VARIABLE NOT USED TO CLASSIFY? Registered 2026-10-02 (revision 5), committed before any of these quantities was",
-   "loc": 437,
-   "modified": "2026-10-03 07:52",
-   "sha256_16": "2276fc00a1f9699e",
+   "loc": 529,
+   "modified": "2026-10-03 10:11",
+   "sha256_16": "a5ac1f582d13b669",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_selection_test.json"
@@ -1425,6 +1441,20 @@
    "flags": [],
    "filenames_mentioned": [
     "snapsi_distribution_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/snapsi_free_natural_experiment.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "A CONFIRMATORY TEST, ON DATA NEVER ANALYSED, OF THE LAW THE INTERVENTIONS SUGGESTED: THE DOWNWARD-NON-DOWNWARD CONTRAST IS WHAT ONE POPULATION, SHIFTED AND RESCALED, GIVES -- FORCING MOVES IT ONLY THROUGH LOCATION AND SPREAD.",
+   "loc": 357,
+   "modified": "2026-10-03 10:10",
+   "sha256_16": "8ecdcdb6ffec3133",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_contrast_generality.json"
    ],
    "filename_prefixes": []
   },
@@ -2825,7 +2855,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-03 07:47",
+   "modified": "2026-10-03 07:54",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -5937,14 +5967,18 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 60115,
-   "modified": "2026-10-03 07:52",
-   "sha256_16": "9cb5014b0303be91",
-   "producers": [],
-   "state": "ORPHAN",
-   "detail": "no script writes this",
+   "bytes": 62420,
+   "modified": "2026-10-03 10:12",
+   "sha256_16": "058cb414c8f9c582",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_free_natural_experiment.py"
+   ],
+   "state": "unverified",
+   "detail": "no provenance baseline recorded",
    "flags": [],
-   "producer_sha256": {},
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_free_natural_experiment.py": "8ecdcdb6ffec3133"
+   },
    "verdicts": [
     {
      "key": "G1_strongly_forced.reading_primary",
@@ -5961,6 +5995,10 @@
     {
      "key": "G1x_post_hoc_spread.note",
      "text": "post hoc, after the registered run"
+    },
+    {
+     "key": "G6_regional_classes.reading",
+     "text": "the law holds for regional impact classes"
     },
     {
      "key": "G5x_post_hoc.note",
@@ -5987,6 +6025,7 @@
     "G4_regional_temperature",
     "G5_nudged_full",
     "G1x_post_hoc_spread",
+    "G6_regional_classes",
     "G5x_post_hoc",
     "pairs_NH",
     "pairs_regional"
@@ -6254,7 +6293,7 @@
    "detail": "producer changed: ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "2276fc00a1f9699e",
+    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "a5ac1f582d13b669",
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "6626a155b09d3623"
    },
    "verdicts": [

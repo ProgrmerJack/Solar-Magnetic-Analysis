@@ -250,7 +250,7 @@ def _s(v):
     return v.decode() if isinstance(v, (bytes, np.bytes_)) else str(v)
 
 
-def read_zg100_ranges(url: str, tok: str):
+def read_zg100_ranges(url: str, tok: str, var: str = "zg", target_pa: float = None, row_sel=None):
     """100 hPa zg over BOTH polar caps (time, cap-rows, lon) from a chunked HDF5
     file, fetched by byte range. Returns (DataArray, time values, time units).
 
@@ -265,7 +265,11 @@ def read_zg100_ranges(url: str, tok: str):
     Refused: any other filter, a non-little-endian-float32 dtype, a level axis
     without an exact 100 hPa entry, an unallocated or wrong-size chunk.
     Only rows with |lat| >= CAP_LAT are returned; cap_means needs nothing else.
+    Generalised 2026-10-03 (behaviour unchanged at the defaults): `var`,
+    `target_pa` and `row_sel(lat) -> row indices` let acquire_snapsi_u10.py read
+    u at 10 hPa on the row nearest 60N through the same gated byte-range path.
     """
+    target_pa = TARGET_PA if target_pa is None else target_pa
     import zlib
 
     import fsspec
@@ -276,12 +280,12 @@ def read_zg100_ranges(url: str, tok: str):
     # the file in small nodes; at fsspec's 1 MB default each node pulled a whole
     # megabyte and reading the index took 406 s per member, against 11 s here.
     with fs.open(url, "rb", block_size=2 ** 12) as fh, h5py.File(fh, "r") as f:
-        v = f["zg"]
+        v = f[var]
         dims = [v.dims[i][0].name.lstrip("/") if len(v.dims[i]) else None
                 for i in range(v.ndim)]
         if len(dims) != 4 or dims[0] != "time" \
                 or dims[2] != "lat" or dims[3] != "lon":
-            raise ValueError(f"unexpected zg dims {dims}")
+            raise ValueError(f"unexpected {var} dims {dims}")
         lev = f[dims[1]]
         # ECCC's plev carries long_name "pressure" and units Pa but no
         # standard_name; Meteo-France's snap34 carries standard_name. Either
@@ -291,17 +295,17 @@ def read_zg100_ranges(url: str, tok: str):
         if not is_p or _s(lev.attrs.get("units", b"")) != "Pa":
             raise ValueError(f"{dims[1]} is not a pressure axis in Pa")
         if v.chunks is None:
-            raise ValueError("zg is contiguous; chunk offsets not available")
+            raise ValueError(f"{var} is contiguous; chunk offsets not available")
         plist = v.id.get_create_plist()
         filters = [plist.get_filter(i)[0] for i in range(plist.get_nfilters())]
         if filters not in ([], [h5py.h5z.FILTER_DEFLATE]):
             raise ValueError(f"unsupported filter pipeline {filters}")
         deflate = bool(filters)
         if v.dtype != np.dtype("<f4"):
-            raise ValueError(f"zg dtype {v.dtype}, expected little-endian float32")
-        hits = np.where(lev[:] == TARGET_PA)[0]
+            raise ValueError(f"{var} dtype {v.dtype}, expected little-endian float32")
+        hits = np.where(lev[:] == target_pa)[0]
         if len(hits) != 1:
-            raise ValueError(f"no unique exact {TARGET_PA} Pa level in {dims[1]}")
+            raise ValueError(f"no unique exact {target_pa} Pa level in {dims[1]}")
         k = int(hits[0])
         nt, _, ny, nx = v.shape
         ct, cz, cy, cx = v.chunks
@@ -314,7 +318,8 @@ def read_zg100_ranges(url: str, tok: str):
         for i in range(v.id.get_num_chunks()):
             ci = v.id.get_chunk_info(i)
             index[tuple(ci.chunk_offset)] = ci
-    rows = np.flatnonzero(np.abs(lat) >= CAP_LAT - 1e-6)
+    rows = (np.flatnonzero(np.abs(lat) >= CAP_LAT - 1e-6) if row_sel is None
+            else np.atleast_1d(np.asarray(row_sel(lat), dtype=int)))
     kc, kin = (k // cz) * cz, k % cz
     full = ct * cz * cy * cx * 4
     # (chunk y0, first row, last row) for each chunk the cap rows touch
