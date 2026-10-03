@@ -78,6 +78,22 @@ G5 nudged-full (the full 3-D stratosphere, vortex geometry included), registered
   -- ECMWF and UKMO at the four NH initialisations, Meteo-France s20190108.
   NOAA-GFDL has no control arm and is not used.
 
+G6 OTHER IMPACT CLASSES (registered 2026-10-03, committed before it was computed;
+  own random stream): is the law a property of outcome-defined classes in general,
+  not of the SSW label? 24 Northern Hemisphere regions (latitude bands 30-50N and
+  50-70N x twelve 30-degree longitude sectors), window-mean 2 m temperature over
+  post-onset days 8-24, standardised by each pair's control. Class: "cold outcome"
+  = below the control ensemble's lower tercile (a fixed threshold, like the label's
+  zero). In each of the 36 NH pairs and each region, where both arms have >= 3
+  members per class: contrast C = mean(cold) - mean(not cold); residual of the
+  SSW-imposed contrast against (a) the location-scale null of the control (the
+  law) and (b) the shift-only null; and the change of the cold-class rate.
+  Summary over all region-pairs (bootstrap over centres, regions kept together).
+  READING, fixed now: law residual inside +-0.25 -> "the law holds for regional
+  impact classes"; excluding 0 with |mean| > 0.25 -> "it fails"; else
+  inconclusive. Secondary: the share of region-pairs whose |law residual| is
+  below 0.25, against that of the shift-only null.
+
 Output: results/current/8_experiment/snapsi_contrast_generality.json
 """
 import json
@@ -266,6 +282,80 @@ def regional_row(centre, init, nm):
     return row
 
 
+# ---------------------------------------------------------------- G6
+G6_REGIONS = {f"{la0}-{la0 + 20}N_{lo0}-{lo0 + 30}E": (la0, la0 + 20, lo0, lo0 + 30)
+              for la0 in (30, 50) for lo0 in range(0, 360, 30)}
+
+
+def g6_series(centre, exp, init):
+    """member -> window-mean tas (K) for every G6 region (days 8-24 after onset)."""
+    off = L.post_onset_offset(init)
+    lo, hi = RT.TAS_DAYS[0] + off, RT.TAS_DAYS[1] + off
+    out = {}
+    for f in sorted(RT.TAS.glob(f"{centre}_{exp}_{init}_*.npz")):
+        with np.load(f) as z:
+            day, tas, n, lat, lon = z["lead_day"], z["tas"], z["n_steps"], z["lat"], z["lon"]
+        sel = (day >= lo) & (day <= hi)
+        if sel.sum() != hi - lo + 1 or (n[sel] != 4).any():
+            continue
+        field = tas[sel].mean(axis=0)
+        row = {}
+        for r, (a, b, c, d) in G6_REGIONS.items():
+            mi = (lat >= a) & (lat < b); mj = (lon >= c) & (lon < d)
+            w = np.cos(np.deg2rad(lat[mi]))[:, None] * np.ones(mj.sum())[None, :]
+            row[r] = float((field[np.ix_(mi, mj)] * w).sum() / w.sum())
+        out[f.stem.split("_", 3)[3]] = row
+    return pd.DataFrame.from_dict(out, orient="index")
+
+
+def class_contrast(x, thr):
+    cold = x < thr
+    if cold.sum() < MIN_CLASS or (~cold).sum() < MIN_CLASS:
+        return np.nan
+    return float(x[cold].mean() - x[~cold].mean())
+
+
+def regional_classes(usable, rng):
+    rows = []
+    for c in usable:
+        for init in NH_INITS:
+            tn, tc = g6_series(c, "nudged", init), g6_series(c, "control", init)
+            if len(tn) < 10 or len(tc) < 10:
+                continue
+            for r in G6_REGIONS:
+                mu, sd = tc[r].mean(), tc[r].std(ddof=1)
+                xn, xc = ((tn[r] - mu) / sd).values, ((tc[r] - mu) / sd).values
+                thr = float(np.quantile(xc, 1 / 3))
+                m_n, m_c, k = xn.mean(), xc.mean(), xn.std(ddof=1) / xc.std(ddof=1)
+                cn = class_contrast(xn, thr)
+                rows.append({"centre": c, "init": init, "region": r, "rate_nudged": float((xn < thr).mean()),
+                             "rate_control": float((xc < thr).mean()), "shift": float(m_n - m_c), "sd_ratio": float(k),
+                             "resid_law": cn - class_contrast(m_n + k * (xc - m_c), thr),
+                             "resid_shift": cn - class_contrast(xc + (m_n - m_c), thr)})
+    df = pd.DataFrame(rows)
+    out = {"n_region_pairs": int(len(df)), "regions": list(G6_REGIONS)}
+    for col in ("resid_law", "resid_shift", "shift", "sd_ratio"):
+        d = df.dropna(subset=[col]); cs = d.centre.unique()
+        by = {cc: d.loc[d.centre == cc, col].values for cc in cs}
+        bs = [np.mean(np.concatenate([by[cc] for cc in rng.choice(cs, len(cs))])) for _ in range(N_BOOT)]
+        out[col] = {"mean": round(float(d[col].mean()), 4), "ci95": [round(float(q), 4) for q in np.quantile(bs, [0.025, 0.975])],
+                    "n": int(len(d)), "n_centres": int(len(cs))}
+    df["rate_change"] = df.rate_nudged - df.rate_control
+    out["rate_change"] = {"mean": round(float(df.rate_change.mean()), 4),
+                          "abs_mean": round(float(df.rate_change.abs().mean()), 4)}
+    ok = df.dropna(subset=["resid_law", "resid_shift"])
+    out["share_abs_resid_lt_tol"] = {"law": round(float((ok.resid_law.abs() < TOL).mean()), 4),
+                                     "shift_only": round(float((ok.resid_shift.abs() < TOL).mean()), 4), "n": int(len(ok))}
+    r = out["resid_law"]
+    out["reading"] = ("the law holds for regional impact classes" if -TOL <= r["ci95"][0] and r["ci95"][1] <= TOL
+                      else "it fails" if (r["ci95"][0] > 0 or r["ci95"][1] < 0) and abs(r["mean"]) > TOL
+                      else "inconclusive")
+    out["per_region_mean_resid_law"] = {k: round(float(v), 4) for k, v in df.groupby("region").resid_law.mean().items()}
+    print("G6:", {k: out[k] for k in ("n_region_pairs", "resid_law", "resid_shift", "rate_change",
+                                      "share_abs_resid_lt_tol", "reading")}, flush=True)
+    return out
+
+
 # ---------------------------------------------------------------- self-test
 def selftest():
     """Synthetic pairs: a pure translation must give Delta_b ~ 0 even when the
@@ -397,6 +487,8 @@ def main():
                  "Delta_b_net_spread": cboot(d, "Delta_b_net_spread", rng)}
            for lab, d in (("strong_11", df[df.strong]), ("other_25", df[~df.strong]), ("all_36", df))}}
     print("G1x post hoc:", res["G1x_post_hoc_spread"])
+    # G6 (registered 2026-10-03): regional cold-outcome classes, own random stream
+    res["G6_regional_classes"] = regional_classes(usable, np.random.default_rng(SEED + 6))
     # POST HOC (added 2026-10-03 after G5 ran, not part of the registration): per-centre
     # means (with 2-3 centres a centre bootstrap gives only the extreme centre means) and
     # the spread check of G1x for the nudged-full pairs. No random numbers are drawn.
