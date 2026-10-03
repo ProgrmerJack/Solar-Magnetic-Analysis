@@ -329,6 +329,10 @@ def main():
          "committed before run", "892377c",
          (f"{g(GEN,'G4_regional_temperature','resid','mean')} {g(GEN,'G4_regional_temperature','resid','ci95')}; "
           f"planted 0.5 sigma {g(GEN,'G4_regional_temperature','resid_plant_0.5sigma','mean')}") if GEN else "pending", None),
+        ("GEN-5", "SNAPSI nudged-full (3-D stratosphere imposed) vs control, 9 pairs, 3 models: paired contrast difference; back-shift difference", "revision-5 primary",
+         "committed before data", "892377c",
+         (f"{g(GEN,'G5_nudged_full','control','paired_diff','mean')} {g(GEN,'G5_nudged_full','control','paired_diff','ci95')}; "
+          f"back-shift {g(GEN,'G5_nudged_full','control','Delta_b','mean')} {g(GEN,'G5_nudged_full','control','Delta_b','ci95')}; inconclusive") if isinstance(g(GEN,'G5_nudged_full'), dict) else "pending", None),
         ("DAV", "January 2021, CESM2(WACCM6) SSW vs scrambled-stratosphere ensembles (21 members), 4 Jan initialisation: back-shift contrast difference; not rejected, low power",
          "revision-5 primary", "committed before data", "738a422",
          f"{g(DAV,'pairs','04jan','Delta_b')} {g(DAV,'pairs','04jan','ci95','Delta_b')}" if DAV else "pending", None),

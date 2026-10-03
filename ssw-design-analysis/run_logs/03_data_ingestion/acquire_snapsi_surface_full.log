@@ -1,0 +1,278 @@
+CEDA token valid, 71.8 h remaining (user mikhail001)
+{
+ "CCCma|control|s20180125": 0.0,
+ "CCCma|control|s20180208": 0.0,
+ "CCCma|control|s20181213": 0.0,
+ "CCCma|control|s20190108": 0.0,
+ "CCCma|nudged|s20180125": 0.0,
+ "CCCma|nudged|s20180208": 0.0,
+ "CCCma|nudged|s20181213": 0.0,
+ "CCCma|nudged|s20190108": 0.0,
+ "CNR-ISAC|control|s20180125": 0.0,
+ "CNR-ISAC|control|s20180208": 0.0,
+ "CNR-ISAC|control|s20181213": 0.0,
+ "CNR-ISAC|control|s20190108": 0.0,
+ "CNR-ISAC|control|s20190829": 0.0,
+ "CNR-ISAC|control|s20191001": 0.0,
+ "CNR-ISAC|nudged|s20180125": 0.0,
+ "CNR-ISAC|nudged|s20180208": 0.0,
+ "CNR-ISAC|nudged|s20181213": 0.0,
+ "CNR-ISAC|nudged|s20190108": 0.0,
+ "CNR-ISAC|nudged|s20190829": 0.0,
+ "CNR-ISAC|nudged|s20191001": 0.0,
+ "ECCC|control|s20180125": 0.0,
+ "ECCC|control|s20180208": 0.0,
+ "ECCC|control|s20181213": 0.0,
+ "ECCC|control|s20190108": 0.0,
+ "ECCC|control|s20190829": 0.0,
+ "ECCC|control|s20191001": 0.0,
+ "ECCC|nudged|s20180125": 0.0,
+ "ECCC|nudged|s20180208": 0.0,
+ "ECCC|nudged|s20181213": 0.0,
+ "ECCC|nudged|s20190108": 0.0,
+ "ECCC|nudged|s20190829": 0.0,
+ "ECCC|nudged|s20191001": 0.0,
+ "ECMWF|control|s20180125": 0.0,
+ "ECMWF|control|s20180208": 0.0,
+ "ECMWF|control|s20181213": 0.0,
+ "ECMWF|control|s20190108": 0.0,
+ "ECMWF|control|s20190829": 0.0,
+ "ECMWF|control|s20191001": 0.0,
+ "ECMWF|nudged|s20180125": 0.0,
+ "ECMWF|nudged|s20180208": 0.0,
+ "ECMWF|nudged|s20181213": 0.0,
+ "ECMWF|nudged|s20190108": 0.0,
+ "ECMWF|nudged|s20190829": 0.0,
+ "ECMWF|nudged|s20191001": 0.0,
+ "KMA|control|s20180125": 0.0,
+ "KMA|control|s20180208": 0.0,
+ "KMA|control|s20181213": 0.0,
+ "KMA|control|s20190108": 0.0,
+ "KMA|control|s20190829": 0.0,
+ "KMA|control|s20191001": 0.0,
+ "KMA|nudged|s20180125": 0.0,
+ "KMA|nudged|s20180208": 0.0,
+ "KMA|nudged|s20181213": 0.0,
+ "KMA|nudged|s20190108": 0.0,
+ "KMA|nudged|s20190829": 0.0,
+ "KMA|nudged|s20191001": 0.0,
+ "Meteo-France|control|s20180125": 6.0,
+ "Meteo-France|control|s20180208": 6.0,
+ "Meteo-France|control|s20181213": 6.0,
+ "Meteo-France|control|s20190108": 6.0,
+ "Meteo-France|control|s20190829": 6.0,
+ "Meteo-France|control|s20191001": 6.0,
+ "Meteo-France|nudged|s20180125": 6.0,
+ "Meteo-France|nudged|s20180208": 6.0,
+ "Meteo-France|nudged|s20181213": 6.0,
+ "Meteo-France|nudged|s20190108": 6.0,
+ "Meteo-France|nudged|s20190829": 6.0,
+ "Meteo-France|nudged|s20191001": 6.0,
+ "NCAR|control|s20180125": 0.0,
+ "NCAR|control|s20180208": 0.0,
+ "NCAR|control|s20181213": 0.0,
+ "NCAR|control|s20190108": 0.0,
+ "NCAR|control|s20190829": 0.0,
+ "NCAR|control|s20191001": 0.0,
+ "NCAR|nudged|s20180125": 0.0,
+ "NCAR|nudged|s20180208": 0.0,
+ "NCAR|nudged|s20181213": 0.0,
+ "NCAR|nudged|s20190108": 0.0,
+ "NCAR|nudged|s20190829": 0.0,
+ "NCAR|nudged|s20191001": 0.0,
+ "NRL|control|s20180125": 0.0,
+ "NRL|control|s20180208": 0.0,
+ "NRL|control|s20181213": 0.0,
+ "NRL|control|s20190108": 0.0,
+ "NRL|control|s20190829": 0.0,
+ "NRL|control|s20191001": 0.0,
+ "NRL|nudged|s20180125": 0.0,
+ "NRL|nudged|s20180208": 0.0,
+ "NRL|nudged|s20181213": 0.0,
+ "NRL|nudged|s20190108": 0.0,
+ "NRL|nudged|s20190829": 0.0,
+ "NRL|nudged|s20191001": 0.0,
+ "SNU|control|s20180125": 0.0,
+ "SNU|control|s20180208": 0.0,
+ "SNU|control|s20181213": 0.0,
+ "SNU|control|s20190108": 0.0,
+ "SNU|control|s20190829": 0.0,
+ "SNU|control|s20191001": 0.0,
+ "SNU|nudged|s20180125": 0.0,
+ "SNU|nudged|s20180208": 0.0,
+ "SNU|nudged|s20181213": 0.0,
+ "SNU|nudged|s20190108": 0.0,
+ "SNU|nudged|s20190829": 0.0,
+ "SNU|nudged|s20191001": 0.0,
+ "UKMO|control|s20180125": 6.0,
+ "UKMO|control|s20180208": 6.0,
+ "UKMO|control|s20181213": 6.0,
+ "UKMO|control|s20190108": 6.0,
+ "UKMO|control|s20190829": 6.0,
+ "UKMO|control|s20191001": 6.0,
+ "UKMO|nudged|s20180125": 6.0,
+ "UKMO|nudged|s20180208": 6.0,
+ "UKMO|nudged|s20181213": 6.0,
+ "UKMO|nudged|s20190108": 6.0,
+ "UKMO|nudged|s20190829": 6.0,
+ "UKMO|nudged|s20191001": 6.0,
+ "ECMWF|nudged-full|s20180125": 0.0,
+ "ECMWF|nudged-full|s20180208": 0.0,
+ "ECMWF|nudged-full|s20181213": 0.0,
+ "ECMWF|nudged-full|s20190108": 0.0,
+ "ECMWF|nudged-full|s20190829": 0.0,
+ "ECMWF|nudged-full|s20191001": 0.0,
+ "Meteo-France|nudged-full|s20190108": 6.0,
+ "Meteo-France|nudged-full|s20191001": 6.0,
+ "NOAA-GFDL|nudged-full|s20180208": 3.0,
+ "NOAA-GFDL|nudged-full|s20190108": 3.0,
+ "NOAA-GFDL|nudged-full|s20191001": 3.0,
+ "UKMO|control-full|s20180125": 6.0,
+ "UKMO|control-full|s20180208": 6.0,
+ "UKMO|control-full|s20181213": 6.0,
+ "UKMO|control-full|s20190108": 6.0,
+ "UKMO|control-full|s20190829": 6.0,
+ "UKMO|control-full|s20191001": 6.0,
+ "UKMO|nudged-full|s20180125": 6.0,
+ "UKMO|nudged-full|s20180208": 6.0,
+ "UKMO|nudged-full|s20181213": 6.0,
+ "UKMO|nudged-full|s20190108": 6.0,
+ "UKMO|nudged-full|s20190829": 6.0,
+ "UKMO|nudged-full|s20191001": 6.0
+}
+measure exit 0
+centres    ['ECMWF', 'UKMO', 'Meteo-France']
+inits      ['s20180125', 's20180208', 's20181213', 's20190108']
+matched    654 files, 34.0 GB total
+cached     0 files (no transfer)
+to fetch   654 files, 34.0 GB
+CEDA token valid, 71.8 h remaining (user mikhail001)
+  100/654  4.9 min  (20 files/min)
+  200/654  9.5 min  (21 files/min)
+  300/654  18.1 min  (17 files/min)
+  400/654  28.5 min  (14 files/min)
+  500/654  39.2 min  (13 files/min)
+  retrying UKMO/s20180208/r42i1p1f1: IncompleteRead: IncompleteRead(13539372 bytes read, 56911119 more expected)
+  retrying UKMO/s20180208/r43i1p1f1: TimeoutError: The read operation timed out
+  retrying UKMO/s20181213/r10i1p1f1: IncompleteRead: IncompleteRead(69270930 bytes read, 1328272 more expected)
+  retrying UKMO/s20181213/r28i1p1f1: IncompleteRead: IncompleteRead(9180750 bytes read, 61453566 more expected)
+  retrying UKMO/s20181213/r19i1p1f1: IncompleteRead: IncompleteRead(43615950 bytes read, 26983410 more expected)
+  retrying UKMO/s20180208/r45i1p1f1: TimeoutError: The read operation timed out
+  retrying UKMO/s20181213/r34i1p1f1: TimeoutError: The read operation timed out
+  retrying UKMO/s20181213/r35i1p1f1: TimeoutError: The read operation timed out
+  retrying UKMO/s20181213/r36i1p1f1: TimeoutError: The read operation timed out
+  retrying UKMO/s20181213/r42i1p1f1: IncompleteRead: IncompleteRead(13256824 bytes read, 57350652 more expected)
+  retrying UKMO/s20181213/r39i1p1f1: IncompleteRead: IncompleteRead(60833946 bytes read, 9731220 more expected)
+  FAILED UKMO/nudged-full/s20180208/r43i1p1f1: IncompleteRead(17096832 bytes read, 53344051 more expected)
+  retrying UKMO/s20181213/r44i1p1f1: IncompleteRead: IncompleteRead(30249870 bytes read, 40370258 more expected)
+  retrying UKMO/s20181213/r40i1p1f1: IncompleteRead: IncompleteRead(60043338 bytes read, 10547354 more expected)
+  retrying UKMO/s20181213/r43i1p1f1: IncompleteRead: IncompleteRead(44507014 bytes read, 26112712 more expected)
+  FAILED UKMO/nudged-full/s20181213/r10i1p1f1: IncompleteRead(20005044 bytes read, 50594158 more expected)
+  retrying UKMO/s20181213/r45i1p1f1: IncompleteRead: IncompleteRead(65386866 bytes read, 5237203 more expected)
+  retrying UKMO/s20181213/r49i1p1f1: IncompleteRead: IncompleteRead(47386722 bytes read, 23219331 more expected)
+  retrying UKMO/s20181213/r8i1p1f1: IncompleteRead: IncompleteRead(47908110 bytes read, 22673779 more expected)
+  600/654  72.8 min  (8 files/min)
+  retrying UKMO/s20190108/r11i1p1f1: IncompleteRead: IncompleteRead(35194830 bytes read, 35150359 more expected)
+  retrying UKMO/s20190108/r16i1p1f1: TimeoutError: The read operation timed out
+  retrying UKMO/s20190108/r27i1p1f1: IncompleteRead: IncompleteRead(5075454 bytes read, 65274915 more expected)
+  retrying UKMO/s20190108/r18i1p1f1: IncompleteRead: IncompleteRead(63820962 bytes read, 6588803 more expected)
+  retrying UKMO/s20190108/r26i1p1f1: IncompleteRead: IncompleteRead(15049182 bytes read, 55329881 more expected)
+  retrying UKMO/s20190108/r24i1p1f1: IncompleteRead: IncompleteRead(39454290 bytes read, 30937618 more expected)
+  retrying UKMO/s20190108/r29i1p1f1: IncompleteRead: IncompleteRead(21521952 bytes read, 48824064 more expected)
+  retrying UKMO/s20190108/r17i1p1f1: IncompleteRead: IncompleteRead(45851790 bytes read, 24539297 more expected)
+  retrying UKMO/s20190108/r2i1p1f1: IncompleteRead: IncompleteRead(27393898 bytes read, 42985570 more expected)
+  retrying UKMO/s20190108/r31i1p1f1: IncompleteRead: IncompleteRead(3615630 bytes read, 66782735 more expected)
+  retrying UKMO/s20190108/r22i1p1f1: IncompleteRead: IncompleteRead(31216488 bytes read, 39185728 more expected)
+  retrying UKMO/s20190108/r28i1p1f1: IncompleteRead: IncompleteRead(58385550 bytes read, 12009626 more expected)
+  retrying UKMO/s20190108/r30i1p1f1: IncompleteRead: IncompleteRead(51232044 bytes read, 19154188 more expected)
+  retrying UKMO/s20190108/r32i1p1f1: IncompleteRead: IncompleteRead(10575366 bytes read, 59822884 more expected)
+  FAILED UKMO/nudged-full/s20190108/r24i1p1f1: IncompleteRead(866988 bytes read, 69524920 more expected)
+  retrying UKMO/s20190108/r33i1p1f1: IncompleteRead: IncompleteRead(3632802 bytes read, 66760744 more expected)
+  FAILED UKMO/nudged-full/s20190108/r2i1p1f1: IncompleteRead(3567522 bytes read, 66811946 more expected)
+  FAILED UKMO/nudged-full/s20190108/r29i1p1f1: IncompleteRead(35896590 bytes read, 34449426 more expected)
+  FAILED UKMO/nudged-full/s20190108/r31i1p1f1: IncompleteRead(58059090 bytes read, 12339275 more expected)
+  FAILED UKMO/nudged-full/s20190108/r18i1p1f1: IncompleteRead(16084110 bytes read, 54325655 more expected)
+  FAILED UKMO/nudged-full/s20190108/r26i1p1f1: IncompleteRead(3272910 bytes read, 67106153 more expected)
+  FAILED UKMO/nudged-full/s20190108/r22i1p1f1: IncompleteRead(2210952 bytes read, 68191264 more expected)
+  retrying UKMO/s20190108/r34i1p1f1: IncompleteRead: IncompleteRead(7989720 bytes read, 62383884 more expected)
+  FAILED UKMO/nudged-full/s20190108/r32i1p1f1: IncompleteRead(2636466 bytes read, 67761784 more expected)
+  retrying UKMO/s20190108/r35i1p1f1: IncompleteRead: IncompleteRead(15463494 bytes read, 54913441 more expected)
+  retrying UKMO/s20190108/r40i1p1f1: IncompleteRead: IncompleteRead(16243968 bytes read, 54157934 more expected)
+  FAILED UKMO/nudged-full/s20190108/r17i1p1f1: IncompleteRead(38704482 bytes read, 31686605 more expected)
+  retrying UKMO/s20190108/r37i1p1f1: IncompleteRead: IncompleteRead(13979190 bytes read, 56412924 more expected)
+  retrying UKMO/s20190108/r39i1p1f1: IncompleteRead: IncompleteRead(19363410 bytes read, 50985076 more expected)
+  FAILED UKMO/nudged-full/s20190108/r27i1p1f1: IncompleteRead(32535522 bytes read, 37814847 more expected)
+  retrying UKMO/s20190108/r38i1p1f1: IncompleteRead: IncompleteRead(34312660 bytes read, 36088852 more expected)
+  retrying UKMO/s20190108/r47i1p1f1: IncompleteRead: IncompleteRead(9099150 bytes read, 61303481 more expected)
+  retrying UKMO/s20190108/r46i1p1f1: IncompleteRead: IncompleteRead(57439512 bytes read, 12944178 more expected)
+  retrying UKMO/s20190108/r48i1p1f1: IncompleteRead: IncompleteRead(13646808 bytes read, 56716070 more expected)
+  retrying UKMO/s20190108/r49i1p1f1: IncompleteRead: IncompleteRead(11122770 bytes read, 59215540 more expected)
+  FAILED UKMO/nudged-full/s20190108/r33i1p1f1: The read operation timed out
+  retrying UKMO/s20190108/r4i1p1f1: IncompleteRead: IncompleteRead(3600210 bytes read, 66782498 more expected)
+  retrying UKMO/s20190108/r44i1p1f1: IncompleteRead: IncompleteRead(5704590 bytes read, 64646618 more expected)
+(first run stopped by the 2-hour background limit at 620/654; restarted)
+centres    ['ECMWF', 'UKMO', 'Meteo-France']
+inits      ['s20180125', 's20180208', 's20181213', 's20190108']
+matched    654 files, 34.0 GB total
+cached     624 files (no transfer)
+to fetch   30 files, 2.0 GB
+CEDA token valid, 69.8 h remaining (user mikhail001)
+  100/654  0.0 min  (25632 files/min)
+  200/654  0.0 min  (28322 files/min)
+  300/654  0.0 min  (28782 files/min)
+  400/654  0.0 min  (30420 files/min)
+  500/654  0.0 min  (30200 files/min)
+  600/654  0.0 min  (30410 files/min)
+  retrying UKMO/s20190108/r2i1p1f1: TimeoutError: The read operation timed out
+  retrying UKMO/s20190108/r18i1p1f1: TimeoutError: The read operation timed out
+  retrying UKMO/s20180208/r43i1p1f1: TimeoutError: The read operation timed out
+  retrying UKMO/s20190108/r32i1p1f1: TimeoutError: The read operation timed out
+  retrying UKMO/s20190108/r17i1p1f1: TimeoutError: The read operation timed out
+  retrying UKMO/s20190108/r24i1p1f1: TimeoutError: The read operation timed out
+  retrying UKMO/s20181213/r10i1p1f1: TimeoutError: The read operation timed out
+  retrying UKMO/s20190108/r29i1p1f1: TimeoutError: The read operation timed out
+  retrying UKMO/s20190108/r27i1p1f1: TimeoutError: The read operation timed out
+  retrying UKMO/s20190108/r31i1p1f1: TimeoutError: The read operation timed out
+  retrying UKMO/s20190108/r22i1p1f1: TimeoutError: The read operation timed out
+  retrying UKMO/s20190108/r26i1p1f1: TimeoutError: The read operation timed out
+  FAILED UKMO/nudged-full/s20190108/r18i1p1f1: IncompleteRead(3599310 bytes read, 66810455 more expected)
+  FAILED UKMO/nudged-full/s20190108/r32i1p1f1: IncompleteRead(4709098 bytes read, 65689152 more expected)
+  retrying UKMO/s20190108/r35i1p1f1: TimeoutError: The read operation timed out
+  retrying UKMO/s20190108/r33i1p1f1: IncompleteRead: IncompleteRead(29303310 bytes read, 41090236 more expected)
+  FAILED UKMO/nudged-full/s20190108/r31i1p1f1: IncompleteRead(11996672 bytes read, 58401693 more expected)
+  FAILED UKMO/nudged-full/s20180208/r43i1p1f1: IncompleteRead(62122432 bytes read, 8318451 more expected)
+  retrying UKMO/s20190108/r44i1p1f1: IncompleteRead: IncompleteRead(32110350 bytes read, 38240858 more expected)
+  retrying UKMO/s20190108/r49i1p1f1: IncompleteRead: IncompleteRead(6422670 bytes read, 63915640 more expected)
+  retrying UKMO/s20190108/r5i1p1f1: IncompleteRead: IncompleteRead(3827392 bytes read, 66549069 more expected)
+  retrying UKMO/s20190108/r6i1p1f1: IncompleteRead: IncompleteRead(28033086 bytes read, 42359041 more expected)
+  retrying UKMO/s20190108/r48i1p1f1: IncompleteRead: IncompleteRead(52999950 bytes read, 17362928 more expected)
+  retrying UKMO/s20190108/r4i1p1f1: IncompleteRead: IncompleteRead(36320910 bytes read, 34061798 more expected)
+  retrying UKMO/s20190108/r50i1p1f1: IncompleteRead: IncompleteRead(57895434 bytes read, 12500381 more expected)
+  retrying UKMO/s20190108/r9i1p1f1: IncompleteRead: IncompleteRead(51906976 bytes read, 18506711 more expected)
+
+141,880 rows from 650 cached members -> snapsi_polarcap_psl_full.parquet  (4 files failed this run)
+init                       s20180125  s20180208  s20181213  s20190108
+centre       experiment                                              
+ECMWF        nudged-full          51         51         51         51
+Meteo-France nudged-full           0          0          0         50
+UKMO         control-full         50         50         50         50
+             nudged-full          50         49         50         47
+download exit 0
+centres    ['UKMO']
+inits      ['s20180125', 's20180208', 's20181213', 's20190108']
+matched    400 files, 26.9 GB total
+cached     396 files (no transfer)
+to fetch   4 files, 0.3 GB
+CEDA token valid, 69.2 h remaining (user mikhail001)
+  100/400  0.0 min  (27905 files/min)
+  200/400  0.0 min  (30826 files/min)
+  300/400  0.0 min  (30879 files/min)
+  400/400  1.8 min  (224 files/min)
+
+142,840 rows from 654 cached members -> snapsi_polarcap_psl_full.parquet  (0 files failed this run)
+init                       s20180125  s20180208  s20181213  s20190108
+centre       experiment                                              
+ECMWF        nudged-full          51         51         51         51
+Meteo-France nudged-full           0          0          0         50
+UKMO         control-full         50         50         50         50
+             nudged-full          50         50         50         50

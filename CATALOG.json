@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-02T22:13:14+00:00",
+ "generated": "2026-10-03T07:47:24+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -1405,9 +1405,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "DOES AN IMPOSED SSW LEAVE THE CLASS STRUCTURE UNCHANGED WHERE THE FORCING IS STRONGEST, IN A THIRD EVENT, AND FOR A VARIABLE NOT USED TO CLASSIFY? Registered 2026-10-02 (revision 5), committed before any of these quantities was",
-   "loc": 420,
-   "modified": "2026-10-02 14:30",
-   "sha256_16": "bed953febc8febff",
+   "loc": 422,
+   "modified": "2026-10-03 07:45",
+   "sha256_16": "845a756b8a95c903",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_selection_test.json"
@@ -1938,9 +1938,9 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 365,
-   "modified": "2026-10-02 22:12",
-   "sha256_16": "9cb5552f00e49783",
+   "loc": 369,
+   "modified": "2026-10-03 07:47",
+   "sha256_16": "1941fe6486ceb25e",
    "flags": [],
    "filenames_mentioned": [
     "class_model_comparison.json",
@@ -2825,7 +2825,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-02 22:00",
+   "modified": "2026-10-02 22:13",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -5937,9 +5937,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 50963,
-   "modified": "2026-10-02 14:22",
-   "sha256_16": "2d8527d3dd54b04e",
+   "bytes": 59391,
+   "modified": "2026-10-03 07:46",
+   "sha256_16": "3ebcca6b4061ee87",
    "producers": [],
    "state": "ORPHAN",
    "detail": "no script writes this",
@@ -6249,7 +6249,7 @@
    "detail": "producer changed: ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "bed953febc8febff",
+    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "845a756b8a95c903",
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "6626a155b09d3623"
    },
    "verdicts": [
@@ -6522,9 +6522,9 @@
    "tree": "current",
    "stage": "9_literature",
    "readable": true,
-   "bytes": 57352,
-   "modified": "2026-10-02 14:52",
-   "sha256_16": "a8f50f851b1a0c35",
+   "bytes": 57424,
+   "modified": "2026-10-03 05:09",
+   "sha256_16": "4e6e6f82e3eebdb3",
    "producers": [],
    "state": "ORPHAN",
    "detail": "no script writes this",
@@ -6557,7 +6557,8 @@
     "predictions",
     "odds_five_events",
     "consistency_gate",
-    "detected"
+    "detected",
+    "scores"
    ]
   },
   {

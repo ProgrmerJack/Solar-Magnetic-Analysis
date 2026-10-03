@@ -372,6 +372,8 @@ def main():
     res["G4_regional_temperature"] = g4
 
     g5 = {}
+    # own stream (set before G5 first ran), so running G5 leaves every other interval unchanged
+    rng5 = np.random.default_rng(SEED + 5)
     for c, inits in FULL.items():
         for init in inits:
             for ref in (["control-full", "control"] if c == "UKMO" else ["control"]):
@@ -381,7 +383,7 @@ def main():
                 row, _ = pair_row(c, init, nm, "nudged-full", ref)
                 g5.setdefault(ref if ref == "control-full" else "control", []).append(row)
     res["G5_nudged_full"] = ({k: {"pairs": pd.DataFrame(v).round(4).to_dict(orient="records"),
-                                  **{s: cboot(pd.DataFrame(v), s, rng) for s in ("paired_diff", "Delta_b", "s")}}
+                                  **{s: cboot(pd.DataFrame(v), s, rng5) for s in ("paired_diff", "Delta_b", "s")}}
                               for k, v in g5.items()}
                              if g5 else "not run: nudged-full members not cached (CEDA token)")
     # POST HOC (added 2026-10-02 after the registered run, not part of the registration):
