@@ -47,6 +47,16 @@ TESTS (unit: mixed ensemble; intervals from 10,000 resamples of centres, and,
   F3 the narrower claim: paired C_SSW - C_non; back-shift Delta_b (SSW members
      minus the shift, classified) - C_non; and Delta_b against the law's
      prediction C_non (k - 1): slope and residual.
+  F3 READING, added 2026-10-03 before any free-arm result existed (theory note
+     theory_spread_law.md: for one location-scale population the contrast's
+     elasticity with respect to the spread is exactly 1; for two response types
+     separated by Delta whose mixing weight the SSW changes it is about 0.60
+     (Delta = 2), 0.37 (Delta = 3), 0.16 (Delta = 4)): the slope of Delta_b on the
+     law's prediction C_non (k - 1), with a 95% interval from resampling centres
+     (ensembles, if fewer than 6 centres). Interval including 1 and excluding 0.60
+     -> "two response types separated by 2 s.d. or more are excluded"; interval
+     excluding 1 -> "the contrast does not follow the spread as one population
+     requires"; otherwise inconclusive.
   F4 one population or a mixture: within each ensemble, SSW and non-SSW window
      means each standardised by their own mean and s.d.; pooled residual quantile
      difference at q = 0.05..0.95, and the Anderson-Darling k-sample statistic with
@@ -336,9 +346,24 @@ def main():
     d3 = mx.dropna(subset=["Delta_b", "law_pred_Delta_b"])
     if len(d3) > 2:
         b = np.polyfit(d3.law_pred_Delta_b, d3.Delta_b, 1)
-        res["F3_Delta_b_vs_law"] = {"slope": round(float(b[0]), 4), "intercept": round(float(b[1]), 4),
+        r3 = np.random.default_rng(SEED + 3)
+        units = d3.centre.unique() if d3.centre.nunique() >= MIN_CENTRES else d3.index.values
+        key = "centre" if d3.centre.nunique() >= MIN_CENTRES else None
+        bs = []
+        for _ in range(N_BOOT):
+            pick = r3.choice(units, len(units))
+            dd = pd.concat([d3[d3.centre == u] for u in pick]) if key else d3.loc[pick]
+            if dd.law_pred_Delta_b.nunique() > 2:
+                bs.append(np.polyfit(dd.law_pred_Delta_b, dd.Delta_b, 1)[0])
+        ci = [round(float(q), 4) for q in np.quantile(bs, [0.025, 0.975])]
+        res["F3_Delta_b_vs_law"] = {"slope": round(float(b[0]), 4), "slope_ci95": ci, "resampled": key or "ensembles",
+                                    "intercept": round(float(b[1]), 4),
                                     "r": round(float(np.corrcoef(d3.law_pred_Delta_b, d3.Delta_b)[0, 1]), 4),
-                                    "mean_residual": round(float((d3.Delta_b - d3.law_pred_Delta_b).mean()), 4)}
+                                    "mean_residual": round(float((d3.Delta_b - d3.law_pred_Delta_b).mean()), 4),
+                                    "reading": ("two response types separated by 2 s.d. or more are excluded"
+                                                if ci[0] <= 1 <= ci[1] and ci[0] > 0.60 else
+                                                "the contrast does not follow the spread as one population requires"
+                                                if not ci[0] <= 1 <= ci[1] else "inconclusive")}
     if zl:
         res["F4_shape"] = shape_test(zl, rng)
     # L is computed with its own random stream, after F
