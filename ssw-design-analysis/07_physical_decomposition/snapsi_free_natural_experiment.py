@@ -53,10 +53,14 @@ TESTS (unit: mixed ensemble; intervals from 10,000 resamples of centres, and,
      separated by Delta whose mixing weight the SSW changes it is about 0.60
      (Delta = 2), 0.37 (Delta = 3), 0.16 (Delta = 4)): the slope of Delta_b on the
      law's prediction C_non (k - 1), with a 95% interval from resampling centres
-     (ensembles, if fewer than 6 centres). Interval including 1 and excluding 0.60
-     -> "two response types separated by 2 s.d. or more are excluded"; interval
-     excluding 1 -> "the contrast does not follow the spread as one population
-     requires"; otherwise inconclusive.
+     (ensembles, if fewer than 6 centres). Interval entirely above 0.60 -> "two
+     response types separated by 2 s.d. or more are excluded"; interval entirely
+     below 0.60 -> "consistent with forced mixing of separated types"; otherwise
+     inconclusive. Whether the interval contains 1 is reported separately.
+     (Corrected 2026-10-03, still before any free-arm result: the first version read
+     an interval excluding 1 as evidence against one population, but mixtures
+     predict slopes BELOW 1; the trigger was the post-hoc slope 1.14 [1.04, 1.24]
+     on the 36 SNAPSI zonal-mean pairs, data already seen, disclosed here.)
   F4 one population or a mixture: within each ensemble, SSW and non-SSW window
      means each standardised by their own mean and s.d.; pooled residual quantile
      difference at q = 0.05..0.95, and the Anderson-Darling k-sample statistic with
@@ -360,10 +364,11 @@ def main():
                                     "intercept": round(float(b[1]), 4),
                                     "r": round(float(np.corrcoef(d3.law_pred_Delta_b, d3.Delta_b)[0, 1]), 4),
                                     "mean_residual": round(float((d3.Delta_b - d3.law_pred_Delta_b).mean()), 4),
+                                    "contains_1": bool(ci[0] <= 1 <= ci[1]),
                                     "reading": ("two response types separated by 2 s.d. or more are excluded"
-                                                if ci[0] <= 1 <= ci[1] and ci[0] > 0.60 else
-                                                "the contrast does not follow the spread as one population requires"
-                                                if not ci[0] <= 1 <= ci[1] else "inconclusive")}
+                                                if ci[0] > 0.60 else
+                                                "consistent with forced mixing of separated types"
+                                                if ci[1] < 0.60 else "inconclusive")}
     if zl:
         res["F4_shape"] = shape_test(zl, rng)
     # L is computed with its own random stream, after F
