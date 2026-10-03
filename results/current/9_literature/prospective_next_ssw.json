@@ -3824,7 +3824,13 @@
   "passed": true
  },
  "detected": {
-  "through": "2026-09-26",
+  "through": "2026-09-27",
   "onsets": []
+ },
+ "scores": {
+  "events": [],
+  "cumulative": {
+   "n_scored": 0
+  }
  }
 }

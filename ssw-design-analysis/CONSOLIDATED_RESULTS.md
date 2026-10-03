@@ -1278,7 +1278,8 @@ CDS ERA5T consistency gate PASSED (Dec 2021–Mar 2022: NAM r 1.000, RMS ≤ 0.0
 bias +0.26 K, removed from real-time T). Primary CRPS of days 8–52 NAM; decisive from 5 events (P 0.118 by 2030,
 0.767 by 2036 at 43/67 per winter, computed by odds()). Amended b2416e0 before any onset (review): month-day keying for
 leap years, full integrity check with skip-not-exit, bias correction, easterly tie rule (< 0 m/s, first-retrieved ERA5T).
-No onsets scored yet. NOT externally timestamped until pushed / archived (Zenodo, Software Heritage, OSF).
+No onsets scored yet (data to 2026-09-27). Externally timestamped: GitHub PushEvent 2026-10-03T04:59:43Z, head 8b59fbb
+(contains d2b54a8, b2416e0). Weekly runner: 08_literature_audit/run_prospective.sh.
 To run each winter: `03_data_ingestion/acquire_era5_realtime_cds.py --start <last+1> --end <today−6>`, then
 `prospective_next_ssw.py --detect`, and `--score` once day 52 + latency has passed.
 

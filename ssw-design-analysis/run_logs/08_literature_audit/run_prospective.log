@@ -1,0 +1,10 @@
+=== 2026-10-03T05:09:52Z  data 2026-09-28 .. 2026-09-27
+{'through': '2026-09-27', 'onsets': []}
+Saved -> prospective_next_ssw.json
+{
+ "events": [],
+ "cumulative": {
+  "n_scored": 0
+ }
+}
+Saved -> prospective_next_ssw.json

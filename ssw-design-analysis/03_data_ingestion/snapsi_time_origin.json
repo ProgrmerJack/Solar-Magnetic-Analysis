@@ -151,6 +151,30 @@
   "first_time": "2019-10-01 00:00:00",
   "offset_hours": 0.0
  },
+ "ECMWF|nudged-full|s20180125": {
+  "first_time": "2018-01-25 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECMWF|nudged-full|s20180208": {
+  "first_time": "2018-02-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECMWF|nudged-full|s20181213": {
+  "first_time": "2018-12-13 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECMWF|nudged-full|s20190108": {
+  "first_time": "2019-01-08 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECMWF|nudged-full|s20190829": {
+  "first_time": "2019-08-29 00:00:00",
+  "offset_hours": 0.0
+ },
+ "ECMWF|nudged-full|s20191001": {
+  "first_time": "2019-10-01 00:00:00",
+  "offset_hours": 0.0
+ },
  "ECMWF|nudged|s20180125": {
   "first_time": "2018-01-25 00:00:00",
   "offset_hours": 0.0
@@ -247,6 +271,14 @@
   "first_time": "2019-10-01 06:00:00",
   "offset_hours": 6.0
  },
+ "Meteo-France|nudged-full|s20190108": {
+  "first_time": "2019-01-08 06:00:00",
+  "offset_hours": 6.0
+ },
+ "Meteo-France|nudged-full|s20191001": {
+  "first_time": "2019-10-01 06:00:00",
+  "offset_hours": 6.0
+ },
  "Meteo-France|nudged|s20180125": {
   "first_time": "2018-01-25 06:00:00",
   "offset_hours": 6.0
@@ -318,6 +350,18 @@
  "NCAR|nudged|s20191001": {
   "first_time": "2019-10-01 00:00:00",
   "offset_hours": 0.0
+ },
+ "NOAA-GFDL|nudged-full|s20180208": {
+  "first_time": "2018-02-08 03:00:00",
+  "offset_hours": 3.0
+ },
+ "NOAA-GFDL|nudged-full|s20190108": {
+  "first_time": "2019-01-08 03:00:00",
+  "offset_hours": 3.0
+ },
+ "NOAA-GFDL|nudged-full|s20191001": {
+  "first_time": "2019-10-01 03:00:00",
+  "offset_hours": 3.0
  },
  "NRL|control|s20180125": {
   "first_time": "2018-01-25 00:00:00",
@@ -415,6 +459,30 @@
   "first_time": "2019-10-01 00:00:00",
   "offset_hours": 0.0
  },
+ "UKMO|control-full|s20180125": {
+  "first_time": "2018-01-25 06:00:00",
+  "offset_hours": 6.0
+ },
+ "UKMO|control-full|s20180208": {
+  "first_time": "2018-02-08 06:00:00",
+  "offset_hours": 6.0
+ },
+ "UKMO|control-full|s20181213": {
+  "first_time": "2018-12-13 06:00:00",
+  "offset_hours": 6.0
+ },
+ "UKMO|control-full|s20190108": {
+  "first_time": "2019-01-08 06:00:00",
+  "offset_hours": 6.0
+ },
+ "UKMO|control-full|s20190829": {
+  "first_time": "2019-08-29 06:00:00",
+  "offset_hours": 6.0
+ },
+ "UKMO|control-full|s20191001": {
+  "first_time": "2019-10-01 06:00:00",
+  "offset_hours": 6.0
+ },
  "UKMO|control|s20180125": {
   "first_time": "2018-01-25 06:00:00",
   "offset_hours": 6.0
@@ -436,6 +504,30 @@
   "offset_hours": 6.0
  },
  "UKMO|control|s20191001": {
+  "first_time": "2019-10-01 06:00:00",
+  "offset_hours": 6.0
+ },
+ "UKMO|nudged-full|s20180125": {
+  "first_time": "2018-01-25 06:00:00",
+  "offset_hours": 6.0
+ },
+ "UKMO|nudged-full|s20180208": {
+  "first_time": "2018-02-08 06:00:00",
+  "offset_hours": 6.0
+ },
+ "UKMO|nudged-full|s20181213": {
+  "first_time": "2018-12-13 06:00:00",
+  "offset_hours": 6.0
+ },
+ "UKMO|nudged-full|s20190108": {
+  "first_time": "2019-01-08 06:00:00",
+  "offset_hours": 6.0
+ },
+ "UKMO|nudged-full|s20190829": {
+  "first_time": "2019-08-29 06:00:00",
+  "offset_hours": 6.0
+ },
+ "UKMO|nudged-full|s20191001": {
   "first_time": "2019-10-01 06:00:00",
   "offset_hours": 6.0
  },
