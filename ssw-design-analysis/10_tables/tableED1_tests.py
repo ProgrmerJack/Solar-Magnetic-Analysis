@@ -338,6 +338,15 @@ def main():
           f"back-shift {g(GEN,'G5_nudged_full','control','Delta_b','mean')} (centre means "
           f"{g(GEN,'G5x_post_hoc','control','centre_means','ECMWF','Delta_b')} to {g(GEN,'G5x_post_hoc','control','centre_means','Meteo-France','Delta_b')}); "
           f"2-3 centres, no interval; not decisive") if isinstance(g(GEN,'G5_nudged_full'), dict) else "pending", None),
+        ("GEN-7", "why the zonal-pair elasticity is 1.14: slope with condition 1 only; calibration under the exact law", "revision-7 diagnostic",
+         "committed before run", "a280a10",
+         (f"condition 1 only {g(GEN,'G7_elasticity_diagnosis','a_condition1_only','slope')} {g(GEN,'G7_elasticity_diagnosis','a_condition1_only','ci95')}; "
+          f"law calibration {g(GEN,'G7_elasticity_diagnosis','b_calibration_means_only','range95')}") if GEN else "pending", None),
+        ("GEN-8", "shape of the outcome distribution, SSW imposed vs not, 36 SNAPSI pairs (AD permutation), with power against two-type mixtures", "revision-7 primary",
+         "committed before run", "e78182a",
+         (f"p {g(GEN,'G8_shape_with_power','AD_perm_p')}, max quantile difference {g(GEN,'G8_shape_with_power','max_abs_quantile_diff')}; "
+          f"excluded: {len(g(GEN,'G8_shape_with_power','excluded_types') or [])} of 9 type grids (all with separation >= 2)") if GEN else "pending",
+         g(GEN, 'G8_shape_with_power', 'AD_perm_p') if GEN else None),
         ("DAV", "January 2021, CESM2(WACCM6) SSW vs scrambled-stratosphere ensembles (21 members), 4 Jan initialisation: back-shift contrast difference; not rejected, low power",
          "revision-5 primary", "committed before data", "738a422",
          f"{g(DAV,'pairs','04jan','Delta_b')} {g(DAV,'pairs','04jan','ci95','Delta_b')}" if DAV else "pending", None),
