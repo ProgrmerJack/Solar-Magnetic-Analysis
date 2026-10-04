@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T18:53:13+00:00",
+ "generated": "2026-10-04T19:08:03+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -1868,8 +1868,8 @@
    "stage": "09_figures",
    "title": "fig5_law.py -- Figure 5: one law for outcome-defined impact classes.",
    "loc": 184,
-   "modified": "2026-10-04 18:50",
-   "sha256_16": "c267443788cd826b",
+   "modified": "2026-10-04 19:06",
+   "sha256_16": "ab7227bc10e01110",
    "flags": [],
    "filenames_mentioned": [
     "damip_class_law.json",
@@ -2059,8 +2059,8 @@
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
    "loc": 427,
-   "modified": "2026-10-04 18:50",
-   "sha256_16": "77a5a9ade2bfcc39",
+   "modified": "2026-10-04 19:06",
+   "sha256_16": "5f7108245c7928fc",
    "flags": [],
    "filenames_mentioned": [
     "class_model_comparison.json",
@@ -2948,7 +2948,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-04 13:24",
+   "modified": "2026-10-04 18:53",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"

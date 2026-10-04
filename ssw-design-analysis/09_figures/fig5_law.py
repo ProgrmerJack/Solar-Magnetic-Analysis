@@ -172,7 +172,7 @@ def main():
         dx.scatter([], [], s=12, color="0.4", marker="s", label="winter (cold class)")
         dx.legend(fontsize=4.4, loc="upper left")
         dx.set_xlim(lim); dx.set_ylim(lim)
-        dx.set_title("human forcing: summers follow the law; some cold winters do not", fontsize=5.8)
+        dx.set_title("human forcing: 13 of 24 model-region cases follow the law", fontsize=5.8)
     dx.set_xlabel("law residual expected under the exact law (σ)")
     dx.set_ylabel("observed law residual (σ)")
     S.panel_label(dx, "d", x=-0.2, y=1.04)

@@ -1306,6 +1306,10 @@ D-MM (CanESM5 p1/p2 separately, MIROC6, HadGEM3; GISS dropped): M1 central-Europ
   value under the law 1.14 [1.08, 1.20] (post hoc). Winter cold classes FAIL in CanESM5 and MIROC6 (-0.20..-0.52), beyond
   the empirical-shape calibration (-0.09..-0.27) in all 6 high-latitude cases; HadGEM3 winters within. Forcing reshapes
   the cold tail there -> the law is a testable null, not an identity.
+  CORRECTED after review: (i) the 1.14 excess is NOT explained (two-condition calibration 1.05 [0.96, 1.13]);
+  (ii) 'reshapes the cold tail' is NOT shown (shape test p 0.46-1.00 everywhere) -> cause unknown; (iii) the
+  multi-model elasticity is NOT identified (high-lat sd ratios 0.98-1.09; 0.61-1.98 is sampling); (iv) by the
+  calibration, W. Russia summers depart too (3 of 4); 13/24 inside. Holds: C. Europe + C. N. America summers, HadGEM3.
 Novelty: identity is textbook (truncated moments); null = Doksum 1974 / Koenker & Xiao 2002 location-scale treatment
   effect; alternative = Palmer 1999 forced regime frequency. Title now SSW-scoped (88 chars); main text 3,999 words.
 
