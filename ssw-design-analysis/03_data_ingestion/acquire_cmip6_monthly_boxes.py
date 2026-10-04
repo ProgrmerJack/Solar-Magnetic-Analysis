@@ -36,7 +36,7 @@ CATALOGUE = "https://storage.googleapis.com/cmip6/pangeo-cmip6.csv"
 SEARCH = "https://esgf.ceda.ac.uk/esg-search/search"
 BOXES = {"CEUR": (45, 55, 5, 15), "WRUS": (50, 60, 30, 60), "CNAM": (35, 50, 260, 280),
          "CEAS": (45, 60, 60, 120), "NSIB": (60, 75, 60, 140), "NWNA": (55, 70, 200, 260)}
-PANGEO_MODELS = ["CanESM5", "MIROC6", "GISS-E2-1-G"]
+PANGEO_MODELS = ["CanESM5", "MIROC6"]          # GISS-E2-1-G dropped (6346c9e)
 T0, T1 = "1984-12-01", "2014-12-31"
 socket.setdefaulttimeout(300)
 
@@ -66,7 +66,7 @@ def esgf_jobs():
     for exp in ("historical", "hist-nat"):
         q = {"type": "File", "project": "CMIP6", "source_id": "HadGEM3-GC31-LL", "experiment_id": exp,
              "variable_id": "tas", "table_id": "Amon", "format": "application/solr+json", "limit": 2000,
-             "fields": "title,url,member_id"}
+             "fields": "title,url,member_id", "distrib": "false"}   # CEDA node only: the distributed search hung
         docs = json.load(urllib.request.urlopen(SEARCH + "?" + urllib.parse.urlencode(q), timeout=120))["response"]["docs"]
         best = {}
         for doc in docs:
