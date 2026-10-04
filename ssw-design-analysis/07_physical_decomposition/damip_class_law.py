@@ -96,7 +96,9 @@ def year_stats(xh, xn, q, side):
     ch, cn = contrast(h, thr, side), contrast(n, thr, side)
     rate = (lambda x: float((x > thr).mean() if side == "hot" else (x < thr).mean()))
     return {"rate_hist": rate(h), "rate_nat": rate(n), "shift": float(m_h - m_n), "sd_ratio": float(k),
-            "C_hist": ch, "C_nat": cn, "resid_law": ch - contrast(m_n + k * (n - m_n), thr, side),
+            # null mapped to the FORCED mean m_h (D2); until 2026-10-05 this read m_n + k (n - m_n),
+            # the reference mean -- in the SNAPSI scripts m_n is the nudged (forced) mean (FAILURES.md)
+            "C_hist": ch, "C_nat": cn, "resid_law": ch - contrast(m_h + k * (n - m_n), thr, side),
             "resid_shift": ch - contrast(n + (m_h - m_n), thr, side), "diff": ch - cn,
             "law_pred_diff": cn * (k - 1), "_z": ((h - m_h) / h.std(ddof=1), (n - m_n) / n.std(ddof=1))}
 

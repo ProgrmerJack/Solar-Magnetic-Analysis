@@ -86,7 +86,9 @@ def esgf_jobs():
 
 def reduce(job):
     src, model, exp, var, member, url = job
+    import dask
     import xarray as xr
+    dask.config.set(scheduler="synchronous")           # one chunk in memory at a time per worker
     CACHE.mkdir(exist_ok=True)
     cf = CACHE / f"{model}_{exp}_{var}_{member}.parquet"
     if cf.exists():
@@ -135,7 +137,8 @@ def main():
         print(k, v, flush=True)
     import multiprocessing as mp
     done = 0
-    with ProcessPoolExecutor(10, mp_context=mp.get_context("spawn")) as ex:   # spawn: gcsfs (FAILURES 2026-10-04)
+    # spawn: gcsfs (FAILURES 2026-10-04); 6 recycled workers: with 10 the workers vanished on EC-Earth3 (2026-10-05)
+    with ProcessPoolExecutor(6, mp_context=mp.get_context("spawn"), max_tasks_per_child=20) as ex:
         for r in ex.map(reduce, jobs):
             done += 1
             if r.startswith("FAILED"):

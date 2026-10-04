@@ -287,3 +287,13 @@ Rule: use mp_context "spawn" for gcsfs/fsspec-async readers; watch the cached-fi
 Tried: claiming the multi-model elasticity was "identified by winter spread changes" (year-level s.d. ratios 0.61-1.98) and that winter law failures meant "forcing reshapes the cold tail".
 Failed: the forced s.d. ratios were 0.98-1.09 (the range was sampling noise; a Gaussian calibration reproduced the slope), and the shape test found no change where the law failed. Found by review.
 Rule: before claiming identification, check the effect size averaged over units against its calibration under the null; never name a mechanism that the registered diagnostic (here the shape test) did not detect.
+
+## 2026-10-05 — One variable name, two meanings across scripts: the law null was never shifted
+Tried: damip_class_law.year_stats computed the location-scale null as m_n + k (n - m_n), copied from the SNAPSI scripts, where m_n is the nudged (forced) mean; in DAMIP code m_n is the hist-nat (reference) mean.
+Failed: the null kept the reference mean, so every cold class under a warm shift read as a "failure" (-0.20 to -0.52 sigma, 8 of 24 cases; HadGEM3 decile "bias" -0.20), reported in the paper as a property of climate for two revisions; with the registered null m_h + k (n - m_n) all 24 lie within -0.14..+0.16.
+Rule: name means by role (m_ref, m_forced), never by arm initial; every null gets a selftest where the law holds exactly with a large shift, and a residual that grows with the shift is a code smell before it is a finding.
+
+## 2026-10-05 — Calibration replicate averaged undefined years as zero
+Tried: damip_class_law_multimodel.calibrate*/: a simulated year with an empty class added 0.0 and the sum was divided by all 30 years.
+Failed: where the forced class is often near-empty (law residual defined in 6-9 of 30 years) the 95% ranges shrank about fivefold, putting 9 of 24 small residuals "outside"; with the mean over defined years, 22 of 24 (Gaussian) lie inside.
+Rule: a calibration must apply exactly the observed estimator, including how undefined units are dropped; compare its range width with the year-bootstrap interval as a check.

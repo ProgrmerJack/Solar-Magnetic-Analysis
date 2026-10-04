@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T19:08:03+00:00",
+ "generated": "2026-10-04T21:01:41+00:00",
  "generator": "tools/catalog_repo.py",
  "note": "Every ssw-design-analysis result in one file. The per-script JSONs remain on disk as write-side provenance; this is the read path. Regenerate with tools/catalog_repo.py.",
  "results": {
@@ -39889,26 +39889,26 @@
       "n_years": 30
      },
      "resid_law": {
-      "mean": 0.0406,
+      "mean": 0.0342,
       "ci95": [
-       -0.0135,
-       0.1016
+       -0.0298,
+       0.1069
       ],
-      "n_years": 30
+      "n_years": 29
      },
      "resid_shift": {
       "mean": 0.0256,
       "ci95": [
-       -0.056,
-       0.1069
+       -0.0561,
+       0.1059
       ],
       "n_years": 29
      },
      "diff": {
       "mean": 0.0266,
       "ci95": [
-       -0.0499,
-       0.1033
+       -0.0498,
+       0.1009
       ],
       "n_years": 30
      },
@@ -39920,13 +39920,13 @@
      "elasticity_slope": {
       "slope": 0.8064,
       "ci95": [
-       0.3696,
-       1.142
+       0.3755,
+       1.1429
       ]
      },
      "shape": {
       "max_abs_quantile_diff": 0.0485,
-      "AD_perm_p": 0.963,
+      "AD_perm_p": 0.9565,
       "quantile_diff": {
        "0.05": -0.0112,
        "0.1": 0.0145,
@@ -39958,7 +39958,7 @@
        "sd_ratio": 1.0256,
        "C_hist": 1.9329,
        "C_nat": 1.5954,
-       "resid_law": 0.2932,
+       "resid_law": 0.2081,
        "resid_shift": 0.2224,
        "diff": 0.3375,
        "law_pred_diff": 0.0408,
@@ -39971,7 +39971,7 @@
        "sd_ratio": 1.0825,
        "C_hist": 1.8264,
        "C_nat": 1.5262,
-       "resid_law": 0.165,
+       "resid_law": 0.1705,
        "resid_shift": 0.2967,
        "diff": 0.3001,
        "law_pred_diff": 0.1259,
@@ -39984,7 +39984,7 @@
        "sd_ratio": 0.8402,
        "C_hist": 1.5328,
        "C_nat": 1.7002,
-       "resid_law": 0.0997,
+       "resid_law": 0.0546,
        "resid_shift": -0.2144,
        "diff": -0.1675,
        "law_pred_diff": -0.2716,
@@ -39997,7 +39997,7 @@
        "sd_ratio": 0.9106,
        "C_hist": 1.4661,
        "C_nat": 1.7056,
-       "resid_law": -0.1143,
+       "resid_law": -0.2394,
        "resid_shift": -0.3268,
        "diff": -0.2395,
        "law_pred_diff": -0.1525,
@@ -40010,7 +40010,7 @@
        "sd_ratio": 1.0966,
        "C_hist": 1.8796,
        "C_nat": 1.614,
-       "resid_law": 0.1004,
+       "resid_law": 0.0826,
        "resid_shift": 0.2259,
        "diff": 0.2656,
        "law_pred_diff": 0.1559,
@@ -40023,7 +40023,7 @@
        "sd_ratio": 1.0554,
        "C_hist": 1.7136,
        "C_nat": 1.6416,
-       "resid_law": -0.0135,
+       "resid_law": -0.0054,
        "resid_shift": 0.0849,
        "diff": 0.072,
        "law_pred_diff": 0.091,
@@ -40036,7 +40036,7 @@
        "sd_ratio": 0.9679,
        "C_hist": 1.4774,
        "C_nat": 1.6806,
-       "resid_law": -0.1493,
+       "resid_law": -0.1377,
        "resid_shift": -0.1732,
        "diff": -0.2032,
        "law_pred_diff": -0.0539,
@@ -40049,7 +40049,7 @@
        "sd_ratio": 1.0332,
        "C_hist": 1.5842,
        "C_nat": 1.6377,
-       "resid_law": -0.1079,
+       "resid_law": -0.0464,
        "resid_shift": 0.006,
        "diff": -0.0535,
        "law_pred_diff": 0.0544,
@@ -40062,7 +40062,7 @@
        "sd_ratio": 1.046,
        "C_hist": 1.6056,
        "C_nat": 1.6728,
-       "resid_law": -0.1184,
+       "resid_law": -0.0949,
        "resid_shift": -0.0202,
        "diff": -0.0673,
        "law_pred_diff": 0.0769,
@@ -40075,7 +40075,7 @@
        "sd_ratio": 1.0684,
        "C_hist": 1.7703,
        "C_nat": 1.6221,
-       "resid_law": 0.0726,
+       "resid_law": 0.0793,
        "resid_shift": 0.1876,
        "diff": 0.1482,
        "law_pred_diff": 0.111,
@@ -40088,7 +40088,7 @@
        "sd_ratio": 0.9486,
        "C_hist": 1.6035,
        "C_nat": 1.6545,
-       "resid_law": 0.0341,
+       "resid_law": 0.2159,
        "resid_shift": 0.1364,
        "diff": -0.051,
        "law_pred_diff": -0.0851,
@@ -40101,7 +40101,7 @@
        "sd_ratio": 0.9854,
        "C_hist": 1.6264,
        "C_nat": 1.5353,
-       "resid_law": 0.1136,
+       "resid_law": 0.0728,
        "resid_shift": 0.0497,
        "diff": 0.0911,
        "law_pred_diff": -0.0225,
@@ -40114,7 +40114,7 @@
        "sd_ratio": 1.1902,
        "C_hist": 1.7438,
        "C_nat": 1.6192,
-       "resid_law": -0.1754,
+       "resid_law": -0.2192,
        "resid_shift": 0.0945,
        "diff": 0.1246,
        "law_pred_diff": 0.308,
@@ -40127,7 +40127,7 @@
        "sd_ratio": 1.1571,
        "C_hist": 1.7391,
        "C_nat": 1.5601,
-       "resid_law": -0.038,
+       "resid_law": -0.0845,
        "resid_shift": 0.1216,
        "diff": 0.179,
        "law_pred_diff": 0.2452,
@@ -40140,7 +40140,7 @@
        "sd_ratio": 0.8107,
        "C_hist": 1.2862,
        "C_nat": 1.5869,
-       "resid_law": -0.0272,
+       "resid_law": 0.0225,
        "resid_shift": -0.2725,
        "diff": -0.3007,
        "law_pred_diff": -0.3003,
@@ -40153,7 +40153,7 @@
        "sd_ratio": 1.0109,
        "C_hist": 1.7087,
        "C_nat": 1.6166,
-       "resid_law": 0.0744,
+       "resid_law": 0.1934,
        "resid_shift": 0.2098,
        "diff": 0.0921,
        "law_pred_diff": 0.0177,
@@ -40166,7 +40166,7 @@
        "sd_ratio": 0.963,
        "C_hist": 1.6169,
        "C_nat": 1.6444,
-       "resid_law": 0.0334,
+       "resid_law": 0.0659,
        "resid_shift": 0.0062,
        "diff": -0.0274,
        "law_pred_diff": -0.0609,
@@ -40179,7 +40179,7 @@
        "sd_ratio": 1.0362,
        "C_hist": 1.7402,
        "C_nat": 1.6908,
-       "resid_law": -0.0119,
+       "resid_law": 0.1785,
        "resid_shift": 0.2277,
        "diff": 0.0493,
        "law_pred_diff": 0.0613,
@@ -40192,7 +40192,7 @@
        "sd_ratio": 1.007,
        "C_hist": 1.6756,
        "C_nat": 1.7281,
-       "resid_law": -0.0646,
+       "resid_law": 0.0259,
        "resid_shift": 0.0374,
        "diff": -0.0525,
        "law_pred_diff": 0.0121,
@@ -40205,7 +40205,7 @@
        "sd_ratio": 1.1178,
        "C_hist": 1.8256,
        "C_nat": 1.5986,
-       "resid_law": 0.0682,
+       "resid_law": -0.3215,
        "resid_shift": -0.0952,
        "diff": 0.227,
        "law_pred_diff": 0.1883,
@@ -40218,7 +40218,7 @@
        "sd_ratio": 0.7883,
        "C_hist": 1.2317,
        "C_nat": 1.689,
-       "resid_law": -0.1052,
+       "resid_law": -0.048,
        "resid_shift": -0.3987,
        "diff": -0.4573,
        "law_pred_diff": -0.3576,
@@ -40231,7 +40231,7 @@
        "sd_ratio": 1.1887,
        "C_hist": 1.9696,
        "C_nat": 1.6605,
-       "resid_law": 0.0407,
+       "resid_law": -0.0639,
        "resid_shift": 0.2296,
        "diff": 0.3091,
        "law_pred_diff": 0.3134,
@@ -40244,7 +40244,7 @@
        "sd_ratio": 0.8461,
        "C_hist": 1.3304,
        "C_nat": 1.6195,
-       "resid_law": -0.0576,
+       "resid_law": -0.0917,
        "resid_shift": -0.3322,
        "diff": -0.2891,
        "law_pred_diff": -0.2492,
@@ -40257,7 +40257,7 @@
        "sd_ratio": 0.9625,
        "C_hist": 1.5725,
        "C_nat": 1.6505,
-       "resid_law": -0.0161,
+       "resid_law": -0.0868,
        "resid_shift": -0.1514,
        "diff": -0.078,
        "law_pred_diff": -0.0619,
@@ -40270,7 +40270,7 @@
        "sd_ratio": 0.892,
        "C_hist": 1.5071,
        "C_nat": 1.6055,
-       "resid_law": 0.0336,
+       "resid_law": 0.0369,
        "resid_shift": -0.1287,
        "diff": -0.0984,
        "law_pred_diff": -0.1733,
@@ -40283,7 +40283,7 @@
        "sd_ratio": 1.008,
        "C_hist": 1.6587,
        "C_nat": 1.6989,
-       "resid_law": -0.0538,
+       "resid_law": -0.0157,
        "resid_shift": -0.0023,
        "diff": -0.0401,
        "law_pred_diff": 0.0136,
@@ -40296,7 +40296,7 @@
        "sd_ratio": 0.9548,
        "C_hist": 1.6865,
        "C_nat": 1.5511,
-       "resid_law": 0.1925,
+       "resid_law": -0.0456,
        "resid_shift": -0.1276,
        "diff": 0.1354,
        "law_pred_diff": -0.0701,
@@ -40309,7 +40309,7 @@
        "sd_ratio": 0.9799,
        "C_hist": 2.1696,
        "C_nat": 1.7782,
-       "resid_law": 0.4272,
+       "resid_law": 0.6268,
        "resid_shift": 0.605,
        "diff": 0.3914,
        "law_pred_diff": -0.0358,
@@ -40322,7 +40322,7 @@
        "sd_ratio": 0.8486,
        "C_hist": 1.9811,
        "C_nat": 1.6299,
-       "resid_law": 0.5792,
+       "resid_law": 0.4598,
        "resid_shift": 0.2434,
        "diff": 0.3511,
        "law_pred_diff": -0.2468,
@@ -40335,7 +40335,7 @@
        "sd_ratio": 0.9366,
        "C_hist": 1.5303,
        "C_nat": 1.6794,
-       "resid_law": -0.0566,
+       "resid_law": NaN,
        "resid_shift": NaN,
        "diff": -0.1491,
        "law_pred_diff": -0.1064,
@@ -40382,44 +40382,44 @@
       "n_years": 30
      },
      "resid_law": {
-      "mean": -0.2026,
+      "mean": -0.0107,
       "ci95": [
-       -0.309,
-       -0.0926
+       -0.0646,
+       0.0397
       ],
-      "n_years": 28
+      "n_years": 26
      },
      "resid_shift": {
       "mean": -0.0168,
       "ci95": [
-       -0.1115,
-       0.0771
+       -0.111,
+       0.0801
       ],
       "n_years": 26
      },
      "diff": {
       "mean": -0.2071,
       "ci95": [
-       -0.3341,
-       -0.0724
+       -0.3328,
+       -0.0736
       ],
       "n_years": 28
      },
-     "reading_law": "inconclusive",
+     "reading_law": "the law holds in a second domain",
      "share_abs_lt_tol": {
-      "law": 0.4615,
+      "law": 0.9615,
       "shift_only": 0.6538
      },
      "elasticity_slope": {
       "slope": 1.1568,
       "ci95": [
-       0.8256,
-       1.6852
+       0.8315,
+       1.682
       ]
      },
      "shape": {
       "max_abs_quantile_diff": 0.0485,
-      "AD_perm_p": 0.958,
+      "AD_perm_p": 0.9655,
       "quantile_diff": {
        "0.05": -0.0112,
        "0.1": 0.0145,
@@ -40451,7 +40451,7 @@
        "sd_ratio": 1.0256,
        "C_hist": 2.2384,
        "C_nat": 1.8219,
-       "resid_law": 0.4097,
+       "resid_law": NaN,
        "resid_shift": NaN,
        "diff": 0.4165,
        "law_pred_diff": 0.0466,
@@ -40464,7 +40464,7 @@
        "sd_ratio": 1.0825,
        "C_hist": 1.9976,
        "C_nat": 1.5068,
-       "resid_law": 0.3701,
+       "resid_law": NaN,
        "resid_shift": NaN,
        "diff": 0.4908,
        "law_pred_diff": 0.1243,
@@ -40503,7 +40503,7 @@
        "sd_ratio": 1.0966,
        "C_hist": 2.1562,
        "C_nat": 1.773,
-       "resid_law": 0.2293,
+       "resid_law": 0.0551,
        "resid_shift": 0.2402,
        "diff": 0.3831,
        "law_pred_diff": 0.1713,
@@ -40516,7 +40516,7 @@
        "sd_ratio": 1.0554,
        "C_hist": 2.068,
        "C_nat": 1.8658,
-       "resid_law": 0.1623,
+       "resid_law": 0.1825,
        "resid_shift": 0.2624,
        "diff": 0.2022,
        "law_pred_diff": 0.1034,
@@ -40529,7 +40529,7 @@
        "sd_ratio": 0.9679,
        "C_hist": 1.9558,
        "C_nat": 2.1052,
-       "resid_law": -0.1126,
+       "resid_law": -0.0661,
        "resid_shift": -0.1332,
        "diff": -0.1494,
        "law_pred_diff": -0.0675,
@@ -40542,7 +40542,7 @@
        "sd_ratio": 1.0332,
        "C_hist": 2.0096,
        "C_nat": 1.7385,
-       "resid_law": 0.228,
+       "resid_law": 0.2358,
        "resid_shift": 0.2987,
        "diff": 0.2712,
        "law_pred_diff": 0.0578,
@@ -40568,7 +40568,7 @@
        "sd_ratio": 1.0684,
        "C_hist": 1.772,
        "C_nat": 2.042,
-       "resid_law": -0.2837,
+       "resid_law": -0.0424,
        "resid_shift": 0.0275,
        "diff": -0.2701,
        "law_pred_diff": 0.1397,
@@ -40581,7 +40581,7 @@
        "sd_ratio": 0.9486,
        "C_hist": 1.448,
        "C_nat": 2.1606,
-       "resid_law": -0.6917,
+       "resid_law": -0.3817,
        "resid_shift": -0.4426,
        "diff": -0.7126,
        "law_pred_diff": -0.1111,
@@ -40594,7 +40594,7 @@
        "sd_ratio": 0.9854,
        "C_hist": 1.6529,
        "C_nat": 1.9638,
-       "resid_law": -0.2822,
+       "resid_law": 0.0886,
        "resid_shift": 0.0653,
        "diff": -0.3109,
        "law_pred_diff": -0.0287,
@@ -40607,7 +40607,7 @@
        "sd_ratio": 1.1902,
        "C_hist": 2.0798,
        "C_nat": 1.8555,
-       "resid_law": -0.0336,
+       "resid_law": 0.1088,
        "resid_shift": 0.3857,
        "diff": 0.2243,
        "law_pred_diff": 0.353,
@@ -40620,7 +40620,7 @@
        "sd_ratio": 1.1571,
        "C_hist": 1.9294,
        "C_nat": 2.0537,
-       "resid_law": -0.2143,
+       "resid_law": 0.1557,
        "resid_shift": 0.3965,
        "diff": -0.1242,
        "law_pred_diff": 0.3227,
@@ -40633,7 +40633,7 @@
        "sd_ratio": 0.8107,
        "C_hist": 1.5204,
        "C_nat": 1.948,
-       "resid_law": -0.1248,
+       "resid_law": 0.0294,
        "resid_shift": -0.1654,
        "diff": -0.4275,
        "law_pred_diff": -0.3687,
@@ -40646,7 +40646,7 @@
        "sd_ratio": 1.0109,
        "C_hist": 1.7276,
        "C_nat": 2.3252,
-       "resid_law": -0.5551,
+       "resid_law": -0.2464,
        "resid_shift": -0.2251,
        "diff": -0.5976,
        "law_pred_diff": 0.0254,
@@ -40659,7 +40659,7 @@
        "sd_ratio": 0.963,
        "C_hist": 1.544,
        "C_nat": 2.0186,
-       "resid_law": -0.3999,
+       "resid_law": -0.1241,
        "resid_shift": -0.1883,
        "diff": -0.4746,
        "law_pred_diff": -0.0747,
@@ -40672,7 +40672,7 @@
        "sd_ratio": 1.0362,
        "C_hist": 1.657,
        "C_nat": 2.2277,
-       "resid_law": -0.5584,
+       "resid_law": -0.0951,
        "resid_shift": -0.0339,
        "diff": -0.5707,
        "law_pred_diff": 0.0807,
@@ -40685,7 +40685,7 @@
        "sd_ratio": 1.007,
        "C_hist": 1.7328,
        "C_nat": 1.885,
-       "resid_law": -0.1687,
+       "resid_law": -0.0765,
        "resid_shift": -0.064,
        "diff": -0.1523,
        "law_pred_diff": 0.0132,
@@ -40698,7 +40698,7 @@
        "sd_ratio": 1.1178,
        "C_hist": 1.7886,
        "C_nat": 1.8532,
-       "resid_law": -0.1936,
+       "resid_law": 0.0527,
        "resid_shift": 0.2356,
        "diff": -0.0646,
        "law_pred_diff": 0.2183,
@@ -40711,7 +40711,7 @@
        "sd_ratio": 0.7883,
        "C_hist": 1.2717,
        "C_nat": 1.8263,
-       "resid_law": -0.2957,
+       "resid_law": -0.061,
        "resid_shift": -0.4244,
        "diff": -0.5546,
        "law_pred_diff": -0.3867,
@@ -40724,7 +40724,7 @@
        "sd_ratio": 1.1887,
        "C_hist": 1.9756,
        "C_nat": 1.8815,
-       "resid_law": -0.232,
+       "resid_law": 0.0466,
        "resid_shift": 0.315,
        "diff": 0.0941,
        "law_pred_diff": 0.3551,
@@ -40737,7 +40737,7 @@
        "sd_ratio": 0.8461,
        "C_hist": 1.4357,
        "C_nat": 1.902,
-       "resid_law": -0.2957,
+       "resid_law": 0.0719,
        "resid_shift": -0.165,
        "diff": -0.4662,
        "law_pred_diff": -0.2926,
@@ -40750,7 +40750,7 @@
        "sd_ratio": 0.9625,
        "C_hist": 1.5176,
        "C_nat": 1.843,
-       "resid_law": -0.2562,
+       "resid_law": -0.077,
        "resid_shift": -0.1391,
        "diff": -0.3253,
        "law_pred_diff": -0.0691,
@@ -40763,7 +40763,7 @@
        "sd_ratio": 0.892,
        "C_hist": 1.4083,
        "C_nat": 2.0101,
-       "resid_law": -0.5941,
+       "resid_law": -0.027,
        "resid_shift": -0.2182,
        "diff": -0.6018,
        "law_pred_diff": -0.217,
@@ -40776,7 +40776,7 @@
        "sd_ratio": 1.008,
        "C_hist": 1.7549,
        "C_nat": 1.95,
-       "resid_law": -0.2018,
+       "resid_law": -0.016,
        "resid_shift": -0.0019,
        "diff": -0.1951,
        "law_pred_diff": 0.0157,
@@ -40789,7 +40789,7 @@
        "sd_ratio": 0.9548,
        "C_hist": 1.5757,
        "C_nat": 1.9513,
-       "resid_law": -0.2874,
+       "resid_law": 0.0742,
        "resid_shift": -0.0121,
        "diff": -0.3756,
        "law_pred_diff": -0.0881,
@@ -40802,7 +40802,7 @@
        "sd_ratio": 0.9799,
        "C_hist": 1.4039,
        "C_nat": 2.0551,
-       "resid_law": -0.6786,
+       "resid_law": -0.1456,
        "resid_shift": -0.1775,
        "diff": -0.6512,
        "law_pred_diff": -0.0414,
@@ -40815,7 +40815,7 @@
        "sd_ratio": 0.8486,
        "C_hist": 1.3021,
        "C_nat": 1.7791,
-       "resid_law": -0.3384,
+       "resid_law": -0.1374,
        "resid_shift": -0.3851,
        "diff": -0.477,
        "law_pred_diff": -0.2694,
@@ -40828,7 +40828,7 @@
        "sd_ratio": 0.9366,
        "C_hist": 1.4761,
        "C_nat": 2.0443,
-       "resid_law": -0.4386,
+       "resid_law": -0.0472,
        "resid_shift": -0.15,
        "diff": -0.5682,
        "law_pred_diff": -0.1296,
@@ -40875,10 +40875,10 @@
       "n_years": 30
      },
      "resid_law": {
-      "mean": 0.0596,
+      "mean": -0.0652,
       "ci95": [
-       0.0038,
-       0.12
+       -0.1387,
+       0.0059
       ],
       "n_years": 30
      },
@@ -40900,7 +40900,7 @@
      },
      "reading_law": "the law holds in a second domain",
      "share_abs_lt_tol": {
-      "law": 0.8667,
+      "law": 0.8,
       "shift_only": 0.6
      },
      "elasticity_slope": {
@@ -40944,7 +40944,7 @@
        "sd_ratio": 0.9991,
        "C_hist": 1.7483,
        "C_nat": 1.527,
-       "resid_law": 0.2227,
+       "resid_law": -0.5582,
        "resid_shift": -0.5604,
        "diff": 0.2213,
        "law_pred_diff": -0.0014,
@@ -40957,7 +40957,7 @@
        "sd_ratio": 0.8649,
        "C_hist": 1.797,
        "C_nat": 1.542,
-       "resid_law": 0.4401,
+       "resid_law": -0.3449,
        "resid_shift": -0.3422,
        "diff": 0.255,
        "law_pred_diff": -0.2083,
@@ -40970,7 +40970,7 @@
        "sd_ratio": 0.9697,
        "C_hist": 1.6316,
        "C_nat": 1.5967,
-       "resid_law": 0.0832,
+       "resid_law": -0.1285,
        "resid_shift": -0.1835,
        "diff": 0.0349,
        "law_pred_diff": -0.0483,
@@ -40983,7 +40983,7 @@
        "sd_ratio": 0.9956,
        "C_hist": 2.094,
        "C_nat": 1.6983,
-       "resid_law": 0.4032,
+       "resid_law": 0.3081,
        "resid_shift": 0.3002,
        "diff": 0.3957,
        "law_pred_diff": -0.0075,
@@ -40996,7 +40996,7 @@
        "sd_ratio": 1.1801,
        "C_hist": 2.1414,
        "C_nat": 1.68,
-       "resid_law": 0.1582,
+       "resid_law": 0.0097,
        "resid_shift": 0.2832,
        "diff": 0.4614,
        "law_pred_diff": 0.3025,
@@ -41009,7 +41009,7 @@
        "sd_ratio": 0.9181,
        "C_hist": 1.772,
        "C_nat": 1.6613,
-       "resid_law": 0.2257,
+       "resid_law": -0.1129,
        "resid_shift": -0.188,
        "diff": 0.1107,
        "law_pred_diff": -0.136,
@@ -41022,7 +41022,7 @@
        "sd_ratio": 1.0892,
        "C_hist": 1.8033,
        "C_nat": 1.7369,
-       "resid_law": -0.0884,
+       "resid_law": -0.3126,
        "resid_shift": -0.1662,
        "diff": 0.0664,
        "law_pred_diff": 0.1549,
@@ -41035,7 +41035,7 @@
        "sd_ratio": 0.9757,
        "C_hist": 1.959,
        "C_nat": 1.6504,
-       "resid_law": 0.3214,
+       "resid_law": 0.0465,
        "resid_shift": -0.0012,
        "diff": 0.3085,
        "law_pred_diff": -0.0401,
@@ -41048,7 +41048,7 @@
        "sd_ratio": 0.8888,
        "C_hist": 1.6333,
        "C_nat": 1.6731,
-       "resid_law": 0.1205,
+       "resid_law": 0.0804,
        "resid_shift": -0.0979,
        "diff": -0.0398,
        "law_pred_diff": -0.1861,
@@ -41061,7 +41061,7 @@
        "sd_ratio": 1.1286,
        "C_hist": 1.7802,
        "C_nat": 1.6316,
-       "resid_law": -0.0447,
+       "resid_law": -0.2621,
        "resid_shift": -0.0676,
        "diff": 0.1486,
        "law_pred_diff": 0.2099,
@@ -41074,7 +41074,7 @@
        "sd_ratio": 1.4365,
        "C_hist": 2.1337,
        "C_nat": 1.5573,
-       "resid_law": -0.1048,
+       "resid_law": -0.0908,
        "resid_shift": 0.5313,
        "diff": 0.5764,
        "law_pred_diff": 0.6799,
@@ -41087,7 +41087,7 @@
        "sd_ratio": 0.9964,
        "C_hist": 1.769,
        "C_nat": 1.7548,
-       "resid_law": 0.0205,
+       "resid_law": -0.0848,
        "resid_shift": -0.0915,
        "diff": 0.0142,
        "law_pred_diff": -0.0063,
@@ -41100,7 +41100,7 @@
        "sd_ratio": 0.9478,
        "C_hist": 1.8507,
        "C_nat": 1.7271,
-       "resid_law": 0.2159,
+       "resid_law": 0.2217,
        "resid_shift": 0.1312,
        "diff": 0.1236,
        "law_pred_diff": -0.0901,
@@ -41113,7 +41113,7 @@
        "sd_ratio": 0.9732,
        "C_hist": 1.4604,
        "C_nat": 1.6045,
-       "resid_law": -0.101,
+       "resid_law": -0.2092,
        "resid_shift": -0.2552,
        "diff": -0.1441,
        "law_pred_diff": -0.043,
@@ -41126,7 +41126,7 @@
        "sd_ratio": 1.2741,
        "C_hist": 2.0155,
        "C_nat": 1.6602,
-       "resid_law": -0.0676,
+       "resid_law": -0.1487,
        "resid_shift": 0.2392,
        "diff": 0.3553,
        "law_pred_diff": 0.455,
@@ -41139,7 +41139,7 @@
        "sd_ratio": 0.9118,
        "C_hist": 1.4268,
        "C_nat": 1.6065,
-       "resid_law": -0.0396,
+       "resid_law": -0.0528,
        "resid_shift": -0.1958,
        "diff": -0.1797,
        "law_pred_diff": -0.1416,
@@ -41152,7 +41152,7 @@
        "sd_ratio": 0.6807,
        "C_hist": 1.1172,
        "C_nat": 1.6415,
-       "resid_law": -0.0983,
+       "resid_law": -0.026,
        "resid_shift": -0.5194,
        "diff": -0.5243,
        "law_pred_diff": -0.5241,
@@ -41165,7 +41165,7 @@
        "sd_ratio": 1.2816,
        "C_hist": 2.0826,
        "C_nat": 1.6444,
-       "resid_law": 0.0054,
+       "resid_law": -0.0028,
        "resid_shift": 0.4354,
        "diff": 0.4382,
        "law_pred_diff": 0.4631,
@@ -41178,7 +41178,7 @@
        "sd_ratio": 0.734,
        "C_hist": 1.2337,
        "C_nat": 1.6712,
-       "resid_law": -0.0255,
+       "resid_law": 0.0364,
        "resid_shift": -0.3976,
        "diff": -0.4375,
        "law_pred_diff": -0.4446,
@@ -41191,7 +41191,7 @@
        "sd_ratio": 1.2623,
        "C_hist": 2.034,
        "C_nat": 1.6484,
-       "resid_law": -0.0731,
+       "resid_law": -0.1579,
        "resid_shift": 0.3047,
        "diff": 0.3856,
        "law_pred_diff": 0.4325,
@@ -41204,7 +41204,7 @@
        "sd_ratio": 0.9842,
        "C_hist": 1.5973,
        "C_nat": 1.5793,
-       "resid_law": 0.043,
+       "resid_law": 0.1899,
        "resid_shift": 0.1674,
        "diff": 0.018,
        "law_pred_diff": -0.0249,
@@ -41217,7 +41217,7 @@
        "sd_ratio": 1.1009,
        "C_hist": 1.6045,
        "C_nat": 1.6852,
-       "resid_law": -0.2225,
+       "resid_law": -0.1469,
        "resid_shift": 0.0233,
        "diff": -0.0807,
        "law_pred_diff": 0.17,
@@ -41230,7 +41230,7 @@
        "sd_ratio": 1.1483,
        "C_hist": 1.8696,
        "C_nat": 1.6752,
-       "resid_law": -0.0394,
+       "resid_law": -0.0228,
        "resid_shift": 0.2216,
        "diff": 0.1944,
        "law_pred_diff": 0.2484,
@@ -41243,7 +41243,7 @@
        "sd_ratio": 1.0631,
        "C_hist": 1.6447,
        "C_nat": 1.5335,
-       "resid_law": 0.0264,
+       "resid_law": -0.0232,
        "resid_shift": 0.0758,
        "diff": 0.1111,
        "law_pred_diff": 0.0968,
@@ -41256,7 +41256,7 @@
        "sd_ratio": 1.1526,
        "C_hist": 1.9296,
        "C_nat": 1.4182,
-       "resid_law": 0.3028,
+       "resid_law": 0.0446,
        "resid_shift": 0.2013,
        "diff": 0.5114,
        "law_pred_diff": 0.2164,
@@ -41269,7 +41269,7 @@
        "sd_ratio": 1.0559,
        "C_hist": 1.6291,
        "C_nat": 1.5311,
-       "resid_law": 0.0124,
+       "resid_law": -0.0565,
        "resid_shift": 0.0328,
        "diff": 0.098,
        "law_pred_diff": 0.0856,
@@ -41282,7 +41282,7 @@
        "sd_ratio": 1.2144,
        "C_hist": 1.9524,
        "C_nat": 1.6148,
-       "resid_law": 0.0096,
+       "resid_law": 0.0235,
        "resid_shift": 0.1636,
        "diff": 0.3376,
        "law_pred_diff": 0.3463,
@@ -41295,7 +41295,7 @@
        "sd_ratio": 0.965,
        "C_hist": 1.5733,
        "C_nat": 1.6557,
-       "resid_law": -0.0244,
+       "resid_law": 0.1248,
        "resid_shift": 0.0722,
        "diff": -0.0825,
        "law_pred_diff": -0.058,
@@ -41308,7 +41308,7 @@
        "sd_ratio": 1.0404,
        "C_hist": 1.7934,
        "C_nat": 1.8131,
-       "resid_law": -0.0804,
+       "resid_law": 0.2398,
        "resid_shift": 0.3001,
        "diff": -0.0196,
        "law_pred_diff": 0.0732,
@@ -41321,7 +41321,7 @@
        "sd_ratio": 0.851,
        "C_hist": 1.5631,
        "C_nat": 1.5953,
-       "resid_law": 0.1862,
+       "resid_law": -0.5393,
        "resid_shift": -0.5084,
        "diff": -0.0322,
        "law_pred_diff": -0.2377,
@@ -41368,44 +41368,44 @@
       "n_years": 30
      },
      "resid_law": {
-      "mean": -0.1644,
+      "mean": -0.0277,
       "ci95": [
-       -0.2775,
-       -0.0561
+       -0.0677,
+       0.0114
       ],
-      "n_years": 21
+      "n_years": 22
      },
      "resid_shift": {
       "mean": 0.0518,
       "ci95": [
-       -0.0475,
-       0.1516
+       -0.0486,
+       0.1527
       ],
       "n_years": 22
      },
      "diff": {
       "mean": -0.1121,
       "ci95": [
-       -0.2633,
-       0.0405
+       -0.2607,
+       0.0402
       ],
       "n_years": 22
      },
-     "reading_law": "inconclusive",
+     "reading_law": "the law holds in a second domain",
      "share_abs_lt_tol": {
-      "law": 0.619,
-      "shift_only": 0.7619
+      "law": 1.0,
+      "shift_only": 0.7273
      },
      "elasticity_slope": {
       "slope": 0.769,
       "ci95": [
-       0.4013,
-       1.087
+       0.4027,
+       1.0792
       ]
      },
      "shape": {
       "max_abs_quantile_diff": 0.0892,
-      "AD_perm_p": 0.5742,
+      "AD_perm_p": 0.5937,
       "quantile_diff": {
        "0.05": -0.0705,
        "0.1": -0.011,
@@ -41528,7 +41528,7 @@
        "sd_ratio": 0.9757,
        "C_hist": 2.3386,
        "C_nat": 2.2724,
-       "resid_law": 0.1214,
+       "resid_law": -0.012,
        "resid_shift": -0.0705,
        "diff": 0.0661,
        "law_pred_diff": -0.0553,
@@ -41541,7 +41541,7 @@
        "sd_ratio": 0.8888,
        "C_hist": 1.998,
        "C_nat": 2.0045,
-       "resid_law": 0.1383,
+       "resid_law": 0.0503,
        "resid_shift": -0.0945,
        "diff": -0.0065,
        "law_pred_diff": -0.223,
@@ -41554,7 +41554,7 @@
        "sd_ratio": 1.1286,
        "C_hist": 2.3753,
        "C_nat": 2.1381,
-       "resid_law": 0.0482,
+       "resid_law": -0.1147,
        "resid_shift": 0.1691,
        "diff": 0.2372,
        "law_pred_diff": 0.275,
@@ -41567,7 +41567,7 @@
        "sd_ratio": 1.4365,
        "C_hist": 2.4945,
        "C_nat": 1.8922,
-       "resid_law": 0.0297,
+       "resid_law": -0.0248,
        "resid_shift": 0.4054,
        "diff": 0.6023,
        "law_pred_diff": 0.826,
@@ -41580,7 +41580,7 @@
        "sd_ratio": 0.9964,
        "C_hist": 2.2828,
        "C_nat": 2.1001,
-       "resid_law": 0.1902,
+       "resid_law": -0.0207,
        "resid_shift": -0.029,
        "diff": 0.1826,
        "law_pred_diff": -0.0075,
@@ -41619,7 +41619,7 @@
        "sd_ratio": 1.2741,
        "C_hist": 2.4281,
        "C_nat": 2.1443,
-       "resid_law": 0.0115,
+       "resid_law": -0.0656,
        "resid_shift": 0.029,
        "diff": 0.2838,
        "law_pred_diff": 0.5877,
@@ -41632,7 +41632,7 @@
        "sd_ratio": 0.9118,
        "C_hist": 1.5526,
        "C_nat": 1.8286,
-       "resid_law": -0.1694,
+       "resid_law": 0.089,
        "resid_shift": -0.0541,
        "diff": -0.276,
        "law_pred_diff": -0.1612,
@@ -41658,7 +41658,7 @@
        "sd_ratio": 1.2816,
        "C_hist": 1.9965,
        "C_nat": 1.9532,
-       "resid_law": -0.2058,
+       "resid_law": -0.111,
        "resid_shift": 0.3443,
        "diff": 0.0433,
        "law_pred_diff": 0.5501,
@@ -41671,7 +41671,7 @@
        "sd_ratio": 0.734,
        "C_hist": 1.4305,
        "C_nat": 2.0122,
-       "resid_law": NaN,
+       "resid_law": -0.0464,
        "resid_shift": -0.4699,
        "diff": -0.5817,
        "law_pred_diff": -0.5353,
@@ -41684,7 +41684,7 @@
        "sd_ratio": 1.2623,
        "C_hist": 2.2286,
        "C_nat": 1.6192,
-       "resid_law": 0.2145,
+       "resid_law": 0.1214,
        "resid_shift": 0.5593,
        "diff": 0.6094,
        "law_pred_diff": 0.4248,
@@ -41697,7 +41697,7 @@
        "sd_ratio": 0.9842,
        "C_hist": 1.6066,
        "C_nat": 2.3877,
-       "resid_law": -0.7435,
+       "resid_law": -0.1736,
        "resid_shift": -0.1543,
        "diff": -0.7811,
        "law_pred_diff": -0.0377,
@@ -41710,7 +41710,7 @@
        "sd_ratio": 1.1009,
        "C_hist": 1.8476,
        "C_nat": 2.0375,
-       "resid_law": -0.2748,
+       "resid_law": -0.0667,
        "resid_shift": 0.1088,
        "diff": -0.1899,
        "law_pred_diff": 0.2056,
@@ -41723,7 +41723,7 @@
        "sd_ratio": 1.1483,
        "C_hist": 1.8499,
        "C_nat": 1.9398,
-       "resid_law": -0.3061,
+       "resid_law": -0.1076,
        "resid_shift": 0.1412,
        "diff": -0.0899,
        "law_pred_diff": 0.2877,
@@ -41736,7 +41736,7 @@
        "sd_ratio": 1.0631,
        "C_hist": 1.6809,
        "C_nat": 2.1217,
-       "resid_law": -0.46,
+       "resid_law": 0.0627,
        "resid_shift": 0.1587,
        "diff": -0.4408,
        "law_pred_diff": 0.1339,
@@ -41749,7 +41749,7 @@
        "sd_ratio": 1.1526,
        "C_hist": 1.8302,
        "C_nat": 2.0623,
-       "resid_law": -0.3911,
+       "resid_law": 0.1208,
        "resid_shift": 0.3397,
        "diff": -0.2321,
        "law_pred_diff": 0.3148,
@@ -41762,7 +41762,7 @@
        "sd_ratio": 1.0559,
        "C_hist": 1.6334,
        "C_nat": 1.8985,
-       "resid_law": -0.1314,
+       "resid_law": 0.0187,
        "resid_shift": 0.1042,
        "diff": -0.2651,
        "law_pred_diff": 0.1062,
@@ -41775,7 +41775,7 @@
        "sd_ratio": 1.2144,
        "C_hist": 1.9137,
        "C_nat": 1.9264,
-       "resid_law": -0.1997,
+       "resid_law": 0.0187,
        "resid_shift": 0.3404,
        "diff": -0.0127,
        "law_pred_diff": 0.4131,
@@ -41788,7 +41788,7 @@
        "sd_ratio": 0.965,
        "C_hist": 1.6361,
        "C_nat": 2.249,
-       "resid_law": -0.6084,
+       "resid_law": -0.141,
        "resid_shift": -0.1641,
        "diff": -0.6129,
        "law_pred_diff": -0.0788,
@@ -41801,7 +41801,7 @@
        "sd_ratio": 1.0404,
        "C_hist": 1.6829,
        "C_nat": 2.004,
-       "resid_law": -0.3065,
+       "resid_law": -0.1763,
        "resid_shift": -0.1041,
        "diff": -0.3211,
        "law_pred_diff": 0.0809,
@@ -41814,7 +41814,7 @@
        "sd_ratio": 0.851,
        "C_hist": 1.3261,
        "C_nat": 1.945,
-       "resid_law": -0.3646,
+       "resid_law": 0.0134,
        "resid_shift": -0.2125,
        "diff": -0.6189,
        "law_pred_diff": -0.2898,
@@ -41861,10 +41861,10 @@
       "n_years": 30
      },
      "resid_law": {
-      "mean": 0.0893,
+      "mean": 0.0205,
       "ci95": [
-       0.0357,
-       0.1505
+       -0.0167,
+       0.059
       ],
       "n_years": 30
      },
@@ -41886,7 +41886,7 @@
      },
      "reading_law": "the law holds in a second domain",
      "share_abs_lt_tol": {
-      "law": 0.8667,
+      "law": 0.9667,
       "shift_only": 0.7667
      },
      "elasticity_slope": {
@@ -41930,7 +41930,7 @@
        "sd_ratio": 1.1294,
        "C_hist": 2.1125,
        "C_nat": 1.6127,
-       "resid_law": 0.338,
+       "resid_law": 0.0263,
        "resid_shift": 0.1852,
        "diff": 0.4998,
        "law_pred_diff": 0.2087,
@@ -41943,7 +41943,7 @@
        "sd_ratio": 0.9722,
        "C_hist": 2.0429,
        "C_nat": 1.7312,
-       "resid_law": 0.362,
+       "resid_law": 0.1438,
        "resid_shift": 0.0895,
        "diff": 0.3117,
        "law_pred_diff": -0.0481,
@@ -41956,7 +41956,7 @@
        "sd_ratio": 1.0099,
        "C_hist": 1.7833,
        "C_nat": 1.6709,
-       "resid_law": 0.0959,
+       "resid_law": 0.0773,
        "resid_shift": 0.094,
        "diff": 0.1124,
        "law_pred_diff": 0.0165,
@@ -41969,7 +41969,7 @@
        "sd_ratio": 0.8787,
        "C_hist": 2.0314,
        "C_nat": 1.5689,
-       "resid_law": 0.6362,
+       "resid_law": 0.1724,
        "resid_shift": -0.0841,
        "diff": 0.4625,
        "law_pred_diff": -0.1903,
@@ -41982,7 +41982,7 @@
        "sd_ratio": 0.7455,
        "C_hist": 1.3647,
        "C_nat": 1.7016,
-       "resid_law": 0.0062,
+       "resid_law": -0.1034,
        "resid_shift": -0.5458,
        "diff": -0.3369,
        "law_pred_diff": -0.4331,
@@ -41995,7 +41995,7 @@
        "sd_ratio": 1.072,
        "C_hist": 1.9555,
        "C_nat": 1.5707,
-       "resid_law": 0.2694,
+       "resid_law": 0.0695,
        "resid_shift": 0.1961,
        "diff": 0.3848,
        "law_pred_diff": 0.1131,
@@ -42008,7 +42008,7 @@
        "sd_ratio": 0.7678,
        "C_hist": 1.5245,
        "C_nat": 1.6476,
-       "resid_law": 0.2454,
+       "resid_law": 0.0008,
        "resid_shift": -0.2891,
        "diff": -0.1231,
        "law_pred_diff": -0.3826,
@@ -42021,7 +42021,7 @@
        "sd_ratio": 1.0979,
        "C_hist": 1.9013,
        "C_nat": 1.6924,
-       "resid_law": 0.0432,
+       "resid_law": 0.0525,
        "resid_shift": 0.216,
        "diff": 0.2089,
        "law_pred_diff": 0.1657,
@@ -42034,7 +42034,7 @@
        "sd_ratio": 0.9076,
        "C_hist": 1.6039,
        "C_nat": 1.5683,
-       "resid_law": 0.1565,
+       "resid_law": 0.1197,
        "resid_shift": -0.0015,
        "diff": 0.0356,
        "law_pred_diff": -0.145,
@@ -42047,7 +42047,7 @@
        "sd_ratio": 0.9921,
        "C_hist": 1.7009,
        "C_nat": 1.5387,
-       "resid_law": 0.1744,
+       "resid_law": -0.1222,
        "resid_shift": -0.1366,
        "diff": 0.1622,
        "law_pred_diff": -0.0121,
@@ -42060,7 +42060,7 @@
        "sd_ratio": 1.1325,
        "C_hist": 1.8945,
        "C_nat": 1.6093,
-       "resid_law": 0.0665,
+       "resid_law": 0.0702,
        "resid_shift": 0.2835,
        "diff": 0.2852,
        "law_pred_diff": 0.2132,
@@ -42073,7 +42073,7 @@
        "sd_ratio": 1.1218,
        "C_hist": 1.8127,
        "C_nat": 1.6328,
-       "resid_law": 0.005,
+       "resid_law": 0.0327,
        "resid_shift": 0.2187,
        "diff": 0.1799,
        "law_pred_diff": 0.1988,
@@ -42086,7 +42086,7 @@
        "sd_ratio": 1.1158,
        "C_hist": 1.8793,
        "C_nat": 1.5986,
-       "resid_law": 0.104,
+       "resid_law": 0.0602,
        "resid_shift": 0.2724,
        "diff": 0.2807,
        "law_pred_diff": 0.1851,
@@ -42099,7 +42099,7 @@
        "sd_ratio": 1.1926,
        "C_hist": 2.0315,
        "C_nat": 1.5596,
-       "resid_law": 0.2074,
+       "resid_law": 0.191,
        "resid_shift": 0.4882,
        "diff": 0.4719,
        "law_pred_diff": 0.3004,
@@ -42112,7 +42112,7 @@
        "sd_ratio": 1.0438,
        "C_hist": 1.6766,
        "C_nat": 1.7081,
-       "resid_law": -0.1063,
+       "resid_law": -0.0571,
        "resid_shift": 0.0157,
        "diff": -0.0315,
        "law_pred_diff": 0.0748,
@@ -42125,7 +42125,7 @@
        "sd_ratio": 1.1507,
        "C_hist": 1.926,
        "C_nat": 1.7016,
-       "resid_law": -0.0218,
+       "resid_law": -0.0305,
        "resid_shift": 0.227,
        "diff": 0.2244,
        "law_pred_diff": 0.2564,
@@ -42138,7 +42138,7 @@
        "sd_ratio": 0.9699,
        "C_hist": 1.5622,
        "C_nat": 1.5932,
-       "resid_law": -0.014,
+       "resid_law": 0.0423,
        "resid_shift": -0.0053,
        "diff": -0.031,
        "law_pred_diff": -0.0479,
@@ -42151,7 +42151,7 @@
        "sd_ratio": 0.9881,
        "C_hist": 1.569,
        "C_nat": 1.6005,
-       "resid_law": -0.0124,
+       "resid_law": -0.1147,
        "resid_shift": -0.135,
        "diff": -0.0315,
        "law_pred_diff": -0.0191,
@@ -42164,7 +42164,7 @@
        "sd_ratio": 0.9747,
        "C_hist": 1.52,
        "C_nat": 1.6949,
-       "resid_law": -0.132,
+       "resid_law": -0.0427,
        "resid_shift": -0.0834,
        "diff": -0.175,
        "law_pred_diff": -0.0429,
@@ -42177,7 +42177,7 @@
        "sd_ratio": 0.9451,
        "C_hist": 1.4702,
        "C_nat": 1.6071,
-       "resid_law": -0.0559,
+       "resid_law": -0.0726,
        "resid_shift": -0.1622,
        "diff": -0.1369,
        "law_pred_diff": -0.0882,
@@ -42190,7 +42190,7 @@
        "sd_ratio": 1.0356,
        "C_hist": 1.6623,
        "C_nat": 1.6225,
-       "resid_law": -0.015,
+       "resid_law": -0.0098,
        "resid_shift": 0.0477,
        "diff": 0.0397,
        "law_pred_diff": 0.0578,
@@ -42203,7 +42203,7 @@
        "sd_ratio": 0.925,
        "C_hist": 1.4707,
        "C_nat": 1.581,
-       "resid_law": -0.0167,
+       "resid_law": 0.1139,
        "resid_shift": 0.0039,
        "diff": -0.1103,
        "law_pred_diff": -0.1185,
@@ -42216,7 +42216,7 @@
        "sd_ratio": 0.9884,
        "C_hist": 1.5787,
        "C_nat": 1.6105,
-       "resid_law": -0.0131,
+       "resid_law": 0.0312,
        "resid_shift": 0.0151,
        "diff": -0.0318,
        "law_pred_diff": -0.0187,
@@ -42229,7 +42229,7 @@
        "sd_ratio": 0.9175,
        "C_hist": 1.5935,
        "C_nat": 1.7035,
-       "resid_law": 0.0246,
+       "resid_law": 0.11,
        "resid_shift": -0.0499,
        "diff": -0.11,
        "law_pred_diff": -0.1405,
@@ -42242,7 +42242,7 @@
        "sd_ratio": 0.826,
        "C_hist": 1.3191,
        "C_nat": 1.605,
-       "resid_law": -0.0134,
+       "resid_law": -0.033,
        "resid_shift": -0.3179,
        "diff": -0.2859,
        "law_pred_diff": -0.2793,
@@ -42255,7 +42255,7 @@
        "sd_ratio": 0.9329,
        "C_hist": 1.4807,
        "C_nat": 1.6488,
-       "resid_law": -0.068,
+       "resid_law": -0.1175,
        "resid_shift": -0.2206,
        "diff": -0.1681,
        "law_pred_diff": -0.1106,
@@ -42268,7 +42268,7 @@
        "sd_ratio": 1.0362,
        "C_hist": 1.7824,
        "C_nat": 1.5487,
-       "resid_law": 0.1887,
+       "resid_law": -0.1938,
        "resid_shift": -0.1246,
        "diff": 0.2337,
        "law_pred_diff": 0.0561,
@@ -42281,7 +42281,7 @@
        "sd_ratio": 1.083,
        "C_hist": 1.7766,
        "C_nat": 1.6625,
-       "resid_law": 0.0029,
+       "resid_law": -0.1267,
        "resid_shift": -0.0774,
        "diff": 0.1141,
        "law_pred_diff": 0.1381,
@@ -42294,7 +42294,7 @@
        "sd_ratio": 0.9165,
        "C_hist": 1.6548,
        "C_nat": 1.7214,
-       "resid_law": 0.0772,
+       "resid_law": 0.05,
        "resid_shift": -0.0963,
        "diff": -0.0666,
        "law_pred_diff": -0.1438,
@@ -42307,7 +42307,7 @@
        "sd_ratio": 0.9824,
        "C_hist": 1.873,
        "C_nat": 1.7609,
-       "resid_law": 0.1432,
+       "resid_law": 0.2766,
        "resid_shift": 0.2564,
        "diff": 0.1121,
        "law_pred_diff": -0.0311,
@@ -42354,44 +42354,44 @@
       "n_years": 30
      },
      "resid_law": {
-      "mean": -0.0812,
+      "mean": 0.0201,
       "ci95": [
-       -0.1919,
-       0.0302
+       -0.0348,
+       0.0765
       ],
-      "n_years": 26
+      "n_years": 23
      },
      "resid_shift": {
       "mean": 0.0518,
       "ci95": [
-       -0.035,
-       0.1426
+       -0.036,
+       0.1423
       ],
       "n_years": 23
      },
      "diff": {
       "mean": -0.0552,
       "ci95": [
-       -0.1811,
-       0.0702
+       -0.1851,
+       0.0694
       ],
       "n_years": 26
      },
      "reading_law": "the law holds in a second domain",
      "share_abs_lt_tol": {
-      "law": 0.5217,
-      "shift_only": 0.6957
+      "law": 0.9091,
+      "shift_only": 0.6818
      },
      "elasticity_slope": {
       "slope": 1.0225,
       "ci95": [
-       0.3739,
-       1.6995
+       0.3815,
+       1.7037
       ]
      },
      "shape": {
       "max_abs_quantile_diff": 0.0658,
-      "AD_perm_p": 0.9445,
+      "AD_perm_p": 0.9365,
       "quantile_diff": {
        "0.05": 0.0429,
        "0.1": -0.0029,
@@ -42436,7 +42436,7 @@
        "sd_ratio": 0.9722,
        "C_hist": 2.2183,
        "C_nat": 1.9534,
-       "resid_law": 0.3191,
+       "resid_law": NaN,
        "resid_shift": 0.1471,
        "diff": 0.2648,
        "law_pred_diff": -0.0543,
@@ -42449,7 +42449,7 @@
        "sd_ratio": 1.0099,
        "C_hist": 2.1545,
        "C_nat": 1.7819,
-       "resid_law": 0.3759,
+       "resid_law": NaN,
        "resid_shift": NaN,
        "diff": 0.3725,
        "law_pred_diff": 0.0176,
@@ -42488,7 +42488,7 @@
        "sd_ratio": 1.072,
        "C_hist": 2.2886,
        "C_nat": 1.8705,
-       "resid_law": 0.3586,
+       "resid_law": 0.1144,
        "resid_shift": 0.2604,
        "diff": 0.418,
        "law_pred_diff": 0.1347,
@@ -42514,7 +42514,7 @@
        "sd_ratio": 1.0979,
        "C_hist": 1.9424,
        "C_nat": 1.715,
-       "resid_law": 0.0935,
+       "resid_law": -0.0574,
        "resid_shift": NaN,
        "diff": 0.2274,
        "law_pred_diff": 0.1679,
@@ -42527,7 +42527,7 @@
        "sd_ratio": 0.9076,
        "C_hist": 1.9749,
        "C_nat": 1.8819,
-       "resid_law": 0.1754,
+       "resid_law": NaN,
        "resid_shift": NaN,
        "diff": 0.093,
        "law_pred_diff": -0.1739,
@@ -42540,7 +42540,7 @@
        "sd_ratio": 0.9921,
        "C_hist": 1.9046,
        "C_nat": 2.045,
-       "resid_law": -0.1243,
+       "resid_law": -0.2676,
        "resid_shift": -0.2848,
        "diff": -0.1404,
        "law_pred_diff": -0.0161,
@@ -42566,7 +42566,7 @@
        "sd_ratio": 1.1218,
        "C_hist": 2.2009,
        "C_nat": 2.0795,
-       "resid_law": -0.0126,
+       "resid_law": 0.0965,
        "resid_shift": 0.2276,
        "diff": 0.1214,
        "law_pred_diff": 0.2532,
@@ -42579,7 +42579,7 @@
        "sd_ratio": 1.1158,
        "C_hist": 2.1464,
        "C_nat": 1.9257,
-       "resid_law": 0.0151,
+       "resid_law": 0.0554,
        "resid_shift": 0.2363,
        "diff": 0.2207,
        "law_pred_diff": 0.223,
@@ -42592,7 +42592,7 @@
        "sd_ratio": 1.1926,
        "C_hist": 2.0875,
        "C_nat": 2.1117,
-       "resid_law": -0.3462,
+       "resid_law": -0.0442,
        "resid_shift": 0.2547,
        "diff": -0.0241,
        "law_pred_diff": 0.4068,
@@ -42605,7 +42605,7 @@
        "sd_ratio": 1.0438,
        "C_hist": 1.9342,
        "C_nat": 2.0866,
-       "resid_law": -0.1812,
+       "resid_law": -0.1345,
        "resid_shift": -0.0477,
        "diff": -0.1524,
        "law_pred_diff": 0.0914,
@@ -42618,7 +42618,7 @@
        "sd_ratio": 1.1507,
        "C_hist": 2.305,
        "C_nat": 1.8061,
-       "resid_law": 0.2503,
+       "resid_law": 0.2796,
        "resid_shift": 0.5304,
        "diff": 0.4989,
        "law_pred_diff": 0.2721,
@@ -42631,7 +42631,7 @@
        "sd_ratio": 0.9699,
        "C_hist": 1.9125,
        "C_nat": 1.7443,
-       "resid_law": 0.1791,
+       "resid_law": 0.2471,
        "resid_shift": 0.2311,
        "diff": 0.1681,
        "law_pred_diff": -0.0525,
@@ -42644,7 +42644,7 @@
        "sd_ratio": 0.9881,
        "C_hist": 1.5107,
        "C_nat": 1.6665,
-       "resid_law": -0.136,
+       "resid_law": -0.0776,
        "resid_shift": -0.0898,
        "diff": -0.1558,
        "law_pred_diff": -0.0198,
@@ -42657,7 +42657,7 @@
        "sd_ratio": 0.9747,
        "C_hist": 1.744,
        "C_nat": 1.8006,
-       "resid_law": -0.011,
+       "resid_law": 0.0212,
        "resid_shift": -0.0236,
        "diff": -0.0566,
        "law_pred_diff": -0.0456,
@@ -42670,7 +42670,7 @@
        "sd_ratio": 0.9451,
        "C_hist": 1.7023,
        "C_nat": 1.7606,
-       "resid_law": 0.0383,
+       "resid_law": 0.16,
        "resid_shift": 0.0779,
        "diff": -0.0584,
        "law_pred_diff": -0.0966,
@@ -42683,7 +42683,7 @@
        "sd_ratio": 1.0356,
        "C_hist": 1.9792,
        "C_nat": 1.7248,
-       "resid_law": 0.2031,
+       "resid_law": 0.2217,
        "resid_shift": 0.2675,
        "diff": 0.2544,
        "law_pred_diff": 0.0614,
@@ -42696,7 +42696,7 @@
        "sd_ratio": 0.925,
        "C_hist": 1.5878,
        "C_nat": 2.2708,
-       "resid_law": -0.6483,
+       "resid_law": -0.0869,
        "resid_shift": -0.2226,
        "diff": -0.683,
        "law_pred_diff": -0.1702,
@@ -42709,7 +42709,7 @@
        "sd_ratio": 0.9884,
        "C_hist": 1.7218,
        "C_nat": 1.9757,
-       "resid_law": -0.231,
+       "resid_law": -0.0285,
        "resid_shift": -0.049,
        "diff": -0.2539,
        "law_pred_diff": -0.023,
@@ -42722,7 +42722,7 @@
        "sd_ratio": 0.9175,
        "C_hist": 1.4856,
        "C_nat": 1.9324,
-       "resid_law": -0.2874,
+       "resid_law": -0.0672,
        "resid_shift": -0.2022,
        "diff": -0.4468,
        "law_pred_diff": -0.1594,
@@ -42735,7 +42735,7 @@
        "sd_ratio": 0.826,
        "C_hist": 1.451,
        "C_nat": 1.9811,
-       "resid_law": -0.4558,
+       "resid_law": 0.0005,
        "resid_shift": -0.2263,
        "diff": -0.5301,
        "law_pred_diff": -0.3447,
@@ -42748,7 +42748,7 @@
        "sd_ratio": 0.9329,
        "C_hist": 1.6281,
        "C_nat": 1.6929,
-       "resid_law": -0.062,
+       "resid_law": 0.0795,
        "resid_shift": -0.0319,
        "diff": -0.0647,
        "law_pred_diff": -0.1135,
@@ -42761,7 +42761,7 @@
        "sd_ratio": 1.0362,
        "C_hist": 1.6984,
        "C_nat": 2.0196,
-       "resid_law": -0.339,
+       "resid_law": 0.0991,
        "resid_shift": 0.155,
        "diff": -0.3212,
        "law_pred_diff": 0.0732,
@@ -42774,7 +42774,7 @@
        "sd_ratio": 1.083,
        "C_hist": 1.7216,
        "C_nat": 2.2099,
-       "resid_law": -0.6204,
+       "resid_law": -0.052,
        "resid_shift": 0.084,
        "diff": -0.4882,
        "law_pred_diff": 0.1835,
@@ -42787,7 +42787,7 @@
        "sd_ratio": 0.9165,
        "C_hist": 1.4149,
        "C_nat": 1.9477,
-       "resid_law": -0.3702,
+       "resid_law": -0.1505,
        "resid_shift": -0.2932,
        "diff": -0.5329,
        "law_pred_diff": -0.1627,
@@ -42800,7 +42800,7 @@
        "sd_ratio": 0.9824,
        "C_hist": 1.5439,
        "C_nat": 2.0359,
-       "resid_law": -0.4561,
+       "resid_law": -0.1073,
        "resid_shift": -0.137,
        "diff": -0.492,
        "law_pred_diff": -0.0359,
@@ -42847,10 +42847,10 @@
       "n_years": 30
      },
      "resid_law": {
-      "mean": -0.1338,
+      "mean": -0.0455,
       "ci95": [
-       -0.2007,
-       -0.0678
+       -0.0985,
+       0.0078
       ],
       "n_years": 30
      },
@@ -42872,7 +42872,7 @@
      },
      "reading_law": "the law holds in a second domain",
      "share_abs_lt_tol": {
-      "law": 0.7333,
+      "law": 0.9333,
       "shift_only": 0.7
      },
      "elasticity_slope": {
@@ -42916,7 +42916,7 @@
        "sd_ratio": 0.8582,
        "C_hist": -1.3849,
        "C_nat": -1.5373,
-       "resid_law": -0.0529,
+       "resid_law": -0.0989,
        "resid_shift": 0.1135,
        "diff": 0.1524,
        "law_pred_diff": 0.2179,
@@ -42929,7 +42929,7 @@
        "sd_ratio": 0.9694,
        "C_hist": -1.5931,
        "C_nat": -1.6609,
-       "resid_law": 0.0271,
+       "resid_law": 0.067,
        "resid_shift": 0.1034,
        "diff": 0.0678,
        "law_pred_diff": 0.0509,
@@ -42942,7 +42942,7 @@
        "sd_ratio": 1.11,
        "C_hist": -1.8472,
        "C_nat": -1.6211,
-       "resid_law": -0.0631,
+       "resid_law": -0.0405,
        "resid_shift": -0.1971,
        "diff": -0.2261,
        "law_pred_diff": -0.1782,
@@ -42955,7 +42955,7 @@
        "sd_ratio": 0.9737,
        "C_hist": -1.5039,
        "C_nat": -1.6329,
-       "resid_law": 0.0862,
+       "resid_law": 0.0923,
        "resid_shift": 0.1354,
        "diff": 0.1291,
        "law_pred_diff": 0.0429,
@@ -42968,7 +42968,7 @@
        "sd_ratio": 1.4074,
        "C_hist": -2.1137,
        "C_nat": -1.5728,
-       "resid_law": 0.0812,
+       "resid_law": 0.0127,
        "resid_shift": -0.5903,
        "diff": -0.5409,
        "law_pred_diff": -0.6407,
@@ -42981,7 +42981,7 @@
        "sd_ratio": 1.1446,
        "C_hist": -1.841,
        "C_nat": -1.6999,
-       "resid_law": 0.0878,
+       "resid_law": 0.0314,
        "resid_shift": -0.2052,
        "diff": -0.1411,
        "law_pred_diff": -0.2458,
@@ -42994,7 +42994,7 @@
        "sd_ratio": 0.838,
        "C_hist": -1.4176,
        "C_nat": -1.6582,
-       "resid_law": -0.0089,
+       "resid_law": -0.0471,
        "resid_shift": 0.2179,
        "diff": 0.2406,
        "law_pred_diff": 0.2687,
@@ -43007,7 +43007,7 @@
        "sd_ratio": 0.8331,
        "C_hist": -1.3557,
        "C_nat": -1.6249,
-       "resid_law": 0.0246,
+       "resid_law": -0.0111,
        "resid_shift": 0.2484,
        "diff": 0.2691,
        "law_pred_diff": 0.2711,
@@ -43020,7 +43020,7 @@
        "sd_ratio": 1.0567,
        "C_hist": -1.6198,
        "C_nat": -1.6779,
-       "resid_law": 0.1457,
+       "resid_law": 0.1659,
        "resid_shift": 0.07,
        "diff": 0.0582,
        "law_pred_diff": -0.0952,
@@ -43033,7 +43033,7 @@
        "sd_ratio": 1.1105,
        "C_hist": -1.8887,
        "C_nat": -1.663,
-       "resid_law": -0.0532,
+       "resid_law": -0.0804,
        "resid_shift": -0.2534,
        "diff": -0.2256,
        "law_pred_diff": -0.1837,
@@ -43046,7 +43046,7 @@
        "sd_ratio": 1.214,
        "C_hist": -2.021,
        "C_nat": -1.6532,
-       "resid_law": -0.0412,
+       "resid_law": -0.067,
        "resid_shift": -0.3903,
        "diff": -0.3678,
        "law_pred_diff": -0.3538,
@@ -43059,7 +43059,7 @@
        "sd_ratio": 1.1722,
        "C_hist": -1.969,
        "C_nat": -1.6994,
-       "resid_law": -0.019,
+       "resid_law": 0.0497,
        "resid_shift": -0.2468,
        "diff": -0.2696,
        "law_pred_diff": -0.2926,
@@ -43072,7 +43072,7 @@
        "sd_ratio": 0.8991,
        "C_hist": -1.4253,
        "C_nat": -1.6422,
-       "resid_law": 0.0722,
+       "resid_law": 0.2743,
        "resid_shift": 0.4651,
        "diff": 0.217,
        "law_pred_diff": 0.1658,
@@ -43085,7 +43085,7 @@
        "sd_ratio": 1.056,
        "C_hist": -1.9386,
        "C_nat": -1.6736,
-       "resid_law": -0.1801,
+       "resid_law": -0.1065,
        "resid_shift": -0.2036,
        "diff": -0.2649,
        "law_pred_diff": -0.0937,
@@ -43098,7 +43098,7 @@
        "sd_ratio": 0.8992,
        "C_hist": -1.6612,
        "C_nat": -1.6648,
-       "resid_law": -0.1107,
+       "resid_law": 0.0538,
        "resid_shift": 0.2462,
        "diff": 0.0036,
        "law_pred_diff": 0.1679,
@@ -43111,7 +43111,7 @@
        "sd_ratio": 1.2779,
        "C_hist": -2.6402,
        "C_nat": -1.6052,
-       "resid_law": -0.6058,
+       "resid_law": -0.4506,
        "resid_shift": -0.854,
        "diff": -1.035,
        "law_pred_diff": -0.4461,
@@ -43124,7 +43124,7 @@
        "sd_ratio": 1.1897,
        "C_hist": -2.2603,
        "C_nat": -1.5832,
-       "resid_law": -0.3928,
+       "resid_law": -0.198,
        "resid_shift": -0.4546,
        "diff": -0.6771,
        "law_pred_diff": -0.3003,
@@ -43137,7 +43137,7 @@
        "sd_ratio": 1.019,
        "C_hist": -1.9061,
        "C_nat": -1.6205,
-       "resid_law": -0.2548,
+       "resid_law": 0.0635,
        "resid_shift": 0.0267,
        "diff": -0.2856,
        "law_pred_diff": -0.0308,
@@ -43150,7 +43150,7 @@
        "sd_ratio": 0.8639,
        "C_hist": -1.7132,
        "C_nat": -1.7285,
-       "resid_law": -0.2191,
+       "resid_law": -0.2237,
        "resid_shift": 0.0163,
        "diff": 0.0153,
        "law_pred_diff": 0.2353,
@@ -43163,7 +43163,7 @@
        "sd_ratio": 1.1117,
        "C_hist": -2.0179,
        "C_nat": -1.5133,
-       "resid_law": -0.3458,
+       "resid_law": -0.171,
        "resid_shift": -0.2272,
        "diff": -0.5046,
        "law_pred_diff": -0.169,
@@ -43176,7 +43176,7 @@
        "sd_ratio": 0.8987,
        "C_hist": -1.5755,
        "C_nat": -1.6118,
-       "resid_law": -0.1125,
+       "resid_law": -0.0492,
        "resid_shift": 0.1131,
        "diff": 0.0363,
        "law_pred_diff": 0.1633,
@@ -43189,7 +43189,7 @@
        "sd_ratio": 1.0928,
        "C_hist": -2.0416,
        "C_nat": -1.6471,
-       "resid_law": -0.2462,
+       "resid_law": -0.2047,
        "resid_shift": -0.3606,
        "diff": -0.3945,
        "law_pred_diff": -0.1528,
@@ -43202,7 +43202,7 @@
        "sd_ratio": 0.8806,
        "C_hist": -1.7603,
        "C_nat": -1.5979,
-       "resid_law": -0.3509,
+       "resid_law": -0.1373,
        "resid_shift": 0.055,
        "diff": -0.1625,
        "law_pred_diff": 0.1908,
@@ -43215,7 +43215,7 @@
        "sd_ratio": 1.152,
        "C_hist": -1.9132,
        "C_nat": -1.6741,
-       "resid_law": -0.0041,
+       "resid_law": 0.2348,
        "resid_shift": -0.0012,
        "diff": -0.2391,
        "law_pred_diff": -0.2545,
@@ -43228,7 +43228,7 @@
        "sd_ratio": 1.2176,
        "C_hist": -2.0069,
        "C_nat": -1.6708,
-       "resid_law": 0.0144,
+       "resid_law": 0.0756,
        "resid_shift": -0.2168,
        "diff": -0.3361,
        "law_pred_diff": -0.3636,
@@ -43241,7 +43241,7 @@
        "sd_ratio": 1.2968,
        "C_hist": -2.4687,
        "C_nat": -1.6752,
-       "resid_law": -0.3393,
+       "resid_law": -0.191,
        "resid_shift": -0.6048,
        "diff": -0.7935,
        "law_pred_diff": -0.4972,
@@ -43254,7 +43254,7 @@
        "sd_ratio": 0.9904,
        "C_hist": -1.9749,
        "C_nat": -1.6206,
-       "resid_law": -0.3698,
+       "resid_law": -0.0931,
        "resid_shift": -0.0749,
        "diff": -0.3543,
        "law_pred_diff": 0.0156,
@@ -43267,7 +43267,7 @@
        "sd_ratio": 1.3131,
        "C_hist": -2.2473,
        "C_nat": -1.5923,
-       "resid_law": -0.1701,
+       "resid_law": -0.1245,
        "resid_shift": -0.516,
        "diff": -0.655,
        "law_pred_diff": -0.4986,
@@ -43280,7 +43280,7 @@
        "sd_ratio": 0.8983,
        "C_hist": -1.7061,
        "C_nat": -1.7073,
-       "resid_law": -0.1526,
+       "resid_law": 0.0154,
        "resid_shift": 0.1522,
        "diff": 0.0012,
        "law_pred_diff": 0.1736,
@@ -43293,7 +43293,7 @@
        "sd_ratio": 1.0089,
        "C_hist": -2.1998,
        "C_nat": -1.7254,
-       "resid_law": -0.4591,
+       "resid_law": -0.2058,
        "resid_shift": -0.2234,
        "diff": -0.4744,
        "law_pred_diff": -0.0154,
@@ -43340,44 +43340,44 @@
       "n_years": 30
      },
      "resid_law": {
-      "mean": -0.1238,
+      "mean": 0.0133,
       "ci95": [
-       -0.2504,
-       0.0061
+       -0.0736,
+       0.1011
       ],
-      "n_years": 21
+      "n_years": 19
      },
      "resid_shift": {
       "mean": -0.0744,
       "ci95": [
-       -0.2078,
-       0.0651
+       -0.2044,
+       0.0614
       ],
       "n_years": 17
      },
      "diff": {
       "mean": -0.2667,
       "ci95": [
-       -0.4447,
-       -0.098
+       -0.4501,
+       -0.0981
       ],
       "n_years": 21
      },
-     "reading_law": "inconclusive",
+     "reading_law": "the law holds in a second domain",
      "share_abs_lt_tol": {
-      "law": 0.7647,
-      "shift_only": 0.4706
+      "law": 0.75,
+      "shift_only": 0.4375
      },
      "elasticity_slope": {
       "slope": 0.9084,
       "ci95": [
-       0.4183,
-       1.4765
+       0.4179,
+       1.4737
       ]
      },
      "shape": {
       "max_abs_quantile_diff": 0.0816,
-      "AD_perm_p": 0.8976,
+      "AD_perm_p": 0.9015,
       "quantile_diff": {
        "0.05": -0.0341,
        "0.1": -0.0156,
@@ -43422,7 +43422,7 @@
        "sd_ratio": 0.9694,
        "C_hist": -1.9223,
        "C_nat": -2.1342,
-       "resid_law": 0.1465,
+       "resid_law": 0.2303,
        "resid_shift": 0.2983,
        "diff": 0.2119,
        "law_pred_diff": 0.0653,
@@ -43448,7 +43448,7 @@
        "sd_ratio": 0.9737,
        "C_hist": -1.9686,
        "C_nat": -1.6912,
-       "resid_law": -0.2993,
+       "resid_law": -0.3414,
        "resid_shift": -0.306,
        "diff": -0.2774,
        "law_pred_diff": 0.0444,
@@ -43461,7 +43461,7 @@
        "sd_ratio": 1.4074,
        "C_hist": -2.3593,
        "C_nat": -2.0445,
-       "resid_law": 0.132,
+       "resid_law": 0.0184,
        "resid_shift": -0.4509,
        "diff": -0.3148,
        "law_pred_diff": -0.8328,
@@ -43474,7 +43474,7 @@
        "sd_ratio": 1.1446,
        "C_hist": -2.0536,
        "C_nat": -2.0084,
-       "resid_law": 0.2146,
+       "resid_law": 0.1107,
        "resid_shift": -0.0719,
        "diff": -0.0451,
        "law_pred_diff": -0.2904,
@@ -43487,7 +43487,7 @@
        "sd_ratio": 0.838,
        "C_hist": -1.4235,
        "C_nat": -2.0298,
-       "resid_law": 0.5845,
+       "resid_law": 0.2366,
        "resid_shift": 0.5139,
        "diff": 0.6063,
        "law_pred_diff": 0.3289,
@@ -43526,7 +43526,7 @@
        "sd_ratio": 1.1105,
        "C_hist": -2.2495,
        "C_nat": -2.0464,
-       "resid_law": -0.1895,
+       "resid_law": -0.2571,
        "resid_shift": -0.4553,
        "diff": -0.2031,
        "law_pred_diff": -0.2261,
@@ -43552,7 +43552,7 @@
        "sd_ratio": 1.1722,
        "C_hist": -2.5149,
        "C_nat": -2.1071,
-       "resid_law": -0.191,
+       "resid_law": -0.0998,
        "resid_shift": -0.4078,
        "diff": -0.4078,
        "law_pred_diff": -0.3628,
@@ -43604,7 +43604,7 @@
        "sd_ratio": 1.2779,
        "C_hist": -3.1264,
        "C_nat": -1.8093,
-       "resid_law": -0.869,
+       "resid_law": NaN,
        "resid_shift": NaN,
        "diff": -1.3171,
        "law_pred_diff": -0.5028,
@@ -43617,7 +43617,7 @@
        "sd_ratio": 1.1897,
        "C_hist": -2.7598,
        "C_nat": -1.9647,
-       "resid_law": -0.4936,
+       "resid_law": -0.2738,
        "resid_shift": NaN,
        "diff": -0.7951,
        "law_pred_diff": -0.3726,
@@ -43630,7 +43630,7 @@
        "sd_ratio": 1.019,
        "C_hist": -2.3384,
        "C_nat": -2.074,
-       "resid_law": -0.3099,
+       "resid_law": 0.3527,
        "resid_shift": 0.3025,
        "diff": -0.2644,
        "law_pred_diff": -0.0394,
@@ -43643,7 +43643,7 @@
        "sd_ratio": 0.8639,
        "C_hist": -1.9862,
        "C_nat": -1.8177,
-       "resid_law": -0.3743,
+       "resid_law": NaN,
        "resid_shift": -0.1563,
        "diff": -0.1686,
        "law_pred_diff": 0.2474,
@@ -43656,7 +43656,7 @@
        "sd_ratio": 1.1117,
        "C_hist": -2.2207,
        "C_nat": -1.9464,
-       "resid_law": -0.1492,
+       "resid_law": 0.0132,
        "resid_shift": -0.1577,
        "diff": -0.2743,
        "law_pred_diff": -0.2174,
@@ -43682,7 +43682,7 @@
        "sd_ratio": 1.0928,
        "C_hist": -2.2433,
        "C_nat": -1.823,
-       "resid_law": -0.2762,
+       "resid_law": -0.163,
        "resid_shift": NaN,
        "diff": -0.4204,
        "law_pred_diff": -0.1691,
@@ -43708,7 +43708,7 @@
        "sd_ratio": 1.152,
        "C_hist": -2.3291,
        "C_nat": -2.2456,
-       "resid_law": 0.1071,
+       "resid_law": 0.3791,
        "resid_shift": 0.1558,
        "diff": -0.0835,
        "law_pred_diff": -0.3413,
@@ -43721,7 +43721,7 @@
        "sd_ratio": 1.2176,
        "C_hist": -2.4032,
        "C_nat": -1.9639,
-       "resid_law": -0.2235,
+       "resid_law": -0.0119,
        "resid_shift": -0.2047,
        "diff": -0.4393,
        "law_pred_diff": -0.4274,
@@ -43734,7 +43734,7 @@
        "sd_ratio": 1.2968,
        "C_hist": -2.7389,
        "C_nat": -2.1334,
-       "resid_law": -0.1433,
+       "resid_law": 0.0277,
        "resid_shift": -0.3193,
        "diff": -0.6055,
        "law_pred_diff": -0.6332,
@@ -43760,7 +43760,7 @@
        "sd_ratio": 1.3131,
        "C_hist": -2.6896,
        "C_nat": -1.8396,
-       "resid_law": -0.4817,
+       "resid_law": -0.186,
        "resid_shift": NaN,
        "diff": -0.8499,
        "law_pred_diff": -0.576,
@@ -43799,23 +43799,23 @@
    "post_hoc_estimator_bias": {
     "note": "post hoc; law holds exactly in these simulations",
     "tercile_k1.0": {
-     "law_resid_mean": -0.0054,
-     "law_resid_sd": 0.0975,
+     "law_resid_mean": 0.0031,
+     "law_resid_sd": 0.0913,
      "shift_resid_mean": 0.0123
     },
     "tercile_k1.1": {
-     "law_resid_mean": -0.0066,
-     "law_resid_sd": 0.1025,
+     "law_resid_mean": 0.001,
+     "law_resid_sd": 0.0985,
      "shift_resid_mean": 0.171
     },
     "decile_k1.0": {
-     "law_resid_mean": -0.2021,
-     "law_resid_sd": 0.1838,
+     "law_resid_mean": 0.0021,
+     "law_resid_sd": 0.1315,
      "shift_resid_mean": 0.0252
     },
     "decile_k1.1": {
-     "law_resid_mean": -0.1902,
-     "law_resid_sd": 0.1886,
+     "law_resid_mean": -0.0027,
+     "law_resid_sd": 0.138,
      "shift_resid_mean": 0.1608
     }
    }
@@ -43851,10 +43851,10 @@
     "CanESM5_p1|CEUR_JJA": {
      "n_years": 30,
      "law": {
-      "mean": 0.0132,
+      "mean": -0.0791,
       "ci95": [
-       -0.0625,
-       0.0965
+       -0.125,
+       -0.0305
       ],
       "n_years": 19
      },
@@ -43886,26 +43886,26 @@
     "CanESM5_p1|WRUS_JJA": {
      "n_years": 30,
      "law": {
-      "mean": 0.1534,
+      "mean": 0.0097,
       "ci95": [
-       0.0603,
-       0.2488
+       -0.0893,
+       0.1142
       ],
-      "n_years": 18
+      "n_years": 16
      },
      "shift_only": {
       "mean": 0.0654,
       "ci95": [
-       -0.0771,
-       0.2012
+       -0.077,
+       0.1994
       ],
       "n_years": 16
      },
      "sd_ratio": {
       "mean": 1.0308,
       "ci95": [
-       0.9567,
-       1.1039
+       0.9572,
+       1.1036
       ],
       "n_years": 30
      },
@@ -43914,33 +43914,33 @@
      "reading": "the law holds",
      "shape": {
       "max_abs_quantile_diff": 0.1061,
-      "AD_perm_p": 0.8366,
+      "AD_perm_p": 0.8476,
       "reading": "shape unchanged by the forcing"
      }
     },
     "CanESM5_p1|CNAM_JJA": {
      "n_years": 30,
      "law": {
-      "mean": 0.0517,
+      "mean": 0.0021,
       "ci95": [
-       -0.0409,
-       0.1487
+       -0.1121,
+       0.1011
       ],
-      "n_years": 15
+      "n_years": 14
      },
      "shift_only": {
       "mean": 0.1213,
       "ci95": [
-       -0.1871,
-       0.4717
+       -0.1803,
+       0.4767
       ],
       "n_years": 13
      },
      "sd_ratio": {
       "mean": 1.0184,
       "ci95": [
-       0.9198,
-       1.1273
+       0.9199,
+       1.129
       ],
       "n_years": 30
      },
@@ -43949,103 +43949,103 @@
      "reading": "the law holds",
      "shape": {
       "max_abs_quantile_diff": 0.0863,
-      "AD_perm_p": 0.7011,
+      "AD_perm_p": 0.6832,
       "reading": "shape unchanged by the forcing"
      }
     },
     "CanESM5_p1|CEAS_DJF": {
      "n_years": 30,
      "law": {
-      "mean": -0.3149,
+      "mean": 0.0019,
       "ci95": [
-       -0.4435,
-       -0.1825
+       -0.2104,
+       0.1664
       ],
-      "n_years": 10
+      "n_years": 7
      },
      "shift_only": {
       "mean": -0.4987,
       "ci95": [
        -0.7693,
-       -0.2281
+       -0.2298
       ],
       "n_years": 5
      },
      "sd_ratio": {
       "mean": 1.0166,
       "ci95": [
-       0.9307,
-       1.1161
+       0.9314,
+       1.1154
       ],
       "n_years": 30
      },
      "rate_hist": 0.0933,
      "rate_nat": 0.32,
-     "reading": "fails",
+     "reading": "the law holds",
      "shape": {
       "max_abs_quantile_diff": 0.0706,
-      "AD_perm_p": 0.946,
+      "AD_perm_p": 0.9485,
       "reading": "shape unchanged by the forcing"
      }
     },
     "CanESM5_p1|NSIB_DJF": {
      "n_years": 30,
      "law": {
-      "mean": -0.3119,
+      "mean": -0.07,
       "ci95": [
-       -0.4765,
-       -0.1499
+       -0.1865,
+       0.0543
       ],
-      "n_years": 10
+      "n_years": 8
      },
      "shift_only": {
       "mean": -0.0942,
       "ci95": [
-       -0.4277,
-       0.24
+       -0.4284,
+       0.2368
       ],
       "n_years": 6
      },
      "sd_ratio": {
       "mean": 0.9937,
       "ci95": [
-       0.9161,
-       1.0769
+       0.9165,
+       1.0766
       ],
       "n_years": 30
      },
      "rate_hist": 0.084,
      "rate_nat": 0.32,
-     "reading": "fails",
+     "reading": "the law holds",
      "shape": {
       "max_abs_quantile_diff": 0.0968,
-      "AD_perm_p": 0.4603,
+      "AD_perm_p": 0.4488,
       "reading": "shape unchanged by the forcing"
      }
     },
     "CanESM5_p1|NWNA_DJF": {
      "n_years": 30,
      "law": {
-      "mean": -0.1979,
+      "mean": 0.159,
       "ci95": [
-       -0.3356,
-       -0.0395
+       -0.0659,
+       0.3871
       ],
-      "n_years": 8
+      "n_years": 6
      },
      "shift_only": {
       "mean": 0.1761,
       "ci95": [
-       -0.0611,
-       0.4028
+       -0.0595,
+       0.4004
       ],
       "n_years": 7
      },
      "sd_ratio": {
       "mean": 0.992,
       "ci95": [
-       0.9338,
-       1.0524
+       0.9339,
+       1.0522
       ],
       "n_years": 30
      },
@@ -44061,26 +44061,26 @@
     "CanESM5_p2|CEUR_JJA": {
      "n_years": 30,
      "law": {
-      "mean": 0.0238,
+      "mean": 0.0439,
       "ci95": [
-       -0.038,
-       0.0881
+       -0.0139,
+       0.1014
       ],
-      "n_years": 21
+      "n_years": 20
      },
      "shift_only": {
       "mean": 0.0819,
       "ci95": [
-       -0.029,
-       0.1958
+       -0.0324,
+       0.1946
       ],
       "n_years": 20
      },
      "sd_ratio": {
       "mean": 1.0534,
       "ci95": [
-       0.9862,
-       1.1198
+       0.9884,
+       1.1202
       ],
       "n_years": 30
      },
@@ -44089,33 +44089,33 @@
      "reading": "the law holds",
      "shape": {
       "max_abs_quantile_diff": 0.0622,
-      "AD_perm_p": 0.93,
+      "AD_perm_p": 0.94,
       "reading": "shape unchanged by the forcing"
      }
     },
     "CanESM5_p2|WRUS_JJA": {
      "n_years": 30,
      "law": {
-      "mean": 0.1217,
+      "mean": 0.0751,
       "ci95": [
-       0.0522,
-       0.1902
+       0.0231,
+       0.1316
       ],
-      "n_years": 23
+      "n_years": 20
      },
      "shift_only": {
       "mean": 0.0298,
       "ci95": [
-       -0.0857,
-       0.1568
+       -0.0844,
+       0.1609
       ],
       "n_years": 17
      },
      "sd_ratio": {
       "mean": 0.9794,
       "ci95": [
-       0.9178,
-       1.0422
+       0.9183,
+       1.0433
       ],
       "n_years": 30
      },
@@ -44124,33 +44124,33 @@
      "reading": "the law holds",
      "shape": {
       "max_abs_quantile_diff": 0.0812,
-      "AD_perm_p": 0.9875,
+      "AD_perm_p": 0.987,
       "reading": "shape unchanged by the forcing"
      }
     },
     "CanESM5_p2|CNAM_JJA": {
      "n_years": 30,
      "law": {
-      "mean": 0.0064,
+      "mean": -0.0341,
       "ci95": [
-       -0.0654,
-       0.0778
+       -0.086,
+       0.0166
       ],
-      "n_years": 19
+      "n_years": 15
      },
      "shift_only": {
       "mean": -0.1682,
       "ci95": [
-       -0.2715,
-       -0.0663
+       -0.2708,
+       -0.0685
       ],
       "n_years": 17
      },
      "sd_ratio": {
       "mean": 0.9074,
       "ci95": [
-       0.8464,
-       0.9706
+       0.8455,
+       0.9711
       ],
       "n_years": 30
      },
@@ -44159,95 +44159,95 @@
      "reading": "the law holds",
      "shape": {
       "max_abs_quantile_diff": 0.1281,
-      "AD_perm_p": 0.6817,
+      "AD_perm_p": 0.6612,
       "reading": "shape unchanged by the forcing"
      }
     },
     "CanESM5_p2|CEAS_DJF": {
      "n_years": 30,
      "law": {
-      "mean": -0.4481,
+      "mean": -0.1068,
       "ci95": [
-       -0.5314,
-       -0.3604
+       -0.2241,
+       0.0076
       ],
-      "n_years": 23
+      "n_years": 13
      },
      "shift_only": {
       "mean": -0.2615,
       "ci95": [
-       -0.4771,
-       -0.0561
+       -0.4732,
+       -0.0646
       ],
       "n_years": 11
      },
      "sd_ratio": {
       "mean": 1.1347,
       "ci95": [
-       1.0589,
-       1.22
+       1.0614,
+       1.2154
       ],
       "n_years": 30
      },
      "rate_hist": 0.105,
      "rate_nat": 0.32,
-     "reading": "fails",
+     "reading": "the law holds",
      "shape": {
       "max_abs_quantile_diff": 0.1451,
-      "AD_perm_p": 0.9115,
+      "AD_perm_p": 0.9185,
       "reading": "shape unchanged by the forcing"
      }
     },
     "CanESM5_p2|NSIB_DJF": {
      "n_years": 30,
      "law": {
-      "mean": -0.4193,
+      "mean": -0.1423,
       "ci95": [
-       -0.5093,
-       -0.326
+       -0.279,
+       -0.0168
       ],
-      "n_years": 15
+      "n_years": 9
      },
      "shift_only": {
       "mean": -0.0759,
       "ci95": [
-       -0.2821,
-       0.1166
+       -0.2871,
+       0.1187
       ],
       "n_years": 10
      },
      "sd_ratio": {
       "mean": 1.0299,
       "ci95": [
-       0.9643,
-       1.1046
+       0.9634,
+       1.1044
       ],
       "n_years": 30
      },
      "rate_hist": 0.0783,
      "rate_nat": 0.32,
-     "reading": "fails",
+     "reading": "inconclusive",
      "shape": {
       "max_abs_quantile_diff": 0.1035,
-      "AD_perm_p": 0.8686,
+      "AD_perm_p": 0.8596,
       "reading": "shape unchanged by the forcing"
      }
     },
     "CanESM5_p2|NWNA_DJF": {
      "n_years": 30,
      "law": {
-      "mean": -0.2877,
+      "mean": 0.0441,
       "ci95": [
-       -0.4054,
-       -0.1756
+       -0.1102,
+       0.188
       ],
-      "n_years": 14
+      "n_years": 9
      },
      "shift_only": {
       "mean": 0.1441,
       "ci95": [
        -0.0224,
-       0.3135
+       0.3178
       ],
       "n_years": 6
      },
@@ -44255,34 +44255,34 @@
       "mean": 1.0897,
       "ci95": [
        1.0307,
-       1.1498
+       1.1502
       ],
       "n_years": 30
      },
      "rate_hist": 0.0867,
      "rate_nat": 0.32,
-     "reading": "fails",
+     "reading": "the law holds",
      "shape": {
       "max_abs_quantile_diff": 0.0715,
-      "AD_perm_p": 0.9925,
+      "AD_perm_p": 0.9865,
       "reading": "shape unchanged by the forcing"
      }
     },
     "MIROC6|CEUR_JJA": {
      "n_years": 30,
      "law": {
-      "mean": 0.0403,
+      "mean": -0.0097,
       "ci95": [
-       -0.0052,
-       0.0916
+       -0.0499,
+       0.0333
       ],
       "n_years": 30
      },
      "shift_only": {
       "mean": -0.0801,
       "ci95": [
-       -0.1553,
-       0.0011
+       -0.1581,
+       0.0013
       ],
       "n_years": 30
      },
@@ -44290,7 +44290,7 @@
       "mean": 0.9575,
       "ci95": [
        0.9106,
-       1.0042
+       1.0046
       ],
       "n_years": 30
      },
@@ -44299,33 +44299,33 @@
      "reading": "the law holds",
      "shape": {
       "max_abs_quantile_diff": 0.0516,
-      "AD_perm_p": 0.9455,
+      "AD_perm_p": 0.9425,
       "reading": "shape unchanged by the forcing"
      }
     },
     "MIROC6|WRUS_JJA": {
      "n_years": 30,
      "law": {
-      "mean": -0.006,
+      "mean": -0.0159,
       "ci95": [
-       -0.0364,
-       0.0233
+       -0.0509,
+       0.0196
       ],
       "n_years": 30
      },
      "shift_only": {
       "mean": -0.0722,
       "ci95": [
-       -0.1322,
-       -0.0116
+       -0.133,
+       -0.0103
       ],
       "n_years": 30
      },
      "sd_ratio": {
       "mean": 0.9582,
       "ci95": [
-       0.9204,
-       0.9955
+       0.9194,
+       0.9964
       ],
       "n_years": 30
      },
@@ -44334,33 +44334,33 @@
      "reading": "the law holds",
      "shape": {
       "max_abs_quantile_diff": 0.0563,
-      "AD_perm_p": 0.7831,
+      "AD_perm_p": 0.7851,
       "reading": "shape unchanged by the forcing"
      }
     },
     "MIROC6|CNAM_JJA": {
      "n_years": 30,
      "law": {
-      "mean": 0.0344,
+      "mean": 0.0332,
       "ci95": [
-       -0.011,
-       0.0836
+       -0.0203,
+       0.09
       ],
       "n_years": 30
      },
      "shift_only": {
       "mean": 0.0135,
       "ci95": [
-       -0.0789,
-       0.1079
+       -0.0773,
+       0.1071
       ],
       "n_years": 30
      },
      "sd_ratio": {
       "mean": 0.9889,
       "ci95": [
-       0.9385,
-       1.0387
+       0.9386,
+       1.0398
       ],
       "n_years": 30
      },
@@ -44369,138 +44369,138 @@
      "reading": "the law holds",
      "shape": {
       "max_abs_quantile_diff": 0.0921,
-      "AD_perm_p": 0.8741,
+      "AD_perm_p": 0.8646,
       "reading": "shape unchanged by the forcing"
      }
     },
     "MIROC6|CEAS_DJF": {
      "n_years": 30,
      "law": {
-      "mean": -0.3048,
+      "mean": 0.003,
       "ci95": [
-       -0.3701,
-       -0.2415
+       -0.0653,
+       0.0703
       ],
       "n_years": 29
      },
      "shift_only": {
       "mean": -0.0695,
       "ci95": [
-       -0.1976,
-       0.056
+       -0.1966,
+       0.0566
       ],
       "n_years": 29
      },
      "sd_ratio": {
       "mean": 1.0441,
       "ci95": [
-       0.9866,
+       0.9876,
        1.102
       ],
       "n_years": 30
      },
      "rate_hist": 0.14,
      "rate_nat": 0.34,
-     "reading": "fails",
+     "reading": "the law holds",
      "shape": {
       "max_abs_quantile_diff": 0.0687,
-      "AD_perm_p": 0.7336,
+      "AD_perm_p": 0.7566,
       "reading": "shape unchanged by the forcing"
      }
     },
     "MIROC6|NSIB_DJF": {
      "n_years": 30,
      "law": {
-      "mean": -0.5245,
+      "mean": -0.015,
       "ci95": [
-       -0.722,
-       -0.3334
+       -0.1863,
+       0.1666
       ],
-      "n_years": 10
+      "n_years": 7
      },
      "shift_only": {
       "mean": -0.1482,
       "ci95": [
-       -0.339,
-       0.0575
+       -0.338,
+       0.0569
       ],
       "n_years": 8
      },
      "sd_ratio": {
       "mean": 0.981,
       "ci95": [
-       0.94,
-       1.0216
+       0.9385,
+       1.0209
       ],
       "n_years": 30
      },
      "rate_hist": 0.0347,
      "rate_nat": 0.34,
-     "reading": "fails",
+     "reading": "the law holds",
      "shape": {
       "max_abs_quantile_diff": 0.0332,
-      "AD_perm_p": 0.9985,
+      "AD_perm_p": 0.9975,
       "reading": "shape unchanged by the forcing"
      }
     },
     "MIROC6|NWNA_DJF": {
      "n_years": 30,
      "law": {
-      "mean": -0.3186,
+      "mean": -0.0955,
       "ci95": [
-       -0.39,
-       -0.2499
+       -0.1603,
+       -0.0319
       ],
       "n_years": 27
      },
      "shift_only": {
       "mean": -0.1348,
       "ci95": [
-       -0.2177,
-       -0.0507
+       -0.2165,
+       -0.0499
       ],
       "n_years": 26
      },
      "sd_ratio": {
       "mean": 1.0165,
       "ci95": [
-       0.9789,
-       1.0547
+       0.9785,
+       1.0554
       ],
       "n_years": 30
      },
      "rate_hist": 0.14,
      "rate_nat": 0.34,
-     "reading": "fails",
+     "reading": "the law holds",
      "shape": {
       "max_abs_quantile_diff": 0.0866,
-      "AD_perm_p": 0.7156,
+      "AD_perm_p": 0.7256,
       "reading": "shape unchanged by the forcing"
      }
     },
     "HadGEM3-GC31-LL|CEUR_JJA": {
      "n_years": 30,
      "law": {
-      "mean": 0.0406,
+      "mean": 0.0342,
       "ci95": [
-       -0.0125,
-       0.1046
+       -0.0331,
+       0.1067
       ],
-      "n_years": 30
+      "n_years": 29
      },
      "shift_only": {
       "mean": 0.0256,
       "ci95": [
-       -0.055,
-       0.1074
+       -0.0558,
+       0.1061
       ],
       "n_years": 29
      },
      "sd_ratio": {
       "mean": 0.992,
       "ci95": [
-       0.9554,
-       1.0294
+       0.9544,
+       1.0292
       ],
       "n_years": 30
      },
@@ -44509,33 +44509,33 @@
      "reading": "the law holds",
      "shape": {
       "max_abs_quantile_diff": 0.0485,
-      "AD_perm_p": 0.9605,
+      "AD_perm_p": 0.9615,
       "reading": "shape unchanged by the forcing"
      }
     },
     "HadGEM3-GC31-LL|WRUS_JJA": {
      "n_years": 30,
      "law": {
-      "mean": 0.0596,
+      "mean": -0.0652,
       "ci95": [
-       0.0038,
-       0.1192
+       -0.1391,
+       0.0034
       ],
       "n_years": 30
      },
      "shift_only": {
       "mean": -0.0031,
       "ci95": [
-       -0.1034,
-       0.0974
+       -0.1053,
+       0.0985
       ],
       "n_years": 30
      },
      "sd_ratio": {
       "mean": 1.0361,
       "ci95": [
-       0.9774,
-       1.0946
+       0.9788,
+       1.0952
       ],
       "n_years": 30
      },
@@ -44544,33 +44544,33 @@
      "reading": "the law holds",
      "shape": {
       "max_abs_quantile_diff": 0.0892,
-      "AD_perm_p": 0.5897,
+      "AD_perm_p": 0.6132,
       "reading": "shape unchanged by the forcing"
      }
     },
     "HadGEM3-GC31-LL|CNAM_JJA": {
      "n_years": 30,
      "law": {
-      "mean": 0.0893,
+      "mean": 0.0205,
       "ci95": [
-       0.0349,
-       0.1488
+       -0.0171,
+       0.059
       ],
       "n_years": 30
      },
      "shift_only": {
       "mean": 0.0093,
       "ci95": [
-       -0.0664,
-       0.0844
+       -0.0665,
+       0.0838
       ],
       "n_years": 30
      },
      "sd_ratio": {
       "mean": 0.9951,
       "ci95": [
-       0.9564,
-       1.0326
+       0.9555,
+       1.0324
       ],
       "n_years": 30
      },
@@ -44579,33 +44579,33 @@
      "reading": "the law holds",
      "shape": {
       "max_abs_quantile_diff": 0.0658,
-      "AD_perm_p": 0.9395,
+      "AD_perm_p": 0.9365,
       "reading": "shape unchanged by the forcing"
      }
     },
     "HadGEM3-GC31-LL|CEAS_DJF": {
      "n_years": 30,
      "law": {
-      "mean": -0.1338,
+      "mean": -0.0455,
       "ci95": [
-       -0.202,
-       -0.0686
+       -0.0991,
+       0.0065
       ],
       "n_years": 30
      },
      "shift_only": {
       "mean": -0.1219,
       "ci95": [
-       -0.2306,
-       -0.018
+       -0.2271,
+       -0.0204
       ],
       "n_years": 30
      },
      "sd_ratio": {
       "mean": 1.0584,
       "ci95": [
-       1.0033,
-       1.1152
+       1.0032,
+       1.1169
       ],
       "n_years": 30
      },
@@ -44614,33 +44614,33 @@
      "reading": "the law holds",
      "shape": {
       "max_abs_quantile_diff": 0.0816,
-      "AD_perm_p": 0.9065,
+      "AD_perm_p": 0.918,
       "reading": "shape unchanged by the forcing"
      }
     },
     "HadGEM3-GC31-LL|NSIB_DJF": {
      "n_years": 30,
      "law": {
-      "mean": -0.131,
+      "mean": 0.0458,
       "ci95": [
-       -0.2057,
-       -0.0609
+       -0.0391,
+       0.1348
       ],
-      "n_years": 25
+      "n_years": 23
      },
      "shift_only": {
       "mean": 0.0064,
       "ci95": [
-       -0.0702,
-       0.084
+       -0.0681,
+       0.0855
       ],
       "n_years": 23
      },
      "sd_ratio": {
       "mean": 1.0013,
       "ci95": [
-       0.9589,
-       1.0444
+       0.9588,
+       1.0448
       ],
       "n_years": 30
      },
@@ -44649,32 +44649,32 @@
      "reading": "the law holds",
      "shape": {
       "max_abs_quantile_diff": 0.0371,
-      "AD_perm_p": 0.9465,
+      "AD_perm_p": 0.9425,
       "reading": "shape unchanged by the forcing"
      }
     },
     "HadGEM3-GC31-LL|NWNA_DJF": {
      "n_years": 30,
      "law": {
-      "mean": -0.1696,
+      "mean": 0.002,
       "ci95": [
-       -0.2452,
-       -0.1012
+       -0.0701,
+       0.0734
       ],
       "n_years": 28
      },
      "shift_only": {
       "mean": -0.0028,
       "ci95": [
-       -0.1376,
-       0.1237
+       -0.1377,
+       0.1222
       ],
       "n_years": 28
      },
      "sd_ratio": {
       "mean": 0.9868,
       "ci95": [
-       0.9417,
+       0.9415,
        1.0344
       ],
       "n_years": 30
@@ -44684,16 +44684,16 @@
      "reading": "the law holds",
      "shape": {
       "max_abs_quantile_diff": 0.0511,
-      "AD_perm_p": 0.8976,
+      "AD_perm_p": 0.9025,
       "reading": "shape unchanged by the forcing"
      }
     }
    },
    "M1_CEUR_JJA_three_models": {
-    "mean": 0.0331,
+    "mean": 0.0023,
     "ci95": [
-     0.0034,
-     0.0647
+     -0.0268,
+     0.0332
     ],
     "n_models": 3,
     "reading": "the law holds"
@@ -44701,8 +44701,8 @@
    "M2_elasticity_all": {
     "slope": 1.152,
     "ci95": [
-     1.0803,
-     1.2226
+     1.0805,
+     1.2239
     ],
     "contains_1": false,
     "reading": "forced mixing of two symmetric types >= 2 s.d. apart is excluded in the second domain",
@@ -44715,8 +44715,8 @@
    "M2_elasticity_highlat_winter": {
     "slope": 1.1961,
     "ci95": [
-     1.0563,
-     1.3211
+     1.0528,
+     1.3234
     ],
     "contains_1": false,
     "reading": "forced mixing of two symmetric types >= 2 s.d. apart is excluded in the second domain",
@@ -44727,47 +44727,47 @@
     ]
    },
    "M3_law_all_primary": {
-    "mean": -0.1222,
+    "mean": -0.0085,
     "ci95": [
-     -0.1415,
-     -0.1028
+     -0.0298,
+     0.0127
     ],
     "n_frames": 24,
     "reading": "the law holds"
    },
    "M3_per_model": {
     "CanESM5_p1": {
-     "mean": -0.101,
+     "mean": 0.0039,
      "ci95": [
-      -0.1503,
-      -0.0505
+      -0.0561,
+      0.0638
      ],
      "n_frames": 6,
      "reading": "the law holds"
     },
     "CanESM5_p2": {
-     "mean": -0.1672,
+     "mean": -0.02,
      "ci95": [
-      -0.2016,
-      -0.1327
+      -0.0616,
+      0.0212
      ],
      "n_frames": 6,
      "reading": "the law holds"
     },
     "MIROC6": {
-     "mean": -0.1799,
+     "mean": -0.0167,
      "ci95": [
-      -0.2184,
-      -0.143
+      -0.0521,
+      0.0198
      ],
      "n_frames": 6,
      "reading": "the law holds"
     },
     "HadGEM3-GC31-LL": {
-     "mean": -0.0408,
+     "mean": -0.0013,
      "ci95": [
-      -0.0669,
-      -0.0144
+      -0.0286,
+      0.026
      ],
      "n_frames": 6,
      "reading": "the law holds"
@@ -44777,243 +44777,243 @@
     "note": "post hoc calibration under the exact law (Gaussian, observed n, shift, s.d. ratio)",
     "per_model_target": {
      "CanESM5_p1|CEUR_JJA": {
-      "observed": 0.0132,
-      "expected_under_law": 0.0736,
+      "observed": -0.0791,
+      "expected_under_law": -0.0021,
       "range95_under_law": [
-       0.0018,
-       0.1406
+       -0.1146,
+       0.1066
       ],
-      "observed_minus_expected": -0.0604,
+      "observed_minus_expected": -0.077,
       "inside_range": true
      },
      "CanESM5_p1|WRUS_JJA": {
-      "observed": 0.1534,
-      "expected_under_law": 0.0608,
+      "observed": 0.0097,
+      "expected_under_law": -0.0037,
       "range95_under_law": [
-       0.0028,
-       0.1222
+       -0.1003,
+       0.1066
       ],
-      "observed_minus_expected": 0.0927,
-      "inside_range": false
+      "observed_minus_expected": 0.0134,
+      "inside_range": true
      },
      "CanESM5_p1|CNAM_JJA": {
-      "observed": 0.0517,
-      "expected_under_law": 0.0541,
+      "observed": 0.0021,
+      "expected_under_law": -0.0002,
       "range95_under_law": [
-       0.0025,
-       0.1136
+       -0.1178,
+       0.1157
       ],
-      "observed_minus_expected": -0.0023,
+      "observed_minus_expected": 0.0022,
       "inside_range": true
      },
      "CanESM5_p1|CEAS_DJF": {
-      "observed": -0.3149,
-      "expected_under_law": -0.0723,
+      "observed": 0.0019,
+      "expected_under_law": 0.0199,
       "range95_under_law": [
-       -0.1499,
-       -0.013
+       -0.1877,
+       0.2527
       ],
-      "observed_minus_expected": -0.2425,
-      "inside_range": false
+      "observed_minus_expected": -0.018,
+      "inside_range": true
      },
      "CanESM5_p1|NSIB_DJF": {
-      "observed": -0.3119,
-      "expected_under_law": -0.0732,
+      "observed": -0.07,
+      "expected_under_law": 0.0143,
       "range95_under_law": [
-       -0.1445,
-       -0.0183
+       -0.231,
+       0.1885
       ],
-      "observed_minus_expected": -0.2387,
-      "inside_range": false
+      "observed_minus_expected": -0.0843,
+      "inside_range": true
      },
      "CanESM5_p1|NWNA_DJF": {
-      "observed": -0.1979,
-      "expected_under_law": -0.0685,
+      "observed": 0.159,
+      "expected_under_law": 0.0374,
       "range95_under_law": [
-       -0.1302,
-       -0.0095
+       -0.1906,
+       0.2557
       ],
-      "observed_minus_expected": -0.1293,
-      "inside_range": false
+      "observed_minus_expected": 0.1216,
+      "inside_range": true
      },
      "CanESM5_p2|CEUR_JJA": {
-      "observed": 0.0238,
-      "expected_under_law": 0.1136,
+      "observed": 0.0439,
+      "expected_under_law": 0.0017,
       "range95_under_law": [
-       0.0376,
-       0.1822
+       -0.0988,
+       0.0941
       ],
-      "observed_minus_expected": -0.0898,
-      "inside_range": false
+      "observed_minus_expected": 0.0422,
+      "inside_range": true
      },
      "CanESM5_p2|WRUS_JJA": {
-      "observed": 0.1217,
-      "expected_under_law": 0.1064,
+      "observed": 0.0751,
+      "expected_under_law": 0.0102,
       "range95_under_law": [
-       0.0434,
-       0.1756
+       -0.0814,
+       0.1016
       ],
-      "observed_minus_expected": 0.0153,
+      "observed_minus_expected": 0.0649,
       "inside_range": true
      },
      "CanESM5_p2|CNAM_JJA": {
-      "observed": 0.0064,
-      "expected_under_law": 0.0751,
+      "observed": -0.0341,
+      "expected_under_law": -0.0016,
       "range95_under_law": [
-       0.0204,
-       0.1356
+       -0.0843,
+       0.0798
       ],
-      "observed_minus_expected": -0.0687,
-      "inside_range": false
+      "observed_minus_expected": -0.0325,
+      "inside_range": true
      },
      "CanESM5_p2|CEAS_DJF": {
-      "observed": -0.4481,
-      "expected_under_law": -0.1887,
+      "observed": -0.1068,
+      "expected_under_law": 0.002,
       "range95_under_law": [
-       -0.2695,
-       -0.1075
+       -0.1906,
+       0.1706
       ],
-      "observed_minus_expected": -0.2594,
-      "inside_range": false
+      "observed_minus_expected": -0.1088,
+      "inside_range": true
      },
      "CanESM5_p2|NSIB_DJF": {
-      "observed": -0.4193,
-      "expected_under_law": -0.1651,
+      "observed": -0.1423,
+      "expected_under_law": 0.0057,
       "range95_under_law": [
-       -0.2416,
-       -0.0868
+       -0.1621,
+       0.1951
       ],
-      "observed_minus_expected": -0.2542,
-      "inside_range": false
+      "observed_minus_expected": -0.1481,
+      "inside_range": true
      },
      "CanESM5_p2|NWNA_DJF": {
-      "observed": -0.2877,
-      "expected_under_law": -0.172,
+      "observed": 0.0441,
+      "expected_under_law": 0.0142,
       "range95_under_law": [
-       -0.255,
-       -0.09
+       -0.192,
+       0.1717
       ],
-      "observed_minus_expected": -0.1157,
-      "inside_range": false
+      "observed_minus_expected": 0.03,
+      "inside_range": true
      },
      "MIROC6|CEUR_JJA": {
-      "observed": 0.0403,
-      "expected_under_law": 0.0641,
+      "observed": -0.0097,
+      "expected_under_law": 0.007,
       "range95_under_law": [
-       0.0061,
-       0.1098
+       -0.0416,
+       0.0593
       ],
-      "observed_minus_expected": -0.0237,
+      "observed_minus_expected": -0.0167,
       "inside_range": true
      },
      "MIROC6|WRUS_JJA": {
-      "observed": -0.006,
-      "expected_under_law": 0.0403,
+      "observed": -0.0159,
+      "expected_under_law": 0.0058,
       "range95_under_law": [
-       -0.001,
-       0.0903
+       -0.0392,
+       0.054
       ],
-      "observed_minus_expected": -0.0463,
-      "inside_range": false
+      "observed_minus_expected": -0.0217,
+      "inside_range": true
      },
      "MIROC6|CNAM_JJA": {
-      "observed": 0.0344,
-      "expected_under_law": 0.0591,
+      "observed": 0.0332,
+      "expected_under_law": 0.007,
       "range95_under_law": [
-       0.0116,
-       0.1171
+       -0.0493,
+       0.0577
       ],
-      "observed_minus_expected": -0.0247,
+      "observed_minus_expected": 0.0262,
       "inside_range": true
      },
      "MIROC6|CEAS_DJF": {
-      "observed": -0.3048,
-      "expected_under_law": -0.2138,
+      "observed": 0.003,
+      "expected_under_law": 0.0053,
       "range95_under_law": [
-       -0.2905,
-       -0.1452
+       -0.0845,
+       0.101
       ],
-      "observed_minus_expected": -0.091,
-      "inside_range": false
+      "observed_minus_expected": -0.0022,
+      "inside_range": true
      },
      "MIROC6|NSIB_DJF": {
-      "observed": -0.5245,
-      "expected_under_law": -0.1326,
+      "observed": -0.015,
+      "expected_under_law": 0.0266,
       "range95_under_law": [
-       -0.2132,
-       -0.0662
+       -0.1885,
+       0.2218
       ],
-      "observed_minus_expected": -0.3919,
-      "inside_range": false
+      "observed_minus_expected": -0.0416,
+      "inside_range": true
      },
      "MIROC6|NWNA_DJF": {
-      "observed": -0.3186,
-      "expected_under_law": -0.2092,
+      "observed": -0.0955,
+      "expected_under_law": 0.0043,
       "range95_under_law": [
-       -0.2792,
-       -0.1507
+       -0.0732,
+       0.0756
       ],
-      "observed_minus_expected": -0.1093,
+      "observed_minus_expected": -0.0999,
       "inside_range": false
      },
      "HadGEM3-GC31-LL|CEUR_JJA": {
-      "observed": 0.0406,
-      "expected_under_law": 0.0628,
+      "observed": 0.0342,
+      "expected_under_law": 0.0017,
       "range95_under_law": [
-       0.017,
-       0.1124
+       -0.0513,
+       0.0485
       ],
-      "observed_minus_expected": -0.0222,
+      "observed_minus_expected": 0.0326,
       "inside_range": true
      },
      "HadGEM3-GC31-LL|WRUS_JJA": {
-      "observed": 0.0596,
-      "expected_under_law": 0.0938,
+      "observed": -0.0652,
+      "expected_under_law": 0.0021,
       "range95_under_law": [
-       0.0397,
-       0.149
+       -0.0492,
+       0.055
       ],
-      "observed_minus_expected": -0.0342,
-      "inside_range": true
+      "observed_minus_expected": -0.0673,
+      "inside_range": false
      },
      "HadGEM3-GC31-LL|CNAM_JJA": {
-      "observed": 0.0893,
-      "expected_under_law": 0.0804,
+      "observed": 0.0205,
+      "expected_under_law": 0.0041,
       "range95_under_law": [
-       0.0379,
-       0.1291
+       -0.0459,
+       0.0613
       ],
-      "observed_minus_expected": 0.0089,
+      "observed_minus_expected": 0.0164,
       "inside_range": true
      },
      "HadGEM3-GC31-LL|CEAS_DJF": {
-      "observed": -0.1338,
-      "expected_under_law": -0.0989,
+      "observed": -0.0455,
+      "expected_under_law": -0.0069,
       "range95_under_law": [
-       -0.1567,
-       -0.0447
+       -0.065,
+       0.0516
       ],
-      "observed_minus_expected": -0.0349,
+      "observed_minus_expected": -0.0386,
       "inside_range": true
      },
      "HadGEM3-GC31-LL|NSIB_DJF": {
-      "observed": -0.131,
-      "expected_under_law": -0.1564,
+      "observed": 0.0458,
+      "expected_under_law": -0.0004,
       "range95_under_law": [
-       -0.2403,
-       -0.0878
+       -0.0699,
+       0.0699
       ],
-      "observed_minus_expected": 0.0255,
+      "observed_minus_expected": 0.0462,
       "inside_range": true
      },
      "HadGEM3-GC31-LL|NWNA_DJF": {
-      "observed": -0.1696,
-      "expected_under_law": -0.1595,
+      "observed": 0.002,
+      "expected_under_law": -0.0015,
       "range95_under_law": [
-       -0.228,
-       -0.1051
+       -0.0729,
+       0.0593
       ],
-      "observed_minus_expected": -0.0101,
+      "observed_minus_expected": 0.0035,
       "inside_range": true
      }
     },
@@ -45024,229 +45024,229 @@
       1.2044
      ]
     },
-    "share_targets_inside_range": 0.4583
+    "share_targets_inside_range": 0.9167
    },
    "post_hoc_calibration_empirical_shape": {
     "note": "post hoc calibration under the exact law with each year's empirical natural-forcing shape",
     "per_model_target": {
      "CanESM5_p1|CEUR_JJA": {
-      "observed": 0.0132,
-      "expected_under_law": 0.0884,
+      "observed": -0.0791,
+      "expected_under_law": 0.0035,
       "range95_under_law": [
-       0.0011,
-       0.1769
+       -0.1021,
+       0.1099
       ],
       "inside_range": true
      },
      "CanESM5_p1|WRUS_JJA": {
-      "observed": 0.1534,
-      "expected_under_law": 0.0718,
+      "observed": 0.0097,
+      "expected_under_law": 0.0141,
       "range95_under_law": [
-       0.0163,
-       0.125
+       -0.1113,
+       0.1191
       ],
-      "inside_range": false
+      "inside_range": true
      },
      "CanESM5_p1|CNAM_JJA": {
-      "observed": 0.0517,
-      "expected_under_law": 0.0589,
+      "observed": 0.0021,
+      "expected_under_law": 0.0217,
       "range95_under_law": [
-       -0.0004,
-       0.1291
+       -0.0889,
+       0.1424
       ],
       "inside_range": true
      },
      "CanESM5_p1|CEAS_DJF": {
-      "observed": -0.3149,
-      "expected_under_law": -0.1257,
+      "observed": 0.0019,
+      "expected_under_law": 0.03,
       "range95_under_law": [
-       -0.217,
-       -0.0454
+       -0.1853,
+       0.2093
       ],
-      "inside_range": false
+      "inside_range": true
      },
      "CanESM5_p1|NSIB_DJF": {
-      "observed": -0.3119,
-      "expected_under_law": -0.0873,
+      "observed": -0.07,
+      "expected_under_law": 0.0176,
       "range95_under_law": [
-       -0.1583,
-       -0.028
+       -0.1725,
+       0.1911
       ],
-      "inside_range": false
+      "inside_range": true
      },
      "CanESM5_p1|NWNA_DJF": {
-      "observed": -0.1979,
-      "expected_under_law": -0.1064,
+      "observed": 0.159,
+      "expected_under_law": 0.0636,
       "range95_under_law": [
-       -0.193,
-       -0.0418
+       -0.123,
+       0.2481
       ],
-      "inside_range": false
+      "inside_range": true
      },
      "CanESM5_p2|CEUR_JJA": {
-      "observed": 0.0238,
-      "expected_under_law": 0.0601,
+      "observed": 0.0439,
+      "expected_under_law": -0.0099,
       "range95_under_law": [
-       -0.0127,
-       0.1414
+       -0.0816,
+       0.0639
       ],
       "inside_range": true
      },
      "CanESM5_p2|WRUS_JJA": {
-      "observed": 0.1217,
-      "expected_under_law": 0.0835,
+      "observed": 0.0751,
+      "expected_under_law": 0.0003,
       "range95_under_law": [
-       0.0216,
-       0.1453
+       -0.0906,
+       0.0835
       ],
       "inside_range": true
      },
      "CanESM5_p2|CNAM_JJA": {
-      "observed": 0.0064,
-      "expected_under_law": 0.0545,
+      "observed": -0.0341,
+      "expected_under_law": 0.0052,
       "range95_under_law": [
-       -0.0107,
-       0.1269
+       -0.1153,
+       0.1161
       ],
       "inside_range": true
      },
      "CanESM5_p2|CEAS_DJF": {
-      "observed": -0.4481,
-      "expected_under_law": -0.2189,
+      "observed": -0.1068,
+      "expected_under_law": -0.0002,
       "range95_under_law": [
-       -0.339,
-       -0.1293
+       -0.195,
+       0.1702
       ],
-      "inside_range": false
+      "inside_range": true
      },
      "CanESM5_p2|NSIB_DJF": {
-      "observed": -0.4193,
-      "expected_under_law": -0.1591,
+      "observed": -0.1423,
+      "expected_under_law": 0.0415,
       "range95_under_law": [
-       -0.2588,
-       -0.068
+       -0.1205,
+       0.2599
       ],
       "inside_range": false
      },
      "CanESM5_p2|NWNA_DJF": {
-      "observed": -0.2877,
-      "expected_under_law": -0.1818,
+      "observed": 0.0441,
+      "expected_under_law": 0.0044,
       "range95_under_law": [
-       -0.2841,
-       -0.0933
+       -0.2176,
+       0.2243
       ],
-      "inside_range": false
+      "inside_range": true
      },
      "MIROC6|CEUR_JJA": {
-      "observed": 0.0403,
-      "expected_under_law": 0.0735,
+      "observed": -0.0097,
+      "expected_under_law": 0.0086,
       "range95_under_law": [
-       0.0322,
-       0.1293
+       -0.0418,
+       0.0605
       ],
       "inside_range": true
      },
      "MIROC6|WRUS_JJA": {
-      "observed": -0.006,
-      "expected_under_law": 0.0421,
+      "observed": -0.0159,
+      "expected_under_law": 0.0114,
       "range95_under_law": [
-       -0.001,
-       0.0875
+       -0.0325,
+       0.0598
       ],
-      "inside_range": false
+      "inside_range": true
      },
      "MIROC6|CNAM_JJA": {
-      "observed": 0.0344,
-      "expected_under_law": 0.0269,
+      "observed": 0.0332,
+      "expected_under_law": 0.005,
       "range95_under_law": [
-       -0.0351,
-       0.08
+       -0.048,
+       0.0659
       ],
       "inside_range": true
      },
      "MIROC6|CEAS_DJF": {
-      "observed": -0.3048,
-      "expected_under_law": -0.2719,
+      "observed": 0.003,
+      "expected_under_law": -0.0069,
       "range95_under_law": [
-       -0.3637,
-       -0.191
+       -0.0959,
+       0.084
       ],
       "inside_range": true
      },
      "MIROC6|NSIB_DJF": {
-      "observed": -0.5245,
-      "expected_under_law": -0.1384,
+      "observed": -0.015,
+      "expected_under_law": 0.019,
       "range95_under_law": [
-       -0.2425,
-       -0.0508
+       -0.1798,
+       0.2152
       ],
-      "inside_range": false
+      "inside_range": true
      },
      "MIROC6|NWNA_DJF": {
-      "observed": -0.3186,
-      "expected_under_law": -0.2049,
+      "observed": -0.0955,
+      "expected_under_law": 0.0057,
       "range95_under_law": [
-       -0.271,
-       -0.1342
+       -0.0854,
+       0.0905
       ],
       "inside_range": false
      },
      "HadGEM3-GC31-LL|CEUR_JJA": {
-      "observed": 0.0406,
-      "expected_under_law": 0.0351,
+      "observed": 0.0342,
+      "expected_under_law": 0.0058,
       "range95_under_law": [
-       -0.0084,
-       0.0876
+       -0.0418,
+       0.0569
       ],
       "inside_range": true
      },
      "HadGEM3-GC31-LL|WRUS_JJA": {
-      "observed": 0.0596,
-      "expected_under_law": 0.133,
+      "observed": -0.0652,
+      "expected_under_law": 0.0151,
       "range95_under_law": [
-       0.0681,
-       0.2055
+       -0.0576,
+       0.0826
       ],
       "inside_range": false
      },
      "HadGEM3-GC31-LL|CNAM_JJA": {
-      "observed": 0.0893,
-      "expected_under_law": 0.0822,
+      "observed": 0.0205,
+      "expected_under_law": 0.0089,
       "range95_under_law": [
-       0.0287,
-       0.1362
+       -0.0366,
+       0.0562
       ],
       "inside_range": true
      },
      "HadGEM3-GC31-LL|CEAS_DJF": {
-      "observed": -0.1338,
-      "expected_under_law": -0.1177,
+      "observed": -0.0455,
+      "expected_under_law": -0.0121,
       "range95_under_law": [
-       -0.1696,
-       -0.0629
+       -0.0722,
+       0.0454
       ],
       "inside_range": true
      },
      "HadGEM3-GC31-LL|NSIB_DJF": {
-      "observed": -0.131,
-      "expected_under_law": -0.1348,
+      "observed": 0.0458,
+      "expected_under_law": -0.0072,
       "range95_under_law": [
-       -0.2126,
-       -0.069
+       -0.0866,
+       0.0599
       ],
       "inside_range": true
      },
      "HadGEM3-GC31-LL|NWNA_DJF": {
-      "observed": -0.1696,
-      "expected_under_law": -0.1851,
+      "observed": 0.002,
+      "expected_under_law": -0.012,
       "range95_under_law": [
-       -0.2465,
-       -0.1184
+       -0.0811,
+       0.0472
       ],
       "inside_range": true
      }
     },
-    "share_targets_inside_range": 0.5417
+    "share_targets_inside_range": 0.875
    }
   },
   "davis2021_intervention_test.json": {

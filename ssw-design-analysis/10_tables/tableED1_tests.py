@@ -355,9 +355,9 @@ def main():
          "committed before data", "a280a10",
          (f"{g(DMM,'M2_elasticity_all','slope')} {g(DMM,'M2_elasticity_all','ci95')}; expected under the law "
           f"{g(DMM,'post_hoc_calibration','expected_elasticity_under_law','range95')} (post hoc)") if DMM else "pending", None),
-        ("MM-3", "same: winter cold classes, CanESM5 and MIROC6 (registered reading 'fails' in 8 of 9; outside the law's calibrated range in all 6 high-latitude cases, post hoc)", "revision-7 secondary",
+        ("MM-3", "same: winter cold classes, CanESM5 and MIROC6 (law residuals; registered reading)", "revision-7 secondary",
          "committed before data", "a280a10",
-         ", ".join(f"{k.split('|')[0]} {k.split('|')[1]} {v['law']['mean']}" for k, v in (DMM or {}).get('per_model_target', {}).items() if 'DJF' in k and not k.startswith('HadGEM3')) if DMM else "pending", None),
+         ", ".join(f"{k.split('|')[0]} {k.split('|')[1]} {v['law']['mean']} ({v['reading']})" for k, v in (DMM or {}).get('per_model_target', {}).items() if 'DJF' in k and not k.startswith('HadGEM3')) if DMM else "pending", None),
         ("DAV", "January 2021, CESM2(WACCM6) SSW vs scrambled-stratosphere ensembles (21 members), 4 Jan initialisation: back-shift contrast difference; not rejected, low power",
          "revision-5 primary", "committed before data", "738a422",
          f"{g(DAV,'pairs','04jan','Delta_b')} {g(DAV,'pairs','04jan','ci95','Delta_b')}" if DAV else "pending", None),
@@ -394,7 +394,7 @@ def main():
          "committed before data", "60f3d8b",
          (f"shape p {g(DAM,'targets','CEUR_JJA_tercile','shape','AD_perm_p')}; elasticity "
           f"{g(DAM,'targets','CEUR_JJA_tercile','elasticity_slope','slope')} {g(DAM,'targets','CEUR_JJA_tercile','elasticity_slope','ci95')}") if DAM else "pending", None),
-        ("DAM-4", "second domain: 10th-percentile classes (law residuals); estimator bias -0.20 when the law holds exactly (post hoc)", "revision-6 secondary",
+        ("DAM-4", "second domain: 10th-percentile classes (law residuals; the estimator is unbiased when the law holds exactly, post hoc)", "revision-6 secondary",
          "committed before data", "60f3d8b",
          ", ".join(f"{t.split('_')[0]} {g(DAM,'targets',t,'resid_law','mean')}" for t in ("CEUR_JJA_decile", "WRUS_JJA_decile", "CNAM_JJA_decile", "CEAS_DJF_decile")) if DAM else "pending", None),
         ("PRO", "prospective: shifted null on every NH SSW with onset Nov 2026 - Mar 2036 (CRPS, days 8-52 NAM)", "prospective primary",

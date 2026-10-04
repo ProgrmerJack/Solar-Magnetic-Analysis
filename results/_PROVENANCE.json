@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-02T10:36:12+00:00",
+ "generated": "2026-10-04T21:01:41+00:00",
  "note": "Known-good baseline: each result was produced by the script at the recorded sha256. catalog_repo.py flags STALE when a producer's hash no longer matches. Re-record with --record only AFTER re-running the analysis.",
  "results": {
   "catalogue_sets.json": {
@@ -780,6 +780,16 @@
    "result_sha256_16": "a759e9d616e1129a",
    "needs_rerun": false
   },
+  "snapsi_contrast_generality.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_free_natural_experiment.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_free_natural_experiment.py": "9f964b9443466ddf"
+   },
+   "result_sha256_16": "b840bc6b85a6be1b",
+   "needs_rerun": false
+  },
   "snapsi_distribution_test.json": {
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_distribution_test.py"
@@ -822,12 +832,24 @@
   },
   "snapsi_selection_test.json": {
    "producers": [
+    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py",
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py"
    ],
    "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "7be5419c0436763c",
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "6626a155b09d3623"
    },
    "result_sha256_16": "c26057a7c4a2e49e",
+   "needs_rerun": false
+  },
+  "threshold_law_theory.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/threshold_law_theory.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/threshold_law_theory.py": "8420e161909ac062"
+   },
+   "result_sha256_16": "dd713459b5eaa581",
    "needs_rerun": false
   },
   "criterion_sweep.json": {

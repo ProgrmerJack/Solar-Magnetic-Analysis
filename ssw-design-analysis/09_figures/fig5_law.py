@@ -164,7 +164,7 @@ def main():
             lo, hi = v["range95_under_law"]
             dx.plot([v["expected_under_law"]] * 2, [lo, hi], color="0.75", lw=0.6, zorder=1)
             dx.scatter(v["expected_under_law"], v["observed"], s=14, color=cols[m], marker=mk[t.split("_")[1]], zorder=3)
-        lim = (-0.58, 0.22)
+        lim = (-0.3, 0.3)
         dx.plot(lim, lim, color="k", lw=0.6, ls=(0, (3, 2)))
         for m, c in cols.items():
             dx.scatter([], [], s=12, color=c, label=m.replace("-GC31-LL", ""))
@@ -172,7 +172,8 @@ def main():
         dx.scatter([], [], s=12, color="0.4", marker="s", label="winter (cold class)")
         dx.legend(fontsize=4.4, loc="upper left")
         dx.set_xlim(lim); dx.set_ylim(lim)
-        dx.set_title("human forcing: 13 of 24 model-region cases follow the law", fontsize=5.8)
+        n_in = sum(v["inside_range"] for v in cal.values())
+        dx.set_title(f"human forcing: {n_in} of {len(cal)} model-region cases inside the law's 95% range", fontsize=5.8)
     dx.set_xlabel("law residual expected under the exact law (σ)")
     dx.set_ylabel("observed law residual (σ)")
     S.panel_label(dx, "d", x=-0.2, y=1.04)

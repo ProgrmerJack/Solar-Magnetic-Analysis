@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-04T19:08:03+00:00",
+ "generated": "2026-10-04T21:01:41+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 188,
+  "scripts": 190,
   "results": 96
  },
  "scripts": [
@@ -34,6 +34,20 @@
    "flags": [],
    "filenames_mentioned": [
     "cmip6_ensemble_manifest.csv"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_cmip6_general.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Monthly box means of 2 m temperature (tas, K) and precipitation (pr, mm/day) for 07_physical_decomposition/class_law_general.py (registered before this script first ran). Reuses the box definitions and reduction of acquire_cmip6_monthly_boxes.py;",
+   "loc": 157,
+   "modified": "2026-10-04 20:51",
+   "sha256_16": "ddd31d3f91858f29",
+   "flags": [],
+   "filenames_mentioned": [
+    "cmip6_general_boxes.parquet"
    ],
    "filename_prefixes": []
   },
@@ -875,6 +889,20 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/07_physical_decomposition/class_law_general.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "IS THE THRESHOLD-CLASS LAW GENERAL? PRECIPITATION AS WELL AS TEMPERATURE, FIVE MODELS, AND FORCING STRONG ENOUGH TO DISTINGUISH ONE POPULATION FROM FORCED MIXING OF RESPONSE TYPES.",
+   "loc": 363,
+   "modified": "2026-10-04 19:33",
+   "sha256_16": "285ffc2bee091a55",
+   "flags": [],
+   "filenames_mentioned": [
+    "cmip6_general_boxes.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/07_physical_decomposition/class_model_comparison.py",
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
@@ -926,9 +954,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "IS THE THRESHOLD-CLASS LAW A PROPERTY OF OUTCOME-DEFINED CLASSES IN GEOSCIENCE, NOT OF THE SSW LABEL? A SECOND DOMAIN: ANTHROPOGENIC FORCING AND EXTREME SEASONS.",
-   "loc": 210,
-   "modified": "2026-10-04 11:29",
-   "sha256_16": "636002137796b31f",
+   "loc": 212,
+   "modified": "2026-10-04 19:24",
+   "sha256_16": "ef0d0388c3d3abd0",
    "flags": [],
    "filenames_mentioned": [
     "damip_hadgem_boxes.parquet"
@@ -940,9 +968,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "THE THRESHOLD-CLASS LAW UNDER HUMAN FORCING IN SEVERAL MODELS, AND WHERE FORCING CHANGES THE SPREAD (so that the elasticity is identified).",
-   "loc": 283,
-   "modified": "2026-10-04 18:45",
-   "sha256_16": "2fd550f489ec97e7",
+   "loc": 287,
+   "modified": "2026-10-04 19:27",
+   "sha256_16": "98997b906eeccf44",
    "flags": [],
    "filenames_mentioned": [
     "cmip6_monthly_boxes.parquet"
@@ -1867,9 +1895,9 @@
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
    "title": "fig5_law.py -- Figure 5: one law for outcome-defined impact classes.",
-   "loc": 184,
-   "modified": "2026-10-04 19:06",
-   "sha256_16": "ab7227bc10e01110",
+   "loc": 185,
+   "modified": "2026-10-04 19:39",
+   "sha256_16": "129830d573b61eab",
    "flags": [],
    "filenames_mentioned": [
     "damip_class_law.json",
@@ -2059,8 +2087,8 @@
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
    "loc": 427,
-   "modified": "2026-10-04 19:06",
-   "sha256_16": "5f7108245c7928fc",
+   "modified": "2026-10-04 19:39",
+   "sha256_16": "79c504e22f84950f",
    "flags": [],
    "filenames_mentioned": [
     "class_model_comparison.json",
@@ -2948,7 +2976,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-04 18:53",
+   "modified": "2026-10-04 19:41",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -5886,9 +5914,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 80448,
-   "modified": "2026-10-04 11:29",
-   "sha256_16": "d0ef66dd5d250eba",
+   "bytes": 80463,
+   "modified": "2026-10-04 19:24",
+   "sha256_16": "03667a91a5f0887e",
    "producers": [],
    "state": "ORPHAN",
    "detail": "no script writes this",
@@ -5905,7 +5933,7 @@
     },
     {
      "key": "targets.CEUR_JJA_decile.reading_law",
-     "text": "inconclusive"
+     "text": "the law holds in a second domain"
     },
     {
      "key": "targets.CEUR_JJA_decile.shape.reading",
@@ -5921,7 +5949,7 @@
     },
     {
      "key": "targets.WRUS_JJA_decile.reading_law",
-     "text": "inconclusive"
+     "text": "the law holds in a second domain"
     },
     {
      "key": "targets.WRUS_JJA_decile.shape.reading",
@@ -5953,7 +5981,7 @@
     },
     {
      "key": "targets.CEAS_DJF_decile.reading_law",
-     "text": "inconclusive"
+     "text": "the law holds in a second domain"
     },
     {
      "key": "targets.CEAS_DJF_decile.shape.reading",
@@ -5986,9 +6014,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 25681,
-   "modified": "2026-10-04 18:46",
-   "sha256_16": "efe1ec4966673816",
+   "bytes": 25672,
+   "modified": "2026-10-04 19:28",
+   "sha256_16": "b4aa9deea85e6629",
    "producers": [],
    "state": "ORPHAN",
    "detail": "no script writes this",
@@ -6021,7 +6049,7 @@
     },
     {
      "key": "per_model_target.CanESM5_p1|CEAS_DJF.reading",
-     "text": "fails"
+     "text": "the law holds"
     },
     {
      "key": "per_model_target.CanESM5_p1|CEAS_DJF.shape.reading",
@@ -6029,7 +6057,7 @@
     },
     {
      "key": "per_model_target.CanESM5_p1|NSIB_DJF.reading",
-     "text": "fails"
+     "text": "the law holds"
     },
     {
      "key": "per_model_target.CanESM5_p1|NSIB_DJF.shape.reading",
@@ -6069,7 +6097,7 @@
     },
     {
      "key": "per_model_target.CanESM5_p2|CEAS_DJF.reading",
-     "text": "fails"
+     "text": "the law holds"
     },
     {
      "key": "per_model_target.CanESM5_p2|CEAS_DJF.shape.reading",
@@ -6077,7 +6105,7 @@
     },
     {
      "key": "per_model_target.CanESM5_p2|NSIB_DJF.reading",
-     "text": "fails"
+     "text": "inconclusive"
     },
     {
      "key": "per_model_target.CanESM5_p2|NSIB_DJF.shape.reading",
@@ -6085,7 +6113,7 @@
     },
     {
      "key": "per_model_target.CanESM5_p2|NWNA_DJF.reading",
-     "text": "fails"
+     "text": "the law holds"
     },
     {
      "key": "per_model_target.CanESM5_p2|NWNA_DJF.shape.reading",
@@ -6117,7 +6145,7 @@
     },
     {
      "key": "per_model_target.MIROC6|CEAS_DJF.reading",
-     "text": "fails"
+     "text": "the law holds"
     },
     {
      "key": "per_model_target.MIROC6|CEAS_DJF.shape.reading",
@@ -6125,7 +6153,7 @@
     },
     {
      "key": "per_model_target.MIROC6|NSIB_DJF.reading",
-     "text": "fails"
+     "text": "the law holds"
     },
     {
      "key": "per_model_target.MIROC6|NSIB_DJF.shape.reading",
@@ -6133,7 +6161,7 @@
     },
     {
      "key": "per_model_target.MIROC6|NWNA_DJF.reading",
-     "text": "fails"
+     "text": "the law holds"
     },
     {
      "key": "per_model_target.MIROC6|NWNA_DJF.shape.reading",
@@ -6435,8 +6463,8 @@
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_free_natural_experiment.py"
    ],
-   "state": "unverified",
-   "detail": "no provenance baseline recorded",
+   "state": "current",
+   "detail": "",
    "flags": [],
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/snapsi_free_natural_experiment.py": "9f964b9443466ddf"
@@ -6831,8 +6859,8 @@
     "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py",
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py"
    ],
-   "state": "STALE",
-   "detail": "producer changed: ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py",
+   "state": "current",
+   "detail": "",
    "flags": [],
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "7be5419c0436763c",
@@ -6877,8 +6905,8 @@
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/threshold_law_theory.py"
    ],
-   "state": "unverified",
-   "detail": "no provenance baseline recorded",
+   "state": "current",
+   "detail": "",
    "flags": [],
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/threshold_law_theory.py": "8420e161909ac062"

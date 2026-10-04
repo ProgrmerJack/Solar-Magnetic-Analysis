@@ -1288,8 +1288,9 @@ L pooled (5 sets, equal weight): +0.005 [-0.068, +0.077] -> HOLDS (shift-only +0
 G6 regional cold classes (24 regions x 36 pairs = 864): law residual -0.015 [-0.021, -0.011] -> HOLDS; 92% within
   tolerance vs 58% shift-only; |rate change| 0.19.
 DAMIP second domain (HadGEM3-GC31-LL historical 55 vs hist-nat 60, 1985-2014): central-Europe JJA upper tercile rate
-  0.33 -> 0.58, law +0.041 [-0.014, +0.102] -> HOLDS; shape p 0.96; all four tercile targets hold (-0.13..+0.09);
-  deciles -0.08..-0.20 = estimator bias at that threshold (post-hoc simulation -0.20 when the law holds exactly);
+  0.33 -> 0.58, law +0.034 [-0.030, +0.107] -> HOLDS; shape p 0.96; all four tercile targets hold (-0.07..+0.03);
+  all four decile targets hold (-0.03..+0.02); the estimator is unbiased under the exact law (post hoc, +0.00).
+  [Corrected 2026-10-05: the null had kept the hist-nat mean (FAILURES.md); the old 'decile bias -0.20' was that defect.]
   sd ratio 0.99 so its elasticities are weak (W. Russia 0.77 [0.53, 0.94] inconclusive).
 Post hoc: SNAPSI zonal elasticity 1.14 [1.05, 1.25]. Paper re-titled around the law; details moved to SI Note 21.
 
@@ -1301,15 +1302,17 @@ T2 theory: for ASYMMETRIC two-type mixtures the elasticity is NOT bounded below 
   experiment 0-0.47 (Delta 1.5-2), human-forcing design 0.77-1.0, SNAPSI 36 pairs 0.82-1.0 (Delta >= 2).
 G8: SNAPSI 36 pairs, shape unchanged (AD p 0.972, max dq 0.044) -> types >= 2 sd apart (width ratios 0.5-2) and
   Delta 1.5 r 0.5 EXCLUDED for imposed SSWs, no symmetry assumption.
-D-MM (CanESM5 p1/p2 separately, MIROC6, HadGEM3; GISS dropped): M1 central-European JJA 3 models +0.033 [+0.003,
-  +0.065] HOLDS; all summers hold; M2 elasticity 1.15 [1.08, 1.22] (identified, sd ratios 0.61-1.98) = estimator's
-  value under the law 1.14 [1.08, 1.20] (post hoc). Winter cold classes FAIL in CanESM5 and MIROC6 (-0.20..-0.52), beyond
-  the empirical-shape calibration (-0.09..-0.27) in all 6 high-latitude cases; HadGEM3 winters within. Forcing reshapes
-  the cold tail there -> the law is a testable null, not an identity.
-  CORRECTED after review: (i) the 1.14 excess is NOT explained (two-condition calibration 1.05 [0.96, 1.13]);
-  (ii) 'reshapes the cold tail' is NOT shown (shape test p 0.46-1.00 everywhere) -> cause unknown; (iii) the
-  multi-model elasticity is NOT identified (high-lat sd ratios 0.98-1.09; 0.61-1.98 is sampling); (iv) by the
-  calibration, W. Russia summers depart too (3 of 4); 13/24 inside. Holds: C. Europe + C. N. America summers, HadGEM3.
+D-MM (CanESM5 p1/p2 separately, MIROC6, HadGEM3; GISS dropped; corrected null, 2026-10-05): M1 central-European
+  JJA 3 models +0.002 [-0.027, +0.033] HOLDS; 22 of 24 model-region cases HOLD (-0.11..+0.08), 2 inconclusive
+  (CanESM5 p1 NWNA DJF +0.16 [-0.07, +0.39], p2 NSIB DJF -0.14 [-0.28, -0.02]; law residual defined in 6 and 9 of 30
+  years), none fails; pooled -0.009 [-0.030, +0.013]; every model holds. Calibration under the exact law (post hoc,
+  averaged over defined years): 22/24 inside (Gaussian), 21/24 (empirical shape) -- chance level. Winter cold-class
+  rate falls to 0.035 (MIROC6 N. Siberia) and the contrast still follows the law. Shape test p 0.45-1.00.
+  M2 elasticity 1.15 [1.08, 1.22] = estimator under the law 1.14 [1.08, 1.20]; NOT discriminating (forced sd ratios
+  0.91-1.13; the year-level 0.61-1.98 is sampling). The 1.14 SNAPSI excess is NOT explained (two-condition
+  calibration 1.05 [0.96, 1.13]).
+  [The earlier 'winter cold classes fail (-0.20..-0.52)', '13/24 inside' and 'W. Russia departs' were two code
+  defects: the null kept the reference mean, and the calibration averaged undefined years as 0 (FAILURES.md).]
 Novelty: identity is textbook (truncated moments); null = Doksum 1974 / Koenker & Xiao 2002 location-scale treatment
   effect; alternative = Palmer 1999 forced regime frequency. Title now SSW-scoped (88 chars); main text 3,999 words.
 

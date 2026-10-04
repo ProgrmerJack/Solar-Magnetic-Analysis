@@ -152,16 +152,19 @@ def calibrate(frames, d, units, n_rep=200):
         box, season, side = TARGETS[t]
         s = seasonal(d[d.model == m], box, season)
         q = 2 / 3 if side == "hot" else 1 / 3
-        reps = np.zeros(n_rep)
+        reps = [[] for _ in range(n_rep)]   # per replicate, the years with a defined contrast (as observed)
         for _, row in f.iterrows():
             y = int(row.year)
             nh = int(((s.arm == "historical") & (s.syear == y)).sum()); nn = int(((s.arm == "hist-nat") & (s.syear == y)).sum())
             for r in range(n_rep):
                 st = D1.year_stats(rc.normal(row["shift"], row.sd_ratio, nh), rc.normal(0, 1, nn), q, side)
-                reps[r] += st["resid_law"] if np.isfinite(st["resid_law"]) else 0.0
+                if np.isfinite(st["resid_law"]):
+                    reps[r].append(st["resid_law"])
                 if np.isfinite(st["diff"]) and np.isfinite(st["law_pred_diff"]):
                     sims_x[r].append(st["law_pred_diff"]); sims_y[r].append(st["diff"])
-        reps /= len(f)
+        # until 2026-10-05 an undefined year added 0 and the sum was divided by all years,
+        # shrinking the range wherever the forced class is often near-empty (FAILURES.md)
+        reps = np.array([np.mean(v) for v in reps if v])
         obs = float(f.resid_law.mean())
         out["per_model_target"][f"{m}|{t}"] = {
             "observed": round(obs, 4), "expected_under_law": round(float(reps.mean()), 4),
@@ -192,7 +195,7 @@ def calibrate_empirical(frames, d, units, n_rep=200):
         box, season, side = TARGETS[t]
         s = seasonal(d[d.model == m], box, season)
         q = 2 / 3 if side == "hot" else 1 / 3
-        reps = np.zeros(n_rep)
+        reps = [[] for _ in range(n_rep)]
         for _, row in f.iterrows():
             y = int(row.year)
             xn = s[(s.arm == "hist-nat") & (s.syear == y)]["mean"].values
@@ -201,8 +204,9 @@ def calibrate_empirical(frames, d, units, n_rep=200):
             for r in range(n_rep):
                 syn_n = rc.choice(z, len(z)); syn_h = row["shift"] + row.sd_ratio * rc.choice(z, nh)
                 st = D1.year_stats(syn_h, syn_n, q, side)
-                reps[r] += st["resid_law"] if np.isfinite(st["resid_law"]) else 0.0
-        reps /= len(f)
+                if np.isfinite(st["resid_law"]):
+                    reps[r].append(st["resid_law"])
+        reps = np.array([np.mean(v) for v in reps if v])
         obs = float(f.resid_law.mean())
         out["per_model_target"][f"{m}|{t}"] = {
             "observed": round(obs, 4), "expected_under_law": round(float(reps.mean()), 4),
