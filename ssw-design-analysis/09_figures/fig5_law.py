@@ -9,10 +9,10 @@ Reads (recomputes only the Gaussian curve and per-unit values stored in the file
   results/current/8_experiment/snapsi_free_natural_experiment.json  F and L (if present)
   results/current/8_experiment/damip_class_law.json              second domain
 
-  a  contrast change against the change a contrast proportional to the spread
-     predicts, C_ref (k - 1), unit by unit: SNAPSI zonal pairs and full nudging
-     (post hoc), the free-arm natural experiment and the human-forcing years
-     (registered); lines, one population (slope 1) and two types 2 s.d. apart (0.6)
+  a  back-shift contrast change against the change a contrast proportional to the
+     spread predicts, C_ref (k - 1), unit by unit: SNAPSI zonal pairs and full
+     nudging (post hoc), the free-arm natural experiment (registered); lines, one
+     population (slope 1) and two types 2 s.d. apart (0.58)
   b  law residual (forced contrast minus the location-scale null of the reference)
      in every intervention set, with the shift-only residual for comparison;
      grey band, the tolerance fixed before the tests
@@ -72,9 +72,6 @@ def main():
         for e in fre.get("ensembles", []):
             if e.get("mixed"):
                 pts.append(("SNAPSI free, natural (registered)", e["law_pred_Delta_b"], e["Delta_b"]))
-    if dam:
-        for y in dam["targets"]["CEUR_JJA_tercile"]["years"]:
-            pts.append(("human forcing, C. Europe (registered)", y["law_pred_diff"], y["diff"]))
     u = pd.DataFrame(pts, columns=["set", "pred", "obs"]).dropna()
     lim = (min(u.pred.min(), u.obs.min()) - 0.05, max(u.pred.max(), u.obs.max()) + 0.05)
     xx = np.array(lim)
@@ -82,7 +79,7 @@ def main():
     e2 = J("threshold_law_theory.json")["mixture_elasticity"]["2.0"]
     ax.plot(xx, e2 * xx, color="0.5", lw=0.7, ls=":", label=f"two types, Δ = 2 (slope {e2:.2f})")
     cols = {"SNAPSI zonal (post hoc)": verm, "SNAPSI full 3-D (post hoc)": S.C["orange"],
-            "SNAPSI free, natural (registered)": S.C["green"], "human forcing, C. Europe (registered)": blue}
+            "SNAPSI free, natural (registered)": S.C["green"]}
     for k, g in u.groupby("set", sort=False):
         ax.scatter(g.pred, g.obs, s=8, color=cols[k], zorder=3, label=k)
     ax.set_xlim(lim); ax.set_ylim(lim)
@@ -95,17 +92,19 @@ def main():
     # b -- law residual by set
     bx = fig.add_subplot(gs[0, 1])
     rows = []
-    g3 = gen["G3_third_event_SH"]
-    rows.append(("SNAPSI zonal, 25 pairs", g3["NH_25"]["resid_locscale"], g3["NH_25"]["resid_shift"]))
-    rows.append(("SNAPSI SH warming", g3["SH"]["resid_locscale"], g3["SH"]["resid_shift"]))
+    if fre and "L_pooled_law" in fre:
+        Lp = fre["L_pooled_law"]
+        names = {"SNAPSI_zonal_NH_25": "SNAPSI zonal-mean", "SNAPSI_SH": "SNAPSI SH warming",
+                 "SNAPSI_full_3D": "SNAPSI full 3-D", "CESM2_Jan2021": "CESM2, January 2021",
+                 "SNAPSI_free_natural": "SNAPSI free, natural"}
+        for k, lab in names.items():
+            ls_m, sh_m = Lp["location_scale"]["per_set"][k][0], Lp["shift_only"]["per_set"][k][0]
+            rows.append((lab, {"mean": ls_m, "ci95": Lp["location_scale"]["per_set_ci95"].get(k)},
+                         {"mean": sh_m, "ci95": Lp["shift_only"]["per_set_ci95"].get(k)}))
+        rows.append(("pooled, five sets", Lp["location_scale"], Lp["shift_only"]))
     g6 = gen.get("G6_regional_classes")
     if g6:
         rows.append(("24 regional cold classes", g6["resid_law"], g6["resid_shift"]))
-    if fre and "L_pooled_law" in fre:
-        ps = fre["L_pooled_law"]["location_scale"]
-        if fre.get("F2_resid_law") and fre["F2_resid_law"].get("ci95"):
-            rows.append(("SNAPSI free, natural", fre["F2_resid_law"], None))
-        rows.append(("pooled, all interventions", ps, fre["L_pooled_law"]["shift_only"]))
     if dam:
         for t, lab in (("CEUR_JJA_tercile", "human forcing, C. Europe JJA"), ("WRUS_JJA_tercile", "W. Russia JJA"),
                        ("CNAM_JJA_tercile", "C. N. America JJA"), ("CEAS_DJF_tercile", "C. Eurasia DJF")):
@@ -113,14 +112,16 @@ def main():
             rows.append((lab, v["resid_law"], v["resid_shift"]))
     bx.axvspan(-0.25, 0.25, color="0.92", zorder=0)
     for i, (lab, law, sh) in enumerate(rows):
-        if sh and sh.get("ci95"):
-            bx.plot(sh["ci95"], [i + 0.18] * 2, color=grey, lw=0.8)
+        if sh is not None:
+            if sh.get("ci95"):
+                bx.plot(sh["ci95"], [i + 0.18] * 2, color=grey, lw=0.8)
             bx.scatter([sh["mean"]], [i + 0.18], s=10, facecolor="white", edgecolor=grey, zorder=3)
-        bx.plot(law["ci95"], [i] * 2, color=verm, lw=1.1)
+        if law.get("ci95"):
+            bx.plot(law["ci95"], [i] * 2, color=verm, lw=1.1)
         bx.scatter([law["mean"]], [i], s=12, color=verm, zorder=3)
     bx.axvline(0, color="k", lw=0.5)
     bx.set_yticks(range(len(rows))); bx.set_yticklabels([r_[0] for r_ in rows], fontsize=5.0)
-    bx.set_ylim(-0.6, len(rows) - 0.3); bx.invert_yaxis(); bx.set_xlim(-0.45, 0.45)
+    bx.set_ylim(-0.6, len(rows) - 0.3); bx.invert_yaxis(); bx.set_xlim(-0.5, 0.65)
     bx.set_xlabel("forced contrast minus null contrast (σ)")
     bx.set_title("law (filled) vs shift only (open)", fontsize=6)
     S.panel_label(bx, "b", x=-0.62, y=1.10)
@@ -150,7 +151,7 @@ def main():
     cx.set_yticks(range(len(ent))); cx.set_yticklabels([e[0] + (f" ({e[3]})" if e[3] else "") for e in ent], fontsize=5.0)
     cx.set_ylim(len(ent) - 0.5, -0.6); cx.set_xlim(0, 1.8)
     cx.set_xlabel("elasticity of the contrast with respect to the spread")
-    cx.set_title("the contrast follows the spread, as one population requires", fontsize=6)
+    cx.set_title("elasticity: one population 1; forced mixing of types ≥ 2 s.d. apart below 0.6", fontsize=6)
     S.panel_label(cx, "c", x=-0.62, y=1.04)
 
     # d -- second domain

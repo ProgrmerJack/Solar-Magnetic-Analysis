@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T13:07:30+00:00",
+ "generated": "2026-10-04T13:24:23+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -1477,9 +1477,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "A CONFIRMATORY TEST, ON DATA NEVER ANALYSED, OF THE LAW THE INTERVENTIONS SUGGESTED: THE DOWNWARD-NON-DOWNWARD CONTRAST IS WHAT ONE POPULATION, SHIFTED AND RESCALED, GIVES -- FORCING MOVES IT ONLY THROUGH LOCATION AND SPREAD.",
-   "loc": 387,
-   "modified": "2026-10-03 10:28",
-   "sha256_16": "81f6adda6017c8cb",
+   "loc": 399,
+   "modified": "2026-10-04 13:21",
+   "sha256_16": "9f964b9443466ddf",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_contrast_generality.json"
@@ -1839,9 +1839,9 @@
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
    "title": "fig5_law.py -- Figure 5: one law for outcome-defined impact classes.",
-   "loc": 177,
-   "modified": "2026-10-04 13:05",
-   "sha256_16": "b28e020eb6af21ac",
+   "loc": 178,
+   "modified": "2026-10-04 13:23",
+   "sha256_16": "ff3338fbd610fb03",
    "flags": [],
    "filenames_mentioned": [
     "damip_class_law.json",
@@ -2029,9 +2029,9 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 400,
-   "modified": "2026-10-04 13:06",
-   "sha256_16": "f10f3ee8bf0f680c",
+   "loc": 407,
+   "modified": "2026-10-04 13:23",
+   "sha256_16": "d5e6685c8f6751d2",
    "flags": [],
    "filenames_mentioned": [
     "class_model_comparison.json",
@@ -2918,7 +2918,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-03 07:54",
+   "modified": "2026-10-04 13:07",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -6140,7 +6140,7 @@
    "detail": "no provenance baseline recorded",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_free_natural_experiment.py": "81f6adda6017c8cb"
+    "ssw-design-analysis/07_physical_decomposition/snapsi_free_natural_experiment.py": "9f964b9443466ddf"
    },
    "verdicts": [
     {
@@ -6227,9 +6227,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 11647,
-   "modified": "2026-10-04 13:01",
-   "sha256_16": "97ec80ba37f7cf3d",
+   "bytes": 12274,
+   "modified": "2026-10-04 13:21",
+   "sha256_16": "aa84be5b076b82e5",
    "producers": [],
    "state": "ORPHAN",
    "detail": "no script writes this",

@@ -57,9 +57,11 @@ TESTS (unit: mixed ensemble; intervals from 10,000 resamples of centres, and,
      response types separated by 2 s.d. or more are excluded"; interval entirely
      below 0.60 -> "consistent with forced mixing of separated types"; otherwise
      inconclusive. Whether the interval contains 1 is reported separately.
-     (Corrected 2026-10-03, still before any free-arm result: the first version read
+     (Numbers now reproduced in the repository by threshold_law_theory.py: 0.58,
+     0.35, 0.14. Corrected 2026-10-03, still before any free-arm result: the first version read
      an interval excluding 1 as evidence against one population, but mixtures
-     predict slopes BELOW 1; the trigger was the post-hoc slope 1.14 [1.04, 1.24]
+     predict slopes BELOW 1; the trigger was the post-hoc slope 1.14 [1.04, 1.24] (a
+     quick 4,000-resample bootstrap; the stored value is 1.14 [1.05, 1.25])
      on the 36 SNAPSI zonal-mean pairs, data already seen, disclosed here.)
   F4 one population or a mixture: within each ensemble, SSW and non-SSW window
      means each standardised by their own mean and s.d.; pooled residual quantile
@@ -278,6 +280,16 @@ def pooled_law(f_rows, rng):
              "n_sets": len(clean), "per_set": {k: [round(float(v.mean()), 4), int(len(v))] for k, v in clean.items()}}
         r["reading"] = reading(r)
         out[which] = r
+    # POST HOC (added 2026-10-04 after the run, for Fig. 2b): a 95% interval for each
+    # set's mean residual, from its own random stream; the pooled numbers are unchanged
+    rp = np.random.default_rng(SEED + 70)
+    for which, j in (("location_scale", 0), ("shift_only", 1)):
+        out[which]["per_set_ci95"] = {}
+        for k, v in sets.items():
+            x = v[j][np.isfinite(v[j])]
+            if len(x) >= 2:
+                bs = [rp.choice(x, len(x)).mean() for _ in range(N_BOOT)]
+                out[which]["per_set_ci95"][k] = [round(float(q), 4) for q in np.quantile(bs, [0.025, 0.975])]
     return out
 
 

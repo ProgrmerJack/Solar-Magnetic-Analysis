@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T13:07:30+00:00",
+ "generated": "2026-10-04T13:24:23+00:00",
  "generator": "tools/catalog_repo.py",
  "note": "Every ssw-design-analysis result in one file. The per-script JSONs remain on disk as write-side provenance; this is the read path. Regenerate with tools/catalog_repo.py.",
  "results": {
@@ -56914,7 +56914,29 @@
        8
       ]
      },
-     "reading": "the law holds on independent data"
+     "reading": "the law holds on independent data",
+     "per_set_ci95": {
+      "SNAPSI_zonal_NH_25": [
+       -0.035,
+       0.1139
+      ],
+      "SNAPSI_SH": [
+       -0.1389,
+       0.0844
+      ],
+      "SNAPSI_full_3D": [
+       -0.0546,
+       0.3848
+      ],
+      "CESM2_Jan2021": [
+       -0.3099,
+       0.0331
+      ],
+      "SNAPSI_free_natural": [
+       -0.092,
+       0.0576
+      ]
+     }
     },
     "shift_only": {
      "mean": 0.0017,
@@ -56945,7 +56967,29 @@
        8
       ]
      },
-     "reading": "the law holds on independent data"
+     "reading": "the law holds on independent data",
+     "per_set_ci95": {
+      "SNAPSI_zonal_NH_25": [
+       -0.0504,
+       0.1279
+      ],
+      "SNAPSI_SH": [
+       -0.2216,
+       -0.0323
+      ],
+      "SNAPSI_full_3D": [
+       -0.0246,
+       0.2896
+      ],
+      "CESM2_Jan2021": [
+       -0.4786,
+       0.6037
+      ],
+      "SNAPSI_free_natural": [
+       -0.2632,
+       0.1177
+      ]
+     }
     }
    },
    "ensembles": [
