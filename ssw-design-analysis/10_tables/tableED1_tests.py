@@ -73,6 +73,7 @@ def main():
     DAV = J("davis2021_intervention_test.json")
     FRE = J("snapsi_free_natural_experiment.json")
     DAM = J("damip_class_law.json")
+    DMM = J("damip_class_law_multimodel.json")
     R2 = ("robustness (revision 2)", "committed before run", "4c8b3f2")
     mm = g(MMt, "multimodel", "confirmatory"); nr = g(SRt, "regions", "NEURASIA", "multimodel", "confirmatory")
     rows = [
@@ -347,6 +348,16 @@ def main():
          (f"p {g(GEN,'G8_shape_with_power','AD_perm_p')}, max quantile difference {g(GEN,'G8_shape_with_power','max_abs_quantile_diff')}; "
           f"excluded: {len(g(GEN,'G8_shape_with_power','excluded_types') or [])} of 9 type grids (all with separation >= 2)") if GEN else "pending",
          g(GEN, 'G8_shape_with_power', 'AD_perm_p') if GEN else None),
+        ("MM-1", "human forcing, three models (CanESM5, MIROC6, HadGEM3): central-European summer class law residual", "revision-7 primary",
+         "committed before data", "a280a10",
+         f"{g(DMM,'M1_CEUR_JJA_three_models','mean')} {g(DMM,'M1_CEUR_JJA_three_models','ci95')}; {g(DMM,'M1_CEUR_JJA_three_models','reading')}" if DMM else "pending", None),
+        ("MM-2", "same: elasticity pooled over all model-region-years (identified by winter spread changes)", "revision-7 primary",
+         "committed before data", "a280a10",
+         (f"{g(DMM,'M2_elasticity_all','slope')} {g(DMM,'M2_elasticity_all','ci95')}; expected under the law "
+          f"{g(DMM,'post_hoc_calibration','expected_elasticity_under_law','range95')} (post hoc)") if DMM else "pending", None),
+        ("MM-3", "same: winter cold classes, CanESM5 and MIROC6 (registered reading 'fails'; outside the law's calibrated range in all 6 high-latitude cases, post hoc)", "revision-7 secondary",
+         "committed before data", "a280a10",
+         ", ".join(f"{k.split('|')[0]} {k.split('|')[1]} {v['law']['mean']}" for k, v in (DMM or {}).get('per_model_target', {}).items() if 'DJF' in k and not k.startswith('HadGEM3')) if DMM else "pending", None),
         ("DAV", "January 2021, CESM2(WACCM6) SSW vs scrambled-stratosphere ensembles (21 members), 4 Jan initialisation: back-shift contrast difference; not rejected, low power",
          "revision-5 primary", "committed before data", "738a422",
          f"{g(DAV,'pairs','04jan','Delta_b')} {g(DAV,'pairs','04jan','ci95','Delta_b')}" if DAV else "pending", None),

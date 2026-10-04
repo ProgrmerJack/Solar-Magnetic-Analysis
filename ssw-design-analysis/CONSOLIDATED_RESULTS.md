@@ -1293,6 +1293,22 @@ DAMIP second domain (HadGEM3-GC31-LL historical 55 vs hist-nat 60, 1985-2014): c
   sd ratio 0.99 so its elasticities are weak (W. Russia 0.77 [0.53, 0.94] inconclusive).
 Post hoc: SNAPSI zonal elasticity 1.14 [1.05, 1.25]. Paper re-titled around the law; details moved to SI Note 21.
 
+### Z10 — revision 7: closing the five weaknesses (registered a280a10 / e78182a / 6346c9e before runs/data)
+G7 elasticity: two-condition 1.14 [1.05, 1.25]; condition 1 only 1.05 [0.97, 1.14] (contains 1); calibration under the
+  exact law (two-condition label) 1.05 [0.96, 1.13] -> excess from condition 2 (persistence within the window).
+T2 theory: for ASYMMETRIC two-type mixtures the elasticity is NOT bounded below 1 (grid maxima 2.5-3.4) -> elasticity
+  discriminates only symmetric/midpoint types; the shape test is the general discriminator. Shape-test power: natural
+  experiment 0-0.47 (Delta 1.5-2), human-forcing design 0.77-1.0, SNAPSI 36 pairs 0.82-1.0 (Delta >= 2).
+G8: SNAPSI 36 pairs, shape unchanged (AD p 0.972, max dq 0.044) -> types >= 2 sd apart (width ratios 0.5-2) and
+  Delta 1.5 r 0.5 EXCLUDED for imposed SSWs, no symmetry assumption.
+D-MM (CanESM5 p1/p2 separately, MIROC6, HadGEM3; GISS dropped): M1 central-European JJA 3 models +0.033 [+0.003,
+  +0.065] HOLDS; all summers hold; M2 elasticity 1.15 [1.08, 1.22] (identified, sd ratios 0.61-1.98) = estimator's
+  value under the law 1.14 [1.08, 1.20] (post hoc). Winter cold classes FAIL in CanESM5 and MIROC6 (-0.20..-0.52), beyond
+  the empirical-shape calibration (-0.09..-0.27) in all 6 high-latitude cases; HadGEM3 winters within. Forcing reshapes
+  the cold tail there -> the law is a testable null, not an identity.
+Novelty: identity is textbook (truncated moments); null = Doksum 1974 / Koenker & Xiao 2002 location-scale treatment
+  effect; alternative = Palmer 1999 forced regime frequency. Title now SSW-scoped (88 chars); main text 3,999 words.
+
 ### Z7 — prospective test (`prospective_next_ssw.py`, 9_literature; registered `d2b54a8`, window amended to 2036 before any onset)
 Prediction table for every onset day 1 Nov–31 Mar committed; shift nam_1000 −0.635, nam_150 −0.945, N-Eurasian T days
 8–24 −1.54 K; constant rate 0.692; T trend 0.037 K/yr. P(DW) shifted 0.71–0.84 vs climatology 0.24–0.44.

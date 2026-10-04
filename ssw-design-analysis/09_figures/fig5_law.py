@@ -19,8 +19,10 @@ Reads (recomputes only the Gaussian curve and per-unit values stored in the file
   c  elasticity of the contrast with respect to the spread: one population
      predicts 1, forced mixing of two response types 0.58, 0.35, 0.14 for
      separations of 2, 3, 4 s.d. (threshold_law_theory.json)
-  d  second domain: human forcing and extreme-season classes (HadGEM3-GC31-LL,
-     historical vs natural forcing, 1985-2014): class rate against law residual
+  d  second domain (CanESM5 p1/p2, MIROC6, HadGEM3; historical vs natural forcing,
+     1985-2014): observed law residual per model and region against its expectation
+     when the law holds exactly with the model's own distribution (post hoc; grey,
+     95% range); dashed, equality
 """
 import json
 import sys
@@ -56,6 +58,7 @@ def main():
     sel, gen, dav, fre, dam = (J("snapsi_selection_test.json"), J("snapsi_contrast_generality.json"),
                                J("davis2021_intervention_test.json"), J("snapsi_free_natural_experiment.json"),
                                J("damip_class_law.json"))
+    dmm = J("damip_class_law_multimodel.json")
     grey, verm, blue = "0.55", S.C["vermillion"], S.C["blue"]
     fig = plt.figure(figsize=(S.DOUBLE, 118 * S.MM))
     gs = fig.add_gridspec(2, 2, wspace=0.36, hspace=0.62)
@@ -105,11 +108,8 @@ def main():
     g6 = gen.get("G6_regional_classes")
     if g6:
         rows.append(("24 regional cold classes", g6["resid_law"], g6["resid_shift"]))
-    if dam:
-        for t, lab in (("CEUR_JJA_tercile", "human forcing, C. Europe JJA"), ("WRUS_JJA_tercile", "W. Russia JJA"),
-                       ("CNAM_JJA_tercile", "C. N. America JJA"), ("CEAS_DJF_tercile", "C. Eurasia DJF")):
-            v = dam["targets"][t]
-            rows.append((lab, v["resid_law"], v["resid_shift"]))
+    if dmm:
+        rows.append(("human forcing, 3 models", dmm["M1_CEUR_JJA_three_models"], None))
     bx.axvspan(-0.25, 0.25, color="0.92", zorder=0)
     for i, (lab, law, sh) in enumerate(rows):
         if sh is not None:
@@ -134,12 +134,11 @@ def main():
     if fre and fre.get("F3_Delta_b_vs_law"):
         f3 = fre["F3_Delta_b_vs_law"]
         ent.append(("SNAPSI free (registered)", f3["slope"], f3["slope_ci95"], ""))
-    if dam:
-        for t, lab in (("CEUR_JJA_tercile", "C. Europe JJA"), ("WRUS_JJA_tercile", "W. Russia JJA"),
-                       ("CNAM_JJA_tercile", "C. N. America JJA"), ("CEAS_DJF_tercile", "C. Eurasia DJF")):
-            e = dam["targets"][t].get("elasticity_slope")
-            if e:
-                ent.append((f"human forcing, {lab}", e["slope"], e["ci95"], ""))
+    if dmm:
+        e = dmm["M2_elasticity_all"]
+        ent.append(("human forcing, 3 models (registered)", e["slope"], e["ci95"], ""))
+        cal = dmm["post_hoc_calibration"]["expected_elasticity_under_law"]
+        ent.append(("  expected under the exact law", cal["mean"], cal["range95"], "post hoc"))
     th = J("threshold_law_theory.json")["mixture_elasticity"]
     for v, lab in ((1.0, "one population"), (th["2.0"], "two types, Δ = 2"), (th["3.0"], "Δ = 3"), (th["4.0"], "Δ = 4")):
         cx.axvline(v, color="k" if v == 1 else "0.6", lw=0.6, ls="-" if v == 1 else ":")
@@ -154,21 +153,28 @@ def main():
     cx.set_title("elasticity: one population 1; forced mixing of types ≥ 2 s.d. apart below 0.6", fontsize=6)
     S.panel_label(cx, "c", x=-0.62, y=1.04)
 
-    # d -- second domain
+    # d -- second domain: observed law residual against its expectation under the exact law
     dx = fig.add_subplot(gs[1, 1])
-    if dam:
-        for t, col in (("CEUR_JJA_tercile", verm), ("WRUS_JJA_tercile", S.C["orange"]),
-                       ("CNAM_JJA_tercile", S.C["green"]), ("CEAS_DJF_tercile", blue)):
-            y = pd.DataFrame(dam["targets"][t]["years"])
-            dx.scatter(y.rate_hist - y.rate_nat, y.resid_law, s=7, color=col, alpha=0.8, label=t.split("_tercile")[0].replace("_", " "))
-        dx.axhspan(-0.25, 0.25, color="0.92", zorder=0)
-        dx.axhline(0, color="k", lw=0.5); dx.axvline(0, color="k", lw=0.5)
-        dx.legend(fontsize=4.8, loc="lower right")
-        v = dam["targets"]["CEUR_JJA_tercile"]
-        dx.set_title(M(f"human forcing: hot-summer rate {v['rate_nat']['mean']:.2f} → {v['rate_hist']['mean']:.2f}, "
-                       f"law residual {v['resid_law']['mean']:+.2f}"), fontsize=5.8)
-    dx.set_xlabel("change in class rate (historical − natural forcing), per year")
-    dx.set_ylabel("law residual (σ)")
+    if dmm:
+        cal = dmm["post_hoc_calibration_empirical_shape"]["per_model_target"]
+        cols = {"CanESM5_p1": verm, "CanESM5_p2": S.C["orange"], "MIROC6": S.C["green"], "HadGEM3-GC31-LL": blue}
+        mk = {"JJA": "o", "DJF": "s"}
+        for k, v in cal.items():
+            m, t = k.split("|")
+            lo, hi = v["range95_under_law"]
+            dx.plot([v["expected_under_law"]] * 2, [lo, hi], color="0.75", lw=0.6, zorder=1)
+            dx.scatter(v["expected_under_law"], v["observed"], s=14, color=cols[m], marker=mk[t.split("_")[1]], zorder=3)
+        lim = (-0.58, 0.22)
+        dx.plot(lim, lim, color="k", lw=0.6, ls=(0, (3, 2)))
+        for m, c in cols.items():
+            dx.scatter([], [], s=12, color=c, label=m.replace("-GC31-LL", ""))
+        dx.scatter([], [], s=12, color="0.4", marker="o", label="summer (hot class)")
+        dx.scatter([], [], s=12, color="0.4", marker="s", label="winter (cold class)")
+        dx.legend(fontsize=4.4, loc="upper left")
+        dx.set_xlim(lim); dx.set_ylim(lim)
+        dx.set_title("human forcing: summers follow the law; some cold winters do not", fontsize=5.8)
+    dx.set_xlabel("law residual expected under the exact law (σ)")
+    dx.set_ylabel("observed law residual (σ)")
     S.panel_label(dx, "d", x=-0.2, y=1.04)
     S.save(fig, "fig5_law")
 
