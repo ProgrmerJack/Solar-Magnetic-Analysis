@@ -277,3 +277,13 @@ Rule: report a cluster bootstrap interval only with enough clusters (say >= 6); 
 Tried: `curl -r 0-1023` on the 553 GB HPSS tar `tas_Aday_CAM5-1-1degree_All-Hist_est1_v2-0_run001-run400.tar` at portal.nersc.gov/archive to fetch one member.
 Failed: the gateway ignored the Range header (HTTP 200, not 206) and streamed the whole tar (~9 MB/s; 3.9 GB pulled before it was killed); while it ran, the archive answered other listings with HTTP 500 and later "can't log in as wwwhpss".
 Rule: never range-read or open portal.nersc.gov/archive tars remotely; read the .idx (a few MB) to plan, fetch per-run tars only, or ask the data contact for a subset.
+
+## 2026-10-04 — gcsfs (Pangeo zarr) inside forked worker processes
+Tried: acquire_cmip6_monthly_boxes.py with ProcessPoolExecutor(fork) opening Pangeo zarr stores via gcsfs.
+Failed: after 84 of 330 members every worker sat idle on the network for an hour with no error; gcsfs's async loop does not survive fork, and has no read timeout.
+Rule: use mp_context "spawn" for gcsfs/fsspec-async readers; watch the cached-file count, not the progress line (map returns in order).
+
+## 2026-10-05 — Reading sampling variation as a forced effect, and naming a cause the data do not show
+Tried: claiming the multi-model elasticity was "identified by winter spread changes" (year-level s.d. ratios 0.61-1.98) and that winter law failures meant "forcing reshapes the cold tail".
+Failed: the forced s.d. ratios were 0.98-1.09 (the range was sampling noise; a Gaussian calibration reproduced the slope), and the shape test found no change where the law failed. Found by review.
+Rule: before claiming identification, check the effect size averaged over units against its calibration under the null; never name a mechanism that the registered diagnostic (here the shape test) did not detect.
