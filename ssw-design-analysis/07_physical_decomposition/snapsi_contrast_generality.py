@@ -111,6 +111,18 @@ G7 WHY IS THE ZONAL-PAIR ELASTICITY 1.14, NOT 1? (registered 2026-10-04 before i
   under one population; if (a) contains 1, the excess comes from condition 2. If
   1.14 lies outside both calibrations, the excess is unexplained and is reported.
 
+G8 SHAPE TEST WITH POWER, FOR SSWs (registered 2026-10-04 before it was computed;
+  own random stream). The natural experiment's shape test is underpowered against
+  asymmetric two-type mixtures (threshold_law_theory shape_power: 0-0.47 for types
+  1.5-2 s.d. apart). The 36 SNAPSI zonal-nudging pairs (~50 + ~50 members) are a
+  design as large as the human-forcing one. Within each pair both arms are
+  standardised by their own mean and s.d. of window means; pooled residual quantiles
+  (q 0.05..0.95) and the Anderson-Darling k-sample statistic, 2,000 within-pair
+  permutations. Power for this design (36 units of 50 + 50; reference weight 0.3,
+  forced 0.6; Delta in {1.5, 2, 3}, width ratio r in {0.5, 1, 2}; 100 replicates of
+  200 permutations). READING, fixed now: if p >= 0.05 and max |dq| <= 0.25, every
+  (Delta, r) with power >= 0.8 is excluded for the imposed SSWs.
+
 Output: results/current/8_experiment/snapsi_contrast_generality.json
 """
 import json
@@ -372,6 +384,59 @@ def elasticity_diagnosis(usable, strong, rng, n_rep=200):
     return out
 
 
+# ---------------------------------------------------------------- G8
+def _ad_perm(units, rng, n_perm):
+    from scipy.stats import anderson_ksamp
+    import warnings
+    warnings.filterwarnings("ignore")
+    A = np.concatenate([a for a, _ in units]); B = np.concatenate([b for _, b in units])
+    ad0 = anderson_ksamp([A, B]).statistic; ex = 0
+    for _ in range(n_perm):
+        a_, b_ = [], []
+        for x, y in units:
+            z = np.concatenate([x, y]); pp = rng.permutation(len(z)); a_.append(z[pp[:len(x)]]); b_.append(z[pp[len(x):]])
+        ex += anderson_ksamp([np.concatenate(a_), np.concatenate(b_)]).statistic >= ad0
+    return ad0, (ex + 1) / (n_perm + 1)
+
+
+def shape_with_power(usable, rng):
+    units = []
+    for c in usable:
+        for init in NH_INITS:
+            nm = member_nam(c, init)
+            if nm is None:
+                continue
+            mn = np.array([x.mean() for x in nm["nudged"].values()]); mc = np.array([x.mean() for x in nm["control"].values()])
+            units.append(((mn - mn.mean()) / mn.std(ddof=1), (mc - mc.mean()) / mc.std(ddof=1)))
+    qs = np.round(np.arange(0.05, 0.951, 0.05), 2)
+    A = np.concatenate([a for a, _ in units]); B = np.concatenate([b for _, b in units])
+    dq = np.quantile(A, qs) - np.quantile(B, qs)
+    ad0, pval = _ad_perm(units, rng, 2000)
+    out = {"n_pairs": len(units), "AD_stat": round(float(ad0), 4), "AD_perm_p": round(float(pval), 4),
+           "max_abs_quantile_diff": round(float(np.max(np.abs(dq))), 4),
+           "quantile_diff": dict(zip([str(q) for q in qs], np.round(dq, 4).tolist()))}
+    sizes = [(len(a), len(b)) for a, b in units]
+    def draw(n, w, D, r):
+        z = rng.random(n) < w
+        return np.where(z, D + r * rng.normal(size=n), rng.normal(size=n))
+    def std(x):
+        return (x - x.mean()) / x.std(ddof=1)
+    power = {}
+    for D in (1.5, 2.0, 3.0):
+        for r in (0.5, 1.0, 2.0):
+            rej = []
+            for _ in range(100):
+                u = [(std(draw(nf, 0.6, D, r)), std(draw(nr, 0.3, D, r))) for nf, nr in sizes]
+                rej.append(_ad_perm(u, rng, 200)[1] < 0.05)
+            power[f"D{D}_r{r}"] = round(float(np.mean(rej)), 3)
+    out["power"] = power
+    ok = pval >= 0.05 and np.max(np.abs(dq)) <= TOL
+    out["no_shape_change"] = bool(ok)
+    out["excluded_types"] = sorted(k for k, v in power.items() if ok and v >= 0.8)
+    print("G8:", {k: out[k] for k in ("n_pairs", "AD_perm_p", "max_abs_quantile_diff", "power", "excluded_types")}, flush=True)
+    return out
+
+
 # ---------------------------------------------------------------- G6
 G6_REGIONS = {f"{la0}-{la0 + 20}N_{lo0}-{lo0 + 30}E": (la0, la0 + 20, lo0, lo0 + 30)
               for la0 in (30, 50) for lo0 in range(0, 360, 30)}
@@ -604,6 +669,7 @@ def main():
         res["G5x_post_hoc"] = g5x
         print("G5x post hoc:", g5x)
     res["G7_elasticity_diagnosis"] = elasticity_diagnosis(usable, strong, np.random.default_rng(SEED + 7))
+    res["G8_shape_with_power"] = shape_with_power(usable, np.random.default_rng(SEED + 8))
     res["pairs_NH"] = df.round(4).to_dict(orient="records")
     res["pairs_regional"] = rg.round(4).to_dict(orient="records")
 

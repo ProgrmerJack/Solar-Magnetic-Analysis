@@ -1083,6 +1083,34 @@
       "Delta_b_net_spread_mean": 0.08
     }
   },
+  "G7_elasticity_diagnosis": {
+    "a_condition1_only": {
+      "slope": 1.0461,
+      "ci95": [
+        0.9691,
+        1.1388
+      ],
+      "n_pairs": 36
+    },
+    "b_calibration_means_only": {
+      "mean_slope": 1.0459,
+      "range95": [
+        0.9557,
+        1.133
+      ],
+      "n_rep": 200
+    },
+    "b_calibration_whole_series": {
+      "mean_slope": 1.0289,
+      "range95": [
+        0.9427,
+        1.1193
+      ],
+      "n_rep": 200
+    },
+    "reading": "the excess comes from condition 2",
+    "observed_two_condition_slope": 1.1434
+  },
   "pairs_NH": [
     {
       "centre": "CCCma",
