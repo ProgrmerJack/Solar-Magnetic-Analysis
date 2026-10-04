@@ -1,0 +1,32 @@
+CanESM5_p1 CEUR_JJA 30 rate 0.32 -> 0.7627 law 0.0132 [-0.0625, 0.0965] the law holds | sd ratio 1.0771 | shape p 0.7176
+CanESM5_p1 WRUS_JJA 30 rate 0.32 -> 0.7627 law 0.1534 [0.0603, 0.2488] the law holds | sd ratio 1.0308 | shape p 0.8366
+CanESM5_p1 CNAM_JJA 30 rate 0.32 -> 0.816 law 0.0517 [-0.0409, 0.1487] the law holds | sd ratio 1.0184 | shape p 0.7011
+CanESM5_p1 CEAS_DJF 30 rate 0.32 -> 0.0933 law -0.3149 [-0.4435, -0.1825] fails | sd ratio 1.0166 | shape p 0.946
+CanESM5_p1 NSIB_DJF 30 rate 0.32 -> 0.084 law -0.3119 [-0.4765, -0.1499] fails | sd ratio 0.9937 | shape p 0.4603
+CanESM5_p1 NWNA_DJF 30 rate 0.32 -> 0.0733 law -0.1979 [-0.3356, -0.0395] inconclusive | sd ratio 0.992 | shape p 0.7736
+CanESM5_p2 CEUR_JJA 30 rate 0.32 -> 0.7775 law 0.0238 [-0.038, 0.0881] the law holds | sd ratio 1.0534 | shape p 0.93
+CanESM5_p2 WRUS_JJA 30 rate 0.32 -> 0.7892 law 0.1217 [0.0522, 0.1902] the law holds | sd ratio 0.9794 | shape p 0.9875
+CanESM5_p2 CNAM_JJA 30 rate 0.32 -> 0.8075 law 0.0064 [-0.0654, 0.0778] the law holds | sd ratio 0.9074 | shape p 0.6817
+CanESM5_p2 CEAS_DJF 30 rate 0.32 -> 0.105 law -0.4481 [-0.5314, -0.3604] fails | sd ratio 1.1347 | shape p 0.9115
+CanESM5_p2 NSIB_DJF 30 rate 0.32 -> 0.0783 law -0.4193 [-0.5093, -0.326] fails | sd ratio 1.0299 | shape p 0.8686
+CanESM5_p2 NWNA_DJF 30 rate 0.32 -> 0.0867 law -0.2877 [-0.4054, -0.1756] fails | sd ratio 1.0897 | shape p 0.9925
+MIROC6 CEUR_JJA 30 rate 0.34 -> 0.4173 law 0.0403 [-0.0052, 0.0916] the law holds | sd ratio 0.9575 | shape p 0.9455
+MIROC6 WRUS_JJA 30 rate 0.34 -> 0.5293 law -0.006 [-0.0364, 0.0233] the law holds | sd ratio 0.9582 | shape p 0.7831
+MIROC6 CNAM_JJA 30 rate 0.34 -> 0.574 law 0.0344 [-0.011, 0.0836] the law holds | sd ratio 0.9889 | shape p 0.8741
+MIROC6 CEAS_DJF 30 rate 0.34 -> 0.14 law -0.3048 [-0.3701, -0.2415] fails | sd ratio 1.0441 | shape p 0.7336
+MIROC6 NSIB_DJF 30 rate 0.34 -> 0.0347 law -0.5245 [-0.722, -0.3334] fails | sd ratio 0.981 | shape p 0.9985
+MIROC6 NWNA_DJF 30 rate 0.34 -> 0.14 law -0.3186 [-0.39, -0.2499] fails | sd ratio 1.0165 | shape p 0.7156
+HadGEM3-GC31-LL CEUR_JJA 30 rate 0.3333 -> 0.58 law 0.0406 [-0.0125, 0.1046] the law holds | sd ratio 0.992 | shape p 0.9605
+HadGEM3-GC31-LL WRUS_JJA 30 rate 0.3333 -> 0.3933 law 0.0596 [0.0038, 0.1192] the law holds | sd ratio 1.0361 | shape p 0.5897
+HadGEM3-GC31-LL CNAM_JJA 30 rate 0.3333 -> 0.4194 law 0.0893 [0.0349, 0.1488] the law holds | sd ratio 0.9951 | shape p 0.9395
+HadGEM3-GC31-LL CEAS_DJF 30 rate 0.3333 -> 0.2685 law -0.1338 [-0.202, -0.0686] the law holds | sd ratio 1.0584 | shape p 0.9065
+HadGEM3-GC31-LL NSIB_DJF 30 rate 0.3333 -> 0.1848 law -0.131 [-0.2057, -0.0609] the law holds | sd ratio 1.0013 | shape p 0.9465
+HadGEM3-GC31-LL NWNA_DJF 30 rate 0.3333 -> 0.1764 law -0.1696 [-0.2452, -0.1012] the law holds | sd ratio 0.9868 | shape p 0.8976
+post hoc calibration: {'mean': 1.1404, 'range95': [1.0792, 1.2044]} inside 0.4583
+post hoc empirical-shape calibration: inside 0.5417
+M1_CEUR_JJA_three_models {'mean': 0.0331, 'ci95': [0.0034, 0.0647], 'n_models': 3, 'reading': 'the law holds'}
+M2_elasticity_all {'slope': 1.152, 'ci95': [1.0803, 1.2226], 'contains_1': False, 'reading': 'forced mixing of two symmetric types >= 2 s.d. apart is excluded in the second domain', 'pooled_sd_ratio_mean': 1.0304, 'pooled_sd_ratio_range': [0.6089, 1.9843]}
+M2_elasticity_highlat_winter {'slope': 1.1961, 'ci95': [1.0563, 1.3211], 'contains_1': False, 'reading': 'forced mixing of two symmetric types >= 2 s.d. apart is excluded in the second domain', 'pooled_sd_ratio_mean': 1.0464, 'pooled_sd_ratio_range': [0.7105, 1.7541]}
+M3_law_all_primary {'mean': -0.1222, 'ci95': [-0.1415, -0.1028], 'n_frames': 24, 'reading': 'the law holds'}
+M3_per_model {'CanESM5_p1': {'mean': -0.101, 'ci95': [-0.1503, -0.0505], 'n_frames': 6, 'reading': 'the law holds'}, 'CanESM5_p2': {'mean': -0.1672, 'ci95': [-0.2016, -0.1327], 'n_frames': 6, 'reading': 'the law holds'}, 'MIROC6': {'mean': -0.1799, 'ci95': [-0.2184, -0.143], 'n_frames': 6, 'reading': 'the law holds'}, 'HadGEM3-GC31-LL': {'mean': -0.0408, 'ci95': [-0.0669, -0.0144], 'n_frames': 6, 'reading': 'the law holds'}}
+Saved -> damip_class_law_multimodel.json

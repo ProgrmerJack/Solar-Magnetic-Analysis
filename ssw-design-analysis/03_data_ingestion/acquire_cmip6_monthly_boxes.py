@@ -37,7 +37,7 @@ SEARCH = "https://esgf.ceda.ac.uk/esg-search/search"
 BOXES = {"CEUR": (45, 55, 5, 15), "WRUS": (50, 60, 30, 60), "CNAM": (35, 50, 260, 280),
          "CEAS": (45, 60, 60, 120), "NSIB": (60, 75, 60, 140), "NWNA": (55, 70, 200, 260)}
 PANGEO_MODELS = ["CanESM5", "MIROC6"]          # GISS-E2-1-G dropped (6346c9e)
-T0, T1 = "1984-12-01", "2014-12-31"
+T0, T1 = "1984-12-01", "2014-12-30"     # 360-day calendars have no 31 December
 socket.setdefaulttimeout(300)
 
 
@@ -122,12 +122,13 @@ def reduce(job):
 
 
 def main():
-    jobs = pangeo_jobs() + esgf_jobs()
+    jobs = esgf_jobs() if "--only-esgf" in sys.argv else pangeo_jobs() + esgf_jobs()
     for m in PANGEO_MODELS + ["HadGEM3-GC31-LL"]:
         print(m, {a: sum(1 for j in jobs if j[1] == m and j[2] == a) for a in ("historical", "hist-nat")}, flush=True)
     import multiprocessing as mp
     done = 0
-    with ProcessPoolExecutor(8, mp_context=mp.get_context("fork")) as ex:
+    # 'spawn': gcsfs (async) hung after fork with 84 of 330 members done (2026-10-04)
+    with ProcessPoolExecutor(10, mp_context=mp.get_context("spawn")) as ex:
         for r in ex.map(reduce, jobs):
             done += 1
             if r.startswith("FAILED"):

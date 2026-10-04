@@ -136,6 +136,83 @@ def pooled_slope(frames, rng):
                                       round(float(np.max(np.concatenate([f.sd_ratio.values for f in fr]))), 4)]}
 
 
+def calibrate(frames, d, units, n_rep=200):
+    """POST HOC (added 2026-10-04 after the registered run): what the same estimators
+    give when the law holds EXACTLY. For every model-target-year, one Gaussian
+    population with the observed member counts, mean shift and s.d. ratio (in units
+    of the natural-forcing arm); n_rep replicates. Reports the expected law residual
+    per model-target (and the observed minus expected), and the expected pooled
+    elasticity. Own random stream; the registered numbers are unchanged."""
+    rc = np.random.default_rng(SEED + 500)
+    out = {"note": "post hoc calibration under the exact law (Gaussian, observed n, shift, s.d. ratio)", "per_model_target": {}}
+    sims_x, sims_y = [[] for _ in range(n_rep)], [[] for _ in range(n_rep)]
+    for (m, t), f in frames.items():
+        if m not in units:
+            continue
+        box, season, side = TARGETS[t]
+        s = seasonal(d[d.model == m], box, season)
+        q = 2 / 3 if side == "hot" else 1 / 3
+        reps = np.zeros(n_rep)
+        for _, row in f.iterrows():
+            y = int(row.year)
+            nh = int(((s.arm == "historical") & (s.syear == y)).sum()); nn = int(((s.arm == "hist-nat") & (s.syear == y)).sum())
+            for r in range(n_rep):
+                st = D1.year_stats(rc.normal(row["shift"], row.sd_ratio, nh), rc.normal(0, 1, nn), q, side)
+                reps[r] += st["resid_law"] if np.isfinite(st["resid_law"]) else 0.0
+                if np.isfinite(st["diff"]) and np.isfinite(st["law_pred_diff"]):
+                    sims_x[r].append(st["law_pred_diff"]); sims_y[r].append(st["diff"])
+        reps /= len(f)
+        obs = float(f.resid_law.mean())
+        out["per_model_target"][f"{m}|{t}"] = {
+            "observed": round(obs, 4), "expected_under_law": round(float(reps.mean()), 4),
+            "range95_under_law": [round(float(x), 4) for x in np.quantile(reps, [0.025, 0.975])],
+            "observed_minus_expected": round(obs - float(reps.mean()), 4),
+            "inside_range": bool(np.quantile(reps, 0.025) <= obs <= np.quantile(reps, 0.975))}
+    slopes = [np.polyfit(x, y, 1)[0] for x, y in zip(sims_x, sims_y) if len(x) > 5]
+    out["expected_elasticity_under_law"] = {"mean": round(float(np.mean(slopes)), 4),
+                                            "range95": [round(float(x), 4) for x in np.quantile(slopes, [0.025, 0.975])]}
+    inside = [v["inside_range"] for v in out["per_model_target"].values()]
+    out["share_targets_inside_range"] = round(float(np.mean(inside)), 4)
+    print("post hoc calibration:", out["expected_elasticity_under_law"], "inside", out["share_targets_inside_range"], flush=True)
+    return out
+
+
+def calibrate_empirical(frames, d, units, n_rep=200):
+    """POST HOC (added 2026-10-04): as calibrate(), but keeping each year's actual
+    outcome shape. Synthetic natural-forcing members are resampled from that year's
+    natural-forcing members; synthetic historical members are resampled from them
+    and mapped by the year's observed location and scale change, so the law holds
+    exactly while the (possibly skewed) shape is the model's own."""
+    rc = np.random.default_rng(SEED + 600)
+    out = {"note": "post hoc calibration under the exact law with each year's empirical natural-forcing shape",
+           "per_model_target": {}}
+    for (m, t), f in frames.items():
+        if m not in units:
+            continue
+        box, season, side = TARGETS[t]
+        s = seasonal(d[d.model == m], box, season)
+        q = 2 / 3 if side == "hot" else 1 / 3
+        reps = np.zeros(n_rep)
+        for _, row in f.iterrows():
+            y = int(row.year)
+            xn = s[(s.arm == "hist-nat") & (s.syear == y)]["mean"].values
+            nh = int(((s.arm == "historical") & (s.syear == y)).sum())
+            z = (xn - xn.mean()) / xn.std(ddof=1)
+            for r in range(n_rep):
+                syn_n = rc.choice(z, len(z)); syn_h = row["shift"] + row.sd_ratio * rc.choice(z, nh)
+                st = D1.year_stats(syn_h, syn_n, q, side)
+                reps[r] += st["resid_law"] if np.isfinite(st["resid_law"]) else 0.0
+        reps /= len(f)
+        obs = float(f.resid_law.mean())
+        out["per_model_target"][f"{m}|{t}"] = {
+            "observed": round(obs, 4), "expected_under_law": round(float(reps.mean()), 4),
+            "range95_under_law": [round(float(x), 4) for x in np.quantile(reps, [0.025, 0.975])],
+            "inside_range": bool(np.quantile(reps, 0.025) <= obs <= np.quantile(reps, 0.975))}
+    out["share_targets_inside_range"] = round(float(np.mean([v["inside_range"] for v in out["per_model_target"].values()])), 4)
+    print("post hoc empirical-shape calibration: inside", out["share_targets_inside_range"], flush=True)
+    return out
+
+
 def reading(r):
     lo, hi = r["ci95"]
     if -TOL <= lo and hi <= TOL:
@@ -192,6 +269,8 @@ def main():
         if fm:
             res["M3_per_model"][m] = pooled_mean(fm, "resid_law", rng)
             res["M3_per_model"][m]["reading"] = reading(res["M3_per_model"][m])
+    res["post_hoc_calibration"] = calibrate(frames, d, units)
+    res["post_hoc_calibration_empirical_shape"] = calibrate_empirical(frames, d, units)
     for k in ("M1_CEUR_JJA_three_models", "M2_elasticity_all", "M2_elasticity_highlat_winter", "M3_law_all_primary", "M3_per_model"):
         print(k, res[k], flush=True)
     (RESULTS / f"{NAME}.json").write_text(json.dumps(res, indent=1, default=float), encoding="utf8", newline="\n")

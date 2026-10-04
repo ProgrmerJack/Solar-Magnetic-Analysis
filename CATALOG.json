@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-04T13:24:23+00:00",
+ "generated": "2026-10-04T18:47:57+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 186,
-  "results": 95
+  "scripts": 188,
+  "results": 96
  },
  "scripts": [
   {
@@ -34,6 +34,20 @@
    "flags": [],
    "filenames_mentioned": [
     "cmip6_ensemble_manifest.csv"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_cmip6_monthly_boxes.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Monthly 2 m temperature box means, 1984-12 .. 2014-12, CMIP6 historical vs DAMIP hist-nat, for 07_physical_decomposition/damip_class_law_multimodel.py (registered a280a10 before this script first ran).",
+   "loc": 147,
+   "modified": "2026-10-04 17:00",
+   "sha256_16": "0e4a733e104280db",
+   "flags": [],
+   "filenames_mentioned": [
+    "cmip6_monthly_boxes.parquet"
    ],
    "filename_prefixes": []
   },
@@ -922,6 +936,20 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/07_physical_decomposition/damip_class_law_multimodel.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "THE THRESHOLD-CLASS LAW UNDER HUMAN FORCING IN SEVERAL MODELS, AND WHERE FORCING CHANGES THE SPREAD (so that the elasticity is identified).",
+   "loc": 283,
+   "modified": "2026-10-04 18:45",
+   "sha256_16": "2fd550f489ec97e7",
+   "flags": [],
+   "filenames_mentioned": [
+    "cmip6_monthly_boxes.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/07_physical_decomposition/davis2021_intervention_test.py",
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
@@ -1449,9 +1477,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "DOES AN IMPOSED SSW LEAVE THE CLASS STRUCTURE UNCHANGED WHERE THE FORCING IS STRONGEST, IN A THIRD EVENT, AND FOR A VARIABLE NOT USED TO CLASSIFY? Registered 2026-10-02 (revision 5), committed before any of these quantities was",
-   "loc": 538,
-   "modified": "2026-10-04 12:44",
-   "sha256_16": "55d1285cbb5a1a1c",
+   "loc": 695,
+   "modified": "2026-10-04 14:35",
+   "sha256_16": "7be5419c0436763c",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_selection_test.json"
@@ -1572,9 +1600,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "The mathematics behind the threshold-class law, computed rather than quoted (numbers used in snapsi_free_natural_experiment F3's registered reading and in the paper's Methods; derivation from research note theory_spread_law.md).",
-   "loc": 84,
-   "modified": "2026-10-04 13:02",
-   "sha256_16": "b41f54138cea7e3d",
+   "loc": 189,
+   "modified": "2026-10-04 14:28",
+   "sha256_16": "8420e161909ac062",
    "flags": [],
    "filenames_mentioned": [
     "threshold_law_theory.json"
@@ -2029,9 +2057,9 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 407,
-   "modified": "2026-10-04 13:23",
-   "sha256_16": "d5e6685c8f6751d2",
+   "loc": 416,
+   "modified": "2026-10-04 15:51",
+   "sha256_16": "532727c762975fb1",
    "flags": [],
    "filenames_mentioned": [
     "class_model_comparison.json",
@@ -2918,7 +2946,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-04 13:07",
+   "modified": "2026-10-04 13:24",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -5952,6 +5980,275 @@
    ]
   },
   {
+   "path": "results/current/8_experiment/damip_class_law_multimodel.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 25681,
+   "modified": "2026-10-04 18:46",
+   "sha256_16": "efe1ec4966673816",
+   "producers": [],
+   "state": "ORPHAN",
+   "detail": "no script writes this",
+   "flags": [],
+   "producer_sha256": {},
+   "verdicts": [
+    {
+     "key": "per_model_target.CanESM5_p1|CEUR_JJA.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "per_model_target.CanESM5_p1|CEUR_JJA.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.CanESM5_p1|WRUS_JJA.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "per_model_target.CanESM5_p1|WRUS_JJA.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.CanESM5_p1|CNAM_JJA.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "per_model_target.CanESM5_p1|CNAM_JJA.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.CanESM5_p1|CEAS_DJF.reading",
+     "text": "fails"
+    },
+    {
+     "key": "per_model_target.CanESM5_p1|CEAS_DJF.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.CanESM5_p1|NSIB_DJF.reading",
+     "text": "fails"
+    },
+    {
+     "key": "per_model_target.CanESM5_p1|NSIB_DJF.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.CanESM5_p1|NWNA_DJF.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "per_model_target.CanESM5_p1|NWNA_DJF.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.CanESM5_p2|CEUR_JJA.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "per_model_target.CanESM5_p2|CEUR_JJA.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.CanESM5_p2|WRUS_JJA.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "per_model_target.CanESM5_p2|WRUS_JJA.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.CanESM5_p2|CNAM_JJA.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "per_model_target.CanESM5_p2|CNAM_JJA.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.CanESM5_p2|CEAS_DJF.reading",
+     "text": "fails"
+    },
+    {
+     "key": "per_model_target.CanESM5_p2|CEAS_DJF.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.CanESM5_p2|NSIB_DJF.reading",
+     "text": "fails"
+    },
+    {
+     "key": "per_model_target.CanESM5_p2|NSIB_DJF.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.CanESM5_p2|NWNA_DJF.reading",
+     "text": "fails"
+    },
+    {
+     "key": "per_model_target.CanESM5_p2|NWNA_DJF.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.MIROC6|CEUR_JJA.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "per_model_target.MIROC6|CEUR_JJA.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.MIROC6|WRUS_JJA.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "per_model_target.MIROC6|WRUS_JJA.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.MIROC6|CNAM_JJA.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "per_model_target.MIROC6|CNAM_JJA.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.MIROC6|CEAS_DJF.reading",
+     "text": "fails"
+    },
+    {
+     "key": "per_model_target.MIROC6|CEAS_DJF.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.MIROC6|NSIB_DJF.reading",
+     "text": "fails"
+    },
+    {
+     "key": "per_model_target.MIROC6|NSIB_DJF.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.MIROC6|NWNA_DJF.reading",
+     "text": "fails"
+    },
+    {
+     "key": "per_model_target.MIROC6|NWNA_DJF.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.HadGEM3-GC31-LL|CEUR_JJA.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "per_model_target.HadGEM3-GC31-LL|CEUR_JJA.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.HadGEM3-GC31-LL|WRUS_JJA.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "per_model_target.HadGEM3-GC31-LL|WRUS_JJA.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.HadGEM3-GC31-LL|CNAM_JJA.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "per_model_target.HadGEM3-GC31-LL|CNAM_JJA.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.HadGEM3-GC31-LL|CEAS_DJF.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "per_model_target.HadGEM3-GC31-LL|CEAS_DJF.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.HadGEM3-GC31-LL|NSIB_DJF.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "per_model_target.HadGEM3-GC31-LL|NSIB_DJF.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "per_model_target.HadGEM3-GC31-LL|NWNA_DJF.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "per_model_target.HadGEM3-GC31-LL|NWNA_DJF.shape.reading",
+     "text": "shape unchanged by the forcing"
+    },
+    {
+     "key": "M1_CEUR_JJA_three_models.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "M2_elasticity_all.reading",
+     "text": "forced mixing of two symmetric types >= 2 s.d. apart is excluded in the second domain"
+    },
+    {
+     "key": "M2_elasticity_highlat_winter.reading",
+     "text": "forced mixing of two symmetric types >= 2 s.d. apart is excluded in the second domain"
+    },
+    {
+     "key": "M3_law_all_primary.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "M3_per_model.CanESM5_p1.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "M3_per_model.CanESM5_p2.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "M3_per_model.MIROC6.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "M3_per_model.HadGEM3-GC31-LL.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "post_hoc_calibration.note",
+     "text": "post hoc calibration under the exact law (Gaussian, observed n, shift, s.d. ratio)"
+    },
+    {
+     "key": "post_hoc_calibration_empirical_shape.note",
+     "text": "post hoc calibration under the exact law with each year's empirical natural-forcing shape"
+    }
+   ],
+   "counts": {
+    "n_boot": [
+     10000
+    ]
+   },
+   "top_level_keys": [
+    "registered",
+    "seed",
+    "n_boot",
+    "tolerance_sigma",
+    "years",
+    "members",
+    "per_model_target",
+    "M1_CEUR_JJA_three_models",
+    "M2_elasticity_all",
+    "M2_elasticity_highlat_winter",
+    "M3_law_all_primary",
+    "M3_per_model",
+    "post_hoc_calibration",
+    "post_hoc_calibration_empirical_shape"
+   ]
+  },
+  {
    "path": "results/current/8_experiment/davis2021_intervention_test.json",
    "tree": "current",
    "stage": "8_experiment",
@@ -6130,9 +6427,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 62534,
-   "modified": "2026-10-04 12:45",
-   "sha256_16": "1e2d5f381372becf",
+   "bytes": 64103,
+   "modified": "2026-10-04 14:39",
+   "sha256_16": "b840bc6b85a6be1b",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_free_natural_experiment.py"
    ],
@@ -6166,11 +6463,18 @@
     {
      "key": "G5x_post_hoc.note",
      "text": "post hoc, after the registered run"
+    },
+    {
+     "key": "G7_elasticity_diagnosis.reading",
+     "text": "the excess comes from condition 2"
     }
    ],
    "counts": {
     "n_boot": [
      10000
+    ],
+    "n_rep": [
+     200
     ]
    },
    "top_level_keys": [
@@ -6190,6 +6494,8 @@
     "G1x_post_hoc_spread",
     "G6_regional_classes",
     "G5x_post_hoc",
+    "G7_elasticity_diagnosis",
+    "G8_shape_with_power",
     "pairs_NH",
     "pairs_regional"
    ]
@@ -6527,7 +6833,7 @@
    "detail": "producer changed: ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "55d1285cbb5a1a1c",
+    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "7be5419c0436763c",
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "6626a155b09d3623"
    },
    "verdicts": [
@@ -6563,9 +6869,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 414,
-   "modified": "2026-10-04 13:03",
-   "sha256_16": "89319d89ff6da545",
+   "bytes": 3171,
+   "modified": "2026-10-04 14:34",
+   "sha256_16": "dd713459b5eaa581",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/threshold_law_theory.py"
    ],
@@ -6573,7 +6879,7 @@
    "detail": "no provenance baseline recorded",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/threshold_law_theory.py": "b41f54138cea7e3d"
+    "ssw-design-analysis/07_physical_decomposition/threshold_law_theory.py": "8420e161909ac062"
    },
    "verdicts": [],
    "counts": {},
@@ -6585,7 +6891,10 @@
     "rate_change_per_sigma_at_median",
     "mixture_elasticity",
     "one_population_elasticity",
-    "ls_residual_w0.3_to_0.7"
+    "ls_residual_w0.3_to_0.7",
+    "asymmetric_grid",
+    "shape_power",
+    "exclusion_by_natural_experiment"
    ]
   },
   {

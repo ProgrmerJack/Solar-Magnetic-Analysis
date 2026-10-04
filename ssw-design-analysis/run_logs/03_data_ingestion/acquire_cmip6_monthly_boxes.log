@@ -1,0 +1,52 @@
+CanESM5 {'historical': 65, 'hist-nat': 50}
+MIROC6 {'historical': 50, 'hist-nat': 50}
+HadGEM3-GC31-LL {'historical': 55, 'hist-nat': 60}
+  25/330
+CanESM5 {'historical': 65, 'hist-nat': 50}
+MIROC6 {'historical': 50, 'hist-nat': 50}
+HadGEM3-GC31-LL {'historical': 55, 'hist-nat': 60}
+  25/330
+  50/330
+  75/330
+  100/330
+  125/330
+/tmp/claude-1000/mm.log:CanESM5 {'historical': 65, 'hist-nat': 50}
+/tmp/claude-1000/mm.log:MIROC6 {'historical': 50, 'hist-nat': 50}
+/tmp/claude-1000/mm.log:HadGEM3-GC31-LL {'historical': 55, 'hist-nat': 60}
+/tmp/claude-1000/mm.log:  25/330
+/tmp/claude-1000/mm.log:  50/330
+/tmp/claude-1000/mm.log:  75/330
+/tmp/claude-1000/mm.log:  100/330
+/tmp/claude-1000/mm.log:  125/330
+/tmp/claude-1000/mm.log:  150/330
+/tmp/claude-1000/mm.log:  175/330
+/tmp/claude-1000/mm.log:  200/330
+/tmp/claude-1000/mm.log:  225/330
+/tmp/claude-1000/mm.log:  250/330
+/tmp/claude-1000/mm.log:  275/330
+/tmp/claude-1000/mm.log:  300/330
+/tmp/claude-1000/mm.log:  325/330
+/tmp/claude-1000/mm.log:model            arm       
+/tmp/claude-1000/mm.log:CanESM5          hist-nat      50
+/tmp/claude-1000/mm.log:                 historical    65
+/tmp/claude-1000/mm.log:HadGEM3-GC31-LL  hist-nat      60
+/tmp/claude-1000/mm.log:                 historical    55
+/tmp/claude-1000/mm.log:MIROC6           hist-nat      50
+/tmp/claude-1000/mm.log:                 historical    50
+/tmp/claude-1000/mm.log:Saved -> cmip6_monthly_boxes.parquet (119,130 rows)
+/tmp/claude-1000/mm.log:python exit 0
+/tmp/claude-1000/mm_esgf.log:CanESM5 {'historical': 0, 'hist-nat': 0}
+/tmp/claude-1000/mm_esgf.log:MIROC6 {'historical': 0, 'hist-nat': 0}
+/tmp/claude-1000/mm_esgf.log:HadGEM3-GC31-LL {'historical': 55, 'hist-nat': 60}
+/tmp/claude-1000/mm_esgf.log:  25/115
+/tmp/claude-1000/mm_esgf.log:  50/115
+/tmp/claude-1000/mm_esgf.log:  75/115
+/tmp/claude-1000/mm_esgf.log:  100/115
+/tmp/claude-1000/mm_esgf.log:model            arm       
+/tmp/claude-1000/mm_esgf.log:CanESM5          hist-nat      50
+/tmp/claude-1000/mm_esgf.log:                 historical    65
+/tmp/claude-1000/mm_esgf.log:HadGEM3-GC31-LL  hist-nat      60
+/tmp/claude-1000/mm_esgf.log:                 historical    55
+/tmp/claude-1000/mm_esgf.log:MIROC6           hist-nat      46
+/tmp/claude-1000/mm_esgf.log:                 historical     3
+/tmp/claude-1000/mm_esgf.log:Saved -> cmip6_monthly_boxes.parquet (100,719 rows)
