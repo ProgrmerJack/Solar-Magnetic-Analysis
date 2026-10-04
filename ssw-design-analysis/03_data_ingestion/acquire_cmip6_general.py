@@ -137,7 +137,7 @@ def main():
         print(k, v, flush=True)
     import multiprocessing as mp
     done = 0
-    # spawn: gcsfs (FAILURES 2026-10-04); 6 recycled workers: with 10 the workers vanished on EC-Earth3 (2026-10-05)
+    # spawn: gcsfs (FAILURES 2026-10-04); 6 recycled workers and synchronous dask bound memory on EC-Earth3's grid
     with ProcessPoolExecutor(6, mp_context=mp.get_context("spawn"), max_tasks_per_child=20) as ex:
         for r in ex.map(reduce, jobs):
             done += 1

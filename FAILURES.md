@@ -297,3 +297,8 @@ Rule: name means by role (m_ref, m_forced), never by arm initial; every null get
 Tried: damip_class_law_multimodel.calibrate*/: a simulated year with an empty class added 0.0 and the sum was divided by all 30 years.
 Failed: where the forced class is often near-empty (law residual defined in 6-9 of 30 years) the 95% ranges shrank about fivefold, putting 9 of 24 small residuals "outside"; with the mean over defined years, 22 of 24 (Gaussian) lie inside.
 Rule: a calibration must apply exactly the observed estimator, including how undefined units are dropped; compare its range width with the year-bootstrap interval as a check.
+
+## 2026-10-05 — Declaring pool workers dead from a ps grep on the script name
+Tried: `ps ... | grep acquire_cmip6_general` showed only the parent, so the download was declared stalled, the parent killed and the pool relaunched.
+Failed: spawn workers run as `python -c "from multiprocessing.spawn ..."`, so the grep cannot see them; they were alive (EC-Earth3 is just slow) and became orphans racing the new pool on the same cache files.
+Rule: find workers by parent PID (`ps -eo pid,ppid,etime,args`), judge progress by cache-file mtimes over 10+ minutes, and kill a pool by its process group.
