@@ -71,6 +71,8 @@ def main():
     GEN = J("snapsi_contrast_generality.json")
     PRO = J("prospective_next_ssw.json")
     DAV = J("davis2021_intervention_test.json")
+    FRE = J("snapsi_free_natural_experiment.json")
+    DAM = J("damip_class_law.json")
     R2 = ("robustness (revision 2)", "committed before run", "4c8b3f2")
     mm = g(MMt, "multimodel", "confirmatory"); nr = g(SRt, "regions", "NEURASIA", "multimodel", "confirmatory")
     rows = [
@@ -342,6 +344,32 @@ def main():
         ("DAV-pool", "the same, pooled over the 4 Jan, 1 Feb and 8 Feb initialisations", "revision-5 secondary",
          "committed before data", "738a422",
          f"{g(DAV,'R4_pooled_mean_of_pairs','Delta_b','mean')} {g(DAV,'R4_pooled_mean_of_pairs','Delta_b','ci95')}" if DAV else "pending", None),
+        ("F2", "law on never-analysed data: SNAPSI free arm, members developing the SSW vs not (9 models); location-scale residual",
+         "revision-6 primary", "committed before data", "1d93ff6",
+         f"{g(FRE,'F2_resid_law','mean')} {g(FRE,'F2_resid_law','ci95')}; {g(FRE,'F2_reading')}" if FRE else "pending", None),
+        ("F3", "same: elasticity of the contrast with respect to the spread (one population 1; two types >= 2 s.d. apart <= 0.60)",
+         "revision-6 primary", "reading fixed before data (ea87721, corrected 51f89fe)", "1d93ff6",
+         f"{g(FRE,'F3_Delta_b_vs_law','slope')} {g(FRE,'F3_Delta_b_vs_law','slope_ci95')}; {g(FRE,'F3_Delta_b_vs_law','reading')}" if FRE else "pending", None),
+        ("F4", "same: shape of standardized groups (Anderson-Darling, 2,000 permutations)", "revision-6 secondary",
+         "committed before data", "1d93ff6",
+         f"p {g(FRE,'F4_shape','AD_perm_p')}, max quantile difference {g(FRE,'F4_shape','max_abs_quantile_diff')}" if FRE else "pending",
+         g(FRE, 'F4_shape', 'AD_perm_p') if FRE else None),
+        ("F5", "same: balance before onset (sigma)", "revision-6 secondary", "committed before data", "1d93ff6",
+         f"{g(FRE,'F5_pre_onset_diff','mean')} {g(FRE,'F5_pre_onset_diff','ci95')}" if FRE else "pending", None),
+        ("LAW-pool", "law residual pooled over five intervention sets (equal weight)", "revision-6 primary",
+         "committed before data", "1d93ff6",
+         f"{g(FRE,'L_pooled_law','location_scale','mean')} {g(FRE,'L_pooled_law','location_scale','ci95')}" if FRE else "pending", None),
+        ("GEN-6", "regional cold-outcome classes, 24 regions x 36 SNAPSI pairs: law residual", "revision-6 primary",
+         "committed before run", "1d93ff6",
+         (f"{g(GEN,'G6_regional_classes','resid_law','mean')} {g(GEN,'G6_regional_classes','resid_law','ci95')}; "
+          f"shift only {g(GEN,'G6_regional_classes','resid_shift','mean')}") if GEN else "pending", None),
+        ("DAM", "second domain: human forcing, HadGEM3-GC31-LL historical vs hist-nat, central-European JJA upper-tercile class: law residual",
+         "revision-6 primary", "committed before data", "60f3d8b",
+         (f"{g(DAM,'targets','CEUR_JJA_tercile','resid_law','mean')} {g(DAM,'targets','CEUR_JJA_tercile','resid_law','ci95')}; "
+          f"rate {g(DAM,'targets','CEUR_JJA_tercile','rate_nat','mean')} -> {g(DAM,'targets','CEUR_JJA_tercile','rate_hist','mean')}") if DAM else "pending", None),
+        ("DAM-2", "same, western Russia and central North America JJA, central Eurasia DJF (tercile)", "revision-6 secondary",
+         "committed before data", "60f3d8b",
+         ", ".join(f"{t.split('_')[0]} {g(DAM,'targets',t,'resid_law','mean')}" for t in ("WRUS_JJA_tercile", "CNAM_JJA_tercile", "CEAS_DJF_tercile")) if DAM else "pending", None),
         ("PRO", "prospective: shifted null on every NH SSW with onset Nov 2026 - Mar 2036 (CRPS, days 8-52 NAM)", "prospective primary",
          "predictions committed before any onset", "d2b54a8 (amended before any onset: 4cfba00, b2416e0)",
          (f"{g(PRO,'scores','cumulative','n_scored') or 0} events scored") if PRO else "pending", None),

@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T13:01:49+00:00",
+ "generated": "2026-10-04T13:07:30+00:00",
  "generator": "tools/catalog_repo.py",
  "note": "Every ssw-design-analysis result in one file. The per-script JSONs remain on disk as write-side provenance; this is the read path. Regenerate with tools/catalog_repo.py.",
  "results": {
@@ -68000,6 +68000,28 @@
    },
    "filter_caveat": "The DW-NDW contrast requires >=3 members in BOTH groups, which is asymmetric by construction: only an arm with a strong forced shift can push nearly every member into one class. 11 of 36 nudged ensembles are dropped that way, with a mean DW rate of 0.993, while 0 of 36 control ensembles are. Quote mean_DW_rate_UNCONDITIONAL for the rate; the contrast is necessarily conditioned on the ensembles where both groups exist, which are the weaker-responding ones.",
    "units_caveat": "Contrasts here are standardised by the CONTROL ensemble's member-to-member spread for a single event. The published -0.708 is standardised by the BETWEEN-EVENT spread in observations. These are different yardsticks, so ratio_to_published indicates scale and is not an exact like-for-like fraction."
+  },
+  "threshold_law_theory.json": {
+   "g0": -1.5958,
+   "g_pm1": -1.8127,
+   "curvature_k": 0.1365,
+   "contrast_change_rate_0.46_to_0.85": 0.1444,
+   "rate_change_per_sigma_at_median": 0.3989,
+   "mixture_elasticity": {
+    "1.5": 0.66,
+    "2.0": 0.579,
+    "2.5": 0.469,
+    "3.0": 0.347,
+    "4.0": 0.143,
+    "6.0": 0.009
+   },
+   "one_population_elasticity": 1.0,
+   "ls_residual_w0.3_to_0.7": {
+    "1.5": -0.0461,
+    "2.0": -0.1221,
+    "3.0": -0.3941,
+    "4.0": -0.7516
+   }
   },
   "criterion_regional_contrast.json": {
    "plan_approved": "2026-10-02",

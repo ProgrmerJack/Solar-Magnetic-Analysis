@@ -1276,6 +1276,23 @@ per pair; pre-run synthetic bias −0.075, s.d. 0.43). POST HOC: Δ_b vs C_noSSW
 Primary (04jan) rate change NOT resolved (12 vs 10 of 21, Fisher p 0.76; s CI [−1.07, +0.30]); only 08feb p 0.043.
 Report as: too small to decide; primary Δ_b −0.47 is nearly twice the tolerance but imprecise. Caveat: Cohen et al. 2023.
 
+### Z9 — THE THRESHOLD-CLASS LAW (revision 6; registered 1d93ff6 / 60f3d8b before data)
+LAW: outcome classes cut at threshold c from one population with location mu, spread sigma, fixed shape have
+contrast D = sigma g((c-mu)/sigma); Gaussian |g| 1.596 at median, 1.813 at +-1 sd; rate 0.46 -> 0.85 changes D by 14%
+(threshold_law_theory.json). Discriminator: elasticity of |D| w.r.t. spread = 1 for one population; forced mixing of
+two types 0.58/0.35/0.14 for Delta 2/3/4 (the registered F3 reading used 0.60 from the research note; same conclusion).
+F (never-analysed SNAPSI free arm, 9 mixed ensembles, 9 models incl. NOAA-GFDL; members classified on u10 60N only):
+  DW 0.41 -> 0.62; F2 law residual -0.012 [-0.092, +0.057] -> HOLDS; F3 elasticity 0.81 [0.67, 1.05] -> types >= 2 sd
+  apart EXCLUDED (1 inside); F4 shape AD p 0.62; F5 balance +0.08 [-0.005, +0.18].
+L pooled (5 sets, equal weight): +0.005 [-0.068, +0.077] -> HOLDS (shift-only +0.002 [-0.11, +0.12]).
+G6 regional cold classes (24 regions x 36 pairs = 864): law residual -0.015 [-0.021, -0.011] -> HOLDS; 92% within
+  tolerance vs 58% shift-only; |rate change| 0.19.
+DAMIP second domain (HadGEM3-GC31-LL historical 55 vs hist-nat 60, 1985-2014): central-Europe JJA upper tercile rate
+  0.33 -> 0.58, law +0.041 [-0.014, +0.102] -> HOLDS; shape p 0.96; all four tercile targets hold (-0.13..+0.09);
+  deciles -0.08..-0.20 = estimator bias at that threshold (post-hoc simulation -0.20 when the law holds exactly);
+  sd ratio 0.99 so its elasticities are weak (W. Russia 0.77 [0.53, 0.94] inconclusive).
+Post hoc: SNAPSI zonal elasticity 1.14 [1.05, 1.25]. Paper re-titled around the law; details moved to SI Note 21.
+
 ### Z7 — prospective test (`prospective_next_ssw.py`, 9_literature; registered `d2b54a8`, window amended to 2036 before any onset)
 Prediction table for every onset day 1 Nov–31 Mar committed; shift nam_1000 −0.635, nam_150 −0.945, N-Eurasian T days
 8–24 −1.54 K; constant rate 0.692; T trend 0.037 K/yr. P(DW) shifted 0.71–0.84 vs climatology 0.24–0.44.

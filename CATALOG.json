@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-04T13:01:49+00:00",
+ "generated": "2026-10-04T13:07:30+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 185,
-  "results": 94
+  "scripts": 186,
+  "results": 95
  },
  "scripts": [
   {
@@ -1568,6 +1568,20 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/07_physical_decomposition/threshold_law_theory.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "The mathematics behind the threshold-class law, computed rather than quoted (numbers used in snapsi_free_natural_experiment F3's registered reading and in the paper's Methods; derivation from research note theory_spread_law.md).",
+   "loc": 84,
+   "modified": "2026-10-04 13:02",
+   "sha256_16": "b41f54138cea7e3d",
+   "flags": [],
+   "filenames_mentioned": [
+    "threshold_law_theory.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/07_physical_decomposition/vortex_geometry_test.py",
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
@@ -1825,16 +1839,17 @@
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
    "title": "fig5_law.py -- Figure 5: one law for outcome-defined impact classes.",
-   "loc": 175,
-   "modified": "2026-10-04 12:46",
-   "sha256_16": "8bf28d7c4b3a6faa",
+   "loc": 177,
+   "modified": "2026-10-04 13:05",
+   "sha256_16": "b28e020eb6af21ac",
    "flags": [],
    "filenames_mentioned": [
     "damip_class_law.json",
     "davis2021_intervention_test.json",
     "snapsi_contrast_generality.json",
     "snapsi_free_natural_experiment.json",
-    "snapsi_selection_test.json"
+    "snapsi_selection_test.json",
+    "threshold_law_theory.json"
    ],
    "filename_prefixes": []
   },
@@ -2014,15 +2029,16 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 372,
-   "modified": "2026-10-03 07:53",
-   "sha256_16": "8ac4dc5add52eecb",
+   "loc": 400,
+   "modified": "2026-10-04 13:06",
+   "sha256_16": "f10f3ee8bf0f680c",
    "flags": [],
    "filenames_mentioned": [
     "class_model_comparison.json",
     "criterion_regional_contrast.json",
     "criterion_sweep.json",
     "criterion_transport_cv.json",
+    "damip_class_law.json",
     "davis2021_intervention_test.json",
     "era5_regional_test.json",
     "forced_variance_ceiling.json",
@@ -2049,6 +2065,7 @@
     "snapsi_contrast_diagnosis.json",
     "snapsi_contrast_generality.json",
     "snapsi_distribution_test.json",
+    "snapsi_free_natural_experiment.json",
     "snapsi_loeffel_test.json",
     "snapsi_regional_test.json",
     "snapsi_residual_quantiles.json",
@@ -6539,6 +6556,36 @@
     "southern_hemisphere",
     "filter_caveat",
     "units_caveat"
+   ]
+  },
+  {
+   "path": "results/current/8_experiment/threshold_law_theory.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 414,
+   "modified": "2026-10-04 13:03",
+   "sha256_16": "89319d89ff6da545",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/threshold_law_theory.py"
+   ],
+   "state": "unverified",
+   "detail": "no provenance baseline recorded",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/threshold_law_theory.py": "b41f54138cea7e3d"
+   },
+   "verdicts": [],
+   "counts": {},
+   "top_level_keys": [
+    "g0",
+    "g_pm1",
+    "curvature_k",
+    "contrast_change_rate_0.46_to_0.85",
+    "rate_change_per_sigma_at_median",
+    "mixture_elasticity",
+    "one_population_elasticity",
+    "ls_residual_w0.3_to_0.7"
    ]
   },
   {

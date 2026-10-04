@@ -17,8 +17,8 @@ Reads (recomputes only the Gaussian curve and per-unit values stored in the file
      in every intervention set, with the shift-only residual for comparison;
      grey band, the tolerance fixed before the tests
   c  elasticity of the contrast with respect to the spread: one population
-     predicts 1, forced mixing of two response types 0.60, 0.37, 0.16 for
-     separations of 2, 3, 4 s.d.
+     predicts 1, forced mixing of two response types 0.58, 0.35, 0.14 for
+     separations of 2, 3, 4 s.d. (threshold_law_theory.json)
   d  second domain: human forcing and extreme-season classes (HadGEM3-GC31-LL,
      historical vs natural forcing, 1985-2014): class rate against law residual
 """
@@ -79,7 +79,8 @@ def main():
     lim = (min(u.pred.min(), u.obs.min()) - 0.05, max(u.pred.max(), u.obs.max()) + 0.05)
     xx = np.array(lim)
     ax.plot(xx, xx, color="k", lw=0.7, label="one population (slope 1)")
-    ax.plot(xx, 0.6 * xx, color="0.5", lw=0.7, ls=":", label="two types, Δ = 2 (slope 0.6)")
+    e2 = J("threshold_law_theory.json")["mixture_elasticity"]["2.0"]
+    ax.plot(xx, e2 * xx, color="0.5", lw=0.7, ls=":", label=f"two types, Δ = 2 (slope {e2:.2f})")
     cols = {"SNAPSI zonal (post hoc)": verm, "SNAPSI full 3-D (post hoc)": S.C["orange"],
             "SNAPSI free, natural (registered)": S.C["green"], "human forcing, C. Europe (registered)": blue}
     for k, g in u.groupby("set", sort=False):
@@ -87,7 +88,7 @@ def main():
     ax.set_xlim(lim); ax.set_ylim(lim)
     ax.set_xlabel("contrast change predicted by the spread change (σ)")
     ax.set_ylabel("observed contrast change (σ)")
-    ax.legend(fontsize=4.4, loc="upper left")
+    ax.legend(fontsize=4.2, loc="lower right", framealpha=0.9)
     ax.set_title("contrast changes are changes of spread", fontsize=6)
     S.panel_label(ax, "a", x=-0.2, y=1.04)
 
@@ -122,7 +123,7 @@ def main():
     bx.set_ylim(-0.6, len(rows) - 0.3); bx.invert_yaxis(); bx.set_xlim(-0.45, 0.45)
     bx.set_xlabel("forced contrast minus null contrast (σ)")
     bx.set_title("law (filled) vs shift only (open)", fontsize=6)
-    S.panel_label(bx, "b", x=-0.62, y=1.04)
+    S.panel_label(bx, "b", x=-0.62, y=1.10)
 
     # c -- elasticity
     cx = fig.add_subplot(gs[1, 0])
@@ -138,7 +139,8 @@ def main():
             e = dam["targets"][t].get("elasticity_slope")
             if e:
                 ent.append((f"human forcing, {lab}", e["slope"], e["ci95"], ""))
-    for v, lab in ((1.0, "one population"), (0.60, "two types, Δ = 2"), (0.37, "Δ = 3"), (0.16, "Δ = 4")):
+    th = J("threshold_law_theory.json")["mixture_elasticity"]
+    for v, lab in ((1.0, "one population"), (th["2.0"], "two types, Δ = 2"), (th["3.0"], "Δ = 3"), (th["4.0"], "Δ = 4")):
         cx.axvline(v, color="k" if v == 1 else "0.6", lw=0.6, ls="-" if v == 1 else ":")
         cx.text(v + 0.02, len(ent) - 0.5, lab, rotation=90, fontsize=4.6, ha="left", va="bottom", color="0.35")
     for i, (lab, sl, ci, note) in enumerate(ent):
