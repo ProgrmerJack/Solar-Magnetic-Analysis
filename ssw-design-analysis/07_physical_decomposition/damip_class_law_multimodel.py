@@ -15,6 +15,14 @@ MODELS  CMIP6 historical vs DAMIP hist-nat, monthly 2 m temperature (Amon tas),
   members (CanESM5 historical also has a p2 physics, excluded):
   PRIMARY    CanESM5 (Pangeo), MIROC6 (Pangeo), HadGEM3-GC31-LL (ESGF CEDA, Amon)
   SECONDARY  GISS-E2-1-G (Pangeo; 20 hist-nat members)
+AMENDED 2026-10-04 before any analysis (one test member fetched; no statistic
+  computed): the members on Pangeo mix variants. CanESM5 hist-nat has 25 p1 + 25 p2
+  and historical 25 p1 + 40 p2 physics members, so the arms would mix two model
+  physics in different proportions -- a genuine mixture, the very thing the test
+  detects. CanESM5 is therefore analysed as two units, p1 (25 vs 25) and p2 (40 vs
+  25), each within one physics, and counts as ONE model in M1 (mean of its two
+  units). GISS-E2-1-G mixes forcing variants f2/f3/f4 with at most 11 members per
+  arm in any one, and is not analysed.
 YEARS 1985-2014; seasons from monthly means (all three months required; DJF by the
   January year).
 TARGETS (cos-latitude box means; classes = the hist-nat arm's tercile of that year)
@@ -99,6 +107,17 @@ def pooled_mean(frames, col, rng):
             "n_frames": len(vals)}
 
 
+def pooled_by_model(by_model, col, rng):
+    """Equal weight per MODEL; a model with two units (CanESM5 p1, p2) is the mean of
+    its units; years resampled within each unit."""
+    by_model = {m: [f[col].dropna().values for f in fs] for m, fs in by_model.items() if fs}
+    pt = float(np.mean([np.mean([v.mean() for v in vs]) for vs in by_model.values()]))
+    bs = [np.mean([np.mean([rng.choice(v, len(v)).mean() for v in vs]) for vs in by_model.values()])
+          for _ in range(N_BOOT)]
+    return {"mean": round(pt, 4), "ci95": [round(float(x), 4) for x in np.quantile(bs, [0.025, 0.975])],
+            "n_models": len(by_model)}
+
+
 def pooled_slope(frames, rng):
     fr = [f.dropna(subset=["diff", "law_pred_diff"]) for f in frames]
     allx = np.concatenate([f.law_pred_diff.values for f in fr]); ally = np.concatenate([f["diff"].values for f in fr])
@@ -134,7 +153,12 @@ def main():
     res = {"registered": "2026-10-04, committed before any data were fetched", "seed": SEED, "n_boot": N_BOOT,
            "tolerance_sigma": TOL, "years": [YEARS[0], YEARS[-1]], "members": {}, "per_model_target": {}}
     frames = {}
-    for m in PRIMARY_MODELS + SECONDARY_MODELS:
+    d = d.copy()
+    phys = d.member.str.extract(r"i\d+(p\d+)f\d+")[0]
+    d.loc[d.model == "CanESM5", "model"] = "CanESM5_" + phys[d.model == "CanESM5"]
+    units = ["CanESM5_p1", "CanESM5_p2", "MIROC6", "HadGEM3-GC31-LL"]
+    model_of = {"CanESM5_p1": "CanESM5", "CanESM5_p2": "CanESM5", "MIROC6": "MIROC6", "HadGEM3-GC31-LL": "HadGEM3-GC31-LL"}
+    for m in units:
         dm = d[d.model == m]
         if dm.empty:
             continue
@@ -152,17 +176,18 @@ def main():
             res["per_model_target"][f"{m}|{t}"] = r
             print(m, t, r["n_years"], "rate", r["rate_nat"], "->", r["rate_hist"], "law", r["law"]["mean"], r["law"]["ci95"],
                   r["reading"], "| sd ratio", r["sd_ratio"]["mean"], "| shape p", r["shape"]["AD_perm_p"], flush=True)
-    prim = [frames[(m, "CEUR_JJA")] for m in PRIMARY_MODELS if (m, "CEUR_JJA") in frames]
-    res["M1_CEUR_JJA_three_models"] = pooled_mean(prim, "resid_law", rng)
+    res["M1_CEUR_JJA_three_models"] = pooled_by_model(
+        {mm: [frames[(u, "CEUR_JJA")] for u in units if model_of[u] == mm and (u, "CEUR_JJA") in frames]
+         for mm in PRIMARY_MODELS}, "resid_law", rng)
     res["M1_CEUR_JJA_three_models"]["reading"] = reading(res["M1_CEUR_JJA_three_models"])
-    allp = [f for (m, t), f in frames.items() if m in PRIMARY_MODELS]
+    allp = [f for (m, t), f in frames.items() if m in units]
     res["M2_elasticity_all"] = pooled_slope(allp, rng)
     res["M2_elasticity_highlat_winter"] = pooled_slope([f for (m, t), f in frames.items()
-                                                        if m in PRIMARY_MODELS and t in HIGHLAT], rng)
+                                                        if m in units and t in HIGHLAT], rng)
     res["M3_law_all_primary"] = pooled_mean(allp, "resid_law", rng)
     res["M3_law_all_primary"]["reading"] = reading(res["M3_law_all_primary"])
     res["M3_per_model"] = {}
-    for m in PRIMARY_MODELS + SECONDARY_MODELS:
+    for m in units:
         fm = [f for (mm, t), f in frames.items() if mm == m]
         if fm:
             res["M3_per_model"][m] = pooled_mean(fm, "resid_law", rng)
