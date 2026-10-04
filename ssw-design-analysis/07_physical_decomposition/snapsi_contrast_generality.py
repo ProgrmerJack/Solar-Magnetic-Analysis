@@ -94,6 +94,23 @@ G6 OTHER IMPACT CLASSES (registered 2026-10-03, committed before it was computed
   inconclusive. Secondary: the share of region-pairs whose |law residual| is
   below 0.25, against that of the shift-only null.
 
+G7 WHY IS THE ZONAL-PAIR ELASTICITY 1.14, NOT 1? (registered 2026-10-04 before it
+  was computed; own random stream). The law's elasticity of exactly 1 holds for a
+  pure threshold on one location-scale variable. The downward label adds condition
+  2 (more than half the 6-hourly values negative), and forcing may scale the
+  spread of member means without scaling each member's within-window noise.
+  (a) The same slope (back-shift difference on C_control (k - 1), 36 pairs, centre
+      bootstrap) with condition 1 only (window mean < 0).
+  (b) Calibration under the exact law: in each pair, synthetic forced members built
+      from resampled control members, Y_i(t) = s + mbar + k (m_i - mbar) + (X_i(t) - m_i)
+      (member means scaled by the pair's observed k, within-window noise kept), and
+      a variant scaling the whole series, Y_i(t) = s + mbar + k (X_i(t) - mbar);
+      the slope recomputed over the 36 pairs, 200 replicates of each.
+  READING, fixed now: if the observed 1.14 lies inside the 95% range of the
+  means-only calibration, the excess over 1 is what the two-condition label gives
+  under one population; if (a) contains 1, the excess comes from condition 2. If
+  1.14 lies outside both calibrations, the excess is unexplained and is reported.
+
 Output: results/current/8_experiment/snapsi_contrast_generality.json
 """
 import json
@@ -280,6 +297,79 @@ def regional_row(centre, init, nm):
         Tc2 = (tc.loc[list(con), r].values - m2) / s2
         row[f"resid_{r}"] = contrast(sn, Tn2) - contrast([x + s for x in sc], Tc2)
     return row
+
+
+# ---------------------------------------------------------------- G7
+def contrast_c1(series):
+    means = np.array([x.mean() for x in series]); dw = means < 0
+    if dw.sum() < MIN_CLASS or (~dw).sum() < MIN_CLASS:
+        return np.nan
+    return float(means[dw].mean() - means[~dw].mean())
+
+
+def g7_units(nud, con, cfun):
+    mn = np.array([x.mean() for x in nud]); mc = np.array([x.mean() for x in con])
+    s = float(mn.mean() - mc.mean()); k = float(mn.std(ddof=1) / mc.std(ddof=1))
+    cc = cfun(con)
+    return cfun([x - s for x in nud]) - cc, cc * (k - 1)
+
+
+def slope(xs, ys):
+    xs, ys = np.asarray(xs), np.asarray(ys); ok = np.isfinite(xs) & np.isfinite(ys)
+    return float(np.polyfit(xs[ok], ys[ok], 1)[0]) if ok.sum() > 3 else np.nan
+
+
+def elasticity_diagnosis(usable, strong, rng, n_rep=200):
+    pairs = []
+    for c in usable:
+        for init in NH_INITS:
+            nm = member_nam(c, init)
+            if nm is not None:
+                pairs.append((c, list(nm["nudged"].values()), list(nm["control"].values())))
+    out = {}
+    # (a) condition 1 only, with the centre bootstrap
+    rows = [(c, *g7_units(n, k, contrast_c1)) for c, n, k in pairs]
+    d = pd.DataFrame(rows, columns=["centre", "y", "x"]).dropna()
+    cs = d.centre.unique(); bs = []
+    for _ in range(N_BOOT):
+        dd = pd.concat([d[d.centre == cc] for cc in rng.choice(cs, len(cs))])
+        bs.append(slope(dd.x, dd.y))
+    out["a_condition1_only"] = {"slope": round(slope(d.x, d.y), 4),
+                                "ci95": [round(float(q), 4) for q in np.nanquantile(bs, [0.025, 0.975])],
+                                "n_pairs": int(len(d))}
+    # (b) calibration under the exact law
+    obs = [(n, k) for _, n, k in pairs]
+    ks = [np.std([x.mean() for x in n], ddof=1) / np.std([x.mean() for x in k], ddof=1) for n, k in obs]
+    ss = [np.mean([x.mean() for x in n]) - np.mean([x.mean() for x in k]) for n, k in obs]
+    for variant in ("means_only", "whole_series"):
+        sl = []
+        for _ in range(n_rep):
+            xs, ys = [], []
+            for (nud, con), k, s in zip(obs, ks, ss):
+                n0 = min(len(x) for x in con)
+                C = [con[i][:n0] for i in rng.integers(len(con), size=len(con))]
+                F = [con[i][:n0] for i in rng.integers(len(con), size=len(nud))]
+                mbar = np.mean([x.mean() for x in con])
+                if variant == "means_only":
+                    Y = [s + mbar + k * (x.mean() - mbar) + (x - x.mean()) for x in F]
+                else:
+                    Y = [s + mbar + k * (x - mbar) for x in F]
+                y_, x_ = g7_units(Y, C, contrast)
+                ys.append(y_); xs.append(x_)
+            sl.append(slope(xs, ys))
+        sl = np.asarray(sl, float)
+        out[f"b_calibration_{variant}"] = {"mean_slope": round(float(np.nanmean(sl)), 4),
+                                           "range95": [round(float(q), 4) for q in np.nanquantile(sl, [0.025, 0.975])],
+                                           "n_rep": n_rep}
+    obs_slope = 1.1434
+    r = out["b_calibration_means_only"]["range95"]
+    out["reading"] = ("the excess over 1 is what the two-condition label gives under one population"
+                      if r[0] <= obs_slope <= r[1] else
+                      "the excess comes from condition 2" if out["a_condition1_only"]["ci95"][0] <= 1 <= out["a_condition1_only"]["ci95"][1]
+                      else "the excess is unexplained")
+    out["observed_two_condition_slope"] = obs_slope
+    print("G7:", out, flush=True)
+    return out
 
 
 # ---------------------------------------------------------------- G6
@@ -513,6 +603,7 @@ def main():
                       "Delta_b_net_spread_mean": round(float((d5.Delta_b - d5.spread_pred).mean()), 4)}
         res["G5x_post_hoc"] = g5x
         print("G5x post hoc:", g5x)
+    res["G7_elasticity_diagnosis"] = elasticity_diagnosis(usable, strong, np.random.default_rng(SEED + 7))
     res["pairs_NH"] = df.round(4).to_dict(orient="records")
     res["pairs_regional"] = rg.round(4).to_dict(orient="records")
 
