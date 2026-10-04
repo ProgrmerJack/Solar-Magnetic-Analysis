@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T11:30:00+00:00",
+ "generated": "2026-10-04T13:01:49+00:00",
  "generator": "tools/catalog_repo.py",
  "note": "Every ssw-design-analysis result in one file. The per-script JSONs remain on disk as write-side provenance; this is the read path. Regenerate with tools/catalog_repo.py.",
  "results": {
@@ -50830,6 +50830,13 @@
       "n_pairs": 36,
       "n_centres": 9
      }
+    },
+    "elasticity_slope_36": {
+     "slope": 1.1434,
+     "ci95": [
+      1.0503,
+      1.2454
+     ]
     }
    },
    "G6_regional_classes": {
@@ -56658,6 +56665,627 @@
      "sep=1.5": 0.0
     }
    }
+  },
+  "snapsi_free_natural_experiment.json": {
+   "registered": "2026-10-03, committed before any free-arm member was downloaded",
+   "seed": 1638441689,
+   "n_boot": 10000,
+   "n_perm": 2000,
+   "tolerance_sigma": 0.25,
+   "n_ensembles": 14,
+   "n_mixed": 9,
+   "centres_mixed": [
+    "CCCma",
+    "ECCC",
+    "ECMWF",
+    "KMA",
+    "Meteo-France",
+    "NCAR",
+    "NOAA-GFDL",
+    "SNU",
+    "UKMO"
+   ],
+   "F2_resid_law": {
+    "mean": -0.0122,
+    "n_ensembles": 8,
+    "n_centres": 8,
+    "centre_means": {
+     "CCCma": -0.1281,
+     "ECMWF": 0.0329,
+     "KMA": 0.1253,
+     "Meteo-France": 0.0774,
+     "NCAR": -0.2239,
+     "NOAA-GFDL": 0.0275,
+     "SNU": 0.0446,
+     "UKMO": -0.0529
+    },
+    "ci95": [
+     -0.092,
+     0.0565
+    ]
+   },
+   "paired_diff": {
+    "mean": -0.0461,
+    "n_ensembles": 8,
+    "n_centres": 8,
+    "centre_means": {
+     "CCCma": 0.1274,
+     "ECMWF": -0.232,
+     "KMA": -0.0993,
+     "Meteo-France": -0.1592,
+     "NCAR": -0.6411,
+     "NOAA-GFDL": 0.3837,
+     "SNU": -0.0312,
+     "UKMO": 0.2829
+    },
+    "ci95": [
+     -0.2637,
+     0.1538
+    ]
+   },
+   "Delta_b": {
+    "mean": -0.0215,
+    "n_ensembles": 8,
+    "n_centres": 8,
+    "centre_means": {
+     "CCCma": 0.1363,
+     "ECMWF": -0.1568,
+     "KMA": -0.2258,
+     "Meteo-France": -0.1725,
+     "NCAR": -0.3884,
+     "NOAA-GFDL": 0.3837,
+     "SNU": -0.0312,
+     "UKMO": 0.2829
+    },
+    "ci95": [
+     -0.1886,
+     0.1563
+    ]
+   },
+   "shift": {
+    "mean": -0.5114,
+    "n_ensembles": 9,
+    "n_centres": 9,
+    "centre_means": {
+     "CCCma": -0.691,
+     "ECCC": -0.2232,
+     "ECMWF": -0.7905,
+     "KMA": -0.7934,
+     "Meteo-France": -0.3813,
+     "NCAR": -1.1972,
+     "NOAA-GFDL": -0.0274,
+     "SNU": -0.2863,
+     "UKMO": -0.2118
+    },
+    "ci95": [
+     -0.7517,
+     -0.2908
+    ]
+   },
+   "dw_rate_ssw": {
+    "mean": 0.6208,
+    "n_ensembles": 9,
+    "n_centres": 9,
+    "centre_means": {
+     "CCCma": 0.7727,
+     "ECCC": 0.4889,
+     "ECMWF": 0.7576,
+     "KMA": 0.625,
+     "Meteo-France": 0.55,
+     "NCAR": 0.75,
+     "NOAA-GFDL": 0.5,
+     "SNU": 0.5714,
+     "UKMO": 0.5714
+    },
+    "ci95": [
+     0.5547,
+     0.6915
+    ]
+   },
+   "dw_rate_non": {
+    "mean": 0.4105,
+    "n_ensembles": 9,
+    "n_centres": 9,
+    "centre_means": {
+     "CCCma": 0.3571,
+     "ECCC": 0.4,
+     "ECMWF": 0.4444,
+     "KMA": 0.4286,
+     "Meteo-France": 0.4667,
+     "NCAR": 0.3125,
+     "NOAA-GFDL": 0.3667,
+     "SNU": 0.5,
+     "UKMO": 0.4186
+    },
+    "ci95": [
+     0.3748,
+     0.4456
+    ]
+   },
+   "sd_ratio": {
+    "mean": 1.031,
+    "n_ensembles": 9,
+    "n_centres": 9,
+    "centre_means": {
+     "CCCma": 0.931,
+     "ECCC": 0.9192,
+     "ECMWF": 1.1151,
+     "KMA": 1.1713,
+     "Meteo-France": 1.1364,
+     "NCAR": 1.3515,
+     "NOAA-GFDL": 0.8135,
+     "SNU": 1.0639,
+     "UKMO": 0.7775
+    },
+    "ci95": [
+     0.919,
+     1.1495
+    ]
+   },
+   "F5_pre_onset_diff": {
+    "mean": 0.0828,
+    "n_ensembles": 9,
+    "n_centres": 9,
+    "centre_means": {
+     "CCCma": -0.0264,
+     "ECCC": 0.3139,
+     "ECMWF": -0.0182,
+     "KMA": 0.1085,
+     "Meteo-France": -0.0978,
+     "NCAR": -0.0107,
+     "NOAA-GFDL": 0.2813,
+     "SNU": 0.2123,
+     "UKMO": -0.0177
+    },
+    "ci95": [
+     -0.0053,
+     0.1796
+    ]
+   },
+   "F2_reading": "the law holds on independent data",
+   "F3_Delta_b_vs_law": {
+    "slope": 0.8116,
+    "slope_ci95": [
+     0.6698,
+     1.0479
+    ],
+    "resampled": "centre",
+    "intercept": 0.0452,
+    "r": 0.9787,
+    "mean_residual": 0.0607,
+    "contains_1": true,
+    "reading": "two response types separated by 2 s.d. or more are excluded"
+   },
+   "F4_shape": {
+    "quantile_diff": {
+     "0.05": 0.0167,
+     "0.1": 0.1775,
+     "0.15": 0.1024,
+     "0.2": 0.0194,
+     "0.25": -0.046,
+     "0.3": -0.1159,
+     "0.35": -0.1355,
+     "0.4": -0.1385,
+     "0.45": -0.1383,
+     "0.5": -0.1165,
+     "0.55": -0.0851,
+     "0.6": 0.0035,
+     "0.65": -0.0186,
+     "0.7": -0.01,
+     "0.75": -0.0903,
+     "0.8": -0.008,
+     "0.85": 0.0226,
+     "0.9": 0.0826,
+     "0.95": 0.0719
+    },
+    "max_abs_quantile_diff": 0.1775,
+    "AD_stat": -0.5643,
+    "AD_perm_p": 0.6172,
+    "reading": "one population (shape unchanged)"
+   },
+   "L_pooled_law": {
+    "sets": {},
+    "location_scale": {
+     "mean": 0.0049,
+     "ci95": [
+      -0.0678,
+      0.0769
+     ],
+     "n_sets": 5,
+     "per_set": {
+      "SNAPSI_zonal_NH_25": [
+       0.0417,
+       22
+      ],
+      "SNAPSI_SH": [
+       -0.0365,
+       7
+      ],
+      "SNAPSI_full_3D": [
+       0.1701,
+       6
+      ],
+      "CESM2_Jan2021": [
+       -0.1384,
+       2
+      ],
+      "SNAPSI_free_natural": [
+       -0.0122,
+       8
+      ]
+     },
+     "reading": "the law holds on independent data"
+    },
+    "shift_only": {
+     "mean": 0.0017,
+     "ci95": [
+      -0.1108,
+      0.1179
+     ],
+     "n_sets": 5,
+     "per_set": {
+      "SNAPSI_zonal_NH_25": [
+       0.0401,
+       23
+      ],
+      "SNAPSI_SH": [
+       -0.136,
+       5
+      ],
+      "SNAPSI_full_3D": [
+       0.1299,
+       5
+      ],
+      "CESM2_Jan2021": [
+       0.0397,
+       3
+      ],
+      "SNAPSI_free_natural": [
+       -0.0653,
+       8
+      ]
+     },
+     "reading": "the law holds on independent data"
+    }
+   },
+   "ensembles": [
+    {
+     "centre": "CCCma",
+     "init": "s20181213",
+     "n_members": 50,
+     "n_ssw_all": 22,
+     "n_non_all": 28,
+     "n_ssw": 22.0,
+     "n_non": 28.0,
+     "dw_rate_ssw": 0.7727,
+     "dw_rate_non": 0.3571,
+     "shift": -0.691,
+     "sd_ratio": 0.931,
+     "C_ssw": -1.4237,
+     "C_non": -1.5511,
+     "C_LS": -1.2956,
+     "C_backshift": -1.4148,
+     "C_shift_null": -1.4106,
+     "F2_resid_law": -0.1281,
+     "paired_diff": 0.1274,
+     "Delta_b": 0.1363,
+     "law_pred_Delta_b": 0.1071,
+     "F5_pre_onset_diff": -0.0264,
+     "mixed": true
+    },
+    {
+     "centre": "CNR-ISAC",
+     "init": "s20181213",
+     "n_members": 50,
+     "n_ssw_all": 1,
+     "n_non_all": 49,
+     "n_ssw": NaN,
+     "n_non": NaN,
+     "dw_rate_ssw": NaN,
+     "dw_rate_non": NaN,
+     "shift": NaN,
+     "sd_ratio": NaN,
+     "C_ssw": NaN,
+     "C_non": NaN,
+     "C_LS": NaN,
+     "C_backshift": NaN,
+     "C_shift_null": NaN,
+     "F2_resid_law": NaN,
+     "paired_diff": NaN,
+     "Delta_b": NaN,
+     "law_pred_Delta_b": NaN,
+     "F5_pre_onset_diff": NaN,
+     "mixed": false
+    },
+    {
+     "centre": "ECCC",
+     "init": "s20181213",
+     "n_members": 50,
+     "n_ssw_all": 45,
+     "n_non_all": 5,
+     "n_ssw": 45.0,
+     "n_non": 5.0,
+     "dw_rate_ssw": 0.4889,
+     "dw_rate_non": 0.4,
+     "shift": -0.2232,
+     "sd_ratio": 0.9192,
+     "C_ssw": -1.4379,
+     "C_non": NaN,
+     "C_LS": NaN,
+     "C_backshift": -1.478,
+     "C_shift_null": NaN,
+     "F2_resid_law": NaN,
+     "paired_diff": NaN,
+     "Delta_b": NaN,
+     "law_pred_Delta_b": NaN,
+     "F5_pre_onset_diff": 0.3139,
+     "mixed": true
+    },
+    {
+     "centre": "ECMWF",
+     "init": "s20181213",
+     "n_members": 51,
+     "n_ssw_all": 33,
+     "n_non_all": 18,
+     "n_ssw": 33.0,
+     "n_non": 18.0,
+     "dw_rate_ssw": 0.7576,
+     "dw_rate_non": 0.4444,
+     "shift": -0.7905,
+     "sd_ratio": 1.1151,
+     "C_ssw": -1.8749,
+     "C_non": -1.6429,
+     "C_LS": -1.9078,
+     "C_backshift": -1.7998,
+     "C_shift_null": -1.6795,
+     "F2_resid_law": 0.0329,
+     "paired_diff": -0.232,
+     "Delta_b": -0.1568,
+     "law_pred_Delta_b": -0.1892,
+     "F5_pre_onset_diff": -0.0182,
+     "mixed": true
+    },
+    {
+     "centre": "KMA",
+     "init": "s20180125",
+     "n_members": 50,
+     "n_ssw_all": 8,
+     "n_non_all": 42,
+     "n_ssw": 8.0,
+     "n_non": 42.0,
+     "dw_rate_ssw": 0.625,
+     "dw_rate_non": 0.4286,
+     "shift": -0.7934,
+     "sd_ratio": 1.1713,
+     "C_ssw": -1.6554,
+     "C_non": -1.556,
+     "C_LS": -1.7806,
+     "C_backshift": -1.7818,
+     "C_shift_null": -1.5527,
+     "F2_resid_law": 0.1253,
+     "paired_diff": -0.0993,
+     "Delta_b": -0.2258,
+     "law_pred_Delta_b": -0.2666,
+     "F5_pre_onset_diff": 0.1085,
+     "mixed": true
+    },
+    {
+     "centre": "KMA",
+     "init": "s20181213",
+     "n_members": 50,
+     "n_ssw_all": 47,
+     "n_non_all": 3,
+     "n_ssw": NaN,
+     "n_non": NaN,
+     "dw_rate_ssw": NaN,
+     "dw_rate_non": NaN,
+     "shift": NaN,
+     "sd_ratio": NaN,
+     "C_ssw": NaN,
+     "C_non": NaN,
+     "C_LS": NaN,
+     "C_backshift": NaN,
+     "C_shift_null": NaN,
+     "F2_resid_law": NaN,
+     "paired_diff": NaN,
+     "Delta_b": NaN,
+     "law_pred_Delta_b": NaN,
+     "F5_pre_onset_diff": NaN,
+     "mixed": false
+    },
+    {
+     "centre": "Meteo-France",
+     "init": "s20180125",
+     "n_members": 50,
+     "n_ssw_all": 20,
+     "n_non_all": 30,
+     "n_ssw": 20.0,
+     "n_non": 30.0,
+     "dw_rate_ssw": 0.55,
+     "dw_rate_non": 0.4667,
+     "shift": -0.3813,
+     "sd_ratio": 1.1364,
+     "C_ssw": -1.7807,
+     "C_non": -1.6215,
+     "C_LS": -1.858,
+     "C_backshift": -1.794,
+     "C_shift_null": -1.635,
+     "F2_resid_law": 0.0774,
+     "paired_diff": -0.1592,
+     "Delta_b": -0.1725,
+     "law_pred_Delta_b": -0.2212,
+     "F5_pre_onset_diff": -0.0978,
+     "mixed": true
+    },
+    {
+     "centre": "Meteo-France",
+     "init": "s20181213",
+     "n_members": 50,
+     "n_ssw_all": 50,
+     "n_non_all": 0,
+     "n_ssw": NaN,
+     "n_non": NaN,
+     "dw_rate_ssw": NaN,
+     "dw_rate_non": NaN,
+     "shift": NaN,
+     "sd_ratio": NaN,
+     "C_ssw": NaN,
+     "C_non": NaN,
+     "C_LS": NaN,
+     "C_backshift": NaN,
+     "C_shift_null": NaN,
+     "F2_resid_law": NaN,
+     "paired_diff": NaN,
+     "Delta_b": NaN,
+     "law_pred_Delta_b": NaN,
+     "F5_pre_onset_diff": NaN,
+     "mixed": false
+    },
+    {
+     "centre": "NCAR",
+     "init": "s20181213",
+     "n_members": 51,
+     "n_ssw_all": 16,
+     "n_non_all": 32,
+     "n_ssw": 16.0,
+     "n_non": 32.0,
+     "dw_rate_ssw": 0.75,
+     "dw_rate_non": 0.3125,
+     "shift": -1.1972,
+     "sd_ratio": 1.3515,
+     "C_ssw": -2.4234,
+     "C_non": -1.7823,
+     "C_LS": -2.1995,
+     "C_backshift": -2.1707,
+     "C_shift_null": -1.7861,
+     "F2_resid_law": -0.2239,
+     "paired_diff": -0.6411,
+     "Delta_b": -0.3884,
+     "law_pred_Delta_b": -0.6264,
+     "F5_pre_onset_diff": -0.0107,
+     "mixed": true
+    },
+    {
+     "centre": "NOAA-GFDL",
+     "init": "s20180125",
+     "n_members": 50,
+     "n_ssw_all": 2,
+     "n_non_all": 48,
+     "n_ssw": NaN,
+     "n_non": NaN,
+     "dw_rate_ssw": NaN,
+     "dw_rate_non": NaN,
+     "shift": NaN,
+     "sd_ratio": NaN,
+     "C_ssw": NaN,
+     "C_non": NaN,
+     "C_LS": NaN,
+     "C_backshift": NaN,
+     "C_shift_null": NaN,
+     "F2_resid_law": NaN,
+     "paired_diff": NaN,
+     "Delta_b": NaN,
+     "law_pred_Delta_b": NaN,
+     "F5_pre_onset_diff": NaN,
+     "mixed": false
+    },
+    {
+     "centre": "NOAA-GFDL",
+     "init": "s20181213",
+     "n_members": 50,
+     "n_ssw_all": 20,
+     "n_non_all": 30,
+     "n_ssw": 20.0,
+     "n_non": 30.0,
+     "dw_rate_ssw": 0.5,
+     "dw_rate_non": 0.3667,
+     "shift": -0.0274,
+     "sd_ratio": 0.8135,
+     "C_ssw": -1.2865,
+     "C_non": -1.6702,
+     "C_LS": -1.314,
+     "C_backshift": -1.2865,
+     "C_shift_null": -1.6154,
+     "F2_resid_law": 0.0275,
+     "paired_diff": 0.3837,
+     "Delta_b": 0.3837,
+     "law_pred_Delta_b": 0.3116,
+     "F5_pre_onset_diff": 0.2813,
+     "mixed": true
+    },
+    {
+     "centre": "SNU",
+     "init": "s20181213",
+     "n_members": 50,
+     "n_ssw_all": 14,
+     "n_non_all": 36,
+     "n_ssw": 14.0,
+     "n_non": 36.0,
+     "dw_rate_ssw": 0.5714,
+     "dw_rate_non": 0.5,
+     "shift": -0.2863,
+     "sd_ratio": 1.0639,
+     "C_ssw": -1.7155,
+     "C_non": -1.6842,
+     "C_LS": -1.76,
+     "C_backshift": -1.7155,
+     "C_shift_null": -1.6795,
+     "F2_resid_law": 0.0446,
+     "paired_diff": -0.0312,
+     "Delta_b": -0.0312,
+     "law_pred_Delta_b": -0.1076,
+     "F5_pre_onset_diff": 0.2123,
+     "mixed": true
+    },
+    {
+     "centre": "UKMO",
+     "init": "s20180125",
+     "n_members": 50,
+     "n_ssw_all": 7,
+     "n_non_all": 43,
+     "n_ssw": 7.0,
+     "n_non": 43.0,
+     "dw_rate_ssw": 0.5714,
+     "dw_rate_non": 0.4186,
+     "shift": -0.2118,
+     "sd_ratio": 0.7775,
+     "C_ssw": -1.2209,
+     "C_non": -1.5039,
+     "C_LS": -1.1681,
+     "C_backshift": -1.2209,
+     "C_shift_null": -1.5,
+     "F2_resid_law": -0.0529,
+     "paired_diff": 0.2829,
+     "Delta_b": 0.2829,
+     "law_pred_Delta_b": 0.3345,
+     "F5_pre_onset_diff": -0.0177,
+     "mixed": true
+    },
+    {
+     "centre": "UKMO",
+     "init": "s20181213",
+     "n_members": 50,
+     "n_ssw_all": 48,
+     "n_non_all": 2,
+     "n_ssw": NaN,
+     "n_non": NaN,
+     "dw_rate_ssw": NaN,
+     "dw_rate_non": NaN,
+     "shift": NaN,
+     "sd_ratio": NaN,
+     "C_ssw": NaN,
+     "C_non": NaN,
+     "C_LS": NaN,
+     "C_backshift": NaN,
+     "C_shift_null": NaN,
+     "F2_resid_law": NaN,
+     "paired_diff": NaN,
+     "Delta_b": NaN,
+     "law_pred_Delta_b": NaN,
+     "F5_pre_onset_diff": NaN,
+     "mixed": false
+    }
+   ]
   },
   "snapsi_loeffel_test.json": {
    "paper": {

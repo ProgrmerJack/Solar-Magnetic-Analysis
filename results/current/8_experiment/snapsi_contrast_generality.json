@@ -942,6 +942,13 @@
         "n_pairs": 36,
         "n_centres": 9
       }
+    },
+    "elasticity_slope_36": {
+      "slope": 1.1434,
+      "ci95": [
+        1.0503,
+        1.2454
+      ]
     }
   },
   "G6_regional_classes": {

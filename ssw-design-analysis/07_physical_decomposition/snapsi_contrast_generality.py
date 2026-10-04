@@ -486,6 +486,15 @@ def main():
         **{lab: {"r_Delta_b_vs_spread_pred": round(float(np.corrcoef(d.Delta_b, d.spread_pred)[0, 1]), 4),
                  "Delta_b_net_spread": cboot(d, "Delta_b_net_spread", rng)}
            for lab, d in (("strong_11", df[df.strong]), ("other_25", df[~df.strong]), ("all_36", df))}}
+    # elasticity slope (Delta_b on the spread prediction), post hoc, own random stream
+    r11 = np.random.default_rng(SEED + 11)
+    b0 = float(np.polyfit(df.spread_pred, df.Delta_b, 1)[0]); bs = []
+    cs_ = df.centre.unique()
+    for _ in range(N_BOOT):
+        dd = pd.concat([df[df.centre == c] for c in r11.choice(cs_, len(cs_))])
+        bs.append(np.polyfit(dd.spread_pred, dd.Delta_b, 1)[0])
+    res["G1x_post_hoc_spread"]["elasticity_slope_36"] = {
+        "slope": round(b0, 4), "ci95": [round(float(q), 4) for q in np.quantile(bs, [0.025, 0.975])]}
     print("G1x post hoc:", res["G1x_post_hoc_spread"])
     # G6 (registered 2026-10-03): regional cold-outcome classes, own random stream
     res["G6_regional_classes"] = regional_classes(usable, np.random.default_rng(SEED + 6))

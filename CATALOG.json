@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-04T11:30:00+00:00",
+ "generated": "2026-10-04T13:01:49+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 184,
-  "results": 93
+  "scripts": 185,
+  "results": 94
  },
  "scripts": [
   {
@@ -1449,9 +1449,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "DOES AN IMPOSED SSW LEAVE THE CLASS STRUCTURE UNCHANGED WHERE THE FORCING IS STRONGEST, IN A THIRD EVENT, AND FOR A VARIABLE NOT USED TO CLASSIFY? Registered 2026-10-02 (revision 5), committed before any of these quantities was",
-   "loc": 529,
-   "modified": "2026-10-03 10:11",
-   "sha256_16": "a5ac1f582d13b669",
+   "loc": 538,
+   "modified": "2026-10-04 12:44",
+   "sha256_16": "55d1285cbb5a1a1c",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_selection_test.json"
@@ -1817,6 +1817,24 @@
    "filenames_mentioned": [
     "forecast_value_test.json",
     "within_model_check.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/09_figures/fig5_law.py",
+   "tree": "ssw-design-analysis",
+   "stage": "09_figures",
+   "title": "fig5_law.py -- Figure 5: one law for outcome-defined impact classes.",
+   "loc": 175,
+   "modified": "2026-10-04 12:46",
+   "sha256_16": "8bf28d7c4b3a6faa",
+   "flags": [],
+   "filenames_mentioned": [
+    "damip_class_law.json",
+    "davis2021_intervention_test.json",
+    "snapsi_contrast_generality.json",
+    "snapsi_free_natural_experiment.json",
+    "snapsi_selection_test.json"
    ],
    "filename_prefixes": []
   },
@@ -6095,9 +6113,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 62420,
-   "modified": "2026-10-03 10:12",
-   "sha256_16": "058cb414c8f9c582",
+   "bytes": 62534,
+   "modified": "2026-10-04 12:45",
+   "sha256_16": "1e2d5f381372becf",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_free_natural_experiment.py"
    ],
@@ -6185,6 +6203,77 @@
     "member_A",
     "pooled_all",
     "pooled_excluding_short_lead_init"
+   ]
+  },
+  {
+   "path": "results/current/8_experiment/snapsi_free_natural_experiment.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 11647,
+   "modified": "2026-10-04 13:01",
+   "sha256_16": "97ec80ba37f7cf3d",
+   "producers": [],
+   "state": "ORPHAN",
+   "detail": "no script writes this",
+   "flags": [],
+   "producer_sha256": {},
+   "verdicts": [
+    {
+     "key": "F2_reading",
+     "text": "the law holds on independent data"
+    },
+    {
+     "key": "F3_Delta_b_vs_law.reading",
+     "text": "two response types separated by 2 s.d. or more are excluded"
+    },
+    {
+     "key": "F4_shape.reading",
+     "text": "one population (shape unchanged)"
+    },
+    {
+     "key": "L_pooled_law.location_scale.reading",
+     "text": "the law holds on independent data"
+    },
+    {
+     "key": "L_pooled_law.shift_only.reading",
+     "text": "the law holds on independent data"
+    }
+   ],
+   "counts": {
+    "n_boot": [
+     10000
+    ],
+    "n_perm": [
+     2000
+    ],
+    "n_members": [
+     50,
+     51
+    ]
+   },
+   "top_level_keys": [
+    "registered",
+    "seed",
+    "n_boot",
+    "n_perm",
+    "tolerance_sigma",
+    "n_ensembles",
+    "n_mixed",
+    "centres_mixed",
+    "F2_resid_law",
+    "paired_diff",
+    "Delta_b",
+    "shift",
+    "dw_rate_ssw",
+    "dw_rate_non",
+    "sd_ratio",
+    "F5_pre_onset_diff",
+    "F2_reading",
+    "F3_Delta_b_vs_law",
+    "F4_shape",
+    "L_pooled_law",
+    "ensembles"
    ]
   },
   {
@@ -6421,7 +6510,7 @@
    "detail": "producer changed: ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "a5ac1f582d13b669",
+    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "55d1285cbb5a1a1c",
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "6626a155b09d3623"
    },
    "verdicts": [
