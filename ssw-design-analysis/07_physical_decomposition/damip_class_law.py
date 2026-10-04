@@ -184,6 +184,22 @@ def main():
                   "| slope", r.get("elasticity_slope"), "| shape", {k: r["shape"][k] for k in ("max_abs_quantile_diff", "AD_perm_p", "reading")},
                   flush=True)
     res["primary"] = res["targets"][f"{PRIMARY}_tercile"]["reading_law"]
+    # POST HOC (added 2026-10-04 after the registered run): the estimator's own bias
+    # when the law holds EXACTLY (one Gaussian population, 55 vs 60 members, shift 0.6),
+    # at the two thresholds; separate random stream, registered numbers unchanged.
+    rng_b = np.random.default_rng(SEED + 99)
+    bias = {}
+    for q_lab, qq in (("tercile", 2 / 3), ("decile", 0.9)):
+        for k in (1.0, 1.1):
+            r, sft = [], []
+            for _ in range(3000):
+                st = year_stats(rng_b.normal(0.6, k, 55), rng_b.normal(0, 1, 60), qq, "hot")
+                r.append(st["resid_law"]); sft.append(st["resid_shift"])
+            bias[f"{q_lab}_k{k}"] = {"law_resid_mean": round(float(np.nanmean(r)), 4),
+                                     "law_resid_sd": round(float(np.nanstd(r)), 4),
+                                     "shift_resid_mean": round(float(np.nanmean(sft)), 4)}
+    res["post_hoc_estimator_bias"] = {"note": "post hoc; law holds exactly in these simulations", **bias}
+    print("post hoc estimator bias:", bias)
     (RESULTS / f"{NAME}.json").write_text(json.dumps(res, indent=1, default=float), encoding="utf8", newline="\n")
     print(f"Saved -> {NAME}.json")
     return 0

@@ -54,6 +54,17 @@ def ua_path(row, tok):
 
 def read_member(row, tok, sess):
     path = ua_path(row, tok)
+    try:
+        return _read(row, tok, sess, path)
+    except (FileNotFoundError, OSError) as e:
+        if "404" not in str(e) and not isinstance(e, FileNotFoundError):
+            raise
+        # ua can sit in a different data version from psl (ECCC free s20181213):
+        # resolve the version that holds exactly this file, refusing to guess
+        return _read(row, tok, sess, S.resolve_archive_path(path, tok))
+
+
+def _read(row, tok, sess, path):
     if row.centre in Z.RANGE_CENTRES:
         da, tv, tu = Z.read_zg100_ranges(f"{Z.FILE_ROOT}{path}", tok, var="ua", target_pa=TARGET_PA,
                                          row_sel=nearest_60)
@@ -109,9 +120,10 @@ def main():
     CACHE.mkdir(exist_ok=True)
     argv = sys.argv[1:]
     centres = argv[argv.index("--centres") + 1].split(",") if "--centres" in argv else CENTRES
+    inits = argv[argv.index("--inits") + 1].split(",") if "--inits" in argv else NH_INITS
     tok = S.token(); sess = Z.session(tok)
     d = pd.read_csv(S.MANIFEST)
-    q = d[(d.variable == "psl") & (d.experiment == "free") & d.start_date.isin(NH_INITS) & d.centre.isin(centres)]
+    q = d[(d.variable == "psl") & (d.experiment == "free") & d.start_date.isin(inits) & d.centre.isin(centres)]
     gates = []
     for (c, i), g in q.groupby(["centre", "start_date"]):
         rows = list(g.itertuples())

@@ -1,0 +1,138 @@
+historical: 55 members with an i1p1f3 1950- file on CEDA
+hist-nat: 60 members with an i1p1f3 1950- file on CEDA
+  10/115
+  20/115
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+FAILED historical r36i1p1f3: OSError: [Errno -68] NetCDF: I/O failure: 'https://esgf.ceda.ac.uk/thredds/dodsC/esg_cmip6/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r36i1p1f3/day/tas/gn/v20230616/tas_
+curl error details: 
+curl error details: 
+FAILED historical r37i1p1f3: OSError: [Errno -68] NetCDF: I/O failure: 'https://esgf.ceda.ac.uk/thredds/dodsC/esg_cmip6/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r37i1p1f3/day/tas/gn/v20230630/tas_
+curl error details: 
+curl error details: 
+FAILED historical r38i1p1f3: OSError: [Errno -68] NetCDF: I/O failure: 'https://esgf.ceda.ac.uk/thredds/dodsC/esg_cmip6/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r38i1p1f3/day/tas/gn/v20230613/tas_
+  30/115
+FAILED historical r39i1p1f3: OSError: [Errno -68] NetCDF: I/O failure: 'https://esgf.ceda.ac.uk/thredds/dodsC/esg_cmip6/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r39i1p1f3/day/tas/gn/v20230706/tas_
+curl error details: 
+FAILED historical r3i1p1f3: OSError: [Errno -68] NetCDF: I/O failure: 'https://esgf.ceda.ac.uk/thredds/dodsC/esg_cmip6/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r3i1p1f3/day/tas/gn/v20190626/tas_d
+FAILED historical r40i1p1f3: OSError: [Errno -68] NetCDF: I/O failure: 'https://esgf.ceda.ac.uk/thredds/dodsC/esg_cmip6/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r40i1p1f3/day/tas/gn/v20230707/tas_
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+curl error details: 
+FAILED historical r41i1p1f3: OSError: [Errno -68] NetCDF: I/O failure: 'https://esgf.ceda.ac.uk/thredds/dodsC/esg_cmip6/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r41i1p1f3/day/tas/gn/v20230704/tas_
+FAILED historical r42i1p1f3: OSError: [Errno -68] NetCDF: I/O failure: 'https://esgf.ceda.ac.uk/thredds/dodsC/esg_cmip6/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r42i1p1f3/day/tas/gn/v20230619/tas_
+FAILED historical r43i1p1f3: OSError: [Errno -68] NetCDF: I/O failure: 'https://esgf.ceda.ac.uk/thredds/dodsC/esg_cmip6/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r43i1p1f3/day/tas/gn/v20230629/tas_
+FAILED historical r44i1p1f3: OSError: [Errno -68] NetCDF: I/O failure: 'https://esgf.ceda.ac.uk/thredds/dodsC/esg_cmip6/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r44i1p1f3/day/tas/gn/v20230629/tas_
+FAILED historical r45i1p1f3: OSError: [Errno -68] NetCDF: I/O failure: 'https://esgf.ceda.ac.uk/thredds/dodsC/esg_cmip6/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r45i1p1f3/day/tas/gn/v20230706/tas_
+FAILED historical r46i1p1f3: OSError: [Errno -68] NetCDF: I/O failure: 'https://esgf.ceda.ac.uk/thredds/dodsC/esg_cmip6/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r46i1p1f3/day/tas/gn/v20230620/tas_
+  40/115
+  50/115
+  60/115
+  70/115
+  80/115
+  90/115
+  100/115
+  110/115
+arm
+hist-nat      60
+historical    43
+Saved -> damip_hadgem_boxes.parquet (1,115,490 rows)
+python exit 0
+historical: 55 members with an i1p1f3 1950- file on CEDA
+hist-nat: 60 members with an i1p1f3 1950- file on CEDA
+  10/115
+  20/115
+  30/115
+  40/115
+  50/115
+  60/115
+  70/115
+  80/115
+  90/115
+  100/115
+  110/115
+arm
+hist-nat      60
+historical    55
+Saved -> damip_hadgem_boxes.parquet (1,245,450 rows)
+python exit 0
