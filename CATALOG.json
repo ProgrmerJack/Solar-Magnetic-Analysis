@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-04T21:01:41+00:00",
+ "generated": "2026-10-05T00:18:36+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
   "scripts": 190,
-  "results": 96
+  "results": 97
  },
  "scripts": [
   {
@@ -43,8 +43,8 @@
    "stage": "03_data_ingestion",
    "title": "Monthly box means of 2 m temperature (tas, K) and precipitation (pr, mm/day) for 07_physical_decomposition/class_law_general.py (registered before this script first ran). Reuses the box definitions and reduction of acquire_cmip6_monthly_boxes.py;",
    "loc": 157,
-   "modified": "2026-10-04 20:51",
-   "sha256_16": "ddd31d3f91858f29",
+   "modified": "2026-10-04 21:03",
+   "sha256_16": "b084d7ee88e2695d",
    "flags": [],
    "filenames_mentioned": [
     "cmip6_general_boxes.parquet"
@@ -893,9 +893,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "IS THE THRESHOLD-CLASS LAW GENERAL? PRECIPITATION AS WELL AS TEMPERATURE, FIVE MODELS, AND FORCING STRONG ENOUGH TO DISTINGUISH ONE POPULATION FROM FORCED MIXING OF RESPONSE TYPES.",
-   "loc": 363,
-   "modified": "2026-10-04 19:33",
-   "sha256_16": "285ffc2bee091a55",
+   "loc": 486,
+   "modified": "2026-10-05 00:11",
+   "sha256_16": "ed9d0809da8282c5",
    "flags": [],
    "filenames_mentioned": [
     "cmip6_general_boxes.parquet"
@@ -1895,11 +1895,12 @@
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
    "title": "fig5_law.py -- Figure 5: one law for outcome-defined impact classes.",
-   "loc": 185,
-   "modified": "2026-10-04 19:39",
-   "sha256_16": "129830d573b61eab",
+   "loc": 189,
+   "modified": "2026-10-04 23:44",
+   "sha256_16": "2aba7bd876a0fa39",
    "flags": [],
    "filenames_mentioned": [
+    "class_law_general.json",
     "damip_class_law.json",
     "damip_class_law_multimodel.json",
     "davis2021_intervention_test.json",
@@ -2086,11 +2087,12 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 427,
-   "modified": "2026-10-04 19:39",
-   "sha256_16": "79c504e22f84950f",
+   "loc": 446,
+   "modified": "2026-10-04 23:44",
+   "sha256_16": "45ad0459f9c34131",
    "flags": [],
    "filenames_mentioned": [
+    "class_law_general.json",
     "class_model_comparison.json",
     "criterion_regional_contrast.json",
     "criterion_sweep.json",
@@ -2976,7 +2978,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-04 19:41",
+   "modified": "2026-10-05 00:18",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -5907,6 +5909,1024 @@
     "marginal_events",
     "physical_contrast",
     "profiles"
+   ]
+  },
+  {
+   "path": "results/current/8_experiment/class_law_general.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 126700,
+   "modified": "2026-10-05 00:17",
+   "sha256_16": "a58da4d93899480e",
+   "producers": [],
+   "state": "ORPHAN",
+   "detail": "no script writes this",
+   "flags": [],
+   "producer_sha256": {},
+   "verdicts": [
+    {
+     "key": "units.CanESM5_p1|tas|CEUR_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|tas|CEUR_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p1|tas|WRUS_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|tas|WRUS_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p1|tas|CNAM_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|tas|CNAM_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p1|tas|CEAS_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|tas|CEAS_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p1|tas|NSIB_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|tas|NSIB_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p1|tas|NWNA_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|tas|NWNA_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p1|tas|CEUR_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p1|tas|WRUS_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|tas|WRUS_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p1|tas|CNAM_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|tas|CNAM_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p1|tas|CEAS_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|tas|CEAS_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p1|tas|NSIB_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|tas|NSIB_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p1|tas|NWNA_DJF.T1.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "units.CanESM5_p1|tas|NWNA_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|CEUR_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|CEUR_JJA.T3.reading",
+     "text": "not identified"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|CEUR_JJA.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|WRUS_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|WRUS_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|WRUS_JJA.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|CNAM_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|CNAM_JJA.T3.reading",
+     "text": "not identified"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|CNAM_JJA.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|CEAS_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|CEAS_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|NSIB_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|NSIB_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|NWNA_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|NWNA_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|CEUR_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|CEUR_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|WRUS_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|WRUS_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|CNAM_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|CNAM_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|CNAM_DJF.T4.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|CEAS_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|CEAS_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|NSIB_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|NSIB_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|NWNA_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p1|pr|NWNA_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|CEUR_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|CEUR_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|WRUS_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|WRUS_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|CNAM_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|CNAM_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|CEAS_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|CEAS_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|NSIB_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|NSIB_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|NWNA_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|NWNA_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|CEUR_DJF.T1.reading",
+     "text": "fails"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|CEUR_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|WRUS_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|WRUS_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|CNAM_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|CNAM_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|CEAS_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|CEAS_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|NSIB_DJF.T1.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|NSIB_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|NWNA_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|tas|NWNA_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|CEUR_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|CEUR_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|CEUR_JJA.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|WRUS_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|WRUS_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|WRUS_JJA.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|CNAM_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|CNAM_JJA.T3.reading",
+     "text": "not identified"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|CNAM_JJA.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|CEAS_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|CEAS_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|NSIB_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|NSIB_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|NWNA_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|NWNA_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|CEUR_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|CEUR_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|WRUS_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|WRUS_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|CNAM_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|CNAM_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|CNAM_DJF.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|CEAS_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|CEAS_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|NSIB_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|NSIB_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|NWNA_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.CanESM5_p2|pr|NWNA_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|tas|CEUR_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|tas|CEUR_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|tas|WRUS_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|tas|WRUS_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|tas|CNAM_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|tas|CNAM_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|tas|CEAS_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|tas|CEAS_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|tas|NSIB_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|tas|NSIB_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|tas|NWNA_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|tas|NWNA_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|tas|CEUR_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|tas|CEUR_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|tas|WRUS_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|tas|WRUS_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|tas|CNAM_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|tas|CNAM_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|tas|CEAS_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|tas|CEAS_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|tas|NSIB_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|tas|NSIB_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|tas|NWNA_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|tas|NWNA_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|pr|CEUR_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|pr|CEUR_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|pr|CEUR_JJA.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|pr|WRUS_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|pr|WRUS_JJA.T3.reading",
+     "text": "not identified"
+    },
+    {
+     "key": "units.MIROC6|pr|WRUS_JJA.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|pr|CNAM_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|pr|CNAM_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|pr|CNAM_JJA.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|pr|CEAS_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|pr|CEAS_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|pr|CEAS_JJA.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|pr|NSIB_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|pr|NSIB_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|pr|NSIB_JJA.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|pr|NWNA_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|pr|NWNA_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|pr|NWNA_JJA.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|pr|CEUR_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|pr|CEUR_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|pr|CEUR_DJF.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|pr|WRUS_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|pr|WRUS_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|pr|WRUS_DJF.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|pr|CNAM_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|pr|CNAM_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|pr|CNAM_DJF.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|pr|CEAS_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|pr|CEAS_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|pr|CEAS_DJF.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|pr|NSIB_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|pr|NSIB_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|pr|NWNA_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.MIROC6|pr|NWNA_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.MIROC6|pr|NWNA_DJF.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.HadGEM3-GC31-LL|pr|CEUR_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.HadGEM3-GC31-LL|pr|WRUS_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.HadGEM3-GC31-LL|pr|CNAM_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.HadGEM3-GC31-LL|pr|CEAS_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.HadGEM3-GC31-LL|pr|NSIB_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.HadGEM3-GC31-LL|pr|NWNA_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.HadGEM3-GC31-LL|pr|CEUR_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.HadGEM3-GC31-LL|pr|WRUS_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.HadGEM3-GC31-LL|pr|CNAM_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.HadGEM3-GC31-LL|pr|CEAS_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.HadGEM3-GC31-LL|pr|NSIB_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.HadGEM3-GC31-LL|pr|NWNA_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|CEUR_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|CEUR_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|WRUS_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|WRUS_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|CNAM_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|CNAM_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|CEAS_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|CEAS_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|NSIB_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|NSIB_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|NWNA_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|NWNA_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|CEUR_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|CEUR_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|WRUS_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|WRUS_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|CNAM_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|CNAM_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|CEAS_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|CEAS_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|NSIB_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|NSIB_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|NWNA_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|tas|NWNA_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|CEUR_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|CEUR_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|CEUR_JJA.T4.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|WRUS_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|WRUS_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|WRUS_JJA.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|CNAM_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|CNAM_JJA.T3.reading",
+     "text": "not identified"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|CNAM_JJA.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|CEAS_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|CEAS_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|CEAS_JJA.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|NSIB_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|NSIB_JJA.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|NSIB_JJA.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|NWNA_JJA.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|NWNA_JJA.T3.reading",
+     "text": "not identified"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|NWNA_JJA.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|CEUR_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|CEUR_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|CEUR_DJF.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|WRUS_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|WRUS_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|WRUS_DJF.T4.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|CNAM_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|CNAM_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|CNAM_DJF.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|CEAS_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|CEAS_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|NSIB_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|NSIB_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|NWNA_DJF.T1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|NWNA_DJF.T3.reading",
+     "text": "mixing excluded"
+    },
+    {
+     "key": "units.ACCESS-ESM1-5|pr|NWNA_DJF.T4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "T1_by_variable.tas.pooled.reading_pooled",
+     "text": "holds"
+    },
+    {
+     "key": "T1_by_variable.tas.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "T1_by_variable.pr.pooled.reading_pooled",
+     "text": "holds"
+    },
+    {
+     "key": "T1_by_variable.pr.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "T3_by_variable.tas.reading",
+     "text": "forced mixing of response types is excluded"
+    },
+    {
+     "key": "T3_by_variable.pr.reading",
+     "text": "forced mixing of response types is excluded"
+    },
+    {
+     "key": "T3_by_model.CanESM5|tas.reading",
+     "text": "forced mixing of response types is excluded"
+    },
+    {
+     "key": "T3_by_model.CanESM5|pr.reading",
+     "text": "forced mixing of response types is excluded"
+    },
+    {
+     "key": "T3_by_model.MIROC6|tas.reading",
+     "text": "forced mixing of response types is excluded"
+    },
+    {
+     "key": "T3_by_model.MIROC6|pr.reading",
+     "text": "forced mixing of response types is excluded"
+    },
+    {
+     "key": "T3_by_model.ACCESS-ESM1-5|tas.reading",
+     "text": "forced mixing of response types is excluded"
+    },
+    {
+     "key": "T3_by_model.ACCESS-ESM1-5|pr.reading",
+     "text": "forced mixing of response types is excluded"
+    },
+    {
+     "key": "T3_post_hoc_note",
+     "text": "post hoc (2026-10-05, after review): calibration of the registered kappa estimator against exact fixed two-type mixtures matched to each case; registered readings unchanged"
+    }
+   ],
+   "counts": {
+    "n_boot": [
+     10000
+    ]
+   },
+   "top_level_keys": [
+    "registered",
+    "seed",
+    "n_boot",
+    "n_boot_kappa",
+    "n_rep_calibration",
+    "tolerance_sigma",
+    "min_members",
+    "members",
+    "units",
+    "T1_by_variable",
+    "T3_by_variable",
+    "T3_by_model",
+    "T4_summary",
+    "T3_post_hoc_calibration_summary",
+    "T3_post_hoc_note"
    ]
   },
   {

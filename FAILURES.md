@@ -302,3 +302,13 @@ Rule: a calibration must apply exactly the observed estimator, including how und
 Tried: `ps ... | grep acquire_cmip6_general` showed only the parent, so the download was declared stalled, the parent killed and the pool relaunched.
 Failed: spawn workers run as `python -c "from multiprocessing.spawn ..."`, so the grep cannot see them; they were alive (EC-Earth3 is just slow) and became orphans racing the new pool on the same cache files.
 Rule: find workers by parent PID (`ps -eo pid,ppid,etime,args`), judge progress by cache-file mtimes over 10+ minutes, and kill a pool by its process group.
+
+## 2026-10-05 — Pangeo EC-Earth3 historical stores mostly start in 1970
+Tried: class_law_general registered EC-Earth3 with an early-historical reference arm 1951-1980 (>= 15 members per year required).
+Failed: 50 of the 58 EC-Earth3 historical Amon stores on Pangeo begin in 1970-01; only 8 members cover 1951-1980, so the registered rule excluded the model after 2 h of download.
+Rule: before registering a period, check each store's time span in the catalogue/metadata (open one store per version), not just the member count.
+
+## 2026-10-05 — A registered discriminator whose power was checked only in an easy design
+Tried: class_law_general T3 (variance-mean curvature; fixed-type mixing gives -1) with the reading "excluded if lower bound > -0.5", selftested on evenly spaced weights (kappa -0.90).
+Failed: in the real design (two levels close, one far) noise in the year means attenuates kappa to -0.3..-0.8 under true mixing, so "identified" was not "has power" and the registered reading claimed 42/42 precipitation exclusions; calibrated against matched mixtures only 29/48 hold. Found by review.
+Rule: before registering a reading, simulate the alternative in the actual design (member counts, level spacing, trends) and set the cut from that; calibration grids must include the boundary (pure switch) finely.

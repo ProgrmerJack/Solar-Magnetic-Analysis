@@ -1,0 +1,75 @@
+{
+ "T3_two_types_D3": {
+  "kappa": -0.8989,
+  "ci95": [
+   -1.0842,
+   -0.7181
+  ],
+  "reading": "consistent with mixing",
+  "mean_range_sd": 1.603,
+  "var_range": [
+   0.51,
+   1.67
+  ],
+  "n_index": 30
+ },
+ "T3_one_population": {
+  "kappa": -0.044,
+  "ci95": [
+   -0.0728,
+   -0.0152
+  ],
+  "reading": "mixing excluded",
+  "mean_range_sd": 4.65,
+  "var_range": [
+   0.263,
+   1.519
+  ],
+  "n_index": 30
+ },
+ "T3_one_population_gamma": {
+  "kappa": 0.1263,
+  "ci95": [
+   -0.1045,
+   0.4429
+  ],
+  "reading": "mixing excluded",
+  "mean_range_sd": 2.989,
+  "var_range": [
+   0.387,
+   6.971
+  ],
+  "n_index": 30
+ },
+ "T1_exact_law": {
+  "observed": 0.0006,
+  "range95": [
+   -0.1111,
+   0.113
+  ],
+  "expected": 0.0008
+ },
+ "T1_skew_change": {
+  "observed": -0.131,
+  "range95": [
+   -0.0629,
+   0.0648
+  ]
+ },
+ "T2_skew_change": {
+  "dg": -0.4643,
+  "observed": -0.0096,
+  "range95_under_law": [
+   -0.0753,
+   0.0355
+  ],
+  "inside_range": true,
+  "share_nonmonotone": 0.0
+ },
+ "T3_calibration_share_excluded": {
+  "true_mixture_D3_w0.1_0.15_0.9": "0/20",
+  "one_population_shift4": "20/20",
+  "one_population_shift0.8": "0/20"
+ }
+}
+SELFTEST PASS

@@ -19,10 +19,12 @@ Reads (recomputes only the Gaussian curve and per-unit values stored in the file
   c  elasticity of the contrast with respect to the spread: one population
      predicts 1, forced mixing of two response types 0.58, 0.35, 0.14 for
      separations of 2, 3, 4 s.d. (threshold_law_theory.json)
-  d  second domain (CanESM5 p1/p2, MIROC6, HadGEM3; historical vs natural forcing,
-     1985-2014): observed law residual per model and region against its expectation
-     when the law holds exactly with the model's own distribution (post hoc; grey,
-     95% range); dashed, equality
+  d  forced mixing of response types (class_law_general.json, T3, registered): curvature
+     of the ensemble variance in the ensemble mean across natural or early-historical,
+     historical and SSP5-8.5 forcing, per model-region-season case, against how far the
+     forcing moves the arm mean; fixed types give -1, one population with linear spread
+     change >= 0; filled, mixing excluded by the post-hoc calibration against matched
+     fixed-type mixtures; open, not excluded
 """
 import json
 import sys
@@ -59,6 +61,7 @@ def main():
                                J("davis2021_intervention_test.json"), J("snapsi_free_natural_experiment.json"),
                                J("damip_class_law.json"))
     dmm = J("damip_class_law_multimodel.json")
+    gen2 = J("class_law_general.json")
     grey, verm, blue = "0.55", S.C["vermillion"], S.C["blue"]
     fig = plt.figure(figsize=(S.DOUBLE, 118 * S.MM))
     gs = fig.add_gridspec(2, 2, wspace=0.36, hspace=0.62)
@@ -110,6 +113,9 @@ def main():
         rows.append(("24 regional cold classes", g6["resid_law"], g6["resid_shift"]))
     if dmm:
         rows.append(("human forcing, 3 models", dmm["M1_CEUR_JJA_three_models"], None))
+    if gen2:
+        rows.append(("temperature, 3 models", gen2["T1_by_variable"]["tas"]["pooled"], None))
+        rows.append(("precipitation, 4 models", gen2["T1_by_variable"]["pr"]["pooled"], None))
     bx.axvspan(-0.25, 0.25, color="0.92", zorder=0)
     for i, (lab, law, sh) in enumerate(rows):
         if sh is not None:
@@ -153,29 +159,27 @@ def main():
     cx.set_title("elasticity: one population 1; forced mixing of types ≥ 2 s.d. apart below 0.6", fontsize=6)
     S.panel_label(cx, "c", x=-0.62, y=1.04)
 
-    # d -- second domain: observed law residual against its expectation under the exact law
+    # d -- forced mixing of fixed response types: variance-mean curvature
     dx = fig.add_subplot(gs[1, 1])
-    if dmm:
-        cal = dmm["post_hoc_calibration_empirical_shape"]["per_model_target"]
-        cols = {"CanESM5_p1": verm, "CanESM5_p2": S.C["orange"], "MIROC6": S.C["green"], "HadGEM3-GC31-LL": blue}
-        mk = {"JJA": "o", "DJF": "s"}
-        for k, v in cal.items():
-            m, t = k.split("|")
-            lo, hi = v["range95_under_law"]
-            dx.plot([v["expected_under_law"]] * 2, [lo, hi], color="0.75", lw=0.6, zorder=1)
-            dx.scatter(v["expected_under_law"], v["observed"], s=14, color=cols[m], marker=mk[t.split("_")[1]], zorder=3)
-        lim = (-0.3, 0.3)
-        dx.plot(lim, lim, color="k", lw=0.6, ls=(0, (3, 2)))
-        for m, c in cols.items():
-            dx.scatter([], [], s=12, color=c, label=m.replace("-GC31-LL", ""))
-        dx.scatter([], [], s=12, color="0.4", marker="o", label="summer (hot class)")
-        dx.scatter([], [], s=12, color="0.4", marker="s", label="winter (cold class)")
-        dx.legend(fontsize=4.4, loc="upper left")
-        dx.set_xlim(lim); dx.set_ylim(lim)
-        n_in = sum(v["inside_range"] for v in cal.values())
-        dx.set_title(f"human forcing: {n_in} of {len(cal)} model-region cases inside the law's 95% range", fontsize=5.8)
-    dx.set_xlabel("law residual expected under the exact law (σ)")
-    dx.set_ylabel("observed law residual (σ)")
+    if gen2:
+        cols = {"tas": verm, "pr": blue}
+        for k, u in gen2["units"].items():
+            if "T3" not in u:
+                continue
+            t = u["T3"]; c = u.get("T3_post_hoc_calibration", {}); var = k.split("|")[1]
+            ex = bool(c.get("mixing_excluded_calibrated")); x = c.get("forced_change_sd", t["mean_range_sd"])
+            dx.plot([x] * 2, t["ci95"], color=cols[var], lw=0.5, alpha=0.5, zorder=1)
+            dx.scatter(x, t["kappa"], s=9, zorder=3, color=cols[var] if ex else "white", edgecolor=cols[var], linewidth=0.6)
+        dx.axhline(-1, color="k", lw=0.7, ls=":"); dx.axhline(0, color="k", lw=0.5)
+        dx.text(0.22, -0.95, "fixed response types (−1)", fontsize=4.8, va="bottom")
+        dx.text(0.22, 0.05, "one population", fontsize=4.8, va="bottom")
+        dx.scatter([], [], s=9, color=verm, label="temperature"); dx.scatter([], [], s=9, color=blue, label="precipitation")
+        dx.scatter([], [], s=9, color="white", edgecolor="0.4", label="mixing not excluded (calibrated)")
+        dx.legend(fontsize=4.4, loc="upper right")
+        dx.set_xscale("log"); dx.set_ylim(-1.3, 2.5)
+        dx.set_title("forced mixing of fixed types would make variance fall with mean²", fontsize=5.8)
+    dx.set_xlabel("forced change of the mean, lowest to highest forcing (s.d. of the reference)")
+    dx.set_ylabel("curvature of ensemble variance in mean")
     S.panel_label(dx, "d", x=-0.2, y=1.04)
     S.save(fig, "fig5_law")
 

@@ -61,8 +61,20 @@ T4 SECONDARY -- the T1 law under strong forcing, M -> H, for units with a define
    contrast in >= 15 years (shifts of several s.d. leave the forced class empty
    elsewhere; expected mainly for precipitation). Reading as T1, per unit.
 
+POST HOC (added 2026-10-05 after the registered run, prompted by review): the T3
+   estimator is attenuated towards 0 when L and M lie close together (noise in the
+   year means), so "identified" does not mean "has power". --posthoc-t3 calibrates
+   each case against exact fixed two-type mixtures (Gaussian types, unequal widths)
+   that reproduce its L and H arm means and variances, its M mean, its member counts
+   and the linear trend of its year means within each level, over a grid of type
+   separations (1-5 x the forced change, steps of 0.02 near 1) and 11 weights; 400
+   replicates each. Mixing is excluded only if the observed
+   kappa exceeds the 97.5th percentile under EVERY feasible mixture. Also records the
+   forced change of the arm mean, |mean H - mean L| in s.d. of L. Own random stream;
+   registered numbers unchanged.
+
 Output: results/current/8_experiment/class_law_general.json
-Run:    class_law_general.py [--selftest]
+Run:    class_law_general.py [--selftest | --posthoc-t3]
 """
 import json
 import sys
@@ -211,6 +223,104 @@ def t3_unit(arms, rng):
             "var_range": [round(float(P[:, 1].min()), 3), round(float(P[:, 1].max()), 3)], "n_index": int(len(idx))}
 
 
+# ------------------------------------------------------------------ T3 post hoc calibration
+def t3_calibrate(arms, k_obs, rng, n_rep=400):
+    """Distribution of the registered kappa estimator under exact fixed two-type mixing
+    matched to this case (see docstring); returns the strictest 97.5th percentile."""
+    L = arms[0]
+    m0 = np.mean([v.mean() for v in L.values()]); s0 = np.sqrt(np.mean([v.var(ddof=1) for v in L.values()]))
+    std = [{i: (v - m0) / s0 for i, v in a.items()} for a in arms]
+    mu = [np.mean([v.mean() for v in a.values()]) for a in std]
+    V = [np.mean([v.var(ddof=1) for v in a.values()]) for a in std]
+    sgn = 1.0 if mu[2] >= mu[0] else -1.0
+    mu = [sgn * x for x in mu]
+    # forced trend within each level: linear fit of the year means (sampling noise not copied)
+    trend = []
+    for a, m in zip(std, mu):
+        ii = np.array(sorted(a)); ym = sgn * np.array([a[i].mean() for i in ii])
+        b = np.polyfit(ii, ym, 1)
+        trend.append({int(i): float(np.polyval(b, i) - m) for i in ii})
+    d = mu[2] - mu[0]
+    out = {"forced_change_sd": round(float(d), 3), "combos": 0}
+    if d <= 0:
+        return out
+    q_max, k_means = -np.inf, []
+    # fine near the pure switch (c = 1), where feasible mixtures can lie between coarse steps (review, 2026-10-05)
+    for c in (1.0, 1.02, 1.04, 1.06, 1.08, 1.1, 1.15, 1.2, 1.25, 1.5, 2.0, 3.0, 5.0):
+        D = c * d
+        for wL in (np.linspace(0.0, 1.0 - 1 / c, 11) if c > 1 else [0.0]):
+            w = [wL, wL + (mu[1] - mu[0]) / D, wL + 1 / c]
+            if not (0 <= w[1] <= 1 and w[2] <= 1):
+                continue
+            A = np.array([[1 - w[0], w[0]], [1 - w[2], w[2]]])
+            rhs = np.array([V[0] - w[0] * (1 - w[0]) * D * D, V[2] - w[2] * (1 - w[2]) * D * D])
+            try:
+                sa2, sb2 = np.linalg.solve(A, rhs)
+            except np.linalg.LinAlgError:
+                continue
+            if sa2 <= 0.01 or sb2 <= 0.01:
+                continue
+            a0 = mu[0] - w[0] * D
+            ks = []
+            for _ in range(n_rep):
+                sim = []
+                for j, arm in enumerate(std):
+                    sim.append({i: None for i in arm})
+                    for i, v in arm.items():
+                        wi = float(np.clip(w[j] + trend[j][i] / D, 0, 1))
+                        b = rng.random(len(v)) < wi
+                        sim[j][i] = np.where(b, a0 + D + np.sqrt(sb2) * rng.normal(size=len(v)), a0 + np.sqrt(sa2) * rng.normal(size=len(v)))
+                pts = curvature_points(sim)
+                ks.append(kappa(pts, np.array(sorted(pts))))
+            out["combos"] += 1
+            q_max = max(q_max, float(np.quantile(ks, 0.975))); k_means.append(float(np.mean(ks)))
+    if out["combos"]:
+        out.update({"q975_max_under_mixing": round(q_max, 4), "mean_kappa_under_mixing_range": [round(min(k_means), 4), round(max(k_means), 4)],
+                    "kappa_observed": round(float(k_obs), 4), "mixing_excluded_calibrated": bool(k_obs > q_max)})
+    return out
+
+
+def _cal_job(job):
+    key, arms, k, seed = job
+    return t3_calibrate(arms, k, np.random.default_rng(seed))
+
+
+def posthoc_t3():
+    res = json.loads((RESULTS / f"{NAME}.json").read_text())
+    d = pd.read_parquet(DATA).copy()
+    can = d.model == "CanESM5"
+    d.loc[can, "model"] = "CanESM5_" + d.loc[can, "member"].str.extract(r"i\d+(p\d+)f\d+")[0]
+    jobs = []
+    for n, (key, u) in enumerate(res["units"].items()):
+        if "T3" not in u:
+            continue
+        m, var, bs = key.split("|"); box, season = bs.split("_")
+        s = seasonal(d[d.model == m], var, box, season)
+        jobs.append((key, [arm_years(s, LEVEL_L[m]), arm_years(s, LEVEL_M), arm_years(s, LEVEL_H)], u["T3"]["kappa"], SEED + 7 + n))
+    import multiprocessing as mp
+    with mp.get_context("fork").Pool(8) as pool:          # numpy only: fork is safe here
+        outs = pool.map(_cal_job, jobs)
+    summ = {}
+    for (key, *_), c in zip(jobs, outs):
+        res["units"][key]["T3_post_hoc_calibration"] = c
+        summ.setdefault(key.split("|")[1], []).append(c)
+        print(key, c, flush=True)
+    res["T3_post_hoc_calibration_summary"] = {
+        var: {"n_cases": len(v), "n_with_feasible_mixture": sum(1 for c in v if c["combos"]),
+              "n_mixing_excluded_calibrated": sum(1 for c in v if c.get("mixing_excluded_calibrated")),
+              "forced_change_sd_range": [min(c["forced_change_sd"] for c in v), max(c["forced_change_sd"] for c in v)],
+              "forced_change_sd_range_excluded": ([min(c["forced_change_sd"] for c in v if c.get("mixing_excluded_calibrated")),
+                                                   max(c["forced_change_sd"] for c in v if c.get("mixing_excluded_calibrated"))]
+                                                  if any(c.get("mixing_excluded_calibrated") for c in v) else None)}
+        for var, v in summ.items()}
+    res["T3_post_hoc_note"] = ("post hoc (2026-10-05, after review): calibration of the registered kappa estimator against "
+                               "exact fixed two-type mixtures matched to each case; registered readings unchanged")
+    print(json.dumps(res["T3_post_hoc_calibration_summary"]), flush=True)
+    (RESULTS / f"{NAME}.json").write_text(json.dumps(res, indent=1, default=float), encoding="utf8", newline="\n")
+    print(f"Saved -> {NAME}.json (post hoc T3 block added)")
+    return 0
+
+
 # ------------------------------------------------------------------ readings
 def reading(r):
     lo, hi = r["ci95"]
@@ -339,10 +449,21 @@ def selftest():
     rg, ex = calib_ls(ref, frc, f.dropna(subset=["resid_law"]), 1 / 3, "cold", rng)
     out["T1_skew_change"] = {"observed": round(float(f.resid_law.mean()), 4), "range95": rg}
     out["T2_skew_change"] = t2_unit(ref, frc, 1 / 3, "cold", rng)
+    # POST HOC (2026-10-05): size and power of the T3 calibration in the review's hard design
+    # (L and M close, H far; 25 members): a true mixture must not be excluded
+    cal = {"true_mixture_D3_w0.1_0.15_0.9": [], "one_population_shift4": [], "one_population_shift0.8": []}
+    for _ in range(20):
+        for lab, gen in (("true_mixture_D3_w0.1_0.15_0.9", lambda: [{i: mix(25, w, 3.0) for i in range(30)} for w in (0.1, 0.15, 0.9)]),
+                         ("one_population_shift4", lambda: [{i: mu + sd * rng.normal(size=25) for i in range(30)} for mu, sd in ((0, 1), (0.5, 1), (4, 0.8))]),
+                         ("one_population_shift0.8", lambda: [{i: mu + sd * rng.normal(size=25) for i in range(30)} for mu, sd in ((0, 1), (0.2, 1), (0.8, 1.1))])):
+            arms = gen(); k = kappa(curvature_points(arms), np.arange(30))
+            cal[lab].append(bool(t3_calibrate(arms, k, rng).get("mixing_excluded_calibrated")))
+    out["T3_calibration_share_excluded"] = {k: f"{sum(v)}/{len(v)}" for k, v in cal.items()}
     print(json.dumps(out, indent=1))
     ok = (out["T3_two_types_D3"]["reading"] == "consistent with mixing" and out["T3_one_population"]["reading"] == "mixing excluded"
           and out["T3_one_population_gamma"]["reading"] == "mixing excluded"
-          and out["T1_exact_law"]["range95"][0] <= out["T1_exact_law"]["observed"] <= out["T1_exact_law"]["range95"][1])
+          and out["T1_exact_law"]["range95"][0] <= out["T1_exact_law"]["observed"] <= out["T1_exact_law"]["range95"][1]
+          and sum(cal["true_mixture_D3_w0.1_0.15_0.9"]) <= 1)
     print("SELFTEST", "PASS" if ok else "FAIL")
     return 0 if ok else 1
 
@@ -350,6 +471,8 @@ def selftest():
 def main():
     if "--selftest" in sys.argv:
         return selftest()
+    if "--posthoc-t3" in sys.argv:
+        return posthoc_t3()
     if not DATA.exists():
         sys.exit("no data: run 03_data_ingestion/acquire_cmip6_general.py")
     res = analyse(pd.read_parquet(DATA))

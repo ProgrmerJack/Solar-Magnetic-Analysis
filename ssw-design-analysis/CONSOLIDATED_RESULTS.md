@@ -1316,6 +1316,30 @@ D-MM (CanESM5 p1/p2 separately, MIROC6, HadGEM3; GISS dropped; corrected null, 2
 Novelty: identity is textbook (truncated moments); null = Doksum 1974 / Koenker & Xiao 2002 location-scale treatment
   effect; alternative = Palmer 1999 forced regime frequency. Title now SSW-scoped (88 chars); main text 3,999 words.
 
+### Z11 — the law is general: precipitation, more models, strong forcing, and no forced type mixing (`class_law_general.py`, 8_experiment; registered `80edfc5` before data)
+Data: Pangeo/ESGF monthly tas+pr box means, 1,119 member-variable series = 626 simulations, 510 analysed
+  (acquire_cmip6_general.py). EC-Earth3 EXCLUDED by the registered rule (>= 15 years with >= 15 members per arm): only
+  8 historical stores cover 1951-1980; all 58 only from 1970 (10-11 usable years). Units: CanESM5 p1/p2, MIROC6, ACCESS-ESM1-5
+  (tas+pr), HadGEM3 (pr) x 6 boxes x JJA/DJF; classes tas JJA hot, DJF cold, pr JJA dry, DJF wet.
+T1 (law, L -> M = hist-nat or 1951-80 -> historical 1985-2014): tas pooled -0.007 [-0.021, +0.007], 44/47 hold,
+  2 inconclusive, 1 fails (CanESM5 p2 CEUR DJF -0.27); 94% inside calibration -> "the law holds" (tas CanESM5/MIROC6
+  hist vs hist-nat was already seen in D-MM). pr (NEW): pooled -0.004 [-0.011, +0.002], 60/60 hold, 95% inside ->
+  "the law holds". Rate changes: wet winters +0.17 mean, +0.15 median (to +0.44); dry summers +0.02 median.
+T2 (skew law) brings 5 of 6 calibration departures inside (tas 3/3, pr 2/3; MIROC6 pr CEUR DJF stays outside).
+T3 (variance-mean curvature over hist-nat/early, historical, ssp585 2071-2100; fixed types give exactly -1):
+  REGISTERED reading: tas kappa 0.00 (-0.04..+0.04), 48/48 mixing excluded; pr kappa 0.01 (-0.26..+1.04), 42/42
+  identified excluded, 6 not identified -> "excluded" for both variables and every model.
+  BUT (review): the estimator is attenuated towards 0 (noise in year means; exact mixtures average -1.03 to +0.56
+  depending on case and mixture), so "identified" != "has power". POST HOC calibration against matched fixed
+  two-type mixtures (--posthoc-t3; grid refined after a second review: c steps 0.02 near 1, 11 weights, 400 reps):
+  tas 48/48 excluded (forced change of arm mean 2.7-17 sd); pr 29/48 excluded: 26/27 with change > 1.4 sd (20/24
+  winters), 3/21 below (little power). Strongly forced exception: ACCESS pr CEUR JJA (2.0 sd, -0.162 vs q975
+  -0.008). The earlier "3.6-22 sd" / "1.1-2.1 sd" were max-min of year points, not forced changes.
+  Claim: fixed-type mixing excluded for temperature and strongly forced precipitation. kappa ~ -1 would NOT prove
+  mixing (one population whose variance follows -mu^2 also gives -1).
+T4 (law under ssp585 2071-2100 vs historical 1985-2014, pr only; tas classes empty): 26/29 hold, 3 inconclusive
+  (-0.25, -0.18, +0.15), none fails; sd ratios to 1.39, rate changes to +0.56.
+
 ### Z7 — prospective test (`prospective_next_ssw.py`, 9_literature; registered `d2b54a8`, window amended to 2036 before any onset)
 Prediction table for every onset day 1 Nov–31 Mar committed; shift nam_1000 −0.635, nam_150 −0.945, N-Eurasian T days
 8–24 −1.54 K; constant rate 0.692; T trend 0.037 K/yr. P(DW) shifted 0.71–0.84 vs climatology 0.24–0.44.

@@ -74,6 +74,7 @@ def main():
     FRE = J("snapsi_free_natural_experiment.json")
     DAM = J("damip_class_law.json")
     DMM = J("damip_class_law_multimodel.json")
+    CLG = J("class_law_general.json")
     R2 = ("robustness (revision 2)", "committed before run", "4c8b3f2")
     mm = g(MMt, "multimodel", "confirmatory"); nr = g(SRt, "regions", "NEURASIA", "multimodel", "confirmatory")
     rows = [
@@ -358,6 +359,24 @@ def main():
         ("MM-3", "same: winter cold classes, CanESM5 and MIROC6 (law residuals; registered reading)", "revision-7 secondary",
          "committed before data", "a280a10",
          ", ".join(f"{k.split('|')[0]} {k.split('|')[1]} {v['law']['mean']} ({v['reading']})" for k, v in (DMM or {}).get('per_model_target', {}).items() if 'DJF' in k and not k.startswith('HadGEM3')) if DMM else "pending", None),
+        ("GL-1", "generality: law residual for temperature classes, human forcing, CanESM5 p1/p2, MIROC6, ACCESS-ESM1-5 (pooled, models equal)", "revision-8 primary",
+         "committed before data", "80edfc5",
+         (f"{g(CLG,'T1_by_variable','tas','pooled','mean')} {g(CLG,'T1_by_variable','tas','pooled','ci95')}; "
+          f"share inside calibration {g(CLG,'T1_by_variable','tas','share_inside_calibration')} ({g(CLG,'T1_by_variable','tas','n_units')} cases); {g(CLG,'T1_by_variable','tas','reading')}") if CLG else "pending", None),
+        ("GL-2", "same for precipitation classes (dry summers, wet winters), adding HadGEM3-GC31-LL", "revision-8 primary",
+         "committed before data", "80edfc5",
+         (f"{g(CLG,'T1_by_variable','pr','pooled','mean')} {g(CLG,'T1_by_variable','pr','pooled','ci95')}; "
+          f"share inside calibration {g(CLG,'T1_by_variable','pr','share_inside_calibration')} ({g(CLG,'T1_by_variable','pr','n_units')} cases); {g(CLG,'T1_by_variable','pr','reading')}") if CLG else "pending", None),
+        ("GL-3", "forced mixing of fixed response types: variance-mean curvature over natural/early-historical, historical, SSP5-8.5 (fixed types -1)", "revision-8 primary",
+         "committed before data", "80edfc5",
+         "; ".join(f"{v}: {g(CLG,'T3_by_variable',v,'n_mixing_excluded')} of {g(CLG,'T3_by_variable',v,'n_identified')} identified exclude mixing "
+                   f"({g(CLG,'T3_by_variable',v,'n_units')} cases); {g(CLG,'T3_by_variable',v,'reading')}; calibrated against matched fixed-type mixtures "
+                   f"(post hoc): {g(CLG,'T3_post_hoc_calibration_summary',v,'n_mixing_excluded_calibrated')} of {g(CLG,'T3_post_hoc_calibration_summary',v,'n_cases')} excluded"
+                   for v in ("tas", "pr")) if CLG else "pending", None),
+        ("GL-4", "the law under SSP5-8.5 2071-2100 vs historical 1985-2014 (precipitation classes; temperature classes empty)", "revision-8 secondary",
+         "committed before data", "80edfc5",
+         (f"{g(CLG,'T4_summary','holds')} of {g(CLG,'T4_summary','n_units')} hold, {g(CLG,'T4_summary','inconclusive')} inconclusive, "
+          f"{g(CLG,'T4_summary','fails')} fail") if CLG else "pending", None),
         ("DAV", "January 2021, CESM2(WACCM6) SSW vs scrambled-stratosphere ensembles (21 members), 4 Jan initialisation: back-shift contrast difference; not rejected, low power",
          "revision-5 primary", "committed before data", "738a422",
          f"{g(DAV,'pairs','04jan','Delta_b')} {g(DAV,'pairs','04jan','ci95','Delta_b')}" if DAV else "pending", None),
