@@ -86,9 +86,12 @@ AMENDMENT 2026-10-07, before any onset (the window opens 1 November 2026; foreca
   scores unchanged): the reading above checked an ordinary 95% interval after every
   event from the fifth, a repeated-looks design whose error rate exceeds 5%. The
   verdict now comes from ONE final analysis, run once the last onset of the window
-  can be scored (from 1 May 2036), with the same statistic and interval, and only if
-  at least five events were scored (otherwise "not decided"). Cumulative summaries
-  before then are descriptive and carry no verdict ("interim").
+  can be scored (from 1 July 2036: a 31 March onset's day-52 outcome ends 22 May, plus
+  reanalysis latency) and no detected event's outcome window is incomplete, with the
+  same statistic and interval, and only if at least five events were scored
+  (otherwise "not decided"). The first final verdict is stored ("final_analysis") and
+  never recomputed. Cumulative summaries before then are descriptive and carry no
+  verdict ("interim"). (Date and the one-look rule corrected 2026-10-07 after review.)
 
 USAGE
   prospective_next_ssw.py                     build and save the prediction table
@@ -352,7 +355,8 @@ def score(m, committed, inputs, gate_res):
             bs = [rng.choice(v, len(v)).mean() for _ in range(N_BOOT)]
             ci = [float(x) for x in np.quantile(bs, [0.025, 0.975])]
             import datetime
-            if datetime.date.today() < FINAL_ANALYSIS_FROM:      # one final look (amendment 2026-10-07)
+            pending = any("incomplete" in str(x.get("status", "")) for x in scored)
+            if datetime.date.today() < FINAL_ANALYSIS_FROM or pending:      # one final look (amendment 2026-10-07)
                 verdict = "interim: descriptive, no verdict before the final analysis"
             else:
                 verdict = ("not decided" if len(v) < 5 else
@@ -363,7 +367,7 @@ def score(m, committed, inputs, gate_res):
 
 
 import datetime as _dt
-FINAL_ANALYSIS_FROM = _dt.date(2036, 5, 1)
+FINAL_ANALYSIS_FROM = _dt.date(2036, 7, 1)
 
 
 def main():
@@ -382,6 +386,13 @@ def main():
         if not g.get("passed"):
             sys.exit(f"consistency gate not passed: {g}")
         prev["scores"] = score(m, prev["predictions"], prev["inputs"], g)
+        cum = prev["scores"]["cumulative"]
+        final = any(isinstance(v, dict) and not str(v.get("reading", "")).startswith("interim") for v in cum.values())
+        if final and "final_analysis" not in prev:        # the one look: stored once, never recomputed
+            import datetime
+            prev["final_analysis"] = {"date": str(datetime.date.today()), "cumulative": cum}
+        if "final_analysis" in prev:
+            prev["scores"]["verdict_of_record"] = prev["final_analysis"]
         print(json.dumps(prev["scores"], indent=1))
     else:
         prev = {"registered": "2026-10-02; prediction table committed before any scored onset",

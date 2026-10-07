@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-07T14:14:22+00:00",
+ "generated": "2026-10-07T14:27:26+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -1552,9 +1552,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "DOES AN IMPOSED SSW LEAVE THE CLASS STRUCTURE UNCHANGED WHERE THE FORCING IS STRONGEST, IN A THIRD EVENT, AND FOR A VARIABLE NOT USED TO CLASSIFY? Registered 2026-10-02 (revision 5), committed before any of these quantities was",
-   "loc": 886,
-   "modified": "2026-10-07 14:06",
-   "sha256_16": "10d57654eda187da",
+   "loc": 918,
+   "modified": "2026-10-07 14:24",
+   "sha256_16": "3d5a308a513cc3a2",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_selection_test.json"
@@ -1834,9 +1834,9 @@
    "tree": "ssw-design-analysis",
    "stage": "08_literature_audit",
    "title": "A REGISTERED PROSPECTIVE TEST OF THE SHIFTED NULL ON THE NEXT SSWs.",
-   "loc": 408,
-   "modified": "2026-10-07 13:43",
-   "sha256_16": "102cb9bcbbb06763",
+   "loc": 419,
+   "modified": "2026-10-07 14:24",
+   "sha256_16": "79e5549f7a56cca8",
    "flags": [],
    "filenames_mentioned": [
     "era5_realtime_cds.parquet",
@@ -1942,15 +1942,16 @@
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
    "title": "fig5_law.py -- Figure 5: one law for outcome-defined impact classes.",
-   "loc": 189,
-   "modified": "2026-10-04 23:44",
-   "sha256_16": "2aba7bd876a0fa39",
+   "loc": 188,
+   "modified": "2026-10-07 14:26",
+   "sha256_16": "29f92c2a84674f19",
    "flags": [],
    "filenames_mentioned": [
     "class_law_general.json",
     "damip_class_law.json",
     "damip_class_law_multimodel.json",
     "davis2021_intervention_test.json",
+    "mixture_moment_test.json",
     "snapsi_contrast_generality.json",
     "snapsi_free_natural_experiment.json",
     "snapsi_selection_test.json",
@@ -2134,9 +2135,9 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 457,
-   "modified": "2026-10-07 14:14",
-   "sha256_16": "eeead3560aa238a3",
+   "loc": 463,
+   "modified": "2026-10-07 14:25",
+   "sha256_16": "d52903405b6647e4",
    "flags": [],
    "filenames_mentioned": [
     "class_law_general.json",
@@ -2152,6 +2153,7 @@
     "forecast_value_robustness.json",
     "forecast_value_test.json",
     "icon_event_heterogeneity.json",
+    "mixture_moment_test.json",
     "obs_model_compatibility.json",
     "prospective_next_ssw.json",
     "response_shape_dose.json",
@@ -8326,9 +8328,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 404688,
-   "modified": "2026-10-07 14:08",
-   "sha256_16": "bd866bd9c4510226",
+   "bytes": 405530,
+   "modified": "2026-10-07 14:24",
+   "sha256_16": "972816a62a6bdddd",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_free_natural_experiment.py"
    ],
@@ -8742,7 +8744,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "10d57654eda187da",
+    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "3d5a308a513cc3a2",
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "6626a155b09d3623"
    },
    "verdicts": [

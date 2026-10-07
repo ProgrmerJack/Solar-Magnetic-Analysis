@@ -1355,12 +1355,12 @@ Also: prospective stopping rule amended `acd8ba7` (one final analysis from 1 May
 ### Z13 — SSW exclusion by test inversion (G8x, post hoc) and the 1.14 explained (G9, registered `752fcb7`)
 G8x: the G8 "no rejection + power >= 0.8" exclusion is not a confidence-set exclusion (and two arms cannot reject
   arbitrary two-type mixing). Inversion over two Gaussian types (D 1-4, width ratio 0.5-2, weights 0.05-0.95 per arm,
-  common to the 36 pairs; 400 sims each): 1,770/1,980 rejected; of 558 able to produce >= half the mean imposed
-  shift (1.57 control sd), 552 rejected; survivors = D 1, equal widths (indistinguishable from one population), max
-  implied shift 0.88. Types >= 2.5 sd apart: all rejected (except dw 0.05 at width ratio 2).
+  common to the 36 pairs; 400 sims each): 1,770/1,980 rejected; of 275 able to produce >= half the mean imposed
+  shift (-1.57 control sd) IN ITS DIRECTION, 272 rejected (review: the first count, 552/558, mixed in opposite-
+  direction mixtures); survivors = D 1, equal widths (indistinguishable from one population), max implied shift 0.88. Types >= 2.5 sd apart: all rejected (except dw 0.05 at width ratio 2).
 G9: observed two-condition slope 1.1434 reproduced; timing-only exact-law calibration (time-varying shift s(t),
   5-day smoothing) 1.09 [0.99, 1.21] CONTAINS it; time-varying mean+spread 1.07 [0.97, 1.19]; held out 8/10 splits
-  inside; longest negative run unchanged (+0.05 [-6.0, +6.1] steps) -> "the excess is the timing of the forced
+  inside; longest negative run unchanged on average (+0.05 steps; 95% of single pair differences -6.0..+6.1) -> "the excess is the timing of the forced
   response". The paper's "excess we cannot explain" is replaced.
 "Second order" claim qualified to near the median of a symmetric population.
 
@@ -1368,7 +1368,7 @@ G9: observed two-condition slope 1.1434 reproduced; timing-only exact-law calibr
 Prediction table for every onset day 1 Nov–31 Mar committed; shift nam_1000 −0.635, nam_150 −0.945, N-Eurasian T days
 8–24 −1.54 K; constant rate 0.692; T trend 0.037 K/yr. P(DW) shifted 0.71–0.84 vs climatology 0.24–0.44.
 CDS ERA5T consistency gate PASSED (Dec 2021–Mar 2022: NAM r 1.000, RMS ≤ 0.002σ; N-Eurasian T r 0.999, RMS 0.087 s.d.,
-bias +0.26 K, removed from real-time T). Primary CRPS of days 8–52 NAM; decisive from 5 events (P 0.118 by 2030,
+bias +0.26 K, removed from real-time T). Primary CRPS of days 8–52 NAM; decided once, by a single final analysis from 1 July 2036 with >= 5 events (amended acd8ba7; P(5 events) 0.118 by 2030,
 0.767 by 2036 at 43/67 per winter, computed by odds()). Amended b2416e0 before any onset (review): month-day keying for
 leap years, full integrity check with skip-not-exit, bias correction, easterly tie rule (< 0 m/s, first-retrieved ERA5T).
 No onsets scored yet (data to 2026-09-27). Externally timestamped: GitHub PushEvent 2026-10-03T04:59:43Z, head 8b59fbb

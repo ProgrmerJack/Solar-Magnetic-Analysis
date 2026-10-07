@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-07T14:14:22+00:00",
+ "generated": "2026-10-07T14:27:26+00:00",
  "generator": "tools/catalog_repo.py",
  "note": "Every ssw-design-analysis result in one file. The per-script JSONs remain on disk as write-side provenance; this is the read path. Regenerate with tools/catalog_repo.py.",
  "results": {
@@ -82132,7 +82132,42 @@
       "implied_shift": -0.093,
       "rejected": false
      }
-    ]
+    ],
+    "signed": {
+     "observed_mean_signed_shift_sd": -1.572,
+     "n_same_direction_half_shift": 275,
+     "n_same_direction_half_shift_rejected": 272,
+     "same_direction_survivors": [
+      {
+       "D": 1.0,
+       "r": 1.0,
+       "wc": 0.9,
+       "wn": 0.05,
+       "p": 0.1621,
+       "implied_shift": -0.814,
+       "rejected": false
+      },
+      {
+       "D": 1.0,
+       "r": 1.0,
+       "wc": 0.95,
+       "wn": 0.05,
+       "p": 0.1895,
+       "implied_shift": -0.879,
+       "rejected": false
+      },
+      {
+       "D": 1.0,
+       "r": 1.0,
+       "wc": 0.95,
+       "wn": 0.1,
+       "p": 0.1521,
+       "implied_shift": -0.831,
+       "rejected": false
+      }
+     ],
+     "max_same_direction_implied_shift_among_survivors": 0.879
+    }
    },
    "G9_timing_diagnosis": {
     "observed_slope_36": 1.1434,

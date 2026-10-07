@@ -75,6 +75,7 @@ def main():
     DAM = J("damip_class_law.json")
     DMM = J("damip_class_law_multimodel.json")
     CLG = J("class_law_general.json")
+    MMT = J("mixture_moment_test.json")
     R2 = ("robustness (revision 2)", "committed before run", "4c8b3f2")
     mm = g(MMt, "multimodel", "confirmatory"); nr = g(SRt, "regions", "NEURASIA", "multimodel", "confirmatory")
     rows = [
@@ -352,8 +353,8 @@ def main():
         ("GEN-8x", "test inversion of GEN-8 over two-Gaussian-type mixtures (separations 1-4, width ratios 0.5-2, any weights; common to the 36 pairs)", "revision-8 post hoc",
          "after review", "752fcb7",
          (f"{g(GEN,'G8x_post_hoc_inversion','n_rejected')} of {g(GEN,'G8x_post_hoc_inversion','n_family')} rejected; of the "
-          f"{g(GEN,'G8x_post_hoc_inversion','n_able_to_produce_half_the_shift')} able to produce half the imposed shift, "
-          f"{g(GEN,'G8x_post_hoc_inversion','n_of_those_rejected')} rejected; largest surviving implied shift "
+          f"{g(GEN,'G8x_post_hoc_inversion','signed','n_same_direction_half_shift')} able to produce half the imposed shift in its direction, "
+          f"{g(GEN,'G8x_post_hoc_inversion','signed','n_same_direction_half_shift_rejected')} rejected; largest surviving implied shift "
           f"{g(GEN,'G8x_post_hoc_inversion','max_abs_implied_shift_among_survivors')} (observed {g(GEN,'G8x_post_hoc_inversion','observed_mean_abs_shift_sd')})") if GEN and g(GEN,'G8x_post_hoc_inversion','n_family') else "pending", None),
         ("GEN-9", "does the timing of the forced response explain the two-condition elasticity 1.14? time-varying-shift calibration under the exact law", "revision-8 primary",
          "committed before run", "752fcb7",
@@ -382,8 +383,13 @@ def main():
          "committed before data", "80edfc5",
          "; ".join(f"{v}: {g(CLG,'T3_by_variable',v,'n_mixing_excluded')} of {g(CLG,'T3_by_variable',v,'n_identified')} identified exclude mixing "
                    f"({g(CLG,'T3_by_variable',v,'n_units')} cases); {g(CLG,'T3_by_variable',v,'reading')}; calibrated against matched fixed-type mixtures "
-                   f"(post hoc): {g(CLG,'T3_post_hoc_calibration_summary',v,'n_mixing_excluded_calibrated')} of {g(CLG,'T3_post_hoc_calibration_summary',v,'n_cases')} excluded"
+                   f"(post hoc): {g(CLG,'T3_post_hoc_calibration_summary',v,'n_mixing_excluded_calibrated')} of {g(CLG,'T3_post_hoc_calibration_summary',v,'n_cases')} excluded; "
+                   f"SUPERSEDED by MIX-1"
                    for v in ("tas", "pr")) if CLG else "pending", None),
+        ("MIX-1", "direct moment test of forced fixed two-type mixing (validated before use; reanalysis of the GL-3 cases), Holm within variable", "revision-8 reanalysis",
+         "method and gate fixed before model data", "70df9fa",
+         "; ".join(f"{v}: {g(MMT,'summary',v+'|p_T','n_incompatible_holm')} of {g(MMT,'summary',v+'|p_T','n_cases')} incompatible "
+                   f"({g(MMT,'summary',v+'|p_T','n_incompatible_raw')} at 5%)" for v in ("tas", "pr")) if MMT else "pending", None),
         ("GL-4", "the law under SSP5-8.5 2071-2100 vs historical 1985-2014 (precipitation classes; temperature classes empty)", "revision-8 secondary",
          "committed before data", "80edfc5",
          (f"{g(CLG,'T4_summary','holds')} of {g(CLG,'T4_summary','n_units')} hold, {g(CLG,'T4_summary','inconclusive')} inconclusive, "

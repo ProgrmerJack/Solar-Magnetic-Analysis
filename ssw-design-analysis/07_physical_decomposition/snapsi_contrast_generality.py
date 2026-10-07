@@ -532,6 +532,30 @@ def g8_inversion(usable, n_sim=400):
     return out
 
 
+def g8x_signed_summary(block, usable):
+    """POST HOC correction (2026-10-07, review): count only mixtures that move the mean in
+    the direction of the imposed shift (the earlier counts included opposite-direction
+    mixtures). Uses the stored grid; no re-simulation."""
+    sh = []
+    for c in usable:
+        for init in NH_INITS:
+            nm = member_nam(c, init)
+            if nm is None:
+                continue
+            mn = np.array([x.mean() for x in nm["nudged"].values()]); mc = np.array([x.mean() for x in nm["control"].values()])
+            sh.append((mn.mean() - mc.mean()) / mc.std(ddof=1))
+    obs = float(np.mean(sh)); sgn = np.sign(obs)
+    rows = block["grid"]
+    same = [x for x in rows if sgn * x["implied_shift"] >= 0.5 * abs(obs)]
+    surv = [x for x in rows if not x["rejected"] and sgn * x["implied_shift"] > 0]
+    out = {"observed_mean_signed_shift_sd": round(obs, 3), "n_same_direction_half_shift": len(same),
+           "n_same_direction_half_shift_rejected": sum(x["rejected"] for x in same),
+           "same_direction_survivors": [x for x in same if not x["rejected"]],
+           "max_same_direction_implied_shift_among_survivors": round(max((abs(x["implied_shift"]) for x in surv), default=0.0), 3)}
+    print("G8x signed:", out, flush=True)
+    return out
+
+
 # ---------------------------------------------------------------- G9 (registered 2026-10-07)
 def _smooth(x, w=20):
     k = np.ones(w) / w
@@ -727,6 +751,14 @@ def main():
                                                       np.random.default_rng(SEED + 9))
         (RESULTS / f"{NAME}.json").write_text(json.dumps(res, indent=2), encoding="utf8", newline="\n")
         print(f"Saved -> {NAME}.json (G9)")
+        return 0
+    if "--g8x-signed" in sys.argv:              # post hoc recount from the stored grid
+        res = json.loads((RESULTS / f"{NAME}.json").read_text())
+        centres = sorted({p.name.split("_")[0] for p in L.RED.glob("*.parquet")})
+        res["G8x_post_hoc_inversion"]["signed"] = g8x_signed_summary(
+            res["G8x_post_hoc_inversion"], [c for c in centres if not L.corruption_guard(c)[0]])
+        (RESULTS / f"{NAME}.json").write_text(json.dumps(res, indent=2), encoding="utf8", newline="\n")
+        print(f"Saved -> {NAME}.json (G8x signed)")
         return 0
     if "--g8x" in sys.argv:                     # POST HOC block only; registered results untouched
         res = json.loads((RESULTS / f"{NAME}.json").read_text())

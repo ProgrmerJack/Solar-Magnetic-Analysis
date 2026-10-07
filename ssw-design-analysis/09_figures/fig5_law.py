@@ -19,12 +19,10 @@ Reads (recomputes only the Gaussian curve and per-unit values stored in the file
   c  elasticity of the contrast with respect to the spread: one population
      predicts 1, forced mixing of two response types 0.58, 0.35, 0.14 for
      separations of 2, 3, 4 s.d. (threshold_law_theory.json)
-  d  forced mixing of response types (class_law_general.json, T3, registered): curvature
-     of the ensemble variance in the ensemble mean across natural or early-historical,
-     historical and SSP5-8.5 forcing, per model-region-season case, against how far the
-     forcing moves the arm mean; fixed types give -1, one population with linear spread
-     change >= 0; filled, mixing excluded by the post-hoc calibration against matched
-     fixed-type mixtures; open, not excluded
+  d  forced mixing of fixed response types (mixture_moment_test.json): rho, the share of the
+     variance that fixed two-type mixing requires at the middle level but that is absent,
+     per model-region-season case, with 95% intervals (clipped), against the forced change
+     of the mean; filled, rejected after Holm correction
 """
 import json
 import sys
@@ -159,27 +157,28 @@ def main():
     cx.set_title("elasticity: one population 1; forced mixing of types ≥ 2 s.d. apart below 0.6", fontsize=6)
     S.panel_label(cx, "c", x=-0.62, y=1.04)
 
-    # d -- forced mixing of fixed response types: variance-mean curvature
+    # d -- forced mixing of fixed response types: direct moment test (mixture_moment_test.json)
     dx = fig.add_subplot(gs[1, 1])
-    if gen2:
+    mmt = J("mixture_moment_test.json")
+    if mmt and mmt.get("cases"):
         cols = {"tas": verm, "pr": blue}
-        for k, u in gen2["units"].items():
-            if "T3" not in u:
-                continue
-            t = u["T3"]; c = u.get("T3_post_hoc_calibration", {}); var = k.split("|")[1]
-            ex = bool(c.get("mixing_excluded_calibrated")); x = c.get("forced_change_sd", t["mean_range_sd"])
-            dx.plot([x] * 2, t["ci95"], color=cols[var], lw=0.5, alpha=0.5, zorder=1)
-            dx.scatter(x, t["kappa"], s=9, zorder=3, color=cols[var] if ex else "white", edgecolor=cols[var], linewidth=0.6)
-        dx.axhline(-1, color="k", lw=0.7, ls=":"); dx.axhline(0, color="k", lw=0.5)
-        dx.text(0.22, -0.95, "fixed response types (−1)", fontsize=4.8, va="bottom")
-        dx.text(0.22, 0.05, "one population", fontsize=4.8, va="bottom")
+        for k, c in mmt["cases"].items():
+            var = k.split("|")[1]; x = abs(c["means"][2] - c["means"][0])
+            ex = c.get("p_T_holm", 1) < 0.05
+            ci = c.get("rho_ci95") or [np.nan, np.nan]
+            dx.plot([x] * 2, np.clip(ci, -1.4, 2.9), color=cols[var], lw=0.5, alpha=0.5, zorder=1)
+            dx.scatter(x, np.clip(c["rho"], -1.4, 2.9), s=9, zorder=3, color=cols[var] if ex else "white",
+                       edgecolor=cols[var], linewidth=0.6)
+        dx.axhline(0, color="k", lw=0.7, ls=":"); dx.axhline(1, color="k", lw=0.5)
+        dx.text(0.22, 0.05, "fixed response types (0)", fontsize=4.8, va="bottom")
+        dx.text(0.22, 1.05, "one translated population (1)", fontsize=4.8, va="bottom")
         dx.scatter([], [], s=9, color=verm, label="temperature"); dx.scatter([], [], s=9, color=blue, label="precipitation")
-        dx.scatter([], [], s=9, color="white", edgecolor="0.4", label="mixing not excluded (calibrated)")
+        dx.scatter([], [], s=9, color="white", edgecolor="0.4", label="not rejected after Holm")
         dx.legend(fontsize=4.4, loc="upper right")
-        dx.set_xscale("log"); dx.set_ylim(-1.3, 2.5)
-        dx.set_title("forced mixing of fixed types would make variance fall with mean²", fontsize=5.8)
-    dx.set_xlabel("forced change of the mean, lowest to highest forcing (s.d. of the reference)")
-    dx.set_ylabel("curvature of ensemble variance in mean")
+        dx.set_xscale("log"); dx.set_ylim(-1.5, 3.0)
+        dx.set_title("share of the variance that fixed-type mixing requires but is absent", fontsize=5.8)
+    dx.set_xlabel("forced change of the mean, lowest to highest forcing (s.d. of the lowest)")
+    dx.set_ylabel("ρ (0 = fixed-type mixing)")
     S.panel_label(dx, "d", x=-0.2, y=1.04)
     S.save(fig, "fig5_law")
 
