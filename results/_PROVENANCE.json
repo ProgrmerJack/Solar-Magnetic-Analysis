@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-07T13:48:48+00:00",
+ "generated": "2026-10-07T14:14:22+00:00",
  "note": "Known-good baseline: each result was produced by the script at the recorded sha256. catalog_repo.py flags STALE when a producer's hash no longer matches. Re-record with --record only AFTER re-running the analysis.",
  "results": {
   "catalogue_sets.json": {
@@ -797,7 +797,7 @@
    "producer_sha256": {
     "ssw-design-analysis/07_physical_decomposition/snapsi_free_natural_experiment.py": "9f964b9443466ddf"
    },
-   "result_sha256_16": "b840bc6b85a6be1b",
+   "result_sha256_16": "bd866bd9c4510226",
    "needs_rerun": false
   },
   "snapsi_distribution_test.json": {
@@ -846,7 +846,7 @@
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "7be5419c0436763c",
+    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "10d57654eda187da",
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "6626a155b09d3623"
    },
    "result_sha256_16": "c26057a7c4a2e49e",

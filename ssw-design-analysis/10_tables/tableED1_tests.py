@@ -349,6 +349,17 @@ def main():
          (f"p {g(GEN,'G8_shape_with_power','AD_perm_p')}, max quantile difference {g(GEN,'G8_shape_with_power','max_abs_quantile_diff')}; "
           f"excluded: {len(g(GEN,'G8_shape_with_power','excluded_types') or [])} of 9 type cells (all six with separation 2-3, and 1.5 with half width)") if GEN else "pending",
          g(GEN, 'G8_shape_with_power', 'AD_perm_p') if GEN else None),
+        ("GEN-8x", "test inversion of GEN-8 over two-Gaussian-type mixtures (separations 1-4, width ratios 0.5-2, any weights; common to the 36 pairs)", "revision-8 post hoc",
+         "after review", "752fcb7",
+         (f"{g(GEN,'G8x_post_hoc_inversion','n_rejected')} of {g(GEN,'G8x_post_hoc_inversion','n_family')} rejected; of the "
+          f"{g(GEN,'G8x_post_hoc_inversion','n_able_to_produce_half_the_shift')} able to produce half the imposed shift, "
+          f"{g(GEN,'G8x_post_hoc_inversion','n_of_those_rejected')} rejected; largest surviving implied shift "
+          f"{g(GEN,'G8x_post_hoc_inversion','max_abs_implied_shift_among_survivors')} (observed {g(GEN,'G8x_post_hoc_inversion','observed_mean_abs_shift_sd')})") if GEN and g(GEN,'G8x_post_hoc_inversion','n_family') else "pending", None),
+        ("GEN-9", "does the timing of the forced response explain the two-condition elasticity 1.14? time-varying-shift calibration under the exact law", "revision-8 primary",
+         "committed before run", "752fcb7",
+         (f"observed {g(GEN,'G9_timing_diagnosis','observed_slope_36')}; timing-only law {g(GEN,'G9_timing_diagnosis','c2','mean_slope')} "
+          f"{g(GEN,'G9_timing_diagnosis','c2','range95')}; held out inside {g(GEN,'G9_timing_diagnosis','held_out_c2','share_inside')}; "
+          f"{g(GEN,'G9_timing_diagnosis','reading')}") if GEN and g(GEN,'G9_timing_diagnosis','c2') else "pending", None),
         ("MM-1", "human forcing, three models (CanESM5, MIROC6, HadGEM3): central-European summer class law residual", "revision-7 primary",
          "committed before data", "a280a10",
          f"{g(DMM,'M1_CEUR_JJA_three_models','mean')} {g(DMM,'M1_CEUR_JJA_three_models','ci95')}; {g(DMM,'M1_CEUR_JJA_three_models','reading')}" if DMM else "pending", None),

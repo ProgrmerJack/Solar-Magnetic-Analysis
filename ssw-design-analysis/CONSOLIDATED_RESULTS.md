@@ -1352,6 +1352,18 @@ level sits near an endpoint (lambda(1-lambda) small) -> stage 2 adds an intermed
    to be replaced together with the stage-2 replication.
 Also: prospective stopping rule amended `acd8ba7` (one final analysis from 1 May 2036, >= 5 events).
 
+### Z13 — SSW exclusion by test inversion (G8x, post hoc) and the 1.14 explained (G9, registered `752fcb7`)
+G8x: the G8 "no rejection + power >= 0.8" exclusion is not a confidence-set exclusion (and two arms cannot reject
+  arbitrary two-type mixing). Inversion over two Gaussian types (D 1-4, width ratio 0.5-2, weights 0.05-0.95 per arm,
+  common to the 36 pairs; 400 sims each): 1,770/1,980 rejected; of 558 able to produce >= half the mean imposed
+  shift (1.57 control sd), 552 rejected; survivors = D 1, equal widths (indistinguishable from one population), max
+  implied shift 0.88. Types >= 2.5 sd apart: all rejected (except dw 0.05 at width ratio 2).
+G9: observed two-condition slope 1.1434 reproduced; timing-only exact-law calibration (time-varying shift s(t),
+  5-day smoothing) 1.09 [0.99, 1.21] CONTAINS it; time-varying mean+spread 1.07 [0.97, 1.19]; held out 8/10 splits
+  inside; longest negative run unchanged (+0.05 [-6.0, +6.1] steps) -> "the excess is the timing of the forced
+  response". The paper's "excess we cannot explain" is replaced.
+"Second order" claim qualified to near the median of a symmetric population.
+
 ### Z7 — prospective test (`prospective_next_ssw.py`, 9_literature; registered `d2b54a8`, window amended to 2036 before any onset)
 Prediction table for every onset day 1 Nov–31 Mar committed; shift nam_1000 −0.635, nam_150 −0.945, N-Eurasian T days
 8–24 −1.54 K; constant rate 0.692; T trend 0.037 K/yr. P(DW) shifted 0.71–0.84 vs climatology 0.24–0.44.

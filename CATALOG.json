@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-07T13:48:48+00:00",
+ "generated": "2026-10-07T14:14:22+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 191,
+  "scripts": 193,
   "results": 98
  },
  "scripts": [
@@ -234,6 +234,25 @@
     "index_checksums.txt"
    ],
    "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_lens_confirmation.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Monthly box means of 2 m temperature (K) and precipitation (mm/day) from two large ensembles never analysed in this project for surface outcomes, for the registered confirmation 07_physical_decomposition/lens_confirmation.py (committed before this",
+   "loc": 214,
+   "modified": "2026-10-07 14:01",
+   "sha256_16": "93b06b97ee2c70c0",
+   "flags": [],
+   "filenames_mentioned": [
+    "gate.json",
+    "lens_confirmation_boxes.parquet"
+   ],
+   "filename_prefixes": [
+    "CESM2-",
+    "MPI-GE_",
+    "_gate_"
+   ]
   },
   {
    "path": "ssw-design-analysis/03_data_ingestion/acquire_ncep_z10_fields.py",
@@ -1153,6 +1172,20 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/07_physical_decomposition/lens_confirmation.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "CONFIRMATION ON UNTOUCHED ENSEMBLES: IS FORCED MIXING OF TWO FIXED RESPONSE TYPES INCOMPATIBLE, AND DOES THE THRESHOLD-CLASS LAW HOLD, IN LARGE ENSEMBLES THIS PROJECT HAS NEVER ANALYSED FOR SURFACE OUTCOMES?",
+   "loc": 178,
+   "modified": "2026-10-07 14:00",
+   "sha256_16": "3fdd80734c553ef6",
+   "flags": [],
+   "filenames_mentioned": [
+    "lens_confirmation_boxes.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/07_physical_decomposition/marginal_events.py",
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
@@ -1519,9 +1552,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "DOES AN IMPOSED SSW LEAVE THE CLASS STRUCTURE UNCHANGED WHERE THE FORCING IS STRONGEST, IN A THIRD EVENT, AND FOR A VARIABLE NOT USED TO CLASSIFY? Registered 2026-10-02 (revision 5), committed before any of these quantities was",
-   "loc": 695,
-   "modified": "2026-10-04 14:35",
-   "sha256_16": "7be5419c0436763c",
+   "loc": 886,
+   "modified": "2026-10-07 14:06",
+   "sha256_16": "10d57654eda187da",
    "flags": [],
    "filenames_mentioned": [
     "snapsi_selection_test.json"
@@ -2101,9 +2134,9 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 446,
-   "modified": "2026-10-04 23:44",
-   "sha256_16": "45ad0459f9c34131",
+   "loc": 457,
+   "modified": "2026-10-07 14:14",
+   "sha256_16": "eeead3560aa238a3",
    "flags": [],
    "filenames_mentioned": [
     "class_law_general.json",
@@ -8293,9 +8326,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 64103,
-   "modified": "2026-10-04 14:39",
-   "sha256_16": "b840bc6b85a6be1b",
+   "bytes": 404688,
+   "modified": "2026-10-07 14:08",
+   "sha256_16": "bd866bd9c4510226",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/snapsi_free_natural_experiment.py"
    ],
@@ -8333,6 +8366,14 @@
     {
      "key": "G7_elasticity_diagnosis.reading",
      "text": "the excess comes from condition 2"
+    },
+    {
+     "key": "G8x_post_hoc_inversion.note",
+     "text": "POST HOC test inversion (2026-10-07); family: two Gaussian types, common weights; replaces the 'power >= 0.8' exclusion of G8"
+    },
+    {
+     "key": "G9_timing_diagnosis.reading",
+     "text": "the excess is the timing of the forced response"
     }
    ],
    "counts": {
@@ -8363,7 +8404,9 @@
     "G7_elasticity_diagnosis",
     "G8_shape_with_power",
     "pairs_NH",
-    "pairs_regional"
+    "pairs_regional",
+    "G8x_post_hoc_inversion",
+    "G9_timing_diagnosis"
    ]
   },
   {
@@ -8699,7 +8742,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "7be5419c0436763c",
+    "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "10d57654eda187da",
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "6626a155b09d3623"
    },
    "verdicts": [
