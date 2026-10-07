@@ -1,0 +1,101 @@
+{
+ "n_sim": 1000,
+ "B": 999,
+ "alpha": 0.05,
+ "gate_upper95": 0.07,
+ "cases": {
+  "N1": {
+   "T_reject": 0.01,
+   "T_upper95": 0.0169,
+   "cdf_reject": 0.0,
+   "cdf_upper95": 0.003
+  },
+  "N2": {
+   "T_reject": 0.002,
+   "T_upper95": 0.0063,
+   "cdf_reject": 0.0,
+   "cdf_upper95": 0.003
+  },
+  "N3": {
+   "T_reject": 0.021,
+   "T_upper95": 0.0301,
+   "cdf_reject": 0.009,
+   "cdf_upper95": 0.0157
+  },
+  "N4": {
+   "T_reject": 0.003,
+   "T_upper95": 0.0077,
+   "cdf_reject": 0.0,
+   "cdf_upper95": 0.003
+  },
+  "N5": {
+   "T_reject": 0.001,
+   "T_upper95": 0.0047,
+   "cdf_reject": 0.0,
+   "cdf_upper95": 0.003
+  },
+  "N6": {
+   "T_reject": 0.0,
+   "T_upper95": 0.003,
+   "cdf_reject": 0.0,
+   "cdf_upper95": 0.003
+  },
+  "N7": {
+   "T_reject": 0.005,
+   "T_upper95": 0.0105,
+   "cdf_reject": 0.0,
+   "cdf_upper95": 0.003
+  },
+  "N8": {
+   "T_reject": 0.005,
+   "T_upper95": 0.0105,
+   "cdf_reject": 0.0,
+   "cdf_upper95": 0.003
+  },
+  "N9": {
+   "T_reject": 0.003,
+   "T_upper95": 0.0077,
+   "cdf_reject": 0.0,
+   "cdf_upper95": 0.003
+  },
+  "N10": {
+   "T_reject": 0.033,
+   "T_upper95": 0.0439,
+   "cdf_reject": 0.001,
+   "cdf_upper95": 0.0047
+  },
+  "P1": {
+   "T_reject": 1.0,
+   "T_upper95": 1.0,
+   "cdf_reject": 1.0,
+   "cdf_upper95": 1.0
+  },
+  "P2": {
+   "T_reject": 1.0,
+   "T_upper95": 1.0,
+   "cdf_reject": 1.0,
+   "cdf_upper95": 1.0
+  },
+  "P3": {
+   "T_reject": 1.0,
+   "T_upper95": 1.0,
+   "cdf_reject": 1.0,
+   "cdf_upper95": 1.0
+  },
+  "P4": {
+   "T_reject": 0.884,
+   "T_upper95": 0.9003,
+   "cdf_reject": 0.681,
+   "cdf_upper95": 0.7053
+  },
+  "P5": {
+   "T_reject": 0.625,
+   "T_upper95": 0.6504,
+   "cdf_reject": 0.075,
+   "cdf_upper95": 0.0902
+  }
+ },
+ "T_passes_gate": true,
+ "cdf_passes_gate": true
+}
+Saved -> mixture_moment_test.json (validation)

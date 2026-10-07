@@ -1,0 +1,119 @@
+CanESM5_p1|tas|CEUR_JJA {'T': -156.61143, 'p_T': 0.0005, 'rho': 0.9713, 'p_cdf': 0.0005}
+CanESM5_p1|tas|WRUS_JJA {'T': -153.73874, 'p_T': 0.0015, 'rho': 0.9732, 'p_cdf': 0.0005}
+CanESM5_p1|tas|CNAM_JJA {'T': -183.03194, 'p_T': 0.001, 'rho': 0.9706, 'p_cdf': 0.0005}
+CanESM5_p1|tas|CEAS_JJA {'T': -434.30151, 'p_T': 0.005, 'rho': 0.9561, 'p_cdf': 0.001}
+CanESM5_p1|tas|NSIB_JJA {'T': -176.9402, 'p_T': 0.0005, 'rho': 0.9872, 'p_cdf': 0.0005}
+CanESM5_p1|tas|NWNA_JJA {'T': -202.7198, 'p_T': 0.001, 'rho': 0.9767, 'p_cdf': 0.0005}
+CanESM5_p1|tas|CEUR_DJF {'T': -21.4998, 'p_T': 0.0005, 'rho': 1.032, 'p_cdf': 0.0005}
+CanESM5_p1|tas|WRUS_DJF {'T': -19.45932, 'p_T': 0.0005, 'rho': 0.9926, 'p_cdf': 0.0005}
+CanESM5_p1|tas|CNAM_DJF {'T': 0.28919, 'p_T': 0.935, 'rho': -0.8723, 'p_cdf': 0.9015}
+CanESM5_p1|tas|CEAS_DJF {'T': -36.62287, 'p_T': 0.0005, 'rho': 0.9854, 'p_cdf': 0.0005}
+CanESM5_p1|tas|NSIB_DJF {'T': -46.74902, 'p_T': 0.0005, 'rho': 0.976, 'p_cdf': 0.0005}
+CanESM5_p1|tas|NWNA_DJF {'T': -43.82146, 'p_T': 0.0005, 'rho': 0.9814, 'p_cdf': 0.0005}
+CanESM5_p1|pr|CEUR_JJA {'T': 0.28901, 'p_T': 0.1025, 'rho': 2.4885, 'p_cdf': 0.6145}
+CanESM5_p1|pr|WRUS_JJA {'T': 0.08295, 'p_T': 0.413, 'rho': 1.7007, 'p_cdf': 0.9495}
+CanESM5_p1|pr|CNAM_JJA {'T': 0.0376, 'p_T': 0.199, 'rho': 4.6618, 'p_cdf': 0.7425}
+CanESM5_p1|pr|CEAS_JJA {'T': -2.71595, 'p_T': 0.0005, 'rho': 1.0037, 'p_cdf': 0.0195}
+CanESM5_p1|pr|NSIB_JJA {'T': -0.43327, 'p_T': 0.506, 'rho': 0.6715, 'p_cdf': 0.429}
+CanESM5_p1|pr|NWNA_JJA {'T': -15.15964, 'p_T': 0.002, 'rho': 0.9386, 'p_cdf': 0.0125}
+CanESM5_p1|pr|CEUR_DJF {'T': -7.04947, 'p_T': 0.0005, 'rho': 1.008, 'p_cdf': 0.0025}
+CanESM5_p1|pr|WRUS_DJF {'T': -21.2692, 'p_T': 0.0025, 'rho': 0.9931, 'p_cdf': 0.001}
+CanESM5_p1|pr|CNAM_DJF {'T': -2.0605, 'p_T': 0.002, 'rho': 0.9947, 'p_cdf': 0.002}
+CanESM5_p1|pr|CEAS_DJF {'T': -48.27917, 'p_T': 0.0005, 'rho': 1.0051, 'p_cdf': 0.0005}
+CanESM5_p1|pr|NSIB_DJF {'T': -40.76808, 'p_T': 0.0005, 'rho': 1.0141, 'p_cdf': 0.0005}
+CanESM5_p1|pr|NWNA_DJF {'T': -7.10109, 'p_T': 0.0065, 'rho': 1.0074, 'p_cdf': 0.011}
+CanESM5_p2|tas|CEUR_JJA {'T': -134.11445, 'p_T': 0.0005, 'rho': 0.97, 'p_cdf': 0.0005}
+CanESM5_p2|tas|WRUS_JJA {'T': -149.87353, 'p_T': 0.0015, 'rho': 0.973, 'p_cdf': 0.0005}
+CanESM5_p2|tas|CNAM_JJA {'T': -150.20867, 'p_T': 0.0025, 'rho': 0.9808, 'p_cdf': 0.0005}
+CanESM5_p2|tas|CEAS_JJA {'T': -442.2183, 'p_T': 0.003, 'rho': 0.9582, 'p_cdf': 0.0005}
+CanESM5_p2|tas|NSIB_JJA {'T': -168.57137, 'p_T': 0.0005, 'rho': 0.9872, 'p_cdf': 0.0005}
+CanESM5_p2|tas|NWNA_JJA {'T': -181.91629, 'p_T': 0.0005, 'rho': 0.9689, 'p_cdf': 0.0005}
+CanESM5_p2|tas|CEUR_DJF {'T': -30.36852, 'p_T': 0.0005, 'rho': 0.9715, 'p_cdf': 0.0005}
+CanESM5_p2|tas|WRUS_DJF {'T': -19.56029, 'p_T': 0.0005, 'rho': 0.9493, 'p_cdf': 0.0005}
+CanESM5_p2|tas|CNAM_DJF {'T': -1.25409, 'p_T': 0.699, 'rho': 0.6825, 'p_cdf': 0.7725}
+CanESM5_p2|tas|CEAS_DJF {'T': -43.67008, 'p_T': 0.0005, 'rho': 0.9617, 'p_cdf': 0.0005}
+CanESM5_p2|tas|NSIB_DJF {'T': -43.92692, 'p_T': 0.0005, 'rho': 0.9762, 'p_cdf': 0.0005}
+CanESM5_p2|tas|NWNA_DJF {'T': -48.2789, 'p_T': 0.0005, 'rho': 0.9605, 'p_cdf': 0.0005}
+CanESM5_p2|pr|CEUR_JJA {'T': 0.33561, 'p_T': 0.0195, 'rho': 2.5471, 'p_cdf': 0.294}
+CanESM5_p2|pr|WRUS_JJA {'T': 0.15832, 'p_T': 0.145, 'rho': 2.1277, 'p_cdf': 0.761}
+CanESM5_p2|pr|CNAM_JJA {'T': 0.06659, 'p_T': 0.0775, 'rho': 2.8628, 'p_cdf': 0.6735}
+CanESM5_p2|pr|CEAS_JJA {'T': -2.45466, 'p_T': 0.004, 'rho': 1.0063, 'p_cdf': 0.0405}
+CanESM5_p2|pr|NSIB_JJA {'T': -0.57808, 'p_T': 0.243, 'rho': 1.0847, 'p_cdf': 0.768}
+CanESM5_p2|pr|NWNA_JJA {'T': -13.21574, 'p_T': 0.022, 'rho': 0.9391, 'p_cdf': 0.015}
+CanESM5_p2|pr|CEUR_DJF {'T': -6.78979, 'p_T': 0.0005, 'rho': 0.9961, 'p_cdf': 0.0005}
+CanESM5_p2|pr|WRUS_DJF {'T': -25.40013, 'p_T': 0.0005, 'rho': 0.996, 'p_cdf': 0.0005}
+CanESM5_p2|pr|CNAM_DJF {'T': -2.2292, 'p_T': 0.0015, 'rho': 0.9688, 'p_cdf': 0.008}
+CanESM5_p2|pr|CEAS_DJF {'T': -46.53024, 'p_T': 0.0005, 'rho': 1.0089, 'p_cdf': 0.0005}
+CanESM5_p2|pr|NSIB_DJF {'T': -41.8068, 'p_T': 0.0005, 'rho': 1.0068, 'p_cdf': 0.0005}
+CanESM5_p2|pr|NWNA_DJF {'T': -7.06054, 'p_T': 0.0045, 'rho': 0.999, 'p_cdf': 0.0035}
+MIROC6|tas|CEUR_JJA {'T': -5.19411, 'p_T': 0.528, 'rho': 0.8572, 'p_cdf': 0.4685}
+MIROC6|tas|WRUS_JJA {'T': -15.91496, 'p_T': 0.0225, 'rho': 0.9403, 'p_cdf': 0.001}
+MIROC6|tas|CNAM_JJA {'T': -44.51995, 'p_T': 0.0145, 'rho': 0.9633, 'p_cdf': 0.007}
+MIROC6|tas|CEAS_JJA {'T': -163.02137, 'p_T': 0.0315, 'rho': 0.9384, 'p_cdf': 0.014}
+MIROC6|tas|NSIB_JJA {'T': -151.5242, 'p_T': 0.0005, 'rho': 0.9899, 'p_cdf': 0.0005}
+MIROC6|tas|NWNA_JJA {'T': -118.85792, 'p_T': 0.0005, 'rho': 0.9633, 'p_cdf': 0.0005}
+MIROC6|tas|CEUR_DJF {'T': -2.65102, 'p_T': 0.002, 'rho': 0.9761, 'p_cdf': 0.0025}
+MIROC6|tas|WRUS_DJF {'T': -4.66776, 'p_T': 0.0005, 'rho': 1.0245, 'p_cdf': 0.002}
+MIROC6|tas|CNAM_DJF {'T': -11.22747, 'p_T': 0.0005, 'rho': 1.0059, 'p_cdf': 0.0005}
+MIROC6|tas|CEAS_DJF {'T': -10.84705, 'p_T': 0.0005, 'rho': 0.9691, 'p_cdf': 0.0005}
+MIROC6|tas|NSIB_DJF {'T': -67.46696, 'p_T': 0.0005, 'rho': 1.0005, 'p_cdf': 0.0005}
+MIROC6|tas|NWNA_DJF {'T': -8.87336, 'p_T': 0.0005, 'rho': 0.9713, 'p_cdf': 0.0005}
+MIROC6|pr|CEUR_JJA {'T': -0.36887, 'p_T': 0.0245, 'rho': 2.1295, 'p_cdf': 0.134}
+MIROC6|pr|WRUS_JJA {'T': -0.02118, 'p_T': 0.6165, 'rho': -10.5842, 'p_cdf': 0.983}
+MIROC6|pr|CNAM_JJA {'T': -0.06794, 'p_T': 0.077, 'rho': 18.4099, 'p_cdf': 0.3875}
+MIROC6|pr|CEAS_JJA {'T': -0.09194, 'p_T': 0.1625, 'rho': 4.5479, 'p_cdf': 0.8955}
+MIROC6|pr|NSIB_JJA {'T': 0.07392, 'p_T': 0.5635, 'rho': 26.8218, 'p_cdf': 0.9505}
+MIROC6|pr|NWNA_JJA {'T': 0.03712, 'p_T': 0.851, 'rho': -0.6797, 'p_cdf': 0.9895}
+MIROC6|pr|CEUR_DJF {'T': -0.03215, 'p_T': 0.4685, 'rho': 1.0929, 'p_cdf': 0.933}
+MIROC6|pr|WRUS_DJF {'T': -0.40775, 'p_T': 0.0175, 'rho': 1.0696, 'p_cdf': 0.0935}
+MIROC6|pr|CNAM_DJF {'T': -0.63452, 'p_T': 0.014, 'rho': 1.1593, 'p_cdf': 0.043}
+MIROC6|pr|CEAS_DJF {'T': -1.9473, 'p_T': 0.0015, 'rho': 0.8702, 'p_cdf': 0.0005}
+MIROC6|pr|NSIB_DJF {'T': -5.28132, 'p_T': 0.0005, 'rho': 0.9024, 'p_cdf': 0.0005}
+MIROC6|pr|NWNA_DJF {'T': 0.05294, 'p_T': 0.718, 'rho': 0.8683, 'p_cdf': 0.8435}
+ACCESS-ESM1-5|tas|CEUR_JJA {'T': -97.29999, 'p_T': 0.002, 'rho': 0.9549, 'p_cdf': 0.0005}
+ACCESS-ESM1-5|tas|WRUS_JJA {'T': -51.75368, 'p_T': 0.006, 'rho': 0.9495, 'p_cdf': 0.001}
+ACCESS-ESM1-5|tas|CNAM_JJA {'T': -21.89424, 'p_T': 0.027, 'rho': 0.9776, 'p_cdf': 0.0175}
+ACCESS-ESM1-5|tas|CEAS_JJA {'T': -341.88637, 'p_T': 0.012, 'rho': 0.9649, 'p_cdf': 0.0005}
+ACCESS-ESM1-5|tas|NSIB_JJA {'T': -81.49707, 'p_T': 0.0265, 'rho': 0.9679, 'p_cdf': 0.005}
+ACCESS-ESM1-5|tas|NWNA_JJA {'T': -130.27257, 'p_T': 0.0055, 'rho': 0.9881, 'p_cdf': 0.001}
+ACCESS-ESM1-5|tas|CEUR_DJF {'T': -9.76455, 'p_T': 0.01, 'rho': 0.9336, 'p_cdf': 0.004}
+ACCESS-ESM1-5|tas|WRUS_DJF {'T': -4.55527, 'p_T': 0.0255, 'rho': 0.9577, 'p_cdf': 0.0075}
+ACCESS-ESM1-5|tas|CNAM_DJF {'T': -5.14151, 'p_T': 0.0135, 'rho': 1.0168, 'p_cdf': 0.0385}
+ACCESS-ESM1-5|tas|CEAS_DJF {'T': -11.25302, 'p_T': 0.0115, 'rho': 1.0023, 'p_cdf': 0.0075}
+ACCESS-ESM1-5|tas|NSIB_DJF {'T': -30.37119, 'p_T': 0.0025, 'rho': 0.9805, 'p_cdf': 0.0005}
+ACCESS-ESM1-5|tas|NWNA_DJF {'T': -15.8774, 'p_T': 0.0125, 'rho': 0.9989, 'p_cdf': 0.0085}
+ACCESS-ESM1-5|pr|CEUR_JJA {'T': -0.32121, 'p_T': 0.4125, 'rho': 6.1931, 'p_cdf': 0.7995}
+ACCESS-ESM1-5|pr|WRUS_JJA {'T': 0.43738, 'p_T': 0.0595, 'rho': 0.9051, 'p_cdf': 0.3575}
+ACCESS-ESM1-5|pr|CNAM_JJA {'T': 0.01517, 'p_T': 0.7995, 'rho': 14.6149, 'p_cdf': 0.9125}
+ACCESS-ESM1-5|pr|CEAS_JJA {'T': 0.1266, 'p_T': 0.3, 'rho': 1.1652, 'p_cdf': 0.78}
+ACCESS-ESM1-5|pr|NSIB_JJA {'T': -0.24676, 'p_T': 0.2575, 'rho': 0.9072, 'p_cdf': 0.818}
+ACCESS-ESM1-5|pr|NWNA_JJA {'T': -0.16053, 'p_T': 0.4805, 'rho': 1.4487, 'p_cdf': 0.964}
+ACCESS-ESM1-5|pr|CEUR_DJF {'T': -0.17628, 'p_T': 0.1515, 'rho': 1.4323, 'p_cdf': 0.7935}
+ACCESS-ESM1-5|pr|WRUS_DJF {'T': -1.15156, 'p_T': 0.121, 'rho': 0.9453, 'p_cdf': 0.1645}
+ACCESS-ESM1-5|pr|CNAM_DJF {'T': -0.29401, 'p_T': 0.181, 'rho': 1.5042, 'p_cdf': 0.8285}
+ACCESS-ESM1-5|pr|CEAS_DJF {'T': -2.44587, 'p_T': 0.1535, 'rho': 0.9858, 'p_cdf': 0.122}
+ACCESS-ESM1-5|pr|NSIB_DJF {'T': -9.07778, 'p_T': 0.019, 'rho': 1.042, 'p_cdf': 0.0045}
+ACCESS-ESM1-5|pr|NWNA_DJF {'T': -0.8705, 'p_T': 0.223, 'rho': 1.0733, 'p_cdf': 0.483}
+{
+ "tas|p_T": {
+  "n_cases": 48,
+  "n_incompatible_raw": 45,
+  "n_incompatible_holm": 28
+ },
+ "tas|p_cdf": {
+  "n_cases": 48,
+  "n_incompatible_raw": 45,
+  "n_incompatible_holm": 37
+ },
+ "pr|p_T": {
+  "n_cases": 48,
+  "n_incompatible_raw": 23,
+  "n_incompatible_holm": 9
+ },
+ "pr|p_cdf": {
+  "n_cases": 48,
+  "n_incompatible_raw": 20,
+  "n_incompatible_holm": 9
+ }
+}
+Saved -> mixture_moment_test.json

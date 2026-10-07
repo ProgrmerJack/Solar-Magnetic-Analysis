@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-05T00:18:36+00:00",
+ "generated": "2026-10-07T13:48:48+00:00",
  "generator": "tools/catalog_repo.py",
  "note": "Every ssw-design-analysis result in one file. The per-script JSONs remain on disk as write-side provenance; this is the read path. Regenerate with tools/catalog_repo.py.",
  "results": {
@@ -52851,6 +52851,2824 @@
     }
    },
    "expected_halfwidth_one_population_n21": 0.777
+  },
+  "mixture_moment_test.json": {
+   "validation": {
+    "n_sim": 1000,
+    "B": 999,
+    "alpha": 0.05,
+    "gate_upper95": 0.07,
+    "cases": {
+     "N1": {
+      "T_reject": 0.01,
+      "T_upper95": 0.0169,
+      "cdf_reject": 0.0,
+      "cdf_upper95": 0.003
+     },
+     "N2": {
+      "T_reject": 0.002,
+      "T_upper95": 0.0063,
+      "cdf_reject": 0.0,
+      "cdf_upper95": 0.003
+     },
+     "N3": {
+      "T_reject": 0.021,
+      "T_upper95": 0.0301,
+      "cdf_reject": 0.009,
+      "cdf_upper95": 0.0157
+     },
+     "N4": {
+      "T_reject": 0.003,
+      "T_upper95": 0.0077,
+      "cdf_reject": 0.0,
+      "cdf_upper95": 0.003
+     },
+     "N5": {
+      "T_reject": 0.001,
+      "T_upper95": 0.0047,
+      "cdf_reject": 0.0,
+      "cdf_upper95": 0.003
+     },
+     "N6": {
+      "T_reject": 0.0,
+      "T_upper95": 0.003,
+      "cdf_reject": 0.0,
+      "cdf_upper95": 0.003
+     },
+     "N7": {
+      "T_reject": 0.005,
+      "T_upper95": 0.0105,
+      "cdf_reject": 0.0,
+      "cdf_upper95": 0.003
+     },
+     "N8": {
+      "T_reject": 0.005,
+      "T_upper95": 0.0105,
+      "cdf_reject": 0.0,
+      "cdf_upper95": 0.003
+     },
+     "N9": {
+      "T_reject": 0.003,
+      "T_upper95": 0.0077,
+      "cdf_reject": 0.0,
+      "cdf_upper95": 0.003
+     },
+     "N10": {
+      "T_reject": 0.033,
+      "T_upper95": 0.0439,
+      "cdf_reject": 0.001,
+      "cdf_upper95": 0.0047
+     },
+     "P1": {
+      "T_reject": 1.0,
+      "T_upper95": 1.0,
+      "cdf_reject": 1.0,
+      "cdf_upper95": 1.0
+     },
+     "P2": {
+      "T_reject": 1.0,
+      "T_upper95": 1.0,
+      "cdf_reject": 1.0,
+      "cdf_upper95": 1.0
+     },
+     "P3": {
+      "T_reject": 1.0,
+      "T_upper95": 1.0,
+      "cdf_reject": 1.0,
+      "cdf_upper95": 1.0
+     },
+     "P4": {
+      "T_reject": 0.884,
+      "T_upper95": 0.9003,
+      "cdf_reject": 0.681,
+      "cdf_upper95": 0.7053
+     },
+     "P5": {
+      "T_reject": 0.625,
+      "T_upper95": 0.6504,
+      "cdf_reject": 0.075,
+      "cdf_upper95": 0.0902
+     }
+    },
+    "T_passes_gate": true,
+    "cdf_passes_gate": true
+   },
+   "method_fixed": "2026-10-07, before any model data",
+   "cases": {
+    "CanESM5_p1|tas|CEUR_JJA": {
+     "T": -156.61143,
+     "T_ci95": [
+      -247.39488,
+      -84.39646
+     ],
+     "p_T": 0.0005,
+     "rho": 0.9713,
+     "rho_ci95": [
+      0.5234,
+      1.5343
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      0.0,
+      1.4426,
+      11.3182
+     ],
+     "vars": [
+      1.0014,
+      1.6502,
+      2.881
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p1|tas|WRUS_JJA": {
+     "T": -153.73874,
+     "T_ci95": [
+      -250.63656,
+      -74.44396
+     ],
+     "p_T": 0.0015,
+     "rho": 0.9732,
+     "rho_ci95": [
+      0.4712,
+      1.5865
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      0.0,
+      1.3481,
+      11.5203
+     ],
+     "vars": [
+      1.0465,
+      1.6013,
+      2.6419
+     ],
+     "p_T_holm": 0.036,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p1|tas|CNAM_JJA": {
+     "T": -183.03194,
+     "T_ci95": [
+      -291.73214,
+      -92.20322
+     ],
+     "p_T": 0.001,
+     "rho": 0.9706,
+     "rho_ci95": [
+      0.4889,
+      1.547
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      -0.0,
+      1.5934,
+      11.7046
+     ],
+     "vars": [
+      1.094,
+      1.7825,
+      2.6711
+     ],
+     "p_T_holm": 0.026,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p1|tas|CEAS_JJA": {
+     "T": -434.30151,
+     "T_ci95": [
+      -755.96359,
+      -179.88525
+     ],
+     "p_T": 0.005,
+     "rho": 0.9561,
+     "rho_ci95": [
+      0.396,
+      1.6643
+     ],
+     "p_cdf": 0.001,
+     "means": [
+      0.0,
+      1.791,
+      16.846
+     ],
+     "vars": [
+      1.1141,
+      2.7176,
+      5.0696
+     ],
+     "p_T_holm": 0.085,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p1|tas|NSIB_JJA": {
+     "T": -176.9402,
+     "T_ci95": [
+      -264.73643,
+      -106.56464
+     ],
+     "p_T": 0.0005,
+     "rho": 0.9872,
+     "rho_ci95": [
+      0.5946,
+      1.4771
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      0.0,
+      1.4704,
+      11.8001
+     ],
+     "vars": [
+      1.0468,
+      1.402,
+      2.3376
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p1|tas|NWNA_JJA": {
+     "T": -202.7198,
+     "T_ci95": [
+      -307.82992,
+      -125.45187
+     ],
+     "p_T": 0.001,
+     "rho": 0.9767,
+     "rho_ci95": [
+      0.6044,
+      1.4831
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      -0.0,
+      1.537,
+      12.4147
+     ],
+     "vars": [
+      1.0189,
+      1.5967,
+      2.5402
+     ],
+     "p_T_holm": 0.026,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p1|tas|CEUR_DJF": {
+     "T": -21.4998,
+     "T_ci95": [
+      -28.7352,
+      -14.73833
+     ],
+     "p_T": 0.0005,
+     "rho": 1.032,
+     "rho_ci95": [
+      0.7074,
+      1.3792
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      0.0,
+      1.0602,
+      4.9946
+     ],
+     "vars": [
+      1.0029,
+      0.7481,
+      0.4306
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p1|tas|WRUS_DJF": {
+     "T": -19.45932,
+     "T_ci95": [
+      -28.24074,
+      -10.90684
+     ],
+     "p_T": 0.0005,
+     "rho": 0.9926,
+     "rho_ci95": [
+      0.5564,
+      1.4406
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      0.0,
+      0.8739,
+      5.1933
+     ],
+     "vars": [
+      0.992,
+      0.9662,
+      0.6737
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p1|tas|CNAM_DJF": {
+     "T": 0.28919,
+     "T_ci95": [
+      -6.30637,
+      6.70692
+     ],
+     "p_T": 0.935,
+     "rho": -0.8723,
+     "rho_ci95": [
+      -20.2311,
+      19.0229
+     ],
+     "p_cdf": 0.9015,
+     "means": [
+      -0.0,
+      0.0136,
+      4.9375
+     ],
+     "vars": [
+      1.0209,
+      1.1461,
+      0.8374
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "CanESM5_p1|tas|CEAS_DJF": {
+     "T": -36.62287,
+     "T_ci95": [
+      -51.90611,
+      -22.21795
+     ],
+     "p_T": 0.0005,
+     "rho": 0.9854,
+     "rho_ci95": [
+      0.5978,
+      1.3966
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      -0.0,
+      1.0962,
+      6.3968
+     ],
+     "vars": [
+      0.9837,
+      1.0943,
+      1.1326
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p1|tas|NSIB_DJF": {
+     "T": -46.74902,
+     "T_ci95": [
+      -66.75933,
+      -28.77024
+     ],
+     "p_T": 0.0005,
+     "rho": 0.976,
+     "rho_ci95": [
+      0.6007,
+      1.3938
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      0.0,
+      1.127,
+      7.107
+     ],
+     "vars": [
+      1.0109,
+      1.1329,
+      0.7627
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p1|tas|NWNA_DJF": {
+     "T": -43.82146,
+     "T_ci95": [
+      -59.3737,
+      -31.63839
+     ],
+     "p_T": 0.0005,
+     "rho": 0.9814,
+     "rho_ci95": [
+      0.7086,
+      1.3297
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      -0.0,
+      1.1352,
+      6.8648
+     ],
+     "vars": [
+      0.9924,
+      1.0862,
+      0.8283
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p1|pr|CEUR_JJA": {
+     "T": 0.28901,
+     "T_ci95": [
+      -0.04966,
+      0.65558
+     ],
+     "p_T": 0.1025,
+     "rho": 2.4885,
+     "rho_ci95": [
+      -0.4276,
+      5.6449
+     ],
+     "p_cdf": 0.6145,
+     "means": [
+      -0.0,
+      -0.2733,
+      -0.8027
+     ],
+     "vars": [
+      1.0075,
+      1.1754,
+      2.1334
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "CanESM5_p1|pr|WRUS_JJA": {
+     "T": 0.08295,
+     "T_ci95": [
+      -0.11993,
+      0.30197
+     ],
+     "p_T": 0.413,
+     "rho": 1.7007,
+     "rho_ci95": [
+      -2.4589,
+      6.1911
+     ],
+     "p_cdf": 0.9495,
+     "means": [
+      0.0,
+      -0.1587,
+      0.4808
+     ],
+     "vars": [
+      0.9976,
+      0.8984,
+      1.514
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "CanESM5_p1|pr|CNAM_JJA": {
+     "T": 0.0376,
+     "T_ci95": [
+      -0.01355,
+      0.11223
+     ],
+     "p_T": 0.199,
+     "rho": 4.6618,
+     "rho_ci95": [
+      -1.6805,
+      13.9155
+     ],
+     "p_cdf": 0.7425,
+     "means": [
+      -0.0,
+      -0.163,
+      -0.3184
+     ],
+     "vars": [
+      0.9984,
+      0.8394,
+      0.8691
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "CanESM5_p1|pr|CEAS_JJA": {
+     "T": -2.71595,
+     "T_ci95": [
+      -4.05724,
+      -1.33709
+     ],
+     "p_T": 0.0005,
+     "rho": 1.0037,
+     "rho_ci95": [
+      0.4941,
+      1.4994
+     ],
+     "p_cdf": 0.0195,
+     "means": [
+      -0.0,
+      0.4306,
+      2.7313
+     ],
+     "vars": [
+      0.9991,
+      1.0486,
+      1.3364
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.6045,
+     "cdf_reading": "unresolved"
+    },
+    "CanESM5_p1|pr|NSIB_JJA": {
+     "T": -0.43327,
+     "T_ci95": [
+      -1.84472,
+      0.91192
+     ],
+     "p_T": 0.506,
+     "rho": 0.6715,
+     "rho_ci95": [
+      -1.4134,
+      2.8591
+     ],
+     "p_cdf": 0.429,
+     "means": [
+      -0.0,
+      0.1709,
+      2.0302
+     ],
+     "vars": [
+      1.0256,
+      1.2592,
+      2.5607
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "CanESM5_p1|pr|NWNA_JJA": {
+     "T": -15.15964,
+     "T_ci95": [
+      -24.49528,
+      -6.02578
+     ],
+     "p_T": 0.002,
+     "rho": 0.9386,
+     "rho_ci95": [
+      0.3731,
+      1.5166
+     ],
+     "p_cdf": 0.0125,
+     "means": [
+      0.0,
+      0.5085,
+      5.8959
+     ],
+     "vars": [
+      1.0426,
+      1.2876,
+      1.9319
+     ],
+     "p_T_holm": 0.074,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.4125,
+     "cdf_reading": "unresolved"
+    },
+    "CanESM5_p1|pr|CEUR_DJF": {
+     "T": -7.04947,
+     "T_ci95": [
+      -10.30541,
+      -4.24385
+     ],
+     "p_T": 0.0005,
+     "rho": 1.008,
+     "rho_ci95": [
+      0.6068,
+      1.4735
+     ],
+     "p_cdf": 0.0025,
+     "means": [
+      0.0,
+      0.6269,
+      3.6682
+     ],
+     "vars": [
+      0.998,
+      1.0914,
+      1.6336
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.095,
+     "cdf_reading": "unresolved"
+    },
+    "CanESM5_p1|pr|WRUS_DJF": {
+     "T": -21.2692,
+     "T_ci95": [
+      -31.58448,
+      -12.80788
+     ],
+     "p_T": 0.0025,
+     "rho": 0.9931,
+     "rho_ci95": [
+      0.598,
+      1.4747
+     ],
+     "p_cdf": 0.001,
+     "means": [
+      0.0,
+      0.8128,
+      5.5557
+     ],
+     "vars": [
+      0.9839,
+      1.2587,
+      2.6806
+     ],
+     "p_T_holm": 0.0875,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.04,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p1|pr|CNAM_DJF": {
+     "T": -2.0605,
+     "T_ci95": [
+      -3.21396,
+      -0.98435
+     ],
+     "p_T": 0.002,
+     "rho": 0.9947,
+     "rho_ci95": [
+      0.4752,
+      1.5516
+     ],
+     "p_cdf": 0.002,
+     "means": [
+      -0.0,
+      0.4284,
+      2.4234
+     ],
+     "vars": [
+      0.9951,
+      1.1893,
+      2.0684
+     ],
+     "p_T_holm": 0.074,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.078,
+     "cdf_reading": "unresolved"
+    },
+    "CanESM5_p1|pr|CEAS_DJF": {
+     "T": -48.27917,
+     "T_ci95": [
+      -71.89262,
+      -31.42907
+     ],
+     "p_T": 0.0005,
+     "rho": 1.0051,
+     "rho_ci95": [
+      0.6543,
+      1.4967
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      -0.0,
+      1.1906,
+      6.9749
+     ],
+     "vars": [
+      0.9969,
+      1.5819,
+      4.6306
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p1|pr|NSIB_DJF": {
+     "T": -40.76808,
+     "T_ci95": [
+      -62.09841,
+      -22.16971
+     ],
+     "p_T": 0.0005,
+     "rho": 1.0141,
+     "rho_ci95": [
+      0.5515,
+      1.5447
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      -0.0,
+      0.9135,
+      7.1062
+     ],
+     "vars": [
+      0.9928,
+      1.2564,
+      3.6652
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p1|pr|NWNA_DJF": {
+     "T": -7.10109,
+     "T_ci95": [
+      -12.36854,
+      -2.88222
+     ],
+     "p_T": 0.0065,
+     "rho": 1.0074,
+     "rho_ci95": [
+      0.4089,
+      1.7546
+     ],
+     "p_cdf": 0.011,
+     "means": [
+      -0.0,
+      0.4431,
+      4.2163
+     ],
+     "vars": [
+      1.0017,
+      1.1758,
+      2.7764
+     ],
+     "p_T_holm": 0.208,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.374,
+     "cdf_reading": "unresolved"
+    },
+    "CanESM5_p2|tas|CEUR_JJA": {
+     "T": -134.11445,
+     "T_ci95": [
+      -211.77794,
+      -72.72779
+     ],
+     "p_T": 0.0005,
+     "rho": 0.97,
+     "rho_ci95": [
+      0.526,
+      1.5317
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      0.0,
+      1.3312,
+      10.8787
+     ],
+     "vars": [
+      1.0262,
+      1.607,
+      2.6567
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p2|tas|WRUS_JJA": {
+     "T": -149.87353,
+     "T_ci95": [
+      -245.8794,
+      -76.6435
+     ],
+     "p_T": 0.0015,
+     "rho": 0.973,
+     "rho_ci95": [
+      0.4976,
+      1.5962
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      -0.0,
+      1.3056,
+      11.5342
+     ],
+     "vars": [
+      0.9934,
+      1.5513,
+      2.7334
+     ],
+     "p_T_holm": 0.036,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p2|tas|CNAM_JJA": {
+     "T": -150.20867,
+     "T_ci95": [
+      -242.01173,
+      -82.37868
+     ],
+     "p_T": 0.0025,
+     "rho": 0.9808,
+     "rho_ci95": [
+      0.5379,
+      1.5802
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      -0.0,
+      1.4657,
+      10.9814
+     ],
+     "vars": [
+      1.0062,
+      1.4446,
+      2.2811
+     ],
+     "p_T_holm": 0.05,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p2|tas|CEAS_JJA": {
+     "T": -442.2183,
+     "T_ci95": [
+      -759.2888,
+      -203.01786
+     ],
+     "p_T": 0.003,
+     "rho": 0.9582,
+     "rho_ci95": [
+      0.4399,
+      1.6452
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      -0.0,
+      1.7619,
+      17.0894
+     ],
+     "vars": [
+      1.1197,
+      2.6923,
+      5.4195
+     ],
+     "p_T_holm": 0.054,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p2|tas|NSIB_JJA": {
+     "T": -168.57137,
+     "T_ci95": [
+      -254.17691,
+      -100.41938
+     ],
+     "p_T": 0.0005,
+     "rho": 0.9872,
+     "rho_ci95": [
+      0.5881,
+      1.4886
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      -0.0,
+      1.4549,
+      11.5854
+     ],
+     "vars": [
+      1.0286,
+      1.4056,
+      2.5306
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p2|tas|NWNA_JJA": {
+     "T": -181.91629,
+     "T_ci95": [
+      -267.63206,
+      -115.27418
+     ],
+     "p_T": 0.0005,
+     "rho": 0.9689,
+     "rho_ci95": [
+      0.6139,
+      1.4254
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      -0.0,
+      1.417,
+      12.2414
+     ],
+     "vars": [
+      1.094,
+      1.6991,
+      2.1968
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p2|tas|CEUR_DJF": {
+     "T": -30.36852,
+     "T_ci95": [
+      -38.94628,
+      -21.70273
+     ],
+     "p_T": 0.0005,
+     "rho": 0.9715,
+     "rho_ci95": [
+      0.6943,
+      1.2459
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      -0.0,
+      1.2214,
+      5.7064
+     ],
+     "vars": [
+      1.0404,
+      1.0937,
+      0.5601
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p2|tas|WRUS_DJF": {
+     "T": -19.56029,
+     "T_ci95": [
+      -27.8021,
+      -12.14459
+     ],
+     "p_T": 0.0005,
+     "rho": 0.9493,
+     "rho_ci95": [
+      0.5894,
+      1.3493
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      -0.0,
+      0.8741,
+      5.3118
+     ],
+     "vars": [
+      1.0067,
+      1.1617,
+      0.7534
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p2|tas|CNAM_DJF": {
+     "T": -1.25409,
+     "T_ci95": [
+      -8.7129,
+      4.71492
+     ],
+     "p_T": 0.699,
+     "rho": 0.6825,
+     "rho_ci95": [
+      -2.5659,
+      4.7417
+     ],
+     "p_cdf": 0.7725,
+     "means": [
+      -0.0,
+      0.0715,
+      5.1036
+     ],
+     "vars": [
+      0.9993,
+      1.1133,
+      0.9793
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "CanESM5_p2|tas|CEAS_DJF": {
+     "T": -43.67008,
+     "T_ci95": [
+      -62.8713,
+      -28.5159
+     ],
+     "p_T": 0.0005,
+     "rho": 0.9617,
+     "rho_ci95": [
+      0.628,
+      1.3845
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      -0.0,
+      1.1216,
+      6.9484
+     ],
+     "vars": [
+      1.0044,
+      1.3658,
+      1.6916
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p2|tas|NSIB_DJF": {
+     "T": -43.92692,
+     "T_ci95": [
+      -61.2379,
+      -30.46034
+     ],
+     "p_T": 0.0005,
+     "rho": 0.9762,
+     "rho_ci95": [
+      0.677,
+      1.361
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      -0.0,
+      1.0794,
+      7.0186
+     ],
+     "vars": [
+      0.9936,
+      1.1143,
+      0.7881
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p2|tas|NWNA_DJF": {
+     "T": -48.2789,
+     "T_ci95": [
+      -65.46051,
+      -33.51935
+     ],
+     "p_T": 0.0005,
+     "rho": 0.9605,
+     "rho_ci95": [
+      0.6669,
+      1.3023
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      0.0,
+      1.1571,
+      7.1947
+     ],
+     "vars": [
+      1.0158,
+      1.2629,
+      0.8359
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p2|pr|CEUR_JJA": {
+     "T": 0.33561,
+     "T_ci95": [
+      0.0714,
+      0.60778
+     ],
+     "p_T": 0.0195,
+     "rho": 2.5471,
+     "rho_ci95": [
+      0.5419,
+      4.6127
+     ],
+     "p_cdf": 0.294,
+     "means": [
+      0.0,
+      -0.2933,
+      -0.8328
+     ],
+     "vars": [
+      0.9987,
+      1.0405,
+      1.8125
+     ],
+     "p_T_holm": 0.551,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "CanESM5_p2|pr|WRUS_JJA": {
+     "T": 0.15832,
+     "T_ci95": [
+      -0.05804,
+      0.39303
+     ],
+     "p_T": 0.145,
+     "rho": 2.1277,
+     "rho_ci95": [
+      -0.78,
+      5.2819
+     ],
+     "p_cdf": 0.761,
+     "means": [
+      -0.0,
+      -0.1896,
+      0.5387
+     ],
+     "vars": [
+      1.0096,
+      0.9868,
+      1.517
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "CanESM5_p2|pr|CNAM_JJA": {
+     "T": 0.06659,
+     "T_ci95": [
+      -0.00392,
+      0.15205
+     ],
+     "p_T": 0.0775,
+     "rho": 2.8628,
+     "rho_ci95": [
+      -0.1686,
+      6.537
+     ],
+     "p_cdf": 0.6735,
+     "means": [
+      -0.0,
+      -0.2214,
+      -0.4532
+     ],
+     "vars": [
+      1.0014,
+      0.8105,
+      0.8064
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "CanESM5_p2|pr|CEAS_JJA": {
+     "T": -2.45466,
+     "T_ci95": [
+      -4.16683,
+      -0.78265
+     ],
+     "p_T": 0.004,
+     "rho": 1.0063,
+     "rho_ci95": [
+      0.3208,
+      1.7081
+     ],
+     "p_cdf": 0.0405,
+     "means": [
+      -0.0,
+      0.3964,
+      2.6868
+     ],
+     "vars": [
+      0.9895,
+      1.0616,
+      1.5165
+     ],
+     "p_T_holm": 0.136,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "CanESM5_p2|pr|NSIB_JJA": {
+     "T": -0.57808,
+     "T_ci95": [
+      -1.58967,
+      0.39827
+     ],
+     "p_T": 0.243,
+     "rho": 1.0847,
+     "rho_ci95": [
+      -0.7473,
+      2.983
+     ],
+     "p_cdf": 0.768,
+     "means": [
+      0.0,
+      0.1497,
+      1.963
+     ],
+     "vars": [
+      1.0113,
+      1.075,
+      2.148
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "CanESM5_p2|pr|NWNA_JJA": {
+     "T": -13.21574,
+     "T_ci95": [
+      -25.30756,
+      -3.16877
+     ],
+     "p_T": 0.022,
+     "rho": 0.9391,
+     "rho_ci95": [
+      0.2252,
+      1.7984
+     ],
+     "p_cdf": 0.015,
+     "means": [
+      -0.0,
+      0.4362,
+      5.9024
+     ],
+     "vars": [
+      1.0183,
+      1.2175,
+      1.75
+     ],
+     "p_T_holm": 0.594,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.48,
+     "cdf_reading": "unresolved"
+    },
+    "CanESM5_p2|pr|CEUR_DJF": {
+     "T": -6.78979,
+     "T_ci95": [
+      -10.24612,
+      -4.03923
+     ],
+     "p_T": 0.0005,
+     "rho": 0.9961,
+     "rho_ci95": [
+      0.5926,
+      1.5032
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      -0.0,
+      0.6222,
+      3.6354
+     ],
+     "vars": [
+      0.9948,
+      1.1322,
+      1.7551
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p2|pr|WRUS_DJF": {
+     "T": -25.40013,
+     "T_ci95": [
+      -37.21168,
+      -15.11705
+     ],
+     "p_T": 0.0005,
+     "rho": 0.996,
+     "rho_ci95": [
+      0.5928,
+      1.4592
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      0.0,
+      0.842,
+      5.9403
+     ],
+     "vars": [
+      0.9977,
+      1.3903,
+      3.6469
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p2|pr|CNAM_DJF": {
+     "T": -2.2292,
+     "T_ci95": [
+      -3.45831,
+      -1.18953
+     ],
+     "p_T": 0.0015,
+     "rho": 0.9688,
+     "rho_ci95": [
+      0.517,
+      1.503
+     ],
+     "p_cdf": 0.008,
+     "means": [
+      -0.0,
+      0.49,
+      2.4257
+     ],
+     "vars": [
+      1.0119,
+      1.2804,
+      2.1946
+     ],
+     "p_T_holm": 0.0585,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.28,
+     "cdf_reading": "unresolved"
+    },
+    "CanESM5_p2|pr|CEAS_DJF": {
+     "T": -46.53024,
+     "T_ci95": [
+      -68.51735,
+      -29.30046
+     ],
+     "p_T": 0.0005,
+     "rho": 1.0089,
+     "rho_ci95": [
+      0.6353,
+      1.4857
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      0.0,
+      1.1283,
+      6.9824
+     ],
+     "vars": [
+      0.9993,
+      1.5187,
+      4.5789
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p2|pr|NSIB_DJF": {
+     "T": -41.8068,
+     "T_ci95": [
+      -60.64374,
+      -25.89475
+     ],
+     "p_T": 0.0005,
+     "rho": 1.0068,
+     "rho_ci95": [
+      0.6236,
+      1.4604
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      0.0,
+      0.9573,
+      7.0822
+     ],
+     "vars": [
+      0.9944,
+      1.377,
+      4.1182
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "CanESM5_p2|pr|NWNA_DJF": {
+     "T": -7.06054,
+     "T_ci95": [
+      -11.69939,
+      -3.10227
+     ],
+     "p_T": 0.0045,
+     "rho": 0.999,
+     "rho_ci95": [
+      0.439,
+      1.6554
+     ],
+     "p_cdf": 0.0035,
+     "means": [
+      -0.0,
+      0.4283,
+      4.2819
+     ],
+     "vars": [
+      1.0045,
+      1.1671,
+      2.6138
+     ],
+     "p_T_holm": 0.1485,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.1295,
+     "cdf_reading": "unresolved"
+    },
+    "MIROC6|tas|CEUR_JJA": {
+     "T": -5.19411,
+     "T_ci95": [
+      -23.96129,
+      7.5989
+     ],
+     "p_T": 0.528,
+     "rho": 0.8572,
+     "rho_ci95": [
+      -1.2541,
+      3.9545
+     ],
+     "p_cdf": 0.4685,
+     "means": [
+      0.0,
+      0.1716,
+      6.0295
+     ],
+     "vars": [
+      1.0286,
+      1.193,
+      1.765
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "MIROC6|tas|WRUS_JJA": {
+     "T": -15.91496,
+     "T_ci95": [
+      -30.69586,
+      -2.7493
+     ],
+     "p_T": 0.0225,
+     "rho": 0.9403,
+     "rho_ci95": [
+      0.1624,
+      1.8136
+     ],
+     "p_cdf": 0.001,
+     "means": [
+      -0.0,
+      0.4568,
+      6.3198
+     ],
+     "vars": [
+      1.0689,
+      1.2601,
+      1.5023
+     ],
+     "p_T_holm": 0.18,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "MIROC6|tas|CNAM_JJA": {
+     "T": -44.51995,
+     "T_ci95": [
+      -83.64868,
+      -15.77531
+     ],
+     "p_T": 0.0145,
+     "rho": 0.9633,
+     "rho_ci95": [
+      0.3413,
+      1.8099
+     ],
+     "p_cdf": 0.007,
+     "means": [
+      -0.0,
+      0.633,
+      8.8674
+     ],
+     "vars": [
+      1.0466,
+      1.3248,
+      2.2614
+     ],
+     "p_T_holm": 0.1495,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.07,
+     "cdf_reading": "unresolved"
+    },
+    "MIROC6|tas|CEAS_JJA": {
+     "T": -163.02137,
+     "T_ci95": [
+      -329.11026,
+      -41.46463
+     ],
+     "p_T": 0.0315,
+     "rho": 0.9384,
+     "rho_ci95": [
+      0.2387,
+      1.8944
+     ],
+     "p_cdf": 0.014,
+     "means": [
+      -0.0,
+      1.0032,
+      13.6707
+     ],
+     "vars": [
+      1.1383,
+      2.1561,
+      4.3387
+     ],
+     "p_T_holm": 0.18,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.084,
+     "cdf_reading": "unresolved"
+    },
+    "MIROC6|tas|NSIB_JJA": {
+     "T": -151.5242,
+     "T_ci95": [
+      -220.25345,
+      -93.99366
+     ],
+     "p_T": 0.0005,
+     "rho": 0.9899,
+     "rho_ci95": [
+      0.614,
+      1.4389
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      0.0,
+      1.3907,
+      11.2097
+     ],
+     "vars": [
+      1.0476,
+      1.4343,
+      3.0519
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "MIROC6|tas|NWNA_JJA": {
+     "T": -118.85792,
+     "T_ci95": [
+      -166.71822,
+      -79.55787
+     ],
+     "p_T": 0.0005,
+     "rho": 0.9633,
+     "rho_ci95": [
+      0.6448,
+      1.3512
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      -0.0,
+      1.5598,
+      9.708
+     ],
+     "vars": [
+      1.0757,
+      1.7847,
+      2.5855
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "MIROC6|tas|CEUR_DJF": {
+     "T": -2.65102,
+     "T_ci95": [
+      -4.19654,
+      -1.39171
+     ],
+     "p_T": 0.002,
+     "rho": 0.9761,
+     "rho_ci95": [
+      0.5124,
+      1.5451
+     ],
+     "p_cdf": 0.0025,
+     "means": [
+      0.0,
+      0.4653,
+      2.6599
+     ],
+     "vars": [
+      0.9929,
+      0.9762,
+      0.7577
+     ],
+     "p_T_holm": 0.044,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.0325,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "MIROC6|tas|WRUS_DJF": {
+     "T": -4.66776,
+     "T_ci95": [
+      -7.571,
+      -2.56592
+     ],
+     "p_T": 0.0005,
+     "rho": 1.0245,
+     "rho_ci95": [
+      0.5632,
+      1.6618
+     ],
+     "p_cdf": 0.002,
+     "means": [
+      0.0,
+      0.4752,
+      3.343
+     ],
+     "vars": [
+      0.9984,
+      0.9749,
+      1.0689
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.028,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "MIROC6|tas|CNAM_DJF": {
+     "T": -11.22747,
+     "T_ci95": [
+      -16.24482,
+      -7.23266
+     ],
+     "p_T": 0.0005,
+     "rho": 1.0059,
+     "rho_ci95": [
+      0.648,
+      1.4554
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      0.0,
+      0.6491,
+      4.4841
+     ],
+     "vars": [
+      1.0055,
+      0.9833,
+      0.953
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "MIROC6|tas|CEAS_DJF": {
+     "T": -10.84705,
+     "T_ci95": [
+      -14.70198,
+      -6.99959
+     ],
+     "p_T": 0.0005,
+     "rho": 0.9691,
+     "rho_ci95": [
+      0.6253,
+      1.3135
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      -0.0,
+      0.792,
+      4.1761
+     ],
+     "vars": [
+      1.0102,
+      1.131,
+      1.21
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "MIROC6|tas|NSIB_DJF": {
+     "T": -67.46696,
+     "T_ci95": [
+      -89.76811,
+      -47.93744
+     ],
+     "p_T": 0.0005,
+     "rho": 1.0005,
+     "rho_ci95": [
+      0.7109,
+      1.3312
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      0.0,
+      1.4552,
+      7.5738
+     ],
+     "vars": [
+      1.0065,
+      1.0693,
+      1.3556
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "MIROC6|tas|NWNA_DJF": {
+     "T": -8.87336,
+     "T_ci95": [
+      -11.9163,
+      -6.22686
+     ],
+     "p_T": 0.0005,
+     "rho": 0.9713,
+     "rho_ci95": [
+      0.6816,
+      1.3044
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      0.0,
+      0.7039,
+      3.9717
+     ],
+     "vars": [
+      1.004,
+      1.0585,
+      0.9395
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "MIROC6|pr|CEUR_JJA": {
+     "T": -0.36887,
+     "T_ci95": [
+      -0.69635,
+      -0.08989
+     ],
+     "p_T": 0.0245,
+     "rho": 2.1295,
+     "rho_ci95": [
+      0.5189,
+      4.02
+     ],
+     "p_cdf": 0.134,
+     "means": [
+      0.0,
+      0.1441,
+      -1.0266
+     ],
+     "vars": [
+      1.0058,
+      1.1475,
+      1.3545
+     ],
+     "p_T_holm": 0.637,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "MIROC6|pr|WRUS_JJA": {
+     "T": -0.02118,
+     "T_ci95": [
+      -0.108,
+      0.06735
+     ],
+     "p_T": 0.6165,
+     "rho": -10.5842,
+     "rho_ci95": [
+      -53.9757,
+      33.6605
+     ],
+     "p_cdf": 0.983,
+     "means": [
+      -0.0,
+      -0.0116,
+      -0.4218
+     ],
+     "vars": [
+      1.0029,
+      1.063,
+      1.1892
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "MIROC6|pr|CNAM_JJA": {
+     "T": -0.06794,
+     "T_ci95": [
+      -0.1633,
+      -0.0019
+     ],
+     "p_T": 0.077,
+     "rho": 18.4099,
+     "rho_ci95": [
+      0.5141,
+      44.2513
+     ],
+     "p_cdf": 0.3875,
+     "means": [
+      0.0,
+      0.1231,
+      0.2453
+     ],
+     "vars": [
+      1.0077,
+      0.9254,
+      1.3657
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "MIROC6|pr|CEAS_JJA": {
+     "T": -0.09194,
+     "T_ci95": [
+      -0.2209,
+      0.05505
+     ],
+     "p_T": 0.1625,
+     "rho": 4.5479,
+     "rho_ci95": [
+      -2.7233,
+      10.927
+     ],
+     "p_cdf": 0.8955,
+     "means": [
+      0.0,
+      0.0699,
+      0.5738
+     ],
+     "vars": [
+      1.0085,
+      0.9347,
+      1.4285
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "MIROC6|pr|NSIB_JJA": {
+     "T": 0.07392,
+     "T_ci95": [
+      -0.17254,
+      0.34323
+     ],
+     "p_T": 0.5635,
+     "rho": 26.8218,
+     "rho_ci95": [
+      -62.6035,
+      124.5367
+     ],
+     "p_cdf": 0.9505,
+     "means": [
+      0.0,
+      -0.0037,
+      0.862
+     ],
+     "vars": [
+      1.0064,
+      1.0863,
+      1.6105
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "MIROC6|pr|NWNA_JJA": {
+     "T": 0.03712,
+     "T_ci95": [
+      -0.34896,
+      0.4394
+     ],
+     "p_T": 0.851,
+     "rho": -0.6797,
+     "rho_ci95": [
+      -8.0448,
+      6.389
+     ],
+     "p_cdf": 0.9895,
+     "means": [
+      0.0,
+      0.0342,
+      1.2814
+     ],
+     "vars": [
+      1.0126,
+      1.0975,
+      1.5136
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "MIROC6|pr|CEUR_DJF": {
+     "T": -0.03215,
+     "T_ci95": [
+      -0.11895,
+      0.05536
+     ],
+     "p_T": 0.4685,
+     "rho": 1.0929,
+     "rho_ci95": [
+      -1.8819,
+      4.0436
+     ],
+     "p_cdf": 0.933,
+     "means": [
+      0.0,
+      0.1263,
+      0.5499
+     ],
+     "vars": [
+      1.0002,
+      1.0911,
+      1.4174
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "MIROC6|pr|WRUS_DJF": {
+     "T": -0.40775,
+     "T_ci95": [
+      -0.76585,
+      -0.0865
+     ],
+     "p_T": 0.0175,
+     "rho": 1.0696,
+     "rho_ci95": [
+      0.2269,
+      2.0089
+     ],
+     "p_cdf": 0.0935,
+     "means": [
+      0.0,
+      0.243,
+      1.38
+     ],
+     "vars": [
+      1.0104,
+      1.1129,
+      1.7015
+     ],
+     "p_T_holm": 0.525,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "MIROC6|pr|CNAM_DJF": {
+     "T": -0.63452,
+     "T_ci95": [
+      -1.1511,
+      -0.21229
+     ],
+     "p_T": 0.014,
+     "rho": 1.1593,
+     "rho_ci95": [
+      0.3879,
+      2.103
+     ],
+     "p_cdf": 0.043,
+     "means": [
+      -0.0,
+      0.2694,
+      1.5665
+     ],
+     "vars": [
+      1.005,
+      1.0716,
+      1.716
+     ],
+     "p_T_holm": 0.434,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "MIROC6|pr|CEAS_DJF": {
+     "T": -1.9473,
+     "T_ci95": [
+      -2.94693,
+      -1.04935
+     ],
+     "p_T": 0.0015,
+     "rho": 0.8702,
+     "rho_ci95": [
+      0.4689,
+      1.3169
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      0.0,
+      0.525,
+      2.3437
+     ],
+     "vars": [
+      1.0201,
+      1.3667,
+      2.0143
+     ],
+     "p_T_holm": 0.0585,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "MIROC6|pr|NSIB_DJF": {
+     "T": -5.28132,
+     "T_ci95": [
+      -8.41319,
+      -2.49204
+     ],
+     "p_T": 0.0005,
+     "rho": 0.9024,
+     "rho_ci95": [
+      0.4258,
+      1.4375
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      -0.0,
+      0.459,
+      3.8079
+     ],
+     "vars": [
+      0.9958,
+      1.2705,
+      2.0302
+     ],
+     "p_T_holm": 0.024,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "MIROC6|pr|NWNA_DJF": {
+     "T": 0.05294,
+     "T_ci95": [
+      -0.27107,
+      0.33321
+     ],
+     "p_T": 0.718,
+     "rho": 0.8683,
+     "rho_ci95": [
+      -4.4464,
+      5.4657
+     ],
+     "p_cdf": 0.8435,
+     "means": [
+      0.0,
+      -0.0329,
+      1.3443
+     ],
+     "vars": [
+      0.9909,
+      0.9776,
+      1.2902
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "ACCESS-ESM1-5|tas|CEUR_JJA": {
+     "T": -97.29999,
+     "T_ci95": [
+      -165.78412,
+      -41.09007
+     ],
+     "p_T": 0.002,
+     "rho": 0.9549,
+     "rho_ci95": [
+      0.4032,
+      1.627
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      0.0,
+      1.4984,
+      9.0296
+     ],
+     "vars": [
+      1.0324,
+      1.8103,
+      2.6512
+     ],
+     "p_T_holm": 0.044,
+     "T_reading": "incompatible with fixed two-type mixing",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "ACCESS-ESM1-5|tas|WRUS_JJA": {
+     "T": -51.75368,
+     "T_ci95": [
+      -94.193,
+      -18.62243
+     ],
+     "p_T": 0.006,
+     "rho": 0.9495,
+     "rho_ci95": [
+      0.3417,
+      1.7281
+     ],
+     "p_cdf": 0.001,
+     "means": [
+      -0.0,
+      1.1481,
+      7.4882
+     ],
+     "vars": [
+      1.0422,
+      1.5497,
+      1.9553
+     ],
+     "p_T_holm": 0.09,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "ACCESS-ESM1-5|tas|CNAM_JJA": {
+     "T": -21.89424,
+     "T_ci95": [
+      -43.39808,
+      -4.78645
+     ],
+     "p_T": 0.027,
+     "rho": 0.9776,
+     "rho_ci95": [
+      0.2137,
+      1.9377
+     ],
+     "p_cdf": 0.0175,
+     "means": [
+      -0.0,
+      0.6618,
+      6.1577
+     ],
+     "vars": [
+      1.044,
+      1.1828,
+      1.5758
+     ],
+     "p_T_holm": 0.18,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.0875,
+     "cdf_reading": "unresolved"
+    },
+    "ACCESS-ESM1-5|tas|CEAS_JJA": {
+     "T": -341.88637,
+     "T_ci95": [
+      -632.16084,
+      -107.92357
+     ],
+     "p_T": 0.012,
+     "rho": 0.9649,
+     "rho_ci95": [
+      0.3046,
+      1.7842
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      -0.0,
+      1.9609,
+      14.4581
+     ],
+     "vars": [
+      1.1799,
+      2.3743,
+      3.652
+     ],
+     "p_T_holm": 0.1495,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "ACCESS-ESM1-5|tas|NSIB_JJA": {
+     "T": -81.49707,
+     "T_ci95": [
+      -162.87456,
+      -22.14305
+     ],
+     "p_T": 0.0265,
+     "rho": 0.9679,
+     "rho_ci95": [
+      0.263,
+      1.9343
+     ],
+     "p_cdf": 0.005,
+     "means": [
+      0.0,
+      1.0415,
+      9.5272
+     ],
+     "vars": [
+      1.0609,
+      1.5624,
+      3.0523
+     ],
+     "p_T_holm": 0.18,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.055,
+     "cdf_reading": "unresolved"
+    },
+    "ACCESS-ESM1-5|tas|NWNA_JJA": {
+     "T": -130.27257,
+     "T_ci95": [
+      -237.13163,
+      -47.91591
+     ],
+     "p_T": 0.0055,
+     "rho": 0.9881,
+     "rho_ci95": [
+      0.3634,
+      1.7986
+     ],
+     "p_cdf": 0.001,
+     "means": [
+      -0.0,
+      1.2365,
+      10.9627
+     ],
+     "vars": [
+      1.0488,
+      1.4481,
+      3.3181
+     ],
+     "p_T_holm": 0.088,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "ACCESS-ESM1-5|tas|CEUR_DJF": {
+     "T": -9.76455,
+     "T_ci95": [
+      -17.82252,
+      -3.53896
+     ],
+     "p_T": 0.01,
+     "rho": 0.9336,
+     "rho_ci95": [
+      0.3384,
+      1.704
+     ],
+     "p_cdf": 0.004,
+     "means": [
+      -0.0,
+      0.5881,
+      4.5214
+     ],
+     "vars": [
+      0.9877,
+      1.1423,
+      0.9949
+     ],
+     "p_T_holm": 0.14,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.048,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "ACCESS-ESM1-5|tas|WRUS_DJF": {
+     "T": -4.55527,
+     "T_ci95": [
+      -8.97407,
+      -1.06598
+     ],
+     "p_T": 0.0255,
+     "rho": 0.9577,
+     "rho_ci95": [
+      0.2241,
+      1.8867
+     ],
+     "p_cdf": 0.0075,
+     "means": [
+      -0.0,
+      0.4493,
+      3.4862
+     ],
+     "vars": [
+      1.0091,
+      1.035,
+      0.7629
+     ],
+     "p_T_holm": 0.18,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.07,
+     "cdf_reading": "unresolved"
+    },
+    "ACCESS-ESM1-5|tas|CNAM_DJF": {
+     "T": -5.14151,
+     "T_ci95": [
+      -9.5868,
+      -1.33078
+     ],
+     "p_T": 0.0135,
+     "rho": 1.0168,
+     "rho_ci95": [
+      0.2632,
+      1.896
+     ],
+     "p_cdf": 0.0385,
+     "means": [
+      -0.0,
+      0.4326,
+      3.6421
+     ],
+     "vars": [
+      1.0313,
+      0.9844,
+      0.8331
+     ],
+     "p_T_holm": 0.1495,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.154,
+     "cdf_reading": "unresolved"
+    },
+    "ACCESS-ESM1-5|tas|CEAS_DJF": {
+     "T": -11.25302,
+     "T_ci95": [
+      -20.25972,
+      -3.87905
+     ],
+     "p_T": 0.0115,
+     "rho": 1.0023,
+     "rho_ci95": [
+      0.3455,
+      1.8045
+     ],
+     "p_cdf": 0.0075,
+     "means": [
+      -0.0,
+      0.5543,
+      4.7863
+     ],
+     "vars": [
+      1.0063,
+      1.0117,
+      1.099
+     ],
+     "p_T_holm": 0.1495,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.07,
+     "cdf_reading": "unresolved"
+    },
+    "ACCESS-ESM1-5|tas|NSIB_DJF": {
+     "T": -30.37119,
+     "T_ci95": [
+      -51.20707,
+      -13.65048
+     ],
+     "p_T": 0.0025,
+     "rho": 0.9805,
+     "rho_ci95": [
+      0.4407,
+      1.6532
+     ],
+     "p_cdf": 0.0005,
+     "means": [
+      0.0,
+      0.8017,
+      6.6295
+     ],
+     "vars": [
+      1.0152,
+      1.1001,
+      0.9654
+     ],
+     "p_T_holm": 0.05,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.024,
+     "cdf_reading": "incompatible with fixed two-type mixing"
+    },
+    "ACCESS-ESM1-5|tas|NWNA_DJF": {
+     "T": -15.8774,
+     "T_ci95": [
+      -29.03244,
+      -5.5686
+     ],
+     "p_T": 0.0125,
+     "rho": 0.9989,
+     "rho_ci95": [
+      0.3503,
+      1.8265
+     ],
+     "p_cdf": 0.0085,
+     "means": [
+      0.0,
+      0.5761,
+      5.5487
+     ],
+     "vars": [
+      1.0308,
+      1.0028,
+      0.7311
+     ],
+     "p_T_holm": 0.1495,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.07,
+     "cdf_reading": "unresolved"
+    },
+    "ACCESS-ESM1-5|pr|CEUR_JJA": {
+     "T": -0.32121,
+     "T_ci95": [
+      -1.19481,
+      0.37766
+     ],
+     "p_T": 0.4125,
+     "rho": 6.1931,
+     "rho_ci95": [
+      -7.2817,
+      23.0371
+     ],
+     "p_cdf": 0.7995,
+     "means": [
+      -0.0,
+      0.0128,
+      -2.0086
+     ],
+     "vars": [
+      0.9875,
+      1.1194,
+      1.3212
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "ACCESS-ESM1-5|pr|WRUS_JJA": {
+     "T": 0.43738,
+     "T_ci95": [
+      0.02941,
+      0.93082
+     ],
+     "p_T": 0.0595,
+     "rho": 0.9051,
+     "rho_ci95": [
+      0.0609,
+      1.9262
+     ],
+     "p_cdf": 0.3575,
+     "means": [
+      0.0,
+      -0.2514,
+      -1.5177
+     ],
+     "vars": [
+      1.0066,
+      1.0475,
+      1.0714
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "ACCESS-ESM1-5|pr|CNAM_JJA": {
+     "T": 0.01517,
+     "T_ci95": [
+      -0.12196,
+      0.13237
+     ],
+     "p_T": 0.7995,
+     "rho": 14.6149,
+     "rho_ci95": [
+      -117.4933,
+      127.5226
+     ],
+     "p_cdf": 0.9125,
+     "means": [
+      0.0,
+      -0.0024,
+      -0.6544
+     ],
+     "vars": [
+      0.9918,
+      0.9707,
+      1.1443
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "ACCESS-ESM1-5|pr|CEAS_JJA": {
+     "T": 0.1266,
+     "T_ci95": [
+      -0.11433,
+      0.38244
+     ],
+     "p_T": 0.3,
+     "rho": 1.1652,
+     "rho_ci95": [
+      -1.0522,
+      3.5199
+     ],
+     "p_cdf": 0.78,
+     "means": [
+      0.0,
+      -0.22,
+      -0.8213
+     ],
+     "vars": [
+      1.006,
+      1.1422,
+      1.5959
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "ACCESS-ESM1-5|pr|NSIB_JJA": {
+     "T": -0.24676,
+     "T_ci95": [
+      -0.69952,
+      0.18162
+     ],
+     "p_T": 0.2575,
+     "rho": 0.9072,
+     "rho_ci95": [
+      -0.6677,
+      2.5718
+     ],
+     "p_cdf": 0.818,
+     "means": [
+      -0.0,
+      0.3153,
+      1.0997
+     ],
+     "vars": [
+      1.0223,
+      1.2511,
+      1.7403
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "ACCESS-ESM1-5|pr|NWNA_JJA": {
+     "T": -0.16053,
+     "T_ci95": [
+      -0.63033,
+      0.28273
+     ],
+     "p_T": 0.4805,
+     "rho": 1.4487,
+     "rho_ci95": [
+      -2.5515,
+      5.6885
+     ],
+     "p_cdf": 0.964,
+     "means": [
+      -0.0,
+      0.167,
+      0.9023
+     ],
+     "vars": [
+      0.9947,
+      1.1545,
+      2.1555
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "ACCESS-ESM1-5|pr|CEUR_DJF": {
+     "T": -0.17628,
+     "T_ci95": [
+      -0.453,
+      0.05322
+     ],
+     "p_T": 0.1515,
+     "rho": 1.4323,
+     "rho_ci95": [
+      -0.4324,
+      3.6805
+     ],
+     "p_cdf": 0.7935,
+     "means": [
+      0.0,
+      0.1826,
+      0.9174
+     ],
+     "vars": [
+      1.0059,
+      0.9878,
+      1.2065
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "ACCESS-ESM1-5|pr|WRUS_DJF": {
+     "T": -1.15156,
+     "T_ci95": [
+      -2.60578,
+      0.24227
+     ],
+     "p_T": 0.121,
+     "rho": 0.9453,
+     "rho_ci95": [
+      -0.1989,
+      2.139
+     ],
+     "p_cdf": 0.1645,
+     "means": [
+      0.0,
+      0.2396,
+      2.3779
+     ],
+     "vars": [
+      1.0059,
+      1.1112,
+      1.7729
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "ACCESS-ESM1-5|pr|CNAM_DJF": {
+     "T": -0.29401,
+     "T_ci95": [
+      -0.75966,
+      0.12355
+     ],
+     "p_T": 0.181,
+     "rho": 1.5042,
+     "rho_ci95": [
+      -0.6321,
+      3.8865
+     ],
+     "p_cdf": 0.8285,
+     "means": [
+      -0.0,
+      0.1136,
+      1.3699
+     ],
+     "vars": [
+      0.999,
+      0.9901,
+      1.7587
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "ACCESS-ESM1-5|pr|CEAS_DJF": {
+     "T": -2.44587,
+     "T_ci95": [
+      -6.19757,
+      0.5407
+     ],
+     "p_T": 0.1535,
+     "rho": 0.9858,
+     "rho_ci95": [
+      -0.2179,
+      2.4978
+     ],
+     "p_cdf": 0.122,
+     "means": [
+      0.0,
+      0.2413,
+      3.3296
+     ],
+     "vars": [
+      1.0033,
+      1.1328,
+      2.6434
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    },
+    "ACCESS-ESM1-5|pr|NSIB_DJF": {
+     "T": -9.07778,
+     "T_ci95": [
+      -17.29396,
+      -3.10242
+     ],
+     "p_T": 0.019,
+     "rho": 1.042,
+     "rho_ci95": [
+      0.3561,
+      1.985
+     ],
+     "p_cdf": 0.0045,
+     "means": [
+      0.0,
+      0.4015,
+      4.8631
+     ],
+     "vars": [
+      1.0005,
+      1.0683,
+      2.732
+     ],
+     "p_T_holm": 0.551,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 0.162,
+     "cdf_reading": "unresolved"
+    },
+    "ACCESS-ESM1-5|pr|NWNA_DJF": {
+     "T": -0.8705,
+     "T_ci95": [
+      -2.29771,
+      0.41759
+     ],
+     "p_T": 0.223,
+     "rho": 1.0733,
+     "rho_ci95": [
+      -0.5149,
+      2.8329
+     ],
+     "p_cdf": 0.483,
+     "means": [
+      0.0,
+      0.1684,
+      2.2807
+     ],
+     "vars": [
+      1.0246,
+      1.0523,
+      1.7528
+     ],
+     "p_T_holm": 1.0,
+     "T_reading": "unresolved",
+     "p_cdf_holm": 1.0,
+     "cdf_reading": "unresolved"
+    }
+   },
+   "summary": {
+    "tas|p_T": {
+     "n_cases": 48,
+     "n_incompatible_raw": 45,
+     "n_incompatible_holm": 28
+    },
+    "tas|p_cdf": {
+     "n_cases": 48,
+     "n_incompatible_raw": 45,
+     "n_incompatible_holm": 37
+    },
+    "pr|p_T": {
+     "n_cases": 48,
+     "n_incompatible_raw": 23,
+     "n_incompatible_holm": 9
+    },
+    "pr|p_cdf": {
+     "n_cases": 48,
+     "n_incompatible_raw": 20,
+     "n_incompatible_holm": 9
+    }
+   },
+   "note": "reanalysis of CMIP6 cases whose T3 curvature had been examined; method and gate fixed before this run",
+   "seed": 1974738902,
+   "B": 1999
   },
   "snapsi_archetype_test.json": {
    "window_post_onset_days": [

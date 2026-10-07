@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-05T00:18:36+00:00",
+ "generated": "2026-10-07T13:48:48+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 190,
-  "results": 97
+  "scripts": 191,
+  "results": 98
  },
  "scripts": [
   {
@@ -1201,6 +1201,20 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/07_physical_decomposition/mixture_moment_test.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "IS FORCED MIXING OF TWO FIXED RESPONSE TYPES INCOMPATIBLE WITH THE ENSEMBLES? A direct test that replaces the variance-mean curvature (class_law_general T3).",
+   "loc": 316,
+   "modified": "2026-10-07 13:46",
+   "sha256_16": "795baae4178c34ab",
+   "flags": [],
+   "filenames_mentioned": [
+    "mixture_moment_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/07_physical_decomposition/multimodel_R.py",
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
@@ -1787,9 +1801,9 @@
    "tree": "ssw-design-analysis",
    "stage": "08_literature_audit",
    "title": "A REGISTERED PROSPECTIVE TEST OF THE SHIFTED NULL ON THE NEXT SSWs.",
-   "loc": 392,
-   "modified": "2026-10-02 14:39",
-   "sha256_16": "3dfc9ed0151030fa",
+   "loc": 408,
+   "modified": "2026-10-07 13:43",
+   "sha256_16": "102cb9bcbbb06763",
    "flags": [],
    "filenames_mentioned": [
     "era5_realtime_cds.parquet",
@@ -7366,6 +7380,808 @@
     "R4_pooled_mean_of_pairs",
     "post_hoc_spread",
     "expected_halfwidth_one_population_n21"
+   ]
+  },
+  {
+   "path": "results/current/8_experiment/mixture_moment_test.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 44782,
+   "modified": "2026-10-07 13:47",
+   "sha256_16": "5be67e9523b7d744",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/mixture_moment_test.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/mixture_moment_test.py": "795baae4178c34ab"
+   },
+   "verdicts": [
+    {
+     "key": "cases.CanESM5_p1|tas|CEUR_JJA.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|CEUR_JJA.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|WRUS_JJA.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|WRUS_JJA.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|CNAM_JJA.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|CNAM_JJA.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|CEAS_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|CEAS_JJA.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|NSIB_JJA.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|NSIB_JJA.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|NWNA_JJA.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|NWNA_JJA.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|CEUR_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|CEUR_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|WRUS_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|WRUS_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|CNAM_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|CNAM_DJF.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|CEAS_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|CEAS_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|NSIB_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|NSIB_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|NWNA_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|tas|NWNA_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|CEUR_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|CEUR_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|WRUS_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|WRUS_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|CNAM_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|CNAM_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|CEAS_JJA.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|CEAS_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|NSIB_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|NSIB_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|NWNA_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|NWNA_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|CEUR_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|CEUR_DJF.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|WRUS_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|WRUS_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|CNAM_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|CNAM_DJF.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|CEAS_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|CEAS_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|NSIB_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|NSIB_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|NWNA_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p1|pr|NWNA_DJF.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|CEUR_JJA.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|CEUR_JJA.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|WRUS_JJA.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|WRUS_JJA.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|CNAM_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|CNAM_JJA.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|CEAS_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|CEAS_JJA.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|NSIB_JJA.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|NSIB_JJA.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|NWNA_JJA.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|NWNA_JJA.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|CEUR_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|CEUR_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|WRUS_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|WRUS_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|CNAM_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|CNAM_DJF.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|CEAS_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|CEAS_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|NSIB_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|NSIB_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|NWNA_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|tas|NWNA_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|CEUR_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|CEUR_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|WRUS_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|WRUS_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|CNAM_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|CNAM_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|CEAS_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|CEAS_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|NSIB_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|NSIB_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|NWNA_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|NWNA_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|CEUR_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|CEUR_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|WRUS_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|WRUS_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|CNAM_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|CNAM_DJF.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|CEAS_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|CEAS_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|NSIB_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|NSIB_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|NWNA_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.CanESM5_p2|pr|NWNA_DJF.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|tas|CEUR_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|tas|CEUR_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|tas|WRUS_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|tas|WRUS_JJA.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.MIROC6|tas|CNAM_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|tas|CNAM_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|tas|CEAS_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|tas|CEAS_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|tas|NSIB_JJA.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.MIROC6|tas|NSIB_JJA.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.MIROC6|tas|NWNA_JJA.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.MIROC6|tas|NWNA_JJA.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.MIROC6|tas|CEUR_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.MIROC6|tas|CEUR_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.MIROC6|tas|WRUS_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.MIROC6|tas|WRUS_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.MIROC6|tas|CNAM_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.MIROC6|tas|CNAM_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.MIROC6|tas|CEAS_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.MIROC6|tas|CEAS_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.MIROC6|tas|NSIB_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.MIROC6|tas|NSIB_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.MIROC6|tas|NWNA_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.MIROC6|tas|NWNA_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.MIROC6|pr|CEUR_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|pr|CEUR_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|pr|WRUS_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|pr|WRUS_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|pr|CNAM_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|pr|CNAM_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|pr|CEAS_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|pr|CEAS_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|pr|NSIB_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|pr|NSIB_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|pr|NWNA_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|pr|NWNA_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|pr|CEUR_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|pr|CEUR_DJF.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|pr|WRUS_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|pr|WRUS_DJF.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|pr|CNAM_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|pr|CNAM_DJF.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|pr|CEAS_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|pr|CEAS_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.MIROC6|pr|NSIB_DJF.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.MIROC6|pr|NSIB_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.MIROC6|pr|NWNA_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.MIROC6|pr|NWNA_DJF.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|CEUR_JJA.T_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|CEUR_JJA.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|WRUS_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|WRUS_JJA.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|CNAM_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|CNAM_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|CEAS_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|CEAS_JJA.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|NSIB_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|NSIB_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|NWNA_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|NWNA_JJA.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|CEUR_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|CEUR_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|WRUS_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|WRUS_DJF.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|CNAM_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|CNAM_DJF.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|CEAS_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|CEAS_DJF.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|NSIB_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|NSIB_DJF.cdf_reading",
+     "text": "incompatible with fixed two-type mixing"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|NWNA_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|tas|NWNA_DJF.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|CEUR_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|CEUR_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|WRUS_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|WRUS_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|CNAM_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|CNAM_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|CEAS_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|CEAS_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|NSIB_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|NSIB_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|NWNA_JJA.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|NWNA_JJA.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|CEUR_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|CEUR_DJF.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|WRUS_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|WRUS_DJF.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|CNAM_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|CNAM_DJF.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|CEAS_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|CEAS_DJF.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|NSIB_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|NSIB_DJF.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|NWNA_DJF.T_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "cases.ACCESS-ESM1-5|pr|NWNA_DJF.cdf_reading",
+     "text": "unresolved"
+    },
+    {
+     "key": "note",
+     "text": "reanalysis of CMIP6 cases whose T3 curvature had been examined; method and gate fixed before this run"
+    }
+   ],
+   "counts": {},
+   "top_level_keys": [
+    "validation",
+    "method_fixed",
+    "cases",
+    "summary",
+    "note",
+    "seed",
+    "B"
    ]
   },
   {

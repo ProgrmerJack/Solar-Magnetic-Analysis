@@ -1340,6 +1340,18 @@ T3 (variance-mean curvature over hist-nat/early, historical, ssp585 2071-2100; f
 T4 (law under ssp585 2071-2100 vs historical 1985-2014, pr only; tas classes empty): 26/29 hold, 3 inconclusive
   (-0.25, -0.18, +0.15), none fails; sd ratios to 1.39, rate changes to +0.56.
 
+### Z12 — corrected test of forced fixed two-type mixing (`mixture_moment_test.py`, 8_experiment; method and gate fixed `70df9fa` before model data; REANALYSIS of the class_law_general cases)
+Replaces T3 curvature (attenuated) and its Gaussian-mixture calibration. Restriction: under fixed two-type mixing the
+three levels' (mean, 2nd raw moment) are collinear (T = 0; any shapes, no ordering); secondary: CDF vectors collinear.
+Two-way member x 5-yr-block bootstrap. VALIDATION (1,000 sims per case, gate upper95 < 0.07): PASSED; T size 0-3.3%
+(conservative), CDF 0-0.9%; power: translations 100%, hard spacing 88%, precipitation-like small shifts 62% (CDF 8%).
+RESULT: tas T incompatible 45/48 raw, 28/48 Holm (CDF 37/48 Holm); pr 23/48 raw, 9/48 Holm (CDF 9; union 11), 8 of
+the 9 winter. rho (0 = mixing, 1 = pure translation) median 0.97 tas, 1.01 pr. Power is lost where the historical
+level sits near an endpoint (lambda(1-lambda) small) -> stage 2 adds an intermediate 2041-2070 level.
+=> The calibrated "tas 48/48, pr 26/27" (Z11 T3) is SUPERSEDED by this. Paper text still carries Z11's T3 claims:
+   to be replaced together with the stage-2 replication.
+Also: prospective stopping rule amended `acd8ba7` (one final analysis from 1 May 2036, >= 5 events).
+
 ### Z7 — prospective test (`prospective_next_ssw.py`, 9_literature; registered `d2b54a8`, window amended to 2036 before any onset)
 Prediction table for every onset day 1 Nov–31 Mar committed; shift nam_1000 −0.635, nam_150 −0.945, N-Eurasian T days
 8–24 −1.54 K; constant rate 0.692; T trend 0.037 K/yr. P(DW) shifted 0.71–0.84 vs climatology 0.24–0.44.
