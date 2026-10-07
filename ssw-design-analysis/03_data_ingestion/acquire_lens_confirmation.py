@@ -13,7 +13,10 @@ SOURCES (anonymous)
             (50 members, f1) and "smbb" (50 members, f2); a member keeps its id across
             historical and SSP3-7.0
   MPI-GE    DKRZ ESGF (project MPI-GE), Amon tas and pr; historical r###i1850p3 and
-            RCP8.5 r###i2005p3 (run ### continues), 100 members; OPeNDAP subsets
+            RCP8.5 r###i2005p3 (run ### continues), 100 members; whole files over HTTPS,
+            reduced and deleted one by one (AMENDED 2026-10-07 before any value was read:
+            DKRZ answers OPeNDAP for this collection with HTTP 404, so the OPeNDAP gate below
+            has nothing to check and is not used)
 PERIODS   historical 1950-12 .. 1980-12; future 2039-12 .. 2099-12
 BOXES     as acquire_cmip6_monthly_boxes.py (cos-latitude means of cell centres inside)
 GATE (--gate, run before the MPI-GE download, as FAILURES/ssw-data-access-traps require):
@@ -101,7 +104,7 @@ def mpi_urls():
     for var in ("tas", "pr"):
         for exp in ("historical", "rcp85"):
             q = {"project": "MPI-GE", "type": "File", "variable": var, "experiment": exp, "time_frequency": "mon",
-                 "cmor_table": "Amon", "distrib": "false", "format": "application/solr+json", "limit": 500,
+                 "distrib": "false", "format": "application/solr+json", "limit": 500,
                  "fields": "title,url,ensemble"}
             docs = json.load(urllib.request.urlopen(SEARCH + "?" + urllib.parse.urlencode(q), timeout=300))["response"]["docs"]
             for d in docs:
@@ -128,9 +131,12 @@ def mpi_job(job):
             for exp, lab in (("historical", "historical"), ("rcp85", "future")):
                 t0, t1 = PERIODS[lab]
                 for var, scale in (("tas", 1.0), ("pr", 86400.0)):
-                    ds = xr.open_dataset(urls[(var, exp)][0], use_cftime=True)
+                    tmp = CACHE / f"_tmp_{run}_{var}_{exp}.nc"
+                    urllib.request.urlretrieve(urls[(var, exp)][1].replace("http://", "https://"), tmp)
+                    ds = xr.open_dataset(tmp, use_cftime=True)
                     x = ds[var].sel(time=slice(t0, t1))
                     cols = boxes(x, scale, var)
+                    ds.close(); tmp.unlink()
                     frames.append(pd.DataFrame({"model": "MPI-GE", "experiment": lab, "var": var, "member": run,
                                                 "year": x["time"].dt.year.values, "month": x["time"].dt.month.values, **cols}))
             pd.concat(frames, ignore_index=True).to_parquet(cf)
@@ -173,9 +179,6 @@ def main():
     if "--only-mpi" not in sys.argv:
         jobs += [("cesm", (v, m)) for v in ("cmip6", "smbb") for m in _cesm_members(v)]
     if "--only-cesm" not in sys.argv:
-        g = CACHE / "gate.json"
-        if not g.exists() or not json.loads(g.read_text())["passed"]:
-            sys.exit("MPI-GE: run --gate first (OPeNDAP must match the full file)")
         runs = sorted({k[2] for k in urls_raw})
         for run in runs:
             u = {(v, e): urls_raw[(v, e, run)] for v in ("tas", "pr") for e in ("historical", "rcp85") if (v, e, run) in urls_raw}
