@@ -123,6 +123,28 @@ G8 SHAPE TEST WITH POWER, FOR SSWs (registered 2026-10-04 before it was computed
   200 permutations). READING, fixed now: if p >= 0.05 and max |dq| <= 0.25, every
   (Delta, r) with power >= 0.8 is excluded for the imposed SSWs.
 
+G9 DOES THE TIMING OF THE FORCED RESPONSE EXPLAIN THE 1.14? (registered 2026-10-07
+  before it was computed; own random stream; run with --g9). G7's exact-law calibration
+  moves every member by ONE shift over the whole window (1.05 [0.96, 1.13]); the
+  observed two-condition slope 1.1434 lies just outside. The label's condition 2 counts
+  negative 6-hourly values, so a forced shift that varies within the window acts on it
+  differently from a constant one. Per pair, the ensemble-mean series of each arm and the
+  across-member s.d. series, smoothed by a centred 5-day (20-step) running mean:
+  (c2) timing only: Y_i(t) = s(t) + mbar + k (m_i - mbar) + (X_i(t) - m_i), with
+       s(t) = smoothed nudged minus control mean series, k the pair's s.d. ratio of
+       member means (G7's means-only construction with s(t) for s);
+  (c1) time-varying marginals: Y_i(t) = mn(t) + (sn(t) / sc(t)) (X_i(t) - mc(t))
+       (forced mean and spread matched at every time; control temporal dependence kept);
+  each from resampled control members, slope over the 36 pairs, 200 replicates.
+  HELD OUT (secondary): s(t) and k fitted on a random half of the nudged members, the
+  slope computed from the other half against control, c2 calibrated in the same sizes;
+  10 splits; reported: share of splits with the held-out slope inside its range.
+  DIAGNOSTIC: longest run of consecutive negative values per member, nudged vs c1
+  synthetic (mean difference, pooled over pairs) -- order-sensitive, fitted by neither.
+  READING, fixed now: 1.1434 inside the c2 95% range -> "the excess is the timing of the
+  forced response"; else inside c1 -> "explained by time-varying marginals (timing and
+  spread)"; else "unexplained by the marginals: a change of temporal dependence".
+
 Output: results/current/8_experiment/snapsi_contrast_generality.json
 """
 import json
@@ -437,6 +459,160 @@ def shape_with_power(usable, rng):
     return out
 
 
+# ---------------------------------------------------------------- G8x (POST HOC, 2026-10-07)
+def _g8x_job(args):
+    """Monte Carlo distribution of the G8 Anderson-Darling statistic under one two-type
+    mixture, in the observed design (pair sizes); returns P(AD_sim <= AD_obs)."""
+    D, r, wc, wn, sizes, ad_obs, seed, n_sim = args
+    from scipy.stats import anderson_ksamp
+    import warnings
+    warnings.filterwarnings("ignore")
+    rng = np.random.default_rng(seed)
+    def draw(n, w):
+        z = rng.random(n) < w
+        return np.where(z, D + r * rng.normal(size=n), rng.normal(size=n))
+    def std(x):
+        return (x - x.mean()) / x.std(ddof=1)
+    le = 0
+    for _ in range(n_sim):
+        A = np.concatenate([std(draw(nn, wn)) for nn, _ in sizes]); B = np.concatenate([std(draw(nc, wc)) for _, nc in sizes])
+        le += anderson_ksamp([A, B]).statistic <= ad_obs
+    sd_c = np.sqrt((1 - wc) + wc * r * r + wc * (1 - wc) * D * D)
+    return D, r, wc, wn, (le + 1) / (n_sim + 1), (wn - wc) * D / sd_c
+
+
+def g8_inversion(usable, n_sim=400):
+    """POST HOC (2026-10-07, after review): G8 excluded types by 'no rejection + power
+    >= 0.8 at one weight change', which is not a confidence-set exclusion, and with two
+    arms arbitrary two-type mixing cannot be rejected at all. Here: test inversion within
+    a stated family -- two Gaussian types D apart (units of the first type's s.d.), width
+    ratio r, control weight wc, nudged weight wn, common to all pairs. A family member is
+    REJECTED at 5% if the observed AD statistic lies below the 5th percentile of its
+    distribution in the observed design (Monte Carlo, n_sim draws, within-arm
+    standardisation exactly as G8). Reported: the surviving set, and, against each
+    member's implied mean shift (control s.d.), whether mixtures able to produce the
+    imposed SSW shift survive."""
+    from scipy.stats import anderson_ksamp
+    units = []; shifts = []
+    for c in usable:
+        for init in NH_INITS:
+            nm = member_nam(c, init)
+            if nm is None:
+                continue
+            mn = np.array([x.mean() for x in nm["nudged"].values()]); mc = np.array([x.mean() for x in nm["control"].values()])
+            units.append(((mn - mn.mean()) / mn.std(ddof=1), (mc - mc.mean()) / mc.std(ddof=1)))
+            shifts.append((mn.mean() - mc.mean()) / mc.std(ddof=1))
+    A = np.concatenate([a for a, _ in units]); B = np.concatenate([b for _, b in units])
+    ad_obs = float(anderson_ksamp([A, B]).statistic)
+    sizes = [(len(a), len(b)) for a, b in units]
+    ws = [0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95]
+    grid = [(D, r, wc, wn) for D in (1.0, 1.5, 2.0, 2.5, 3.0, 4.0) for r in (0.5, 1.0, 2.0) for wc in ws for wn in ws if wc != wn]
+    jobs = [(D, r, wc, wn, sizes, ad_obs, SEED + 81 + i, n_sim) for i, (D, r, wc, wn) in enumerate(grid)]
+    import multiprocessing as mp
+    with mp.get_context("fork").Pool(8) as pool:
+        outs = pool.map(_g8x_job, jobs)
+    obs_shift = float(np.mean(np.abs(shifts)))
+    rows = [{"D": D, "r": r, "wc": wc, "wn": wn, "p": round(pv, 4), "implied_shift": round(float(sh), 3), "rejected": bool(pv < 0.05)}
+            for D, r, wc, wn, pv, sh in outs]
+    surv = [x for x in rows if not x["rejected"]]
+    big = [x for x in rows if abs(x["implied_shift"]) >= 0.5 * obs_shift]
+    out = {"note": "POST HOC test inversion (2026-10-07); family: two Gaussian types, common weights; replaces the "
+                   "'power >= 0.8' exclusion of G8", "AD_obs": round(ad_obs, 4), "n_pairs": len(units), "n_sim": n_sim,
+           "observed_mean_abs_shift_sd": round(obs_shift, 3), "n_family": len(rows), "n_rejected": sum(x["rejected"] for x in rows),
+           "n_able_to_produce_half_the_shift": len(big), "n_of_those_rejected": sum(x["rejected"] for x in big),
+           "survivors_able_to_produce_half_the_shift": [x for x in big if not x["rejected"]],
+           "max_abs_implied_shift_among_survivors": round(max((abs(x["implied_shift"]) for x in surv), default=0.0), 3),
+           "by_D_r": {f"D{D}_r{r}": {"n": sum(1 for x in rows if x["D"] == D and x["r"] == r),
+                                     "rejected": sum(1 for x in rows if x["D"] == D and x["r"] == r and x["rejected"]),
+                                     "max_abs_dw_surviving": round(max((abs(x["wn"] - x["wc"]) for x in surv if x["D"] == D and x["r"] == r), default=0.0), 2)}
+                      for D in (1.0, 1.5, 2.0, 2.5, 3.0, 4.0) for r in (0.5, 1.0, 2.0)},
+           "grid": rows}
+    print("G8x:", {k: v for k, v in out.items() if k not in ("grid", "by_D_r")}, flush=True)
+    print("G8x by D,r:", out["by_D_r"], flush=True)
+    return out
+
+
+# ---------------------------------------------------------------- G9 (registered 2026-10-07)
+def _smooth(x, w=20):
+    k = np.ones(w) / w
+    pad = np.concatenate([np.full(w // 2, x[0]), x, np.full(w - w // 2 - 1, x[-1])])
+    return np.convolve(pad, k, mode="valid")
+
+
+def _arm_stats(series):
+    n0 = min(len(x) for x in series)
+    X = np.array([x[:n0] for x in series])
+    return X, _smooth(X.mean(0)), _smooth(X.std(0, ddof=1))
+
+
+def _longest_neg(x):
+    best = run = 0
+    for v in x:
+        run = run + 1 if v < 0 else 0; best = max(best, run)
+    return best
+
+
+def timing_diagnosis(usable, rng, n_rep=200, n_split=10):
+    pairs = []
+    for c in usable:
+        for init in NH_INITS:
+            nm = member_nam(c, init)
+            if nm is not None:
+                pairs.append((list(nm["nudged"].values()), list(nm["control"].values())))
+    obs = slope(*zip(*[g7_units(n, k, contrast)[::-1] for n, k in pairs]))
+    def synth(con_sel, n_out, Xn_fit, variant):
+        Xc, mc, sc = _arm_stats(con_sel)
+        Xn, mn, sn = Xn_fit
+        n0 = min(Xc.shape[1], len(mn))
+        F = Xc[rng.integers(len(Xc), size=n_out), :n0]
+        if variant == "c2":
+            mbar = Xc.mean(); k = Xn.mean(1).std(ddof=1) / Xc.mean(1).std(ddof=1)
+            st = (mn - mc)[:n0]
+            return [st + mbar + k * (f.mean() - mbar) + (f - f.mean()) for f in F]
+        return [mn[:n0] + (sn[:n0] / sc[:n0]) * (f - mc[:n0]) for f in F]
+    out = {"observed_slope_36": round(obs, 4)}
+    for variant in ("c2", "c1"):
+        sl, runs = [], []
+        for _ in range(n_rep):
+            xs, ys = [], []
+            for nud, con in pairs:
+                C = [con[i] for i in rng.integers(len(con), size=len(con))]
+                Y = synth(con, len(nud), _arm_stats(nud), variant)
+                y_, x_ = g7_units(Y, C, contrast); ys.append(y_); xs.append(x_)
+                if variant == "c1" and len(runs) < 36 * 20:
+                    runs.append(np.mean([_longest_neg(v) for v in nud]) - np.mean([_longest_neg(v) for v in Y]))
+            sl.append(slope(xs, ys))
+        sl = np.asarray(sl, float)
+        r = [round(float(q), 4) for q in np.nanquantile(sl, [0.025, 0.975])]
+        out[variant] = {"mean_slope": round(float(np.nanmean(sl)), 4), "range95": r, "n_rep": n_rep,
+                        "observed_inside": bool(r[0] <= obs <= r[1])}
+        if variant == "c1":
+            out["longest_negative_run_nudged_minus_c1_steps"] = {"mean": round(float(np.mean(runs)), 3),
+                                                                 "ci95_over_draws": [round(float(q), 3) for q in np.quantile(runs, [0.025, 0.975])]}
+    # held out: fit on half of the nudged members, score the other half
+    inside = []; held = []
+    for _ in range(n_split):
+        split = [rng.permutation(len(n)) for n, _ in pairs]
+        A = [[n[i] for i in sp[: len(n) // 2]] for (n, _), sp in zip(pairs, split)]
+        Bh = [[n[i] for i in sp[len(n) // 2:]] for (n, _), sp in zip(pairs, split)]
+        ob = slope(*zip(*[g7_units(b, k, contrast)[::-1] for b, (_, k) in zip(Bh, pairs)]))
+        sl = []
+        for _ in range(n_rep // 4):
+            xs, ys = [], []
+            for a, b, (_, con) in zip(A, Bh, pairs):
+                C = [con[i] for i in rng.integers(len(con), size=len(con))]
+                Y = synth(con, len(b), _arm_stats(a), "c2")
+                y_, x_ = g7_units(Y, C, contrast); ys.append(y_); xs.append(x_)
+            sl.append(slope(xs, ys))
+        r = np.nanquantile(sl, [0.025, 0.975]); held.append(round(ob, 4)); inside.append(bool(r[0] <= ob <= r[1]))
+    out["held_out_c2"] = {"slopes_heldout_half": held, "share_inside": round(float(np.mean(inside)), 3), "n_split": n_split}
+    out["reading"] = ("the excess is the timing of the forced response" if out["c2"]["observed_inside"] else
+                      "explained by time-varying marginals (timing and spread)" if out["c1"]["observed_inside"] else
+                      "unexplained by the marginals: a change of temporal dependence")
+    print("G9:", out, flush=True)
+    return out
+
+
 # ---------------------------------------------------------------- G6
 G6_REGIONS = {f"{la0}-{la0 + 20}N_{lo0}-{lo0 + 30}E": (la0, la0 + 20, lo0, lo0 + 30)
               for la0 in (30, 50) for lo0 in range(0, 360, 30)}
@@ -544,6 +720,21 @@ def selftest():
 def main():
     if "--selftest" in sys.argv:
         return 0 if selftest() else 1
+    if "--g9" in sys.argv:                      # registered 2026-10-07; writes only its own block
+        res = json.loads((RESULTS / f"{NAME}.json").read_text())
+        centres = sorted({p.name.split("_")[0] for p in L.RED.glob("*.parquet")})
+        res["G9_timing_diagnosis"] = timing_diagnosis([c for c in centres if not L.corruption_guard(c)[0]],
+                                                      np.random.default_rng(SEED + 9))
+        (RESULTS / f"{NAME}.json").write_text(json.dumps(res, indent=2), encoding="utf8", newline="\n")
+        print(f"Saved -> {NAME}.json (G9)")
+        return 0
+    if "--g8x" in sys.argv:                     # POST HOC block only; registered results untouched
+        res = json.loads((RESULTS / f"{NAME}.json").read_text())
+        centres = sorted({p.name.split("_")[0] for p in L.RED.glob("*.parquet")})
+        res["G8x_post_hoc_inversion"] = g8_inversion([c for c in centres if not L.corruption_guard(c)[0]])
+        (RESULTS / f"{NAME}.json").write_text(json.dumps(res, indent=2), encoding="utf8", newline="\n")
+        print(f"Saved -> {NAME}.json (G8x)")
+        return 0
     rng = np.random.default_rng(SEED)
     sel = json.loads((RESULTS / "snapsi_selection_test.json").read_text())
     strong = {(e["centre"], e["init"]) for e in sel["all_ensembles"]
