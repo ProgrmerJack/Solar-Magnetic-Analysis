@@ -82,6 +82,14 @@ AMENDMENTS AFTER THE FRESH-CONTEXT REVIEW (2026-10-02, before any onset; the
     mismatch leaves that event unscored with the reason rather than stopping;
   - real-time temperature is corrected by the bias the consistency gate measured.
 
+AMENDMENT 2026-10-07, before any onset (the window opens 1 November 2026; forecasts and
+  scores unchanged): the reading above checked an ordinary 95% interval after every
+  event from the fifth, a repeated-looks design whose error rate exceeds 5%. The
+  verdict now comes from ONE final analysis, run once the last onset of the window
+  can be scored (from 1 May 2036), with the same statistic and interval, and only if
+  at least five events were scored (otherwise "not decided"). Cumulative summaries
+  before then are descriptive and carry no verdict ("interim").
+
 USAGE
   prospective_next_ssw.py                     build and save the prediction table
   prospective_next_ssw.py --gate              check the CDS overlap (consistency gate)
@@ -343,11 +351,19 @@ def score(m, committed, inputs, gate_res):
         if len(v):
             bs = [rng.choice(v, len(v)).mean() for _ in range(N_BOOT)]
             ci = [float(x) for x in np.quantile(bs, [0.025, 0.975])]
-            verdict = ("not yet decided" if len(v) < 5 else
-                       "prospectively supported" if ci[0] > 0 else
-                       "prospectively refuted" if ci[1] < 0 else "not yet decided")
+            import datetime
+            if datetime.date.today() < FINAL_ANALYSIS_FROM:      # one final look (amendment 2026-10-07)
+                verdict = "interim: descriptive, no verdict before the final analysis"
+            else:
+                verdict = ("not decided" if len(v) < 5 else
+                           "prospectively supported" if ci[0] > 0 else
+                           "prospectively refuted" if ci[1] < 0 else "not decided")
             cum[k] = {"mean": round(float(v.mean()), 4), "ci95": [round(x, 4) for x in ci], "reading": verdict}
     return {"events": scored, "cumulative": cum}
+
+
+import datetime as _dt
+FINAL_ANALYSIS_FROM = _dt.date(2036, 5, 1)
 
 
 def main():
