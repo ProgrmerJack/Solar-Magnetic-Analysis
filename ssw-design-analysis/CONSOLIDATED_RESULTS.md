@@ -1389,8 +1389,8 @@ Regimes: k-means k=4 (sens. k=6) on 10 EOFs of control psl anomalies, per centre
 forced +0.75 mm/day per pair [0.61, 0.87]; frequency-only reproduces R = 0.30 [0.11, 0.48] -> "rainfall within
 regimes must change" (k=6: 0.41 [0.28, 0.54]). Scandinavia -0.44 [-0.65, -0.29], R 0.38 [0.31, 0.47] (k=6 0.49).
 British Isles: no forced change. O2 (tail) and O3 (wet spells) BIASED BY CONSTRUCTION (independent daily draws
-remove within-regime persistence) -> not interpreted. Meaning: SSW rainfall impacts are mostly a shift within
-circulation types, not a reshuffling of type frequency.
+remove within-regime persistence) -> not interpreted. Meaning: regime frequency carries 30-49% of the SSW rainfall effect (more with k=6); the rest is a
+shift within circulation types. Review control-vs-control check: O1 unbiased, O2/O3 bias confirmed.
 
 ### Z7 — prospective test (`prospective_next_ssw.py`, 9_literature; registered `d2b54a8`, window amended to 2036 before any onset)
 Prediction table for every onset day 1 Nov–31 Mar committed; shift nam_1000 −0.635, nam_150 −0.945, N-Eurasian T days
