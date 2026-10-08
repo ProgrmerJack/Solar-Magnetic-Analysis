@@ -67,3 +67,5 @@ ssw-design-analysis/03_data_ingestion/_snapsi_tas/
 
 # NCEP 10 hPa height fields for the vortex-geometry classification
 ssw-design-analysis/03_data_ingestion/_ncep_z10/
+ssw-design-analysis/03_data_ingestion/raw/ibtracs/
+ssw-design-analysis/03_data_ingestion/raw/ersst/

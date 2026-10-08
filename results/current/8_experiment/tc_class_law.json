@@ -1,0 +1,21 @@
+{
+ "validation": {
+  "n_sim": 1000,
+  "B": 1999,
+  "false_rejection_rate": 0.054,
+  "upper95": 0.0673,
+  "gate": 0.07,
+  "passes": true,
+  "power_vs_one_population": 1.0
+ },
+ "method_fixed": "2026-10-08, before any data",
+ "validation_history": [
+  {
+   "v1_centred_p": {
+    "false_rejection_rate": 0.058,
+    "upper95": 0.0717,
+    "passes": false
+   }
+  }
+ ]
+}

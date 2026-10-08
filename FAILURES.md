@@ -322,3 +322,8 @@ Rule: time one raw object with curl before choosing a cloud store; the same CESM
 Tried: snapsi_regime_precip registered tail-exceedance and wet-spell outcomes for a frequency-only construction that draws each day's rainfall independently from same-regime control days.
 Failed: independent draws keep the expected mean but remove day-to-day rainfall persistence within regimes, so synthetic wet spells shorten and window-mean spread narrows regardless of the forcing; those outcomes were biased by construction and could not be interpreted.
 Rule: a counterfactual built by resampling must preserve the dependence structure of every outcome it is compared on (resample regime-runs or blocks, or calibrate the construction on control-vs-control) before such outcomes are registered.
+
+## 2026-10-08 — Centred season-bootstrap p-value is liberal with ~43 clusters
+Tried: tc_class_law reused mixture_moment_test's centred bootstrap p (|T_b - T| >= |T|), resampling 43 seasons only.
+Failed: validation gate (before data) gave false rejection 0.058, one-sided upper bound 0.0717 > 0.07; with few clusters the bootstrap spread of T is too narrow.
+Rule: with < ~50 resampled clusters use T / bootstrap s.d. referred to Student t (clusters - 1 d.f.) and re-validate (here 0.054, upper 0.0673).
