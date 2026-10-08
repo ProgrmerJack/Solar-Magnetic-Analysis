@@ -77,6 +77,7 @@ def main():
     CLG = J("class_law_general.json")
     MMT = J("mixture_moment_test.json")
     LCF = J("lens_confirmation.json")
+    EOB = J("criterion_precip_contrast.json")
     R2 = ("robustness (revision 2)", "committed before run", "4c8b3f2")
     mm = g(MMt, "multimodel", "confirmatory"); nr = g(SRt, "regions", "NEURASIA", "multimodel", "confirmatory")
     rows = [
@@ -403,6 +404,13 @@ def main():
         ("CONF-4", "same: class law 1951-80 -> 2040-69 (precipitation; temperature classes empty)", "revision-8 secondary", "committed before data", "d5096e4",
          (f"pr: {g(LCF,'summary','C4|pr','pooled','mean')} {g(LCF,'summary','C4|pr','pooled','ci95')}, {g(LCF,'summary','C4|pr','readings','holds')} of "
           f"{g(LCF,'summary','C4|pr','n_cases')} hold; {g(LCF,'summary','C4|pr','reading')}") if LCF else "pending", None),
+        ("OBS-PR", "station rainfall (E-OBS) after the 39 observed SSWs: DW-NDW contrast vs matched null, Iberia days 1-25 (primary; Scandinavia, British Isles secondary)", "revision-8 primary",
+         "committed before data", "9b0af12",
+         (f"Iberia {g(EOB,'contrast','IBERIA_d1_25','C_obs')} vs null {g(EOB,'contrast','IBERIA_d1_25','C_null_mean')} mm/day, "
+          f"p {g(EOB,'contrast','IBERIA_d1_25','p_two_sided')}, power {g(EOB,'contrast','IBERIA_d1_25','power_planted','detection_rate')}: "
+          f"{g(EOB,'contrast','IBERIA_d1_25','reading')}; Scandinavia {g(EOB,'contrast','SCANDINAVIA_d1_25','C_obs')} vs "
+          f"{g(EOB,'contrast','SCANDINAVIA_d1_25','C_null_mean')} (p {g(EOB,'contrast','SCANDINAVIA_d1_25','p_two_sided')})") if EOB else "pending",
+         g(EOB, 'contrast', 'IBERIA_d1_25', 'p_two_sided') if EOB else None),
         ("GL-4", "the law under SSP5-8.5 2071-2100 vs historical 1985-2014 (precipitation classes; temperature classes empty)", "revision-8 secondary",
          "committed before data", "80edfc5",
          (f"{g(CLG,'T4_summary','holds')} of {g(CLG,'T4_summary','n_units')} hold, {g(CLG,'T4_summary','inconclusive')} inconclusive, "

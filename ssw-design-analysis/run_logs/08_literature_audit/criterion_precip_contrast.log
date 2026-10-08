@@ -1,0 +1,12 @@
+events with NAM windows 39; with complete Iberian days 1-25 39
+IBERIA d1_25 {'C_obs': 0.8597, 'C_null_mean': 0.2673, 'C_null_ci95': [-0.5986, 1.1223], 'p_two_sided': 0.1665, 'share_reproduced': 0.3109, 'n_rep_used': 3999, 'n_rep_dropped_small_class': 1, 'event_free_sd': 1.4225, 'C_obs_ci95': [-0.1125, 1.7908], 'power_planted': {'delta': 0.7113, 'detection_rate': 0.347}, 'reading': 'inconclusive'}
+SCANDINAVIA d1_25 {'C_obs': -0.5445, 'C_null_mean': -0.6229, 'C_null_ci95': [-1.2138, -0.0281], 'p_two_sided': 0.7812, 'share_reproduced': 1.1438, 'n_rep_used': 3999, 'n_rep_dropped_small_class': 1, 'event_free_sd': 0.8082}
+BRITISH_ISLES d1_25 {'C_obs': 0.0234, 'C_null_mean': -0.0718, 'C_null_ci95': [-1.2084, 0.9979], 'p_two_sided': 0.8757, 'share_reproduced': -3.0614, 'n_rep_used': 3999, 'n_rep_dropped_small_class': 1, 'event_free_sd': 1.3576}
+IBERIA d8_52 {'C_obs': 0.7105, 'C_null_mean': 0.4158, 'C_null_ci95': [-0.1874, 1.0319], 'p_two_sided': 0.3356, 'share_reproduced': 0.5853, 'n_rep_used': 3999, 'n_rep_dropped_small_class': 1, 'event_free_sd': 1.1036}
+SCANDINAVIA d8_52 {'C_obs': -0.3024, 'C_null_mean': -0.5817, 'C_null_ci95': [-1.0506, -0.1318], 'p_two_sided': 0.2181, 'share_reproduced': 1.9236, 'n_rep_used': 3999, 'n_rep_dropped_small_class': 1, 'event_free_sd': 0.6632}
+BRITISH_ISLES d8_52 {'C_obs': -0.1234, 'C_null_mean': -0.0501, 'C_null_ci95': [-0.9114, 0.729], 'p_two_sided': 0.8297, 'share_reproduced': 0.406, 'n_rep_used': 3999, 'n_rep_dropped_small_class': 1, 'event_free_sd': 1.0475}
+IBERIA wetrun_d1_25 {'C_obs': 3.1759, 'C_null_mean': 0.0819, 'C_null_ci95': [-2.6063, 2.5946], 'p_two_sided': 0.0125, 'share_reproduced': 0.0258, 'n_rep_used': 3999, 'n_rep_dropped_small_class': 1, 'event_free_sd': 3.9995}
+SCANDINAVIA wetrun_d1_25 {'C_obs': -2.4722, 'C_null_mean': -2.6656, 'C_null_ci95': [-6.7958, 1.2131], 'p_two_sided': 0.9597, 'share_reproduced': 1.0782, 'n_rep_used': 3999, 'n_rep_dropped_small_class': 1, 'event_free_sd': 5.4677}
+forecast IBERIA {'mean_crps_gain': 0.1374, 'ci95': [-0.0426, 0.3135], 'n_events': 39, 'reading': 'not resolved'}
+forecast SCANDINAVIA {'mean_crps_gain': 0.0174, 'ci95': [-0.0339, 0.0678], 'n_events': 39, 'reading': 'not resolved'}
+Saved -> criterion_precip_contrast.json

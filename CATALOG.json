@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-08T03:39:13+00:00",
+ "generated": "2026-10-08T04:13:11+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 193,
-  "results": 99
+  "scripts": 195,
+  "results": 100
  },
  "scripts": [
   {
@@ -105,6 +105,20 @@
    "filenames_mentioned": [
     "enso_checksum.txt",
     "enso_oni.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_eobs_precip.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Daily station-based precipitation (E-OBS v33.0e ensemble mean, 0.25 deg, 1950 to present; Copernicus Climate Data Store \"insitu-gridded-observations-europe\") averaged over three literature-defined boxes, for 08_literature_audit/criterion_precip_contrast.py",
+   "loc": 84,
+   "modified": "2026-10-08 04:03",
+   "sha256_16": "48f923f0525f79e6",
+   "flags": [],
+   "filenames_mentioned": [
+    "eobs_precip_regions_daily.parquet"
    ],
    "filename_prefixes": []
   },
@@ -1741,6 +1755,20 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/08_literature_audit/criterion_precip_contrast.py",
+   "tree": "ssw-design-analysis",
+   "stage": "08_literature_audit",
+   "title": "A NEW MEASURED ENDPOINT: STATION-BASED PRECIPITATION AFTER OBSERVED SSWs. DOES THE MATCHED NULL REPRODUCE THE DOWNWARD/NON-DOWNWARD DIFFERENCE IN RAINFALL, AND DOES THE SHIFTED NULL PREDICT HELD-OUT WINTERS' RAINFALL?",
+   "loc": 215,
+   "modified": "2026-10-08 04:06",
+   "sha256_16": "e9394d9f56a7addd",
+   "flags": [],
+   "filenames_mentioned": [
+    "eobs_precip_regions_daily.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/08_literature_audit/criterion_regional_contrast.py",
    "tree": "ssw-design-analysis",
    "stage": "08_literature_audit",
@@ -2137,13 +2165,14 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 476,
-   "modified": "2026-10-08 03:37",
-   "sha256_16": "4feab5d673a607e6",
+   "loc": 484,
+   "modified": "2026-10-08 04:12",
+   "sha256_16": "1d72838d8b6f0600",
    "flags": [],
    "filenames_mentioned": [
     "class_law_general.json",
     "class_model_comparison.json",
+    "criterion_precip_contrast.json",
     "criterion_regional_contrast.json",
     "criterion_sweep.json",
     "criterion_transport_cv.json",
@@ -9209,6 +9238,61 @@
    ]
   },
   {
+   "path": "results/current/9_literature/criterion_precip_contrast.json",
+   "tree": "current",
+   "stage": "9_literature",
+   "readable": true,
+   "bytes": 4170,
+   "modified": "2026-10-08 04:11",
+   "sha256_16": "86a3781852530eca",
+   "producers": [],
+   "state": "ORPHAN",
+   "detail": "no script writes this",
+   "flags": [],
+   "producer_sha256": {},
+   "verdicts": [
+    {
+     "key": "contrast.IBERIA_d1_25.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "forecast_d1_25.IBERIA.reading",
+     "text": "not resolved"
+    },
+    {
+     "key": "forecast_d1_25.SCANDINAVIA.reading",
+     "text": "not resolved"
+    }
+   ],
+   "counts": {
+    "n_rep": [
+     4000
+    ],
+    "n_boot": [
+     4000
+    ],
+    "n_events": [
+     39
+    ]
+   },
+   "top_level_keys": [
+    "registered",
+    "seed",
+    "n_rep",
+    "n_boot",
+    "n_plant",
+    "n_shift_sets",
+    "halfwin_days",
+    "inputs",
+    "n_events",
+    "events",
+    "n_dw",
+    "n_ndw",
+    "contrast",
+    "forecast_d1_25"
+   ]
+  },
+  {
    "path": "results/current/9_literature/criterion_regional_contrast.json",
    "tree": "current",
    "stage": "9_literature",
@@ -9451,8 +9535,8 @@
    "stage": "9_literature",
    "readable": true,
    "bytes": 57424,
-   "modified": "2026-10-03 07:53",
-   "sha256_16": "4e6e6f82e3eebdb3",
+   "modified": "2026-10-08 04:01",
+   "sha256_16": "a7676a0f99edcd7d",
    "producers": [],
    "state": "ORPHAN",
    "detail": "no script writes this",
