@@ -10,6 +10,12 @@ value was fetched (03_data_ingestion/acquire_snapsi_regime_precip.py). This is t
 physical alternative a class reading implies: the SSW acts by changing the frequency of
 fixed weather types. It is tested here with types defined from circulation alone.
 
+AMENDMENT 2026-10-08, before any rainfall outcome was computed (the fetch had read values
+  only for range checks): the 2019 initialisations cover post-onset days 1-24 (s20181213)
+  and 6-25 (s20190108) only -- the 8 January run starts after the 2 January onset -- so
+  "days 1-25" below becomes DAYS 8-24 throughout (the paper's regional-temperature window,
+  covered by all four initialisations), including the anomaly reference and every outcome.
+
 DATA  SNAPSI nudged and control, the four Northern Hemisphere initialisations
   (s20180125, s20180208 -> 2018 event; s20181213, s20190108 -> 2019 event), every centre
   with both arms; per member, days 1-25 after the event's onset (lead offset as

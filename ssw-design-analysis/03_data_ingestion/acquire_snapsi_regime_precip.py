@@ -16,8 +16,13 @@ pr files are found by listing <member>/6hr/pr/<grid>/<version>/; when several ve
 exist the latest is taken and recorded. Whole files are fetched with the CEDA token
 (acquire_snapsi_surface.token) and discarded after reduction; per-member cache in
 _snapsi_regime_precip/.
+AMENDED 2026-10-08 (before any rainfall outcome was computed): the 2019 initialisations
+cover only post-onset days 1-24 (s20181213) and 6-25 (s20190108), so completeness is
+required on days 8-24 and the analysis uses those days; days 1-25 are stored where present.
+Bounds are used only when consistent with the time stamps (NRL's decode to wrong dates);
+a day needs all samples finite; precipitation noise down to -0.05 mm/day is set to zero.
 Assembly (--assemble, also run at the end): anomalies of the pressure maps from each
-pair's control ensemble-mean field over days 1-25, as registered; writes
+pair's control ensemble-mean field over days 8-24, as amended; writes
 snapsi_regime_precip.parquet (rainfall) and snapsi_regime_psl.npz (maps, keys, lat).
 """
 import io
@@ -42,7 +47,8 @@ OUT_FIELD = HERE / "snapsi_regime_psl.npz"
 ONSET = {"s20180125": (2018, 2, 12), "s20180208": (2018, 2, 12), "s20181213": (2019, 1, 2), "s20190108": (2019, 1, 2)}
 LATS = np.arange(30, 81, 5.0); LONS = np.arange(-80, 41, 5.0)
 BOXES = {"IBERIA": (36, 44, -10, -1), "SCANDINAVIA": (55, 70, 4, 20), "BRITISH_ISLES": (49, 61, -10, 1)}
-DAYS = range(1, 26)
+DAYS = range(1, 26)          # stored where available
+NEED = range(8, 25)          # required complete: days 8-24 (amended 2026-10-08, see snapsi_regime_precip)
 
 
 def get(url, tok, tries=4):
@@ -78,13 +84,20 @@ def pr_path(psl_archive_path, tok):
 
 def post_onset_days(ds, init):
     import cftime
-    t = ds["time"].values
-    if "time_bnds" in ds or "time_bounds" in ds:
-        b = ds["time_bnds" if "time_bnds" in ds else "time_bounds"].values
-        t = np.array([b0 + (b1 - b0) / 2 for b0, b1 in b])
-    cal = getattr(t[0], "calendar", "standard")
+    stamps = ds["time"].values
+    cal = getattr(stamps[0], "calendar", "standard")
     on = cftime.datetime(*ONSET[init], calendar=cal)
-    return np.array([(x - on).total_seconds() / 86400.0 for x in t])
+    x = np.array([(v - on).total_seconds() / 86400.0 for v in stamps])
+    bname = "time_bnds" if "time_bnds" in ds else "time_bounds" if "time_bounds" in ds else None
+    if bname:                                  # bounds midpoint, only if consistent with the stamps (NRL's are not)
+        try:
+            b = ds[bname].values
+            mid = np.array([((b0 + (b1 - b0) / 2) - on).total_seconds() / 86400.0 for b0, b1 in b])
+            if np.all(np.abs(mid - x) <= 0.5):
+                x = mid
+        except Exception:                      # noqa: BLE001 -- undecodable bounds: keep the stamps
+            pass
+    return x
 
 
 def daily(values, x):
@@ -94,7 +107,7 @@ def daily(values, x):
     out = {}
     for k in DAYS:
         m = d == k
-        if m.sum() >= max(per, 1):
+        if m.sum() >= max(per, 1) and np.isfinite(values[m]).all():
             out[k] = values[m].mean(0)
     return out
 
@@ -122,7 +135,10 @@ def boxes(pr, lat, lon):
         if not mi.any() or not mj.any():
             raise ValueError(f"empty box {b}")
         w = np.cos(np.deg2rad(lat[mi]))[:, None] * np.ones(mj.sum())[None]
-        cols[b] = (pr[:, mi][:, :, mj] * w).sum(axis=(1, 2)) / w.sum() * 86400.0
+        v = (pr[:, mi][:, :, mj] * w).sum(axis=(1, 2)) / w.sum() * 86400.0
+        if np.nanmin(v) < -0.05:
+            raise ValueError(f"{b}: negative precipitation {np.nanmin(v)} mm/day")
+        cols[b] = np.where(v < 0, 0.0, v)            # numerical noise (ECCC: -0.003 mm/day) set to zero
     return cols
 
 
@@ -143,10 +159,10 @@ def job(args):
             x = post_onset_days(ds, row["start_date"])
             bx = boxes(ds["pr"].values, ds["lat"].values, ds["lon"].values)
             R = {b: daily(v, x) for b, v in bx.items()}
-        if len(P) < 25 or any(len(v) < 25 for v in R.values()):
-            return f"FAILED {cf.name}: incomplete days psl {len(P)} pr {[len(v) for v in R.values()]}"
+        if any(k not in P for k in NEED) or any(k not in v for v in R.values() for k in NEED):
+            return f"FAILED {cf.name}: incomplete days 8-24: psl {sorted(P)[:1]}..{sorted(P)[-1:]} pr {[len(v) for v in R.values()]}"
         rows = []
-        for k in DAYS:
+        for k in sorted(set(P) & set.intersection(*[set(v) for v in R.values()])):
             rr = {b: float(R[b][k]) for b in BOXES}
             if not all(0 <= v < 200 for v in rr.values()) or not (85000 < P[k].mean() < 110000):
                 return f"FAILED {cf.name}: implausible day {k}"
@@ -161,6 +177,7 @@ def job(args):
 
 def assemble():
     d = pd.concat([pd.read_parquet(p) for p in sorted(CACHE.glob("*.parquet"))], ignore_index=True)
+    d = d[d.day.isin(list(NEED))]                    # analysis window, days 8-24
     fcols = [c for c in d.columns if c.startswith("f") and c[1:].isdigit()]
     both = d.groupby(["centre", "init"]).experiment.nunique()
     d = d.set_index(["centre", "init"]).loc[both[both == 2].index].reset_index()
