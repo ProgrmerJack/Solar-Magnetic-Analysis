@@ -1378,7 +1378,7 @@ C3 law 2040-69 -> 2070-99: pr 36/36 hold (pooled -0.000 [-0.006, +0.006]); tas 1
 ### Z15 — station rainfall (E-OBS) after observed SSWs (`criterion_precip_contrast.py`, 9_literature; registered `9b0af12` before data)
 E-OBS v33.0e (licence accepted 2026-10-08; acknowledgement + Cornes et al. 2018 required), Dai et al. 2025 boxes,
 39 events, matched null of Z5. PRIMARY Iberia days 1-25: DW-NDW +0.86 mm/day [-0.11, +1.79] vs null +0.27, p 0.17,
-power 0.35 -> INCONCLUSIVE. Scandinavia -0.54 vs -0.62 (p 0.78; reproduced); British Isles +0.02 vs -0.07; days
+power 0.35 -> INCONCLUSIVE. Scandinavia -0.54 vs -0.62 (p 0.78; agreement in POINT ESTIMATE only -- power ~0.27 by a reviewer check, not in the JSON); British Isles +0.02 vs -0.07; days
 8-52 Iberia p 0.34, Scandinavia p 0.22. Iberian longest wet spell +3.2 d vs +0.1 (p 0.0125 raw; Holm over 7
 secondaries 0.09) -> a hint that persistence may exceed one shifted population, NOT a finding. Shifted-null CRPS
 forecast not resolved (Iberia +0.14 [-0.04, +0.31]).
