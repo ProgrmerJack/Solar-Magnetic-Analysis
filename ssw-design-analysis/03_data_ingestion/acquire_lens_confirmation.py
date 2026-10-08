@@ -17,6 +17,11 @@ SOURCES (anonymous)
             reduced and deleted one by one (AMENDED 2026-10-07 before any value was read:
             DKRZ answers OPeNDAP for this collection with HTTP 404, so the OPeNDAP gate below
             has nothing to check and is not used)
+            AMENDED 2026-10-08, before any CESM2 value was read: from this network AWS
+            us-west-2 delivers ~30 kB/s per connection (a 79 MB chunk in ~45 min), so CESM2-LE
+            is taken instead from the Multi-Model Large Ensemble Archive v2 (NCAR GDEX
+            d651039, THREDDS fileServer, ~2.5 MB/s): the same 50 + 50 runs, historical joined
+            to SSP3-7.0, Amon tas and pr regridded to 2.5 degrees ("g025"); --cesm-gdex
 PERIODS   historical 1950-12 .. 1980-12; future 2039-12 .. 2099-12
 BOXES     as acquire_cmip6_monthly_boxes.py (cos-latitude means of cell centres inside)
 GATE (--gate, run before the MPI-GE download, as FAILURES/ssw-data-access-traps require):
@@ -99,6 +104,50 @@ def cesm_job(job):
     return f"FAILED CESM2-{variant} {member}: {type(last).__name__}: {str(last)[:160]}"
 
 
+GDEX = "https://tds.gdex.ucar.edu/thredds"
+GDEX_DIR = "files/d651039/cesm2_lens/Amon"
+
+
+def gdex_files():
+    import re
+    out = {}
+    for var in ("tas", "pr"):
+        html = urllib.request.urlopen(f"{GDEX}/catalog/{GDEX_DIR}/{var}/catalog.html", timeout=300).read().decode()
+        for f in sorted(set(re.findall(r"dataset=(files/[^'\"&]+\.nc)", html))):
+            m = re.search(r"CESM2_(cmip6|smbb)_historical_ssp370_([0-9.]+)i", f)
+            out.setdefault((m.group(1), m.group(2)), {})[var] = f"{GDEX}/fileServer/{f}"
+    return {k: v for k, v in out.items() if len(v) == 2}
+
+
+def gdex_job(job):
+    (variant, member), urls = job
+    import xarray as xr
+    CACHE.mkdir(exist_ok=True)
+    cf = CACHE / f"CESM2-{variant}_{member}.parquet"
+    if cf.exists():
+        return str(cf)
+    last = None
+    for attempt in range(4):
+        try:
+            frames = []
+            for var, scale in (("tas", 1.0), ("pr", 86400.0)):
+                tmp = CACHE / f"_tmp_cesm_{variant}_{member}_{var}.nc"
+                urllib.request.urlretrieve(urls[var], tmp)
+                ds = xr.open_dataset(tmp, use_cftime=True)
+                for lab, (t0, t1) in PERIODS.items():
+                    x = ds[var].sel(time=slice(t0, t1))
+                    cols = boxes(x, scale, var)
+                    frames.append(pd.DataFrame({"model": f"CESM2-{variant}", "experiment": lab, "var": var, "member": member,
+                                                "year": x["time"].dt.year.values, "month": x["time"].dt.month.values, **cols}))
+                ds.close(); tmp.unlink()
+            pd.concat(frames, ignore_index=True).to_parquet(cf)
+            return str(cf)
+        except Exception as e:                       # noqa: BLE001
+            last = e
+            time.sleep(15 * (attempt + 1))
+    return f"FAILED CESM2-{variant} {member}: {type(last).__name__}: {str(last)[:160]}"
+
+
 def mpi_urls():
     out = {}
     for var in ("tas", "pr"):
@@ -170,15 +219,17 @@ def gate(urls):
 
 def main():
     import multiprocessing as mp
-    urls_raw = mpi_urls() if ("--gate" in sys.argv or "--only-cesm" not in sys.argv) else {}
+    urls_raw = mpi_urls() if ("--gate" in sys.argv or not ({"--only-cesm", "--cesm-gdex"} & set(sys.argv))) else {}
     if "--gate" in sys.argv:
         r = gate(urls_raw)
         (CACHE / "gate.json").write_text(json.dumps(r, indent=1))
         return 0 if r["passed"] else 1
     jobs = []
-    if "--only-mpi" not in sys.argv:
+    if "--cesm-gdex" in sys.argv:
+        jobs += [("gdex", (k, u)) for k, u in sorted(gdex_files().items())]
+    elif "--only-mpi" not in sys.argv:
         jobs += [("cesm", (v, m)) for v in ("cmip6", "smbb") for m in _cesm_members(v)]
-    if "--only-cesm" not in sys.argv:
+    if not ({"--only-cesm", "--cesm-gdex"} & set(sys.argv)):
         runs = sorted({k[2] for k in urls_raw})
         for run in runs:
             u = {(v, e): urls_raw[(v, e, run)] for v in ("tas", "pr") for e in ("historical", "rcp85") if (v, e, run) in urls_raw}
@@ -187,7 +238,7 @@ def main():
     print(f"{len(jobs)} jobs", flush=True)
     done = 0
     with ProcessPoolExecutor(6, mp_context=mp.get_context("spawn"), max_tasks_per_child=10) as ex:
-        futs = [ex.submit(cesm_job if k == "cesm" else mpi_job, a) for k, a in jobs]
+        futs = [ex.submit({"cesm": cesm_job, "mpi": mpi_job, "gdex": gdex_job}[k], a) for k, a in jobs]
         for f in futs:
             r = f.result(); done += 1
             if r.startswith("FAILED"):

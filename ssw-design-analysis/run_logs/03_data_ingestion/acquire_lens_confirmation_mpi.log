@@ -1,0 +1,2063 @@
+100 jobs
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+  20/100
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+  40/100
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+  60/100
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+  80/100
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  ds = xr.open_dataset(tmp, use_cftime=True)
+  100/100
+model   experiment  var
+MPI-GE  future      pr     100
+                    tas    100
+        historical  pr     100
+                    tas    100
+Saved -> lens_confirmation_boxes.parquet (216,400 rows)
+exit 0
