@@ -1,0 +1,756 @@
+CEDA token valid, 69.0 h remaining (user mikhail001)
+4243 members
+  100/4243
+  200/4243
+  300/4243
+  400/4243
+  500/4243
+  600/4243
+  700/4243
+  800/4243
+  900/4243
+  1000/4243
+  1100/4243
+  1200/4243
+  1300/4243
+  1400/4243
+  1500/4243
+  1600/4243
+  1700/4243
+  1800/4243
+  1900/4243
+  2000/4243
+  2100/4243
+  2200/4243
+  2300/4243
+  2400/4243
+  2500/4243
+  2600/4243
+  2700/4243
+  2800/4243
+FAILED NRL_control_s20180125_r10i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r11i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r12i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r13i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r14i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r15i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r16i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r17i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r18i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r19i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r1i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r20i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r21i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r22i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r23i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r24i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r25i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r26i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r27i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r28i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r29i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r2i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r30i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r31i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r32i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r33i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r34i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r35i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r36i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r37i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r38i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r39i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r3i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r40i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r41i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r42i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r43i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r44i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r45i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r46i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r47i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r48i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r49i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r4i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r50i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r51i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r52i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r53i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r54i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r55i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r56i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r57i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r58i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r59i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r5i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r60i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r61i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r62i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r63i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r64i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r65i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r66i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r67i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r68i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r69i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r6i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r70i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r71i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r72i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r73i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r74i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r75i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r76i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r77i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r78i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r79i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r7i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r80i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r8i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180125_r9i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r10i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r11i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r12i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r13i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r14i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r15i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r16i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r17i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r18i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r19i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r1i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r20i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r21i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r22i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r23i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r24i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r25i1p1f1.parquet: implausible day 1
+  2900/4243
+FAILED NRL_nudged_s20180125_r26i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r27i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r28i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r29i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r2i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r30i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r31i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r32i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r33i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r34i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r35i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r36i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r37i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r38i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r39i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r3i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r40i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r41i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r42i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r43i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r44i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r45i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r46i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r47i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r48i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r49i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r4i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r50i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r51i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r52i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r53i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r54i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r55i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r56i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r57i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r58i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r59i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r5i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r60i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r61i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r62i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r63i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r64i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r65i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r66i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r67i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r68i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r69i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r6i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r70i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r71i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r72i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r73i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r74i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r75i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r76i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r77i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r78i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r79i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r7i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r80i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r8i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180125_r9i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r10i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r11i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r12i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r13i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r14i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r15i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r16i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r17i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r18i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r19i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r1i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r20i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r21i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r22i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r23i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r24i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r25i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r26i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r27i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r28i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r29i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r2i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r30i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r31i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r32i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r33i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r34i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r35i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r36i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r37i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r38i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r39i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r3i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r40i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r41i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r42i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r43i1p1f1.parquet: implausible day 1
+  3000/4243
+FAILED NRL_control_s20180208_r44i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r45i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r46i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r47i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r48i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r49i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r4i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r50i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r51i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r52i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r53i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r54i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r55i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r56i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r57i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r58i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r59i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r5i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r60i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r61i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r62i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r63i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r64i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r65i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r66i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r67i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r68i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r69i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r6i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r70i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r71i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r72i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r73i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r74i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r75i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r76i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r77i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r78i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r79i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r7i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r80i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r8i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20180208_r9i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r10i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r11i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r12i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r13i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r14i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r15i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r16i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r17i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r18i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r19i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r1i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r20i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r21i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r22i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r23i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r24i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r25i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r26i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r27i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r28i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r29i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r2i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r30i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r31i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r32i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r33i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r34i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r35i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r36i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r37i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r38i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r39i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r3i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r40i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r41i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r42i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r43i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r44i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r45i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r46i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r47i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r48i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r49i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r4i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r50i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r51i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r52i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r53i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r54i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r55i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r56i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r57i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r58i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r59i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r5i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r60i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r61i1p1f1.parquet: implausible day 1
+  3100/4243
+FAILED NRL_nudged_s20180208_r62i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r63i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r64i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r65i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r66i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r67i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r68i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r69i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r6i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r70i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r71i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r72i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r73i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r74i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r75i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r76i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r77i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r78i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r79i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r7i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r80i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r8i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20180208_r9i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r10i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r11i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r12i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r13i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r14i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r15i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r16i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r17i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r18i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r19i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r1i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r20i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r21i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r22i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r23i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r24i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r25i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r26i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r27i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r28i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r29i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r2i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r30i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r31i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r32i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r33i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r34i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r35i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r36i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r37i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r38i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r39i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r3i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r40i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r41i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r42i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r43i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r44i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r45i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r46i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r47i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r48i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r49i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r4i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r50i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r51i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r52i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r53i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r54i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r55i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r56i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r57i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r58i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r59i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r5i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r60i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r61i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r62i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r63i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r64i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r65i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r66i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r67i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r68i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r69i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r6i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r70i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r71i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r72i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r73i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r74i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r75i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r76i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r77i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r78i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r79i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r7i1p1f1.parquet: implausible day 1
+  3200/4243
+FAILED NRL_control_s20181213_r80i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r8i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20181213_r9i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r10i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r11i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r12i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r13i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r14i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r15i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r16i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r17i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r18i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r19i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r1i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r20i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r21i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r22i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r23i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r24i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r25i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r26i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r27i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r28i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r29i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r2i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r30i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r31i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r32i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r33i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r34i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r35i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r36i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r37i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r38i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r39i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r3i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r40i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r41i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r42i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r43i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r44i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r45i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r46i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r47i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r48i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r49i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r4i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r50i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r51i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r52i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r53i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r54i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r55i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r56i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r57i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r58i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r59i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r5i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r60i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r61i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r62i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r63i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r64i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r65i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r66i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r67i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r68i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r69i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r6i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r70i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r71i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r72i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r73i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r74i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r75i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r76i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r77i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r78i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r79i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r7i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r80i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r8i1p1f1.parquet: implausible day 1
+FAILED NRL_nudged_s20181213_r9i1p1f1.parquet: implausible day 1
+FAILED NRL_control_s20190108_r10i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r11i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r12i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r13i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r14i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r15i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r16i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r17i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r18i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r19i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r1i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r20i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r21i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r22i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r23i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r24i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r25i1p1f1.parquet: implausible day 7
+  3300/4243
+FAILED NRL_control_s20190108_r26i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r27i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r28i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r29i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r2i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r30i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r31i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r32i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r33i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r34i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r35i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r36i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r37i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r38i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r39i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r3i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r40i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r41i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r42i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r43i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r44i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r45i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r46i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r47i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r48i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r49i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r4i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r50i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r51i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r52i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r53i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r54i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r55i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r56i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r57i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r58i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r59i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r5i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r60i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r61i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r62i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r63i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r64i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r65i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r66i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r67i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r68i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r69i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r6i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r70i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r71i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r72i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r73i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r74i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r75i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r76i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r77i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r78i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r79i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r7i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r80i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r8i1p1f1.parquet: implausible day 7
+FAILED NRL_control_s20190108_r9i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r10i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r11i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r12i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r13i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r14i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r15i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r16i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r17i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r18i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r19i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r1i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r20i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r21i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r22i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r23i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r24i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r25i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r26i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r27i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r28i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r29i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r2i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r30i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r31i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r32i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r33i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r34i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r35i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r36i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r37i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r38i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r39i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r3i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r40i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r41i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r42i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r43i1p1f1.parquet: implausible day 7
+  3400/4243
+FAILED NRL_nudged_s20190108_r44i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r45i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r46i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r47i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r48i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r49i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r4i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r50i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r51i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r52i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r53i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r54i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r55i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r56i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r57i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r58i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r59i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r5i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r60i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r61i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r62i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r63i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r64i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r65i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r66i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r67i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r68i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r69i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r6i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r70i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r71i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r72i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r73i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r74i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r75i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r76i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r77i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r78i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r79i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r7i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r80i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r8i1p1f1.parquet: implausible day 7
+FAILED NRL_nudged_s20190108_r9i1p1f1.parquet: implausible day 7
+  3500/4243
+  3600/4243
+  3700/4243
+  3800/4243
+  3900/4243
+FAILED UKMO_nudged_s20180125_r30i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r30i1p1f1/6hr/pr/: HTTP Error 500: Internal Server Error
+FAILED UKMO_nudged_s20180125_r33i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r33i1p1f1/6hr/pr/: HTTP Error 500: Internal Server Error
+FAILED UKMO_nudged_s20180125_r34i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r34i1p1f1/6hr/pr/: HTTP Error 500: Internal Server Error
+FAILED UKMO_nudged_s20180125_r35i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r35i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r35i1p1f1_gn_201801250600-201803260000.nc?down
+FAILED UKMO_nudged_s20180125_r36i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r36i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r36i1p1f1_gn_201801250600-201803260000.nc?down
+FAILED UKMO_nudged_s20180125_r37i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r37i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r37i1p1f1_gn_201801250600-201803260000.nc?down
+FAILED UKMO_nudged_s20180125_r38i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r38i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r38i1p1f1_gn_201801250600-201803260000.nc?down
+FAILED UKMO_nudged_s20180125_r39i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r39i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r39i1p1f1_gn_201801250600-201803260000.nc?down
+FAILED UKMO_nudged_s20180125_r3i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r3i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r3i1p1f1_gn_201801250600-201803260000.nc?downlo
+FAILED UKMO_nudged_s20180125_r40i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r40i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r40i1p1f1_gn_201801250600-201803260000.nc?down
+FAILED UKMO_nudged_s20180125_r41i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r41i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r41i1p1f1_gn_201801250600-201803260000.nc?down
+FAILED UKMO_nudged_s20180125_r42i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r42i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r42i1p1f1_gn_201801250600-201803260000.nc?down
+FAILED UKMO_nudged_s20180125_r43i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r43i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r43i1p1f1_gn_201801250600-201803260000.nc?down
+FAILED UKMO_nudged_s20180125_r44i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r44i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r44i1p1f1_gn_201801250600-201803260000.nc?down
+FAILED UKMO_nudged_s20180125_r45i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r45i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r45i1p1f1_gn_201801250600-201803260000.nc?down
+FAILED UKMO_nudged_s20180125_r46i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r46i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r46i1p1f1_gn_201801250600-201803260000.nc?down
+FAILED UKMO_nudged_s20180125_r47i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r47i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r47i1p1f1_gn_201801250600-201803260000.nc?down
+FAILED UKMO_nudged_s20180125_r48i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r48i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r48i1p1f1_gn_201801250600-201803260000.nc?down
+FAILED UKMO_nudged_s20180125_r49i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r49i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r49i1p1f1_gn_201801250600-201803260000.nc?down
+FAILED UKMO_nudged_s20180125_r4i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r4i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r4i1p1f1_gn_201801250600-201803260000.nc?downlo
+FAILED UKMO_nudged_s20180125_r50i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r50i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r50i1p1f1_gn_201801250600-201803260000.nc?down
+FAILED UKMO_nudged_s20180125_r5i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r5i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r5i1p1f1_gn_201801250600-201803260000.nc?downlo
+FAILED UKMO_nudged_s20180125_r6i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r6i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r6i1p1f1_gn_201801250600-201803260000.nc?downlo
+FAILED UKMO_nudged_s20180125_r7i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r7i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r7i1p1f1_gn_201801250600-201803260000.nc?downlo
+FAILED UKMO_nudged_s20180125_r8i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r8i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r8i1p1f1_gn_201801250600-201803260000.nc?downlo
+FAILED UKMO_nudged_s20180125_r9i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/nudged/s20180125/r9i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_nudged_s20180125-r9i1p1f1_gn_201801250600-201803260000.nc?downlo
+FAILED UKMO_control_s20180208_r10i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/control/s20180208/r10i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_control_s20180208-r10i1p1f1_gn_201802080600-201804090000.nc?do
+FAILED UKMO_control_s20180208_r11i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/control/s20180208/r11i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_control_s20180208-r11i1p1f1_gn_201802080600-201804090000.nc?do
+FAILED UKMO_control_s20180208_r12i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/control/s20180208/r12i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_control_s20180208-r12i1p1f1_gn_201802080600-201804090000.nc?do
+FAILED UKMO_control_s20180208_r13i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/control/s20180208/r13i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_control_s20180208-r13i1p1f1_gn_201802080600-201804090000.nc?do
+FAILED UKMO_control_s20180208_r14i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/control/s20180208/r14i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_control_s20180208-r14i1p1f1_gn_201802080600-201804090000.nc?do
+FAILED UKMO_control_s20180208_r15i1p1f1.parquet: RuntimeError: https://dap.ceda.ac.uk/badc/snap/data/post-cmip6/SNAPSI/UKMO/GloSea6/control/s20180208/r15i1p1f1/6hrPt/psl/gn/v20230403/psl_6hrPt_GloSea6_control_s20180208-r15i1p1f1_gn_201802080600-201804090000.nc?do
+  4000/4243
+  4100/4243
+  4200/4243
+experiment              control  nudged
+centre       init                      
+CCCma        s20180125       50      50
+             s20180208       50      50
+             s20181213       50      50
+             s20190108       47      38
+CNR-ISAC     s20180125       50      50
+             s20180208       50      50
+             s20181213       50      50
+             s20190108       50      50
+ECCC         s20180125       50      50
+             s20180208       50      50
+             s20181213       50      50
+             s20190108       50      50
+ECMWF        s20180125       51      51
+             s20180208       51      51
+             s20181213       51      51
+             s20190108       51      51
+KMA          s20180125       50      50
+             s20180208       50      50
+             s20181213       50      52
+             s20190108       50      50
+Meteo-France s20180125       50      50
+             s20180208       50      50
+             s20181213       50      50
+             s20190108       50      50
+NCAR         s20180125       51      51
+             s20180208       51      51
+             s20181213       51      51
+             s20190108       51      51
+SNU          s20180125       50      50
+             s20180208       50      50
+             s20181213       50      50
+             s20190108       50      50
+UKMO         s20180125       50      24
+             s20180208       44      50
+             s20181213       50      50
+             s20190108       50      50
+Saved -> snapsi_regime_precip.parquet, snapsi_regime_psl.npz
+exit 0

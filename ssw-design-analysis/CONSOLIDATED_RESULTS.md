@@ -1383,6 +1383,15 @@ power 0.35 -> INCONCLUSIVE. Scandinavia -0.54 vs -0.62 (p 0.78; agreement in POI
 secondaries 0.09) -> a hint that persistence may exceed one shifted population, NOT a finding. Shifted-null CRPS
 forecast not resolved (Iberia +0.14 [-0.04, +0.31]).
 
+### Z16 — circulation regimes and SNAPSI rainfall (`snapsi_regime_precip.py`, 8_experiment; registered `6c99ebc`, amended `44ff51a`/`bdaa907` before any outcome)
+9 centres x 4 NH inits = 36 pairs (NRL excluded: pr units undeterminable); days 8-24 (2019 inits do not cover 1-25).
+Regimes: k-means k=4 (sens. k=6) on 10 EOFs of control psl anomalies, per centre. PRIMARY Iberia mean rainfall:
+forced +0.75 mm/day per pair [0.61, 0.87]; frequency-only reproduces R = 0.30 [0.11, 0.48] -> "rainfall within
+regimes must change" (k=6: 0.41 [0.28, 0.54]). Scandinavia -0.44 [-0.65, -0.29], R 0.38 [0.31, 0.47] (k=6 0.49).
+British Isles: no forced change. O2 (tail) and O3 (wet spells) BIASED BY CONSTRUCTION (independent daily draws
+remove within-regime persistence) -> not interpreted. Meaning: SSW rainfall impacts are mostly a shift within
+circulation types, not a reshuffling of type frequency.
+
 ### Z7 — prospective test (`prospective_next_ssw.py`, 9_literature; registered `d2b54a8`, window amended to 2036 before any onset)
 Prediction table for every onset day 1 Nov–31 Mar committed; shift nam_1000 −0.635, nam_150 −0.945, N-Eurasian T days
 8–24 −1.54 K; constant rate 0.692; T trend 0.037 K/yr. P(DW) shifted 0.71–0.84 vs climatology 0.24–0.44.

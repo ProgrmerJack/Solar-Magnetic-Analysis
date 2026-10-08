@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-08T04:13:11+00:00",
+ "generated": "2026-10-08T15:34:02+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 195,
-  "results": 100
+  "scripts": 197,
+  "results": 101
  },
  "scripts": [
   {
@@ -309,6 +309,21 @@
    "flags": [],
    "filenames_mentioned": [
     "snapsi_manifest.csv"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_snapsi_regime_precip.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Inputs of 07_physical_decomposition/snapsi_regime_precip.py (registered 6c99ebc before any of these values was fetched): for every SNAPSI nudged and control member of the four Northern Hemisphere initialisations and every centre with both arms,",
+   "loc": 230,
+   "modified": "2026-10-08 10:25",
+   "sha256_16": "5ba92556788523a2",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_manifest.csv",
+    "snapsi_regime_precip.parquet"
    ],
    "filename_prefixes": []
   },
@@ -1621,6 +1636,20 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/07_physical_decomposition/snapsi_regime_precip.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "DOES A CHANGE IN HOW OFTEN CIRCULATION REGIMES OCCUR EXPLAIN THE SSW'S EFFECT ON RAINFALL, OR MUST RAINFALL WITHIN THE REGIMES CHANGE? Registered 2026-10-08, committed BEFORE any SNAPSI precipitation or regional pressure",
+   "loc": 256,
+   "modified": "2026-10-08 10:29",
+   "sha256_16": "020e09abafe7bffe",
+   "flags": [],
+   "filenames_mentioned": [
+    "snapsi_regime_precip.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/07_physical_decomposition/snapsi_regional_test.py",
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
@@ -2165,9 +2194,9 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 484,
-   "modified": "2026-10-08 04:12",
-   "sha256_16": "1d72838d8b6f0600",
+   "loc": 489,
+   "modified": "2026-10-08 15:33",
+   "sha256_16": "46c67fd3e0cab866",
    "flags": [],
    "filenames_mentioned": [
     "class_law_general.json",
@@ -2208,6 +2237,7 @@
     "snapsi_distribution_test.json",
     "snapsi_free_natural_experiment.json",
     "snapsi_loeffel_test.json",
+    "snapsi_regime_precip.json",
     "snapsi_regional_test.json",
     "snapsi_residual_quantiles.json",
     "snapsi_selection_test.json",
@@ -8985,6 +9015,112 @@
    ]
   },
   {
+   "path": "results/current/8_experiment/snapsi_regime_precip.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 9401,
+   "modified": "2026-10-08 15:31",
+   "sha256_16": "f5c21637f7da30fa",
+   "producers": [],
+   "state": "ORPHAN",
+   "detail": "no script writes this",
+   "flags": [],
+   "producer_sha256": {},
+   "verdicts": [
+    {
+     "key": "k4.O1.IBERIA.reading",
+     "text": "rainfall within regimes must change"
+    },
+    {
+     "key": "k4.O1.SCANDINAVIA.reading",
+     "text": "rainfall within regimes must change"
+    },
+    {
+     "key": "k4.O1.BRITISH_ISLES.reading",
+     "text": "no forced change to explain"
+    },
+    {
+     "key": "k4.O2.IBERIA.reading",
+     "text": "rainfall within regimes must change"
+    },
+    {
+     "key": "k4.O2.SCANDINAVIA.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "k4.O2.BRITISH_ISLES.reading",
+     "text": "no forced change to explain"
+    },
+    {
+     "key": "k4.O3.IBERIA.reading",
+     "text": "rainfall within regimes must change"
+    },
+    {
+     "key": "k4.O3.SCANDINAVIA.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "k4.O3.BRITISH_ISLES.reading",
+     "text": "no forced change to explain"
+    },
+    {
+     "key": "k6.O1.IBERIA.reading",
+     "text": "rainfall within regimes must change"
+    },
+    {
+     "key": "k6.O1.SCANDINAVIA.reading",
+     "text": "rainfall within regimes must change"
+    },
+    {
+     "key": "k6.O1.BRITISH_ISLES.reading",
+     "text": "no forced change to explain"
+    },
+    {
+     "key": "k6.O2.IBERIA.reading",
+     "text": "rainfall within regimes must change"
+    },
+    {
+     "key": "k6.O2.SCANDINAVIA.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "k6.O2.BRITISH_ISLES.reading",
+     "text": "no forced change to explain"
+    },
+    {
+     "key": "k6.O3.IBERIA.reading",
+     "text": "rainfall within regimes must change"
+    },
+    {
+     "key": "k6.O3.SCANDINAVIA.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "k6.O3.BRITISH_ISLES.reading",
+     "text": "no forced change to explain"
+    },
+    {
+     "key": "primary_reading",
+     "text": "rainfall within regimes must change"
+    }
+   ],
+   "counts": {
+    "n_boot": [
+     10000
+    ]
+   },
+   "top_level_keys": [
+    "registered",
+    "seed",
+    "n_syn",
+    "n_boot",
+    "k4",
+    "k6",
+    "primary_reading"
+   ]
+  },
+  {
    "path": "results/current/8_experiment/snapsi_regional_test.json",
    "tree": "current",
    "stage": "8_experiment",
@@ -9535,7 +9671,7 @@
    "stage": "9_literature",
    "readable": true,
    "bytes": 57424,
-   "modified": "2026-10-08 04:01",
+   "modified": "2026-10-08 11:12",
    "sha256_16": "a7676a0f99edcd7d",
    "producers": [],
    "state": "ORPHAN",

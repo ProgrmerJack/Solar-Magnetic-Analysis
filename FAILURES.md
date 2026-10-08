@@ -317,3 +317,8 @@ Rule: before registering a reading, simulate the alternative in the actual desig
 Tried: acquire_lens_confirmation.py reading s3://ncar-cesm2-lens zarr (anonymous s3fs) in 6 spawn workers.
 Failed: after 26 min each worker had read 42 MB and sat idle (no error); curl measured 27-32 kB/s per connection to that bucket, so one 79 MB chunk takes ~45 min; ~900 chunks were needed.
 Rule: time one raw object with curl before choosing a cloud store; the same CESM2-LE runs are on NCAR GDEX THREDDS (MMLEA v2, d651039) at ~2.5 MB/s.
+
+## 2026-10-08 — A resampling counterfactual that destroys the persistence its secondary outcomes measure
+Tried: snapsi_regime_precip registered tail-exceedance and wet-spell outcomes for a frequency-only construction that draws each day's rainfall independently from same-regime control days.
+Failed: independent draws keep the expected mean but remove day-to-day rainfall persistence within regimes, so synthetic wet spells shorten and window-mean spread narrows regardless of the forcing; those outcomes were biased by construction and could not be interpreted.
+Rule: a counterfactual built by resampling must preserve the dependence structure of every outcome it is compared on (resample regime-runs or blocks, or calibrate the construction on control-vs-control) before such outcomes are registered.

@@ -1,0 +1,233 @@
+{
+ "registered": "2026-10-08, committed before any value was fetched",
+ "seed": 998431051,
+ "n_syn": 200,
+ "n_boot": 10000,
+ "k4": {
+  "O1": {
+   "IBERIA": {
+    "forced_change_mean_per_pair": 0.7464,
+    "forced_ci95_per_pair": [
+     0.6094,
+     0.8704
+    ],
+    "freq_only_change_mean_per_pair": 0.2217,
+    "R": 0.297,
+    "R_ci95": [
+     0.112,
+     0.4759
+    ],
+    "reading": "rainfall within regimes must change"
+   },
+   "SCANDINAVIA": {
+    "forced_change_mean_per_pair": -0.4379,
+    "forced_ci95_per_pair": [
+     -0.6489,
+     -0.2941
+    ],
+    "freq_only_change_mean_per_pair": -0.1667,
+    "R": 0.3807,
+    "R_ci95": [
+     0.3127,
+     0.4676
+    ],
+    "reading": "rainfall within regimes must change"
+   },
+   "BRITISH_ISLES": {
+    "forced_change_mean_per_pair": -0.0165,
+    "forced_ci95_per_pair": [
+     -0.1979,
+     0.1442
+    ],
+    "freq_only_change_mean_per_pair": -0.1356,
+    "R": 8.2345,
+    "R_ci95": [
+     -21.2708,
+     24.9556
+    ],
+    "reading": "no forced change to explain"
+   }
+  },
+  "O2": {
+   "IBERIA": {
+    "forced_change_mean_per_pair": 0.2361,
+    "forced_ci95_per_pair": [
+     0.1949,
+     0.2741
+    ],
+    "freq_only_change_mean_per_pair": -0.0137,
+    "R": -0.058,
+    "R_ci95": [
+     -0.1701,
+     0.0601
+    ],
+    "reading": "rainfall within regimes must change"
+   },
+   "SCANDINAVIA": {
+    "forced_change_mean_per_pair": -0.0638,
+    "forced_ci95_per_pair": [
+     -0.0772,
+     -0.0495
+    ],
+    "freq_only_change_mean_per_pair": -0.0726,
+    "R": 1.1377,
+    "R_ci95": [
+     0.9558,
+     1.4287
+    ],
+    "reading": "inconclusive"
+   },
+   "BRITISH_ISLES": {
+    "forced_change_mean_per_pair": 0.0093,
+    "forced_ci95_per_pair": [
+     -0.0246,
+     0.0422
+    ],
+    "freq_only_change_mean_per_pair": -0.0487,
+    "R": -5.2577,
+    "R_ci95": [
+     -37.999,
+     42.622
+    ],
+    "reading": "no forced change to explain"
+   }
+  },
+  "O3": {
+   "IBERIA": {
+    "forced_change_mean_per_pair": 1.7853,
+    "forced_ci95_per_pair": [
+     1.525,
+     2.0087
+    ],
+    "freq_only_change_mean_per_pair": -1.1496,
+    "R": -0.6439,
+    "R_ci95": [
+     -0.7573,
+     -0.5462
+    ],
+    "reading": "rainfall within regimes must change"
+   },
+   "SCANDINAVIA": {
+    "forced_change_mean_per_pair": -0.5639,
+    "forced_ci95_per_pair": [
+     -1.2173,
+     -0.056
+    ],
+    "freq_only_change_mean_per_pair": -1.6651,
+    "R": 2.953,
+    "R_ci95": [
+     1.3146,
+     17.1349
+    ],
+    "reading": "inconclusive"
+   },
+   "BRITISH_ISLES": {
+    "forced_change_mean_per_pair": 0.3882,
+    "forced_ci95_per_pair": [
+     -0.1928,
+     0.9775
+    ],
+    "freq_only_change_mean_per_pair": -1.7277,
+    "R": -4.4504,
+    "R_ci95": [
+     -45.049,
+     43.4283
+    ],
+    "reading": "no forced change to explain"
+   }
+  },
+  "regime_counts": {
+   "CCCma": {
+    "control": [
+     841,
+     847,
+     847,
+     814
+    ],
+    "nudged": [
+     759,
+     448,
+     627,
+     1362
+    ],
+    "explained_var_10eof": 0.8060147341239503
+   },
+   "CNR-ISAC": {
+    "control": [
+     827,
+     871,
+     844,
+     858
+    ],
+    "nudged": [
+     544,
+     1475,
+     565,
+     816
+    ],
+    "explained_var_10eof": 0.8057488232822688
+   },
+   "ECCC": {
+    "control": [
+     888,
+     920,
+     869,
+     723
+    ],
+    "nudged": [
+     99,
+     1583,
+     794,
+     924
+    ],
+    "explained_var_10eof": 0.8454863366272065
+   },
+   "ECMWF": {
+    "control": [
+     825,
+     883,
+     759,
+     1001
+    ],
+    "nudged": [
+     559,
+     1563,
+     829,
+     517
+    ],
+    "explained_var_10eof": 0.8218355259073727
+   },
+   "KMA": {
+    "control": [
+     798,
+     933,
+     850,
+     819
+    ],
+    "nudged": [
+     1559,
+     612,
+     729,
+     534
+    ],
+    "explained_var_10eof": 0.8231122782452052
+   },
+   "Meteo-France": {
+    "control": [
+     827,
+     792,
+     834,
+     947
+    ],
+    "nudged": [
+     1064,
+     1350,
+     364,
+     622
+    ],
+    "explained_var_10eof": 0.8623763882953968
+   },
+   "NCAR": {
+    "control": [
+     879,
+Saved -> snapsi_regime_precip.json

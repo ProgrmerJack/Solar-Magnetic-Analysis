@@ -1,0 +1,587 @@
+{
+ "registered": "2026-10-08, committed before any value was fetched",
+ "seed": 998431051,
+ "n_syn": 200,
+ "n_boot": 10000,
+ "k4": {
+  "O1": {
+   "IBERIA": {
+    "forced_change_mean_per_pair": 0.7464,
+    "forced_ci95_per_pair": [
+     0.6094,
+     0.8704
+    ],
+    "freq_only_change_mean_per_pair": 0.2217,
+    "R": 0.297,
+    "R_ci95": [
+     0.112,
+     0.4759
+    ],
+    "reading": "rainfall within regimes must change"
+   },
+   "SCANDINAVIA": {
+    "forced_change_mean_per_pair": -0.4379,
+    "forced_ci95_per_pair": [
+     -0.6489,
+     -0.2941
+    ],
+    "freq_only_change_mean_per_pair": -0.1667,
+    "R": 0.3807,
+    "R_ci95": [
+     0.3127,
+     0.4676
+    ],
+    "reading": "rainfall within regimes must change"
+   },
+   "BRITISH_ISLES": {
+    "forced_change_mean_per_pair": -0.0165,
+    "forced_ci95_per_pair": [
+     -0.1979,
+     0.1442
+    ],
+    "freq_only_change_mean_per_pair": -0.1356,
+    "R": 8.2345,
+    "R_ci95": [
+     -21.2708,
+     24.9556
+    ],
+    "reading": "no forced change to explain"
+   }
+  },
+  "O2": {
+   "IBERIA": {
+    "forced_change_mean_per_pair": 0.2361,
+    "forced_ci95_per_pair": [
+     0.1949,
+     0.2741
+    ],
+    "freq_only_change_mean_per_pair": -0.0137,
+    "R": -0.058,
+    "R_ci95": [
+     -0.1701,
+     0.0601
+    ],
+    "reading": "rainfall within regimes must change"
+   },
+   "SCANDINAVIA": {
+    "forced_change_mean_per_pair": -0.0638,
+    "forced_ci95_per_pair": [
+     -0.0772,
+     -0.0495
+    ],
+    "freq_only_change_mean_per_pair": -0.0726,
+    "R": 1.1377,
+    "R_ci95": [
+     0.9558,
+     1.4287
+    ],
+    "reading": "inconclusive"
+   },
+   "BRITISH_ISLES": {
+    "forced_change_mean_per_pair": 0.0093,
+    "forced_ci95_per_pair": [
+     -0.0246,
+     0.0422
+    ],
+    "freq_only_change_mean_per_pair": -0.0487,
+    "R": -5.2577,
+    "R_ci95": [
+     -37.999,
+     42.622
+    ],
+    "reading": "no forced change to explain"
+   }
+  },
+  "O3": {
+   "IBERIA": {
+    "forced_change_mean_per_pair": 1.7853,
+    "forced_ci95_per_pair": [
+     1.525,
+     2.0087
+    ],
+    "freq_only_change_mean_per_pair": -1.1496,
+    "R": -0.6439,
+    "R_ci95": [
+     -0.7573,
+     -0.5462
+    ],
+    "reading": "rainfall within regimes must change"
+   },
+   "SCANDINAVIA": {
+    "forced_change_mean_per_pair": -0.5639,
+    "forced_ci95_per_pair": [
+     -1.2173,
+     -0.056
+    ],
+    "freq_only_change_mean_per_pair": -1.6651,
+    "R": 2.953,
+    "R_ci95": [
+     1.3146,
+     17.1349
+    ],
+    "reading": "inconclusive"
+   },
+   "BRITISH_ISLES": {
+    "forced_change_mean_per_pair": 0.3882,
+    "forced_ci95_per_pair": [
+     -0.1928,
+     0.9775
+    ],
+    "freq_only_change_mean_per_pair": -1.7277,
+    "R": -4.4504,
+    "R_ci95": [
+     -45.049,
+     43.4283
+    ],
+    "reading": "no forced change to explain"
+   }
+  },
+  "regime_counts": {
+   "CCCma": {
+    "control": [
+     841,
+     847,
+     847,
+     814
+    ],
+    "nudged": [
+     759,
+     448,
+     627,
+     1362
+    ],
+    "explained_var_10eof": 0.8060147341239503
+   },
+   "CNR-ISAC": {
+    "control": [
+     827,
+     871,
+     844,
+     858
+    ],
+    "nudged": [
+     544,
+     1475,
+     565,
+     816
+    ],
+    "explained_var_10eof": 0.8057488232822688
+   },
+   "ECCC": {
+    "control": [
+     888,
+     920,
+     869,
+     723
+    ],
+    "nudged": [
+     99,
+     1583,
+     794,
+     924
+    ],
+    "explained_var_10eof": 0.8454863366272065
+   },
+   "ECMWF": {
+    "control": [
+     825,
+     883,
+     759,
+     1001
+    ],
+    "nudged": [
+     559,
+     1563,
+     829,
+     517
+    ],
+    "explained_var_10eof": 0.8218355259073727
+   },
+   "KMA": {
+    "control": [
+     798,
+     933,
+     850,
+     819
+    ],
+    "nudged": [
+     1559,
+     612,
+     729,
+     534
+    ],
+    "explained_var_10eof": 0.8231122782452052
+   },
+   "Meteo-France": {
+    "control": [
+     827,
+     792,
+     834,
+     947
+    ],
+    "nudged": [
+     1064,
+     1350,
+     364,
+     622
+    ],
+    "explained_var_10eof": 0.8623763882953968
+   },
+   "NCAR": {
+    "control": [
+     879,
+     741,
+     908,
+     940
+    ],
+    "nudged": [
+     670,
+     1676,
+     478,
+     644
+    ],
+    "explained_var_10eof": 0.815029955757698
+   },
+   "SNU": {
+    "control": [
+     1058,
+     791,
+     603,
+     948
+    ],
+    "nudged": [
+     868,
+     1371,
+     589,
+     572
+    ],
+    "explained_var_10eof": 0.8241522506339423
+   },
+   "UKMO": {
+    "control": [
+     861,
+     878,
+     817,
+     844
+    ],
+    "nudged": [
+     1391,
+     504,
+     758,
+     747
+    ],
+    "explained_var_10eof": 0.8236365487413065
+   }
+  },
+  "n_pairs": 36
+ },
+ "k6": {
+  "O1": {
+   "IBERIA": {
+    "forced_change_mean_per_pair": 0.7464,
+    "forced_ci95_per_pair": [
+     0.6091,
+     0.8672
+    ],
+    "freq_only_change_mean_per_pair": 0.3048,
+    "R": 0.4084,
+    "R_ci95": [
+     0.277,
+     0.5418
+    ],
+    "reading": "rainfall within regimes must change"
+   },
+   "SCANDINAVIA": {
+    "forced_change_mean_per_pair": -0.4379,
+    "forced_ci95_per_pair": [
+     -0.6462,
+     -0.2949
+    ],
+    "freq_only_change_mean_per_pair": -0.2143,
+    "R": 0.4893,
+    "R_ci95": [
+     0.3895,
+     0.5678
+    ],
+    "reading": "rainfall within regimes must change"
+   },
+   "BRITISH_ISLES": {
+    "forced_change_mean_per_pair": -0.0165,
+    "forced_ci95_per_pair": [
+     -0.2018,
+     0.1413
+    ],
+    "freq_only_change_mean_per_pair": -0.0582,
+    "R": 3.5332,
+    "R_ci95": [
+     -9.7074,
+     9.5754
+    ],
+    "reading": "no forced change to explain"
+   }
+  },
+  "O2": {
+   "IBERIA": {
+    "forced_change_mean_per_pair": 0.2361,
+    "forced_ci95_per_pair": [
+     0.1943,
+     0.2739
+    ],
+    "freq_only_change_mean_per_pair": 0.0021,
+    "R": 0.0091,
+    "R_ci95": [
+     -0.0846,
+     0.108
+    ],
+    "reading": "rainfall within regimes must change"
+   },
+   "SCANDINAVIA": {
+    "forced_change_mean_per_pair": -0.0638,
+    "forced_ci95_per_pair": [
+     -0.0773,
+     -0.049
+    ],
+    "freq_only_change_mean_per_pair": -0.0744,
+    "R": 1.1673,
+    "R_ci95": [
+     1.0,
+     1.4431
+    ],
+    "reading": "inconclusive"
+   },
+   "BRITISH_ISLES": {
+    "forced_change_mean_per_pair": 0.0093,
+    "forced_ci95_per_pair": [
+     -0.0237,
+     0.0425
+    ],
+    "freq_only_change_mean_per_pair": -0.0297,
+    "R": -3.2048,
+    "R_ci95": [
+     -28.1354,
+     25.98
+    ],
+    "reading": "no forced change to explain"
+   }
+  },
+  "O3": {
+   "IBERIA": {
+    "forced_change_mean_per_pair": 1.7853,
+    "forced_ci95_per_pair": [
+     1.5255,
+     2.0086
+    ],
+    "freq_only_change_mean_per_pair": -0.9135,
+    "R": -0.5117,
+    "R_ci95": [
+     -0.6521,
+     -0.4222
+    ],
+    "reading": "rainfall within regimes must change"
+   },
+   "SCANDINAVIA": {
+    "forced_change_mean_per_pair": -0.5639,
+    "forced_ci95_per_pair": [
+     -1.1972,
+     -0.0522
+    ],
+    "freq_only_change_mean_per_pair": -1.5871,
+    "R": 2.8147,
+    "R_ci95": [
+     1.3711,
+     16.0039
+    ],
+    "reading": "inconclusive"
+   },
+   "BRITISH_ISLES": {
+    "forced_change_mean_per_pair": 0.3882,
+    "forced_ci95_per_pair": [
+     -0.1933,
+     0.9915
+    ],
+    "freq_only_change_mean_per_pair": -1.3995,
+    "R": -3.6051,
+    "R_ci95": [
+     -35.5348,
+     35.5404
+    ],
+    "reading": "no forced change to explain"
+   }
+  },
+  "regime_counts": {
+   "CCCma": {
+    "control": [
+     403,
+     552,
+     581,
+     596,
+     486,
+     731
+    ],
+    "nudged": [
+     368,
+     315,
+     1007,
+     605,
+     268,
+     633
+    ],
+    "explained_var_10eof": 0.8060147341239503
+   },
+   "CNR-ISAC": {
+    "control": [
+     659,
+     554,
+     496,
+     571,
+     668,
+     452
+    ],
+    "nudged": [
+     411,
+     711,
+     933,
+     277,
+     611,
+     457
+    ],
+    "explained_var_10eof": 0.8057488232822688
+   },
+   "ECCC": {
+    "control": [
+     602,
+     431,
+     564,
+     624,
+     731,
+     448
+    ],
+    "nudged": [
+     1461,
+     1003,
+     158,
+     250,
+     63,
+     465
+    ],
+    "explained_var_10eof": 0.8454863366272065
+   },
+   "ECMWF": {
+    "control": [
+     667,
+     615,
+     548,
+     671,
+     510,
+     457
+    ],
+    "nudged": [
+     287,
+     524,
+     658,
+     477,
+     339,
+     1183
+    ],
+    "explained_var_10eof": 0.8218355259073727
+   },
+   "KMA": {
+    "control": [
+     594,
+     625,
+     679,
+     452,
+     466,
+     584
+    ],
+    "nudged": [
+     232,
+     596,
+     496,
+     422,
+     1070,
+     618
+    ],
+    "explained_var_10eof": 0.8231122782452052
+   },
+   "Meteo-France": {
+    "control": [
+     686,
+     637,
+     590,
+     613,
+     539,
+     335
+    ],
+    "nudged": [
+     246,
+     414,
+     662,
+     543,
+     634,
+     901
+    ],
+    "explained_var_10eof": 0.8623763882953968
+   },
+   "NCAR": {
+    "control": [
+     482,
+     504,
+     786,
+     535,
+     517,
+     644
+    ],
+    "nudged": [
+     1189,
+     177,
+     513,
+     458,
+     634,
+     497
+    ],
+    "explained_var_10eof": 0.815029955757698
+   },
+   "SNU": {
+    "control": [
+     557,
+     557,
+     528,
+     482,
+     572,
+     704
+    ],
+    "nudged": [
+     697,
+     504,
+     223,
+     260,
+     1009,
+     707
+    ],
+    "explained_var_10eof": 0.8241522506339423
+   },
+   "UKMO": {
+    "control": [
+     675,
+     536,
+     575,
+     669,
+     451,
+     494
+    ],
+    "nudged": [
+     696,
+     238,
+     528,
+     371,
+     724,
+     843
+    ],
+    "explained_var_10eof": 0.8236365487413065
+   }
+  },
+  "n_pairs": 36
+ },
+ "primary_reading": "rainfall within regimes must change"
+}

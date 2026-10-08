@@ -78,6 +78,7 @@ def main():
     MMT = J("mixture_moment_test.json")
     LCF = J("lens_confirmation.json")
     EOB = J("criterion_precip_contrast.json")
+    RGM = J("snapsi_regime_precip.json")
     R2 = ("robustness (revision 2)", "committed before run", "4c8b3f2")
     mm = g(MMt, "multimodel", "confirmatory"); nr = g(SRt, "regions", "NEURASIA", "multimodel", "confirmatory")
     rows = [
@@ -411,6 +412,10 @@ def main():
           f"{g(EOB,'contrast','IBERIA_d1_25','reading')}; Scandinavia {g(EOB,'contrast','SCANDINAVIA_d1_25','C_obs')} vs "
           f"{g(EOB,'contrast','SCANDINAVIA_d1_25','C_null_mean')} (p {g(EOB,'contrast','SCANDINAVIA_d1_25','p_two_sided')})") if EOB else "pending",
          g(EOB, 'contrast', 'IBERIA_d1_25', 'p_two_sided') if EOB else None),
+        ("REG-1", "SNAPSI: share of the imposed SSW's rainfall change reproduced by the frequency of four pressure-defined regimes (Iberia primary; Scandinavia), days 8-24, 36 pairs", "revision-8 primary",
+         "committed before data (window amended before any outcome)", "6c99ebc, 44ff51a",
+         ("; ".join(f"{b.title()}: forced {g(RGM,'k4','O1',b,'forced_change_mean_per_pair')} mm/day per pair, R {g(RGM,'k4','O1',b,'R')} {g(RGM,'k4','O1',b,'R_ci95')}; "
+                    f"{g(RGM,'k4','O1',b,'reading')}" for b in ("IBERIA", "SCANDINAVIA"))) if RGM else "pending", None),
         ("GL-4", "the law under SSP5-8.5 2071-2100 vs historical 1985-2014 (precipitation classes; temperature classes empty)", "revision-8 secondary",
          "committed before data", "80edfc5",
          (f"{g(CLG,'T4_summary','holds')} of {g(CLG,'T4_summary','n_units')} hold, {g(CLG,'T4_summary','inconclusive')} inconclusive, "
