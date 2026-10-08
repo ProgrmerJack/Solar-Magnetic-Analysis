@@ -1,0 +1,168 @@
+CESM2-cmip6|tas|CEUR_JJA {'p_T': 0.0005, 'rho': 1.0029, 'p_cdf': 0.0005, 'forced_change_sd': 6.217} {'C3': ('holds', -0.0576)}
+CESM2-cmip6|tas|WRUS_JJA {'p_T': 0.0005, 'rho': 1.0052, 'p_cdf': 0.0005, 'forced_change_sd': 6.106} {}
+CESM2-cmip6|tas|CNAM_JJA {'p_T': 0.0005, 'rho': 1.0045, 'p_cdf': 0.0005, 'forced_change_sd': 6.823} {}
+CESM2-cmip6|tas|CEAS_JJA {'p_T': 0.0005, 'rho': 0.9999, 'p_cdf': 0.0005, 'forced_change_sd': 9.204} {}
+CESM2-cmip6|tas|NSIB_JJA {'p_T': 0.0005, 'rho': 0.9917, 'p_cdf': 0.0005, 'forced_change_sd': 6.968} {}
+CESM2-cmip6|tas|NWNA_JJA {'p_T': 0.0005, 'rho': 1.0089, 'p_cdf': 0.0005, 'forced_change_sd': 8.922} {}
+CESM2-cmip6|tas|CEUR_DJF {'p_T': 0.0005, 'rho': 1.0074, 'p_cdf': 0.0005, 'forced_change_sd': 2.401} {'C3': ('holds', 0.0701)}
+CESM2-cmip6|tas|WRUS_DJF {'p_T': 0.0005, 'rho': 0.9128, 'p_cdf': 0.0005, 'forced_change_sd': 2.552} {'C3': ('holds', 0.0156)}
+CESM2-cmip6|tas|CNAM_DJF {'p_T': 0.0005, 'rho': 0.9906, 'p_cdf': 0.0005, 'forced_change_sd': 3.54} {}
+CESM2-cmip6|tas|CEAS_DJF {'p_T': 0.0005, 'rho': 0.9641, 'p_cdf': 0.0005, 'forced_change_sd': 3.769} {}
+CESM2-cmip6|tas|NSIB_DJF {'p_T': 0.0005, 'rho': 0.9933, 'p_cdf': 0.0005, 'forced_change_sd': 4.044} {}
+CESM2-cmip6|tas|NWNA_DJF {'p_T': 0.0005, 'rho': 0.9803, 'p_cdf': 0.0005, 'forced_change_sd': 3.535} {}
+CESM2-cmip6|pr|CEUR_JJA {'p_T': 0.0005, 'rho': 0.8491, 'p_cdf': 0.032, 'forced_change_sd': 1.487} {'C3': ('holds', -0.0104), 'C4': ('holds', -0.0447)}
+CESM2-cmip6|pr|WRUS_JJA {'p_T': 0.0005, 'rho': 0.9379, 'p_cdf': 0.0005, 'forced_change_sd': 2.001} {'C3': ('holds', -0.0264), 'C4': ('holds', -0.0547)}
+CESM2-cmip6|pr|CNAM_JJA {'p_T': 0.06, 'rho': 2.5914, 'p_cdf': 0.6145, 'forced_change_sd': 0.64} {'C3': ('holds', -0.0014), 'C4': ('holds', -0.0271)}
+CESM2-cmip6|pr|CEAS_JJA {'p_T': 0.2585, 'rho': 6.6208, 'p_cdf': 0.942, 'forced_change_sd': 0.385} {'C3': ('holds', -0.0088), 'C4': ('holds', -0.0165)}
+CESM2-cmip6|pr|NSIB_JJA {'p_T': 0.881, 'rho': 2.9128, 'p_cdf': 0.987, 'forced_change_sd': 0.556} {'C3': ('holds', -0.029), 'C4': ('holds', 0.0272)}
+CESM2-cmip6|pr|NWNA_JJA {'p_T': 0.6655, 'rho': 1.1304, 'p_cdf': 0.995, 'forced_change_sd': 0.44} {'C3': ('holds', -0.0314), 'C4': ('holds', 0.0008)}
+CESM2-cmip6|pr|CEUR_DJF {'p_T': 0.0225, 'rho': 1.1084, 'p_cdf': 0.372, 'forced_change_sd': 0.926} {'C3': ('holds', 0.0193), 'C4': ('holds', -0.0093)}
+CESM2-cmip6|pr|WRUS_DJF {'p_T': 0.002, 'rho': 0.8955, 'p_cdf': 0.0135, 'forced_change_sd': 1.817} {'C3': ('holds', -0.0083), 'C4': ('holds', -0.0013)}
+CESM2-cmip6|pr|CNAM_DJF {'p_T': 0.0025, 'rho': 1.1258, 'p_cdf': 0.153, 'forced_change_sd': 1.327} {'C3': ('holds', 0.0332), 'C4': ('holds', -0.0208)}
+CESM2-cmip6|pr|CEAS_DJF {'p_T': 0.0015, 'rho': 1.0326, 'p_cdf': 0.0005, 'forced_change_sd': 2.522} {'C3': ('holds', -0.0165), 'C4': ('holds', 0.0409)}
+CESM2-cmip6|pr|NSIB_DJF {'p_T': 0.0005, 'rho': 0.9968, 'p_cdf': 0.0005, 'forced_change_sd': 3.522} {'C3': ('holds', 0.011), 'C4': ('holds', 0.0927)}
+CESM2-cmip6|pr|NWNA_DJF {'p_T': 0.0035, 'rho': 1.1286, 'p_cdf': 0.0125, 'forced_change_sd': 1.361} {'C3': ('holds', 0.0135), 'C4': ('holds', -0.0153)}
+CESM2-smbb|tas|CEUR_JJA {'p_T': 0.0005, 'rho': 1.0195, 'p_cdf': 0.0005, 'forced_change_sd': 6.128} {'C3': ('holds', 0.0313)}
+CESM2-smbb|tas|WRUS_JJA {'p_T': 0.0005, 'rho': 0.9945, 'p_cdf': 0.0005, 'forced_change_sd': 6.101} {}
+CESM2-smbb|tas|CNAM_JJA {'p_T': 0.0005, 'rho': 1.0084, 'p_cdf': 0.0005, 'forced_change_sd': 6.677} {}
+CESM2-smbb|tas|CEAS_JJA {'p_T': 0.0005, 'rho': 1.0041, 'p_cdf': 0.0005, 'forced_change_sd': 9.219} {}
+CESM2-smbb|tas|NSIB_JJA {'p_T': 0.0005, 'rho': 1.0007, 'p_cdf': 0.0005, 'forced_change_sd': 7.165} {}
+CESM2-smbb|tas|NWNA_JJA {'p_T': 0.0005, 'rho': 1.0043, 'p_cdf': 0.0005, 'forced_change_sd': 9.232} {}
+CESM2-smbb|tas|CEUR_DJF {'p_T': 0.0005, 'rho': 1.0648, 'p_cdf': 0.0005, 'forced_change_sd': 2.385} {'C3': ('holds', 0.0292)}
+CESM2-smbb|tas|WRUS_DJF {'p_T': 0.0005, 'rho': 0.9711, 'p_cdf': 0.0005, 'forced_change_sd': 2.483} {'C3': ('inconclusive', -0.1437)}
+CESM2-smbb|tas|CNAM_DJF {'p_T': 0.0005, 'rho': 0.985, 'p_cdf': 0.0005, 'forced_change_sd': 3.505} {}
+CESM2-smbb|tas|CEAS_DJF {'p_T': 0.0005, 'rho': 1.0076, 'p_cdf': 0.0005, 'forced_change_sd': 3.622} {}
+CESM2-smbb|tas|NSIB_DJF {'p_T': 0.0005, 'rho': 1.0089, 'p_cdf': 0.0005, 'forced_change_sd': 3.876} {}
+CESM2-smbb|tas|NWNA_DJF {'p_T': 0.0005, 'rho': 0.9828, 'p_cdf': 0.0005, 'forced_change_sd': 3.515} {}
+CESM2-smbb|pr|CEUR_JJA {'p_T': 0.0005, 'rho': 0.8262, 'p_cdf': 0.0155, 'forced_change_sd': 1.575} {'C3': ('holds', -0.0119), 'C4': ('holds', 0.004)}
+CESM2-smbb|pr|WRUS_JJA {'p_T': 0.0005, 'rho': 0.9397, 'p_cdf': 0.0005, 'forced_change_sd': 1.858} {'C3': ('holds', -0.0077), 'C4': ('holds', -0.0378)}
+CESM2-smbb|pr|CNAM_JJA {'p_T': 0.1045, 'rho': 2.5807, 'p_cdf': 0.657, 'forced_change_sd': 0.701} {'C3': ('holds', -0.0404), 'C4': ('holds', -0.0026)}
+CESM2-smbb|pr|CEAS_JJA {'p_T': 0.1615, 'rho': 32.9646, 'p_cdf': 0.6595, 'forced_change_sd': 0.256} {'C3': ('holds', -0.0212), 'C4': ('holds', 0.0143)}
+CESM2-smbb|pr|NSIB_JJA {'p_T': 0.2285, 'rho': 41.2095, 'p_cdf': 0.662, 'forced_change_sd': 0.555} {'C3': ('holds', -0.0319), 'C4': ('holds', -0.014)}
+CESM2-smbb|pr|NWNA_JJA {'p_T': 0.475, 'rho': 1.2766, 'p_cdf': 0.9865, 'forced_change_sd': 0.56} {'C3': ('holds', -0.0037), 'C4': ('holds', 0.0099)}
+CESM2-smbb|pr|CEUR_DJF {'p_T': 0.2195, 'rho': 0.5196, 'p_cdf': 0.819, 'forced_change_sd': 0.917} {'C3': ('holds', 0.0266), 'C4': ('holds', -0.006)}
+CESM2-smbb|pr|WRUS_DJF {'p_T': 0.0015, 'rho': 0.965, 'p_cdf': 0.001, 'forced_change_sd': 1.909} {'C3': ('holds', 0.0226), 'C4': ('holds', 0.0119)}
+CESM2-smbb|pr|CNAM_DJF {'p_T': 0.009, 'rho': 1.2752, 'p_cdf': 0.1225, 'forced_change_sd': 1.236} {'C3': ('holds', 0.0154), 'C4': ('holds', -0.02)}
+CESM2-smbb|pr|CEAS_DJF {'p_T': 0.0005, 'rho': 1.0475, 'p_cdf': 0.0005, 'forced_change_sd': 2.573} {'C3': ('holds', 0.041), 'C4': ('holds', -0.0358)}
+CESM2-smbb|pr|NSIB_DJF {'p_T': 0.0005, 'rho': 1.0524, 'p_cdf': 0.0005, 'forced_change_sd': 3.358} {'C3': ('holds', 0.0406), 'C4': ('holds', -0.0492)}
+CESM2-smbb|pr|NWNA_DJF {'p_T': 0.0235, 'rho': 0.9418, 'p_cdf': 0.075, 'forced_change_sd': 1.377} {'C3': ('holds', 0.0565), 'C4': ('holds', -0.0192)}
+MPI-GE|tas|CEUR_JJA {'p_T': 0.0005, 'rho': 1.002, 'p_cdf': 0.0005, 'forced_change_sd': 6.882} {'C3': ('holds', 0.0545)}
+MPI-GE|tas|WRUS_JJA {'p_T': 0.0005, 'rho': 0.9859, 'p_cdf': 0.0005, 'forced_change_sd': 6.259} {}
+MPI-GE|tas|CNAM_JJA {'p_T': 0.0005, 'rho': 0.9888, 'p_cdf': 0.0005, 'forced_change_sd': 9.749} {}
+MPI-GE|tas|CEAS_JJA {'p_T': 0.0005, 'rho': 0.9909, 'p_cdf': 0.0005, 'forced_change_sd': 9.412} {}
+MPI-GE|tas|NSIB_JJA {'p_T': 0.0005, 'rho': 0.9918, 'p_cdf': 0.0005, 'forced_change_sd': 6.635} {}
+MPI-GE|tas|NWNA_JJA {'p_T': 0.0005, 'rho': 0.9859, 'p_cdf': 0.0005, 'forced_change_sd': 7.176} {}
+MPI-GE|tas|CEUR_DJF {'p_T': 0.0005, 'rho': 1.0254, 'p_cdf': 0.0005, 'forced_change_sd': 2.457} {'C3': ('holds', 0.0087)}
+MPI-GE|tas|WRUS_DJF {'p_T': 0.0005, 'rho': 0.9768, 'p_cdf': 0.0005, 'forced_change_sd': 2.521} {'C3': ('holds', -0.0053)}
+MPI-GE|tas|CNAM_DJF {'p_T': 0.0005, 'rho': 0.9876, 'p_cdf': 0.0005, 'forced_change_sd': 3.098} {'C3': ('holds', -0.01)}
+MPI-GE|tas|CEAS_DJF {'p_T': 0.0005, 'rho': 0.9827, 'p_cdf': 0.0005, 'forced_change_sd': 3.229} {'C3': ('holds', 0.0044)}
+MPI-GE|tas|NSIB_DJF {'p_T': 0.0005, 'rho': 0.977, 'p_cdf': 0.0005, 'forced_change_sd': 4.635} {}
+MPI-GE|tas|NWNA_DJF {'p_T': 0.0005, 'rho': 0.9715, 'p_cdf': 0.0005, 'forced_change_sd': 3.979} {}
+MPI-GE|pr|CEUR_JJA {'p_T': 0.0015, 'rho': 0.8454, 'p_cdf': 0.0005, 'forced_change_sd': 2.012} {'C3': ('holds', -0.0313), 'C4': ('holds', -0.0071)}
+MPI-GE|pr|WRUS_JJA {'p_T': 0.9645, 'rho': 0.0205, 'p_cdf': 0.943, 'forced_change_sd': 0.806} {'C3': ('holds', -0.0146), 'C4': ('holds', -0.0003)}
+MPI-GE|pr|CNAM_JJA {'p_T': 0.0525, 'rho': 0.4741, 'p_cdf': 0.3045, 'forced_change_sd': 1.272} {'C3': ('holds', -0.0131), 'C4': ('holds', -0.0065)}
+MPI-GE|pr|CEAS_JJA {'p_T': 0.2505, 'rho': 0.4905, 'p_cdf': 0.54, 'forced_change_sd': 0.859} {'C3': ('holds', -0.0082), 'C4': ('holds', -0.0061)}
+MPI-GE|pr|NSIB_JJA {'p_T': 0.0005, 'rho': 1.1949, 'p_cdf': 0.0015, 'forced_change_sd': 1.608} {'C3': ('holds', -0.0182), 'C4': ('holds', -0.0233)}
+MPI-GE|pr|NWNA_JJA {'p_T': 0.0005, 'rho': 0.9102, 'p_cdf': 0.0045, 'forced_change_sd': 1.631} {'C3': ('holds', 0.0209), 'C4': ('holds', 0.0276)}
+MPI-GE|pr|CEUR_DJF {'p_T': 0.004, 'rho': 5.9494, 'p_cdf': 0.2195, 'forced_change_sd': 0.55} {'C3': ('holds', 0.0215), 'C4': ('holds', -0.0109)}
+MPI-GE|pr|WRUS_DJF {'p_T': 0.0005, 'rho': 1.1718, 'p_cdf': 0.017, 'forced_change_sd': 1.336} {'C3': ('holds', -0.004), 'C4': ('holds', 0.0172)}
+MPI-GE|pr|CNAM_DJF {'p_T': 0.067, 'rho': 0.8142, 'p_cdf': 0.8355, 'forced_change_sd': 0.853} {'C3': ('holds', -0.0044), 'C4': ('holds', 0.0116)}
+MPI-GE|pr|CEAS_DJF {'p_T': 0.0005, 'rho': 1.0022, 'p_cdf': 0.0005, 'forced_change_sd': 2.086} {'C3': ('holds', 0.001), 'C4': ('holds', 0.0044)}
+MPI-GE|pr|NSIB_DJF {'p_T': 0.0005, 'rho': 0.9927, 'p_cdf': 0.0005, 'forced_change_sd': 3.221} {'C3': ('holds', 0.0149), 'C4': ('holds', 0.0088)}
+MPI-GE|pr|NWNA_DJF {'p_T': 0.0005, 'rho': 1.0, 'p_cdf': 0.0005, 'forced_change_sd': 2.157} {'C3': ('holds', 0.0121), 'C4': ('holds', 0.0346)}
+{
+ "C1|tas": {
+  "n_cases": 36,
+  "n_incompatible": 36,
+  "n_compatible": 0,
+  "n_unresolved": 0,
+  "n_raw_p_below_0.05": 36,
+  "rho_median": 0.993,
+  "reading": "replicated: fixed two-type mixing rejected"
+ },
+ "C2|tas": {
+  "n_cases": 36,
+  "n_incompatible": 36,
+  "n_compatible": 0,
+  "n_unresolved": 0,
+  "n_raw_p_below_0.05": 36,
+  "rho_median": 0.993,
+  "reading": "replicated: fixed two-type mixing rejected"
+ },
+ "C3|tas": {
+  "pooled": {
+   "mean": 0.0006,
+   "ci95": [
+    -0.0271,
+    0.0277
+   ],
+   "n_models": 2,
+   "reading_pooled": "holds"
+  },
+  "n_cases": 11,
+  "share_inside_calibration": 0.9091,
+  "readings": {
+   "holds": 10,
+   "inconclusive": 1,
+   "fails": 0
+  },
+  "reading": "the law holds"
+ },
+ "C1|pr": {
+  "n_cases": 36,
+  "n_incompatible": 18,
+  "n_compatible": 0,
+  "n_unresolved": 18,
+  "n_raw_p_below_0.05": 23,
+  "rho_median": 1.017,
+  "reading": "replicated: fixed two-type mixing rejected"
+ },
+ "C2|pr": {
+  "n_cases": 36,
+  "n_incompatible": 12,
+  "n_compatible": 0,
+  "n_unresolved": 24,
+  "n_raw_p_below_0.05": 18,
+  "rho_median": 1.017,
+  "reading": "replicated: fixed two-type mixing rejected"
+ },
+ "C3|pr": {
+  "pooled": {
+   "mean": -0.0003,
+   "ci95": [
+    -0.0063,
+    0.0058
+   ],
+   "n_models": 2,
+   "reading_pooled": "holds"
+  },
+  "n_cases": 36,
+  "share_inside_calibration": 0.9722,
+  "readings": {
+   "holds": 36,
+   "inconclusive": 0,
+   "fails": 0
+  },
+  "reading": "the law holds"
+ },
+ "C4|pr": {
+  "pooled": {
+   "mean": -0.0015,
+   "ci95": [
+    -0.0104,
+    0.0074
+   ],
+   "n_models": 2,
+   "reading_pooled": "holds"
+  },
+  "n_cases": 36,
+  "share_inside_calibration": 0.9722,
+  "readings": {
+   "holds": 36,
+   "inconclusive": 0,
+   "fails": 0
+  },
+  "reading": "the law holds"
+ }
+}
+Saved -> lens_confirmation.json

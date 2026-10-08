@@ -1364,6 +1364,17 @@ G9: observed two-condition slope 1.1434 reproduced; timing-only exact-law calibr
   response". The paper's "excess we cannot explain" is replaced.
 "Second order" claim qualified to near the median of a symmetric population.
 
+### Z14 — REPLICATION on untouched ensembles (`lens_confirmation.py`, 8_experiment; registered `d5096e4` before data)
+CESM2-LE (cmip6 50, smbb 50; SSP3-7.0; MMLEA v2 GDEX 2.5 deg -- AWS too slow, source amended `d65f1ad` before any value
+read) and MPI-GE (100; RCP8.5; DKRZ ESGF whole files). Levels 1951-80, 2040-69, 2070-99; 36 cases per variable.
+C1 moment test (frozen 70df9fa), Holm: tas 36/36 incompatible, 0 compatible -> "replicated"; pr 18/36 incompatible,
+  0 compatible, 18 unresolved -> "replicated". pr incompatible = forced change 1.3-3.5 sd (all 16 > 1.4 sd);
+  unresolved 0.3-1.4 sd. rho medians 0.99 / 1.02. C2 CDF: 36 / 12, replicated.
+C3 law 2040-69 -> 2070-99: pr 36/36 hold (pooled -0.000 [-0.006, +0.006]); tas 10/11 hold, 1 inconclusive (CESM2-smbb
+  WRUS DJF -0.14 [-0.26, -0.04]) -> both "the law holds". C4 1951-80 -> 2040-69: pr 36/36 hold; tas classes empty.
+=> The paper's mixing claim now rests on a registered replication. Abstract: "in two large ensembles examined only
+   after the test was fixed, forced mixing ... rejected in all temperature and half of the precipitation cases".
+
 ### Z7 — prospective test (`prospective_next_ssw.py`, 9_literature; registered `d2b54a8`, window amended to 2036 before any onset)
 Prediction table for every onset day 1 Nov–31 Mar committed; shift nam_1000 −0.635, nam_150 −0.945, N-Eurasian T days
 8–24 −1.54 K; constant rate 0.692; T trend 0.037 K/yr. P(DW) shifted 0.71–0.84 vs climatology 0.24–0.44.

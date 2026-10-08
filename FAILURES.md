@@ -312,3 +312,8 @@ Rule: before registering a period, check each store's time span in the catalogue
 Tried: class_law_general T3 (variance-mean curvature; fixed-type mixing gives -1) with the reading "excluded if lower bound > -0.5", selftested on evenly spaced weights (kappa -0.90).
 Failed: in the real design (two levels close, one far) noise in the year means attenuates kappa to -0.3..-0.8 under true mixing, so "identified" was not "has power" and the registered reading claimed 42/42 precipitation exclusions; calibrated against matched mixtures only 29/48 hold. Found by review.
 Rule: before registering a reading, simulate the alternative in the actual design (member counts, level spacing, trends) and set the cut from that; calibration grids must include the boundary (pure switch) finely.
+
+## 2026-10-07 — CESM2-LE from AWS us-west-2: ~30 kB/s per connection, s3fs workers hang silently
+Tried: acquire_lens_confirmation.py reading s3://ncar-cesm2-lens zarr (anonymous s3fs) in 6 spawn workers.
+Failed: after 26 min each worker had read 42 MB and sat idle (no error); curl measured 27-32 kB/s per connection to that bucket, so one 79 MB chunk takes ~45 min; ~900 chunks were needed.
+Rule: time one raw object with curl before choosing a cloud store; the same CESM2-LE runs are on NCAR GDEX THREDDS (MMLEA v2, d651039) at ~2.5 MB/s.

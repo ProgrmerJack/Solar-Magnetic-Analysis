@@ -76,6 +76,7 @@ def main():
     DMM = J("damip_class_law_multimodel.json")
     CLG = J("class_law_general.json")
     MMT = J("mixture_moment_test.json")
+    LCF = J("lens_confirmation.json")
     R2 = ("robustness (revision 2)", "committed before run", "4c8b3f2")
     mm = g(MMt, "multimodel", "confirmatory"); nr = g(SRt, "regions", "NEURASIA", "multimodel", "confirmatory")
     rows = [
@@ -390,6 +391,18 @@ def main():
          "method and gate fixed before model data", "70df9fa",
          "; ".join(f"{v}: {g(MMT,'summary',v+'|p_T','n_incompatible_holm')} of {g(MMT,'summary',v+'|p_T','n_cases')} incompatible "
                    f"({g(MMT,'summary',v+'|p_T','n_incompatible_raw')} at 5%)" for v in ("tas", "pr")) if MMT else "pending", None),
+        ("CONF-1", "replication on untouched ensembles (CESM2 x2 forcing versions, MPI-GE; 1951-80, 2040-69, 2070-99): moment test of fixed two-type mixing, Holm, 36 cases per variable", "revision-8 primary",
+         "committed before data", "d5096e4",
+         "; ".join(f"{v}: {g(LCF,'summary','C1|'+v,'n_incompatible')} incompatible, {g(LCF,'summary','C1|'+v,'n_compatible')} compatible, "
+                   f"{g(LCF,'summary','C1|'+v,'n_unresolved')} unresolved; {g(LCF,'summary','C1|'+v,'reading')}" for v in ("tas", "pr")) if LCF else "pending", None),
+        ("CONF-2", "same: distribution (CDF) collinearity test", "revision-8 secondary", "committed before data", "d5096e4",
+         "; ".join(f"{v}: {g(LCF,'summary','C2|'+v,'n_incompatible')} incompatible; {g(LCF,'summary','C2|'+v,'reading')}" for v in ("tas", "pr")) if LCF else "pending", None),
+        ("CONF-3", "same: class law 2040-69 -> 2070-99 (pooled residual, models equal)", "revision-8 secondary", "committed before data", "d5096e4",
+         "; ".join(f"{v}: {g(LCF,'summary','C3|'+v,'pooled','mean')} {g(LCF,'summary','C3|'+v,'pooled','ci95')}, {g(LCF,'summary','C3|'+v,'readings','holds')} of "
+                   f"{g(LCF,'summary','C3|'+v,'n_cases')} hold; {g(LCF,'summary','C3|'+v,'reading')}" for v in ("tas", "pr")) if LCF else "pending", None),
+        ("CONF-4", "same: class law 1951-80 -> 2040-69 (precipitation; temperature classes empty)", "revision-8 secondary", "committed before data", "d5096e4",
+         (f"pr: {g(LCF,'summary','C4|pr','pooled','mean')} {g(LCF,'summary','C4|pr','pooled','ci95')}, {g(LCF,'summary','C4|pr','readings','holds')} of "
+          f"{g(LCF,'summary','C4|pr','n_cases')} hold; {g(LCF,'summary','C4|pr','reading')}") if LCF else "pending", None),
         ("GL-4", "the law under SSP5-8.5 2071-2100 vs historical 1985-2014 (precipitation classes; temperature classes empty)", "revision-8 secondary",
          "committed before data", "80edfc5",
          (f"{g(CLG,'T4_summary','holds')} of {g(CLG,'T4_summary','n_units')} hold, {g(CLG,'T4_summary','inconclusive')} inconclusive, "

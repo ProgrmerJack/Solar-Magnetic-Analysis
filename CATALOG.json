@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-07T14:27:26+00:00",
+ "generated": "2026-10-08T03:39:13+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
   "scripts": 193,
-  "results": 98
+  "results": 99
  },
  "scripts": [
   {
@@ -240,9 +240,9 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "Monthly box means of 2 m temperature (K) and precipitation (mm/day) from two large ensembles never analysed in this project for surface outcomes, for the registered confirmation 07_physical_decomposition/lens_confirmation.py (committed before this",
-   "loc": 214,
-   "modified": "2026-10-07 14:01",
-   "sha256_16": "93b06b97ee2c70c0",
+   "loc": 265,
+   "modified": "2026-10-08 02:49",
+   "sha256_16": "7347260a378e2a94",
    "flags": [],
    "filenames_mentioned": [
     "gate.json",
@@ -251,7 +251,8 @@
    "filename_prefixes": [
     "CESM2-",
     "MPI-GE_",
-    "_gate_"
+    "_gate_",
+    "_tmp_cesm_"
    ]
   },
   {
@@ -1942,15 +1943,16 @@
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
    "title": "fig5_law.py -- Figure 5: one law for outcome-defined impact classes.",
-   "loc": 188,
-   "modified": "2026-10-07 14:26",
-   "sha256_16": "29f92c2a84674f19",
+   "loc": 202,
+   "modified": "2026-10-08 03:35",
+   "sha256_16": "8f9949ff47df4b87",
    "flags": [],
    "filenames_mentioned": [
     "class_law_general.json",
     "damip_class_law.json",
     "damip_class_law_multimodel.json",
     "davis2021_intervention_test.json",
+    "lens_confirmation.json",
     "mixture_moment_test.json",
     "snapsi_contrast_generality.json",
     "snapsi_free_natural_experiment.json",
@@ -2135,9 +2137,9 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 463,
-   "modified": "2026-10-07 14:25",
-   "sha256_16": "d52903405b6647e4",
+   "loc": 476,
+   "modified": "2026-10-08 03:37",
+   "sha256_16": "4feab5d673a607e6",
    "flags": [],
    "filenames_mentioned": [
     "class_law_general.json",
@@ -2153,6 +2155,7 @@
     "forecast_value_robustness.json",
     "forecast_value_test.json",
     "icon_event_heterogeneity.json",
+    "lens_confirmation.json",
     "mixture_moment_test.json",
     "obs_model_compatibility.json",
     "prospective_next_ssw.json",
@@ -7415,6 +7418,403 @@
     "R4_pooled_mean_of_pairs",
     "post_hoc_spread",
     "expected_halfwidth_one_population_n21"
+   ]
+  },
+  {
+   "path": "results/current/8_experiment/lens_confirmation.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 74052,
+   "modified": "2026-10-08 03:34",
+   "sha256_16": "30fc0ee675c342f2",
+   "producers": [],
+   "state": "ORPHAN",
+   "detail": "no script writes this",
+   "flags": [],
+   "producer_sha256": {},
+   "verdicts": [
+    {
+     "key": "cases.CESM2-cmip6|tas|CEUR_JJA.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|tas|CEUR_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|tas|WRUS_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|CEUR_JJA.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|CEUR_JJA.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|WRUS_JJA.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|WRUS_JJA.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|CNAM_JJA.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|CNAM_JJA.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|CEAS_JJA.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|CEAS_JJA.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|NSIB_JJA.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|NSIB_JJA.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|NWNA_JJA.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|NWNA_JJA.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|CEUR_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|CEUR_DJF.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|WRUS_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|WRUS_DJF.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|CNAM_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|CNAM_DJF.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|CEAS_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|CEAS_DJF.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|NSIB_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|NSIB_DJF.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|NWNA_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-cmip6|pr|NWNA_DJF.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|tas|CEUR_JJA.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|tas|CEUR_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|tas|WRUS_DJF.C3.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|CEUR_JJA.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|CEUR_JJA.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|WRUS_JJA.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|WRUS_JJA.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|CNAM_JJA.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|CNAM_JJA.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|CEAS_JJA.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|CEAS_JJA.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|NSIB_JJA.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|NSIB_JJA.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|NWNA_JJA.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|NWNA_JJA.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|CEUR_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|CEUR_DJF.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|WRUS_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|WRUS_DJF.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|CNAM_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|CNAM_DJF.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|CEAS_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|CEAS_DJF.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|NSIB_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|NSIB_DJF.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|NWNA_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.CESM2-smbb|pr|NWNA_DJF.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|tas|CEUR_JJA.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|tas|CEUR_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|tas|WRUS_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|tas|CNAM_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|tas|CEAS_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|CEUR_JJA.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|CEUR_JJA.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|WRUS_JJA.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|WRUS_JJA.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|CNAM_JJA.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|CNAM_JJA.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|CEAS_JJA.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|CEAS_JJA.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|NSIB_JJA.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|NSIB_JJA.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|NWNA_JJA.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|NWNA_JJA.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|CEUR_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|CEUR_DJF.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|WRUS_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|WRUS_DJF.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|CNAM_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|CNAM_DJF.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|CEAS_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|CEAS_DJF.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|NSIB_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|NSIB_DJF.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|NWNA_DJF.C3.reading",
+     "text": "holds"
+    },
+    {
+     "key": "cases.MPI-GE|pr|NWNA_DJF.C4.reading",
+     "text": "holds"
+    },
+    {
+     "key": "summary.C1|tas.reading",
+     "text": "replicated: fixed two-type mixing rejected"
+    },
+    {
+     "key": "summary.C2|tas.reading",
+     "text": "replicated: fixed two-type mixing rejected"
+    },
+    {
+     "key": "summary.C3|tas.pooled.reading_pooled",
+     "text": "holds"
+    },
+    {
+     "key": "summary.C3|tas.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "summary.C1|pr.reading",
+     "text": "replicated: fixed two-type mixing rejected"
+    },
+    {
+     "key": "summary.C2|pr.reading",
+     "text": "replicated: fixed two-type mixing rejected"
+    },
+    {
+     "key": "summary.C3|pr.pooled.reading_pooled",
+     "text": "holds"
+    },
+    {
+     "key": "summary.C3|pr.reading",
+     "text": "the law holds"
+    },
+    {
+     "key": "summary.C4|pr.pooled.reading_pooled",
+     "text": "holds"
+    },
+    {
+     "key": "summary.C4|pr.reading",
+     "text": "the law holds"
+    }
+   ],
+   "counts": {},
+   "top_level_keys": [
+    "registered",
+    "seed",
+    "B",
+    "members",
+    "cases",
+    "summary"
    ]
   },
   {

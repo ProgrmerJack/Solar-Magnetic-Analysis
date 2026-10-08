@@ -114,6 +114,10 @@ def main():
     if gen2:
         rows.append(("temperature, 3 models", gen2["T1_by_variable"]["tas"]["pooled"], None))
         rows.append(("precipitation, 4 models", gen2["T1_by_variable"]["pr"]["pooled"], None))
+    conf_b = J("lens_confirmation.json")
+    if conf_b:
+        rows.append(("replication: temperature", conf_b["summary"]["C3|tas"]["pooled"], None))
+        rows.append(("replication: precipitation", conf_b["summary"]["C3|pr"]["pooled"], None))
     bx.axvspan(-0.25, 0.25, color="0.92", zorder=0)
     for i, (lab, law, sh) in enumerate(rows):
         if sh is not None:
@@ -169,11 +173,21 @@ def main():
             dx.plot([x] * 2, np.clip(ci, -1.4, 2.9), color=cols[var], lw=0.5, alpha=0.5, zorder=1)
             dx.scatter(x, np.clip(c["rho"], -1.4, 2.9), s=9, zorder=3, color=cols[var] if ex else "white",
                        edgecolor=cols[var], linewidth=0.6)
+        conf = J("lens_confirmation.json")
+        if conf:                                   # registered replication on untouched ensembles: diamonds
+            for k, u in conf["cases"].items():
+                c = u["C1C2"]; var = k.split("|")[1]; ex = c.get("T_category") == "incompatible"
+                ci = c.get("rho_ci95") or [np.nan, np.nan]
+                dx.plot([c["forced_change_sd"]] * 2, np.clip(ci, -1.4, 2.9), color=cols[var], lw=0.5, alpha=0.5, zorder=1)
+                dx.scatter(c["forced_change_sd"], np.clip(c["rho"], -1.4, 2.9), s=12, marker="D", zorder=4,
+                           color=cols[var] if ex else "white", edgecolor="k", linewidth=0.5)
+            dx.scatter([], [], s=12, marker="D", color="0.6", edgecolor="k", linewidth=0.5,
+                       label="replication (CESM2, MPI-GE; registered)")
         dx.axhline(0, color="k", lw=0.7, ls=":"); dx.axhline(1, color="k", lw=0.5)
         dx.text(0.22, 0.05, "fixed response types (0)", fontsize=4.8, va="bottom")
         dx.text(0.22, 1.05, "one translated population (1)", fontsize=4.8, va="bottom")
         dx.scatter([], [], s=9, color=verm, label="temperature"); dx.scatter([], [], s=9, color=blue, label="precipitation")
-        dx.scatter([], [], s=9, color="white", edgecolor="0.4", label="not rejected after Holm")
+        dx.scatter([], [], s=9, color="white", edgecolor="0.4", label="not rejected after Holm (open)")
         dx.legend(fontsize=4.4, loc="upper right")
         dx.set_xscale("log"); dx.set_ylim(-1.5, 3.0)
         dx.set_title("share of the variance that fixed-type mixing requires but is absent", fontsize=5.8)
