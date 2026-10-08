@@ -18,3 +18,15 @@ Saved -> prospective_next_ssw.json
  }
 }
 Saved -> prospective_next_ssw.json
+=== 2026-10-08T03:57:56Z  data 2026-09-28 .. 2026-10-02
+2026-10-02    73.85  13321.23    12.79    279.43     281.39     282.63     287.44
+Saved -> era5_realtime_cds.parquet (2026-05-01 .. 2026-10-02)
+{'through': '2026-10-02', 'onsets': []}
+Saved -> prospective_next_ssw.json
+{
+ "events": [],
+ "cumulative": {
+  "n_scored": 0
+ }
+}
+Saved -> prospective_next_ssw.json
