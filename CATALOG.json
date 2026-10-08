@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-08T15:34:02+00:00",
+ "generated": "2026-10-08T19:03:33+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 197,
-  "results": 101
+  "scripts": 199,
+  "results": 102
  },
  "scripts": [
   {
@@ -403,6 +403,22 @@
     "snotel_stations.csv",
     "snotel_stations.json",
     "station_checksums.txt"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_tc_data.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Inputs of 07_physical_decomposition/tc_class_law.py (registered 2026-10-08, committed before any of these values was fetched).",
+   "loc": 109,
+   "modified": "2026-10-08 18:47",
+   "sha256_16": "b5fc3f7669d8bde0",
+   "flags": [],
+   "filenames_mentioned": [
+    "ibtracs.ALL.list.v04r01.csv",
+    "sst.mnmean.nc",
+    "tc_storms.parquet"
    ],
    "filename_prefixes": []
   },
@@ -1715,6 +1731,21 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/07_physical_decomposition/tc_class_law.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "DOES THE THRESHOLD-CLASS LAW HOLD OUTSIDE THE STRATOSPHERE, AND CAN ITS TEST TELL A THRESHOLD ON ONE POPULATION FROM GENUINE TYPES? TROPICAL-CYCLONE CLASSES.",
+   "loc": 253,
+   "modified": "2026-10-08 18:59",
+   "sha256_16": "fdb43851fb0d84e1",
+   "flags": [],
+   "filenames_mentioned": [
+    "tc_class_law.json",
+    "tc_storms.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/07_physical_decomposition/threshold_law_theory.py",
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
@@ -2194,9 +2225,9 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 489,
-   "modified": "2026-10-08 15:33",
-   "sha256_16": "46c67fd3e0cab866",
+   "loc": 495,
+   "modified": "2026-10-08 19:02",
+   "sha256_16": "02e6fd37167957bf",
    "flags": [],
    "filenames_mentioned": [
     "class_law_general.json",
@@ -2243,6 +2274,7 @@
     "snapsi_selection_test.json",
     "state_forecast.json",
     "tableED1_tests.csv",
+    "tc_class_law.json",
     "vortex_geometry_test.json",
     "vortex_threshold_continuity.json",
     "within_model_check.json"
@@ -3089,7 +3121,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-05 00:18",
+   "modified": "2026-10-08 19:03",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -9338,6 +9370,56 @@
     "southern_hemisphere",
     "filter_caveat",
     "units_caveat"
+   ]
+  },
+  {
+   "path": "results/current/8_experiment/tc_class_law.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 3002,
+   "modified": "2026-10-08 18:59",
+   "sha256_16": "d13f939e8184f699",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/tc_class_law.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/tc_class_law.py": "fdb43851fb0d84e1"
+   },
+   "verdicts": [
+    {
+     "key": "C2_law.RI.reading",
+     "text": "holds"
+    },
+    {
+     "key": "C2_law.MAJOR.reading",
+     "text": "holds"
+    },
+    {
+     "key": "reading_pair",
+     "text": "one population in both"
+    }
+   ],
+   "counts": {},
+   "top_level_keys": [
+    "validation",
+    "method_fixed",
+    "validation_history",
+    "registered",
+    "seed",
+    "B",
+    "n_storms",
+    "n_seasons",
+    "sst_tercile_cuts_C",
+    "levels",
+    "C1_mixing",
+    "C2_law",
+    "C3_ground_truth",
+    "reading_pair",
+    "C3_post_hoc"
    ]
   },
   {

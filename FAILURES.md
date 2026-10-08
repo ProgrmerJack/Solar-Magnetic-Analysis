@@ -327,3 +327,8 @@ Rule: a counterfactual built by resampling must preserve the dependence structur
 Tried: tc_class_law reused mixture_moment_test's centred bootstrap p (|T_b - T| >= |T|), resampling 43 seasons only.
 Failed: validation gate (before data) gave false rejection 0.058, one-sided upper bound 0.0717 > 0.07; with few clusters the bootstrap spread of T is too narrow.
 Rule: with < ~50 resampled clusters use T / bootstrap s.d. referred to Student t (clusters - 1 d.f.) and re-validate (here 0.054, upper 0.0673).
+
+## 2026-10-08 — Substring test on category labels: "incompatible" contains "compatible"
+Tried: tc_class_law set reading flags with `"compatible with" in category`.
+Failed: true for "incompatible with ..." too, so two rejections were read as "the test discriminates" (registered rule: "one population in both"); caught on first output, numbers unaffected.
+Rule: compare category labels by equality against named constants, never by substring.

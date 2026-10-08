@@ -10,7 +10,7 @@ value was fetched (03_data_ingestion/acquire_tc_data.py).
 
 CLASSES (outcome-defined, from the literature)
   RI     rapid intensification: the storm's largest 24-h over-water increase of maximum
-         sustained wind >= 30 kt (Kaplan & DeMaria 2003, ~95th percentile of 24-h changes)
+         sustained wind >= 30 kt (the conventional threshold; Lee et al. 2016 use 35 kt and test 30)
   MAJOR  lifetime maximum intensity (LMI) >= 96 kt (Saffir-Simpson category 3+)
   Literature positions: intensification rates show "no evidence of significant departures
   from exponential distributions" (Kowch & Emanuel 2015) -> one population expected;
@@ -80,6 +80,7 @@ NAME = "tc_class_law"
 SEED = zlib.crc32(NAME.encode()) % (2 ** 31)
 B, N_SIM, GATE, TOL = 1999, 1000, 0.07, 0.25
 RI_KT, MAJOR_KT = 30.0, 96.0
+INC, COM = "incompatible with fixed two-type mixing", "compatible with fixed two-type mixing"
 
 
 # ------------------------------------------------------------------ statistics
@@ -205,8 +206,7 @@ def main():
     for (o, c), a in zip(c1.items(), adj):
         ci = c["rho_ci95"]
         c["p_T_holm"] = round(float(a), 4)
-        c["category"] = ("incompatible with fixed two-type mixing" if a < 0.05 else
-                         "compatible with fixed two-type mixing" if ci and -TOL <= ci[0] and ci[1] <= TOL else "unresolved")
+        c["category"] = INC if a < 0.05 else COM if ci and -TOL <= ci[0] and ci[1] <= TOL else "unresolved"
     res["C1_mixing"] = c1
     res["C2_law"] = {"RI": law_residual(d.y_ri.values.astype(float), lev, yr, ny, RI_KT, rng),
                      "MAJOR": law_residual(d.y_lmi.values.astype(float), lev, yr, ny, MAJOR_KT, rng)}
@@ -218,15 +218,31 @@ def main():
     ks_holm = holm([g["RI"]["ks_p_L_vs_H"], g["nonRI"]["ks_p_L_vs_H"]])
     differ = bool((ks_holm < 0.05).any()); cat = c1["y_lmi"]["category"]
     g["ks_p_holm"] = [round(float(x), 6) for x in ks_holm]
-    g["agreement_C1_lmi"] = ("right" if ("incompatible" in cat and differ) or ("compatible with" in cat and not differ) else
-                             "wrong" if ("incompatible" in cat and not differ) or ("compatible with" in cat and differ) else
-                             "not decidable")
+    inc_l, com_l = cat == INC, cat == COM
+    g["agreement_C1_lmi"] = ("right" if (inc_l and differ) or (com_l and not differ) else
+                             "wrong" if (inc_l and not differ) or (com_l and differ) else "not decidable")
     res["C3_ground_truth"] = g
+    # POST HOC (added after the registered result, labelled so): C3 at Lee et al.'s 35-kt RI definition, and
+    # the within-type LMI shift H - L with a season-bootstrap interval (KS treats storms as independent)
+    ph = {}
+    for kt in (RI_KT, 35.0):
+        r_ = d.y_ri.values >= kt; ok = np.isfinite(d.y_ri.values); e = {}
+        for typ, m in (("RI", r_), ("nonRI", ~r_ & ok)):
+            def shift(w, m=m):
+                ww = w[yr]; a, b = m & (lev == 0), m & (lev == 2)
+                return (ww[b] * d.y_lmi.values[b]).sum() / ww[b].sum() - (ww[a] * d.y_lmi.values[a]).sum() / ww[a].sum()
+            bs = [shift(np.bincount(rng.integers(ny, size=ny), minlength=ny).astype(float)) for _ in range(B)]
+            e[typ] = {"lmi_shift_H_minus_L_kt": round(float(shift(np.ones(ny))), 2),
+                      "ci95": [round(float(x), 2) for x in np.quantile(bs, [0.025, 0.975])],
+                      "ks_p_L_vs_H": round(float(ks_2samp(d.y_lmi.values[m & (lev == 0)], d.y_lmi.values[m & (lev == 2)]).pvalue), 6),
+                      "share_L_H": [round(float(r_[ok & (lev == i)].mean()), 4) for i in (0, 2)] if typ == "RI" else None}
+        ph[f"{int(kt)}kt"] = e
+    res["C3_post_hoc"] = ph
     cats = [c1["y_ri"]["category"], c1["y_lmi"]["category"]]
-    inc = ["incompatible" in c for c in cats]; com = ["compatible with" in c for c in cats]
+    inc = [c == INC for c in cats]; com = [c == COM for c in cats]     # exact: "incompatible" contains "compatible"
     res["reading_pair"] = ("the test discriminates" if (inc[0] and com[1]) or (inc[1] and com[0]) else
                            "one population in both" if all(inc) else "mixing in both" if all(com) else "not resolved")
-    print(json.dumps({k: res[k] for k in ("levels", "C1_mixing", "C2_law", "C3_ground_truth", "reading_pair")}, indent=1))
+    print(json.dumps({k: res[k] for k in ("levels", "C1_mixing", "C2_law", "C3_ground_truth", "C3_post_hoc", "reading_pair")}, indent=1))
     OUT.write_text(json.dumps(res, indent=1, default=float), encoding="utf8", newline="\n")
     print(f"Saved -> {OUT.name}")
     return 0

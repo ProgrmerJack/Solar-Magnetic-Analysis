@@ -1392,6 +1392,18 @@ British Isles: no forced change. O2 (tail) and O3 (wet spells) BIASED BY CONSTRU
 remove within-regime persistence) -> not interpreted. Meaning: regime frequency carries 30-49% of the SSW rainfall effect (more with k=6); the rest is a
 shift within circulation types. Review control-vs-control check: O1 unbiased, O2/O3 bias confirmed.
 
+### Z17 — tropical cyclones: the test on observed types (`tc_class_law.py`, 8_experiment; registered `d3c6ef1` before data)
+IBTrACS v04r01 1982-2024, USA_WIND, 3,746 storms / 43 seasons; levels = ERSSTv5 terciles at genesis (28.4, 29.1 C).
+Gate v1 (centred bootstrap p, 43 clusters) FAILED 0.058/0.0717 -> v2 Wald-t passed 0.054/0.0673 before data.
+RI share 0.26 -> 0.52, major 0.16 -> 0.38 (cool -> warm third). C1 fixed two-type mixing REJECTED: 24-h intensification
+rho 1.58 [0.58, 2.58] Holm p 0.005; LMI rho 1.67 [0.81, 2.59] p 0.001 (registered label "one population in both" =
+incompatible with fixed types in both; it does NOT establish one population). C3 ground truth (RI label observable):
+LMI of RI storms +13.4 kt [9.9, 16.8], non-RI +5.6 [3.7, 7.5] warm minus cool (KS p<1e-5) -> fixed types false, test RIGHT;
+at Lee et al.'s 35 kt: +10.8 [7.3, 14.3], +7.3 [5.5, 9.2] (post hoc). C2 law holds: RI -0.10 [-0.14, +0.19], major
+-0.12 [-0.22, -0.04]. Meaning: LMI bimodality ("two types of storms", Lee 2016) is not two fixed types whose mix follows
+SST; warm water raises the RI share AND both types' intensity. No compatible case here, so "discrimination" on real data
+was not shown; the test's rejection is confirmed by independent labels. Observational (levels confounded with basin/season).
+
 ### Z7 — prospective test (`prospective_next_ssw.py`, 9_literature; registered `d2b54a8`, window amended to 2036 before any onset)
 Prediction table for every onset day 1 Nov–31 Mar committed; shift nam_1000 −0.635, nam_150 −0.945, N-Eurasian T days
 8–24 −1.54 K; constant rate 0.692; T trend 0.037 K/yr. P(DW) shifted 0.71–0.84 vs climatology 0.24–0.44.
