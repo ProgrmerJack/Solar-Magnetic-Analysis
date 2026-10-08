@@ -15,6 +15,9 @@ AMENDMENT 2026-10-08, before any rainfall outcome was computed (the fetch had re
   and 6-25 (s20190108) only -- the 8 January run starts after the 2 January onset -- so
   "days 1-25" below becomes DAYS 8-24 throughout (the paper's regional-temperature window,
   covered by all four initialisations), including the anomaly reference and every outcome.
+  NRL is excluded before any outcome: its pr files state kg m-2 s-1 but their global mean
+  converts to ~4,600 mm/day and varies erratically between steps, so the units cannot be
+  determined (the fetch's plausibility check rejects every NRL member).
 
 DATA  SNAPSI nudged and control, the four Northern Hemisphere initialisations
   (s20180125, s20180208 -> 2018 event; s20181213, s20190108 -> 2019 event), every centre
