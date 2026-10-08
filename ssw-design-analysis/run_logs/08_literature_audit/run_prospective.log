@@ -30,3 +30,13 @@ Saved -> prospective_next_ssw.json
  }
 }
 Saved -> prospective_next_ssw.json
+=== 2026-10-08T11:12:50Z  data 2026-10-03 .. 2026-10-02
+{'through': '2026-10-02', 'onsets': []}
+Saved -> prospective_next_ssw.json
+{
+ "events": [],
+ "cumulative": {
+  "n_scored": 0
+ }
+}
+Saved -> prospective_next_ssw.json
