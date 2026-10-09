@@ -337,3 +337,18 @@ Rule: compare category labels by equality against named constants, never by subs
 Tried: acquire_tc_data grouped all IBTrACS records by SID.
 Failed: 49 SIDs in 1982-2024 carry only spur-merge/split/other records (alternative track branches); 6 passed the 34-kt filter as "storms" (found by review; readings unchanged).
 Rule: filter TRACK_TYPE == "main" before grouping IBTrACS by SID.
+
+## 2026-10-09 — Unretried directory listing killed a 3-hour streaming download
+Tried: acquire_jra3q_u10 listed each OSDF month directory to find the file name, outside the download's retry loop, in a thread pool.
+Failed: one listing timed out after 7 of 198 months; the exception ended the pool and the run.
+Rule: build deterministic file names instead of listing; retry every network call with backoff to ~10 min (a DNS outage outlasted 6 x 30 s retries), and never let one failed item end the pool -- record it and re-pass.
+
+## 2026-10-09 — OSDF director routes some requests to a stalled cache
+Tried: acquire_jra3q_u10 downloading via osdf-director.osg-htc.org with retries on error only.
+Failed: the director redirects each request to a cache; INFN gave 6.8 MB/s, SURFsara ~300 B/s, so aggregate throughput fell to 0.8 MB/s (45 retries, ~15 h projected).
+Rule: on OSDF, abandon a transfer below ~0.5 MB/s after 20 s and retry, preferring a cache measured fast (here xsod14.cr.cnaf.infn.it:8443); aggregate rose to ~10 MB/s.
+
+## 2026-10-09 — Detector gate decided by one event, with a 3-day tolerance tighter than reanalysis spread
+Tried: early_transfer_retest required JRA-3Q CP07 onsets to match >= 80% of 14 catalogued 1958-80 onsets within 3 days.
+Failed: 11/14 (78.6%); two "misses" were the same events 6 and 10 days apart, so one event decided the gate and the primary test was not run.
+Rule: before setting a detector gate, measure the timing spread between reanalyses on a period not used for the test and use enough events that one cannot decide it.

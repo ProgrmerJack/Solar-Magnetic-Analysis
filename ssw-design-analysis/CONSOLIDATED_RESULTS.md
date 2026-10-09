@@ -1417,6 +1417,17 @@ code disagreed on direction -> no reading. Meaning: with 39 events observations 
 class difference of 0.5 s.d.; "inconclusive" is correct and is now quantified. Producers re-run to save null replicates:
 both JSONs reproduced exactly (parsed).
 
+### Z19 — re-test of the failed 1941-1958 transfer (`early_transfer_retest.py`, 6_predictability; registered `3a2950b` before data)
+Independent detector JRA-3Q u(10 hPa, 60.0N) from Nov 1947 (OSDF); independent outcome GHCN-Daily (221 stations, 36 cells).
+Gate O (stations vs ERA5, r >= 0.90): PASSED, r 0.998 (1959-2022), 0.989 vs early ERA5 (1941-58).
+Gate D (>= 80% of 14 catalogue onsets 1958-80 within 3 d): FAILED 11/14 (misses 1960-01-17 [JRA 01-07], 1969-03-13,
+1977-01-09 [JRA 01-15]) -> registered primary P1 (JRA events) NOT RUN; S2, S3 not run.
+S1 (ERA5 R6 events, station outcome): 0/12, 0/12, 2/12 at q 0.05/0.10/0.20, p under rule 0.08/0.012/0.08 -> identical
+to R6: the failure is NOT an ERA5 surface-temperature artefact. Input comparison (no outcomes): JRA-ERA5 u r 0.989,
+rms 2.7 m/s after 1958 but r 0.83, rms 10.7, sign disagreement 8% in 1947-58; of ERA5's 7 onsets from Nov 1947, JRA-3Q
+finds 2 within 3 d and 7 others. Meaning: the pre-1958 event list is reanalysis-dependent; the failed transfer cannot be
+attributed to the forecast or to the events. Power of R6-type test vs climatology at n=12: 0.28.
+
 ### Z7 — prospective test (`prospective_next_ssw.py`, 9_literature; registered `d2b54a8`, window amended to 2036 before any onset)
 Prediction table for every onset day 1 Nov–31 Mar committed; shift nam_1000 −0.635, nam_150 −0.945, N-Eurasian T days
 8–24 −1.54 K; constant rate 0.692; T trend 0.037 K/yr. P(DW) shifted 0.71–0.84 vs climatology 0.24–0.44.

@@ -81,6 +81,7 @@ def main():
     RGM = J("snapsi_regime_precip.json")
     TCL = J("tc_class_law.json")
     EQV = J("equivalence_observational.json")
+    ETR = J("early_transfer_retest.json")
     R2 = ("robustness (revision 2)", "committed before run", "4c8b3f2")
     mm = g(MMt, "multimodel", "confirmatory"); nr = g(SRt, "regions", "NEURASIA", "multimodel", "confirmatory")
     rows = [
@@ -418,6 +419,11 @@ def main():
          "revision-8 post hoc", "bounds, priors, readings committed before computation", "7bce848",
          ("; ".join(f"{k.split('|')[1]}: TOST p {g(EQV,'results',k,'p_TOST')}, equivalent only at +-{g(EQV,'results',k,'smallest_bound_sd')} s.d., "
                     f"BF01 {g(EQV,'results',k,'BF01')}: {g(EQV,'results',k,'BF_reading')}" for k in ("T|NEURASIA_d8_24", "PR|IBERIA_d1_25"))) if EQV else "pending", None),
+        ("R6-RT", "re-test of the failed 1941-1958 transfer with an independent detector (JRA-3Q) and outcome (GHCN-Daily stations); gates: detector >= 80% of 1958-80 catalogue onsets within 3 d, stations vs ERA5 r >= 0.90",
+         "revision-8 primary", "committed before data", "3a2950b",
+         (f"detector gate {g(ETR,'gate_D','matched_within_3d')}/{g(ETR,'gate_D','n_catalogue')}: FAILED, primary not run; station gate r {g(ETR,'gate_O','r_1959_2022')}: passed; "
+          f"ERA5 events with station outcome {g(ETR,'arms','S1','0.1','count')}/{g(ETR,'arms','S1','0.1','n')} below q 0.10 (p under rule {g(ETR,'arms','S1','0.1','binom_p_under_rule')})") if ETR else "pending",
+         g(ETR, 'arms', 'S1', '0.1', 'binom_p_under_rule') if ETR else None),
         ("REG-1", "SNAPSI: share of the imposed SSW's rainfall change reproduced by the frequency of four pressure-defined regimes (Iberia primary; Scandinavia), days 8-24, 36 pairs", "revision-8 primary",
          "committed before data (window amended before any outcome)", "6c99ebc, 44ff51a",
          ("; ".join(f"{b.title()}: forced {g(RGM,'k4','O1',b,'forced_change_mean_per_pair')} mm/day per pair, R {g(RGM,'k4','O1',b,'R')} {g(RGM,'k4','O1',b,'R_ci95')}; "

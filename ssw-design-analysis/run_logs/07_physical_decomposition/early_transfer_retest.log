@@ -1,0 +1,30 @@
+{
+ "gate_D": {
+  "n_catalogue": 14,
+  "matched_within_3d": 11,
+  "share": 0.7857,
+  "missed": [
+   "1960-01-17",
+   "1969-03-13",
+   "1977-01-09"
+  ],
+  "extra_jra3q": [
+   "1960-01-07",
+   "1970-01-26",
+   "1977-01-15"
+  ],
+  "passes": false
+ },
+ "gate_O": {
+  "r_1959_2022": 0.9977,
+  "n_windows": 9276,
+  "passes": true,
+  "r_1941_1958_vs_early_ERA5_not_gated": 0.9888,
+  "n_windows_early": 2698,
+  "stations_used_1941_1958": 221,
+  "cells_max": 36
+ }
+}
+S1 {0.05: (0, 12, 0.0827, 1.0, 0.0), 0.1: (0, 12, 0.0122, 0.6234, 0.2824), 0.2: (2, 12, 0.0776, 1.0, 0.2749)}
+not run: gate failed
+Saved -> early_transfer_retest.json

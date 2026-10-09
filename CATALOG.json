@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-09T05:06:26+00:00",
+ "generated": "2026-10-09T07:47:10+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 200,
-  "results": 103
+  "scripts": 203,
+  "results": 104
  },
  "scripts": [
   {
@@ -220,6 +220,22 @@
    ]
   },
   {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_ghcnd_neurasia.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Input of 07_physical_decomposition/early_transfer_retest.py (registered 2026-10-09, committed before any station value was read): a station-based northern-Eurasian (50-65 N, 10-130 E) daily-mean temperature anomaly from GHCN-Daily (Menne et al. 2012), NOAA NCEI, anonymous:",
+   "loc": 116,
+   "modified": "2026-10-09 05:12",
+   "sha256_16": "7b5073c76a64f39e",
+   "flags": [],
+   "filenames_mentioned": [
+    "ghcnd-inventory.txt",
+    "ghcnd_neurasia_daily.parquet",
+    "ghcnd_neurasia_stations.csv"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/03_data_ingestion/acquire_heatflux.py",
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
@@ -248,6 +264,22 @@
     "index_checksums.txt"
    ],
    "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_jra3q_u10.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Input of 07_physical_decomposition/early_transfer_retest.py (registered 2026-10-09, committed before any JRA-3Q value was read): daily-mean zonal-mean zonal wind at 10 hPa on the 60.0 N row of JRA-3Q (Kosaka et al. 2024), November-April of the winters 1947/48 to 1979/80.",
+   "loc": 110,
+   "modified": "2026-10-09 07:18",
+   "sha256_16": "4d3754db23d485ac",
+   "flags": [],
+   "filenames_mentioned": [
+    "jra3q_u10_60N_daily.parquet"
+   ],
+   "filename_prefixes": [
+    "jra3q.anl_p125.0_2_2.ugrd-pres-an-ll125."
+   ]
   },
   {
    "path": "ssw-design-analysis/03_data_ingestion/acquire_lens_confirmation.py",
@@ -1070,6 +1102,26 @@
     "design_sensitivity.json",
     "heatflux_daily.parquet",
     "ncep_stratosphere.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/early_transfer_retest.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "DOES THE OUT-OF-SAMPLE FAILURE OF THE SHIFT RULE IN 1941-1958 SURVIVE AN INDEPENDENT DETECTOR AND AN INDEPENDENT OUTCOME? Registered 2026-10-09, committed with its inputs' acquisition scripts BEFORE any JRA-3Q wind",
+   "loc": 163,
+   "modified": "2026-10-09 07:46",
+   "sha256_16": "b41fcbeac6e522c9",
+   "flags": [],
+   "filenames_mentioned": [
+    "early_transfer_retest.json",
+    "era5_t2m_regions_daily.parquet",
+    "era5_t2m_regions_daily_arco_early.parquet",
+    "era5_u10_60N_daily_cds.parquet",
+    "ghcnd_neurasia_daily.parquet",
+    "jra3q_u10_60N_daily.parquet",
+    "shift_rule_forecast.json"
    ],
    "filename_prefixes": []
   },
@@ -2241,9 +2293,9 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 500,
-   "modified": "2026-10-09 05:05",
-   "sha256_16": "eb1ee70537a22f54",
+   "loc": 506,
+   "modified": "2026-10-09 07:46",
+   "sha256_16": "20b77c4af20d0601",
    "flags": [],
    "filenames_mentioned": [
     "class_law_general.json",
@@ -2255,6 +2307,7 @@
     "damip_class_law.json",
     "damip_class_law_multimodel.json",
     "davis2021_intervention_test.json",
+    "early_transfer_retest.json",
     "equivalence_observational.json",
     "era5_regional_test.json",
     "forced_variance_ceiling.json",
@@ -3138,7 +3191,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-09 05:06",
+   "modified": "2026-10-09 07:47",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -4959,6 +5012,41 @@
    ]
   },
   {
+   "path": "results/current/6_predictability/early_transfer_retest.json",
+   "tree": "current",
+   "stage": "6_predictability",
+   "readable": true,
+   "bytes": 4281,
+   "modified": "2026-10-09 07:46",
+   "sha256_16": "a85cc6acb18cb9ef",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/early_transfer_retest.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/early_transfer_retest.py": "b41fcbeac6e522c9"
+   },
+   "verdicts": [
+    {
+     "key": "reading_P1",
+     "text": "not run: gate failed"
+    }
+   ],
+   "counts": {},
+   "top_level_keys": [
+    "registered",
+    "seed",
+    "gate_D",
+    "gate_O",
+    "onsets",
+    "input_comparison_post_run",
+    "arms",
+    "reading_P1"
+   ]
+  },
+  {
    "path": "results/current/6_predictability/forced_variance_ceiling.json",
    "tree": "current",
    "stage": "6_predictability",
@@ -5751,12 +5839,14 @@
    "modified": "2026-10-02 08:20",
    "sha256_16": "654eb427d5a20560",
    "producers": [
+    "ssw-design-analysis/07_physical_decomposition/early_transfer_retest.py",
     "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py"
    ],
    "state": "current",
    "detail": "",
    "flags": [],
    "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/early_transfer_retest.py": "b41fcbeac6e522c9",
     "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "0347a686764afd50"
    },
    "verdicts": [],

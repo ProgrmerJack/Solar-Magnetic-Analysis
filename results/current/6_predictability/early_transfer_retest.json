@@ -1,0 +1,231 @@
+{
+ "registered": "2026-10-09, committed before any JRA-3Q or GHCN-Daily value was read",
+ "seed": 3163887649,
+ "gate_D": {
+  "n_catalogue": 14,
+  "matched_within_3d": 11,
+  "share": 0.7857,
+  "missed": [
+   "1960-01-17",
+   "1969-03-13",
+   "1977-01-09"
+  ],
+  "extra_jra3q": [
+   "1960-01-07",
+   "1970-01-26",
+   "1977-01-15"
+  ],
+  "passes": false
+ },
+ "gate_O": {
+  "r_1959_2022": 0.9977,
+  "n_windows": 9276,
+  "passes": true,
+  "r_1941_1958_vs_early_ERA5_not_gated": 0.9888,
+  "n_windows_early": 2698,
+  "stations_used_1941_1958": 221,
+  "cells_max": 36
+ },
+ "onsets": {
+  "jra3q_P1": [
+   "1949-11-28",
+   "1950-02-03",
+   "1951-03-05",
+   "1952-02-13",
+   "1952-12-29",
+   "1953-12-20",
+   "1955-01-09",
+   "1957-02-06",
+   "1958-01-30"
+  ],
+  "era5_R6": [
+   "1941-02-07",
+   "1942-03-21",
+   "1945-03-19",
+   "1946-02-19",
+   "1946-03-19",
+   "1950-03-05",
+   "1952-02-22",
+   "1952-11-19",
+   "1954-12-18",
+   "1955-01-26",
+   "1957-02-04",
+   "1958-02-01"
+  ],
+  "both_within_3d_era5_dates": [
+   "1957-02-04",
+   "1958-02-01"
+  ]
+ },
+ "input_comparison_post_run": {
+  "1947-1958": {
+   "n_days": 1994,
+   "r": 0.8297,
+   "bias_jra_minus_era5": -2.676,
+   "rms": 10.671,
+   "sign_disagreement": 0.0812
+  },
+  "1958-1980": {
+   "n_days": 3988,
+   "r": 0.989,
+   "bias_jra_minus_era5": -0.407,
+   "rms": 2.721,
+   "sign_disagreement": 0.0143
+  },
+  "era5_onsets_from_nov1947": 7,
+  "of_which_jra3q_within_3d": 2,
+  "jra3q_onsets_not_in_era5_within_3d": 7,
+  "missed_catalogue_nearest_jra3q_days": {
+   "1960-01-17": 10,
+   "1969-03-13": 105,
+   "1977-01-09": 6
+  }
+ },
+ "arms": {
+  "S1": {
+   "n_free_windows": 1280,
+   "0.05": {
+    "set": "S1",
+    "n": 12,
+    "count": 0,
+    "f": 0.0,
+    "f_wilson95": [
+     0.0,
+     0.2425
+    ],
+    "p_rule": 0.2409,
+    "q": 0.05,
+    "binom_p_under_rule": 0.0827,
+    "binom_p_under_climatology": 1.0,
+    "brier_rule": 0.058,
+    "brier_climatology": 0.0025,
+    "bss_vs_climatology": -22.2131,
+    "risk_ratio_observed": 0.0,
+    "risk_ratio_rule": 4.818,
+    "rev_at": {
+     "0.05": {
+      "rev": null,
+      "ci95": null
+     },
+     "0.1": {
+      "rev": null,
+      "ci95": null
+     }
+    },
+    "events": [
+     "1941-02-07",
+     "1942-03-21",
+     "1945-03-19",
+     "1946-02-19",
+     "1946-03-19",
+     "1950-03-05",
+     "1952-02-22",
+     "1952-11-19",
+     "1954-12-18",
+     "1955-01-26",
+     "1957-02-04",
+     "1958-02-01"
+    ],
+    "threshold_K": -4.689,
+    "power_vs_climatology": 0.0
+   },
+   "0.1": {
+    "set": "S1",
+    "n": 12,
+    "count": 0,
+    "f": 0.0,
+    "f_wilson95": [
+     0.0,
+     0.2425
+    ],
+    "p_rule": 0.3243,
+    "q": 0.1,
+    "binom_p_under_rule": 0.0122,
+    "binom_p_under_climatology": 0.6234,
+    "brier_rule": 0.1052,
+    "brier_climatology": 0.01,
+    "bss_vs_climatology": -9.517,
+    "risk_ratio_observed": 0.0,
+    "risk_ratio_rule": 3.243,
+    "rev_at": {
+     "0.1": {
+      "rev": null,
+      "ci95": null
+     },
+     "0.2": {
+      "rev": null,
+      "ci95": null
+     }
+    },
+    "events": [
+     "1941-02-07",
+     "1942-03-21",
+     "1945-03-19",
+     "1946-02-19",
+     "1946-03-19",
+     "1950-03-05",
+     "1952-02-22",
+     "1952-11-19",
+     "1954-12-18",
+     "1955-01-26",
+     "1957-02-04",
+     "1958-02-01"
+    ],
+    "threshold_K": -3.801,
+    "power_vs_climatology": 0.2824
+   },
+   "0.2": {
+    "set": "S1",
+    "n": 12,
+    "count": 2,
+    "f": 0.1667,
+    "f_wilson95": [
+     0.047,
+     0.448
+    ],
+    "p_rule": 0.4541,
+    "q": 0.2,
+    "binom_p_under_rule": 0.0776,
+    "binom_p_under_climatology": 1.0,
+    "brier_rule": 0.2215,
+    "brier_climatology": 0.14,
+    "bss_vs_climatology": -0.5822,
+    "risk_ratio_observed": 0.833,
+    "risk_ratio_rule": 2.27,
+    "rev_at": {
+     "0.2": {
+      "rev": -0.25,
+      "ci95": [
+       -1.75,
+       0.65
+      ]
+     },
+     "0.4": {
+      "rev": -2.3333,
+      "ci95": [
+       -6.3333,
+       0.0667
+      ]
+     }
+    },
+    "events": [
+     "1941-02-07",
+     "1942-03-21",
+     "1945-03-19",
+     "1946-02-19",
+     "1946-03-19",
+     "1950-03-05",
+     "1952-02-22",
+     "1952-11-19",
+     "1954-12-18",
+     "1955-01-26",
+     "1957-02-04",
+     "1958-02-01"
+    ],
+    "threshold_K": -2.462,
+    "power_vs_climatology": 0.2749
+   }
+  }
+ },
+ "reading_P1": "not run: gate failed"
+}

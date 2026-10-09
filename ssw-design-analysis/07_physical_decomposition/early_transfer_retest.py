@@ -118,6 +118,19 @@ def main():
     both = [e for e in era5_on if len(p1_on) and np.min(np.abs((p1_on - e).days)) <= 3]
     res["onsets"] = {"jra3q_P1": [str(o.date()) for o in p1_on], "era5_R6": [str(o.date()) for o in era5_on],
                      "both_within_3d_era5_dates": [str(o.date()) for o in both]}
+    # added after the run (descriptive, inputs only, no outcome): reanalysis agreement and event-set overlap
+    eu = pd.read_parquet(ING / "era5_u10_60N_daily_cds.parquet"); eu = pd.Series(eu["u10_60N"].values, index=pd.to_datetime(eu["date"]))
+    x = pd.concat([u, eu], axis=1, keys=["j", "e"], sort=True).dropna(); cmp_ = {}
+    for a, b in (("1947-11-01", "1958-04-30"), ("1958-11-01", "1980-04-30")):
+        y = x[a:b]
+        cmp_[f"{a[:4]}-{b[:4]}"] = {"n_days": int(len(y)), "r": round(float(y.j.corr(y.e)), 4), "bias_jra_minus_era5": round(float((y.j - y.e).mean()), 3),
+                                     "rms": round(float(np.sqrt(((y.j - y.e) ** 2).mean())), 3), "sign_disagreement": round(float(((y.j < 0) != (y.e < 0)).mean()), 4)}
+    e47 = era5_on[era5_on >= pd.Timestamp("1947-11-01")]
+    cmp_["era5_onsets_from_nov1947"] = int(len(e47))
+    cmp_["of_which_jra3q_within_3d"] = int(sum(np.min(np.abs((p1_on - e).days)) <= 3 for e in e47))
+    cmp_["jra3q_onsets_not_in_era5_within_3d"] = int(sum(np.min(np.abs((e47 - o).days)) > 3 for o in p1_on))
+    cmp_["missed_catalogue_nearest_jra3q_days"] = {m: int(np.min(np.abs((jv - pd.Timestamp(m)).days))) for m in res["gate_D"]["missed"]}
+    res["input_comparison_post_run"] = cmp_
     arms = {}
     if res["gate_D"]["passes"] and res["gate_O"]["passes"]:
         arms["P1"] = SRF.obs_verify(st_early, list(p1_on), excl_j, (1941, 1958), SRF.T_WIN, pr, rng, "P1")
