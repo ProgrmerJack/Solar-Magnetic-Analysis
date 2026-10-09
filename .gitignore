@@ -70,3 +70,6 @@ ssw-design-analysis/03_data_ingestion/_ncep_z10/
 ssw-design-analysis/03_data_ingestion/raw/ibtracs/
 ssw-design-analysis/03_data_ingestion/raw/ersst/
 ssw-design-analysis/03_data_ingestion/_null_replicates/
+ssw-design-analysis/03_data_ingestion/_jra3q_tmp/
+ssw-design-analysis/03_data_ingestion/_jra3q_u10/
+ssw-design-analysis/03_data_ingestion/raw/ghcnd/
