@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-08T19:03:33+00:00",
+ "generated": "2026-10-09T05:03:20+00:00",
  "note": "Known-good baseline: each result was produced by the script at the recorded sha256. catalog_repo.py flags STALE when a producer's hash no longer matches. Re-record with --record only AFTER re-running the analysis.",
  "results": {
   "catalogue_sets.json": {
@@ -857,9 +857,9 @@
     "ssw-design-analysis/07_physical_decomposition/tc_class_law.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/tc_class_law.py": "fdb43851fb0d84e1"
+    "ssw-design-analysis/07_physical_decomposition/tc_class_law.py": "fead79f7e5804798"
    },
-   "result_sha256_16": "d13f939e8184f699",
+   "result_sha256_16": "bba920f0a3460f7d",
    "needs_rerun": false
   },
   "threshold_law_theory.json": {
@@ -870,6 +870,26 @@
     "ssw-design-analysis/07_physical_decomposition/threshold_law_theory.py": "8420e161909ac062"
    },
    "result_sha256_16": "dd713459b5eaa581",
+   "needs_rerun": false
+  },
+  "criterion_precip_contrast.json": {
+   "producers": [
+    "ssw-design-analysis/08_literature_audit/equivalence_observational.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/08_literature_audit/equivalence_observational.py": "05f4330f5a7ef217"
+   },
+   "result_sha256_16": "86a3781852530eca",
+   "needs_rerun": false
+  },
+  "criterion_regional_contrast.json": {
+   "producers": [
+    "ssw-design-analysis/08_literature_audit/equivalence_observational.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/08_literature_audit/equivalence_observational.py": "05f4330f5a7ef217"
+   },
+   "result_sha256_16": "57329a944e65a49f",
    "needs_rerun": false
   },
   "criterion_sweep.json": {

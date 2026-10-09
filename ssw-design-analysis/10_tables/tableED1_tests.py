@@ -417,10 +417,10 @@ def main():
          "committed before data (window amended before any outcome)", "6c99ebc, 44ff51a",
          ("; ".join(f"{b.title()}: forced {g(RGM,'k4','O1',b,'forced_change_mean_per_pair')} mm/day per pair, R {g(RGM,'k4','O1',b,'R')} {g(RGM,'k4','O1',b,'R_ci95')}; "
                     f"{g(RGM,'k4','O1',b,'reading')}" for b in ("IBERIA", "SCANDINAVIA"))) if RGM else "pending", None),
-        ("TC-1", "tropical cyclones (IBTrACS 1982-2024, 3,746 storms): fixed two-type mixing across terciles of genesis SST, 24-h intensification and LMI (Holm over 2); ground truth from the observable RI label", "revision-8 primary",
+        ("TC-1", "tropical cyclones (IBTrACS 1982-2024, 3,740 storms; observational, SST levels confounded with basin): fixed two-type mixing across terciles of genesis SST, 24-h intensification and LMI (Holm over 2); ground truth from the observable RI label", "revision-8 primary",
          "committed before data (gate v2 before data)", "d3c6ef1",
          (f"rho {g(TCL,'C1_mixing','y_ri','rho')} {g(TCL,'C1_mixing','y_ri','rho_ci95')} and {g(TCL,'C1_mixing','y_lmi','rho')} {g(TCL,'C1_mixing','y_lmi','rho_ci95')}; "
-          f"{g(TCL,'reading_pair')}; ground truth {g(TCL,'C3_ground_truth','agreement_C1_lmi')}; law RI {g(TCL,'C2_law','RI','reading')}, major {g(TCL,'C2_law','MAJOR','reading')}") if TCL else "pending",
+          f"incompatible with fixed types in both (registered label: {g(TCL,'reading_pair')}; does not establish one population); ground truth {g(TCL,'C3_ground_truth','agreement_C1_lmi')}; law RI {g(TCL,'C2_law','RI','reading')}, major {g(TCL,'C2_law','MAJOR','reading')}") if TCL else "pending",
          g(TCL, 'C1_mixing', 'y_lmi', 'p_T_holm') if TCL else None),
         ("GL-4", "the law under SSP5-8.5 2071-2100 vs historical 1985-2014 (precipitation classes; temperature classes empty)", "revision-8 secondary",
          "committed before data", "80edfc5",

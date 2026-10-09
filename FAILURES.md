@@ -332,3 +332,8 @@ Rule: with < ~50 resampled clusters use T / bootstrap s.d. referred to Student t
 Tried: tc_class_law set reading flags with `"compatible with" in category`.
 Failed: true for "incompatible with ..." too, so two rejections were read as "the test discriminates" (registered rule: "one population in both"); caught on first output, numbers unaffected.
 Rule: compare category labels by equality against named constants, never by substring.
+
+## 2026-10-09 — IBTrACS spur tracks counted as storms
+Tried: acquire_tc_data grouped all IBTrACS records by SID.
+Failed: 49 SIDs in 1982-2024 carry only spur-merge/split/other records (alternative track branches); 6 passed the 34-kt filter as "storms" (found by review; readings unchanged).
+Rule: filter TRACK_TYPE == "main" before grouping IBTrACS by SID.

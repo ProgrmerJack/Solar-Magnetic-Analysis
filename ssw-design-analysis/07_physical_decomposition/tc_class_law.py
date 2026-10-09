@@ -197,7 +197,7 @@ def main():
     rng = np.random.default_rng(SEED + 1)
     res.update({"registered": "2026-10-08, committed before any data", "seed": SEED, "B": B, "n_storms": int(len(d)),
                 "n_seasons": int(ny), "sst_tercile_cuts_C": [round(float(x), 3) for x in cuts],
-                "levels": {k: {"n": int((lev == i).sum()), "ri_share": round(float((d.y_ri.values[lev == i] >= RI_KT).mean()), 4),
+                "levels": {k: {"n": int((lev == i).sum()), "ri_share": round(float((d.y_ri.values[(lev == i) & np.isfinite(d.y_ri.values)] >= RI_KT).mean()), 4),
                                "major_share": round(float((d.y_lmi.values[lev == i] >= MAJOR_KT).mean()), 4),
                                "mean_lmi": round(float(d.y_lmi.values[lev == i].mean()), 2)}
                            for i, k in enumerate(("L", "M", "H"))}})
@@ -237,6 +237,20 @@ def main():
                       "ks_p_L_vs_H": round(float(ks_2samp(d.y_lmi.values[m & (lev == 0)], d.y_lmi.values[m & (lev == 2)]).pvalue), 6),
                       "share_L_H": [round(float(r_[ok & (lev == i)].mean()), 4) for i in (0, 2)] if typ == "RI" else None}
         ph[f"{int(kt)}kt"] = e
+    # POST HOC (after review): the SST levels are confounded with basin; the within-type LMI shift H - L
+    # recomputed inside each basin with at least 20 storms of the type in both L and H
+    wb = {}
+    for b in sorted(d.basin.unique()):
+        e = {}
+        for typ, m in (("RI", ri), ("nonRI", ~ri & np.isfinite(d.y_ri.values))):
+            a, h = m & (lev == 0) & (d.basin.values == b), m & (lev == 2) & (d.basin.values == b)
+            if a.sum() >= 20 and h.sum() >= 20:
+                e[typ] = {"shift_kt": round(float(d.y_lmi.values[h].mean() - d.y_lmi.values[a].mean()), 2),
+                          "n_L": int(a.sum()), "n_H": int(h.sum()),
+                          "ks_p": round(float(ks_2samp(d.y_lmi.values[a], d.y_lmi.values[h]).pvalue), 5)}
+        e["share_of_level_L_H"] = [round(float(((d.basin.values == b) & (lev == i)).sum() / (lev == i).sum()), 4) for i in (0, 2)]
+        wb[b] = e
+    ph["within_basin"] = wb
     res["C3_post_hoc"] = ph
     cats = [c1["y_ri"]["category"], c1["y_lmi"]["category"]]
     inc = [c == INC for c in cats]; com = [c == COM for c in cats]     # exact: "incompatible" contains "compatible"

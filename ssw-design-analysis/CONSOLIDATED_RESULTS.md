@@ -1393,15 +1393,17 @@ remove within-regime persistence) -> not interpreted. Meaning: regime frequency 
 shift within circulation types. Review control-vs-control check: O1 unbiased, O2/O3 bias confirmed.
 
 ### Z17 — tropical cyclones: the test on observed types (`tc_class_law.py`, 8_experiment; registered `d3c6ef1` before data)
-IBTrACS v04r01 1982-2024, USA_WIND, 3,746 storms / 43 seasons; levels = ERSSTv5 terciles at genesis (28.4, 29.1 C).
+IBTrACS v04r01 1982-2024, USA_WIND, main tracks, 3,740 storms / 43 seasons (6 spur-only tracks dropped after review); levels = ERSSTv5 terciles at genesis (28.4, 29.1 C).
 Gate v1 (centred bootstrap p, 43 clusters) FAILED 0.058/0.0717 -> v2 Wald-t passed 0.054/0.0673 before data.
 RI share 0.26 -> 0.52, major 0.16 -> 0.38 (cool -> warm third). C1 fixed two-type mixing REJECTED: 24-h intensification
-rho 1.58 [0.58, 2.58] Holm p 0.005; LMI rho 1.67 [0.81, 2.59] p 0.001 (registered label "one population in both" =
+rho 1.50 [0.51, 2.51] Holm p 0.006; LMI rho 1.63 [0.78, 2.55] p 0.0014 (registered label "one population in both" =
 incompatible with fixed types in both; it does NOT establish one population). C3 ground truth (RI label observable):
-LMI of RI storms +13.4 kt [9.9, 16.8], non-RI +5.6 [3.7, 7.5] warm minus cool (KS p<1e-5) -> fixed types false, test RIGHT;
-at Lee et al.'s 35 kt: +10.8 [7.3, 14.3], +7.3 [5.5, 9.2] (post hoc). C2 law holds: RI -0.10 [-0.14, +0.19], major
--0.12 [-0.22, -0.04]. Meaning: LMI bimodality ("two types of storms", Lee 2016) is not two fixed types whose mix follows
-SST; warm water raises the RI share AND both types' intensity. No compatible case here, so "discrimination" on real data
+LMI of RI storms +13.4 kt [9.9, 16.7], non-RI +5.6 [3.8, 7.6] warm minus cool (KS p<1e-5) -> fixed types false, test RIGHT;
+at Lee et al.'s 35 kt: +10.7 [7.3, 14.2], +7.4 [5.5, 9.2] (post hoc). Levels confounded with basin (WP 12% of cool vs
+42% of warm third); within basins (post hoc, review) both types more intense in warm third in 10/11 comparisons
+(RI 5.6-26.1 kt, non-RI 2.3-11.2; NI non-RI -1.2), 5 individually significant. C2 law holds: RI -0.09 [-0.14, +0.19],
+major -0.12 [-0.21, -0.04]. Meaning: LMI bimodality ("two types of storms", Lee 2016) is not two fixed types whose mix follows
+SST; storms over warmer water are more often RI AND both types are more intense (not causal: levels confounded). No compatible case here, so "discrimination" on real data
 was not shown; the test's rejection is confirmed by independent labels. Observational (levels confounded with basin/season).
 
 ### Z7 — prospective test (`prospective_next_ssw.py`, 9_literature; registered `d2b54a8`, window amended to 2036 before any onset)

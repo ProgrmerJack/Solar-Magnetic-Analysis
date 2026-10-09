@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-08T19:03:33+00:00",
+ "generated": "2026-10-09T05:03:20+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 199,
+  "scripts": 200,
   "results": 102
  },
  "scripts": [
@@ -411,9 +411,9 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "Inputs of 07_physical_decomposition/tc_class_law.py (registered 2026-10-08, committed before any of these values was fetched).",
-   "loc": 109,
-   "modified": "2026-10-08 18:47",
-   "sha256_16": "b5fc3f7669d8bde0",
+   "loc": 111,
+   "modified": "2026-10-09 05:01",
+   "sha256_16": "0ca6f8341d740541",
    "flags": [],
    "filenames_mentioned": [
     "ibtracs.ALL.list.v04r01.csv",
@@ -1735,9 +1735,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "DOES THE THRESHOLD-CLASS LAW HOLD OUTSIDE THE STRATOSPHERE, AND CAN ITS TEST TELL A THRESHOLD ON ONE POPULATION FROM GENUINE TYPES? TROPICAL-CYCLONE CLASSES.",
-   "loc": 253,
-   "modified": "2026-10-08 18:59",
-   "sha256_16": "fdb43851fb0d84e1",
+   "loc": 267,
+   "modified": "2026-10-09 05:01",
+   "sha256_16": "fead79f7e5804798",
    "flags": [],
    "filenames_mentioned": [
     "tc_class_law.json",
@@ -1819,9 +1819,9 @@
    "tree": "ssw-design-analysis",
    "stage": "08_literature_audit",
    "title": "A NEW MEASURED ENDPOINT: STATION-BASED PRECIPITATION AFTER OBSERVED SSWs. DOES THE MATCHED NULL REPRODUCE THE DOWNWARD/NON-DOWNWARD DIFFERENCE IN RAINFALL, AND DOES THE SHIFTED NULL PREDICT HELD-OUT WINTERS' RAINFALL?",
-   "loc": 215,
-   "modified": "2026-10-08 04:06",
-   "sha256_16": "e9394d9f56a7addd",
+   "loc": 218,
+   "modified": "2026-10-09 04:58",
+   "sha256_16": "1a2ae8498982b38a",
    "flags": [],
    "filenames_mentioned": [
     "eobs_precip_regions_daily.parquet"
@@ -1833,9 +1833,9 @@
    "tree": "ssw-design-analysis",
    "stage": "08_literature_audit",
    "title": "DOES THE MATCHED NULL REPRODUCE A CLASS DIFFERENCE IN A VARIABLE NOT USED TO DEFINE THE CLASSES? NORTHERN-EURASIAN TEMPERATURE UNDER THE NAM-BASED DW/NDW LABEL.",
-   "loc": 245,
-   "modified": "2026-10-02 10:34",
-   "sha256_16": "91b77db46e150bea",
+   "loc": 249,
+   "modified": "2026-10-09 04:58",
+   "sha256_16": "1910b9b0574271f4",
    "flags": [],
    "filenames_mentioned": [
     "era5_t2m_regions_daily.parquet"
@@ -1868,6 +1868,22 @@
    "flags": [],
    "filenames_mentioned": [
     "criterion_transport_cv.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/08_literature_audit/equivalence_observational.py",
+   "tree": "ssw-design-analysis",
+   "stage": "08_literature_audit",
+   "title": "ARE THE INCONCLUSIVE OBSERVATIONAL CLASS-CONTRAST TESTS EVIDENCE OF NO SSW-SPECIFIC DIFFERENCE, OR ONLY INSENSITIVE? Equivalence tests (TOST; Lakens 2017) and Bayes factors (Dienes 2014) on the matched-null tests of criterion_regional_contrast (ERA5 temperature)",
+   "loc": 112,
+   "modified": "2026-10-09 05:00",
+   "sha256_16": "05f4330f5a7ef217",
+   "flags": [],
+   "filenames_mentioned": [
+    "criterion_precip_contrast.json",
+    "criterion_regional_contrast.json",
+    "equivalence_observational.json"
    ],
    "filename_prefixes": []
   },
@@ -2226,8 +2242,8 @@
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
    "loc": 495,
-   "modified": "2026-10-08 19:02",
-   "sha256_16": "02e6fd37167957bf",
+   "modified": "2026-10-09 05:02",
+   "sha256_16": "3defdf46b0d990d2",
    "flags": [],
    "filenames_mentioned": [
     "class_law_general.json",
@@ -3121,7 +3137,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-08 19:03",
+   "modified": "2026-10-09 05:03",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -9377,9 +9393,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 3002,
-   "modified": "2026-10-08 18:59",
-   "sha256_16": "d13f939e8184f699",
+   "bytes": 4629,
+   "modified": "2026-10-09 05:01",
+   "sha256_16": "bba920f0a3460f7d",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/tc_class_law.py"
    ],
@@ -9387,7 +9403,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/tc_class_law.py": "fdb43851fb0d84e1"
+    "ssw-design-analysis/07_physical_decomposition/tc_class_law.py": "fead79f7e5804798"
    },
    "verdicts": [
     {
@@ -9461,13 +9477,17 @@
    "stage": "9_literature",
    "readable": true,
    "bytes": 4170,
-   "modified": "2026-10-08 04:11",
+   "modified": "2026-10-09 04:59",
    "sha256_16": "86a3781852530eca",
-   "producers": [],
-   "state": "ORPHAN",
-   "detail": "no script writes this",
+   "producers": [
+    "ssw-design-analysis/08_literature_audit/equivalence_observational.py"
+   ],
+   "state": "current",
+   "detail": "",
    "flags": [],
-   "producer_sha256": {},
+   "producer_sha256": {
+    "ssw-design-analysis/08_literature_audit/equivalence_observational.py": "05f4330f5a7ef217"
+   },
    "verdicts": [
     {
      "key": "contrast.IBERIA_d1_25.reading",
@@ -9516,13 +9536,17 @@
    "stage": "9_literature",
    "readable": true,
    "bytes": 8738,
-   "modified": "2026-10-02 10:34",
+   "modified": "2026-10-09 04:58",
    "sha256_16": "57329a944e65a49f",
-   "producers": [],
-   "state": "ORPHAN",
-   "detail": "no script writes this",
+   "producers": [
+    "ssw-design-analysis/08_literature_audit/equivalence_observational.py"
+   ],
+   "state": "current",
+   "detail": "",
    "flags": [],
-   "producer_sha256": {},
+   "producer_sha256": {
+    "ssw-design-analysis/08_literature_audit/equivalence_observational.py": "05f4330f5a7ef217"
+   },
    "verdicts": [
     {
      "key": "primary_surface.cv.NEURASIA_d8_24.reading",

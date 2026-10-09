@@ -17,6 +17,8 @@ Raw files go to raw/ibtracs/ and raw/ersst/ (not committed). Per storm (SID), se
   sst_g    ERSST v5 at the genesis month and the nearest grid cell with a value
            (great-circle distance), deg C
   basin, season, lat_g, lon_g, month_g kept for description.
+Only TRACK_TYPE "main" records are used (spur-merge/split/other tracks are alternative
+branches, not storms; added 2026-10-09 after review found 6 spur-only SIDs among 3,746).
 Writes tc_storms.parquet next to this script.
 """
 import sys
@@ -50,10 +52,10 @@ def fetch(url, dest):
 
 
 def storms():
-    cols = ["SID", "SEASON", "BASIN", "ISO_TIME", "LAT", "LON", "DIST2LAND", "USA_WIND"]
+    cols = ["SID", "SEASON", "BASIN", "ISO_TIME", "LAT", "LON", "DIST2LAND", "USA_WIND", "TRACK_TYPE"]
     d = pd.read_csv(IBT, usecols=cols, skiprows=[1], keep_default_na=False, na_values=[" ", ""], low_memory=False)
     d["SEASON"] = pd.to_numeric(d.SEASON, errors="coerce")
-    d = d[(d.SEASON >= 1982) & (d.SEASON <= 2024)].copy()
+    d = d[(d.SEASON >= 1982) & (d.SEASON <= 2024) & (d.TRACK_TYPE == "main")].copy()   # spur tracks are not storms
     for c in ("LAT", "LON", "DIST2LAND", "USA_WIND"):
         d[c] = pd.to_numeric(d[c], errors="coerce")
     d["t"] = pd.to_datetime(d.ISO_TIME)

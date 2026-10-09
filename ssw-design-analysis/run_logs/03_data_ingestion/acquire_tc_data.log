@@ -1,3 +1,1 @@
-fetched ibtracs.ALL.list.v04r01.csv: 332.8 MB
-fetched sst.mnmean.nc: 160.8 MB
-3746 storms, 43 seasons; y_ri finite 3719; sst_g finite 3746 -> tc_storms.parquet
+3740 storms, 43 seasons; y_ri finite 3713; sst_g finite 3740 -> tc_storms.parquet
