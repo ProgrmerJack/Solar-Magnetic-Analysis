@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-09T05:03:20+00:00",
+ "generated": "2026-10-09T05:06:26+00:00",
  "generator": "tools/catalog_repo.py",
  "note": "Every ssw-design-analysis result in one file. The per-script JSONs remain on disk as write-side provenance; this is the read path. Regenerate with tools/catalog_repo.py.",
  "results": {
@@ -106654,6 +106654,345 @@
     ],
     "mean_pit": 0.4964,
     "share_pit_outer_deciles": 0.2564
+   }
+  },
+  "equivalence_observational.json": {
+   "label": "post hoc relative to the matched-null tests; bounds, priors and readings committed before computation",
+   "D_sd": 0.25,
+   "tau_sd": 0.5,
+   "primary": [
+    "T|NEURASIA_d8_24",
+    "PR|IBERIA_d1_25"
+   ],
+   "results": {
+    "T|NEURASIA_d8_24": {
+     "C_obs": -2.2049,
+     "C_null_mean": -2.2524,
+     "delta_hat": 0.0475,
+     "event_free_sd": 2.6383,
+     "D": 0.6596,
+     "p_TOST": 0.262,
+     "delta_ci90": [
+      -1.5507,
+      1.583
+     ],
+     "smallest_equivalence_bound": 1.583,
+     "smallest_bound_sd": 0.6,
+     "tau": 1.3192,
+     "direction": "-",
+     "BF01": 1.807,
+     "BF01_sensitivity": {
+      "tau_0.25sd": 1.273,
+      "tau_1.0sd": 3.113,
+      "gaussian_tau_0.5sd": 1.756
+     },
+     "TOST_reading": "equivalence not shown",
+     "BF_reading": "insensitive",
+     "n_null": 3996
+    },
+    "T|HI_EUROPE_d8_24": {
+     "C_obs": -1.3412,
+     "C_null_mean": -2.033,
+     "delta_hat": 0.6918,
+     "event_free_sd": 2.5862,
+     "D": 0.6465,
+     "p_TOST": 0.5345,
+     "delta_ci90": [
+      -0.9894,
+      2.259
+     ],
+     "smallest_equivalence_bound": 2.259,
+     "smallest_bound_sd": 0.873,
+     "tau": 1.2931,
+     "direction": "-",
+     "BF01": 2.326,
+     "BF01_sensitivity": {
+      "tau_0.25sd": 1.544,
+      "tau_1.0sd": 4.117,
+      "gaussian_tau_0.5sd": 2.395
+     },
+     "TOST_reading": "equivalence not shown",
+     "BF_reading": "insensitive",
+     "n_null": 3996
+    },
+    "T|MID_EASIA_d8_24": {
+     "C_obs": -1.1412,
+     "C_null_mean": -0.9318,
+     "delta_hat": -0.2094,
+     "event_free_sd": 1.5364,
+     "D": 0.3841,
+     "p_TOST": 0.3684,
+     "delta_ci90": [
+      -1.0961,
+      0.6514
+     ],
+     "smallest_equivalence_bound": 1.0961,
+     "smallest_bound_sd": 0.713,
+     "tau": 0.7682,
+     "direction": "-",
+     "BF01": 1.357,
+     "BF01_sensitivity": {
+      "tau_0.25sd": 1.035,
+      "tau_1.0sd": 2.249,
+      "gaussian_tau_0.5sd": 1.327
+     },
+     "TOST_reading": "equivalence not shown",
+     "BF_reading": "insensitive",
+     "n_null": 3996
+    },
+    "T|MID_NAMER_d8_24": {
+     "C_obs": -0.2477,
+     "C_null_mean": -0.2045,
+     "delta_hat": -0.0432,
+     "event_free_sd": 2.0324,
+     "D": 0.5081,
+     "p_TOST": 0.2658,
+     "delta_ci90": [
+      -1.2352,
+      1.1784
+     ],
+     "smallest_equivalence_bound": 1.2352,
+     "smallest_bound_sd": 0.608,
+     "tau": 1.0162,
+     "direction": "-",
+     "BF01": 1.629,
+     "BF01_sensitivity": {
+      "tau_0.25sd": 1.181,
+      "tau_1.0sd": 2.783,
+      "gaussian_tau_0.5sd": 1.645
+     },
+     "TOST_reading": "equivalence not shown",
+     "BF_reading": "insensitive",
+     "n_null": 3996
+    },
+    "T|NEURASIA_d8_52": {
+     "C_obs": -2.9451,
+     "C_null_mean": -2.3383,
+     "delta_hat": -0.6068,
+     "event_free_sd": 2.1197,
+     "D": 0.5299,
+     "p_TOST": 0.5384,
+     "delta_ci90": [
+      -1.8657,
+      0.6295
+     ],
+     "smallest_equivalence_bound": 1.8657,
+     "smallest_bound_sd": 0.88,
+     "tau": 1.0598,
+     "direction": "-",
+     "BF01": 0.987,
+     "BF01_sensitivity": {
+      "tau_0.25sd": 0.85,
+      "tau_1.0sd": 1.52,
+      "gaussian_tau_0.5sd": 0.935
+     },
+     "TOST_reading": "equivalence not shown",
+     "BF_reading": "insensitive",
+     "n_null": 3993
+    },
+    "PR|IBERIA_d1_25": {
+     "C_obs": 0.8597,
+     "C_null_mean": 0.2673,
+     "delta_hat": 0.5924,
+     "event_free_sd": 1.4225,
+     "D": 0.3556,
+     "p_TOST": 0.7074,
+     "delta_ci90": [
+      -0.1197,
+      1.3159
+     ],
+     "smallest_equivalence_bound": 1.3159,
+     "smallest_bound_sd": 0.925,
+     "tau": 0.7113,
+     "direction": "+",
+     "BF01": 0.556,
+     "BF01_sensitivity": {
+      "tau_0.25sd": 0.55,
+      "tau_1.0sd": 0.812,
+      "gaussian_tau_0.5sd": 0.555
+     },
+     "TOST_reading": "equivalence not shown",
+     "BF_reading": "insensitive",
+     "n_null": 3999
+    },
+    "PR|SCANDINAVIA_d1_25": {
+     "C_obs": -0.5445,
+     "C_null_mean": -0.6229,
+     "delta_hat": 0.0784,
+     "event_free_sd": 0.8082,
+     "D": 0.2021,
+     "p_TOST": 0.3353,
+     "delta_ci90": [
+      -0.4162,
+      0.5743
+     ],
+     "smallest_equivalence_bound": 0.5743,
+     "smallest_bound_sd": 0.711,
+     "tau": 0.4041,
+     "direction": "-",
+     "BF01": 1.991,
+     "BF01_sensitivity": {
+      "tau_0.25sd": 1.363,
+      "tau_1.0sd": 3.486,
+      "gaussian_tau_0.5sd": 1.961
+     },
+     "TOST_reading": "equivalence not shown",
+     "BF_reading": "insensitive",
+     "n_null": 3999,
+     "BF01_docstring_direction_wetter": 1.415
+    },
+    "PR|BRITISH_ISLES_d1_25": {
+     "C_obs": 0.0234,
+     "C_null_mean": -0.0718,
+     "delta_hat": 0.0952,
+     "event_free_sd": 1.3576,
+     "D": 0.3394,
+     "p_TOST": 0.3341,
+     "delta_ci90": [
+      -0.8173,
+      1.0224
+     ],
+     "smallest_equivalence_bound": 1.0224,
+     "smallest_bound_sd": 0.753,
+     "tau": 0.6788,
+     "direction": "+",
+     "BF01": 1.389,
+     "BF01_sensitivity": {
+      "tau_0.25sd": 1.078,
+      "tau_1.0sd": 2.261,
+      "gaussian_tau_0.5sd": 1.408
+     },
+     "TOST_reading": "equivalence not shown",
+     "BF_reading": "insensitive",
+     "n_null": 3999
+    },
+    "PR|IBERIA_d8_52": {
+     "C_obs": 0.7105,
+     "C_null_mean": 0.4158,
+     "delta_hat": 0.2947,
+     "event_free_sd": 1.1036,
+     "D": 0.2759,
+     "p_TOST": 0.5299,
+     "delta_ci90": [
+      -0.2079,
+      0.8011
+     ],
+     "smallest_equivalence_bound": 0.8011,
+     "smallest_bound_sd": 0.726,
+     "tau": 0.5518,
+     "direction": "+",
+     "BF01": 0.919,
+     "BF01_sensitivity": {
+      "tau_0.25sd": 0.753,
+      "tau_1.0sd": 1.499,
+      "gaussian_tau_0.5sd": 0.906
+     },
+     "TOST_reading": "equivalence not shown",
+     "BF_reading": "insensitive",
+     "n_null": 3999
+    },
+    "PR|SCANDINAVIA_d8_52": {
+     "C_obs": -0.3024,
+     "C_null_mean": -0.5817,
+     "delta_hat": 0.2793,
+     "event_free_sd": 0.6632,
+     "D": 0.1658,
+     "p_TOST": 0.6852,
+     "delta_ci90": [
+      -0.0963,
+      0.66
+     ],
+     "smallest_equivalence_bound": 0.66,
+     "smallest_bound_sd": 0.995,
+     "tau": 0.3316,
+     "direction": "-",
+     "BF01": 3.33,
+     "BF01_sensitivity": {
+      "tau_0.25sd": 2.012,
+      "tau_1.0sd": 6.216,
+      "gaussian_tau_0.5sd": 3.294
+     },
+     "TOST_reading": "equivalence not shown",
+     "BF_reading": "evidence of no SSW-specific difference",
+     "n_null": 3999,
+     "BF01_docstring_direction_wetter": 0.637
+    },
+    "PR|BRITISH_ISLES_d8_52": {
+     "C_obs": -0.1234,
+     "C_null_mean": -0.0501,
+     "delta_hat": -0.0733,
+     "event_free_sd": 1.0475,
+     "D": 0.2619,
+     "p_TOST": 0.3296,
+     "delta_ci90": [
+      -0.7255,
+      0.6353
+     ],
+     "smallest_equivalence_bound": 0.7255,
+     "smallest_bound_sd": 0.693,
+     "tau": 0.5238,
+     "direction": "+",
+     "BF01": 1.869,
+     "BF01_sensitivity": {
+      "tau_0.25sd": 1.324,
+      "tau_1.0sd": 3.187,
+      "gaussian_tau_0.5sd": 1.797
+     },
+     "TOST_reading": "equivalence not shown",
+     "BF_reading": "insensitive",
+     "n_null": 3999
+    },
+    "PR|IBERIA_wetrun_d1_25": {
+     "C_obs": 3.1759,
+     "C_null_mean": 0.0819,
+     "delta_hat": 3.094,
+     "event_free_sd": 3.9995,
+     "D": 0.9999,
+     "p_TOST": 0.945,
+     "delta_ci90": [
+      0.9348,
+      5.2879
+     ],
+     "smallest_equivalence_bound": 5.2879,
+     "smallest_bound_sd": 1.322,
+     "tau": 1.9997,
+     "direction": "+",
+     "BF01": 0.121,
+     "BF01_sensitivity": {
+      "tau_0.25sd": 0.217,
+      "tau_1.0sd": 0.121,
+      "gaussian_tau_0.5sd": 0.138
+     },
+     "TOST_reading": "equivalence not shown",
+     "BF_reading": "evidence of a difference",
+     "n_null": 3999
+    },
+    "PR|SCANDINAVIA_wetrun_d1_25": {
+     "C_obs": -2.4722,
+     "C_null_mean": -2.6656,
+     "delta_hat": 0.1934,
+     "event_free_sd": 5.4677,
+     "D": 1.3669,
+     "p_TOST": 0.2778,
+     "delta_ci90": [
+      -3.0569,
+      3.6341
+     ],
+     "smallest_equivalence_bound": 3.6341,
+     "smallest_bound_sd": 0.665,
+     "tau": 2.7338,
+     "direction": "-",
+     "BF01": 1.642,
+     "BF01_sensitivity": {
+      "tau_0.25sd": 1.16,
+      "tau_1.0sd": 2.847,
+      "gaussian_tau_0.5sd": 1.769
+     },
+     "TOST_reading": "equivalence not shown",
+     "BF_reading": "insensitive",
+     "n_null": 3999,
+     "BF01_docstring_direction_wetter": 1.593
+    }
    }
   },
   "era5_nam_daily_mean_check.json": {

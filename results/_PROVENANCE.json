@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-09T05:03:20+00:00",
+ "generated": "2026-10-09T05:06:25+00:00",
  "note": "Known-good baseline: each result was produced by the script at the recorded sha256. catalog_repo.py flags STALE when a producer's hash no longer matches. Re-record with --record only AFTER re-running the analysis.",
  "results": {
   "catalogue_sets.json": {
@@ -877,7 +877,7 @@
     "ssw-design-analysis/08_literature_audit/equivalence_observational.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/08_literature_audit/equivalence_observational.py": "05f4330f5a7ef217"
+    "ssw-design-analysis/08_literature_audit/equivalence_observational.py": "ca8c98e3fb18e9fb"
    },
    "result_sha256_16": "86a3781852530eca",
    "needs_rerun": false
@@ -887,7 +887,7 @@
     "ssw-design-analysis/08_literature_audit/equivalence_observational.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/08_literature_audit/equivalence_observational.py": "05f4330f5a7ef217"
+    "ssw-design-analysis/08_literature_audit/equivalence_observational.py": "ca8c98e3fb18e9fb"
    },
    "result_sha256_16": "57329a944e65a49f",
    "needs_rerun": false
@@ -910,6 +910,16 @@
     "ssw-design-analysis/08_literature_audit/criterion_transport_cv.py": "803cba21ec2099c3"
    },
    "result_sha256_16": "e2524cb708b89a55",
+   "needs_rerun": false
+  },
+  "equivalence_observational.json": {
+   "producers": [
+    "ssw-design-analysis/08_literature_audit/equivalence_observational.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/08_literature_audit/equivalence_observational.py": "ca8c98e3fb18e9fb"
+   },
+   "result_sha256_16": "4ec4c309cba151ef",
    "needs_rerun": false
   },
   "era5_nam_daily_mean_check.json": {

@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-09T05:03:20+00:00",
+ "generated": "2026-10-09T05:06:26+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
   "scripts": 200,
-  "results": 102
+  "results": 103
  },
  "scripts": [
   {
@@ -1877,8 +1877,8 @@
    "stage": "08_literature_audit",
    "title": "ARE THE INCONCLUSIVE OBSERVATIONAL CLASS-CONTRAST TESTS EVIDENCE OF NO SSW-SPECIFIC DIFFERENCE, OR ONLY INSENSITIVE? Equivalence tests (TOST; Lakens 2017) and Bayes factors (Dienes 2014) on the matched-null tests of criterion_regional_contrast (ERA5 temperature)",
    "loc": 112,
-   "modified": "2026-10-09 05:00",
-   "sha256_16": "05f4330f5a7ef217",
+   "modified": "2026-10-09 05:04",
+   "sha256_16": "ca8c98e3fb18e9fb",
    "flags": [],
    "filenames_mentioned": [
     "criterion_precip_contrast.json",
@@ -2241,9 +2241,9 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 495,
-   "modified": "2026-10-09 05:02",
-   "sha256_16": "3defdf46b0d990d2",
+   "loc": 500,
+   "modified": "2026-10-09 05:05",
+   "sha256_16": "eb1ee70537a22f54",
    "flags": [],
    "filenames_mentioned": [
     "class_law_general.json",
@@ -2255,6 +2255,7 @@
     "damip_class_law.json",
     "damip_class_law_multimodel.json",
     "davis2021_intervention_test.json",
+    "equivalence_observational.json",
     "era5_regional_test.json",
     "forced_variance_ceiling.json",
     "forecast_value_robustness.json",
@@ -3137,7 +3138,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-09 05:03",
+   "modified": "2026-10-09 05:06",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -9486,7 +9487,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/08_literature_audit/equivalence_observational.py": "05f4330f5a7ef217"
+    "ssw-design-analysis/08_literature_audit/equivalence_observational.py": "ca8c98e3fb18e9fb"
    },
    "verdicts": [
     {
@@ -9545,7 +9546,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/08_literature_audit/equivalence_observational.py": "05f4330f5a7ef217"
+    "ssw-design-analysis/08_literature_audit/equivalence_observational.py": "ca8c98e3fb18e9fb"
    },
    "verdicts": [
     {
@@ -9665,6 +9666,144 @@
     "secondary_with_150hPa",
     "all_108_versions",
     "crps_window_mean_days8_52"
+   ]
+  },
+  {
+   "path": "results/current/9_literature/equivalence_observational.json",
+   "tree": "current",
+   "stage": "9_literature",
+   "readable": true,
+   "bytes": 7564,
+   "modified": "2026-10-09 05:04",
+   "sha256_16": "4ec4c309cba151ef",
+   "producers": [
+    "ssw-design-analysis/08_literature_audit/equivalence_observational.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/08_literature_audit/equivalence_observational.py": "ca8c98e3fb18e9fb"
+   },
+   "verdicts": [
+    {
+     "key": "results.T|NEURASIA_d8_24.TOST_reading",
+     "text": "equivalence not shown"
+    },
+    {
+     "key": "results.T|NEURASIA_d8_24.BF_reading",
+     "text": "insensitive"
+    },
+    {
+     "key": "results.T|HI_EUROPE_d8_24.TOST_reading",
+     "text": "equivalence not shown"
+    },
+    {
+     "key": "results.T|HI_EUROPE_d8_24.BF_reading",
+     "text": "insensitive"
+    },
+    {
+     "key": "results.T|MID_EASIA_d8_24.TOST_reading",
+     "text": "equivalence not shown"
+    },
+    {
+     "key": "results.T|MID_EASIA_d8_24.BF_reading",
+     "text": "insensitive"
+    },
+    {
+     "key": "results.T|MID_NAMER_d8_24.TOST_reading",
+     "text": "equivalence not shown"
+    },
+    {
+     "key": "results.T|MID_NAMER_d8_24.BF_reading",
+     "text": "insensitive"
+    },
+    {
+     "key": "results.T|NEURASIA_d8_52.TOST_reading",
+     "text": "equivalence not shown"
+    },
+    {
+     "key": "results.T|NEURASIA_d8_52.BF_reading",
+     "text": "insensitive"
+    },
+    {
+     "key": "results.PR|IBERIA_d1_25.TOST_reading",
+     "text": "equivalence not shown"
+    },
+    {
+     "key": "results.PR|IBERIA_d1_25.BF_reading",
+     "text": "insensitive"
+    },
+    {
+     "key": "results.PR|SCANDINAVIA_d1_25.TOST_reading",
+     "text": "equivalence not shown"
+    },
+    {
+     "key": "results.PR|SCANDINAVIA_d1_25.BF_reading",
+     "text": "insensitive"
+    },
+    {
+     "key": "results.PR|BRITISH_ISLES_d1_25.TOST_reading",
+     "text": "equivalence not shown"
+    },
+    {
+     "key": "results.PR|BRITISH_ISLES_d1_25.BF_reading",
+     "text": "insensitive"
+    },
+    {
+     "key": "results.PR|IBERIA_d8_52.TOST_reading",
+     "text": "equivalence not shown"
+    },
+    {
+     "key": "results.PR|IBERIA_d8_52.BF_reading",
+     "text": "insensitive"
+    },
+    {
+     "key": "results.PR|SCANDINAVIA_d8_52.TOST_reading",
+     "text": "equivalence not shown"
+    },
+    {
+     "key": "results.PR|SCANDINAVIA_d8_52.BF_reading",
+     "text": "evidence of no SSW-specific difference"
+    },
+    {
+     "key": "results.PR|BRITISH_ISLES_d8_52.TOST_reading",
+     "text": "equivalence not shown"
+    },
+    {
+     "key": "results.PR|BRITISH_ISLES_d8_52.BF_reading",
+     "text": "insensitive"
+    },
+    {
+     "key": "results.PR|IBERIA_wetrun_d1_25.TOST_reading",
+     "text": "equivalence not shown"
+    },
+    {
+     "key": "results.PR|IBERIA_wetrun_d1_25.BF_reading",
+     "text": "evidence of a difference"
+    },
+    {
+     "key": "results.PR|SCANDINAVIA_wetrun_d1_25.TOST_reading",
+     "text": "equivalence not shown"
+    },
+    {
+     "key": "results.PR|SCANDINAVIA_wetrun_d1_25.BF_reading",
+     "text": "insensitive"
+    }
+   ],
+   "counts": {
+    "n_null": [
+     3993,
+     3996,
+     3999
+    ]
+   },
+   "top_level_keys": [
+    "label",
+    "D_sd",
+    "tau_sd",
+    "primary",
+    "results"
    ]
   },
   {

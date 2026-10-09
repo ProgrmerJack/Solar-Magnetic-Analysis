@@ -1406,6 +1406,17 @@ major -0.12 [-0.21, -0.04]. Meaning: LMI bimodality ("two types of storms", Lee 
 SST; storms over warmer water are more often RI AND both types are more intense (not causal: levels confounded). No compatible case here, so "discrimination" on real data
 was not shown; the test's rejection is confirmed by independent labels. Observational (levels confounded with basin/season).
 
+### Z18 — are the inconclusive observational tests evidence of absence? (`equivalence_observational.py`, 9_literature; registered `7bce848`, post hoc relative to the tests)
+Model: observed contrast ~ null replicates + delta (exact under the planted-effect design). TOST +-0.25 event-free s.d.;
+BF01 vs half-normal delta, tau = 0.5 s.d. (planted effect), KDE of 4,000 null replicates.
+PRIMARY N-Eurasia T d8-24: delta +0.05 K [-1.55, +1.58] (90%), equivalence only at +-0.60 s.d. (TOST p 0.26), BF01 1.8
+(1.3-3.1 over tau 0.25-1.0) -> INSENSITIVE. Iberia rain d1-25: delta +0.59 mm/day [-0.12, +1.32], +-0.93 s.d., BF01 0.56 ->
+INSENSITIVE. Secondaries: 9/11 insensitive; Iberian wet spells BF01 0.12 (evidence of a difference; its p had been seen,
+no multiplicity correction); Scandinavia d8-52 BF01 3.3 (drier alternative) vs 0.64 (wetter) -- registration text and
+code disagreed on direction -> no reading. Meaning: with 39 events observations neither exclude nor show an SSW-specific
+class difference of 0.5 s.d.; "inconclusive" is correct and is now quantified. Producers re-run to save null replicates:
+both JSONs reproduced exactly (parsed).
+
 ### Z7 — prospective test (`prospective_next_ssw.py`, 9_literature; registered `d2b54a8`, window amended to 2036 before any onset)
 Prediction table for every onset day 1 Nov–31 Mar committed; shift nam_1000 −0.635, nam_150 −0.945, N-Eurasian T days
 8–24 −1.54 K; constant rate 0.692; T trend 0.037 K/yr. P(DW) shifted 0.71–0.84 vs climatology 0.24–0.44.

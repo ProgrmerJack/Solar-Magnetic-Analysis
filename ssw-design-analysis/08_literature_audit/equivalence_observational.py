@@ -96,6 +96,10 @@ def main():
         cn = zp[k]
         assert abs(cn.mean() - rec["C_null_mean"]) < 1e-3
         out["results"][f"PR|{k}"] = analyse(cn, rec["C_obs"], rec["event_free_sd"], +1 if not k.startswith("SCAND") else -1)
+        if k.startswith("SCAND"):
+            # added after the run: the docstring registers "downward wetter" for all rainfall, the code (also
+            # committed before the run) used "drier" for Scandinavia; both directions are reported
+            out["results"][f"PR|{k}"]["BF01_docstring_direction_wetter"] = round(bf01(rec["C_obs"], TAU_SD * rec["event_free_sd"], +1, gaussian_kde(cn)), 3)
     for k, v in out["results"].items():
         print(k, {x: v[x] for x in ("delta_hat", "p_TOST", "smallest_bound_sd", "BF01", "TOST_reading", "BF_reading")})
     OUT.write_text(json.dumps(out, indent=1), encoding="utf8", newline="\n")

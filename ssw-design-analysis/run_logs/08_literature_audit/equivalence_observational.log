@@ -1,0 +1,14 @@
+T|NEURASIA_d8_24 {'delta_hat': 0.0475, 'p_TOST': 0.262, 'smallest_bound_sd': 0.6, 'BF01': 1.807, 'TOST_reading': 'equivalence not shown', 'BF_reading': 'insensitive'}
+T|HI_EUROPE_d8_24 {'delta_hat': 0.6918, 'p_TOST': 0.5345, 'smallest_bound_sd': 0.873, 'BF01': 2.326, 'TOST_reading': 'equivalence not shown', 'BF_reading': 'insensitive'}
+T|MID_EASIA_d8_24 {'delta_hat': -0.2094, 'p_TOST': 0.3684, 'smallest_bound_sd': 0.713, 'BF01': 1.357, 'TOST_reading': 'equivalence not shown', 'BF_reading': 'insensitive'}
+T|MID_NAMER_d8_24 {'delta_hat': -0.0432, 'p_TOST': 0.2658, 'smallest_bound_sd': 0.608, 'BF01': 1.629, 'TOST_reading': 'equivalence not shown', 'BF_reading': 'insensitive'}
+T|NEURASIA_d8_52 {'delta_hat': -0.6068, 'p_TOST': 0.5384, 'smallest_bound_sd': 0.88, 'BF01': 0.987, 'TOST_reading': 'equivalence not shown', 'BF_reading': 'insensitive'}
+PR|IBERIA_d1_25 {'delta_hat': 0.5924, 'p_TOST': 0.7074, 'smallest_bound_sd': 0.925, 'BF01': 0.556, 'TOST_reading': 'equivalence not shown', 'BF_reading': 'insensitive'}
+PR|SCANDINAVIA_d1_25 {'delta_hat': 0.0784, 'p_TOST': 0.3353, 'smallest_bound_sd': 0.711, 'BF01': 1.991, 'TOST_reading': 'equivalence not shown', 'BF_reading': 'insensitive'}
+PR|BRITISH_ISLES_d1_25 {'delta_hat': 0.0952, 'p_TOST': 0.3341, 'smallest_bound_sd': 0.753, 'BF01': 1.389, 'TOST_reading': 'equivalence not shown', 'BF_reading': 'insensitive'}
+PR|IBERIA_d8_52 {'delta_hat': 0.2947, 'p_TOST': 0.5299, 'smallest_bound_sd': 0.726, 'BF01': 0.919, 'TOST_reading': 'equivalence not shown', 'BF_reading': 'insensitive'}
+PR|SCANDINAVIA_d8_52 {'delta_hat': 0.2793, 'p_TOST': 0.6852, 'smallest_bound_sd': 0.995, 'BF01': 3.33, 'TOST_reading': 'equivalence not shown', 'BF_reading': 'evidence of no SSW-specific difference'}
+PR|BRITISH_ISLES_d8_52 {'delta_hat': -0.0733, 'p_TOST': 0.3296, 'smallest_bound_sd': 0.693, 'BF01': 1.869, 'TOST_reading': 'equivalence not shown', 'BF_reading': 'insensitive'}
+PR|IBERIA_wetrun_d1_25 {'delta_hat': 3.094, 'p_TOST': 0.945, 'smallest_bound_sd': 1.322, 'BF01': 0.121, 'TOST_reading': 'equivalence not shown', 'BF_reading': 'evidence of a difference'}
+PR|SCANDINAVIA_wetrun_d1_25 {'delta_hat': 0.1934, 'p_TOST': 0.2778, 'smallest_bound_sd': 0.665, 'BF01': 1.642, 'TOST_reading': 'equivalence not shown', 'BF_reading': 'insensitive'}
+Saved -> equivalence_observational.json
