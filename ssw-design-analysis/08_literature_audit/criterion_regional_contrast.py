@@ -87,6 +87,7 @@ SEED = zlib.crc32(NAME.encode()) % (2 ** 31)
 RESULTS = CS.RESULTS
 ING = HERE.parents[0] / "03_data_ingestion"
 T_FILE = ING / "era5_t2m_regions_daily.parquet"
+NULL_NPZ = ING / "_null_replicates" / "criterion_regional_contrast.npz"   # null contrasts, read by equivalence_observational
 REGIONS = ["NEURASIA", "HI_EUROPE", "MID_EASIA", "MID_NAMER"]
 N_SHIFT_SETS, N_REP, N_BOOT, N_PLANT, HALFWIN, MIN_CLASS = 200, 4000, 4000, 1000, 10, 3
 PLANT_SD = 0.5
@@ -147,6 +148,7 @@ def main():
     dr = np.array([t.dayofyear for t in real]); dc = np.array([t.dayofyear for t in clean])
     pos = {t: i for i, t in enumerate(clean)}
     clf = {"primary_surface": False, "secondary_with_150hPa": True}
+    store = {}
 
     def shifts(train_ev, train_clean):
         by = G.build_by_doy(clean[train_clean])
@@ -201,6 +203,7 @@ def main():
                     c_obs = contrast(lab_obs, y_obs)
                     cn = np.array([contrast(labs[r], Tc[tk][draws[r], ri]) for r in range(N_REP)])
                     dropped = int(np.isnan(cn).sum()); cn = cn[np.isfinite(cn)]
+                    store[f"{cname}|{variant}|{reg}_{tk}"] = cn
                     p = float(min(1.0, 2 * min(np.mean(cn <= c_obs), np.mean(cn >= c_obs))))
                     rec = {"C_obs_K": round(c_obs, 4), "C_null_mean_K": round(float(cn.mean()), 4),
                            "C_null_ci95_K": [round(float(x), 4) for x in np.percentile(cn, [2.5, 97.5])],
@@ -235,6 +238,7 @@ def main():
             block[variant] = out
             print(cname, variant, json.dumps(out.get("NEURASIA_d8_24")), flush=True)
         res[cname] = block
+    NULL_NPZ.parent.mkdir(parents=True, exist_ok=True); np.savez_compressed(NULL_NPZ, **store)
     RESULTS.mkdir(parents=True, exist_ok=True)
     (RESULTS / f"{NAME}.json").write_text(json.dumps(res, indent=2), encoding="utf8", newline="\n")
     print(f"Saved -> {NAME}.json")

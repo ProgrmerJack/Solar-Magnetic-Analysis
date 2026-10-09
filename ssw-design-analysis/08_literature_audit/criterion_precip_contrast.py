@@ -63,6 +63,7 @@ NAME = "criterion_precip_contrast"
 SEED = zlib.crc32(NAME.encode()) % (2 ** 31)
 RESULTS = CS.RESULTS
 P_FILE = HERE.parents[0] / "03_data_ingestion" / "eobs_precip_regions_daily.parquet"
+NULL_NPZ = HERE.parents[0] / "03_data_ingestion" / "_null_replicates" / "criterion_precip_contrast.npz"   # read by equivalence_observational
 REGIONS = ["IBERIA", "SCANDINAVIA", "BRITISH_ISLES"]
 N_SHIFT_SETS, N_REP, N_BOOT, N_PLANT, HALFWIN = CRC.N_SHIFT_SETS, CRC.N_REP, CRC.N_BOOT, CRC.N_PLANT, CRC.HALFWIN
 PLANT_SD, WET = 0.5, 1.0
@@ -153,7 +154,7 @@ def main():
                              plan[i][0]["nam_1000"], 0.0)
         labs[:, j] = np.where(o_, l_, False)
     ndjfm = np.array([t.month in (11, 12, 1, 2, 3) for t in clean])
-    out = {}
+    out = {}; store = {}
     for tk in ("d1_25", "d8_52", "wetrun_d1_25"):
         for ri, reg in enumerate(REGIONS):
             if tk == "wetrun_d1_25" and reg == "BRITISH_ISLES":
@@ -162,6 +163,7 @@ def main():
             c_obs = CRC.contrast(lab_obs, y_obs)
             cn = np.array([CRC.contrast(labs[r], Yc[tk][draws[r], ri]) for r in range(N_REP)])
             dropped = int(np.isnan(cn).sum()); cn = cn[np.isfinite(cn)]
+            store[f"{reg}_{tk}"] = cn
             p = float(min(1.0, 2 * min(np.mean(cn <= c_obs), np.mean(cn >= c_obs))))
             sd = float(np.nanstd(Yc[tk][ndjfm, ri], ddof=1))
             rec = {"C_obs": round(c_obs, 4), "C_null_mean": round(float(cn.mean()), 4),
@@ -204,6 +206,7 @@ def main():
                    "reading": "improves on climatology" if ci[0] > 0 else "worse than climatology" if ci[1] < 0 else "not resolved"}
         print("forecast", reg, fc[reg], flush=True)
     res["forecast_d1_25"] = fc
+    NULL_NPZ.parent.mkdir(parents=True, exist_ok=True); np.savez_compressed(NULL_NPZ, **store)
     RESULTS.mkdir(parents=True, exist_ok=True)
     (RESULTS / f"{NAME}.json").write_text(json.dumps(res, indent=2), encoding="utf8", newline="\n")
     print(f"Saved -> {NAME}.json")

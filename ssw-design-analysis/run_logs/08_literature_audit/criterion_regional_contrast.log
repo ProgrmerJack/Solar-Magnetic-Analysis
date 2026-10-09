@@ -4,4 +4,3 @@ primary_surface full {"C_obs_K": -2.2049, "C_null_mean_K": -2.253, "C_null_ci95_
 secondary_with_150hPa cv {"C_obs_K": -1.8582, "C_null_mean_K": -1.4457, "C_null_ci95_K": [-3.0669, 0.2505], "p_two_sided": 0.6385, "share_reproduced": 0.778, "n_rep_used": 4000, "n_rep_dropped_small_class": 0, "event_free_sd_K": 2.6383, "C_obs_ci95_K": [-3.5122, -0.1715], "power_planted": {"delta_K": 1.3192, "detection_rate": 0.367}, "reading": "inconclusive (not rejected, power below 0.5)"}
 secondary_with_150hPa full {"C_obs_K": -1.8582, "C_null_mean_K": -1.4706, "C_null_ci95_K": [-3.1869, 0.2087], "p_two_sided": 0.651, "share_reproduced": 0.7914, "n_rep_used": 4000, "n_rep_dropped_small_class": 0, "event_free_sd_K": 2.6383}
 Saved -> criterion_regional_contrast.json
-exit=0
