@@ -99,6 +99,8 @@ SECONDARY (each reported with its own interval, not in the Holm family)
      class shares 0.5 and 0.65 -- how far the Gaussian rule can understate R
      (computed 2026-10-09 before registration: 1.06, 1.09, 1.16 for forced
      variances 0.019, 0.117, 0.46).
+AMENDMENT 2026-10-09, before any statistic or validation was run: the P1 gate drew
+  the interval's two limits from two separate bootstraps; it now uses one.
 OUTPUT results/current/8_experiment/class_forcing_content.json
 """
 import json
@@ -286,7 +288,8 @@ def validate():
                 draw = [N[j] for j in rng.integers(len(N), size=len(S))]
                 syn.append((c, i, [s + (d / 0.5) * (rng.random() < 0.5) if mix else s + d for s in draw], N))
             df = pairs_frame(syn)
-            hits += int(not (centre_summary(df, "stat", rng, 1000)["ci95"][0] <= 0 <= centre_summary(df, "stat", rng, 1000)["ci95"][1]))
+            lo, hi = centre_summary(df, "stat", rng, 1000)["ci95"]
+            hits += int(not (lo <= 0 <= hi))
         res[f"P1_{label}"] = {"rate_interval_excludes_0": hits / n, "upper95": round(upper95(hits, n), 4), "n_sim": n}
     X, Y, c, win = episodes("ncep")
     beta = np.cov(X, Y, ddof=0)[0, 1] / np.var(Y); resid = X - X.mean() - beta * (Y - Y.mean()); s = resid.std()
