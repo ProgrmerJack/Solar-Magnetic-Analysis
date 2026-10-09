@@ -82,6 +82,7 @@ def main():
     TCL = J("tc_class_law.json")
     EQV = J("equivalence_observational.json")
     ETR = J("early_transfer_retest.json")
+    CFC = J("class_forcing_content.json")
     R2 = ("robustness (revision 2)", "committed before run", "4c8b3f2")
     mm = g(MMt, "multimodel", "confirmatory"); nr = g(SRt, "regions", "NEURASIA", "multimodel", "confirmatory")
     rows = [
@@ -433,6 +434,30 @@ def main():
          (f"rho {g(TCL,'C1_mixing','y_ri','rho')} {g(TCL,'C1_mixing','y_ri','rho_ci95')} and {g(TCL,'C1_mixing','y_lmi','rho')} {g(TCL,'C1_mixing','y_lmi','rho_ci95')}; "
           f"incompatible with fixed types in both (registered label: {g(TCL,'reading_pair')}; does not establish one population); ground truth {g(TCL,'C3_ground_truth','agreement_C1_lmi')}; law RI {g(TCL,'C2_law','RI','reading')}, major {g(TCL,'C2_law','MAJOR','reading')}") if TCL else "pending",
          g(TCL, 'C1_mixing', 'y_lmi', 'p_T_holm') if TCL else None),
+        ("TC-2", "tropical cyclones: TC-1 with basin-relative genesis-SST terciles (each level holds every basin in the same proportion); ground truth as TC-1", "revision-8 primary",
+         "committed before it was computed (C1-C3 had been run)", "4285f9b",
+         (f"rho {g(TCL,'C4_basin_relative','mixing','y_ri','rho')} {g(TCL,'C4_basin_relative','mixing','y_ri','rho_ci95')} and {g(TCL,'C4_basin_relative','mixing','y_lmi','rho')} "
+          f"{g(TCL,'C4_basin_relative','mixing','y_lmi','rho_ci95')}: {g(TCL,'C4_basin_relative','mixing','y_lmi','category')} in both; ground truth {g(TCL,'C4_basin_relative','ground_truth','agreement_C4_lmi')} "
+          f"(LMI shift warm-cool: RI {g(TCL,'C4_basin_relative','ground_truth','RI','lmi_shift_H_minus_L_kt')} kt, non-RI {g(TCL,'C4_basin_relative','ground_truth','nonRI','lmi_shift_H_minus_L_kt')} kt)") if g(TCL, 'C4_basin_relative') else "pending",
+         g(TCL, 'C4_basin_relative', 'mixing', 'y_lmi', 'p_T_holm') if g(TCL, 'C4_basin_relative') else None),
+        ("FC-1", "forced share of a class contrast, known binary forcing: SNAPSI nudged+control pooled per pair, R_obs - R_LS (law), 36 pairs; validation gate on the centre bootstrap", "revision-8 primary",
+         "committed before computation (data analysed before for other statistics); amended before any run", "2240d9f, aae2b3c",
+         (f"gate FAILED (false exclusion {g(CFC,'validation','P1_law','rate_interval_excludes_0')}, upper {g(CFC,'validation','P1_law','upper95')}): not interpreted; "
+          f"{g(CFC,'P1_snapsi_pooled_arms','stat_R_obs_minus_R_LS','mean')} {g(CFC,'P1_snapsi_pooled_arms','stat_R_obs_minus_R_LS','ci95')}; "
+          f"R_obs {g(CFC,'P1_snapsi_pooled_arms','R_obs','mean')}, h2 {g(CFC,'P1_snapsi_pooled_arms','R_h2','mean')}") if CFC else "pending", None),
+        ("FC-2", "forced share across 114 observed vortex weakenings (NCEP): share of the downward-non-downward AO contrast carried by the 10 hPa minimum wind, against its variance share h2", "revision-8 primary",
+         "committed before computation (data analysed before for other statistics)", "2240d9f",
+         (f"R_obs {g(CFC,'P2_obs_ncep_episodes','R_obs','mean')} {g(CFC,'P2_obs_ncep_episodes','R_obs','ci95')}: {g(CFC,'P2_obs_ncep_episodes','R_obs','reading')}; "
+          f"h2 {g(CFC,'P2_obs_ncep_episodes','R_h2','mean')}; R_obs - h2 {g(CFC,'P2_obs_ncep_episodes','stat_R_obs_minus_R_h2','mean')} {g(CFC,'P2_obs_ncep_episodes','stat_R_obs_minus_R_h2','ci95')}: "
+          f"{g(CFC,'P2_obs_ncep_episodes','stat_R_obs_minus_R_h2','reading')}") if CFC else "pending",
+         g(CFC, 'P2_obs_ncep_episodes', 'stat_R_obs_minus_R_h2', 'p_boot_two_sided') if CFC else None),
+        ("FC-S", "forced share, secondary sets: SNAPSI free arm (SSW or not), ERA5 143 episodes, tropical cyclones, HadGEM3 human forcing (4 regions), CMIP6 1,517 events with the realised 100 hPa dose", "revision-8 secondary",
+         "committed before computation", "2240d9f",
+         (f"free: {g(CFC,'S1_free_natural_experiment','R_obs','mean')} vs law {g(CFC,'S1_free_natural_experiment','R_LS','mean')}; "
+          f"ERA5: {g(CFC,'S2_obs_era5_episodes','R_obs','mean')} {g(CFC,'S2_obs_era5_episodes','R_obs','ci95')} vs h2 {g(CFC,'S2_obs_era5_episodes','R_h2','mean')}; "
+          f"TC major {g(CFC,'S3_tropical_cyclones','global_terciles','MAJOR','R_obs')} vs law {g(CFC,'S3_tropical_cyclones','global_terciles','MAJOR','R_LS')}; "
+          f"CEUR summers {g(CFC,'S4_human_forcing_hadgem3','CEUR_JJA','R_obs')} vs {g(CFC,'S4_human_forcing_hadgem3','CEUR_JJA','R_LS')}; "
+          f"CMIP6 dose {g(CFC,'S5_cmip6_events_dose','R_obs')} vs h2 {g(CFC,'S5_cmip6_events_dose','R_h2')}") if CFC else "pending", None),
         ("GL-4", "the law under SSP5-8.5 2071-2100 vs historical 1985-2014 (precipitation classes; temperature classes empty)", "revision-8 secondary",
          "committed before data", "80edfc5",
          (f"{g(CLG,'T4_summary','holds')} of {g(CLG,'T4_summary','n_units')} hold, {g(CLG,'T4_summary','inconclusive')} inconclusive, "

@@ -1,0 +1,20 @@
+{
+ "P1_law": {
+  "rate_interval_excludes_0": 0.085,
+  "upper95": 0.1248,
+  "n_sim": 200
+ },
+ "P1_couples_or_not": {
+  "rate_interval_excludes_0": 0.265,
+  "upper95": 0.3213,
+  "n_sim": 200
+ },
+ "P2_law": {
+  "rate_interval_excludes_0": 0.051,
+  "upper95": 0.064,
+  "n_sim": 1000
+ },
+ "P1_passes": false,
+ "P2_passes": true
+}
+.venv/bin/python  --validate  87.10s user 2.60s system 110% cpu 1:20.83 total

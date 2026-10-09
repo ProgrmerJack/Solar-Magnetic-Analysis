@@ -1427,6 +1427,31 @@ to R6: the failure is NOT an ERA5 surface-temperature artefact. Input comparison
 rms 2.7 m/s after 1958 but r 0.83, rms 10.7, sign disagreement 8% in 1947-58; of ERA5's 7 onsets from Nov 1947, JRA-3Q
 finds 2 within 3 d and 7 others. Meaning: the pre-1958 event list is reanalysis-dependent; the outcome source is ruled out, but the failed transfer cannot be assigned to the forecast rather than to the event set. Power of R6-type test vs climatology at n=12: 0.28.
 
+### Z20 — forced share of a class contrast: the breeder's equation for impact classes (`class_forcing_content.py`, 8_experiment; registered `2240d9f`, amended `aae2b3c` before any run)
+Rule: for X = F + E, classes cut from X differ in mean forcing by h2 x their outcome contrast, h2 = Var(F)/Var(X)
+(exact for Gaussian; two-point forcing at most 1.06/1.09/1.16 x h2 at forced variance 0.019/0.117/0.46; Walsh & Lynch 2018 ch. 13).
+Validation gate: P1 FAILED (centre bootstrap, 9 centres: false exclusion 8.5%, upper 12.5% > 7%) -> P1 not interpreted
+(R - R_LS -0.019 [-0.032, -0.006]; R 0.34, h2 0.35; power vs couple-or-not 0.27). P2 passed (5.1%, upper 6.4%).
+P2 (114 NCEP weakenings, AO days 8-52, DW label, dose u_min): R 0.077 [0.001, 0.191], h2 0.117 [0.039, 0.225],
+R - h2 -0.040 [-0.089, +0.009] inconclusive; headline reading met: most of the observed contrast is NOT a difference in dose.
+Secondary: free natural experiment R 0.071 [0.023, 0.128] vs law 0.071 (holds; liberal centre CI); ERA5 143 episodes
+0.134 [0.048, 0.255] vs h2 0.125 (inconclusive); TC major/RI 0.061/0.069 vs law 0.040/0.034, h2 0.070/0.067 (holds;
+basin-relative same; but R is 1.5-2x R_LS, within the tolerance only because the shares are small); HadGEM3 4 regions
+0.03-0.15, each within 0.006 of law (holds); CMIP6 1,517 events, realised 100 hPa dose 0.32 [0.24, 0.39] vs h2 0.32
+(holds, -0.002 [-0.026, +0.020]; first run divided by the member-demeaned variance, 0.35, fixed after review).
+Applied bounds (R for Gaussian x two-point factor): CMIP6 0.020 point, 0.073/0.114 upper, 0.166 strongest damping;
+obs 0.30/0.37 upper, 0.45 damped; at the label's class share 0.70 (post review): CMIP6 0.120/0.173, obs 0.38/0.46;
+ICON event-conditioned 0.44. Assumes forced and internal parts do not anti-correlate and Gaussian internal variability
+(simulation, forced s.d. 0.6: R 0.264 Gaussian, 0.240 gamma, 0.364 t3 internal variability vs h2 0.265).
+Meaning: across real events the DW-NDW contrast is mostly selection on internal variability; the label selects
+more strongly forced events only weakly (about a tenth of the observed contrast is vortex dose).
+
+### Z17b — tropical cyclones, basin-relative levels (`tc_class_law.py` C4; registered `4285f9b` before it was computed)
+SST terciles cut within each basin (3,737 storms, SA excluded): RI share 0.25 -> 0.51; fixed-type mixing rejected for
+24-h intensification (rho 2.09 [1.10, 3.03], Holm p 0.0002) and LMI (rho 1.91 [0.96, 2.96], p 0.0005); ground truth agrees
+(LMI H - L: RI +11.4 kt [7.5, 15.6], non-RI +5.3 kt [3.5, 7.2]; KS p < 1e-5). Removes the basin-composition confound of
+C1; levels still differ in latitude and month within a basin. C1-C3 unchanged by the rerun (parsed comparison).
+
 ### Z7 — prospective test (`prospective_next_ssw.py`, 9_literature; registered `d2b54a8`, window amended to 2036 before any onset)
 Prediction table for every onset day 1 Nov–31 Mar committed; shift nam_1000 −0.635, nam_150 −0.945, N-Eurasian T days
 8–24 −1.54 K; constant rate 0.692; T trend 0.037 K/yr. P(DW) shifted 0.71–0.84 vs climatology 0.24–0.44.

@@ -352,3 +352,13 @@ Rule: on OSDF, abandon a transfer below ~0.5 MB/s after 20 s and retry, preferri
 Tried: early_transfer_retest required JRA-3Q CP07 onsets to match >= 80% of 14 catalogued 1958-80 onsets within 3 days.
 Failed: 11/14 (78.6%); two "misses" were the same events 6 and 10 days apart, so one event decided the gate and the primary test was not run.
 Rule: before setting a detector gate, measure the timing spread between reanalyses on a period not used for the test and use enough events that one cannot decide it.
+
+## 2026-10-09 — Centre bootstrap with nine SNAPSI centres is liberal for a share statistic
+Tried: class_forcing_content P1 (forced share of the pooled nudged+control contrast), 95% interval from resampling the nine centres.
+Failed: on 200 synthetic data sets with the law exact, the interval excluded the true 0 in 8.5% (upper bound 12.5% > gate 7%); P1 not interpreted.
+Rule: with fewer than about 15 clusters, validate a cluster-bootstrap interval in the real layout before registering it as primary; prefer a t-based interval on cluster means.
+
+## 2026-10-09 — `git commit -a` swept unrelated manuscript edits into a registration amendment
+Tried: committing a one-line amendment to class_forcing_content.py with `git commit -qam`.
+Failed: -a also committed the in-progress, unreviewed revision-8 main.tex and supplementary.tex (aae2b3c), under a message that does not describe them.
+Rule: commit registrations and amendments with explicit paths (`git commit <file>`), never -a, while other files are being edited.

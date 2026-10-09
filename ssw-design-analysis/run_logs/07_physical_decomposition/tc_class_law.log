@@ -1,3 +1,4 @@
+C4 {"registered": "2026-10-09, before it was computed", "n_storms": 3737, "ri_share_L_M_H": [0.2548, 0.4153, 0.5106], "mixing": {"y_ri": {"T": -0.22724, "p_T": 0.0001, "p_T_centred_v1": 0.0005, "rho": 2.0866, "rho_ci95": [1.1013, 3.0253], "level_means_sd_units": [0.0, 0.4707, 0.7708], "p_T_holm": 0.0002, "category": "incompatible with fixed two-type mixing"}, "y_lmi": {"T": -0.1315, "p_T": 0.0005, "p_T_centred_v1": 0.0005, "rho": 1.9135, "rho_ci95": [0.9565, 2.9565], "level_means_sd_units": [-0.0, 0.529, 0.7116], "p_T_holm": 0.0005, "category": "incompatible with fixed two-type mixing"}}, "ground_truth": {"RI": {"lmi_shift_H_minus_L_kt": 11.41, "ci95": [7.47, 15.64], "ks_p_L_vs_H": 3e-06, "n_L_H": [317, 626]}, "nonRI": {"lmi_shift_H_minus_L_kt": 5.27, "ci95": [3.45, 7.18], "ks_p_L_vs_H": 0.0, "n_L_H": [927, 600]}, "ks_p_holm": [3e-06, 0.0], "agreement_C4_lmi": "right"}}
 {
  "levels": {
   "L": {

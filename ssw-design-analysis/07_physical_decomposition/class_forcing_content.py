@@ -101,6 +101,11 @@ SECONDARY (each reported with its own interval, not in the Holm family)
      variances 0.019, 0.117, 0.46).
 AMENDMENT 2026-10-09, before any statistic or validation was run: the P1 gate drew
   the interval's two limits from two separate bootstraps; it now uses one.
+POST-RUN CORRECTIONS (after a fresh-context review, labelled in the JSON)
+  S5: R_h2 is now Var(F)/Var(X) on the classified outcome, as registered; the first run divided
+      by the member-demeaned variance (0.346 instead of 0.318), which made S5 read inconclusive.
+  S6: the two-point factor is also reported at class share 0.70, the label's share (post review).
+  S2: 143 of the 144 ERA5 episodes have every input; 143 are used.
 OUTPUT results/current/8_experiment/class_forcing_content.json
 """
 import json
@@ -394,7 +399,9 @@ def cmip6_set(rng):
             s = gi == m; Xd[s] -= Xd[s].mean(0); yd[s] -= yd[s].mean()
         beta = np.linalg.lstsq(Xd, yd, rcond=None)[0]; F = Xd @ beta
         D, DF, R = share(yi, yi < 0, F)
-        return {"D": D, "D_F": DF, "R_obs": R, "R_h2": h2(yd, F), "stat": R - h2(yd, F)}
+        # R_h2 on the classified outcome, as registered; the first run used the member-demeaned yd (kept, labelled)
+        return {"D": D, "D_F": DF, "R_obs": R, "R_h2": h2(yi, F), "stat": R - h2(yi, F),
+                "R_h2_within_member_first_run_definition": h2(yd, F)}
     s0 = stats(np.arange(len(y)))
     bs = [stats(np.concatenate([idx[m] for m in rng.choice(mem, len(mem))])) for _ in range(2000)]
     out = {k: round(float(v), 4) for k, v in s0.items()}
@@ -430,6 +437,12 @@ def derived():
                     ("cmip6_damped_upper_sd_0.42", 0.42 ** 2), ("obs_damped_upper_sd_0.78", 0.78 ** 2)):
         out[name] = {"R_max_gaussian": round(s / (1 + s), 4), "two_point_inflation": two_point_max(s),
                      "R_max_two_point": round(s / (1 + s) * two_point_max(s), 4)}
+    # POST REVIEW (2026-10-09): the registered factor covers class shares 0.5 and 0.65; the label's share is ~0.70
+    cases = {"cmip6_upper_sd_0.342": 0.342 ** 2, "cmip6_damped_upper_sd_0.42": 0.42 ** 2,
+             "obs_upper_sd_0.681": 0.681 ** 2, "obs_damped_upper_sd_0.78": 0.78 ** 2}
+    fac = {k: two_point_max(v, qs=(0.70,)) for k, v in cases.items()}
+    out["post_review_two_point_inflation_q070"] = fac
+    out["post_review_R_max_q070"] = {k: round(v / (1 + v) * fac[k], 4) for k, v in cases.items()}
     out["icon_event_conditioned_between_over_within_0.8"] = {"R_max_gaussian": round(0.8 / 1.8, 4), "two_point_inflation": two_point_max(0.8)}
     out["sources"] = ["Methods 'Bounds on event differences' (upper s_f 0.342/0.269 CMIP6, 0.596/0.681 obs)",
                       "Methods 'Identification audit' (upper s_f at the strongest damping: 0.42 CMIP6, 0.78 obs)",

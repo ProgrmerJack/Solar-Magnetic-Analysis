@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-09T07:47:10+00:00",
+ "generated": "2026-10-09T10:52:57+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 203,
-  "results": 104
+  "scripts": 204,
+  "results": 105
  },
  "scripts": [
   {
@@ -986,6 +986,22 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/07_physical_decomposition/class_forcing_content.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "HOW MUCH OF A CLASS CONTRAST IS A DIFFERENCE IN FORCING, WHEN FORCING DIFFERS BETWEEN THE UNITS THAT ARE CLASSIFIED? Registered 2026-10-09, committed BEFORE any statistic below was computed. The inputs (SNAPSI nudged/control and free members, the vortex-weakening unit tables,",
+   "loc": 509,
+   "modified": "2026-10-09 10:47",
+   "sha256_16": "6fd895a937656024",
+   "flags": [],
+   "filenames_mentioned": [
+    "class_forcing_content.json",
+    "tc_storms.parquet",
+    "vortex_threshold_continuity.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/07_physical_decomposition/class_law_general.py",
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
@@ -1787,9 +1803,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "DOES THE THRESHOLD-CLASS LAW HOLD OUTSIDE THE STRATOSPHERE, AND CAN ITS TEST TELL A THRESHOLD ON ONE POPULATION FROM GENUINE TYPES? TROPICAL-CYCLONE CLASSES.",
-   "loc": 267,
-   "modified": "2026-10-09 05:01",
-   "sha256_16": "fead79f7e5804798",
+   "loc": 307,
+   "modified": "2026-10-09 10:33",
+   "sha256_16": "b66746fc00c6f85a",
    "flags": [],
    "filenames_mentioned": [
     "tc_class_law.json",
@@ -2293,11 +2309,12 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 506,
-   "modified": "2026-10-09 07:46",
-   "sha256_16": "20b77c4af20d0601",
+   "loc": 531,
+   "modified": "2026-10-09 10:35",
+   "sha256_16": "ba3289014af249cf",
    "flags": [],
    "filenames_mentioned": [
+    "class_forcing_content.json",
     "class_law_general.json",
     "class_model_comparison.json",
     "criterion_precip_contrast.json",
@@ -3191,7 +3208,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-09 07:47",
+   "modified": "2026-10-09 10:39",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -4932,6 +4949,7 @@
    "modified": "2026-10-02 08:35",
    "sha256_16": "7557e877d0fb2645",
    "producers": [
+    "ssw-design-analysis/07_physical_decomposition/class_forcing_content.py",
     "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py",
     "ssw-design-analysis/07_physical_decomposition/vortex_threshold_continuity.py"
    ],
@@ -4939,6 +4957,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/class_forcing_content.py": "6fd895a937656024",
     "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "0347a686764afd50",
     "ssw-design-analysis/07_physical_decomposition/vortex_threshold_continuity.py": "715551ce3b7ec6bb"
    },
@@ -6159,6 +6178,95 @@
     "marginal_events",
     "physical_contrast",
     "profiles"
+   ]
+  },
+  {
+   "path": "results/current/8_experiment/class_forcing_content.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 19103,
+   "modified": "2026-10-09 10:47",
+   "sha256_16": "194e6cea8f117b65",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/class_forcing_content.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/class_forcing_content.py": "6fd895a937656024"
+   },
+   "verdicts": [
+    {
+     "key": "P1_snapsi_pooled_arms.stat_R_obs_minus_R_LS.reading",
+     "text": "not interpreted: validation gate failed"
+    },
+    {
+     "key": "P2_obs_ncep_episodes.stat_R_obs_minus_R_h2.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "P2_obs_ncep_episodes.R_obs.reading",
+     "text": "most of the observed downward-non-downward contrast is not a difference in vortex dose"
+    },
+    {
+     "key": "S1_free_natural_experiment.stat_R_obs_minus_R_LS.reading",
+     "text": "the forced share of the contrast is what the variance share predicts (the rule holds)"
+    },
+    {
+     "key": "S2_obs_era5_episodes.stat_R_obs_minus_R_h2.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "S4_human_forcing_hadgem3.CEUR_JJA.stat_summary.reading",
+     "text": "the forced share of the contrast is what the variance share predicts (the rule holds)"
+    },
+    {
+     "key": "S4_human_forcing_hadgem3.WRUS_JJA.stat_summary.reading",
+     "text": "the forced share of the contrast is what the variance share predicts (the rule holds)"
+    },
+    {
+     "key": "S4_human_forcing_hadgem3.CNAM_JJA.stat_summary.reading",
+     "text": "the forced share of the contrast is what the variance share predicts (the rule holds)"
+    },
+    {
+     "key": "S4_human_forcing_hadgem3.CEAS_DJF.stat_summary.reading",
+     "text": "the forced share of the contrast is what the variance share predicts (the rule holds)"
+    },
+    {
+     "key": "S5_cmip6_events_dose.stat_summary.reading",
+     "text": "the forced share of the contrast is what the variance share predicts (the rule holds)"
+    }
+   ],
+   "counts": {
+    "n_boot": [
+     10000
+    ],
+    "n_events": [
+     1517
+    ],
+    "n_members": [
+     20
+    ]
+   },
+   "top_level_keys": [
+    "validation",
+    "validation_fixed",
+    "registered",
+    "seed",
+    "n_boot",
+    "tolerance_share",
+    "inputs",
+    "P1_snapsi_pooled_arms",
+    "P2_obs_ncep_episodes",
+    "holm_P1_P2",
+    "S1_free_natural_experiment",
+    "S2_obs_era5_episodes",
+    "S3_tropical_cyclones",
+    "S4_human_forcing_hadgem3",
+    "S5_cmip6_events_dose",
+    "S6_derived_bounds"
    ]
   },
   {
@@ -9484,9 +9592,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 4629,
-   "modified": "2026-10-09 05:01",
-   "sha256_16": "bba920f0a3460f7d",
+   "bytes": 5851,
+   "modified": "2026-10-09 10:34",
+   "sha256_16": "370cd796a2fe4010",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/tc_class_law.py"
    ],
@@ -9494,7 +9602,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/tc_class_law.py": "fead79f7e5804798"
+    "ssw-design-analysis/07_physical_decomposition/tc_class_law.py": "b66746fc00c6f85a"
    },
    "verdicts": [
     {
@@ -9526,7 +9634,8 @@
     "C2_law",
     "C3_ground_truth",
     "reading_pair",
-    "C3_post_hoc"
+    "C3_post_hoc",
+    "C4_basin_relative"
    ]
   },
   {

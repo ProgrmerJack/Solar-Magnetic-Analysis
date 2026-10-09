@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-09T07:47:10+00:00",
+ "generated": "2026-10-09T10:52:57+00:00",
  "note": "Known-good baseline: each result was produced by the script at the recorded sha256. catalog_repo.py flags STALE when a producer's hash no longer matches. Re-record with --record only AFTER re-running the analysis.",
  "results": {
   "catalogue_sets.json": {
@@ -454,10 +454,12 @@
   },
   "vortex_threshold_continuity.json": {
    "producers": [
+    "ssw-design-analysis/07_physical_decomposition/class_forcing_content.py",
     "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py",
     "ssw-design-analysis/07_physical_decomposition/vortex_threshold_continuity.py"
    ],
    "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/class_forcing_content.py": "6fd895a937656024",
     "ssw-design-analysis/07_physical_decomposition/shift_rule_forecast.py": "0347a686764afd50",
     "ssw-design-analysis/07_physical_decomposition/vortex_threshold_continuity.py": "715551ce3b7ec6bb"
    },
@@ -762,6 +764,16 @@
    "result_sha256_16": "8a1b3cb002cef128",
    "needs_rerun": false
   },
+  "class_forcing_content.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/class_forcing_content.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/class_forcing_content.py": "6fd895a937656024"
+   },
+   "result_sha256_16": "194e6cea8f117b65",
+   "needs_rerun": false
+  },
   "mixture_moment_test.json": {
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/mixture_moment_test.py"
@@ -869,9 +881,9 @@
     "ssw-design-analysis/07_physical_decomposition/tc_class_law.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/tc_class_law.py": "fead79f7e5804798"
+    "ssw-design-analysis/07_physical_decomposition/tc_class_law.py": "b66746fc00c6f85a"
    },
-   "result_sha256_16": "bba920f0a3460f7d",
+   "result_sha256_16": "370cd796a2fe4010",
    "needs_rerun": false
   },
   "threshold_law_theory.json": {
