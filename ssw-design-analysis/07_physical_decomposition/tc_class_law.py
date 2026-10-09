@@ -57,6 +57,16 @@ VALIDATION GATE (--validate; before any data): 1,000 simulations of 43 seasons x
   Wald statistic T / bootstrap s.d., referred to Student t with (seasons - 1) d.f.;
   the v1 p-value is stored as p_T_centred_v1 and not used.
 
+C4 REGISTERED 2026-10-09, committed before it was computed (C1-C3 had been run): the
+  levels of C1 are confounded with basin (western North Pacific 12% of L, 42% of H).
+  C4 repeats C1 with BASIN-RELATIVE levels: SST_g terciles cut within each basin (SA,
+  3 storms, excluded), so every level holds each basin in the same proportion. Same
+  moment test, season bootstrap, Holm over the two outcomes and categories as C1.
+  Ground truth as C3 on these levels: LMI shift H - L of RI and of non-RI storms with a
+  1,999-replicate season-bootstrap interval and the KS p (Holm over the two types);
+  agreement rule as C3. Levels still differ in latitude and month within a basin.
+  Own random stream (SEED + 20), so C1-C3 are unchanged.
+
 Output: results/current/8_experiment/tc_class_law.json
 Run:    tc_class_law.py --validate | tc_class_law.py
 """
@@ -252,6 +262,36 @@ def main():
         wb[b] = e
     ph["within_basin"] = wb
     res["C3_post_hoc"] = ph
+    # C4 (registered 2026-10-09): basin-relative SST terciles
+    r4 = np.random.default_rng(SEED + 20)
+    db = d[d.basin != "SA"].reset_index(drop=True)
+    lb = np.zeros(len(db), int)
+    for b, g_ in db.groupby("basin"):
+        lb[g_.index] = np.digitize(g_.sst_g.values, np.quantile(g_.sst_g, [1 / 3, 2 / 3]))
+    sb = np.sort(db.season.unique()); yb = np.searchsorted(sb, db.season.values); nb = len(sb)
+    c4 = {o: moment_test(db[o].values.astype(float), lb, yb, nb, r4) for o in ("y_ri", "y_lmi")}
+    for (o, c), a in zip(c4.items(), holm([c4[o]["p_T"] for o in c4])):
+        ci = c["rho_ci95"]; c["p_T_holm"] = round(float(a), 4)
+        c["category"] = INC if a < 0.05 else COM if ci and -TOL <= ci[0] and ci[1] <= TOL else "unresolved"
+    rib = db.y_ri.values >= RI_KT; okb = np.isfinite(db.y_ri.values); gt = {}
+    for typ, m in (("RI", rib), ("nonRI", ~rib & okb)):
+        def sh(w, m=m):
+            ww = w[yb]; a, b = m & (lb == 0), m & (lb == 2)
+            return (ww[b] * db.y_lmi.values[b]).sum() / ww[b].sum() - (ww[a] * db.y_lmi.values[a]).sum() / ww[a].sum()
+        bs = [sh(np.bincount(r4.integers(nb, size=nb), minlength=nb).astype(float)) for _ in range(B)]
+        gt[typ] = {"lmi_shift_H_minus_L_kt": round(float(sh(np.ones(nb))), 2),
+                   "ci95": [round(float(x), 2) for x in np.quantile(bs, [0.025, 0.975])],
+                   "ks_p_L_vs_H": round(float(ks_2samp(db.y_lmi.values[m & (lb == 0)], db.y_lmi.values[m & (lb == 2)]).pvalue), 6),
+                   "n_L_H": [int((m & (lb == 0)).sum()), int((m & (lb == 2)).sum())]}
+    kh = holm([gt["RI"]["ks_p_L_vs_H"], gt["nonRI"]["ks_p_L_vs_H"]]); dif = bool((kh < 0.05).any())
+    cat4 = c4["y_lmi"]["category"]
+    gt["ks_p_holm"] = [round(float(x), 6) for x in kh]
+    gt["agreement_C4_lmi"] = ("right" if (cat4 == INC and dif) or (cat4 == COM and not dif) else
+                              "wrong" if (cat4 == INC and not dif) or (cat4 == COM and dif) else "not decidable")
+    res["C4_basin_relative"] = {"registered": "2026-10-09, before it was computed", "n_storms": int(len(db)),
+                                "ri_share_L_M_H": [round(float(rib[okb & (lb == i)].mean()), 4) for i in range(3)],
+                                "mixing": c4, "ground_truth": gt}
+    print("C4", json.dumps(res["C4_basin_relative"], default=float), flush=True)
     cats = [c1["y_ri"]["category"], c1["y_lmi"]["category"]]
     inc = [c == INC for c in cats]; com = [c == COM for c in cats]     # exact: "incompatible" contains "compatible"
     res["reading_pair"] = ("the test discriminates" if (inc[0] and com[1]) or (inc[1] and com[0]) else
