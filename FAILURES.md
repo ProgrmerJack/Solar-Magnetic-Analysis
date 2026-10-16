@@ -372,3 +372,8 @@ Rule: state a contrast change against the law's own prediction for the same unit
 Tried: enso_regime_relative P1b, LR of fixed regimes (shared components, free weights) against free mixtures per level, chi-square 8 d.f.
 Failed: validation gate false rejection 0.070-0.083 at nominal 0.05 (upper bounds 0.085-0.099 > 0.07); not run. Also the moment test P1 had power 0.01 here.
 Rule: calibrate mixture LR tests by parametric bootstrap under the fitted null, and check power, not only size, before data.
+
+## 2026-10-16 — Box-centre regridding left empty boxes and let land into ocean boxes
+Tried: acquire_enso_regime_fields, native cells assigned to the 2.5-degree box containing their centre, with an observed (OISST) ocean mask only.
+Failed: CanESM5's 2.8-degree grid left 278 boxes empty (NaN, silently passed by a nan-aware plausibility check); MIROC6 put ~330 K desert cells into "ocean" boxes.
+Rule: mask with the model's own land fraction before regridding, fill boxes without a native centre, and make plausibility checks fail on NaN.
