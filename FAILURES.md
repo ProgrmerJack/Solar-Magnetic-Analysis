@@ -367,3 +367,8 @@ Rule: commit registrations and amendments with explicit paths (`git commit <file
 Tried: abstract "raises 45% to 84% while the contrast changes by −0.03σ" (rate over 36 pairs, contrast over 25; there 46% → 78%).
 Failed: one shifted population itself predicts a contrast change (−0.07σ there), so "unchanged" misstated the law and could not discriminate one population from two types.
 Rule: state a contrast change against the law's own prediction for the same units, and let the shape test, not invariance, carry a one-population claim.
+
+## 2026-10-16 — Chi-square reference for a two-component mixture likelihood ratio is liberal
+Tried: enso_regime_relative P1b, LR of fixed regimes (shared components, free weights) against free mixtures per level, chi-square 8 d.f.
+Failed: validation gate false rejection 0.070-0.083 at nominal 0.05 (upper bounds 0.085-0.099 > 0.07); not run. Also the moment test P1 had power 0.01 here.
+Rule: calibrate mixture LR tests by parametric bootstrap under the fitted null, and check power, not only size, before data.
