@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16T12:56:02+00:00",
+ "generated": "2026-10-16T17:32:21+00:00",
  "generator": "tools/catalog_repo.py",
  "note": "Every ssw-design-analysis result in one file. The per-script JSONs remain on disk as write-side provenance; this is the read path. Regenerate with tools/catalog_repo.py.",
  "results": {
@@ -4357,6 +4357,925 @@
      ],
      "n_units": 23,
      "n_centres": 8
+    }
+   },
+   "r10_few_cluster_robustness": {
+    "registered": "2026-10-16 (amendment R10), committed before any of these intervals was computed",
+    "disclosed": "a literature note had rescaled the stored S5 interval to about 90% before registration",
+    "n_sim": 2000,
+    "statistics": {
+     "S1_paired_diff": {
+      "mean": -0.0283,
+      "n_units": 25,
+      "n_centres": 8,
+      "ci": {
+       "B": [
+        -0.1443,
+        0.0878
+       ],
+       "C": [
+        -0.1522,
+        0.0797
+       ],
+       "D": [
+        -0.1522,
+        0.0826
+       ],
+       "E": [
+        -0.1509,
+        0.0944
+       ],
+       "F": [
+        -0.1212,
+        0.0647
+       ]
+      },
+      "validation": {
+       "indep_gauss": {
+        "B": {
+         "non_coverage": 0.0395,
+         "upper95": 0.0474
+        },
+        "C": {
+         "non_coverage": 0.0395,
+         "upper95": 0.0474
+        },
+        "D": {
+         "non_coverage": 0.0395,
+         "upper95": 0.0474
+        },
+        "E": {
+         "non_coverage": 0.0385,
+         "upper95": 0.0463
+        },
+        "F": {
+         "non_coverage": 0.093,
+         "upper95": 0.1044
+        }
+       },
+       "indep_t4": {
+        "B": {
+         "non_coverage": 0.049,
+         "upper95": 0.0577
+        },
+        "C": {
+         "non_coverage": 0.0485,
+         "upper95": 0.0572
+        },
+        "D": {
+         "non_coverage": 0.047,
+         "upper95": 0.0555
+        },
+        "E": {
+         "non_coverage": 0.053,
+         "upper95": 0.062
+        },
+        "F": {
+         "non_coverage": 0.1,
+         "upper95": 0.1117
+        }
+       },
+       "shared_gauss": {
+        "B": {
+         "non_coverage": 0.0505,
+         "upper95": 0.0593
+        },
+        "C": {
+         "non_coverage": 0.046,
+         "upper95": 0.0545
+        },
+        "D": {
+         "non_coverage": 0.0465,
+         "upper95": 0.055
+        },
+        "E": {
+         "non_coverage": 0.0565,
+         "upper95": 0.0657
+        },
+        "F": {
+         "non_coverage": 0.107,
+         "upper95": 0.119
+        }
+       },
+       "shared_t4": {
+        "B": {
+         "non_coverage": 0.044,
+         "upper95": 0.0523
+        },
+        "C": {
+         "non_coverage": 0.049,
+         "upper95": 0.0577
+        },
+        "D": {
+         "non_coverage": 0.0495,
+         "upper95": 0.0582
+        },
+        "E": {
+         "non_coverage": 0.0465,
+         "upper95": 0.055
+        },
+        "F": {
+         "non_coverage": 0.0975,
+         "upper95": 0.1091
+        }
+       }
+      },
+      "valid": {
+       "B": true,
+       "C": true,
+       "D": true,
+       "E": true,
+       "F": true
+      },
+      "readings_valid_methods": {
+       "B": "holds",
+       "C": "holds",
+       "D": "holds",
+       "E": "holds"
+      },
+      "robust": true,
+      "equivalence_90_secondary": "equivalent"
+     },
+     "S2_resid_shift_NH": {
+      "mean": 0.0401,
+      "n_units": 23,
+      "n_centres": 8,
+      "ci": {
+       "B": [
+        -0.0406,
+        0.1208
+       ],
+       "C": [
+        -0.0433,
+        0.1152
+       ],
+       "D": [
+        -0.0438,
+        0.1174
+       ],
+       "E": [
+        -0.0434,
+        0.1236
+       ],
+       "F": [
+        -0.0245,
+        0.1047
+       ]
+      },
+      "validation": {
+       "indep_gauss": {
+        "B": {
+         "non_coverage": 0.0585,
+         "upper95": 0.0679
+        },
+        "C": {
+         "non_coverage": 0.055,
+         "upper95": 0.0641
+        },
+        "D": {
+         "non_coverage": 0.056,
+         "upper95": 0.0652
+        },
+        "E": {
+         "non_coverage": 0.0615,
+         "upper95": 0.0711
+        },
+        "F": {
+         "non_coverage": 0.1055,
+         "upper95": 0.1175
+        }
+       },
+       "indep_t4": {
+        "B": {
+         "non_coverage": 0.04,
+         "upper95": 0.048
+        },
+        "C": {
+         "non_coverage": 0.042,
+         "upper95": 0.0501
+        },
+        "D": {
+         "non_coverage": 0.042,
+         "upper95": 0.0501
+        },
+        "E": {
+         "non_coverage": 0.045,
+         "upper95": 0.0534
+        },
+        "F": {
+         "non_coverage": 0.0885,
+         "upper95": 0.0996
+        }
+       },
+       "shared_gauss": {
+        "B": {
+         "non_coverage": 0.045,
+         "upper95": 0.0534
+        },
+        "C": {
+         "non_coverage": 0.0435,
+         "upper95": 0.0518
+        },
+        "D": {
+         "non_coverage": 0.0435,
+         "upper95": 0.0518
+        },
+        "E": {
+         "non_coverage": 0.0465,
+         "upper95": 0.055
+        },
+        "F": {
+         "non_coverage": 0.092,
+         "upper95": 0.1033
+        }
+       },
+       "shared_t4": {
+        "B": {
+         "non_coverage": 0.0505,
+         "upper95": 0.0593
+        },
+        "C": {
+         "non_coverage": 0.045,
+         "upper95": 0.0534
+        },
+        "D": {
+         "non_coverage": 0.0475,
+         "upper95": 0.0561
+        },
+        "E": {
+         "non_coverage": 0.0485,
+         "upper95": 0.0572
+        },
+        "F": {
+         "non_coverage": 0.095,
+         "upper95": 0.1065
+        }
+       }
+      },
+      "valid": {
+       "B": true,
+       "C": true,
+       "D": true,
+       "E": false,
+       "F": true
+      },
+      "readings_valid_methods": {
+       "B": "holds",
+       "C": "holds",
+       "D": "holds"
+      },
+      "robust": true,
+      "equivalence_90_secondary": "equivalent"
+     },
+     "S3_resid_locscale_NH": {
+      "mean": 0.0417,
+      "n_units": 22,
+      "n_centres": 8,
+      "ci": {
+       "B": [
+        -0.0539,
+        0.1372
+       ],
+       "C": [
+        -0.0565,
+        0.1781
+       ],
+       "D": [
+        -0.0565,
+        0.1787
+       ],
+       "E": [
+        -0.0698,
+        0.1532
+       ],
+       "F": [
+        -0.0349,
+        0.1182
+       ]
+      },
+      "validation": {
+       "indep_gauss": {
+        "B": {
+         "non_coverage": 0.049,
+         "upper95": 0.0577
+        },
+        "C": {
+         "non_coverage": 0.0435,
+         "upper95": 0.0518
+        },
+        "D": {
+         "non_coverage": 0.045,
+         "upper95": 0.0534
+        },
+        "E": {
+         "non_coverage": 0.055,
+         "upper95": 0.0641
+        },
+        "F": {
+         "non_coverage": 0.101,
+         "upper95": 0.1128
+        }
+       },
+       "indep_t4": {
+        "B": {
+         "non_coverage": 0.046,
+         "upper95": 0.0545
+        },
+        "C": {
+         "non_coverage": 0.042,
+         "upper95": 0.0501
+        },
+        "D": {
+         "non_coverage": 0.042,
+         "upper95": 0.0501
+        },
+        "E": {
+         "non_coverage": 0.0495,
+         "upper95": 0.0582
+        },
+        "F": {
+         "non_coverage": 0.088,
+         "upper95": 0.0991
+        }
+       },
+       "shared_gauss": {
+        "B": {
+         "non_coverage": 0.059,
+         "upper95": 0.0684
+        },
+        "C": {
+         "non_coverage": 0.0515,
+         "upper95": 0.0604
+        },
+        "D": {
+         "non_coverage": 0.0525,
+         "upper95": 0.0615
+        },
+        "E": {
+         "non_coverage": 0.06,
+         "upper95": 0.0695
+        },
+        "F": {
+         "non_coverage": 0.1075,
+         "upper95": 0.1196
+        }
+       },
+       "shared_t4": {
+        "B": {
+         "non_coverage": 0.0595,
+         "upper95": 0.0689
+        },
+        "C": {
+         "non_coverage": 0.058,
+         "upper95": 0.0673
+        },
+        "D": {
+         "non_coverage": 0.059,
+         "upper95": 0.0684
+        },
+        "E": {
+         "non_coverage": 0.058,
+         "upper95": 0.0673
+        },
+        "F": {
+         "non_coverage": 0.1265,
+         "upper95": 0.1394
+        }
+       }
+      },
+      "valid": {
+       "B": true,
+       "C": true,
+       "D": true,
+       "E": true,
+       "F": false
+      },
+      "readings_valid_methods": {
+       "B": "holds",
+       "C": "holds",
+       "D": "holds",
+       "E": "holds"
+      },
+      "robust": true,
+      "equivalence_90_secondary": "F not valid"
+     },
+     "S4_Delta_b_strong11": {
+      "mean": 0.1734,
+      "n_units": 11,
+      "n_centres": 8,
+      "ci": {
+       "B": [
+        0.0111,
+        0.3357
+       ],
+       "C": [
+        -0.0496,
+        0.4192
+       ],
+       "D": [
+        -0.0496,
+        0.4192
+       ],
+       "E": [
+        0.0201,
+        0.3268
+       ],
+       "F": [
+        0.0434,
+        0.3035
+       ]
+      },
+      "validation": {
+       "indep_gauss": {
+        "B": {
+         "non_coverage": 0.069,
+         "upper95": 0.0791
+        },
+        "C": {
+         "non_coverage": 0.0485,
+         "upper95": 0.0572
+        },
+        "D": {
+         "non_coverage": 0.0475,
+         "upper95": 0.0561
+        },
+        "E": {
+         "non_coverage": 0.0685,
+         "upper95": 0.0785
+        },
+        "F": {
+         "non_coverage": 0.1205,
+         "upper95": 0.1331
+        }
+       },
+       "indep_t4": {
+        "B": {
+         "non_coverage": 0.0495,
+         "upper95": 0.0582
+        },
+        "C": {
+         "non_coverage": 0.0425,
+         "upper95": 0.0507
+        },
+        "D": {
+         "non_coverage": 0.0435,
+         "upper95": 0.0518
+        },
+        "E": {
+         "non_coverage": 0.056,
+         "upper95": 0.0652
+        },
+        "F": {
+         "non_coverage": 0.11,
+         "upper95": 0.1222
+        }
+       },
+       "shared_gauss": {
+        "B": {
+         "non_coverage": 0.0635,
+         "upper95": 0.0732
+        },
+        "C": {
+         "non_coverage": 0.044,
+         "upper95": 0.0523
+        },
+        "D": {
+         "non_coverage": 0.0455,
+         "upper95": 0.0539
+        },
+        "E": {
+         "non_coverage": 0.064,
+         "upper95": 0.0737
+        },
+        "F": {
+         "non_coverage": 0.1225,
+         "upper95": 0.1352
+        }
+       },
+       "shared_t4": {
+        "B": {
+         "non_coverage": 0.0485,
+         "upper95": 0.0572
+        },
+        "C": {
+         "non_coverage": 0.0395,
+         "upper95": 0.0474
+        },
+        "D": {
+         "non_coverage": 0.0365,
+         "upper95": 0.0442
+        },
+        "E": {
+         "non_coverage": 0.057,
+         "upper95": 0.0663
+        },
+        "F": {
+         "non_coverage": 0.1015,
+         "upper95": 0.1133
+        }
+       }
+      },
+      "valid": {
+       "B": false,
+       "C": true,
+       "D": true,
+       "E": false,
+       "F": false
+      },
+      "readings_valid_methods": {
+       "C": "inconclusive",
+       "D": "inconclusive"
+      },
+      "robust": false,
+      "equivalence_90_secondary": "F not valid"
+     },
+     "S5_regional_resid": {
+      "mean": -0.0861,
+      "n_units": 23,
+      "n_centres": 8,
+      "ci": {
+       "B": [
+        -0.2803,
+        0.1081
+       ],
+       "C": [
+        -0.303,
+        0.0958
+       ],
+       "D": [
+        -0.3116,
+        0.0958
+       ],
+       "E": [
+        -0.301,
+        0.1288
+       ],
+       "F": [
+        -0.2417,
+        0.0695
+       ]
+      },
+      "validation": {
+       "indep_gauss": {
+        "B": {
+         "non_coverage": 0.055,
+         "upper95": 0.0641
+        },
+        "C": {
+         "non_coverage": 0.0455,
+         "upper95": 0.0539
+        },
+        "D": {
+         "non_coverage": 0.0465,
+         "upper95": 0.055
+        },
+        "E": {
+         "non_coverage": 0.0575,
+         "upper95": 0.0668
+        },
+        "F": {
+         "non_coverage": 0.1095,
+         "upper95": 0.1217
+        }
+       },
+       "indep_t4": {
+        "B": {
+         "non_coverage": 0.0465,
+         "upper95": 0.055
+        },
+        "C": {
+         "non_coverage": 0.0485,
+         "upper95": 0.0572
+        },
+        "D": {
+         "non_coverage": 0.05,
+         "upper95": 0.0588
+        },
+        "E": {
+         "non_coverage": 0.0545,
+         "upper95": 0.0636
+        },
+        "F": {
+         "non_coverage": 0.102,
+         "upper95": 0.1138
+        }
+       },
+       "shared_gauss": {
+        "B": {
+         "non_coverage": 0.0525,
+         "upper95": 0.0615
+        },
+        "C": {
+         "non_coverage": 0.0485,
+         "upper95": 0.0572
+        },
+        "D": {
+         "non_coverage": 0.0465,
+         "upper95": 0.055
+        },
+        "E": {
+         "non_coverage": 0.0605,
+         "upper95": 0.07
+        },
+        "F": {
+         "non_coverage": 0.1095,
+         "upper95": 0.1217
+        }
+       },
+       "shared_t4": {
+        "B": {
+         "non_coverage": 0.0555,
+         "upper95": 0.0647
+        },
+        "C": {
+         "non_coverage": 0.0505,
+         "upper95": 0.0593
+        },
+        "D": {
+         "non_coverage": 0.05,
+         "upper95": 0.0588
+        },
+        "E": {
+         "non_coverage": 0.0565,
+         "upper95": 0.0657
+        },
+        "F": {
+         "non_coverage": 0.1075,
+         "upper95": 0.1196
+        }
+       }
+      },
+      "valid": {
+       "B": true,
+       "C": true,
+       "D": true,
+       "E": false,
+       "F": false
+      },
+      "readings_valid_methods": {
+       "B": "inconclusive",
+       "C": "inconclusive",
+       "D": "inconclusive"
+      },
+      "robust": true,
+      "equivalence_90_secondary": "F not valid"
+     },
+     "S6_free_law_resid": {
+      "mean": -0.0121,
+      "n_units": 8,
+      "n_centres": 8,
+      "ci": {
+       "B": [
+        -0.1089,
+        0.0846
+       ],
+       "C": [
+        -0.1081,
+        0.0784
+       ],
+       "D": [
+        -0.1081,
+        0.0784
+       ],
+       "E": [
+        -0.107,
+        0.0827
+       ],
+       "F": [
+        -0.0896,
+        0.0653
+       ]
+      },
+      "validation": {
+       "indep_gauss": {
+        "B": {
+         "non_coverage": 0.042,
+         "upper95": 0.0501
+        },
+        "C": {
+         "non_coverage": 0.038,
+         "upper95": 0.0458
+        },
+        "D": {
+         "non_coverage": 0.038,
+         "upper95": 0.0458
+        },
+        "E": {
+         "non_coverage": 0.046,
+         "upper95": 0.0545
+        },
+        "F": {
+         "non_coverage": 0.0885,
+         "upper95": 0.0996
+        }
+       },
+       "indep_t4": {
+        "B": {
+         "non_coverage": 0.051,
+         "upper95": 0.0598
+        },
+        "C": {
+         "non_coverage": 0.045,
+         "upper95": 0.0534
+        },
+        "D": {
+         "non_coverage": 0.045,
+         "upper95": 0.0534
+        },
+        "E": {
+         "non_coverage": 0.0525,
+         "upper95": 0.0615
+        },
+        "F": {
+         "non_coverage": 0.1075,
+         "upper95": 0.1196
+        }
+       },
+       "shared_gauss": {
+        "B": {
+         "non_coverage": 0.0845,
+         "upper95": 0.0954
+        },
+        "C": {
+         "non_coverage": 0.077,
+         "upper95": 0.0875
+        },
+        "D": {
+         "non_coverage": 0.077,
+         "upper95": 0.0875
+        },
+        "E": {
+         "non_coverage": 0.057,
+         "upper95": 0.0663
+        },
+        "F": {
+         "non_coverage": 0.144,
+         "upper95": 0.1575
+        }
+       },
+       "shared_t4": {
+        "B": {
+         "non_coverage": 0.0705,
+         "upper95": 0.0806
+        },
+        "C": {
+         "non_coverage": 0.0645,
+         "upper95": 0.0743
+        },
+        "D": {
+         "non_coverage": 0.0645,
+         "upper95": 0.0743
+        },
+        "E": {
+         "non_coverage": 0.048,
+         "upper95": 0.0566
+        },
+        "F": {
+         "non_coverage": 0.1395,
+         "upper95": 0.1529
+        }
+       }
+      },
+      "valid": {
+       "B": false,
+       "C": false,
+       "D": false,
+       "E": true,
+       "F": false
+      },
+      "readings_valid_methods": {
+       "E": "holds"
+      },
+      "robust": false,
+      "equivalence_90_secondary": "F not valid"
+     },
+     "S7_SH_resid_locscale": {
+      "mean": -0.0365,
+      "n_units": 7,
+      "n_centres": 7,
+      "ci": {
+       "B": [
+        -0.1912,
+        0.1183
+       ],
+       "C": [
+        -0.1766,
+        0.1457
+       ],
+       "D": [
+        -0.1766,
+        0.1457
+       ],
+       "E": [
+        -0.1834,
+        0.1104
+       ],
+       "F": [
+        -0.1594,
+        0.0864
+       ]
+      },
+      "validation": {
+       "indep_gauss": {
+        "B": {
+         "non_coverage": 0.0445,
+         "upper95": 0.0528
+        },
+        "C": {
+         "non_coverage": 0.0405,
+         "upper95": 0.0485
+        },
+        "D": {
+         "non_coverage": 0.0405,
+         "upper95": 0.0485
+        },
+        "E": {
+         "non_coverage": 0.0525,
+         "upper95": 0.0615
+        },
+        "F": {
+         "non_coverage": 0.0935,
+         "upper95": 0.1049
+        }
+       },
+       "indep_t4": {
+        "B": {
+         "non_coverage": 0.051,
+         "upper95": 0.0598
+        },
+        "C": {
+         "non_coverage": 0.0465,
+         "upper95": 0.055
+        },
+        "D": {
+         "non_coverage": 0.0465,
+         "upper95": 0.055
+        },
+        "E": {
+         "non_coverage": 0.0535,
+         "upper95": 0.0625
+        },
+        "F": {
+         "non_coverage": 0.105,
+         "upper95": 0.117
+        }
+       },
+       "shared_gauss": {
+        "B": {
+         "non_coverage": 0.089,
+         "upper95": 0.1002
+        },
+        "C": {
+         "non_coverage": 0.08,
+         "upper95": 0.0907
+        },
+        "D": {
+         "non_coverage": 0.08,
+         "upper95": 0.0907
+        },
+        "E": {
+         "non_coverage": 0.0615,
+         "upper95": 0.0711
+        },
+        "F": {
+         "non_coverage": 0.152,
+         "upper95": 0.1658
+        }
+       },
+       "shared_t4": {
+        "B": {
+         "non_coverage": 0.0785,
+         "upper95": 0.0891
+        },
+        "C": {
+         "non_coverage": 0.0715,
+         "upper95": 0.0817
+        },
+        "D": {
+         "non_coverage": 0.0715,
+         "upper95": 0.0817
+        },
+        "E": {
+         "non_coverage": 0.0515,
+         "upper95": 0.0604
+        },
+        "F": {
+         "non_coverage": 0.1445,
+         "upper95": 0.1581
+        }
+       }
+      },
+      "valid": {
+       "B": false,
+       "C": false,
+       "D": false,
+       "E": false,
+       "F": false
+      },
+      "readings_valid_methods": {},
+      "robust": false,
+      "equivalence_90_secondary": "F not valid"
+     }
     }
    }
   },
@@ -55355,6 +56274,63 @@
      }
     }
    }
+  },
+  "enso_regime_relative.json": {
+   "validation": {
+    "n_sim": 1000,
+    "B": 999,
+    "cases": {
+     "V1": {
+      "reject": 0.003,
+      "upper95": 0.0077
+     },
+     "V2": {
+      "reject": 0.002,
+      "upper95": 0.0063
+     },
+     "V3": {
+      "reject": 0.001,
+      "upper95": 0.0047
+     },
+     "W1": {
+      "reject": 0.009,
+      "upper95": 0.0157
+     },
+     "W2": {
+      "reject": 0.008,
+      "upper95": 0.0144
+     }
+    },
+    "passes": true
+   },
+   "validation_fixed": "2026-10-16, before any field was retrieved",
+   "validation_P1b": {
+    "n_sim": 1000,
+    "cases": {
+     "V1": {
+      "reject": 0.083,
+      "upper95": 0.0988
+     },
+     "V2": {
+      "reject": 0.07,
+      "upper95": 0.0847
+     },
+     "V3": {
+      "reject": 0.073,
+      "upper95": 0.088
+     },
+     "W1": {
+      "reject": 0.999,
+      "upper95": 0.9999
+     },
+     "W2": {
+      "reject": 1.0,
+      "upper95": 1.0
+     }
+    },
+    "passes": false
+   },
+   "validation_P1b_fixed": "2026-10-16, amendment, before any field was retrieved"
   },
   "lens_confirmation.json": {
    "registered": "2026-10-07, committed before any value was fetched",

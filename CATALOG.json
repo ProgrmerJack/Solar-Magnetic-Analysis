@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-16T12:56:02+00:00",
+ "generated": "2026-10-16T17:32:21+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 207,
-  "results": 107
+  "scripts": 209,
+  "results": 108
  },
  "scripts": [
   {
@@ -119,6 +119,20 @@
    "filenames_mentioned": [
     "enso_checksum.txt",
     "enso_oni.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Monthly surface temperature over the tropical band (20S-20N, all longitudes), box-averaged onto a common 2.5-degree grid, for the registered test 07_physical_decomposition/enso_regime_relative.py (committed with it, before this script first ran). Over ocean cells ts is SST on the atmospheric grid.",
+   "loc": 222,
+   "modified": "2026-10-16 15:43",
+   "sha256_16": "b8366228d5cf5f98",
+   "flags": [],
+   "filenames_mentioned": [
+    "lsmask.oisst.nc"
    ],
    "filename_prefixes": []
   },
@@ -733,9 +747,9 @@
    "tree": "ssw-design-analysis",
    "stage": "06_simulation_validation",
    "title": "ARE THE HEADLINE SNAPSI INTERVALS, BUILT BY RESAMPLING EIGHT OR NINE MODELLING CENTRES, TOO NARROW? AND DOES ANY READING CHANGE UNDER AN INTERVAL THAT IS VALID FOR SO FEW CLUSTERS? Registered 2026-10-09 (plan approved by the user), committed BEFORE any interval below was",
-   "loc": 165,
-   "modified": "2026-10-15 21:00",
-   "sha256_16": "d07e7a6fcce74b45",
+   "loc": 274,
+   "modified": "2026-10-16 13:07",
+   "sha256_16": "57b9270884240b1c",
    "flags": [],
    "filenames_mentioned": [
     "cluster_ci_audit.json",
@@ -1198,6 +1212,20 @@
    "filenames_mentioned": [
     "cmip6_nino3.parquet",
     "enso_extreme_class.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/enso_regime_relative.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "IN MODELS THAT PRODUCE A STRONG EASTERN-PACIFIC EL NINO REGIME, DOES GREENHOUSE FORCING CHANGE HOW OFTEN THAT FIXED REGIME OCCURS, OR DOES IT MOVE THE REGIMES (OR ONE POPULATION) ITSELF? Registered 2026-10-16 (plan approved by the user the same day), committed with its validation gate and",
+   "loc": 508,
+   "modified": "2026-10-16 14:14",
+   "sha256_16": "363aed1b85b26e21",
+   "flags": [],
+   "filenames_mentioned": [
+    "enso_regime_relative.json"
    ],
    "filename_prefixes": []
   },
@@ -3943,9 +3971,9 @@
    "tree": "current",
    "stage": "3_calibration",
    "readable": true,
-   "bytes": 7096,
-   "modified": "2026-10-15 21:01",
-   "sha256_16": "7a17f509362ffde3",
+   "bytes": 23429,
+   "modified": "2026-10-16 17:31",
+   "sha256_16": "ead23537ff131a66",
    "producers": [
     "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py"
    ],
@@ -3953,7 +3981,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py": "d07e7a6fcce74b45"
+    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py": "57b9270884240b1c"
    },
    "verdicts": [
     {
@@ -4024,7 +4052,8 @@
     "n_boot",
     "n_sim",
     "statistics",
-    "post_hoc_planted_S5"
+    "post_hoc_planted_S5",
+    "r10_few_cluster_robustness"
    ]
   },
   {
@@ -7966,6 +7995,32 @@
    ]
   },
   {
+   "path": "results/current/8_experiment/enso_regime_relative.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 905,
+   "modified": "2026-10-16 14:13",
+   "sha256_16": "49c7b409c7c2926b",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/enso_regime_relative.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/enso_regime_relative.py": "363aed1b85b26e21"
+   },
+   "verdicts": [],
+   "counts": {},
+   "top_level_keys": [
+    "validation",
+    "validation_fixed",
+    "validation_P1b",
+    "validation_P1b_fixed"
+   ]
+  },
+  {
    "path": "results/current/8_experiment/lens_confirmation.json",
    "tree": "current",
    "stage": "8_experiment",
@@ -9284,7 +9339,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py": "d07e7a6fcce74b45",
+    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py": "57b9270884240b1c",
     "ssw-design-analysis/07_physical_decomposition/snapsi_free_natural_experiment.py": "9f964b9443466ddf"
    },
    "verdicts": [
@@ -9401,7 +9456,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py": "d07e7a6fcce74b45"
+    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py": "57b9270884240b1c"
    },
    "verdicts": [
     {
@@ -9802,7 +9857,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py": "d07e7a6fcce74b45",
+    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py": "57b9270884240b1c",
     "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "3d5a308a513cc3a2",
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "6626a155b09d3623"
    },
