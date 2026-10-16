@@ -75,8 +75,15 @@ AMENDMENT (2026-10-16, after the validation gate and BEFORE any field was retrie
      L0 -> L2 lie inside +-0.25; else "unresolved". READING as for P1 with these categories. Its own gate
      (--validate-p1b): 1,000 simulations each of V1, V2, V3, upper bound of the false-rejection rate < 0.07;
      power reported for W1 and W2.
+SECOND AMENDMENT (2026-10-16, after the P1b gate failed -- false rejection 0.083/0.070/0.073, upper bounds
+  0.085-0.099 -- so P1b with the chi-square reference is not run; registered after the fields began
+  downloading and BEFORE any statistic was computed on them). P1b-PB replaces it as co-primary: the same
+  likelihood ratio (2 starts for H0, 2 for H1 plus the H0 solution, identical for data and replicates)
+  referred to its parametric bootstrap under the fitted H0 (499 replicates for data). Categories and
+  READING as P1b. Gate (--validate-pb): 1,000 simulations each of V1, V2, V3 with 99 replicates, upper
+  bound < 0.07; power W1, W2 from 200 simulations.
 Output: results/current/8_experiment/enso_regime_relative.json
-Run:    enso_regime_relative.py --validate ; enso_regime_relative.py --validate-p1b ; enso_regime_relative.py
+Run:    enso_regime_relative.py --validate ; --validate-p1b ; --validate-pb ; enso_regime_relative.py
 """
 import json
 import sys
@@ -269,6 +276,65 @@ def lr_fixed_regimes(xs):
             "H0_components": [round(float(v), 3) for v in (m1, m2, s1, s2)], "H0_upper_weights": [round(float(v), 3) for v in w]}
 
 
+def lr_stat(xs, n_seeds=2):
+    """the LR used by P1b-PB, identical for data and bootstrap replicates."""
+    from sklearn.mixture import GaussianMixture
+    X = np.concatenate(xs); best0 = (-np.inf, None)
+    for seed in range(n_seeds):
+        g = GaussianMixture(2, n_init=1, random_state=seed).fit(X.reshape(-1, 1)); o = np.argsort(g.means_.ravel())
+        mu = g.means_.ravel()[o]; sd = np.sqrt(g.covariances_.ravel()[o])
+        r = em_fixed(xs, (mu[0], mu[1], sd[0], sd[1], [g.weights_[o][1]] * len(xs)))
+        if r[0] > best0[0]:
+            best0 = r
+    l0, (m1, m2, s1, s2, w) = best0
+    l1 = 0.0
+    for j, x in enumerate(xs):
+        g = GaussianMixture(2, n_init=2, random_state=0).fit(x.reshape(-1, 1))
+        l1 += max(em_level(x, (m1, m2, s1, s2, w[j])), g.score(x.reshape(-1, 1)) * x.size)
+    return max(2 * (l1 - l0), 0.0), (m1, m2, s1, s2, w)
+
+
+def lr_pb(xs, rng, n_boot):
+    """P1b-PB: the LR referred to its parametric-bootstrap distribution under the fitted H0."""
+    lr, (m1, m2, s1, s2, w) = lr_stat(xs)
+    n = [x.size for x in xs]; ge = 0
+    for _ in range(n_boot):
+        xb = []
+        for j in range(len(xs)):
+            t = rng.random(n[j]) < w[j]
+            xb.append(np.where(t, rng.normal(m2, s2, n[j]), rng.normal(m1, s1, n[j])))
+        ge += lr_stat(xb)[0] >= lr
+    return {"LR": round(float(lr), 3), "n_boot": n_boot, "p": round((1 + ge) / (n_boot + 1), 5),
+            "H0_components": [round(float(v), 3) for v in (m1, m2, s1, s2)], "H0_upper_weights": [round(float(v), 3) for v in w]}
+
+
+def _val_pb(args):
+    kind, seed, nsim, nb = args
+    rng = np.random.default_rng(seed); rej = 0
+    for _ in range(nsim):
+        rej += lr_pb([X.ravel() for _, X in sim(kind, rng)], rng, nb)["p"] < ALPHA
+    return kind, rej
+
+
+def validate_pb():
+    plan = {"V1": 1000, "V2": 1000, "V3": 1000, "W1": 200, "W2": 200}; chunks = 20
+    jobs = [(k, SEED + 9000 + 1000 * i + c, n // chunks, 99) for i, (k, n) in enumerate(plan.items()) for c in range(chunks)]
+    import multiprocessing as mp
+    with mp.get_context("fork").Pool(20) as pool:
+        outs = pool.map(_val_pb, jobs)
+    agg = {}
+    for k, r in outs:
+        agg[k] = agg.get(k, 0) + r
+    ub = lambda r, n: float(beta.ppf(0.95, r + 1, n - r)) if r < n else 1.0
+    val = {"n_boot": 99, "cases": {k: {"n_sim": plan[k], "reject": v / plan[k], "upper95": round(ub(v, plan[k]), 4)} for k, v in agg.items()}}
+    val["passes"] = all(val["cases"][k]["upper95"] < GATE for k in ("V1", "V2", "V3"))
+    res = json.loads(OUT.read_text()) if OUT.exists() else {}
+    res["validation_P1b_PB"] = val
+    res["validation_P1b_PB_fixed"] = "2026-10-16, second amendment, after fields began downloading and before any statistic was computed on them"
+    OUT.write_text(json.dumps(res, indent=1), encoding="utf8", newline="\n")
+    print(json.dumps(val, indent=1)); return 0
+
+
 def category_p1b(r, p_holm, s2boot):
     lo, up = s2boot["lower_mode_shift_K_ci95"], s2boot["upper_mode_shift_K_ci95"]
     inside = all(-TOL <= a and b <= TOL for a, b in (lo, up))
@@ -354,6 +420,8 @@ def main():
         return validate()
     if "--validate-p1b" in sys.argv:
         return validate_p1b()
+    if "--validate-pb" in sys.argv:
+        return validate_pb()
     res = json.loads(OUT.read_text()) if OUT.exists() else {}
     if not res.get("validation", {}).get("passes"):
         sys.exit("validation gate not passed (run --validate)")
@@ -406,8 +474,10 @@ def main():
                  "L0_to_L2": EX.law_test(arms[m], 0, 2, thr, np.random.default_rng(SEED + 90 + i))}
         S4[m] = EX.forced_share(arms[m], thr, np.random.default_rng(SEED + 110 + i))
     res.update({"S2_regimes": S2, "S3_class_law": S3, "S4_forced_share": S4})
-    if res.get("validation_P1b", {}).get("passes"):
-        p1b = {m: lr_fixed_regimes([X.ravel() for _, X in arms[m]]) for m in sorted(arms)}
+    pb_ok = res.get("validation_P1b_PB", {}).get("passes")
+    if res.get("validation_P1b", {}).get("passes") or pb_ok:
+        p1b = ({m: lr_pb([X.ravel() for _, X in arms[m]], np.random.default_rng(SEED + 170 + i), 499) for i, m in enumerate(sorted(arms))}
+               if pb_ok else {m: lr_fixed_regimes([X.ravel() for _, X in arms[m]]) for m in sorted(arms)})
         for fam, keys in (("selected", sel), ("all", sorted(arms))):
             if keys:
                 adj = EX.holm([p1b[m]["p"] for m in keys])
@@ -416,13 +486,13 @@ def main():
                     p1b[m][f"category_{fam}"] = category_p1b(p1b[m], a, S2[m]["bootstrap_L0_to_L2"])
         cb = [p1b[m]["category_selected"] for m in sel]
         rej = sum(c == "fixed regimes rejected" for c in cb); cmp_ = sum(c.startswith("compatible") for c in cb)
-        res["P1b_LR_fixed_regimes"] = p1b
+        res["P1b_LR_fixed_regimes"] = p1b; res["P1b_reference"] = "parametric bootstrap (P1b-PB)" if pb_ok else "chi-square"
         res["P1b_reading"] = ("cannot test: no model produces a strong regime" if not sel else
                               "the strong El Nino regime is not a fixed regime whose frequency forcing changes" if rej >= 1 and cmp_ == 0 else
                               "consistent with a fixed regime whose frequency forcing changes" if cmp_ > len(sel) / 2 else "not resolved")
         print("P1b", res["P1b_reading"], json.dumps({m: (p1b[m]["LR"], p1b[m]["p"]) for m in p1b}), flush=True)
     else:
-        res["P1b_reading"] = "not run: its validation gate did not pass"
+        res["P1b_reading"] = "not run: neither the chi-square nor the parametric-bootstrap version passed its gate"
     res["S5_absolute_frame"] = {m: {"P1": MM.tests(arms_abs[m], B, np.random.default_rng(SEED + 130 + i)),
                                     "S1": shape_test(arms_abs[m][0][1], arms_abs[m][2][1], np.random.default_rng(SEED + 150 + i))}
                                 for i, m in enumerate(sorted(arms_abs))}
