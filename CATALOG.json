@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-09T10:52:57+00:00",
+ "generated": "2026-10-16T05:16:16+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 204,
-  "results": 105
+  "scripts": 207,
+  "results": 107
  },
  "scripts": [
   {
@@ -62,6 +62,20 @@
    "flags": [],
    "filenames_mentioned": [
     "cmip6_monthly_boxes.parquet"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/03_data_ingestion/acquire_cmip6_nino3.py",
+   "tree": "ssw-design-analysis",
+   "stage": "03_data_ingestion",
+   "title": "Monthly Nino3 (5S-5N, 210-270E) area means of precipitation (pr, mm/day) and surface temperature (ts, K; all-ocean box, so SST on the atmospheric grid) for the registered test 07_physical_decomposition/enso_extreme_class.py (committed with it, before this script",
+   "loc": 116,
+   "modified": "2026-10-09 11:55",
+   "sha256_16": "5b0ab70115d51db4",
+   "flags": [],
+   "filenames_mentioned": [
+    "cmip6_nino3.parquet"
    ],
    "filename_prefixes": []
   },
@@ -715,6 +729,23 @@
    "filename_prefixes": []
   },
   {
+   "path": "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py",
+   "tree": "ssw-design-analysis",
+   "stage": "06_simulation_validation",
+   "title": "ARE THE HEADLINE SNAPSI INTERVALS, BUILT BY RESAMPLING EIGHT OR NINE MODELLING CENTRES, TOO NARROW? AND DOES ANY READING CHANGE UNDER AN INTERVAL THAT IS VALID FOR SO FEW CLUSTERS? Registered 2026-10-09 (plan approved by the user), committed BEFORE any interval below was",
+   "loc": 165,
+   "modified": "2026-10-15 21:00",
+   "sha256_16": "d07e7a6fcce74b45",
+   "flags": [],
+   "filenames_mentioned": [
+    "cluster_ci_audit.json",
+    "snapsi_contrast_generality.json",
+    "snapsi_free_natural_experiment.json",
+    "snapsi_selection_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
    "path": "ssw-design-analysis/06_simulation_validation/era_dependence_gate.py",
    "tree": "ssw-design-analysis",
    "stage": "06_simulation_validation",
@@ -1154,6 +1185,21 @@
    "filename_prefixes": [
     "ensemble_precursor_"
    ]
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/enso_extreme_class.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "IS \"EXTREME EL NINO\" A FIXED REGIME WHOSE FREQUENCY GREENHOUSE FORCING CHANGES, OR A THRESHOLD ON ONE POPULATION THAT FORCING SHIFTS AND RESCALES? Registered 2026-10-09 (plan approved by the user the same day), committed together with",
+   "loc": 425,
+   "modified": "2026-10-15 21:05",
+   "sha256_16": "51f35ea9093c1232",
+   "flags": [],
+   "filenames_mentioned": [
+    "cmip6_nino3.parquet",
+    "enso_extreme_class.json"
+   ],
+   "filename_prefixes": []
   },
   {
    "path": "ssw-design-analysis/07_physical_decomposition/era5_regional_test.py",
@@ -2037,11 +2083,12 @@
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
    "title": "fig1_summary.py -- Figure 1: an imposed SSW changes the outcome rate, not the class contrast.",
-   "loc": 143,
-   "modified": "2026-10-02 10:04",
-   "sha256_16": "1283de88570707d9",
+   "loc": 145,
+   "modified": "2026-10-09 12:02",
+   "sha256_16": "17ab173d8d51151b",
    "flags": [],
    "filenames_mentioned": [
+    "cluster_ci_audit.json",
     "snapsi_causal_effect.json",
     "snapsi_distribution_test.json",
     "snapsi_selection_test.json"
@@ -2083,15 +2130,16 @@
    "path": "ssw-design-analysis/09_figures/fig3_scope.py",
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
-   "title": "fig3_scope.py -- Figure 3: what the result permits -- distributional departures and differences between events.",
-   "loc": 101,
-   "modified": "2026-10-02 10:05",
-   "sha256_16": "bb287ea42a098e63",
+   "title": "fig3_scope.py -- Figure 3: across events and systems, where forcing differs -- the forced share of class contrasts, and how much events differ.",
+   "loc": 119,
+   "modified": "2026-10-15 20:55",
+   "sha256_16": "7ed1b8b43dedd51a",
    "flags": [],
    "filenames_mentioned": [
+    "class_forcing_content.json",
+    "enso_extreme_class.json",
     "icon_event_heterogeneity.json",
-    "snapsi_archetype_test.json",
-    "snapsi_residual_quantiles.json"
+    "snapsi_archetype_test.json"
    ],
    "filename_prefixes": []
   },
@@ -2154,11 +2202,12 @@
    "tree": "ssw-design-analysis",
    "stage": "09_figures",
    "title": "figED10_generality.py -- Extended Data Fig.: the class structure where the forcing is strongest, in the Southern Hemisphere warming, and for regional temperature.",
-   "loc": 116,
-   "modified": "2026-10-02 14:40",
-   "sha256_16": "9d981f423fffea89",
+   "loc": 121,
+   "modified": "2026-10-15 21:01",
+   "sha256_16": "9c1f9d90903e5f1d",
    "flags": [],
    "filenames_mentioned": [
+    "cluster_ci_audit.json",
     "snapsi_contrast_generality.json"
    ],
    "filename_prefixes": []
@@ -2309,14 +2358,15 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 531,
-   "modified": "2026-10-09 10:35",
-   "sha256_16": "ba3289014af249cf",
+   "loc": 540,
+   "modified": "2026-10-09 12:02",
+   "sha256_16": "d6fb338768f37cb0",
    "flags": [],
    "filenames_mentioned": [
     "class_forcing_content.json",
     "class_law_general.json",
     "class_model_comparison.json",
+    "cluster_ci_audit.json",
     "criterion_precip_contrast.json",
     "criterion_regional_contrast.json",
     "criterion_sweep.json",
@@ -2325,6 +2375,7 @@
     "damip_class_law_multimodel.json",
     "davis2021_intervention_test.json",
     "early_transfer_retest.json",
+    "enso_extreme_class.json",
     "equivalence_observational.json",
     "era5_regional_test.json",
     "forced_variance_ceiling.json",
@@ -3208,7 +3259,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-09 10:39",
+   "modified": "2026-10-15 21:07",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -3885,6 +3936,95 @@
     "tested_bin",
     "specs",
     "passing_specs"
+   ]
+  },
+  {
+   "path": "results/current/3_calibration/cluster_ci_audit.json",
+   "tree": "current",
+   "stage": "3_calibration",
+   "readable": true,
+   "bytes": 7096,
+   "modified": "2026-10-15 21:01",
+   "sha256_16": "7a17f509362ffde3",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py": "d07e7a6fcce74b45"
+   },
+   "verdicts": [
+    {
+     "key": "statistics.S1_paired_diff.reading_published_interval",
+     "text": "holds"
+    },
+    {
+     "key": "statistics.S1_paired_diff.reading_valid_interval",
+     "text": "holds"
+    },
+    {
+     "key": "statistics.S2_resid_shift_NH.reading_published_interval",
+     "text": "holds"
+    },
+    {
+     "key": "statistics.S2_resid_shift_NH.reading_valid_interval",
+     "text": "holds"
+    },
+    {
+     "key": "statistics.S3_resid_locscale_NH.reading_published_interval",
+     "text": "holds"
+    },
+    {
+     "key": "statistics.S3_resid_locscale_NH.reading_valid_interval",
+     "text": "holds"
+    },
+    {
+     "key": "statistics.S4_Delta_b_strong11.reading_published_interval",
+     "text": "inconclusive"
+    },
+    {
+     "key": "statistics.S4_Delta_b_strong11.reading_valid_interval",
+     "text": "no valid method"
+    },
+    {
+     "key": "statistics.S5_regional_resid.reading_published_interval",
+     "text": "holds"
+    },
+    {
+     "key": "statistics.S5_regional_resid.reading_valid_interval",
+     "text": "inconclusive"
+    },
+    {
+     "key": "statistics.S6_free_law_resid.reading_published_interval",
+     "text": "holds"
+    },
+    {
+     "key": "statistics.S6_free_law_resid.reading_valid_interval",
+     "text": "holds"
+    },
+    {
+     "key": "statistics.S7_SH_resid_locscale.reading_published_interval",
+     "text": "holds"
+    },
+    {
+     "key": "statistics.S7_SH_resid_locscale.reading_valid_interval",
+     "text": "holds"
+    }
+   ],
+   "counts": {
+    "n_boot": [
+     10000
+    ]
+   },
+   "top_level_keys": [
+    "registered",
+    "seed",
+    "n_boot",
+    "n_sim",
+    "statistics",
+    "post_hoc_planted_S5"
    ]
   },
   {
@@ -7727,6 +7867,105 @@
    ]
   },
   {
+   "path": "results/current/8_experiment/enso_extreme_class.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 14174,
+   "modified": "2026-10-15 21:07",
+   "sha256_16": "82078f4367e77c7d",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/enso_extreme_class.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/enso_extreme_class.py": "51f35ea9093c1232"
+   },
+   "verdicts": [
+    {
+     "key": "T1_reading",
+     "text": "extreme El Nino is not a fixed regime whose frequency forcing changes"
+    },
+    {
+     "key": "T3_law_extreme.ACCESS-ESM1-5.L0_to_L1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "T3_law_extreme.ACCESS-ESM1-5.L0_to_L2.reading",
+     "text": "holds"
+    },
+    {
+     "key": "T3_law_extreme.CanESM5-p1.L0_to_L1.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "T3_law_extreme.CanESM5-p1.L0_to_L2.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "T3_law_extreme.CanESM5-p2.L0_to_L1.reading",
+     "text": "undefined (class below 10 member-seasons)"
+    },
+    {
+     "key": "T3_law_extreme.CanESM5-p2.L0_to_L2.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "T3_law_extreme.MIROC6.L0_to_L1.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "T3_law_extreme.MIROC6.L0_to_L2.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "T4_forced_share.ACCESS-ESM1-5.reading",
+     "text": "the forced share is what the law predicts"
+    },
+    {
+     "key": "T4_forced_share.CanESM5-p1.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "T4_forced_share.CanESM5-p2.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "T4_forced_share.MIROC6.reading",
+     "text": "the forced share is what the law predicts"
+    }
+   ],
+   "counts": {
+    "n_boot": [
+     1000
+    ],
+    "n_members": [
+     50
+    ]
+   },
+   "top_level_keys": [
+    "validation",
+    "validation_fixed",
+    "registered",
+    "seed",
+    "B",
+    "inputs",
+    "command",
+    "versions",
+    "step0_models",
+    "selected",
+    "T1_rain_mixing",
+    "T1_reading",
+    "T2_ts_mixing",
+    "T3_law_extreme",
+    "T4_forced_share",
+    "T5_shape_modes",
+    "T6_post_hoc_regimes_by_level"
+   ]
+  },
+  {
    "path": "results/current/8_experiment/lens_confirmation.json",
    "tree": "current",
    "stage": "8_experiment",
@@ -9038,12 +9277,14 @@
    "modified": "2026-10-07 14:24",
    "sha256_16": "972816a62a6bdddd",
    "producers": [
+    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py",
     "ssw-design-analysis/07_physical_decomposition/snapsi_free_natural_experiment.py"
    ],
    "state": "current",
    "detail": "",
    "flags": [],
    "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py": "d07e7a6fcce74b45",
     "ssw-design-analysis/07_physical_decomposition/snapsi_free_natural_experiment.py": "9f964b9443466ddf"
    },
    "verdicts": [
@@ -9153,11 +9394,15 @@
    "bytes": 12274,
    "modified": "2026-10-04 13:21",
    "sha256_16": "aa84be5b076b82e5",
-   "producers": [],
-   "state": "ORPHAN",
-   "detail": "no script writes this",
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py"
+   ],
+   "state": "current",
+   "detail": "",
    "flags": [],
-   "producer_sha256": {},
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py": "d07e7a6fcce74b45"
+   },
    "verdicts": [
     {
      "key": "F2_reading",
@@ -9549,6 +9794,7 @@
    "modified": "2026-09-25 16:07",
    "sha256_16": "c26057a7c4a2e49e",
    "producers": [
+    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py",
     "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py",
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py"
    ],
@@ -9556,6 +9802,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py": "d07e7a6fcce74b45",
     "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "3d5a308a513cc3a2",
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "6626a155b09d3623"
    },

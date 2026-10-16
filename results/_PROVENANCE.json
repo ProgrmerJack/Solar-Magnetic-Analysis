@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-09T10:52:57+00:00",
+ "generated": "2026-10-16T05:16:16+00:00",
  "note": "Known-good baseline: each result was produced by the script at the recorded sha256. catalog_repo.py flags STALE when a producer's hash no longer matches. Re-record with --record only AFTER re-running the analysis.",
  "results": {
   "catalogue_sets.json": {
@@ -180,6 +180,16 @@
     "ssw-design-analysis/06_simulation_validation/calibrate_seasonality.py": "d0df387de0b919aa"
    },
    "result_sha256_16": "88119e150d8bb44f",
+   "needs_rerun": false
+  },
+  "cluster_ci_audit.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py": "d07e7a6fcce74b45"
+   },
+   "result_sha256_16": "7a17f509362ffde3",
    "needs_rerun": false
   },
   "gate3_clean_null.json": {
@@ -774,6 +784,16 @@
    "result_sha256_16": "194e6cea8f117b65",
    "needs_rerun": false
   },
+  "enso_extreme_class.json": {
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/enso_extreme_class.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/enso_extreme_class.py": "51f35ea9093c1232"
+   },
+   "result_sha256_16": "82078f4367e77c7d",
+   "needs_rerun": false
+  },
   "mixture_moment_test.json": {
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/mixture_moment_test.py"
@@ -816,9 +836,11 @@
   },
   "snapsi_contrast_generality.json": {
    "producers": [
+    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py",
     "ssw-design-analysis/07_physical_decomposition/snapsi_free_natural_experiment.py"
    ],
    "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py": "d07e7a6fcce74b45",
     "ssw-design-analysis/07_physical_decomposition/snapsi_free_natural_experiment.py": "9f964b9443466ddf"
    },
    "result_sha256_16": "972816a62a6bdddd",
@@ -832,6 +854,16 @@
     "ssw-design-analysis/07_physical_decomposition/snapsi_distribution_test.py": "f1808d11b4060b15"
    },
    "result_sha256_16": "81296c9279fade5d",
+   "needs_rerun": false
+  },
+  "snapsi_free_natural_experiment.json": {
+   "producers": [
+    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py"
+   ],
+   "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py": "d07e7a6fcce74b45"
+   },
+   "result_sha256_16": "aa84be5b076b82e5",
    "needs_rerun": false
   },
   "snapsi_loeffel_test.json": {
@@ -866,10 +898,12 @@
   },
   "snapsi_selection_test.json": {
    "producers": [
+    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py",
     "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py",
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py"
    ],
    "producer_sha256": {
+    "ssw-design-analysis/06_simulation_validation/cluster_ci_audit.py": "d07e7a6fcce74b45",
     "ssw-design-analysis/07_physical_decomposition/snapsi_contrast_generality.py": "3d5a308a513cc3a2",
     "ssw-design-analysis/07_physical_decomposition/snapsi_selection_test.py": "6626a155b09d3623"
    },

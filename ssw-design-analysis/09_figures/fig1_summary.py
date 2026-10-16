@@ -124,7 +124,9 @@ def main():
     dx.text(gm, 1.33, f"{gm:+.2f}σ".replace("-", "−"), ha="center", fontsize=5.8, color=verm)
     d_ = ys - xs
     dx.scatter(d_, 0 + rng.uniform(-0.12, 0.12, len(d_)), s=8, color=grey, zorder=2)
-    lo, hi = pr["paired_difference_CI95_centre_bootstrap"]
+    aud = R / "3_calibration" / "cluster_ci_audit.json"       # valid few-cluster interval (cluster_ci_audit, 2026-10-09)
+    lo, hi = (json.loads(aud.read_text())["statistics"]["S1_paired_diff"]["ci_B_cluster_robust_t"] if aud.exists()
+              else pr["paired_difference_CI95_centre_bootstrap"])
     dx.plot([lo, hi], [0, 0], color=verm, lw=1.0, zorder=3)
     dx.plot([pr["paired_difference"]] * 2, [-0.25, 0.25], color=verm, lw=1.6, zorder=3)
     dx.text(pr["paired_difference"], -0.45, f"{pr['paired_difference']:+.2f}σ [{lo:+.2f}, {hi:+.2f}]".replace("-", "−"),

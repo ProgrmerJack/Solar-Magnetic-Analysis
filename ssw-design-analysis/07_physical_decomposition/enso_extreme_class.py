@@ -70,6 +70,17 @@ VALIDATION GATE (--validate; before any data). 1,000 simulations per null case, 
   mean 0/0.5/1.0, through the fixed convex map rain = 1 + 2 exp(0.8 sst); PB one gamma
   population with constant coefficient of variation, mean 2/2.6/3.4 mm/day.
   A failed gate stops T1-T3 and is reported.
+POST HOC (added 2026-10-16 after the registered results, labelled so in the JSON): T6, for every
+  model, a two-component Gaussian mixture fitted to DJF Nino3 ts at each level separately:
+  component means, s.d. and weights, the number of modes of the fitted density, and BIC(1) - BIC(2).
+  Question: where the SST is bimodal (two regimes), does forcing move the components (regimes
+  that drift) or change their weights (fixed regimes)? Descriptive; no reading was fixed.
+  For models whose fit has two modes at every level, 1,000 resamples of whole members (paired
+  across levels) give 95% intervals of the upper-regime weight change and of each component's
+  shift from L0 to L2 (also post hoc). A decomposition (post hoc, after review) assigns every
+  member-season to a regime by the fit's posterior and splits the L0-to-L2 change of the rainfall
+  extreme rate (pr > 5 mm/day; pr and ts of the same member-season) into a weight-only and a
+  within-regime-only counterfactual.
 Output: results/current/8_experiment/enso_extreme_class.json
 Run:    enso_extreme_class.py --validate ; enso_extreme_class.py
 """
@@ -217,6 +228,61 @@ def shape_and_modes(arms, ts_arms):
     return out
 
 
+def regimes_by_level(ts_arms):
+    """POST HOC: two-component fit to DJF Nino3 ts at each level (K, absolute)."""
+    from sklearn.mixture import GaussianMixture
+    out = {}
+    for L, (_, X) in zip(LEVELS, ts_arms):
+        x = X.ravel().reshape(-1, 1)
+        g1 = GaussianMixture(1, random_state=0).fit(x); g2 = GaussianMixture(2, n_init=10, random_state=0).fit(x)
+        o = np.argsort(g2.means_.ravel())
+        grid = np.linspace(x.min(), x.max(), 4001).reshape(-1, 1); f = np.exp(g2.score_samples(grid))
+        out[L] = {"means_K": [round(float(g2.means_.ravel()[i]), 3) for i in o],
+                  "sd_K": [round(float(np.sqrt(g2.covariances_.ravel()[i])), 3) for i in o],
+                  "weights": [round(float(g2.weights_[i]), 3) for i in o],
+                  "modes": int(np.sum((f[1:-1] > f[:-2]) & (f[1:-1] > f[2:]))),
+                  "bic_1_minus_2": round(float(g1.bic(x) - g2.bic(x)), 2), "mean_K": round(float(x.mean()), 3)}
+    return out
+
+
+def regime_boot(ts_arms, rng, n=1000):
+    """POST HOC: member bootstrap of the two-component fit at L0 and L2."""
+    from sklearn.mixture import GaussianMixture
+    X0, X2 = ts_arms[0][1], ts_arms[2][1]; M = X0.shape[0]
+    def fit(x):
+        g = GaussianMixture(2, n_init=5, random_state=0).fit(x.reshape(-1, 1)); o = np.argsort(g.means_.ravel())
+        return g.means_.ravel()[o], g.weights_[o]
+    dw, d_lo, d_hi = [], [], []
+    for _ in range(n):
+        i = rng.integers(M, size=M)
+        (m0, w0), (m2, w2) = fit(X0[i].ravel()), fit(X2[i].ravel())
+        dw.append(w2[1] - w0[1]); d_lo.append(m2[0] - m0[0]); d_hi.append(m2[1] - m0[1])
+    q = lambda a: [round(float(x), 3) for x in np.quantile(a, [0.025, 0.975])]
+    return {"n_boot": n, "upper_weight_change_ci95": q(dw), "lower_mode_shift_K_ci95": q(d_lo), "upper_mode_shift_K_ci95": q(d_hi)}
+
+
+def regime_decomposition(ts_arms, pr_arms):
+    """POST HOC: how much of the L0->L2 change in the extreme rate is a change of regime weight."""
+    from sklearn.mixture import GaussianMixture
+    ids_t = list(ts_arms[0][0]); ids_p = list(pr_arms[0][0]); common = [i for i in ids_t if i in ids_p]
+    it = [ids_t.index(i) for i in common]; ip = [ids_p.index(i) for i in common]
+    out = {}
+    for L, j in (("L0", 0), ("L2", 2)):
+        T = ts_arms[j][1][it].ravel(); P = pr_arms[j][1][ip].ravel()
+        g = GaussianMixture(2, n_init=10, random_state=0).fit(T.reshape(-1, 1)); up = int(np.argmax(g.means_.ravel()))
+        reg = g.predict(T.reshape(-1, 1)) == up
+        out[L] = {"w_upper": float(reg.mean()), "p_ext_upper": float((P[reg] > EXTREME_MM).mean()),
+                  "p_ext_lower": float((P[~reg] > EXTREME_MM).mean()), "rate": float((P > EXTREME_MM).mean()),
+                  "share_of_extremes_in_upper": float((reg & (P > EXTREME_MM)).sum() / max((P > EXTREME_MM).sum(), 1))}
+    a, b = out["L0"], out["L2"]
+    w_only = b["w_upper"] * a["p_ext_upper"] + (1 - b["w_upper"]) * a["p_ext_lower"]
+    within_only = a["w_upper"] * b["p_ext_upper"] + (1 - a["w_upper"]) * b["p_ext_lower"]
+    rnd = lambda d: {k: round(v, 4) for k, v in d.items()}
+    return {"n_members": len(common), "L0": rnd(a), "L2": rnd(b), "rate_weight_only": round(w_only, 4),
+            "rate_within_regime_only": round(within_only, 4),
+            "share_of_rise_from_weight": round((w_only - a["rate"]) / (b["rate"] - a["rate"]), 4)}
+
+
 def category(r, p_holm):
     ci = r["rho_ci95"]
     return ("incompatible with fixed two-type mixing" if p_holm < 0.05 else
@@ -341,7 +407,13 @@ def main():
                              for i, m in enumerate(sorted(arms_pr))}
     res["T4_forced_share"] = {m: forced_share(arms_pr[m], EXTREME_MM, np.random.default_rng(SEED + 80 + i)) for i, m in enumerate(sorted(arms_pr))}
     res["T5_shape_modes"] = {m: shape_and_modes(arms_pr[m], arms_ts.get(m)) for m in sorted(arms_pr)}
-    for k in ("T2_ts_mixing", "T3_law_extreme", "T4_forced_share", "T5_shape_modes"):
+    res["T6_post_hoc_regimes_by_level"] = {m: regimes_by_level(arms_ts[m]) for m in sorted(arms_ts)}
+    for m, v in res["T6_post_hoc_regimes_by_level"].items():
+        if all(v[L]["modes"] == 2 for L in LEVELS):
+            v["bootstrap_L0_to_L2"] = regime_boot(arms_ts[m], np.random.default_rng(SEED + 200))
+            if m in arms_pr:
+                v["decomposition_extreme_rate"] = regime_decomposition(arms_ts[m], arms_pr[m])
+    for k in ("T2_ts_mixing", "T3_law_extreme", "T4_forced_share", "T5_shape_modes", "T6_post_hoc_regimes_by_level"):
         print(k, json.dumps(res[k], default=float)[:1500], flush=True)
     OUT.write_text(json.dumps(res, indent=1, default=float), encoding="utf8", newline="\n")
     print(f"Saved -> {OUT.name}")

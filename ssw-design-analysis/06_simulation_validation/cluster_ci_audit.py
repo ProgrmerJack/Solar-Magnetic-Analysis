@@ -34,6 +34,8 @@ REPORT  for each statistic: both intervals, validity, and its reading under the 
   rule (tolerance +-0.25 sigma: inside -> holds; excluding 0 with |mean| > 0.25 -> fails;
   else inconclusive) with the valid method (B if both are valid); a change of reading is
   flagged. Nothing in the paper is changed by this script.
+POST HOC (2026-10-16, after review; labelled in the JSON): the cluster-robust interval of the
+  planted-cooling check of S5 (pairs_regional resid_plant_1.32K and resid_plant_0.5sigma).
 Output: results/current/3_calibration/cluster_ci_audit.json
 """
 import json
@@ -144,6 +146,14 @@ def main():
         res["statistics"][name] = r
         print(name, json.dumps({k: r[k] for k in ("mean", "ci_A_centre_bootstrap", "ci_B_cluster_robust_t", "valid",
                                                     "reading_published_interval", "reading_valid_interval")}), flush=True)
+    g = json.loads((R8 / "snapsi_contrast_generality.json").read_text())
+    ph = {}
+    for key in ("resid_plant_1.32K", "resid_plant_0.5sigma"):
+        v = [(r["centre"], r[key]) for r in g["pairs_regional"] if r.get(key) is not None and np.isfinite(r[key])]
+        c = np.array([a for a, _ in v]); x = np.array([b for _, b in v])
+        ph[key] = {"mean": round(float(x.mean()), 4), "ci_B_cluster_robust_t": [round(float(q), 4) for q in cr1_ci(c, x)],
+                   "n_units": int(len(x)), "n_centres": int(len(np.unique(c)))}
+    res["post_hoc_planted_S5"] = ph
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(res, indent=1, default=float), encoding="utf8", newline="\n")
     print(f"Saved -> {OUT.relative_to(ROOT)}")

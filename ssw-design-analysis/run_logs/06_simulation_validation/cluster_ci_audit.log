@@ -1,0 +1,8 @@
+S1_paired_diff {"mean": -0.0283, "ci_A_centre_bootstrap": [-0.1233, 0.0557], "ci_B_cluster_robust_t": [-0.1443, 0.0878], "valid": {"A": false, "B": true}, "reading_published_interval": "holds", "reading_valid_interval": "holds"}
+S2_resid_shift_NH {"mean": 0.0401, "ci_A_centre_bootstrap": [-0.0247, 0.0978], "ci_B_cluster_robust_t": [-0.0406, 0.1208], "valid": {"A": false, "B": true}, "reading_published_interval": "holds", "reading_valid_interval": "holds"}
+S3_resid_locscale_NH {"mean": 0.0417, "ci_A_centre_bootstrap": [-0.0248, 0.1215], "ci_B_cluster_robust_t": [-0.0539, 0.1372], "valid": {"A": false, "B": true}, "reading_published_interval": "holds", "reading_valid_interval": "holds"}
+S4_Delta_b_strong11 {"mean": 0.1734, "ci_A_centre_bootstrap": [0.0378, 0.3288], "ci_B_cluster_robust_t": [0.0111, 0.3357], "valid": {"A": false, "B": false}, "reading_published_interval": "inconclusive", "reading_valid_interval": "no valid method"}
+S5_regional_resid {"mean": -0.0861, "ci_A_centre_bootstrap": [-0.2419, 0.0521], "ci_B_cluster_robust_t": [-0.2803, 0.1081], "valid": {"A": false, "B": true}, "reading_published_interval": "holds", "reading_valid_interval": "inconclusive"}
+S6_free_law_resid {"mean": -0.0121, "ci_A_centre_bootstrap": [-0.0913, 0.0572], "ci_B_cluster_robust_t": [-0.1089, 0.0846], "valid": {"A": false, "B": true}, "reading_published_interval": "holds", "reading_valid_interval": "holds"}
+S7_SH_resid_locscale {"mean": -0.0365, "ci_A_centre_bootstrap": [-0.1382, 0.0844], "ci_B_cluster_robust_t": [-0.1912, 0.1183], "valid": {"A": false, "B": true}, "reading_published_interval": "holds", "reading_valid_interval": "holds"}
+Saved -> results/current/3_calibration/cluster_ci_audit.json

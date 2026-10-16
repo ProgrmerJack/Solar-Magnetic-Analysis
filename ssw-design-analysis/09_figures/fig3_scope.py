@@ -1,21 +1,23 @@
 #!/usr/bin/env python3
 """
-fig3_scope.py -- Figure 3: what the result permits -- distributional departures and
-differences between events.
+fig3_scope.py -- Figure 3: across events and systems, where forcing differs -- the forced
+share of class contrasts, and how much events differ.
 
 Reads (recomputes nothing):
   results/current/8_experiment/snapsi_residual_quantiles.json   residual quantiles (Z1)
   results/current/5_mechanism/icon_event_heterogeneity.json     ICON event ensembles (Z3)
   results/current/8_experiment/snapsi_archetype_test.json       archetype pair (O)
 
-  a  polar-cap NAM, days 8-25: residual quantile of the SSW-imposed members against
-     the control translated by the mean shift, pooled over 36 ensembles and per event
-     (95% two-stage bootstrap); grey, the tolerance declared before the test
-  b  the same for northern-Eurasian temperature, days 8-24
-  c  18 ICON SSWs re-run as 40-member ensembles (Loeffel et al. 2026): ensemble-mean
+  results/current/8_experiment/class_forcing_content.json      forced shares (Z20)
+  results/current/8_experiment/enso_extreme_class.json         extreme El Nino (Z22)
+
+  a  forced share R of the class contrast (observed, filled; 95% interval where stored) and
+     its prediction (open: the law's R_LS where forcing levels are known, else h2), per system
+     (residual-quantile panels of earlier versions are Extended Data Fig. 8)
+  b  18 ICON SSWs re-run as 40-member ensembles (Loeffel et al. 2026): ensemble-mean
      surface response, days 8-25, against the week-2 100 hPa anomaly (both NAM sign);
      open, the six ensembles that start on their onset day (already easterly at t = 0)
-  d  the field's archetype pair: forced probability of a downward outcome in each
+  c  the field's archetype pair: forced probability of a downward outcome in each
      model (nudged members), February 2018 and January 2019, primary initialisations
 """
 import json
@@ -27,7 +29,6 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import nature_style as S  # noqa: E402
 import matplotlib.pyplot as plt  # noqa: E402
-from figED8_translation import panel  # noqa: E402
 
 M = lambda s: s.replace("-", "−")                     # noqa: E731
 
@@ -35,27 +36,44 @@ M = lambda s: s.replace("-", "−")                     # noqa: E731
 def main():
     S.apply()
     R = S.RESULTS
-    rq = json.loads((R / "8_experiment" / "snapsi_residual_quantiles.json").read_text())
+    cf = json.loads((R / "8_experiment" / "class_forcing_content.json").read_text())
+    en = json.loads((R / "8_experiment" / "enso_extreme_class.json").read_text())
     ic = json.loads((R / "5_mechanism" / "icon_event_heterogeneity.json").read_text())["primary_registered"]
     arc = json.loads((R / "8_experiment" / "snapsi_archetype_test.json").read_text())
     grey, verm = "0.6", S.C["vermillion"]
-    fig = plt.figure(figsize=(S.DOUBLE, 112 * S.MM))
-    gs = fig.add_gridspec(2, 2, wspace=0.34, hspace=0.62)
-    tR = rq["tolerance"]["R_sigma"]
-
-    ax = fig.add_subplot(gs[0, 0])
-    A = rq["A_polar_cap_NAM_days8_25"]
-    panel(ax, A, tR, "R", "residual quantile (σ of control)")
-    ax.set_ylim(-0.6, 0.6); ax.legend(loc="lower left", fontsize=4.8)
-    ax.set_title(f"polar-cap NAM: pooled within tolerance; single events {A['Feb-2018']['reading']}", fontsize=5.8)
-    S.panel_label(ax, "a", x=-0.18, y=1.04)
-
-    bx = fig.add_subplot(gs[0, 1])
-    T = rq["T_northern_Eurasia_days8_24"]
-    panel(bx, T, tR, "R", "residual quantile (σ of control)")
-    bx.set_ylim(-0.6, 0.6)
-    bx.set_title(f"northern-Eurasian temperature: {T['pooled']['reading']}", fontsize=5.8)
-    S.panel_label(bx, "b", x=-0.18, y=1.04)
+    fig = plt.figure(figsize=(S.DOUBLE, 140 * S.MM))
+    gs = fig.add_gridspec(2, 2, wspace=0.34, hspace=0.45, height_ratios=[1.35, 1])
+    rows = []          # (label, observed R, ci or None, predicted, kind of prediction)
+    p2 = cf["P2_obs_ncep_episodes"]; s2 = cf["S2_obs_era5_episodes"]; s1 = cf["S1_free_natural_experiment"]
+    rows.append(("SSW, 114 observed weakenings (NCEP)", p2["R_obs"]["mean"], p2["R_obs"]["ci95"], p2["R_h2"]["mean"], "h2"))
+    rows.append(("SSW, 143 observed weakenings (ERA5)", s2["R_obs"]["mean"], s2["R_obs"]["ci95"], s2["R_h2"]["mean"], "h2"))
+    rows.append(("SSW, spontaneous in SNAPSI", s1["R_obs"]["mean"], s1["R_obs"]["ci95"], s1["R_LS"]["mean"], "law"))
+    s5 = cf["S5_cmip6_events_dose"]
+    rows.append(("SSW, CMIP6 realised 100 hPa dose", s5["R_obs"], s5["R_obs_summary"]["ci95"], s5["R_h2"], "h2"))
+    for k, lab in (("MAJOR", "cyclones, major (genesis SST)"), ("RI", "cyclones, rapid intensification")):
+        t = cf["S3_tropical_cyclones"]["global_terciles"][k]; rows.append((lab, t["R_obs"], None, t["R_LS"], "law"))
+    for k, lab in (("CEUR_JJA", "hot summers, central Europe"), ("WRUS_JJA", "hot summers, western Russia"),
+                   ("CNAM_JJA", "hot summers, central N. America"), ("CEAS_DJF", "cold winters, central Eurasia")):
+        t = cf["S4_human_forcing_hadgem3"][k]; rows.append((lab + " (HadGEM3)", t["R_obs"], None, t["R_LS"], "law"))
+    for m, t in en["T4_forced_share"].items():
+        if "R_obs" in t:
+            rows.append((f"extreme El Niño, {m}", t["R_obs"], None, t["R_LS"], "law"))
+    ax = fig.add_subplot(gs[0, :])
+    yy = np.arange(len(rows))[::-1]
+    for y_, (lab, r, ci, pr, kind) in zip(yy, rows):
+        if ci:
+            ax.plot(ci, [y_, y_], color=verm, lw=0.9)
+        ax.scatter([r], [y_], s=14, color=verm, zorder=3)
+        ax.scatter([pr], [y_], s=14, facecolor="white", edgecolor="k", lw=0.6, zorder=4)
+        ax.text(0.465, y_, f"×{1 / r:.0f}", va="center", fontsize=5.2, color="0.3")
+    ax.set_yticks(yy); ax.set_yticklabels([r[0] for r in rows], fontsize=5.2)
+    ax.set_xlim(0, 0.5); ax.set_xlabel("share of the class contrast that is a difference in forcing")
+    ax.text(0.465, len(rows) - 0.2, "contrast /\nforcing", ha="center", va="bottom", fontsize=5.0, color="0.3")
+    ax.scatter([], [], s=14, color=verm, label="observed (95% interval where stored)")
+    ax.scatter([], [], s=14, facecolor="white", edgecolor="k", lw=0.6, label="predicted (law, or variance share h²)")
+    ax.legend(loc="lower right", fontsize=4.8, frameon=False, bbox_to_anchor=(0.9, 0.0))
+    ax.set_title("classes cut from the outcome overstate their difference in forcing", fontsize=6)
+    S.panel_label(ax, "a", x=-0.28, y=1.02)
 
     cx = fig.add_subplot(gs[1, 0])
     ev = ic["events"]
@@ -74,7 +92,7 @@ def main():
     cx.set_ylabel("ensemble-mean surface response,\ndays 8-25 (NAM sign, s.d.)")
     cx.legend(loc="lower right", fontsize=4.8)
     cx.set_title("events differ, with the lower stratosphere (ICON)", fontsize=6)
-    S.panel_label(cx, "c", x=-0.2, y=1.04)
+    S.panel_label(cx, "b", x=-0.2, y=1.04)
 
     dx = fig.add_subplot(gs[1, 1])
     pe = [e for e in arc["per_ensemble"] if e["init"] in ("s20180125", "s20181213")]
@@ -92,7 +110,7 @@ def main():
     dx.set_xlim(-0.5, 1.6); dx.set_ylim(0, 1.05)
     dx.set_ylabel("forced P(downward), per model")
     dx.set_title("the archetype pair: similar forced odds", fontsize=6)
-    S.panel_label(dx, "d", x=-0.16, y=1.04)
+    S.panel_label(dx, "c", x=-0.16, y=1.04)
     S.save(fig, "fig3_scope")
 
 

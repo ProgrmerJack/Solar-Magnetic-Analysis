@@ -1,0 +1,32 @@
+{
+ "n_sim": 1000,
+ "B": 999,
+ "cases": {
+  "E1": {
+   "T_reject": 0.003,
+   "T_upper95": 0.0077
+  },
+  "E2": {
+   "T_reject": 0.003,
+   "T_upper95": 0.0077
+  },
+  "E3": {
+   "T_reject": 0.004,
+   "T_upper95": 0.0091
+  },
+  "E4": {
+   "T_reject": 0.004,
+   "T_upper95": 0.0091
+  },
+  "PA": {
+   "T_reject": 0.262,
+   "T_upper95": 0.2859
+  },
+  "PB": {
+   "T_reject": 0.799,
+   "T_upper95": 0.8197
+  }
+ },
+ "passes": true
+}
+.venv/bin/python  --validate  278.07s user 1.06s system 617% cpu 45.216 total

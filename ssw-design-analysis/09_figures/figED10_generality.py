@@ -99,7 +99,12 @@ def main():
     dx.plot(lim, lim, color="k", lw=0.6, ls=(0, (3, 2)))
     dx.scatter(q.CT_null, q.CT_nudged, s=12, color=verm, zorder=3)
     g4 = d["G4_regional_temperature"]
-    r, pl = g4["resid"], g4["resid_plant_0.5sigma"]
+    r, pl = dict(g4["resid"]), dict(g4["resid_plant_0.5sigma"])
+    aud = S.RESULTS / "3_calibration" / "cluster_ci_audit.json"     # valid few-cluster intervals (2026-10-16)
+    if aud.exists():
+        A = json.loads(aud.read_text())
+        r["ci95"] = A["statistics"]["S5_regional_resid"]["ci_B_cluster_robust_t"]
+        pl["ci95"] = A["post_hoc_planted_S5"]["resid_plant_0.5sigma"]["ci_B_cluster_robust_t"]
     dx.set_title(M(f"residual {r['mean']:+.2f}σ [{r['ci95'][0]:+.2f}, {r['ci95'][1]:+.2f}] "
                           f"(≈ {g4['resid_K_approx']:+.2f} K), {r['n_pairs']} pairs\n"
                           f"with a planted 0.5σ: {pl['mean']:+.2f} [{pl['ci95'][0]:+.2f}, {pl['ci95'][1]:+.2f}]"),

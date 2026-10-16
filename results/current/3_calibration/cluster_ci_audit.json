@@ -1,0 +1,414 @@
+{
+ "registered": "2026-10-09, committed before any interval was recomputed",
+ "seed": 574297246,
+ "n_boot": 10000,
+ "n_sim": 2000,
+ "statistics": {
+  "S1_paired_diff": {
+   "n_units": 25,
+   "n_centres": 8,
+   "mean": -0.0283,
+   "published": {
+    "mean": -0.0283,
+    "ci95": [
+     -0.1219,
+     0.0544
+    ]
+   },
+   "ci_A_centre_bootstrap": [
+    -0.1233,
+    0.0557
+   ],
+   "ci_B_cluster_robust_t": [
+    -0.1443,
+    0.0878
+   ],
+   "s_between": 0.0,
+   "s_within": 0.3331,
+   "validation": {
+    "gauss": {
+     "A": {
+      "non_coverage": 0.124,
+      "upper95": 0.1368
+     },
+     "B": {
+      "non_coverage": 0.049,
+      "upper95": 0.0577
+     }
+    },
+    "t4": {
+     "A": {
+      "non_coverage": 0.1225,
+      "upper95": 0.1352
+     },
+     "B": {
+      "non_coverage": 0.0475,
+      "upper95": 0.0561
+     }
+    }
+   },
+   "valid": {
+    "A": false,
+    "B": true
+   },
+   "method_used": "B",
+   "reading_published_interval": "holds",
+   "reading_valid_interval": "holds",
+   "reading_changed": false
+  },
+  "S2_resid_shift_NH": {
+   "n_units": 23,
+   "n_centres": 8,
+   "mean": 0.0401,
+   "published": {
+    "mean": 0.0401,
+    "ci95": [
+     -0.026,
+     0.0985
+    ],
+    "n_pairs": 23,
+    "n_centres": 8
+   },
+   "ci_A_centre_bootstrap": [
+    -0.0247,
+    0.0978
+   ],
+   "ci_B_cluster_robust_t": [
+    -0.0406,
+    0.1208
+   ],
+   "s_between": 0.0,
+   "s_within": 0.2491,
+   "validation": {
+    "gauss": {
+     "A": {
+      "non_coverage": 0.1055,
+      "upper95": 0.1175
+     },
+     "B": {
+      "non_coverage": 0.048,
+      "upper95": 0.0566
+     }
+    },
+    "t4": {
+     "A": {
+      "non_coverage": 0.107,
+      "upper95": 0.119
+     },
+     "B": {
+      "non_coverage": 0.0455,
+      "upper95": 0.0539
+     }
+    }
+   },
+   "valid": {
+    "A": false,
+    "B": true
+   },
+   "method_used": "B",
+   "reading_published_interval": "holds",
+   "reading_valid_interval": "holds",
+   "reading_changed": false
+  },
+  "S3_resid_locscale_NH": {
+   "n_units": 22,
+   "n_centres": 8,
+   "mean": 0.0417,
+   "published": {
+    "mean": 0.0417,
+    "ci95": [
+     -0.0259,
+     0.1222
+    ],
+    "n_pairs": 22,
+    "n_centres": 8
+   },
+   "ci_A_centre_bootstrap": [
+    -0.0248,
+    0.1215
+   ],
+   "ci_B_cluster_robust_t": [
+    -0.0539,
+    0.1372
+   ],
+   "s_between": 0.0439,
+   "s_within": 0.1787,
+   "validation": {
+    "gauss": {
+     "A": {
+      "non_coverage": 0.107,
+      "upper95": 0.119
+     },
+     "B": {
+      "non_coverage": 0.047,
+      "upper95": 0.0555
+     }
+    },
+    "t4": {
+     "A": {
+      "non_coverage": 0.116,
+      "upper95": 0.1284
+     },
+     "B": {
+      "non_coverage": 0.045,
+      "upper95": 0.0534
+     }
+    }
+   },
+   "valid": {
+    "A": false,
+    "B": true
+   },
+   "method_used": "B",
+   "reading_published_interval": "holds",
+   "reading_valid_interval": "holds",
+   "reading_changed": false
+  },
+  "S4_Delta_b_strong11": {
+   "n_units": 11,
+   "n_centres": 8,
+   "mean": 0.1734,
+   "published": {
+    "mean": 0.1734,
+    "ci95": [
+     0.0404,
+     0.3304
+    ],
+    "n_pairs": 11,
+    "n_centres": 8
+   },
+   "ci_A_centre_bootstrap": [
+    0.0378,
+    0.3288
+   ],
+   "ci_B_cluster_robust_t": [
+    0.0111,
+    0.3357
+   ],
+   "s_between": 0.0,
+   "s_within": 0.5067,
+   "validation": {
+    "gauss": {
+     "A": {
+      "non_coverage": 0.1265,
+      "upper95": 0.1394
+     },
+     "B": {
+      "non_coverage": 0.065,
+      "upper95": 0.0748
+     }
+    },
+    "t4": {
+     "A": {
+      "non_coverage": 0.1275,
+      "upper95": 0.1404
+     },
+     "B": {
+      "non_coverage": 0.0615,
+      "upper95": 0.0711
+     }
+    }
+   },
+   "valid": {
+    "A": false,
+    "B": false
+   },
+   "method_used": null,
+   "reading_published_interval": "inconclusive",
+   "reading_valid_interval": "no valid method",
+   "reading_changed": false
+  },
+  "S5_regional_resid": {
+   "n_units": 23,
+   "n_centres": 8,
+   "mean": -0.0861,
+   "published": {
+    "mean": -0.0861,
+    "ci95": [
+     -0.2398,
+     0.057
+    ],
+    "n_pairs": 23,
+    "n_centres": 8
+   },
+   "ci_A_centre_bootstrap": [
+    -0.2419,
+    0.0521
+   ],
+   "ci_B_cluster_robust_t": [
+    -0.2803,
+    0.1081
+   ],
+   "s_between": 0.0,
+   "s_within": 0.602,
+   "validation": {
+    "gauss": {
+     "A": {
+      "non_coverage": 0.109,
+      "upper95": 0.1211
+     },
+     "B": {
+      "non_coverage": 0.046,
+      "upper95": 0.0545
+     }
+    },
+    "t4": {
+     "A": {
+      "non_coverage": 0.113,
+      "upper95": 0.1253
+     },
+     "B": {
+      "non_coverage": 0.037,
+      "upper95": 0.0447
+     }
+    }
+   },
+   "valid": {
+    "A": false,
+    "B": true
+   },
+   "method_used": "B",
+   "reading_published_interval": "holds",
+   "reading_valid_interval": "inconclusive",
+   "reading_changed": true
+  },
+  "S6_free_law_resid": {
+   "n_units": 8,
+   "n_centres": 8,
+   "mean": -0.0121,
+   "published": {
+    "mean": -0.0122,
+    "n_ensembles": 8,
+    "n_centres": 8,
+    "centre_means": {
+     "CCCma": -0.1281,
+     "ECMWF": 0.0329,
+     "KMA": 0.1253,
+     "Meteo-France": 0.0774,
+     "NCAR": -0.2239,
+     "NOAA-GFDL": 0.0275,
+     "SNU": 0.0446,
+     "UKMO": -0.0529
+    },
+    "ci95": [
+     -0.092,
+     0.0565
+    ]
+   },
+   "ci_A_centre_bootstrap": [
+    -0.0913,
+    0.0572
+   ],
+   "ci_B_cluster_robust_t": [
+    -0.1089,
+    0.0846
+   ],
+   "s_between": 0.1157,
+   "s_within": 0.0,
+   "validation": {
+    "gauss": {
+     "A": {
+      "non_coverage": 0.1195,
+      "upper95": 0.1321
+     },
+     "B": {
+      "non_coverage": 0.047,
+      "upper95": 0.0555
+     }
+    },
+    "t4": {
+     "A": {
+      "non_coverage": 0.115,
+      "upper95": 0.1274
+     },
+     "B": {
+      "non_coverage": 0.047,
+      "upper95": 0.0555
+     }
+    }
+   },
+   "valid": {
+    "A": false,
+    "B": true
+   },
+   "method_used": "B",
+   "reading_published_interval": "holds",
+   "reading_valid_interval": "holds",
+   "reading_changed": false
+  },
+  "S7_SH_resid_locscale": {
+   "n_units": 7,
+   "n_centres": 7,
+   "mean": -0.0365,
+   "published": {
+    "mean": -0.0365,
+    "ci95": [
+     -0.1376,
+     0.0794
+    ],
+    "n_pairs": 7,
+    "n_centres": 7
+   },
+   "ci_A_centre_bootstrap": [
+    -0.1382,
+    0.0844
+   ],
+   "ci_B_cluster_robust_t": [
+    -0.1912,
+    0.1183
+   ],
+   "s_between": 0.1673,
+   "s_within": 0.0,
+   "validation": {
+    "gauss": {
+     "A": {
+      "non_coverage": 0.137,
+      "upper95": 0.1503
+     },
+     "B": {
+      "non_coverage": 0.0515,
+      "upper95": 0.0604
+     }
+    },
+    "t4": {
+     "A": {
+      "non_coverage": 0.122,
+      "upper95": 0.1347
+     },
+     "B": {
+      "non_coverage": 0.046,
+      "upper95": 0.0545
+     }
+    }
+   },
+   "valid": {
+    "A": false,
+    "B": true
+   },
+   "method_used": "B",
+   "reading_published_interval": "holds",
+   "reading_valid_interval": "holds",
+   "reading_changed": false
+  }
+ },
+ "post_hoc_planted_S5": {
+  "resid_plant_1.32K": {
+   "mean": -0.7915,
+   "ci_B_cluster_robust_t": [
+    -0.9942,
+    -0.5888
+   ],
+   "n_units": 23,
+   "n_centres": 8
+  },
+  "resid_plant_0.5sigma": {
+   "mean": -0.5861,
+   "ci_B_cluster_robust_t": [
+    -0.7803,
+    -0.3919
+   ],
+   "n_units": 23,
+   "n_centres": 8
+  }
+ }
+}

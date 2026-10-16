@@ -83,6 +83,8 @@ def main():
     EQV = J("equivalence_observational.json")
     ETR = J("early_transfer_retest.json")
     CFC = J("class_forcing_content.json")
+    CIA = J("cluster_ci_audit.json")
+    ENX = J("enso_extreme_class.json")
     R2 = ("robustness (revision 2)", "committed before run", "4c8b3f2")
     mm = g(MMt, "multimodel", "confirmatory"); nr = g(SRt, "regions", "NEURASIA", "multimodel", "confirmatory")
     rows = [
@@ -458,6 +460,13 @@ def main():
           f"TC major {g(CFC,'S3_tropical_cyclones','global_terciles','MAJOR','R_obs')} vs law {g(CFC,'S3_tropical_cyclones','global_terciles','MAJOR','R_LS')}; "
           f"CEUR summers {g(CFC,'S4_human_forcing_hadgem3','CEUR_JJA','R_obs')} vs {g(CFC,'S4_human_forcing_hadgem3','CEUR_JJA','R_LS')}; "
           f"CMIP6 dose {g(CFC,'S5_cmip6_events_dose','R_obs')} vs h2 {g(CFC,'S5_cmip6_events_dose','R_h2')}") if CFC else "pending", None),
+        ("CI-1", "validity of intervals from resampling 8-9 SNAPSI centres (seven headline statistics): centre bootstrap vs cluster-robust t, coverage simulated in each layout", "revision-8 primary",
+         "committed before any interval was recomputed", "822f418",
+         ("; ".join(f"{k.split('_', 1)[1]}: {g(CIA,'statistics',k,'ci_B_cluster_robust_t')} ({g(CIA,'statistics',k,'reading_valid_interval')})"
+                    for k in (CIA or {}).get("statistics", {})) + "; centre bootstrap undercovers in all seven") if CIA else "pending", None),
+        ("EN-1", "extreme El Nino (DJF Nino3 rain > 5 mm/day): fixed two-type mixing across 1951-80, 2021-50, 2070-99 in CMIP6 large ensembles selected by Cai et al.'s rule (Holm over models)", "revision-8 primary",
+         "committed before data (gate before data)", "3342af3",
+         (f"selected {g(ENX,'selected')}: {g(ENX,'T1_reading')}") if g(ENX, 'T1_reading') else "pending", None),
         ("GL-4", "the law under SSP5-8.5 2071-2100 vs historical 1985-2014 (precipitation classes; temperature classes empty)", "revision-8 secondary",
          "committed before data", "80edfc5",
          (f"{g(CLG,'T4_summary','holds')} of {g(CLG,'T4_summary','n_units')} hold, {g(CLG,'T4_summary','inconclusive')} inconclusive, "

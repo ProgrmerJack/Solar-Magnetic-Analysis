@@ -1446,6 +1446,28 @@ ICON event-conditioned 0.44. Assumes forced and internal parts do not anti-corre
 Meaning: across real events the DW-NDW contrast is mostly selection on internal variability; the label selects
 more strongly forced events only weakly (about a tenth of the observed contrast is vortex dose).
 
+### Z22 — extreme El Nino: fixed regime or threshold on one population? (`enso_extreme_class.py`, 8_experiment; registered `3342af3` before data)
+Cai et al. 2014 class (DJF Nino3 rain > 5 mm/day); CMIP6 Pangeo pr/ts, levels DJF 1951-80, 2021-50, 2070-99 (ssp585).
+Gate passed (false rejection 0.3-0.4%; power 0.80 vs rescaled gamma, 0.26 vs Gaussian SST through a convex map).
+Cai rule selects CanESM5-p1, -p2, MIROC6 (ACCESS skew 0.96, unselected; EC-Earth3 8 members, excluded: 50 historical
+runs start ~1970). T1: CanESM5 rho 0.78 [0.29, 1.24], 0.86 [0.41, 1.34] (Holm p 0.0075 each) incompatible; MIROC6 -0.24
+[-1.80, 1.44] unresolved -> registered reading "extreme El Nino is not a fixed regime whose frequency forcing changes"
+(rests on CanESM5, whose SST is unimodal). T2 SST: all four incompatible, rho 0.84-1.02 (one translated population).
+T3 law at 5 mm/day: holds in ACCESS; inconclusive/undefined elsewhere (L0 extreme class 0-67 member-seasons).
+T4 forced share 0.05-0.22, matches law in ACCESS and MIROC6. POST HOC (labelled): MIROC6 SST bimodal at all levels;
+modes move +2.96 [2.90, 3.02] and +3.39 [3.10, 3.65] K, upper-regime weight +0.04 [-0.01, +0.08] (1,000 member resamples); all extremes in the
+upper regime; weight-only counterfactual 5.7% vs actual 15.4% (11% of the rise from 4.5%): regimes drift, mix barely moves.
+
+### Z21 — validity of SNAPSI centre-resampled intervals (`cluster_ci_audit.py`, 3_calibration; registered `822f418` before any interval was recomputed)
+Seven headline statistics, coverage simulated in each layout (2,000 sets, Gaussian and t4 noise, variance components from
+the data): centre percentile bootstrap non-coverage 10.6-13.7% (nominal 5%) -> invalid in all seven; cluster-robust t
+(CR1, C-1 d.f.) 3.7-6.5%, valid in six (not the 11 strongly forced pairs). Valid intervals (about 1.3x wider):
+paired contrast -0.03 [-0.14, +0.09] holds; shift residual +0.04 [-0.04, +0.12] holds; loc-scale NH +0.04 [-0.05, +0.14]
+holds; free law -0.01 [-0.11, +0.08] holds; SH -0.04 [-0.19, +0.12] holds; strongly forced +0.17: no valid method;
+N-Eurasian class residual -0.09 [-0.28, +0.11]: reading CHANGES holds -> inconclusive (planted cooling, post hoc:
+-0.79 [-0.99, -0.59], still detected; stored as post_hoc_planted_S5). Other centre-resampled intervals in the paper not recomputed:
+their valid counterparts would be about 30% wider (width ratio 1.12-1.39, mean 1.29).
+
 ### Z17b — tropical cyclones, basin-relative levels (`tc_class_law.py` C4; registered `4285f9b` before it was computed)
 SST terciles cut within each basin (3,737 storms, SA excluded): RI share 0.25 -> 0.51; fixed-type mixing rejected for
 24-h intensification (rho 2.09 [1.10, 3.03], Holm p 0.0002) and LMI (rho 1.91 [0.96, 2.96], p 0.0005); ground truth agrees
