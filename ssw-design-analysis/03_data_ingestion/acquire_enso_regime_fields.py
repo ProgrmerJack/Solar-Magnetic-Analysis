@@ -11,6 +11,9 @@ SOURCES
   GFDL-CM3   MMLEA v2 (NCAR GDEX d651039) ts_Amon_GFDL-CM3_historical_rcp85_r*i1p1_g025_192001-210012.nc
   CMIP6      Pangeo store (as acquire_cmip6_nino3.py): MIROC6, CanESM5, ACCESS-ESM1-5, ts, historical + ssp585,
              members present in both
+  LAND       CMIP6 only: native cells with model land fraction (fx sftlf, historical) > 50% are left out
+             before box-averaging (added 2026-10-16 before any statistic: MIROC6's coarse grid put desert-land
+             cells of about 330 K into ocean boxes and failed the plausibility check; CMIP6 members redone)
   MASK       NOAA OISST v2 0.25-degree land-sea mask (lsmask.oisst.nc, PSL), ocean fraction per 2.5-degree box
 WINDOWS  1950-12..1980-11, 2020-12..2050-11, 2069-12..2099-11 (360 months each; RCP8.5 for the CMIP5-era
   ensembles, SSP5-8.5 for CMIP6)
@@ -41,18 +44,29 @@ GFDL_URL = "https://osdf-director.osg-htc.org/ncar/gdex/d651039/gfdl_cm3_lens/Am
 socket.setdefaulttimeout(600)
 
 
-def to_grid(da):
-    """box-average a (time, lat, lon) DataArray with 0..360 longitudes onto LAT x LON."""
+def to_grid(da, land=None):
+    """box-average a (time, lat, lon) DataArray with 0..360 longitudes onto LAT x LON; native cells with
+    land fraction > 50% (model sftlf, %, same grid) are left out when it is given."""
     lat = da.lat.values; lon = np.mod(da.lon.values, 360.0)
     il = np.round(lat / 2.5).astype(int); jl = np.mod(np.round(lon / 2.5).astype(int), 144)
     v = da.values.astype(np.float64); w = np.cos(np.deg2rad(lat))
+    keep = np.ones((lat.size, lon.size), bool) if land is None else land <= 50.0
     out = np.zeros((v.shape[0], LAT.size, LON.size)); wsum = np.zeros((LAT.size, LON.size))
     for a, i in enumerate(il):
         if not (-8 <= i <= 8):
             continue
         for b, j in enumerate(jl):
-            out[:, i + 8, j] += w[a] * v[:, a, b]; wsum[i + 8, j] += w[a]
-    return (out / np.where(wsum > 0, wsum, np.nan)).astype(np.float32)
+            if keep[a, b]:
+                out[:, i + 8, j] += w[a] * v[:, a, b]; wsum[i + 8, j] += w[a]
+    out = out / np.where(wsum > 0, wsum, np.nan)
+    # boxes with no kept native centre (native grid coarser than 2.5 degrees, or coastal boxes after the
+    # land mask) take the nearest kept native cell (distance in degrees, longitude scaled by cos latitude)
+    ka, kb = np.where(keep & (np.abs(lat)[:, None] <= 22.5))
+    for i, j in zip(*np.where(wsum == 0)):
+        dl = np.abs(np.mod(lon[kb] - LON[j] + 180.0, 360.0) - 180.0) * np.cos(np.deg2rad(LAT[i]))
+        k = int(np.argmin((lat[ka] - LAT[i]) ** 2 + dl ** 2))
+        out[:, i, j] = v[:, ka[k], kb[k]]
+    return out.astype(np.float32)
 
 
 def window_months(t):
@@ -64,18 +78,25 @@ def window_months(t):
     return keep, yrs, mon
 
 
-def save(model, member, da):
+def save(model, member, da, land=None):
     sub = da.sel(lat=slice(-22, 22))
+    if land is not None:
+        land = land.sel(lat=slice(-22, 22)).values
     keep, yrs, mon = window_months(sub.time.values)
     sub = sub.isel(time=np.where(keep)[0]).load()
-    g = to_grid(sub)
+    g = to_grid(sub, land)
     if g.shape[0] != 1080:
         raise ValueError(f"{model} {member}: {g.shape[0]} months, expected 1080")
     of = np.load(OUTD / "ocean_frac.npy")
     oc = g[:, of >= 0.9]
+    if np.isnan(oc).any():
+        raise ValueError(f"{model} {member}: {int(np.isnan(oc[0]).sum())} ocean boxes without a native ocean cell")
     if not (np.nanmin(oc) > 270 and np.nanmax(oc) < 315):
         raise ValueError(f"{model} {member}: implausible ocean ts {np.nanmin(oc):.1f}-{np.nanmax(oc):.1f}")
-    np.savez_compressed(OUTD / f"{model}__{member}.npz", ts=g, year=yrs[keep], month=mon[keep])
+    tmp = OUTD / f".{model}__{member}.{np.random.randint(1 << 30)}.tmp.npz"
+    extra = {"land_masked": np.array(True)} if land is not None else {}
+    np.savez_compressed(tmp, ts=g, year=yrs[keep], month=mon[keep], **extra)
+    tmp.replace(OUTD / f"{model}__{member}.npz")              # atomic: two downloaders may overlap
 
 
 def mask():
@@ -124,21 +145,26 @@ def gfdl(r):
 def cmip6(job):
     import gcsfs
     import xarray as xr
-    model, member, urls = job
-    if (OUTD / f"{model}__{member}.npz").exists():
+    model, member, urls, lf_url = job
+    f = OUTD / f"{model}__{member}.npz"
+    if f.exists() and np.load(f).get("land_masked") is not None:
         return "ok"
     fs = gcsfs.GCSFileSystem(token="anon")
     parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
     da = xr.concat(parts, "time")
+    lf = xr.open_zarr(fs.get_mapper(lf_url), consolidated=True).sftlf.squeeze(drop=True)
     if da.lat.values[0] > da.lat.values[-1]:
-        da = da.sortby("lat")
-    save(model, member, da)
+        da = da.sortby("lat"); lf = lf.sortby("lat")
+    if not (np.allclose(lf.lat.values, da.lat.values) and np.allclose(lf.lon.values, da.lon.values)):
+        raise ValueError(f"{model}: sftlf grid differs from ts grid")
+    save(model, member, da, lf)
     return "ok"
 
 
 def cmip6_jobs():
     from acquire_cmip6_monthly_boxes import CATALOGUE
     c = pd.read_csv(CATALOGUE)
+    lf = c[(c.variable_id == "sftlf") & (c.experiment_id == "historical") & c.source_id.isin(CMIP6)]
     c = c[(c.table_id == "Amon") & (c.variable_id == "ts") & c.experiment_id.isin(["historical", "ssp585"]) & c.source_id.isin(CMIP6)]
     out = []
     for m in CMIP6:
@@ -147,7 +173,7 @@ def cmip6_jobs():
         for mem in common:
             urls = [cm[(cm.experiment_id == e) & (cm.member_id == mem)].sort_values("version").zstore.iloc[-1]
                     for e in ("historical", "ssp585")]
-            out.append((m, mem, urls))
+            out.append((m, mem, urls, lf[lf.source_id == m].sort_values("version").zstore.iloc[-1]))
     return out
 
 
@@ -172,11 +198,13 @@ def main():
     import xarray as xr
     ds = xr.open_zarr(s3fs.S3FileSystem(anon=True).get_mapper("ncar-cesm-lens/atm/monthly/cesmLE-RCP85-TS.zarr"), consolidated=True)
     jobs = [(cesm, int(m)) for m in ds.member_id.values] + [(gfdl, r) for r in range(1, 21)] + [(cmip6, j) for j in cmip6_jobs()]
+    if "--reverse" in sys.argv:                     # a second downloader from the other end of the list
+        jobs = jobs[::-1]
     print(f"{len(jobs)} members", flush=True)
     if "--list" in sys.argv:
         return 0
     import multiprocessing as mp
-    with ProcessPoolExecutor(4, mp_context=mp.get_context("spawn"), max_tasks_per_child=5) as ex:
+    with ProcessPoolExecutor(6 if "--reverse" in sys.argv else 4, mp_context=mp.get_context("spawn"), max_tasks_per_child=5) as ex:
         for i, r in enumerate(ex.map(_job, jobs)):
             if r != "ok":
                 print(r, flush=True)
