@@ -362,3 +362,8 @@ Rule: with fewer than about 15 clusters, validate a cluster-bootstrap interval i
 Tried: committing a one-line amendment to class_forcing_content.py with `git commit -qam`.
 Failed: -a also committed the in-progress, unreviewed revision-8 main.tex and supplementary.tex (aae2b3c), under a message that does not describe them.
 Rule: commit registrations and amendments with explicit paths (`git commit <file>`), never -a, while other files are being edited.
+
+## 2026-10-16 — Headline paired a rate over all pairs with a contrast over a subset and read it as invariance
+Tried: abstract "raises 45% to 84% while the contrast changes by −0.03σ" (rate over 36 pairs, contrast over 25; there 46% → 78%).
+Failed: one shifted population itself predicts a contrast change (−0.07σ there), so "unchanged" misstated the law and could not discriminate one population from two types.
+Rule: state a contrast change against the law's own prediction for the same units, and let the shape test, not invariance, carry a one-population claim.

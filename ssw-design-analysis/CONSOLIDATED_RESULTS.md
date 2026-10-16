@@ -1532,6 +1532,16 @@ BUT the test has NO POWER (below) → reported as INCONCLUSIVE (underpowered).**
 mixture one mode). Registered controls INVALID here (both rates 1.0: noise
 outcomes lack the dose relation); post-hoc power check (synthetic y = real in-sample ridge mean incl. dose, R² 0.32, + noise s.d. 0.60; planted 2:1 regimes 1σ apart): detection **0.08** vs 0.05 nominal → underpowered by the registered <0.2 rule; real G at the 7th percentile of the no-regime synthetic sets. Do NOT claim the dose explains the shape; claim only unimodality, wider downward component, unimodal dose.
 
+### Z23 — what one shifted population predicts for the SNAPSI contrast change (derived 2026-10-16 from `snapsi_contrast_generality.json`; no new run)
+
+Over the 25 `pairs_NH` rows with a contrast in both arms: DW rate 0.4565 control, 0.7757 nudged
+(0.45 / 0.842 over all 36). Predicted contrast change: shifted null −0.0745σ (mean of C_null_shift − C_control,
+23 rows), location–scale null −0.087σ (22 rows); a pure shift of a Gaussian cut at zero from the rates gives −0.150σ
+(−0.211σ for 45% → 84%). Observed paired difference −0.028σ; residual vs the shifted null +0.04 [−0.04, +0.12] (CR1, Z21).
+**Reading: the contrast changes by about what one shifted population predicts, not "not at all". Contrast
+invariance cannot separate one population from two types; the shape test (AD p 0.97; 272/275 mixtures
+rejected) is the discriminator.** Stated in main text and Methods from revision 10.
+
 ## 4. Prior art — verified from source, all must be cited
 
 1. **Karpechko et al. (2017)**, QJRMS 143, 1459, doi 10.1002/qj.3017 — the

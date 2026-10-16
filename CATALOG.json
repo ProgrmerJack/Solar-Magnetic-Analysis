@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16T05:16:16+00:00",
+ "generated": "2026-10-16T12:56:02+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -3259,7 +3259,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-15 21:07",
+   "modified": "2026-10-16 12:56",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
