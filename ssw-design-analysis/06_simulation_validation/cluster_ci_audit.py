@@ -36,6 +36,22 @@ REPORT  for each statistic: both intervals, validity, and its reading under the 
   flagged. Nothing in the paper is changed by this script.
 POST HOC (2026-10-16, after review; labelled in the JSON): the cluster-robust interval of the
   planted-cooling check of S5 (pairs_regional resid_plant_1.32K and resid_plant_0.5sigma).
+REGISTERED AMENDMENT R10 (2026-10-16, plan approved by the user; committed before any interval below was
+  computed; run with --r10, which leaves every value above unchanged). Disclosed: before registration a
+  literature note rescaled the stored S5 interval to a 90% level (about [-0.24, +0.07]); nothing else here
+  had been computed. Same seven statistics, same data.
+  C  sign-flip randomization interval: test of mean = theta by flipping the signs of the centre sums of
+     (x - theta), all 2^C patterns, inverted over a grid of theta (step se/200, +-6 se)
+  D  restricted wild cluster bootstrap-t, Rademacher weights, all 2^C patterns, studentised by CR1,
+     inverted over the same grid
+  E  CR1 with KMA and UKMO as one cluster (both run GloSea6-family systems), t with C' - 1 d.f.
+  F  CR1 90% interval (two one-sided tests at 0.05): "equivalent" if inside +-0.25 (registered secondary;
+     the registered primary reading stays the 95% one)
+  VALIDATION as above (2,000 sets per noise case, gate: one-sided 95% Clopper-Pearson upper bound of
+  non-coverage < 0.07 for C, D, E; < 0.12 for the 90% interval F), in three layouts: as observed
+  ("indep"), and with KMA and UKMO given one shared centre effect ("shared"), for B and E as well.
+  READING per statistic and method under the published rule; "robust" if every valid method gives the
+  reading of B; S5's equivalence reading is reported as secondary whatever it is.
 Output: results/current/3_calibration/cluster_ci_audit.json
 """
 import json
@@ -160,5 +176,98 @@ def main():
     return 0
 
 
+MERGE = {"KMA": "KMA+UKMO", "UKMO": "KMA+UKMO"}
+
+
+def _grid(c, x):
+    b = cr1_ci(c, x); m = x.mean(); se = (b[1] - m) / tdist.ppf(0.975, len(np.unique(c)) - 1)
+    return m, se, m + se * np.arange(-1200, 1201) / 200.0
+
+
+def _patterns(C):
+    return np.array([[1.0 if (i >> k) & 1 else -1.0 for k in range(C)] for i in range(2 ** C)])
+
+
+def _invert(theta, p):
+    keep = theta[p >= 0.05]
+    return np.array([keep.min(), keep.max()]) if keep.size else np.array([np.nan, np.nan])
+
+
+def signflip_ci(c, x):
+    cs = np.unique(c); N = len(x); m, se, th = _grid(c, x)
+    S = np.array([x[c == k].sum() for k in cs]); n = np.array([np.sum(c == k) for k in cs])
+    s = S[None, :] - n[None, :] * th[:, None]                    # grid x C
+    T = np.abs(m - th); Ts = np.abs(s @ _patterns(len(cs)).T) / N  # grid x 2^C
+    return _invert(th, np.mean(Ts >= T[:, None] - 1e-12, axis=1))
+
+
+def wcb_ci(c, x):
+    cs = np.unique(c); C = len(cs); N = len(x); m, se, th = _grid(c, x)
+    S = np.array([x[c == k].sum() for k in cs]); n = np.array([np.sum(c == k) for k in cs])
+    t_obs = np.abs(m - th) / se
+    s = S[None, :] - n[None, :] * th[:, None]; E = _patterns(C)
+    es = s[:, None, :] * E[None, :, :]                           # grid x 2^C x C
+    d = es.sum(2) / N
+    sest = np.sqrt(C / (C - 1) * np.sum((es - n[None, None, :] * d[:, :, None]) ** 2, axis=2)) / N
+    ts = np.abs(d) / np.where(sest > 0, sest, np.inf)
+    return _invert(th, np.mean(ts >= t_obs[:, None] - 1e-12, axis=1))
+
+
+def merged_ci(c, x):
+    return cr1_ci(np.array([MERGE.get(k, k) for k in c]), x)
+
+
+def cr1_ci90(c, x):
+    cs = np.unique(c); C = len(cs); m = x.mean(); N = len(x)
+    s = np.array([np.sum(x[c == k] - m) for k in cs])
+    se = np.sqrt(C / (C - 1) * np.sum(s ** 2)) / N; q = tdist.ppf(0.95, C - 1)
+    return np.array([m - q * se, m + q * se])
+
+
+def equivalence(ci):
+    return "equivalent" if -TOL <= ci[0] and ci[1] <= TOL else "not shown equivalent"
+
+
+def r10():
+    rng = np.random.default_rng(SEED + 10)
+    res = json.loads(OUT.read_text())
+    out = {"registered": "2026-10-16 (amendment R10), committed before any of these intervals was computed",
+           "disclosed": "a literature note had rescaled the stored S5 interval to about 90% before registration",
+           "n_sim": N_SIM, "statistics": {}}
+    ub = lambda k, n: float(beta.ppf(0.95, k + 1, n - k)) if k < n else 1.0
+    meth = {"B": cr1_ci, "C": signflip_ci, "D": wcb_ci, "E": merged_ci, "F": cr1_ci90}
+    for name, ((cent, x), pub) in load().items():
+        c = np.array(cent); m = float(x.mean()); cs = np.unique(c)
+        if pub and abs(pub["mean"] - m) > 1e-3:
+            continue
+        cis = {k: f(c, x) for k, f in meth.items()}
+        sb2, sw2 = anova(c, x)
+        val = {}
+        for lay in ("indep", "shared"):
+            for noise in ("gauss", "t4"):
+                miss = {k: 0 for k in meth}
+                for _ in range(N_SIM):
+                    eff = {k: rng.normal(0, np.sqrt(sb2)) for k in cs}
+                    if lay == "shared" and "KMA" in eff and "UKMO" in eff:
+                        eff["UKMO"] = eff["KMA"]
+                    e = rng.normal(size=len(x)) if noise == "gauss" else rng.standard_t(4, len(x)) / np.sqrt(2.0)
+                    y = np.array([eff[k] for k in c]) + np.sqrt(sw2) * e
+                    for k, f in meth.items():
+                        ci = f(c, y); miss[k] += not (ci[0] <= 0 <= ci[1])
+                val[f"{lay}_{noise}"] = {k: {"non_coverage": v / N_SIM, "upper95": round(ub(v, N_SIM), 4)} for k, v in miss.items()}
+        valid = {k: all(val[s][k]["upper95"] < (0.12 if k == "F" else GATE) for s in val) for k in meth}
+        rd = {k: reading(m, cis[k]) for k in "BCDE" if valid[k]}
+        r = {"mean": round(m, 4), "n_units": int(len(x)), "n_centres": int(len(cs)),
+             "ci": {k: [round(float(v), 4) for v in cis[k]] for k in meth}, "validation": val, "valid": valid,
+             "readings_valid_methods": rd, "robust": bool(valid["B"] and all(v == rd["B"] for v in rd.values())),
+             "equivalence_90_secondary": equivalence(cis["F"]) if valid["F"] else "F not valid"}
+        out["statistics"][name] = r
+        print(name, json.dumps({k: r[k] for k in ("mean", "ci", "valid", "readings_valid_methods", "robust", "equivalence_90_secondary")}), flush=True)
+    res["r10_few_cluster_robustness"] = out
+    OUT.write_text(json.dumps(res, indent=1, default=float), encoding="utf8", newline="\n")
+    print(f"Saved -> {OUT.relative_to(ROOT)}")
+    return 0
+
+
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(r10() if "--r10" in sys.argv else main())
