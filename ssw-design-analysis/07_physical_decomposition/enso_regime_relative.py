@@ -62,8 +62,21 @@ VALIDATION GATE (--validate; before any data). 1,000 simulations per case, B = 9
   GATE: one-sided 95% Clopper-Pearson upper bound of the false-rejection rate at 0.05 below 0.07 in
   each. Power (no gate): W1 one skewed population z + 0.25 (z^2 - 1), mean 0/0.2/0.5, s.d. 1/1.1/1.25,
   40 members; W2 the V1 types both shifting by 0/0.3/0.6 with weight fixed at 0.10, 40 members.
+AMENDMENT (2026-10-16, after the validation gate and BEFORE any field was retrieved; the download was
+  stopped with only the land mask on disk). The gate passed, but it showed P1 almost powerless here
+  (rejection 0.009 for one shifting population W1 and 0.008 for drifting regimes W2), so P1 is kept and
+  reported, and a test with power is added as co-primary:
+  P1b CO-PRIMARY  likelihood ratio of fixed regimes. H0: DJF E at the three levels is a two-component
+     Gaussian mixture whose component means and s.d. are shared by the levels and whose weights are free
+     per level (7 parameters); H1: a separate two-component mixture per level (15). LR = 2(l1 - l0),
+     referred to chi-square with 8 d.f.; EM with several starts, H1 also started from the H0 solution so
+     that l1 >= l0. Holm over the STEP-0 models. Category: "fixed regimes rejected" (Holm p < 0.05);
+     "compatible with fixed regimes" if p >= 0.05 and the S2 bootstrap intervals of both component shifts
+     L0 -> L2 lie inside +-0.25; else "unresolved". READING as for P1 with these categories. Its own gate
+     (--validate-p1b): 1,000 simulations each of V1, V2, V3, upper bound of the false-rejection rate < 0.07;
+     power reported for W1 and W2.
 Output: results/current/8_experiment/enso_regime_relative.json
-Run:    enso_regime_relative.py --validate ; enso_regime_relative.py
+Run:    enso_regime_relative.py --validate ; enso_regime_relative.py --validate-p1b ; enso_regime_relative.py
 """
 import json
 import sys
@@ -195,6 +208,99 @@ def decomposition(arms, thr):
             "rate_weight_only": round(w_only, 4), "share_of_rate_change_from_weight": round((w_only - a["rate"]) / d, 4) if abs(d) > 1e-9 else None}
 
 
+def _npdf(x, m, s):
+    return np.exp(-0.5 * ((x - m) / s) ** 2) / (s * np.sqrt(2 * np.pi))
+
+
+def em_fixed(xs, init, n_iter=500):
+    """H0: shared (m1, m2, s1, s2), weights per level. xs: list of 1-d arrays. Returns loglik, params."""
+    m1, m2, s1, s2 = init[:4]; w = np.array(init[4], float)
+    ll_old = -np.inf
+    for _ in range(n_iter):
+        rs, ll = [], 0.0
+        for j, x in enumerate(xs):
+            a = (1 - w[j]) * _npdf(x, m1, s1); b = w[j] * _npdf(x, m2, s2); t = a + b + 1e-300
+            rs.append(b / t); ll += np.log(t).sum()
+        X = np.concatenate(xs); R = np.concatenate(rs)
+        w = np.array([r.mean() for r in rs]).clip(1e-4, 1 - 1e-4)
+        m1 = np.sum((1 - R) * X) / np.sum(1 - R); m2 = np.sum(R * X) / np.sum(R)
+        s1 = max(np.sqrt(np.sum((1 - R) * (X - m1) ** 2) / np.sum(1 - R)), 1e-3)
+        s2 = max(np.sqrt(np.sum(R * (X - m2) ** 2) / np.sum(R)), 1e-3)
+        if ll - ll_old < 1e-8:
+            break
+        ll_old = ll
+    return ll, (m1, m2, s1, s2, w)
+
+
+def em_level(x, init, n_iter=500):
+    m1, m2, s1, s2, w = init; ll_old = -np.inf
+    for _ in range(n_iter):
+        a = (1 - w) * _npdf(x, m1, s1); b = w * _npdf(x, m2, s2); t = a + b + 1e-300; r = b / t; ll = np.log(t).sum()
+        w = float(np.clip(r.mean(), 1e-4, 1 - 1e-4))
+        m1 = np.sum((1 - r) * x) / np.sum(1 - r); m2 = np.sum(r * x) / np.sum(r)
+        s1 = max(np.sqrt(np.sum((1 - r) * (x - m1) ** 2) / np.sum(1 - r)), 1e-3)
+        s2 = max(np.sqrt(np.sum(r * (x - m2) ** 2) / np.sum(r)), 1e-3)
+        if ll - ll_old < 1e-8:
+            break
+        ll_old = ll
+    return ll
+
+
+def lr_fixed_regimes(xs):
+    """P1b: LR of H0 (shared components, free weights) against H1 (free mixture per level)."""
+    from scipy.stats import chi2
+    from sklearn.mixture import GaussianMixture
+    X = np.concatenate(xs)
+    best0 = (-np.inf, None)
+    for seed in range(5):
+        g = GaussianMixture(2, n_init=1, random_state=seed).fit(X.reshape(-1, 1)); o = np.argsort(g.means_.ravel())
+        mu = g.means_.ravel()[o]; sd = np.sqrt(g.covariances_.ravel()[o]); wu = g.weights_[o][1]
+        r = em_fixed(xs, (mu[0], mu[1], sd[0], sd[1], [wu] * len(xs)))
+        if r[0] > best0[0]:
+            best0 = r
+    l0, (m1, m2, s1, s2, w) = best0
+    l1 = 0.0
+    for j, x in enumerate(xs):
+        cands = [em_level(x, (m1, m2, s1, s2, w[j]))]
+        g = GaussianMixture(2, n_init=5, random_state=0).fit(x.reshape(-1, 1)); cands.append(g.score(x.reshape(-1, 1)) * x.size)
+        l1 += max(cands)
+    lr = max(2 * (l1 - l0), 0.0); df = 3 * 5 - (4 + len(xs))
+    return {"LR": round(float(lr), 3), "df": df, "p": round(float(chi2.sf(lr, df)), 5),
+            "H0_components": [round(float(v), 3) for v in (m1, m2, s1, s2)], "H0_upper_weights": [round(float(v), 3) for v in w]}
+
+
+def category_p1b(r, p_holm, s2boot):
+    lo, up = s2boot["lower_mode_shift_K_ci95"], s2boot["upper_mode_shift_K_ci95"]
+    inside = all(-TOL <= a and b <= TOL for a, b in (lo, up))
+    return "fixed regimes rejected" if p_holm < 0.05 else "compatible with fixed regimes" if inside else "unresolved"
+
+
+def _val_p1b(args):
+    kind, seed, nsim = args
+    rng = np.random.default_rng(seed); rej = 0
+    for _ in range(nsim):
+        rej += lr_fixed_regimes([X.ravel() for _, X in sim(kind, rng)])["p"] < ALPHA
+    return kind, rej
+
+
+def validate_p1b():
+    kinds = ["V1", "V2", "V3", "W1", "W2"]; chunks = 10
+    jobs = [(k, SEED + 5000 + 1000 * i + c, N_SIM // chunks) for i, k in enumerate(kinds) for c in range(chunks)]
+    import multiprocessing as mp
+    with mp.get_context("fork").Pool(10) as pool:
+        outs = pool.map(_val_p1b, jobs)
+    agg = {}
+    for k, r in outs:
+        agg[k] = agg.get(k, 0) + r
+    ub = lambda r: float(beta.ppf(0.95, r + 1, N_SIM - r)) if r < N_SIM else 1.0
+    val = {"n_sim": N_SIM, "cases": {k: {"reject": v / N_SIM, "upper95": round(ub(v), 4)} for k, v in agg.items()}}
+    val["passes"] = all(val["cases"][k]["upper95"] < GATE for k in ("V1", "V2", "V3"))
+    res = json.loads(OUT.read_text()) if OUT.exists() else {}
+    res["validation_P1b"] = val; res["validation_P1b_fixed"] = "2026-10-16, amendment, before any field was retrieved"
+    OUT.write_text(json.dumps(res, indent=1), encoding="utf8", newline="\n")
+    print(json.dumps(val, indent=1)); return 0
+
+
 # ------------------------------------------------------------------ validation
 def sim(kind, rng, nY=30):
     n = {"V1": 40, "V2": 20, "V3": 50, "W1": 40, "W2": 40}[kind]
@@ -246,6 +352,8 @@ def validate():
 def main():
     if "--validate" in sys.argv:
         return validate()
+    if "--validate-p1b" in sys.argv:
+        return validate_p1b()
     res = json.loads(OUT.read_text()) if OUT.exists() else {}
     if not res.get("validation", {}).get("passes"):
         sys.exit("validation gate not passed (run --validate)")
@@ -298,6 +406,23 @@ def main():
                  "L0_to_L2": EX.law_test(arms[m], 0, 2, thr, np.random.default_rng(SEED + 90 + i))}
         S4[m] = EX.forced_share(arms[m], thr, np.random.default_rng(SEED + 110 + i))
     res.update({"S2_regimes": S2, "S3_class_law": S3, "S4_forced_share": S4})
+    if res.get("validation_P1b", {}).get("passes"):
+        p1b = {m: lr_fixed_regimes([X.ravel() for _, X in arms[m]]) for m in sorted(arms)}
+        for fam, keys in (("selected", sel), ("all", sorted(arms))):
+            if keys:
+                adj = EX.holm([p1b[m]["p"] for m in keys])
+                for m, a in zip(keys, adj):
+                    p1b[m][f"p_holm_{fam}"] = round(float(a), 5)
+                    p1b[m][f"category_{fam}"] = category_p1b(p1b[m], a, S2[m]["bootstrap_L0_to_L2"])
+        cb = [p1b[m]["category_selected"] for m in sel]
+        rej = sum(c == "fixed regimes rejected" for c in cb); cmp_ = sum(c.startswith("compatible") for c in cb)
+        res["P1b_LR_fixed_regimes"] = p1b
+        res["P1b_reading"] = ("cannot test: no model produces a strong regime" if not sel else
+                              "the strong El Nino regime is not a fixed regime whose frequency forcing changes" if rej >= 1 and cmp_ == 0 else
+                              "consistent with a fixed regime whose frequency forcing changes" if cmp_ > len(sel) / 2 else "not resolved")
+        print("P1b", res["P1b_reading"], json.dumps({m: (p1b[m]["LR"], p1b[m]["p"]) for m in p1b}), flush=True)
+    else:
+        res["P1b_reading"] = "not run: its validation gate did not pass"
     res["S5_absolute_frame"] = {m: {"P1": MM.tests(arms_abs[m], B, np.random.default_rng(SEED + 130 + i)),
                                     "S1": shape_test(arms_abs[m][0][1], arms_abs[m][2][1], np.random.default_rng(SEED + 150 + i))}
                                 for i, m in enumerate(sorted(arms_abs))}
