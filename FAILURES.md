@@ -377,3 +377,8 @@ Rule: calibrate mixture LR tests by parametric bootstrap under the fitted null, 
 Tried: acquire_enso_regime_fields, native cells assigned to the 2.5-degree box containing their centre, with an observed (OISST) ocean mask only.
 Failed: CanESM5's 2.8-degree grid left 278 boxes empty (NaN, silently passed by a nan-aware plausibility check); MIROC6 put ~330 K desert cells into "ocean" boxes.
 Rule: mask with the model's own land fraction before regridding, fill boxes without a native centre, and make plausibility checks fail on NaN.
+
+## 2026-10-16 — Multiprocessing pool of numpy/sklearn workers oversubscribed the CPU 50-fold
+Tried: enso_regime_relative --validate-pb on a 20-process pool with default thread settings.
+Failed: each worker opened 49-70 BLAS/OpenMP threads (about 1,100 on 24 cores, load 222); one LR cost 5.1 CPU-s instead of 0.07, so 4 hours reached about 20%.
+Rule: run every multiprocessing job with OMP_NUM_THREADS=OPENBLAS_NUM_THREADS=MKL_NUM_THREADS=1 and check load and thread counts in the first minute.
