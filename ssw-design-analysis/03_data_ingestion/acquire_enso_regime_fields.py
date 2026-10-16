@@ -18,8 +18,11 @@ SOURCES
 WINDOWS  1950-12..1980-11, 2020-12..2050-11, 2069-12..2099-11 (360 months each; RCP8.5 for the CMIP5-era
   ensembles, SSP5-8.5 for CMIP6)
 GRID  centres at multiples of 2.5 degrees (lat -20..20, lon 0..357.5); a native cell belongs to the box
-  that contains its centre (box edges +-1.25); cos-latitude weights. Plausibility: 270-315 K over the
-  ocean cells of the band.
+  that contains its centre (box edges +-1.25); cos-latitude weights. Plausibility: 270-320 K over the
+  ocean cells of the band (upper limit raised from 315 K before any statistic: GFDL-CM3 reaches 316.6 K in
+  the coastal Red Sea box in the 2090s; MIROC6 land leakage reached 330 K). A box containing no kept native
+  centre takes the nearest kept native cell (added before any statistic: CanESM5's grid is coarser than
+  2.5 degrees). Any remaining NaN over ocean boxes fails the member.
 Output: _enso_fields/<model>__<member>.npz (ts[1080, 17, 144], year, month), _enso_fields/ocean_frac.npy
 """
 import socket
@@ -91,7 +94,7 @@ def save(model, member, da, land=None):
     oc = g[:, of >= 0.9]
     if np.isnan(oc).any():
         raise ValueError(f"{model} {member}: {int(np.isnan(oc[0]).sum())} ocean boxes without a native ocean cell")
-    if not (np.nanmin(oc) > 270 and np.nanmax(oc) < 315):
+    if not (np.nanmin(oc) > 270 and np.nanmax(oc) < 320):
         raise ValueError(f"{model} {member}: implausible ocean ts {np.nanmin(oc):.1f}-{np.nanmax(oc):.1f}")
     tmp = OUTD / f".{model}__{member}.{np.random.randint(1 << 30)}.tmp.npz"
     extra = {"land_masked": np.array(True)} if land is not None else {}
