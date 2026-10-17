@@ -1,0 +1,30 @@
+200 members
+/usr/lib/Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7ff631d62120>
+Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x7ff631da4b90>, 123583.949606654)])']
+connector: <aiobotocore.httpsession._ProxySSLTCPConnector object at 0x7ff631d612b0>
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fdd1d636120>
+Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x7fdd1d679310>, 123581.571796864), (<aiohttp.client_proto.ResponseHandler object at 0x7fdd1d2be990>, 123590.970753799)])']
+connector: <aiobotocore.httpsession._ProxySSLTCPConnector object at 0x7fdd1d6352b0>
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fd74c2f2120>
+Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x7fd747efe350>, 123740.599947699)])']
+connector: <aiobotocore.httpsession._ProxySSLTCPConnector object at 0x7fd74c2f12b0>
+  20/200
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f3ede131e80>
+Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x7f3edddba490>, 123786.619723558)])']
+connector: <aiobotocore.httpsession._ProxySSLTCPConnector object at 0x7f3ede131be0>
+  30/200
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f39bd956120>
+Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x7f39bd6e2ad0>, 128327.464762023), (<aiohttp.client_proto.ResponseHandler object at 0x7f39bd6e2c10>, 128332.90308044)])']
+connector: <aiobotocore.httpsession._ProxySSLTCPConnector object at 0x7f39bd9552b0>
+/usr/lib/python3.14/multiprocessing/resource_tracker.py:475: UserWarning: resource_tracker: There appear to be 9 leaked semaphore objects to clean up at shutdown: {'/mp-_hhxl6eu', '/mp-v7bcimql', '/mp-nz3z_a48', '/mp-dtv7htof', '/mp-a9atifxy', '/mp-ezc7wycr', '/mp-sm4cdo8p', '/mp-wapj_5dq', '/mp-oodr8vzt'}
+  warnings.warn(

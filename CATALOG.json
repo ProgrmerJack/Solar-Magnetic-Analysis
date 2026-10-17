@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16T17:32:21+00:00",
+ "generated": "2026-10-17T04:53:01+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -1220,9 +1220,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "IN MODELS THAT PRODUCE A STRONG EASTERN-PACIFIC EL NINO REGIME, DOES GREENHOUSE FORCING CHANGE HOW OFTEN THAT FIXED REGIME OCCURS, OR DOES IT MOVE THE REGIMES (OR ONE POPULATION) ITSELF? Registered 2026-10-16 (plan approved by the user the same day), committed with its validation gate and",
-   "loc": 508,
-   "modified": "2026-10-16 14:14",
-   "sha256_16": "363aed1b85b26e21",
+   "loc": 520,
+   "modified": "2026-10-16 19:15",
+   "sha256_16": "34978571a8876229",
    "flags": [],
    "filenames_mentioned": [
     "enso_regime_relative.json"
@@ -3287,7 +3287,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-16 12:56",
+   "modified": "2026-10-16 17:32",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -7999,9 +7999,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 905,
-   "modified": "2026-10-16 14:13",
-   "sha256_16": "49c7b409c7c2926b",
+   "bytes": 30015,
+   "modified": "2026-10-16 20:10",
+   "sha256_16": "1de722b15419bead",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/enso_regime_relative.py"
    ],
@@ -8009,15 +8009,182 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/enso_regime_relative.py": "363aed1b85b26e21"
+    "ssw-design-analysis/07_physical_decomposition/enso_regime_relative.py": "34978571a8876229"
    },
-   "verdicts": [],
-   "counts": {},
+   "verdicts": [
+    {
+     "key": "P1_reading",
+     "text": "not resolved"
+    },
+    {
+     "key": "S1_shape.ACCESS-ESM1-5.reading",
+     "text": "shape changes"
+    },
+    {
+     "key": "S1_shape.CESM1-LE.reading",
+     "text": "shape changes"
+    },
+    {
+     "key": "S1_shape.CanESM5-p1.reading",
+     "text": "same shape"
+    },
+    {
+     "key": "S1_shape.CanESM5-p2.reading",
+     "text": "same shape"
+    },
+    {
+     "key": "S1_shape.GFDL-CM3.reading",
+     "text": "shape changes"
+    },
+    {
+     "key": "S1_shape.MIROC6.reading",
+     "text": "shape changes"
+    },
+    {
+     "key": "S3_class_law.ACCESS-ESM1-5.L0_to_L1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "S3_class_law.ACCESS-ESM1-5.L0_to_L2.reading",
+     "text": "holds"
+    },
+    {
+     "key": "S3_class_law.CESM1-LE.L0_to_L1.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "S3_class_law.CESM1-LE.L0_to_L2.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "S3_class_law.CanESM5-p1.L0_to_L1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "S3_class_law.CanESM5-p1.L0_to_L2.reading",
+     "text": "holds"
+    },
+    {
+     "key": "S3_class_law.CanESM5-p2.L0_to_L1.reading",
+     "text": "holds"
+    },
+    {
+     "key": "S3_class_law.CanESM5-p2.L0_to_L2.reading",
+     "text": "holds"
+    },
+    {
+     "key": "S3_class_law.GFDL-CM3.L0_to_L1.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "S3_class_law.GFDL-CM3.L0_to_L2.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "S3_class_law.MIROC6.L0_to_L1.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "S3_class_law.MIROC6.L0_to_L2.reading",
+     "text": "holds"
+    },
+    {
+     "key": "S4_forced_share.ACCESS-ESM1-5.reading",
+     "text": "the forced share is what the law predicts"
+    },
+    {
+     "key": "S4_forced_share.CESM1-LE.reading",
+     "text": "the forced share is what the law predicts"
+    },
+    {
+     "key": "S4_forced_share.CanESM5-p1.reading",
+     "text": "the forced share is what the law predicts"
+    },
+    {
+     "key": "S4_forced_share.CanESM5-p2.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "S4_forced_share.GFDL-CM3.reading",
+     "text": "the forced share is what the law predicts"
+    },
+    {
+     "key": "S4_forced_share.MIROC6.reading",
+     "text": "the forced share is what the law predicts"
+    },
+    {
+     "key": "P1b_reading",
+     "text": "the strong El Nino regime is not a fixed regime whose frequency forcing changes"
+    },
+    {
+     "key": "S5_absolute_frame.ACCESS-ESM1-5.S1.reading",
+     "text": "shape changes"
+    },
+    {
+     "key": "S5_absolute_frame.CESM1-LE.S1.reading",
+     "text": "shape changes"
+    },
+    {
+     "key": "S5_absolute_frame.CanESM5-p1.S1.reading",
+     "text": "same shape"
+    },
+    {
+     "key": "S5_absolute_frame.CanESM5-p2.S1.reading",
+     "text": "same shape"
+    },
+    {
+     "key": "S5_absolute_frame.GFDL-CM3.S1.reading",
+     "text": "same shape"
+    },
+    {
+     "key": "S5_absolute_frame.MIROC6.S1.reading",
+     "text": "shape changes"
+    }
+   ],
+   "counts": {
+    "n_boot": [
+     99,
+     499,
+     1000
+    ],
+    "n_perm": [
+     1999
+    ],
+    "n_members": [
+     20,
+     25,
+     40,
+     50
+    ]
+   },
    "top_level_keys": [
     "validation",
     "validation_fixed",
     "validation_P1b",
-    "validation_P1b_fixed"
+    "validation_P1b_fixed",
+    "validation_P1b_PB",
+    "validation_P1b_PB_fixed",
+    "validation_P1b_PB04",
+    "validation_P1b_PB04_fixed",
+    "registered",
+    "seed",
+    "B",
+    "n_perm",
+    "inputs",
+    "command",
+    "versions",
+    "step0_models",
+    "selected",
+    "P1_E_mixing",
+    "P1_reading",
+    "S1_shape",
+    "S2_regimes",
+    "S3_class_law",
+    "S4_forced_share",
+    "P1b_LR_fixed_regimes",
+    "P1b_reference",
+    "P1b_reading",
+    "S5_absolute_frame"
    ]
   },
   {

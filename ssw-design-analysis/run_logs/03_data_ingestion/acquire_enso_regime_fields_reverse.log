@@ -1,0 +1,1983 @@
+200 members
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+  10/200
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+  20/200
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+  30/200
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+  40/200
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+  50/200
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+  60/200
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+  70/200
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+  80/200
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+  90/200
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+  100/200
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+  110/200
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+  120/200
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+  130/200
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:153: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  parts = [xr.open_zarr(fs.get_mapper(u), consolidated=True, use_cftime=True).ts for u in urls]
+  140/200
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+FAILED gfdl 20: ValueError: GFDL-CM3 r20i1p1: implausible ocean ts 289.5-316.6
+FAILED gfdl 19: ValueError: GFDL-CM3 r19i1p1: implausible ocean ts 289.7-316.5
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:143: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:143: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:143: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:143: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:143: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+FAILED gfdl 18: ValueError: GFDL-CM3 r18i1p1: implausible ocean ts 289.2-315.8
+FAILED gfdl 17: ValueError: GFDL-CM3 r17i1p1: implausible ocean ts 289.8-316.2
+FAILED gfdl 16: ValueError: GFDL-CM3 r16i1p1: implausible ocean ts 289.2-316.2
+FAILED gfdl 15: ValueError: GFDL-CM3 r15i1p1: implausible ocean ts 289.4-316.5
+FAILED gfdl 14: ValueError: GFDL-CM3 r14i1p1: implausible ocean ts 289.9-317.0
+FAILED gfdl 13: ValueError: GFDL-CM3 r13i1p1: implausible ocean ts 289.8-316.2
+FAILED gfdl 12: ValueError: GFDL-CM3 r12i1p1: implausible ocean ts 289.8-316.4
+FAILED gfdl 11: ValueError: GFDL-CM3 r11i1p1: implausible ocean ts 289.8-316.6
+  150/200
+FAILED gfdl 10: ValueError: GFDL-CM3 r10i1p1: implausible ocean ts 289.6-316.9
+FAILED gfdl 9: ValueError: GFDL-CM3 r9i1p1: implausible ocean ts 290.0-316.8
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:143: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+FAILED gfdl 5: ContentTooShortError: <urlopen error retrieval incomplete: got only 1851392 out of 180314367 bytes>
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/03_data_ingestion/acquire_enso_regime_fields.py:140: FutureWarning: Usage of 'use_cftime' as a kwarg is deprecated. Please pass a 'CFDatetimeCoder' instance initialized with 'use_cftime' to the 'decode_times' kwarg instead.
+Example usage:
+    time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+    ds = xr.open_dataset(decode_times=time_coder)
+
+  da = xr.open_dataset(f, use_cftime=True).ts
+FAILED gfdl 4: ValueError: GFDL-CM3 r4i1p1: implausible ocean ts 289.8-316.3
+  160/200
+  170/200
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f9aa0e68ec0>
+Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x7f9aa0e41450>, 129251.054754644)])']
+connector: <aiobotocore.httpsession._ProxySSLTCPConnector object at 0x7f9aa0e682f0>
+/usr/lib/python3.14/multiprocessing/resource_tracker.py:475: UserWarning: resource_tracker: There appear to be 10 leaked semaphore objects to clean up at shutdown: {'/mp-ye2t06xn', '/mp-o_e662hb', '/mp-jc7ap0gi', '/mp-g477dpih', '/mp-c84wmvc8', '/mp-aq0geld6', '/mp-bjlc2v64', '/mp-3op29oc3', '/mp-85glvnw9', '/mp-g22y1s1s'}
+  warnings.warn(

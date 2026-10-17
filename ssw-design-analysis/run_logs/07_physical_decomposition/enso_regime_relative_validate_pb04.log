@@ -1,0 +1,32 @@
+{
+ "n_boot": 99,
+ "level": 0.04,
+ "cases": {
+  "V1": {
+   "n_sim": 1000,
+   "reject": 0.054,
+   "upper95": 0.0673
+  },
+  "V2": {
+   "n_sim": 1000,
+   "reject": 0.038,
+   "upper95": 0.0495
+  },
+  "V3": {
+   "n_sim": 1000,
+   "reject": 0.028,
+   "upper95": 0.0382
+  },
+  "W1": {
+   "n_sim": 200,
+   "reject": 1.0,
+   "upper95": 1.0
+  },
+  "W2": {
+   "n_sim": 200,
+   "reject": 1.0,
+   "upper95": 1.0
+  }
+ },
+ "passes": true
+}
