@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-17T04:53:01+00:00",
+ "generated": "2026-10-17T05:13:14+00:00",
  "generator": "tools/catalog_repo.py",
  "note": "Every ssw-design-analysis result in one file. The per-script JSONs remain on disk as write-side provenance; this is the read path. Regenerate with tools/catalog_repo.py.",
  "results": {
@@ -56332,7 +56332,6 @@
    },
    "validation_P1b_fixed": "2026-10-16, amendment, before any field was retrieved",
    "validation_P1b_PB": {
-    "n_boot": 99,
     "cases": {
      "V1": {
       "n_sim": 1000,
@@ -56360,11 +56359,11 @@
       "upper95": 1.0
      }
     },
-    "passes": false
+    "passes": false,
+    "replicates_per_simulated_set": 99
    },
    "validation_P1b_PB_fixed": "2026-10-16, second amendment, after fields began downloading and before any statistic was computed on them",
    "validation_P1b_PB04": {
-    "n_boot": 99,
     "level": 0.04,
     "cases": {
      "V1": {
@@ -56393,7 +56392,8 @@
       "upper95": 1.0
      }
     },
-    "passes": true
+    "passes": true,
+    "replicates_per_simulated_set": 99
    },
    "validation_P1b_PB04_fixed": "2026-10-17, third amendment, after the fields were downloaded and before any statistic was computed on them",
    "registered": "2026-10-16, committed before any field was retrieved",
@@ -57733,8 +57733,8 @@
    "P1b_LR_fixed_regimes": {
     "ACCESS-ESM1-5": {
      "LR": 104.087,
-     "n_boot": 499,
-     "p": 0.002,
+     "n_boot": 1999,
+     "p": 0.0005,
      "H0_components": [
       0.074,
       1.756,
@@ -57746,13 +57746,13 @@
       0.141,
       0.328
      ],
-     "p_holm_all": 0.012,
+     "p_holm_all": 0.003,
      "category_all": "fixed regimes rejected"
     },
     "CESM1-LE": {
      "LR": 106.896,
-     "n_boot": 499,
-     "p": 0.002,
+     "n_boot": 1999,
+     "p": 0.0005,
      "H0_components": [
       -0.169,
       1.856,
@@ -57764,15 +57764,15 @@
       0.175,
       0.204
      ],
-     "p_holm_selected": 0.006,
+     "p_holm_selected": 0.0015,
      "category_selected": "fixed regimes rejected",
-     "p_holm_all": 0.012,
+     "p_holm_all": 0.003,
      "category_all": "fixed regimes rejected"
     },
     "CanESM5-p1": {
      "LR": 82.828,
-     "n_boot": 499,
-     "p": 0.002,
+     "n_boot": 1999,
+     "p": 0.0005,
      "H0_components": [
       0.093,
       1.621,
@@ -57784,13 +57784,13 @@
       0.433,
       0.99
      ],
-     "p_holm_all": 0.012,
+     "p_holm_all": 0.003,
      "category_all": "fixed regimes rejected"
     },
     "CanESM5-p2": {
      "LR": 68.656,
-     "n_boot": 499,
-     "p": 0.002,
+     "n_boot": 1999,
+     "p": 0.0005,
      "H0_components": [
       0.092,
       1.621,
@@ -57802,13 +57802,13 @@
       0.41,
       0.998
      ],
-     "p_holm_all": 0.012,
+     "p_holm_all": 0.003,
      "category_all": "fixed regimes rejected"
     },
     "GFDL-CM3": {
      "LR": 72.816,
-     "n_boot": 499,
-     "p": 0.002,
+     "n_boot": 1999,
+     "p": 0.0005,
      "H0_components": [
       -0.458,
       1.283,
@@ -57820,15 +57820,15 @@
       0.315,
       0.253
      ],
-     "p_holm_selected": 0.006,
+     "p_holm_selected": 0.0015,
      "category_selected": "fixed regimes rejected",
-     "p_holm_all": 0.012,
+     "p_holm_all": 0.003,
      "category_all": "fixed regimes rejected"
     },
     "MIROC6": {
      "LR": 725.071,
-     "n_boot": 499,
-     "p": 0.002,
+     "n_boot": 1999,
+     "p": 0.0005,
      "H0_components": [
       -0.14,
       1.523,
@@ -57840,9 +57840,9 @@
       0.382,
       1.0
      ],
-     "p_holm_selected": 0.006,
+     "p_holm_selected": 0.0015,
      "category_selected": "fixed regimes rejected",
-     "p_holm_all": 0.012,
+     "p_holm_all": 0.003,
      "category_all": "fixed regimes rejected"
     }
    },
@@ -58167,7 +58167,8 @@
       "reading": "shape changes"
      }
     }
-   }
+   },
+   "P1b_note": "registered with 499 replicates; that run (2026-10-17 01:10) gave LR 104.1/106.9/82.8/68.7/72.8/725.1 and p 0.002 (the floor) for ACCESS-ESM1-5/CESM1-LE/CanESM5-p1/CanESM5-p2/GFDL-CM3/MIROC6, Holm 0.006 for the three selected; re-run with 1,999 for the repo floor"
   },
   "lens_confirmation.json": {
    "registered": "2026-10-07, committed before any value was fetched",

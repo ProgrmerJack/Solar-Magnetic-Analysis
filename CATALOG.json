@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-17T04:53:01+00:00",
+ "generated": "2026-10-17T05:13:14+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -1220,9 +1220,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "IN MODELS THAT PRODUCE A STRONG EASTERN-PACIFIC EL NINO REGIME, DOES GREENHOUSE FORCING CHANGE HOW OFTEN THAT FIXED REGIME OCCURS, OR DOES IT MOVE THE REGIMES (OR ONE POPULATION) ITSELF? Registered 2026-10-16 (plan approved by the user the same day), committed with its validation gate and",
-   "loc": 520,
-   "modified": "2026-10-16 19:15",
-   "sha256_16": "34978571a8876229",
+   "loc": 527,
+   "modified": "2026-10-17 04:54",
+   "sha256_16": "a2ba5a280dfca34b",
    "flags": [],
    "filenames_mentioned": [
     "enso_regime_relative.json"
@@ -2386,9 +2386,9 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 540,
-   "modified": "2026-10-09 12:02",
-   "sha256_16": "d6fb338768f37cb0",
+   "loc": 548,
+   "modified": "2026-10-17 04:55",
+   "sha256_16": "5a5119fc1ed985c1",
    "flags": [],
    "filenames_mentioned": [
     "class_forcing_content.json",
@@ -2404,6 +2404,7 @@
     "davis2021_intervention_test.json",
     "early_transfer_retest.json",
     "enso_extreme_class.json",
+    "enso_regime_relative.json",
     "equivalence_observational.json",
     "era5_regional_test.json",
     "forced_variance_ceiling.json",
@@ -3287,7 +3288,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-16 17:32",
+   "modified": "2026-10-17 04:53",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -7999,9 +8000,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 30015,
-   "modified": "2026-10-16 20:10",
-   "sha256_16": "1de722b15419bead",
+   "bytes": 30353,
+   "modified": "2026-10-17 05:12",
+   "sha256_16": "1004b796107a1798",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/enso_regime_relative.py"
    ],
@@ -8009,7 +8010,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/enso_regime_relative.py": "34978571a8876229"
+    "ssw-design-analysis/07_physical_decomposition/enso_regime_relative.py": "a2ba5a280dfca34b"
    },
    "verdicts": [
     {
@@ -8139,14 +8140,13 @@
     {
      "key": "S5_absolute_frame.MIROC6.S1.reading",
      "text": "shape changes"
+    },
+    {
+     "key": "P1b_note",
+     "text": "registered with 499 replicates; that run (2026-10-17 01:10) gave LR 104.1/106.9/82.8/68.7/72.8/725.1 and p 0.002 (the floor) for ACCESS-ESM1-5/CESM1-LE/CanESM5-p1/CanESM5-p2/GFDL-CM3/MIROC6, Holm 0.006 for the three selected; re-run with 1,999 for the repo floor"
     }
    ],
    "counts": {
-    "n_boot": [
-     99,
-     499,
-     1000
-    ],
     "n_perm": [
      1999
     ],
@@ -8155,6 +8155,10 @@
      25,
      40,
      50
+    ],
+    "n_boot": [
+     1000,
+     1999
     ]
    },
    "top_level_keys": [
@@ -8184,7 +8188,8 @@
     "P1b_LR_fixed_regimes",
     "P1b_reference",
     "P1b_reading",
-    "S5_absolute_frame"
+    "S5_absolute_frame",
+    "P1b_note"
    ]
   },
   {

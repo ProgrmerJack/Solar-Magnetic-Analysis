@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-17T04:53:01+00:00",
+ "generated": "2026-10-17T05:13:14+00:00",
  "note": "Known-good baseline: each result was produced by the script at the recorded sha256. catalog_repo.py flags STALE when a producer's hash no longer matches. Re-record with --record only AFTER re-running the analysis.",
  "results": {
   "catalogue_sets.json": {
@@ -799,9 +799,9 @@
     "ssw-design-analysis/07_physical_decomposition/enso_regime_relative.py"
    ],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/enso_regime_relative.py": "34978571a8876229"
+    "ssw-design-analysis/07_physical_decomposition/enso_regime_relative.py": "a2ba5a280dfca34b"
    },
-   "result_sha256_16": "1de722b15419bead",
+   "result_sha256_16": "1004b796107a1798",
    "needs_rerun": false
   },
   "mixture_moment_test.json": {

@@ -111,6 +111,9 @@ import enso_extreme_class as EX                      # noqa: E402
 NAME = "enso_regime_relative"
 SEED = zlib.crc32(NAME.encode()) % (2 ** 31)
 B, B_VAL, N_SIM, N_PERM, ALPHA, GATE, TOL = 1999, 999, 1000, 1999, 0.05, 0.07, 0.25
+# registered 499 replicates for the data; raised to 1,999 after the first run (2026-10-17) to meet the repo's
+# floor of 1,000 for any reported p value; with 499 all six p were 0.002, the floor (results kept in the JSON note)
+P1B_BOOT = 1999
 LAT = np.arange(-20.0, 20.01, 2.5); LON = np.arange(0.0, 360.0, 2.5)
 LEVEL_JYEARS = {"L0": (1951, 1980), "L1": (2021, 2050), "L2": (2070, 2099)}
 MIN_MEMBERS = 15
@@ -333,7 +336,7 @@ def validate_pb(level=ALPHA, seed_off=9000, key="validation_P1b_PB"):
     for k, r in outs:
         agg[k] = agg.get(k, 0) + r
     ub = lambda r, n: float(beta.ppf(0.95, r + 1, n - r)) if r < n else 1.0
-    val = {"n_boot": 99, "level": level, "cases": {k: {"n_sim": plan[k], "reject": v / plan[k], "upper95": round(ub(v, plan[k]), 4)} for k, v in agg.items()}}
+    val = {"replicates_per_simulated_set": 99, "level": level, "cases": {k: {"n_sim": plan[k], "reject": v / plan[k], "upper95": round(ub(v, plan[k]), 4)} for k, v in agg.items()}}
     val["passes"] = all(val["cases"][k]["upper95"] < GATE for k in ("V1", "V2", "V3"))
     res = json.loads(OUT.read_text()) if OUT.exists() else {}
     res[key] = val
@@ -438,6 +441,9 @@ def main():
     import platform
     import scipy
     import sklearn
+    for k in ("validation_P1b_PB", "validation_P1b_PB04"):      # inner Monte Carlo replicates of a gate, not a reported p
+        if "n_boot" in res.get(k, {}):
+            res[k]["replicates_per_simulated_set"] = res[k].pop("n_boot")
     ocean = np.load(FIELDS / "ocean_frac.npy") >= 0.9
     res.update({"registered": "2026-10-16, committed before any field was retrieved", "seed": SEED, "B": B, "n_perm": N_PERM,
                 "inputs": [str(FIELDS.relative_to(ROOT))], "command": " ".join(sys.argv),
@@ -488,7 +494,7 @@ def main():
     pb_ok = res.get("validation_P1b_PB", {}).get("passes") or pb04
     lev = 0.04 if pb04 and not res.get("validation_P1b_PB", {}).get("passes") else ALPHA
     if res.get("validation_P1b", {}).get("passes") or pb_ok:
-        p1b = ({m: lr_pb([X.ravel() for _, X in arms[m]], np.random.default_rng(SEED + 170 + i), 499) for i, m in enumerate(sorted(arms))}
+        p1b = ({m: lr_pb([X.ravel() for _, X in arms[m]], np.random.default_rng(SEED + 170 + i), P1B_BOOT) for i, m in enumerate(sorted(arms))}
                if pb_ok else {m: lr_fixed_regimes([X.ravel() for _, X in arms[m]]) for m in sorted(arms)})
         for fam, keys in (("selected", sel), ("all", sorted(arms))):
             if keys:
@@ -498,6 +504,7 @@ def main():
                     p1b[m][f"category_{fam}"] = category_p1b(p1b[m], a, S2[m]["bootstrap_L0_to_L2"], lev)
         cb = [p1b[m]["category_selected"] for m in sel]
         rej = sum(c == "fixed regimes rejected" for c in cb); cmp_ = sum(c.startswith("compatible") for c in cb)
+        res["P1b_note"] = ("registered with 499 replicates; that run (2026-10-17 01:10) gave LR 104.1/106.9/82.8/68.7/72.8/725.1 and p 0.002 (the floor) for ACCESS-ESM1-5/CESM1-LE/CanESM5-p1/CanESM5-p2/GFDL-CM3/MIROC6, Holm 0.006 for the three selected; re-run with 1,999 for the repo floor")
         res["P1b_LR_fixed_regimes"] = p1b; res["P1b_reference"] = (f"parametric bootstrap at level {lev}" if pb_ok else "chi-square")
         res["P1b_reading"] = ("cannot test: no model produces a strong regime" if not sel else
                               "the strong El Nino regime is not a fixed regime whose frequency forcing changes" if rej >= 1 and cmp_ == 0 else
