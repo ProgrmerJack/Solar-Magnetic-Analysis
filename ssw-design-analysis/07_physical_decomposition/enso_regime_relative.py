@@ -85,7 +85,8 @@ SECOND AMENDMENT (2026-10-16, after the P1b gate failed -- false rejection 0.083
 THIRD AMENDMENT (2026-10-17, after the P1b-PB gate failed narrowly -- false rejection 0.062/0.063/0.062,
   upper bounds 0.076-0.077 -- and BEFORE any statistic was computed on the fields; P1b-PB at 0.05 is not
   run). P1b-PB04: the same statistic and bootstrap, with the level lowered to 0.04 (Holm family level
-  0.04; "fixed regimes rejected" if the Holm-adjusted p < 0.04), the size correction taken from the failed
+  0.04; "fixed regimes rejected" if the Holm-adjusted p < 0.04 -- with the gate's 99 replicates that rule is
+  p <= 0.03, so p <= 0.03 is applied to the data, review 2026-10-22), the size correction taken from the failed
   gate's simulations only. Gate (--validate-pb04): 1,000 FRESH simulations each of V1, V2, V3 (new seeds),
   99 replicates, rejection at p < 0.04, upper bound < 0.07; power W1, W2 from 200. This is the third
   calibration tried; if it fails, P1b is reported as not run.
@@ -223,6 +224,21 @@ def decomposition(arms, thr):
     d = b["rate"] - a["rate"]
     return {"L0": {k: round(v, 4) for k, v in a.items()}, "L2": {k: round(v, 4) for k, v in b.items()},
             "rate_weight_only": round(w_only, 4), "share_of_rate_change_from_weight": round((w_only - a["rate"]) / d, 4) if abs(d) > 1e-9 else None}
+
+
+def decomposition_mixture(arms, thr):
+    """POST REVIEW (2026-10-22): the weight-only counterfactual from the fitted mixtures themselves, so that
+    it uses the same weights as S2's by_level fits: with the L0 components fixed, only their weights set to
+    the L2 fit's; tail probabilities from the Gaussian components."""
+    from scipy.stats import norm
+    g0, g2 = gmm(arms[0][1].ravel()), gmm(arms[2][1].ravel())
+    tail = lambda g, k: float(norm.sf(thr, g["means"][k], g["sd"][k]))
+    fit_rate = lambda g, w: (1 - w) * tail(g, 0) + w * tail(g, 1)
+    r0, r2 = fit_rate(g0, g0["weights"][1]), fit_rate(g2, g2["weights"][1])
+    w_only = fit_rate(g0, g2["weights"][1]); d = r2 - r0
+    return {"w_upper_L0_L2": [g0["weights"][1], g2["weights"][1]], "rate_fitted_L0_L2": [round(r0, 4), round(r2, 4)],
+            "rate_observed_L0_L2": [round(float((arms[0][1] > thr).mean()), 4), round(float((arms[2][1] > thr).mean()), 4)],
+            "rate_weight_only": round(w_only, 4), "share_of_rate_change_from_weight": round((w_only - r0) / d, 4) if abs(d) > 1e-9 else None}
 
 
 def _npdf(x, m, s):
@@ -485,14 +501,17 @@ def main():
         thr = float(np.quantile(arms[m][0][1].ravel(), 0.95))
         S2[m] = {"by_level": {L: gmm(X.ravel()) for L, (_, X) in zip(LEVEL_JYEARS, arms[m])},
                  "bootstrap_L0_to_L2": EX.regime_boot(arms[m], np.random.default_rng(SEED + 50 + i)),
-                 "strong_threshold_L0_p95": round(thr, 4), "decomposition": decomposition(arms[m], thr)}
+                 "strong_threshold_L0_p95": round(thr, 4), "decomposition": decomposition(arms[m], thr),
+                 "decomposition_mixture_post_review": decomposition_mixture(arms[m], thr)}
         S3[m] = {"L0_to_L1": EX.law_test(arms[m], 0, 1, thr, np.random.default_rng(SEED + 70 + i)),
                  "L0_to_L2": EX.law_test(arms[m], 0, 2, thr, np.random.default_rng(SEED + 90 + i))}
         S4[m] = EX.forced_share(arms[m], thr, np.random.default_rng(SEED + 110 + i))
     res.update({"S2_regimes": S2, "S3_class_law": S3, "S4_forced_share": S4})
     pb04 = res.get("validation_P1b_PB04", {}).get("passes")
     pb_ok = res.get("validation_P1b_PB", {}).get("passes") or pb04
-    lev = 0.04 if pb04 and not res.get("validation_P1b_PB", {}).get("passes") else ALPHA
+    # the 0.04 gate ran with 99 replicates, where p < 0.04 means p <= 0.03 (review 2026-10-22): the validated
+    # rule is p <= 0.03, applied here with 1,999 replicates
+    lev = 0.0301 if pb04 and not res.get("validation_P1b_PB", {}).get("passes") else ALPHA
     if res.get("validation_P1b", {}).get("passes") or pb_ok:
         p1b = ({m: lr_pb([X.ravel() for _, X in arms[m]], np.random.default_rng(SEED + 170 + i), P1B_BOOT) for i, m in enumerate(sorted(arms))}
                if pb_ok else {m: lr_fixed_regimes([X.ravel() for _, X in arms[m]]) for m in sorted(arms)})
