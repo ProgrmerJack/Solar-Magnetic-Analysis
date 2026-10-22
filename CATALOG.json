@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-22T11:56:53+00:00",
+ "generated": "2026-10-22T16:30:43+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -1220,9 +1220,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "IN MODELS THAT PRODUCE A STRONG EASTERN-PACIFIC EL NINO REGIME, DOES GREENHOUSE FORCING CHANGE HOW OFTEN THAT FIXED REGIME OCCURS, OR DOES IT MOVE THE REGIMES (OR ONE POPULATION) ITSELF? Registered 2026-10-16 (plan approved by the user the same day), committed with its validation gate and",
-   "loc": 596,
-   "modified": "2026-10-22 11:06",
-   "sha256_16": "809a7658d4902d15",
+   "loc": 632,
+   "modified": "2026-10-22 12:26",
+   "sha256_16": "89c16d242cf00b49",
    "flags": [],
    "filenames_mentioned": [
     "enso_regime_relative.json"
@@ -2386,9 +2386,9 @@
    "tree": "ssw-design-analysis",
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
-   "loc": 548,
-   "modified": "2026-10-17 05:16",
-   "sha256_16": "a097b4790e8d4cfc",
+   "loc": 552,
+   "modified": "2026-10-22 16:30",
+   "sha256_16": "a0ff95692077446a",
    "flags": [],
    "filenames_mentioned": [
     "class_forcing_content.json",
@@ -3288,7 +3288,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-17 05:17",
+   "modified": "2026-10-22 11:59",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -8000,9 +8000,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 32930,
-   "modified": "2026-10-22 11:55",
-   "sha256_16": "09dd8d38b5239092",
+   "bytes": 33776,
+   "modified": "2026-10-22 13:00",
+   "sha256_16": "e343bcf9a2b43104",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/enso_regime_relative.py"
    ],
@@ -8010,7 +8010,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/enso_regime_relative.py": "809a7658d4902d15"
+    "ssw-design-analysis/07_physical_decomposition/enso_regime_relative.py": "89c16d242cf00b49"
    },
    "verdicts": [
     {
@@ -8143,7 +8143,7 @@
     },
     {
      "key": "P1b_note",
-     "text": "registered with 499 replicates; that run (2026-10-17 01:10) gave LR 104.1/106.9/82.8/68.7/72.8/725.1 and p 0.002 (the floor) for ACCESS-ESM1-5/CESM1-LE/CanESM5-p1/CanESM5-p2/GFDL-CM3/MIROC6, Holm 0.006 for the three selected; re-run with 1,999 for the repo floor"
+     "text": "registered with 499 replicates; that run (2026-10-17 01:10, on the v1 fields later superseded by the area-overlap regridding) gave LR 104.1/106.9/82.8/68.7/72.8/725.1 and p 0.002 (the floor) for ACCESS-ESM1-5/CESM1-LE/CanESM5-p1/CanESM5-p2/GFDL-CM3/MIROC6, Holm 0.006 for the three selected; re-run with 1,999 for the repo floor"
     },
     {
      "key": "post_hoc_P1b_misspecification.note",
@@ -8152,6 +8152,10 @@
     {
      "key": "S2_note",
      "text": "POST REVIEW: in simulations with fixed Gaussian types whose weight rises (V1, V3), per-level two-component fits report a falling weight and a moving upper component; the per-level weights, shifts and both decompositions are therefore descriptive of the fits and are not evidence about fixed regimes"
+    },
+    {
+     "key": "post_hoc_P1b_empirical_calibration.note",
+     "text": "POST HOC (second review): LR calibrated against fixed regimes of each model's own shape; one family of fixed shapes, devised after the results"
     }
    ],
    "counts": {
@@ -8167,6 +8171,9 @@
     "n_boot": [
      1000,
      1999
+    ],
+    "n_null": [
+     1000
     ]
    },
    "top_level_keys": [
@@ -8199,7 +8206,8 @@
     "S5_absolute_frame",
     "P1b_note",
     "post_hoc_P1b_misspecification",
-    "S2_note"
+    "S2_note",
+    "post_hoc_P1b_empirical_calibration"
    ]
   },
   {

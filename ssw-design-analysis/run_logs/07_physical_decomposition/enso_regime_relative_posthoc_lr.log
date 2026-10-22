@@ -1,0 +1,32 @@
+{
+ "note": "POST HOC (second review): LR calibrated against fixed regimes of each model's own shape; one family of fixed shapes, devised after the results",
+ "models": {
+  "CESM1-LE": {
+   "LR_observed": 116.28,
+   "null_median": 10.5,
+   "null_p95": 22.58,
+   "null_max": 41.54,
+   "p_empirical": 0.001,
+   "n_null": 1000,
+   "p_holm": 0.003
+  },
+  "GFDL-CM3": {
+   "LR_observed": 67.45,
+   "null_median": 8.01,
+   "null_p95": 20.73,
+   "null_max": 39.45,
+   "p_empirical": 0.001,
+   "n_null": 1000,
+   "p_holm": 0.003
+  },
+  "MIROC6": {
+   "LR_observed": 728.61,
+   "null_median": 609.13,
+   "null_p95": 677.63,
+   "null_max": 733.61,
+   "p_empirical": 0.006,
+   "n_null": 1000,
+   "p_holm": 0.006
+  }
+ }
+}

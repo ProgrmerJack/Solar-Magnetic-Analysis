@@ -85,6 +85,7 @@ def main():
     CFC = J("class_forcing_content.json")
     CIA = J("cluster_ci_audit.json")
     ENX = J("enso_extreme_class.json")
+    ENR = J("enso_regime_relative.json")
     R2 = ("robustness (revision 2)", "committed before run", "4c8b3f2")
     mm = g(MMt, "multimodel", "confirmatory"); nr = g(SRt, "regions", "NEURASIA", "multimodel", "confirmatory")
     rows = [
@@ -467,6 +468,17 @@ def main():
         ("EN-1", "extreme El Nino (DJF Nino3 rain > 5 mm/day): fixed two-type mixing across 1951-80, 2021-50, 2070-99 in CMIP6 large ensembles selected by Cai et al.'s rule (Holm over models)", "revision-8 primary",
          "committed before data (gate before data)", "3342af3",
          (f"selected {g(ENX,'selected')}: {g(ENX,'T1_reading')}") if g(ENX, 'T1_reading') else "pending", None),
+        ("EN-2", "strong El Nino regime (E index, relative SST) in models that produce one: fixed regimes with free weights vs regimes free per level, 1951-80, 2021-50, 2070-99 (likelihood ratio, parametric bootstrap, rule p <= 0.03 after two calibrations failed their gates; Holm over models)", "revision-10 co-primary",
+         "committed before data; calibration amended before any statistic", "db36561, fe25843",
+         (f"selected {g(ENR,'selected')}: LR rejects in all (Holm p {', '.join(str(v.get('p_holm_selected')) for k, v in (g(ENR,'P1b_LR_fixed_regimes') or {}).items() if v.get('p_holm_selected') is not None)}), but post hoc it also rejects fixed non-Gaussian regimes "
+          f"(false rejection {', '.join(f'{k} {v["reject"]}' for k, v in (g(ENR,'post_hoc_P1b_misspecification','cases') or {}).items())}); "
+          f"calibrated post hoc against fixed regimes of each model's own shape: empirical Holm p "
+          f"{', '.join(f'{k} {v["p_holm"]}' for k, v in (g(ENR,'post_hoc_P1b_empirical_calibration','models') or {}).items())}; "
+          f"moment test {g(ENR,'P1_reading')}; shape-free CDF form rejects only in MIROC6 (post hoc); registered tests undecided") if g(ENR, 'P1b_reading') else "pending", None),
+        ("CI-2", "few-cluster robustness of the seven SNAPSI statistics: sign-flip, wild cluster bootstrap-t, KMA+UKMO merged, 90% equivalence; validated with and without a shared KMA/UKMO effect", "revision-10 secondary",
+         "committed before any interval was computed", "db36561",
+         ("; ".join(f"{k.split('_', 1)[1]}: " + (f"{'/'.join(sorted(set(v.values())))} ({len(v)} valid methods)" if (v := g(CIA,'r10_few_cluster_robustness','statistics',k,'readings_valid_methods')) else 'no method valid in every layout')
+                    for k in (g(CIA, 'r10_few_cluster_robustness', 'statistics') or {}))) if g(CIA, 'r10_few_cluster_robustness') else "pending", None),
         ("GL-4", "the law under SSP5-8.5 2071-2100 vs historical 1985-2014 (precipitation classes; temperature classes empty)", "revision-8 secondary",
          "committed before data", "80edfc5",
          (f"{g(CLG,'T4_summary','holds')} of {g(CLG,'T4_summary','n_units')} hold, {g(CLG,'T4_summary','inconclusive')} inconclusive, "

@@ -1987,7 +1987,7 @@
    }
   }
  },
- "P1b_note": "registered with 499 replicates; that run (2026-10-17 01:10) gave LR 104.1/106.9/82.8/68.7/72.8/725.1 and p 0.002 (the floor) for ACCESS-ESM1-5/CESM1-LE/CanESM5-p1/CanESM5-p2/GFDL-CM3/MIROC6, Holm 0.006 for the three selected; re-run with 1,999 for the repo floor",
+ "P1b_note": "registered with 499 replicates; that run (2026-10-17 01:10, on the v1 fields later superseded by the area-overlap regridding) gave LR 104.1/106.9/82.8/68.7/72.8/725.1 and p 0.002 (the floor) for ACCESS-ESM1-5/CESM1-LE/CanESM5-p1/CanESM5-p2/GFDL-CM3/MIROC6, Holm 0.006 for the three selected; re-run with 1,999 for the repo floor",
  "post_hoc_P1b_misspecification": {
   "note": "POST HOC (review 2026-10-22): P1b false rejection (p <= 0.03, 99 replicates) when regimes are fixed but not Gaussian",
   "n_sim": 400,
@@ -2010,5 +2010,37 @@
    }
   }
  },
- "S2_note": "POST REVIEW: in simulations with fixed Gaussian types whose weight rises (V1, V3), per-level two-component fits report a falling weight and a moving upper component; the per-level weights, shifts and both decompositions are therefore descriptive of the fits and are not evidence about fixed regimes"
+ "S2_note": "POST REVIEW: in simulations with fixed Gaussian types whose weight rises (V1, V3), per-level two-component fits report a falling weight and a moving upper component; the per-level weights, shifts and both decompositions are therefore descriptive of the fits and are not evidence about fixed regimes",
+ "post_hoc_P1b_empirical_calibration": {
+  "note": "POST HOC (second review): LR calibrated against fixed regimes of each model's own shape; one family of fixed shapes, devised after the results",
+  "models": {
+   "CESM1-LE": {
+    "LR_observed": 116.28,
+    "null_median": 10.5,
+    "null_p95": 22.58,
+    "null_max": 41.54,
+    "p_empirical": 0.001,
+    "n_null": 1000,
+    "p_holm": 0.003
+   },
+   "GFDL-CM3": {
+    "LR_observed": 67.45,
+    "null_median": 8.01,
+    "null_p95": 20.73,
+    "null_max": 39.45,
+    "p_empirical": 0.001,
+    "n_null": 1000,
+    "p_holm": 0.003
+   },
+   "MIROC6": {
+    "LR_observed": 728.61,
+    "null_median": 609.13,
+    "null_p95": 677.63,
+    "null_max": 733.61,
+    "p_empirical": 0.006,
+    "n_null": 1000,
+    "p_holm": 0.006
+   }
+  }
+ }
 }

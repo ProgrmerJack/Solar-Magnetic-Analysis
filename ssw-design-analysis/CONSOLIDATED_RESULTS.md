@@ -1457,6 +1457,7 @@ T3 law at 5 mm/day: holds in ACCESS; inconclusive/undefined elsewhere (L0 extrem
 T4 forced share 0.05-0.22, matches law in ACCESS and MIROC6. POST HOC (labelled): MIROC6 SST bimodal at all levels;
 modes move +2.96 [2.90, 3.02] and +3.39 [3.10, 3.65] K, upper-regime weight +0.04 [-0.01, +0.08] (1,000 member resamples); all extremes in the
 upper regime; weight-only counterfactual 5.7% vs actual 15.4% (11% of the rise from 4.5%): regimes drift, mix barely moves.
+**WITHDRAWN (2026-10-22): per-level two-component fits do not recover known fixed types in simulation (they report a falling weight and moving components when fixed types change weight); this post-hoc MIROC6 reading is not evidence. See Z25.**
 
 ### Z21 — validity of SNAPSI centre-resampled intervals (`cluster_ci_audit.py`, 3_calibration; registered `822f418` before any interval was recomputed)
 Seven headline statistics, coverage simulated in each layout (2,000 sets, Gaussian and t4 noise, variance components from
@@ -1541,6 +1542,39 @@ Over the 25 `pairs_NH` rows with a contrast in both arms: DW rate 0.4565 control
 **Reading: the contrast changes by about what one shifted population predicts, not "not at all". Contrast
 invariance cannot separate one population from two types; the shape test (AD p 0.97; 272/275 mixtures
 rejected) is the discriminator.** Stated in main text and Methods from revision 10.
+
+### Z24 — few-cluster robustness of the SNAPSI intervals (`cluster_ci_audit.py --r10`, 3_calibration; registered `db36561` before any interval was computed)
+
+Methods: B CR1-t (C-1 d.f.), C sign-flip (all 2^C), D wild cluster bootstrap-t (Rademacher, all 2^C), E CR1 with KMA+UKMO
+merged, F CR1 90% (equivalence, secondary). Validated with independent centres AND with a shared KMA/UKMO effect.
+- S1 paired contrast, S2 shift residual, S3 location-scale residual: **holds** under every valid method; S1 and S2 equivalent at 90%.
+- S4 strongly forced back-shift: CR1 not valid; sign flip valid, +0.17 [-0.05, +0.42], **inconclusive** (first valid interval).
+- S5 regional residual: **inconclusive** under B, C, D; its 90% interval FAILED coverage, so no equivalence claim (the note's
+  rescaled [-0.24, +0.07] is not usable).
+- S6 natural-experiment law residual: only E valid with a shared effect: -0.01 [-0.11, +0.08], **holds**.
+- S7 SH residual: no method valid in every layout; B valid only if KMA and UKMO are independent (shared: B non-coverage up to 0.10).
+
+### Z25 — strong El Nino regimes in models that produce them (`enso_regime_relative.py`, 8_experiment; registered `db36561` before data; amended `541e68f`, `f8a31b3`, `fe25843` before any statistic; re-run on corrected fields `49c6548`)
+
+**READING: NOT DECIDED by the registered tests; post-hoc evidence against fixed regimes in all three.** Relative SST, E index (Takahashi 2011; Geng 2022), DJF, L0 1951-80 / L1 2021-50 / L2 2070-99.
+Fields re-reduced by area overlap after review (v1 centre binning left GFDL boxes empty/doubled; v1 results superseded, 55040c9).
+- STEP 0 passes CESM1-LE (40), GFDL-CM3 (20), MIROC6 (50); fails CanESM5 p1/p2, ACCESS-ESM1-5 (no strong regime).
+- P1 moment test: not resolved (power ~0.01).
+- P1b LR (Gaussian regimes, shared components, free weights), bootstrap rule p <= 0.03 (the 99-replicate gate's p < 0.04):
+  rejects in all three (LR 116/67/729, Holm p 0.0015) -- BUT post hoc (review) it rejects FIXED non-Gaussian regimes too:
+  empirical fixed-regime null (each model's own L0 shapes, H0 weights) 19%/11%/100%, skewed fixed pair 100% (400 sims):
+  its Gaussian-calibrated p are invalid. **POST HOC calibration against that empirical fixed-regime null (1,000 sims, jitter
+  0.05): observed LR 116/67/729 vs null p95 23/21/678; empirical Holm p 0.003/0.003/0.006 -> evidence AGAINST fixed regimes
+  in all three, but devised after the results and for one family of fixed shapes.**
+- Shape-free CDF form of the moment test (validated, conservative for gamma/lognormal/t types): p 0.44 / 0.92 / 0.01
+  (Holm 0.03 MIROC6). Post hoc reading (not the registered decision statistic).
+- Per-level two-component fits NOT interpretable: with fixed types whose weight rises 0.05->0.20, they report weight -0.05
+  and an upper component moving +2.3 s.d. The v1 claims "weight barely changes while regimes move; weight gives 12-21%
+  of the rise" are WITHDRAWN.
+- Secondary: S1 shape changes CESM1 (p 0.013), MIROC6 (0.028); GFDL same shape (0.058; was 0.023 in v1; the other changed reading is
+  CanESM5-p2's forced share, with CanESM5-p2's forced share, an unselected model). Strong class (E > L0 p95) rate 5% -> 8.6/6.2/24.5%; class law holds MIROC6 (-0.04 [-0.17, +0.12]), inconclusive
+  else; forced share = law in all three (0.010/0.003/0.15).
+Paper: El Nino out of the abstract; main text states the regime view is not decided.
 
 ## 4. Prior art — verified from source, all must be cited
 
