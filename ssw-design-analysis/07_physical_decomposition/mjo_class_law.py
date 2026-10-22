@@ -105,7 +105,12 @@ def read_rmm():
 
 def read_qbo():
     vals = {}
+    sec = 0
     for line in (RAW / "qbo_u50.txt").read_text(errors="replace").splitlines():
+        if "zonal wind index" in line:
+            sec += 1                                 # sections: ORIGINAL, ANOMALY, STANDARDIZED; use the first only
+        if sec != 1:
+            continue
         p = line.split()
         if len(p) == 13 and p[0].isdigit() and len(p[0]) == 4:
             for k, v in enumerate(p[1:], start=1):
