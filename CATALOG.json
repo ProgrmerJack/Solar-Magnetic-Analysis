@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-22T16:30:43+00:00",
+ "generated": "2026-10-22T16:42:39+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
-  "scripts": 209,
-  "results": 108
+  "scripts": 210,
+  "results": 109
  },
  "scripts": [
   {
@@ -283,9 +283,9 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "Acquires the circulation indices needed for Gate 6 (\"the result is not driven by AO/NAO alone\") and records a checksum for every raw file, as the plan requires.",
-   "loc": 122,
-   "modified": "2026-07-28 19:32",
-   "sha256_16": "a81ce627c326fe5b",
+   "loc": 125,
+   "modified": "2026-10-22 16:40",
+   "sha256_16": "93b72344e330b226",
    "flags": [],
    "filenames_mentioned": [
     "daily_indices.parquet",
@@ -1432,6 +1432,22 @@
    "flags": [],
    "filenames_mentioned": [
     "mixture_moment_test.json"
+   ],
+   "filename_prefixes": []
+  },
+  {
+   "path": "ssw-design-analysis/07_physical_decomposition/mjo_class_law.py",
+   "tree": "ssw-design-analysis",
+   "stage": "07_physical_decomposition",
+   "title": "DO MJO EVENTS THAT CROSS THE MARITIME CONTINENT AND EVENTS IT BLOCKS FORM TWO FIXED TYPES WHOSE FREQUENCY THE QBO CHANGES, OR IS \"CROSSING\" A THRESHOLD ON ONE POPULATION OF PROPAGATION EXTENTS THAT THE QBO SHIFTS?",
+   "loc": 277,
+   "modified": "2026-10-22 16:42",
+   "sha256_16": "70832b262aebb020",
+   "flags": [],
+   "filenames_mentioned": [
+    "mjo_class_law.json",
+    "qbo_u50.txt",
+    "rmm.txt"
    ],
    "filename_prefixes": []
   },
@@ -3288,7 +3304,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-22 11:59",
+   "modified": "2026-10-22 16:30",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -9407,6 +9423,83 @@
     "note",
     "seed",
     "B"
+   ]
+  },
+  {
+   "path": "results/current/8_experiment/mjo_class_law.json",
+   "tree": "current",
+   "stage": "8_experiment",
+   "readable": true,
+   "bytes": 2867,
+   "modified": "2026-10-22 16:42",
+   "sha256_16": "0c33958aa6a9a012",
+   "producers": [
+    "ssw-design-analysis/07_physical_decomposition/mjo_class_law.py"
+   ],
+   "state": "current",
+   "detail": "",
+   "flags": [],
+   "producer_sha256": {
+    "ssw-design-analysis/07_physical_decomposition/mjo_class_law.py": "70832b262aebb020"
+   },
+   "verdicts": [
+    {
+     "key": "primary.M2_law_crossing.reading",
+     "text": "holds"
+    },
+    {
+     "key": "primary.M2_law_Y7.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "primary.M3_forced_share.reading",
+     "text": "the forced share is what the law predicts"
+    },
+    {
+     "key": "primary.M1_reading",
+     "text": "not resolved"
+    },
+    {
+     "key": "S1_before_2014.M2_law_crossing.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "S1_before_2014.M2_law_Y7.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "S1_before_2014.M3_forced_share.reading",
+     "text": "inconclusive"
+    },
+    {
+     "key": "S1_before_2014.M1_reading",
+     "text": "not resolved"
+    }
+   ],
+   "counts": {
+    "n_events": [
+     87,
+     119
+    ],
+    "n_winters": [
+     34,
+     46
+    ]
+   },
+   "top_level_keys": [
+    "validation",
+    "validation_fixed",
+    "registered",
+    "seed",
+    "B",
+    "inputs",
+    "command",
+    "versions",
+    "phase_check_agreement",
+    "n_events_all_seasons",
+    "qbo_tercile_bounds_ms",
+    "primary",
+    "S1_before_2014"
    ]
   },
   {
