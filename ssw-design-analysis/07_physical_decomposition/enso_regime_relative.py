@@ -334,6 +334,49 @@ def lr_pb(xs, rng, n_boot):
             "H0_components": [round(float(v), 3) for v in (m1, m2, s1, s2)], "H0_upper_weights": [round(float(v), 3) for v in w]}
 
 
+def _misspec_job(args):
+    """POST HOC (review 2026-10-22): false rejection of P1b under FIXED regimes that are not Gaussian."""
+    kind, seed, nsim, nb, payload = args
+    rng = np.random.default_rng(seed); rej = 0
+    from scipy.stats import skewnorm, gamma
+    for _ in range(nsim):
+        xs = []
+        for j in range(3):
+            if kind == "empirical":
+                A, Bv, w, n = payload["A"], payload["B"], payload["w"][j], payload["n"][j]
+                t = rng.random(n) < w
+                xs.append(np.where(t, rng.choice(Bv, n), rng.choice(A, n)))
+            else:                                   # skewed fixed types, strong weight 0.05/0.10/0.20, 40 x 30
+                n = 1200; w = (0.05, 0.10, 0.20)[j]; t = rng.random(n) < w
+                mod = skewnorm.rvs(4, size=n, random_state=rng); mod = (mod - mod.mean()) / mod.std()
+                strong = 2.0 + gamma.rvs(3, scale=0.5, size=n, random_state=rng)
+                xs.append(np.where(t, strong, mod))
+        rej += lr_pb(xs, rng, nb)["p"] <= 0.03
+    return kind if kind != "empirical" else payload["model"], rej
+
+
+def post_hoc_misspecification(arms, p1b, nsim=400, nb=99):
+    """fixed regimes with each model's own L0 regime shapes (seasons assigned by the H0 fit's posterior)
+    and the H0 weights per level; and a generic skewed pair. Returns false-rejection rates at p <= 0.03."""
+    jobs, chunks = [], 20
+    for m in arms:
+        m1, m2, s1, s2 = p1b[m]["H0_components"]; w = p1b[m]["H0_upper_weights"]
+        x0 = arms[m][0][1].ravel()
+        post = w[0] * _npdf(x0, m2, s2) / (w[0] * _npdf(x0, m2, s2) + (1 - w[0]) * _npdf(x0, m1, s1))
+        pay = {"model": m, "A": x0[post <= 0.5], "B": x0[post > 0.5], "w": w, "n": [X.size for _, X in arms[m]]}
+        jobs += [("empirical", SEED + 30000 + 100 * len(jobs) + c, nsim // chunks, nb, pay) for c in range(chunks)]
+    jobs += [("skewed", SEED + 40000 + c, nsim // chunks, nb, None) for c in range(chunks)]
+    import multiprocessing as mp
+    with mp.get_context("fork").Pool(20) as pool:
+        outs = pool.map(_misspec_job, jobs)
+    agg = {}
+    for k, r in outs:
+        agg[k] = agg.get(k, 0) + r
+    ub = lambda r, n: float(beta.ppf(0.95, r + 1, n - r)) if r < n else 1.0
+    return {"note": "POST HOC (review 2026-10-22): P1b false rejection (p <= 0.03, 99 replicates) when regimes are fixed but not Gaussian",
+            "n_sim": nsim, "cases": {k: {"reject": v / nsim, "upper95": round(ub(v, nsim), 4)} for k, v in agg.items()}}
+
+
 def _val_pb(args):
     kind, seed, nsim, nb, level = args
     rng = np.random.default_rng(seed); rej = 0
@@ -534,6 +577,13 @@ def main():
     res["S5_absolute_frame"] = {m: {"P1": MM.tests(arms_abs[m], B, np.random.default_rng(SEED + 130 + i)),
                                     "S1": shape_test(arms_abs[m][0][1], arms_abs[m][2][1], np.random.default_rng(SEED + 150 + i))}
                                 for i, m in enumerate(sorted(arms_abs))}
+    if "P1b_LR_fixed_regimes" in res and "--no-posthoc" not in sys.argv:
+        sel_arms = {m: arms[m] for m in sel}
+        res["post_hoc_P1b_misspecification"] = post_hoc_misspecification(sel_arms, res["P1b_LR_fixed_regimes"])
+        print("POSTHOC", json.dumps(res["post_hoc_P1b_misspecification"]["cases"]), flush=True)
+    res["S2_note"] = ("POST REVIEW: in simulations with fixed Gaussian types whose weight rises (V1, V3), per-level two-component "
+                      "fits report a falling weight and a moving upper component; the per-level weights, shifts and both "
+                      "decompositions are therefore descriptive of the fits and are not evidence about fixed regimes")
     for k in ("S1_shape", "S2_regimes", "S3_class_law", "S4_forced_share", "S5_absolute_frame"):
         print(k, json.dumps(res[k], default=float)[:2000], flush=True)
     OUT.write_text(json.dumps(res, indent=1, default=float), encoding="utf8", newline="\n")
