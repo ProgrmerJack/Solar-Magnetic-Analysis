@@ -377,6 +377,34 @@ def post_hoc_misspecification(arms, p1b, nsim=400, nb=99):
             "n_sim": nsim, "cases": {k: {"reject": v / nsim, "upper95": round(ub(v, nsim), 4)} for k, v in agg.items()}}
 
 
+def posthoc_empirical_lr(arms, p1b, rng, n=1000, jitter=0.05):
+    """POST HOC (second review, 2026-10-22): the observed LR against its distribution when the regimes are FIXED
+    with each model's own 1951-1980 shapes (seasons split by the H0 fit's posterior) and the H0 weights per level;
+    a small jitter (0.05 s.d.) breaks ties from resampling. Empirical p = (1 + #null >= observed) / (n + 1)."""
+    out = {}
+    for m in arms:
+        m1, m2, s1, s2 = p1b[m]["H0_components"]; w = p1b[m]["H0_upper_weights"]
+        x0 = arms[m][0][1].ravel()
+        post = w[0] * _npdf(x0, m2, s2) / (w[0] * _npdf(x0, m2, s2) + (1 - w[0]) * _npdf(x0, m1, s1))
+        A, Bv = x0[post <= 0.5], x0[post > 0.5]; ns = [X.size for _, X in arms[m]]
+        lr_obs = lr_stat([X.ravel() for _, X in arms[m]])[0]; null = []
+        for _ in range(n):
+            xs = []
+            for j in range(3):
+                t = rng.random(ns[j]) < w[j]
+                xs.append(np.where(t, rng.choice(Bv, ns[j]), rng.choice(A, ns[j])) + jitter * rng.normal(size=ns[j]))
+            null.append(lr_stat(xs)[0])
+        null = np.array(null)
+        out[m] = {"LR_observed": round(float(lr_obs), 2), "null_median": round(float(np.median(null)), 2),
+                  "null_p95": round(float(np.quantile(null, 0.95)), 2), "null_max": round(float(null.max()), 2),
+                  "p_empirical": round(float((1 + np.sum(null >= lr_obs)) / (n + 1)), 4), "n_null": n}
+    ps = [out[m]["p_empirical"] for m in out]
+    for m, a in zip(out, EX.holm(ps)):
+        out[m]["p_holm"] = round(float(a), 4)
+    return {"note": "POST HOC (second review): LR calibrated against fixed regimes of each model's own shape; one family of "
+                    "fixed shapes, devised after the results", "models": out}
+
+
 def _val_pb(args):
     kind, seed, nsim, nb, level = args
     rng = np.random.default_rng(seed); rej = 0
@@ -494,6 +522,14 @@ def main():
         return validate_pb()
     if "--validate-pb04" in sys.argv:
         return validate_pb(level=0.04, seed_off=20000, key="validation_P1b_PB04")
+    if "--posthoc-empirical-lr" in sys.argv:
+        res = json.loads(OUT.read_text()); ocean = np.load(FIELDS / "ocean_frac.npy") >= 0.9; arms = {}
+        for m in res["selected"]:
+            ids, ts, yr, mo = load_model(m); E, _, _ = e_index(ts, yr, mo, ocean, True)
+            ok = np.all(np.isfinite(np.concatenate(E, 1)), axis=1); arms[m] = [(ids[ok], X[ok]) for X in E]
+        res["post_hoc_P1b_empirical_calibration"] = posthoc_empirical_lr(arms, res["P1b_LR_fixed_regimes"], np.random.default_rng(SEED + 50000))
+        OUT.write_text(json.dumps(res, indent=1, default=float), encoding="utf8", newline="\n")
+        print(json.dumps(res["post_hoc_P1b_empirical_calibration"], indent=1)); return 0
     res = json.loads(OUT.read_text()) if OUT.exists() else {}
     if not res.get("validation", {}).get("passes"):
         sys.exit("validation gate not passed (run --validate)")
@@ -566,7 +602,7 @@ def main():
                     p1b[m][f"category_{fam}"] = category_p1b(p1b[m], a, S2[m]["bootstrap_L0_to_L2"], lev)
         cb = [p1b[m]["category_selected"] for m in sel]
         rej = sum(c == "fixed regimes rejected" for c in cb); cmp_ = sum(c.startswith("compatible") for c in cb)
-        res["P1b_note"] = ("registered with 499 replicates; that run (2026-10-17 01:10) gave LR 104.1/106.9/82.8/68.7/72.8/725.1 and p 0.002 (the floor) for ACCESS-ESM1-5/CESM1-LE/CanESM5-p1/CanESM5-p2/GFDL-CM3/MIROC6, Holm 0.006 for the three selected; re-run with 1,999 for the repo floor")
+        res["P1b_note"] = ("registered with 499 replicates; that run (2026-10-17 01:10, on the v1 fields later superseded by the area-overlap regridding) gave LR 104.1/106.9/82.8/68.7/72.8/725.1 and p 0.002 (the floor) for ACCESS-ESM1-5/CESM1-LE/CanESM5-p1/CanESM5-p2/GFDL-CM3/MIROC6, Holm 0.006 for the three selected; re-run with 1,999 for the repo floor")
         res["P1b_LR_fixed_regimes"] = p1b; res["P1b_reference"] = (f"parametric bootstrap at level {lev}" if pb_ok else "chi-square")
         res["P1b_reading"] = ("cannot test: no model produces a strong regime" if not sel else
                               "the strong El Nino regime is not a fixed regime whose frequency forcing changes" if rej >= 1 and cmp_ == 0 else
