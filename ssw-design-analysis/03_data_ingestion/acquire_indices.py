@@ -55,6 +55,9 @@ DAILY = {
 }
 MONTHLY = {
     "tele_index_nh": "https://ftp.cpc.ncep.noaa.gov/wd52dg/data/indices/tele_index.nh",
+    # for 07_physical_decomposition/mjo_class_law.py (added 2026-10-22, before either was retrieved)
+    "qbo_u50": "https://www.cpc.ncep.noaa.gov/data/indices/qbo.u50.index",
+    "rmm": "https://www.bom.gov.au/clim_data/IDCKGEM000/rmm.74toRealtime.txt",     # daily; parsed by mjo_class_law
 }
 
 
