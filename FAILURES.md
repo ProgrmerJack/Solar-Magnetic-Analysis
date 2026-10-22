@@ -382,3 +382,13 @@ Rule: mask with the model's own land fraction before regridding, fill boxes with
 Tried: enso_regime_relative --validate-pb on a 20-process pool with default thread settings.
 Failed: each worker opened 49-70 BLAS/OpenMP threads (about 1,100 on 24 cores, load 222); one LR cost 5.1 CPU-s instead of 0.07, so 4 hours reached about 20%.
 Rule: run every multiprocessing job with OMP_NUM_THREADS=OPENBLAS_NUM_THREADS=MKL_NUM_THREADS=1 and check load and thread counts in the first minute.
+
+## 2026-10-22 — np.round binning of grid centres that lie on box edges
+Tried: acquire_enso_regime_fields v1, each native cell assigned to the 2.5-degree box containing its centre via np.round(lat/2.5).
+Failed: round-half-to-even sent GFDL-CM3's edge-centred cells two-to-one, leaving half the boxes as nearest copies (rms 0.42 K, up to 4.6 K at coasts); found only in review.
+Rule: regrid by area overlap, and test the regridder on a synthetic field (e.g. latitude itself) on each source grid before use.
+
+## 2026-10-22 — Per-level mixture fits describe fixed regimes as moving ones
+Tried: reading two-component fits at each forcing level (weights, component shifts, weight-only decomposition) as evidence about El Nino regimes.
+Failed: in simulations with fixed types whose weight rises 0.05 -> 0.20, the fits report a falling weight (-0.05) and an upper component moving +2.3 s.d.
+Rule: never interpret per-level mixture parameters without checking that they recover known truth in simulation; use the validated joint test instead.
