@@ -1576,6 +1576,15 @@ Fields re-reduced by area overlap after review (v1 centre binning left GFDL boxe
   else; forced share = law in all three (0.010/0.003/0.15).
 Paper: El Nino out of the abstract; main text states the regime view is not decided.
 
+### Z26 — MJO crossing vs blocked under the QBO (`mjo_class_law.py`, 8_experiment; registered `f07480a` before data; QBO parser fixed `c781048` before any statistic)
+
+119 NDJFM Indian Ocean starts (phase 2-3, amp >= 1), 46 winters 1979/80-2024/25; outcome = furthest unwrapped RMM phase;
+crossing = phase 6. QBO u50 terciles (bounds -2.1, 5.1 m/s). Crossing rate 60% / 38% / 40% (easterly -> westerly).
+- M1 fixed-type mixing: **unresolved** (p 0.64; gate power 0.22).
+- M2 class law (crossing): **holds** -0.05 [-0.19, +0.17]; phase-7 class inconclusive.
+- M3 forced share 0.062 vs law 0.051 (h2 0.069): **what the law predicts**; 1/R = 16 -> 15th set in Fig. 3a (range still 3-30, median 10.9).
+- S1 pre-2014 (87 events): inconclusive throughout.
+
 ## 4. Prior art — verified from source, all must be cited
 
 1. **Karpechko et al. (2017)**, QJRMS 143, 1459, doi 10.1002/qj.3017 — the

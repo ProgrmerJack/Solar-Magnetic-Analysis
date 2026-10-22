@@ -86,6 +86,7 @@ def main():
     CIA = J("cluster_ci_audit.json")
     ENX = J("enso_extreme_class.json")
     ENR = J("enso_regime_relative.json")
+    MJO = J("mjo_class_law.json")
     R2 = ("robustness (revision 2)", "committed before run", "4c8b3f2")
     mm = g(MMt, "multimodel", "confirmatory"); nr = g(SRt, "regions", "NEURASIA", "multimodel", "confirmatory")
     rows = [
@@ -475,6 +476,11 @@ def main():
           f"calibrated post hoc against fixed regimes of each model's own shape: empirical Holm p "
           f"{', '.join(f'{k} {v["p_holm"]}' for k, v in (g(ENR,'post_hoc_P1b_empirical_calibration','models') or {}).items())}; "
           f"moment test {g(ENR,'P1_reading')}; shape-free CDF form rejects only in MIROC6 (post hoc); registered tests undecided") if g(ENR, 'P1b_reading') else "pending", None),
+        ("MJ-1", "MJO events crossing vs blocked by the Maritime Continent: fixed two-type mixing of the furthest RMM phase reached across QBO u50 terciles (119 NDJFM events, winter bootstrap)", "revision-10 primary",
+         "committed before data (gate before data)", "f07480a",
+         (f"{g(MJO,'primary','M1_reading')}; crossing law {g(MJO,'primary','M2_law_crossing','residual_sd_units')} {g(MJO,'primary','M2_law_crossing','ci95')} "
+          f"({g(MJO,'primary','M2_law_crossing','reading')}); forced share {g(MJO,'primary','M3_forced_share','R_obs')} vs law {g(MJO,'primary','M3_forced_share','R_LS')}") if g(MJO, 'primary') else "pending",
+         g(MJO, 'primary', 'M1_mixing', 'p_T')),
         ("CI-2", "few-cluster robustness of the seven SNAPSI statistics: sign-flip, wild cluster bootstrap-t, KMA+UKMO merged, 90% equivalence; validated with and without a shared KMA/UKMO effect", "revision-10 secondary",
          "committed before any interval was computed", "db36561",
          ("; ".join(f"{k.split('_', 1)[1]}: " + (f"{'/'.join(sorted(set(v.values())))} ({len(v)} valid methods)" if (v := g(CIA,'r10_few_cluster_robustness','statistics',k,'readings_valid_methods')) else 'no method valid in every layout')

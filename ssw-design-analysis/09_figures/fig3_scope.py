@@ -10,6 +10,7 @@ Reads (recomputes nothing):
 
   results/current/8_experiment/class_forcing_content.json      forced shares (Z20)
   results/current/8_experiment/enso_extreme_class.json         extreme El Nino (Z22)
+  results/current/8_experiment/mjo_class_law.json              MJO crossing under the QBO (Z26)
 
   a  forced share R of the class contrast (observed, filled; 95% interval where stored) and
      its prediction (open: the law's R_LS where forcing levels are known, else h2), per system
@@ -38,6 +39,7 @@ def main():
     R = S.RESULTS
     cf = json.loads((R / "8_experiment" / "class_forcing_content.json").read_text())
     en = json.loads((R / "8_experiment" / "enso_extreme_class.json").read_text())
+    mj = json.loads((R / "8_experiment" / "mjo_class_law.json").read_text())["primary"]["M3_forced_share"]
     ic = json.loads((R / "5_mechanism" / "icon_event_heterogeneity.json").read_text())["primary_registered"]
     arc = json.loads((R / "8_experiment" / "snapsi_archetype_test.json").read_text())
     grey, verm = "0.6", S.C["vermillion"]
@@ -52,6 +54,7 @@ def main():
     rows.append(("SSW, CMIP6 realised 100 hPa dose", s5["R_obs"], s5["R_obs_summary"]["ci95"], s5["R_h2"], "h2"))
     for k, lab in (("MAJOR", "cyclones, major (genesis SST)"), ("RI", "cyclones, rapid intensification")):
         t = cf["S3_tropical_cyclones"]["global_terciles"][k]; rows.append((lab, t["R_obs"], None, t["R_LS"], "law"))
+    rows.append(("MJO crossing the Maritime Continent (QBO)", mj["R_obs"], None, mj["R_LS"], "law"))
     for k, lab in (("CEUR_JJA", "hot summers, central Europe"), ("WRUS_JJA", "hot summers, western Russia"),
                    ("CNAM_JJA", "hot summers, central N. America"), ("CEAS_DJF", "cold winters, central Eurasia")):
         t = cf["S4_human_forcing_hadgem3"][k]; rows.append((lab + " (HadGEM3)", t["R_obs"], None, t["R_LS"], "law"))
