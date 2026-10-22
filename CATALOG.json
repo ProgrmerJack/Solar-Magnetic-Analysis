@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-17T05:13:14+00:00",
+ "generated": "2026-10-22T11:56:53+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -127,9 +127,9 @@
    "tree": "ssw-design-analysis",
    "stage": "03_data_ingestion",
    "title": "Monthly surface temperature over the tropical band (20S-20N, all longitudes), box-averaged onto a common 2.5-degree grid, for the registered test 07_physical_decomposition/enso_regime_relative.py (committed with it, before this script first ran). Over ocean cells ts is SST on the atmospheric grid.",
-   "loc": 222,
-   "modified": "2026-10-16 15:43",
-   "sha256_16": "b8366228d5cf5f98",
+   "loc": 239,
+   "modified": "2026-10-22 11:03",
+   "sha256_16": "aef9920945225184",
    "flags": [],
    "filenames_mentioned": [
     "lsmask.oisst.nc"
@@ -1220,9 +1220,9 @@
    "tree": "ssw-design-analysis",
    "stage": "07_physical_decomposition",
    "title": "IN MODELS THAT PRODUCE A STRONG EASTERN-PACIFIC EL NINO REGIME, DOES GREENHOUSE FORCING CHANGE HOW OFTEN THAT FIXED REGIME OCCURS, OR DOES IT MOVE THE REGIMES (OR ONE POPULATION) ITSELF? Registered 2026-10-16 (plan approved by the user the same day), committed with its validation gate and",
-   "loc": 527,
-   "modified": "2026-10-17 04:54",
-   "sha256_16": "a2ba5a280dfca34b",
+   "loc": 596,
+   "modified": "2026-10-22 11:06",
+   "sha256_16": "809a7658d4902d15",
    "flags": [],
    "filenames_mentioned": [
     "enso_regime_relative.json"
@@ -2387,8 +2387,8 @@
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
    "loc": 548,
-   "modified": "2026-10-17 04:55",
-   "sha256_16": "5a5119fc1ed985c1",
+   "modified": "2026-10-17 05:16",
+   "sha256_16": "a097b4790e8d4cfc",
    "flags": [],
    "filenames_mentioned": [
     "class_forcing_content.json",
@@ -3288,7 +3288,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-17 04:53",
+   "modified": "2026-10-17 05:17",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"
@@ -8000,9 +8000,9 @@
    "tree": "current",
    "stage": "8_experiment",
    "readable": true,
-   "bytes": 30353,
-   "modified": "2026-10-17 05:12",
-   "sha256_16": "1004b796107a1798",
+   "bytes": 32930,
+   "modified": "2026-10-22 11:55",
+   "sha256_16": "09dd8d38b5239092",
    "producers": [
     "ssw-design-analysis/07_physical_decomposition/enso_regime_relative.py"
    ],
@@ -8010,7 +8010,7 @@
    "detail": "",
    "flags": [],
    "producer_sha256": {
-    "ssw-design-analysis/07_physical_decomposition/enso_regime_relative.py": "a2ba5a280dfca34b"
+    "ssw-design-analysis/07_physical_decomposition/enso_regime_relative.py": "809a7658d4902d15"
    },
    "verdicts": [
     {
@@ -8035,7 +8035,7 @@
     },
     {
      "key": "S1_shape.GFDL-CM3.reading",
-     "text": "shape changes"
+     "text": "same shape"
     },
     {
      "key": "S1_shape.MIROC6.reading",
@@ -8103,7 +8103,7 @@
     },
     {
      "key": "S4_forced_share.CanESM5-p2.reading",
-     "text": "inconclusive"
+     "text": "the forced share is what the law predicts"
     },
     {
      "key": "S4_forced_share.GFDL-CM3.reading",
@@ -8144,6 +8144,14 @@
     {
      "key": "P1b_note",
      "text": "registered with 499 replicates; that run (2026-10-17 01:10) gave LR 104.1/106.9/82.8/68.7/72.8/725.1 and p 0.002 (the floor) for ACCESS-ESM1-5/CESM1-LE/CanESM5-p1/CanESM5-p2/GFDL-CM3/MIROC6, Holm 0.006 for the three selected; re-run with 1,999 for the repo floor"
+    },
+    {
+     "key": "post_hoc_P1b_misspecification.note",
+     "text": "POST HOC (review 2026-10-22): P1b false rejection (p <= 0.03, 99 replicates) when regimes are fixed but not Gaussian"
+    },
+    {
+     "key": "S2_note",
+     "text": "POST REVIEW: in simulations with fixed Gaussian types whose weight rises (V1, V3), per-level two-component fits report a falling weight and a moving upper component; the per-level weights, shifts and both decompositions are therefore descriptive of the fits and are not evidence about fixed regimes"
     }
    ],
    "counts": {
@@ -8189,7 +8197,9 @@
     "P1b_reference",
     "P1b_reading",
     "S5_absolute_frame",
-    "P1b_note"
+    "P1b_note",
+    "post_hoc_P1b_misspecification",
+    "S2_note"
    ]
   },
   {

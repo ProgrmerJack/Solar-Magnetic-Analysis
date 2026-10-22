@@ -392,3 +392,8 @@ Rule: regrid by area overlap, and test the regridder on a synthetic field (e.g. 
 Tried: reading two-component fits at each forcing level (weights, component shifts, weight-only decomposition) as evidence about El Nino regimes.
 Failed: in simulations with fixed types whose weight rises 0.05 -> 0.20, the fits report a falling weight (-0.05) and an upper component moving +2.3 s.d.
 Rule: never interpret per-level mixture parameters without checking that they recover known truth in simulation; use the validated joint test instead.
+
+## 2026-10-22 — A Gaussian-mixture likelihood ratio rejects fixed regimes that are merely non-Gaussian
+Tried: enso_regime_relative P1b, LR of fixed Gaussian regimes against free per-level mixtures; gates used Gaussian types only.
+Failed: post hoc, with fixed regimes of each model's own shape it rejected 11-100% (skewed synthetic: 100%), so its rejections said nothing about fixed regimes.
+Rule: validate a regime test under fixed regimes of realistic, non-Gaussian shape before registering it; prefer the shape-free CDF collinearity test.

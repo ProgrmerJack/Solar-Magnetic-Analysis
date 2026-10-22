@@ -1,0 +1,29 @@
+200 members
+  10/200
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f327df3a120>
+Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x7f327dbc7890>, 76882.932956918)])']
+connector: <aiobotocore.httpsession._ProxySSLTCPConnector object at 0x7f327df392b0>
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fad09146120>
+Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x7fad08ed3c50>, 77016.951418359)])']
+connector: <aiobotocore.httpsession._ProxySSLTCPConnector object at 0x7fad091452b0>
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f72d723e120>
+Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x7f72d7282d50>, 77025.524222285)])']
+connector: <aiobotocore.httpsession._ProxySSLTCPConnector object at 0x7f72d723d2b0>
+  20/200
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f41d2eb2120>
+Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x7f41d2947890>, 77063.984196761), (<aiohttp.client_proto.ResponseHandler object at 0x7f41d2cf6c10>, 77064.850336272)])']
+connector: <aiobotocore.httpsession._ProxySSLTCPConnector object at 0x7f41d2eb12b0>
+  30/200
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f905313e120>
+Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x7f9052ecaad0>, 77367.320466266)])']
+connector: <aiobotocore.httpsession._ProxySSLTCPConnector object at 0x7f905313d2b0>
