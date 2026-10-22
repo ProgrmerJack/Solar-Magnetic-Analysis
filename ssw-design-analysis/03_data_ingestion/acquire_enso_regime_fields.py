@@ -17,12 +17,13 @@ SOURCES
   MASK       NOAA OISST v2 0.25-degree land-sea mask (lsmask.oisst.nc, PSL), ocean fraction per 2.5-degree box
 WINDOWS  1950-12..1980-11, 2020-12..2050-11, 2069-12..2099-11 (360 months each; RCP8.5 for the CMIP5-era
   ensembles, SSP5-8.5 for CMIP6)
-GRID  centres at multiples of 2.5 degrees (lat -20..20, lon 0..357.5); a native cell belongs to the box
-  that contains its centre (box edges +-1.25); cos-latitude weights. Plausibility: 270-320 K over the
+GRID  centres at multiples of 2.5 degrees (lat -20..20, lon 0..357.5), box edges +-1.25; area-weighted
+  (overlap) averaging of native cells, corrected 2026-10-22 after review: the first version assigned each
+  native cell to the box containing its centre with np.round, which on grids whose centres fall on box edges
+  (GFDL-CM3, CESM1 longitudes) left boxes empty or doubled; all fields were re-reduced and the analysis re-run. Plausibility: 270-320 K over the
   ocean cells of the band (upper limit raised from 315 K before any statistic: GFDL-CM3 reaches 316.6 K in
-  the coastal Red Sea box in the 2090s; MIROC6 land leakage reached 330 K). A box containing no kept native
-  centre takes the nearest kept native cell (added before any statistic: CanESM5's grid is coarser than
-  2.5 degrees). Any remaining NaN over ocean boxes fails the member.
+  the coastal Red Sea box in the 2090s; MIROC6 land leakage reached 330 K). A box with no kept native area
+  takes the nearest kept native cell. Any remaining NaN over ocean boxes fails the member.
 Output: _enso_fields/<model>__<member>.npz (ts[1080, 17, 144], year, month), _enso_fields/ocean_frac.npy
 """
 import socket
@@ -37,7 +38,7 @@ import pandas as pd
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-OUTD = HERE / "_enso_fields"
+OUTD = HERE / "_enso_fields_v2"
 RAW = HERE / "raw" / "gfdl_cm3_ts"
 WINDOWS = [("1950-12-01", "1980-11-30"), ("2020-12-01", "2050-11-30"), ("2069-12-01", "2099-11-30")]
 LAT = np.arange(-20.0, 20.01, 2.5); LON = np.arange(0.0, 360.0, 2.5)
@@ -47,25 +48,39 @@ GFDL_URL = "https://osdf-director.osg-htc.org/ncar/gdex/d651039/gfdl_cm3_lens/Am
 socket.setdefaulttimeout(600)
 
 
+def _edges(c):
+    """cell edges of sorted centres: midpoints, ends extended by half a spacing."""
+    m = 0.5 * (c[1:] + c[:-1])
+    return np.concatenate([[c[0] - (m[0] - c[0])], m, [c[-1] + (c[-1] - m[-1])]])
+
+
+def _overlap(lo, hi, tlo, thi, period=None):
+    """length of overlap of native cells [lo, hi] with target boxes [tlo, thi] (targets x cells)."""
+    shifts = (0.0,) if period is None else (-period, 0.0, period)
+    w = np.zeros((tlo.size, lo.size))
+    for s_ in shifts:
+        w += np.clip(np.minimum(hi[None, :] + s_, thi[:, None]) - np.maximum(lo[None, :] + s_, tlo[:, None]), 0, None)
+    return w
+
+
 def to_grid(da, land=None):
-    """box-average a (time, lat, lon) DataArray with 0..360 longitudes onto LAT x LON; native cells with
-    land fraction > 50% (model sftlf, %, same grid) are left out when it is given."""
-    lat = da.lat.values; lon = np.mod(da.lon.values, 360.0)
-    il = np.round(lat / 2.5).astype(int); jl = np.mod(np.round(lon / 2.5).astype(int), 144)
-    v = da.values.astype(np.float64); w = np.cos(np.deg2rad(lat))
-    keep = np.ones((lat.size, lon.size), bool) if land is None else land <= 50.0
-    out = np.zeros((v.shape[0], LAT.size, LON.size)); wsum = np.zeros((LAT.size, LON.size))
-    for a, i in enumerate(il):
-        if not (-8 <= i <= 8):
-            continue
-        for b, j in enumerate(jl):
-            if keep[a, b]:
-                out[:, i + 8, j] += w[a] * v[:, a, b]; wsum[i + 8, j] += w[a]
-    out = out / np.where(wsum > 0, wsum, np.nan)
-    # boxes with no kept native centre (native grid coarser than 2.5 degrees, or coastal boxes after the
-    # land mask) take the nearest kept native cell (distance in degrees, longitude scaled by cos latitude)
-    ka, kb = np.where(keep & (np.abs(lat)[:, None] <= 22.5))
-    for i, j in zip(*np.where(wsum == 0)):
+    """area-weighted (overlap) average of a (time, lat, lon) DataArray onto the 2.5-degree boxes LAT x LON
+    (edges +-1.25 degrees): each native cell contributes in proportion to the area it shares with a box
+    (overlap in latitude x overlap in longitude x cos latitude). Native cells with land fraction > 50%
+    (model sftlf, %, same grid) are left out when it is given. A box with no kept native area takes the
+    nearest kept native cell (only coastal boxes after the land mask; none in the ocean mask is expected)."""
+    lat = da.lat.values.astype(float); lon = np.mod(da.lon.values.astype(float), 360.0)
+    o = np.argsort(lon); lon = lon[o]
+    v = np.nan_to_num(da.values.astype(np.float64)[:, :, o])
+    keep = (np.ones((lat.size, lon.size), bool) if land is None else (land <= 50.0)[:, o]).astype(float)
+    la_e = _edges(lat); lo_e = _edges(lon)
+    Wla = _overlap(la_e[:-1], la_e[1:], LAT - 1.25, LAT + 1.25) * np.cos(np.deg2rad(lat))[None, :]
+    Wlo = _overlap(lo_e[:-1], lo_e[1:], LON - 1.25, LON + 1.25, period=360.0)
+    num = np.einsum("ia,tab,jb->tij", Wla, v * keep[None], Wlo, optimize=True)
+    den = Wla @ keep @ Wlo.T
+    out = num / np.where(den > 0, den, np.nan)[None]
+    ka, kb = np.where((keep > 0) & (np.abs(lat)[:, None] <= 22.5))
+    for i, j in zip(*np.where(den <= 0)):
         dl = np.abs(np.mod(lon[kb] - LON[j] + 180.0, 360.0) - 180.0) * np.cos(np.deg2rad(LAT[i]))
         k = int(np.argmin((lat[ka] - LAT[i]) ** 2 + dl ** 2))
         out[:, i, j] = v[:, ka[k], kb[k]]
@@ -82,9 +97,11 @@ def window_months(t):
 
 
 def save(model, member, da, land=None):
-    sub = da.sel(lat=slice(-22, 22))
+    sub = da.sel(lat=slice(-25, 25))
+    if not np.all(np.diff(sub.lat.values) > 0):
+        raise ValueError(f"{model} {member}: latitudes not ascending")
     if land is not None:
-        land = land.sel(lat=slice(-22, 22)).values
+        land = land.sel(lat=slice(-25, 25)).values
     keep, yrs, mon = window_months(sub.time.values)
     sub = sub.isel(time=np.where(keep)[0]).load()
     g = to_grid(sub, land)

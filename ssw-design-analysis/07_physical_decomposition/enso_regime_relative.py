@@ -103,7 +103,7 @@ from scipy.stats import anderson_ksamp, beta, skew
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 OUT = ROOT / "results" / "current" / "8_experiment" / "enso_regime_relative.json"
-FIELDS = HERE.parents[0] / "03_data_ingestion" / "_enso_fields"
+FIELDS = HERE.parents[0] / "03_data_ingestion" / "_enso_fields_v2"   # v1 had a regridding defect (2026-10-22)
 sys.path.insert(0, str(HERE))
 import mixture_moment_test as MM                    # noqa: E402
 import enso_extreme_class as EX                      # noqa: E402
