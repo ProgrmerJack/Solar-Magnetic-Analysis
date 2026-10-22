@@ -1,0 +1,10 @@
+/home/xola/Solar-Magnetic-Analysis/ssw-design-analysis/07_physical_decomposition/tc_class_law.py:104: RuntimeWarning: invalid value encountered in scalar divide
+  out.append(((ww[m] * y[m]).sum() / s, (ww[m] * y[m] ** 2).sum() / s))
+{
+ "n_sim": 1000,
+ "false_rejection_rate": 0.032,
+ "upper95": 0.0427,
+ "gate": 0.07,
+ "passes": true,
+ "power_vs_one_population": 0.22
+}

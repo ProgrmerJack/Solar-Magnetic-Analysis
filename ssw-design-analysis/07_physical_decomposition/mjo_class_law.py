@@ -53,6 +53,9 @@ VALIDATION GATE (--validate; before any data): 1,000 simulations of 46 winters w
   blocked = 2.5 + Gamma(2, 0.5), crossing = 6 + Gamma(3, 0.5), crossing weight 1/(1 + exp(-1.2 cov));
   false rejection of M1 at 0.05: one-sided 95% Clopper-Pearson upper bound < 0.07, else M1 is not
   interpreted. Power reported against one population whose location rises with cov.
+  GATE RESULT (before any data): false rejection 0.032 (upper bound 0.043), power 0.22. In 2 of 300 re-simulated
+  sets a bootstrap draw lacked a level and p was NaN (counted as non-rejection; at most +0.7%, still inside the
+  gate); a NaN p on the data is reported as undefined, not as unresolved (added before any data).
 Output: results/current/8_experiment/mjo_class_law.json
 Run:    mjo_class_law.py --validate ; mjo_class_law.py
 """
@@ -175,6 +178,8 @@ def forced_share(y, lev, win, n_win, thr, rng, B=1999):
 
 def category(r):
     ci = r["rho_ci95"]
+    if not np.isfinite(r["p_T"]):                 # bootstrap draws without one level (0.7% of gate sets)
+        return "undefined (bootstrap draws without a level)"
     return INC if r["p_T"] < 0.05 else COM if ci and -TOL <= ci[0] and ci[1] <= TOL else "unresolved"
 
 

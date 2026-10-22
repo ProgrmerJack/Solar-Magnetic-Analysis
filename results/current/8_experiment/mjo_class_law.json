@@ -1,0 +1,11 @@
+{
+ "validation": {
+  "n_sim": 1000,
+  "false_rejection_rate": 0.032,
+  "upper95": 0.0427,
+  "gate": 0.07,
+  "passes": true,
+  "power_vs_one_population": 0.22
+ },
+ "validation_fixed": "2026-10-22, before any RMM or QBO value was retrieved"
+}
