@@ -397,3 +397,8 @@ Rule: never interpret per-level mixture parameters without checking that they re
 Tried: enso_regime_relative P1b, LR of fixed Gaussian regimes against free per-level mixtures; gates used Gaussian types only.
 Failed: post hoc, with fixed regimes of each model's own shape it rejected 11-100% (skewed synthetic: 100%), so its rejections said nothing about fixed regimes.
 Rule: validate a regime test under fixed regimes of realistic, non-Gaussian shape before registering it; prefer the shape-free CDF collinearity test.
+
+## 2026-10-24 — Condensing Methods by keeping verbatim sentences broke definitions and readings
+Tried: shortening each Methods paragraph to a verbatim subset of its sentences (full text moved to Supplementary Methods) to fit a page target.
+Failed: kept sentences used terms defined only in moved ones (R_LS, M0, distribution test), one reading inverted (elasticity 1.14 "outside" the law), registered tests lost design or readings, and data/method citations left the main bibliography.
+Rule: after any condensation, check every kept sentence for undefined terms, every registered test for design + registration + reading + result, and every cited reference, before counting pages.

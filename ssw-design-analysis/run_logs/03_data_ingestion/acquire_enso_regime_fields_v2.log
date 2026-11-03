@@ -27,3 +27,5 @@ client_session: <aiohttp.client.ClientSession object at 0x7f905313e120>
 Unclosed connector
 connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x7f9052ecaad0>, 77367.320466266)])']
 connector: <aiobotocore.httpsession._ProxySSLTCPConnector object at 0x7f905313d2b0>
+/usr/lib/python3.14/multiprocessing/resource_tracker.py:475: UserWarning: resource_tracker: There appear to be 9 leaked semaphore objects to clean up at shutdown: {'/mp-cmlswy0p', '/mp-ke9ns29e', '/mp-w8xlvxef', '/mp-0y1vm_do', '/mp-sridwd7h', '/mp-cyhpuolf', '/mp-araze04z', '/mp-oa2iewov', '/mp-dmh9i9sy'}
+  warnings.warn(

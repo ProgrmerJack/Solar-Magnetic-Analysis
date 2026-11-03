@@ -24,12 +24,12 @@ ssw-design-analysis/     THE LIVE PROJECT. Numbered stages, executed in order.
   07_physical_decomposition/ mechanism, predictability, SNAPSI analyses
   08_literature_audit/     recomputing published criteria on our data
   09_figures/ 10_tables/   display items; scripts READ results, never compute them
-  manuscript/              main.md, the submission draft (written from CONSOLIDATED_RESULTS.md)
+  manuscript/              latex/main.tex + supplementary.tex (the submission; latex/build.sh), cover_letter.md
   environment/             the pinned environment and its check
   run_logs/<stage>/        stdout of every run, mirroring the stage layout
   tests/smoke_test.py      the standing checks
 results/
-  current/<theme>/         60 live result JSONs, grouped by question answered
+  current/<theme>/         109 live result JSONs (plus a checkpoint file), grouped by question answered
   superseded/<family>/     retired results, kept for provenance
   _ALL_RESULTS.json        every live payload in one file -- the read path
   _PROVENANCE.json         producer path + sha256 baseline, drives staleness
@@ -117,7 +117,7 @@ with no NetCDF backend and cannot open any `.nc` in this repo.
 
 ## Superseded
 
-`archive/superseded_paper/` (moved from `paper/` 2026-09-25), `notebooks/`, `scripts/`, `docs/`, `ZENODO_DEPOSITS.json`, `requirements.txt`
+`archive/superseded_paper/` (moved from `paper/` 2026-09-25), `archive/superseded_project/` (`scripts/`, `ZENODO_DEPOSITS.json`, `requirements.txt`, `DATA_INVENTORY.md`, moved 2026-10-22)
 and nearly all of `data/` belong to the abandoned solar/geomagnetic–avalanche project.
 Four files under `data/processed/` are still read by live code
 (`ao_daily_cpc.txt`, `ncep_stratosphere.parquet`, `ssw_canonical.csv`,

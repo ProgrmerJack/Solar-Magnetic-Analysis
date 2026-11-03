@@ -5,11 +5,17 @@
 data/solar
 data/processed
 data/cryosphere
-C:\Users\Jack0\Solar-Magnetic-Analysis\data\cryosphere\
 data/raw
 data/atmospheric
 logs/
 paper/
+archive/
+AGENTS.md
+CLAUDE.md
+research_notes/
+reports/
+ssw_revision_research_plan.md
+submission/
 # the old manuscript, moved 2026-09-25; its build outputs stay untracked
 archive/superseded_paper/
 nature_geoscience_paper.md

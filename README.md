@@ -18,7 +18,7 @@ against a modelled null.
 | **Results — the single source of truth** | [`ssw-design-analysis/CONSOLIDATED_RESULTS.md`](ssw-design-analysis/CONSOLIDATED_RESULTS.md) |
 | **Traps, and the approaches that failed** | [`FAILURES.md`](FAILURES.md) |
 | **Every script and result, generated** | [`CATALOG.md`](CATALOG.md) |
-| **Venue assessment and the work remaining** | [`ssw-design-analysis/NATURE_GEO_PLAN.md`](ssw-design-analysis/NATURE_GEO_PLAN.md) |
+| **The manuscript (LaTeX; build with `latex/build.sh`)** | [`ssw-design-analysis/manuscript/latex/main.tex`](ssw-design-analysis/manuscript/latex/main.tex) |
 
 Individual `FINDING_*.md` documents go stale; `CONSOLIDATED_RESULTS.md` is the one
 that is maintained. Where a claim was withdrawn, §7 records it rather than dropping
@@ -52,6 +52,6 @@ needs a free account only to download. Everything under `data/` is read-only.
 
 This began as a solar/geomagnetic study of avalanche activity. That project was
 abandoned: three headline claims collapsed under stricter specifications and both of
-its manuscripts are marked do-not-submit. `archive/superseded_paper/`, `scripts/`, `docs/`, most of
+its manuscripts are marked do-not-submit. `archive/superseded_paper/`, `archive/superseded_project/`, most of
 `data/` and everything in `archive/` belong to it. Four files under `data/processed/`
 are still read by live code; the rest is inert. Nothing solar is live.

@@ -45,14 +45,8 @@ detected by sha256 — not mtime) and **orphans** (no script writes them). Run
 ## Reading order
 
 1. `CONSOLIDATED_RESULTS.md` — the source of truth for what is established
-2. `REVIEW_BRIEF.md` — results A–E as framed for review, and the errors caught
-3. `GO_NO_GO.md` — the venue verdict and the 12-condition rubric
-4. `02_event_catalogues/FREEZE_RECORD.md` — reconciles every event count
-
-## Gate status
-
-Go/no-go conditions are tracked in `GO_NO_GO.md`. **Condition 3 (pseudo-onset calibration
-centred on zero) is the current blocker** and is being worked in `06_simulation_validation/`.
+2. `manuscript/latex/main.tex` and `supplementary.tex` — the submission (build with `manuscript/latex/build.sh`)
+3. `02_event_catalogues/FREEZE_RECORD.md` — reconciles every event count
 
 ## Rules carried forward
 
