@@ -407,3 +407,8 @@ Rule: after any condensation, check every kept sentence for undefined terms, eve
 Tried: pushing the manuscript/history cleanup with the existing scientific inputs still tracked.
 Failed: GitHub rejected the atomic push because the E-OBS ZIP (703.86 MiB) and SNAPSI NPZ (129.58 MiB) exceed its 100 MiB per-file limit.
 Rule: inspect reachable blob sizes before pushing; ignore and untrack large datasets, then purge their historical blobs with explicit approval while retaining local data.
+
+## 2026-11-07 — A removed uploader still exposed its token through Git history
+Tried: the prior repository cleanup removed retired Zenodo uploaders from the current tree.
+Failed: a hardcoded token remained in published ancestry and matched the configured token used successfully by the live API.
+Rule: keep credentials out of source; purge implicated history with approval, then rotate the credential because history rewriting does not revoke it or clear cached copies.
