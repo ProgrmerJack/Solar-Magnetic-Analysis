@@ -92,3 +92,7 @@ ssw-design-analysis/03_data_ingestion/_enso_fields_v2/
 
 # Local recovery copy for the approved Git history rewrite.
 /.git-history-recovery/
+
+# Large scientific inputs belong in the data archive.
+/ssw-design-analysis/03_data_ingestion/raw/eobs/
+/ssw-design-analysis/03_data_ingestion/snapsi_regime_psl.npz

@@ -402,3 +402,8 @@ Rule: validate a regime test under fixed regimes of realistic, non-Gaussian shap
 Tried: shortening each Methods paragraph to a verbatim subset of its sentences (full text moved to Supplementary Methods) to fit a page target.
 Failed: kept sentences used terms defined only in moved ones (R_LS, M0, distribution test), one reading inverted (elasticity 1.14 "outside" the law), registered tests lost design or readings, and data/method citations left the main bibliography.
 Rule: after any condensation, check every kept sentence for undefined terms, every registered test for design + registration + reading + result, and every cited reference, before counting pages.
+
+## 2026-11-07 — Ignoring files did not remove oversized Git blobs
+Tried: pushing the manuscript/history cleanup with the existing scientific inputs still tracked.
+Failed: GitHub rejected the atomic push because the E-OBS ZIP (703.86 MiB) and SNAPSI NPZ (129.58 MiB) exceed its 100 MiB per-file limit.
+Rule: inspect reachable blob sizes before pushing; ignore and untrack large datasets, then purge their historical blobs with explicit approval while retaining local data.
