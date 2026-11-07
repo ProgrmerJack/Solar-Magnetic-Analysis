@@ -7,6 +7,10 @@ every result below, contains none of them, and still leads with the snow-avalanc
 application that the project abandoned. **Do not write from the manuscript. Write
 from this file.**
 
+Historical `FINDING_*.md` and Gate 3 summary documents named below are local
+working records excluded from Git; use the producer scripts and result JSONs
+for the public evidence.
+
 Every number here is traced to a script and a JSON. Where a claim was withdrawn or
 corrected, that is recorded in §7 rather than quietly dropped — nine headline
 claims died during this project, and the tests that killed them are the reason the
@@ -1822,9 +1826,9 @@ multiple testing.
 | result | script | output |
 |---|---|---|
 | A/B | `07_physical_decomposition/design_sensitivity.py`, `05_corrected_estimators/clean_subset.py` | — |
-| C | `07_physical_decomposition/` causal-timescale scripts | `FINDING_causal_timescale.md` |
-| D | `07_physical_decomposition/mediation_disattenuated.py` | `FINDING_mediation.md` |
-| E | `06_simulation_validation/selection_on_outcome.py` | `FINDING_selection_on_outcome.md` |
+| C | `07_physical_decomposition/` causal-timescale scripts | `causal_timescale_ratio.json`, `R_profile.json` |
+| D | `07_physical_decomposition/mediation_disattenuated.py` | `mediation_disattenuated.json` |
+| E | `06_simulation_validation/selection_on_outcome.py` | `selection_on_outcome.json` |
 | F/G | `06_simulation_validation/stratifier_bias_law.py`, `stratifier_law_cmip6.py` | `stratifier_bias_law{,_1958}.json` |
 | H | `07_physical_decomposition/is_downward_propagation_a_class.py` | `is_downward_propagation_a_class.json` |
 | H | `08_literature_audit/era5_recompute_and_two_thirds.py` | ERA5 body count + two-thirds |

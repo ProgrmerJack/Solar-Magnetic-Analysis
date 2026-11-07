@@ -14,13 +14,12 @@ against a modelled null.
 
 | | |
 |---|---|
-| **Conventions, layout, how to add an analysis** | [`CLAUDE.md`](CLAUDE.md) |
 | **Results — the single source of truth** | [`ssw-design-analysis/CONSOLIDATED_RESULTS.md`](ssw-design-analysis/CONSOLIDATED_RESULTS.md) |
 | **Traps, and the approaches that failed** | [`FAILURES.md`](FAILURES.md) |
 | **Every script and result, generated** | [`CATALOG.md`](CATALOG.md) |
-| **The manuscript (LaTeX; build with `latex/build.sh`)** | [`ssw-design-analysis/manuscript/latex/main.tex`](ssw-design-analysis/manuscript/latex/main.tex) |
 
-Individual `FINDING_*.md` documents go stale; `CONSOLIDATED_RESULTS.md` is the one
+Historical `FINDING_*.md` working narratives and the manuscript are kept locally
+and excluded from Git. `CONSOLIDATED_RESULTS.md` is the one
 that is maintained. Where a claim was withdrawn, §7 records it rather than dropping
 it — nine headline claims died during this project, and the tests that killed them
 are the reason the survivors are trustworthy.

@@ -21,12 +21,11 @@ tree, shared with the superseded project — see `../results/README.md`.
 | `01_search_and_screen/` | preregistration, search queries, PRISMA screening, coding sheet |
 | `02_event_catalogues/` | catalogue spec, freeze record, `build_catalogue.py` |
 | `03_data_ingestion/` | raw acquisition with checksums |
-| `04_reproduce_published/` | reproduction of published estimates |
 | `05_corrected_estimators/` | the common event-study framework |
 | `06_simulation_validation/` | estimator behaviour under known truth |
 | `07_physical_decomposition/` | mechanism, predictability, SNAPSI |
 | `08_literature_audit/` | recomputation of published criteria |
-| `08_figures/`, `09_tables/` | display items |
+| `09_figures/`, `10_tables/` | display items |
 
 Scripts stay in their stage folders because 147 import sites resolve modules by
 stage path (`sys.path.insert(... "05_corrected_estimators")`) and the numbering
@@ -45,8 +44,12 @@ detected by sha256 — not mtime) and **orphans** (no script writes them). Run
 ## Reading order
 
 1. `CONSOLIDATED_RESULTS.md` — the source of truth for what is established
-2. `manuscript/latex/main.tex` and `supplementary.tex` — the submission (build with `manuscript/latex/build.sh`)
+2. `../results/_ALL_RESULTS.json` — computed results and reproducibility metadata
 3. `02_event_catalogues/FREEZE_RECORD.md` — reconciles every event count
+
+The manuscript and historical `FINDING_*.md` and Gate 3 summary narratives are
+local working documents excluded from Git. Preregistrations, catalogue specifications,
+freeze records, audit protocols and generated tables remain public.
 
 ## Rules carried forward
 

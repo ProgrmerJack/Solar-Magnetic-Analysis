@@ -109,4 +109,5 @@ superseded project came from exactly that practice.
 Every catalogue-dependent result was recomputed on the 43-event primary after the
 re-freeze: `canonical_event_study.py`, `multi_index_event_study.py`,
 `design_sensitivity.py`. Consequences are recorded in
-`../FINDING_design_robustness.md`.
+`../CONSOLIDATED_RESULTS.md` and `results/current/5_mechanism/design_sensitivity.json`
+(at the repository root).

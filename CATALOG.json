@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-23T15:17:41+00:00",
+ "generated": "2026-11-07T11:41:35+00:00",
  "generator": "tools/catalog_repo.py",
  "touch_tolerance_min": 15,
  "counts": {
@@ -2404,8 +2404,8 @@
    "stage": "10_tables",
    "title": "tableED1_tests.py -- Extended Data Table 1: every test in the paper, whether it was fixed before its data were analysed, where that is recorded, and its result.",
    "loc": 558,
-   "modified": "2026-10-23 10:43",
-   "sha256_16": "eae0cbc7a9b4a059",
+   "modified": "2026-10-23 19:24",
+   "sha256_16": "865a3bc581e05428",
    "flags": [],
    "filenames_mentioned": [
     "class_forcing_content.json",
@@ -2542,7 +2542,7 @@
    "stage": "1_catalogue",
    "readable": true,
    "bytes": 6826,
-   "modified": "2026-10-23 15:17",
+   "modified": "2026-11-07 11:41",
    "sha256_16": "5cd0aff03201ca05",
    "producers": [
     "ssw-design-analysis/02_event_catalogues/build_catalogue.py"

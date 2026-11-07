@@ -19,6 +19,9 @@ submission/
 # the old manuscript, moved 2026-09-25; its build outputs stay untracked
 archive/superseded_paper/
 nature_geoscience_paper.md
+/ssw-design-analysis/manuscript/
+/manuscript/
+/.remember/
 
 # python
 __pycache__/
@@ -81,3 +84,11 @@ ssw-design-analysis/03_data_ingestion/_jra3q_u10/
 ssw-design-analysis/03_data_ingestion/raw/ghcnd/
 ssw-design-analysis/03_data_ingestion/_enso_fields/
 ssw-design-analysis/03_data_ingestion/_enso_fields_v2/
+
+# Historical working narratives; maintained findings live in CONSOLIDATED_RESULTS.md.
+/ssw-design-analysis/**/FINDING_*.md
+/ssw-design-analysis/06_simulation_validation/GATE3_CLOSURE.md
+/ssw-design-analysis/06_simulation_validation/GATE3_FINAL.md
+
+# Local recovery copy for the approved Git history rewrite.
+/.git-history-recovery/
